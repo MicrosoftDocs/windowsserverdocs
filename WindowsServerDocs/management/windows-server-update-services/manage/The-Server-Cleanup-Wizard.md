@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-management-and-automation
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # The Server Cleanup Wizard
 
 >Applies To: Windows Server Technical Preview

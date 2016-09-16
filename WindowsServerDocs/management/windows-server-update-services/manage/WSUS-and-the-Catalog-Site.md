@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-management-and-automation
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # WSUS and the Catalog Site
 
 >Applies To: Windows Server Technical Preview

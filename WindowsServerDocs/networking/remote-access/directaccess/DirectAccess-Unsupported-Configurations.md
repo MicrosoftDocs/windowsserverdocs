@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # DirectAccess Unsupported Configurations

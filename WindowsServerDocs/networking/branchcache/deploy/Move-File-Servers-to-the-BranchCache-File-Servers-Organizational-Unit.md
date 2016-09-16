@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Move File Servers to the BranchCache File Servers Organizational Unit

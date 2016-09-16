@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c6df007-4c39-4b72-9f2c-b2c9b2825c2f
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Remote Access Server Role Documentation

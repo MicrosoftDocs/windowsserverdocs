@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: da956be0-c92d-46ea-99eb-85e2bd67bf07
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic

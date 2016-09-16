@@ -6,10 +6,11 @@ ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
+ms.author: jamesmci
 author: jamesmci
 ---
 # Software Defined Networking Technologies

@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8ca82f6-a543-4430-98b9-06ba383b610d
+ms.author: jamesmci
 author: jamesmci
 ---
 # NIC Teaming and Virtual Local Area Networks (VLANs)

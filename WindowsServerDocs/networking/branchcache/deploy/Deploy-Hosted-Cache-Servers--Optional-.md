@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 96d03b42-6cd9-4905-b6a2-dc36130dd24f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Deploy Hosted Cache Servers (Optional)
