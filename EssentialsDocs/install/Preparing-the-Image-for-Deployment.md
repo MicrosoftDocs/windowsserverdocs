@@ -2,33 +2,18 @@
 title: "Preparing the Image for Deployment"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 681c6cad-7fde-494f-86a5-f4c7c15d23f9
 caps.latest.revision: 17
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Preparing the Image for Deployment
 A typical tool for preparing an image is sysprep.exe. Running this tool generalizes the image and shuts down the server so that the Initial Configuration will run when the server that contains the image is restarted. All modifications to the image must be complete before you run sysprep.exe.  

@@ -2,18 +2,17 @@
 title: "What&#39;s New in Windows Server Essentials"
 ms.custom: na
 ms.date: 07/02/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 caps.latest.revision: 25
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # What&#39;s New in Windows Server Essentials
@@ -36,7 +35,7 @@ The content in this section describes what's new and changed in  Windows Server 
 |Server Storage|The following functionalities are added in Server Storage:<br /><br /> -   Folder management on a second server in a  Windows Server 2012 R2 Essentials network<br />-   Server folder quota|-   You can create shared folders on a secondary server while keeping the same Universal Naming Convention (UNC) path prefix.<br />-   You can specify a space quota for a server folder. You receive an alert when a server folder size grows beyond its defined quota.|  
 |Data Protection| Windows Server 2012 R2 Essentials includes improved File History.|File History backups are configured per user instead of per device. Also, you can automatically restore your data through File History backups on a new computer if your old computer is no longer functional or is unavailable.The first time you log on to your new computer in the network, you are prompted to restore your files from your File History backups.|  
 |Health Reports|Health Reports is integrated with  Windows Server 2012 R2 Essentials, and it no longer needs to be installed as an add-in.|The Home page includes the Alerts and Reports tabs. Depending on your business needs, you can customize the system health reports to display items that you want to monitor.|  
-|BranchCache|BranchCache is integrated with  Windows Server 2012 R2 Essentials.|You can turn on BranchCache to improve data access if the server running  Windows Server 2012 R2 Essentials is located offsite. For more information, see [Manage BranchCache](../manage/Manage-BranchCache-in-Windows-Server-Essentials.md).|  
+|BranchCache|BranchCache is integrated with  Windows Server 2012 R2 Essentials.|You can turn on BranchCache to improve data access if the server running  Windows Server 2012 R2 Essentials is located offsite. For more information, see [Manage BranchCache](manage/Manage-BranchCache-in-Windows-Server-Essentials.md).|  
 |Office 365 Integration|The following functionalities are available when Office 365 is integrated with  Windows Server 2012 R2 Essentials:<br /><br /> -   SharePoint Libraries management<br />-   Office 365 distribution groups management|If your server is integrated with Office 365, you can:<br /><br /> -   Manage your Office 365 SharePoint Libraries from the Dashboard.<br />-   Manage your Office 365 distribution groups from the Dashboard.<br /><br /> **Important:** The integration of  Windows Server 2012 R2 Essentials with Office 365 is only supported in a single domain controller environment. The Integrate with Office 365 Wizard must be run on a domain controller.|  
 |Mobile Devices|You can manage Mobile Devices through the Dashboard.|If your server is integrated with Office 365, you can manage your mobile devices by using the Exchange Active Sync functionalities; for example, you can define email access from a mobile device, set up password policies, and perform a remote wipe of the mobile device.|  
 |Client Full System Restore|Client Full System Restore is supported by Windows Deployment Services.|You can create a client restore service by using the Set Up Client Restore Service task, and you can perform client full system restore over the network instead of using an image that is saved on a DVD.|  
@@ -44,9 +43,7 @@ The content in this section describes what's new and changed in  Windows Server 
 |Microsoft online services integration|The integration of  Windows Server 2012 R2 Essentials with Microsoft online services is updated.|The integration of  Windows Server 2012 R2 Essentials with Microsoft online services, including  Microsoft Azure Active Directory (Azure AD), Office 365, Windows Intune, and on-premises Exchange, is only supported in a single domain controller environment. The integration wizard for these Microsoft online services must be run on a domain controller.|  
   
 ## See also  
-  
-<<<<<<< HEAD
+
 -   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
-=======
--   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../intro/Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+-   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+

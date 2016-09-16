@@ -2,18 +2,17 @@
 title: "Manage VPN in Windows Server Essentials"
 ms.custom: na
 ms.date: 01/12/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: cc2b264a-b9a8-4114-9f7b-8604f77096e5
 caps.latest.revision: 10
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -74,7 +73,7 @@ translation.priority.ht:
 7.  Click **Apply**, and then click **OK**.  
   
 ##  <a name="BKMK_Connect"></a> Connect client computers to the server  
- After VPN is enabled on a server running Windows Server Essentials for remote access, you can use a VPN connection to connect to and access all your resources that are stored on the server. However, you must first connect the computer to the server. When you connect a computer to the server by using the Connect My Computer to the Server Wizard, a VPN network connection is automatically generated on the client computer and can be used to access server resources while working at home or on the road. For step-by-step instructions about connecting your computer to the server, see [Connect computers to the server](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_9).  
+ After VPN is enabled on a server running Windows Server Essentials for remote access, you can use a VPN connection to connect to and access all your resources that are stored on the server. However, you must first connect the computer to the server. When you connect a computer to the server by using the Connect My Computer to the Server Wizard, a VPN network connection is automatically generated on the client computer and can be used to access server resources while working at home or on the road. For step-by-step instructions about connecting your computer to the server, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
   
 ##  <a name="BKMK_3"></a> Use VPN to connect to Windows Server Essentials  
  If you have a client computer that is set up with network accounts that can be used to connect to a hosted server running Windows Server Essentials through a VPN connection, all the newly created user accounts on the hosted server must use VPN to log on to the client computer for the first time. Complete the following procedure from the client computer that is connected to the server.  
@@ -91,7 +90,7 @@ translation.priority.ht:
   
 ## See also  
   
--   [Work Remotely](../Topic/Work%20Remotely%20in%20Windows%20Server%20Essentials.md)  
+-   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   

@@ -2,18 +2,17 @@
 title: "Restore or repair your server running Windows Server Essentials"
 ms.custom: na
 ms.date: 01/14/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 27bf6f24-30c4-4935-9b24-069eb43e22f4
 caps.latest.revision: 21
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -102,7 +101,7 @@ translation.priority.ht:
   
 -   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed  Windows Server 2012 Essentials server from a client computer, open a web browser, and then type **http://***<YourServerName\>* in the address bar.  
   
--   **Reconnect client computers to the server.** If a computer was previously connected to the server, you must uninstall the  Windows Server Essentials Connector software from the computer before you connect the computer to the server again. For more information, see [Uninstall the Connector software](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_13) and [Connect computers to the server](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_9).  
+-   **Reconnect client computers to the server.** If a computer was previously connected to the server, you must uninstall the  Windows Server Essentials Connector software from the computer before you connect the computer to the server again. For more information, see [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) and [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
   
 ##  <a name="BKMK_Restore"></a> Restore or repair the system drive  
  The first step in server restoration is to restore or repair the server system drive. After you restore the system drive, you will do whatever is needed to restore the data drives on the server and restore any sharing that was lost in the restore.  
@@ -255,4 +254,4 @@ translation.priority.ht:
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

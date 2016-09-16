@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c73a50c-47f3-4470-a77f-fac1a6739942
+ms.author: jamesmci
 author: jamesmci
 ---
 # NIC Teaming in Virtual Machines (VMs)

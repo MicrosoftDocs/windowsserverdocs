@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - techgroup-networking
+  - networking
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
+ms.author: jamesmci
 author: jamesmci
 ---
 # Networking

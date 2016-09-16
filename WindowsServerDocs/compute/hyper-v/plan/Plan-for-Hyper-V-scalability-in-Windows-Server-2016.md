@@ -4,9 +4,7 @@ description: "Gives the maximum supported number for components you can add to o
 ms.prod: windows-server-threshold
 ms.service: na
 ms.author: kathydav
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 author: KBDAzure

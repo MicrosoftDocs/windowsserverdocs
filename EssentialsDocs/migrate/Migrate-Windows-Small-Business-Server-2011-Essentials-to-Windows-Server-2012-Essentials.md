@@ -2,18 +2,17 @@
 title: "Migrate Windows Small Business Server 2011 Essentials to Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 11/20/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Migrate Windows Small Business Server 2011 Essentials to Windows Server 2012 Essentials
@@ -23,11 +22,11 @@ This guide describes how to migrate an existing Windows Small Business Server 20
 >  To avoid problems during migration, the  Windows Server 2012 Essentials product development team strongly recommends that you read this document before you begin the migration.  
   
 > [!NOTE]
-<<<<<<< HEAD
+
 >  To migrate your server data to the latest version of Windows Server Essentials, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
-=======
+
 >  To migrate your server data to the latest version of Windows Server Essentials, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## Additional resources  
  For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](http://go.microsoft.com/fwlink/?LinkId=217520).  
@@ -40,7 +39,7 @@ This guide describes how to migrate an existing Windows Small Business Server 20
 ## Migration process summary  
  This Migration Guide includes the following steps:  
   
-<<<<<<< HEAD
+
 1.  [Prepare your Source Server for Windows Server 2012 Essentials migration](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration1.md).  You must ensure that your Source Server and network are ready for migration. This section guides you through backing up the Source Server, evaluating the Source Server system health, installing the most recent service packs and fixes, and verifying the network configuration.  
   
 2.  [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode2.md).  This section describes the steps you should take to install  Windows Server 2012 Essentials on the Destination Server in migration mode.  
@@ -56,7 +55,7 @@ This guide describes how to migrate an existing Windows Small Business Server 20
 7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration6.md).  After you finish migrating all settings and data to  Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
   
 8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer1.md).  After you finish migrating settings and data to  Windows Server 2012 Essentials, you should download and run the  Windows Server 2012 Essentials BPA.  
-=======
+
 1.  [Prepare your Source Server for Windows Server 2012 Essentials migration](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration1.md).  You must ensure that your Source Server and network are ready for migration. This section guides you through backing up the Source Server, evaluating the Source Server system health, installing the most recent service packs and fixes, and verifying the network configuration.  
   
 2.  [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode2.md).  This section describes the steps you should take to install  Windows Server 2012 Essentials on the Destination Server in migration mode.  
@@ -72,7 +71,7 @@ This guide describes how to migrate an existing Windows Small Business Server 20
 7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration6.md).  After you finish migrating all settings and data to  Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
   
 8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](../migrate/Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer1.md).  After you finish migrating settings and data to  Windows Server 2012 Essentials, you should download and run the  Windows Server 2012 Essentials BPA.  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
  Several of the migration procedures require that you open a command prompt window as an administrator.  
   

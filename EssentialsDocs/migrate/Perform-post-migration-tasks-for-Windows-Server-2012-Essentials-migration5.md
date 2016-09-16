@@ -2,33 +2,32 @@
 title: "Perform post-migration tasks for Windows Server 2012 Essentials migration5"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Perform post-migration tasks for Windows Server 2012 Essentials migration
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 3404fcb5-c0d4-4f6d-9faf-9c3d86538019
 caps.latest.revision: 4
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Perform post-migration tasks for Windows Server 2012 Essentials migration5
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server.  
   
-<<<<<<< HEAD
+
 1.  [Delete DNS entries of the Source Server](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_DeleteDNSEntries)  
   
 2.  [Share line-of-business and other application data folders](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
-=======
+
 1.  [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_DeleteDNSEntries)  
   
 2.  [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_DeleteDNSEntries"></a> Delete DNS entries of the Source Server  
  After you decommission the Source Server, the Domain Name Service (DNS) server may still contain entries that point to the Source Server. Delete these DNS entries.  
