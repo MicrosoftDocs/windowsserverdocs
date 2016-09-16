@@ -10,7 +10,7 @@ ms.date: 09/15/2016
 # What's New in Data Deduplication
 > Applies to Windows Server 2016
 
-[Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at "Private Cloud" scale. For more information about the Software Defined Storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016.md).
+[Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at "Private Cloud" scale. For more information about the Software Defined Storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-in-storage.md).
 
 Data Deduplication has the following enhancements in Windows Server 2016: 
 
@@ -20,7 +20,7 @@ Data Deduplication has the following enhancements in Windows Server 2016:
 | [Support for Large Files](whats-new.md#large-file-support) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for Data Deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
 | [Support for Nano Server](whats-new.md#nano-server-support) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
 | [Simplified Backup Support](whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications.|
-| [Support for Cluster OS Rolling Upgrades](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
+| [Support for Cluster OS Rolling Upgrades](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ## <a name="large-volume-support"></a>Support for Large Volumes
 **What value does this change add?**  
