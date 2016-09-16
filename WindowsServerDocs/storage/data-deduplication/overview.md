@@ -1,19 +1,14 @@
 ---
-title: Data Deduplication overview
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+title: Data Deduplication Overview
+ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: eldenc
 ms.author: wgries
----
-# Data Deduplication overview
->Applies to Windows Server 2016
+ms.date: 09/15/2016
+--- 
+# Data Deduplication Overview
+> Applies to Windows Server 2016
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 Data Deduplication, often called Dedup for short, is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
@@ -45,7 +40,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
                 <ul>
                     <li>Team shares</li>
                     <li>User home folders</li>
-                    <li><a href="https://technet.microsoft.com/library/dn265974.aspx">Work folders</a></li>
+                    <li><a href="https://technet.microsoft.com/library/dn265974.aspx">Work Folders</a></li>
                     <li>Software development shares</li>
                 </ul>
                 General purpose file servers are a good candidate for Data Deduplication because multiple users tend to have many copies or versions of the same file. Software development shares benefit from Data Deduplication because many binaries remain essentially unchanged from build to build. 

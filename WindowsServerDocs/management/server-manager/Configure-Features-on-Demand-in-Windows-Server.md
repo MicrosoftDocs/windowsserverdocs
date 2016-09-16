@@ -1,16 +1,18 @@
 ---
 title: Configure Features on Demand in Windows Server
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-management-and-automation
+ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Configure Features on Demand in Windows Server
 
 >Applies To: Windows Server 2016 Technical Preview

@@ -2,18 +2,17 @@
 title: "Manage Client Computer Backup in Windows Server Essentials"
 ms.custom: na
 ms.date: 03/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Client Computer Backup in Windows Server Essentials
@@ -453,7 +452,7 @@ manager: stevenka
 |Backup frequency|Every hour|Specifies how often File History creates a backup of the selected data. You can choose from several options that range from every 10 minutes to daily.|  
 |Retain copies for|1 year|Specifies the amount of time that File History keeps a copy of a backup.|  
   
- For information about file history issues, see [Troubleshoot File History](../Topic/Troubleshoot%20File%20History%20in%20Windows%20Server%20Essentials.md).  
+ For information about file history issues, see [Troubleshoot File History](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md).  
   
 ## See also  
   
@@ -461,4 +460,4 @@ manager: stevenka
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

@@ -2,18 +2,17 @@
 title: "Integrate an On-Premises Exchange Server with Windows Server Essentials"
 ms.custom: na
 ms.date: 02/15/2015
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 caps.latest.revision: 25
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -44,12 +43,12 @@ This guide provides information and basic instructions to help you set up and in
 -   [Configure your Internet domain name](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)  
   
 ###  <a name="BKMK_SetUpSBS8"></a> Set up a server that is running Windows Server Essentials  
- You must have already set up a server that is running Windows Server Essentials. This will be the domain controller for the server that is running Exchange Server. For information about how to set up Windows Server Essentials, see [Install Windows Server Essentials](../Topic/Install%20Windows%20Server%20Essentials.md).  
+ You must have already set up a server that is running Windows Server Essentials. This will be the domain controller for the server that is running Exchange Server. For information about how to set up Windows Server Essentials, see [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_SecondServer"></a> Prepare a second server on which to install Exchange Server  
  You must install Exchange Server on a second server that is running a version of the Windows Server operating system that officially supports running Exchange Server 2010 or Exchange Server 2013. You must then join the second server to the Windows Server Essentials domain.  
   
- For information about how to join a second server to the Windows Server Essentials domain, see “Join a second server to the network�? in [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md).  
+ For information about how to join a second server to the Windows Server Essentials domain, see “Join a second server to the network�? in [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md).  
   
 > [!NOTE]
 >  Microsoft does not support installing Exchange Server on a server that is running Windows Server Essentials.  
@@ -299,7 +298,7 @@ This guide provides information and basic instructions to help you set up and in
 ### Configure the network router  
   
 > [!NOTE]
->  This is a required task if you are performing a clean setup. If you are migrating from Windows Small Business Server, see [Migrate Server Data to Windows Server Essentials](../Topic/Migrate%20Server%20Data%20to%20Windows%20Server%20Essentials.md) for instructions about how to configure the network.  
+>  This is a required task if you are performing a clean setup. If you are migrating from Windows Small Business Server, see [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md) for instructions about how to configure the network.  
   
  At minimum, you must configure the following port settings on the router:  
   
@@ -463,7 +462,7 @@ This guide provides information and basic instructions to help you set up and in
   
 ## See also  
   
--   [System Requirements for Windows Server 2012 Essentials](../Topic/System%20Requirements%20for%20Windows%20Server%202012%20Essentials.md)  
+-   [System Requirements for Windows Server 2012 Essentials](../install/System-Requirements-for-Windows-Server-2012-Essentials.md)  
   
 -   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   

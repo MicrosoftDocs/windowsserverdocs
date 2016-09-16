@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
+ms.author: jamesmci
 author: jamesmci
 ---
 # What&#39;s New in DNS Server in Windows Server Technical Preview

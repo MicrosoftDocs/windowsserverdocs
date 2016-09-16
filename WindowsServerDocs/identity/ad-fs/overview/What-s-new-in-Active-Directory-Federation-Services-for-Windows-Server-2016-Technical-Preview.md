@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d133f97f-4b37-475f-b965-56d97d6c0e16
 author: billmath
+ms.author: billmath
 ---
 # What&#39;s new in Active Directory Federation Services for Windows Server 2016 Technical Preview
 

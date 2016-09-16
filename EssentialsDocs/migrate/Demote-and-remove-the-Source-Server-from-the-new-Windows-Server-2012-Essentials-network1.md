@@ -2,25 +2,24 @@
 title: "Demote and remove the Source Server from the new Windows Server 2012 Essentials network1"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Demote and remove the Source Server from the new Windows Server 2012 Essentials network
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 caps.latest.revision: 9
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network1
 After you finish installing  Windows Server 2012 Essentials and you complete the tasks in the Migration Wizard, you must perform the following tasks:  
   
-<<<<<<< HEAD
+
 1.  [Uninstall Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
   
 2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_PhysicallyDisconnect).  
@@ -30,7 +29,7 @@ After you finish installing  Windows Server 2012 Essentials and you complete the
 4.  [Move the DHCP Server role from the Source Server to the router](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_MoveTheDHCPRole).  
   
 5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
-=======
+
 1.  [Uninstall Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
   
 2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_PhysicallyDisconnect).  
@@ -40,7 +39,7 @@ After you finish installing  Windows Server 2012 Essentials and you complete the
 4.  [Move the DHCP Server role from the Source Server to the router](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_MoveTheDHCPRole).  
   
 5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_UninstallExchangeServer2003"></a> Uninstall Exchange Server 2003  
   
@@ -62,11 +61,11 @@ After you finish installing  Windows Server 2012 Essentials and you complete the
 5.  On the Component Selection page, expand **Exchange Server**, and then choose **Remove**.  
   
     > [!NOTE]
-<<<<<<< HEAD
+
     >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  
-=======
+
     >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 6.  Click **Next**.  
   
@@ -123,11 +122,11 @@ After you finish installing  Windows Server 2012 Essentials and you complete the
 ###  <a name="BKMK_MoveTheDHCPRole"></a> Move the DHCP Server role from the Source Server to the router  
   
 > [!NOTE]
-<<<<<<< HEAD
+
 >  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
-=======
+
 >  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
   

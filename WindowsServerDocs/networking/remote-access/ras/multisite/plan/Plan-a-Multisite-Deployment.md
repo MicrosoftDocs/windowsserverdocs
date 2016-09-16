@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Plan a Multisite Deployment

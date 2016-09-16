@@ -2,18 +2,17 @@
 title: "Manage Backup and Restore in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/22/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 41000915-f6ff-4dbb-b7be-629ef36386d4
 caps.latest.revision: 18
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Backup and Restore in Windows Server Essentials
@@ -31,4 +30,4 @@ manager: stevenka
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

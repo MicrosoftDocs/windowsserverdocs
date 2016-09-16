@@ -2,18 +2,17 @@
 title: "Use the My Server App to Connect to Windows Server Essentials"
 ms.custom: na
 ms.date: 04/01/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 caps.latest.revision: 29
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -32,7 +31,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
  If your server is running the  Windows Server 2012 Essentials operating system, use the original My Server app. If your server is running the  Windows Server 2012 R2 Essentials operating system, you must use the updated My Server 2012 R2 app. Both apps can be downloaded from [Apps for Windows](http://windows.microsoft.com/windows-8/apps).  
   
 > [!TIP]
-<<<<<<< HEAD
+
 >  To access resources in  Windows Server Essentials from your Windows Phone, use the My Server phone app (for  Windows Server 2012 Essentials) or the My Server 2012 R2 phone app (for  Windows Server 2012 R2 Essentials). For information about the My Server phone app, see [Use the My Server app for Windows Phone](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2). For information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
   
 ## In this topic  
@@ -48,7 +47,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
 -   [Features of My Server](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_Features)  
   
 -   [How to connect to your server from your local network](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_ConnectServer)  
-=======
+
 >  To access resources in  Windows Server Essentials from your Windows Phone, use the My Server phone app (for  Windows Server 2012 Essentials) or the My Server 2012 R2 phone app (for  Windows Server 2012 R2 Essentials). For information about the My Server phone app, see [Use the My Server app for Windows Phone](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2). For information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
   
 ## In this topic  
@@ -64,7 +63,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
 -   [Features of My Server](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_Features)  
   
 -   [How to connect to your server from your local network](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_ConnectServer)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ##  <a name="BKMK_WhatsNew"></a> What’s new in My Server 2012 R2  
  In addition to the features available in My Server, My Server 2012 R2 offers the following new features for customers with  Windows Server 2012 R2 Essentials:  
@@ -187,12 +186,12 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
-<<<<<<< HEAD
+
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
-=======
+
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

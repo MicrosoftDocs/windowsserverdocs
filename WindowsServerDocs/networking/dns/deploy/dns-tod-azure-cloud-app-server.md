@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
+ms.author: jamesmci
 author: jamesmci
 ---
 # DNS Responses Based on Time of Day with an Azure Cloud App Server

@@ -2,38 +2,23 @@
 title: "Assessment and Deployment Kit for Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Assessment and Deployment Kit for Windows Server 2012 Essentials
 The  Windows Server® 2012 Essentials Assessment and Deployment Kit (ADK) is a collection of tools, binaries, and operating system language packs that you can use to customize, assess, and deploy  Windows Server 2012 Essentials on new computers. This document includes information that is specific to partners who intend to preinstall the operating system for their customers and includes the following topics:  
   
-<<<<<<< HEAD
+
 -   [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)  
   
     -   [Important Information for Using the Windows Server 2012 Essentials ADK](Important-Information-for-Using-the-Windows-Server-2012-Essentials-ADK.md)  
@@ -93,7 +78,7 @@ The  Windows Server® 2012 Essentials Assessment and Deployment Kit (ADK) is a c
 -   [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)  
   
 -   [Testing the Customer Experience](Testing-the-Customer-Experience.md)  
-=======
+
 -   [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)  
   
     -   [Important Information for Using the Windows Server 2012 Essentials ADK](../install/Important-Information-for-Using-the-Windows-Server-2012-Essentials-ADK.md)  
@@ -153,7 +138,7 @@ The  Windows Server® 2012 Essentials Assessment and Deployment Kit (ADK) is a c
 -   [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)  
   
 -   [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## Copyright information  
  This document is provided “as-is.�? Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. Some examples depicted herein are provided for illustration only and are fictitious. No real association or connection is intended or should be inferred. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  

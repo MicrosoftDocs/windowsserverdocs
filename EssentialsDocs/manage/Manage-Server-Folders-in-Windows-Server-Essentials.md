@@ -2,18 +2,17 @@
 title: "Manage Server Folders in Windows Server Essentials"
 ms.custom: na
 ms.date: 01/14/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 090cf1b8-7b9b-48b9-ae85-b98477b8d7cc
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Server Folders in Windows Server Essentials
@@ -285,7 +284,7 @@ manager: stevenka
  For information about restoring files from server backups, see the section “Learn more about restoring files and folders�? in the topic [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_11"></a> Understand shared folders  
- There are several different ways that you can access your shared folders on Windows Server Essentials from a device that is connected to the server. For more information, see the topic [Use Shared Folders](../Topic/Use%20Shared%20Folders%20in%20Windows%20Server%20Essentials.md).  
+ There are several different ways that you can access your shared folders on Windows Server Essentials from a device that is connected to the server. For more information, see the topic [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_Shadow"></a> Understand shadow copies  
  With server Shadow Copies, users can view shared files and folders as they existed at points of time in the past. Accessing previous versions of files, or shadow copies, is useful because users can:  
@@ -302,6 +301,6 @@ manager: stevenka
   
 -   [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md)  
   
--   [Use Shared Folders](../Topic/Use%20Shared%20Folders%20in%20Windows%20Server%20Essentials.md)  
+-   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

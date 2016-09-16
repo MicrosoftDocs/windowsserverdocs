@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Windows Server 2016 Technical Preview Supported Networking Scenarios

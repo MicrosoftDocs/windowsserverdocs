@@ -12,8 +12,8 @@ applies_to:
   - Windows Storage Server 2012 R2 Essentials
 ms.assetid: 04f680d2-8d3a-42ac-a916-82634e5f5154
 caps.latest.revision: 21
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Deploying Windows Server Essentials
@@ -21,7 +21,7 @@ manager: stevenka
   
 ## UI Help  
   
-<<<<<<< HEAD
+
 -   [What should I know before I personalize my server?](Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
   
 -   [Which options should I choose for update settings?](Deploying-Windows-Server-Essentials.md#BKMK_Update)  
@@ -33,19 +33,19 @@ manager: stevenka
 -   [Support information](Deploying-Windows-Server-Essentials.md#BKMK_Support)  
   
 -   [Troubleshoot Windows Server 2012 R2 Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
-=======
--   [What should I know before I personalize my server?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
+
+-   [What should I know before I personalize my server?](Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
   
--   [Which options should I choose for update settings?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Update)  
+-   [Which options should I choose for update settings?](Deploying-Windows-Server-Essentials.md#BKMK_Update)  
   
--   [Why are the data and time settings important?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_DateTime)  
+-   [Why are the data and time settings important?](Deploying-Windows-Server-Essentials.md#BKMK_DateTime)  
   
--   [How do I connect my computers to my server?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_ConnectComputer)  
+-   [How do I connect my computers to my server?](Deploying-Windows-Server-Essentials.md#BKMK_ConnectComputer)  
   
--   [Support information](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Support)  
+-   [Support information](Deploying-Windows-Server-Essentials.md#BKMK_Support)  
   
--   [Troubleshoot Windows Server 2012 R2 Essentials installation](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+-   [Troubleshoot Windows Server 2012 R2 Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+
   
 ##  <a name="BKMK_Personalize"></a> What should I know before I personalize my server?  
  To distinguish and help secure your server on your network, you should identify your company name, choose a unique internal domain name, and give your server a unique name.  
@@ -275,6 +275,6 @@ manager: stevenka
   
 ## See also  
   
--   [Install and Configure Windows Server 2012 R2 Essentials](../windows-server-essentials/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
+-   [Install and Configure Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
--   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../windows-server-essentials/Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+-   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)

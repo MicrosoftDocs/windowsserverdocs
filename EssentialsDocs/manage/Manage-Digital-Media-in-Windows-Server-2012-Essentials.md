@@ -2,18 +2,17 @@
 title: "Manage Digital Media in Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 03/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Digital Media in Windows Server 2012 Essentials
@@ -89,7 +88,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 -   CD Audio Track (.cda)  
   
- To play a file, simply locate a song, video, or picture in a shared folder, double-click the file, and the content will stream from the server to your computer and play. For information about how to find and play the digital media files that are stored on the server, see [Play Digital Media](../Topic/Play%20Digital%20Media%20in%20Windows%20Server%202012%20Essentials.md).  
+ To play a file, simply locate a song, video, or picture in a shared folder, double-click the file, and the content will stream from the server to your computer and play. For information about how to find and play the digital media files that are stored on the server, see [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md).  
   
  To stream your media, you need the following hardware:  
   
@@ -126,7 +125,7 @@ The following topics discuss the media streaming features of your server, and ex
  For more information, see [Allow or restrict access to a media library on the server](Manage-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_6).  
   
 ##  <a name="BKMK_5"></a> Add digital media files to the server  
- The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the  Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the  Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play Digital Media](../Topic/Play%20Digital%20Media%20in%20Windows%20Server%202012%20Essentials.md).  
+ The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the  Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the  Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md).  
   
 > [!NOTE]
 >  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows phone, see the blog post [My Server phone app for Windows Server 2012 Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).  
@@ -135,7 +134,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 1.  Use one of the following methods to sign in to the server:  
   
-    1.  For information about logging on to Remote Web Access, see [Log on to Remote Web Access](../Topic/Use%20Remote%20Web%20Access%20in%20Windows%20Server%20Essentials.md#BKMK_1).  
+    1.  For information about logging on to Remote Web Access, see [Log on to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1).  
   
     2.  For information about signing in with Launchpad, see [Launchpad Overview](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md).  
   
@@ -244,6 +243,6 @@ The following topics discuss the media streaming features of your server, and ex
   
 ## See also  
   
--   [Play Digital Media](../Topic/Play%20Digital%20Media%20in%20Windows%20Server%202012%20Essentials.md)  
+-   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md)  
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)
