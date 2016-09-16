@@ -2,18 +2,17 @@
 title: "Use Remote Web Access in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/01/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 caps.latest.revision: 13
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Use Remote Web Access in Windows Server Essentials
@@ -23,7 +22,7 @@ manager: stevenka
   
  This topic includes the following sections:  
   
-<<<<<<< HEAD
+
 -   [Connect to Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Connect)  
   
 -   [Share files and folders](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
@@ -35,7 +34,7 @@ manager: stevenka
 -   [Log on to Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
   
 -   [Remotely access your computer](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)  
-=======
+
 -   [Connect to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Connect)  
   
 -   [Share files and folders](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
@@ -47,7 +46,7 @@ manager: stevenka
 -   [Log on to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
   
 -   [Remotely access your computer](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_1"></a> Log on to Remote Web Access  
  When you log on to  Remote Web Access from a local or remote computer, you can access resources on your server running Windows Server Essentials and computers on your network.  
@@ -101,15 +100,15 @@ manager: stevenka
   
 ##  <a name="BKMK_SharedFolders"></a> Share files and folders  
   
-<<<<<<< HEAD
+
 -   [Upload and download files in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
   
 -   [Create, rename, move, delete, or copy files and folders in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
-=======
+
 -   [Upload and download files in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
   
 -   [Create, rename, move, delete, or copy files and folders in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_UploadRWA"></a> Upload and download files in Remote Web Access  
  On the Remote Web Access **Shared Folders** tab, you can do the following:  
@@ -123,11 +122,11 @@ manager: stevenka
   
 -   Create a folder within a shared folder on Windows Server Essentials.  
   
-<<<<<<< HEAD
+
 -   Move, delete, and rename files and folders on Windows Server Essentials. For more information, see [Create, rename, move, delete, or copy files and folders in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2).  
-=======
+
 -   Move, delete, and rename files and folders on Windows Server Essentials. For more information, see [Create, rename, move, delete, or copy files and folders in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 #### Upload files  
   
@@ -290,15 +289,15 @@ manager: stevenka
   
 ##  <a name="BKMK_ConnectMobile"></a> Connect from a mobile device  
   
-<<<<<<< HEAD
+
 -   [Use Remote Web Access from a mobile device](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
   
 -   [Supported Web browsers for mobile devices](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
-=======
+
 -   [Use Remote Web Access from a mobile device](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
   
 -   [Supported Web browsers for mobile devices](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_8"></a> Use Remote Web Access from a mobile device  
  You can log on to Remote Web Access from your smart phone to view the files and folders in the shared folders on the server.  
@@ -349,12 +348,12 @@ manager: stevenka
   
 -   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
-<<<<<<< HEAD
+
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
-=======
+
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

@@ -2,18 +2,17 @@
 title: "Troubleshoot Windows Server 2012 Essentials Log Collector Errors"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 caps.latest.revision: 5
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Troubleshoot Windows Server 2012 Essentials Log Collector Errors

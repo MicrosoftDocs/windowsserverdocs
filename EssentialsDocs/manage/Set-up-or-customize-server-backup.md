@@ -2,18 +2,17 @@
 title: "Set up or customize server backup"
 ms.custom: na
 ms.date: 05/01/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -147,4 +146,4 @@ translation.priority.ht:
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

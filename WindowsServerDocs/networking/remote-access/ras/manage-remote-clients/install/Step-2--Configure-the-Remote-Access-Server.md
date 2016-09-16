@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Step 2 Configure the Remote Access Server

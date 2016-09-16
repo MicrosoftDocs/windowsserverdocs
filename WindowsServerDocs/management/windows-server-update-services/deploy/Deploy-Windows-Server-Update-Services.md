@@ -3,13 +3,14 @@ title: Deploy Windows Server Update Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.suite: na
-ms.technology:
-ms.tgt_pltfrm: na
+ms.technology: manage-wsus
 ms.topic: get-started-article
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
-author: britw
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Deploy
 
 >Applies To: Windows Server Technical Preview

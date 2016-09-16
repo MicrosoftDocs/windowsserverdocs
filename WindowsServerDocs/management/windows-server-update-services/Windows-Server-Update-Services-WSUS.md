@@ -3,13 +3,14 @@ title: Windows Server Update Services (WSUS)
 ms.custom: 
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: biztalk-services
 ms.suite: na
-ms.technology: 
-  - techgroup-management-and-automation
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
 # Windows Server Update Services (WSUS)
 

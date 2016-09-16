@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc7205b4-a822-4038-ab67-ec0a870737f2
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Steps for Configuring the Test Lab

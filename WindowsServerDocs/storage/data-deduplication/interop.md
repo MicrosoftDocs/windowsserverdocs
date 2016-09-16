@@ -1,17 +1,12 @@
 ---
 title: Data Deduplication Interoperability
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: eldenc
 ms.author: wgries
----
+ms.date: 09/15/2016
+--- 
 
 # Data Deduplication Interoperability
 > Applies to Windows Server 2016

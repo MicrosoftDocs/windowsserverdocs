@@ -2,33 +2,18 @@
 title: "Create a Server Recovery DVD for Multi-Language Support"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 caps.latest.revision: 24
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Create a Server Recovery DVD for Multi-Language Support
 ##  <a name="BKMK_MLHeadedRecovery"></a> Create a server setup and server recovery DVD for multiple language support on locally administered servers  
@@ -60,11 +45,11 @@ translation.priority.ht:
 ### Prerequisites  
  To add multilingual support to Windows Setup, you need the following:  
   
-<<<<<<< HEAD
+
 -   A technician computer that provides all the tools and source files necessary to create a customized WinPE image. For more information, see [Prepare the Technician Computer](Prepare-the-Technician-Computer.md).  
-=======
+
 -   A technician computer that provides all the tools and source files necessary to create a customized WinPE image. For more information, see [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 -   A  Windows Server 2012 Essentials DVD.  
   
@@ -96,11 +81,11 @@ translation.priority.ht:
   
     ```  
   
-<<<<<<< HEAD
+
 2.  Add Language specific files to support creating the Client Backup Restore USB flash drive, using the procedure described in [Build Multi-Language Client Restore Media](Build-Multi-Language-Client-Restore-Media.md).  
-=======
+
 2.  Add Language specific files to support creating the Client Backup Restore USB flash drive, using the procedure described in [Build Multi-Language Client Restore Media](../install/Build-Multi-Language-Client-Restore-Media.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 3.  Recreate the Lang.ini file in the loose media to reflect the additional language support by using the `DISM /Gen-LangINI` command, for example:  
   
@@ -116,14 +101,14 @@ translation.priority.ht:
     ```  
   
 ## See Also  
-<<<<<<< HEAD
+
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-=======
+
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

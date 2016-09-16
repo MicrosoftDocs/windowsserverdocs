@@ -2,18 +2,17 @@
 title: "Overview of the Launchpad in Windows Server Essentials"
 ms.custom: na
 ms.date: 01/14/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 caps.latest.revision: 15
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Overview of the Launchpad in Windows Server Essentials
@@ -64,7 +63,7 @@ The Windows Server Essentials Launchpad is a small application that is installed
 >  To use this feature, you must have the proper access or permissions to log on to the server.  
   
 ### Microsoft Office 365  
- The **Microsoft Office 365** link only appears on the Launchpad if the user has an Office 365 account. Click  **Microsoft Office 365** to access additional links to the Office 365 resources. For more information, see [Quick Start Guide to Using Microsoft Office 365](../Topic/Quick%20Start%20Guide%20to%20Using%20Microsoft%20Office%20365%20with%20Windows%20Server%20Essentials.md).  
+ The **Microsoft Office 365** link only appears on the Launchpad if the user has an Office 365 account. Click  **Microsoft Office 365** to access additional links to the Office 365 resources. For more information, see [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).  
   
 ### Computer health alerts  
  Alerts that appear on the Launchpad provide a quick status as to the immediate health of the computer. To view information about a health alert, click an alert indicator to open the alert viewer. Health alerts appear in the viewer based on level of severity. The most severe alerts appear first in the list; less severe alerts appear later in the list. For more information about computer health alerts, see [Manage System Health](Manage-System-Health-in-Windows-Server-Essentials.md).  
@@ -81,18 +80,18 @@ The Windows Server Essentials Launchpad is a small application that is installed
  Click **Backup** to set up Time Machine to back up your computer and to change Time Machine settings. For more information about Time Machine, see the documentation from the manufacturer of your computer.  
   
 ### Remote Web Access  
- Click **Remote Web Access** to open the web browser to the  Remote Web Access site. The  Remote Web Access enables you to access the shared files and folders on the server from any remote location with an Internet-enabled computer. You can upload files, play music and videos on the web-based Media Play, and view pictures and play slide shows. For more information, see [Use Remote Web Access](../Topic/Use%20Remote%20Web%20Access%20in%20Windows%20Server%20Essentials.md).  
+ Click **Remote Web Access** to open the web browser to the  Remote Web Access site. The  Remote Web Access enables you to access the shared files and folders on the server from any remote location with an Internet-enabled computer. You can upload files, play music and videos on the web-based Media Play, and view pictures and play slide shows. For more information, see [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
 ### Shared Folders  
- Click **Shared Folders** to open Finder to the location of the shared folders on the server. For information about sharing files and folders, see [Use Shared Folders](../Topic/Use%20Shared%20Folders%20in%20Windows%20Server%20Essentials.md).  
+ Click **Shared Folders** to open Finder to the location of the shared folders on the server. For information about sharing files and folders, see [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md).  
   
 ### Computer health alerts  
  Alerts that appear on the Launchpad provide a quick status about the immediate health of the computer. To view information about a health alert, click an alert indicator to open the alert viewer. Health alerts appear in the viewer based on level of severity. The most severe alerts appear first in the list. Less severe alerts appear later in the list.  
   
 ## See also  
   
--   [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md)  
+-   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)  
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)  
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

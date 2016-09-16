@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
+ms.author: jamesmci
 author: jamesmci
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day

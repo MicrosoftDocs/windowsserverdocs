@@ -2,18 +2,17 @@
 title: "Customize and Deploy Windows Server Essentials in Windows Server 2012 R2"
 ms.custom: na
 ms.date: 08/29/2016
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: d1c70cf2-0db8-4b75-af46-73620b9e81c8
 caps.latest.revision: 5
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Customize and Deploy Windows Server Essentials in Windows Server 2012 R2

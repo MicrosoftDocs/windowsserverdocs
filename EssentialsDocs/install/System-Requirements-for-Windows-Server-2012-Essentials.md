@@ -2,18 +2,17 @@
 title: "System Requirements for Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 04/01/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 49565621-ecd6-412b-b91a-e12e3b8a8773
 caps.latest.revision: 21
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # System Requirements for Windows Server 2012 Essentials
@@ -70,8 +69,8 @@ manager: stevenka
   
 ## See also  
   
-<<<<<<< HEAD
+
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
-=======
+
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

@@ -2,33 +2,18 @@
 title: "Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
 ##  <a name="BKMK_O365"></a>   
@@ -101,14 +86,14 @@ translation.priority.ht:
 7.  Repeat steps 4-6 for each string name listed in step 4.  
   
 ## See Also  
-<<<<<<< HEAD
+
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-=======
+
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

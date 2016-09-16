@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: da74fea7-52b2-4d6d-9d21-19184eedbe3c
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure the BranchCache Hash Publication Group Policy Object

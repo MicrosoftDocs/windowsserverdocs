@@ -2,30 +2,29 @@
 title: "Step 6: Demote and remove the Source Server from the new Windows Server 2012 R2 Essentials network"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 caps.latest.revision: 16
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Step 6: Demote and remove the Source Server from the new Windows Server 2012 R2 Essentials network
 After you finish installing  Windows Server 2012 R2 Essentials and you complete the migration, you must perform the following tasks:  
   
-1.  [Remove Active Directory Certificate Services](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md#BKMK_ADCS)  
+1.  [Remove Active Directory Certificate Services](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-R2-Essentials-network.md#BKMK_ADCS)  
   
-2.  [Disconnect printers that are directly connected to the Source Server](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md#BKMK_PhysicallyDisconnect)  
+2.  [Disconnect printers that are directly connected to the Source Server](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-R2-Essentials-network.md#BKMK_PhysicallyDisconnect)  
   
-3.  [Demote the Source Server](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md#BKMK_DemoteTheSourceServer)  
+3.  [Demote the Source Server](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-R2-Essentials-network.md#BKMK_DemoteTheSourceServer)  
   
-4.  [Remove and repurpose the Source Server](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md#BKMK_RemoveTheSourceServer)  
+4.  [Remove and repurpose the Source Server](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-R2-Essentials-network.md#BKMK_RemoveTheSourceServer)  
   
 ##  <a name="BKMK_ADCS"></a> Remove Active Directory Certificate Services  
  The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. You can use the following procedure to uninstall an AD CS role service and to retain other AD CS role services.  
@@ -101,10 +100,10 @@ After you finish installing  Windows Server 2012 R2 Essentials and you complete 
  After you demote the Source Server, it is not in a healthy state. If you want to repurpose the Source Server, the simplest way is to reformat it, install a server operating system, and then set it up for use as an additional server.  
   
 ## Next steps  
- You have demoted and removed the Source Server from the new  Windows Server 2012 R2 Essentials network. Now go to [Step 7: Perform post-migration tasks for the Windows Server 2012 R2 Essentials migration](../Topic/Step%207:%20Perform%20post-migration%20tasks%20for%20the%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
+ You have demoted and removed the Source Server from the new  Windows Server 2012 R2 Essentials network. Now go to [Step 7: Perform post-migration tasks for the Windows Server 2012 R2 Essentials migration](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-2012-R2-Essentials-migration.md).  
   
-<<<<<<< HEAD
+
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
-=======
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+
