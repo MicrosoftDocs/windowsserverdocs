@@ -78,7 +78,7 @@ Includes security solutions and features for the IT professional to deploy in yo
 ### Just Enough Administration  
 Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to/from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).
 
-### Remote Credential support
+### Remote Credential Guard
 Credential Guard support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/en-us/itpro/windows/keep-secure/remote-credential-guard).   
   
 ### Shielded Virtual Machines  
