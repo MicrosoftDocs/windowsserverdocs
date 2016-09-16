@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - service-management-automation-(sma)
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b1ea915-0f9f-4f0e-8913-a1dd460d07ab
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Managing WSUS Client Computers and WSUS Computer Groups
 
 >Applies To: Windows Server Technical Preview

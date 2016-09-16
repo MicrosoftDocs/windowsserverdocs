@@ -4,12 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28fde77a-f5fc-4e51-835d-8bc304dcfa54
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Update Management with Windows Server Update Services
 
 >Applies To: Windows Server Technical Preview
