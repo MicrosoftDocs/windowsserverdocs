@@ -16,7 +16,7 @@ ms.date: 09/15/2016
 Accessing data over the network can be optimized by enabling [BranchCache](../../networking/branchcache/branchcache.md) on servers and clients. When a BranchCache-enabled system communicates over a WAN with a remote file server that is running data deduplication, all of the deduplicated files are already indexed and hashed, so requests for data from a branch office are quickly computed. This is similar to preindexing or prehashing a BranchCache-enabled server.
 
 ### <a id="supported-clusters"></a>Failover Clusters
-[Failover Clustering](../../failover-clustering/failover-clustering-overview.md) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes: 
+[Failover Clustering](../../failover-clustering/failover-clustering-overview.md) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes:
 * [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Deduplication schedules are managed by using the task scheduler and when a cluster is formed, the schedule information is put into the cluster scheduler so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
 * Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
@@ -31,7 +31,7 @@ Creating a hard quota on a volume root folder that also has deduplication enable
 Creating a soft quota on a volume root that has deduplication enabled is supported. When quota encounter a deduplicated file, it accounts for it based on the file’s logical size. Quota usage (including any quota thresholds) does not change when a file is processed by deduplication. All other quota functionality, including volume-root soft quotas and quotas on subfolders, work normally when using deduplication.
 
 ### <a id="supported-windows-server-backup"></a>Windows Server Backup
-Windows Server Backup has the ability to back up an optimized volume “as-is” (that is, without removing deduplicated data). The following steps show how to back up a volume and how to restore a volume or selected files from a volume:
+Windows Server Backup has the ability to back up an optimized volume "as-is" (that is, without removing deduplicated data). The following steps show how to back up a volume and how to restore a volume or selected files from a volume:
 1. Install Windows Server Backup by running the following Windows PowerShell command:  
     ```PowerShell
     Install-WindowsFeature -Name Windows-Server-Backup
@@ -43,7 +43,7 @@ Windows Server Backup has the ability to back up an optimized volume “as-is”
     ```
 
 3. Get the version ID of the backup you just created:
-    ```PowerShell 
+    ```PowerShell
     wbadmin get versions
     ```
 
