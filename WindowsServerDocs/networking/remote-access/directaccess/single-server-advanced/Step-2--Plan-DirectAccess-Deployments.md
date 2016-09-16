@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Step 2 Plan DirectAccess Deployments

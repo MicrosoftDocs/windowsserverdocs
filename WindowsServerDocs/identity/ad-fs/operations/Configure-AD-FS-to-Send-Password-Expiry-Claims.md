@@ -2,12 +2,13 @@
 title: Configure AD FS to Send Password Expiry Claims
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Configure AD FS to Send Password Expiry Claims
 

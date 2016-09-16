@@ -6,10 +6,11 @@ ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
+ms.author: vhorne
 author: vhorne
 ---
 # Plan a Software Defined Network Infrastructure

@@ -8,8 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96433df6-6068-4c04-86cd-fc03425c41e5
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 ---
 # WSE_LogCollector.cover
 ## Using the Windows Server 2012 Essentials Log Collector  
@@ -22,8 +22,8 @@ manager: stevenka
   
  To view the most recent version of this guide, see [Using the Windows Server 2012 Essentials Log Collector](http://go.microsoft.com/fwlink/?LinkId=255211) at the Microsoft TechNet website.  
   
-<<<<<<< HEAD
+
  ![Microsoft logo](media/DocCoverBottom.gif "DocCoverBottom")
-=======
+
  ![Microsoft logo](../windows-server-essentials-notinTOC/media/DocCoverBottom.gif "DocCoverBottom")
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

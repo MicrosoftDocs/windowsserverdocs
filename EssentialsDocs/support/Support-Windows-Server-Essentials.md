@@ -2,18 +2,17 @@
 title: "Support Windows Server Essentials"
 ms.custom: na
 ms.date: 05/20/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 caps.latest.revision: 25
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -50,7 +49,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
   
-<<<<<<< HEAD
+
 -   [Troubleshoot Anywhere Access](Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 -   [Troubleshoot computer backup and restore errors](Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)  
@@ -68,7 +67,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
 -   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
   
 -   [Use the Windows Server 2012 Essentials Log Collector](Use-the-Windows-Server-2012-Essentials-Log-Collector.md)  
-=======
+
 -   [Troubleshoot Anywhere Access](../support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 -   [Troubleshoot computer backup and restore errors](../support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)  
@@ -86,7 +85,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
 -   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
   
 -   [Use the Windows Server 2012 Essentials Log Collector](../support/Use-the-Windows-Server-2012-Essentials-Log-Collector.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## Ask a question in the forums  
   

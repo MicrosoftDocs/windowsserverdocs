@@ -6,8 +6,9 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: 
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: identity-adds
+ms.author: markvi
+  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef51a2e0-9cd6-43c7-80b4-4f3c696c5c2a

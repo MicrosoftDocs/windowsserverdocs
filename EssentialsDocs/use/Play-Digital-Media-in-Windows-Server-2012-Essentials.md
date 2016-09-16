@@ -2,18 +2,17 @@
 title: "Play Digital Media in Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 01/14/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 caps.latest.revision: 10
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Play Digital Media in Windows Server 2012 Essentials
@@ -21,7 +20,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
  The following topics provide information about accessing and playing digital media files that are stored on  Windows Server 2012 Essentials:  
   
-<<<<<<< HEAD
+
 -   [Digital media overview](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_1)  
   
 -   [Play and share digital media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2)  
@@ -35,7 +34,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   [Easy File Upload tool](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_6)  
   
 -   [View and browse shared digital media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_7)  
-=======
+
 -   [Digital media overview](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_1)  
   
 -   [Play and share digital media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2)  
@@ -49,7 +48,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   [Easy File Upload tool](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_6)  
   
 -   [View and browse shared digital media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_7)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ##  <a name="BKMK_1"></a> Digital media overview  
  Digital media refers to audio, video, and photo content that has been encoded (digitally compressed). Encoding content involves converting audio and video input to a digital media file such as a Windows Media file. After digital media is encoded, it can be easily manipulated, distributed, and played by computers, and it is easily transmitted over computer networks.  
@@ -78,20 +77,20 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
  You can use either of the following ways to search for and play digital media files that are stored on your server:  
   
-<<<<<<< HEAD
+
 -   [Search for and play media files on Windows Server 2012 Essentials from a computer or digital media player on the network](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2.1)  
   
 -   [Send media files on Windows Server 2012 Essentials to Windows Media Player, Xbox 360, or to a networked digital media player in the network](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_SendToDevice)  
-=======
+
 -   [Search for and play media files on Windows Server 2012 Essentials from a computer or digital media player on the network](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2.1)  
   
 -   [Send media files on Windows Server 2012 Essentials to Windows Media Player, Xbox 360, or to a networked digital media player in the network](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_SendToDevice)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_2.1"></a> Search for and play media files on Windows Server 2012 Essentials from a computer or digital media player on the network  
  When your device is joined to the  Windows Server 2012 Essentials network, you can search for and play digital media files in any of the following ways:  
   
-<<<<<<< HEAD
+
 -   [Search for and play media files from a computer that is running Windows Media Center](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_WMC)  
   
 -   [Search for and play media files from a computer that is running Windows by using Windows Media Player](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_MWP)  
@@ -103,7 +102,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   [Search for and play media files by using the Shared Folders feature of the Launchpad](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_SharedFolders)  
   
 -   [Search for and play shared media by using Remote Web Access](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_RWA2)  
-=======
+
 -   [Search for and play media files from a computer that is running Windows Media Center](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_WMC)  
   
 -   [Search for and play media files from a computer that is running Windows by using Windows Media Player](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_MWP)  
@@ -115,7 +114,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   [Search for and play media files by using the Shared Folders feature of the Launchpad](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_SharedFolders)  
   
 -   [Search for and play shared media by using Remote Web Access](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_RWA2)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ####  <a name="BKMK_WMC"></a> Search for and play media files from a computer that is running Windows Media Center  
   
@@ -196,20 +195,20 @@ Digital media refers to audio, video, and photo content that has been digitally 
 4.  Use whatever method you like to search for the media file that you want to play.  
   
     > [!NOTE]
-<<<<<<< HEAD
+
     >  For information about the various search methods, see [Search for and play media files on Windows Server 2012 Essentials from a computer or digital media player on the network](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2.1).  
-=======
+
     >  For information about the various search methods, see [Search for and play media files on Windows Server 2012 Essentials from a computer or digital media player on the network](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2.1).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 5.  When the media file name appears, click the file name to play the media.  
   
 ##  <a name="BKMK_4"></a> Add digital media files to the server  
-<<<<<<< HEAD
+
  The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the  Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the  Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play and share digital media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2).  
-=======
+
  The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the  Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the  Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play and share digital media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 > [!NOTE]
 >  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows Phone, see the blog post [My Server phone app for Windows Server 2012 Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).  
@@ -218,11 +217,11 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
 1.  Use one of the following methods to sign in to the server:  
   
-<<<<<<< HEAD
+
     1.  For information about logging on to Remote Web Access, see [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
-=======
+
     1.  For information about logging on to Remote Web Access, see [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
     2.  For information about signing in with Launchpad, see [Launchpad Overview](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md).  
   
@@ -287,16 +286,16 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
 -   [Manage Digital Media](../manage/Manage-Digital-Media-in-Windows-Server-2012-Essentials.md)  
   
-<<<<<<< HEAD
+
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
-=======
+
 -   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

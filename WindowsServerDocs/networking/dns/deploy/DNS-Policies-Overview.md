@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
+ms.author: jamesmci
 author: jamesmci
 ---
 # DNS Policies Overview

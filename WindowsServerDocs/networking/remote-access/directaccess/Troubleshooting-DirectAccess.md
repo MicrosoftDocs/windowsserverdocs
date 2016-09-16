@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Troubleshooting DirectAccess

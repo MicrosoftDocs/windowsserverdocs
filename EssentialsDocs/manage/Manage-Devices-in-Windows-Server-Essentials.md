@@ -2,18 +2,17 @@
 title: "Manage Devices in Windows Server Essentials"
 ms.custom: na
 ms.date: 01/14/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 caps.latest.revision: 11
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Devices in Windows Server Essentials
@@ -104,7 +103,7 @@ manager: stevenka
  When you remove a computer from a server that is running Windows Server Essentials by using the Dashboard, it is no longer managed by the server. As a result, the server will stop creating computer backups or monitor its health after its removal from the network.  
   
 > [!NOTE]
->  Removal of a computer from the server does not disconnect the computer from the network. The computer can still access resources on the network in the same way it could before being connected to the server. To prevent the computer from accessing server resources and to disconnect it from the server, you must remove the computer from the domain. In addition, removal of the computer from the server does not automatically uninstall the Connector software or the Launchpad from the computer that is being removed. You must manually remove the Connector software from the computer. For more information, see the section “Uninstall the Connector software�? in [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md).  
+>  Removal of a computer from the server does not disconnect the computer from the network. The computer can still access resources on the network in the same way it could before being connected to the server. To prevent the computer from accessing server resources and to disconnect it from the server, you must remove the computer from the domain. In addition, removal of the computer from the server does not automatically uninstall the Connector software or the Launchpad from the computer that is being removed. You must manually remove the Connector software from the computer. For more information, see the section “Uninstall the Connector software�? in [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md).  
   
 #### To remove a computer from the network by using the Dashboard  
   
@@ -181,10 +180,10 @@ manager: stevenka
   
 -   [Manage Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
--   [Use Remote Web Access](../Topic/Use%20Remote%20Web%20Access%20in%20Windows%20Server%20Essentials.md)  
+-   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
 -   [Manage user accounts using the Dashboard](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)  
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

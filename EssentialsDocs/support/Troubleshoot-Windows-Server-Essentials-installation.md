@@ -2,18 +2,17 @@
 title: "Troubleshoot Windows Server Essentials installation"
 ms.custom: na
 ms.date: 07/31/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: ecf19216-7aac-4aca-839a-342ac28f5329
 caps.latest.revision: 9
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -29,15 +28,15 @@ translation.priority.ht:
 # Troubleshoot Windows Server Essentials installation
 This topic provides troubleshooting for issues that occur when installing  Windows Server 2012 Essentials. Guidance is provided in the following areas:  
   
-<<<<<<< HEAD
+
 -   [General troubleshooting steps](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
   
 -   [Troubleshoot driver issues](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
-=======
+
 -   [General troubleshooting steps](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
   
 -   [Troubleshoot driver issues](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 > [!NOTE]
 >  For the most current troubleshooting information from the  Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  

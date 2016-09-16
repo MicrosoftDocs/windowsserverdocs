@@ -5,8 +5,9 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: 
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: identity-adds
+ms.author: markvi
+  
 ms.tgt_pltfrm: na
 ms.assetid: 04f9603d-b4a8-4a33-af4a-257aca2f3279
 author: Femila

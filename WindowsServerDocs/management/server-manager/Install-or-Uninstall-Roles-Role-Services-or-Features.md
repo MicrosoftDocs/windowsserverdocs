@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-management-and-automation
+ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Install or Uninstall Roles, Role Services, or Features
 
 >Applies To: Windows Server Technical Preview

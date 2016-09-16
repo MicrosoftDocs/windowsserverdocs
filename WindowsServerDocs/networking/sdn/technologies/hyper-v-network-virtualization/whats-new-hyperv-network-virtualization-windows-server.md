@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
+ms.author: vhorne
 author: vhorne
 ---
 # What&#39;s New in Hyper-V Network Virtualization in Windows Server Technical Preview

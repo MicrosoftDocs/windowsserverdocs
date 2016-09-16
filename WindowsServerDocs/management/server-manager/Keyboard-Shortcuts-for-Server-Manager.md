@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Keyboard Shortcuts for Server Manager
 
 >Applies To: Windows Server Technical Preview

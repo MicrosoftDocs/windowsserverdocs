@@ -2,18 +2,17 @@
 title: "Install Windows Server Essentials"
 ms.custom: na
 ms.date: 05/20/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: fdf020cd-3184-4886-9f9d-7d729a89057e
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Install Windows Server Essentials
@@ -21,7 +20,7 @@ The following documents provide step-by-step instructions for installing and con
   
 ## Install Windows Server 2012 R2 Essentials  
   
-<<<<<<< HEAD
+
 -   [System Requirements for Windows Server 2012 R2 Essentials](System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
   
 -   [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
@@ -47,7 +46,7 @@ The following documents provide step-by-step instructions for installing and con
 -   [Hosted Windows Server 2012 Essentials](Hosted-Windows-Server-2012-Essentials.md)  
   
 -   [Windows Server 2012 Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)  
-=======
+
 -   [System Requirements for Windows Server 2012 R2 Essentials](../install/System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
   
 -   [Install and Configure Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
@@ -73,7 +72,7 @@ The following documents provide step-by-step instructions for installing and con
 -   [Hosted Windows Server 2012 Essentials](../install/Hosted-Windows-Server-2012-Essentials.md)  
   
 -   [Windows Server 2012 Essentials - Assessment and Deployment Kit](../install/Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## End-to-end solution guides  
   

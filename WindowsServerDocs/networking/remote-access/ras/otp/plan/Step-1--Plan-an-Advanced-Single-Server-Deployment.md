@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Step 1 Plan an Advanced Single Server Deployment

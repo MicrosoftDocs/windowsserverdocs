@@ -2,18 +2,17 @@
 title: "Step 5: Enable folder redirection on the Destination Server for Windows Server 2012 R2 Essentials migration"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 caps.latest.revision: 11
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Step 5: Enable folder redirection on the Destination Server for Windows Server 2012 R2 Essentials migration
@@ -48,10 +47,10 @@ If folder redirection is enabled on the Source Server, you can enable folder red
  To apply the change for the folder redirection, network users must log off their computers, and then log back on. This ensures the transfer of all redirected folders to the Destination Server.  
   
 ## Next steps  
- You have enabled folder redirection on the Destination Server. Now go to [Step 6: Demote and remove the Source Server from the new Windows Server 2012 R2 Essentials network](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md).  
+ You have enabled folder redirection on the Destination Server. Now go to [Step 6: Demote and remove the Source Server from the new Windows Server 2012 R2 Essentials network](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-R2-Essentials-network.md).  
   
-<<<<<<< HEAD
+
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
-=======
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+

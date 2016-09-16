@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
+ms.author: jamesmci
 author: jamesmci
 ---
 # Choosing a BranchCache Design
