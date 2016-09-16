@@ -5,7 +5,6 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - techgroup-networking
   - networking
 ms.tgt_pltfrm: na
 ms.topic: article
