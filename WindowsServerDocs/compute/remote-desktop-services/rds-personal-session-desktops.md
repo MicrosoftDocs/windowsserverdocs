@@ -10,14 +10,14 @@ ms.topic: article
 ms.assetid: df3f3d58-2ae6-4816-9c59-1821262b508b
 author: lizap
 ms.author: elizapo
-ms.date: 09/14/2016
+ms.date: 09/16/2016
 manager: dongill
 ---
 # Use personal session desktops with Remote Desktop Services
 
 >Applies To: Windows Server Technical Preview
 
-You can deploy sever-based personal desktops in a cloud-computing environment by using personal session desktops.  (A cloud-computing environment has a separation between the fabric Hyper-V servers and the guest virtual machines, such as Microsoft Azure Cloud or the Microsoft Cloud Platform.) The personal session desktop capability extends the session-based desktop deployment scenario in Remote Desktop Services to create a new type of session collection where each user is assigned to their own personal session host with administrative rights. 
+You can deploy server-based personal desktops in a cloud-computing environment by using personal session desktops.  (A cloud-computing environment has a separation between the fabric Hyper-V servers and the guest virtual machines, such as Microsoft Azure Cloud or the Microsoft Cloud Platform.) The personal session desktop capability extends the session-based desktop deployment scenario in Remote Desktop Services to create a new type of session collection where each user is assigned to their own personal session host with administrative rights. 
 
 Use the following information to create and manage a personal session desktop collection.
 
