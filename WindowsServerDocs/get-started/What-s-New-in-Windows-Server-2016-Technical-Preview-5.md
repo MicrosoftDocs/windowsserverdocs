@@ -1,11 +1,11 @@
 ---
-title: What's New in Windows Server 2016 Technical Preview 5
+title: What's New in Windows Server 2016
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 08/09/2016
+ms.date: 09/16/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,31 +14,29 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# What's New in Windows Server 2016 Technical Preview 5
->Applies To: Windows Server Technical Preview
+# What's New in Windows Server 2016
+>Applies To: Windows Server 2016
 
-The content in this section describes what's new and changed in Windows Server&reg; 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. There are several new additions in each of these areas: [Compute](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Compute), [Identity](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Identity), [Management and Automation](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_ManagAuto), [Networking](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Networking), [Security](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Security), and [Storage](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Storage).  
-  
-> [!IMPORTANT]  
-> This preview release should not be used in production environments.  
+The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. There are several new additions in each of these areas: [Compute](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Compute), [Identity](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Identity), [Management and Automation](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_ManagAuto), [Networking](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Networking), [Security](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Security), and [Storage](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Storage).  
+   
   
 ## <a name="BKMK_Compute"></a>Compute  
 The Compute area includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.  
   
 ### General  
-**New for Technical Preview 5**: Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
+Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
   
 ### Hyper-V  
 -   [What's new in Hyper-V on Windows Server 2016 Technical Preview](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016 Technical Preview, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server Technical Preview.  
   
--   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  **new for Technical Preview 5**, Windows Server 2016 Technical Preview container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
+-   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
   
 ### Nano Server  
-What's New in [Nano Server](https://technet.microsoft.com/library/mt126167.aspx). **Starting in Technical Preview 5**, Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality as well as support for different Windows Server editions.   
+What's New in [Nano Server](https://technet.microsoft.com/library/mt126167.aspx). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality as well as support for different Windows Server editions.   
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair configuration of WinRM.  
   
 ### Remote Desktop Services  
-[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). With the release of **Technical Preview 5**, deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
+[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). Deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
   
 ## <a name="BKMK_Identity"></a>Identity and Access  
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
@@ -65,28 +63,40 @@ Windows PowerShell 5.0 includes significant new features, including support for 
 ## <a name="BKMK_Networking"></a>Networking  
 This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server Technical Preview.  
   
-**Technical Preview 5** adds improvements in three main areas. You can now both mirror and route traffic to new or existing virtual appliances. Together with a distributed firewall and Network security groups, this enables you to dynamically segment and secure workloads in a manner similar to Azure. Second, you can deploy and manage the entire Software-defined networking (SDN) stack using System Center Virtual Machine Manager. Finally, you can use Docker to manage Windows Server container networking, and associate SDN policies not only with virtual machines but containers as well. For more information, see [Plan Software Defined Networking Deployment](https://technet.microsoft.com/library/mt605207.aspx).  
+### Software-Defined Networking
+You can now both mirror and route traffic to new or existing virtual appliances. Together with a distributed firewall and Network security groups, this enables you to dynamically segment and secure workloads in a manner similar to Azure. Second, you can deploy and manage the entire Software-defined networking (SDN) stack using System Center Virtual Machine Manager. Finally, you can use Docker to manage Windows Server container networking, and associate SDN policies not only with virtual machines but containers as well. For more information, see [Plan Software Defined Networking Deployment](https://technet.microsoft.com/library/mt605207.aspx).
+
+### TCP performance improvements
+The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
+
+TCP Tail Loss Probe (TLP) and Recent ACKnowledgement (RACK)
+
+In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgement (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.  
   
 ## <a name="BKMK_Security"></a>Security  
 Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 Technical Preview generally, see [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx).  
   
 ### Just Enough Administration  
-Just Enough Administration in Windows Server Technical Preview is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to/from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).  
+Just Enough Administration in Windows Server Technical Preview is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to/from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).
+
+### Remote Credential support
+Credential Guard support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/en-us/itpro/windows/keep-secure/remote-credential-guard).   
   
 ### Shielded Virtual Machines  
-**Starting in Windows Server 2016 Technical Preview 5**, a number of new features are available for shielded virtual machines:  
+Windows Server 2016 offers a number of new features are available for shielded virtual machines:  
   
 - New "Encryption Supported" mode that offers more protections than for an ordinary virtual machine, but less than "Shielded" mode, while still supporting vTPM, disk encryption, Live Migration traffic encryption, and other features, including direct fabric administration conveniences such as virtual machine console connections and Powershell Direct.  
   
 - Full support for converting existing non-shielded Generation 2 virtual machines to shielded virtual machines, including automated disk encryption.  
-  
 - Hyper-V Virtual Machine Manager can now view the fabrics upon which a shielded virtual is authorized to run, providing a way for the fabric administrator to open a shielded virtual machine's key protector (KP) and view the fabrics it is permitted to run on.  
   
 - You can switch Attestation modes on a running Host Guardian Service. Now you can switch on the fly between the less secure but simpler Active Directory-based attestation and TPM-based attestation.  
   
 - End-to-end diagnostics tooling based on Windows PowerShell that is able to detect misconfigurations or errors in both guarded Hyper-V hosts and the Host Guardian Service.  
   
-- A recovery environment that offers a means to securely troubleshoot and repair shielded virtual machines within the fabric in which they normally run while offering the same level of protection as the shielded virtual machine itself.  
+- A recovery environment that offers a means to securely troubleshoot and repair shielded virtual machines within the fabric in which they normally run while offering the same level of protection as the shielded virtual machine itself.
+
+- Host Guardian Service support for existing safe Active Directory – you can direct the Host Guardian Service to use an existing Active Directory forest as its Active Directory instead of creating its own Active Directory instance 
   
 For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](http://aka.ms/shieldedvms).  
   
