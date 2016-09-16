@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: manage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d33d4506-2dad-404e-a93e-0e0780dc1f85
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Management
 
 >Applies To: Windows Server Technical Preview
