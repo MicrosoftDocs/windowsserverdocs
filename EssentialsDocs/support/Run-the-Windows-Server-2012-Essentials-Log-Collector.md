@@ -2,18 +2,17 @@
 title: "Run the Windows Server 2012 Essentials Log Collector"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 0d340223-fa24-4c75-ba8e-b654feb120ab
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Run the Windows Server 2012 Essentials Log Collector

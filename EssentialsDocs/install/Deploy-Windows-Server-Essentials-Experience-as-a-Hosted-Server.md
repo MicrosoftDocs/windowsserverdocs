@@ -2,24 +2,23 @@
 title: "Deploy Windows Server Essentials Experience as a Hosted Server"
 ms.custom: na
 ms.date: 08/29/2016
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Deploy Windows Server Essentials Experience as a Hosted Server
 This document includes information that is specific to hosters who intend to deploy  Windows Server 2012 R2 with the Windows Server Essentials Experience role (referred to as Windows Server Essentials in the remainder of the document) installed in their lab and intend to offer Windows Server Essentials Experience as a service to their customers. This document includes the following sections:  
   
-<<<<<<< HEAD
+
 -   [Windows Server Essentials Experience overview](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
   
 -   [Benefits of hosting Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
@@ -43,31 +42,31 @@ This document includes information that is specific to hosters who intend to dep
 -   [Test scenarios](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
   
 -   [Support information](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)  
-=======
--   [Windows Server Essentials Experience overview](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
+
+-   [Windows Server Essentials Experience overview](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
   
--   [Benefits of hosting Windows Server Essentials Experience](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
+-   [Benefits of hosting Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
   
--   [Supported deployment options](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
+-   [Supported deployment options](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
   
--   [Supported network topologies](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
+-   [Supported network topologies](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
   
--   [Customize the image of Windows Server Essentials Experience role](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
+-   [Customize the image of Windows Server Essentials Experience role](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
   
--   [Automate the deployment of Windows Server Essentials Experience](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
+-   [Automate the deployment of Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
   
--   [Migrate data from Windows Small Business Server to Windows Server Essentials Experience](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
+-   [Migrate data from Windows Small Business Server to Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
   
--   [Perform common tasks by using Windows PowerShell](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
+-   [Perform common tasks by using Windows PowerShell](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
   
--   [Email integration with Windows Server Essentials](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)  
+-   [Email integration with Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)  
   
--   [Monitor and manage by using native tools](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
+-   [Monitor and manage by using native tools](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
   
--   [Test scenarios](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
+-   [Test scenarios](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
   
--   [Support information](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+-   [Support information](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)  
+
   
 ##  <a name="BKMK_WSEEOverview"></a> Windows Server Essentials Experience overview  
  The  Windows Server Essentials Experience is a server role that is available in the  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter. When the  Windows Server Essentials Experience role is installed on a server running  Windows Server 2012 R2, the customer can take advantage of all the features that are available in  Windows Server 2012 R2 Essentials without the locks and limits. The  Windows Server Essentials Experience enables the following cross-premises solutions for small and midsize businesses:  
@@ -100,11 +99,11 @@ This document includes information that is specific to hosters who intend to dep
   
  We recommend that you first deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, and then install the  Windows Server Essentials Experience role. With this deployment method, you get all the functionalities of  Windows Server 2012 R2 Essentials edition, without the locks and limits.  
   
-<<<<<<< HEAD
+
  For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
-=======
- For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+ For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
+
   
  For more information about requirements, see [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d).  
   
@@ -322,7 +321,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
 ##  <a name="BKMK_Scenarios"></a> Test scenarios  
  From the hosting perspective, we recommend that you test the following scenarios:  
   
-<<<<<<< HEAD
+
 -   [Server deployment](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)  
   
 -   [Server configuration](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)  
@@ -330,15 +329,15 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
 -   [Server management](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)  
   
 -   [Client experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)  
-=======
--   [Server deployment](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)  
+
+-   [Server deployment](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)  
   
--   [Server configuration](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)  
+-   [Server configuration](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)  
   
--   [Server management](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)  
+-   [Server management](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)  
   
--   [Client experience](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+-   [Client experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)  
+
   
 ###  <a name="BKMK_ServerDeploy"></a> Server deployment  
  You can test the following server deployment scenarios:  
@@ -409,12 +408,8 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../Topic/What's%20New%20in%20Windows%20Server%20Essentials.md)  
-  
-<<<<<<< HEAD
+-   [What's New in Windows Server Essentials](../What-s-New-in-Windows-Server-Essentials.md)  
+
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
-=======
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
-  
--   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Topic/Windows%20Server%202012%20R2%20Essentials%20and%20Windows%20Server%202012%20Essentials.md)
+
+-   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)

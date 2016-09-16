@@ -2,12 +2,18 @@
 title: Create a Rule to Send Claims Using a Custom Rule
 description:
 author: billmath
+ms.author: billmath
+ms.author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
+ms.author: billmath
+ms.author: billmath
+ms.author: billmath
 ms.author: billmath
 ---
 

@@ -8,11 +8,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 422f53b9-de94-4479-9b32-2ccc4c41aeb0
 caps.latest.revision: 4
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 ---
 # WSE_LogCollector.copy
-This document is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.  
+This document is provided “as-is�?. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.  
   
  This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  
   

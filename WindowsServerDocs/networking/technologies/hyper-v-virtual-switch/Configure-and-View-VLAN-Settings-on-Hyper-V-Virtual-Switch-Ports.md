@@ -4,11 +4,11 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-hv-switch
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69e0e28a-98ae-4ade-bd27-ce2ad7eb310f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure and View VLAN Settings on Hyper-V Virtual Switch Ports

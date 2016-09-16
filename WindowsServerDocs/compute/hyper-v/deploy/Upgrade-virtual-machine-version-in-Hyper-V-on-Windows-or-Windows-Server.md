@@ -4,9 +4,7 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
@@ -25,7 +23,7 @@ Make the latest Hyper-V features available on your virtual machines by upgrading
 - You upgrade the cluster functional level.   
 - You're sure that you won't need to move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server.  
   
-For more information, see [Cluster Operating System Rolling Upgrade ](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Upgrading Windows Server 2012 R2 clusters to Windows Server 2016 Technical Preview in VMM](https://technet.microsoft.com/library/mt445417.aspx).  
+For more information, see [Cluster Operating System Rolling Upgrade ](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Upgrading Windows Server 2012 R2 clusters to Windows Server 2016 Technical Preview in VMM](https://technet.microsoft.com/library/mt445417.aspx).  
     
 Step 1: Check the virtual machine configuration versions  
 ---  
