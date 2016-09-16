@@ -2,15 +2,10 @@
 title: Wireless Access Deployment Process
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-networking
-  - networking
-ms.tgt_pltfrm: na
+ms.technology: networking
 ms.topic: article
-ms.assetid: 
 author: jamesmci
+ms.author: jamesmci
 ---
 # Wireless Access Deployment Process
 The process that you use to deploy wireless access occurs in these stages:
@@ -46,7 +41,7 @@ You can also force Group Policy to refresh while logged on to a computer by runn
 
 ##Stage 4 – NPS server configuration
 
-Use a configuration wizard in NPS to add wireless access points as RADIUS clients, and to create the network policies that NPS uses when processing connection requests. 
+Use a configuration wizard in NPS to add wireless access points as RADIUS clients, and to create the network policies that NPS uses when processing connection requests.
 
 When using the wizard to create the network policies, specify PEAP as the EAP type, and the wireless users security group that was created in the second stage.
 
