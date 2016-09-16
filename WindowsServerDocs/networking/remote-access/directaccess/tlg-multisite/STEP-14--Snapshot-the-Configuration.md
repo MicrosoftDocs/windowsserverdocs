@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e17d886-f216-400e-bd31-808aceb88033
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 14 Snapshot the Configuration

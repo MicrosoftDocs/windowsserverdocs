@@ -2,18 +2,17 @@
 title: "Use the Windows Server 2012 Essentials Log Collector"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Use the Windows Server 2012 Essentials Log Collector
@@ -28,15 +27,15 @@ When you are troubleshooting computer issues, a representative from Microsoft Cu
   
  To install and run the Log Collector, perform the steps in the following topics:  
   
-<<<<<<< HEAD
+
 1.  [Install the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md)  
   
 2.  [Run the Log Collector](Run-the-Windows-Server-2012-Essentials-Log-Collector.md)  
-=======
+
 1.  [Install the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md)  
   
 2.  [Run the Log Collector](../support/Run-the-Windows-Server-2012-Essentials-Log-Collector.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## Environment information collected  
  For each network computer or server that you specify, the Log Collector gathers the following environment information and places it into the log collection file.  
@@ -159,8 +158,8 @@ When you are troubleshooting computer issues, a representative from Microsoft Cu
   
 ## See also  
   
-<<<<<<< HEAD
+
 -   [Troubleshoot Log Collector Errors](Troubleshoot-Windows-Server-2012-Essentials-Log-Collector-Errors.md)
-=======
+
 -   [Troubleshoot Log Collector Errors](../support/Troubleshoot-Windows-Server-2012-Essentials-Log-Collector-Errors.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

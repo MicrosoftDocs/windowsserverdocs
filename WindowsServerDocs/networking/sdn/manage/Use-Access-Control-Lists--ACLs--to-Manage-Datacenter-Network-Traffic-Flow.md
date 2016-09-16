@@ -4,11 +4,11 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a7ac5af-85e9-4440-a631-6a3a38e9015d
+ms.author: jamesmci
 author: jamesmci
 ---
 # Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow

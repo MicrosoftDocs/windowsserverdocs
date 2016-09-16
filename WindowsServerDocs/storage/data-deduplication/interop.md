@@ -1,16 +1,11 @@
 ---
 title: Data Deduplication Interoperability
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: eldenc
 ms.author: wgries
+ms.date: 09/15/2016
 --- 
 
 # Data Deduplication Interoperability
@@ -21,11 +16,11 @@ ms.author: wgries
 Accessing data over the network can be optimized by enabling [BranchCache](../../networking/branchcache/branchcache.md) on servers and clients. When a BranchCache-enabled system communicates over a WAN with a remote file server that is running data deduplication, all of the deduplicated files are already indexed and hashed, so requests for data from a branch office are quickly computed. This is similar to preindexing or prehashing a BranchCache-enabled server.
 
 ### <a id="supported-clusters"></a>Failover Clusters
-[Failover Clustering](../../compute/failover-clustering/failover-clustering.md) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes: 
+[Failover Clustering](../../failover-clustering/failover-clustering-overview.md) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes: 
 * [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Deduplication schedules are managed by using the task scheduler and when a cluster is formed, the schedule information is put into the cluster scheduler so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
-* Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
-* Data Deduplication is fully supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-windows-server-2016.md) NTFS-formatted volumes (mirror or parity). Deduplication isn't supported on volumes with multiple tiers, see [Data Deduplication on ReFS](interop.md#unsupported-refs) for more information.
+* Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
+* Data Deduplication is fully supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md) NTFS-formatted volumes (mirror or parity). Deduplication isn't supported on volumes with multiple tiers, see [Data Deduplication on ReFS](interop.md#unsupported-refs) for more information.
 
 ### <a id="supported-dfsr"></a>DFS Replication
 Data Deduplication works fine with Distributed File System (DFS) Replication. Optimizing or unoptimizing a file will not trigger a replication because the file does not change. DFS Replication uses Remote Differential Compression (RDC), not the chunks in the chunk store, for over-the-wire savings. The files on the replica can also be optimized by using deduplication if the replica is using Data Deduplication.

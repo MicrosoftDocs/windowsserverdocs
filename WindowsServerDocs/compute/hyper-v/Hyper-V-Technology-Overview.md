@@ -4,9 +4,7 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
@@ -86,7 +84,7 @@ Hyper-V also has tools for management and connectivity. You can install these on
 ## Related technologies  
 These are some technologies from Microsoft that are often used with Hyper-V:  
   
-* [Failover Clustering](../failover-clustering/whats-new-failover-clustering-windows-server.md)  
+* [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)  
 * [Remote Desktop Services](../remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
 * [Virtual Machine Manager](https://technet.microsoft.com/library/en-us/system-center-docs/vmm/virtual-machine-manager)  
   

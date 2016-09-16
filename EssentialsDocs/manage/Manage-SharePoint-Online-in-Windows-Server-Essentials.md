@@ -2,24 +2,23 @@
 title: "Manage SharePoint Online in Windows Server Essentials"
 ms.custom: na
 ms.date: 06/18/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 282f3634-6de6-4691-803c-df6c3c16660d
 caps.latest.revision: 23
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage SharePoint Online in Windows Server Essentials
 You can manage your  SharePoint Online libraries and team sites from the Dashboard, without signing in to  Office 365, if you integrate  Office 365 with your  Windows Server 2012 R2 Essentials server. You get  SharePoint Online libraries and team sites with any  Office 365 business plan. [Find out how to integrate Office 365 with your server](Manage-Office-365-in-Windows-Server-Essentials.md)  
   
- As a bonus, your users will be able to use the My Server 2012 R2 app to access files in your  SharePoint Online libraries from anywhere using their mobile device or Windows phone. [Where can I get the My Server app?](../Topic/Use%20the%20My%20Server%20App%20to%20Connect%20to%20Windows%20Server%20Essentials.md)  
+ As a bonus, your users will be able to use the My Server 2012 R2 app to access files in your  SharePoint Online libraries from anywhere using their mobile device or Windows phone. [Where can I get the My Server app?](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md)  
   
  Haven't tried SharePoint yet? [What you can do now](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/get-started-with-sharepoint-2013-HA102772778.aspx)  
   
@@ -56,16 +55,14 @@ You can manage your  SharePoint Online libraries and team sites from the Dashboa
   
 ## Other things you might want to do  
   
--   [Use a My Server app to work with your SharePoint Online libraries from anywhere](../Topic/Use%20the%20My%20Server%20App%20to%20Connect%20to%20Windows%20Server%20Essentials.md)  
+-   [Use a My Server app to work with your SharePoint Online libraries from anywhere](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md)  
   
 -   [Learn more about assigning permissions for SharePoint team sites](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924)  
   
 -   [Find out what you can do with SharePoint features](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/get-started-with-sharepoint-2013-HA102772778.aspx)  
   
--   [Take a look at the Office 365 business plans that are available](http://office.microsoft.com/business/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_what%20is%20office%20365%20for_Text)  
+-   [Take a look at the Office 365 business plans that are available](http://office.microsoft.com/business/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_what-is-office-365-for_Text)  
   
 -   [Integrate Office 365 with your server](Manage-Office-365-in-Windows-Server-Essentials.md)  
-  
--   [Create online accounts for your users from the Dashboard](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md)  
   
 -   [Manage other Microsoft online services from the Dashboard](Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md)
