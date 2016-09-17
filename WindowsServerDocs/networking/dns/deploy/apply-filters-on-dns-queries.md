@@ -35,12 +35,13 @@ Another example is to create a query filter Allow List that allows only a specif
 You can create query filters with any logical combination (AND/OR/NOT) of the following criteria.
 
 |Name|Description|
+|-----------------|---------------------|
 |Client Subnet|Name of a predefined client subnet. Used to verify the subnet from which the query was sent.|
-|Transport Protocol|Transport protocol used in the query. Possible entries are UDP and TCP.|
-|Internet Protocol|Network protocol used in the query. Possible entries are IPv4 and IPv6.|
-|Server Interface IP address|IP address of the network interface of the DNS server which received the DNS request|
-|FQDN|FQDN of record in the query, with the possibility of using a wild card.|
-|Query Type|Type of record being queried \(A, SRV, TXT etc.\)|
+|Transport Protocol|Transport protocol used in the query. Possible values are UDP and TCP.|
+|Internet Protocol|Network protocol used in the query. Possible values are IPv4 and IPv6.|
+|Server Interface IP address|IP address of the network interface of the DNS server that received the DNS request|
+|FQDN|Fully Qualified Domain Name of record in the query, with the possibility of using a wild card.|
+|Query Type|Type of record being queried \(A, SRV, TXT, etc.\)|
 |Time of Day|Time of day the query is received.|
 
 The following examples show you how to create filters for DNS policy that either block or allow DNS name resolution queries.
