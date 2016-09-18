@@ -44,11 +44,11 @@ Node Fairness is enabled by default and when load balancing occurs can be config
 
 1. Right-click on your cluster name and select the “Properties” option
 
-![Graphic of selecting property for cluster through Failover Cluster Manager](media\detailed-VM-load-balancing-2.jpg)
+![Graphic of selecting property for cluster through Failover Cluster Manager](media/vm-load-balancing/detailed-VM-load-balancing-2.jpg)
 
 2.  Select the “Balancer” pane
 
-![Graphic of selecting the balancer option through Failover Cluster Manager](media\detailed-VM-load-balancing-3.jpg)
+![Graphic of selecting the balancer option through Failover Cluster Manager](media/vm-load-balancing/detailed-VM-load-balancing-3.jpg)
 
 **Using PowerShell:**
 
@@ -66,6 +66,3 @@ Run the following:
 ## Node Fairness vs. SCVMM Dynamic Optimization
 
 The node fairness feature, provides in-box functionality, which is targeted towards deployments without System Center Virtual Machine Manager (SCVMM). SCVMM Dynamic Optimization is the recommended mechanism for balancing virtual machine load in your cluster for SCVMM deployments. SCVMM automatically disables the Node Fairness feature when Dynamic Optimization is enabled.
-
-
-

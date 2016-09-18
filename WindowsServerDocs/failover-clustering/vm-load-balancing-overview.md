@@ -29,7 +29,7 @@ VM Load Balancing is a new in-box feature in Windows Server 2016 that allows you
 ## <a id="feature-in-action"></a>The Feature in Action
 
 ### <a id="new-node-added"></a>A new node is added to your private cloud
-![Graphic of a new node being added to your private cloud](media/overview-VM-load-balancing-1.png)
+![Graphic of a new node being added to your private cloud](media/vm-load-balancing/overview-VM-load-balancing-1.png)
 
 When you add new capacity to your private cloud, the VM Load Balancing feature automatically balances capacity from the existing nodes in your private cloud, to the newly added capacity. Here is the flow of the steps:
 
@@ -39,7 +39,7 @@ When you add new capacity to your private cloud, the VM Load Balancing feature a
 4. VMs are Live Migrated (with no down time) from a node exceeding threshold to a newly added node in the private cloud.
 
 ### <a id="recurring-load-balancing"></a>Recurring load balancing
-![Graphic of a recurring VM load balancing](media/overview-VM-load-balancing-2.png)
+![Graphic of a recurring VM load balancing](media/vm-load-balancing/overview-VM-load-balancing-2.png)
 
 When configured for periodic balancing, the pressure on the cluster nodes is evaluated for balancing every 30 minutes. Alternately, the pressure can be evaluated on-demand. Here is the flow of the steps:
 
