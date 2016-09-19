@@ -1,5 +1,5 @@
 ---
-title: Virtual Machine Load Balancing Overview
+title: Virtual Machine Load Balancing overview
 +ms.prod: windows-server-threshold
 +ms.technology: storage-failover-clustering
 +ms.topic: article
@@ -8,7 +8,7 @@ title: Virtual Machine Load Balancing Overview
 +ms.author: subhatt 
 +ms.date: 09/19/2016 
 --- 
-# Virtual Machine Load Balancing Overview
+# Virtual Machine Load Balancing overview
 > Applies to Windows Server 2016
 
 A key consideration for private cloud deployments is the capital expenditure (<abbr title="capital expenditure">CapEx</abbr>) required to go into production. It is very common to add redundancy to private cloud deployments to avoid under-capacity during peak traffic in production, but this increases <abbr title="capital expenditure">CapEx</abbr>. The need for redundancy is driven by unbalanced private clouds where some nodes are hosting more Virtual Machines (<abbr title="virtual machines">VMs</abbr>) and others are underutilized (such as a freshly rebooted server).
