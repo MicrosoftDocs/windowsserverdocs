@@ -31,6 +31,7 @@
 ##### [VM Generation](compute/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 ##### [Networking](compute/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.md)
 ##### [Scalability](compute/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
+##### [Security](compute/hyper-v/plan/plan-for-hyper-v-security-in-Windows-Server-2016.md)
 #### Deploy
 ##### [Set up hosts for live migration](compute/hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)
 ##### [Upgrade virtual machine version](compute/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
