@@ -76,11 +76,12 @@ In order to improve TCP behavior when recovering from packet loss we have implem
 Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx).  
   
 ### Just Enough Administration  
-Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).
+Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default For more details, see [JEA on GitHub](http://aka.ms/JEA).
 
-### Remote Credential Guard
+###Credential Guard
 Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. See [Protect derived domain credentials with Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
 
+###Remote Credential Guard
 Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).   
   
 ###Device Guard (Code Integrity)
