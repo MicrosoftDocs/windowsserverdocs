@@ -1,6 +1,6 @@
 ---
 title: Privileged Access Workstations
-ms.custom: na
+ms.technology: security
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -8,6 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 93589778-3907-4410-8ed5-e7b6db406513
 manager:
+ms.author: YuriDio
 author: YuriDio
 ---
 # Privileged Access Workstations
@@ -57,7 +58,7 @@ The PAW approach is an extension of the well-established recommended practice to
 
 > [!NOTE]
 > Microsoft IT uses PAWs (internally referred to as "secure admin workstations", or SAWs) to manage secure access to internal high-value systems within Microsoft.  This guidance has additional details on PAW usage at Microsoft in the section "How Microsoft uses admin workstations"
-> 
+>
 > For more detailed information on this high value asset environment approach, please refer to the article [Protecting high-value assets with secure admin workstations](https://msdn.microsoft.com/en-us/library/mt186538.aspx).
 
 This PAW guidance is intended to help you implement this capability for protecting high value accounts such as high-privileged IT administrators and high sensitivity business accounts. The guidance helps you:
@@ -134,7 +135,7 @@ Providing a PAW to access these solutions enables you to gain the security benef
 ![](../media/Privileged-Access-Workstations/PAWFig8.JPG)
 
 > [!NOTE]
-> These systems should be classified at the highest tier of the privilege they manage and be protected at or above that level of security. These are commonly configured to manage Tier 0 solutions and Tier 0 assets and should be classified at Tier 0. 
+> These systems should be classified at the highest tier of the privilege they manage and be protected at or above that level of security. These are commonly configured to manage Tier 0 solutions and Tier 0 assets and should be classified at Tier 0.
 > For more information on the tier model, see [http://aka.ms/tiermodel](http://aka.ms/tiermodel) For more information on Tier 0 groups, see Tier 0 equivalency in [Securing Privileged Access Reference Material](../securing-privileged-access/Securing-Privileged-Access-Reference-Material.md).
 
 For more information on deploying Microsoft Identity Manager (MIM) privileged access management (PAM), see [http://aka.ms/mimpamdeploy](http://aka.ms/mimpamdeploy)
@@ -158,7 +159,7 @@ In order to provide the greatest security, PAWs should always run the most up-to
 
 > [!NOTE]
 > Organizations without access to Windows 10 Enterprise can use Windows 10 Pro, which includes many of the critical foundational technologies for PAWs, including Trusted Boot, BitLocker, and Remote Desktop.  Education customers can use Windows 10 Education.  Windows 10 Home should not be used for a PAW.
-> 
+>
 > For a comparison matrix of the different editions of Windows 10, read [this article](https://www.microsoft.com/en-us/WindowsForBusiness/Compare).
 
 The security controls in PAW are focused on mitigating the highest impact and most likely risks of compromise. These include mitigating attacks on the environment and mitigating risks that the PAW controls may degrade over time:
@@ -174,11 +175,11 @@ The security controls in PAW are focused on mitigating the highest impact and mo
 -   **Physical attacks** - Because PAWs can be physically mobile and used outside of physically secure facilities, they must be protected against attacks that leverage unauthorized physical access to the computer.
 
 > [!NOTE]
-> A PAW will not protect an environment from an adversary that has already gained administrative access over an Active Directory Forest. 
+> A PAW will not protect an environment from an adversary that has already gained administrative access over an Active Directory Forest.
 > Because many existing implementations of Active Directory Domain Services have been operating for years at risk of credential theft, organizations should assume breach and consider the possibility that they may have an undetected compromise of domain or enterprise administrator credentials. An organization that suspects domain compromise should consider the use of professional incident response services.
-> 
+>
 > For more information on response and recovery guidance, see the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](http://www.microsoft.com/pth), version 2.
-> 
+>
 > Visit [Microsoft's Incident Response and Recovery services](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx) page for more information.
 
 ### PAW Hardware Profiles
@@ -276,7 +277,7 @@ See the [Tier model page](http://aka.ms/tiermodel) for more information on the T
 |Embedded Operating System|No|While many hardening steps from PAW can be used for embedded operating systems, a custom solution would need to be developed for hardening in this scenario.|
 
 > [!NOTE]
-> **Combination scenarios** some personnel may have administrative responsibilities that span multiple scenarios. 
+> **Combination scenarios** some personnel may have administrative responsibilities that span multiple scenarios.
 > In these cases, the key rules to keep in mind are that the Tier model rules must be followed at all times. See the Tier model page for more information.
 
 > [!NOTE]
@@ -389,10 +390,10 @@ Phase 1 includes the following steps:
 
         > [!NOTE]
         > Do not add the same user account or group to both PAW Users and PAW Maintenance.  The PAW security model is based partly on the assumption that the PAW user account has privileged rights on managed systems or over the PAW itself, but not both.
-        > 
+        >
         > -   This is important for building good administrative practices and habits in Phase 1.
         > -   This is critically important for Phase 2 and beyond to prevent escalation of privilege through PAW as PAWs being to span Tiers.
-        > 
+        >
         > Ideally, no personnel are assigned to duties at multiple tiers to enforce the principle of segregation of duties, but Microsoft recognizes that many organizations may have limited staff (or other organizational requirements) that don't allow for this full segregation. In these cases, the same personnel may be assigned to both roles, but should not use the same account for these functions.
 
 5.  **Create "PAW Configuration - Computer" group policy object (GPO) and link to the Tier 0 Devices OU** ("Devices" under Tier 0\Admin).  In this section, you will create a new "PAW Configuration - Computer" GPO which provide specific protections for these PAWs.
@@ -460,7 +461,7 @@ Phase 1 includes the following steps:
                 4.  Click **OK**.
 
                     > [!NOTE]
-                    > You may add addresses or subnets which must reach the PAW with unsolicited traffic at this point (e.g. security scanning or management software. 
+                    > You may add addresses or subnets which must reach the PAW with unsolicited traffic at this point (e.g. security scanning or management software.
                     > The settings in the WFW file will enable the firewall in "Block - Default" mode for all firewall profiles, turn off rule merging and enable logging of both dropped and successful packets. These settings will block unsolicitied traffic while still allowing bidirectional communication on connections initiated from the PAW, prevent users with local administrative access from creating local firewall rules that would override the GPO settings and ensure that traffic in and out of the PAW is logged.
                     > **Opening up this firewall will expand the attack surface for the PAW and increase security risk. Before adding any addresses, consult the Managing and Operating PAW section in this guidance**.
 
@@ -774,9 +775,9 @@ Phase 1 includes the following steps:
 
         > [!NOTE]
         > You may use Microsoft Deployment Toolkit (MDT) or another automated image deployment system to automate PAW deployment, but you must ensure the build process is as trustworthy as the PAW. Adversaries specifically seek out corporate images and deployment systems (including ISOs, deployment packages, etc.) as a persistence mechanism so preexisting deployment systems or images should not be used.
-        > 
+        >
         > If you automate deployment of the PAW, you must:
-        > 
+        >
         > -   Build the system using installation media validated using the guidance in [Clean Source for installation media](http://aka.ms/cleansource).
         > -   Ensure that the automated deployment system is disconnected from the network during the operating system build process.
 
@@ -943,9 +944,9 @@ Once you confirm that all steps were done, perform the steps below to complete P
             > [!NOTE]
             > You will need to update the *proxy.pac* file after downloading to ensure that it is up-to-date and complete.  
             > Microsoft publishes all current Office 365 and Azure URLs in the Office [Support Center](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
-            > 
+            >
             > You may need to add other valid Internet destinations to add to this list for other IaaS provider, but do not add productivity, entertainment, news, or search sites to this list.
-            > 
+            >
             > You may also need to adjust the PAC file to accommodate a valid proxy address to use for these addresses.
 
             > [!NOTE]
@@ -1116,7 +1117,7 @@ Follow the steps below to configure this phase:
 
     -   **Virtual smart card**:  A virtual smart card provides the same security benefits as physical smart cards, with the added benefit of being linked to specific hardware.  For details on deployment and hardware requirements, please refer to the articles, [Virtual Smart Card Overview](https://technet.microsoft.com/en-us/library/dn593708.aspx) and [Get Started with Virtual Smart Cards: Walkthrough Guide](https://technet.microsoft.com/en-us/library/dn579260.aspx).
 
-    -   **Microsoft Passport**: Microsoft Passport lets users authenticate to a Microsoft account, an Active Directory account, a Microsoft Azure Active Directory (Azure AD) account, or non-Microsoft service that supports Fast ID Online (FIDO) authentication. After an initial two-step verification during Microsoft Passport enrollment, a Microsoft Passport is set up on the user's device and the user sets a gesture, which can be Windows Hello or a PIN. Microsoft Passport credentials are an asymmetric key pair, which can be generated within isolated environments of Trusted Platform Modules (TPMs). 
+    -   **Microsoft Passport**: Microsoft Passport lets users authenticate to a Microsoft account, an Active Directory account, a Microsoft Azure Active Directory (Azure AD) account, or non-Microsoft service that supports Fast ID Online (FIDO) authentication. After an initial two-step verification during Microsoft Passport enrollment, a Microsoft Passport is set up on the user's device and the user sets a gesture, which can be Windows Hello or a PIN. Microsoft Passport credentials are an asymmetric key pair, which can be generated within isolated environments of Trusted Platform Modules (TPMs).
         For more information on Microsoft Passport read [Microsoft Passport overview](https://technet.microsoft.com/en-us/library/dn985839%28v=vs.85%29.aspx) article.
 
     -   **Azure multi-factor authentication**:  Azure multi-factor authentication (MFA) provides the security of a second verification factor as well as enhanced protection through monitoring and machine-learning-based analysis.  Azure MFA can secure not only Azure administrators but many other solutions as well, including web applications, Azure Active Directory, and on-premises solutions like remote access and Remote Desktop.  For more information on Azure multi-factor authentication, please refer to the article [Multi-Factor Authentication](https://azure.microsoft.com/en-us/services/multi-factor-authentication).
@@ -1192,6 +1193,3 @@ The PAW solution should be operated using the standards in [Operational Standard
 [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](http://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
 
 [Trusted Platform Module](C:\sd\docs\p_ent_keep_secure\p_ent_keep_secure\trusted_platform_module_technology_overview.xml)
-
-
-
