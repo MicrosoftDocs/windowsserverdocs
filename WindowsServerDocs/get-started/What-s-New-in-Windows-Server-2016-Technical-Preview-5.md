@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/16/2016
+ms.date: 09/19/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -76,17 +76,23 @@ In order to improve TCP behavior when recovering from packet loss we have implem
 Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx).  
   
 ### Just Enough Administration  
-Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to/from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).
+Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).
 
 ### Remote Credential Guard
-Credential Guard support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/en-us/itpro/windows/keep-secure/remote-credential-guard).   
+Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. See [Protect derived domain credentials with Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
+
+Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).   
   
+###Device Guard (Code Integrity)
+Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See[Introduction to Device Guard: virtualization-based security and code integrity policies] (https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
+
 ### Shielded Virtual Machines  
-Windows Server 2016 offers a number of new features are available for shielded virtual machines:  
+Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Among the features introduced starting with Technical Preview 5 are the following:  
   
 - New "Encryption Supported" mode that offers more protections than for an ordinary virtual machine, but less than "Shielded" mode, while still supporting vTPM, disk encryption, Live Migration traffic encryption, and other features, including direct fabric administration conveniences such as virtual machine console connections and Powershell Direct.  
   
-- Full support for converting existing non-shielded Generation 2 virtual machines to shielded virtual machines, including automated disk encryption.  
+- Full support for converting existing non-shielded Generation 2 virtual machines to shielded virtual machines, including automated disk encryption.
+
 - Hyper-V Virtual Machine Manager can now view the fabrics upon which a shielded virtual is authorized to run, providing a way for the fabric administrator to open a shielded virtual machine's key protector (KP) and view the fabrics it is permitted to run on.  
   
 - You can switch Attestation modes on a running Host Guardian Service. Now you can switch on the fly between the less secure but simpler Active Directory-based attestation and TPM-based attestation.  
@@ -100,7 +106,10 @@ Windows Server 2016 offers a number of new features are available for shielded v
 For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](http://aka.ms/shieldedvms).  
   
 ### Windows Defender  
-[Windows Defender Overview for Windows Server Technical Preview](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.  
+[Windows Defender Overview for Windows Server Technical Preview](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
+
+###Control Flow Guard
+Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard] (https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx) for more information. 
   
   
 ## <a name="BKMK_Storage"></a>Storage  
