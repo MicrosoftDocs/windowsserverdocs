@@ -41,10 +41,10 @@ The aggressiveness of balancing based on the Memory and CPU heuristics can be co
 <abbr title="Virtual machine">VM</abbr> Load Balancing is enabled by default and when load balancing occurs can be configured by the cluster common property 'AutoBalancerMode'. To control when Node Fairness balances the cluster:
 
 ### Using Failover Cluster Manager:
-1. Right-click on your cluster name and select the "Properties" option
+1. Right-click on your cluster name and select the "Properties" option  
     ![Graphic of selecting property for cluster through Failover Cluster Manager](media/vm-load-balancing/detailed-VM-load-balancing-2.jpg)
 
-2.  Select the "Balancer" pane
+2.  Select the "Balancer" pane  
     ![Graphic of selecting the balancer option through Failover Cluster Manager](media/vm-load-balancing/detailed-VM-load-balancing-3.jpg)
 
 ### Using PowerShell:
