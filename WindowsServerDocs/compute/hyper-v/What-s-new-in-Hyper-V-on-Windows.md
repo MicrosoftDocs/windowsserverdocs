@@ -1,5 +1,5 @@
 ---
-title: What's new in Hyper-V on Windows Server 2016 Technical Preview
+title: What's new in Hyper-V on Windows Server 2016
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,15 +12,15 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 09/02/2016
+ms.date: 09/19/2016
 ---
-# What's new in Hyper-V on Windows Server 2016 Technical Preview
+# What's new in Hyper-V on Windows Server 2016
 
->Applies To: Microsoft Hyper-V Server Technical Preview, Windows Server Technical Preview
+>Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
 
 **This is preliminary content and subject to change.**  
   
-This article explains the new and changed functionality of Hyper-V on Windows Server 2016 Technical Preview and Microsoft Hyper-V Server Technical Preview. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016 Technical Preview, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).  
+This article explains the new and changed functionality of Hyper-V on Windows Server 2016 and Microsoft Hyper-V Server 2016. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).  
   
 Here's what's included in this article and whether the functionality is new or updated.  
 
@@ -28,7 +28,7 @@ Here's what's included in this article and whether the functionality is new or u
 When the Hyper-V role is installed on a computer that uses the Always On/Always Connected (AOAC) power model, the **Connected Standby** power state is now available.  
   
 ## <a name="BKMK_device"></a>Discrete device assignment \(New\) 
-This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
+This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
   
 ## <a name="BKMK_host"></a>Host resource protection \(New\)
 This feature helps prevent a virtual machine from using more than its share of system resources by looking for excessive levels of activity. This can help prevent a virtual machine's excessive activity from degrading the performance of the host or other virtual machines. When monitoring detects a virtual machine with excessive activity, the virtual machine is given fewer resources. This monitoring and enforcement is off by default. Use Windows PowerShell to turn it on or off. To turn it on, run this command:  
@@ -42,13 +42,13 @@ For details about this cmdlet, see [Set-VMProcessor](https://technet.microsoft.c
 ## <a name="BKMK_hot"></a>Hot add and remove for network adapters and memory \(New\) 
 You can now add or remove a network adapter while the virtual machine is running, without incurring downtime. This works for generation 2 virtual machines that run either Windows or Linux operating systems.  
   
-You can also adjust the amount of memory assigned to a virtual machine while it's running, even if you haven't enabled Dynamic Memory. This works for both generation 1 and generation 2 virtual machines, running Windows Server 2016 Technical Preview or Windows 10.  
+You can also adjust the amount of memory assigned to a virtual machine while it's running, even if you haven't enabled Dynamic Memory. This works for both generation 1 and generation 2 virtual machines, running Windows Server 2016 or Windows 10.  
   
 ## <a name="BKMK_Mgmt"></a>Hyper-V Manager improvements \(Updated\) 
   
--   **Alternate credentials support** - You can now use a different set of credentials in Hyper-V Manager when you connect to another Windows Server 2016 Technical Preview or Windows 10 remote host. You can also save these credentials to make it easier to log on again.  
+-   **Alternate credentials support** - You can now use a different set of credentials in Hyper-V Manager when you connect to another Windows Server 2016 or Windows 10 remote host. You can also save these credentials to make it easier to log on again.  
   
--   **Manage earlier versions** - With Hyper-V Manager in Windows Server 2016 Technical Preview and Windows 10, you can manage computers running Hyper-V on  Windows Server 2012, Windows 8,  Windows Server 2012 R2 and Windows 8.1.  
+-   **Manage earlier versions** - With Hyper-V Manager in Windows Server 2016 and Windows 10, you can manage computers running Hyper-V on  Windows Server 2012, Windows 8,  Windows Server 2012 R2 and Windows 8.1.  
   
 -   **Updated management protocol** - Hyper-V Manager now communicates with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos or NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can do a live migration without enabling constrained delegation in Active Directory. The WS-MAN-based infrastructure also makes it easier to enable a host for remote management. WS-MAN connects over port 80, which is open by default.  
   
@@ -56,10 +56,10 @@ You can also adjust the amount of memory assigned to a virtual machine while it'
 Updates to integration services for Windows guests are distributed through Windows Update. For service providers and private cloud hosters, this puts the control of applying updates into the hands of the tenants who own the virtual machines. Tenants can now update their Windows virtual machines with all updates, including the integration services, using a single method. For details about integration services for Linux guests, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
   
 > [!IMPORTANT]  
-> The vmguest.iso image file is no longer needed, so it isn't included with Hyper-V on Windows Server 2016 Technical Preview.  
+> The vmguest.iso image file is no longer needed, so it isn't included with Hyper-V on Windows Server 2016.  
   
 ## <a name="BKMK_linux"></a>Linux Secure Boot \(New\) 
-Linux operating systems running on generation 2 virtual machines can now boot with the Secure Boot option enabled. Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later are enabled for Secure Boot on hosts that run Windows Server 2016 Technical Preview. Before you boot the virtual machine for the first time, you must configure the virtual machine to use the Microsoft UEFI Certificate Authority. You can do this from Hyper-V Manager, Virtual Machine Manager, or an elevated Windows Powershell session. For Windows PowerShell, run this command:  
+Linux operating systems running on generation 2 virtual machines can now boot with the Secure Boot option enabled. Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later are enabled for Secure Boot on hosts that run Windows Server 2016. Before you boot the virtual machine for the first time, you must configure the virtual machine to use the Microsoft UEFI Certificate Authority. You can do this from Hyper-V Manager, Virtual Machine Manager, or an elevated Windows Powershell session. For Windows PowerShell, run this command:  
   
 ```  
 Set-VMFirmware vmname -SecureBootTemplate MicrosoftUEFICertificateAuthority  
@@ -96,22 +96,22 @@ Production checkpoints are "point-in-time" images of a virtual machine. These gi
 > New virtual machines use production checkpoints as the default.  
   
 ## <a name="BKMK_HyperVRollingUpgrades"></a>Rolling Hyper-V Cluster upgrade \(New\) 
-You can now add a node running Windows Server 2016 Technical Preview to a Hyper-V Cluster with nodes running  Windows Server 2012 R2 . This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](https://technet.microsoft.com/library/mt589702.aspx).  
+You can now add a node running Windows Server 2016 to a Hyper-V Cluster with nodes running  Windows Server 2012 R2. This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](https://technet.microsoft.com/library/mt589702.aspx).  
   
 > [!IMPORTANT]  
 > After you update the cluster functional level, you can't return it to Windows Server 2012 R2.  
   
-For a Hyper-V cluster with a functional level of  Windows Server 2012 R2 with nodes running Windows Server 2012 R2 and Windows Server 2016 Technical Preview, note the following:  
+For a Hyper-V cluster with a functional level of  Windows Server 2012 R2 with nodes running Windows Server 2012 R2 and Windows Server 2016, note the following:  
   
--   Manage the cluster, Hyper-V, and virtual machines from a node running Windows Server 2016 Technical Preview or Windows 10.  
+-   Manage the cluster, Hyper-V, and virtual machines from a node running Windows Server 2016w or Windows 10.  
   
 -   You can move virtual machines between all of the nodes in the Hyper-V cluster.  
   
--   To use new Hyper-V features, all nodes must run Windows Server 2016 Technical Preview and the cluster functional level must be updated.  
+-   To use new Hyper-V features, all nodes must run Windows Server 2016 and the cluster functional level must be updated.  
   
 -   The virtual machine configuration version for existing virtual machines isn't upgraded. You can upgrade the configuration version only after you upgrade the cluster functional level.  
   
--   Virtual machines that you create are compatible with  Windows Server 2012 R2 , virtual machine configuration level 5.  
+-   Virtual machines that you create are compatible with Windows Server 2012 R2, virtual machine configuration level 5.  
   
 After you update the cluster functional level:  
   
@@ -147,9 +147,9 @@ Virtual machine configuration files use a new format that makes reading and writ
 > The .vmcx file name extension indicates a binary file. Editing .vmcx or .vmrs files isn't supported.  
   
 ## <a name="BKMK_ConfgVersion"></a>Virtual machine configuration version \(Updated\)
-The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with  Windows Server 2012 R2  and can run on both  Windows Server 2012 R2  and Windows Server 2016 Technical Preview. Virtual machines with versions introduced in Windows Server 2016 Technical Preview won't run in Hyper-V on  Windows Server 2012 R2 .   
+The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with Windows Server 2012 R2 and can run on both Windows Server 2012 R2 and Windows Server 2016 . Virtual machines with versions introduced in Windows Server 2016 won't run in Hyper-V on Windows Server 2012 R2.   
   
-If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 Technical Preview from  Windows Server 2012 R2 , the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs  Windows Server 2012 R2 . But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
+If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 from  Windows Server 2012 R2, the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs Windows Server 2012 R2. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   
 For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). This article also lists the version in which some features were introduced.   
   
@@ -157,7 +157,10 @@ For instructions on checking and upgrading the version, see [Upgrade virtual mac
 > -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2 .  
 > -   You can't downgrade the configuration to a previous version.  
 > -   The Update-VMVersion cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2 .  
-  
+
+## Virtualization-based security \(New\)
+Available for generation 2 virtual machines, this feature protects secrets \(such as credentials\) from untrusted guest operating systems by storing them in an isolated space on the host that the guest operating system can't access. This solution is designed to protect secrets even if the guest kernel is exploited by malware. For details, see [Secure Hyper-V virtual machines using virtualization-based security](/plan/secure-hyper-v-virtual-machines-using-virtualization-based-security.md)
+
 ## <a name="BKMK_Containers"></a>Windows Containers \(New\) 
 Windows Containers allow many isolated applications to run on one computer system. They're fast to build and are highly scalable and portable. Two types of container runtime are available, each with a different degree of application isolation. Windows Server Containers use namespace and process isolation. Hyper-V Containers use a light-weight virtual machine for each container.  
   
