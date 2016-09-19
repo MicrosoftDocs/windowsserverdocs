@@ -49,5 +49,5 @@ When configured for periodic balancing, the pressure on the cluster nodes is eva
 
 ## See Also
 * [Virtual Machine Load Balancing Deep-Dive](vm-load-balancing-deep-dive.md)
-* [Failover Clustering](../failover-clustering-overview.md)
-* [Hyper-V Overview](../../compute/hyper-v/Hyper-V-on-Windows-Server.md)
+* [Failover Clustering](failover-clustering-overview.md)
+* [Hyper-V Overview](../compute/hyper-v/Hyper-V-on-Windows-Server.md)
