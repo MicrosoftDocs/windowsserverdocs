@@ -10,7 +10,8 @@ author: kumudd
 ms.date: 09/15/2016
 ---
 # Health Service in Windows Server 2016
->Applies To: Windows Server 2016
+> Applies to Windows Server 2016
+
 The Health Service is a new feature in Windows Server 2016 which significantly improves the day-to-day monitoring, operations, and maintenance experience of cluster resources. In Windows Server 2016, it is supported only for Storage Spaces Direct.   
 
 ## Prerequisites  
