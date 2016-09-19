@@ -85,7 +85,7 @@ Credential Guard uses virtualization-based security to isolate secrets so that o
 Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).   
   
 ###Device Guard (Code Integrity)
-Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See[Introduction to Device Guard: virtualization-based security and code integrity policies] (https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
+Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See [Introduction to Device Guard: virtualization-based security and code integrity policies] (https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
 
 ### Shielded Virtual Machines  
 Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Among the features introduced starting with Technical Preview 5 are the following:  
