@@ -22,7 +22,7 @@ A key consideration for private cloud deployments is the capital expenditure (<a
 * *Granular control*: Enabled by default. Can be activated on-demand or at a periodic interval.
 * *Aggressiveness thresholds*: Three thresholds available based on the characteristics of your deployment.
 
-## <a id="feature-in-action"></a>The Feature in Action
+## <a id="feature-in-action"></a>The feature in action
 ### <a id="new-node-added"></a>A new node is added to your Failover Cluster
 ![Graphic of a new node being added to your Failover Cluster](media/vm-load-balancing/overview-VM-load-balancing-1.png)
 

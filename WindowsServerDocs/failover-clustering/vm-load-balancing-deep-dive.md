@@ -13,12 +13,12 @@ ms.date: 09/19/2016
 
 Windows Server 2016 introduces the [Virtual Machine Load Balancing feature](vm-load-balancing-overview.md) to optimize the utilization of nodes in a Failover Cluster. This document describes how to configure and control <abbr title="virtual machine">VM</abbr> Load Balancing. 
 
-## <a id="heuristics-for-balancing"></a>Heuristics for Balancing
+## <a id="heuristics-for-balancing"></a>Heuristics for balancing
 <abbr title="Virtual machine">VM</abbr> Virtual Machine Load Balancing evaluates a node's load based on the following heuristics:
 1. Current **memory pressure**: Memory is the most common resource constraint on a Hyper-V host
 2. <abbr title="Central processing unit">CPU</abbr> **utilization** of the Node averaged over a 5 minute window: Mitigates a node in the cluster becoming over-committed
 
-## <a id="controlling-aggressiveness-of-balancing"></a>Controlling Aggressiveness of Balancing
+## <a id="controlling-aggressiveness-of-balancing"></a>Controlling the aggressiveness of balancing
 The aggressiveness of balancing based on the Memory and CPU heuristics can be configured using the by the cluster common property 'AutoBalancerLevel'. To control the aggressiveness run the following in PowerShell:
 
 ```PowerShell
