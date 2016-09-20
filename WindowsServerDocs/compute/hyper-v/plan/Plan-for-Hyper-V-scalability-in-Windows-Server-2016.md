@@ -23,19 +23,19 @@ This article gives you details about the maximum configuration for components yo
 > For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](https://technet.microsoft.com/en-us/system-center-docs/vmm/virtual-machine-manager). VMM is a Microsoft product for managing a virtualized data center that is sold separately.  
   
 ## Maximums for virtual machines  
-These maximums apply to each virtual machine. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md) 
+These maximums apply to each virtual machine. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md) 
   
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
 |Checkpoints|50|The actual number may be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|  
-|Memory|generation 2 &#151 12 TB <br>generation 1 &#151 1 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
+|Memory|generation 2 - 12 TB <br>generation 1 - 1 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
 |Serial (COM) ports|2|None.|  
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|  
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|  
 |Virtual floppy devices|1 virtual floppy drive|None.|  
-|Virtual hard disk capacity|VHDX format &#151 64 TB<br>VHD format &#151 2040 GB|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|  
+|Virtual hard disk capacity|VHDX format - 151 64 TB<br>VHD format - 2040 GB|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|  
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|  
-|Virtual processors|generation 2 &#151 240<br>generation 1 &#151 64|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|  
+|Virtual processors|generation 2 - 240<br>generation 1 - 64|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|  
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) and [Supported Windows guest operating systems](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows-server-technical-preview).|  
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|  
 |Virtual network adapters|12 total:<br> - 8 Hyper-V specific network adapters<br>- 4 legacy network adapters|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server 2016](Plan-for-Hyper-V-networking-in-Windows-Server-2016.md).|  
@@ -60,7 +60,7 @@ These maximums apply to each Hyper-V host.
 ## Failover Clusters and Hyper-V  
 This table lists the maximums that apply when using Hyper-V and Failover Clustering. It's important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  
 
-To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server Technical Preview](https://technet.microsoft.com/en-us/windows-server-docs/compute/failover-clustering/whats-new-failover-clustering-windows-server).
+To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server Technical Preview](https://technet.microsoft.com/windows-server-docs/compute/failover-clustering/whats-new-failover-clustering-windows-server).
 
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
