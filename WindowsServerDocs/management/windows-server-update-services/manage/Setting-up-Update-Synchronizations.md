@@ -128,6 +128,3 @@ You can either synchronize your WSUS server manually or specify a time for it to
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
 -   [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md)
-
-
-
