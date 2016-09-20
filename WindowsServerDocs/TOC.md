@@ -239,7 +239,7 @@
 ###### [How the Windows Time Service Works](identity/ad-ds/get-started/windows-time-service/How-the-Windows-Time-Service-Works.md)
 ###### [Windows Time Service Tools and Settings](identity/ad-ds/get-started/windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
 ##### [Windows Server 2016 Functional Levels](identity/ad-ds/Windows-Server-2016-Functional-Levels.md)
-##### [Windows 2016 Accurate Time](identity/ad-ds/Windows-2016-Accurate-Time.md)
+##### [Windows 2016 Accurate Time](identity/ad-ds/get-started/Windows-2016-Accurate-Time.md)
 #### [AD DS Design and Planning](identity/ad-ds/plan/AD-DS-Design-and-Planning.md)
 ##### [Understanding AD DS Design](identity/ad-ds/plan/Understanding-AD-DS-Design.md)
 ##### [Identifying Your AD DS Design and Deployment Requirements](identity/ad-ds/plan/Identifying-Your-AD-DS-Design-and-Deployment-Requirements.md)
