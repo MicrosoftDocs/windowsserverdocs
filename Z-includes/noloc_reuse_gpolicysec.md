@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">To complete this procedure, you must be logged on as a member of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group.</Token>

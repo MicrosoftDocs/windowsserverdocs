@@ -1,1 +1,0 @@
-Microsoft Azure Active Directory (Azure AD)

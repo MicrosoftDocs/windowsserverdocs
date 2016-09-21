@@ -1,1 +1,0 @@
-Session Virtualization standard deployment

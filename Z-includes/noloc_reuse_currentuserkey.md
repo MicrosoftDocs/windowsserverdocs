@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Uses the <legacyBold xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">HKEY_CURRENT_USER</legacyBold> keys or certificate store.</Token>

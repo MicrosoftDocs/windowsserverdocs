@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">For the latest updates, including security fixes, service packs, new Help files, and device drivers, see <externalLink xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><linkText>Windows Update Web site</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=284</linkUri></externalLink>.</Token>
