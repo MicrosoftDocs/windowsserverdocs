@@ -12,27 +12,19 @@ ms.date: 08/18/2016
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
 
-Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available storage systems with local storage. This is a significant step forward in Windows Server software-defined storage (SDS) as it simplifies the deployment and management of storage and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+This topic describes how to perform an evaluation deployment of Storage Spaces Direct in a hyper-converged configuration, with storage and virtual machines hosted by the same cluster. 
 
-Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct , and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 and includes the following sections:  
-* [How to use this guide](#BKMK_S2D1)  
-* [Hyper-converged Solution with Software Defined Storage Overview](#BKMK_S2D2)  
-* [Hardware requirements](#BKMK_S2D3)  
-* [Information gathering](#BKMK_S2D4)  
-* [Nano or Full/Core Installation Options](#BKMK_InstallOptions)  
-* [Installing and configuring Hyper-Converged solution using Storage Spaces Direct with Windows Server 2016 Nano Server](#BKMK_S2D5)  
-* [Definitions](#BKMK_S2D6)  
-* [Storage Spaces Optmize Pool](#BKMK_S2D7)  
+For production environments, we recommend acquiring a *Windows Server Software-Defined* solution. These solutions are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined solutions will be available later this year, including production deployment tools and procedures - check back for updates!
 
 ## <a name="BKMK_S2D1"></a> How to Use this Guide   
-This document provides both an introductory overview and specific standalone examples of how to deploy a Hyper Converged Solution with Storage Spaces Direct.  
+This document provides both an introductory overview and specific standalone examples of how to deploy a hyper-converged solution with Storage Spaces Direct in a non-production environment. Again, we strongly recommend a *Windows Server Software-Defined* solution for production use.   
 
-Before taking any action, it is recommended that you do a quick read through of this document to familiarize yourself with the overall approach, to get a sense for the important **Notes** associated with some steps, and to acquaint yourself with the additional supporting resources and documentation.  
+Before taking any action, we recommended briefly reading this document to familiarize yourself with the overall approach, to get a sense for the important **Notes** associated with some steps, and to acquaint yourself with the additional supporting resources and documentation. For background info, see [Storage Spaces Direct](storage-spaces-direct-overview.md).   
 
-## <a name="BKMK_S2D2"></a> Hyper-converged Solution with Software Defined Storage Overview  
-In the Hyper-Converged configuration described in this guide, Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering.  
+## <a name="BKMK_S2D2"></a> Solution overview  
+In the hyper-converged configuration described in this guide, Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering.  
 
-The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using. Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. Figure 1 illustrates the hyper-converged deployment scenario.  
+The hyper-converged deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using. Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. Figure 1 illustrates the hyper-converged deployment scenario.  
 
 ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)  
 
