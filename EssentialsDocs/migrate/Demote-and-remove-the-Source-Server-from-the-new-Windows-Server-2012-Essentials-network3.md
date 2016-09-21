@@ -2,37 +2,32 @@
 title: "Demote and remove the Source Server from the new Windows Server 2012 Essentials network3"
 ms.custom: na
 ms.date: 02/28/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Demote and remove the Source Server from the new Windows Server 2012 Essentials network
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: a3ea2800-658b-46d0-bcbc-b821eb5f81f3
 caps.latest.revision: 6
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network3
-After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and you complete the Migration, you must perform the following tasks:  
+After you finish installing  Windows Server 2012 Essentials and you complete the Migration, you must perform the following tasks:  
   
+
+1.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_ADCS)  
+  
+2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_PhysicallyDisconnect)  
+  
+3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_DemoteTheSourceServer)  
+  
+4.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_RemoveTheSourceServer)  
+
 1.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_ADCS)  
   
 2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_PhysicallyDisconnect)  
@@ -40,6 +35,7 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
 3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_DemoteTheSourceServer)  
   
 4.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_RemoveTheSourceServer)  
+
   
 ###  <a name="BKMK_ADCS"></a> Remove Active Directory Certificate Services  
  The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. You can use the following procedure to uninstall an AD CS role service and to retain other AD CS role services.  
@@ -83,7 +79,7 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
     >  Restart the server even if you are not prompted to do so.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from  Windows Server 2012 Essentials.  
   
 ###  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  
@@ -95,7 +91,11 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
   
 1.  Log on to the client computer as an administrator.  
   
+
+2.  Open a Command Prompt window as an administrator. For more information, see [To open a Command Prompt window as an Administrator](Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md#BKMK_OpenACommandPromptAsAdmin).  
+
 2.  Open a Command Prompt window as an administrator. For more information, see [To open a Command Prompt window as an Administrator](../migrate/Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md#BKMK_OpenACommandPromptAsAdmin).  
+
   
 3.  At the command prompt, type **gpupdate /force**, and then press ENTER.  
   

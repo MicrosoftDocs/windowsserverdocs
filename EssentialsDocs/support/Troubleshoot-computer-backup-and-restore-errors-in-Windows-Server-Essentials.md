@@ -2,32 +2,18 @@
 title: "Troubleshoot computer backup and restore errors in Windows Server Essentials"
 ms.custom: na
 ms.date: 06/25/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 caps.latest.revision: 11
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Troubleshoot computer backup and restore errors in Windows Server Essentials
 Use these procedures to troubleshoot computer backups in Windows Server Essentials, including backup configuration issues, incomplete or unsuccessful backups, backup health alerts, and issues with file, folder, or full-system restores.  
@@ -212,7 +198,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
         1.  Open a command prompt with administrator privileges, and run the following command:  
   
-             **“%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe” –i**  
+             **“%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe�? –i**  
   
         2.  Refresh Device Manager. The driver should appear.  
   
@@ -251,4 +237,4 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
 ## See also  
   
--   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)

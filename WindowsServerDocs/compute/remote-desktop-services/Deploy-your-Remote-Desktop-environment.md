@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ed2eb96-2bc4-4b1a-977c-ff7a11f21cef
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Deploy your Remote Desktop environment
 

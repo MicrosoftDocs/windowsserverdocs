@@ -2,36 +2,35 @@
 title: "Move Windows SBS 2008 settings and data to the Destination Server for Windows Server 2012 Essentials migration"
 ms.custom: na
 ms.date: 02/28/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 4950469d-d800-430d-8d10-53bafc4a9932
 caps.latest.revision: 11
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Move Windows SBS 2008 settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
+
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
+  
+2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
+  
+3.  [Move the DHCP Server role from the Source Server to the router](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MoveDHCP)  
+  
+4.  [Configure the network](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
+  
+5.  [Remove legacy Active Directory Group Policy objects (optional)](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
+  
+6.  [Map permitted computers to user accounts](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+
 1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -43,6 +42,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Remove legacy Active Directory Group Policy objects (optional)](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
   
 6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -123,7 +123,7 @@ Move settings and data to the Destination Server as follows:
 >  If you have set up an on-premises Exchange server on a second server, you must ensure port 25 (for SMTP) is also open and that it is redirected to the IP address of the on-premises Exchange server.  
   
 ##  <a name="BKMK_RemoveLegacyADGPO"></a> Remove legacy Active Directory Group Policy objects (optional)  
- The Group Policy objects (GPOs) are updated for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. They are a superset of the Windows SBS 2008 GPOs. For [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a number of the Windows SBS 2008 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] GPOs and WMI filters.  
+ The Group Policy objects (GPOs) are updated for  Windows Server 2012 Essentials. They are a superset of the Windows SBS 2008 GPOs. For  Windows Server 2012 Essentials, a number of the Windows SBS 2008 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the  Windows Server 2012 Essentials GPOs and WMI filters.  
   
 > [!NOTE]
 >  If you modified the original Windows SBS 2008 Group Policy objects, you should save copies of them in a different location, and then delete them from Windows SBS 2008.  
@@ -146,7 +146,7 @@ Move settings and data to the Destination Server as follows:
   
     -   Small Business Server Domain Password Policy  
   
-         We recommend you configure the password policy in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] to enforce strong passwords. To configure the password policy, use the Dashboard, which writes the configuration to the default domain policy. The password policy configuration is not written to the Small Business Server Domain Password Policy object, as it was in Windows SBS 2008.  
+         We recommend you configure the password policy in  Windows Server 2012 Essentials to enforce strong passwords. To configure the password policy, use the Dashboard, which writes the configuration to the default domain policy. The password policy configuration is not written to the Small Business Server Domain Password Policy object, as it was in Windows SBS 2008.  
   
     -   Small Business Server Internet Connection Firewall  
   
@@ -187,11 +187,11 @@ Move settings and data to the Destination Server as follows:
 7.  Confirm that these three WMI filters are deleted.  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In Windows SBS 2008, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows SBS 2008 must be mapped to one or more computers.  
+ In Windows SBS 2008, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In  Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows SBS 2008 must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  Open the  Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

@@ -6,10 +6,11 @@ ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
+ms.author: vhorne
 author: vhorne
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview

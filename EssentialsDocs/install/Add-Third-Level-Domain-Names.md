@@ -2,33 +2,18 @@
 title: "Add Third-Level Domain Names"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103
 caps.latest.revision: 13
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Add Third-Level Domain Names
 You can add the ability for users to request third-level domain names in the Set Up Domain Name Wizard. You do this by creating and installing a code assembly that is used by the Domain Manager in the operating system.  
@@ -36,15 +21,15 @@ You can add the ability for users to request third-level domain names in the Set
 ## Create a provider of third-level domain names  
  You can make third-level domain names available by creating and installing a code assembly that provides the domain names to the wizard. To do this, you complete the following tasks:  
   
--   [Add an implementation of the IDomainSignupProvider interface to the assembly](../install/Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)  
+-   [Add an implementation of the IDomainSignupProvider interface to the assembly](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)  
   
--   [Add an implementation of the IDomainMaintenanceProvider interface to the assembly](../install/Add-Third-Level-Domain-Names.md#BKMK_DomainMaintenance)  
+-   [Add an implementation of the IDomainMaintenanceProvider interface to the assembly](Add-Third-Level-Domain-Names.md#BKMK_DomainMaintenance)  
   
--   [Sign the assembly with an Authenticode signature](../install/Add-Third-Level-Domain-Names.md#BKMK_SignAssembly)  
+-   [Sign the assembly with an Authenticode signature](Add-Third-Level-Domain-Names.md#BKMK_SignAssembly)  
   
--   [Install the assembly on the reference computer](../install/Add-Third-Level-Domain-Names.md#BKMK_InstallAssembly)  
+-   [Install the assembly on the reference computer](Add-Third-Level-Domain-Names.md#BKMK_InstallAssembly)  
   
--   [Restart the Windows Server Domain Name Management service](../install/Add-Third-Level-Domain-Names.md#BKMK_RestartService)  
+-   [Restart the Windows Server Domain Name Management service](Add-Third-Level-Domain-Names.md#BKMK_RestartService)  
   
 ###  <a name="BKMK_DomainSignup"></a> Add an implementation of the IDomainSignupProvider interface to the assembly  
  The IDomainSignupProvider interface is used to add domain offerings to the wizard.  
@@ -542,7 +527,7 @@ You can add the ability for users to request third-level domain names in the Set
   
 3.  Right-click **Providers**, point to **New**, and then click **Key**.  
   
-4.  Type the identifier for the provider as the name for the key. The identifier is the GUID that you defined for the provider in step 8 of [Add an implementation of the IDomainSignupProvider interface to the assembly](../install/Add-Third-Level-Domain-Names.md#BKMK_DomainSignup).  
+4.  Type the identifier for the provider as the name for the key. The identifier is the GUID that you defined for the provider in step 8 of [Add an implementation of the IDomainSignupProvider interface to the assembly](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup).  
   
 5.  Right-click the key that you just created, and then click **String Value**.  
   
@@ -588,7 +573,7 @@ You can add the ability for users to request third-level domain names in the Set
 3.  Double-click **Services**, scroll down and select **Windows Server Domain Management**, and then click **Restart the service**.  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

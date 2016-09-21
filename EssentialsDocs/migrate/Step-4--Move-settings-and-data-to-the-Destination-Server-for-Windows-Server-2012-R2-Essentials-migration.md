@@ -2,41 +2,27 @@
 title: "Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration
 This section provides information about migrating data and settings from the Source Server. Move settings and data to the Destination Server as follows:  
   
--   [Copy data to the Destination Server](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_CopyData)  
+-   [Copy data to the Destination Server](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_CopyData)  
   
--   [Configure the network](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_Network)  
+-   [Configure the network](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_Network)  
   
--   [Map permitted computers to user accounts](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_MapPermittedComputers)  
+-   [Map permitted computers to user accounts](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_MapPermittedComputers)  
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -49,7 +35,7 @@ This section provides information about migrating data and settings from the Sou
   
 -   The **Client Computer Backup** folder cannot be migrated to the Destination Server. Before the server migration, make sure that all the client computers are healthy. After the server migration, it is recommended that you configure and start client computer backups to ensure that the data is backed up for all your important client computers.  
   
--   The **File History Backups** folder cannot be directly migrated to the Destination Server due to the folder structure and backup metadata changes in [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)]. However, it is possible to migrate the **File History Backups** folder for a specific user on a specific computer. To do so, you should locate the **Data** folder in the **File History Backups** folder for that user and computer, then copy that **Data** folder to the **File History Backups** folder on the Destination Server.  
+-   The **File History Backups** folder cannot be directly migrated to the Destination Server due to the folder structure and backup metadata changes in  Windows Server 2012 R2 Essentials. However, it is possible to migrate the **File History Backups** folder for a specific user on a specific computer. To do so, you should locate the **Data** folder in the **File History Backups** folder for that user and computer, then copy that **Data** folder to the **File History Backups** folder on the Destination Server.  
   
 #### To copy data from the Source Server to the Destination Server  
   
@@ -69,7 +55,7 @@ This section provides information about migrating data and settings from the Sou
   
     -   *<SharedDestinationFolderName\>* is the folder on the Destination Server to which the data will be copied  
   
-     For example,  `robocopy \\sourceserver\MyData “d:\ServerFolders\MyData” /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
+     For example,  `robocopy \\sourceserver\MyData “d:\ServerFolders\MyData�? /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
 3.  If you use Windows PowerShell, type the following command, and then press ENTER.  
   
@@ -101,7 +87,7 @@ This section provides information about migrating data and settings from the Sou
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] Dashboard.  
+1.  Open the  Windows Server 2012 R2 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   
@@ -122,6 +108,10 @@ This section provides information about migrating data and settings from the Sou
 >  After you complete the migration, if you encounter an issue when you create the first new user account on the Destination Server, remove the user account that you added, and then create it again.  
   
 ## Next steps  
- You have moved your settings and data to the Destination Server. Now go to [Step 5: Enable folder redirection on the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%205:%20Enable%20folder%20redirection%20on%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
+ You have moved your settings and data to the Destination Server. Now go to [Step 5: Enable folder redirection on the Destination Server for Windows Server 2012 R2 Essentials migration](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-2012-R2-Essentials-migration.md).  
   
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+

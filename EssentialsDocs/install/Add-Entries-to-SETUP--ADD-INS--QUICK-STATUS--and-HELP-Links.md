@@ -2,33 +2,18 @@
 title: "Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 caps.latest.revision: 18
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links
 You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, and you can add links to the Community Links section in the home page of the Dashboard. Tasks and links are added to these lists and section by placing an XML file named OEMHomePageContent.home file or an embedded resource file named OEMHomePageContent.dll in %ProgramFiles%\Windows Server\Bin\Addins\Home. The embedded resource file can be used to localize the text in the tasks and links that you add. The .home file contains the XML definitions of the tasks and links.  
@@ -60,30 +45,30 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
     ```  
   
-    <Tasks version=‚Äù2.0‚Äù xmlns=‚Äùhttp://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+    <Tasks version=‚Ä?2.0‚Ä? xmlns=‚Ä?http://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
        <SetupMyServerTasks>  
           <Task name="MyTask"  
              description="MyTaskDescription"  
              id="GUID">  
                   <Action   
-                  name=‚ÄùMyAction1Name‚Äù   
-                  image=‚ÄùIconForAction1‚Äù  
-                  type=‚ÄùTaskType‚Äù  
-                  exelocation=‚ÄùActionExeLocation‚Äù />  
+                  name=‚Ä?MyAction1Name‚Ä?   
+                  image=‚Ä?IconForAction1‚Ä?  
+                  type=‚Ä?TaskType‚Ä?  
+                  exelocation=‚Ä?ActionExeLocation‚Ä? />  
                   <Action   
-                  name=‚ÄùMyAction2Name‚Äù   
-                  image=‚ÄùIconForAction2‚Äù  
-                  type=‚ÄùTaskType‚Äù  
-                  exelocation=‚ÄùActionExeLocation‚Äù />  
+                  name=‚Ä?MyAction2Name‚Ä?   
+                  image=‚Ä?IconForAction2‚Ä?  
+                  type=‚Ä?TaskType‚Ä?  
+                  exelocation=‚Ä?ActionExeLocation‚Ä? />  
                    ‚Ä¶  
            </Task>  
                    ‚Ä¶  
         </SetupMyServerTasks>  
     <MailServiceTasks>  
-         <!-- Same schema as in ‚ÄúSetupMyServerTasks‚Äù but the tasks are shown in ‚ÄúConnect to Email Service‚Äù category. -->  
+         <!-- Same schema as in ‚ÄúSetupMyServerTasks‚Ä? but the tasks are shown in ‚ÄúConnect to Email Service‚Ä? category. -->  
     </MailServiceTasks>  
     <LineOfBusinessTasks>  
-         <!-- Same schema as in ‚ÄúSetupMyServerTasks‚Äù but the tasks are shown in ‚ÄúAdd-ins‚Äù category. -->  
+         <!-- Same schema as in ‚ÄúSetupMyServerTasks‚Ä? but the tasks are shown in ‚ÄúAdd-ins‚Ä? category. -->  
   
     <GetQuickStatusTasks>  
           <Task name="MyQuickStatusTask1"  
@@ -92,12 +77,12 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
              assembly="AssemblyName of quick status query implementation"  
              class="ClassName of quick status query implementation"           
              replaceid="GUID"/>  
-               <!--  Same schema as Actions in ‚ÄúSetupMyServerTasks‚Äù -->   
+               <!--  Same schema as Actions in ‚ÄúSetupMyServerTasks‚Ä? -->   
              </Task>  
     </GetQuickStatusTasks>  
        <Links>  
           <Link  
-             ID=‚ÄùGUID‚Äù  
+             ID=‚Ä?GUID‚Ä?  
              Title="Displayed text of the link"  
              Description="A very short description"  
              ShellExecPath="Path to the application or URL"/>  
@@ -114,7 +99,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
     |id (Task)|The identifier of the task. This identifier must be a GUID. You create a new GUID for an **exe** task, but for a **global** task, you use the GUID that you created when you defined the task for the task pane of the sub-tab. For more information about creating a GUID, see [Create Guid (guidgen.exe)](http://go.microsoft.com/fwlink/?LinkId=116098).|  
     |image|This field will be ignored.|  
     |Name (Action)|Displays the name of the task.|  
-    |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see ‚ÄúCreating the support classes‚Äù in ‚ÄúHow to: Create a Sub-Tab‚Äù of the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|  
+    |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see ‚ÄúCreating the support classes‚Ä? in ‚ÄúHow to: Create a Sub-Tab‚Ä? of the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|  
     |exelocation|The path to the application that is associated with the task. This attribute is only used for **exe** tasks.|  
     |replaceid|The identifier of the task that is replaced with this task.|  
     |assembly|The AssemblyName of the assembly which provides the class to implement quick status query. The assembly needs to be located in Program files\ windows server\bin\\.|  
@@ -147,9 +132,9 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
  For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
   
- ![Dashboard Home Page Setup Tasks](../install/media/WSE_Dashboard_Home_SetupTasks.gif "WSE_Dashboard_Home_SetupTasks")  
+ ![Dashboard Home Page Setup Tasks](media/WSE_Dashboard_Home_SetupTasks.gif "WSE_Dashboard_Home_SetupTasks")  
   
- ![Dashboard Home Page Help Links](../install/media/WSE_Home_HelpLinks.png "WSE_Home_HelpLinks")  
+ ![Dashboard Home Page Help Links](media/WSE_Home_HelpLinks.png "WSE_Home_HelpLinks")  
   
 #### Change the status of a SETUP/ADD-INS task  
  The tasks that are listed in SETUP and ADD-INS can be toggled in states of completed (configured for Add-ins) and not completed (not configured for Add-ins).  
@@ -190,7 +175,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
   
     ```  
   
-    <Tasks version=‚Äù2.0‚Äù xmlns=‚Äùhttp://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+    <Tasks version=‚Ä?2.0‚Ä? xmlns=‚Ä?http://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
        <SetupMyServerTasks>  
           <Task name="MyTask"  
              description="MyDescription"  
@@ -226,7 +211,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
 2.  If you did not create an embedded resource file, copy the OEMHomePageContent.home file to **%ProgramFiles%\Windows Server\Bin\Addins\Home** on the server. If you created an embedded resource file, copy the OEMHomePageContent.dll file to **%ProgramFiles%\Windows Server\Bin\Addins\Home** on the server.  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

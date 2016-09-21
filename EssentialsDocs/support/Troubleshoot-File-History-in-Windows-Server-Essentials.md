@@ -2,18 +2,17 @@
 title: "Troubleshoot File History in Windows Server Essentials"
 ms.custom: na
 ms.date: 03/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: ed062945-27e9-4572-b1bb-6c8cf1b9c2f4
 caps.latest.revision: 4
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -27,7 +26,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot File History in Windows Server Essentials
-[!INCLUDE[wse_all](../manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
 ## Troubleshoot issues with user File History backups  
  The following issues might occur while managing File History backups for a user or a computer that has been added to a server running Windows Server Essentials.  
@@ -78,13 +77,24 @@ translation.priority.ht:
   
 4.  Rename the subfolder for the user that you deleted, for example, **<*UserName*>_Deleted**. If you no longer need the user's file history, you can delete the folder.  
   
-5.  You can now add the new user. For instructions, see “Add a user account” in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+
+5.  You can now add the new user. For instructions, see “Add a user account�? in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+  
+### A user account was removed, but the user's file history remains  
+ In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  
+
+5.  You can now add the new user. For instructions, see “Add a user account�? in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
 ### A user account was removed, but the user's file history remains  
  In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  
+
   
 ## See also  
   
 -   [Manage Client Backup](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)  
   
+
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
+
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+

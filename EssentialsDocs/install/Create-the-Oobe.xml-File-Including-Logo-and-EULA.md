@@ -2,33 +2,18 @@
 title: "Create the Oobe.xml File Including Logo and EULA"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
 caps.latest.revision: 15
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Create the Oobe.xml File Including Logo and EULA
 You can add your own End User License Agreement (EULA) to Initial Configuration by using the Oobe.xml file. The Oobe.xml is a file used to provide text and images for Initial Configuration, Windows Welcome, and other pages presented to the end user. You can add multiple Oobe.xml files to customize the content based on the language and country or region selections of the end user. For more information, see the [Windows Assessment and Deployment Kit for Windows 8](http://go.microsoft.com/fwlink/?LinkId=248694) documentation.  
@@ -96,8 +81,8 @@ You can add your own End User License Agreement (EULA) to Initial Configuration 
 8.  Enter the path that contains the logo image, and then click OK.  
   
 ## See Also  
- [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

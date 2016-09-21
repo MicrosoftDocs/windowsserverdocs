@@ -2,35 +2,21 @@
 title: "Install the Windows Server 2012 Essentials Log Collector"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Install the Windows Server 2012 Essentials Log Collector
-The [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
+The  Windows Server 2012 Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
   
 ###  <a name="BKMK_ToInstall"></a> To install the Log Collector  
   
@@ -58,14 +44,18 @@ The [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Colle
   
 2.  Click the **Add-in** tab, select **Log Collector** from the list, and then click **Uninstall**.  
   
+
+3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
+
 3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
+
   
 ### Manually install the Log Collector  
  If the installation wizard failed to install the Log Collector, you can install the Log Collector on a single computer using the following procedure.  
   
 ##### To manually install the Log Collector  
   
-1.  Rename the extension of the downloaded installation file from “.wssx” to “.cab”.  
+1.  Rename the extension of the downloaded installation file from “.wssx�? to “.cab�?.  
   
 2.  Double-click the installation file name.  
   

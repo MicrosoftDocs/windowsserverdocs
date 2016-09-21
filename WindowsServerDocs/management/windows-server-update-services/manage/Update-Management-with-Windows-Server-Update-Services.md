@@ -1,9 +1,10 @@
 ---
 title: Update Management with Windows Server Update Services
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28fde77a-f5fc-4e51-835d-8bc304dcfa54
@@ -11,7 +12,10 @@ author: coreyp
 ms.author: coreyp-at-msft
 ms.date: 09/14/2016
 ---
+
 # Update Management with Windows Server Update Services
+
+>Applies To: Windows Server Technical Preview
 
 You should check the WSUS administration console home page regularly to view overall update compliance and network health. Check application logs frequently, if you suspect problems such as download failures or client computers that are failing to report to the WSUS server. This guide provides information to help you manage Windows Server Update Services.  
   
@@ -33,5 +37,3 @@ In this guide, you will find information about:
 -   [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md)  
   
 -   [WSUS Messages and Troubleshooting Tips](WSUS-Messages-and-Troubleshooting-Tips.md)  
-  
-

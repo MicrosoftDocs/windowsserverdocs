@@ -13,25 +13,12 @@ applies_to:
   - Windows Storage Server 2012 R2 Essentials
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Remote desktop options
-[!INCLUDE[wse_all](../windows-server-essentials/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
 ## Connection speed  
  The speed of the connection to a network computer using Remote Web Access determines the desktop options that are available to you on the host computer. The following table tells you which desktop options are available for speed that you are connecting to the remote computer through Remote Web Access.  
@@ -77,6 +64,6 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Remote Web Access](../windows-server-essentials/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
+-   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
--   [Use Remote Web Access](../windows-server-essentials/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)
+-   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)

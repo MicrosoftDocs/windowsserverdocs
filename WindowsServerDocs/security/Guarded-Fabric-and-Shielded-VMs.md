@@ -2,13 +2,11 @@
 title: Guarded Fabric and Shielded VMs
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cf257b3a-9365-42e2-a37c-327cac6028d4
 manager: dongill
 author: coreyp-at-msft
+ms.technology: security-guarded-fabric
 ---
 # Guarded fabric and shielded VMs
 
@@ -18,21 +16,21 @@ author: coreyp-at-msft
 
 Virtualization security is a major investment area in Windows Server 2016 Hyper-V. In addition to protecting hosts or other virtual machines from a virtual machine running malicious software, we also need to protect virtual machines from a compromised host. Since a virtual machine is just a file, we need to protect it from attacks via the storage system, the network, or while it is backed up. This is a fundamental need for every virtualization platform today, whether it's Hyper-V, VMware or any other. Quite simply, if a virtual machine gets out of an organization (either maliciously or accidentally), that virtual machine can be run on any other system. Protecting high value assets in your organization, such as domain controllers, sensitive file servers, and HR systems, is a top priority.
 
-To help protect against compromised fabric, Windows Server 2016 Hyper-V introduces shielded VMs. A shielded VM is a generation 2 VM (supported on Windows Server 2012 and later) that has a virtual TPM, is encrypted using BitLocker and can only run on healthy and approved hosts in the fabric. Shielded VMs and guarded fabric enable cloud service providers or enterprise private cloud administrators to provide a more secure environment for tenant VMs. 
+To help protect against compromised fabric, Windows Server 2016 Hyper-V introduces shielded VMs. A shielded VM is a generation 2 VM (supported on Windows Server 2012 and later) that has a virtual TPM, is encrypted using BitLocker and can only run on healthy and approved hosts in the fabric. Shielded VMs and guarded fabric enable cloud service providers or enterprise private cloud administrators to provide a more secure environment for tenant VMs.
 
 A guarded fabric consists of:
 
-- 1 Host Guardian Service (HGS) (typically, a cluster of 3 nodes) 
+- 1 Host Guardian Service (HGS) (typically, a cluster of 3 nodes)
 - 1 or more guarded hosts
 - A set of shielded virtual machines. The diagram below shows how the Host Guardian Service uses attestation to ensure that only known, valid hosts can start the shielded VMs, and key protection to securely release the keys for shielded VMs.
 
-When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hosts and the shielded VMs themselves are protected by the HGS. The HGS provides two distinct services: attestation and key protection. The Attestation service ensures only trusted Hyper-V hosts can run shielded VMs while the Key Protection Service provides the keys necessary to power them on and to live migrate them to other guarded hosts. 
+When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hosts and the shielded VMs themselves are protected by the HGS. The HGS provides two distinct services: attestation and key protection. The Attestation service ensures only trusted Hyper-V hosts can run shielded VMs while the Key Protection Service provides the keys necessary to power them on and to live migrate them to other guarded hosts.
 
 ![Guarded host fabric](./media/Guarded-Host-Overview-Diagram.png)
 
 ### Attestation modes in the Guarded Fabric solution
 
-The HGS supports two different attestation modes for a guarded fabric: 
+The HGS supports two different attestation modes for a guarded fabric:
 
 - TPM-trusted attestation (Hardware based)
 - Admin-trusted attestation (AD based)
@@ -52,7 +50,7 @@ Guarded fabrics are capable of running VMs in one of three possible ways:
 2.	An encryption-supported VM whose protections can be configured by a fabric admin
 3.	A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
 
-Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools. 
+Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools.
 
 Shielded VMs are intended for use in fabrics where the data and state of the VM must be protected from both fabric administrators and untrusted software that might be running on the Hyper-V hosts. For example, shielded VMs will never permit a VM console connection whereas a fabric administrator can turn this protection on or off for encryption supported VMs.
 
@@ -64,7 +62,7 @@ The followuing table summarizes the differences between encryption support and s
 |Vtpm               | Yes, required but configurable        | Yes, required and enforced    |
 |Encrypt VM state and live migration traffic | Yes, required but configurable |  Yes, required and enforced  |
 |Integration components | Configurable by fabric admin      | Certain integration components blocked (e.g. data exchange, PowerShell Direct) |
-|Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) | 
+|Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) |
 |COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
 |Attach a debugger (to the VM process) | Supported          | Disabled (cannot be enabled) |
 
@@ -85,17 +83,17 @@ HGS, together with the methods for creating shielded VMs, help provide the follo
 
 A shielding data file (also called a provisioning data file or PDK file) is an encrypted file that a tenant or VM owner creates to protect important VM configuration information, such as the administrator password, RDP and other identity-related certificates, domain-join credentials, and so on. A fabric administrator uses the shielding data file when creating a shielded VM, but is unable to view or use the information contained in the file.
 
-Among others, a shielding data files contain secrets such as: 
+Among others, a shielding data files contain secrets such as:
 
 - Administrator credentials
 - An answer file (unattend.xml)
 - A security policy that determines whether VM’s created using this shielding data are configured as shielded or encryption supported
     - Remember, VMs configured as shielded are protected from fabric admins whereas encryption supported VMs are not
-- An RDP certificate to secure remote desktop communication with the VM 
+- An RDP certificate to secure remote desktop communication with the VM
 - A volume signature catalog that contains a list of trusted, signed template-disk signatures that a new VM is allowed to be created from
 - A Key Protector (or KP) that defines which guarded fabrics a shielded VM is authorized to run on
 
-The shielding data file (PDK file) provides assurances that the VM will be created in the way the tenant intended. For example, when the tenant places an answer file (unattend.xml) in the shielding data file and delivers it to the hosting provider, the hosting provider cannot view or make changes to that answer file. Similarly, the hosting provider cannot substitute a different VHDX when creating the shielded VM, because the shielding data file contains the signatures of the trusted disks that shielded VMs can be created from. 
+The shielding data file (PDK file) provides assurances that the VM will be created in the way the tenant intended. For example, when the tenant places an answer file (unattend.xml) in the shielding data file and delivers it to the hosting provider, the hosting provider cannot view or make changes to that answer file. Similarly, the hosting provider cannot substitute a different VHDX when creating the shielded VM, because the shielding data file contains the signatures of the trusted disks that shielded VMs can be created from.
 
 The following figure shows the shielding data file and related configuration elements.
 
@@ -157,7 +155,7 @@ The following figure shows the shielding data file and related configuration ele
 | Term              | Definiotion           |
 |-------------------|-----------------------|
 | Host Guardian Service (HGS) | A Windows Server role that is installed on a secured cluster of bare-metal servers that is able to measure the health of a Hyper-V host and release keys to healthy Hyper-V hosts when powering-on or live migrating shielded VMs. These two capabilities are fundamental to a shielded VM solution and are referred to as the **Attestation service** and **Key Protection Service** respectively. |
-| guarded host | A Hyper-V host on which shielded VMs can run. A host can only be considered _guarded_ when it has been deemed healthy by HGS’ Attestation service. Shielded VMs cannot be powered-on or live migrated to a Hyper-V host that has not yet attested or that failed attestation. | 
+| guarded host | A Hyper-V host on which shielded VMs can run. A host can only be considered _guarded_ when it has been deemed healthy by HGS’ Attestation service. Shielded VMs cannot be powered-on or live migrated to a Hyper-V host that has not yet attested or that failed attestation. |
 | guarded fabric    | This is the collective term used to describe a fabric of Hyper-V hosts and their Host Guardian Service that has the ability to manage and run shielded VMs. |
 | shielded virtual machine (VM) | A virtual machine that can only run on guarded hosts and is protected from inspection, tampering and theft from malicious fabric admins and host malware. |
 | fabric administrator | A public or private cloud administrator that can manage virtual machines. In the context of a guarded fabric, a fabric administrator does not have access to shielded VMs, or the policies that determine which hosts shielded VMs can run on. |

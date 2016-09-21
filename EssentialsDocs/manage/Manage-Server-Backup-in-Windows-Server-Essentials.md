@@ -2,53 +2,39 @@
 title: "Manage Server Backup in Windows Server Essentials"
 ms.custom: na
 ms.date: 03/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Manage Server Backup in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  The following topics include information about common backup tasks that you can accomplish by using the Windows Server Essentials Dashboard:  
   
--   [Which backup should I choose?](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_WhichBackup)  
+-   [Which backup should I choose?](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_WhichBackup)  
   
--   [Set up or customize server backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Set up or customize server backup](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Stop server backup in progress](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Stop server backup in progress](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Remotely manage your backups](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Remotely manage your backups](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Disable server backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Disable server backup](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
   
--   [Learn more about setting up server backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Learn more about setting up server backup](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Repartition a hard drive on the server](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
+-   [Repartition a hard drive on the server](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Restore files and folders from a server backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Restore files and folders from a server backup](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
   
 ##  <a name="BKMK_WhichBackup"></a> Which backup should I choose?  
  Choosing a backup can be straightforward if you have a very recent successful backup and you know that the backup contains all of your critical data. If you are trying to restore to the server or a computer from an older backup, choosing a good backup to restore to may require some investigation and, possibly, some compromise.  
@@ -64,7 +50,7 @@ translation.priority.ht:
 4.  As a best practice, you can restore files and folders to an alternate location, and then let the owner of the files and folders move the ones that they need to the original location. When they finish, the files and folders that remain in the alternate location can be deleted.  
   
 ##  <a name="BKMK_1"></a> Set up or customize server backup  
- Server backup is not automatically configured during installation. You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days. For more information, see [Set up or customize server backup](../windows-server-essentials-manage/Set-up-or-customize-server-backup.md).  
+ Server backup is not automatically configured during installation. You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days. For more information, see [Set up or customize server backup](Set-up-or-customize-server-backup.md).  
   
 ##  <a name="BKMK_2"></a> Stop server backup in progress  
  Whether a server backup starts at a regularly scheduled time or you start a server backup manually, you can stop the backup in progress.  
@@ -90,11 +76,11 @@ translation.priority.ht:
   
 3.  When prompted, enter your user name and password.  
   
-4.  When you click the name of the server in [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)], the logon page for the Dashboard is displayed.  
+4.  When you click the name of the server in  Remote Web Access, the logon page for the Dashboard is displayed.  
   
 5.  Log on to the Dashboard as an administrator, and then click **Devices**.  
   
- For more information about [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)], see [Remote Web Access overview](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview).  
+ For more information about  Remote Web Access, see [Remote Web Access overview](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview).  
   
 ##  <a name="BKMK_4"></a> Disable server backup  
  You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  
@@ -110,7 +96,7 @@ translation.priority.ht:
 3.  In the Tasks pane, click **Customize Backup for the server**.  
   
     > [!NOTE]
-    >  The **Customize Backup for the server** task is displayed after you have configured server backup using the Set Up Server Backup Wizard. For more information about setting up server backup, see [Set up or customize server backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
+    >  The **Customize Backup for the server** task is displayed after you have configured server backup using the Set Up Server Backup Wizard. For more information about setting up server backup, see [Set up or customize server backup](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
   
 4.  The Customize Server Backup Wizard appears.  
   
@@ -204,8 +190,8 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

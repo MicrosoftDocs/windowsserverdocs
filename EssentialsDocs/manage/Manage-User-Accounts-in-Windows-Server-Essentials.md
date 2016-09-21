@@ -2,60 +2,41 @@
 title: "Manage User Accounts in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/22/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 caps.latest.revision: 18
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Manage User Accounts in Windows Server Essentials
-The Users page of the Windows Server Essentials Dashboard centralizes information and tasks that help you manage the user accounts on your small business network. For an overview of the Users Dashboard, see [Dashboard Overview](../windows-server-essentials-manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials.md).  
+The Users page of the Windows Server Essentials Dashboard centralizes information and tasks that help you manage the user accounts on your small business network. For an overview of the Users Dashboard, see [Dashboard Overview](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md).  
   
- In this topic:  
-  
--   [Managing user accounts](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_ManageAccounts)  
-  
--   [Managing passwords and access](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_ManageAccess)  
   
 ##  <a name="BKMK_ManageAccounts"></a> Managing user accounts  
  The following topics provide information about how to use the Windows Server Essentials Dashboard to manage the user accounts on the server:  
   
--   [Add a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)  
+-   [Add a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)  
   
--   [Remove a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Remove)  
+-   [Remove a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Remove)  
   
--   [View user accounts](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage3)  
+-   [View user accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage3)  
   
--   [Change the display name for the user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage4)  
+-   [Change the display name for the user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage4)  
   
--   [Activate a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage5)  
+-   [Activate a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage5)  
   
--   [Deactivate a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage6)  
+-   [Deactivate a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage6)  
   
--   [Understand user accounts](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage7)  
+-   [Understand user accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage7)  
   
--   [Manage user accounts using the Dashboard](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)  
+-   [Manage user accounts using the Dashboard](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)  
   
 ###  <a name="BKMK_Manage1"></a> Add a user account  
  When you add a user account, the assigned user can log on to the network, and you can give the user permission to access network resources such as shared folders and the Remote Web Access site. Windows Server Essentials includes the Add a User Account Wizard that helps you:  
@@ -70,12 +51,12 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
 -   Select email options if applicable.  
   
--   Assign a Microsoft Online Services account (referred to as an “[!INCLUDE[office_365_2](../windows-server-essentials-manage/includes/office_365_2_md.md)] account” in [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)]) if applicable.  
+-   Assign a Microsoft Online Services account (referred to as an “ Office 365 account�? in  Windows Server 2012 Essentials) if applicable.  
   
--   Assign user groups ([!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] only).  
+-   Assign user groups ( Windows Server 2012 R2 Essentials only).  
   
 > [!NOTE]
->  -   Non-ASCII characters are not supported in [!INCLUDE[aad_1](../windows-server-essentials-manage/includes/aad_1_md.md)]. Do not use any non-ASCII characters in your password, if your server is integrated with [!INCLUDE[aad_2](../windows-server-essentials-manage/includes/aad_2_md.md)].  
+>  -   Non-ASCII characters are not supported in  Microsoft Azure Active Directory (Azure AD). Do not use any non-ASCII characters in your password, if your server is integrated with  Azure AD.  
 > -   The email options are only available if you install an add-in that provides email service.  
   
 ##### To add a user account  
@@ -92,7 +73,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  When you choose to remove a user account from the server, a wizard deletes the selected account. Because of this, you can no longer use the account to log on to the network or to access any of the network resources. As an option, you can also delete the files for the user account at the same time that you remove the account. If you do not want to permanently remove the user account, you can deactivate the user account instead to suspend access to network resources.  
   
 > [!IMPORTANT]
->  If a user account has a Microsoft online account assigned, when you remove the user account, the online account also is removed from Microsoft Online Services, and the user’s data, including email, is subject to data retention policies in Microsoft Online Services. If you want to retain user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](../windows-server-essentials-manage/Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+>  If a user account has a Microsoft online account assigned, when you remove the user account, the online account also is removed from Microsoft Online Services, and the user’s data, including email, is subject to data retention policies in Microsoft Online Services. If you want to retain user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ##### To remove a user account  
   
@@ -177,7 +158,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 ###  <a name="BKMK_Manage6"></a> Deactivate a user account  
  When you deactivate a user account, account access to the server is temporarily suspended. Because of this, the assigned user cannot use the account to access network resources such as shared folders or the Remote Web Access site until you activate the account.  
   
- If the user account has a Microsoft online account assigned, the online account is also deactivated. The user cannot use resources in [!INCLUDE[office_365_2](../windows-server-essentials-manage/includes/office_365_2_md.md)] and other online services that you subscribe to, but the user’s data, including email, is retained in Microsoft Online Services.  
+ If the user account has a Microsoft online account assigned, the online account is also deactivated. The user cannot use resources in  Office 365 and other online services that you subscribe to, but the user’s data, including email, is retained in Microsoft Online Services.  
   
 > [!NOTE]
 >  You can only deactivate a user account that is currently active.  
@@ -212,8 +193,8 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  Windows Server Essentials makes it possible to perform common administrative tasks by using the Windows Server Essentials Dashboard. By default, the **Users** page of the Dashboard includes two tabs – **Users** and **Users Groups**.  
   
 > [!NOTE]
->  -   If you integrate your server that is running [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] with Office 365, a new tab called **Distribution Groups** is also added within the **Users** page of the Dashboard.  
-> -   In [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], the **Users** page of the Dashboard includes only a single tab - **Users**.  
+>  -   If you integrate your server that is running  Windows Server 2012 R2 Essentials with Office 365, a new tab called **Distribution Groups** is also added within the **Users** page of the Dashboard.  
+> -   In  Windows Server 2012 Essentials, the **Users** page of the Dashboard includes only a single tab - **Users**.  
   
  The **Users** tab includes the following:  
   
@@ -231,9 +212,9 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
     -   The user account status. A user account can be **Active**, **Inactive**, or **Incomplete**.  
   
-    -   In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)], if the server is integrated with [!INCLUDE[office_365_2](../windows-server-essentials-manage/includes/office_365_2_md.md)] or Windows Intune, the Microsoft online account is displayed.  
+    -   In  Windows Server 2012 R2 Essentials, if the server is integrated with  Office 365 or Windows Intune, the Microsoft online account is displayed.  
   
-    -   In [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], if the server is integrated with Microsoft Office 365, the status of the Office 365 account (known in [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] as the Microsoft online account) for the user account is displayed.  
+    -   In  Windows Server 2012 Essentials, if the server is integrated with Microsoft Office 365, the status of the Office 365 account (known in  Windows Server 2012 R2 Essentials as the Microsoft online account) for the user account is displayed.  
   
 -   A details pane with additional information about a selected user account.  
   
@@ -246,7 +227,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  The following table describes the various user account tasks that are available from the **Users** tab. Some of the tasks are user account-specific, and they are only visible when you select a user account in the list.  
   
 > [!NOTE]
->  If you integrate [!INCLUDE[office365_sbp_3](../windows-server-essentials-manage/includes/office365_sbp_3_md.md)] with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](../windows-server-essentials-manage/Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+>  If you integrate  Office 365 with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ### User account tasks in the Dashboard  
   
@@ -262,36 +243,36 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 |Add Microsoft online accounts|Adds Microsoft online accounts and associates them to local network user accounts.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Office 365.|  
 |Set the password policy|Enables you to change the values of the password polices for your network.|  
 |Import Microsoft online accounts|Performs a bulk import of accounts from Microsoft online services into the local network.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Office 365.|  
-|Refresh|Refreshes the Users tab.<br /><br /> This task is applicable to [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)].|  
-|Change File History settings|Enables you to change File History settings, such as backup frequency, or backup duration.<br /><br /> This task is applicable to [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)].|  
+|Refresh|Refreshes the Users tab.<br /><br /> This task is applicable to  Windows Server 2012 R2 Essentials.|  
+|Change File History settings|Enables you to change File History settings, such as backup frequency, or backup duration.<br /><br /> This task is applicable to  Windows Server 2012 R2 Essentials.|  
 |Export all remote connections|Creates a .CSV-format file of all remote connections to the server that have occurred over the past 30 days.|  
   
 ##  <a name="BKMK_ManageAccess"></a> Managing passwords and access  
  The following topics provide information about how to use the Windows Server Essentials Dashboard to manage user account passwords and user access to the shared folders on the server:  
   
--   [Change or reset the password for a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access1)  
+-   [Change or reset the password for a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access1)  
   
--   [What you should know about password policies](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access3)  
+-   [What you should know about password policies](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access3)  
   
--   [Change the password policy](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access4)  
+-   [Change the password policy](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access4)  
   
--   [Level of access to shared folders](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access5)  
+-   [Level of access to shared folders](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access5)  
   
--   [Retain and manage access to files for removed user accounts](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access6)  
+-   [Retain and manage access to files for removed user accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access6)  
   
--   [Synchronize the DSRM password with the network administrator password](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access7)  
+-   [Synchronize the DSRM password with the network administrator password](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access7)  
   
--   [Give user accounts remote desktop permission](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access8)  
+-   [Give user accounts remote desktop permission](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access8)  
   
--   [Enable users to access resources on the server](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access9)  
+-   [Enable users to access resources on the server](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access9)  
   
--   [Change remote access permissions for a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access10)  
+-   [Change remote access permissions for a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access10)  
   
--   [Change virtual private network permissions for a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access11)  
+-   [Change virtual private network permissions for a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access11)  
   
--   [Change access to internal shared folders for a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access12)  
+-   [Change access to internal shared folders for a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access12)  
   
--   [Allow user accounts to establish a remote desktop session to their computer](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access13)  
+-   [Allow user accounts to establish a remote desktop session to their computer](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Access13)  
   
 ###  <a name="BKMK_Access1"></a> Change or reset the password for a user account  
  To change or reset a user account password, follow these steps.  
@@ -314,8 +295,8 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
     > [!IMPORTANT]
     >  -   You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.  
-    > -   Non-ASCII characters are not supported in [!INCLUDE[aad_2](../windows-server-essentials-manage/includes/aad_2_md.md)]. Therefore, if your server is integrated with [!INCLUDE[aad_2](../windows-server-essentials-manage/includes/aad_2_md.md)], do not use any non-ASCII characters in your password.  
-    > -   If a Microsoft online account (known in [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)] as an “[!INCLUDE[office_365_2](../windows-server-essentials-manage/includes/office_365_2_md.md)] account”) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](../windows-server-essentials-manage/Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+    > -   Non-ASCII characters are not supported in  Azure AD. Therefore, if your server is integrated with  Azure AD, do not use any non-ASCII characters in your password.  
+    > -   If a Microsoft online account (known in  Windows Server 2012 Essentials as an “ Office 365 account�?) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ###  <a name="BKMK_Access3"></a> What you should know about password policies  
  The password policy is a set of rules that define how users create and use passwords. The policy helps to prevent unauthorized access to user data and other information that is stored on the server. The password policy is applied to all user accounts that access the network.  
@@ -381,7 +362,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  The network administrator can remove a user account and choose to keep the user’s files for future use. In this scenario, the removed user account can no longer be used to sign in to the network; however, the files for this user will be saved in a shared folder, which can be shared with another user.  
   
 > [!IMPORTANT]
->  Be aware that if you remove a user account that has a Microsoft online account assigned, the online account is also removed, and the user data, including email, is subject to data retention policies in Microsoft Online Services. To retain the user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](../windows-server-essentials-manage/Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+>  Be aware that if you remove a user account that has a Microsoft online account assigned, the online account is also removed, and the user data, including email, is subject to data retention policies in Microsoft Online Services. To retain the user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ##### To remove a user account but retain access to the user’s files  
   
@@ -461,7 +442,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
     2.  In the **Action** list, click **Start a program**, and then browse to **C:\WINDOWS\SYSTEM32\ntdsutil.exe**.  
   
-    3.  In the **Add arguments**(optional) text box, type the following (you must include the quotation marks): **“set dsrm password” “sync from domain account SBS_network_administrator_account” q q** where *SBS_network_administrator_account* is the current network administrator’s account name.  
+    3.  In the **Add arguments**(optional) text box, type the following (you must include the quotation marks): **“set dsrm password�? “sync from domain account SBS_network_administrator_account�? q q** where *SBS_network_administrator_account* is the current network administrator’s account name.  
   
 6.  Click **OK** twice to save the task and close the **Create Task** dialog box. The new task appears in the **Active Tasks** section of **Task Schedule**.  
   
@@ -480,12 +461,12 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
  To set up Anywhere Access, open the Dashboard **Home** page, click **SETUP**, and then click **Set up Anywhere Access**.  
   
- For more information about Anywhere Access, see [Manage Anywhere Access](../windows-server-essentials-manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).  
+ For more information about Anywhere Access, see [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_Access9"></a> Enable users to access resources on the server  
- [!INCLUDE[wse_all_section](../windows-server-essentials-manage/includes/wse_all_section_md.md)]  
+  This section applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- If you want users to use remote access, and/or have individual user accounts, after you finish connecting a computer to the server, you can create new network user accounts for the users of the networked computer on the server by using the Dashboard. For more information about creating a user account, see [Add a user account](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1). After creating the user accounts, you must provide the network user name and password information to the users of the client computer so that they can access resources on the server by using the Launchpad.  
+ If you want users to use remote access, and/or have individual user accounts, after you finish connecting a computer to the server, you can create new network user accounts for the users of the networked computer on the server by using the Dashboard. For more information about creating a user account, see [Add a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1). After creating the user accounts, you must provide the network user name and password information to the users of the client computer so that they can access resources on the server by using the Launchpad.  
   
  For each user account that you create you can set access for the following through the user account properties:  
   
@@ -618,7 +599,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
     >  You cannot modify the sharing permissions for **File History Backups**, **Folder Redirection**, and **Users** server folders. Hence, the folder properties of these server folders do not include a **Sharing** tab.  
   
 ###  <a name="BKMK_Access13"></a> Allow user accounts to establish a remote desktop session to their computer  
- [!INCLUDE[wse_all_section](../windows-server-essentials-manage/includes/wse_all_section_md.md)]  
+  This section applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  The network administrator can grant permissions to network users that allow them to access their network computers from a remote location.  
   
@@ -638,10 +619,10 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
 ## See also  
   
--   [Manage Online Accounts for Users](../windows-server-essentials-manage/Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md)  
+-   [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md)  
   
--   [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md)  
+-   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)  
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

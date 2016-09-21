@@ -4,11 +4,11 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-hv-switch
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
+ms.author: jamesmci
 author: jamesmci
 ---
 # Hyper-V Virtual Switch
@@ -42,7 +42,7 @@ The Hyper-V Virtual Switch includes tenant isolation capabilities, traffic shapi
   
 In the following illustration, a Virtual Machine (VM) has a virtual NIC that is connected to the Hyper-V Virtual Switch through a switch port.  
   
-![](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
+![Hyper-V Virtual Switch](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
   
 The capabilities provided in the Hyper-V Virtual Switch mean that your organization has more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious virtual machines.  
   

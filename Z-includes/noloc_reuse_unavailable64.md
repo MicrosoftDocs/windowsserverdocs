@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">This feature is not available on the Itanium-based versions of the Windows operating systems.</Token>

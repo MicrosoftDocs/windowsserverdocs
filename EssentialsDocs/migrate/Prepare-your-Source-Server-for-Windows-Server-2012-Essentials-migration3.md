@@ -2,39 +2,40 @@
 title: "Prepare your Source Server for Windows Server 2012 Essentials migration3"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Prepare your Source Server for Windows Server 2012 Essentials migration
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: b91188c2-036a-47e9-8d59-4bc7a7f0e8d2
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Prepare your Source Server for Windows Server 2012 Essentials migration3
 Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   
 #### To prepare for migration  
   
+
+1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+  
+2.  [Install the most recent service packs](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+  
+3.  [Verify the network configuration](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_Verify)  
+  
+4.  [Evaluate the health of the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_UseWindowsBestPracticeAnalyzer)  
+  
+5.  [Run the Migration Preparation Tool on the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_MPT)  
+  
+6.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+  
+7.  [Create a plan to migrate email that is hosted on Windows Small Business Server 2008](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateEmail)  
+
 1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
 2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
@@ -48,6 +49,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 6.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
   
 7.  [Create a plan to migrate email that is hosted on Windows Small Business Server 2008](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateEmail)  
+
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
@@ -62,9 +64,13 @@ Complete the following preliminary steps to ensure that the settings and data on
  You must install the latest updates and service packs on the Source Server prior to migration. If updates or service packs are missing, the Migration Preparation Tool will report the problem and ask you to install the necessary updates before proceeding.  
   
 ###  <a name="BKMK_Verify"></a> Verify the network configuration  
- Before you can migrate your network to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure:  
+ Before you can migrate your network to  Windows Server 2012 Essentials, you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure:  
   
+
+ ![Example small business network](media/WSE_Network.png "WSE_Network")  
+
  ![Example small business network](../migrate/media/WSE_Network.png "WSE_Network")  
+
   
 #### Disable the VPN on the Source Server  
  If you are using a VPN on the Source Server, disable it.  
@@ -82,7 +88,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 5.  The wizard disables the Routing and Remote Access service, closes port 1723 on the router, and removes the VPN configuration. When the wizard finishes disabling the VPN, click **Finish**.  
   
 ####  <a name="BKMK_VerifyTheDHCPSettings"></a> Verify the settings for the DHCP Server role  
- Windows SBS 2008 is configured to run the DHCP Server role. However, [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] does not use the DHCP Server role, and you will eventually need to move the DHCP Server role to the router. During migration, you can manage the DHCP Server role from the Source Server or from the router, depending on your current network configuration:  
+ Windows SBS 2008 is configured to run the DHCP Server role. However,  Windows Server 2012 Essentials does not use the DHCP Server role, and you will eventually need to move the DHCP Server role to the router. During migration, you can manage the DHCP Server role from the Source Server or from the router, depending on your current network configuration:  
   
 -   If you are running the DHCP Server role on the Source Server, we recommend that you continue to run this role from the Source Server during migration. After you have removed the Source Server from the network, move the DHCP Server role to the router.  
   
@@ -174,7 +180,7 @@ Complete the following preliminary steps to ensure that the settings and data on
  To view the description and the solutions for an issue, click the issue in the report. Not all of the issues that are reported by the Windows SBS 2008 BPA affect migration, but you should solve as many of the issues as possible to ensure that the migration is successful.  
   
 ####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> Synchronize the Source Server time with an external time source  
- The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
+ The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that  Windows Server 2012 Essentials is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
   
 ###### To synchronize the Source Server time with the NTP server  
   
@@ -189,10 +195,10 @@ Complete the following preliminary steps to ensure that the settings and data on
 5.  At the command prompt, type net start w32time, and then press ENTER.  
   
 > [!IMPORTANT]
->  During the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
+>  During the  Windows Server 2012 Essentials installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
   
 ###  <a name="BKMK_MPT"></a> Run the Migration Preparation Tool on the Source Server  
- You cannot perform a migration mode install without first running the Migration Preparation Tool on your Source Server. This tool is designed to prepare your Source Server and domain to be migrated to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ You cannot perform a migration mode install without first running the Migration Preparation Tool on your Source Server. This tool is designed to prepare your Source Server and domain to be migrated to  Windows Server 2012 Essentials.  
   
 > [!IMPORTANT]
 >  Back up your Source Server before you run the Migration Preparation Tool. All changes that the Migration Preparation Tool makes to the schema are irreversible. If you experience issues during the migration, the only way to return the Source Server to the state it was in before you ran the tool is to restore the server from a system backup.  
@@ -223,15 +229,15 @@ Complete the following preliminary steps to ensure that the settings and data on
   
  Before you can install Windows Update Agent on the Source Server, you must first install Microsoft PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.  
   
--   To download and install Microsoft PowerShell 2.0, see “[Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0](http://go.microsoft.com/fwlink/p/?LinkId=241483))” at the Microsoft Support website (http://go.microsoft.com/fwlink/p/?LinkId=241483).  
+-   To download and install Microsoft PowerShell 2.0, see “[Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0](http://go.microsoft.com/fwlink/p/?LinkId=241483))�? at the Microsoft Support website (http://go.microsoft.com/fwlink/p/?LinkId=241483).  
   
 -   To download and install Microsoft Baseline Configuration Analyzer 2.0, visit the [Microsoft Baseline Configuration Analyzer 2.0 page](http://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center (http://go.microsoft.com/fwlink/p/?LinkId=241484).  
   
--   To download and install the latest version of Windows Update Agent, see “[How to obtain the latest version of the Windows Update Agent to help manage updates on a computer](http://go.microsoft.com/fwlink/p/?LinkId=237493)” at the Microsoft Support website (http://go.microsoft.com/fwlink/p/?LinkId=237493).  
+-   To download and install the latest version of Windows Update Agent, see “[How to obtain the latest version of the Windows Update Agent to help manage updates on a computer](http://go.microsoft.com/fwlink/p/?LinkId=237493)�? at the Microsoft Support website (http://go.microsoft.com/fwlink/p/?LinkId=237493).  
   
 ##### To install and run the Migration Preparation Tool on the Source Server  
   
-1.  Insert [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] DVD1 in the DVD drive on the Source Server.  
+1.  Insert  Windows Server 2012 Essentials DVD1 in the DVD drive on the Source Server.  
   
 2.  Open Windows Explorer, browse to the **\support\tools** folder of the DVD, and then double click the **sourcetool.msi** file.  
   
@@ -244,7 +250,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 3.  In the **Migration Preparation Tool**, select **I have a backup and am ready to proceed**, and then click **Next**.  
   
     > [!NOTE]
-    >  If you receive an error message relating to hotfix installation, follow the instructions in “Method 2: Rename the Catroot2 Folder” in the Microsoft Knowledge Base article “[You cannot install some updates or programs](http://go.microsoft.com/FWLink/p/?LinkID=118672)” (http://go.microsoft.com/FWLink/p/?LinkID=118672).  
+    >  If you receive an error message relating to hotfix installation, follow the instructions in “Method 2: Rename the Catroot2 Folder�? in the Microsoft Knowledge Base article “[You cannot install some updates or programs](http://go.microsoft.com/FWLink/p/?LinkID=118672)�? (http://go.microsoft.com/FWLink/p/?LinkID=118672).  
   
      The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.  
   
@@ -258,10 +264,10 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 5.  In the Migration Preparation Tool, click **Finish**.  
   
-6.  When the Migration Preparation Tool finishes, you may be prompted to restart the Source Server before you can begin migrating to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+6.  When the Migration Preparation Tool finishes, you may be prompted to restart the Source Server before you can begin migrating to  Windows Server 2012 Essentials.  
   
 > [!NOTE]
->  You must complete a successful run of the Migration Preparation Tool on the Source Server within two weeks of installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the Destination Server. Otherwise, installation of [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the Destination Server will be blocked. If this occurs, you must run the Migration Preparation Tool on the Source Server again.  
+>  You must complete a successful run of the Migration Preparation Tool on the Source Server within two weeks of installing  Windows Server 2012 Essentials on the Destination Server. Otherwise, installation of  Windows Server 2012 Essentials on the Destination Server will be blocked. If this occurs, you must run the Migration Preparation Tool on the Source Server again.  
   
 ###  <a name="BKMK_PlanToMigrateLineOfBusinessApplications"></a> Create a plan to migrate line-of-business applications  
  A line-of-business (LOB) application is a critical computer application that is vital to running a business. LOB applications include accounting, supply-chain management, and resource-planning applications.  
@@ -269,7 +275,7 @@ Complete the following preliminary steps to ensure that the settings and data on
  When you plan to migrate your LOB applications, consult with the LOB application providers to determine the appropriate method for migrating each application. You also must locate the media that is used to install the LOB applications on the Destination Server.  
   
 > [!NOTE]
->  If you used the Windows Small Business Server 2008 SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you must also update the add-in and deploy it on the destination server.  
+>  If you used the Windows Small Business Server 2008 SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server 2012 Essentials, you must also update the add-in and deploy it on the destination server.  
   
  You can fill in the following table as you collect LOB application information. A good place to start collecting information is to run Windows Control Panel, click **Add/Remove Programs** and look in the **Program Files (x86)** and the **Program Files** folders.  
   
@@ -280,23 +286,34 @@ Complete the following preliminary steps to ensure that the settings and data on
 ||||  
   
 ###  <a name="BKMK_PlanToMigrateEmail"></a> Create a plan to migrate email that is hosted on Windows Small Business Server 2008  
- In Windows SBS 2008, email is provided through Exchange Server. However, [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] does not provide an inbox email service. If you are currently using Windows SBS 2008 to host your company’s email, you will need to migrate to an alternate on-premise or hosted solution.  
+ In Windows SBS 2008, email is provided through Exchange Server. However,  Windows Server 2012 Essentials does not provide an inbox email service. If you are currently using Windows SBS 2008 to host your company’s email, you will need to migrate to an alternate on-premise or hosted solution.  
   
 > [!NOTE]
 >  After you update and prepare your Source Server for migration, we recommend that you create a backup of the updated server before you continue the migration process.  
   
 #### Migrate email to Microsoft Office 365  
- If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in the topic  “[Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://go.microsoft.com/fwlink/p/?LinkId=248619)” to start the email migration to Office 365. We recommend that you complete the email migration before you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md).  
+
+ If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in the topic  “[Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://go.microsoft.com/fwlink/p/?LinkId=248619)�? to start the email migration to Office 365. We recommend that you complete the email migration before you [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode1.md).  
+
+ If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in the topic  “[Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://go.microsoft.com/fwlink/p/?LinkId=248619)�? to start the email migration to Office 365. We recommend that you complete the email migration before you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md).  
+
   
 > [!NOTE]
 >  The step to remove the on-premises Exchange Server on the Source Server is optional.  
 >   
 >  Office 365 does not support the use of public folders. For information about how to move messages from Exchange Public Folders to Office 365, see [Migrate from Exchange Public Folders to Microsoft Office 365](http://www.microsoft.com/download/en/details.aspx?id=27582)  
 >   
->  After you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md), you should turn on the Office 365 Integration feature on [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+
+>  After you [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode1.md), you should turn on the Office 365 Integration feature on  Windows Server 2012 Essentials.  
+  
+#### Migrate email to another on-premises Exchange Server  
+ For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md). We recommend that you set up the new on-premises Exchange Server after you [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode1.md), and then finish the email migration before demoting the Source Server.  
+
+>  After you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md), you should turn on the Office 365 Integration feature on  Windows Server 2012 Essentials.  
   
 #### Migrate email to another on-premises Exchange Server  
  For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md). We recommend that you set up the new on-premises Exchange Server after you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md), and then finish the email migration before demoting the Source Server.  
+
   
 > [!NOTE]
 >  The Windows Small Business Server POP3 Connector is not included with Exchange Server. After you migrate email data to another Exchange Server, you can no longer use the POP3 Connector feature.  

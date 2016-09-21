@@ -1,22 +1,16 @@
 ---
 title: Format
-ms.custom: na
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
-ms.technology:
-  - techgroup-storage
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.technology: storage
 ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
+ms.date: 09/15/2016
 ---
-
->Applies To: Windows 10 Anniversary Edition (version 1607), Windows 10, Windows Server 2016
-
 # Format
+> Applies To: Windows 10 (including versions 1511, 1607), Windows 10, Windows Server 2016
 
 Formats a volume so that you can use it to store files. 
 

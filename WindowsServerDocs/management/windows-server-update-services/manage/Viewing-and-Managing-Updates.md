@@ -1,9 +1,9 @@
 ---
 title: Viewing and Managing Updates
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c

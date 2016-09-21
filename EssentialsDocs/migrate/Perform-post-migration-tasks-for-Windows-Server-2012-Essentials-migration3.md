@@ -2,40 +2,32 @@
 title: "Perform post-migration tasks for Windows Server 2012 Essentials migration3"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Perform post-migration tasks for Windows Server 2012 Essentials migration
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 4e58b360-1cce-4641-a84e-51b8998e9080
 caps.latest.revision: 2
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Perform post-migration tasks for Windows Server 2012 Essentials migration3
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server.  
   
+
+1.  [Delete DNS entries of the Source Server](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_DeleteDNSEntries)  
+  
+2.  [Share line-of-business and other application data folders](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+
 1.  [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_DeleteDNSEntries)  
   
 2.  [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration5.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+
   
 ###  <a name="BKMK_DeleteDNSEntries"></a> Delete DNS entries of the Source Server  
  After you decommission the Source Server, the Domain Name Service (DNS) server may still contain entries that point to the Source Server. Delete these DNS entries.  
@@ -63,6 +55,6 @@ The following tasks help you finish setting up your Destination Server with some
 10. Repeat steps 6 through 9 to remove all Reverse Lookup Zones that point to the Source Server.  
   
 ###  <a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a> Share line-of-business and other application data folders  
- You must set the shared folder permissions and the NTFS permissions for the line-of-business and other application data folders that you copied to the Destination Server. After you set the permissions, the shared folders are displayed in the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard on the **Storage** tab.  
+ You must set the shared folder permissions and the NTFS permissions for the line-of-business and other application data folders that you copied to the Destination Server. After you set the permissions, the shared folders are displayed in the  Windows Server 2012 Essentials Dashboard on the **Storage** tab.  
   
  If you are using a logon script to map drives to the shared folders, you must update the script to map to the drives on the Destination Server.

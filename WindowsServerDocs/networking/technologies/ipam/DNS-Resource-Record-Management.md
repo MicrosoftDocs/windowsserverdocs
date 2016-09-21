@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b66c09d-e401-4f70-9a2a-6047dd629bfa
+ms.author: jamesmci
 author: jamesmci
 ---
 # DNS Resource Record Management
@@ -30,7 +31,7 @@ When you deploy IPAM in Windows Server&reg; 2016 Technical Preview, you can perf
   
 The yellow status bar in the following illustration shows the user interface location of IPAM notifications.  
   
-![](../../media/DNS-Resource-Record-Management/ipam_DataCollection_01.jpg)  
+![IPAM notifications](../../media/DNS-Resource-Record-Management/ipam_DataCollection_01.jpg)  
   
 The DNS data that is collected includes DNS zone and resource record information. You can configure IPAM to collect zone information from your preferred DNS server.  IPAM collects both file-based and Active Directory zones.  
   

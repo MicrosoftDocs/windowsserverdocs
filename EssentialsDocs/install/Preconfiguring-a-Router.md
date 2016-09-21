@@ -2,33 +2,18 @@
 title: "Preconfiguring a Router"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
 caps.latest.revision: 9
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Preconfiguring a Router
 Typically, a new installation of the operating system requires an Internet capable router and firewall to connect the internal network of the customer to the Internet. If you provide a router as an additional value with a preconfigured server, you can take additional steps to preconfigure the router to provide a better user experience.  
@@ -54,11 +39,11 @@ Typically, a new installation of the operating system requires an Internet capab
 -   If the router has an integrated access control feature for Active Directory® Domain Services, you can automate the Active Directory integration during the Initial Configuration of the server. You should also expose this feature through the router management add-in in the Dashboard.  
   
 > [!NOTE]
->  For more information about configuring wireless connections, see [Configure Support for a Wireless Network](../install/Configure-Support-for-a-Wireless-Network.md).  
+>  For more information about configuring wireless connections, see [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md).  
   
 ## See Also  
- [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

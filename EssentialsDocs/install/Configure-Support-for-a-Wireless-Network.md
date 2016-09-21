@@ -2,33 +2,18 @@
 title: "Configure Support for a Wireless Network"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 4d7020d4-fd46-4858-a406-de5c0f21ea06
 caps.latest.revision: 6
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Configure Support for a Wireless Network
 You can configure the operating system to support a wireless network. The following requirements must be met to enable wireless support on the server:  
@@ -55,10 +40,10 @@ You can configure the operating system to support a wireless network. The follow
 -   If an ad-hoc network is created on the server, the wireless network adapter is dedicated for the ad-hoc network so the user must always plug the network cable into the server to obtain an Internet connection.  
   
 > [!NOTE]
->  For more information about configuring network connections, see [Preconfiguring a Router](../install/Preconfiguring-a-Router.md).  
+>  For more information about configuring network connections, see [Preconfiguring a Router](Preconfiguring-a-Router.md).  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

@@ -2,12 +2,18 @@
 title: Getting Started with AD FS
 description:
 author: billmath
+ms.author: billmath
+ms.author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
+ms.author: billmath
+ms.author: billmath
+ms.author: billmath
 ms.author: billmath
 ---
 # Getting Started with AD FS
@@ -32,6 +38,7 @@ The following document is provided as a reference to some of the most common sce
     -   [Walkthrough: Workplace Join with an iOS Device](../ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
     -   [Walkthrough: Workplace Join with a Windows Device](../ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [Set up an AD FS lab environment](../ad-fs/get-started/Set-up-an-AD-FS-lab-environment.md)
 
 
 ## See Also

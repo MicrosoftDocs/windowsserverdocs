@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
+ms.author: jamesmci
 author: jamesmci
 ---
 # RAS Gateway

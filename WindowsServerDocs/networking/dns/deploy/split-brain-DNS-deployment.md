@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
+ms.author: jamesmci
 author: jamesmci
 ---
 # Use DNS Policy for Split-Brain DNS Deployment
@@ -44,7 +45,7 @@ Using DNS policies these zones can now be hosted on the same DNS server.
 
 The following illustration depicts this scenario.
 
-![](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
+![Split brain DNS deployment](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
 
 
 ##<a name="bkmk_sbhow"></a>How DNS Split-Brain Deployment Works
@@ -141,7 +142,7 @@ Because of this, Contoso DNS administrators do not want the DNS server for conto
 
 The following illustration depicts this scenario.
 
-![](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg)  
+![DNS Selective Recursion Control](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg)  
 
 
 
@@ -196,4 +197,4 @@ For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.m
 Now the DNS server is configured with the required DNS policies for either a split-brain name server or a DNS server with selective recursion control enabled for internal clients.
 
 
-You can create hundreds of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries. 
+You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries. 

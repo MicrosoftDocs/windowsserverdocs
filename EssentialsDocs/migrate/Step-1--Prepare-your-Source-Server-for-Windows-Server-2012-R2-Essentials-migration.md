@@ -2,32 +2,18 @@
 title: "Step 1: Prepare your Source Server for Windows Server 2012 R2 Essentials migration"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 caps.latest.revision: 19
 author: DonGill
 manager: jwhit
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Step 1: Prepare your Source Server for Windows Server 2012 R2 Essentials migration
 This topic explains how to back up the Source Server, evaluate the Source Server system health, install the most recent service packs and fixes, and verify the network configuration.  
@@ -35,15 +21,15 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 ## To prepare for migration  
  Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   
-1.  [Back up your Source Server](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+1.  [Back up your Source Server](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
-2.  [Install the most recent service packs](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+2.  [Install the most recent service packs](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
   
-3.  [Delete the “Log on as a service” account setting](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_DeleteSvcAcctSetting)  
+3.  [Delete the “Log on as a service�? account setting](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_DeleteSvcAcctSetting)  
   
-4.  [Evaluate the health of the Source Server](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_EvaluateHealth)  
+4.  [Evaluate the health of the Source Server](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_EvaluateHealth)  
   
-5.  [Create a plan to migrate line-of-business applications](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_MigrateLOB)  
+5.  [Create a plan to migrate line-of-business applications](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_MigrateLOB)  
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
@@ -66,10 +52,10 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 ###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a> Install the most recent service packs  
  You must install the latest updates and service packs on the Source Server prior to migration.  
   
-###  <a name="BKMK_DeleteSvcAcctSetting"></a> Delete the “Log on as a service” account setting  
+###  <a name="BKMK_DeleteSvcAcctSetting"></a> Delete the “Log on as a service�? account setting  
  If you're migrating from Windows Small Business Server 2003 or Windows Server 2003, delete the **Log on as a service** account setting from Group Policy.  
   
-##### To delete the “Log on as a service” account setting  
+##### To delete the “Log on as a service�? account setting  
   
 1.  To open the **Group Policy Management** tool, click **Start**, click **Control Panel**, click **Administrative Tools**, and then click **Group Policy Management**.  
   
@@ -147,7 +133,7 @@ This topic explains how to back up the Source Server, evaluate the Source Server
  To view the description and the solutions for an issue, click the issue in the report. Not all of the issues that are reported by the BPA tool affect migration, but you should solve as many of the issues as possible to ensure that the migration is successful.  
   
 ####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> Synchronize the Source Server time with an external time source  
- The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
+ The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that  Windows Server 2012 R2 Essentials is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
   
 ###### To synchronize the Source Server time with the NTP server  
   
@@ -162,7 +148,7 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 5.  At the command prompt, type net start w32time, and then press ENTER.  
   
 > [!IMPORTANT]
->  During the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
+>  During the  Windows Server 2012 R2 Essentials installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
   
 ###  <a name="BKMK_MigrateLOB"></a> Create a plan to migrate line-of-business applications  
  A line-of-business (LOB) application is a critical computer application that is vital to running a business. LOB applications include accounting, supply-chain management, and resource-planning applications.  
@@ -170,7 +156,7 @@ This topic explains how to back up the Source Server, evaluate the Source Server
  When you plan to migrate your LOB applications, consult with the LOB application providers to determine the appropriate method for migrating each application. You also must locate the media that is used to install the LOB applications on the Destination Server.  
   
 > [!NOTE]
->  If you used the Windows Small Business Server 2011 Essentials SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you must also update the add-in and deploy it on the Destination Server.  
+>  If you used the Windows Small Business Server 2011 Essentials SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server 2012 Essentials, you must also update the add-in and deploy it on the Destination Server.  
   
  You can fill in the following table as you collect LOB application information. A good place to start collecting information is to open Windows Control Panel, click **Add/Remove Programs**, and look in the **Program Files (x86)** and the **Program Files** folders.  
   
@@ -181,18 +167,18 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 ||||  
   
 ### Create a plan to migrate email hosted on Windows SBS 2011, Windows SBS 2008, and Windows SBS 2003  
- In Windows SBS 2011, Windows SBS 2008, and Windows SBS 2003, email is provided through the Microsoft Exchange Server. However, [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] does not provide an inbox email service. If you are currently using a server running Windows SBS 2011, Windows SBS 2008, or Windows SBS 2003 to host your company’s email, you need to migrate to an alternate on-premises or hosted solution.  
+ In Windows SBS 2011, Windows SBS 2008, and Windows SBS 2003, email is provided through the Microsoft Exchange Server. However,  Windows Server 2012 Essentials does not provide an inbox email service. If you are currently using a server running Windows SBS 2011, Windows SBS 2008, or Windows SBS 2003 to host your company’s email, you need to migrate to an alternate on-premises or hosted solution.  
   
 > [!NOTE]
 >  After you update and prepare your Source Server for migration, we recommend that you create a backup of the updated server before you continue the migration process.  
   
 #### Migrate email to Microsoft Office 365  
- If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in [Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) to start the email migration to Office 365. We recommend that you complete the email migration before you install [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)].  
+ If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in [Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) to start the email migration to Office 365. We recommend that you complete the email migration before you install  Windows Server 2012 R2 Essentials.  
   
 > [!NOTE]
->  The step to remove the on-premises Exchange Server on the Source Server is mandatory if you intend to integrate [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] with Office 365. For information about how to migrate Exchange Server public folders to Office 365,  see the blog post [Microsoft Exchange 2013 Public Folders Migration Scripts for Office 365](http://blogs.technet.com/b/fmustafa/archive/2013/04/11/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365.aspx).  
+>  The step to remove the on-premises Exchange Server on the Source Server is mandatory if you intend to integrate  Windows Server 2012 R2 Essentials with Office 365. For information about how to migrate Exchange Server public folders to Office 365,  see the blog post [Microsoft Exchange 2013 Public Folders Migration Scripts for Office 365](http://blogs.technet.com/b/fmustafa/archive/2013/04/11/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365.aspx).  
 >   
->  After you complete the installation, you should turn on the Office 365 Integration feature in [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] by running the **Integrate with Microsoft Office 365** task.  
+>  After you complete the installation, you should turn on the Office 365 Integration feature in  Windows Server 2012 R2 Essentials by running the **Integrate with Microsoft Office 365** task.  
   
 > [!IMPORTANT]
 >  To allow the Office 365 migration tool to connect to the Exchange Server that is running on the Source Server, you must enable RPC over HTTP on the Source Server. For information about how to enable RPC over HTTP, see [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard or Premium)](http://technet.microsoft.com/library/bb123622%28EXCHG.65%29.aspx). If you cannot successfully run the Office 365 migration tool after you enable RPC over HTTP, view the **ValidPorts** setting in the registry at HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy, and make sure that the fully qualified domain name (FQDN) for the Source Server is listed. If the FQDN is not listed, add it manually by using the following example:  
@@ -200,7 +186,7 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 >  remote. *contoso*.com:6001-6002;remote. *contoso*.com:6004 (replace *contoso* with the name of your domain).  
   
 #### Migrate email to another on-premises Exchange Server  
- For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server 2012 Essentials](http://technet.microsoft.com/library/jj200172.aspx). We recommend that you set up the new on-premises Exchange Server after you install [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)], and then finish the email migration before demoting the Source Server.  
+ For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server 2012 Essentials](http://technet.microsoft.com/library/jj200172.aspx). We recommend that you set up the new on-premises Exchange Server after you install  Windows Server 2012 R2 Essentials, and then finish the email migration before demoting the Source Server.  
   
 > [!NOTE]
 >  The Windows Small Business Server POP3 Connector is not included with Exchange Server. After you migrate email data to another Exchange Server, you can no longer use the POP3 Connector feature.  
@@ -209,6 +195,9 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 >  After you update and prepare your Source Server for migration, you should create a backup of the updated server before you continue the migration process.  
   
 ## Next steps  
- You have prepared your Source Server for migration to [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)].  Now go to [Step 2: Install Windows Server 2012 R2 Essentials as a new replica domain controller](../Topic/Step%202:%20Install%20Windows%20Server%202012%20R2%20Essentials%20as%20a%20new%20replica%20domain%20controller.md).  
-  
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+ You have prepared your Source Server for migration to  Windows Server 2012 R2 Essentials.  Now go to [Step 2: Install Windows Server 2012 R2 Essentials as a new replica domain controller](Step-2--Install-Windows-Server-2012-R2-Essentials-as-a-new-replica-domain-controller.md).  
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+

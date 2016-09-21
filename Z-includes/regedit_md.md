@@ -1,1 +1,0 @@
-To open Registry Editor, click **Start**, click **Run**, type **regedit**, and then click **OK**.

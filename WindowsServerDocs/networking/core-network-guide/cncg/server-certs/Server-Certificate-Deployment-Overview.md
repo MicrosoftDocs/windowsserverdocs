@@ -6,6 +6,9 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca5c3e04-ae25-4590-97f3-0376a9c2a9a2
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Server Certificate Deployment Overview
@@ -14,19 +17,19 @@ author: jamesmci
 
 This topic contains the following sections.  
   
--   [Server certificate deployment components](#bkmk_components)  
+-   [Server certificate deployment components](#bkmk_components)
   
--   [Server certificate deployment process overview](#bkmk_process)  
+-   [Server certificate deployment process overview](#bkmk_process)
   
-## <a name="bkmk_components"></a>Server certificate deployment components  
-You can use this guide to install Active Directory Certificate Services (AD CS) as an Enterprise root certification authority (CA) and to enroll server certificates to servers that are running Network Policy Server (NPS), Routing and Remote Access service (RRAS), or both NPS and RRAS.  
+## <a name="bkmk_components"></a>Server certificate deployment components
+You can use this guide to install Active Directory Certificate Services (AD CS) as an Enterprise root certification authority (CA) and to enroll server certificates to servers that are running Network Policy Server (NPS), Routing and Remote Access service (RRAS), or both NPS and RRAS.
 
+
+If you deploy SDN with certificate-based authentication, servers are required to use a server certificate to prove their identities to other servers so that they achieve secure communications.
   
-If you deploy SDN with certificate-based authentication, servers are required to use a server certificate to prove their identities to other servers so that they achieve secure communications.  
+The following illustration shows the components that are required to deploy server certificates to servers in your SDN infrastructure.
   
-The following illustration shows the components that are required to deploy server certificates to servers in your SDN infrastructure.  
-  
-![Server Certificate Deployment](../../../media/Nps-Certs/Nps-Certs.jpg)  
+![Server Certificate Deployment required infrastructure](../../../media/Nps-Certs/Nps-Certs.jpg)  
   
 > [!NOTE]  
 > In the illustration above, multiple servers are depicted: DC1, CA1, WEB1, and many SDN servers. This guide provides instructions for deploying and configuring CA1 and WEB1, and for configuring DC1, which this guide assumes you have already installed on your network. If you have not already installed your Active Directory domain, you can do so by using the [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) for Windows Server 2016.  

@@ -4,9 +4,7 @@ description: "Gives the maximum supported number for components you can add to o
 ms.prod: windows-server-threshold
 ms.service: na
 ms.author: kathydav
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 author: KBDAzure
@@ -30,7 +28,7 @@ These maximums apply to each virtual machine. Not all components are available i
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
 |Checkpoints|50|The actual number may be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|  
-|Memory|16 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
+|Memory|12 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
 |Serial (COM) ports|2|None.|  
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|  
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|  
@@ -62,7 +60,7 @@ These maximums apply to each Hyper-V host.
 ## Failover Clusters and Hyper-V  
 This table lists the maximums that apply when using Hyper-V and Failover Clustering. It's important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  
 
-To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server Technical Preview](https://technet.microsoft.com/en-us/windows-server-docs/compute/failover-clustering/whats-new-failover-clustering-windows-server).
+To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server 2016](../../../failover-clustering/whats-new-in-failover-clustering.md).
 
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  

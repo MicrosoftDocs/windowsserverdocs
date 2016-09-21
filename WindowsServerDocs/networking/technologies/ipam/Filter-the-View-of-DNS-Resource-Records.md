@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
+ms.author: jamesmci
 author: jamesmci
 ---
 # Filter the View of DNS Resource Records
@@ -33,23 +34,23 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 6.  In the display pane, click **Add criteria**.  
   
-    ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_01.jpg)  
+    ![Add criteria](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_01.jpg)  
   
 7.  Select a criteria from the drop-down list. For example, if you want to view a specific record type, click **Record Type**.  
   
-    ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_02.jpg)  
+    ![Record Type](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_02.jpg)  
   
 8.  Click **Add**.  
   
-    ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_03.jpg)  
+    ![Add criteria Record Type](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_03.jpg)  
   
 9. **Record Type** is added as a search parameter. Enter text for the type of record that you want to find. For example, if you want to view only SRV records, type **SRV**.  
   
-    ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_04.jpg)  
+    ![Enter text for the type of record that you want to find](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_04.jpg)  
   
 10. Press ENTER. The DNS resource records are filtered according to the criteria and search phrase that you specified.  
   
-    ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_05.jpg)  
+    ![Press ENTER - DNS resource records are filtered](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_05.jpg)  
   
 ## See Also  
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  

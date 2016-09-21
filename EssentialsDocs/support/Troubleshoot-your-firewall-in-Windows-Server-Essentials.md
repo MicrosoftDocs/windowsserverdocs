@@ -2,18 +2,17 @@
 title: "Troubleshoot your firewall in Windows Server Essentials"
 ms.custom: na
 ms.date: 01/12/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 51d94b67-8b9b-4159-80dd-f652d73a43cb
 caps.latest.revision: 10
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -27,7 +26,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot your firewall in Windows Server Essentials
-[!INCLUDE[wse_all](../manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  If you experience problems with remote access, run the Repair Anywhere Access Wizard.  
   
@@ -59,4 +58,8 @@ translation.priority.ht:
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
+
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
+
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+

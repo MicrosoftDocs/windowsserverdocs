@@ -2,18 +2,17 @@
 title: "Set up or customize server backup"
 ms.custom: na
 ms.date: 05/01/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -27,19 +26,19 @@ translation.priority.ht:
   - zh-tw
 ---
 # Set up or customize server backup
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Server backup is not automatically configured during installation. You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  
   
  See the following sections to set up or customize server backup:  
   
--   [Set up or change server backup settings](../windows-server-essentials-manage/Set-up-or-customize-server-backup.md#BKMK_1)  
+-   [Set up or change server backup settings](Set-up-or-customize-server-backup.md#BKMK_1)  
   
--   [Server backup schedule](../windows-server-essentials-manage/Set-up-or-customize-server-backup.md#BKMK_2)  
+-   [Server backup schedule](Set-up-or-customize-server-backup.md#BKMK_2)  
   
--   [Backup target drive](../windows-server-essentials-manage/Set-up-or-customize-server-backup.md#BKMK_Target)  
+-   [Backup target drive](Set-up-or-customize-server-backup.md#BKMK_Target)  
   
--   [Items to be backed up](../windows-server-essentials-manage/Set-up-or-customize-server-backup.md#BKMK_4)  
+-   [Items to be backed up](Set-up-or-customize-server-backup.md#BKMK_4)  
   
 ##  <a name="BKMK_1"></a> Set up or change server backup settings  
   
@@ -60,7 +59,7 @@ translation.priority.ht:
     >  If you start the wizard before attaching the external hard drive to the server, click **Refresh list** on the **Select the backup destination** page after attaching the hard drive.  
   
 > [!NOTE]
->  In the default installation of [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
+>  In the default installation of  Windows Server 2012 Essentials, the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
 >   
 >  1.  Press the Windows key + W to open **Search**.  
 > 2.  In the Search text box, type **Defragment**.  
@@ -87,7 +86,7 @@ translation.priority.ht:
   
 -   If you choose a drive that contains previous backups as the backup target, the wizard allows you choose if you want to keep the previous backups. If you keep the backups, the wizard does not format the drive.  
   
--   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)].  
+-   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running  Windows Server 2012 Essentials.  
   
 -   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don’t need the data on the disk, you can reformat the disk and use it for backups.  
   
@@ -141,10 +140,10 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Server Backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md)  
+-   [Manage Server Backup](Manage-Server-Backup-in-Windows-Server-Essentials.md)  
   
--   [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

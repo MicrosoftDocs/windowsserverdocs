@@ -2,18 +2,17 @@
 title: "Manage Server Storage in Windows Server Essentials"
 ms.custom: na
 ms.date: 03/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 1836682e-c7bb-4dd5-a2b5-6ff032693574
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -27,25 +26,25 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage Server Storage in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Windows Server Essentials enables you to manage all your server storage (including hard drives and storage spaces) from the **Hard Drives** pages on the **Storage** tab of the Dashboard.  
   
  The following sections provide information that will help you increase your server storage, understand and use storage spaces, and manage your hard drives:  
   
--   [Manage hard drives using the Dashboard](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Manage hard drives using the Dashboard](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Increase storage on the server](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Increase storage on the server](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Perform checks and repairs on hard drives](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_Check)  
+-   [Perform checks and repairs on hard drives](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_Check)  
   
--   [Format hard drives](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Format hard drives](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Add a new hard drive](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Add a new hard drive](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4)  
   
--   [Storage Spaces Overview](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Storage Spaces Overview](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Create a storage space](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_6)  
+-   [Create a storage space](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_6)  
   
 ##  <a name="BKMK_1"></a> Manage hard drives using the Dashboard  
  Windows Server Essentials allows you to manage all the hard drives that are connected to the server through the Dashboard. On the Dashboard **Storage** tab, **Hard Drives** displays all the hard drives that are available on the server for storing data and server backups. The server monitors the space available on each hard drive, and displays an alert if hard drive space becomes low. The **Hard Drives** tab displays the following information:  
@@ -68,8 +67,8 @@ translation.priority.ht:
   
 |Task Name|Description|  
 |---------------|-----------------|  
-|**View the hard drive properties**|Opens the *HardDriveName***Properties** page. This task is displayed when the hard drive is selected. The **General** tab of the *HardDriveName* Properties page includes the following additional tasks:<br /><br /> -   **Drive cleanup**:  Allows you to clean up unused files on the hard drive (this task is only available in [!INCLUDE[sbs_sbs8_2](../windows-server-essentials-manage/includes/sbs_sbs8_2_md.md)]).<br />-   **Check and repair**:  Checks the hard drive for file system errors and attempts to repair detected errors automatically.<br /><br /> The **Shadow Copies** tab of the *HardDriveName***Properties** page allows you to enable shadow copies. This tab also displays the next time that shadow copies is scheduled to run.|  
-|**Manage Storage Spaces**|**Note:** For [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)], this task is only displayed when there is an existing storage space.<br /><br /> Opens the **Storage Spaces** control panel, from which you can create and manage storage pools and storage spaces.|  
+|**View the hard drive properties**|Opens the *HardDriveName***Properties** page. This task is displayed when the hard drive is selected. The **General** tab of the *HardDriveName* Properties page includes the following additional tasks:<br /><br /> -   **Drive cleanup**:  Allows you to clean up unused files on the hard drive (this task is only available in  Windows Server 2012 Essentials).<br />-   **Check and repair**:  Checks the hard drive for file system errors and attempts to repair detected errors automatically.<br /><br /> The **Shadow Copies** tab of the *HardDriveName***Properties** page allows you to enable shadow copies. This tab also displays the next time that shadow copies is scheduled to run.|  
+|**Manage Storage Spaces**|**Note:** For  Windows Server 2012 R2 Essentials, this task is only displayed when there is an existing storage space.<br /><br /> Opens the **Storage Spaces** control panel, from which you can create and manage storage pools and storage spaces.|  
 |**Create a storage space**|Opens the Create a Storage Space Wizard, which allows you to use one or more hard drives to increase the capacity of a storage pool.|  
 |**Increase storage pool capacity**|**Note:** This task is only visible if the selected hard drive is located on a storage space.<br /><br /> Opens the Increase Capacity of a Storage Pool Wizard, which allows you to use one or more hard drives to increase the capacity of a storage pool.|  
   
@@ -86,7 +85,7 @@ translation.priority.ht:
   
 1.  Open the Dashboard.  
   
-2.  In the navigation pane, click the alert icon to launch the **Alert Viewer** in [!INCLUDE[sbs_sbs8_2](../windows-server-essentials-manage/includes/sbs_sbs8_2_md.md)], or the **Health Monitoring** tab in [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)].  
+2.  In the navigation pane, click the alert icon to launch the **Alert Viewer** in  Windows Server 2012 Essentials, or the **Health Monitoring** tab in  Windows Server 2012 R2 Essentials.  
   
 3.  In the **Alert Viewer** or the **Health Monitoring** tab, click the alert, and then in the tasks pane, click **Troubleshoot this issue**.  
   
@@ -131,11 +130,11 @@ translation.priority.ht:
 ##  <a name="BKMK_4"></a> Add a new hard drive  
  When you plug a new hard disk drive into a server running Windows Server Essentials, you can:  
   
--   [Use the new hard drive to store server folders](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4a)  
+-   [Use the new hard drive to store server folders](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4a)  
   
--   [Use the new hard drive to store server backups](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4b)  
+-   [Use the new hard drive to store server backups](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4b)  
   
--   [Use the new hard drive to increase storage pool capacity](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c)  
+-   [Use the new hard drive to increase storage pool capacity](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c)  
   
 ###  <a name="BKMK_4a"></a> Use the new hard drive to store server folders  
  To use the new hard drive to store server folders, you can add a new server folder to the hard drive or move an existing server folder to the hard drive.  
@@ -157,7 +156,7 @@ translation.priority.ht:
   
 4.  Follow the instructions to finish the wizard.  
   
- For more information about moving server folders, see [Add or move a server folder](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).  
+ For more information about moving server folders, see [Add or move a server folder](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).  
   
 ###  <a name="BKMK_4b"></a> Use the new hard drive to store server backups  
  You can use the newly added hard drive to store server backups.  
@@ -202,7 +201,7 @@ translation.priority.ht:
  To create a storage space, all you need is one or more extra drives in addition to the drive on which Windows is installed. These drives can be internal or external hard drives, or solid state drives. You can use a variety of types of drives with Storage Spaces, including USB, SATA, and SAS drives.  
   
 > [!NOTE]
->  If you configure Storage Spaces on a server running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
+>  If you configure Storage Spaces on a server running  Windows Server 2012 Essentials, you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
   
  For more information about Storage Spaces, see [Storage Spaces Frequently Asked Questions (FAQ)](http://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx).  
   
@@ -214,7 +213,7 @@ translation.priority.ht:
 -   A minimum of two physical drives are required to create a storage space with resiliency through parity or two-way mirroring.  
   
 > [!NOTE]
->  If you configure Storage Spaces on a server running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
+>  If you configure Storage Spaces on a server running  Windows Server 2012 Essentials, you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
   
 #### To create a storage space in Windows Server 2012 Essentials  
   
@@ -230,7 +229,7 @@ translation.priority.ht:
   
 6.  Enter the maximum size the storage space can reach, and then click **Create storage space**.  
   
- In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)], you can create a two-way mirrored storage space by using the Create a Storage Space Wizard from the Dashboard.  
+ In  Windows Server 2012 R2 Essentials, you can create a two-way mirrored storage space by using the Create a Storage Space Wizard from the Dashboard.  
   
 #### To create a storage space in Windows Server 2012 R2 Essentials  
   
@@ -240,12 +239,12 @@ translation.priority.ht:
   
 3.  Follow the instructions to complete the wizard.  
   
- For information about increasing storage pool capacity, see [Use the new hard drive to increase storage pool capacity](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c).  
+ For information about increasing storage pool capacity, see [Use the new hard drive to increase storage pool capacity](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c).  
   
 ## See also  
   
--   [Manage Server Folders](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md)  
+-   [Manage Server Folders](Manage-Server-Folders-in-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)  
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

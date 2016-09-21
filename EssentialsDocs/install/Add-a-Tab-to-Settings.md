@@ -2,33 +2,18 @@
 title: "Add a Tab to Settings"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: aac6b7f3-9020-46c3-a83f-b81542300385
 caps.latest.revision: 10
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Add a Tab to Settings
 You can add a tab to Settings on the Dashboard by creating and installing a code assembly that is used by the Settings Manager in operating system.  
@@ -36,11 +21,11 @@ You can add a tab to Settings on the Dashboard by creating and installing a code
 ## Add a tab to Settings  
  You add a tab to Settings by performing the following tasks:  
   
--   [Add an implementation of the ISettingsData interface to the assembly](../install/Add-a-Tab-to-Settings.md#BKMK_ISettingsData).  
+-   [Add an implementation of the ISettingsData interface to the assembly](Add-a-Tab-to-Settings.md#BKMK_ISettingsData).  
   
--   [Sign the assembly with an Authenticode signature](../install/Add-a-Tab-to-Settings.md#BKMK_SignAssembly).  
+-   [Sign the assembly with an Authenticode signature](Add-a-Tab-to-Settings.md#BKMK_SignAssembly).  
   
--   [Install the assembly on the reference computer](../install/Add-a-Tab-to-Settings.md#BKMK_InstallAssembly).  
+-   [Install the assembly on the reference computer](Add-a-Tab-to-Settings.md#BKMK_InstallAssembly).  
   
 ###  <a name="BKMK_ISettingsData"></a> Add an implementation of the ISettingsData interface to the assembly  
  The ISettingsData interface is included in the Microsoft.WindowsServerSolutions.Settings namespace of the AdminCommon.dll assembly which is located in \Program Files\Windows Server\Bin.  
@@ -166,7 +151,7 @@ You can add a tab to Settings on the Dashboard by creating and installing a code
  **%Programfiles%\Windows Server\Bin\OEM**  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

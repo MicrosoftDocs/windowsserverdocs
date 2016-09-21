@@ -2,40 +2,26 @@
 title: "Install Windows Server 2012 Essentials in migration mode4"
 ms.custom: na
 ms.date: 11/20/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Install Windows Server 2012 Essentials in migration mode
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 89432707-dd5b-4e74-ac2f-42a5f26970c4
 caps.latest.revision: 5
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Install Windows Server 2012 Essentials in migration mode4
-You can have only one server on your network that is running [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], and that server must be a domain controller for the network.  
+You can have only one server on your network that is running  Windows Server 2012 Essentials, and that server must be a domain controller for the network.  
   
- When you install [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] in migration mode, the installation wizard performs the following tasks:  
+ When you install  Windows Server 2012 Essentials in migration mode, the installation wizard performs the following tasks:  
   
-1.  Installs and configures the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server software on the Destination Server.  
+1.  Installs and configures the  Windows Server 2012 Essentials server software on the Destination Server.  
   
 2.  Joins the Destination Server to the existing domain. The Source Server and the Destination Server can both be members of the same domain until the migration process is finished. After the migration is finished, you must remove the Source Server from the network within 21 days.  
   
@@ -49,14 +35,14 @@ You can have only one server on your network that is running [!INCLUDE[sbs_sbs8w
 5.  Configures the Destination Server as the site-licensing server.  
   
 ##  <a name="BKMK_Install"></a> Install Windows Server 2012 Essentials on the Destination Server  
- To install and configure [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the Destination Server in migration mode, perform the following procedure.  
+ To install and configure  Windows Server 2012 Essentials on the Destination Server in migration mode, perform the following procedure.  
   
 #### To install Windows Server 2012 Essentials on the Destination Server  
   
-1.  Turn on the Destination Server and insert [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] DVD1 into the DVD drive. If you see a message that asks if you want to boot from a CD or DVD, press any key to do so.  
+1.  Turn on the Destination Server and insert  Windows Server 2012 Essentials DVD1 into the DVD drive. If you see a message that asks if you want to boot from a CD or DVD, press any key to do so.  
   
     > [!NOTE]
-    >  If the Destination Server supports booting from a USB flash drive, you can use the **Windows 7 USB/DVD Download Tool** to create a bootable USB Flash drive from the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] ISO file. Using a USB flash drive can significantly speed up the installation process because flash drives read data much faster than DVD-ROM drives do. After you create a bootable USB flash drive, you can add an answer file to the flash drive. You can [download the Windows 7 USB/DVD Download Tool](http://go.microsoft.com/fwlink/p/?LinkId=248282) free at the Microsoft Store website.  
+    >  If the Destination Server supports booting from a USB flash drive, you can use the **Windows 7 USB/DVD Download Tool** to create a bootable USB Flash drive from the  Windows Server 2012 Essentials ISO file. Using a USB flash drive can significantly speed up the installation process because flash drives read data much faster than DVD-ROM drives do. After you create a bootable USB flash drive, you can add an answer file to the flash drive. You can [download the Windows 7 USB/DVD Download Tool](http://go.microsoft.com/fwlink/p/?LinkId=248282) free at the Microsoft Store website.  
   
     > [!NOTE]
     >  If the Destination Server does not boot from the DVD, restart the computer and check the BIOS Setup to ensure that **DVD-ROM** is listed first in the boot sequence. For more information about how to change the BIOS Setup boot sequence, see your hardware manufacturer's documentation.  
@@ -74,10 +60,10 @@ You can have only one server on your network that is running [!INCLUDE[sbs_sbs8w
      After the installation finishes, you are automatically logged on with the administrator user account and password that you provided in the migration answer file.  
   
     > [!NOTE]
-    >  To unlock the desktop while [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] is installing, use the built-in administrator account and leave the password blank.  
+    >  To unlock the desktop while  Windows Server 2012 Essentials is installing, use the built-in administrator account and leave the password blank.  
   
 ##  <a name="BKMK_VerifyTheHealthOfDC"></a> Verify the health of the domain controller  
- Before proceeding with the migration, you should ensure that the domain controller and [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] network are healthy.  
+ Before proceeding with the migration, you should ensure that the domain controller and  Windows Server 2012 Essentials network are healthy.  
   
  The following table lists the tools that you can use to diagnose issues on your Destination Server and network and in the domain.  
   

@@ -2,33 +2,18 @@
 title: "Change the Color Scheme of the Dashboard and Launchpad"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: b2913e51-7979-4d48-a431-d2ec5f1042be
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Change the Color Scheme of the Dashboard and Launchpad
 You can change the color scheme of the Dashboard and the Launchpad by defining the colors that you want to use in an XML formatted file, installing the .xml file in a folder on the server, and by specifying the .xml file name in a registry entry.  
@@ -126,7 +111,7 @@ You can change the color scheme of the Dashboard and the Launchpad by defining t
 > [!NOTE]
 >  All values of the HexValue attribute are examples of hexadecimal values for colors. You can enter any hexadecimal color value that you want to use.  
   
- Use Notepad or Visual Studio 2010 to create the .xml file that contains the tags for the areas that you want to customize. The file can be given any name, but it must have a .xml extension. For a description of the areas that can be customized on the Dashboard and Launchpad, see [Dashboard and Launchpad areas that can be changed](../install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md#BKMK_Dashboard).  
+ Use Notepad or Visual Studio 2010 to create the .xml file that contains the tags for the areas that you want to customize. The file can be given any name, but it must have a .xml extension. For a description of the areas that can be customized on the Dashboard and Launchpad, see [Dashboard and Launchpad areas that can be changed](Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md#BKMK_Dashboard).  
   
 #### To install the .xml file  
   
@@ -156,31 +141,31 @@ You can change the color scheme of the Dashboard and the Launchpad by defining t
 ### Examples  
   
 ####  <a name="BKMK_Figure1"></a> Figure 1: Sign-in page of the Dashboard  
- ![Windows Server 2012 Essentials Dashboard](../install/media/SBS8_ADK_Dashboard_Signin_RC.png "SBS8_ADK_Dashboard_Signin_RC")  
+ ![Windows Server 2012 Essentials Dashboard](media/SBS8_ADK_Dashboard_Signin_RC.png "SBS8_ADK_Dashboard_Signin_RC")  
   
 ####  <a name="BKMK_Figure2"></a> Figure 2: Launchpad  
- ![Windows SBS Launchpad Sign&#45;in](../install/media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")  
+ ![Windows SBS Launchpad Sign&#45;in](media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")  
   
 ####  <a name="BKMK_Figure3"></a> Figure 3: Sign-in page of the Launchpad  
- ![Windows Server 2012 Essentials Launchpad](../install/media/SBS8_ADK_Launchpad_Signin_RC.png "SBS8_ADK_Launchpad_Signin_RC")  
+ ![Windows Server 2012 Essentials Launchpad](media/SBS8_ADK_Launchpad_Signin_RC.png "SBS8_ADK_Launchpad_Signin_RC")  
   
 ####  <a name="BKMK_Figure4"></a> Figure 4: Dashboard text  
- ![Windows Server 2012 Essentials Navigation Pane](../install/media/SBS8_ADK_Navigation_RC.png "SBS8_ADK_Navigation_RC")  
+ ![Windows Server 2012 Essentials Navigation Pane](media/SBS8_ADK_Navigation_RC.png "SBS8_ADK_Navigation_RC")  
   
 ####  <a name="BKMK_Figure5"></a> Figure 5: Subtab border  
- ![Windows SBS Dashboard Sub Tab Border](../install/media/SBS8_ADK_DashboardSubtabborder.png "SBS8_ADK_DashboardSubtabborder")  
+ ![Windows SBS Dashboard Sub Tab Border](media/SBS8_ADK_DashboardSubtabborder.png "SBS8_ADK_DashboardSubtabborder")  
   
 ####  <a name="BKMK_Figure6"></a> Figure 6: Task pane  
- ![Windows SBS Dashboard Task Pane](../install/media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")  
+ ![Windows SBS Dashboard Task Pane](media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")  
   
 ####  <a name="BKMK_Figure9"></a> Figure 7a: Product Splash Screen  
- ![Windows Server 2012 Essentials Splash Screen](../install/media/SBS8_ADK_productspalshscreen_RC.png "SBS8_ADK_productspalshscreen_RC")  
+ ![Windows Server 2012 Essentials Splash Screen](media/SBS8_ADK_productspalshscreen_RC.png "SBS8_ADK_productspalshscreen_RC")  
   
 #### Figure 7b: Home Page  
- ![Windows Server 2012 Essentials Home Page](../install/media/SBS8_ADK_Dashboard_HomePage_RC.png "SBS8_ADK_Dashboard_HomePage_RC")  
+ ![Windows Server 2012 Essentials Home Page](media/SBS8_ADK_Dashboard_HomePage_RC.png "SBS8_ADK_Dashboard_HomePage_RC")  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

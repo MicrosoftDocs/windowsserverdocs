@@ -2,35 +2,21 @@
 title: "Run the Windows Server 2012 Essentials Log Collector"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 0d340223-fa24-4c75-ba8e-b654feb120ab
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Run the Windows Server 2012 Essentials Log Collector
-You can run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Collector from the server or a computer on the network. If you run the Log Collector from the server, you can only collect logs from the server. If you run the Log Collector from a network computer, you can choose to collect logs from the server, in addition to the logs for that computer.  
+You can run the  Windows Server 2012 Essentials Log Collector from the server or a computer on the network. If you run the Log Collector from the server, you can only collect logs from the server. If you run the Log Collector from a network computer, you can choose to collect logs from the server, in addition to the logs for that computer.  
   
  You must have appropriate administrative privileges to run the Log Collector. If you are collecting log files for a server, you must be a Server Administrator; if you are collecting log files on a network computer, you must be a Client Administrator for that computer.  
   
@@ -45,7 +31,7 @@ You can run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md
 2.  When you are prompted for a location to save the collected log files, you can choose the default location, **\\\\<ServerName\>\logs**, or specify another location. To accept the default location, click **Next**. To change the location, click **Browse**, navigate to the folder where you want to save the log files, and then click **Save**.  
   
     > [!NOTE]
-    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name” and the “time stamp” of the file.  
+    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name�? and the “time stamp�? of the file.  
   
 3.  A progress bar is displayed while the logs are being collected.  
   
@@ -71,7 +57,7 @@ You can run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md
 4.  Type or browse to the location where you want to save the log files, and then click **Next**.  
   
     > [!NOTE]
-    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name” and the “time stamp” of the file.  
+    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name�? and the “time stamp�? of the file.  
   
 5.  A progress bar is displayed while the logs are being collected.  
   

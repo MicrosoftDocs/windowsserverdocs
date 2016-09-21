@@ -2,33 +2,18 @@
 title: "Create a Server Recovery DVD for Remotely Administered Servers"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Create a Server Recovery DVD for Remotely Administered Servers
 ##  <a name="BKMK_HeadlessRecovery"></a> Create a server recovery DVD for remotely administered servers  
@@ -49,7 +34,7 @@ translation.priority.ht:
   
  **Factory reset**  
   
- This recovery returns the server to the original state that existed when the server was shipped from the factory. Following a factory reset, you are asked to perform the initial configuration of the server just as you were the first time you turned it on, and all settings and customizations are lost. This is also referred to as “Day 0.” Because factory reset requires that a hardware-specific image be shipped with the server, the partner must author the server recovery DVD.  
+ This recovery returns the server to the original state that existed when the server was shipped from the factory. Following a factory reset, you are asked to perform the initial configuration of the server just as you were the first time you turned it on, and all settings and customizations are lost. This is also referred to as “Day 0.�? Because factory reset requires that a hardware-specific image be shipped with the server, the partner must author the server recovery DVD.  
   
  **Bare-metal restore**  
   
@@ -71,17 +56,17 @@ translation.priority.ht:
 ### Steps for creating a server recovery DVD for multiple language support  
  There are six major steps to create a server recovery DVD  
   
-1.  [(Optional) Update WinPE](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Updating)  
+1.  [(Optional) Update WinPE](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Updating)  
   
-2.  [Collect the factory reset images and XML files](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Collecting)  
+2.  [Collect the factory reset images and XML files](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Collecting)  
   
-3.  [Create the server recovery DVD](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Creating)  
+3.  [Create the server recovery DVD](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Creating)  
   
-4.  [Customize the wizard](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Customizing)  
+4.  [Customize the wizard](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Customizing)  
   
-5.  [Create the ISO file](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_CreatingISO)  
+5.  [Create the ISO file](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_CreatingISO)  
   
-6.  [Test the recovery DVD](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Testing)  
+6.  [Test the recovery DVD](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Testing)  
   
 ####  <a name="BKMK_Updating"></a> Step 1: (Optional) Update WinPE  
  The ADK includes a copy of Windows PE that is customized. When this image is booted, it automatically launches the beacon that is used by the client recovery application to connect to a server in recovery mode.  
@@ -178,7 +163,7 @@ translation.priority.ht:
 3.  Click **Restore the server from a backup**, and then follow the instructions in the wizard.  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

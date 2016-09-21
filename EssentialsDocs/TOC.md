@@ -169,6 +169,5 @@
 ### [Troubleshoot File History in Windows Server Essentials](support/Troubleshoot-File-History-in-Windows-Server-Essentials.md)
 ### [Troubleshoot Remote Web Access connectivity in Windows Server Essentials](support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)
 ### [Troubleshoot Windows Server 2012 Essentials Log Collector Errors](support/Troubleshoot-Windows-Server-2012-Essentials-Log-Collector-Errors.md)
-### [Troubleshoot Windows Server Essentials installation](support/Troubleshoot-installation.md)
 ### [Troubleshoot your firewall in Windows Server Essentials](support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
 ### [Use the Windows Server 2012 Essentials Log Collector](support/Use-the-Windows-Server-2012-Essentials-Log-Collector.md)

@@ -2,33 +2,18 @@
 title: "Create the PostIC.cmd File for Running Post Initial Configuration Tasks"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Create the PostIC.cmd File for Running Post Initial Configuration Tasks
 You can add post-initial configuration customizations by writing your own code, and then calling that code from a script file named PostIC.cmd. When using the PostIC.cmd file, you must adhere to the following guidelines:  
@@ -39,7 +24,7 @@ You can add post-initial configuration customizations by writing your own code, 
   
 -   Your customization code must run in three minutes or less.  
   
- Define your PostIC.cmd file to return a 0 if the code runs successfully. If any other value is returned, the operating system looks for a file named [SetupFailure.cmd](../Topic/Create%20the%20PostIC.cmd%20File%20for%20Running%20Post%20Initial%20Configuration%20Tasks.md#BKMK_SetupFailure), which contains code that should be run if the code in the PostIC.cmd file does not run successfully. Both the PostIC.cmd file and the SetupFailure.cmd file must be located C:\Windows\Setup\Scripts.  
+ Define your PostIC.cmd file to return a 0 if the code runs successfully. If any other value is returned, the operating system looks for a file named [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure), which contains code that should be run if the code in the PostIC.cmd file does not run successfully. Both the PostIC.cmd file and the SetupFailure.cmd file must be located C:\Windows\Setup\Scripts.  
   
 #### To define post-initial configuration customizations  
   
@@ -63,8 +48,8 @@ You can add post-initial configuration customizations by writing your own code, 
 3.  Save SetupFailure.cmd in C:\Windows\Setup\Scripts.  
   
 ## See Also  
- [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

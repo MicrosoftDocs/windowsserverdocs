@@ -2,40 +2,39 @@
 title: "Use Remote Web Access in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/01/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 caps.latest.revision: 13
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Use Remote Web Access in Windows Server Essentials
-[!INCLUDE[wse_all](../manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] helps you stay connected to your Windows Server Essentials network when you are away. When you log on to [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)], you can connect to the computers on your Windows Server Essentials network, open the Dashboard to manage your Windows Server Essentials network, and access all of the shared folders and media files on the server.  
+  Remote Web Access helps you stay connected to your Windows Server Essentials network when you are away. When you log on to  Remote Web Access, you can connect to the computers on your Windows Server Essentials network, open the Dashboard to manage your Windows Server Essentials network, and access all of the shared folders and media files on the server.  
   
  This topic includes the following sections:  
   
+
+-   [Connect to Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Connect)  
+  
+-   [Share files and folders](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
+  
+-   [Connect from a mobile device](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
+  
+##  <a name="BKMK_Connect"></a> Connect to Remote Web Access  
+  
+-   [Log on to Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
+  
+-   [Remotely access your computer](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)  
+
 -   [Connect to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Connect)  
   
 -   [Share files and folders](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
@@ -47,30 +46,31 @@ translation.priority.ht:
 -   [Log on to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
   
 -   [Remotely access your computer](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)  
+
   
 ###  <a name="BKMK_1"></a> Log on to Remote Web Access  
- When you log on to [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] from a local or remote computer, you can access resources on your server running Windows Server Essentials and computers on your network.  
+ When you log on to  Remote Web Access from a local or remote computer, you can access resources on your server running Windows Server Essentials and computers on your network.  
   
 ##### To log on to Remote Web Access from a network computer  
   
 1.  Open a Web browser, type **https://***<YourServerName\>***/remote** in the address bar, and then press Enter.  
   
     > [!NOTE]
-    >  Make sure that you include the “s” in https.  
+    >  Make sure that you include the “s�? in https.  
   
-2.  On the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] logon page, type your user name and password in the text boxes, and then click the arrow.  
+2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow.  
   
 ##### To log on to Remote Web Access from a remote computer  
   
 1.  Open a Web browser, type **https://***<YourDomainName\>***/remote** in the address bar, and then press Enter.  
   
     > [!NOTE]
-    >  You can get your domain name information from your network administrator. Make sure that you include the “s” in https.  
+    >  You can get your domain name information from your network administrator. Make sure that you include the “s�? in https.  
   
-2.  On the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] logon page, type your user name and password in the text boxes, and then click the arrow.  
+2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow.  
   
 ###  <a name="BKMK_1.5"></a> Remotely access your computer  
- When you are away from your office, you can use your Web browser to log on to the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] site to remotely access your Windows Server Essentials Dashboard, shared folders, and computers on your network.  
+ When you are away from your office, you can use your Web browser to log on to the  Remote Web Access site to remotely access your Windows Server Essentials Dashboard, shared folders, and computers on your network.  
   
  When you connect to the Dashboard, you can manage Windows Server Essentials just like you would if you were at the office. You can perform all of the usual administrative tasks, such as adding user accounts, adding shared folders, setting shared folder access, and so on. When you connect to computers on your network, you can access their desktops as if you were sitting in front of them at the office.  
   
@@ -100,9 +100,15 @@ translation.priority.ht:
   
 ##  <a name="BKMK_SharedFolders"></a> Share files and folders  
   
+
+-   [Upload and download files in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
+  
+-   [Create, rename, move, delete, or copy files and folders in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
+
 -   [Upload and download files in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
   
 -   [Create, rename, move, delete, or copy files and folders in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
+
   
 ###  <a name="BKMK_UploadRWA"></a> Upload and download files in Remote Web Access  
  On the Remote Web Access **Shared Folders** tab, you can do the following:  
@@ -116,7 +122,11 @@ translation.priority.ht:
   
 -   Create a folder within a shared folder on Windows Server Essentials.  
   
+
+-   Move, delete, and rename files and folders on Windows Server Essentials. For more information, see [Create, rename, move, delete, or copy files and folders in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2).  
+
 -   Move, delete, and rename files and folders on Windows Server Essentials. For more information, see [Create, rename, move, delete, or copy files and folders in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2).  
+
   
 #### Upload files  
   
@@ -179,7 +189,7 @@ translation.priority.ht:
 -   **Self-extracting executable file (.exe)**  
   
     > [!NOTE]
-    >  [!INCLUDE[wse_section](../manage/includes/wse_section_md.md)]  
+    >   This section applies to a server running Windows Server 2012 Essentials.  
   
      A self-extracting executable file is a file that you can download that combines the decompression (executable) program with the compressed files. When you run the executable program, it automatically decompresses the compressed files (self-extracting). This is a common way to distribute compressed data without worrying about whether the recipient has the right decompression utility.  
   
@@ -191,7 +201,7 @@ translation.priority.ht:
      Zipping a file creates a compressed version of the file that is smaller than the original file. The zipped version of the file has a .zip file name extension. File types that are reduced the most by zipping are text-oriented file types, such as .txt, .doc, .xls, and graphics files that use non-compressed file types such as .bmp. Some graphic files, such as .jpg and .gif files, already use compression, and the file size is reduced very little by zipping. Also, a Word document that contains a lot of graphics is not reduced as much as a document that is mostly text.  
   
     > [!NOTE]
-    >  This option provides limited support for international file names in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+    >  This option provides limited support for international file names in  Windows Server 2012 Essentials.  
   
  Before the actual download begins, the exe or zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
   
@@ -212,7 +222,7 @@ translation.priority.ht:
 #### Retrieve compressed files downloaded to your computer  
   
 > [!NOTE]
->  [!INCLUDE[wse_section](../manage/includes/wse_section_md.md)]  
+>   This section applies to a server running Windows Server 2012 Essentials.  
   
  If you select multiple files or folders to download, you can receive a self-extracting compressed executable file (.exe) or a compressed (.zip) file.  
   
@@ -279,9 +289,15 @@ translation.priority.ht:
   
 ##  <a name="BKMK_ConnectMobile"></a> Connect from a mobile device  
   
+
+-   [Use Remote Web Access from a mobile device](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
+  
+-   [Supported Web browsers for mobile devices](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
+
 -   [Use Remote Web Access from a mobile device](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
   
 -   [Supported Web browsers for mobile devices](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
+
   
 ###  <a name="BKMK_8"></a> Use Remote Web Access from a mobile device  
  You can log on to Remote Web Access from your smart phone to view the files and folders in the shared folders on the server.  
@@ -291,23 +307,23 @@ translation.priority.ht:
   
 ##### To log on to Remote Web Access from a mobile device  
   
-1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the “s” in https.  
+1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the “s�? in https.  
   
-2.  On the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of Remote Web Access.  
+2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of Remote Web Access.  
   
 ##### To switch to the desktop version of Remote Web Access  
   
-1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the “s” in https.  
+1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the “s�? in https.  
   
-2.  On the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] logon page, type your user name and password in the text boxes, click **View desktop version**, and then click the arrow. You are logged on to the desktop version of Remote Web Access.  
+2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, click **View desktop version**, and then click the arrow. You are logged on to the desktop version of Remote Web Access.  
   
 ##### To return to the mobile version of Remote Web Access  
   
 1.  Log off.  
   
-2.  Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the “s” in https.  
+2.  Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the “s�? in https.  
   
-3.  The mobile version of [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] is displayed. On the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)].  
+3.  The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.  
   
  You can search for files and folders in the shared folders on the server.  
   
@@ -332,6 +348,12 @@ translation.priority.ht:
   
 -   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
+
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
+  
+-   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
+
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
+

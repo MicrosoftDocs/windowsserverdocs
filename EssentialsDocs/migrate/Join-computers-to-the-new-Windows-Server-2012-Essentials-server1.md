@@ -2,37 +2,23 @@
 title: "Join computers to the new Windows Server 2012 Essentials server1"
 ms.custom: na
 ms.date: 11/20/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Join computers to the new Windows Server 2012 Essentials server
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 caps.latest.revision: 6
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Join computers to the new Windows Server 2012 Essentials server1
 ##  <a name="BKMK_JoinComputers"></a>   
- The next step in the migration process is to join client computers to the new [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] network and update Group Policy settings.  
+ The next step in the migration process is to join client computers to the new  Windows Server 2012 Essentials network and update Group Policy settings.  
   
 > [!NOTE]
 >  If a client computer is already joined to the Source Server, you must first uninstall the Connector software on the client computer before you can connect the computer to the Destination Server.  
@@ -55,7 +41,7 @@ translation.priority.ht:
   
 2.  At the command prompt, type **GPRESULT /R**, and then press ENTER.  
   
-3.  Review the resulting output for the section “Group Policy was applied from:” and ensure it lists the Destination Server, such as **DestinationSrv.Domain.local**. For example:  
+3.  Review the resulting output for the section “Group Policy was applied from:�? and ensure it lists the Destination Server, such as **DestinationSrv.Domain.local**. For example:  
   
     ```  
     USER SETTINGS  
@@ -75,6 +61,6 @@ translation.priority.ht:
   
     1.  Click **Start**, click **Run**, type **rsop.msc** (Resultant Set of Policy), and then press ENTER.  
   
-    2.  Expand the tree with the “X” on it until you get to a node.  
+    2.  Expand the tree with the “X�? on it until you get to a node.  
   
     3.  Right-click the node, and click **View Error** for information about why the Group Policy settings are failing on the computer listed.

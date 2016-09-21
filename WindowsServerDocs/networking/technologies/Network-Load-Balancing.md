@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - techgroup-networking
+  - networking-nlb
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid:
+ms.author: jamesmci 
 author: jamesmci
 ---
 #Network Load Balancing
@@ -75,7 +76,7 @@ To support manageability, you can do the following with NLB:
  
 NLB is installed as a standard Windows Server networking driver component. Its operations are transparent to the TCP\/IP networking stack. The following figure shows the relationship between NLB and other software components in a typical configuration.  
   
-![](../media/NLB/nlb.jpg)  
+![Network Load Balancing and other software components](../media/NLB/nlb.jpg)  
   
 Following are the primary features of NLB.  
   

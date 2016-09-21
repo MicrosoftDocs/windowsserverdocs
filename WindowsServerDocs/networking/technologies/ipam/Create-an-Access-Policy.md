@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
+ms.author: jamesmci
 author: jamesmci
 ---
 # Create an Access Policy
@@ -28,45 +29,45 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 2.  In the navigation pane, click **ACCESS CONTROL**. In the lower navigation pane, right-click **Access Policies**, and then click **Add Access Policy**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)  
+    ![Add access policy](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)  
   
 3.  The **Add Access Policy** dialog box opens. In **User Settings**, click **Add**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_02.jpg)  
+    ![In user settings click Add](../../media/Create-an-Access-Policy/ipam_CreateAP_02.jpg)  
   
 4.  The **Select User or Group** dialog box opens. Click **Locations**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_03.jpg)  
+    ![Click locations to select user or group](../../media/Create-an-Access-Policy/ipam_CreateAP_03.jpg)  
   
 5.  The **Locations** dialog box opens. Browse to the location that contains the user account, select the location, and then click **OK**. The **Locations** dialog box closes.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_04.jpg)  
+    ![Select a location](../../media/Create-an-Access-Policy/ipam_CreateAP_04.jpg)  
   
 6.  In the **Select User or Group** dialog box, in **Enter the object name to select**, type the user account name for which you want to create an access policy. Click **OK**.  
   
 7.  In **Add Access Policy**, in **User Settings**, **User alias** now contains the user account to which the policy applies. In **Access Settings**, click **New**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_05.jpg)  
+    ![Create new access setting](../../media/Create-an-Access-Policy/ipam_CreateAP_05.jpg)  
   
 8.  In **Add Access Policy**, **Access Settings** changes to **New Setting**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_06.jpg)  
+    ![Access settings changes to new setting](../../media/Create-an-Access-Policy/ipam_CreateAP_06.jpg)  
   
 9. Click **Select role** to expand the list of roles. Select one of the built-in roles or, if you have created new roles, select one of the roles that you created. For example, if you created the IPAMSrv role to apply to the user, click **IPAMSrv**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_07.jpg)  
+    ![Select a role](../../media/Create-an-Access-Policy/ipam_CreateAP_07.jpg)  
   
 10. Click **Add Setting**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_08.jpg)  
+    ![Add setting](../../media/Create-an-Access-Policy/ipam_CreateAP_08.jpg)  
   
 11. The role is added to the access policy. To create additional access policies, click **Apply**, and then repeat these steps for each policy that you want to create. If you do not want to create additional policies, click **OK**.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_09.jpg)  
+    ![Complete policy creation with Apply or OK](../../media/Create-an-Access-Policy/ipam_CreateAP_09.jpg)  
   
 12. In the IPAM client console display pane, verify that the new access policy is created.  
   
-    ![](../../media/Create-an-Access-Policy/ipam_CreateAP_09a.jpg)  
+    ![Verify the new access policy](../../media/Create-an-Access-Policy/ipam_CreateAP_09a.jpg)  
   
 ## See Also  
 [Role-based Access Control](Role-based-Access-Control.md)  
