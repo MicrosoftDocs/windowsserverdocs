@@ -28,14 +28,14 @@ These maximums apply to each virtual machine. Not all components are available i
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
 |Checkpoints|50|The actual number may be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|  
-|Memory|generation 2 - 12 TB <br>generation 1 - 1 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
+|Memory|12 TB for generation 2; <br>1 TB for generation 1|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
 |Serial (COM) ports|2|None.|  
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|  
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|  
-|Virtual floppy devices|1 virtual floppy drive|None.|  
-|Virtual hard disk capacity|VHDX format - 151 64 TB<br>VHD format - 2040 GB|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|  
+|Virtual floppy devices|1 virtual floppy drive|None.|
+|Virtual hard disk capacity|64 TB for VHDX format;<br>2040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|  
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|  
-|Virtual processors|generation 2 - 240<br>generation 1 - 64|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|  
+|Virtual processors|240 for generation 2;<br>64 for generation 1|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|  
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) and [Supported Windows guest operating systems](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows-server-technical-preview).|  
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|  
 |Virtual network adapters|12 total:<br> - 8 Hyper-V specific network adapters<br>- 4 legacy network adapters|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server 2016](Plan-for-Hyper-V-networking-in-Windows-Server-2016.md).|  
@@ -50,7 +50,7 @@ These maximums apply to each Hyper-V host.
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|  
 |Physical network adapters|No limits imposed by Hyper-V.|None.|  
 |Running virtual machines per server|1024|None.|  
-|Storage|Limited by what is supported by the management operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage is not supported.|
+|Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage is not supported.|
 |Virtual network switch ports per server|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|  
 |Virtual processors per logical processor|No ratio imposed by Hyper-V.|None.|  
 |Virtual processors per server|2048|None.|  
@@ -65,6 +65,6 @@ To learn about updates to Failover Clustering, including new features for virtua
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
 |Nodes per cluster|64|Consider the number of nodes you want to reserve for failover, as well as maintenance tasks such as applying updates. We recommend that you plan for enough resources to allow for 1 node to be reserved for failover, which means it remains idle until another node is failed over to it. (This is sometimes referred to as a passive node.) You can increase this number if you want to reserve additional nodes. There is no recommended ratio or multiplier of reserved nodes to active nodes; the only requirement is that the total number of nodes in a cluster can't exceed the maximum of 64.|  
-|Running virtual machines per cluster and per node|8,000 per cluster|Several factors can affect the real number of virtual machines that can be run at the same time on one node, such as:<br /><br />- Amount of physical memory being used by each virtual machine.<br />-   Networking and storage bandwidth.<br />- Number of disk spindles, which affects disk I/O performance.|  
+|Running virtual machines per cluster and per node|8,000 per cluster|Several factors can affect the real number of virtual machines that can be run at the same time on one node, such as:<br />- Amount of physical memory being used by each virtual machine.<br />- Networking and storage bandwidth.<br />- Number of disk spindles, which affects disk I/O performance.|  
   
 
