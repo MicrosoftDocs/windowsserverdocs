@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Physical access to a server is a high security risk. To maintain a more secure environment, you must restrict physical access to all servers and network hardware.</Token>

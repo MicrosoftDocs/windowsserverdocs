@@ -1,1 +1,0 @@
-Windows Identity Foundation (WIF)

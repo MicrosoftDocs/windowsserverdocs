@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Splits the embedded Abstract Syntax Notation One (ASN.1) elements, and saves them to files.</Token>

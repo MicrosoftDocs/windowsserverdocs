@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Run Windows Update. For more information, see <link xlink:href="e77ca20b-52d3-414d-a119-18bbe53c6678" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Windows Update</link>.</Token>

@@ -1,1 +1,0 @@
-Microsoft Virtual Desktop Infrastructure (VDI) deployment

@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">For information about adding the Wireless Monitor snap-in, see Related Topics.</Token>
