@@ -31,7 +31,7 @@ A WSUS server downloads updates based on the products or product families (for e
 
 You can specify update products and classifications on the **Options** page under **Products and Classifications**. Products are listed in a hierarchy, grouped by product family. If you select Windows, you automatically select every product that falls under that product hierarchy. By selecting the parent check box you select all items under it, as well as all future versions. Selecting the child check boxes will not select the parent check boxes. The default setting for products is all Windows products, and the default setting for classifications is critical and security updates.
 
-If a WSUS server is running in replica mode, you will not be able to perform this task. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md), and [Step 1: Prepare for Your WSUS Deployment](../deploy/Step-1--Prepare-for-Your-WSUS-Deployment.md).
+If a WSUS server is running in replica mode, you will not be able to perform this task. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md), and [Step 1: Prepare for Your WSUS Deployment](../plan/plan-Your-WSUS-Deployment.md).
 
 ##### To specify update products and classifications for synchronization
 
@@ -92,9 +92,9 @@ The update source is the location from which your WSUS server gets its updates a
 
 Options for customizing how your WSUS server synchronizes with the update source include the following:
 
--   You can specify a custom port for synchronization. For information about configuring ports, see [Step 3: Configure WSUS](../deploy/Step-3--Configure-WSUS.md) in the WSUS deployment guide.
+-   You can specify a custom port for synchronization. For information about configuring ports, see [Step 3: Configure WSUS](../deploy/2--Configure-WSUS.md) in the WSUS deployment guide.
 
--   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/Step-3--Configure-WSUS.md) in the WSUS deployment guide.
+-   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/3--Configure-WSUS.md) in the WSUS deployment guide.
 
 ## Synchronizing Manually or Automatically
 You can either synchronize your WSUS server manually or specify a time for it to synchronize automatically.
