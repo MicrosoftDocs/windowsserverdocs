@@ -28,41 +28,41 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the lower navigation pane, click **Forward Lookup**. All IPAM-managed DNS Forward Lookup zones are displayed in the display pane search results. Right-click the zone where you want to add a resource record, and then click **Add DNS resource record**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_01.jpg)  
+    ![Add a DNS Resource Record](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_01.jpg)  
   
 4.  The **Add DNS Resource Records** dialog box opens. In **Resource record properties**, click **DNS server** and select the DNS server where you want to add one or more  new resource records. In **Configure DNS resource records**, click **New**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_02.jpg)  
+    ![In Configure DNS resource records click New](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_02.jpg)  
   
 5.  The dialog box expands to reveal **New Resource Record**. Click **Resource record type**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_03.jpg)  
+    ![Click Resource record type](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_03.jpg)  
   
 6.  The list of resource record types is displayed. Click the resource record type that you want to add.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_04.jpg)  
+    ![Click the resource record type that you want to add](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_04.jpg)  
   
 7.  In **New Resource Record,** in **Name**, type a resource record name. In **IP Address**, type an IP address, and then select the resource record properties that are appropriate for your deployment. Click **Add Resource Record**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_06.jpg)  
+    ![In New Resource Record fill in properties for the record](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_06.jpg)  
   
 8.  If you do not want to create additional new resource records, click **OK**. If you want to create additional new resource records, click **New**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_01.jpg)  
+    ![In Add Resource Record click OK or New](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_01.jpg)  
   
 9. The dialog box expands to reveal **New Resource Record**. Click **Resource record type**. The list of resource record types is displayed. Click the resource record type that you want to add.  
   
 10. In **New Resource Record,** in **Name**, type a resource record name. In **IP Address**, type an IP address, and then select the resource record properties that are appropriate for your deployment. Click **Add Resource Record**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_02.jpg)  
+    ![Fill in new resource record properties](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_02.jpg)  
   
 11. If you want to add more resource records, repeat the process for creating records. When you are done creating new resource records, click **Apply**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_03.jpg)  
+    ![Repeat the process for more records](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_03.jpg)  
   
 12. The **Add Resource Record** dialog box displays a resource records summary while IPAM creates the resource records on the DNS server that you specified. When the records are successfully created, the **Status** of the record is **Success**.  
   
-    ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_04.jpg)  
+    ![The Status of the record creation is Success](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_04.jpg)  
   
 13. Click **OK**.  
   
