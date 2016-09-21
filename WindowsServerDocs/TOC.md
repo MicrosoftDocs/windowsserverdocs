@@ -58,7 +58,7 @@
 ###### [Desktop hosting service](compute/remote-desktop-services/Desktop-hosting-service.md)
 ###### [Azure services and considerations for desktop hosting](compute/remote-desktop-services/Azure-services-and-considerations-for-desktop-hosting.md)
 ###### [Tenant on-premises components](compute/remote-desktop-services/Tenant-on-premises-components.md)
-#### Deploy
+#### [Build and deploy](compute/remote-desktop-services/rds-build-and-deploy.md)
 ##### [Upgrade your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/upgrade-to-rds-2016.md)
 ###### [Upgrade Remote Desktop Session Host servers](compute/remote-desktop-services/upgrade-to-rdsh-2016.md)
 ###### [Upgrade Remote Desktop Virtualization Host servers](compute/remote-desktop-services/upgrade-to-rdvh-2016.md)
@@ -87,6 +87,7 @@
 ##### [Deploy RemoteApp programs](compute/remote-desktop-services/Deploy-RemoteApp-programs.md)
 ###### [Add the RDSH Server, create a collection, and publish the RemoteApp programs](compute/remote-desktop-services/Add-the-RDSH-Server,-create-a-collection,-and-publish-the-RemoteApp-programs.md)
 ##### [Deploy and manage a personal session desktops environment](compute/remote-desktop-services/rds-personal-session-desktops.md)
+#### [Run and tune](compute/remote-desktop-services/rds-run-and-tune.md)
 #### [Remote Desktop clients](compute/remote-desktop-services/clients/remote-desktop-clients.md)
 ##### [Getting started with Remote Desktop client on Android](compute/remote-desktop-services/clients/remote-desktop-android.md)
 ##### [Remote Desktop client on Android FAQ](compute/remote-desktop-services/clients/remote-desktop-android-faq.md)
