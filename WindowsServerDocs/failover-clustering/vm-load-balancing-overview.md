@@ -1,12 +1,12 @@
 ---
 title: Virtual Machine Load Balancing overview
-+ms.prod: windows-server-threshold
-+ms.technology: storage-failover-clustering
-+ms.topic: article
-+author: bhattacharyaz
-+manager: eldenc 
-+ms.author: subhatt 
-+ms.date: 09/19/2016 
+ms.prod: windows-server-threshold
+ms.technology: storage-failover-clustering
+ms.topic: article
+author: bhattacharyaz
+manager: eldenc 
+ms.author: subhatt 
+ms.date: 09/19/2016 
 --- 
 # Virtual Machine Load Balancing overview
 > Applies to Windows Server 2016
