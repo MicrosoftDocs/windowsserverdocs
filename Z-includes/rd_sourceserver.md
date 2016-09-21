@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">After you remove a source server from the domain, you will not have access to any role services on that computer.</Token>

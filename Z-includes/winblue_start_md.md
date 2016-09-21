@@ -1,1 +1,0 @@
-On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type
