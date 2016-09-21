@@ -36,9 +36,31 @@ Check the FWLink tool for any FWLinks that point to the article. Point any FWLin
 
 Work with the person who maintains the ToC.md file. This file populates the left-hand table of contents in the technical library. If you don't know who to contact, send email to wssc-pra@microsoft.com.
 
+## Step 5: Add redirects
+If you're renaming a file, add a redirect so that existing links don't break:
+
+1. Leave the old file in existing location and filename.
+2. Remove the content from the old topic, but make sure you have this piece of metadata:
+   ```
+   ---
+   redirect_url: <redirection-URL-or-file>
+   ---
+   ```
+   \<redirection-URL-or-file> is the full URL to a different location or is the path+filename to a different topic in the same OPS repo.
+
+   For example - this would be the whole file:
+
+   ```
+   ---
+   redirect_url: ../../failover-clustering/whats-new-in-failover-clustering
+   ---
+   ```
+
+3. After creating a PR for the redirect, click the links in the comments for the PR - if the redirect works you should get to the target topic.
+
 ## Step 5: Rename or retire the article
 
-After you've completed the previous steps and all affected articles are published, then you can rename or remove the file in your local clone, then push the change and open a pull request.
+After you've completed the previous steps and all affected articles are published, then you can rename or remove the file in your local clone, if you're not using redirects, then push the change and open a pull request.
 
 ## Step 6: Find and fix straggler broken links
 
