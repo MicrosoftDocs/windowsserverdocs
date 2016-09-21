@@ -1,9 +1,9 @@
 ---
 title: Get Started with Windows Server Update Services (WSUS)
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b

@@ -20,14 +20,8 @@ This scenario is useful in situations where you want to direct traffic in one ti
 >[!NOTE]
 >To learn how to use DNS policy for intelligent DNS responses without using Azure, see [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md). 
 
-This topic contains the following sections.
-
-- [Example of Intelligent DNS Responses Based on the Time of Day with Azure Cloud App Server](#bkmk_azureexample)
-- [How Intelligent DNS Responses Based on Time of Day with Azure App Server Works](#bkmk_azurehow)
-- [How to Configure DNS Policy for Intelligent DNS Responses Based on Time of Day with Azure App Server](#bkmk_azureconfigure)
-
-
 ## <a name="bkmk_azureexample"></a>Example of Intelligent DNS Responses Based on the Time of Day with Azure Cloud App Server
+
 Following is an example of how you can use DNS policy to balance application traffic based on the time of day.
 
 This example uses one fictional company, Contoso Gift Services, which provides online gifting solutions across the globe through their Web site, contosogiftservices.com. 
@@ -51,7 +45,7 @@ The DNS servers are configured with zone scopes and DNS policies so that between
 
 The following illustration depicts this scenario.
 
-![](../../media/DNS-Policy-Tod2/dns_policy_tod2.jpg)  
+![DNS Policy for time of day responses](../../media/DNS-Policy-Tod2/dns_policy_tod2.jpg)  
 
 ## <a name="bkmk_azurehow"></a>How Intelligent DNS Responses Based on Time of Day with Azure App Server Works
  
@@ -140,4 +134,4 @@ Note the expression:
 
 This expression configures the DNS server with a ZoneScope and weight combination that instructs the DNS server to send the IP address of the Seattle Web server seventy per cent of the time, while sending the IP address of the Azure Web server thirty per cent of the time.
 
-You can create hundreds of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.
+You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.

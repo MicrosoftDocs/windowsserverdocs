@@ -1,1 +1,0 @@
-For information about how to use this extension to create and configure a preference item, see the following topics:

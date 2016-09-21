@@ -1,10 +1,9 @@
 ---
 title: Plan Your WSUS Deployment
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
-ms.tgt_pltfrm: na
+ms.reviewer: na
+ms.technology: manage-wsus
+558b59af6ba89cfa315744ad81ca589c0ecb5a7a:WindowsServerDocs/management/windows-server-update-services/plan/Plan-Your-WSUS-Deployment.md
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp

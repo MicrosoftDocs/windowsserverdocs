@@ -1,1 +1,0 @@
-**Active Directory Module for Windows PowerShell**

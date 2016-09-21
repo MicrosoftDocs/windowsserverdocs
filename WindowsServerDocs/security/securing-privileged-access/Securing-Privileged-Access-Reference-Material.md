@@ -1,10 +1,7 @@
 ---
 title: Securing Privileged Access Reference Material
-ms.custom: na
+ms.technology: security
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 22ee9a77-4872-4c54-82d9-98fc73a378c0
 manager:
@@ -304,7 +301,7 @@ These standards help achieve least privilege by reducing the number of administr
 
 > [!NOTE]
 > Achieving least privilege in your organization will require understanding the organizational roles, their requirements, and their designing mechanisms to ensure that they are able to accomplish their job by using least privilege. Achieving a state of least privilege in an administrative model frequently requires the use of multiple approaches:
-> 
+>
 > -   Limit the count of administrators or members of privileged groups
 > -   Delegate fewer privileges to accounts
 > -   Provide time-bound privileges on demand
@@ -329,7 +326,7 @@ Administrators are required to obtain permissions "just-in-time" to use them as 
 
 > [!NOTE]
 > Permanently assigned administrative privileges naturally create a "most privilege" strategy because administrative personnel require rapid access to permissions to maintain operational availability if there is an issue. Just-in-time permissions provide the ability to:
-> 
+>
 > -   Assign permissions more granularly, getting closer to least privilege.
 > -   Reduce the exposure time of privileges
 > -   Tracking permissions use to detect abuse or attacks.
@@ -351,7 +348,7 @@ Administrators can only sign in to admin workstations with their administrative 
 
 > [!NOTE]
 > This is required because logging onto a host interactively grants control of the credentials to that host.
-> 
+>
 > See the [Administrative Tools and Logon Types](http://aka.ms/admintoolsecurity) for details about logon types, common management tools, and credential exposure.
 
 ###### Use of approved support technology and methods
@@ -735,6 +732,3 @@ Column definitions:
 
 > [!NOTE]
 > For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](http://technet.microsoft.com/en-us/library/aa380129(VS.85).aspx).
-
-
-

@@ -1,11 +1,9 @@
 ---
 title: Deploy Windows Server Update Services
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.reviewer: na
+ms.technology: manage-wsus
+ms.topic: get-started-article
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
 author: coreyp
 ms.author: coreyp-at-msft

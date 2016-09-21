@@ -4,13 +4,11 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-networking
-  - networking
+ms.technology: networking
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
 author: jamesmci
+ms.author: jamesmci
 ---
 # Wireless Access Deployment Overview
 The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.  
@@ -40,7 +38,7 @@ Use the Active Directory Users and Computers snap\-in to create and manage user 
 
 #### Wireless Network \(IEEE 802.11\) Policies
 
-You can use the Wireless Network \(IEEE 802.11\) Policies extension of Group Policy Management to configure policies that are applied to wireless computers when they attempt to access the network. 
+You can use the Wireless Network \(IEEE 802.11\) Policies extension of Group Policy Management to configure policies that are applied to wireless computers when they attempt to access the network.
 
 In Group Policy Management Editor, when you right\-click **Wireless Network \(IEEE 802.11\) Policies**, you have the following two options for the type of wireless policy that you create.
 
@@ -54,7 +52,7 @@ In Group Policy Management Editor, when you right\-click **Wireless Network \(IE
 The Wireless Network Policy for Windows Vista and Later Releases enables you to configure, prioritize, and manage multiple wireless profiles. A wireless profile is a collection of connectivity and security settings that are used to connect to a specific wireless network. When Group Policy is updated on your wireless client computers, the profiles you create in the  Wireless Network Policy are automatically added to the configuration on your wireless client computers to which the Wireless Network Policy applies.
 
 ##### Allowing connections to multiple wireless networks
-  
+
 If you have wireless clients that are moved across physical locations in your organization, such as between a main office and a branch office, you might want computers to connect to more than one wireless network. In this situation, you can configure a wireless profile that contains the specific connectivity and security settings for each network.
 
 For example, assume your company has one wireless network for the main corporate office, with a service set identifier \(SSID\) WlanCorp.
@@ -67,14 +65,14 @@ In this scenario, you can configure a profile for each network, and computers or
 
 Alternately, assume your network has a mixture of wireless computers and devices that support different security standards. Perhaps some older computers have wireless adapters that can only use WPA\-Enterprise, while newer devices can use the stronger WPA2\-Enterprise standard.
 
-You can create two different profiles that use the same SSID and nearly identical connectivity and security settings. 
+You can create two different profiles that use the same SSID and nearly identical connectivity and security settings.
 
-In one profile, you can set the wireless authentication to WPA2\-Enterprise with AES, and in the other profile you can specify WPA\-Enterprise with TKIP. 
+In one profile, you can set the wireless authentication to WPA2\-Enterprise with AES, and in the other profile you can specify WPA\-Enterprise with TKIP.
 
 This is commonly known as a mixed\-mode deployment, and it allows computers of different types and wireless capabilities to share the same wireless network.
 
 ### Network Policy Server \(NPS\)
-NPS enables you to create and enforce network access policies for connection request authentication and authorization. 
+NPS enables you to create and enforce network access policies for connection request authentication and authorization.
 
 When you use NPS as a RADIUS server, you configure network access servers, such as wireless access points, as RADIUS clients in NPS. You also configure the network policies that NPS uses to authenticate access clients and authorize their connection requests.  
 
@@ -83,9 +81,9 @@ For the purpose of this guide, wireless client computers are computers and other
 
 #### Server computers as wireless clients
 
-By default, the functionality for 802.11 wireless is disabled on computers that are running Windows Server. 
+By default, the functionality for 802.11 wireless is disabled on computers that are running Windows Server.
 
-To enable wireless connectivity on computers running server operating systems, you must install and enable the Wireless LAN \(WLAN\) Service feature by using either Windows PowerShell or the Add Roles and Features Wizard in Server Manager. 
+To enable wireless connectivity on computers running server operating systems, you must install and enable the Wireless LAN \(WLAN\) Service feature by using either Windows PowerShell or the Add Roles and Features Wizard in Server Manager.
 
 When you install the **Wireless LAN Service** feature, the new service **WLAN AutoConfig** is installed in **Services**. When installation is complete, you must restart the server.
 

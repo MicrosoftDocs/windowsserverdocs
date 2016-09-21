@@ -1,10 +1,8 @@
 ---
 title: Step 3 - Configure WSUS
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
-ms.tgt_pltfrm: na
+ms.reviewer: na
+ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 author: coreyp

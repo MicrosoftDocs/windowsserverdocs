@@ -2,15 +2,9 @@
 title: Wireless Access Deployment Planning
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-networking
-  - networking
-ms.tgt_pltfrm: na
+ms.technology: networking
 ms.topic: article
-ms.assetid:
-Ms.author: jamesmci
+ms.author: jamesmci
 author: jamesmci
 ---
 # Wireless Access Deployment Planning
@@ -27,7 +21,7 @@ When you design your wireless network access solution, you must do the following
 
 1. Determine what standards your wireless APs must support
 2. Determine the coverage areas where you want to provide wireless service
-3. Determine where you want to locate wireless APs 
+3. Determine where you want to locate wireless APs
 
 Additionally, you must plan an IP address scheme for your wireless AP’s and wireless clients. See the section **Plan the configuration of wireless AP’s in NPS** below for related information.
 
@@ -62,20 +56,20 @@ In addition, to provide enhanced security for the network, the wireless APs must
 - **Client isolation** If your wireless access point provides client isolation capabilities, you should enable the feature to prevent possible Address Resolution Protocol \(ARP\) spoofing exploits.
 
 ### Identify areas of coverage for wireless users
-Use architectural drawings of each floor for each building to identify the areas where you want to provide wireless coverage. For example, identify the appropriate offices, conferences rooms, lobbies, cafeterias, or courtyards. 
+Use architectural drawings of each floor for each building to identify the areas where you want to provide wireless coverage. For example, identify the appropriate offices, conferences rooms, lobbies, cafeterias, or courtyards.
 
-On the drawings, indicate any devices that interfere with the wireless signals, such as medical equipment, wireless video cameras, cordless telephones that operate in the 2.4 through 2.5 GHz Industrial, Scientific and Medical \(ISM\) range, and Bluetooth\-enabled devices. 
+On the drawings, indicate any devices that interfere with the wireless signals, such as medical equipment, wireless video cameras, cordless telephones that operate in the 2.4 through 2.5 GHz Industrial, Scientific and Medical \(ISM\) range, and Bluetooth\-enabled devices.
 
 On the drawing, mark aspects of the building that might interfere with wireless signals; metal objects used in the construction of a building can affect the wireless signal. For example, the following common objects can interfere with signal propagation: Elevators, heating and air\-conditioning ducts, and concrete support girders.
 
 Refer to your AP manufacturer for information about sources that might cause wireless AP radio frequency attenuation. Most APs provide testing software that you can use to check for signal strength, error rate, and data throughput.
 
 ### Determine where to install wireless APs
-On the architectural drawings, locate your wireless APs close enough together to provide ample wireless coverage but far enough apart that they do not interfere with each other. 
+On the architectural drawings, locate your wireless APs close enough together to provide ample wireless coverage but far enough apart that they do not interfere with each other.
 
 The necessary distance between APs depends upon the type of AP and AP antenna, aspects of the building that block wireless signals, and other sources of interference. You can mark wireless AP placements so that each wireless AP is not more than 300 feet from any adjacent wireless AP. See the wireless AP manufacturer’s documentation for AP specifications and guidelines for placement.
 
-Temporarily install wireless APs in the locations specified on your architectural drawings. Then, using a laptop equipped with an 802.11 wireless adapter and the site survey software that is commonly supplied with wireless adapters, determine the signal strength within each coverage area. 
+Temporarily install wireless APs in the locations specified on your architectural drawings. Then, using a laptop equipped with an 802.11 wireless adapter and the site survey software that is commonly supplied with wireless adapters, determine the signal strength within each coverage area.
 
 In coverage areas where signal strength is low, position the AP to improve signal strength for the coverage area, install additional wireless APs to provide the necessary coverage, relocate or remove sources of signal interference.  
 
@@ -191,7 +185,7 @@ For example, if your network has wireless computers that support WPA2\-Enterpris
 
 In many cases, you might want to provide wireless users with varying levels of access to the wireless network. For example, you might want to allow some users unrestricted access, any hour of the day, every day of the week. For other users, you might only want to allow access during core hours, Monday through Friday, and deny access on Saturday and Sunday.
 
-This guide provides instructions to create an access environment that places all of your wireless users in a group with common access to wireless resources. You create one wireless users security group in the Active Directory Users and Computers snap\-in, and then make every user for whom you want to grant wireless access a member of that group. 
+This guide provides instructions to create an access environment that places all of your wireless users in a group with common access to wireless resources. You create one wireless users security group in the Active Directory Users and Computers snap\-in, and then make every user for whom you want to grant wireless access a member of that group.
 
 When you configure NPS network policies, you specify the wireless users security group as the object that NPS processes when determining authorization.
 

@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-dns
+ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
@@ -20,12 +19,6 @@ You can use this topic to learn how to distribute application traffic across dif
   
 This scenario is useful in situations where you want to direct traffic in one time zone to alternate application servers, such as Web servers, that are located in another time zone. This allows you to load balance traffic across application instances during peak time periods when your primary servers are overloaded with traffic.   
   
-This topic contains the following sections.  
-  
-- [Example of Intelligent DNS Responses Based on the Time of Day](#bkmk_example1)  
-- [How Intelligent DNS Responses Based on Time of Day Works](#bkmk_works1)  
-- [How to Configure DNS Policy for Intelligent DNS Responses Based on Time of Day](#bkmk_how1)  
-  
 ### <a name="bkmk_example1"></a>Example of Intelligent DNS Responses Based on the Time of Day  
 Following is an example of how you can use DNS policy to balance application traffic based on the time of day.  
   
@@ -39,7 +32,7 @@ To ensure that contosogiftservices.com customers get a responsive experience fro
   
 The following illustration depicts this scenario.  
   
-![](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
+![DNS Policy for time of day based responses](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
   
 ### <a name="bkmk_works1"></a>How Intelligent DNS Responses Based on Time of Day Works  
   
@@ -159,6 +152,6 @@ Now the DNS server is configured with the required DNS policies to redirect traf
   
 When the DNS server receives name resolution queries, the DNS server evaluates the fields in the DNS request against the configured DNS policies. If the source IP address in the name resolution request matches any of the policies, the associated zone scope is used to respond to the query, and the user is directed to the resource that is geographically closest to them.  
   
-You can create hundreds of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.
+You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.
 
 

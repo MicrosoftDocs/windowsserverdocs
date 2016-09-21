@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Open the <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Group Policy Management Console</ui>. Right-click the Group Policy Object (GPO) that should contain the new preference item, and then click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Edit</ui>.</Token>

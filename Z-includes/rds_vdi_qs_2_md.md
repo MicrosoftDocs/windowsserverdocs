@@ -1,1 +1,0 @@
-VDI Quick Start deployment

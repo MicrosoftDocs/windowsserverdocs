@@ -1,9 +1,9 @@
 ---
 title: Updates Operations
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
