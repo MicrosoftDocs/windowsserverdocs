@@ -94,7 +94,7 @@ Options for customizing how your WSUS server synchronizes with the update source
 
 -   You can specify a custom port for synchronization. For information about configuring ports, see [Step 3: Configure WSUS](../deploy/2--Configure-WSUS.md) in the WSUS deployment guide.
 
--   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/3--Configure-WSUS.md) in the WSUS deployment guide.
+-   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/2--Configure-WSUS.md) in the WSUS deployment guide.
 
 ## Synchronizing Manually or Automatically
 You can either synchronize your WSUS server manually or specify a time for it to synchronize automatically.
