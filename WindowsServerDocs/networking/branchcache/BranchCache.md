@@ -83,7 +83,7 @@ When you deploy BranchCache in hosted cache mode, the content cache at a branch 
   
 In the following illustration, BranchCache is deployed in both modes.  
   
-![](../media/BranchCache/bc_modes.jpg)  
+![BranchCache Modes](../media/BranchCache/bc_modes.jpg)  
   
 Distributed cache mode is best suited for small branch offices that do not contain a local server for use as a hosted cache server. Distributed cache mode allows you to deploy BranchCache with no additional hardware in branch offices.  
   
