@@ -30,7 +30,7 @@ You can deploy AD FS to:
 ## About this guide  
 This guide is intended for use by system administrators and system engineers. It provides detailed guidance for deploying an AD FS design that has been preselected by you or an infrastructure specialist or system architect in your organization.  
   
-If a design has not yet been selected, we recommend that you wait to follow the instructions in this guide until after you have reviewed the design options in the [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md) and you have selected the most appropriate design for your organization. For more information about using this guide with a design that has already been selected, see [Implementing Your AD FS Design Plan](Implementing-Your-AD-FS-Design-Plan.md).  
+If a design has not yet been selected, we recommend that you wait to follow the instructions in this guide until after you have reviewed the design options in the [AD FS Design Guide in Windows Server 2012](https://technet.microsoft.com/library/dd807036.aspx) and you have selected the most appropriate design for your organization. For more information about using this guide with a design that has already been selected, see [Implementing Your AD FS Design Plan](Implementing-Your-AD-FS-Design-Plan.md).  
   
 After you select your design from the design guide and gather the required information about claims, token types, attribute stores, and other items, you can use this guide to deploy your AD FS design in your production environment. This guide provides steps for deploying either of the following primary AD FS designs:  
   
