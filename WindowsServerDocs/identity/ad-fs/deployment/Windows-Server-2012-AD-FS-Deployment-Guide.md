@@ -38,12 +38,12 @@ After you select your design from the design guide and gather the required infor
   
 -   Federated Web SSO  
   
-Use the checklists in [Implementing Your AD FS Design Plan](Implementing-Your-AD-FS-Design-Plan.md) to determine how best to use the instructions in this guide to deploy your particular design. For information about hardware and software requirements for deploying AD FS, see the [Appendix A: Reviewing AD FS Requirements](Appendix-A--Reviewing-AD-FS-Requirements.md) in the AD FS Design Guide.  
+Use the checklists in [Implementing Your AD FS Design Plan](Implementing-Your-AD-FS-Design-Plan.md) to determine how best to use the instructions in this guide to deploy your particular design. For information about hardware and software requirements for deploying AD FS, see the [Appendix A: Reviewing AD FS Requirements](https://technet.microsoft.com/library/ff678034.aspx) in the AD FS Design Guide.  
   
 ### What this guide does not provide  
 This guide does not provide:  
   
--   Guidance regarding when and where to place federation servers, federation server proxies, or Web servers in your existing network infrastructure. For this information, see [Planning Federation Server Placement](Planning-Federation-Server-Placement.md) and [Planning Federation Server Proxy Placement](Planning-Federation-Server-Proxy-Placement.md) in the AD FS Design Guide.  
+-   Guidance regarding when and where to place federation servers, federation server proxies, or Web servers in your existing network infrastructure. For this information, see [Planning Federation Server Placement](https://technet.microsoft.com/library/dd807069.aspx) and [Planning Federation Server Proxy Placement](https://technet.microsoft.com/library/dd807130.aspx) in the AD FS Design Guide.  
   
 -   Guidance for using certification authorities \(CAs\) to set up AD FS  
   
@@ -69,6 +69,6 @@ This guide does not provide:
   
 -   [Deploying Federation Servers](Deploying-Federation-Servers.md)  
   
--   [Deploying Federation Server Proxies_1](Deploying-Federation-Server-Proxies_1.md)  
+-   [Deploying Federation Server Proxies](Deploying-Federation-Server-Proxies.md)  
   
 -   [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md)  
