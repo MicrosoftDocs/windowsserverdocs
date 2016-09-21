@@ -6,7 +6,8 @@ ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
+ms.author: billmath
 ms.author: billmath
 ---
 

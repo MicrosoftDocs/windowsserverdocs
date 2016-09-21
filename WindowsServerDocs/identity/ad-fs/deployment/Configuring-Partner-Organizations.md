@@ -7,7 +7,8 @@ ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
+ms.author: billmath
 ---
 
 # Configuring Partner Organizations
@@ -17,7 +18,7 @@ ms.technology: active-directory-federation-services
 To deploy a new partner organization in Active Directory Federation Services \(AD FS\), complete the tasks in either [Checklist: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md) or [Checklist: Configuring the Account Partner Organization](Checklist--Configuring-the-Account-Partner-Organization.md), depending on your AD FS design.  
   
 > [!NOTE]  
-> When you use either of these checklists, we strongly recommend that you first read the references to account partner or resource partner planning guidance \(in the [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)\) before continuing to the procedures for setting up the new partner organization. Following the checklist in this way will help provide a better understanding of the full AD FS design and deployment story for the account partner or resource partner organization.  
+> When you use either of these checklists, we strongly recommend that you first read the references to account partner or resource partner planning guidance in the [AD FS Design Guide in Windows Server 2012](https://technet.microsoft.com/library/dd807036.aspx) before continuing to the procedures for setting up the new partner organization. Following the checklist in this way will help provide a better understanding of the full AD FS design and deployment story for the account partner or resource partner organization.  
   
 ## About account partner organizations  
 An account partner is the organization in the federation trust relationship that physically stores user accounts in an AD FS–supported attribute store. The account partner is responsible for collecting and authenticating a user's credentials, building up claims for that user, and packaging the claims into security tokens. These tokens can then be presented across a federation trust to enable access to Web\-based resources that are located in the resource partner organization.  
