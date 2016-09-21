@@ -1,55 +1,51 @@
 ---
 title: Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-networking
-ms.tgt_pltfrm: na
+ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 author: vhorne
+ms.author: victorh
 ---
 # Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack
 
 >Applies To: Windows Server Technical Preview
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.  
-  
+
 For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../../sdn/Software-Defined-Networking--SDN-.md).  
-   
+
 ## Error types  
 The following list represents the class of problems most often seen with HNVv1 in-market production deployments and coincides in many ways with the same types of problems seen in the new SDN Stack.  
-  
+
 Most errors can be classified into a small set of classes:   
 * **Invalid or unsupported configuration**  
    A user invokes the NorthBound API incorrectly or with invalid policy.   
-  
+
 * **Error in policy application**  
      Policy from Network Controller was not delivered to Hyper-V Host, significantly delayed and / or not up to date on all Hyper-V hosts (e.g. after Live Migration).  
 * **Configuration drift or software bug**  
  Data-path issues resulting in dropped packets.  
-  
+
 * **External error related to NIC hardware / drivers or the underlay network fabric**  
  Misbehaving task offloads (such as VMQ) or underlay network fabric misconfigured (such as MTU)   
-   
+
  This troubleshooting guide examines each of these error categories and recommends best practices and diagnostic tools available to identify and fix the error.  
-   
+
 ## Diagnostic tools  
-  
+
 Before discussing the troubleshooting workflows for each of these type of errors, let's examine the diagnostic tools available.   
-  
+
 To use these tools, you must first install the RSAT-NetworkController feature and import the ``NetworkControllerDiagnostics`` module:  
-  
+
 ```  
 Add-WindowsFeature RSAT-NetworkController -IncludeManagementTools  
 Import-Module NetworkControllerDiagnostics  
 ```  
-  
-  
+
+
 ### Network controller diagnostics  
-  
+
 * **``Debug-NetworkControllerConfigurationState -NcIpAddress <FQDN of NC REST>``**  
  This script can run from anywhere that has Layer-3 connectivity to the NetworkController REST IP Address and has the Network Controller REST certificate installed. It queries the Network Controller to see if there are any tenant or fabric resources which are in a failure or warning configuration state based on the actual configuration state of the component. It also returns detailed info containing the source of the error, a message, and error code. The resources on which Configuration State has been implemented and the list of error codes are provided in the Appendix of this topic.  
  * **``Debug-SlbConfigState -NcIp <NC REST IP Address> [-LogPath <string>]``**  
@@ -64,10 +60,10 @@ This script must be run from one of the Network Controller nodes. It queries the
 This script allows a user to create an ICMP packet to be sent between two Provider Address (PA) IP Addresses. The hosting provider administrator specifies the sender and receiver PA IP addresses and reference the HNV Provider logical network where these IPs are attached. To get the results, query the Network Controller using the ``Get-ConnectivityResults`` command.  
 * **``Get-ConnectivityResults.ps1 -RestUri <string> [-OperationId <string>]``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Get-ConnectivityResults.ps1))  
  This script checks the connectivity results from both CA and PA Connectivity checks. You can optionally supply an operation Id (returned by Test-*AConnectivity) as a parameter. If no Operation Id is given, all recent connectivity results are returned. Results are available for one hour.  
-   
+
 ### Hyper-V host diagnostics  
 The following scripts can be run as Windows PowerShell cmdlets on the physical server. Before using these scripts, an administrator must import the ``hnvdiagnostics`` module:  
-  
+
 ```  
 import-module hnvdiagnostics   
 ```  
@@ -94,10 +90,10 @@ import-module hnvdiagnostics
   - **Routing Domain ID**  
 * **``Test-LogicalNetworkConnection [PA IP Address]``**  
    This script pings the supplied Provider Address (PA) IP Address on a remote host and automatically determines the correct TCP/IP network compartment where the PA Host vNIC resides. This command is short-hand for the following:  ``ping -c <PA Host vNIC compartment> <PA IP Address>``. PA Connectivity can also be checked through the Network Controller using the ``Test-LogicalNetworkPing.ps1`` command documented previously.  
-  
+
 ## Troubleshooting scenarios  
 The following are common troubleshooting scenarios, with a logical sequence of troubleshooting steps, specific diagnostic tools to use, required inputs, expected outputs, and follow-up actions for each output.  
-  
+
 ### No network connectivity between two tenant virtual machines  
 1.  [Tenant] Ensure Windows Firewall in tenant virtual machines is not blocking traffic.  
 2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine's VM NIC.  
@@ -110,8 +106,8 @@ The following are common troubleshooting scenarios, with a logical sequence of t
 9.  [Hosting provider]] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
 10. [Hosting provider]] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
 11. [Hosting provider]] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
-  
-  
+
+
 ### Software Load Balancer (SLB) failures  
 #### SLBM Fabric errors (Hosting service provider actions)  
 1.  Check that Software Load Balancer Manager (SLBM) is functioning and that the orchestration layers can talk to each other: SLBM -> SLB Mux and SLBM -> SLB Host Agents. Run Debug-SlbConfigState  from any Network Controller node.  
@@ -129,9 +125,9 @@ The following are common troubleshooting scenarios, with a logical sequence of t
 4.  Check configuration state and VIP ranges in Software Load Balancer Manager Resource  
     1.  Get-NCLoadBalancerManager | convertto-json -depth 8 (check VIP ranges and ensure SLBM self-VIP and any tenant-facing VIPs are within this range)  
     2.  Debug-NetworkControllerConfigurationState -  
-   
+
 If any of the checks above fail, the tenant SLB state will also be in a failure mode.  
-   
+
 **Remediation**   
 Based on the following diagnostic information presented, fix the following:  
 * Ensure SLB Multiplexers are connected  
@@ -152,8 +148,8 @@ Based on the following diagnostic information presented, fix the following:
     2.  Check *HostId* in *nchostagent* service regkey (reference *HostNotConnected* error code in the Appendix) matches the corresponding server resource's instance Id (``Get-NCServer |convertto-json -depth 8``)  
     3.  Check port profile id for virtual machine port matches corresponding virtual machine NIC resource's Instance Id   
 4.  [Hosting provider] Collect logs   
-  
-  
+
+
 ### Underlay Network Error: Network Controller Cannot Communicate with Host  
 1.  [Hoster] Verify basic IP connectivity over management network using ping  
 2.  [Hoster] Query Network Controller for Configuration State of Server resource(s) using   
@@ -162,7 +158,7 @@ Debug-NetworkControllerConfigurationState
         1.  OVSDB: from Hyper-V Host to Network Controller REST IP (TCP:6640)  
         2.  (only after tenant resources are created) WCF: from Hyper-V Host to Network Controller Node (TCP: &lt;ephemeral port&gt;)   
     2.  [Hoster] Check SouthBound channel Certificates  on Hyper-V Host and ensure they match with what is loaded in Network Controller node (VM)  
-  
+
         ```  
         dir cert:\\localmachine\my  
         dir cert:\\localmachine\root  
@@ -170,17 +166,17 @@ Debug-NetworkControllerConfigurationState
         1.  Subject Name  
         2.  Expiration Date  
         3.  Trusted by Root Authority  
-  
-  
+
+
 ## Logging and advanced diagnostic  
 ### Network controller centralized logging  
 The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines. Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.  
-  
+
 ### Enable logging  
 Logging is automatically enabled when you install the Network Controller cluster using the  ``Install-NetworkControllerCluster`` cmdlet. By default, the logs are collected locally on the Network Controller nodes at *%systemdrive%\SDNDiagnostics*. It is **STRONGLY RECOMMENDED** that you change this location to be a remote file share (not local). The Network Controller cluster logs are stored at *%programData%\Windows Fabric\log\Traces*. You can specify a centralized location for log collection with the ``DiagnosticLogLocation`` parameter with the recommendation that this is also be a remote file share. If you want to restrict access to this location, you can provide the access credentials with the ``LogLocationCredential`` parameter. If you provide the credentials to access the log location, you should also provide the ``CredentialEncryptionCertificate`` parameter, which is used to encrypt the credentials stored locally on the Network Controller nodes.  
-  
+
 With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a 3-node Network Controller cluster.  
-  
+
 ### Change logging settings  
 You can change logging settings at any time using the ``Set-NetworkControllerDiagnostic`` cmdlet. The following settings can be changed:  
 *   **Centralized log location**  
@@ -197,31 +193,31 @@ The default logging level is Informational. You can change it to Error, Warning,
 The logs are stored in a circular fashion. You will have 3 days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with ``LogTimeLimitInDays`` parameter.  
 *   **Log Aging size**  
 By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the ``LogSizeLimitInMBs`` parameter.  
-  
-  
+
+
 ### Advanced diagnostics and log collection  
-  
+
 If the previous troubleshooting guidance does not solve your particular problem, you may need help from a support or software engineer. In this case, the engineer will need the output from the following components:  
 ```  
 Debug-NetworkControllerConfigState -  
-  
+
 ovsdb-client.exe dump tcp:127.0.0.1:6641 ms_vtep  
-  
+
 ovsdb-client.exe dump tcp:127.0.0.1:6641 ms_firewall  
-  
+
 vfpctrl /list-vmswitch-port  
-  
+
 vfpctrl /port <port name> /get-port-state  
 ```  
-  
+
 ## Appendix  
 This appendix lists the error codes and messages output as a result of ``Test-Connectivity`` and ``Debug-NetworkControllerConfigurationState``.  
-  
-  
+
+
 ### Test-connectivity recovery actions  
 If the packet is dropped due to rule misconfiguration, this is typically evident in the VFP rule traces. The following is a list of potentially common errors due to misconfiguration.  
-  
-  
+
+
 Rule/Drop Reason  |Description  |Action    
 ---------|---------|---------  
 No rule match     | Network Controller Host Agent was unable to program vSwitch layers or rules in Virtual Filtering Platform (VFP).        | Run the ``Debug-NetworkControllerConfigurationState`` to determine which resource is in an error state.          
@@ -231,11 +227,11 @@ Address resolution failure(ARP/ND interception)|Address resolution failed for CA
 MAP encap rule|Missing CA-PA mapping|Tenant admin should consult Network Controller Configuration State (VM NIC resource) and IP configuration to ensure the CA IP address is correctly specified.           
 Forwarding     |Packet does not match any of the ports for forwarding|Tenant admin should consult Network Controller Configuration State (VM NIC resource) and IP configuration to ensure the CA IP address is correctly specified.           
 Redirection Rules|Misconfigured redirection rule causes the packet not to be redirected to DR IP.<br><br>In this case CA ping is used to ping infra service proxy endpoint (without setting up a listener).|Tenant administrator should consult Network Controller Configuration State (VM NIC resource) and IP configuration to ensure the CA IP address is correctly specified.           
-  
+
 ### Network controller configuration state error codes and recovery actions  
-  
-  
-  
+
+
+
 | **Code**| **Message**| **Action**                                                                                 |  
 |---------|------------|-----------|  
 | Unknown| Unknown error|                                                                                                                                                                                                                                                                                                          |  
@@ -262,5 +258,3 @@ Redirection Rules|Misconfigured redirection rule causes the packet not to be red
 | RoutePublicationFailure               | Loadbalancer MUX is not connected to a BGP router.                                            | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly.                                                                                                                                                                                                            |  
 | VirtualServerUnreachable              | Loadbalancer MUX is not connected to SLB manager.                                             | Check connectivity between SLBM and MUX.                                                                                                                                                                                                                                                                   |  
 | QosConfigurationFailure               | Failed to configure QOS policies.                                                             | See if sufficient bandwidth is available for all VM's if QOS reservation is used.                                                                                                                                                                                                                          |
-
-

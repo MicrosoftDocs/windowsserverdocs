@@ -1,10 +1,8 @@
 ---
 title: Step 3 - Approve and Deploy Updates in WSUS
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
-ms.tgt_pltfrm: na
+ms.reviewer: na
+ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
 author: coreyp

@@ -1,9 +1,9 @@
 ---
 title: Step 4 - Configure Group Policy Settings for Automatic Updates
 ms.prod: windows-server-threshold
-ms.technology: 
-  - WSUS
-  - techgroup-management
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c

@@ -1,17 +1,12 @@
 ---
 title: Appendix B - Privileged Accounts and Groups in Active Directory
-ms.custom:
-  - AD
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  
-ms.tgt_pltfrm: na
+ms.technology: idenity-adds
 ms.topic: article
 ms.assetid: 95ab100e-c45f-4419-ac97-a3abc2666f71
 author: Femila
+ms.author: Femila
 ---
 # Appendix B: Privileged Accounts and Groups in Active Directory
 

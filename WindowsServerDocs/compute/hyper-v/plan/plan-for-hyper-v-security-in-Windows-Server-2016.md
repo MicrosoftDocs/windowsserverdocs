@@ -4,15 +4,13 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 ms.suite: na
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 manager: dongill
-author: cwatsonMSFT
-ms.author: cwatson
-ms.date: 9/02/2016
+author: larsiwer
+ms.author: kathyDav
+ms.date: 9/19/2016
 ---
 
 # Plan for Hyper-V security in Windows Server 2016

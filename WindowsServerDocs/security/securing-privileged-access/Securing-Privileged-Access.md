@@ -1,13 +1,11 @@
 ---
 title: Securing Privileged Access
-ms.custom: na
+ms.technology: security
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
-manager:
+ms.author: YuriDio
 author: YuriDio
 ---
 # Securing Privileged Access
@@ -118,7 +116,7 @@ To lower the exposure time of privileges and increase visibility into their use,
 
 **3. Multi-factor for time-bound elevation**
 
-To increase the assurance level of administrator authentication, you should require multi-factor authentication before granting privileges. 
+To increase the assurance level of administrator authentication, you should require multi-factor authentication before granting privileges.
 This can be accomplished with MIM PAM and Azure AD PIM using Azure Multi-factor authentication (MFA).
 
 **4. Just Enough Admin (JEA) for DC Maintenance**
@@ -208,6 +206,3 @@ For more information on engaging Microsoft services to assist with any of these 
 [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](http://technet.microsoft.com/library/dd378897(v=ws.10).aspx)
 
 [Trusted Platform Module](C:\sd\docs\p_ent_keep_secure\p_ent_keep_secure\trusted_platform_module_technology_overview.xml)
-
-
-

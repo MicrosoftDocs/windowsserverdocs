@@ -11,9 +11,9 @@ ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
 ---
 # Storage Spaces Optimize Pool
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview Storage Spaces Direct can optimize a storage pool to balance data equally across the set of physical disks that comprise the pool.  
+Windows Server 2016 Storage Spaces Direct can optimize a storage pool to balance data equally across the set of physical disks that comprise the pool.  
 
 Over time, as physical disks are added or removed or as data is written or deleted, the distribution of data among the set of physical disks that comprise the pool may become uneven. In some cases, this may result in certain physical disks becoming full while other disks in the same pool have much lower consumption.  
 
@@ -34,24 +34,14 @@ Get-StorageJob | ? Name -eq Optimize
 ```  
 
 ## Related Topics  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
+-   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
-
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
-
-
 ## See Also  
-
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
-
--   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
-
--   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/whats-new-failover-clustering-windows-server.md)  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
-
--   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
-
+-   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  \
+-   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
+-   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
+-   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)  
