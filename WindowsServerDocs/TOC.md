@@ -427,7 +427,7 @@
 #####[Implementing Your AD FS Design Plan](identity/ad-fs/deployment/Implementing-your-AD-FS-Design-Plan.md)
 #####[Checklist:Implementing a Web SSO Design](identity/ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md)
 #####[Checklist:Implementing a Federated Web SSO Design](identity/ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md)
-#####[Configure Partner Organizations]((identity/ad-fs/deployment/Configuring-Partner-Organizations.md)
+#####[Configure Partner Organizations](identity/ad-fs/deployment/Configuring-Partner-Organizations.md)
 ######[Checklist: Configure the Account Partner Organization](identity/ad-fs/deployment/Checklist--Configuring-the-Account-Partner-Organization.md)
 ######[Checklist: Configure the Resource Partner Organization](identity/ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)
 ######[Add an Attribute Store](identity/ad-fs/operations/Add-an-Attribute-Store.md)
