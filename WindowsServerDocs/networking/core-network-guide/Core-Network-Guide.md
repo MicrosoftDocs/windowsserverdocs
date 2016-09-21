@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - networking
+ms.technology: networking
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
@@ -153,7 +152,7 @@ TCP/IP provides basic TCP/IP utilities that enable Windows-based computers to co
 ## <a name="BKMK_overview"></a>Core Network Overview
 The following illustration shows the Windows Server Core Network topology.
 
-![](../media/Core-Network-Guide/cng16_overview.jpg)
+![Windows Server Core Network topology](../media/Core-Network-Guide/cng16_overview.jpg)
 
 > [!NOTE]
 > This guide also includes instructions for adding optional Network Policy Server (NPS) and Web Server (IIS) servers to your network topology to provide the foundation for secure network access solutions, such as 802.1X wired and wireless deployments that you can implement using Core Network Companion guides. For more information, see [Deploying optional features for network access authentication and Web services](#BKMK_optionalfeatures).
@@ -934,7 +933,7 @@ If you intend to deploy network access servers, such as wireless access points o
 
 The following illustration shows the Windows Server Core Network topology with added NPS and Web servers.
 
-![](../media/Core-Network-Guide/cng16_overview_2.jpg)
+![Windows Server Core Network topology with added NPS and Web servers](../media/Core-Network-Guide/cng16_overview_2.jpg)
 
 The following sections provide information on adding NPS and Web servers to your network.
 

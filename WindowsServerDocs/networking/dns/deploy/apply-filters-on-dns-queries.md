@@ -14,17 +14,6 @@ author: jamesmci
 # Use DNS Policy for Applying Filters on DNS Queries
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply. 
 
-This topic contains the following sections.
-
-- [Query filter criteria](#bkmk_criteria)
-- [Block queries from a domain](#bkmk_block1)
-- [Block queries from a subnet](#bkmk_block2)
-- [Block a type of query](#bkmk_block3)
-- [Allow queries only from a domain](#bkmk_allow1)
-- [Allow queries only from a subnet](#bkmk_allow2)
-- [Allow only certain QTypes](#bkmk_allow3)
-
-
 Query filters in DNS policy allow you to configure the DNS server to respond in a custom manner based on the DNS query and DNS client that sends the DNS query.
 
 For example, you can configure DNS policy with query filter Block List that blocks DNS queries from known malicious domains, which prevents DNS from responding to queries from these domains. Because no response is sent from the DNS server, the malicious domain member's DNS query times out.
