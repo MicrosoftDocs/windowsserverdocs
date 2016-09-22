@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # What&#39;s New in DNS Client in Windows Server Technical Preview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10.  
   
@@ -28,7 +28,7 @@ This topic describes the Domain Name System (DNS) client functionality that is n
 -   If the DNS server that is used is designated by a Group Policy setting from the Name Resolution Policy Table (NRPT), the DNS Client service does not bind to a specific interface.  
   
 > [!NOTE]  
-> Changes to the DNS Client service in Windows 10 are also present in computers running Windows Server 2016 Technical Preview.  
+> Changes to the DNS Client service in Windows 10 are also present in computers running Windows Server 2016.  
   
 ## See also  
   
