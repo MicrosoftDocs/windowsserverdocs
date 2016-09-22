@@ -34,5 +34,5 @@ The grid on this page explains your server role upgrade and migration options sp
 |Web Server (IIS)|	Yes|	Yes|	Yes|	No|
 |Windows Server Essentials Experience|	Yes|	N/A – new feature|	Yes|	No|
 |Windows Server Update Services|	Yes|	Yes|	Yes|	No|
-|Work Folders|	Yes|	Yes|	Yes|	Yes| from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+|Work Folders|	Yes|	Yes|	Yes|	Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
 

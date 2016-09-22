@@ -54,12 +54,13 @@ If you see more than one edition in the right column, upgrading to **either** ed
 
 |If you are running this edition:|You can upgrade to these editions:|  
 |-------------------|----------|  
-|Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|  
-|Windows Server 2012 Standard|Windows Server 2016 Standard or Windows Server 2016 Datacenter|  
-|Windows Server 2012 R2 Datacenter|Windows Server 2016 Datacenter|  
-|Windows Server 2012 R2 Standard|Windows Server 2016 Standard or Windows Server 2016 Datacenter|  
-|Windows Storage Server 2012 Standard|Windows Storage Server 2016 Standard|  
-|Windows Storage Server 2012 Workgroup|Windows Storage Server 2016 Workgroup|  
+|Windows Server 2012 Standard|Windows Server 2016 Standard or Datacenter|
+|Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
+|Windows Server 2012 R2 Standard|Windows Server 2016 Standard or Datacenter|
+|Windows Server 2012 R2 Datacenter|Windows Server 2016 Datacenter|
+|Windows Server 2012 R2 Essentials|Windows Server 2016 Essentials|
+|Windows Storage Server 2012 Standard|Windows Storage Server 2016 Standard|
+|Windows Storage Server 2012 Workgroup|Windows Storage Server 2016 Workgroup|
 |Windows Storage Server 2012 R2 Standard|Windows Storage Server 2016 Standard|
 |Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 Workgroup|
 
