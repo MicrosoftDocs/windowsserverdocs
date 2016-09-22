@@ -21,7 +21,7 @@ You can use Active Directory Federation Services \(AD FS\) with the  Windows S
   
 -   [Deploying Federation Server Proxies](Deploying-Federation-Server-Proxies.md)  
   
--   [Azure Active Directory Connect](AAD-Connect.md)  
+-   [Azure Active Directory Connect](Azure-Active-Directory-Connect.md)  
   
 ## See Also  
 [AD FS Deployment](../../ad-fs/AD-FS-Deployment.md)  

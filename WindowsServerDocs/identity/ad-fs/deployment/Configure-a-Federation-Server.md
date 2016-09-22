@@ -38,7 +38,7 @@ After you install the Active Directory Federation Services \(AD FS\) role serv
   
 4.  On the **Specify Service Properties** page, do the following, and then click **Next**:  
   
-    -   Import the .pfx file that contains the Secure Socket Layer \(SSL\) certificate and key that you have obtained earlier. In [Step 2: Enroll an SSL Certificate for AD FS](assetId:///44efd0d3-a82f-4455-bf49-e55108159305), you have obtained this certificate and copied it onto the computer that you want to configure as a federation server. To import the .pfx file via the wizard, click **Import**, and then browse to the file’s location. Enter the password for the .pfx file when you are prompted.  
+    -   Import the .pfx file that contains the Secure Socket Layer \(SSL\) certificate and key that you have obtained earlier. In [Step 2: Enroll an SSL Certificate for AD FS](../../ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md), you have obtained this certificate and copied it onto the computer that you want to configure as a federation server. To import the .pfx file via the wizard, click **Import**, and then browse to the file’s location. Enter the password for the .pfx file when you are prompted.  
   
     -   Provide a name for your federation service. For example, **fs.contoso.com**. This name must match one of the subject or subject alternative names in the certificate.  
   
@@ -56,7 +56,7 @@ After you install the Active Directory Federation Services \(AD FS\) role serv
   
 6.  On the **Specify Configuration Database** page, specify an AD FS configuration database, and then click **Next**. You can either create a database on this computer by using Windows Internal Database \(WID\), or you can specify the location and the instance name of Microsoft SQL Server.  
   
-    For more information, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+    For more information, see [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
     > [!IMPORTANT]  
     > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012 and SQL Server 2014.  
@@ -129,7 +129,7 @@ You can create a new federation server farm by using either a new or existing gM
 ## <a name="BKMK_2"></a>Add a federation server to an existing federation server farm  
   
 > [!IMPORTANT]  
-> Ensure that you have completed [Step 3: Install the AD FS Role Service](assetId:///ed16b4c9-77b5-4aae-b590-a93a2f2bf486), before you start any of the procedures in this section.  
+> Ensure that you have completed [Step 3: Install the AD FS Role Service](../../ad-fs/deployment/Install-the-AD-FS-Role-Service.md), before you start any of the procedures in this section.  
   
 > [!IMPORTANT]  
 > Ensure that you have obtained a valid SSL server authentication certificate before you complete this procedure.  
@@ -147,12 +147,12 @@ You can create a new federation server farm by using either a new or existing gM
 4.  On the **Specify Farm** page, provide the name of the primary federation server in a farm that uses WID or specify the database host name and the database instance name of an existing federation server farm that uses SQL Server.  
   
     > [!WARNING]  
-    > In Windows Server® 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](assetId:///e340cf8f-acf3-4cba-8135-a9353b85e714#BKMK_3).  
+    > In Windows Server® 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](Configure-a-Federation-Server.md#BKMK_3).  
   
     > [!IMPORTANT]  
     > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012.  
   
-5.  On the **Specify SSL Certificate** page, import the .pfx file that contains the SSL certificate and key that you have obtained previously. This certificate is the required service authentication certificate. In [Step 2: Enroll an SSL Certificate for AD FS](assetId:///44efd0d3-a82f-4455-bf49-e55108159305), you have obtained this certificate and copied it to the computer that you want to configure as a federation server. To import the .pfx file via the wizard, click **Import** and browse to the file’s location. Enter the password for the .pfx file when you are prompted.  
+5.  On the **Specify SSL Certificate** page, import the .pfx file that contains the SSL certificate and key that you have obtained previously. This certificate is the required service authentication certificate. In [Step 2: Enroll an SSL Certificate for AD FS](../../ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md), you have obtained this certificate and copied it to the computer that you want to configure as a federation server. To import the .pfx file via the wizard, click **Import** and browse to the file’s location. Enter the password for the .pfx file when you are prompted.  
   
 6.  On the **Specify Service Account** page, specify the same service account that you configured when you created the first federation server in the farm. You can use an existing group Managed Service Account or an existing domain user account.  
   
