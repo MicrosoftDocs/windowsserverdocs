@@ -3,11 +3,10 @@ title: Adding nodes or drives to Storage Spaces Direct
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: dongill
-ms.technology:
-  - techgroup-storage
+ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/19/2016
+ms.date: 09/22/2016
 ---
 # Adding nodes or drives to Storage Spaces Direct
 
@@ -15,11 +14,11 @@ This topic describes how to add nodes (scaling "out") or drives (scaling "up") t
 
 ## Adding nodes
 
-**Scaling "Out" refers to adding new nodes to your Storage Spaces Direct cluster.** Scaling out can expand storage capacity, unlock greater storage efficiency, improve storage performance, and if you’re running hyper-converged, provide more compute resources for your workload.
+**Scaling "out" refers to adding new nodes to your Storage Spaces Direct cluster.** Scaling out can expand storage capacity, unlock greater storage efficiency, improve storage performance, and if you’re running hyper-converged, provide more compute resources for your workload.
 
-Typical deployments are very easy to scale out. First, ensure the new node is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain, has all the requisite roles and features installed, and has networking properly configured. You can verify that it is suitable to join the cluster by running cluster validation again, including the new node. This should only take a few minutes.
+Typical deployments are simple to scale out. First, ensure the new node is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing nodes, has all the requisite roles and features installed, and has networking properly configured. You can verify that it's ready to join the cluster by running cluster validation again, including the new node. This should only take a few minutes:
 
-```
+```PowerShell
 Test-Cluster -Node Node, Node, Node, NewNode -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
 ```
 
@@ -28,7 +27,7 @@ Test-Cluster -Node Node, Node, Node, NewNode -Include "Storage Spaces Direct", I
 
 Now, the only step is to run the following PowerShell cmdlet on the cluster (as Administrator):
 
-```
+```PowerShell
 Add-ClusterNode -Name NewNode 
 ```
 
@@ -43,7 +42,7 @@ You’re done! You are now ready to create more volumes!
 
 With two nodes, you can only create two-way mirrored volumes (compare to distributed RAID-1). Any of the following cmdlets in PowerShell will do so.
 
-```
+```PowerShell
 New-Volume -FriendlyName "A" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB
 New-Volume -FriendlyName "B" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Mirror
 New-Volume -FriendlyName "C" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes 100GB
@@ -56,7 +55,7 @@ With three nodes, you can create three-way mirrored volumes, which are tolerant 
 
 #### OPTION 1: Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
 
-```
+```PowerShell
 New-Volume -FriendlyName "D" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -PhysicalDiskRedundancy 2
 New-Volume -FriendlyName "E" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 2 
 New-Volume -FriendlyName "F" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes 100GB -PhysicalDiskRedundancy 2
@@ -64,19 +63,19 @@ New-Volume -FriendlyName "F" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D
 
 #### OPTION 2: Set **PhysicalDiskRedundancy = 2** on the pool’s **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
 
-```
+```PowerShell
 Get-StoragePool S* | Get-ResiliencySetting -Name Mirror | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2 
 ```
 
 #### OPTION #: Set **PhysicalDiskRedundancy = 2** on the **StorageTier** called *Capacity*, and then create volumes by referencing the tier.
 
-```
+```PowerShell
 Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2 
 ```
 
 It is worth noting that with three nodes, you are also able to use single parity (compare to distributed RAID-5). This has the advantage of greater storage efficiency: 66.7%, compared to 50.0% with two-way mirroring or 33.3% with three-way mirroring.
 
-```
+```PowerShell
 New-Volume -FriendlyName "P" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Parity 
 ```
 
@@ -89,13 +88,13 @@ With four nodes, you can use "dual" parity, also commonly called "erasure coding
 
 #### OPTION 1: Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Q" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
 ```
 
 #### OPTION 2: Set **PhysicalDiskRedundancy = 2** on the pool’s **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
 
-```
+```PowerShell
 Get-StoragePool S* | Get-ResiliencySetting -Name Parity | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2 
 ```
 
@@ -107,7 +106,7 @@ You may find it easiest to simply remove the existing tier, and create the two n
 
 #### OPTION 3: Modify the **StorageTier** definitions and then create volumes by referencing the tier.
 
-```
+```PowerShell
 Remove-StorageTier -FriendlyName Capacity
 
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Mirror -FriendlyName Performance
@@ -118,7 +117,7 @@ That’s it! You are now ready to create mixed resiliency volumes!
 
 Example:
 
-```
+```PowerShell
 New-Volume -FriendlyName "M" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 50GB, 50GB 
 ```
 
@@ -134,7 +133,7 @@ However, any pre-existing volumes will *not* be "converted" to the new, wider en
 
 First, create a “placeholder” fault domain for the node with the following PowerShell cmdlet.
 
-```
+```PowerShell
 New-ClusterFaultDomain -Type Node -Name NewNode 
 ```
 
@@ -143,7 +142,7 @@ New-ClusterFaultDomain -Type Node -Name NewNode
 
 Then, move this placeholder into the chassis or rack where the new node is located in the real world.
 
-```
+```PowerShell
 Set-ClusterFaultDomain -Name NewNode -Parent ParentName 
 ```
 
@@ -159,16 +158,16 @@ That’s it! You are now ready to add the new node!
 
 To scale up, simply connect the drives and verify that Windows discovers them. They should appear in the output of this PowerShell cmdlet (run as Administrator), on any cluster node, marked as **CanPool = True**.
 
-```
+```PowerShell
 Get-PhysicalDisk 
 ```
 
    >[!TIP]
    > If they don’t appear, you may need to manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management**.
 
-Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be redistributed evenly across all the drives. That’s it!
+Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be redistributed evenly across all the drives. At this point - you're finished and ready to create more volumes.
 
    >[!TIP]
    > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
 
-You’re done! You are now ready to create more volumes!
+
