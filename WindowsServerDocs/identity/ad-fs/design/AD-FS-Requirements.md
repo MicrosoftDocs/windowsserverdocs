@@ -305,7 +305,7 @@ AD FS supports additional authentication \(beyond primary authentication support
   
 Every MFA adapter must be built on top of .NET 4.5.  
   
-For more information on MFA, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
+For more information on MFA, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
   
 **Device Authentication**  
   
