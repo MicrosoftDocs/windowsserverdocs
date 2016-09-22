@@ -11,6 +11,9 @@ author: jamesmci
 ms.author: jamesmci
 ---
 # Wireless Access Deployment Overview
+
+>Applies To: Windows Server 2016
+
 The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.  
 
 ![802.1X Deployment Infrastructure Overview](../../../media/8021X-Deploy-Overview/8021X-Deploy-Overview.jpg)

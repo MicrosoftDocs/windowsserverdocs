@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # BranchCache
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.  
   
@@ -63,7 +63,7 @@ This topic includes the following sections:
 -   [Cache Security](#bkmk_cache)  
   
 ## <a name="bkmk_what"></a>What is BranchCache?  
-BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of the Windows Server 2016 Technical Preview and Windows 10 operating systems, as well as in some editions of Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8 ,  Windows Server 2008 R2  and  Windows 7 . To optimize WAN bandwidth when users access content on remote servers, BranchCache fetches content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.  
+BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of the Windows Server 2016 and Windows 10 operating systems, as well as in some editions of Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8 ,  Windows Server 2008 R2  and  Windows 7 . To optimize WAN bandwidth when users access content on remote servers, BranchCache fetches content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.  
   
 At branch offices, content is stored either on servers that are configured to host the cache or, when no server is available in the branch office, on client computers that are running Windows 10, Windows 8.1, Windows 8 or  Windows 7 . After a client computer requests and receives content from the main office and the content is cached at the branch office, other computers at the same branch office can obtain the content locally rather than downloading the content from the content server over the WAN link.  
   
@@ -93,7 +93,7 @@ If the branch office where you want to deploy BranchCache contains additional in
 Hosted cache mode increases the cache efficiency because content is available even if the client that originally requested and cached the data is offline. Because the hosted cache server is always available, more content is cached, providing greater WAN bandwidth savings, and BranchCache efficiency is improved.  
   
 ### Centralized caching for multiple-subnet branch offices  
-Distributed cache mode operates on a single subnet. At a multiple-subnet branch office that is configured for distributed cache mode, a file downloaded to one subnet cannot be shared with client computers on other subnets. Because of this, clients on other subnets, unable to discover that the file has already been downloaded, get the file from the main office content server, using WAN bandwidth in the process. When you deploy hosted cache mode, however, this is not the case - all clients in a multiple-subnet branch office can access a single cache, which is stored on the hosted cache server, even if the clients are on different subnets. In addition, BranchCache in Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  provides the ability to deploy more than one hosted cache server per branch office.  
+Distributed cache mode operates on a single subnet. At a multiple-subnet branch office that is configured for distributed cache mode, a file downloaded to one subnet cannot be shared with client computers on other subnets. Because of this, clients on other subnets, unable to discover that the file has already been downloaded, get the file from the main office content server, using WAN bandwidth in the process. When you deploy hosted cache mode, however, this is not the case - all clients in a multiple-subnet branch office can access a single cache, which is stored on the hosted cache server, even if the clients are on different subnets. In addition, BranchCache in Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  provides the ability to deploy more than one hosted cache server per branch office.  
   
 > [!CAUTION]  
 > If you use BranchCache for SMB caching of files and folders, do not disable Offline Files. If you disable Offline Files, BranchCache SMB caching does not function correctly.  
@@ -105,13 +105,13 @@ When you deploy BranchCache, the source content is stored on BranchCache-enabled
 > Only source content - that is, content that client computers initially obtain from a BranchCache-enabled content server - is accelerated by BranchCache. Content that client computers obtain directly from other sources, such as Web servers on the Internet or Windows Update, is not cached by client computers or hosted cache servers and then shared with other computers in the branch office. If you want to accelerate Windows Update content, however, you can install a Windows Server Update Services (WSUS) application server at your main office or cloud data center and configure it as a BranchCache content server.  
   
 ### Web servers  
-Supported Web servers include computers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012  or  Windows Server 2008 R2  that have the Web Server (IIS) server role installed and that use Hypertext Transfer Protocol (HTTP) or HTTP Secure (HTTPS). In addition, the Web server must have the BranchCache feature installed.  
+Supported Web servers include computers that are running Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012  or  Windows Server 2008 R2  that have the Web Server (IIS) server role installed and that use Hypertext Transfer Protocol (HTTP) or HTTP Secure (HTTPS). In addition, the Web server must have the BranchCache feature installed.  
   
 ### File servers  
-Supported file servers include computers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012  or  Windows Server 2008 R2  that have the File Services server role and the BranchCache for Network Files role service installed. These file servers use Server Message Block (SMB) to exchange information between computers. After you complete installation of your file server, you must also share folders and enable hash generation for shared folders by using Group Policy or Local Computer Policy to enable BranchCache.  
+Supported file servers include computers that are running Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012  or  Windows Server 2008 R2  that have the File Services server role and the BranchCache for Network Files role service installed. These file servers use Server Message Block (SMB) to exchange information between computers. After you complete installation of your file server, you must also share folders and enable hash generation for shared folders by using Group Policy or Local Computer Policy to enable BranchCache.  
   
 ### Application servers  
-Supported application servers include computers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012  or  Windows Server 2008 R2  with Background Intelligent Transfer Service (BITS) installed and enabled. In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft System Center Configuration Manager Branch Distribution Point servers as BranchCache content servers.  
+Supported application servers include computers that are running Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012  or  Windows Server 2008 R2  with Background Intelligent Transfer Service (BITS) installed and enabled. In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft System Center Configuration Manager Branch Distribution Point servers as BranchCache content servers.  
   
 ## <a name="BKMK_3a"></a>BranchCache and the cloud  
 The cloud has enormous potential to reduce operational expenses and achieve new levels of scale, but moving workloads away from the people who depend on them can increase networking costs and hurt productivity. Users expect high performance and don't care where their applications and data are hosted. BranchCache can improve the performance of networked applications and reduce bandwidth consumption with a shared cache of data.  It improves productivity in branch offices and in headquarters, where workers are using servers that are deployed in the cloud.  
@@ -121,14 +121,14 @@ Because BranchCache does not require new hardware or network topology changes, i
 > [!NOTE]  
 > Because some Web proxies cannot process non-standard Content-Encoding headers, it is recommended that you use BranchCache with Hyper Text Transfer Protocol Secure (HTTPS) and not HTTP.  
   
-For more information about cloud technologies in Windows Server 2016 Technical Preview, see [Software Defined Networking &#40;SDN&#41;](../sdn/Software-Defined-Networking--SDN-.md).  
+For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](../sdn/Software-Defined-Networking--SDN-.md).  
   
 ## <a name="bkmk_version"></a>Content information versions  
 There are two versions of content information:  
   
 -   Content information that is compatible with computers running  Windows Server 2008 R2  and  Windows 7  is called version 1, or V1. With V1 BranchCache file segmentation, file segments are larger than in V2 and are of fixed size. Because of large fixed segment sizes, when a user makes a change that modifies the file length, not only is the segment with the change invalidated, but all of the segments to the end of the file are invalidated. The next call for the changed file by another user in the branch office therefore results in reduced WAN bandwidth savings because the changed content and all content after the change are sent over the WAN link.  
   
--   Content information that is compatible with computers running Windows Server 2016 Technical Preview, Windows 10,  Windows Server 2012 R2 , Windows 8.1,  Windows Server 2012 , and Windows 8 is called version 2, or V2. V2 content information uses smaller, variable-sized segments that are more tolerant to changes within a file.  This increases the probability that segments from an older version of the file can be reused when users access an updated version, causing them to retrieve only the changed portion of the file from the content server, and using less WAN bandwidth.  
+-   Content information that is compatible with computers running Windows Server 2016, Windows 10,  Windows Server 2012 R2 , Windows 8.1,  Windows Server 2012 , and Windows 8 is called version 2, or V2. V2 content information uses smaller, variable-sized segments that are more tolerant to changes within a file.  This increases the probability that segments from an older version of the file can be reused when users access an updated version, causing them to retrieve only the changed portion of the file from the content server, and using less WAN bandwidth.  
   
 The following table provides information on the content information version that is used depending upon which client, content server, and hosted cache server operating systems you are using in your BranchCache deployment.  
   
@@ -142,7 +142,7 @@ The following table provides information on the content information version that
 | Windows Server 2012  or later; Windows 8 or later| Windows Server 2012  or later| Windows Server 2008 R2 |V1|  
 | Windows Server 2012  or later;  Windows 8 or later| Windows Server 2012  or later| Windows Server 2012  or later; none for distributed cache mode|V2|  
   
-When you have content servers and hosted cache servers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012 , they use the content information version that is appropriate based on the operating system of the BranchCache client that requests information. When computers running  Windows Server 2012  and Windows 8 or later operating systems request content, the content and hosted cache servers use V2 content information; when computers running  Windows Server 2008 R2  and  Windows 7  request content, the content and hosted cache servers use V1 content information.  
+When you have content servers and hosted cache servers that are running Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012 , they use the content information version that is appropriate based on the operating system of the BranchCache client that requests information. When computers running  Windows Server 2012  and Windows 8 or later operating systems request content, the content and hosted cache servers use V2 content information; when computers running  Windows Server 2008 R2  and  Windows 7  request content, the content and hosted cache servers use V1 content information.  
   
 When you deploy BranchCache in distributed cache mode, clients that use different content information versions do not share content with each other. For example, a client computer running  Windows 7  and a client computer running Windows 10 that are installed in the same branch office do not share content with each other.  
   
@@ -152,7 +152,7 @@ When branch office users modify or update the contents of documents, their chang
 When the modified file is requested by a different client in a branch office, the new segments of the file are downloaded from the main office server and added to the distributed or hosted cache in that branch. Because of this, branch office users always receive the most recent versions of cached content.  
   
 ## <a name="BKMK_4"></a>BranchCache installation guide  
-You can use Server Manager in Windows Server 2016 Technical Preview to install either the BranchCache feature or the BranchCache for Network Files role service of the File Services server role. You can use the following table to determine whether to install the role service or the feature.  
+You can use Server Manager in Windows Server 2016 to install either the BranchCache feature or the BranchCache for Network Files role service of the File Services server role. You can use the following table to determine whether to install the role service or the feature.  
   
 |Functionality|Computer location|Install this BranchCache element|  
 |-----------------|---------------------|------------------------------------|  
@@ -202,7 +202,7 @@ In the following operating systems, BranchCache does not support HTTP and SMB fu
 > BranchCache is not available by default in the Windows Server 2008 or Windows Vista operating systems. On these operating systems, however, if you download and install the Windows Management Framework update, BranchCache functionality is available for the Background Intelligent Transfer Service (BITS) protocol only. For more information, and to download Windows Management Framework, see [Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0)](http://go.microsoft.com/fwlink/?LinkId=188677) at http://go.microsoft.com/fwlink/?LinkId=188677.  
   
 ### Operating systems for BranchCache content server functionality  
-You can use the Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  families of operating systems as BranchCache content servers.  
+You can use the Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  families of operating systems as BranchCache content servers.  
   
 In addition, the  Windows Server 2008 R2  family of operating systems can be used as BranchCache content servers, with the following exceptions:  
   
@@ -211,7 +211,7 @@ In addition, the  Windows Server 2008 R2  family of operating systems can be use
 -   BranchCache is not supported in Server Core installations of Windows Server 2008 R2 Datacenter with Hyper-V.  
   
 ### Operating systems for BranchCache hosted cache server functionality  
-You can use the Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  families of operating systems as BranchCache hosted cache servers.  
+You can use the Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  families of operating systems as BranchCache hosted cache servers.  
   
 In addition, the following  Windows Server 2008 R2  operating systems can be used as BranchCache hosted cache servers:  
   
@@ -379,7 +379,7 @@ To update the hosted cache server by using the Hosted Cache Protocol, the follow
 -   For hosted cache servers that are running  Windows Server 2008 R2 , a hosted cache server certificate and associated private key are required, and the certification authority (CA) that issued the certificate must be trusted by client computers in the branch office. This allows the client and server to participate successfully in HTTPS Server authentication.  
   
     > [!IMPORTANT]  
-    > Hosted cache servers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , or  Windows Server 2012  do not require a hosted cache server certificate and associated private key.  
+    > Hosted cache servers that are running Windows Server 2016,  Windows Server 2012 R2 , or  Windows Server 2012  do not require a hosted cache server certificate and associated private key.  
   
 -   The client computer is configured with the computer name of the hosted cache server and the Transmission Control Protocol (TCP) port number upon which the hosted cache server is listening for BranchCache traffic. The hosted cache server's certificate is bound to this port. The computer name of the hosted cache server can be a fully qualified domain name (FQDN), if the hosted cache server is a domain member computer; or it can be the NetBIOS name of the computer if the hosted cache server is not a domain member.  
   
@@ -412,7 +412,7 @@ In hosted cache mode, the greatest threat to the security of the hosted cache se
 In a hosted cache environment where the hosted cache server is running  Windows Server 2008 R2 , the use of encryption technologies such as BitLocker or EFS is advisable if any of the clients in the branch office can access sensitive data across the WAN link. It is also necessary to prevent physical access to the hosted cache, because disk encryption works only when the computer is turned off when the attacker gains physical access.  If the computer is turned on or is in sleep mode, then disk encryption offers little protection.  
   
 > [!NOTE]  
-> Hosted cache servers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , or  Windows Server 2012  encrypt all data in the cache by default, so the use of additional encryption technologies is not required.  
+> Hosted cache servers that are running Windows Server 2016,  Windows Server 2012 R2 , or  Windows Server 2012  encrypt all data in the cache by default, so the use of additional encryption technologies is not required.  
   
 Even if a client is configured in hosted cache mode, it will still cache data locally, and you might want to take steps to protect the local cache in addition to the cache on the hosted cache server.  
   

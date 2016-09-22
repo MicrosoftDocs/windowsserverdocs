@@ -8,6 +8,9 @@ author: jamesmci
 ms.author: jamesmci
 ---
 # Wireless Access Deployment Process
+
+>Applies To: Windows Server 2016
+
 The process that you use to deploy wireless access occurs in these stages:
 
 ##Stage 1 – AP Deployment

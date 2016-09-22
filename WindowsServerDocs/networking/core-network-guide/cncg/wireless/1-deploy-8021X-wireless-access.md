@@ -14,6 +14,9 @@ author: jamesmci
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
+
+>Applies To: Windows Server 2016
+
 This is a companion guide to the Windows Server&reg; 2016 Core Network Guide. The Core Network Guide provides instructions for planning and deploying the components required for a fully functioning network and a new Active Directory® domain in a new forest.
 
 This guide explains how to build upon a core network by providing instructions about how to deploy Institute of Electrical and Electronics Engineers \(IEEE\) 802.1X\-authenticated IEEE 802.11 wireless access using Protected Extensible Authentication Protocol – Microsoft Challenge Handshake Authentication Protocol version 2 \(PEAP\-MS\-CHAP v2\).
