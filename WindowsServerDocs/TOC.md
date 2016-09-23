@@ -636,6 +636,7 @@
 ##### [DNS Responses Based on Time of Day with an Azure Cloud App Server](networking/dns/deploy/dns-tod-azure-cloud-app-server.md)
 ##### [Use DNS Policy for Split-Brain DNS Deployment](networking/dns/deploy/split-brain-DNS-deployment.md)
 ##### [Use DNS Policy for Applying Filters on DNS Queries](networking/dns/deploy/apply-filters-on-dns-queries.md)
+##### [Use DNS Policy for Application Load Balancing](networking/dns/deploy/app-lb.md)
 ### [Dynamic Host Configuration Protocol (DHCP)](networking/technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md)
 #### [What's New in DHCP](networking/technologies/dhcp/What-s-New-in-DHCP.md)
 ### [Hyper-V Virtual Switch](networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
