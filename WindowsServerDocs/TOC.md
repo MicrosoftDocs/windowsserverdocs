@@ -3,6 +3,7 @@
 ## [Release Notes: Important Issues in Windows Server](get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)
 ## [Supported Upgrade Paths](get-started/Supported-Upgrade-Paths.md)
 ## [Server Role Upgradeability Table](get-started/Server-Role-Upgradeability-Table.md)
+## [Server Application Compatibility Table](get-started/Server-Application-Compatibility.md)
 ## [Installation Options for Windows Server 2016](get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md)
 ## [Features Removed or Deprecated in  Windows Server 2016](get-started/Features-Removed-or-Deprecated-in--Windows-Server-2016-Technical-Preview.md)
 ## [Customer Experience Guides for Windows Server 2016](get-started/Customer-Experience-Guides-for-Windows-Server-2016-Technical-Preview-5.md)
