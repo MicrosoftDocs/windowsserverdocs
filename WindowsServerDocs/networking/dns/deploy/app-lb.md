@@ -39,7 +39,7 @@ The Seattle Web server has the best hardware configuration and can handle twice 
 
 The following illustration depicts this scenario.
 
-![DNS Application Load Balancing with DNS Policy](../../media/Dns-App-Lb-01/dns-app-lb-01.jpg)
+![DNS Application Load Balancing with DNS Policy](../../media/Dns-App-Lb/dns-app-lb.jpg)
 
 
 ### How Application Load Balancing Works
