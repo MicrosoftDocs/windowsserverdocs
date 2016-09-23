@@ -566,7 +566,7 @@
 ##### [Running WSUS Replica Mode](management/windows-server-update-services/manage/Running-WSUS-Replica-Mode.md)
 ##### [WSUS Messages and Troubleshooting Tips](management/windows-server-update-services/manage/WSUS-Messages-and-Troubleshooting-Tips.md)
 ## [Networking](networking/Networking.md)
-### [Windows Server 2016 Technical Preview Supported Networking Scenarios](networking/windows-server-2016-supported-networking-scenarios.md)
+### [Windows Server 2016 Supported Networking Scenarios](networking/windows-server-2016-supported-networking-scenarios.md)
 ### [What's New in Networking](networking/What-s-New-in-Networking.md)
 ### [Core Network Guide for Windows Server Technical Preview](networking/core-network-guide/core-network-guide-windows-server.md)
 #### [Core Network Guide](networking/core-network-guide/Core-Network-Guide.md)
