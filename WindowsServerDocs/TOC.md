@@ -503,11 +503,14 @@
 #######[Create a Relying Party Trust Manually](identity/ad-fs/operations/Create-a-Relying-Party-Trust.md)
 #######[Create a Claims Provider Trust Manually](identity/ad-fs/operations/Create-a-Claims-Provider-Trust.md)
 #######[Create a Rule to Send an AD FS 1.x Compatible Claim](identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md)
+#####[Monitor your on-premises identity infrastructure and synchronization services in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health/)
+
 #### [AD FS Development](identity/ad-fs/AD-FS-Development.md)
 ##### [AD FS On-behalf-of Authentication in Windows Server 2016](identity/ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md)
 ##### [Enabling OpenId Connect with AD FS 2016](identity/ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)
 ##### [Enabling Oauth Confidential Clients with AD FS 2016](identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 ##### [Single Page Application with AD FS](identity/ad-fs/development/Single-Page-Application-with-AD-FS.md)
+
 #### [AD FS Operations](identity/ad-fs/AD-FS-2016-Operations.md)
 ##### [AD FS Rapid Restore Tool](identity/ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 ##### [Add an Attribute Store](identity/ad-fs/operations/Add-an-Attribute-Store.md)
