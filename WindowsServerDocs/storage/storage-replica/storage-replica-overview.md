@@ -6,7 +6,7 @@ ms.author: JGerend
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: kumudd
-ms.date: 08/18/2016
+ms.date: 09/23/2016
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica Overview
