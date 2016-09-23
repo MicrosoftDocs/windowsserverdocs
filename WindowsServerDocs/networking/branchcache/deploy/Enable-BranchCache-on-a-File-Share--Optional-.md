@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Enable BranchCache on a File Share (Optional)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this procedure to enable BranchCache on a file share.  
   
