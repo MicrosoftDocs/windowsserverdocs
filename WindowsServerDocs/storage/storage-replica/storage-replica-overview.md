@@ -90,13 +90,15 @@ Windows Server 2016 implements the following features in Storage Replica:
 |Server to server replication|Yes|  
 |Cluster to cluster replication|Yes|  
 |Transport|SMB3|  
-|Network|TCP/IP or RDMA|  
+|Network|TCP/IP or RDMA|
+|Network constraint support|Yes|  
 |RDMA*|iWARP, InfiniBand, RoCE v2|  
 |Replication network port firewall requirements|Single IANA port (TCP 445 or 5445)|  
 |Multipath/Multichannel|Yes (SMB3)|  
 |Kerberos support|Yes (SMB3)|  
 |Over the wire encryption and signing|Yes (SMB3)|  
-|Per-volume failovers allowed|Yes|  
+|Per-volume failovers allowed|Yes|
+|Thin-provisioned storage support|Yes|
 |Management UI in-box|PowerShell, Failover Cluster Manager|  
 
 *May require additional long haul equipment and cabling.  
@@ -104,14 +106,13 @@ Windows Server 2016 implements the following features in Storage Replica:
 ## <a name="BKMK_SR3"></a> Storage Replica Prerequisites  
 
 * Active Directory Domain Services forest.  
-* SAS JBODs, fibre channel SAN, shared VHDX, iSCSI Target, or local SCSI/SATA storage. SSD or faster recommended for replication log drives.  
+* SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives.  
 * At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
 * At least 2GB of RAM and two cores per server.  
-* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
-* The replicated storage cannot be located on the drive containing the Windows operating system folder.
+* A network between servers with enough bandwidth to contain your IO write workload and an average of 5ms round trip latency or lower, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 
 ##  <a name="BKMK_SR4"> </a> Background  
-This section includes information about high-level industry terms, synchronous and asynchronous replication, changes and improvements between Technical Preview 4 and Technical Preview 5, and Storage Replica terminology.   
+This section includes information about high-level industry terms, synchronous and asynchronous replication, and key behaviors.
 ### High level industry terms  
 Disaster Recovery (DR) refers to a contingency plan for recovering from site catastrophes so that the business continues to operate. Data DR means multiple copies of production data in a separate physical location. For example, a stretch cluster, where half the nodes are in one site and half are in another. Disaster Preparedness (DP) refers to a contingency plan for preemptively moving workloads to a different location prior to an oncoming disaster, such as a hurricane.  
 
@@ -137,32 +138,6 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 |--------|-----------|---------|  
 |**Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO|![](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
 
-### Changes and improvements between Technical Preview 4 and Technical Preview 5  
-
--   Asynchronous stretch clusters now supported. Unlike prior technical previews, which required use of synchronous replication, you can now configure stretch clusters over very high latency and lower bandwidth networks.  
-
--   RoCE V2 RDMA networks now supported. In addition to iWARP and InfiniBand networking, Storage Replica now also supports RDMA over Converged Ethernet V2.  
-
--   Thin provisioned storage now supported and can be utilized for greater initial sync efficiency and speed.  
-
--   Network Constraint. You can now control which networks Storage Replica is allowed to use.  
-
--   Failover Cluster Manager update. Now includes an updated wizard for selecting synchronous vs asynchronous stretch cluster replication.  
-
--   Integrated with the Cluster Health service for easier state monitoring and problem resolution.  
-
--   New Powershell  
-
-    -   Delegation. You can use `Grant-SRDelegation` and `Revoke-SRDelegation` to configure users to manage replication without them needing to be members of the Administrators group.  
-
-    -   Network Constraint. You can use `Set-SRNetworkConstraint`, `Remove-SRNetworkConstraint`, and `Get-SRNetworkConstraint` to control which network interfaces will allow replication.  
-
-    -   Ability to generate graphed reports on Nano server using `Test-SRTopology`.  
-
-    -   Updates to various cmdlets.  
-
--   Fixes. Many bug fixes, stability improvements, provisioning, and de-provisioning improvements, and known issues resolved.  
-
 ### Key Evaluation Points and Behaviors  
 -   Performance. The Windows Server 2016 Technical Preview version of Storage Replica has not been fully optimized for performance.  
 
@@ -172,7 +147,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 -   The Microsoft implementation of asynchronous replication is different than most. Most industry implementations of asynchronous replication rely on snapshot-based replication, where periodic differential transfers move to the other node and merge. Storage Replica asynchronous replication operates just like synchronous replication, except that it removes the requirement for a serialized synchronous acknowledgment from the destination. This means that SR theoretically has a lower RPO as it continuously replicates. However, this also means it relies on internal application consistency guarantees rather than using snapshots to force consistency in application files. SR guarantees crash consistency in all replication modes  
 
--   Storage Replica is not DFSR. Many customers use DFSR as a disaster recovery solution even though often impractical for that scenario - DFSR cannot replicate open files and is designed to minimize bandwidth usage at the expense of performance, leading to large recovery point deltas. SR may allow you to retire DFSR from some of these types of disaster recovery duties.  
+-   Many customers use DFSR as a disaster recovery solution even though often impractical for that scenario - DFSR cannot replicate open files and is designed to minimize bandwidth usage at the expense of performance, leading to large recovery point deltas. SR may allow you to retire DFSR from some of these types of disaster recovery duties.  
 
 -   Storage Replica is not backup. Some IT environments deploy replication systems as backup solutions, due to their zero data loss options when compared to daily backups. SR replicates all changes to all blocks of data on the volume, regardless of the change type. If a user deletes all data from a volume, Storage Replica will replicate the deletion instantly to the other volume, irrevocably removing the data from both servers. Do not use SR as a replacement for a point-in-time backup solution.  
 
