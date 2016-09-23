@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Network Virtualization Overview in Windows Server Technical Preview
+title: Hyper-V Network Virtualization Overview in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,14 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
-ms.author: vhorne
+ms.author: victorh
 author: vhorne
 ---
-# Hyper-V Network Virtualization Overview in Windows Server Technical Preview
+# Hyper-V Network Virtualization Overview in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-In Windows Server 2016 Technical Preview and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:  
+In Windows Server 2016 and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:  
   
 -   **Windows Azure Pack for Windows Server** provides a tenant facing portal to create virtual networks, and an administrative portal to manage virtual networks.  
   
@@ -28,11 +28,9 @@ In Windows Server 2016 Technical Preview and Virtual Machine Manager, Microsoft 
   
 -   **Hyper-V Network Virtualization gateways** provide connections between virtual and physical networks.  
   
-For more information about a network virtualization solution that uses all of these components, see Windows Server 2016 Technical Preview Solution (coming soon).  
+This topic introduces concepts and explains the key benefits and capabilities of Hyper-V Network Virtualization (one part of the overall network virtualization solution) in Windows Server 2016. It explains how network virtualization benefits both private clouds looking for enterprise workload consolidation and public cloud service providers of Infrastructure as a Service (IaaS).  
   
-This topic introduces concepts and explains the key benefits and capabilities of Hyper-V Network Virtualization (one part of the overall network virtualization solution) in Windows Server 2016 Technical Preview. It explains how network virtualization benefits both private clouds looking for enterprise workload consolidation and public cloud service providers of Infrastructure as a Service (IaaS).  
-  
-For more technical details about networking virtualization in Windows Server 2016 Technical Preview, see [Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md).  
+For more technical details about networking virtualization in Windows Server 2016, see [Hyper-V Network Virtualization Technical Details in Windows Server 2016](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md).  
   
 **Did you mean**  
   
@@ -54,9 +52,9 @@ For workload owners, the key benefit is that they can now move their workload "t
 For infrastructure owners, the additional flexibility in virtual machine placement makes it possible to move workloads anywhere in the datacenters without changing the virtual machines or reconfiguring the networks. For example Hyper-V Network Virtualization enables cross subnet live migration so that a virtual machine can live migrate anywhere in the datacenter without a service disruption. Previously live migration was limited to the same subnet restricting where virtual machines could be located. Cross subnet live migration allows administrators to consolidate workloads based on dynamic resource requirements, energy efficiency, and can also accommodate infrastructure maintenance without disrupting customer workload up time.  
   
 ## <a name="BKMK_APP"></a>Practical applications  
-With the success of virtualized datacenters, IT organizations and hosting providers (providers who offer colocation or physical server rentals) have begun offering more flexible virtualized infrastructures that make it easier to offer on-demand server instances to their customers. This new class of service is referred to as Infrastructure as a Service (IaaS). Windows Server 2016 Technical Preview provides all the required platform capabilities to enable enterprise customers to build private clouds and transition to an IT as a service operational model. Windows Server 2016 Technical Preview also enables hosters to build public clouds and offer IaaS solutions to their customers. When combined with Virtual Machine Manager and Windows Azure Pack to manage Hyper-V Network Virtualization policy, Microsoft provides a powerful cloud solution.  
+With the success of virtualized datacenters, IT organizations and hosting providers (providers who offer colocation or physical server rentals) have begun offering more flexible virtualized infrastructures that make it easier to offer on-demand server instances to their customers. This new class of service is referred to as Infrastructure as a Service (IaaS). Windows Server 2016 provides all the required platform capabilities to enable enterprise customers to build private clouds and transition to an IT as a service operational model. Windows Server 2016 2016 also enables hosters to build public clouds and offer IaaS solutions to their customers. When combined with Virtual Machine Manager and Windows Azure Pack to manage Hyper-V Network Virtualization policy, Microsoft provides a powerful cloud solution.  
   
-Windows Server 2016 Technical Preview Hyper-V Network Virtualization provides policy-based, software-controlled network virtualization that reduces the management overhead faced by enterprises when they expand dedicated IaaS clouds, and it provides cloud hosters better flexibility and scalability for managing virtual machines to achieve higher resource utilization.  
+Windows Server 2016 Hyper-V Network Virtualization provides policy-based, software-controlled network virtualization that reduces the management overhead faced by enterprises when they expand dedicated IaaS clouds, and it provides cloud hosters better flexibility and scalability for managing virtual machines to achieve higher resource utilization.  
   
 An IaaS scenario that has virtual machines from different organizational divisions (dedicated cloud) or different customers (hosted cloud) requires secure isolation. Today's solution, virtual local area networks (VLANs), can present significant disadvantages in this scenario.  
   
@@ -87,7 +85,7 @@ The problem with this requirement is that in addition to being an address, there
 Hyper-V Network Virtualization decouples virtual networks for customer virtual machines from the physical network infrastructure. As a result, it enables customer virtual machines to maintain their original IP addresses, while allowing datacenter administrators to provision customer virtual machines anywhere in the datacenter without reconfiguring physical IP addresses or VLAN IDs. The next section summarizes the key functionality.  
   
 ## <a name="BKMK_NEW"></a>Important functionality  
-The following is a list of the key functionality, benefits, and capabilities of Hyper-V Network Virtualization in Windows Server 2016 Technical Preview:  
+The following is a list of the key functionality, benefits, and capabilities of Hyper-V Network Virtualization in Windows Server 2016:  
   
 -   **Enables flexible workload placement - Network isolation and IP address re-use without VLANs**  
   
@@ -103,7 +101,7 @@ The following is a list of the key functionality, benefits, and capabilities of 
   
 -   **Enables live migration across subnets**  
   
-    Live migration of virtual machine workloads traditionally has been limited to the same IP subnet or VLAN because crossing subnets required the virtual machine's guest operating system to change its IP address. This address change breaks existing communication and disrupts the services running on the virtual machine. With Hyper-V Network Virtualization, workloads can be live migrated from servers running Windows Server 2016 Technical Preview in one subnet to servers running Windows Server 2016 Technical Preview in a different subnet without changing the workload IP addresses. Hyper-V Network Virtualization ensures that virtual machine location changes due to live migration are updated and synchronized among hosts that have ongoing communication with the migrated virtual machine.  
+    Live migration of virtual machine workloads traditionally has been limited to the same IP subnet or VLAN because crossing subnets required the virtual machine's guest operating system to change its IP address. This address change breaks existing communication and disrupts the services running on the virtual machine. With Hyper-V Network Virtualization, workloads can be live migrated from servers running Windows Server 2016 in one subnet to servers running Windows Server 2016 in a different subnet without changing the workload IP addresses. Hyper-V Network Virtualization ensures that virtual machine location changes due to live migration are updated and synchronized among hosts that have ongoing communication with the migrated virtual machine.  
   
 -   **Enables easier management of decoupled server and network administration**  
   
@@ -117,7 +115,7 @@ The following is a list of the key functionality, benefits, and capabilities of 
   
     Hyper-V Network Virtualization can be deployed in today's datacenter, yet it is compatible with emerging datacenter "flat network" technologies.  
   
-    For example, HNV in Windows Server 2016 Technical Preview supports the VXLAN encapsulation format and the Open vSwitch Database Management Protocol (OVSDB) as the SouthBound Interface (SBI)..  
+    For example, HNV in Windows Server 2016 supports the VXLAN encapsulation format and the Open vSwitch Database Management Protocol (OVSDB) as the SouthBound Interface (SBI)..  
   
 -   **Provides for interoperability and ecosystem readiness**  
   
@@ -125,13 +123,13 @@ The following is a list of the key functionality, benefits, and capabilities of 
   
 -   **Policy-based configuration**  
   
-    Network virtualization policies in Windows Server 2016 Technical Preview are configured through the Microsoft Network Controller. The network controller has a RESTful northbound API, and Windows PowerShell interface to configure policy. For more information about the Microsoft Network Controller, see [Network Controller](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md).  
+    Network virtualization policies in Windows Server 2016 are configured through the Microsoft Network Controller. The network controller has a RESTful northbound API, and Windows PowerShell interface to configure policy. For more information about the Microsoft Network Controller, see [Network Controller](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md).  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
-Hyper-V Network Virtualization using the Microsoft Network Controller requires Windows Server 2016 Technical Preview and the Hyper-V role.  
+Hyper-V Network Virtualization using the Microsoft Network Controller requires Windows Server 2016 and the Hyper-V role.  
   
 ## <a name="BKMK_LINKS"></a>See also  
-To learn more about Hyper-V Network Virtualization in Windows Server 2016 Technical Preview see the following links:  
+To learn more about Hyper-V Network Virtualization in Windows Server 2016 see the following links:  
   
 |Content type|References|  
 |----------------|--------------|  
