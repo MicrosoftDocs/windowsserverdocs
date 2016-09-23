@@ -54,6 +54,7 @@
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 #### Get started
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
+##### [Planning poster for Remote Desktop Services](compute/remote-desktop-services/rds-poster.md)
 ##### [Host Windows Desktop and Applications using Remote Desktop Services in Azure](compute/remote-desktop-services/rds-hosting-partners.md)
 #### Plan
 ##### [Desktop Hosting Reference Architecture](compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md)
