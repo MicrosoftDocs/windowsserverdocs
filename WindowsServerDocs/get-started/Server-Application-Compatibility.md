@@ -22,30 +22,19 @@ This table lists Microsoft server applications that support installation and fun
 
 For customers and software vendor partners looking for more information on Windows Server compatibility with non-Microsoft applications, visit the main [Windows Server Logo certification portal](https://msdn.microsoft.com/enterprisecloudcertified).
 
-|Microsoft Server Application|	Available at WS 2016 General Availability?|	Product Link|
-|----------------------------|--------------------------------------------|-------------|
+|Microsoft Server Application|	Available at Windows Server 2016 General Availability?|	Product Link|
+|-------------------------------------|--------------------------------------------|-------------------|
 |Microsoft SQL Server 2016|	Yes|	https://www.microsoft.com/cloud-platform/sql-server| 
-
 |Microsoft System Center Virtual Machine Manager 2016|	Yes|	https://technet.microsoft.com/system-center-docs/vmm/deploy/preparing-your-environment-for-system-center-2016---virtual-machine-manager|
-
 |Microsoft System Center Operations Manager 2016|	Yes|	https://technet.microsoft.com/system-center-docs/om/operations-manager|
-
 |Microsoft System Center Data Protection Manager 2016|	Yes|	https://technet.microsoft.com/system-center-docs/dpm/get-started/what-s-new-in-dpm-in-system-center-technical-preview|
-
 |Microsoft System Center Configuration Manager (version 1606)|	Yes|	https://technet.microsoft.com/library/mt752488.aspx|  
-
 |SharePoint Server 2016|	Yes|	https://technet.microsoft.com/library/cc262485(v=office.16).aspx|
-
 |Project Server 2016|	Yes|	https://technet.microsoft.com/library/ee683978(v=office.16).aspx|
-
 |Exchange Server 2016|	No|	https://technet.microsoft.com/library/jj907309(v=exchg.160).aspx| 
-
 |Skype for Business Server 2015|	No|	https://technet.microsoft.com/library/dn951388.aspx|
-
 |Biztalk Server 2016|	No|	https://msdn.microsoft.com/library/mt670742.aspx| 
-
 |Visual Studio Team Foundation Server 15|	No|	https://www.visualstudio.com/docs/setup-admin/requirements| 
-
 |Host Integration Server 2016|	No|	https://msdn.microsoft.com/library/mt670807.aspx| 
 
 
