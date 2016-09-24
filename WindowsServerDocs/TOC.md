@@ -58,7 +58,7 @@
 ##### [Host Windows Desktop and Applications using Remote Desktop Services in Azure](compute/remote-desktop-services/rds-hosting-partners.md)
 #### [Plan and design](compute/remote-desktop-services/rds-plan-and-design.md)
 ##### [VDI vs. session-based](compute/remote-desktop-services/rds-plan-vdi-session.md)
-##### [Personal or pooled desktops](compute/remote-desktop-services/rds-plan-personal-pooled.md))
+##### [Personal or pooled desktops](compute/remote-desktop-services/rds-plan-personal-pooled.md)
 ##### [Build anywhere](compute/remote-desktop-services/rds-plan-build-anywhere.md)
 ##### [Cater to different kinds of users](compute/remote-desktop-services/rds-plan-cater-to-users.md)
 ##### [Access from anywhere](compute/remote-desktop-services/rds-plan-access-from-anywhere.md)

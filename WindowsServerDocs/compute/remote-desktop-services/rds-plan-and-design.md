@@ -21,7 +21,7 @@ Designing for optimal performance and scale-out is key. Use the scenarios below 
 Use the following information to plan and design your deployment:
 
 - [VDI vs. session-based](rds-plan-vdi-session.md)
-- [Personal or pooled desktops](rds-plan-personal-pooled.md))
+- [Personal or pooled desktops](rds-plan-personal-pooled.md)
 - [Build anywhere](rds-plan-build-anywhere.md)
 - [Cater to different kinds of users](rds-plan-cater-to-users.md)
 - [Access from anywhere](rds-plan-access-from-anywhere.md)
