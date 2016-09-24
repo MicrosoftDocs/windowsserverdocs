@@ -5,13 +5,13 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
-ms.author: elizapo
-ms.date: 09/20/2016  
+ms.author: spatnaik
+ms.date: 09/23/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
-author: lizap
-manager: dongill
+author: spatnaik
+manager: scottman
 ---
 # Run and tune your Remote Desktop Services environment
 
@@ -21,10 +21,10 @@ It’s a good practice to continually assess the metrics and balance against run
 
 ## Management and monitoring
 
-Use Microsoft Operations Management Suite (OMS) to monitor Remote Desktop deployments for potential bottlenecks and manage them using one of the following ways: 
+Use **Microsoft Operations Management Suite (OMS)** to monitor Remote Desktop deployments for potential bottlenecks and manage them using one of the following ways: 
 
-- Server Manager: Use the RD management tool that is built in to Windows Server to manage deployments with up to 500 concurrent remote end-users. 
-- PowerShell: Use the RD PowerShell module, also built into Windows Server, to manage deployments with up to 5000 concurrent remote end-users.
+- **Server Manager**: Use the RD management tool that is built in to Windows Server to manage deployments with up to 500 concurrent remote end-users. 
+- **PowerShell**: Use the RD PowerShell module, also built into Windows Server, to manage deployments with up to 5000 concurrent remote end-users.
 
 ## Scale: Bigger, better, faster
 
