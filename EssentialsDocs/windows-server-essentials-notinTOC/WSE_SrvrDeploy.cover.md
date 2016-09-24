@@ -13,10 +13,6 @@ ms.author: coreyp
 ---
 # WSE_SrvrDeploy.cover
 
-![Windows SBS8 Beta Logo](media/WindowsSBS8Betalogo.gif "WindowsSBS8Betalogo")  
-
-![Windows SBS8 Beta Logo](../windows-server-essentials-notinTOC/media/WindowsSBS8Betalogo.gif "WindowsSBS8Betalogo")  
-
   
 ## Install and Configure Windows Small Business Server "8" Beta  
  Microsoft Corporation  
@@ -25,9 +21,5 @@ ms.author: coreyp
   
 ### Abstract  
  This document provides step-by-step instructions for installing and configuring  Windows Server 2012 Essentials, including preinstallation tasks and information about system requirements.  
-  
 
- ![Microsoft logo](media/DocCoverBottom.gif "DocCoverBottom")
-
- ![Microsoft logo](../windows-server-essentials-notinTOC/media/DocCoverBottom.gif "DocCoverBottom")
 
