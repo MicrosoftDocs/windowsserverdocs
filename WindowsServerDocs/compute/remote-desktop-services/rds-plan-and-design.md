@@ -29,8 +29,8 @@ Use the following information to plan and design your deployment:
 - [MultiFactor Authentication](rds-plan-mfa.md)
 - [Secure data storage](rds-plan-secure-data-storage.md)
 - [Persistent or non-persistent sessions](rds-plan-persistent-nonpersistent.md)
-- [Enable high-end graphics remoting](rds-plan-grapics-rendering.md)
+- [Enable high-end graphics remoting](rds-plan-graphics-rendering.md)
 - [Connect from any device](rds-plan-connect-from-any-device.md)
-- [Choose how you pay](rds-choose-how-you-pay.md)
+- [Choose how you pay](rds-plan-choose-how-you-pay.md)
 
 Be sure to also review the [Desktop Hosting Reference Architecture](desktop-hosting-reference-architecture.md), which provides an overview of the Remote Desktop architecture and helps you plan a hybrid RDS environment that includes Azure infrastructure.
