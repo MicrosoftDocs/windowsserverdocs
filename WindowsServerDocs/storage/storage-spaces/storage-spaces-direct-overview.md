@@ -17,7 +17,7 @@ Storage Spaces Direct uses industry-standard servers with local-attached drives 
 
 Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
-[![Storage Spaces Direct overview video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+[![Storage Spaces Direct Overview Video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
 
 ## Key Benefits
 
@@ -76,11 +76,11 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 Storage Spaces Direct was designed for two distinct deployment options:
 
-![](media/storage-spaces-direct-in-windows-server-2016/converged-minimal.png)
+![Storage Spaces Direct Converged](media/storage-spaces-direct-in-windows-server-2016/converged-minimal.png)
 
 **1.** The converged deployment option, also known as disaggregated, layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 File Shares. This allows for scaling compute/workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
 
-![](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
+![Storage Spaces Direct Hyper-Converged](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
 **2.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).
 
@@ -88,7 +88,9 @@ Storage Spaces Direct was designed for two distinct deployment options:
 
 Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Windows Server 2012. It leverages many of the features you know today in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) File System, Server Message Block (SMB) 3, and of course Storage Spaces. It also introduces new technology, most notably the Software Storage Bus and its sprawling feature set.
 
-Here’s an overview of the Storage Spaces Direct stack:
+Here's an overview of the Storage Spaces Direct stack:
+
+![Storage Spaces Direct Stack](media/storage-spaces-direct-in-windows-server-2016/converged-full-stack.png)
 
 **Networking Hardware.** Storage Spaces Direct uses SMB3, including SMB Direct and SMB Multichannel, over Ethernet to communicate between servers. We strongly recommend 10+ GbE with remote-direct memory access (RDMA), either iWARP or RoCE.
 
