@@ -17,7 +17,7 @@ Storage Spaces Direct uses industry-standard servers with local-attached drives 
 
 Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
-[![Storage Spaces Direct overview video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-overview.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+[![Storage Spaces Direct overview video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
 
 ## Key Benefits
 
