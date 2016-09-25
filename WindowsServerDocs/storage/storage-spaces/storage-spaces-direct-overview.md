@@ -76,9 +76,13 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 Storage Spaces Direct was designed for two distinct deployment options:
 
-The converged deployment option, also known as disaggregated, layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 File Shares. This allows for scaling of compute/workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
+![](media/storage-spaces-direct-in-windows-server-2016/converged-minimal.png)
 
-The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See Hyper-converged solution using Storage Spaces Direct.
+**1.** The converged deployment option, also known as disaggregated, layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 File Shares. This allows for scaling compute/workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
+
+![](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
+
+**2.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See Hyper-converged solution using Storage Spaces Direct.
 
 ## How It Works
 
@@ -108,10 +112,8 @@ Here’s an overview of the Storage Spaces Direct stack:
 
 ## Get Started
 
-Try Storage Spaces Direct today in Azure, or download the Windows Server 2016 Technical Preview.
+Try Storage Spaces Direct today in Azure, or download the Windows Server 2016 Technical Preview.\
 
-![](media/storage-spaces-direct-in-windows-server-2016/StorageSpacesDirectStack.png)  
-![](media/storage-spaces-direct-in-windows-server-2016/StorageSpacesDirectHyperconverged.png)
 
 [Storage Spaces Direct - Under the hood with the Software Storage Bus](http://blogs.technet.com/b/clausjor/archive/2015/11/19/storage-spaces-direct-under-the-hood-with-the-software-storage-bus.aspx).  
 [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).   
