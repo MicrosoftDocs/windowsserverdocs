@@ -24,7 +24,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/simplicity-icon.png">
+			<img src="media/storage-spaces-direct-in-windows-server-2016/simplicity-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Simplicity.</b> Go from industry-standard servers running Windows Server 2016 to your first Storage Spaces Direct cluster in under 15 minutes. For System Center users, deployment is just <a href="https://channel9.msdn.com/Blogs/hybrid-it-management/Demo-Creating-a-Storage-Spaces-Direct-Hyperconverged-Cluster-using-System-Center-2016-VMM">one checkbox</a>.
@@ -32,7 +32,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/performance-icon.png">
+			<img src="media/storage-spaces-direct-in-windows-server-2016/performance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Unrivaled Performance.</b> Whether all-flash or hybrid, Storage Spaces Direct easily exceeds <a href="https://blogs.technet.microsoft.com/filecab/2016/07/26/storage-iops-update-with-storage-spaces-direct/">150,000 mixed 4k random IOPS per server</a> with consistent, low latency thanks to its hypervisor-embedded architecture, its built-in read/write cache, and support for cutting-edge NVMe drives mounted directly on the PCIe bus.
@@ -40,7 +40,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/fault-tolerance-icon.png">
+			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Fault Tolerance.</b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
@@ -48,7 +48,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/efficiency-icon.png">
+			<img src="media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like <a href="https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/">Local Reconstruction Codes</a> and <a href="https://blogs.technet.microsoft.com/filecab/2016/03/25/storage-spaces-direct-in-technical-preview-4/">real-time tiering</a> to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
@@ -56,7 +56,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/manageability-icon.png">
+			<img src="media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Manageability.</b> Use <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-qos/storage-qos-overview">Storage QoS Controls</a> to keep noisy neighbors in check with minimum and maximum per-VM IOPS limits. The <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/health-service-overview">Health Service</a> provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
@@ -64,7 +64,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/scalability-icon.png">
+			<img src="media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster! To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
