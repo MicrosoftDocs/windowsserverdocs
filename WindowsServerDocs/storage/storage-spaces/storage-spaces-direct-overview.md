@@ -27,7 +27,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/simplicity-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Simplicity.</b> Go from industry-standard servers running Windows Server 2016 to your first Storage Spaces Direct cluster in under 15 minutes. For System Center users, deployment is just [one literal checkbox](https://channel9.msdn.com/Blogs/hybrid-it-management/Demo-Creating-a-Storage-Spaces-Direct-Hyperconverged-Cluster-using-System-Center-2016-VMM).
+			<b>Simplicity.</b> Go from industry-standard servers running Windows Server 2016 to your first Storage Spaces Direct cluster in under 15 minutes. For System Center users, deployment is just <a href="https://channel9.msdn.com/Blogs/hybrid-it-management/Demo-Creating-a-Storage-Spaces-Direct-Hyperconverged-Cluster-using-System-Center-2016-VMM">one checkbox</a>.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -35,7 +35,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/performance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Unrivaled Performance.</b> Whether all-flash or hybrid, Storage Spaces Direct easily [exceeds 150,000 mixed 4k random IOPS per server](https://blogs.technet.microsoft.com/filecab/2016/07/26/storage-iops-update-with-storage-spaces-direct/) with consistent, low latency thanks to its hypervisor-embedded architecture, its built-in read/write cache, and support for cutting-edge NVMe drives mounted directly on the PCIe bus.
+			<b>Unrivaled Performance.</b> Whether all-flash or hybrid, Storage Spaces Direct easily exceeds <a href="https://blogs.technet.microsoft.com/filecab/2016/07/26/storage-iops-update-with-storage-spaces-direct/">150,000 mixed 4k random IOPS per server</a> with consistent, low latency thanks to its hypervisor-embedded architecture, its built-in read/write cache, and support for cutting-edge NVMe drives mounted directly on the PCIe bus.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -43,7 +43,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Fault Tolerance.</b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for [chassis and rack fault tolerance](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains). When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
+			<b>Fault Tolerance.</b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -51,7 +51,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/efficiency-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like [Local Reconstruction Codes](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/) and [real-time tiering](https://blogs.technet.microsoft.com/filecab/2016/03/25/storage-spaces-direct-in-technical-preview-4/) to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
+			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like <a href="https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/">Local Reconstruction Codes</a> and <a href="https://blogs.technet.microsoft.com/filecab/2016/03/25/storage-spaces-direct-in-technical-preview-4/">real-time tiering</a> to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -59,7 +59,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/manageability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Manageability.</b> Use [Storage QoS Controls](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-qos/storage-qos-overview) to keep noisy neighbors in check with minimum and maximum per-VM IOPS limits. The [Health Service](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/health-service-overview) provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
+			<b>Manageability.</b> Use <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-qos/storage-qos-overview">Storage QoS Controls</a> to keep noisy neighbors in check with minimum and maximum per-VM IOPS limits. The <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/health-service-overview">Health Service</a> provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -113,9 +113,6 @@ Here’s an overview of the Storage Spaces Direct stack:
 ## Get Started
 
 Try Storage Spaces Direct today [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download the [Windows Server 2016 Technical Preview](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview).
-
-
-[Storage Spaces Direct - Under the hood with the Software Storage Bus](http://blogs.technet.com/b/clausjor/archive/2015/11/19/storage-spaces-direct-under-the-hood-with-the-software-storage-bus.aspx).
 
 ## Related Topics  
 -   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
