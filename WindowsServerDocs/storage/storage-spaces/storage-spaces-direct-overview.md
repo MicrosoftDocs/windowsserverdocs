@@ -22,51 +22,51 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 ## Key Benefits
 
 <table>
-	<tr>
+	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
 			<img src="media/simplicity-icon.png">
 		</td>
-		<td>
+		<td style="padding: 10px; border: 0;">
 			<b>Simplicity.</b> Go from industry-standard servers running Windows Server 2016 to your first Storage Spaces Direct cluster in under 15 minutes. For System Center users, deployment is just one literal checkbox.
 		</td>
 	</tr>
-	<tr>
+	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
 			<img src="media/performance-icon.png">
 		</td>
-		<td>
+		<td style="padding: 10px; border: 0;">
 			<b>Unrivaled Performance.</b> Whether all-flash or hybrid, Storage Spaces Direct easily exceeds 150,000 mixed 4k random IOPS per server with consistent, low latency thanks to its hypervisor-embedded architecture, its built-in read/write cache, and support for cutting-edge NVMe drives mounted directly on the PCIe bus.
 		</td>
 	</tr>
-	<tr>
+	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
 			<img src="media/fault-tolerance-icon.png">
 		</td>
-		<td>
+		<td style="padding: 10px; border: 0;">
 			<b>Fault Tolerance.</b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for chassis and rack fault tolerance. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
-	<tr>
+	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
 			<img src="media/efficiency-icon.png">
 		</td>
-		<td>
+		<td style="padding: 10px; border: 0;">
 			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like Local Reconstruction Codes and real-time tiering to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
 		</td>
 	</tr>
-	<tr>
+	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
 			<img src="media/manageability-icon.png">
 		</td>
-		<td>
+		<td style="padding: 10px; border: 0;">
 			<b>Manageability.</b> Use Storage QoS Controls to keep noisy neighbors in check with minimum and maximum per-VM IOPS limits. The Health Service provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
 		</td>
 	</tr>
-	<tr>
+	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
 			<img src="media/scalability-icon.png">
 		</td>
-		<td>
+		<td style="padding: 10px; border: 0;">
 			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster! To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
 		</td>
 	</tr>
