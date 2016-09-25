@@ -65,7 +65,7 @@ The following table shows the CALs that are compatible on RD Session Hosts and R
 | CAL type     | 2000 | 2003 | 2003R2 | 2008 | 2008R2 | 2012 | 2012R2 | 2016 |
 |--------------|------|------|--------|------|--------|------|--------|------|
 | 2000         | Yes  | No   | No     | No   | No     | No   | No     | No   |
-| 2003         | Yes  | Yes  | yes    | No   | No     | No   | No     | No   |
+| 2003         | Yes  | Yes  | Yes    | No   | No     | No   | No     | No   |
 | 2008, 2008R2 | Yes  | Yes  | Yes    | Yes  | Yes    | No   | No     | No   |
 | 2012         | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | No   |
 | 2016         | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | Yes  |
