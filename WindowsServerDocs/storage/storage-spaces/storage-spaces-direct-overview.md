@@ -84,7 +84,7 @@ Storage Spaces Direct was designed for two distinct deployment options:
 
 **2.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).
 
-## How It Works
+## How it works
 
 Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Windows Server 2012. It leverages many of the features you know today in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) file system, Server Message Block (SMB) 3, and of course Storage Spaces. It also introduces new technology, most notably the Software Storage Bus.
 
@@ -112,14 +112,12 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Scale-Out File Server.** This final layer is necessary in converged deployments only. It provides remote file access using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
 
-## Get Started
+## Get started
 
 Try Storage Spaces Direct today [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download the [Windows Server 2016 Technical Preview](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview).
 
-## Related Topics  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
-
 ## See Also  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md) 
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
