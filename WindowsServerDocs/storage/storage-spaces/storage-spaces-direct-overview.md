@@ -7,19 +7,19 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 manager: eldenc
-ms.date: 09/16/2016
+ms.date: 09/25/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct in Windows Server 2016
 >Applies To: Windows Server 2016
 
-Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, tiering, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
+Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
 Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 [![Storage Spaces Direct Overview Video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
 
-## Key Benefits
+## Key benefits
 
 <table>
 	<tr style="border: 0;">
@@ -59,7 +59,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Manageability.</b> Use <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-qos/storage-qos-overview">Storage QoS Controls</a> to keep noisy neighbors in check with minimum and maximum per-VM IOPS limits. The <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/health-service-overview">Health Service</a> provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
+			<b>Manageability.</b> Use <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-qos/storage-qos-overview">Storage QoS Controls</a> to keep overly busy VMs in check with minimum and maximum per-VM IOPS limits. The <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/health-service-overview">Health Service</a> provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -67,18 +67,18 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster! To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
+			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster. To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
 		</td>
 	</tr>
 </table>
 
-## Deployment Options
+## Deployment options
 
 Storage Spaces Direct was designed for two distinct deployment options:
 
 ![Storage Spaces Direct Converged](media/storage-spaces-direct-in-windows-server-2016/converged-minimal.png)
 
-**1.** The converged deployment option, also known as disaggregated, layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 File Shares. This allows for scaling compute/workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
+**1.** The converged deployment option, also known as disaggregated, layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 file shares. This allows for scaling compute/workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
 
 ![Storage Spaces Direct Hyper-Converged](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
@@ -86,7 +86,7 @@ Storage Spaces Direct was designed for two distinct deployment options:
 
 ## How It Works
 
-Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Windows Server 2012. It leverages many of the features you know today in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) File System, Server Message Block (SMB) 3, and of course Storage Spaces. It also introduces new technology, most notably the Software Storage Bus and its sprawling feature set.
+Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Windows Server 2012. It leverages many of the features you know today in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) file system, Server Message Block (SMB) 3, and of course Storage Spaces. It also introduces new technology, most notably the Software Storage Bus.
 
 Here's an overview of the Storage Spaces Direct stack:
 
@@ -102,13 +102,13 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Storage Bus Layer Cache.** The [Software Storage Bus](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/software-storage-bus-overview) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
-**Storage Pool.** The collection of drives that will form the basis of Storage Spaces is called the Storage Pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings.
+**Storage Pool.** The collection of drives that will form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings.
 
 **Storage Spaces.** Storage Spaces provides fault tolerance to virtual “disks” using [mirroring, erasure coding, or both](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
 
-**Resilient File System (ReFS).** ReFS is the premier filesystem purpose-built for virtualization. It includes dramatic accelerations for VHD(X) file operations such as creation, expansion, and checkpoint merging, and built-in checksums to detect and correct bit errors. It also introduces Real-Time Tiering, which rotates data between so-called “hot” and “cold” storage tiers in real-time based on usage.
+**Resilient File System (ReFS).** ReFS is the premier filesystem purpose-built for virtualization. It includes dramatic accelerations for .vhdx file operations such as creation, expansion, and checkpoint merging, and built-in checksums to detect and correct bit errors. It also introduces real-time tiers that rotate data between so-called “hot” and “cold” storage tiers in real-time based on usage.
 
-**Cluster Shared Volumes.** The CSV File System unifies all the ReFS volumes into a single namespace accessible through any server, so that to each server, every volume looks and acts like it’s mounted locally.
+**Cluster Shared Volumes.** The CSV file system unifies all the ReFS volumes into a single namespace accessible through any server, so that to each server, every volume looks and acts like it’s mounted locally.
 
 **Scale-Out File Server.** This final layer is necessary in converged deployments only. It provides remote file access using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
 
