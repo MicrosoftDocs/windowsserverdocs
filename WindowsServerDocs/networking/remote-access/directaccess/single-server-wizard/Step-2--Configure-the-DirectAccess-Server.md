@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Configure the DirectAccess Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](../../../remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md).  
   

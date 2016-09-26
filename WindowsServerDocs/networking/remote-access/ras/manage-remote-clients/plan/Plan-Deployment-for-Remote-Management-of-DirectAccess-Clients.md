@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Plan Deployment for Remote Management of DirectAccess Clients
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following topics provide planning steps for deploying a single Remote Access server running that can be used for remote management of DirectAccess clients.  
   

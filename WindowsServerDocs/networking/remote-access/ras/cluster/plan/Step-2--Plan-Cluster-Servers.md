@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Plan Cluster Servers
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After deploying a single Remote Access server, plan to add additional servers to the cluster.  
   

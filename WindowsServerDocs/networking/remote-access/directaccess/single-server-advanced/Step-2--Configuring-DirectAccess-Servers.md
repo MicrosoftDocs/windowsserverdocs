@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Configuring DirectAccess Servers
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes how to configure the client and server settings that are required for an advanced Remote Access deployment that uses a single Remote Access server in a mixed IPv4 and IPv6 environment. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).  
   

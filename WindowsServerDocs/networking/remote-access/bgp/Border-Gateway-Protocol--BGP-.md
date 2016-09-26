@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Border Gateway Protocol (BGP)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to gain an understanding of Border Gateway Protocol (BGP), including BGP supported deployment topologies and BGP features and capabilities.  
   
@@ -29,7 +29,7 @@ This topic contains the following sections.
   
 -   [BGP Features](#bkmk_features)  
   
-When configured on a Windows Server 2016 Technical Preview Remote Access Service \(RAS\) Gateway in multitenant mode, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants' VM networks and their remote sites. You can also use BGP for single tenant RAS Gateway deployments, and when you deploy Remote Access as a Local Area Network \(LAN\) router.  
+When configured on a  Windows Server 2016 Remote Access Service \(RAS\) Gateway in multitenant mode, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants' VM networks and their remote sites. You can also use BGP for single tenant RAS Gateway deployments, and when you deploy Remote Access as a Local Area Network \(LAN\) router.  
   
 BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
   
@@ -57,7 +57,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
 ## <a name="bkmk_top"></a>BGP Supported Deployment Topologies  
 Listed below are the supported deployment topologies where Enterprise sites are connected to a Cloud Service Provider (CSP) datacenter.  
   
-In all scenarios, the CSP gateway is a Windows Server 2016 Technical Preview RAS Gateway at the edge. The RAS Gateway, which is capable of handling multiple connections from multiple tenants, consists of a Hyper-V host and a VM that is actually configured as the gateway. This edge gateway is configured with site-to-site VPN connections as a multitenant BGP router to exchange Enterprise and CSP subnet routes.  
+In all scenarios, the CSP gateway is a  Windows Server 2016 RAS Gateway at the edge. The RAS Gateway, which is capable of handling multiple connections from multiple tenants, consists of a Hyper-V host and a VM that is actually configured as the gateway. This edge gateway is configured with site-to-site VPN connections as a multitenant BGP router to exchange Enterprise and CSP subnet routes.  
   
 Tenants connect to their resources at the CSP datacenter by using a site-to-site (S2S) VPN connection. In addition, the BGP routing protocol is deployed for dynamic routing information exchange between the Enterprise and CSP gateways.  
   
@@ -74,7 +74,7 @@ The following deployment topologies are supported.
 The following sections contain additional information on each supported BGP topology.  
   
 ### <a name="bkmk_top1"></a>RAS VPN Site-to-Site Gateway with BGP at Enterprise site edge  
-This topology depicts an Enterprise site connected to a CSP. The Enterprise routing topology includes an internal router, a Windows Server 2016 Technical Preview RAS Gateway configured for VPN site-to-site connections with the CSP, and an edge firewall device. The RAS Gateway terminates the S2S VPN and BGP connections.  
+This topology depicts an Enterprise site connected to a CSP. The Enterprise routing topology includes an internal router, a  Windows Server 2016 RAS Gateway configured for VPN site-to-site connections with the CSP, and an edge firewall device. The RAS Gateway terminates the S2S VPN and BGP connections.  
   
 ![](../../media/Border-Gateway-Protocol--BGP-/bgp_01.jpg)  
   
@@ -119,7 +119,7 @@ Each Enterprise site learns the hosted network routes directly and by using the 
 If the BGP router at Enterprise Site 1 cannot connect with the Enterprise Site 2 BGP router because connectivity has failed, the Site 1 BGP router dynamically begins to learn the routes to Enterprise Site 2 network from the CSP BGP Router, and the traffic is seamlessly rerouted from Site 1 to Site 2 via the Windows Server BGP Router at the CSP.  
   
 ### <a name="bkmk_top4"></a>Separate termination points for BGP and VPN  
-This topology depicts an Enterprise that uses two different routers as the BGP and site-to-site VPN endpoints. Site-to-site VPN is terminated on the Windows Server 2016 Technical Preview RAS Gateway, while BGP is terminated on an internal router. At the CSP side of the connections, the CSP terminates both the VPN and BGP connections with the RAS Gateway. With this configuration, the internal third party router hardware must support redistribution of IGP routes to BGP, as well as redistributing BGP routes to IGP.  
+This topology depicts an Enterprise that uses two different routers as the BGP and site-to-site VPN endpoints. Site-to-site VPN is terminated on the  Windows Server 2016 RAS Gateway, while BGP is terminated on an internal router. At the CSP side of the connections, the CSP terminates both the VPN and BGP connections with the RAS Gateway. With this configuration, the internal third party router hardware must support redistribution of IGP routes to BGP, as well as redistributing BGP routes to IGP.  
   
 ![](../../media/Border-Gateway-Protocol--BGP-/bgp_04.jpg)  
   
@@ -164,13 +164,13 @@ Following are the features of the RAS Gateway BGP Router.
   
 **Route-Reflector (RR) and RR client**. The BGP Router can act as a Route-Reflector and an RR client. This is useful in complex topologies where RR can simplify the network by forming RR Clusters.  
   
-**Route-Refresh support**. The BGP Router supports Route-Refresh and advertises this capability on peering by default. It is capable of sending a fresh set of route updates when requested by a peer via route-refresh message, as well as sending a Route-Refresh to update its Routing table in the events like Routing policy changes for a peer. This enables the scenario of changing or updating the BGP Routing policies in Windows Server 2016 Technical Preview without needing to restart the peering.  
+**Route-Refresh support**. The BGP Router supports Route-Refresh and advertises this capability on peering by default. It is capable of sending a fresh set of route updates when requested by a peer via route-refresh message, as well as sending a Route-Refresh to update its Routing table in the events like Routing policy changes for a peer. This enables the scenario of changing or updating the BGP Routing policies in  Windows Server 2016 without needing to restart the peering.  
   
 **Static route configuration support**. You can configure static routes or interfaces on the BGP Router by using the **Add-BgpCustomRoute** Windows PowerShell command. The static routes that you configure can be the prefixes or the name of the interfaces from which the routes must be chosen. However, only the routes with resolvable next-hops are plumbed into the BGP routing tables and advertised to peers.  
   
 **Transit routing support**. The BGP Router supports transit routing for iBGP to iBGP connections, iBGP to eBGP connections as well as eBGP to eBGP connections.  
   
-**Route Flap Dampening**. Route Flap Dampening to BGP Routing in Windows Server 2016 Technical Preview provides support for Route flap dampening. For example, when a route is constantly being advertised and withdrawn, making the routing table unstable, you can configure the BGP Router to assign a dampening weight to the route and monitor it for flaps - and accordingly suppress or un-suppress it as required. This helps with maintaining a stable routing table and less processing by the BGP Router.  
+**Route Flap Dampening**. Route Flap Dampening to BGP Routing in  Windows Server 2016 provides support for Route flap dampening. For example, when a route is constantly being advertised and withdrawn, making the routing table unstable, you can configure the BGP Router to assign a dampening weight to the route and monitor it for flaps - and accordingly suppress or un-suppress it as required. This helps with maintaining a stable routing table and less processing by the BGP Router.  
   
 **Route Aggregation**. Route Aggregation to the   BGP Router provides you with the ability to configure Aggregate Routes and to replace the more granular route advertisements with summary or aggregate routes to peers. This results in a fewer number of route advertisement messages transmitted on the network.  
   

@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Steps for Configuring the Test Lab
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.  
   
