@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # RAS Gateway Deployment Architecture
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.  
   
@@ -45,7 +45,7 @@ The Border Gateway Protocol (BGP) Route Reflector capability  is now included wi
 For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md).  
   
 ### <a name="bkmk_pools"></a>Gateway Pools  
-In Windows Server 2016 Technical Preview, you can create many gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks.  
+In  Windows Server 2016, you can create many gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks.  
   
 For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   

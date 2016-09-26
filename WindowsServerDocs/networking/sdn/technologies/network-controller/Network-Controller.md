@@ -14,9 +14,9 @@ author: jamesmci
 ---
 # Network Controller
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
+New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
   
 > [!NOTE]  
 > In addition to this topic, the following Network Controller documentation is available.  

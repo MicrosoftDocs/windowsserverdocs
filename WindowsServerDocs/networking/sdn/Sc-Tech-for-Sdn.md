@@ -12,7 +12,10 @@ ms.assetid:
 ms.author: jamesmci
 author: jamesmci
 ---
-# System Center Technologies for Software Defined Networking  
+# System Center Technologies for Software Defined Networking
+
+>Applies To: Windows Server&reg; 2016
+
 System Center includes the following technologies for use with Software Defined Networking (SDN):  
   
 -   [System Center Operations Manager](#bkmk_scom)  
