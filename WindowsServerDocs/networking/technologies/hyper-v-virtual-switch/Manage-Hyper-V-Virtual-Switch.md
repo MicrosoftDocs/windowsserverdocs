@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Manage Hyper-V Virtual Switch
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to access Hyper-V Virtual Switch management content.
 

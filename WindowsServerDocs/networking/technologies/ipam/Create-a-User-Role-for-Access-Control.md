@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Create a User Role for Access Control
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to create a new Access Control user role in the IPAM client console.  
   

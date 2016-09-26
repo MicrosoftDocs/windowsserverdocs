@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 CLIENT1 is now ready for DirectAccess testing.  
   

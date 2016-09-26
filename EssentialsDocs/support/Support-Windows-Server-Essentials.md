@@ -1,30 +1,21 @@
 ---
 title: "Support Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 05/20/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
-caps.latest.revision: 25
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-translation.priority.ht: 
-  - de-de
-  - es-es
-  - fr-fr
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Support Windows Server Essentials
 This topic provides support and troubleshooting options for Windows Server Essentials.  
   
@@ -32,22 +23,22 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Top support solutions for Windows Server 2012 R2 and Windows Server 2012](http://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
   
--   [Update for the Windows Server 2012 Essentials Migration Preparation Tool](http://support.microsoft.com/kb/2908176) (December 2013)  
+-   [Update for the Windows Server Essentials Migration Preparation Tool](http://support.microsoft.com/kb/2908176) (December 2013)  
   
--   [Update Rollup 1 for Windows Server 2012 R2 Essentials](http://support.microsoft.com/kb/2887595) (November 2013)  
+-   [Update Rollup 1 for Windows Server Essentials](http://support.microsoft.com/kb/2887595) (November 2013)  
   
--   [Update Rollup 3 for Windows Server 2012 Essentials](http://support.microsoft.com/kb/2862551) (October 2013)  
+-   [Update Rollup 3 for Windows Server Essentials](http://support.microsoft.com/kb/2862551) (October 2013)  
   
--   [Update Rollup 2 for Windows Server 2012 Essentials](http://support.microsoft.com/kb/2824160) (June 2013)  
+-   [Update Rollup 2 for Windows Server Essentials](http://support.microsoft.com/kb/2824160) (June 2013)  
   
--   [Update Rollup 1 for Windows Server 2012 Essentials](http://support.microsoft.com/kb/2781267) (February 2013)  
+-   [Update Rollup 1 for Windows Server Essentials](http://support.microsoft.com/kb/2781267) (February 2013)  
   
--   [Hotfix: You cannot enable the Windows Server Update Services role in Windows Server 2012 Essentials](http://support.microsoft.com/kb/2762663) (February 2013)  
+-   [Hotfix: You cannot enable the Windows Server Update Services role in Windows Server Essentials](http://support.microsoft.com/kb/2762663) (February 2013)  
   
 ## Troubleshoot  
  This section provides information to help you troubleshoot common problems that you may encounter when using Windows Server Essentials. The troubleshooting information is organized in logical areas that correspond to key product features.  
   
--   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+-   [Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
   
 
 -   [Troubleshoot Anywhere Access](Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
@@ -66,7 +57,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
   
--   [Use the Windows Server 2012 Essentials Log Collector](Use-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+-   [Use the Windows Server Essentials Log Collector](Use-the-Windows-Server-Essentials-Log-Collector.md)  
 
 -   [Troubleshoot Anywhere Access](../support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
@@ -84,7 +75,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
   
--   [Use the Windows Server 2012 Essentials Log Collector](../support/Use-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+-   [Use the Windows Server Essentials Log Collector](../support/Use-the-Windows-Server-Essentials-Log-Collector.md)  
 
   
 ## Ask a question in the forums  

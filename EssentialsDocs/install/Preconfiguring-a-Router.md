@@ -1,20 +1,21 @@
 ---
 title: "Preconfiguring a Router"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
-caps.latest.revision: 9
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Preconfiguring a Router
 Typically, a new installation of the operating system requires an Internet capable router and firewall to connect the internal network of the customer to the Internet. If you provide a router as an additional value with a preconfigured server, you can take additional steps to preconfigure the router to provide a better user experience.  
   
@@ -26,7 +27,7 @@ Typically, a new installation of the operating system requires an Internet capab
 |---------------------------|-------------|  
 |DHCP|On|  
 |Port forwarding|You should forward the following ports to the address of the server:<br /><br /> -   80 (For hosted configuration, only use 443)<br />-   443|  
-|UPnP support|You should enable UPnPâ„¢ support to provide the easiest router configuration for the customer and the best customer experience during installation.<br /><br /> **Warning:** The UPnP architecture can pose a security risk if it is left enabled.|  
+|UPnP support|You should enable UPnP„¢ support to provide the easiest router configuration for the customer and the best customer experience during installation.<br /><br /> **Warning:** The UPnP architecture can pose a security risk if it is left enabled.|  
   
  In addition to the basic router preconfiguration settings, you can complete the following tasks to provide a more integrated user experience for managing the router:  
   
@@ -42,7 +43,7 @@ Typically, a new installation of the operating system requires an Internet capab
 >  For more information about configuring wireless connections, see [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md).  
   
 ## See Also  
- [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Getting Started with the Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   

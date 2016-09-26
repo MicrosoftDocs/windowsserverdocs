@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot computer backup and restore errors in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 06/25/2013
 ms.prod: windows-server-2016-essentials
@@ -7,19 +8,19 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
-caps.latest.revision: 11
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Troubleshoot computer backup and restore errors in Windows Server Essentials
 Use these procedures to troubleshoot computer backups in Windows Server Essentials, including backup configuration issues, incomplete or unsuccessful backups, backup health alerts, and issues with file, folder, or full-system restores.  
   
 > [!NOTE]
->  For the most recent troubleshooting information from the Windows Server Essentials community, visit the [Windows Server 2012 Essentials Forum](http://social.technet.microsoft.com/Forums//winserveressentials/threads).  
+>  For the most recent troubleshooting information from the Windows Server Essentials community, visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums//winserveressentials/threads).  
   
 ##  <a name="BKMK_TroubleshootBackupConfigurationIssues"></a> Troubleshoot backup configuration issues for a connected computer  
  Use these procedures to troubleshoot issues with the backup configurations for computers that are backed up on your Windows Server Essentials server.  
@@ -198,7 +199,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
         1.  Open a command prompt with administrator privileges, and run the following command:  
   
-             **â€œ%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exeâ€? â€“i**  
+             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe? “i**  
   
         2.  Refresh Device Manager. The driver should appear.  
   

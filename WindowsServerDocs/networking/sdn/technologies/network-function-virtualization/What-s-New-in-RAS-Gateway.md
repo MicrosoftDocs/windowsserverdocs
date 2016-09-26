@@ -14,9 +14,9 @@ author: jamesmci
 ---
 # What&#39;s New in RAS Gateway
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
+You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
   
 > [!NOTE]  
 > In Windows Server 2012 R2, RAS Gateway is named RRAS Gateway; and in System Center Virtual Machine Manager, RAS Gateway is named Windows Server Gateway.  
@@ -39,7 +39,7 @@ RAS Gateway now supports three types of VPN site-to-site connections:  Internet 
 For more information about GRE, see [GRE Tunneling in Windows Server Technical Preview](../../../remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 ## <a name="bkmk_pools"></a>Gateway Pools  
-In Windows Server 2016 Technical Preview, you can create gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks. Gateway pools can perform any of the individual gateway functions - Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networking (VPN), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) tunnels - or the pool can perform all of these functions and act as a mixed pool.  
+In  Windows Server 2016, you can create gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks. Gateway pools can perform any of the individual gateway functions - Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networking (VPN), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) tunnels - or the pool can perform all of these functions and act as a mixed pool.  
   
 You can create gateway pools using any logic that you prefer based on your infrastructure requirements. For example, you can create gateway pools based on any of the following characteristics.  
   
@@ -66,7 +66,7 @@ For more information, see [RAS Gateway High Availability](../../../sdn/technolog
 ## <a name="bkmk_rr"></a>Route Reflector  
 The Border Gateway Protocol (BGP) Route Reflector is now included with RAS Gateway, and provides an alternative to BGP full mesh topology that is required for route synchronization between routers. With full mesh synchronization, all BGP routers must connect with all other routers in the routing topology. When you use Route Reflector, however, the Route Reflector is the only router that connects with all of the other routers, called BGP clients, thereby simplifying route synchronization and reducing network traffic. The Route Reflector learns all routes, calculates best routes, and redistributes the best routes to its BGP clients.  
   
-With Windows Server 2016 Technical Preview, you can configure an individual tenant's remote access tunnels to terminate on more than one RAS Gateway VM. This provides increased flexibility for Cloud Service Providers when faced with circumstances where one RAS Gateway VM cannot meet all of the bandwidth requirements of the tenant connections.  
+With  Windows Server 2016, you can configure an individual tenant's remote access tunnels to terminate on more than one RAS Gateway VM. This provides increased flexibility for Cloud Service Providers when faced with circumstances where one RAS Gateway VM cannot meet all of the bandwidth requirements of the tenant connections.  
   
 This capability, however, introduces the additional complexity of route management and effective synchronization of routes between the tenant remote sites and their virtual resources in the cloud datacenter. Providing tenants with connections to multiple RAS Gateways also introduces additional complexity in configuration at the Enterprise end, where each tenant site will have separate routing neighbors.  
   

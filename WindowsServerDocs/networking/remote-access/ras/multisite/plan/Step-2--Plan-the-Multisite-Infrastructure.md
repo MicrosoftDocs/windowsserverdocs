@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Plan the Multisite Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The next step in deploying Remote Access in a multisite topology is to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.  
   

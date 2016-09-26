@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # NIC Teaming and Virtual Local Area Networks (VLANs)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides information about using NIC Teaming with virtual Local Area Networks (VLANs) on both host computers and VMs, and includes the following sections.  
   

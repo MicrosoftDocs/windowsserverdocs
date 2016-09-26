@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Manage Tenant Workloads and Virtual Networks
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use the topics in this section to manage tenant workloads and virtual networks.  
   

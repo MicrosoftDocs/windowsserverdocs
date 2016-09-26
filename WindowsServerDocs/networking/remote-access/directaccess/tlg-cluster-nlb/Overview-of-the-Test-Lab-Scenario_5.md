@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Overview of the Test Lab Scenario
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 In this test lab scenario, DirectAccess is deployed with:  
   
