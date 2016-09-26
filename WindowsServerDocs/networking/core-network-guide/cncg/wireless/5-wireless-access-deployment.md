@@ -14,6 +14,8 @@ author: jamesmci
 ---
 # Wireless Access Deployment
 
+>Applies To: Windows Server 2016
+
 Follow these steps to deploy wireless access:
 
 - [Deploy and Configure Wireless APs](#bkmk_aps)

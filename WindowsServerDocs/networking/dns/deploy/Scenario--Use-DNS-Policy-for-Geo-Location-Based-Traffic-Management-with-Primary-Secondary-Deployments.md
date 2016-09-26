@@ -14,15 +14,10 @@ author: jamesmci
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.  
-  
-This topic contains the following sections.  
-- [Primary-Secondary Geo-Location Based Traffic Management Example](#bkmk_example)  
-- [How the DNS Primary-Secondary System Works](#bkmk_works)  
-- [How to configure DNS Policy for Primary-Secondary Geo-Location Based Traffic Management](#bkmk_config)  
-  
+
 The previous scenario provided instructions for configuring DNS policy for geo-location based traffic management on a primary DNS server. In the Internet infrastructure, however, the DNS servers are widely deployed in a primary-secondary model, where the writable copy of a zone is stored on select and secure primary servers, and read-only copies of the zone are kept on multiple secondary servers.   
   
 The secondary servers use the zone transfer protocols Authoritative Transfer (AXFR) and Incremental Zone Transfer (IXFR) to request and receive zone updates that include new changes to the zones on the primary DNS servers.   

@@ -14,12 +14,12 @@ author: jamesmci
 ---
 # What&#39;s New in DNS Server in Windows Server Technical Preview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016 Technical Preview.  
+This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   
 ## <a name="BKMK_DNSClient2012R2"></a>What's new in DNS Server in Windows Server Technical Preview  
-In Windows Server 2016 Technical Preview, DNS Server offers enhanced support in the following areas.  
+In Windows Server 2016, DNS Server offers enhanced support in the following areas.  
   
 |Functionality|New or Improved|Description|  
 |-----------------|-------------------|---------------|  

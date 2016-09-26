@@ -9,9 +9,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3596907-4233-4c8e-86ad-8404720b760d
 author: lizap
+<<<<<<< HEAD
 ms.author: spatnaik
 ms.date: 09/23/2016
 manager: scottman
+=======
+ms.author: elizapo
+ms.date: 09/07/2016
+manager: dongill
+>>>>>>> 23532965f8ab35170f53a07a2d3b7331369662ca
 ---
 # Remote Desktop Services - Connect from any device
 

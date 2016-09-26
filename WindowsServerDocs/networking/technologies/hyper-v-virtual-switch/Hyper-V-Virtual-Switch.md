@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides an overview of the Hyper-V Virtual Switch, and contains the following sections.  
   
@@ -42,7 +42,7 @@ The Hyper-V Virtual Switch includes tenant isolation capabilities, traffic shapi
   
 In the following illustration, a Virtual Machine (VM) has a virtual NIC that is connected to the Hyper-V Virtual Switch through a switch port.  
   
-![](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
+![Hyper-V Virtual Switch](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
   
 The capabilities provided in the Hyper-V Virtual Switch mean that your organization has more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious virtual machines.  
   
