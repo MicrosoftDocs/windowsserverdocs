@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Manage Role Based Access Control with Windows PowerShell
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.  
   

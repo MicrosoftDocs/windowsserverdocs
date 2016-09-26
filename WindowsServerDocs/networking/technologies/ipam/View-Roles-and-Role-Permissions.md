@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # View Roles and Role Permissions
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to view Access Control user roles in the IPAM client console.  
   

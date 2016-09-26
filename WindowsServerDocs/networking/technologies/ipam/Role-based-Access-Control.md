@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Role-based Access Control
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides information about using role-based access control in IPAM.  
   
