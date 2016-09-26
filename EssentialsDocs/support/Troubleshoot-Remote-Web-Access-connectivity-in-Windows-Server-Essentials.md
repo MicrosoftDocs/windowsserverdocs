@@ -1,32 +1,23 @@
 ---
 title: "Troubleshoot Remote Web Access connectivity in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 01/12/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: d3642575-b3ee-4488-b654-5bf9d3b8c935
-caps.latest.revision: 12
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-translation.priority.ht: 
-  - de-de
-  - es-es
-  - fr-fr
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Troubleshoot Remote Web Access connectivity in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
  Typically, Windows Server Essentials can automatically configure a broadband router if the router is a UPnP certified device and if the UPnP setting is enabled on the router.  
   
@@ -58,7 +49,7 @@ translation.priority.ht:
   
          Before you manually configure the router to forward the required ports to Windows Server Essentials, you must set up a Dynamic Host Configuration Protocol (DHCP) reservation for your server that is running Windows Server Essentials on the router. This step guarantees that the IP address that you will be forwarding the ports to do not change.  
   
-         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturerâ€™s documentation for your router.  
+         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer™s documentation for your router.  
   
     -   Configure port forwarding on your router for the following ports:  
   
@@ -67,7 +58,7 @@ translation.priority.ht:
         |HTTP|TCP 80|  
         |HTTPS|TCP 443|  
   
-     For information about how to manually set up port forwarding on your router, see the manufacturerâ€™s documentation.  
+     For information about how to manually set up port forwarding on your router, see the manufacturer™s documentation.  
   
      A typical router configuration page includes a table that resembles the following.  
   

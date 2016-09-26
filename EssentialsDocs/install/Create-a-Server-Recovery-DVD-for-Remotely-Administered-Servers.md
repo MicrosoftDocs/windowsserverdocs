@@ -1,20 +1,21 @@
 ---
 title: "Create a Server Recovery DVD for Remotely Administered Servers"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
-caps.latest.revision: 7
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Create a Server Recovery DVD for Remotely Administered Servers
 ##  <a name="BKMK_HeadlessRecovery"></a> Create a server recovery DVD for remotely administered servers  
  There are two models for factory reset and server recovery, and they differ based on the hardware that the customer received.  
@@ -34,7 +35,7 @@ ms.author: coreyp
   
  **Factory reset**  
   
- This recovery returns the server to the original state that existed when the server was shipped from the factory. Following a factory reset, you are asked to perform the initial configuration of the server just as you were the first time you turned it on, and all settings and customizations are lost. This is also referred to as â€œDay 0.â€? Because factory reset requires that a hardware-specific image be shipped with the server, the partner must author the server recovery DVD.  
+ This recovery returns the server to the original state that existed when the server was shipped from the factory. Following a factory reset, you are asked to perform the initial configuration of the server just as you were the first time you turned it on, and all settings and customizations are lost. This is also referred to as Day 0.? Because factory reset requires that a hardware-specific image be shipped with the server, the partner must author the server recovery DVD.  
   
  **Bare-metal restore**  
   
@@ -45,7 +46,7 @@ ms.author: coreyp
 ### Remotely administered server recovery  
  This section describes the required customizations that the partner must perform and the final media that must be shipped with each server. Before delving into the details, let us look at the customer experience.  
   
- In this scenario, the customerâ€™s server is no longer working. This could be caused by a virus, a hard disk failure, or some other cause. The customer inserts the server recovery DVD into a client computer that is located on the same network as the server. The server recovery application walks them through three steps to recover their server:  
+ In this scenario, the customer™s server is no longer working. This could be caused by a virus, a hard disk failure, or some other cause. The customer inserts the server recovery DVD into a client computer that is located on the same network as the server. The server recovery application walks them through three steps to recover their server:  
   
 1.  Creates a bootable USB flash drive that is used to restart the server in recovery mode. The USB flash drive must be 8 GB or larger.  
   

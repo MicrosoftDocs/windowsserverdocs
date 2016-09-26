@@ -1,25 +1,26 @@
 ---
 title: "Install or Remove Language Packs"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 98f13f63-4480-40ba-a7ef-d1d9b7582e5f
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Install or Remove Language Packs
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](http://technet.microsoft.com/library/hh824829) before you add the  Windows Server 2012 Essentials language pack.  
+>  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](http://technet.microsoft.com/library/hh824829) before you add the  Windows Server Essentials language pack.  
   
- Language packs are only available for creating multi-lingual images. The information in this section is specific to installing or removing language packs on  Windows Server 2012 Essentials.  
+ Language packs are only available for creating multi-lingual images. The information in this section is specific to installing or removing language packs on  Windows Server Essentials.  
   
 > [!NOTE]
 >  If you intend to run Initial Configuration (IC) from a client computer that does not support East-Asian languages, such as ja-jp, and if English is not included in the multilingual image on the server, the IC webpage will display squares. For the IC webpage to default to English, the multilingual image that you create must include English.  
@@ -36,7 +37,7 @@ ms.author: coreyp
  **dism.exe /online /Add-Package /PackagePath:C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
   
 > [!IMPORTANT]
->  You must also apply language packs for  Windows Server 2012 Essentials to fully localize the operating system.  
+>  You must also apply language packs for  Windows Server Essentials to fully localize the operating system.  
   
 ## Removing language packs from an image  
  You can use the following command to remove a language pack that you no longer want to include in an image:  

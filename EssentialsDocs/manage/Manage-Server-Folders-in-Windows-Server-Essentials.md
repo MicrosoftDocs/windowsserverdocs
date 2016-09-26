@@ -1,24 +1,25 @@
 ---
 title: "Manage Server Folders in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 01/14/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 090cf1b8-7b9b-48b9-ae85-b98477b8d7cc
-caps.latest.revision: 14
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Manage Server Folders in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
- As a server administrator, you can manage access to any server folders (known as â€œshared foldersï¿½? when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
+ As a server administrator, you can manage access to any server folders (known as shared folders when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
   
  The following topics provide information that will help you understand, create, and manage server folders:  
   
@@ -161,7 +162,7 @@ ms.author: coreyp
  You can modify the server folder name, its description, and define which user accounts have access to a server folder through the **View the folder properties** task on the **Server Folders** tab of the Dashboard.  
   
 > [!NOTE]
->  In  Windows Server 2012 R2 Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, you can also modify folder quota.  
+>  In  Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, you can also modify folder quota.  
   
 ##### To view or modify folder properties  
   
@@ -176,7 +177,7 @@ ms.author: coreyp
 5.  In **<Foldername\> Properties**, on the **General** tab, view or modify the name and description of the server folder.  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, you can also modify folder quota that gives a warning message when a server folder reaches its specified size.  
+    >  In  Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, you can also modify folder quota that gives a warning message when a server folder reaches its specified size.  
   
 ##  <a name="BKMK_5"></a> Add or move a server folder  
  You can **add more server folders** to store your files on the server in addition to the default server folders that are created during setup. You can add server folders on either the primary server or a member server running Windows Server Essentials.  
@@ -240,7 +241,7 @@ ms.author: coreyp
   
 -   A sub-folder of an existing shared folder  
   
--   A member server running  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed  
+-   A member server running  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed  
   
 ### Steps to add or move a server folder  
   
@@ -274,14 +275,14 @@ ms.author: coreyp
 5.  Follow the instructions to complete the wizard.  
   
 ##  <a name="BKMK_9"></a> Add a missing server folder  
- When the server detects that a pre-defined server folderâ€”Company, Users, Client Computer Backups, File History Backup, or Folder Redirectionâ€”is no longer shared (for some reason or another), an alert is generated to guide the user to resolve this issue. It is recommended that you try and restore the folder from server backup. However, if the server has not been backed up, select the missing folder and then click **Recreate the missing folder** to reconfigure the location of the server folder.  
+ When the server detects that a pre-defined server folder”Company, Users, Client Computer Backups, File History Backup, or Folder Redirection”is no longer shared (for some reason or another), an alert is generated to guide the user to resolve this issue. It is recommended that you try and restore the folder from server backup. However, if the server has not been backed up, select the missing folder and then click **Recreate the missing folder** to reconfigure the location of the server folder.  
   
 > [!NOTE]
->  Only pre-defined foldersâ€”Company, Users, Client Computer Backups, File History Backup, or Folder Redirectionâ€”can be recreated. User-created server folders and media server folders cannot be recreated.  
+>  Only pre-defined folders”Company, Users, Client Computer Backups, File History Backup, or Folder Redirection”can be recreated. User-created server folders and media server folders cannot be recreated.  
   
  After you restore or recreate the missing folder, it should no longer be listed as **Missing**.  
   
- For information about restoring files from server backups, see the section â€œLearn more about restoring files and foldersï¿½? in the topic [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
+ For information about restoring files from server backups, see the section Learn more about restoring files and folders in the topic [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_11"></a> Understand shared folders  
  There are several different ways that you can access your shared folders on Windows Server Essentials from a device that is connected to the server. For more information, see the topic [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md).  

@@ -1,31 +1,32 @@
 ---
 title: "Troubleshoot computer monitoring in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 07/31/2013
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
-caps.latest.revision: 13
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Troubleshoot computer monitoring in Windows Server Essentials
-This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in  Windows Server 2012 Essentials.  
+This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in  Windows Server Essentials.  
   
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ##  <a name="BKMK_TS"></a> Troubleshooting email notifications for alerts  
  This section lists various issues that you might encounter when using email notifications for alerts.  
   
 ### Cannot send the test email for the alert  
- **Issue** You get an error message that says, â€œCannot send the test email for alert.ï¿½?  
+ **Issue** You get an error message that says, Cannot send the test email for alert.  
   
  **Cause** This error might occur due to any of the following issues in the settings for alert notifications:  
   
@@ -46,7 +47,7 @@ This topic provides troubleshooting for issues encountered while monitoring the 
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  To see the ProgramData folder, you must have hidden items displayed. If you donâ€™t see the ProgramData folder, on the ribbonâ€™s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
+    >  To see the ProgramData folder, you must have hidden items displayed. If you don™t see the ProgramData folder, on the ribbon™s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
   
 ##### To update your email notification setup for alerts  
   

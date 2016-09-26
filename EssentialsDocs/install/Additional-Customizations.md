@@ -1,22 +1,23 @@
 ---
 title: "Additional Customizations"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Additional Customizations
-You can make the following additional customizations to create and customize an image of  Windows Server 2012 Essentials:  
+You can make the following additional customizations to create and customize an image of  Windows Server Essentials:  
   
 
 -   [Add Branding to the Dashboard, Remote Web Access, and Launchpad](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  

@@ -1,20 +1,21 @@
 ---
 title: "Use Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 05/20/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 86f158a5-c807-4242-b73d-e97b604adb5f
-caps.latest.revision: 6
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Use Windows Server Essentials
 The following topics provide information to help you get started using Windows Server Essentials:  
   
@@ -24,7 +25,7 @@ The following topics provide information to help you get started using Windows S
   
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
--   [Play Digital Media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md)  
+-   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)  
   
 ## See also  
   

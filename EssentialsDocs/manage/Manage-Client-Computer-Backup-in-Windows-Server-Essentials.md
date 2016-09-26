@@ -1,22 +1,23 @@
 ---
 title: "Manage Client Computer Backup in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 03/25/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
-caps.latest.revision: 14
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Manage Client Computer Backup in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
  This topic includes information about common backup tasks for client computers that you can accomplish by using the Windows Server Essentials Dashboard, and includes the following sections:  
   
@@ -88,7 +89,7 @@ ms.author: coreyp
 >  The computer must be online for you to set up backup.  
   
 > [!IMPORTANT]
->   Windows Server 2012 Essentials does not support backing up and restoring dynamic disks on client computers.  
+>   Windows Server Essentials does not support backing up and restoring dynamic disks on client computers.  
   
 #### To set up backup for a client computer  
   
@@ -104,7 +105,7 @@ ms.author: coreyp
 4.  Click **Close** when backup is set up for the computer.  
   
 ### Critical system files  
- When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the systemâ€™s registry, are required for the operating system to run properly.  
+ When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the system™s registry, are required for the operating system to run properly.  
   
 ### Find the file you are looking for  
  You can restore all the folders for a computer, multiple files and folders, or a single file or folder from an existing backup.  
@@ -141,7 +142,7 @@ ms.author: coreyp
 2.  In **Devices Tasks**, click **Customize Computer Backup and File History settings**.  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials, this task has been renamed **Client computer backup tasks**.  
+    >  In  Windows Server Essentials, this task has been renamed **Client computer backup tasks**.  
   
 3.  In **Client computer backup settings and tools**, on the **Computer Backup** tab, you can change the start and end times to meet your needs.  
   
@@ -167,7 +168,7 @@ ms.author: coreyp
 3.  In the **Devices Tasks** pane, click **Customize Computer Backup and File History settings**.  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials, this task has been renamed **Client Computer backup tasks**.  
+    >  In  Windows Server Essentials, this task has been renamed **Client Computer backup tasks**.  
   
 4.  In **Client computer backup settings and tools**, in the **Client computer backup retention policy** section, make the changes to the retention policy that meets your needs.  
   
@@ -198,7 +199,7 @@ ms.author: coreyp
 2.  In **Devices Tasks**, click **Customize Computer Backup and File History settings**.  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
+    >  In  Windows Server Essentials, click **Client computer backup tasks**.  
   
 3.  On the **Computer Backup** tab of the **Client computer and backup settings and tools** page, click **Reset to defaults**.  
   
@@ -227,7 +228,7 @@ ms.author: coreyp
 3.  In the **Devices Tasks** pane, click **Customize Computer Backup and File History settings.**  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
+    >  In  Windows Server Essentials, click **Client computer backup tasks**.  
   
 4.  In **Client computer backup settings and tools**, click the **Tools** tab.  
   
@@ -238,7 +239,7 @@ ms.author: coreyp
 7.  Depending on how large the backup database is, the database repair can take several hours. Click **Close**, and then click **OK** to close the **Customize Computer Backup and File History settings** page.  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup settings and tools**.  
+    >  In  Windows Server Essentials, click **Client computer backup settings and tools**.  
   
 #### To review the results of the backup database repair  
   
@@ -249,7 +250,7 @@ ms.author: coreyp
 3.  In the **Devices Tasks** pane, click **Customize Computer Backup and File History settings.**  
   
     > [!NOTE]
-    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
+    >  In  Windows Server Essentials, click **Client computer backup tasks**.  
   
 4.  In **Client computer backup settings and tools**, click the **Tools** tab.  
   
@@ -304,7 +305,7 @@ ms.author: coreyp
   
 -   There is not a recent successful backup. The number of days since the last successful backup is included in the notice.  
   
--    Windows Server 2012 Essentials only: A new volume is added to your computer. The person who administers your network needs to run the Customize Backup Wizard to include or exclude the volume for future backups.  
+-    Windows Server Essentials only: A new volume is added to your computer. The person who administers your network needs to run the Customize Backup Wizard to include or exclude the volume for future backups.  
   
 ##  <a name="BKMK_12"></a> View backup status from the Launchpad  
  Use the Launchpad to view quick backup status for your computer.  
@@ -329,7 +330,7 @@ ms.author: coreyp
     -   **Cannot connect**: Backup cannot connect to the Windows Server Client Computer Backup Provider Service.  
   
         > [!NOTE]
-        >  In  Windows Server 2012 R2 Essentials, this service has been renamed Windows Server Essentials Client Computer Management Service.  
+        >  In  Windows Server Essentials, this service has been renamed Windows Server Essentials Client Computer Management Service.  
   
     -   **Backup in progress**: Displays the percentage of backup completed.  
   
@@ -411,9 +412,9 @@ ms.author: coreyp
   
 -   Before you clean up or restore the client backup database, make sure to stop all client backups that are currently in progress.  
   
-     If you are running  Windows Server 2012 Essentials, you should also stop the Windows Server Client Computer Backup Service and the Windows Server Client Computer Backup Provider Service.  
+     If you are running  Windows Server Essentials, you should also stop the Windows Server Client Computer Backup Service and the Windows Server Client Computer Backup Provider Service.  
   
-     If you are running  Windows Server 2012 R2 Essentials, you should also stop the Windows Server Computer Backup Service.  
+     If you are running  Windows Server Essentials, you should also stop the Windows Server Computer Backup Service.  
   
      After completing the restore operation, restart the service.  
   
@@ -439,9 +440,9 @@ ms.author: coreyp
 ##  <a name="BKMK_FileHistory"></a> Understanding File History  
  The File History feature of Windows Server Essentials automatically backs up files that are in the Libraries, Contacts, Desktop, and Favorites folders of network computers that have File History capability. If the originals are lost, damaged or deleted, you can restore them. You can also find different versions of your files from a specific point in time. Over time, you will have a complete history of your files.  
   
- In  Windows Server 2012 Essentials, you can customize File History settings from the **File History** page of **Client computer backup settings and tools**.  
+ In  Windows Server Essentials, you can customize File History settings from the **File History** page of **Client computer backup settings and tools**.  
   
- In Windows Server 2012 R2 Essentials, you can customize the File History settings by going to the **Users** tab, and then selecting the **Change the File History setting** task.  
+ In Windows Server Essentials, you can customize the File History settings by going to the **Users** tab, and then selecting the **Change the File History setting** task.  
   
  The File History page provides the following options:  
   
