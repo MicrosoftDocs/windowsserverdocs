@@ -31,5 +31,6 @@ This guide contains the following sections.
 - [DNS Responses Based on Time of Day with an Azure Cloud App Server](dns-tod-azure-cloud-app-server.md)
 - [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md)
 - [Use DNS Policy for Applying Filters on DNS Queries](apply-filters-on-dns-queries.md)
+- [Use DNS Policy for Application Load Balancing](app-lb.md)
 
 
