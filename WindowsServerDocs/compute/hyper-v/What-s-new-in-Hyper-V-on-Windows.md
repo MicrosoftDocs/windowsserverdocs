@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 09/19/2016
+ms.date: 09/26/2016
 ---
 # What's new in Hyper-V on Windows Server 2016
 
@@ -64,7 +64,10 @@ Set-VMFirmware vmname -SecureBootTemplate MicrosoftUEFICertificateAuthority
 ```  
   
 For more information about Linux virtual machines on Hyper-V, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). For more information about the cmdlet, see [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx).
-  
+
+## More memory and processors for generation 2 virtual machines and Hyper-V hosts
+Starting with version 8, generation 2 virtual machines can use significantly more memory and virtual processors. Hosts also can be configured with significantly more memory and virtual processors than were previously supported. For details, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). For details about virtual machine versions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+
 ## <a name="BKMK_nested"></a>Nested virtualization \(New\) 
 This feature lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. This can be especially useful for development and test environments. To use nested virtualization, you'll need:  
   
@@ -155,9 +158,6 @@ For instructions on checking and upgrading the version, see [Upgrade virtual mac
 > -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2 .  
 > -   You can't downgrade the configuration to a previous version.  
 > -   The Update-VMVersion cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2 .  
-
-## Virtualization-based security \(New\)
-Available for generation 2 virtual machines, this feature protects secrets \(such as credentials\) from untrusted guest operating systems by storing them in an isolated space on the host that the guest operating system can't access. This solution is designed to protect secrets even if the guest kernel is exploited by malware. For details, see [Secure Hyper-V virtual machines using virtualization-based security](/plan/secure-hyper-v-virtual-machines-using-virtualization-based-security.md)
 
 ## <a name="BKMK_Containers"></a>Windows Containers \(New\) 
 Windows Containers allow many isolated applications to run on one computer system. They're fast to build and are highly scalable and portable. Two types of container runtime are available, each with a different degree of application isolation. Windows Server Containers use namespace and process isolation. Hyper-V Containers use a light-weight virtual machine for each container.  
