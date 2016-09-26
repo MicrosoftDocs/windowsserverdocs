@@ -1,4 +1,4 @@
-c---
+---
 title: Microsoft Server Application Compatibility
 description: "Compatibility chart for Server 2016 and Microsoft server applications."
 ms.custom: na
