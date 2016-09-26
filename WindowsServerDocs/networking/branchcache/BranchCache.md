@@ -35,7 +35,7 @@ If you are a system administrator, network or storage solution architect, or oth
 
 - You have deployed or are planning on deploying content servers at your main office that match the configurations that are described in this topic.
 
-- The client computers in your branch offices are running Windows 10,  Windows 8.1, Windows 8, or  Windows 7 .
+- The client computers in your branch offices are running Windows 10,  Windows 8.1, Windows 8, or  Windows 7.
 
 This topic includes the following sections:
 
@@ -63,17 +63,17 @@ This topic includes the following sections:
 
 ## <a name="bkmk_what"></a>What is BranchCache?
 
-BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of the Windows Server 2016 and Windows 10 operating systems, as well as in some editions of Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2 and  Windows 7. To optimize WAN bandwidth when users access content on remote servers, BranchCache downloads content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.
+BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of the Windows Server 2016 and Windows 10 operating systems, as well as in some editions of Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, and  Windows 7. To optimize WAN bandwidth when users access content on remote servers, BranchCache downloads content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.
 
 At branch offices, content is stored either on servers that are configured to host the cache or, when no server is available in the branch office, on client computers that are running Windows 10, Windows 8.1, Windows 8 or Windows 7.
 
 After a client computer requests and receives content from the main office and the content is cached at the branch office, other computers at the same branch office can obtain the content locally rather than downloading the content from the content server over the WAN link.
 
-When subsequent requests for the same content are made by client computers, the clients download *content information* from the server instead of the actual content. 
+When subsequent requests for the same content are made by client computers, the clients download *content information* from the server instead of the actual content.
 
-Content information consists of hashes that are calculated by using chunks of the original content. Content information hashes are extremely small compared to the content in the original data. 
+Content information consists of hashes that are calculated by using chunks of the original content. Content information hashes are extremely small compared to the content in the original data.
 
-Client computers then use the content information to locate the content from a cache in the branch office, whether the cache is located on a client computer or on a server. 
+Client computers then use the content information to locate the content from a cache in the branch office, whether the cache is located on a client computer or on a server.
 
 Client computers and servers also use content information to secure cached content so that it cannot be accessed by unauthorized users.
 
@@ -122,7 +122,7 @@ When you deploy BranchCache, the source content is stored on BranchCache-enabled
 
 ### Web servers
 
-Supported Web servers include computers that are running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 or Windows Server 2008 R2 that have the Web Server (IIS) server role installed and that use Hypertext Transfer Protocol (HTTP) or HTTP Secure (HTTPS). 
+Supported Web servers include computers that are running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2 that have the Web Server (IIS) server role installed and that use Hypertext Transfer Protocol (HTTP) or HTTP Secure (HTTPS).
 
 In addition, the Web server must have the BranchCache feature installed.
 
@@ -134,7 +134,7 @@ These file servers use Server Message Block (SMB) to exchange information betwee
 
 ### Application servers
 
-Supported application servers include computers that are running Windows Server 2016,  Windows Server 2012 R2, Windows Server 2012 or Windows Server 2008 R2 with Background Intelligent Transfer Service (BITS) installed and enabled. 
+Supported application servers include computers that are running Windows Server 2016,  Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2 with Background Intelligent Transfer Service (BITS) installed and enabled. 
 
 In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft System Center Configuration Manager Branch Distribution Point servers as BranchCache content servers.
 
@@ -155,9 +155,9 @@ For more information about cloud technologies in Windows Server 2016, see [Softw
 
 There are two versions of content information:
 
-- Content information that is compatible with computers running  Windows Server 2008 R2  and  Windows 7  is called version 1, or V1. With V1 BranchCache file segmentation, file segments are larger than in V2 and are of fixed size. Because of large fixed segment sizes, when a user makes a change that modifies the file length, not only is the segment with the change invalidated, but all of the segments to the end of the file are invalidated. The next call for the changed file by another user in the branch office therefore results in reduced WAN bandwidth savings because the changed content and all content after the change are sent over the WAN link.
+- Content information that is compatible with computers running  Windows Server 2008 R2 and  Windows 7 is called version 1, or V1. With V1 BranchCache file segmentation, file segments are larger than in V2 and are of fixed size. Because of large fixed segment sizes, when a user makes a change that modifies the file length, not only is the segment with the change invalidated, but all of the segments to the end of the file are invalidated. The next call for the changed file by another user in the branch office therefore results in reduced WAN bandwidth savings because the changed content and all content after the change are sent over the WAN link.
 
-- Content information that is compatible with computers running Windows Server 2016, Windows 10,  Windows Server 2012 R2 , Windows 8.1,  Windows Server 2012 , and Windows 8 is called version 2, or V2. V2 content information uses smaller, variable-sized segments that are more tolerant to changes within a file.  This increases the probability that segments from an older version of the file can be reused when users access an updated version, causing them to retrieve only the changed portion of the file from the content server, and using less WAN bandwidth.
+- Content information that is compatible with computers running Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1,  Windows Server 2012, and Windows 8 is called version 2, or V2. V2 content information uses smaller, variable-sized segments that are more tolerant to changes within a file. This increases the probability that segments from an older version of the file can be reused when users access an updated version, causing them to retrieve only the changed portion of the file from the content server, and using less WAN bandwidth.
 
 The following table provides information on the content information version that is used depending upon which client, content server, and hosted cache server operating systems you are using in your BranchCache deployment.
 
@@ -190,11 +190,11 @@ You can use Server Manager in Windows Server 2016 to install either the BranchCa
 
 |Functionality|Computer location|Install this BranchCache element|
 |-----------------|---------------------|------------------------------------|
-|Content server (BITS-based application server)|Main office or cloud data center|BranchCache feature|
-|Content server (Web server)|Main office or cloud data center|BranchCache feature|
-|Content server (file server using the SMB protocol)|Main office or cloud data center|BranchCache for Network Files role service of the File Services server role|
+|Content server \(BITS-based application server\)|Main office or cloud data center|BranchCache feature|
+|Content server \(Web server\)|Main office or cloud data center|BranchCache feature|
+|Content server \(file server using the SMB protocol\)|Main office or cloud data center|BranchCache for Network Files role service of the File Services server role|
 |Hosted cache server|Branch office|BranchCache feature with hosted cache server mode enabled|
-|BranchCache-enabled client computer|Branch office|No installation needed; just enable BranchCache and a BranchCache mode (distributed or hosted) on the client|
+|BranchCache-enabled client computer|Branch office|No installation needed; just enable BranchCache and a BranchCache mode \(distributed or hosted\) on the client|
 
 To install either the role service or the feature, open Server Manager and select the computers where you want to enable BranchCache functionality. In Server Manager, click **Manage**, and then click **Add Roles and Features**. The **Add Roles and Features** wizard opens. As you run the wizard, make the following selections:
 
@@ -348,9 +348,9 @@ After the initial portion of content information (Hash of Data + Segment Secret)
 
     `HoHoDk = HMAC(Kp, HoD + C), where C is the ASCII string "MS_P2P_CACHING" with NUL terminator.`
 
-The primary threat at this layer is the risk to the Segment Secret, however BranchCache encrypts the content data blocks to protect the Segment Secret. BranchCache does this by using the encryption key that is derived from the Segment Secret of the content segment within which the content blocks are located. 
+The primary threat at this layer is the risk to the Segment Secret, however BranchCache encrypts the content data blocks to protect the Segment Secret. BranchCache does this by using the encryption key that is derived from the Segment Secret of the content segment within which the content blocks are located.
 
-This approach ensures that an entity that is not in possession of the server secret cannot discover the actual content in a data block. The Segment Secret is treated with the same degree of security as the plaintext segment itself, because knowledge of the Segment Secret for a given segment enables an entity to obtain the segment from peers and then decrypt it. Knowledge of the Server Secret does not immediately yield any particular plaintext but can be used to derive certain types of data from the cipher text and then to possibly expose some partially known data to a brute-force guessing attack. The server secret, therefore, should be kept confidential.  
+This approach ensures that an entity that is not in possession of the server secret cannot discover the actual content in a data block. The Segment Secret is treated with the same degree of security as the plaintext segment itself, because knowledge of the Segment Secret for a given segment enables an entity to obtain the segment from peers and then decrypt it. Knowledge of the Server Secret does not immediately yield any particular plaintext but can be used to derive certain types of data from the cipher text and then to possibly expose some partially known data to a brute-force guessing attack. The server secret, therefore, should be kept confidential.
   
 ## <a name="BKMK_9"></a>BranchCache processes: Locate content
 
@@ -362,7 +362,7 @@ If the client computer is configured for distributed cache mode, however, the co
 
 When they are configured for distributed cache mode, client computers locate content by using a discovery protocol that is based on the Web Services Dynamic Discovery (WS-Discovery) protocol. Clients send WS-Discovery multicast Probe messages to discover cached content over the network. Probe messages include the Segment ID, which enables clients to check whether the requested content matches the content stored in their cache. Clients that receive the initial Probe message reply to the querying client with unicast Probe-Match messages if the Segment ID matches content that is cached locally.  
 
-The success of the WS-Discovery process depends on the fact that the client that is performing the discovery has the correct content information, which was provided by the content server, for the content that it is requesting.  
+The success of the WS-Discovery process depends on the fact that the client that is performing the discovery has the correct content information, which was provided by the content server, for the content that it is requesting.
 
 The main threat to data during the Request content phase is information disclosure, because access to the content information implies authorized access to content. To mitigate this risk, the discovery process does not reveal the content information, other than the Segment ID, which does not reveal anything about the plaintext segment that contains the content.
 
@@ -405,46 +405,46 @@ Servers and clients never exchange, share, or send each other the encryption key
 
 ### Security threats
 
-The primary security threats at this layer include:  
-  
--   Tampering with data:  
-  
-    *A client serving data to a requester tampers with the data*. The BranchCache security model uses hashes to confirm that neither the client nor the server has altered the data.  
-  
--   Information disclosure:  
-  
+The primary security threats at this layer include:
+
+- Tampering with data:
+
+  *A client serving data to a requester tampers with the data*. The BranchCache security model uses hashes to confirm that neither the client nor the server has altered the data.  
+
+- Information disclosure:  
+
     *BranchCache sends encrypted content to any client that specifies the appropriate Segment ID*. Segment IDs are public, so any client can receive encrypted content. However, if a malicious user obtains encrypted content, they must know the encryption key to decrypt the content. The upper layer protocol performs authentication and then gives the content information to the authenticated and authorized client. The security of the content information is equivalent to the security provided to the content itself, and BranchCache never exposes the content information.  
-  
-    *An attacker sniffs the wire to obtain the content*.  BranchCache encrypts all transfers between clients by using AES128 where the secret key is Ke, preventing data from being sniffed from the wire.  Content information that is downloaded from the content server is protected in exactly the same way as the data itself would have been and is hence no more or less protected from information disclosure than if BranchCache had not been used at all.  
-  
--   Denial of Service:  
-  
-    *A client is overwhelmed by requests for data*. BranchCache protocols incorporate queue management counters and timers to prevent clients from being overloaded.  
-  
+
+    *An attacker sniffs the wire to obtain the content*.  BranchCache encrypts all transfers between clients by using AES128 where the secret key is Ke, preventing data from being sniffed from the wire.  Content information that is downloaded from the content server is protected in exactly the same way as the data itself would have been and is hence no more or less protected from information disclosure than if BranchCache had not been used at all.
+
+-   Denial of Service:
+
+    *A client is overwhelmed by requests for data*. BranchCache protocols incorporate queue management counters and timers to prevent clients from being overloaded.
+
 ## <a name="BKMK_11"></a>BranchCache processes: Cache content
 
-On distributed cache mode client computers and hosted cache servers that are located in branch offices, content caches are built up over time as content is retrieved over WAN links.  
-  
-When client computers are configured with hosted cache mode, they add content to their own local cache and also offer data to the hosted cache server. The Hosted Cache Protocol provides a mechanism for clients to inform the hosted cache server about content and segment availability. 
+On distributed cache mode client computers and hosted cache servers that are located in branch offices, content caches are built up over time as content is retrieved over WAN links.
 
-To upload content to the hosted cache server, the client informs the server that it has a segment that is available. The hosted cache server then retrieves all of the content information that is associated with the offered segment, and downloads the blocks within the segment that it actually needs. This process is repeated until the client has no more segments to offer the hosted cache server.  
-  
-To update the hosted cache server by using the Hosted Cache Protocol, the following requirements must be met:  
-  
-- The client computer is required to have a set of blocks within a segment that it can offer to the hosted cache server. The client must supply content information for the offered segment; this is comprised of the Segment ID, the segment Hash of Data, the Segment Secret, and a list of all block hashes that are contained within the segment.  
-  
-- For hosted cache servers that are running  Windows Server 2008 R2 , a hosted cache server certificate and associated private key are required, and the certification authority (CA) that issued the certificate must be trusted by client computers in the branch office. This allows the client and server to participate successfully in HTTPS Server authentication.
+When client computers are configured with hosted cache mode, they add content to their own local cache and also offer data to the hosted cache server. The Hosted Cache Protocol provides a mechanism for clients to inform the hosted cache server about content and segment availability.
+
+To upload content to the hosted cache server, the client informs the server that it has a segment that is available. The hosted cache server then retrieves all of the content information that is associated with the offered segment, and downloads the blocks within the segment that it actually needs. This process is repeated until the client has no more segments to offer the hosted cache server.
+
+To update the hosted cache server by using the Hosted Cache Protocol, the following requirements must be met:
+
+- The client computer is required to have a set of blocks within a segment that it can offer to the hosted cache server. The client must supply content information for the offered segment; this is comprised of the Segment ID, the segment Hash of Data, the Segment Secret, and a list of all block hashes that are contained within the segment.
+
+- For hosted cache servers that are running  Windows Server 2008 R2, a hosted cache server certificate and associated private key are required, and the certification authority (CA) that issued the certificate must be trusted by client computers in the branch office. This allows the client and server to participate successfully in HTTPS Server authentication.
 
     > [!IMPORTANT]
     > Hosted cache servers that are running Windows Server 2016,  Windows Server 2012 R2 , or  Windows Server 2012  do not require a hosted cache server certificate and associated private key.  
-  
-- The client computer is configured with the computer name of the hosted cache server and the Transmission Control Protocol (TCP) port number upon which the hosted cache server is listening for BranchCache traffic. The hosted cache server's certificate is bound to this port. The computer name of the hosted cache server can be a fully qualified domain name (FQDN), if the hosted cache server is a domain member computer; or it can be the NetBIOS name of the computer if the hosted cache server is not a domain member.  
 
-- The client computer actively listens for incoming block requests. The port on which it is listening is passed as part of the offer messages from the client to the hosted cache server. This enables the hosted cache server to use BranchCache protocols to connect to the client computer to retrieve data blocks in the segment.  
+- The client computer is configured with the computer name of the hosted cache server and the Transmission Control Protocol (TCP) port number upon which the hosted cache server is listening for BranchCache traffic. The hosted cache server's certificate is bound to this port. The computer name of the hosted cache server can be a fully qualified domain name (FQDN), if the hosted cache server is a domain member computer; or it can be the NetBIOS name of the computer if the hosted cache server is not a domain member.
 
-- The hosted cache server starts to listen for incoming HTTP requests when it is initialized.  
+- The client computer actively listens for incoming block requests. The port on which it is listening is passed as part of the offer messages from the client to the hosted cache server. This enables the hosted cache server to use BranchCache protocols to connect to the client computer to retrieve data blocks in the segment.
 
-- If the hosted cache server is configured to require client computer authentication, both the client and the hosted cache server are required to support HTTPS authentication.  
+- The hosted cache server starts to listen for incoming HTTP requests when it is initialized.
+
+- If the hosted cache server is configured to require client computer authentication, both the client and the hosted cache server are required to support HTTPS authentication.
 
 ### Hosted cache mode cache population
 
@@ -467,7 +467,7 @@ Although the ACL is effective in preventing unauthorized users from accessing th
 Data that is stored in the content cache is not encrypted, so if data leakage is a concern, you can use encryption technologies such as BitLocker or the Encrypting File System (EFS). The local cache that is used by BranchCache does not increase the information disclosure threat borne by a computer in the branch office; the cache contains only copies of files that reside unencrypted elsewhere on the disk. 
 
 Encrypting the entire disk is particularly important in environments in which the physical security of the clients is difficult to ensure. For example, encrypting the entire disk helps to secure sensitive data on mobile computers that might be removed from the branch office environment.
-  
+
 ### Hosted cache server cache security
 
 In hosted cache mode, the greatest threat to the security of the hosted cache server is information disclosure. BranchCache in a hosted cache environment behaves in a similar manner to distributed cache mode, with file system permission protecting the cached data. The difference is that the hosted cache server stores all of the content that any BranchCache-enabled computer in the branch office requests, rather than just the data that a single client requests. The consequences of unauthorized intrusion into this cache could be much more serious, because much more data is at risk.  
@@ -476,5 +476,5 @@ In a hosted cache environment where the hosted cache server is running  Windows 
 
 > [!NOTE]
 > Hosted cache servers that are running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 encrypt all data in the cache by default, so the use of additional encryption technologies is not required.
-  
+
 Even if a client is configured in hosted cache mode, it will still cache data locally, and you might want to take steps to protect the local cache in addition to the cache on the hosted cache server.
