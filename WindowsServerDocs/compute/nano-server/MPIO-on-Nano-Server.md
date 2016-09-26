@@ -4,6 +4,7 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
+ms.date: 09/26/2016
 ms.technology: server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -13,9 +14,9 @@ ms.author: jaimeo
 ---
 # MPIO on Nano Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-This topic introduces the use of MPIO in Nano Server installations of Windows Server 2016 Technical Preview. For general information about MPIO in Windows Server, see [Multipath I/O Overview](https://technet.microsoft.com/library/cc725907.aspx).  
+This topic introduces the use of MPIO in Nano Server installations of Windows Server 2016. For general information about MPIO in Windows Server, see [Multipath I/O Overview](https://technet.microsoft.com/library/cc725907.aspx).  
   
 ## Using MPIO on Nano Server  
 You can use MPIO on Nano Server, but with these differences:  
@@ -32,7 +33,9 @@ You can use MPIO on Nano Server, but with these differences:
   
 -   Path states (active/passive) for ALUA arrays are picked up from the target array.  
   
--   Storage devices are claimed by bus type (for example, FC, iSCSI, or SAS). When MPIO is installed on Nano Server, disks are still exposed as duplicates (one available per path) until MPIO is configured to claim and manage particular disks. The sample script in this topic will claim or unclaim disks for MPIO.  
+-   Storage devices are claimed by bus type (for example, FC, iSCSI, or SAS). When MPIO is installed on Nano Server, disks are still exposed as duplicates (one available per path) until MPIO is configured to claim and manage particular disks. The sample script in this topic will claim or unclaim disks for MPIO.
+
+- iSCSI boot is not supported.
   
 Enable MPIO with this Windows PowerShell cmdlet:  
   
