@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Configure the CDP and AIA Extensions on CA1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this procedure to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.  
   

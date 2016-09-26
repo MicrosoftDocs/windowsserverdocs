@@ -8,6 +8,9 @@ ms.author: jamesmci
 author: jamesmci
 ---
 # Wireless Access Deployment Planning
+
+>Applies To: Windows Server&reg; 2016
+
 Before you deploy wireless access, you must plan the following items:
 
 - Installation of wireless access points \(APs\) on your network
