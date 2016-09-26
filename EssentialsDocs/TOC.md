@@ -1,4 +1,4 @@
-# [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+# [Windows Server 2016 Essentials and Windows Server 2012 Essentials](Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
 ## [What's New in Windows Server Essentials](What-s-New-in-Windows-Server-Essentials.md)
 ## [Install Windows Server Essentials](install/Install-Windows-Server-Essentials.md)
 ### [Add a Tab to Settings](install/Add-a-Tab-to-Settings.md)

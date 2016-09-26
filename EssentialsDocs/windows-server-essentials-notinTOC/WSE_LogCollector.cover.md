@@ -22,8 +22,3 @@ ms.author: coreyp
   
  To view the most recent version of this guide, see [Using the Windows Server 2012 Essentials Log Collector](http://go.microsoft.com/fwlink/?LinkId=255211) at the Microsoft TechNet website.  
   
-
- ![Microsoft logo](media/DocCoverBottom.gif "DocCoverBottom")
-
- ![Microsoft logo](../windows-server-essentials-notinTOC/media/DocCoverBottom.gif "DocCoverBottom")
-

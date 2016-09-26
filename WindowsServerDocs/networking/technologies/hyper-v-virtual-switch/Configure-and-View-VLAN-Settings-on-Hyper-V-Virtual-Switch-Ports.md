@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn best practices for configuring and viewing virtual Local Area Network (VLAN) settings on a Hyper-V Virtual Switch port.
 
