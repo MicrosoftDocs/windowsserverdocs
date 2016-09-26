@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Add a DNS Resource Record
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to add one or more new DNS resource records by using the IPAM client console.  
   

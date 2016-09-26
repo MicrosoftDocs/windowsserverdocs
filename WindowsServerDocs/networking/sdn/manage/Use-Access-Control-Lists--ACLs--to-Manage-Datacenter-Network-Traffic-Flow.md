@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to configure access control lists to manage data traffic flow using Datacenter Firewall and ACLs on virtual subnets.  
   

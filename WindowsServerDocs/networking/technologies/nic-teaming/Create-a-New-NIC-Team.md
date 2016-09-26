@@ -16,7 +16,7 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-You can use this topic to create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) that is running Windows Server 2016.  
+You can use this topic to create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) that is running  Windows Server 2016.  
   
 > [!IMPORTANT]  
 > If you are creating a new NIC Team in a VM, review the topic [Create a New NIC Team in a VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md) before you perform this procedure.  

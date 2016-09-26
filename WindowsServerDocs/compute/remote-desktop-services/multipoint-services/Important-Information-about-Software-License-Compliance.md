@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd42fbac-fa7b-484d-b97d-3911e9180e7b
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Important Information about Software License Compliance

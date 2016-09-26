@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # View DNS Resource Records for a Specific IP Address
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to view the DNS resource records that are associated with the IP Address that you choose.  
   

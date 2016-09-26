@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # DNS Resource Record Management
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides information about managing DNS resource records by using IPAM.  
   
@@ -27,7 +27,7 @@ This topic provides information about managing DNS resource records by using IPA
 > -   [View DNS Resource Records for a Specific IP Address](../../technologies/ipam/View-DNS-Resource-Records-for-a-Specific-IP-Address.md)  
   
 ## Resource record management overview  
-When you deploy IPAM in Windows Server&reg; 2016 Technical Preview, you can perform server discovery to add DHCP and DNS servers to the IPAM server management console. The IPAM server then dynamically collects DNS data every six hours from the DNS servers that it is configured to manage. IPAM maintains a local database where it stores this DNS data. IPAM provides you with notification of the day and time that the server data was collected, as well as telling you the next day and time when data collection from DNS servers will occur.  
+When you deploy IPAM in  Windows Server 2016, you can perform server discovery to add DHCP and DNS servers to the IPAM server management console. The IPAM server then dynamically collects DNS data every six hours from the DNS servers that it is configured to manage. IPAM maintains a local database where it stores this DNS data. IPAM provides you with notification of the day and time that the server data was collected, as well as telling you the next day and time when data collection from DNS servers will occur.  
   
 The yellow status bar in the following illustration shows the user interface location of IPAM notifications.  
   
@@ -82,7 +82,7 @@ Following is a list of DNS resource record types that are collected by IPAM.
   
 -   X.25  
   
-In Windows Server 2016 Technical Preview, IPAM provides integration between IP address inventory, DNS Zones, and DNS resource records:  
+In  Windows Server 2016, IPAM provides integration between IP address inventory, DNS Zones, and DNS resource records:  
   
 -   You can use IPAM to automatically build an IP address inventory from DNS resource records.  
   

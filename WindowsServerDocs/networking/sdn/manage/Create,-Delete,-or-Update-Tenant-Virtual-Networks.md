@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Create, Delete, or Update Tenant Virtual Networks
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to create, delete, and update Hyper-V Network Virtualization Virtual Networks after you deploy Software Defined Networking (SDN).  
   

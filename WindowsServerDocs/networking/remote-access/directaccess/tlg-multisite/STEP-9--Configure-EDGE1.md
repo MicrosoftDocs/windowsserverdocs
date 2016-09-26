@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 9 Configure EDGE1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following procedures are performed on the EDGE1 server:  
   

@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Deploy Software Defined Network Technologies using Windows PowerShell
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use the topics in this section to deploy individual SDN technologies using Windows PowerShell.  
   

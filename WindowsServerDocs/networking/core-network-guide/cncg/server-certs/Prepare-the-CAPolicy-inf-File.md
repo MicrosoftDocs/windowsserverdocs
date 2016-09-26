@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Prepare the CAPolicy.inf File
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 On CA1, you must prepare the CAPolicy.inf file before installing Active Directory Certificate Services.  
   

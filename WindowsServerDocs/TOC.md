@@ -817,7 +817,7 @@
 ####### [Step 2: Configure the DirectAccess Server](networking/remote-access/directaccess/single-server-wizard/Step-2--Configure-the-DirectAccess-Server.md)
 ####### [Step 3: Verify the Deployment](networking/remote-access/directaccess/single-server-advanced/Step-3--Verify-the-Deployment.md)
 #### [RAS Gateway](networking/remote-access/ras-gateway/RAS-Gateway.md)
-##### [GRE Tunneling in Windows Server Technical Preview](networking/remote-access/ras-gateway/gre-tunneling-windows-server.md)
+##### [GRE Tunneling in Windows Server 2016](networking/remote-access/ras-gateway/gre-tunneling-windows-server.md)
 #### [Remote Access Server Role Documentation](networking/remote-access/ras/Remote-Access-Server-Role-Documentation.md)
 ##### [Deploy Remote Access in an Enterprise](networking/remote-access/ras/Deploy-Remote-Access-in-an-Enterprise.md)
 ###### [Deploy Remote Access in a Cluster](networking/remote-access/ras/cluster/Deploy-Remote-Access-In-Cluster.md)

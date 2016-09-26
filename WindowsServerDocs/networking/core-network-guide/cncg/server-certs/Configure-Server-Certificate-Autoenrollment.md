@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Configure Server Certificate Autoenrollment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
   
 > [!NOTE]  

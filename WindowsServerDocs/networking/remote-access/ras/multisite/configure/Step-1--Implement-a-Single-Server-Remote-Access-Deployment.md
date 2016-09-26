@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 1 Implement a Single Server Remote Access Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The first configuration step to deploy Remote Access in a multisite topology is to implement an advanced single server deployment and then plan to add servers to each multisite entry point.  
   

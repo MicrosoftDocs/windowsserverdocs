@@ -15,10 +15,10 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016, in addition fo information about Switch Embedded Teaming (SET).  
+This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in  Windows Server 2016, in addition fo information about Switch Embedded Teaming (SET).  
   
 > [!NOTE]  
-> In editions of Windows Server previous to Windows Server 2016, it is not possible to configure RDMA on network adapters that  are bound to a NIC Team or to a Hyper-V Virtual Switch.  In Windows Server 2016, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET).  
+> In editions of Windows Server previous to  Windows Server 2016, it is not possible to configure RDMA on network adapters that  are bound to a NIC Team or to a Hyper-V Virtual Switch.  In  Windows Server 2016, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET).  
   
 This topic contains the following sections.  
   
@@ -27,9 +27,9 @@ This topic contains the following sections.
 -   [Switch Embedded Teaming (SET)](#bkmk_sswitchembedded)  
   
 ## <a name="bkmk_rdma"></a>Configuring RDMA Interfaces with Hyper-V  
-In Windows Server 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch.  This increases the number of physical network adapters that are required to be installed in the Hyper-V host.    In Windows Server 2016, you can use fewer network adapters while using RDMA with or without SET.  
+In Windows Server 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch.  This increases the number of physical network adapters that are required to be installed in the Hyper-V host. In  Windows Server 2016, you can use fewer network adapters while using RDMA with or without SET.  
   
-The image below illustrates the software architecture changes between  Windows Server 2012 R2  and Windows Server 2016.  
+The image below illustrates the software architecture changes between  Windows Server 2012 R2 and Windows Server 2016.  
   
 ![Software architecture changes](../../media/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/rdma_over.jpg)  
   
@@ -120,7 +120,8 @@ Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -Isolat
 ```  
   
 ## <a name="bkmk_sswitchembedded"></a>Switch Embedded Teaming (SET)  
-This section provides an overview of  Switch Embedded Teaming (SET) in Windows Server 2016, and contains the following sections.  
+
+This section provides an overview of  Switch Embedded Teaming (SET) in  Windows Server 2016, and contains the following sections.  
   
 -   [SET Overview](#bkmk_over)  
   
@@ -143,13 +144,14 @@ This section provides an overview of  Switch Embedded Teaming (SET) in Windows S
 -   [Managing a SET team](#bkmk_manage)  
   
 ## <a name="bkmk_over"></a>SET Overview  
-SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.  
+
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in  Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.  
   
 SET allows you to group between one and eight physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
 SET member network adapters must all be installed in the same physical Hyper-V host to be placed in a team.  
   
 > [!NOTE]  
-> The use of SET is only supported in Hyper-V Virtual Switch in Windows Server 2016. You cannot deploy SET in  Windows Server 2012 R2 .  
+> The use of SET is only supported in Hyper-V Virtual Switch in  Windows Server 2016. You cannot deploy SET in  Windows Server 2012 R2 .  
   
 In addition, you can connect your teamed NICs to the same physical switch or to different physical switches. If you connect NICs to different switches, both switches must be on the same subnet.  
   
@@ -162,6 +164,7 @@ Because SET is integrated into the Hyper-V Virtual Switch, you cannot use SET in
 In addition, SET architecture does not expose team interfaces. Instead, you must configure Hyper-V Virtual Switch ports.  
   
 ## <a name="bkmk_avail"></a>SET Availability  
+
 SET is available in all versions of Windows Server 2016 that include Hyper-V and the SDN stack. In addition, you can use Windows PowerShell commands and Remote Desktop connections to manage SET from remote computers that are running a client operating system upon which the tools are supported.  
   
 ## <a name="bkmk_nics"></a>Supported NICs for SET  
@@ -186,9 +189,9 @@ SET is compatible with the following networking technologies in Windows Server 2
   
 -   Virtual Machine Queues (VMQ)  
   
--   Virtual Receive Side Scalaing (RSS)  
+-   Virtual Receive Side Scaling (RSS)  
   
-SET is not compatible with the following networking technologies in Windows Server 2016.  
+SET is not compatible with the following networking technologies in  Windows Server 2016.  
   
 -   802.1X authentication  
   
@@ -259,6 +262,7 @@ Some VMQ settings appear to be settings for RSS queues but are really settings o
 -   The team members' processors should be, to the extent practical, non-overlapping. For example, in a 4-core host (8 logical processors) with a team of 2 10Gbps NICs, you could set the first one to use base processor of 2 and to use 4 cores; the second would be set to use base processor 6 and use 2 cores.  
   
 ## <a name="bkmk_hnv"></a>SET and Hyper-V Network Virtualization (HNV)  
+
 SET is fully compatible with Hyper-V Network Virtualization in Windows Server 2016.  The HNV management system provides information to the SET driver that allows SET to distribute the network traffic load in a manner that is optimized for the HNV traffic.  
   
 ## <a name="bkmk_live"></a>SET and Live Migration  

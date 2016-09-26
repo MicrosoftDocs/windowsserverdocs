@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Plan the DirectAccess Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning the Remote Access infrastructure, the next step in enabling DirectAccess is to plan the settings for the Enable DirectAccesss Wizard.  
   

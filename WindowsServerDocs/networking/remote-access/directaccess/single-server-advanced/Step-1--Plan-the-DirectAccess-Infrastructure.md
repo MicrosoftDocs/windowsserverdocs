@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 1 Plan the DirectAccess Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The first step of planning for an advanced DirectAccess deployment on a single server is to plan the infrastructure that is required for the deployment. This topic describes the infrastructure planning steps. These planning tasks do not need to be completed in a specific order.  
   
@@ -492,7 +492,7 @@ DirectAccess uses AD DS and Active Directory Group policy objects (GPOs) as foll
   
 When you plan AD DS for a DirectAccess deployment, consider the following requirements:  
   
--   At least one domain controller must be installed with the Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  operating system.  
+-   At least one domain controller must be installed with the  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  operating system.  
   
     If the domain controller is on a perimeter network (and therefore reachable from the Internet-facing network adapter of the DirectAccess server), you must prevent the DirectAccess server from reaching it by adding packet filters on the domain controller to prevent connectivity to the IP address of the Internet adapter.  
   
