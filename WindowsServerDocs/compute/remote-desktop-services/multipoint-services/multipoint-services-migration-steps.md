@@ -2,15 +2,15 @@
 title: Steps for migrating MultiPoint Services
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-2016
-ms.technology: remote-desktop-services
+ms.prod: windows-server-threshold
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ee77efa-7cc5-4ddf-aaff-b5634a717014
 author: lizap
-manager: swadhwa
+manager: dongill
 ---
 # Migrate to  MultiPoint Services in Windows Server 2016
 

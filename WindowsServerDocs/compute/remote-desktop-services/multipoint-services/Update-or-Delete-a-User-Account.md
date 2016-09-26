@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7f55a35-c932-482c-97d4-ef3c1f390cbf
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Update or Delete a User Account

@@ -2,15 +2,15 @@
 title: MultiPoint Services - post-migration tasks
 ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-2016
-ms.technology: remote-desktop-services
+ms.prod: windows-server-threshold
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1497cae0-071e-467d-89b8-a7050815d7de
 author: lizap
-manager: swadhwa
+manager: dongill
 ---
 # MultiPoint Services - post-migration tasks
 
