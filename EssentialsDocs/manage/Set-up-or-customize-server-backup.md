@@ -1,32 +1,23 @@
 ---
 title: "Set up or customize server backup"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 05/01/2013
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
-caps.latest.revision: 14
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-translation.priority.ht: 
-  - de-de
-  - es-es
-  - fr-fr
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Set up or customize server backup
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
  Server backup is not automatically configured during installation. You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  
   
@@ -59,7 +50,7 @@ translation.priority.ht:
     >  If you start the wizard before attaching the external hard drive to the server, click **Refresh list** on the **Select the backup destination** page after attaching the hard drive.  
   
 > [!NOTE]
->  In the default installation of  Windows Server 2012 Essentials, the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
+>  In the default installation of  Windows Server Essentials, the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
 >   
 >  1.  Press the Windows key + W to open **Search**.  
 > 2.  In the Search text box, type **Defragment**.  
@@ -86,9 +77,9 @@ translation.priority.ht:
   
 -   If you choose a drive that contains previous backups as the backup target, the wizard allows you choose if you want to keep the previous backups. If you keep the backups, the wizard does not format the drive.  
   
--   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running  Windows Server 2012 Essentials.  
+-   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running  Windows Server Essentials.  
   
--   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don’t need the data on the disk, you can reformat the disk and use it for backups.  
+-   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don™t need the data on the disk, you can reformat the disk and use it for backups.  
   
     > [!CAUTION]
     >  All data will be deleted when you reformat the disk.  
@@ -110,7 +101,7 @@ translation.priority.ht:
     2.  Select the folder you want to stop sharing, and then, on the task pane, click **Stop**.  
   
 > [!NOTE]
->  If a backup is unsuccessful because the backup drive had insufficient space, the drive letter for the backup target drive is removed from the Windows Server 2012 Essentials database, and the Dashboard does not display the drive. If you want to use the drive in future backups, you must reassign the drive letter using a native tool.  
+>  If a backup is unsuccessful because the backup drive had insufficient space, the drive letter for the backup target drive is removed from the Windows Server Essentials database, and the Dashboard does not display the drive. If you want to use the drive in future backups, you must reassign the drive letter using a native tool.  
 >   
 >  **To reassign a drive letter for an existing volume**  
 >   

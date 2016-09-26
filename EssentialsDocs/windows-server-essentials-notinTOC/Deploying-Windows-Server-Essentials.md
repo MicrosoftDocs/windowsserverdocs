@@ -1,23 +1,22 @@
 ---
 title: "Deploying Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 08/20/2013
+ms.date: 10/03/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2012 R2
-  - Windows Server 2012 R2 Essentials
-  - Windows Storage Server 2012 R2 Essentials
 ms.assetid: 04f680d2-8d3a-42ac-a916-82634e5f5154
-caps.latest.revision: 21
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Deploying Windows Server Essentials
- This topic applies to a server running Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
 ## UI Help  
   
@@ -32,7 +31,7 @@ ms.author: coreyp
   
 -   [Support information](Deploying-Windows-Server-Essentials.md#BKMK_Support)  
   
--   [Troubleshoot Windows Server 2012 R2 Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+-   [Troubleshoot Windows Server Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
 
 -   [What should I know before I personalize my server?](Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
   
@@ -44,7 +43,7 @@ ms.author: coreyp
   
 -   [Support information](Deploying-Windows-Server-Essentials.md#BKMK_Support)  
   
--   [Troubleshoot Windows Server 2012 R2 Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+-   [Troubleshoot Windows Server Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
 
   
 ##  <a name="BKMK_Personalize"></a> What should I know before I personalize my server?  
@@ -80,7 +79,7 @@ ms.author: coreyp
 -   Must not contain only numbers  
   
 ### Reserved words  
- Some words are used by the operating system. These are called “reserved words.�? If you attempt to use a reserved word when you name your server, you will receive an error message. For non-English installations, do not use the English or localized (reserved) words.  
+ Some words are used by the operating system. These are called reserved words. If you attempt to use a reserved word when you name your server, you will receive an error message. For non-English installations, do not use the English or localized (reserved) words.  
   
  Reserved words include:  
   
@@ -170,9 +169,9 @@ ms.author: coreyp
  By participating in the Customer Experience Improvement Program (CEIP), you can help Microsoft improve your server software. CEIP collects information about how customers use Microsoft programs and about some of the issues that customers encounter. Microsoft uses this information to improve the products and features that customers use most often and to help create solutions to common issues. Participation in the program is voluntary, and the end results are software improvements to better meet the needs of our customers. When you participate in the program, we collect basic information about how you use your programs, your computer, and your connected devices. We also collect information about how each of these is set up and performing.  
   
 ##  <a name="BKMK_DateTime"></a> Why are the data and time settings important?  
- Computers keep the time on their internal clocks, which allows them to perform any function that requires the date or time. For scheduling purposes, however, the clocks must be set to the correct date and time, and they must be synchronized with the other clocks in the network. With time synchronization, computers set their clocks automatically to match another computer's clock.  Windows Server 2012 R2 Essentials maintains very accurate time, and then all other computers set their clocks to match the server’s time. In this way, you can set an accurate time on all computers.  
+ Computers keep the time on their internal clocks, which allows them to perform any function that requires the date or time. For scheduling purposes, however, the clocks must be set to the correct date and time, and they must be synchronized with the other clocks in the network. With time synchronization, computers set their clocks automatically to match another computer's clock.  Windows Server Essentials maintains very accurate time, and then all other computers set their clocks to match the server™s time. In this way, you can set an accurate time on all computers.  
   
-  Windows Server 2012 R2 Essentials uses the time synchronization service to synchronize the date and time of computers running in a  Windows Server 2012 R2 Essentials network. Synchronized time is critical because the default authentication protocol uses the server’s time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time,  Windows Server 2012 R2 Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
+  Windows Server Essentials uses the time synchronization service to synchronize the date and time of computers running in a  Windows Server Essentials network. Synchronized time is critical because the default authentication protocol uses the server™s time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time,  Windows Server Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
   
 #### To verify the date and time settings on your computer  
   
@@ -204,11 +203,11 @@ ms.author: coreyp
 9. Click **OK** to close the **Date and Time** dialog box.  
   
 ##  <a name="BKMK_ConnectComputer"></a> How do I connect my computers to my server?  
- When you connect a computer to the server running  Windows Server 2012 R2 Essentials,  Windows Server 2012 R2 with the Windows Server Essentials Experience role installed, make sure your client computer has a valid connection to the Internet. In addition, you need the following information:  
+ When you connect a computer to the server running  Windows Server Essentials,  Windows Server 2012 R2 with the Windows Server Essentials Experience role installed, make sure your client computer has a valid connection to the Internet. In addition, you need the following information:  
   
 -   The user name and password of the person who will use the computer on the new network.  
   
--   The user name and password of the computer’s local administrator account.  
+-   The user name and password of the computer™s local administrator account.  
   
 > [!NOTE]
 >  Complete the following procedure on all client computers to connect them to your server.  
@@ -239,7 +238,7 @@ ms.author: coreyp
   
 7.  The Connect a Computer to the Server Wizard appears. Do the following to complete the wizard:  
   
-    1.  On the **Find my server** page, auto-detect the server in the local networks and select the server that you want to connect to. Or, if you have the information, you can manually input your server’s name or domain address.  
+    1.  On the **Find my server** page, auto-detect the server in the local networks and select the server that you want to connect to. Or, if you have the information, you can manually input your server™s name or domain address.  
   
     2.  On the **Type your new network user name and password** page, do the following:  
   
@@ -268,13 +267,13 @@ ms.author: coreyp
     2.  From the **Dashboard** link, you can administer your server.  
   
 ##  <a name="BKMK_Support"></a> Support information  
- For help resolving issues in  Windows Server 2012 R2 Essentials, you can post your questions on the [Windows Server 2012 R2 Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
+ For help resolving issues in  Windows Server Essentials, you can post your questions on the [Windows Server Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
   
-##  <a name="BKMK_Troubleshoot"></a> Troubleshoot Windows Server 2012 R2 Essentials installation  
- Troubleshooting information that is related to a  Windows Server 2012 R2 Essentials installation is currently not available. For help resolving installation issues, you can post your questions on the [Windows Server 2012 R2 Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
+##  <a name="BKMK_Troubleshoot"></a> Troubleshoot Windows Server Essentials installation  
+ Troubleshooting information that is related to a  Windows Server Essentials installation is currently not available. For help resolving installation issues, you can post your questions on the [Windows Server Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
   
 ## See also  
   
--   [Install and Configure Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
+-   [Install and Configure Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
--   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+-   [Windows Server Essentials and Windows Server Essentials](../Windows-Server-Essentials-Overview.md)

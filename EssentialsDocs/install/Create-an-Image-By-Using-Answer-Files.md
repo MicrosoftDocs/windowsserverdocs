@@ -1,20 +1,21 @@
 ---
 title: "Create an Image By Using Answer Files"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 72809c9d-c2c9-478c-a867-65d3b9a08b95
-caps.latest.revision: 5
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Create an Image By Using Answer Files
 When creating a custom image, you should take advantage of the support files that can be used to add, change, or keep track of data, settings and conditions. The following support files can be used in the installation process:  
   
