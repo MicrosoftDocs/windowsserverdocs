@@ -14,6 +14,8 @@ author: jamesmci
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 
+>Applies To: Windows Server&reg; 2016
+
 You can use this topic to learn how to use the Software Defined Networking \(SDN\)  software load balancer \(SLB\) to provide outbound network address translation NAT, inbound NAT, or load balancing between multiple instances of an application.
 
 This topic contains the following sections.
@@ -36,7 +38,7 @@ You can configure SLB to do the following.
 * Forward external traffic to a specific VM.  This is called inbound NAT.
 
 >[!IMPORTANT]
->A known issue prevents the Load Balancer objects in the NetworkController Windows PowerShell module from working correctly in Windows Server&reg; 2016 Technical Preview 5. The workaround is to use dynamic hash tables and Invoke-WebRequest instead. This method is demonstrated in the following examples.
+>A known issue prevents the Load Balancer objects in the NetworkController Windows PowerShell module from working correctly in  Windows Server 2016 5. The workaround is to use dynamic hash tables and Invoke-WebRequest instead. This method is demonstrated in the following examples.
 
 
 ## <a name="bkmk_publicvip"></a>Example: Create a public VIP for load balancing a pool of two VMs on a virtual network

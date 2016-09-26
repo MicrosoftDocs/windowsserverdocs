@@ -13,6 +13,9 @@ ms.author: jamesmci
 author: jamesmci
 ---
 # Manage Tenant Workloads
+
+>Applies To: Windows Server&reg; 2016
+
 This topic contains links to documentation that allows you to manage tenant workloads by adding tenant virtual machines (VMs), using network virtual appliances, configuring software load balancing, and more.
 
 This section includes the following topics.

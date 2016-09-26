@@ -15,9 +15,9 @@ author: vhorne
 ---
 # Deploy Software Defined Networking
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-The topics in this section provide information about the different methods you can use to deploy a Software Defined Networking (SDN) infrastructure and the individual technologies that are included in Windows Server 2016 Technical Preview.  
+The topics in this section provide information about the different methods you can use to deploy a Software Defined Networking (SDN) infrastructure and the individual technologies that are included in  Windows Server 2016.  
   
 -   [Deploy a Software Defined Network Infrastructure](../../sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)  
 -   [Deploy Software Defined Network Technologies using Windows PowerShell](../../sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-PowerShell.md)  
