@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 3 Verify the Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.  
   

@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 2 Configure APP1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Use the following steps to prepare APP1 for OTP support:  
   

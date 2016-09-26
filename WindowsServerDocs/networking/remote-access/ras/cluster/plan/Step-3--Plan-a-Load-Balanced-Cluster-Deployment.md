@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 3 Plan a Load-Balanced Cluster Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The next step is to plan the load-balancing configuration and cluster deployment.  
   

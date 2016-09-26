@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Create a DNS Zone
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to create a DNS zone by using the IPAM client console.  
   

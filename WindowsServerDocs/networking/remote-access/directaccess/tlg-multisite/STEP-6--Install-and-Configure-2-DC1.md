@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 6 Install and Configure 2-DC1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 2-DC1 provides the following services:  
   
@@ -37,15 +37,15 @@ author: coreyp-at-msft
 -   [Force replication between DC1 and 2-DC1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#replication)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on 2-DC1  
-First, install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
+First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
   
 #### To install the operating system on 2-DC1  
   
-1.  Start the installation of Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 .  
+1.  Start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 .  
   
-2.  Follow the instructions to complete the installation, specifying Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
+2.  Follow the instructions to complete the installation, specifying  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
   
-3.  Connect 2-DC1 to a network that has Internet access and run Windows Update to install the latest updates for Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
+3.  Connect 2-DC1 to a network that has Internet access and run Windows Update to install the latest updates for  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
   
 4.  Connect 2-DC1 to the 2-Corpnet subnet.  
   

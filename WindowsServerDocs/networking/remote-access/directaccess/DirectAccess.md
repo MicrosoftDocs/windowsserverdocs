@@ -14,9 +14,9 @@ author: jamesmci
 ---
 # DirectAccess
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, as well as for links to additional DirectAccess documentation for Windows Server 2016 Technical Preview.  
+You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, as well as for links to additional DirectAccess documentation for  Windows Server 2016.  
   
 > [!NOTE]  
 > In addition to this topic, the following DirectAccess documentation is available.  
@@ -39,7 +39,7 @@ DirectAccess provides support only for domain-joined clients that include operat
   
 The following server operating systems support DirectAccess.  
   
--   You can deploy all versions of Windows Server 2016 Technical Preview as a DirectAccess client or a DirectAccess server.  
+-   You can deploy all versions of  Windows Server 2016 as a DirectAccess client or a DirectAccess server.  
   
 -   You can deploy all versions of Windows Server 2012 R2 as a DirectAccess client or a DirectAccess server.  
   

@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # DirectAccess Known Issues
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
   
 ## Recommended hotfixes and updates for Windows Server 2012 DirectAccess  

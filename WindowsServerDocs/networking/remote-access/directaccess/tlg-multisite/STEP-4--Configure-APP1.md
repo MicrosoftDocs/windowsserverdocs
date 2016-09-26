@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 4 Configure APP1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.  
   
