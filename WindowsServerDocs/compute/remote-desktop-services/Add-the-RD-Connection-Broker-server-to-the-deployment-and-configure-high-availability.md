@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Add the RD Connection Broker server to the deployment and configure high availability
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 1. Connect to the RDMS server virtual machine. (The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.)   
     1.  In the Azure portal click **Browse > Resource groups** and click the resource group for the deployment.  

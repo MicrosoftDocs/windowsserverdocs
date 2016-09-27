@@ -15,7 +15,7 @@ manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Each user and device that connects to a Remote Desktop session host needs a client access licenses (CAL). You use RD Licensing to install, issue, and track RDS CALs.  
 

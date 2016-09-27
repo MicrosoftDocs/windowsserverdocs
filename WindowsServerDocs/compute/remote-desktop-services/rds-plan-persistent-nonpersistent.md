@@ -15,6 +15,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Persistent or non-persistent sessions
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Choose between persistent and non-persistent sessions to cater to your business needs. Minimize storage requirements and ease management with non-persistent sessions, or increase personalization and save user settings with persistent sessions.

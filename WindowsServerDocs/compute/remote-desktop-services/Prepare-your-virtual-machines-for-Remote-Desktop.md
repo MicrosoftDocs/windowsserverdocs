@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Prepare your virtual machines for Remote Desktop
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to prepare the virtual machines hosting the Remote Desktop Services roles you created in the previous step.  
   

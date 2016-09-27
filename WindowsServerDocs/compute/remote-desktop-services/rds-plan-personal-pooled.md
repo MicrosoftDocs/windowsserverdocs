@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Personal or pooled desktops
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Personal desktops give end users increased flexibility of administrative access, while pooled desktops lower maintenance requirements and costs. Provision personal and pooled desktops in both VDI and session-based deployments.
 

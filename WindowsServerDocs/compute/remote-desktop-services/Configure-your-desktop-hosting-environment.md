@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Configure your desktop hosting environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Before you start deploying any of the desktop hosting solutions for Remote Desktop Services, there are some steps you need to take to prepare your environment:  
   

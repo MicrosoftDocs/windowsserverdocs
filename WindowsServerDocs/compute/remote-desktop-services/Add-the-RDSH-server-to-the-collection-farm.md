@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Add the RDSH server to the collection farm
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Now that your environment is ready, use the following steps to add the Remote Desktop Session Host server to the collection farm.  
 
