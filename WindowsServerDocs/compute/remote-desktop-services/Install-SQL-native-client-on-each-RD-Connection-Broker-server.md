@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Install SQL native client on each RD Connection Broker server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to install a SQL native client on each RD COnnection Broker server:  
   

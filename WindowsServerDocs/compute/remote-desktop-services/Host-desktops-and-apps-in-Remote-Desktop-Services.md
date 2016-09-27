@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Host desktops and apps in Remote Desktop Services on Azure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely.   
   
