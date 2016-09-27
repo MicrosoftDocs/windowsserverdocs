@@ -1,5 +1,6 @@
 ---
 title: Security and Assurance
+Description: "An overview of Security in Windows Server 2016"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.date: 09/26/2016
@@ -11,7 +12,6 @@ ms.asset b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ---
-
 # Security and Assurance
 
 >Applies To: Windows Server 2016
@@ -25,7 +25,11 @@ ms.author: coreyp
 | [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)                                                                              | In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat. |
 | [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx) | This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                                                                                                                                                                                                                                                                                                                                              |
 | [Security and Assurance Overview session at Ignite 2015](http://channel9.msdn.com/events/ignite/2015/brk2482)                                                                                 | This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                                                                                                                                                  |
+<<<<<<< HEAD
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+=======
 |                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+>>>>>>> dde0488ede7acd5d0ad6e6341610f94e534c7a55
 
 ##Secure virtualization with Shielded VMs
 
