@@ -13,9 +13,9 @@ ms.date: 8/16/2016
 ---
 # All virtual network adapters should be enabled
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
+
   
 |Property|Details|  
 |-|-|  

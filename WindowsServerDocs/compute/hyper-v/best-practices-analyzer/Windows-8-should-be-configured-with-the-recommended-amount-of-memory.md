@@ -13,7 +13,7 @@ ms.date: 8/16/2016
 ---
 # Windows 8 should be configured with the recommended amount of memory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 [This information is preliminary and subject to change.  
   
