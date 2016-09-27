@@ -51,6 +51,7 @@
 #### [Developing on Nano Server](compute/nano-server/Developing-on-Nano-Server.md)
 ##### [PowerShell on Nano Server](compute/nano-server/PowerShell-on-Nano-Server.md)
 ##### [Developing PowerShell Cmdlets for Nano Server](compute/nano-server/Developing-PowerShell-Cmdlets-for-Nano-Server.md)
+#### [Troubleshooting Nano Server](compute/nano-server/Troubleshooting-Nano-Server.md)
 ### [Get started with Setup and Boot Event Collection](compute/Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 #### Get started
