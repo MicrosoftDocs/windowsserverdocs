@@ -34,6 +34,6 @@ The DNS Client service is included in all client and server versions of the Wind
   
 The Windows Server 2016 DNS Server and DNS Client services use the DNS protocol that is included in the TCP/IP protocol suite. DNS is part of the application layer of the TCP/IP reference model, as shown in the following illustration.  
   
-![](../media/Domain-Name-System--DNS-/dns_in_tcpip.jpg)  
+![DNS in TCP/IP](../media/Domain-Name-System--DNS-/dns_in_tcpip.jpg)  
   
 
