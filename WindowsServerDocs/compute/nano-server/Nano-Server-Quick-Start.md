@@ -26,7 +26,7 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
   
 ## To quickly deploy Nano Server in a virtual machine  
   
-1.  Copy *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server Technical Preview ISO to a folder on your hard drive.  
+1.  Copy *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server 2016 ISO to a folder on your hard drive.  
   
 2.  Start Windows PowerShell as an administrator, change directory to the folder where you have placed the NanoServerImageGenerator folder and then import the module with `Import-Module .\NanoServerImageGenerator -Verbose`  
 >[!NOTE]  
@@ -36,7 +36,7 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
   
     `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` where  
   
-    -   **-MediaPath <path to root of media\>** specifies a path to the root of the contents of the Technical Preview ISO. For example if you have copied the contents of the ISO to d:\TP5ISO you would use that path.  
+    -   **-MediaPath <path to root of media\>** specifies a path to the root of the contents of the Windows Server 2016 ISO. For example if you have copied the contents of the ISO to d:\TP5ISO you would use that path.  
   
     -   **-BasePath** (optional) specifies a folder that will be created to copy the Nano Server WIM and packages to.  
   
@@ -49,7 +49,7 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
     This example creates a VHD from an ISO mounted as f:\\. When creating the VHD it will use a folder called Base in the same directory where you ran New-NanoServerImage; it will place the VHD (called Nano.vhd) in a folder called Nano1 in the folder from where the command is run. The computer name will be Nano1. The resulting VHD will contain the Standard edition of Windows Server 2016 and will be suitable for Hyper-V virtual machine deployment. If you want a Generation 1 virtual machine, create a VHD image by specifying a  **.vhd** extension for -TargetPath. For a Generation 2 virtual machine, create a VHDX image by specifying a  **.vhdx** extension for -TargetPath. You can also directly generate a WIM file by specifying a **.wim** extension for -TargetPath.  
   
     > [!NOTE]  
-    > New-NanoServerImage is supported on Windows 8.1, Windows 10, Windows Server 2012 R2, and Windows Server 2016 Threshold Preview.  
+    > New-NanoServerImage is supported on Windows 8.1, Windows 10, Windows Server 2012 R2, and Windows Server 2016.  
   
 4.  In Hyper-V Manager, create a new virtual machine and use the VHD created in Step 3.  
   
@@ -67,7 +67,7 @@ You can also create a VHD that will run Nano Server on a physical computer, usin
   
 ## To quickly deploy Nano Server on a physical computer  
   
-1.  Copy *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server Technical Preview ISO to a folder on your hard drive.  
+1.  Copy *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server 2016 ISO to a folder on your hard drive.  
   
 2.  Start Windows PowerShell as an administrator, change directory to the folder where you have placed the NanoServerImageGenerator folder and then import the module with `Import-Module .\NanoServerImageGenerator -Verbose`  
   
@@ -78,7 +78,7 @@ You can also create a VHD that will run Nano Server on a physical computer, usin
   
     `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` where  
   
-    -   **-MediaPath <path to root of media\>** specifies a path to the root of the contents of the Technical Preview ISO. For example if you have copied the contents of the ISO to d:\TP5ISO you would use that path.  
+    -   **-MediaPath <path to root of media\>** specifies a path to the root of the contents of the Windows Server 2016 ISO. For example if you have copied the contents of the ISO to d:\TP5ISO you would use that path.  
   
     -   **BasePath** specifies a folder that will be created to copy the Nano Server WIM and packages to. (This parameter is optional.)  
   

@@ -22,9 +22,9 @@ Windows Server 2016 offers
 
 
 ## <a name="BKMK_CreateImage"></a>Creating a custom Nano Server image  
-For Windows Server 2016 Technical Preview, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
+For Windows Server 2016, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
   
-You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the [Installing roles and features online](Getting-Started-with-Nano-Server.md#BKMK_online) section of this topic.  
+You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the "Installing roles and features online" section of this topic.  
   
 This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Packages parameter, which you can combine in a comma-separated list. You can dynamically list available packages using Get-NanoServerPackage cmdlet.  
   
@@ -32,7 +32,7 @@ This table shows the roles and features that are available in this release of Na
 |-------------------|----------|  
 |Hyper-V role (including NetQoS|-Compute|  
 |Failover Clustering|-Clustering|  
-|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016 Technical Preview.|-OEMDrivers|  
+|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|  
 |File Server role and other storage components|-Storage|  
 |Windows Defender Antimalware, including a default signature file|-Defender|  
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default  
@@ -94,7 +94,7 @@ If you do not specify a computer name, a random name will be generated.
   
 ### Installing a Nano Server WIM  
   
-1.  Copy the *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server Technical Preview ISO a local folder on your computer.  
+1.  Copy the *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server 2016 ISO a local folder on your computer.  
 2. Start Windows PowerShell as an administrator, change directory to the folder where you placed the NanoServerImageGenerator folder and then import the module with `Import-Module .\NanoServerImageGenerator -Verbose`.  
   
  >[!NOTE]  
@@ -105,7 +105,7 @@ To create a Nano Server image to serve as a Hyper-V host, run the following:
 `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.wim -ComputerName <computer name> -OEMDrivers -Compute -Clustering`  
   
 Where  
--   -MediaPath is the root of the DVD media or ISO image containing Windows Server Technical Preview .  
+-   -MediaPath is the root of the DVD media or ISO image containing Windows Server 2016 .  
 -   -BasePath will contain a copy of the Nano Server binaries, so you can use New-NanoServerImage -BasePath without having to specify -MediaPath in future runs.  
 -   -TargetPath will contain the resulting .wim file containing the roles & features you selected. Make sure to specify the .wim extension.  
 -   -Compute adds the Hyper-V role.  
@@ -544,7 +544,10 @@ To provide Nano Server with the DNS Server role, add the Microsoft-NanoServer-DN
 `Enable-WindowsOptionalFeature -Online -FeatureName DNS-Server-Full-Role`  
   
 ### <a name="BKMK_IIS"></a>Using IIS on Nano Server  
-For steps to use the Internet Information Services (IIS) role, see [IIS on Nano Server](IIS-on-Nano-Server.md).  
+For steps to use the Internet Information Services (IIS) role, see [IIS on Nano Server](IIS-on-Nano-Server.md). 
+
+### Using MPIO on Nano Server
+For steps to use MPIO, see [MPIO on Nano Server](MPIO-on-Nano-Server.md) 
 
 ### <a name="BKMK_SSH"></a>Using SSH on Nano Server
 For instructions on how to install and use SSH on Nano Server with the OpenSSH project, see the [Win32-OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki).
