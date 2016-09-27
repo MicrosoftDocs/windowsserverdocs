@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Create a second RD Connection Broker virtual machine
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to create a virtual machine to host the RD Connection Broker role service:  
   

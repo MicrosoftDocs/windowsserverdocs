@@ -13,7 +13,7 @@ ms.date: 8/16/2016
 ---
 # Windows hypervisor must be running
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 *[This information is preliminary and subject to change.]*  
   

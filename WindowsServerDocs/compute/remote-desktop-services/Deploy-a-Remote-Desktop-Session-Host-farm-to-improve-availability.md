@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Deploy a Remote Desktop Session Host farm to improve availability
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 If you want to improve the availability and scale of your desktop hosting solution, you can deploy a Remote Desktop Session Host (RDSH) farm based on the [Microsoft Azure Desktop Hosting Reference Architecture Guide](Desktop-Hosting-Reference-Architecture.md).   
   

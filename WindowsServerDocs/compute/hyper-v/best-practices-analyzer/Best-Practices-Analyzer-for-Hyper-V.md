@@ -13,7 +13,7 @@ ms.date: 8/16/2016
 ---
 # Best Practices Analyzer for Hyper-V
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **This is preliminary content and subject to change.**  
   

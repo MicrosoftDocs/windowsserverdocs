@@ -15,6 +15,6 @@ manager: dongill
 ---
 # Remote Desktop Services - VDI or session-based deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Deploy session hosts for a more lightweight and cost effective model when requirements for user resources are lower. Take advantage of increased application compatibility and a familiar Windows Client OS experience with a VDI deployment.

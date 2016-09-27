@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Create an Azure internal load balancer for Remote Desktop deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This section provides steps to deploy an Azure Internal Load Balancer to effectively load balance incoming connections to the RD Connection Brokers setup in High Availability. Another method of load balancing is DNS round-robin, which is detailed below in the Appendix.   
   

@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Activate the Remote Desktop Services license server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The Remote Desktop Services license server issues client access licenses (CALs) to users and devices when they access the RD Session Host. You can activate the license server by using the Remote Desktop Licensing Manager. 
 
