@@ -18,8 +18,8 @@ ms.author: jaimeo
 
 These topics explain important differences in PowerShell on Nano Server and also provide guidance for developing your own PowerShell cmdlets for use on Nano Server.
 
-- [PowerShell on Nano Server](compute/nano-server/PowerShell-on-Nano-Server.md)
-- [Developing PowerShell Cmdlets for Nano Server](compute/nano-server/Developing-PowerShell-Cmdlets-for-Nano-Server.md)
+- [PowerShell on Nano Server](PowerShell-on-Nano-Server.md)
+- [Developing PowerShell Cmdlets for Nano Server](Developing-PowerShell-Cmdlets-for-Nano-Server.md)
 
 
 ### Using Windows PowerShell remoting  
