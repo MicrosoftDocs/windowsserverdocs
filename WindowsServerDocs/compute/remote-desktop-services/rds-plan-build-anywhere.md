@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Build anywhere
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Deploy on-premises, in the cloud, or a hybrid of the two. Modify your deployment as your business needs change.
 

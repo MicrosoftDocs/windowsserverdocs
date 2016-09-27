@@ -15,6 +15,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Secure data storage
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Store business resources, user personalization data and settings securely on-premises or in Azure. RD Session Hosts use AD authentication and empower users with the resources they need in a personalized environment, securely. 

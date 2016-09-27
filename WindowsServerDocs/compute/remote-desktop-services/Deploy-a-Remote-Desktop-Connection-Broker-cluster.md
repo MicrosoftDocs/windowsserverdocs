@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Deploy a Remote Desktop Connection Broker cluster
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of a desktop hosting solution based on the Microsoft Azure Desktop Hosting Reference Architecture Guide.   
   

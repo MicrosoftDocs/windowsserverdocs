@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Deploy your Remote Desktop environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to deploy the Remote Desktop servers in your environment.  
   

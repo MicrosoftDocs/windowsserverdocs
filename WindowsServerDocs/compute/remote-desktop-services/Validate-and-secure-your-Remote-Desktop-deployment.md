@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Validate and secure your Remote Desktop deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Once you have deployed your Remote Desktop servers, you can validate the deployment by connecting to Remote Desktop from a client computer over the Internet.   
   

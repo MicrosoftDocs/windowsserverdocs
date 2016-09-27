@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Configure the current RD Web and Gateway virtual machine for load balancing
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to configure load balancing for the RD Web and Gateway virtual machine:  
   

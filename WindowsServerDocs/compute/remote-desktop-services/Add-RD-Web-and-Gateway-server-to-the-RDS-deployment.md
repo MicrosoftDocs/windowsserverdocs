@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Add RD Web and Gateway server to the RDS deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to add the RD Web and Gateway server you created to your existing Remote Desktop Services basic deployment.  
 

@@ -13,7 +13,7 @@ ms.date: 8/16/2016
 ---
 # Windows Server 2008 R2 should be configured with at least the minimum amount of memory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   

@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use the Remote Desktop Licensing Manager tool to create (generate) reports to track the RDS Per User CALs that have been issued by a Remote Desktop license server.
 

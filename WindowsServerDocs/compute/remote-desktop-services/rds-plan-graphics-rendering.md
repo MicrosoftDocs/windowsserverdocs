@@ -15,6 +15,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Enable high-end graphics remoting with GPUs
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Improve users’ graphics performance in a remote session by attaching GPUs to your Remote Desktop host servers. Directly map a GPU to a VM using Discrete Device Assignment.
