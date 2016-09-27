@@ -1,14 +1,13 @@
 ---
 title: Security and Assurance
-Description: "An overview of Security in Windows Server 2016"
+description: "An overview of Security in Windows Server 2016"
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.date: 09/26/2016
-ms.technology:
-  - techgroup-security
+ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.asset b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
+ms.date: 09/26/2016
+ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ---
@@ -24,12 +23,8 @@ ms.author: coreyp
 | [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)                                                                                         | This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team.                                                                                                                                                                                                                                                                                                                                                                   |
 | [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)                                                                              | In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat. |
 | [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx) | This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                                                                                                                                                                                                                                                                                                                                              |
-| [Security and Assurance Overview session at Ignite 2015](http://channel9.msdn.com/events/ignite/2015/brk2482)                                                                                 | This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                                                                                                                                                  |
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-=======
-|                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
->>>>>>> dde0488ede7acd5d0ad6e6341610f94e534c7a55
+| [Security and Assurance Overview session at Ignite 2015](http://channel9.msdn.com/events/ignite/2015/brk2482)                                                                                 | This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                   
+|                                                                                                                                     
 
 ##Secure virtualization with Shielded VMs
 
@@ -67,7 +62,7 @@ ms.author: coreyp
 | **Link**                                                                                                                                       | **Description**                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                         | Device Guard is a combination of enterprise-related hardware and software security features that, when configured together, will lock a device down so that it can only run trusted applications that you define in your code integrity |
-| [Device](https://www.youtube.com/watch?v=F-pTkesjkhI) Guard demo video                                                                         | This 7-minute video presents Device Guard and its usage on Windows Server 2016                                                                                                                                                          |
+| [Device Guard demo video](https://www.youtube.com/watch?v=F-pTkesjkhI)                                                                          | This 7-minute video presents Device Guard and its usage on Windows Server 2016                                                                                                                                                          |
 | [Control Flow Guard](https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065(v=vs.85).aspx)                                          | Control Flow Guard provides built-in protection against some classes of memory corruption attacks.                                                                                                                                      |
 | [Windows Defender](https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server) | Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server 2016.                                   |
 
