@@ -18,7 +18,7 @@ ms.author: jaimeo
 
 This topic includes information about tools you can use to connect to, diagnose, and repair Nano Server installations.  
   
-##Using the Nano Server Recovery Console 
+## Using the Nano Server Recovery Console 
  
 Nano Server includes a Recovery Console that ensures you can access your Nano Server even if a network mis-configuration interferes with connecting to the Nano Server. You can use the Recovery Console to fix the network and then use your usual remote management tools.  
   
@@ -36,7 +36,7 @@ The Recovery Console allows you to view and configure network adapters and TCP/I
 > [!NOTE]  
     > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
 
-##Accessing Nano Server over a serial port with Emergency Management Services  
+## Accessing Nano Server over a serial port with Emergency Management Services  
 Emergency Management Services (EMS) lets you perform basic troubleshooting, get network status, and open console sessions (including CMD/PowerShell) by using a terminal emulator over a serial port. This replaces the need for a keyboard and monitor to troubleshoot a server. For more information about EMS, see [Emergency Management Services Technical Reference](https://technet.microsoft.com/library/cc784411(v=ws.10).aspx).
 
 To enable EMS on a Nano Server image so that it's ready should you need it later, run this cmdlet:  
@@ -45,7 +45,7 @@ To enable EMS on a Nano Server image so that it's ready should you need it later
   
 This example cmdlet enables EMS on serial port 3 with a baud rate of 9600 bps. If you don't include those parameters, the defaults are port 1 and 115200 bps. To use this cmdlet for VHDX media, be sure to include the Hyper-V feature and the corresponding Windows PowerShell modules.
 
-##Kernel debugging  
+## Kernel debugging  
 You can configure the Nano Server image to support kernel debugging by a variety of methods. To use kernel debugging with a VHDX image, be sure to include the Hyper-V feature and the corresponding Windows PowerShell modules. For more information about remote kernel debugging generally see [Setting Up Kernel-Mode Debugging over a Network Cable Manually](https://msdn.microsoft.com/library/windows/hardware/hh439346%28v=vs.85%29.aspx) and  [Remote Debugging Using WinDbg](https://msdn.microsoft.com/library/windows/hardware/hh451173%28v=vs.85%29.aspx).  
   
 ### Debugging using a serial port  
