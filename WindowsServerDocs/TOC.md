@@ -47,7 +47,7 @@
 ### [Getting Started with Nano Server](compute/nano-server/Getting-Started-with-Nano-Server.md)
 #### [IIS on Nano Server](compute/nano-server/IIS-on-Nano-Server.md)
 #### [MPIO on Nano Server](compute/nano-server/MPIO-on-Nano-Server.md)
-#### [Managing updates in Nano Server](compute/nano-server/Managing-updates-in-Nano-Server.md)
+#### [Manage Nano Server](compute/nano-server/Manage-Nano-Server.md)
 #### [Developing on Nano Server](compute/nano-server/Developing-on-Nano-Server.md)
 ##### [PowerShell on Nano Server](compute/nano-server/PowerShell-on-Nano-Server.md)
 ##### [Developing PowerShell Cmdlets for Nano Server](compute/nano-server/Developing-PowerShell-Cmdlets-for-Nano-Server.md)
