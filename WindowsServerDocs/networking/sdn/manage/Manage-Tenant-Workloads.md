@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
@@ -25,3 +24,4 @@ This section includes the following topics.
 - [Configure Datacenter Firewall Access Control Lists (ACLs)](Configure-Datacenter-Firewall-ACLs.md)
 - [Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)](Configure-SLB-and-NAT.md)
 - [Use Network Virtual Appliances on a Virtual Network](Use-Network-Virtual-Appliances-on-a-VN.md)
+- [Guest Clustering in a Virtual Network](guest-clustering.md)

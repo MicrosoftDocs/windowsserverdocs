@@ -1,6 +1,7 @@
 ---
 title: What's New in Data Deduplication
 ms.technology: storage-deduplication
+ms.prod: windows-server-threshold
 ms.topic: article
 author: wmgries
 manager: eldenc
