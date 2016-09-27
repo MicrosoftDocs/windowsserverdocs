@@ -13,10 +13,8 @@ ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows Vista and enabled for Dynamic Memory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  

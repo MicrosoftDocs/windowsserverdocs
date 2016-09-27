@@ -13,7 +13,7 @@ ms.date: 8/16/2016
 ---
 # The Hyper-V Virtual Machine Management service must be running
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 *[This information is preliminary and subject to change.]*  
   

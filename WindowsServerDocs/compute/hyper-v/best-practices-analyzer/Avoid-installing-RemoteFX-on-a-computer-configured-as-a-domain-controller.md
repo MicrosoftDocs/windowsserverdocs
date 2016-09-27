@@ -13,10 +13,8 @@ ms.date: 8/16/2016
 ---
 # Avoid installing RemoteFX on a computer that is configured as an Active Directory domain controller
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
