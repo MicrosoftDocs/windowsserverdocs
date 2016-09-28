@@ -28,7 +28,7 @@ This topic describes the Domain Name System (DNS) client functionality that is n
 -   If the DNS server that is used is designated by a Group Policy setting from the Name Resolution Policy Table (NRPT), the DNS Client service does not bind to a specific interface.  
   
 > [!NOTE]  
-> Changes to the DNS Client service in Windows 10 are also present in computers running  Windows Server 2016.  
+> Changes to the DNS Client service in Windows 10 are also present in computers running Windows Server 2016.  
   
 ## See also  
   
