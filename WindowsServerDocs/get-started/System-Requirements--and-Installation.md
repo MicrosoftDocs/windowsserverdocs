@@ -26,7 +26,7 @@ This topic addresses the minimum system requirements to run Windows Server&reg; 
 >   
 
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
 
 
 ## Review system requirements  
@@ -119,4 +119,4 @@ The following items are not strictly required, but are necessary for certain fea
 >- A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
-For detailed steps to install Windows Server 2016 as a Nano Server, see [Getting Started with Nano Server](get-started/Getting-Started-with-Nano-Server.md).
+For detailed steps to install Windows Server 2016 as a Nano Server, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md).
