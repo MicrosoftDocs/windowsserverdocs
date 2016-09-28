@@ -29,4 +29,6 @@ Use the following information to build and deploy your Remote Desktop Services d
 - [Deploy a RD Web Access and Gateway farm.](deploy-a-rd-web-access-and-gateway-farm.md)
 - [Deploy RemoteApp programs.](deploy-remoteapp-programs.md)
 - [Deploy a personal sessions desktop environment.](rds-personal-session-desktops.md)
+- [Deploy a Storage Spaces Direct scale-out file server for UPD storage](rds-storage-spaces-direct-deployment.md)
+- [License your deployment by using client access licenses](rds-client-access-license.md)
 
