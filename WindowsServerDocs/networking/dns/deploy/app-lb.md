@@ -25,7 +25,7 @@ When you have deployed multiple instances of an application, you can use DNS pol
 
 Following is an example of how you can use DNS policy for application load balancing.
 
-This example uses one fictional company - Contoso Gift Services - which provides online gifing services, and which has a Web site named **contosogiftservices.com**.
+This example uses one fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named **contosogiftservices.com**.
 
 The contosogiftservices.com website is hosted in multiple datacenters that each have different IP addresses.
 
