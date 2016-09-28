@@ -20,7 +20,7 @@ You can enable richer access control for federated applications by using Active 
 ## About Dynamic Access Control  
 In Windows Server® 2012, the Dynamic Access Control feature enables organizations to grant access to files based on user claims \(which are sourced by user account attributes\) and device claims \(which are sourced by computer account attributes\) that are issued by Active Directory Domain Services \(AD DS\). AD DS issued claims are integrated into Windows integrated authentication through the Kerberos authentication protocol.  
   
-For more information about Dynamic Access Control, see [Dynamic Access Control Content Roadmap](Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
+For more information about Dynamic Access Control, see [Dynamic Access Control Content Roadmap](../../solution-guides/Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
   
 ### What’s New in AD FS?  
 As an extension to the Dynamic Access Control scenario, AD FS in  Windows Server 2012  can now:  
@@ -49,7 +49,7 @@ These AD DS issued claims can be inserted into Kerberos authentication tickets a
 ## Differences Between AD DS and AD FS Issued Claims  
 There are two differentiating factors that are important to understand about claims that are issued from AD DS vs. AD FS. These differences include:  
   
--   AD DS can only issue claims that are encapsulated in Kerberos tickets, not SAML tokens. For more information about how AD DS issues claims, see [Dynamic Access Control Content Roadmap](Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
+-   AD DS can only issue claims that are encapsulated in Kerberos tickets, not SAML tokens. For more information about how AD DS issues claims, see [Dynamic Access Control Content Roadmap](../../solution-guides/Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
   
 -   AD FS can only issue claims that are encapsulated in SAML tokens, not Kerberos tickets. For more information about how AD FS issues claims, see [The Role of the Claims Engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md).  
   
@@ -72,7 +72,7 @@ AD DS issued claims can be used with AD FS to access both user and device claims
   
 7.  The client receives the SAML token containing the correct claims and is then redirected to the website.  
   
-For more information about how to create the claim rules required for AD DS issued claims to work with AD FS, see [Create a Rule to Transform an Incoming Claim](Create-a-Rule-to-Transform-an-Incoming-Claim.md).  
+For more information about how to create the claim rules required for AD DS issued claims to work with AD FS, see [Create a Rule to Transform an Incoming Claim](../../ad-fs/operations/Create-a-Rule-to-Transform-an-Incoming-Claim.md).  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -21,11 +21,11 @@ So that your client computers can seamlessly access federated applications witho
   
 -   Configure Internet Explorer on each client computer to trust the account federation server.  
   
-    For more information, see [Configure Client Computers to Trust the Account Federation Server](Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md).  
+    For more information, see [Configure Client Computers to Trust the Account Federation Server](../../ad-fs/deployment/Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md).  
   
 -   Install the appropriate account federation server, resource federation server, and Web server Secure Sockets Layer \(SSL\) certificates \(or equivalent certificates that chain to a trusted root\) on each client computer.  
   
-    For more information, see [Distribute Certificates to Client Computers by Using Group Policy](Distribute-Certificates-to-Client-Computers-by-Using-Group-Policy.md).  
+    For more information, see [Distribute Certificates to Client Computers by Using Group Policy](../../ad-fs/deployment/Distribute-Certificates-to-Client-Computers-by-Using-Group-Policy.md).  
   
 
 ## See Also

@@ -17,11 +17,11 @@ ms.technology: identity-adfs
 
 Active Directory Federation Services \(AD FS\) federation servers running Windows Server® 2012 can interoperate with both an AD FS 1.0 \(installed with Windows Server 2003 R2\) Federation Service and an AD FS 1.1 \(installed with Windows Server 2008 or Windows Server 2008 R2\) Federation Service. Any of the following interoperability combinations are supported:  
   
--   Any AD FS 1.*x* Federation Service can send a claim that can be consumed by an AD FS Federation Service in  Windows Server 2012 . For more information, see [Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x](Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md).  
+-   Any AD FS 1.*x* Federation Service can send a claim that can be consumed by an AD FS Federation Service in  Windows Server 2012 . For more information, see [Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x](../../ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md).  
   
--   Any AD FS Federation Service in  Windows Server 2012  can send an AD FS 1.*x*\-compatible claim that can be consumed by an AD FS 1.*x* Federation Service. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md).  
+-   Any AD FS Federation Service in  Windows Server 2012  can send an AD FS 1.*x*\-compatible claim that can be consumed by an AD FS 1.*x* Federation Service. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service](../../ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md).  
   
--   Any AD FS Federation Service in  Windows Server 2012  can send an AD FS 1.*x*\-compatible claim that can be consumed by one or more Web servers running the AD FS 1.*x* claims\-aware Web agent. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md).  
+-   Any AD FS Federation Service in  Windows Server 2012  can send an AD FS 1.*x*\-compatible claim that can be consumed by one or more Web servers running the AD FS 1.*x* claims\-aware Web agent. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent](../../ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md).  
   
 > [!NOTE]  
 > AD FS does not support or interoperate with the AD FS 1.*x* Windows NT token–based Web agent.  
@@ -33,15 +33,15 @@ The Name ID claim type is the equivalent of the identity claim type that AD FS�
   
 |Name ID format|Corresponding URI|  
 |------------------|---------------------|  
-|AD FS 1.*x* Email Address|http:\/\/schemas.xmlsoap.org\/claims\/EmailAddress|  
-|AD FS 1.*x* Email UPN|http:\/\/schemas.xmlsoap.org\/claims\/UPN|  
-|Common Name|http:\/\/schemas.xmlsoap.org\/claims\/CommonName|  
-|Group|http:\/\/schemas.xmlsoap.org\/claims\/Group|  
+|AD FS 1.*x* Email Address|http://schemas.xmlsoap.org/claims/EmailAddress|  
+|AD FS 1.*x* Email UPN|http://schemas.xmlsoap.org/claims/UPN|  
+|Common Name|http://schemas.xmlsoap.org/claims/CommonName|  
+|Group|http://schemas.xmlsoap.org/claims/Group|  
   
 Only one Name ID claim in the appropriate format must be sent. When that criterion is satisfied, many other claims may be sent as well, assuming that they conform to the restrictions described in the table.  
   
 > [!NOTE]  
-> An AD FS 1.*x* Federation Service can interpret only incoming claim types that begin with the Uniform Resource Identifier \(URI\) of http:\/\/schemas.xmlsoap.org\/claims\/.  
+> An AD FS 1.*x* Federation Service can interpret only incoming claim types that begin with the Uniform Resource Identifier \(URI\) of http://schemas.xmlsoap.org/claims/.  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

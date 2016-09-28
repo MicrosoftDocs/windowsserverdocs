@@ -24,9 +24,9 @@ In the following illustration, you can see how this task is accomplished for a g
   
 ![](media/adfs2_deploy_single_fs.gif)  
   
-For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](http://go.microsoft.com/fwlink/?LinkId=75282)\).  
+For information about how to configure a cluster IP address or cluster FQDN using NLB, see [Specifying the Cluster Parameters](http://go.microsoft.com/fwlink/?LinkId=75282).  
   
-For information about how to configure corporate DNS for a federation server, see [Add a Host &#40;A&#41; Resource Record to Corporate DNS for a Federation Server](Add-a-Host--A--Resource-Record-to-Corporate-DNS-for-a-Federation-Server.md).  
+For information about how to configure corporate DNS for a federation server, see [Add a Host &#40;A&#41; Resource Record to Corporate DNS for a Federation Server](../../ad-fs/deployment/Add-a-Host--A--Resource-Record-to-Corporate-DNS-for-a-Federation-Server.md).  
   
 For information about how to configure federation server proxies in the perimeter network, see [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   

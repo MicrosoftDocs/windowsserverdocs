@@ -35,7 +35,7 @@ When you have reviewed the content in the previous table, proceed to the followi
   
 -   [Federation Server Farm Using WID and Proxies](Federation-Server-Farm-Using-WID-and-Proxies-2012.md)  
   
--   [Federation Server Farm Using SQL Server](Federation-Server-Farm-Using-SQL-Server-2102.md)  
+-   [Federation Server Farm Using SQL Server](Federation-Server-Farm-Using-SQL-Server-2012.md)  
   
 After you finish selecting your AD FS deployment topology, we recommend that you review the topic [Planning for AD FS Server Capacity](Planning-for-AD-FS-Server-Capacity.md) to determine the recommended number of servers that you will need to deploy to support this topology.  
   

@@ -102,10 +102,10 @@ The process of configuring DNS to support AD FS varies, depending on whether:
   
 -   You intend to add a federated server proxy to your perimeter network. When you want to authenticate user accounts that are located in the corporate network of your identity partner organization, the internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal federation server proxy. For information about how to configure DNS to accommodate the addition of federation server proxies, see [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   
--   You are setting up DNS for a test lab environment. If you plan to use AD FS in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an AD FS test lab environment, see [AD FS Step\-by\-Step and How To Guides](http://go.microsoft.com/fwlink/?LinkId=180357) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=180357\).  
+-   You are setting up DNS for a test lab environment. If you plan to use AD FS in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an AD FS test lab environment, see [AD FS Step\-by\-Step and How To Guides](http://go.microsoft.com/fwlink/?LinkId=180357).  
   
 ## Attribute store requirements  
-AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
+AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
   
 > [!NOTE]  
 > AD FS automatically creates an Active Directory attribute store, by default.  
@@ -127,7 +127,7 @@ AD FS does not require schema changes or functional\-level modifications to AD 
 Most AD FS features do not require AD DS functional\-level modifications to operate successfully. However, Windows Server 2008 domain functional level or higher is required for client certificate authentication to operate successfully if the certificate is explicitly mapped to a user's account in AD DS.  
   
 #### Service account requirements  
-If you are creating a federation server farm, you must first create a dedicated domain\-based service account in AD DS that the Federation Service can use. Later, you configure each federation server in the farm to use this account. For more information about how to do this, see [Manually Configure a Service Account for a Federation Server Farm](Manually-Configure-a-Service-Account-for-a-Federation-Server-Farm.md) in the AD FS Deployment Guide.  
+If you are creating a federation server farm, you must first create a dedicated domain\-based service account in AD DS that the Federation Service can use. Later, you configure each federation server in the farm to use this account. For more information about how to do this, see [Manually Configure a Service Account for a Federation Server Farm](../../ad-fs/deployment/Manually-Configure-a-Service-Account-for-a-Federation-Server-Farm.md) in the AD FS Deployment Guide.  
   
 ### LDAP  
 When you work with other Lightweight Directory Access Protocol \(LDAP\)\-based attribute stores, you must connect to an LDAP server that supports Windows Integrated authentication. The LDAP connection string must also be written in the format of an LDAP URL, as described in RFC 2255.  
@@ -148,7 +148,7 @@ You can develop custom attribute stores to enable advanced scenarios. The policy
   
 When you work with a custom attribute store, you may also have to configure a connection string. In this situation, you can enter any custom code you like that enables a connection to your custom attribute store. The connection string in this situation is a set of name\/value pairs that are interpreted as implemented by the developer of the custom attribute store.  
   
-For more information about developing and using custom attribute stores, see [Attribute Store Overview](http://go.microsoft.com/fwlink/?LinkId=190782) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=190782\).  
+For more information about developing and using custom attribute stores, see [Attribute Store Overview](http://go.microsoft.com/fwlink/?LinkId=190782).  
   
 ## Application requirements  
 Federation servers can communicate with and protect federation applications, such as claims\-aware applications.  

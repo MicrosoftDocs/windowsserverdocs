@@ -19,7 +19,7 @@ The resource partner organization in Active Directory Federation Services \(AD�
   
 In scenarios in which you need to provide access to federated services or applications to many different users—when some users reside in different organizations—you can configure the resource federation server so that you can deploy multiple account partners.  
   
-For more information about how to set up and configure a resource partner organization, see [Checklist: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md).  
+For more information about how to set up and configure a resource partner organization, see [Checklist: Configuring the Resource Partner Organization](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md).  
   
 ## In this section  
   

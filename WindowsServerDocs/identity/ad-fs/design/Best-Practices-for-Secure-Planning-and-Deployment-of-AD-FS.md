@@ -38,7 +38,7 @@ The following core best practices are common to all AD FS installations where yo
   
     To apply the AD FS role extensions in the SCW, complete the following steps in order:  
   
-    1.  Install AD FS and choose the appropriate server role for that computer. For more information, see [Install the Federation Service Proxy Role Service](Install-the-Federation-Service-Proxy-Role-Service.md) in the AD FS Deployment Guide.  
+    1.  Install AD FS and choose the appropriate server role for that computer. For more information, see [Install the Federation Service Proxy Role Service](../../ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md) in the AD FS Deployment Guide.  
   
     2.  Register the appropriate role extension file using the Scwcmd command\-line tool. See the following table for details about using this tool in the role for which your computer is configured.  
   
@@ -55,12 +55,12 @@ The following core best practices are common to all AD FS installations where yo
     |Farm\-joined federation server|SQL Server|`scwcmd register /kbname:ADFS2Standalone /kbfile:"Windows\ADFS\scw\SQLFarm.xml"`|  
     |Federation server proxy|N\/A|`scwcmd register /kbname:ADFS2Standalone /kbfile:"Windows\ADFS\scw\Proxy.xml"`|  
   
-    For more information about the databases that you can use with AD FS, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+    For more information about the databases that you can use with AD FS, see [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 -   **Use token replay detection in situations in which security is a very important concern, for example, when kiosks are used.**  
     Token replay detection is a feature of AD FS that ensures that any attempt to replay a token request that is made to the Federation Service is detected and the request is discarded. Token replay detection is enabled by default. It works for both the WS\-Federation passive profile and the Security Assertion Markup Language \(SAML\) WebSSO profile by ensuring that the same token is never used more than once.  
   
-    When the Federation Service starts, it begins to build a cache of any token requests that it fulfills. Over time, as subsequent token requests are added to the cache, the ability to detect any attempts to replay a token request multiple times increases for the Federation Service. If you disable token replay detection and later choose to enable it again, remember that the Federation Service will still accept tokens for a period of time that may have been used previously, until the replay cache has been allowed enough time to rebuild its contents. For more information, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+    When the Federation Service starts, it begins to build a cache of any token requests that it fulfills. Over time, as subsequent token requests are added to the cache, the ability to detect any attempts to replay a token request multiple times increases for the Federation Service. If you disable token replay detection and later choose to enable it again, remember that the Federation Service will still accept tokens for a period of time that may have been used previously, until the replay cache has been allowed enough time to rebuild its contents. For more information, see [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 -   **Use token encryption, especially if you are using supporting SAML artifact resolution.**  
   
@@ -126,7 +126,7 @@ The following security best practices are specific to the use of Microsoft SQL 
   
     If there is a concern that any SQL data might be seen or tampered with over your network, use Internet Protocol security \(IPsec\) or Secure Sockets Layer \(SSL\) to help secure your SQL connections. However, this might have a negative effect on SQL Server performance, which might affect or limit AD FS performance in some situations. For example, AD FS performance in token issuance might degrade when attribute lookups from a SQL\-based attribute store are critical for token issuance. You can better eliminate a SQL tampering threat by having a strong perimeter security configuration. For example, a better solution for securing your SQL Server installation is to ensure that it remains inaccessible for Internet users and computers and that it remains accessible only by users or computers within your datacenter environment.  
   
-    For more information, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkID=189234) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=189234\) or [SQL Server Encryption](http://go.microsoft.com/fwlink/?LinkID=189233) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=189233\).  
+    For more information, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkID=189234) or [SQL Server Encryption](http://go.microsoft.com/fwlink/?LinkID=189233).  
   
 -   **Configure securely designed access by using stored procedures to perform all SQL\-based lookups by AD FS of SQL\-stored data.**  
   

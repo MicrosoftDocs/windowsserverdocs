@@ -32,7 +32,7 @@ The following illustration and corresponding steps show how each of these condit
   
 ![](media/adfs2_deploy_single_fs.gif)  
   
-For more information about configuring a cluster IP address or a cluster FQDN using NLB, see Specifying the Cluster Parameters \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](http://go.microsoft.com/fwlink/?LinkId=75282)\).  
+For more information about configuring a cluster IP address or a cluster FQDN using NLB, see [Specifying the Cluster Parameters](http://go.microsoft.com/fwlink/?LinkId=75282).  
   
 ### 1. Configure the hosts file on the federation server proxy  
 Because DNS in the perimeter network is configured to resolve all requests for fs.fabrikam.com to the account federation server proxy, the account partner federation server proxy has an entry in its local hosts file to resolve fs.fabrikam.com to the IP address of the actual account federation server \(or cluster DNS name for the federation server farm\) that is connected to the corporate network. This makes it possible for the account federation server proxy to resolve the host name fs.fabrikam.com to the account federation server rather than to itself—as would occur if it attempted to look up fs.fabrikam.com using perimeter DNS—so that the federation server proxy can communicate with the federation server.  
@@ -40,7 +40,7 @@ Because DNS in the perimeter network is configured to resolve all requests for f
 ### 2. Configure perimeter DNS  
 Because there is only a single AD FS host name that client computers are directed to—whether they are on an intranet or on the Internet—client computers on the Internet that use the perimeter DNS server must resolve the FQDN for the account federation server \(fs.fabrikam.com\) to the IP address of the account federation server proxy on the perimeter network. So that it can forward clients on to the account federation server proxy when they attempt to resolve fs.fabrikam.com, perimeter DNS contains a limited corp.fabrikam.com DNS zone with a single host \(A\) resource record for fs \(fs.fabrikam.com\) and the IP address of the account federation server proxy on the perimeter network.  
   
-For more information about how to modify the hosts file of the federation server proxy and configure DNS in the perimeter network, see [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md).  
+For more information about how to modify the hosts file of the federation server proxy and configure DNS in the perimeter network, see [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](../../ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md).  
   
 ## DNS zone serving both the perimeter network and Internet clients  
 In this scenario, your organization controls the DNS zone in the perimeter network and at least one DNS zone on the Internet. Successful name resolution for a federation server proxy in this scenario depends on the following conditions:  
