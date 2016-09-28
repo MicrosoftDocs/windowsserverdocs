@@ -32,7 +32,7 @@ We recommend the following best practices for deploying a federation server in a
 -   If you will be deploying multiple federation servers at the same time or you know that you will be adding more servers to the farm over time, consider creating a server image of an existing federation server in the farm and then installing from that image when you need to create additional federation servers quickly.  
   
     > [!NOTE]  
-    > If you do decide to use the server image method for deploying additional federation servers, you do not have to complete the tasks in [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md) every time that you want to add a new server to the farm.  
+    > If you do decide to use the server image method for deploying additional federation servers, you do not have to complete the tasks in [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md) every time that you want to add a new server to the farm.  
   
 -   Use NLB or some other form of clustering to allocate a single IP address for many federation server computers.  
   
