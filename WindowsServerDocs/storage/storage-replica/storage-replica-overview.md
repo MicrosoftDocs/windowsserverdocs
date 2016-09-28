@@ -34,19 +34,19 @@ Storage Replica also supports asynchronous replication for longer ranges and hig
 ### <a name="BKMK_SRSupportedScenarios"></a>Supported Storage Replica configurations in Windows Server 2016  
 Using this guide and Windows Server 2016, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
 
-**Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize shared Storage Spaces on JBOD, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
+**Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
 
 ![](./media/Storage-Replica-Overview/Storage_SR_StretchCluster.png)  
 
 **FIGURE 1: Storage replication in a stretch cluster using Storage Replica**  
 
-**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize shared Storage Spaces on JBOD, SAN and iSCSI-attached LUNs. It is managed with PowerShell and requires manual intervention for failover.  
+**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and requires manual intervention for failover.  
 
 ![](./media/Storage-Replica-Overview/Storage_SR_ClustertoCluster.png)  
 
 **FIGURE 2: Cluster-to-cluster storage replication using Storage Replica**  
 
-**Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces on JBOD, SAN and iSCSI-attached LUNs, and local drives. It is managed with PowerShell and requires manual intervention for failover.  
+**Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs, and local drives. It is managed with PowerShell and requires manual intervention for failover.  
 
 ![](./media/Storage-Replica-Overview/Storage_SR_ServertoServer.png)  
 
