@@ -1,5 +1,5 @@
 ---
-title: Deploy a two-node S2D SOFS for UPD storage in Azure
+title: Deploy a 2 node S2D SOFS for UPD storage in Azure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: harowl
 ms.date: 09/28/2016
 manager: scottman
 ---
-# Deploy a two-node S2D SOFS for UPD storage in Azure
+# Deploy a 2 node Storage Spaces Direct scale-out file server for UPD storage in Azure
 
 >Applies To: Windows Server Technical Preview
 
@@ -37,7 +37,7 @@ These instructions are for a 2-node deployment. The following table shows the VM
 | 2500  | 12500      | D4 | 13      | P30       | 1024           | 2x(D4 + 13 P30) |
 | 5000  | 25000      | D5 | 25      | P30       | 1024           | 2x(D5 + 25 P30) | 
 
-Use the following steps to create a domain controller (we called ours "my-dc" below) and two node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node S2D SOFS.
+Use the following steps to create a domain controller (we called ours "my-dc" below) and 2 node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node S2D SOFS.
 
 1. Create a [Microsoft Azure subscription](https://azure.microsoft.com).
 2. Sign into the [Azure portal](https://ms.portal.azure.com).
