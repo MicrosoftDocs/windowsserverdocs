@@ -37,5 +37,7 @@ iSCSI Target Server can be installed as part of the File and iSCSI Services role
 > [!NOTE]
 > Booting Nano Server from iSCSI (either from the Windows iSCSI Target Server, or a 3rd party target implementation) is not supported.
   
-For automation, you can use the corresponding Windows PowerShell cmdlets.  
+For automation, you can use the corresponding Windows PowerShell cmdlets:
+* [iSCSI cmdlets](https://technet.microsoft.com/library/hh826099(v=wps.640).aspx)
+* [iSCSI Target cmdlets](https://technet.microsoft.com/library/jj612803(v=wps.630).aspx)
   
