@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Start</ui>, point to <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Administrative Tools</ui>, and then click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">DFS Management</ui>.</Token>

@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">To open Authorization Manager, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Start</ui>, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Run</ui>, and then type: <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">azman.msc</ui></Token>

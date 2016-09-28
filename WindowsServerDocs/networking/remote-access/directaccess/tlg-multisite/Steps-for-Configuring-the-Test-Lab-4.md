@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Steps for Configuring the Test Lab
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients and test DirectAccess connectivity from the Internet and Homenet subnets.  
   
@@ -24,7 +24,7 @@ In this test lab guide you will build a multisite Remote Access deployment by pe
   
 -   [STEP 2: Install and configure ROUTER1](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9). ROUTER1 provides routing and forwarding functionality between the Corpnet and 2-Corpnet subnets.  
   
--   [STEP 3: Install and configure CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee). CLIENT2 is a  Windows 7  client computer that is used to demonstrate the backwards compatibility of a Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 Remote Access deployment.  
+-   [STEP 3: Install and configure CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee). CLIENT2 is a  Windows 7  client computer that is used to demonstrate the backwards compatibility of a  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 Remote Access deployment.  
   
 -   [STEP 4: Configure APP1](assetId:///a0ee655e-c01e-4bf3-a7b3-064e9614f810). Configure APP1 with ROUTER1 as the default gateway and 2-DC1 as the alternate DNS server.  
   

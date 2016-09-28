@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 3 Configure DC1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain. Configure DC1 as follows:  
   

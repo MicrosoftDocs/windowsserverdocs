@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink"><embeddedLabel xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Windows PowerShell equivalent commands</embeddedLabel></Token>

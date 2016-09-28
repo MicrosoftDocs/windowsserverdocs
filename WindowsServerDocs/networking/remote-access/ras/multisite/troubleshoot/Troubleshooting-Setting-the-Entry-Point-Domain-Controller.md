@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Troubleshooting Setting the Entry Point Domain Controller
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic contains troubleshooting information for issues related to the `Set-DAEntryPointDC` command. To confirm that the error you received is related to setting the entry point domain controller, check in the Windows Event log for the event ID 10065.  
   

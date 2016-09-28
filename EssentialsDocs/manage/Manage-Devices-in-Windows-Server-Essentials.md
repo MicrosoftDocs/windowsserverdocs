@@ -1,22 +1,23 @@
 ---
 title: "Manage Devices in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 01/14/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
-caps.latest.revision: 11
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Manage Devices in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
  The following sections discuss the device management features of a server, and explain how to set up and use devices on your network:  
   
@@ -103,7 +104,7 @@ ms.author: coreyp
  When you remove a computer from a server that is running Windows Server Essentials by using the Dashboard, it is no longer managed by the server. As a result, the server will stop creating computer backups or monitor its health after its removal from the network.  
   
 > [!NOTE]
->  Removal of a computer from the server does not disconnect the computer from the network. The computer can still access resources on the network in the same way it could before being connected to the server. To prevent the computer from accessing server resources and to disconnect it from the server, you must remove the computer from the domain. In addition, removal of the computer from the server does not automatically uninstall the Connector software or the Launchpad from the computer that is being removed. You must manually remove the Connector software from the computer. For more information, see the section “Uninstall the Connector software�? in [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md).  
+>  Removal of a computer from the server does not disconnect the computer from the network. The computer can still access resources on the network in the same way it could before being connected to the server. To prevent the computer from accessing server resources and to disconnect it from the server, you must remove the computer from the domain. In addition, removal of the computer from the server does not automatically uninstall the Connector software or the Launchpad from the computer that is being removed. You must manually remove the Connector software from the computer. For more information, see the section Uninstall the Connector software in [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md).  
   
 #### To remove a computer from the network by using the Dashboard  
   
@@ -122,9 +123,9 @@ ms.author: coreyp
   
 2.  On the navigation bar, click **DEVICES**.  
   
-3.  For  Windows Server 2012 Essentials: In the global **Users Tasks** pane, click **Implement Group Policy**.  
+3.  For  Windows Server Essentials: In the global **Users Tasks** pane, click **Implement Group Policy**.  
   
-     For  Windows Server 2012 R2 Essentials: In the global **Devices Tasks** pane, click **Implement Group Policy**.  
+     For  Windows Server Essentials: In the global **Devices Tasks** pane, click **Implement Group Policy**.  
   
 4.  The Implement Group Policy Wizard opens.  
   
@@ -135,7 +136,7 @@ ms.author: coreyp
 7.  Click **Finish** to implement the Group Policy settings.  
   
 ##  <a name="BKMK_7"></a> Connect to a network computer by using a Remote Desktop session  
- To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization’s Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
+ To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization�s Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
   
  The **Status** column shows you if you can connect to a computer on your network, and can contain the following values:  
   

@@ -1,20 +1,21 @@
 ---
 title: "Replace the List of Domain Name Providers"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 104d0412-2d77-4cd4-99f7-65a885522850
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
+
+
 # Replace the List of Domain Name Providers
 You can replace the list of domain name providers that is displayed in the Set Up Domain Name Wizard by completing the following tasks:  
   
@@ -80,7 +81,7 @@ You can replace the list of domain name providers that is displayed in the Set U
     >  A slash (/) is required at the end of the URL.  
   
 ###  <a name="BKMK_ReplaceDomainNameProviders"></a> Domain name status issues  
- If a partner adds domain name providers and uses an application programming interface (API) in the  Windows Server 2012 Essentials SDK to set the Unknown, Failed, and CertificateRequestNotSubmitted statuses for the certificate, the customer receives an incorrect message and configuration result. This is because the cases are handled by exceptions rather than returning a status.  
+ If a partner adds domain name providers and uses an application programming interface (API) in the  Windows Server Essentials SDK to set the Unknown, Failed, and CertificateRequestNotSubmitted statuses for the certificate, the customer receives an incorrect message and configuration result. This is because the cases are handled by exceptions rather than returning a status.  
   
  The following domain statuses are failures and should be reported as an error:  
   

@@ -14,22 +14,24 @@ author: jamesmci
 ---
 # DNS Policy Scenario Guide
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This guide is intended for use by DNS, network, and systems administrators.  
-  
-DNS Policy is a new feature for DNS in Windows Server&reg; 2016. You can use this guide to learn how to use DNS policy to control how a DNS server processes name resolution queries based on different parameters that you define in policies.   
-  
-This guide contains DNS policy overview information, as well as specific DNS policy scenarios that provide you with instructions on how to configure DNS server behavior to accomplish your goals, including geo-location based traffic management for primary and secondary DNS servers, application high availability, split-brain DNS, and more.  
-  
-This guide contains the following sections.  
-  
-- [DNS Policies Overview](DNS-Policies-Overview.md)  
-- [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)  
-- [Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md)  
+This guide is intended for use by DNS, network, and systems administrators.
+
+DNS Policy is a new feature for DNS in Windows Server&reg; 2016. You can use this guide to learn how to use DNS policy to control how a DNS server processes name resolution queries based on different parameters that you define in policies.
+
+This guide contains DNS policy overview information, as well as specific DNS policy scenarios that provide you with instructions on how to configure DNS server behavior to accomplish your goals, including geo-location based traffic management for primary and secondary DNS servers, application high availability, split-brain DNS, and more.
+
+This guide contains the following sections.
+
+- [DNS Policies Overview](DNS-Policies-Overview.md)
+- [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)
+- [Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md)
 - [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)
 - [DNS Responses Based on Time of Day with an Azure Cloud App Server](dns-tod-azure-cloud-app-server.md)
 - [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md)
 - [Use DNS Policy for Applying Filters on DNS Queries](apply-filters-on-dns-queries.md)
+- [Use DNS Policy for Application Load Balancing](app-lb.md)
+- [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)
 
 

@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 1 Configure the DirectAccess Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan the DirectAccess Infrastructure](assetId:///27cdb4a4-189b-413c-9e52-c7c29d5cccb5).  
   

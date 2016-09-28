@@ -14,9 +14,9 @@ author: jamesmci
 ---
 # RAS Gateway for SDN
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-You can use this topic to learn about RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
+You can use this topic to learn about RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016 that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
   
 > [!NOTE]  
 > In addition to this topic, the following RAS Gateway topics are available.  
@@ -27,7 +27,7 @@ You can use this topic to learn about RAS Gateway, which is a software-based, mu
 > -   [Border Gateway Protocol &#40;BGP&#41;](../../../remote-access/bgp/Border-Gateway-Protocol--BGP-.md)  
 > -   [BGP Windows PowerShell Command Reference](../../../remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md)  
   
-In Windows Server 2016 Technical Preview, RAS Gateway routes network traffic between the physical network and VM network resources, regardless of where the resources are located. You can use RAS Gateway to route network traffic between physical and virtual networks at the same physical location or at many different physical locations over the Internet.  
+In  Windows Server 2016, RAS Gateway routes network traffic between the physical network and VM network resources, regardless of where the resources are located. You can use RAS Gateway to route network traffic between physical and virtual networks at the same physical location or at many different physical locations over the Internet.  
   
 Multitenancy is the ability of a cloud infrastructure to support the virtual machine workloads of multiple tenants, yet isolate them from each other, while all of the workloads run on the same infrastructure. The multiple workloads of an individual tenant can interconnect and be managed remotely, but these systems do not interconnect with the workloads of other tenants, nor can other tenants remotely manage them.  
   
@@ -45,7 +45,7 @@ After you have added **RemoteAccess** to your server, you can install Remote Acc
 For more information, see the Windows PowerShell reference topic [Install-RemoteAccess](https://technet.microsoft.com/library/hh918408.aspx).  
   
 ## RAS Gateway Features  
-Following are RAS Gateway features in Windows Server 2016 Technical Preview. You can deploy RAS Gateway in high availability pools that use all of these features at one time.  
+Following are RAS Gateway features in  Windows Server 2016. You can deploy RAS Gateway in high availability pools that use all of these features at one time.  
   
 -   **Site-to-site VPN**. This RAS Gateway feature allows you to connect two networks at different physical locations across the Internet by using a site-to-site VPN connection. For CSPs that host many tenants in their datacenter, RAS Gateway provides a multitenant gateway solution that allows your tenants to access and manage their resources over site-to-site VPN connections from remote sites, and that allows network traffic flow between virtual resources in your datacenter and their physical network.  
   

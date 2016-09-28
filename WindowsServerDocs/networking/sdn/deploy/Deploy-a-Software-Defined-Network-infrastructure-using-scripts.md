@@ -34,7 +34,7 @@ All Hyper-V hosts must have Windows Server 2016 installed.
 Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switch and  IP address assignment. Any storage type that is compatible with Hyper-V, shared or local may be used.  
 ### Install host networking  
 1. Install the latest network drivers available for your NIC hardware.  
-2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016 Technical Preview](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
+2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
   
    From an elevated Windows PowerShellcommand prompt:  
    ``Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart``  

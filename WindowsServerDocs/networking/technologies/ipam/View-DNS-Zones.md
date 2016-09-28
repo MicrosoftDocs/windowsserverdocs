@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # View DNS Zones
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to view DNS zones in the IPAM client console.  
   

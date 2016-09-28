@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 3 Configure the Multisite Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After configuring the multisite infrastructure follow these steps to set up the  Remote Access multisite deployment.  
   

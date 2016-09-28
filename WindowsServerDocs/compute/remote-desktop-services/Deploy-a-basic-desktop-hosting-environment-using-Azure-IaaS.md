@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Deploy a basic desktop hosting environment using Azure IaaS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use Remote Desktop Services with Azure services to implement a desktop hosting service for tenants. This is ideal for hosting providers that want to leverage Microsoft Azure Infrastructure Services to deliver desktop hosting services and Subscriber Access Licenses (SALs) to multiple tenants via the Microsoft Service Provider Licensing Agreement (SPLA) program. It's also good for end customers who want to create and manage desktop hosting solutions in Microsoft Azure Infrastructure Services for their own employees using RDS User CALs extended rights through Software Assurance (SA).   
   

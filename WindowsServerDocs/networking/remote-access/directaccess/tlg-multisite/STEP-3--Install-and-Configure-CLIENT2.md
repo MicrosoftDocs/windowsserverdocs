@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # STEP 3 Install and Configure CLIENT2
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server&reg; 2012 servers.  
   

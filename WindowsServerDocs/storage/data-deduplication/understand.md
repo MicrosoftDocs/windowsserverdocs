@@ -1,6 +1,7 @@
 ---
 title: Understanding Data Deduplication
 ms.technology: storage-deduplication
+ms.prod: windows-server-threshold
 ms.topic: article
 author: wmgries
 manager: eldenc

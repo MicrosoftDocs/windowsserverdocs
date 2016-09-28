@@ -13,7 +13,11 @@ ms.author: jamesmci
 author: jamesmci
 ---
 
-In Windows Server&reg; 2016, **DirectAccess and VPN** is a role service of the **Remote Access** server role.
+# DirectAccess
+
+>Applies To: Windows Server&reg; 2016
+
+In Windows Server 2016, **DirectAccess and VPN** is a role service of the **Remote Access** server role.
 
 You can find the DirectAccess documentation in this library at the following location.
 

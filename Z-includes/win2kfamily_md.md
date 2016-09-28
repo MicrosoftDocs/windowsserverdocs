@@ -1,1 +1,0 @@
-Windows® 2000 family operating systems
