@@ -20,7 +20,8 @@ You can use this topic to learn how to configure DNS policy to load balance an a
 
 The previous topic in this guide, [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb), uses an example of a fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named contosogiftservices.com. Contoso Gift Services load balances their online Web application between servers in North America: Seattle, WA, Chicago, IL, and Dallas, TX.
 
->[!NOTE] It is recommended that you familiarize yourself with the topic [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb) before performing the instructions in this scenario.
+>[!NOTE]
+>It is recommended that you familiarize yourself with the topic [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb) before performing the instructions in this scenario.
 
 This topic uses the same fictional company and network infrastructure as a basis for a new example deployment that includes geo-location awareness.
 
