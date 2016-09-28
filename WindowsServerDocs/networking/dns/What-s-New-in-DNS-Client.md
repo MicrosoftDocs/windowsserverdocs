@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New in DNS Client in Windows Server Technical Preview
+title: What&#39;s New in DNS Client in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,13 +12,14 @@ ms.assetid: 6edaba84-4595-4fd8-95d7-64d4d975a38a
 ms.author: jamesmci
 author: jamesmci
 ---
-# What&#39;s New in DNS Client in Windows Server Technical Preview
+# What&#39;s New in DNS Client in Windows Server 2016
 
 >Applies To: Windows Server&reg; 2016
 
 This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10.  
   
-## <a name="BKMK_DNSClient2012R2"></a>Updates to DNS Client in Windows Technical Preview  
+## <a name="BKMK_DNSClient2012R2"></a>Updates to DNS Client
+
 **DNS Client service binding**: In Windows 10, the DNS Client service offers enhanced support for computers with more than one network interface. For multi-homed computers, DNS resolution is optimized in the following ways:  
   
 -   When a DNS server that is configured on a specific interface is used to resolve a DNS query, the DNS Client service will bind to this interface before sending the DNS query.  
@@ -32,6 +33,6 @@ This topic describes the Domain Name System (DNS) client functionality that is n
   
 ## See also  
   
--   [What's New in DNS Server in Windows Server Technical Preview](What-s-New-in-DNS-Server.md)  
+-   [What's New in DNS Server in Windows Server 2016](What-s-New-in-DNS-Server.md)  
   
 

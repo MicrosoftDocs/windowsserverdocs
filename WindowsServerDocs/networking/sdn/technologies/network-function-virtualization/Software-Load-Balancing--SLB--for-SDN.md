@@ -128,14 +128,12 @@ Following is an overview of the SLB infrastructure.
 The following sections provide more information about these elements of the SLB infrastructure.  
   
 ### SCVMM  
-With System Center 2016 Technical Preview 4, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
+With System Center 2016, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
   
-For more information about System Center 2016 Technical Preview 4, see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
-  
-To download System Center 2016 Technical Preview 4, see [System Center 2016 Technical Preview 4](http://www.microsoft.com/en-us/evalcenter/evaluate-system-center-technical-preview)  
-  
+For more information about System Center 2016 , see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).
+
 > [!NOTE]  
-> If you do not want to use System Center 2016 Technical Preview 4, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
+> If you do not want to use System Center 2016, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
   
 ### Network Controller  
 Network Controller hosts the SLB Manager and performs the following actions for SLB.  
