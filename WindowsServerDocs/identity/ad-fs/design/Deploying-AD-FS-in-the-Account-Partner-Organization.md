@@ -15,11 +15,11 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-An account partner in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] represents the organization in the federation trust relationship that physically stores user accounts in a supported attribute store. For more information about which attribute stores are supported, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).  
+An account partner in Active Directory Federation Services \(AD FS\) represents the organization in the federation trust relationship that physically stores user accounts in a supported attribute store. For more information about which attribute stores are supported, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).  
   
-The [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] in the account partner organization authenticates local users and creates security tokens that are used by the resource partner in making authorization decisions. Relying parties such as Web sites and Web services are then able to easily register themselves with the [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] and consume issued tokens for authentication and access control.  
+The federation server in the account partner organization authenticates local users and creates security tokens that are used by the resource partner in making authorization decisions. Relying parties such as Web sites and Web services are then able to easily register themselves with the federation server and consume issued tokens for authentication and access control.  
   
-In scenarios in which you need to provide your users with access to multiple federated applications or services—when each application or service is hosted by a different organization—you can configure the account partner [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] so that you can deploy multiple relying parties.  
+In scenarios in which you need to provide your users with access to multiple federated applications or services—when each application or service is hosted by a different organization—you can configure the account partner federation server so that you can deploy multiple relying parties.  
   
 For more information about how to set up and configure an account partner organization, see [Checklist: Configuring the Account Partner Organization](Checklist--Configuring-the-Account-Partner-Organization.md).  
   

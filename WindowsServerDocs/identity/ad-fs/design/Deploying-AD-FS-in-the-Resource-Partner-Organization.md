@@ -15,9 +15,9 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The resource partner organization in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] represents the organization whose Web servers may be protected by a resource\-side [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]. The [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
+The resource partner organization in Active Directory Federation Services \(AD FS\) represents the organization whose Web servers may be protected by a resource\-side federation server. The federation server at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
   
-In scenarios in which you need to provide access to federated services or applications to many different users—when some users reside in different organizations—you can configure the resource [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] so that you can deploy multiple account partners.  
+In scenarios in which you need to provide access to federated services or applications to many different users—when some users reside in different organizations—you can configure the resource federation server so that you can deploy multiple account partners.  
   
 For more information about how to set up and configure a resource partner organization, see [Checklist: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md).  
   
