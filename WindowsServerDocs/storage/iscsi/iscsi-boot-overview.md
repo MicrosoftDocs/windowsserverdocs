@@ -32,7 +32,10 @@ iSCSI Target Server does not require special hardware for functional verificatio
 A network adapter is not required for this scenario, and a software boot loader can be used \(such as iPXE open source boot firmware\).  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
-iSCSI Target Server can be installed as part of the File and iSCSI Services role service in Server Manager.  
+iSCSI Target Server can be installed as part of the File and iSCSI Services role service in Server Manager.
+
+> [!NOTE]
+> Booting Nano Server from iSCSI (either from the Windows iSCSI Target Server, or a 3rd party target implementation) is not supported.
   
 For automation, you can use the corresponding Windows PowerShell cmdlets.  
   
