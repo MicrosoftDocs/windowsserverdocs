@@ -46,7 +46,7 @@ The following components are required for this deployment goal:
   
 -   **Employee:** An employee accesses a Web\-based service \(through an application\) or a Web\-based application \(through a supported Web browser\) while he or she is logged on to the corporate network. The employee's client computer on the corporate network communicates directly with the federation server for authentication.  
   
-After reviewing the information in the linked topics, you can begin deploying this goal by following the steps in [Checklist: Implementing a Federated Web SSO Design](Checklist--Implementing-a-Federated-Web-SSO-Design.md).  
+After reviewing the information in the linked topics, you can begin deploying this goal by following the steps in [Checklist: Implementing a Federated Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md).  
   
 The following illustration shows each of the required components for this AD FS deployment goal.  
   

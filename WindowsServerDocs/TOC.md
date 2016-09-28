@@ -445,7 +445,7 @@
 #######[AD FS Deployment Topology Considerations](identity/ad-fs/design/AD-FS-Deployment-Topology-Considerations.md)
 #######[Stand-Alone Federation Server Using WID](identity/ad-fs/design/Stand-Alone-Federation-Server-Using-WID.md)
 #######[Federation Server Farm Using WID](identity/ad-fs/design/Federation-Server-Farm-Using-WID-2012.md)
-#######[Federation Server Farm Using WID and Proxies](identity/ad-fs/design/Federation-Server-Farm-Using-WID-and-Proxies-2102.md)
+#######[Federation Server Farm Using WID and Proxies](identity/ad-fs/design/Federation-Server-Farm-Using-WID-and-Proxies-2012.md)
 #######[Federation Server Farm Using SQL Server](identity/ad-fs/design/Federation-Server-Farm-Using-SQL-Server-2012.md)
 ######[Planning Your Deployment](identity/ad-fs/design/Planning-Your-Deployment.md)
 #######[Using AD DS Claims with AD FS](identity/ad-fs/design/Using-AD-DS-Claims-with-AD-FS.md)

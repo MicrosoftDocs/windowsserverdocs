@@ -37,7 +37,7 @@ The following components are required for this deployment goal:
   
     By using Windows Identity Foundation \(WIF\), you can develop your Web application or service so that it accepts federated user logon requests that are made with any standard logon method, such as user name and password.  
   
-After reviewing the information in the linked topics, you can begin deploying this goal by following the steps in [Checklist: Implementing a Federated Web SSO Design](Checklist--Implementing-a-Federated-Web-SSO-Design.md) and [Checklist: Implementing a Web SSO Design](Checklist--Implementing-a-Web-SSO-Design.md).  
+After reviewing the information in the linked topics, you can begin deploying this goal by following the steps in [Checklist: Implementing a Federated Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md) and [Checklist: Implementing a Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md).  
   
 The following illustration shows each of the required components for this AD FS deployment goal.  
   

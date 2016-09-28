@@ -25,7 +25,7 @@ You can manage the local accounts for customers in the perimeter network by usin
   
 This design coincides with the deployment goal in [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md).  
   
-For a list of detailed tasks that you can use to plan and deploy your Web SSO design, see [Checklist: Implementing a Web SSO Design](Checklist--Implementing-a-Web-SSO-Design.md).  
+For a list of detailed tasks that you can use to plan and deploy your Web SSO design, see [Checklist: Implementing a Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md).  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

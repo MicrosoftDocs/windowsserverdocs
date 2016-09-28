@@ -35,7 +35,7 @@ In addition to the foundational components that are described in [Provide Your A
   
 -   **Remote employee:** The remote employee accesses a Web\-based application \(through a supported Web browser\) or a Web\-based service \(through an application\), using valid credentials from the corporate network, while the employee is offsite using the Internet. The employee's client computer in the remote location communicates directly with the federation server proxy to generate a token and authenticate to the application or service.  
   
-After reviewing the information in the linked topics, you can begin deploying this goal by following the steps in [Checklist: Implementing a Federated Web SSO Design](Checklist--Implementing-a-Federated-Web-SSO-Design.md).  
+After reviewing the information in the linked topics, you can begin deploying this goal by following the steps in [Checklist: Implementing a Federated Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md).  
   
 The following illustration shows each of the required components for this AD FS deployment goal.  
   

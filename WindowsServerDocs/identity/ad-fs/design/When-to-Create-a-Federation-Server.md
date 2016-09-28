@@ -59,19 +59,19 @@ You can create a federation server using the AD FS Federation Server Configurati
   
 -   Create a stand\-alone federation server  
   
-    For more information about how to set up a stand\-alone federation server, see [Create a Stand-Alone Federation Server](Create-a-Stand-Alone-Federation-Server.md).  
+    For more information about how to set up a stand\-alone federation server, see [Create a Stand-Alone Federation Server](../../ad-fs/deployment/Create-a-Stand-Alone-Federation-Server.md).  
   
 -   Create the first federation server in a federation server farm  
   
-    For more information about how to set up the first federation server or add a federation server to a farm, see [Create the First Federation Server in a Federation Server Farm](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md).  
+    For more information about how to set up the first federation server or add a federation server to a farm, see [Create the First Federation Server in a Federation Server Farm](../../ad-fs/deployment/Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md).  
   
 -   Add a federation server to a federation server farm  
   
-    For more information about how to add a federation server to a farm, see [Add a Federation Server to a Federation Server Farm](Add-a-Federation-Server-to-a-Federation-Server-Farm.md).  
+    For more information about how to add a federation server to a farm, see [Add a Federation Server to a Federation Server Farm](../../ad-fs/deployment/Add-a-Federation-Server-to-a-Federation-Server-Farm.md).  
   
-For more detailed information about how each of these options work, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+For more detailed information about how each of these options work, see [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
-For more information about how to set up all the prerequisites necessary to deploy a federation server, see [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md).  
+For more information about how to set up all the prerequisites necessary to deploy a federation server, see [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md).  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
