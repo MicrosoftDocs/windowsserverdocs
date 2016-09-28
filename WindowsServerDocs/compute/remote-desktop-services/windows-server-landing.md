@@ -16,25 +16,42 @@ manager: dongill
 ---
 # Welcome to Windows Server 2016 
 
-This is the fifth release of Windows Server 2016. In this documentation lorum epsum lorum epsum.
-
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e"><img src="1system-requirements.png"> <br>System requirements<br>and installation</th>
-    <th class="tg-031e"><img src="2whats-new.png"><br>What's new in<br>Windows Server<br>2016</th>
-    <th class="tg-031e"><img src="3compute.png"><br>Compute</th>
-    <th class="tg-031e"><img src="4identity-and-access.png"><br>Identity and access</th>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<table border='0'>
+  <tr style='text-align:center;'>
+    <td style='width:25%'>
+    ![alt text](1system-requirements.png "System requirements and installation")<br/><br/>
+    System Requirements and Installation</td>
+    <td style='width:25%'>
+    ![alt text](2whats-new.png "What's new in Windows Server 2016?")<br/><br/>
+    What's New in Windows Server 2016?</td>
+    <td style='width:25%'>
+    ![alt text](3compute.png "Windows Server Compute")<br/><br/>
+    Compute</td>
+    <td style='width:25%'>
+    ![alt text](4identity-and-access.png "Windows Server Identity and Access")<br/><br/>
+    Identity and Access</td>
   </tr>
-  <tr>
-    <td class="tg-031e"><img src="5management-and-automation.png"><br>Management and <br>automation</td>
-    <td class="tg-031e"><img src="6networking.png"><br>Networking</td>
-    <td class="tg-031e"><img src="6storage.png"><br>Storage</td>
-    <td class="tg-031e"><img src="8security-and-assurance.png"><br>Security and assurance</td>
+  <tr style='text-align:center;'>
+  <td style='width:25%'>
+  ![alt text](8security-and-assurance.png "Windows Server Security and Assurance")<br/><br/>
+  Security and Assurance</td>
+  <td style='width:25%'>
+  ![alt text](6networking.png "Windows Server Networking")<br/><br/>
+  Networking</td>
+  <td style='width:25%'>
+  ![alt text](6storage.png "Windows Server Storage")<br/><br/>
+  Storage</td>
+  <td style='width:25%'>
+  ![alt text](5management-and-automation.png "Windows Server Management and Automation")<br/><br/>
+  System Requirements and Installation</td>
   </tr>
 </table>
+
+> [!Note]  
+> To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1).  
+>   
+
+## Welcome to Windows Server&reg; 2016.  
+
+**Jaime's install options, release notes, deprecated features**
