@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Desktop hosting logical architecture
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 A logical architecture diagram of the software components for a basic desktop hosting service in Microsoft Azure is shown in Diagram 1.   
   

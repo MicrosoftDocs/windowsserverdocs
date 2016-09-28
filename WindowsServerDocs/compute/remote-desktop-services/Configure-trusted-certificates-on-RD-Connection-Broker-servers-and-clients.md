@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Configure trusted certificates on RD Connection Broker servers and clients
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to configure trusted certificates.  
   

@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Add the RDSH Server, create a collection, and publish the RemoteApp programs
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to deploy RemoteApp programs in your desktop hosting environment. Make sure you have reviewed and completed the prerequisites before starting.  
 

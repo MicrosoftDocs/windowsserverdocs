@@ -13,9 +13,9 @@ ms.date: 8/16/2016
 ---
 # Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
+
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   

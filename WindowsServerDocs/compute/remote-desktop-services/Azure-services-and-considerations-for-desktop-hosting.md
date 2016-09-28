@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Azure services and considerations for desktop hosting
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following sections describe Azure Infrastructure Services.  
   

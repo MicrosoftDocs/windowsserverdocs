@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Deploy RemoteApp programs
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 RemoteApp programs let you share apps, programs, and resources with your users as part of your Remote Desktop Services deployment. To do this, you need to deploy a Remote Desktop Session Host (RDSH) server and collection  
 

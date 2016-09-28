@@ -3,6 +3,7 @@ title: What's new in Failover Clustering in Windows Server
 ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
+manager: dongill
 author: kumudd
 ms.author: kumud
 ms.date: 09/15/2016

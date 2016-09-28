@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Tenant on-premises components
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following information describes the on-premises components that make up the desktop hosting deployment.  
   

@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Access from anywhere
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 End users can connect to internal network resources securely from outside the corporate firewall through RD Gateway.
 
