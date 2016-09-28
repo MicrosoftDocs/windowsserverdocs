@@ -1,9 +1,9 @@
 ---
 title: What's new in Hyper-V on Windows Server 2016
-description: "Describes the "
+description: "Describes the new and updated features in this version of Hyper-V"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
