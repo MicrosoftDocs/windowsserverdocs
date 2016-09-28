@@ -113,3 +113,5 @@ For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.m
 You have now successfully created a DNS policy that provides application load balancing across Web servers in three different datacenters.
 
 You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.
+
+To add geo-location awareness to application load balancing, see [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md).
