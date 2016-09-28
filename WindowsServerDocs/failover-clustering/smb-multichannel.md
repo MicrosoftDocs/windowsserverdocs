@@ -3,6 +3,7 @@ title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: article
+ms.manager: eldenc
 author: RobHindman
 ms.author: robhind
 ms.date: 09/15/2016

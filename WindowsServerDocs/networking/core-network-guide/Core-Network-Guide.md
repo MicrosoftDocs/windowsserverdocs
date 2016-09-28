@@ -1094,19 +1094,19 @@ For more information about the technologies in this guide, see the following res
 
  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/en-us/library/mt163897.aspx)
+-   [What's new in Active Directory Domain Services (AD DS)](https://technet.microsoft.com/windows-server-docs/identity/whats-new-active-directory-domain-services)
 
--   [Active Directory Domain Services overview](http://technet.microsoft.com/library/hh831484.aspx) at http://technet.microsoft.com/library/hh831484.aspx.
+-   [Active Directory Domain Services overview](https://technet.microsoft.com/windows-server-docs/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview).
 
--   [Domain Name System (DNS) overview](http://technet.microsoft.com/library/hh831667.aspx) at http://technet.microsoft.com/library/hh831667.aspx.
+-   [Domain Name System (DNS)](https://technet.microsoft.com/windows-server-docs/networking/dns/domain-name-system--dns-)
 
--   [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152(WS.10).aspx)
+-   [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152.aspx)
 
--   [Dynamic Host Configuration Protocol (DHCP) overview](http://technet.microsoft.com/library/hh831825.aspx) at http://technet.microsoft.com/library/hh831825.aspx.
+-   [Dynamic Host Configuration Protocol (DHCP) overview](http://technet.microsoft.com/library/hh831825.aspx) 
 
--   [Network Policy and Access Services overview](http://technet.microsoft.com/library/hh831683.aspx) at http://technet.microsoft.com/library/hh831683.aspx.
+-   [Network Policy and Access Services overview](http://technet.microsoft.com/library/hh831683.aspx) 
 
--   [Web Server (IIS) overview](http://technet.microsoft.com/library/hh831725.aspx) at http://technet.microsoft.com/library/hh831725.aspx.
+-   [Web Server (IIS) overview](http://technet.microsoft.com/library/hh831725.aspx)
 
 ## <a name="BKMK_appendix"></a>Appendices A through E
 The following sections contain additional configuration information for computers that are running operating systems other than  Windows Server 2016, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
