@@ -1,5 +1,5 @@
 ---
-title: Deploy a 2 node S2D SOFS for UPD storage in Azure
+title: Deploy a S2D SOFS for UPD storage in Azure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: harowl
 ms.date: 09/28/2016
 manager: scottman
 ---
-# Deploy a 2 node Storage Spaces Direct scale-out file server for UPD storage in Azure
+# Deploy a Storage Spaces Direct scale-out file server for UPD storage in Azure
 
 >Applies To: Windows Server Technical Preview
 
