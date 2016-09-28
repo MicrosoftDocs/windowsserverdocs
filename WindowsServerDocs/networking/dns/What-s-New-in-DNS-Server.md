@@ -16,10 +16,10 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic describes the Domain Name System (DNS) server functionality that is new or changed in  Windows Server 2016.  
+This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   
 ## <a name="BKMK_DNSClient2012R2"></a>What's new in DNS Server in Windows Server Technical Preview  
-In  Windows Server 2016, DNS Server offers enhanced support in the following areas.  
+In Windows Server 2016, DNS Server offers enhanced support in the following areas.  
   
 |Functionality|New or Improved|Description|  
 |-----------------|-------------------|---------------|  
