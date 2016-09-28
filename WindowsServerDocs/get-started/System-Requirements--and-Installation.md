@@ -119,4 +119,4 @@ The following items are not strictly required, but are necessary for certain fea
 >- A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
-For detailed steps to install Windows Server 2016 as a Nano Server, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx)  
+For detailed steps to install Windows Server 2016 as a Nano Server, see [Getting Started with Nano Server](get-started/Getting-Started-with-Nano-Server.md).
