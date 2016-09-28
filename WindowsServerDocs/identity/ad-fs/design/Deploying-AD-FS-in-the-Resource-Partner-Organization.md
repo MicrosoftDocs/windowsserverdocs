@@ -1,0 +1,34 @@
+---
+title: Deploying AD FS in the Resource Partner Organization
+description:
+author: billmath
+ms.author:  billmath
+manager: femila
+ms.date: 09/28/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adfs
+---
+
+# Deploying AD FS in the Resource Partner Organization
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+The resource partner organization in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] represents the organization whose Web servers may be protected by a resource\-side [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]. The [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
+  
+In scenarios in which you need to provide access to federated services or applications to many different users—when some users reside in different organizations—you can configure the resource [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] so that you can deploy multiple account partners.  
+  
+For more information about how to set up and configure a resource partner organization, see [Checklist: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md).  
+  
+## In this section  
+  
+-   [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
+  
+-   [Review the Role of the Federation Server Proxy in the Resource Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
+  
+-   [Determine Your Federated Application Strategy in the Resource Partner](Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md)  
+  
+
+## See Also
+[AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
