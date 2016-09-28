@@ -16,8 +16,10 @@ manager: dongill
 ---
 # Windows Server 2016 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-<table border='0'>
+<table border=0 width='845px;'>
+  <tr>
+    <td colspan='4' style='padding:0;'><img src='bkg_server.jpg'/></td>
+  </tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
     ![alt text](1system-requirements.png "System requirements and installation")<br/><br/>
@@ -27,7 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     [What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</td>
     <td style='width:25%'>
     ![alt text](3compute.png "Windows Server Compute")<br/><br/>
-    [Compute](../compute/Compute.md) </td>
+    [Compute](../compute/Compute.md)</td>
     <td style='width:25%'>
     ![alt text](4identity-and-access.png "Windows Server Identity and Access")<br/><br/>
     [Identity and Access](../identity/Identity-and-Access.md)</td>
@@ -38,7 +40,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   [Security and Assurance](../security/Security-and-Assurance.md)</td>
   <td style='width:25%'>
   ![alt text](6networking.png "Windows Server Networking")<br/><br/>
-  [Networking](../networking/Networking.md)</td>
+  [Networking](windows-server-technology-area.md)</td>
   <td style='width:25%'>
   ![alt text](6storage.png "Windows Server Storage")<br/><br/>
   [Storage](../storage/storage.md)</td>
