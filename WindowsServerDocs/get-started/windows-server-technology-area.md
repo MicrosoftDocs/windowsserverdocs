@@ -16,10 +16,19 @@ manager: dongill
 ---
 # Welcome to Networking in Windows Server 2016 
 
-![Networking](6networking.png) Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization. Software-defined networking capabilities have been significantly enhanced and revolve around the new Network Controller function.
+![Networking](6networking.png) Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 Technical Preview provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization.
+
+When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. This consistency means that your applications are now easier to scale and you can seamlessly run applications , anywhere, with equal confidence around security, performance, quality of service, and availability.
 
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
+
+Windows Server 2016 adds the following new networking technologies:
+
+- [Software Defined Networking](#Software-Defined-Networking): Network Controller, Hyper-V Virtual Switch, Network Function Virtualization
+- [Cloud Scale Fundamentals](#Cloud-Scale-Fundamentals): Converged Network Interface Card (NIC), Packet Direct, Switch Embedded Teaming (SET)
+
+Read on for more information about using networking in Windows Server 2016.
 
 ## Software Defined Networking technologies
 
