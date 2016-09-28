@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: lizap
-manager: dongill
+manager: swadhwa
 ms.author: elizapo
 ---
 # End a User Session

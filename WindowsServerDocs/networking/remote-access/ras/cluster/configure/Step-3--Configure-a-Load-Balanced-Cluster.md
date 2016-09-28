@@ -94,7 +94,7 @@ After preparing servers for the cluster, configure load-balancing on the single 
     > [!NOTE]  
     > If external load balancing is being used, note the Virtual IPs and provide them as on the external load balancers.  
   
-![Windows PowerShell](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -241,7 +241,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 12. On the **Adding and Removing Servers** dialog box, click **Close**.  
   
-![Windows PowerShell](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -271,7 +271,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 7.  On the **Adding and Removing Servers** dialog box, click **Close**.  
   
-![Windows PowerShell](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -292,7 +292,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 4.  On the **Disable Load Balancing** dialog box, click **Close**.  
   
-![Windows PowerShell](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

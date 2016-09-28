@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e392f423-a64b-4825-91ab-334058721c4d
 author: lizap
-manager: dongill
+manager: swadhwa
 ms.author: elizapo
 ---
 # Prepare your MultiPoint Services system for users

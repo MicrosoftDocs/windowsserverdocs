@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4fb5b8b-2d57-40bb-afc7-7cfefc2ae232
 author: lizap
-manager: dongill
+manager: swadhwa
 ms.author: elizapo
 ---
 # Install software on your MultiPoint Services system

@@ -30,7 +30,7 @@ This collection contains tool and reference information for IT pros who want to 
     To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10&reg;. Remote Server Administration Tools for Windows 10&reg; includes Server Manager, Microsoft Management Console (MMC) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server 2016 Technical Preview.  
 
 
--   [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/get-started/Windows-Server-Update-Services-WSUS.md)  
+-   [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/Windows-Server-Update-Services-WSUS.md)  
 
     The content in this section describes how to configure and manage WSUS. In this section you will find information about installing the WSUS Server Role, configuring WSUS servers, as well as managing updates, and managing WSUS client computers and WSUS computer groups.  
 

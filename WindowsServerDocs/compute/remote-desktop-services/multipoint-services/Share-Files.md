@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e138e01-39e3-4d60-ad3c-5a33b1e0b076
 author: lizap
-manager: dongill
+manager: swadhwa
 ms.date: 08/04/2016
 ms.author: elizapo
 ---
