@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d2908865-6be3-474d-88f1-995f40bb61d0
 author: lizap
-manager: dongill
+manager: swadhwa
 ms.author: elizapo
 ---
 # Set up a USB zero client-connected station in MultiPoint Services

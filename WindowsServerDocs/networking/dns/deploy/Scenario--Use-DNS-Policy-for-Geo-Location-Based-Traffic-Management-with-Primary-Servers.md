@@ -14,16 +14,25 @@ author: jamesmci
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 
->Applies To: Windows Server 2016
+>Applies To:  Windows Server 2016
 
 You can use this topic to learn how to configure DNS Policy to allow primary DNS servers to respond to DNS client queries based on the geographical location of both the client and the resource to which the client is attempting to connect, providing the client with the IP address of the closest resource.  
   
 >[!IMPORTANT]  
->This scenario illustrates how to deploy DNS policy for geo-location based traffic management when you are using only primary DNS servers. You can also accomplish geo-location based traffic management when you have both primary and secondary DNS servers. If you have a primary-secondary deployment, first complete the steps in this topic, and then complete the steps that are provided in the topic [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md).
-
+>This scenario illustrates how to deploy DNS policy for geo-location based traffic management when you are using only primary DNS servers. You can also accomplish geo-location based traffic management when you have both primary and secondary DNS servers. If you have a primary-secondary deployment, first complete the steps in this topic, and then complete the steps that are provided in the topic [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md).  
+  
+This topic contains the following sections.  
+  
+- [Geo-Location Based Traffic Management Example](#bkmk_example)  
+- [How the DNS name resolution process works](#bkmk_works)  
+- [How to configure DNS Policy for Geo-Location Based Query Responses](#bkmk_config)  
+  
 With new DNS policies, you can create a DNS policy that allows the DNS server to respond to a client query asking for the IP address of a Web server. Instances of the Web server might be located in different datacenters at different physical locations. DNS can assess the client and Web server locations, then respond to the client request by providing the client with a Web server IP address for a Web server that is physically located closer to the client.  
-
+  
 You can use the following DNS policy parameters to control the DNS server responses to queries from DNS clients. 
+
+
+
 
 - **Client Subnet**. Name of a predefined client subnet. Used to verify the subnet from which the query was sent.
 - **Transport Protocol**. Transport protocol used in the query. Possible entries are **UDP** and **TCP**.
@@ -33,14 +42,14 @@ You can use the following DNS policy parameters to control the DNS server respon
 - **Query Type**. Type of record being queried (A, SRV, TXT, etc.).
 - **Time of Day**. Time of day the query is received. 
   
-You can combine the following criteria with a logical operator (AND/OR) to formulate policy expressions. When these expressions match, the policies are expected to perform one of the following actions.
+You can combine the following criteria with a logical operator (AND/OR) to formulate policy expressions. When these expressions match, the policies are expected to perform one of the following actions.  
+  
  
 - **Ignore**. The DNS server silently drops the query.          
 - **Deny**. The DNS server responds that query with a failure response.          
 - **Allow**. The DNS server responds back with traffic managed response.          
   
-##  <a name="bkmk_example"></a>Geo-Location Based Traffic Management Example
-
+##  <a name="bkmk_example"></a>Geo-Location Based Traffic Management Example  
 Following is an example of how you can use DNS policy to achieve traffic redirection on the basis of the physical location of the client that performs a DNS query.   
   
 This example uses two fictional companies - Contoso Cloud Services, which provides web and domain hosting solutions; and Woodgrove Food Services, which provides food delivery services in multiple cities across the globe, and which has a Web site named woodgrove.com.  
@@ -114,7 +123,9 @@ You can use the following Windows PowerShell commands to create zone scopes.
     Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "USZoneScope"  
       
     Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "EuropeZoneScope"  
-
+      
+  
+  
 For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx).  
   
 ### <a name="bkmk_records"></a>Add Records to the Zone Scopes  

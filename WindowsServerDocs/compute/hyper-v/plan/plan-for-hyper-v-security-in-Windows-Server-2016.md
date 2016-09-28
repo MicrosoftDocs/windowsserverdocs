@@ -58,7 +58,7 @@ For more secure environments:
 - **Store virtual hard disks and snapshot files in a secure location.**
 - **Secure devices.**	Configure only required devices for a virtual machine. Don't enable discrete device assignment in your production environment unless you need it for a specific scenario. If you do enable it, make sure to only expose devices from trusted vendors. 
 - **Configure antivirus, firewall, and intrusion detection software** within virtual machines as appropriate based on the virtual machine role.
-- **Enable virtualization based security for guests that run Windows 10 or Windows Server 2016.** For more information, see [Secure Hyper-V virtual machines using virtualization-based security](secure-hyper-v-virtual-machines-using-virtualization-based-security.md) and the [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
+- **Enable virtualization based security for guests that run Windows 10 or Windows Server 2016.** For more information, see the [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
 - **Only enable Discrete Device Assignment if needed for a specific workload**. Due to the nature of passing through a physical device, work with the device manufacturer to understand if it should be used in a secure environment.
 
 For more secure environments:

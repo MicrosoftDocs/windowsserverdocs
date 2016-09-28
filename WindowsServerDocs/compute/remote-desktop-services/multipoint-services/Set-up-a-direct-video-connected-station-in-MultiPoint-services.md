@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82ba3517-9743-4cde-8eea-63a17edb016f
 author: lizap
-manager: dongill
+manager: swadhwa
 ms.author: elizapo
 ---
 # Set up a direct-video-connected station in MultiPoint Services

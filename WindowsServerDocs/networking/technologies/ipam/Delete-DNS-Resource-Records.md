@@ -30,15 +30,15 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 4.  In the display pane, locate and select the resource records that you want to delete.  
   
-    ![In the display pane select the resource records to delete](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_01.jpg)  
+    ![](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_01.jpg)  
   
 5.  Right-click the selected records, and then click **Delete DNS resource record**.  
   
-    ![Right-click the selected records and click Delete DNS resource record](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_02.jpg)  
+    ![](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_02.jpg)  
   
 6.  The **Delete DNS Resource Record** dialog box opens. Verify that the correct DNS server is selected. If it is not, click **DNS server** and select the server from which you want to delete the resource records. Click **OK**. IPAM deletes the resource records from the DNS server.  
   
-    ![Verify that the correct DNS server is selected and click OK](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_03.jpg)  
+    ![](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_03.jpg)  
   
 ## See Also  
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  
