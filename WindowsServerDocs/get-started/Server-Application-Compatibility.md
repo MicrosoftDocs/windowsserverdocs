@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/26/2016
+ms.date: 09/29/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -31,7 +31,7 @@ For customers and software vendor partners looking for more information on Windo
 |Microsoft System Center Configuration Manager (version 1606)|	Yes|	[What's new in version 1606 of System Center Configuration Manager](https://technet.microsoft.com/library/mt752488.aspx)|  
 |SharePoint Server 2016|	Yes|	[Hardware and software requirements for SharePoint Server 2016](https://technet.microsoft.com/library/cc262485(v=office.16).aspx)|
 |Project Server 2016|	Yes|	[Software requirements for Project Server 2016](https://technet.microsoft.com/library/ee683978(v=office.16).aspx)|
-|Exchange Server 2016|	No|	[Updates for Exchange 2016](https://technet.microsoft.com/library/jj907309(v=exchg.160).aspx)| 
+|Exchange Server 2016|	Yes|	[Updates for Exchange 2016](https://technet.microsoft.com/library/jj907309(v=exchg.160).aspx)| 
 |Skype for Business Server 2015|	No|	[Server requirements for Skype for Business Server 2015](https://technet.microsoft.com/library/dn951388.aspx)|
 |Biztalk Server 2016|	No|	[BizTalk Server 2016 What's New](https://msdn.microsoft.com/library/mt670742.aspx)| 
 |Visual Studio Team Foundation Server 15|	No|	[Team Foundation Server 2015](https://www.visualstudio.com/docs/setup-admin/requirements)| 
