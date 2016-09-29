@@ -58,4 +58,6 @@ manager: dongill
 
 Choose the installation option that works best for you.
 
-![Nano](nano.png) ![Server core](servercore.png) ![Desktop](desktop.png)
+
+| ![Nano](nano.png) | ![Server core](servercore.png) | ![Desktop](desktop.png) |
+|------|-------------|----------|
