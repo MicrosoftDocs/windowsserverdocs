@@ -14,7 +14,7 @@ ms.author: victorh
 The topics in this section provide information about troubleshooting the Software Defined Networking (SDN) technologies that are included in Windows Server 2016:  
 
 
-* [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](../../sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)  
+* [Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack](../../sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)  
 
 For additional SDN documentation, see the following:  
 

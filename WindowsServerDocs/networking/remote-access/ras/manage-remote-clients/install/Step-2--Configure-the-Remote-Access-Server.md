@@ -54,7 +54,7 @@ You must install the Remote Access role on a server in your organization that wi
   
 8.  On the **Installation progress** dialog, verify that the installation was successful, and then click **Close**.  
   
-![](../../../../media/Step-2--Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2--Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
