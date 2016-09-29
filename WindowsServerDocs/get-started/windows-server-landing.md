@@ -18,7 +18,7 @@ manager: dongill
 
 <table border=0 width='845px;'>
   <tr>
-    <td colspan='4' style='padding:0;'><img src='bkg_server.jpg'/></td>
+    <td colspan='4' style='padding:0;'><img src='wsbanner.png'/></td>
   </tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
