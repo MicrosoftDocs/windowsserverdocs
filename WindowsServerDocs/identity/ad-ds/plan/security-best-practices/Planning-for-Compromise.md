@@ -1,22 +1,19 @@
 ---
 title: Planning for Compromise
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 6e240c2c-d387-492e-b00e-ee5ee842e5ad
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Planning for Compromise
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](http://technet.microsoft.com/library/cc722488.aspx)  
   

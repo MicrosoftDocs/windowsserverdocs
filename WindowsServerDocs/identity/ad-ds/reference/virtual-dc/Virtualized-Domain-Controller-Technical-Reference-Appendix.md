@@ -1,22 +1,19 @@
 ---
 title: Virtualized Domain Controller Technical Reference Appendix
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 22f363ed-d4cf-4c01-8238-75cc1d5b8d6b
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Virtualized Domain Controller Technical Reference Appendix
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers:  
   

@@ -1,20 +1,19 @@
 ---
 title: Planning Operations Master Role Placement
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: e2616396-12e6-4bad-a081-f94c03288710
-author: Femila
 ---
+
 # Planning Operations Master Role Placement
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Domain Services (AD DS) supports multimaster replication of directory data, which means any domain controller can accept directory changes and replicate the changes to all other domain controllers. However, certain changes, such as schema modifications, are impractical to perform in a multimaster fashion. For this reason certain domain controllers, known as operations masters, hold roles responsible for accepting requests for certain specific changes.  
   
