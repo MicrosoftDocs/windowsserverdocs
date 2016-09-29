@@ -76,6 +76,7 @@
 ##### [Enable high-end graphics remoting](compute/remote-desktop-services/rds-plan-graphics-rendering.md)
 ##### [Connect from any device](compute/remote-desktop-services/rds-plan-connect-from-any-device.md)
 ##### [Choose how you pay](compute/remote-desktop-services/rds-plan-choose-how-you-pay.md)
+##### [Office 2016 in RDS and VDI deployments](compute/remote-desktop-services/rds-office-vdi-rdsh.md)
 ##### [Desktop Hosting Reference Architecture](compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md)
 ###### [Desktop hosting logical architecture](compute/remote-desktop-services/Desktop-hosting-logical-architecture.md)
 ###### [Desktop hosting service](compute/remote-desktop-services/Desktop-hosting-service.md)
