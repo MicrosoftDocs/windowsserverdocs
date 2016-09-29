@@ -84,7 +84,7 @@ To restore the IP Helper service on your Remote Access server, you can follow th
   
 2.  In the list of **Services**, scroll down and right-click **IP Helper**, and then click **Start**.  
   
-![Windows PowerShell](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

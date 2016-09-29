@@ -50,21 +50,21 @@ For more information, see the [Storage Replica in Windows Server 2016](storage-r
 This capability is new in Windows Server 2016.  
 
 ## <a name="storage-qos"></a>Storage Quality of Service  
-You can now use storage quality of service (QoS) to centrally monitor end-to-end storage performance and create management policies using Hyper-V and CSV clusters in Windows Server 2016.  
+You can now use storage quality of service (QoS) to centrally monitor end-to-end storage performance and create policies using Hyper-V and Scale-Out File Servers in Windows Server 2016.  
 
 **What value does this change add?**  
-You can now create storage QoS policies on a CSV cluster and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the workloads and storage loads fluctuate.  
+You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates.  
 
-* Each policy can specify a reserve (minimum) and/or a limit (maximum) to be applied to a collection of data flows, such as a virtual hard disk, a single virtual machine or a group of virtual machines, a service, or a tenant.  
+* Each policy specifies a reserve (minimum) and a limit (maximum) to be applied to a collection of data flows, such as a virtual hard disk, a single virtual machine or a group of virtual machines, a service, or a tenant.  
 * Using Windows PowerShell or WMI, you can perform the following tasks:  
-    * Create policies on a CSV cluster.
-    * Enumerate policies available on a CSV cluster.
-    * Assign a policy to a virtual hard disk of a Hyper-V virtual machine. 
+    * Create policies on a Scale-Out File Server.
+    * Enumerate policies available on a Scale-Out File Server.
+    * Assign a policy to a virtual hard disk on a server running Hyper-V. 
     * Monitor the performance of each flow and status within the policy.  
-* If multiple virtual hard disks share the same policy, performance is fairly distributed to meet demand within the policy's minimum and maximum settings. Therefore, a policy can be used to manage a virtual hard disk, a virtual machine, multiple virtual machines comprising a service, or all virtual machines owned by a tenant.  
+* If multiple virtual hard disks share the same policy, performance is fairly distributed to meet demand within the policy minimum and maximum. Therefore, a policy can be used to represent a virtual machine, multiple virtual machines comprising a service, or all virtual machines owned by a tenant.  
 
 **What works differently?**  
-This capability is new in Windows Server 2016. Managing minimum reserves, monitoring flows of all virtual disks across the cluster via a single command, and centralized policy based management were not possible in previous releases of Windows Server.  
+This capability is new in Windows Server 2016. It was not possible to configure centralized policies for storage QoS in previous releases of Windows Server.  
 
 For more information, see [Storage Quality of Service](storage-qos/storage-qos-overview.md)
 

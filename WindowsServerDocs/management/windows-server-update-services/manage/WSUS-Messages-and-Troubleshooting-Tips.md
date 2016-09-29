@@ -1,5 +1,6 @@
 ---
 title: WSUS Messages and Troubleshooting Tips
+ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -11,8 +12,10 @@ author: coreyp
 ms.author: coreyp-at-msft
 ms.date: 09/14/2016
 ---
+
 # WSUS Messages and Troubleshooting Tips
 
+>Applies To: Windows Server Technical Preview
 
 This topic provides information about some common WSUS messages.
 
@@ -101,6 +104,8 @@ For additional details, see: [WSUS sync in ConfigMgr 2012 fails with HTTP 503 er
 
     Right-click the service, and then click **Start** if the service is not running, or **Restart** to refresh the service if it is running.
 
+### See also
+WSUS resources on the [Windows Server Update Services](https://technet.microsoft.com/en-us/windowsserver/bb332157.aspx) Windows Server Update Services  TechCenter page
 
 
 

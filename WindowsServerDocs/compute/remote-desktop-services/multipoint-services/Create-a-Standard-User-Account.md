@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e113666-e45f-48b6-aad8-42c361c9046d
 author: lizap
-manager: dongill
+manager: swadhwa
 ---
 # Create a Standard User Account
 Create *standard user accounts* for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with standard user accounts can run most applications and save files, but cannot run MultiPoint Manager. To see who has standard user access, in MultiPoint Manager, click the **Users** tab. Standard user accounts are displayed in the **Account Type** column as **Standard**.  

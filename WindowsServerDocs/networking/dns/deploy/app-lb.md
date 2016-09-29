@@ -25,7 +25,7 @@ When you have deployed multiple instances of an application, you can use DNS pol
 
 Following is an example of how you can use DNS policy for application load balancing.
 
-This example uses one fictional company - Contoso Gift Services - which provides online gifing services, and which has a Web site named **contosogiftservices.com**.
+This example uses one fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named **contosogiftservices.com**.
 
 The contosogiftservices.com website is hosted in multiple datacenters that each have different IP addresses.
 
@@ -113,3 +113,5 @@ For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.m
 You have now successfully created a DNS policy that provides application load balancing across Web servers in three different datacenters.
 
 You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.
+
+To add geo-location awareness to application load balancing, see [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md).

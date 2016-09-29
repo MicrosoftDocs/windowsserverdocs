@@ -28,11 +28,11 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the lower navigation pane, click **Roles**. In the display pane, the roles are listed.  
   
-    ![Click roles to list them](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_01.jpg)  
+    ![](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_01.jpg)  
   
 4.  Select the role whose permissions you want to view. In the lower details pane, the operations that are permitted for the role are displayed.  
   
-    ![Select a role to view permissions in the lower details pane](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_02.jpg)  
+    ![](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_02.jpg)  
   
 ## See Also  
 [Role-based Access Control](Role-based-Access-Control.md)  

@@ -256,7 +256,7 @@ You must manually configure a DNS entry for the network location server website 
   
 5.  In the **DNS** dialog box, click **OK**, and then click **Done**.  
   
-![Windows PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -328,7 +328,7 @@ The DirectAccess server and all DirectAccess client computers must be joined to 
   
 10. When you are prompted to restart the computer, click **Restart Now**.  
   
-![Windows PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -417,7 +417,7 @@ After the Remote Access administrator completes any changes to the Remote Access
   
     10. On the **Scanning Backup** page, click **Next**, and then click **Finish**.  
   
-![Windows PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -462,7 +462,7 @@ The DirectAccess settings that are contained in the client computer Group Policy
   
 6.  In the **Select Users, Contacts, Computers, or Service Accounts** dialog box, select the client computers that you want to enable for DirectAccess, and then click **OK**.  
   
-![Windows PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

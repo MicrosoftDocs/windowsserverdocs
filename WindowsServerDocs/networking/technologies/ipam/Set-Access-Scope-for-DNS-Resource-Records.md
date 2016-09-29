@@ -28,15 +28,15 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the display pane, locate and select the resource records whose access scope you want to change.  
   
-    ![Select the resource records](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_02.jpg)  
+    ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_02.jpg)  
   
 4.  Right-click the selected DNS resource records, and then click **Set Access Scope**.  
   
-    ![Right-click records to click set access scope](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_03.jpg)  
+    ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_03.jpg)  
   
 5.  The **Set Access Scope** dialog box opens. If required for your deployment, click to deselect **Inherit access scope from parent**. In **Select the access scope**, select an item, and then click **OK**.  
   
-    ![Select an access scope and click OK](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_04.jpg)  
+    ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_04.jpg)  
   
 ## See Also  
 [Role-based Access Control](Role-based-Access-Control.md)  

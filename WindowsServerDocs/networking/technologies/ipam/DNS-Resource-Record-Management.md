@@ -31,7 +31,7 @@ When you deploy IPAM in  Windows Server 2016, you can perform server discovery t
   
 The yellow status bar in the following illustration shows the user interface location of IPAM notifications.  
   
-![IPAM notifications](../../media/DNS-Resource-Record-Management/ipam_DataCollection_01.jpg)  
+![](../../media/DNS-Resource-Record-Management/ipam_DataCollection_01.jpg)  
   
 The DNS data that is collected includes DNS zone and resource record information. You can configure IPAM to collect zone information from your preferred DNS server.  IPAM collects both file-based and Active Directory zones.  
   
