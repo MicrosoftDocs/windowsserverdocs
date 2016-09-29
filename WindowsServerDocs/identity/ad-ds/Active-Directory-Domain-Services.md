@@ -1,23 +1,20 @@
 ---
 title: Active Directory Domain Services
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 5df97522-e05c-42de-ab79-65d02a1e0dd3
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Active Directory Domain Services
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-  
-**[This information is preliminary and subject to change.]**  
   
 You will find links to Active Directory Domain services content on this page.   
   

@@ -23,7 +23,7 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 - Measurements
 - Best Practices
 
-Overview
+## Overview
 The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1304)](https://tools.ietf.org/html/rfc1305) to synchronize the local system time to a NTP reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider, using stratum level first, followed by root delay dispersion and then time offset.
 
 > [!NOTE] 
@@ -31,9 +31,10 @@ The Windows Time service is a component which uses a plug-in model for client an
 
 Domain and Standalone configurations work differently.
 
-Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the “Specify a Local Reliable Time Service Using GTIMESERV section below.
 
-Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point back to a Microsoft time reference service resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
+- Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the “Specify a Local Reliable Time Service Using GTIMESERV section below.
+
+- Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point back to a Microsoft time reference service resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
 
 > [!NOTE] 
 > For more information about the domain hierarchy and scoring system, see the [“What is Windows Time Service?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/).
@@ -46,9 +47,10 @@ Since Hyper-V guests will have at least two Windows Time providers to choose fro
 ### Three Critical Factors
 In every case for accurate time, there are three critical factors:
 
-1. **Symmetrical NTP communication** - It is critical that the connection for NTP communication is symmetrical.  NTP uses calculations to adjust the time that assume the network patch is symmetrical.  If the path the NTP packet takes going to the server takes a different amount of time to return, the accuracy is affected.  For example, the path could change due to changes in network topology, or packets being routed through devices that have different interface speeds.
-2. **Solid Source Clock** - The source clock in your domain needs to be stable and accurate.  This usually means installing a GPS device or pointing to a Stratum 1 source, taking #1 into account.  The analogy goes, if you have two boats on the water, and you are trying to measure the altitude of one compared to the other, your accuracy is best if the source boat is very stable and not moving.  The same goes for time, and if your source clock isn’t stable, then the entire chain of synchronized clocks is affected and magnified at each stage.  It also must be accessible, because disruptions in the connection will interfere with time synchronization.  And finally it must be secure.  If the time reference is not properly maintained, or operated by a potentially malicious party, is can risky to trust it and exposes your domain to time based attacks.
-3. **Stable client clock** - A stable client clocks assures that the natural drift of the oscillator is containable.  NTP uses multiple samples from potentially multiple NTP servers to condition and discipline your local computers clock.  It does not step the time changes, but rather slows or speeds up the local clock that that you approach the accurate time quickly and stay accurate between NTP requests.  However, if you’re the client computer clock’s oscillator is not stable, then more fluctuations in between adjustments can occur and the algorithms Windows uses to condition the clock don’t work accurately.  In some cases, firmware updates might be needed for accurate time.
+1. **Solid Source Clock** - The source clock in your domain needs to be stable and accurate.  This usually means installing a GPS device or pointing to a Stratum 1 source, taking #1 into account.  The analogy goes, if you have two boats on the water, and you are trying to measure the altitude of one compared to the other, your accuracy is best if the source boat is very stable and not moving.  The same goes for time, and if your source clock isn’t stable, then the entire chain of synchronized clocks is affected and magnified at each stage.  It also must be accessible, because disruptions in the connection will interfere with time synchronization.  And finally it must be secure.  If the time reference is not properly maintained, or operated by a potentially malicious party, is can risky to trust it and exposes your domain to time based attacks.
+2. **Stable client clock** - A stable client clocks assures that the natural drift of the oscillator is containable.  NTP uses multiple samples from potentially multiple NTP servers to condition and discipline your local computers clock.  It does not step the time changes, but rather slows or speeds up the local clock that that you approach the accurate time quickly and stay accurate between NTP requests.  However, if you’re the client computer clock’s oscillator is not stable, then more fluctuations in between adjustments can occur and the algorithms Windows uses to condition the clock don’t work accurately.  In some cases, firmware updates might be needed for accurate time.
+3. **Symmetrical NTP communication** - It is critical that the connection for NTP communication is symmetrical.  NTP uses calculations to adjust the time that assume the network patch is symmetrical.  If the path the NTP packet takes going to the server takes a different amount of time to return, the accuracy is affected.  For example, the path could change due to changes in network topology, or packets being routed through devices that have different interface speeds.
+
 
 For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time’s ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings. 
 
@@ -101,6 +103,8 @@ In this section shows the changes in default configuration based on various envi
 
 ![](media/Windows-2016-Accurate-Time/table1.png)
 
+>[!NOTE]
+>For Linux in Hyper-V, see the Allowing Linux to use Hyper-V Host Time section below.
 
 ### Impact of increased polling and clock update frequency
 In order to provide more accurate time, the defaults for polling frequencies and clock updates are increased which allow us to make small adjustments more frequently.  This will cause more UDP/NTP traffic, however, these packets are small so there should be very little or no impact over broadband links. The benefit, however, is that time should be better on a wider variety of hardware and environments.
@@ -164,8 +168,8 @@ The following chart compares 1 virtual network hop to 6 physical network hops wi
 ## Best Practices for accurate timekeeping
 ### Solid Source Clock
 A machines time is only as good as the source clock it synchronizes with.  In order to achieve 1 ms of accuracy, you’ll need GPS hardware or a time appliance on your network you reference as the master source clock.  Using the default of time.windows.com, may not provide a stable and local time source.  Additionally, as you get further away from the source clock, the network affects the accuracy.  Having a master source clock in each data center is required for the best accuracy.
-Hardware GPS Options
 
+### Hardware GPS Options
 There are various hardware solutions that can offer accurate time.  In general, solutions today are based on GPS antennas.  There are also radio and dial-up modem solutions using dedicated lines.  They attach to your network as either an appliance, or plug into a PC, for instance Windows via a PCIe or USB device.  Different options will deliver different levels of accuracy, and as always, results depend on your environment.  Variables which affect accuracy include GPS availability, network stability and load, and PC Hardware.  These are all important factors when choosing a source clock, which as we stated, is a requirement for stable and accurate time.
 
 ### Domain and Synchronizing Time

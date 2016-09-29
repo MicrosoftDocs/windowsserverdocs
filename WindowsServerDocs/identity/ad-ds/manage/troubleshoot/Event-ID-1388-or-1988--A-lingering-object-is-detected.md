@@ -1,20 +1,19 @@
 ---
 title: Event ID 1388 or 1988 - A lingering object is detected
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: d8e0b934-be71-4929-b377-d3330c6811e9
-author: Femila
 ---
+
 # Event ID 1388 or 1988: A lingering object is detected
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">

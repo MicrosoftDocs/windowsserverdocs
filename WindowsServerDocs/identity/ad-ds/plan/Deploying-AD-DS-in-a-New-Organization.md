@@ -1,20 +1,19 @@
 ---
 title: Deploying AD DS in a New Organization
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 5c937353-b6d9-4b95-b757-4ca7b6bca7d7
-author: Femila
 ---
+
 # Deploying AD DS in a New Organization
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Thoroughly preparing your Active Directory Domain Services (AD DS) design is essential to a cost-effective deployment. If your network environment is currently operating without a directory service, complete a comprehensive design of your AD DS logical structure before you deploy AD DS. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.  
   

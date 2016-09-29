@@ -1,13 +1,14 @@
 ---
 title: Dynamic Access Control Overview
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: 
+ms.technology: identity-adds
 ---
 
 # Dynamic Access Control Overview

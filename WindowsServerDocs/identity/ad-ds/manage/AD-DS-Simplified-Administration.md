@@ -1,22 +1,19 @@
 ---
 title: AD DS Simplified Administration
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: ad8fbdf8-549f-4ff2-91ab-ad5fcde9fcdb
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # AD DS Simplified Administration
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains the new capabilities and benefits of Windows Server 2012 domain controller deployment and administration, and the differences between previous operating system DC deployment and the new Windows Server 2012 implementation.  
   
