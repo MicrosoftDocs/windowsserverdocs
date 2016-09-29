@@ -30,4 +30,6 @@ Outlook 2016 has a solution to tackle this in cached mode by providing a new ser
 The OneDrive for Business sync client is currently not supported for multi-user environments (pooled VDI and RDSH). Users can connect to their resources using the web interface.
 
 ## Skype for Business
-Check out the documentation on [planning for Skype for Business in VDI environments](https://technet.microsoft.com/library/mt740144.aspx).
+Skype for Business is not supported for RDSH deployments. For VDI deployments check out the documentation on [planning for Skype for Business in VDI environments](https://technet.microsoft.com/library/mt740144.aspx).
+
+[Microsoft Office 365 for Citrix XenApp and XenDesktop 7.x](https://www.citrix.com/content/dam/citrix/en_us/documents/products-solutions/deployment-guide-office-365-for-xenapp-and-xendesktop.pdf) also includes a good discussion of integrating OneDrive for Business in an RDS or VDI environment.
