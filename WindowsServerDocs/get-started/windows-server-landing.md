@@ -54,6 +54,8 @@ manager: dongill
 > To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1).  
 >   
 
-## Welcome to Windows Server 2016.  
+## Ready to get started?  
 
-**Jaime's install options, release notes, deprecated features**
+Choose the installation option that works best for you.
+
+![Nano](nano.png) ![Server core](servercore.png) ![Desktop](desktop.png)
