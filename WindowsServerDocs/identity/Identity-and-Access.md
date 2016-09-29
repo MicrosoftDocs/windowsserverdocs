@@ -26,7 +26,7 @@ The following new features in Identity improve the ability for organizations to 
 |[Privileged Access Management for Active Directory Domain Services &#40;AD DS&#41;](https://technet.microsoft.com/library/dn903243.aspx)|Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016. 
 |[Web Application Proxy in Windows Server 2016](web-application-proxy/web-application-proxy-windows-server.md)|The content in this section describes what's new and changed in the Web Application Proxy for Windows Server 2016. 
 |[Windows 10 for the enterprise: Ways to use devices for work](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1)|Windows 10 provides you the ability to leverage Azure Active Directory. Windows 10 devices can be connected to Azure AD, and users can sign in to Windows with Azure AD accounts or add their Azure ID to gain access to business apps and resources. 
-|[Active Directory Domain Services](Active-Directory-Domain-Services.md)|Detailed documentation on all of the features available for AD DS in Windows Server 2016. 
+|[Active Directory Domain Services](../identity/ad-ds/Active-Directory-Domain-Services.md)|Detailed documentation on all of the features available for AD DS in Windows Server 2016. 
 |[Active Directory Federation Services](Active-Directory-Federation-Services.md)|Detailed documentation on all of the features available for AD FS in Windows Server 2016.  
   
 ## Solutions and Scenario Guides  
