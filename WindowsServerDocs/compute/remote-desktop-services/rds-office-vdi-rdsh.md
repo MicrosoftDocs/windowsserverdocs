@@ -17,6 +17,8 @@ manager: scottman
 
 Use the following information to plan how best to integrate Office 2016 into your Remote Desktop (RDSH) and VDI deployments.
 
+For more information on integrating Office 365 with your RDSH or VDI environment, check out [Microsoft Office 365 for Citrix XenApp and XenDesktop 7.x](https://www.citrix.com/content/dam/citrix/en_us/documents/products-solutions/deployment-guide-office-365-for-xenapp-and-xendesktop.pdf).
+
 ## Outlook 2016
 In pooled VDI and RDSH deployments, using search within Outlook has limitations. Search indexing depends on the machine ID, which is different for different VMs. It is possible that every time a user logs into a pooled VDI infrastructure, they are directed to a new VM. That would mean, if we enable local search, the indexer will run every time the machine ID changes (when the user is on a different VM). Depending on the size of the .OST file, the indexer could take a long time to complete and use up resources needed for other apps. Search would not only be slow but might not produce results. Using an Online Mode account profile would work around this, but overall performance would suffer due to the lack of a local cache. 
 
@@ -32,4 +34,4 @@ The OneDrive for Business sync client is currently not supported for multi-user 
 ## Skype for Business
 Skype for Business is not supported for RDSH deployments. For VDI deployments check out the documentation on [planning for Skype for Business in VDI environments](https://technet.microsoft.com/library/mt740144.aspx).
 
-[Microsoft Office 365 for Citrix XenApp and XenDesktop 7.x](https://www.citrix.com/content/dam/citrix/en_us/documents/products-solutions/deployment-guide-office-365-for-xenapp-and-xendesktop.pdf) also includes a good discussion of integrating OneDrive for Business in an RDS or VDI environment.
+For more information on integrating Office 365 with your RDSH or VDI environment, check out [Microsoft Office 365 for Citrix XenApp and XenDesktop 7.x](https://www.citrix.com/content/dam/citrix/en_us/documents/products-solutions/deployment-guide-office-365-for-xenapp-and-xendesktop.pdf).
