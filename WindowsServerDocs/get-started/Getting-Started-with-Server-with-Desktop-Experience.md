@@ -37,7 +37,6 @@ You can obtain a 180-day-licensed evaluation copy of Windows Server from [Window
 
 
 ### Clean installation
-You can obtain retail installation media from SOMEWHERE.
 
 To install the Server with Desktop Experience installation option from the media, insert the media in a drive, restart the computer, and run Setup.exe. In the wizard that opens, select **Windows Server (Server with Desktop Experience)** (Standard or Datacenter), and then complete the wizard.
 
