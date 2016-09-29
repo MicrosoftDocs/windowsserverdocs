@@ -61,8 +61,8 @@ Choose the installation option that works best for you.
 
 <table border=0 width='845px;'>
   <tr style='text-align:center;'>
-    <th style='width:34%'>![Nano](nano.png)</th>
-    <th style='width:33%'>![Server core](servercore.png)</th>
-    <th style='width:33%'>![Desktop](desktop.png)</th>
+    <td style='width:34%'>![Nano](nano.png)</td>
+    <td style='width:33%'>![Server core](servercore.png)</td>
+    <td style='width:33%'>![Desktop](desktop.png)</td>
   </tr>
 </table>
