@@ -48,7 +48,7 @@ Install Storage Replica on Nano Server using  PowerShell remoting as follows:
 2.  To install the Storage Replica feature, run the following cmdlet from a management computer:  
 
     ```  
-    Install-windowsfeature -Name storage-replica -ComputerName <nano server> -Restart -IncludeManagementTools  
+    Install-windowsfeature -Name storage-replica,RSAT-Storage-Replica -ComputerName <nano server> -Restart -IncludeManagementTools  
     ```  
 
     Using the `Test-SRTopology` cmdlet with Nano Server in Windows Server 2016 requires remote script invocation with CredSSP. Unlike other Storage Replica cmdlets, `Test-SRTopology` requires running locally on the source server.   
