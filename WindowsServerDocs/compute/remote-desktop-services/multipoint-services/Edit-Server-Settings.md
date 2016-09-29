@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Edit Server Settings
