@@ -14,15 +14,7 @@ ms.date: 08/18/2016
 
 Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available storage systems with local storage. This is a significant step forward in Windows Server software-defined storage (SDS) as it simplifies the deployment and management of storage and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
-Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct , and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 and includes the following sections:  
-* [How to use this guide](#BKMK_S2D1)  
-* [Hyper-converged Solution with Software Defined Storage Overview](#BKMK_S2D2)  
-* [Hardware requirements](#BKMK_S2D3)  
-* [Information gathering](#BKMK_S2D4)  
-* [Nano or Full/Core Installation Options](#BKMK_InstallOptions)  
-* [Installing and configuring Hyper-Converged solution using Storage Spaces Direct with Windows Server 2016 Nano Server](#BKMK_S2D5)  
-* [Definitions](#BKMK_S2D6)  
-* [Storage Spaces Optmize Pool](#BKMK_S2D7)  
+Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct , and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016. 
 
 ## <a name="BKMK_S2D1"></a> How to Use this Guide   
 This document provides both an introductory overview and specific standalone examples of how to deploy a Hyper Converged Solution with Storage Spaces Direct.  
@@ -34,7 +26,7 @@ In the Hyper-Converged configuration described in this guide, Storage Spaces Dir
 
 The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on local CSVs. This allows for scaling Hyper-V compute clusters together with the storage it is using. Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. Figure 1 illustrates the hyper-converged deployment scenario.  
 
-![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)  
+![Diagram showing the hyper-converged stack with a single cluster hosting the storage and virtual machines](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)  
 
 **FIGURE 1: Hyperconverged - same cluster configured for Storage Spaces Direct and the hosting of virtual machines**  
 
@@ -103,7 +95,7 @@ This section includes instructions to install and configure the components of a 
 
 Figure 2 illustrates the process for building a hyper-converged solution using Windows Server 2016.  
 
-![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_HyperconvergedInfratsructureProcess.png)  
+![Diagram of the deployment process](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_HyperconvergedInfratsructureProcess.png)  
 
 **Figure 2: Process for building a hyper-converged solution using Windows Server 2016.**  
 
@@ -137,7 +129,7 @@ The provisioning and deployment process for a Windows Server Nano server involve
 **Host machines.** In the example below, the expectation is that you start with physical machines that are booted to a Windows Server operating system (full or core). We'll be copying the VHDs files to the Host machines and then re-booting into Nano operation system that was created in the VHDx files. Booting from a VHDx file is the method of deployment being outlined in this guide. Other methods of deploying Nano Server can also be used.  
 
 > [!NOTE]
-> The Image creation machine and the Management machine (defined below) can be the same machine. The critical factor is that **the machine from which you are managing must be of the same version (or higher) as the Nano servers that are being managed.** For Windows Server 2016 evaluation **we recommend that your Management machine be running Windows Server 2016 so you will be able to efficiently manage the Nano Servers (which are also running Windows Server 2016).**  
+> The Image creation machine and the Management machine (defined below) can be the same machine. The critical factor is that **the machine from which you are managing must be of the same version (or higher) as the Nano servers that are being managed.** For Windows Server 2016 evaluation we recommend that your Management machine be running Windows Server 2016 so you will be able to efficiently manage the Nano Servers (which are also running Windows Server 2016).  
 
 ### <a name="BKMK_S2D5a"></a> Deploy the operating system  
 
@@ -153,7 +145,7 @@ Deploying the operating system includes the following tasks:
 
 5.  Connecting to and managing the Nano Servers from the Management system machine  
 
-     ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step1HyperconvergedInfratsructureProcess.png)  
+     ![Diagram showing the process for deploying an operating system to the cluster](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step1HyperconvergedInfratsructureProcess.png)  
 
 **Figure 3: Process for deploying the operating system in a hyper-converged solution using Windows Server 2016.**  
 
@@ -193,7 +185,7 @@ There are other methods to deploy Nano, but in the case of this example we'll pr
 
     You should see something like this:  
 
-    ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig1a.png)  
+    ![Screen showing the output of the Import-Module cmdlet](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig1a.png)  
 
 1. **Copy network drivers** to a directory and note the path. The example in the next step will use  
 
@@ -354,7 +346,7 @@ For each server of the hyper-converged system:
 
 The following assumes 2 RDMA NIC Ports (1 dual port, or 2 single port). In order to deploy Storage Spaces Direct, the Hyper-V switch must be deployed with RDMA-enabled host virtual NICs. Complete the following steps to configure the network on each server:  
 
-![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step2HyperconvergedInfratsructureProcess.png)  
+![Diagram of the network configuration process](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step2HyperconvergedInfratsructureProcess.png)  
 
 **Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016.**  
 
@@ -431,12 +423,6 @@ The Hyper-V virtual switch allows the physical NIC ports to be used for both the
 
 Do the following steps from a management system using [Enter-PSSession](https://technet.microsoft.com/library/hh849707(v=wps.630).aspx) to connect to each of the servers.  
 
-
-
-
-
-
-
 1. Identify the network adapters (you will use this info in step #2)                                                                                                                                                                            
 
         Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed  
@@ -452,19 +438,13 @@ Do the following steps from a management system using [Enter-PSSession](https://
         NIC1        QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #44  Disconnected      0 bps  
         NIC2        QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45  Disconnected      0 bps  
 
-
-
-
-
 1. Create the virtual switch connected to both of the physical network adapters, and enable the Switch Embedded Teaming (SET). You may notice a message that your PSSession lost connection. This is expected and your session will reconnect.    
 
         New-VMSwitch -Name SETswitch -NetAdapterName "<adapter1>","<adapter2>" -EnableEmbeddedTeaming $true                                                                                                                                  
 
     Using the Get-NetAdapter example above, the command would look like this:                                                                                                                                                                        
 
-        New-VMSwitch -Name SETswitch -NetAdapterName "Ethernet 2","Slot #" -EnableEmbeddedTeaming $true                                                                                                                                                 
-
-
+        New-VMSwitch -Name SETswitch -NetAdapterName "Ethernet 2","Slot #" -EnableEmbeddedTeaming $true                            
 
 1. Add host vNICs to the virtual switch. This configures a virtual NIC (vNIC) from the virtual switch that you just configured for the management OS to use.                                                                                      
 
@@ -472,25 +452,18 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
         Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_2 -managementOS  
 
-
-
-
-1. Configure the host vNIC to use a Vlan. They can be on the same or different VLans                                                                                                                                                              
+1. Configure the host vNIC to use a Vlan. They can be on the same or different VLans                                               
 
         Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_1" -VlanId <vlan number> -Access -ManagementOS  
+        Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_2" -VlanId <vlan number> -Access -ManagementOS                        
 
-        Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_2" -VlanId <vlan number>  -Access -ManagementOS                                                                                                                                     
+1. Verify that the VLANID is set                                                                                                   
 
+        Get-VMNetworkAdapterVlan -ManagementOS                                                                                     
 
+     The output should look like this:                                                                                             
 
-
-1. Verify that the VLANID is set                                                                                                                                                                                                                  
-
-        Get-VMNetworkAdapterVlan -ManagementOS                                                                                                                                                                                                           
-
-     The output should look like this:                                                                                                                                                                                                                
-
-        VMName   VMNetworkAdapterName    Mode     VlanList                                                                                                                                                                                                        
+        VMName   VMNetworkAdapterName    Mode     VlanList                                                                         
 
          ------   -------------------    ----      --------                                                                                                                                                                                                        
 
@@ -498,9 +471,7 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
                      SETswitch         Untagged                                                                                                                                                                                                                               
 
-                     SMB_2             Access      13                                                                                                                                                                                                                                 
-
-
+                     SMB_2             Access      13                                                                              
 
 1. Disable and enable each host vNIC adapter so that the Vlan is active.                                                                                                                                                                          
 
@@ -512,8 +483,6 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
         Enable-NetAdapter "vEthernet (SMB_2)"                                                                                                                                                                                                           
 
-
-
 1. Enable RDMA on the host vNIC adapters                                                                                                                                                                                                          
 
         Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)"   
@@ -522,8 +491,7 @@ Do the following steps from a management system using [Enter-PSSession](https://
         Get-SmbClientNetworkInterface       
    Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB_1)** and **vEthernet (SMB_2)**.                                                      
 
-   ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig2.png)       
-
+   ![Screen showing the output of the Get-SmbClientNetworkInterface cmdlet](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig2.png)       
 
 ### <a name="BKMK_S2D5c"></a> Configure Storage Spaces Direct    
 
@@ -545,7 +513,7 @@ Configuring Storage Spaces Direct in Windows Server 2016 includes the following 
 
 The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be done using a PSSession, but run in a Windows PowerShell session that was opened as administrator on the management system.  
 
-![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step3HyperconvergedInfratsructureProcess.png)  
+![Diagram showing the process to configure Storage Spaces Direct](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step3HyperconvergedInfratsructureProcess.png)  
 
  **Figure 4: Process for configuring Storage Spaces Direct in a hyper-converged solution using Windows Server 2016.**  
 
@@ -594,6 +562,7 @@ The disks intended to be used for Storage Spaces Direct need to be empty and wit
 > [!NOTE]
 > There is one parameter that needs to be replaced in the first and last line of the script below, which is &lt;ClusterName&gt;.  
 
+   ```PowerShell
     icm (Get-Cluster -Name HCNanoUSClu3 | Get-ClusterNode) {  
 
         Update-StorageProviderCache  
@@ -623,10 +592,11 @@ The disks intended to be used for Storage Spaces Direct need to be empty and wit
         Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -eq RAW | Group -NoElement -Property FriendlyName  
 
     } | Sort -Property PsComputerName,Count   
+   ```
 
 The output from this script will look similar to the following. The **Count** is the number of disks with that name per cluster node (PSComputerName):  
 
-![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2DCount.png)  
+![Screen showing the output from the above script](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2DCount.png)  
 
 #### <a name="BKMK_S2D5c5"></a>Step 5. Enable Storage Spaces Direct  
 
@@ -725,36 +695,31 @@ The Mellanox ConnectX-3 Pro (dual port 10Gb, SFP+) driver for TP5 that is linked
 
 It will be much easier to do this configuration before configuring the virtual switch on each node.  If you do this before configuring the virtual switch, then you can do one physical adapter at a time.  If you do it after configuring the virtual switch, you need to disable all Mellanox adapters connected to the virtual switch and change the parameter and then re-enable them.  If these are the only adapters you have for connectivity to the server, you will need to be able to access the system by a KVM or other console access device that doesn't' require these network connections.  
 
-For each server do the following for each Mellanox ConnectX-3 Pro adapter:  
+For each server do the following for each Mellanox ConnectX-3 Pro adapter:
 
-1.  Open Device Manager.  
-2.  Navigate to the **Network adapters** item and open it to see the list of network adapters.  
-3.  Right click on a Mellanox adapter and select **Disable**.  
-4.  Select **Properties** to open the properties dialog  
-5.  Select the **Advanced** tab.  
-6.  In the Property list, select the property labeled **Force NDK to work with Global Pause**, then change the value to **Enabled**.  
-7.  Select **OK** to close the properties dialog.  
-8.  Select **Enable**, to enable the adapter.  
-
+1. Open Device Manager.  
+2. Navigate to the **Network adapters** item and open it to see the list of network adapters.  
+3. Right click on a Mellanox adapter and select **Disable**.  
+4. Select **Properties** to open the properties dialog  
+5. Select the **Advanced** tab.  
+6. In the Property list, select the property labeled **Force NDK to work with Global Pause**, then change the value to **Enabled**.  
+7. Select **OK** to close the properties dialog.  
+8. Select **Enable**, to enable the adapter.  
 
 To verify, open a PowerShell console as Administrator and run the following command:  
 
-        Get-SmbClientNetworkInterface       
+```PowerShell
+Get-SmbClientNetworkInterface
+```       
 
-Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB_1)** and **vEthernet (SMB_2)**.                                                      
+Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB_1)** and **vEthernet (SMB_2)**.
 
-   ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig2.png)       
+![Screen showing the output of Get-SmbClientNetworkInterface](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig2.png)       
 
-
-
-## Related Topics  
+## See also  
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
--   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)  
-## See Also ##  
-
-
-[Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
-
-[Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
+-   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
+-   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)
+-   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  

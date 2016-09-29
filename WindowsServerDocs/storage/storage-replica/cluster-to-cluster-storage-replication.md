@@ -32,9 +32,9 @@ This walkthrough uses the following environment as an example:
 
 -   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
-![](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
+![Diagram showing an example environment with a cluster in the Redmond site replicating with a cluster in the Bellevue site](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
 
-**FIGURE: Cluster to Cluster Replication**  
+**FIGURE 1: Cluster to Cluster Replication**  
 
 ### Prerequisites  
 
@@ -149,7 +149,7 @@ For example, to validate two of the proposed stretch cluster nodes that each hav
 
 11. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
-    ![](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
+    ![Screen showing replication topology report results](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
 ### Configure two Scale-Out File Server Failover Clusters  
 You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
@@ -178,14 +178,14 @@ You will now create two normal failover clusters. After configuration, validatio
 
 1.  Test the proposed cluster and analyze the results to ensure you can continue:  
 
-    ```  
+    ```PowerShell
     Test-Cluster SR-SRV01,SR-SRV02  
     Test-Cluster SR-SRV03,SR-SRV04  
     ```  
 
 2.  Create the clusters (you must specify your own static IP addresses for the clusters). Ensure that each cluster name is 15 characters or fewer:  
 
-    ```  
+    ```PowerShell
     New-Cluster -Name SR-SRVCLUSA -Node SR-SRV01,SR-SRV02 -StaticAddress <your IP here>  
     New-Cluster -Name SR-SRVCLUSB -Node SR-SRV03,SR-SRV04 -StaticAddress <your IP here>  
     ```  
