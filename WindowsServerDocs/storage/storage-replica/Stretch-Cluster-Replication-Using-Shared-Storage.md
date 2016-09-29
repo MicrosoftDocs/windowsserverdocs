@@ -151,8 +151,10 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
       ![Screen showing the replication report](./media/Stretch-Cluster-Replication-Using-Shared-Storage/SRTestSRTopologyReport.png)
 
- 11.    Return the disks to Available Storage and remove the temporary empty roles.       
-## Configure a Hyper-V Failover Cluster  or a File Server for a General Use Cluster  
+11.    Return the disks to Available Storage and remove the temporary empty roles.
+
+## Configure a Hyper-V Failover Cluster  or a File Server for a General Use Cluster
+
 After you setup your server nodes, the next step is to create one of the following types of clusters:  
 *  [Hyper-V failover cluster](#BKMK_HyperV)  
 *  [File Server for general use cluster](#BKMK_FileServer)  

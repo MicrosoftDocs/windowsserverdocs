@@ -34,7 +34,7 @@ This walkthrough uses the following environment as an example:
 
 ![Diagram showing an example environment with a cluster in the Redmond site replicating with a cluster in the Bellevue site](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
 
-**FIGURE: 1 Cluster to Cluster Replication**  
+**FIGURE 1: Cluster to Cluster Replication**  
 
 ### Prerequisites  
 
