@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Nano Server
+title: Install Nano Server
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,7 +12,7 @@ ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
 ms.author: jaimeo
 ---
-# Getting Started with Nano Server
+# Install Nano Server
 
 >Applies To: Windows Server 2016
 

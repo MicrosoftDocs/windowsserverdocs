@@ -1,5 +1,5 @@
 ---
-title: Getting Started with a Server Core installation
+title: Install Server Core
 description: "Explains how to obtain and install a Server Core installation " 
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Getting Started with a Server Core Installation
+# Install Server Core
 > Applies To: Windows Server
   
 

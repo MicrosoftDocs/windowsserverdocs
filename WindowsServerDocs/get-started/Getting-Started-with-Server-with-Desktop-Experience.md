@@ -1,5 +1,5 @@
 ---
-title: Getting Started with a Server with Desktop Experience installation
+title: Install Server with Desktop Experience
 description: "Explains how to obtain and install a Server with Desktop Experience installation " 
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Getting Started with a Server with Desktop Experience Installation
+# Install Server with Desktop Experience
 > Applies To: Windows Server
   
 
