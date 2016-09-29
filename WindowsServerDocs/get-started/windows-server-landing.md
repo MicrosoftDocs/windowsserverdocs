@@ -59,5 +59,10 @@ manager: dongill
 Choose the installation option that works best for you.
 
 
-| ![Nano](nano.png) | ![Server core](servercore.png) | ![Desktop](desktop.png) |
-|------|-------------|----------|
+<table border=0 width='845px;'>
+  <tr style='text-align:center;'>
+    <th style='width:34%'>![Nano](nano.png)</th>
+    <th style='width:33%'>![Server core](servercore.png)</th>
+    <th style='width:33%'>![Desktop](desktop.png)</th>
+  </tr>
+</table>
