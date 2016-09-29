@@ -26,7 +26,7 @@ This topic contains the following sections.
 ## <a name="bkmk_detailed"></a>Detailed ACL rules  
 Hyper-V Virtual Switch extended ACLs allow you to create detailed rules that you can apply to individual VM network adapters that are connected to the Hyper-V Virtual Switch. The ability to create detailed rules allows Enterprises and Cloud Service Providers (CSPs) to address network-based security threats in a multitenant shared server environment.  
   
-With extended ACLs, rather than having to create broad rules that block or allow all traffic from all protocols to or from a VM, you can now block or allow the network traffic of individual protocols that are running on VMs. You can create extended ACL rules in  Windows Server 2016 that include the following 5-tuple set of parameters: source IP address, destination IP address, protocol, source port, and destination port. In addition, each rule can specify network traffic direction (in or out), and the action the rule supports (block or allow traffic).  
+With extended ACLs, rather than having to create broad rules that block or allow all traffic from all protocols to or from a VM, you can now block or allow the network traffic of individual protocols that are running on VMs. You can create extended ACL rules in Windows Server 2016 that include the following 5-tuple set of parameters: source IP address, destination IP address, protocol, source port, and destination port. In addition, each rule can specify network traffic direction (in or out), and the action the rule supports (block or allow traffic).  
   
 For example, you can configure port ACLs for a VM to allow all incoming and outgoing HTTP and HTTPS traffic on port 80, while blocking the network traffic of all other protocols on all ports.  
   
@@ -115,7 +115,7 @@ Add-VMNetworkAdapterExtendedAcl -VMName "ApplicationServer" -Action "Allow" -Dir
 ### <a name="bkmk_both"></a>Enforce both user-level and application-level security  
 Because a rule can match a 5-tuple IP packet (Source IP, Destination IP, Protocol, Source Port, and Destination Port), the rule can enforce a more detailed security policy than a Port ACL.  
   
-For example, if you want to provide DHCP service to a limited number of client computers using a specific set of DHCP servers, you can configure the following rules on the  Windows Server 2016 computer that is running Hyper-V, where the user VMs are hosted:  
+For example, if you want to provide DHCP service to a limited number of client computers using a specific set of DHCP servers, you can configure the following rules on the Windows Server 2016 computer that is running Hyper-V, where the user VMs are hosted:  
   
 |Source IP|Destination IP|Protocol|Source Port|Destination Port|Direction|Action|  
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  

@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f0d1fc9c-f5ea-45bc-a8da-623c5d081cdf
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Split a User Station
