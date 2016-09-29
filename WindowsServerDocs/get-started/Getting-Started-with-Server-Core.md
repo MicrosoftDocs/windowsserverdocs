@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/28/2016
+ms.date: 09/29/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -15,7 +15,7 @@ ms.author: jaimeo
 manager: dongill
 ---
 # Install Server Core
-> Applies To: Windows Server
+> Applies To: Windows Server 2016
   
 
 When you install Windows Server 2016 using the Setup wizard, you can choose between **Windows Server 2016** and **Windows Server (Server with Desktop Experience)**. The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you do not make a choice in the Setup wizard, **Windows Server 2016** is installed; this is the **Server Core** installation option.
@@ -71,8 +71,10 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 
 ## Installation scenarios
 
+### Evaluation
+You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
+
 ### Clean installation
-You can obtain retail installation media from SOMEWHERE.
 
 To install the Server Core installation option from the media, insert the media in a drive, restart the computer, and run Setup.exe. In the wizard that opens, select **Windows Server 2016** (Standard or Datacenter), and then complete the wizard.
 
@@ -129,3 +131,5 @@ The ability to migrate varies among different server roles. The follwogin grid e
 |Windows Server Essentials Experience|	Yes|	N/A – new feature|	Yes|	No|
 |Windows Server Update Services|	Yes|	Yes|	Yes|	No|
 |Work Folders|	Yes|	Yes|	Yes|	Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+------------------------------------------
+If you need a different installation option, or if you've completed installation and are ready to deploy specific workloads, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md).
