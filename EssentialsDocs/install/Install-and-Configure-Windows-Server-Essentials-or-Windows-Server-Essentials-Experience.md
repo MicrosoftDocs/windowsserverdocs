@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Install and Configure Windows Server Essentials or Windows Server Essentials Experience
@@ -64,12 +63,8 @@ ms.author: coreyp
   
 -   [Windows Server Essentials Product Overview](http://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)  
   
--   [Release Notes: Important Issues in Windows Server 2012 R2](assetId:///84f5dec4-fc3b-47d3-b8a0-128fbad2fec0)  
-  
 
--   [System Requirements for Windows Server Essentials](System-Requirements-for-Windows-Server-Essentials.md)  
-
--   [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)   
 
   
 ##  <a name="BKMK_NewAD"></a> Deploy Windows Server Essentials to set up a new Active Directory environment  
@@ -225,12 +220,12 @@ ms.author: coreyp
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../What-s-New-in-Windows-Server-Essentials.md)  
+-   [What's New in Windows Server Essentials](../get-started/What-s-New-in-Windows-Server-Essentials.md)  
   
 
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
   
--   [Windows Server Essentials and Windows Server Essentials](../Windows-Server-Essentials-Overview.md)
+-   [Get Started with Windows Server Essentials](../get-started/get-started-with-windows-server-essentials.md)

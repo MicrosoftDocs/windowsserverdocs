@@ -12,7 +12,6 @@ ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddbauthor: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Get Connected in Windows Server Essentials

@@ -14,7 +14,7 @@ ms.author: jaimeo
 ---
 # PowerShell on Nano Server
 
->Applies To: Windows Server Technical
+>Applies To: Windows Server 2016
 
   
   
@@ -110,7 +110,7 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
 * Counter cmdlets { Get | Export | Import }   
 * Web-related cmdlets  { Invoke-WebRequest, Invoke-RestMethod, New-WebServiceProxy, Send-MailMessage, ConvertTo-Html }  
 * Logging and tracing using PSDiagnostics module    
-* Get-HotFix (to obtain and manage updates on Nano Server, see [Managing Updates in Nano Server](Managing-updates-in-Nano-Server.md)).  
+* Get-HotFix (to obtain and manage updates on Nano Server, see [Manage Nano Server](Manage-Nano-Server.md)).  
 * Implicit remoting cmdlets { Export-PSSession | Import-PSSession }   
 * New-PSTransportOption   
 * PowerShell transactions and Transaction cmdlets { Complete | Get | Start | Undo | Use }   

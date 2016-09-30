@@ -13,7 +13,6 @@ ms.assetid: c09f4cf6-4d12-49fe-9ae4-e6cb14027b9d
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Manage Online Accounts for Windows Server Essentials Users

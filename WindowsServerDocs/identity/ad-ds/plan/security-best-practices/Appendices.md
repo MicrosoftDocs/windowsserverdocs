@@ -1,22 +1,19 @@
 ---
 title: Appendices
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: ff4086dd-992f-41bc-a05f-521dd950d480
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendices
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Appendices are included in this document to augment the information contained in the body of the document. The list of appendices and a brief description of each in included the following table.  
   

@@ -209,13 +209,187 @@ You should set at least the **WUServer** and **WUStatusServer** registry keys, b
 
 Once these values are set for your WSUS, the commands in the section above will query that server for updates and use it the download source.  
 
-Automatic Updates  
+### Automatic Updates  
 ---  
 Currently, the way to automate update installation is to convert the steps above into a local Windows PowerShell script and then create a scheduled task to run it and restart the system on your schedule.
 
 
+## Performance and event monitoring on Nano Server
+[comment]: # (from Venkat Yalla.)
+Nano Server fully supports the [Event Tracing for Windows](https://aka.ms/u2pa0i) (ETW) framework, but some familiar tools used to manage tracing and performance counters are not currently available on Nano Server. However, Nano Server has tools and cmdlets to accomplish most common performance analysis scenarios.
 
-[comment]: # (## Performance monitoring on Nano Server: Content goes here for OneView bug #68672.)
+The high-level workflow remains the same as on any Window Server installation -- low-overhead tracing is performed on the target (Nano Server) computer, and the resulting trace files and/or logs are post-processed offline on a separate computer using tools such as [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx), [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226), or others.
+
+> [!NOTE]
+> Refer to [How to copy files to and from Nano Server](https://aka.ms/nri9c8) for a refresher on how to transfer files using PowerShell remoting.
+
+The following sections list the most common performance data collection activities along with a supported way to accomplish them on Nano Server.
+
+### Query available event providers
+[Windows Performance Recorder](https://msdn.microsoft.com/en-us/library/hh448229.aspx) is tool to query available event providers as follows:
+```
+wpr.exe -providers
+```
+
+You can filter the output on the type of events that are of interest. For example:
+```
+PS C:\> wpr.exe -providers | select-string "Storage"
+
+       595f33ea-d4af-4f4d-b4dd-9dacdd17fc6e                              : Microsoft-Windows-StorageManagement-WSP-Host
+       595f7f52-c90a-4026-a125-8eb5e083f15e                              : Microsoft-Windows-StorageSpaces-Driver
+       69c8ca7e-1adf-472b-ba4c-a0485986b9f6                              : Microsoft-Windows-StorageSpaces-SpaceManager
+       7e58e69a-e361-4f06-b880-ad2f4b64c944                              : Microsoft-Windows-StorageManagement
+       88c09888-118d-48fc-8863-e1c6d39ca4df                              : Microsoft-Windows-StorageManagement-WSP-Spaces
+```
+
+### Record traces from a single ETW provider
+You can use new [Event Tracing Management cmdlets](https://technet.microsoft.com/library/dn919247.aspx) for this. Here is an example workflow:
+
+Create and start the trace, specifying a file name for storing the events.
+```
+PS C:\> New-EtwTraceSession -Name "ExampleTrace" -LocalFilePath c:\etrace.etl
+```
+
+Add a provider GUID to the trace. Use ```wpr.exe -providers``` for Provider Name to GUID translation. 
+```
+PS C:\> wpr.exe -providers | select-string "Kernel-Memory"
+
+       d1d93ef7-e1f2-4f45-9943-03d245fe6c00                              : Microsoft-Windows-Kernel-Memory
+
+PS C:\> Add-EtwTraceProvider -Guid "{d1d93ef7-e1f2-4f45-9943-03d245fe6c00}" -SessionName "ExampleTrace"
+```
+
+Remove the trace -- this stops the trace session, flushing events to the associated log file.
+```
+PS C:\> Remove-EtwTraceSession -Name "ExampleTrace"
+
+PS C:\> dir .\etrace.etl
+
+    Directory: C:\
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        9/14/2016  11:17 AM       16515072 etrace.etl
+```
+> [!NOTE]
+> This example shows adding a single trace provider to the session, but you can also use the ```Add-EtwTraceProvider``` cmdlet multiple times on a trace session with different provider GUIDs to enable tracing from multiple sources. Another alternative is to use ```wpr.exe``` profiles described below.
+
+### Record traces from multiple ETW providers
+The ```-profiles``` option of [Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) enables tracing from multiple providers at the same time. There are a number of built-in profiles like CPU, Network, and DiskIO to choose from:
+```
+PS C:\Users\Administrator\Documents> wpr.exe -profiles 
+
+Microsoft Windows Performance Recorder Version 10.0.14393 (CoreSystem)
+Copyright (c) 2015 Microsoft Corporation. All rights reserved.
+
+        GeneralProfile              First level triage
+        CPU                         CPU usage
+        DiskIO                      Disk I/O activity
+        FileIO                      File I/O activity
+        Registry                    Registry I/O activity
+        Network                     Networking I/O activity
+        Heap                        Heap usage
+        Pool                        Pool usage
+        VirtualAllocation           VirtualAlloc usage
+        Audio                       Audio glitches
+        Video                       Video glitches
+        Power                       Power usage
+        InternetExplorer            Internet Explorer
+        EdgeBrowser                 Edge Browser
+        Minifilter                  Minifilter I/O activity
+        GPU                         GPU activity
+        Handle                      Handle usage
+        XAMLActivity                XAML activity
+        HTMLActivity                HTML activity
+        DesktopComposition          Desktop composition activity
+        XAMLAppResponsiveness       XAML App Responsiveness analysis
+        HTMLResponsiveness          HTML Responsiveness analysis
+        ReferenceSet                Reference Set analysis
+        ResidentSet                 Resident Set analysis
+        XAMLHTMLAppMemoryAnalysis   XAML/HTML application memory analysis
+        UTC                         UTC Scenarios
+        DotNET                      .NET Activity
+        WdfTraceLoggingProvider     WDF Driver Activity
+```
+
+For detailed guidance on creating custom profiles, see the [WPR.exe documentation](https://msdn.microsoft.com/library/windows/hardware/hh448223.aspx).
+
+### Record ETW traces during operating system boot time
+Use the ```New-AutologgerConfig``` cmdlet to collect events during system boot. Usage is very similar to the ```New-EtwTraceSession``` cmdlet, but providers added to the Autologger's configuration will only be enabled early at next boot. The overall workflow looks like this:
+
+First, create a new Autologger config.
+```
+PS C:\> New-AutologgerConfig -Name "BootPnpLog" -LocalFilePath c:\bootpnp.etl 
+```
+
+Add a ETW provider to it. This example uses the Kernel PnP provider. Invoke ```Add-EtwTraceProvider``` again, specifying the same Autologger name but a different GUID to enable boot trace collection from multiple sources.
+```
+Add-EtwTraceProvider -Guid "{9c205a39-1250-487d-abd7-e831c6290539}" -AutologgerName BootPnpLog
+```
+
+This does not start an ETW session immediately, but rather configures one to start at next boot. After rebooting, a new ETW session with the Autologger configuration name is automatically started with the added trace providers enabled. After Nano Server boots, the following command will stop the trace session after flushing the logged events to the associated trace file:
+```
+PS C:\> Remove-EtwTraceSession -Name BootPnpLog
+```
+
+To prevent another trace session from being auto-created at next boot, remove the Autologger configuration as follows:
+```
+PS C:\> Remove-AutologgerConfig -Name BootPnpLog
+```
+
+To collect boot and setup traces across a number of systems or on a diskless system, consider using [Setup and Boot Event Collection](../compute/get-started-with-setup-and-boot-event-collection.md).
+
+### Capture performance counter data
+Usually, you monitor performance counter data with Perfmon.exe GUI. On Nano Server, use the ```Typeperf.exe```  command-line equivalent. For example:
+
+Query available counters--you can filter the output to easily find the ones of interest.
+```
+PS C:\> typeperf.exe -q | Select-String "UDPv6"
+
+\UDPv6\Datagrams/sec
+\UDPv6\Datagrams Received/sec
+\UDPv6\Datagrams No Port/sec
+\UDPv6\Datagrams Received Errors
+\UDPv6\Datagrams Sent/sec
+```
+
+Options allow specifying the number of times and the interval at which counter values are collected. In the example below, Processor Idle Time is collected 5 times every 3 seconds.
+```
+PS C:\> typeperf.exe "\Processor Information(0,0)\% Idle Time" -si 3 -sc 5
+
+"(PDH-CSV 4.0)","\\ns-g2\Processor Information(0,0)\% Idle Time"
+"09/15/2016 09:20:56.002","99.982990"
+"09/15/2016 09:20:59.002","99.469634"
+"09/15/2016 09:21:02.003","99.990081"
+"09/15/2016 09:21:05.003","99.990454"
+"09/15/2016 09:21:08.003","99.998577"
+Exiting, please wait...
+The command completed successfully.
+```
+
+Other command-line options allow you to specify performance counter names of interest in a configuration file, redirecting output to a log file, among other things. See the [typeperf.exe documentation](https://technet.microsoft.com/library/bb490960.aspx) for details.
+
+You can also use Perfmon.exe's graphical interface remotely with Nano Server targets. When adding performance counters to the view, specify the Nano Server target in the computer name instead of the default *<Local computer>*.
+
+### Interact with the Windows Event Log
+
+Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](https://technet.microsoft.com/library/hh849682.aspx). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
+```
+PS C:\> $StartTime = (Get-Date) - (New-TimeSpan -Day 2)
+PS C:\> Get-WinEvent -FilterHashTable @{LogName='System'; Level=2; StartTime=$StartTime} | select TimeCreated, Message
+
+TimeCreated           Message
+-----------           -------
+9/15/2016 11:31:19 AM Task Scheduler service failed to start Task Compatibility module. Tasks may not be able to reg...
+9/15/2016 11:31:16 AM The Virtualization Based Security enablement policy check at phase 6 failed with status: {File...
+9/15/2016 11:31:16 AM The Virtualization Based Security enablement policy check at phase 0 failed with status: {File...
+```
+
+Nano Server also supports ```wevtutil.exe``` which allows retrieving information about event logs and publishers. See [wevtutil.exe documentation](https://aka.ms/qvod7p) for more details. 
+
+### Graphical interface tools
+[Web-based server management tools](https://blogs.technet.microsoft.com/servermanagement/2016/08/17/deploy-setup-server-management-tools/) can be used to remotely manage Nano Server targets and present a Nano Server Event Log by using a web browser. Finally, the MMC snap-in Event Viewer (eventvwr.msc) can also be used to view logs -- just open it on a computer with a desktop and point it to a remote Nano Server.
+
 
 
 

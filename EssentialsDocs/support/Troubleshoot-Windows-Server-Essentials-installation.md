@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Troubleshoot Windows Server Essentials installation
@@ -24,9 +23,9 @@ This topic provides troubleshooting for issues that occur when installing  Windo
   
 -   [Troubleshoot driver issues](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
 
--   [General troubleshooting steps](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
+-   [General troubleshooting steps](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
   
--   [Troubleshoot driver issues](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
+-   [Troubleshoot driver issues](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
 
   
 > [!NOTE]
@@ -40,7 +39,7 @@ This topic provides troubleshooting for issues that occur when installing  Windo
   
 #### To identify issues in a failed installation of Windows Server Essentials  
   
-1.  Verify that your server hardware meets the minimum requirements. For information about hardware requirements, see [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md).  
+1.  Verify that your server hardware meets the minimum requirements. For information about hardware requirements, see [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md).  
   
 2.  If you received the  Windows Server Essentials installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum. For more information, see [Availability and description of the File Checksum Integrity Verifier utility](http://go.microsoft.com/fwlink/?LinkId=220495) (http://go.microsoft.com/fwlink/?LinkId=220495).  
   
@@ -51,7 +50,7 @@ This topic provides troubleshooting for issues that occur when installing  Windo
     > [!IMPORTANT]
     >  Do not disconnect the network cable or restart the router while installing  Windows Server Essentials.  
   
-5.  Review "Server installation and deployment" in [Release Documentation for Windows Server Essentials](../install/Release-Documentation-for-Windows-Server-Essentials.md) (http://technet.microsoft.com/library/jj200180.aspx) for known issues.  
+5.  Review "Server installation and deployment" in [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md)  
   
 6.  If you receive the error message An error occurred while setting up your server during installation, use the Server Recovery DVD and the instructions provided by the manufacturer of your hardware to restore the server to factory default settings.  
   

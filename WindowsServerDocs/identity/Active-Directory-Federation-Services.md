@@ -1,28 +1,21 @@
 ---
 title: Active Directory Federation Services
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1f23beab-e55e-47c9-b0ce-85ddb9388f0b
-author: billmath
-ms.date: "06/24/2016"
-appliesto:  Windows Server Technical Preview
 description:
+author: billmath
+ms.author: billmath
 manager: femila
+ms.date: 09/29/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Active Directory Federation Services
 
->Applies To: Windows Server Technical Preview
-
-**[This information is preliminary and subject to change.]**  
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 
   
-  
-This document contains a list of all of the documentation areas for AD FS for Windows Server 2016.  This includes the following:  
+This document contains a list of all of the documentation areas for AD FS for Windows Server 2016, 2012 R2, and 2012.  This includes the following:  
   
 * [AD FS Overview](ad-fs/AD-FS-2016-Overview.md)
 

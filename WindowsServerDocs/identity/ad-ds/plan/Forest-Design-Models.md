@@ -1,20 +1,19 @@
 ---
 title: Forest Design Models
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 066d1fe4-cd49-4efb-9e24-3ab0612620fc
-author: Femila
 ---
+
 # Forest Design Models
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can apply one of the following three forest design models in your Active Directory environment:  
   
