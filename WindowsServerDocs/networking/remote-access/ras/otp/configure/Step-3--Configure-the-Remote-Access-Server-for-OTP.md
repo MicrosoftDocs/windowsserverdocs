@@ -98,7 +98,7 @@ To configure Remote Access to use two-factor authentication and OTP with the RAD
   
 To configure Remote Access for OTP using PowerShell commands:  
   
-![](../../../../media/Step-3--Configure-the-Remote-Access-Server-for-OTP/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![Windows PowerShell](../../../../media/Step-3--Configure-the-Remote-Access-Server-for-OTP/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

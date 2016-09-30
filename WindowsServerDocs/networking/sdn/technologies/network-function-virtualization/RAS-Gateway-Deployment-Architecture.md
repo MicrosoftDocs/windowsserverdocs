@@ -62,7 +62,7 @@ For more information, see [What's New in RAS Gateway](../../../sdn/technologies/
 ## <a name="bkmk_example"></a>Example Deployment  
 The following illustration provides an example with eBGP peering over site-to-site VPN connections configured between two tenants, Contoso and Woodgrove, and the Fabrikam CSP datacenter.  
   
-![](../../../media/RAS-Gateway-Deployment-Architecture/ras_gateway_architecture.png)  
+![Example with eBGP peering over site-to-site VPN connections](../../../media/RAS-Gateway-Deployment-Architecture/ras_gateway_architecture.png)  
   
 In this example, Contoso requires additional gateway bandwidth, leading to the gateway infrastructure design decision to terminate the Contoso Los Angeles site on GW3 instead of GW2. Because of this, Contoso VPN connections from different sites terminate in the CSP datacenter on two different gateways.  
   

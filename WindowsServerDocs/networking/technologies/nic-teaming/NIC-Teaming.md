@@ -16,7 +16,11 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
+<<<<<<< HEAD
 This topic provides an overview of Network Interface Card (NIC) Teaming in  Windows Server 2016, and contains the following sections.  
+=======
+This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016, and contains the following sections.  
+>>>>>>> e393ac9ef5c4551fcaf3b8f3444422e1063e4c7d
   
 -   [NIC Teaming Overview](#bkmk_over)  
   
@@ -50,7 +54,11 @@ NIC Team member network adapters must all be installed in the same physical host
 > [!NOTE]  
 > A NIC team that contains only one network adapter cannot provide load balancing and failover; however with one network adapter, you can use NIC Teaming for separation of network traffic when you are also using virtual Local Area Networks (VLANs).  
   
+<<<<<<< HEAD
 When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system.  Windows Server 2016 supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
+=======
+When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server 2016 supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
+>>>>>>> e393ac9ef5c4551fcaf3b8f3444422e1063e4c7d
   
 The following illustration depicts a NIC Team with multiple tNICs.  
   
@@ -59,10 +67,17 @@ The following illustration depicts a NIC Team with multiple tNICs.
 In addition, you can connect your teamed NICs to the same switch or to different switches. If you connect NICs to different switches, both switches must be on the same subnet.  
   
 ## <a name="bkmk_avail"></a>NIC Teaming Availability  
+<<<<<<< HEAD
 NIC Teaming is available in all versions of  Windows Server 2016. In addition, you can use Windows PowerShell commands, Remote Desktop, and Remote Server Administration Tools to manage NIC Teaming from computers that are running a client operating system upon which the tools are supported.  
   
 ## <a name="bkmk_nics"></a>Supported and Unsupported NICs for NIC Teaming  
 You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo test (WHQL tests) in a NIC Team in  Windows Server 2016.  
+=======
+NIC Teaming is available in all versions of Windows Server 2016. In addition, you can use Windows PowerShell commands, Remote Desktop, and Remote Server Administration Tools to manage NIC Teaming from computers that are running a client operating system upon which the tools are supported.  
+  
+## <a name="bkmk_nics"></a>Supported and Unsupported NICs for NIC Teaming  
+You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo test (WHQL tests) in a NIC Team in Windows Server 2016.  
+>>>>>>> e393ac9ef5c4551fcaf3b8f3444422e1063e4c7d
   
 The following NICs cannot be placed in a NIC team.  
   
@@ -78,7 +93,11 @@ The following NICs cannot be placed in a NIC team.
 -   NICs that use technologies other than Ethernet, such as WWAN, WLAN/Wi-Fi, Bluetooth, and Infiniband, including Internet Protocol over Infiniband (IPoIB) NICs.  
   
 ## <a name="bkmk_compat"></a>NIC Teaming Compatibility  
+<<<<<<< HEAD
 NIC teaming is compatible with all networking technologies in  Windows Server 2016 with the following exceptions.  
+=======
+NIC teaming is compatible with all networking technologies in Windows Server 2016 with the following exceptions.  
+>>>>>>> e393ac9ef5c4551fcaf3b8f3444422e1063e4c7d
   
 -   **Single-root I/O virtualization (SR-IOV)**. For SR-IOV, data is delivered directly to the NIC without passing it through the networking stack (in the host operating system, in the case of virtualization). Therefore, it is not possible for the NIC team to inspect or redirect the data to another path in the team.  
   
