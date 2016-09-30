@@ -1,4 +1,5 @@
 ---
+ms.assetid: 2c76e81a-c2eb-439f-a89f-7d3d70790244
 title: Deploy Encryption of Office Files (Demonstration Steps)
 description:
 author: billmath

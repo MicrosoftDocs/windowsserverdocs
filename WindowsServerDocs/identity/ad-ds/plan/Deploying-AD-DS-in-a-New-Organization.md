@@ -1,4 +1,5 @@
 ---
+ms.assetid: a589dda6-e05b-4b44-ae3e-b15dd3877617
 title: Deploying AD DS in a New Organization
 description:
 author: billmath

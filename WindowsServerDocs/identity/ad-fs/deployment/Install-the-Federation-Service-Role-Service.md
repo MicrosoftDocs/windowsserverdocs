@@ -1,4 +1,5 @@
 ---
+ms.assetid: e33673ff-ea1c-4476-a549-3bf5899a47dd
 title: Install the Federation Service Role Service
 description:
 author: billmath

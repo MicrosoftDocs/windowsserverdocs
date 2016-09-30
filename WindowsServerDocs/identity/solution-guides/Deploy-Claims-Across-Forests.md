@@ -1,4 +1,5 @@
 ---
+ms.assetid: ceb9ce18-5a94-4166-9edd-2685b81fc15f
 title: Deploy Claims Across Forests
 description:
 author: billmath

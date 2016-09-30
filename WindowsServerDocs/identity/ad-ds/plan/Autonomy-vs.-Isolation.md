@@ -1,4 +1,5 @@
 ---
+ms.assetid: ef63d40c-a262-4a18-938d-b95c10680c0b
 title: Autonomy vs. Isolation
 description:
 author: billmath

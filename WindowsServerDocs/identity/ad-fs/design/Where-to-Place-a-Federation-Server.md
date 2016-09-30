@@ -1,4 +1,5 @@
 ---
+ms.assetid: 935ea7c2-4678-4033-b50f-2036a0359c5d
 title: Where to Place a Federation Server
 description:
 author: billmath

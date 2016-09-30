@@ -1,4 +1,5 @@
 ---
+ms.assetid: 6127963f-71b2-4d8f-8b53-7c525bf06521
 title: Create a Rule to Pass Through or Filter an Incoming Claim
 description:
 author: billmath

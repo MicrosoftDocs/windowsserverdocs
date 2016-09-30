@@ -1,4 +1,5 @@
 ---
+ms.assetid: ad3f0480-99f7-428a-ab33-6d165a440840
 title: Scenario Get Insight into Your Data by Using Classification
 description:
 author: billmath

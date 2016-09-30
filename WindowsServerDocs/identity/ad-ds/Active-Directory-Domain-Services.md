@@ -1,4 +1,5 @@
 ---
+ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Active Directory Domain Services
 description:
 author: billmath

@@ -1,4 +1,5 @@
 ---
+ms.assetid: e008cc4e-c1dc-4822-bc8c-a904567fb21f
 title: Replication error 8524 The DSA operation is unable to proceed because of a DNS lookup failure
 description:
 author: billmath

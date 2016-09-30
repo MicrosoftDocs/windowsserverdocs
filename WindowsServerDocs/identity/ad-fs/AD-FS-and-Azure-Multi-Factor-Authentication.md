@@ -1,4 +1,5 @@
 ---
+ms.assetid: 0f7e56fe-1cbc-43ff-bb87-f4672137ed7f
 title: AD FS and Azure Multi-Factor Authentication
 description:
 author: billmath

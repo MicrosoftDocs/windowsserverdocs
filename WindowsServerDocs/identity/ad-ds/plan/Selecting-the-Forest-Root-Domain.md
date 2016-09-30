@@ -1,4 +1,5 @@
 ---
+ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: Selecting the Forest Root Domain
 description:
 author: billmath

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 39c0126d-af5e-4dcb-88c1-aa38f888e973
 title: Active Directory-Integrated DNS Zones
 description:
 author: billmath

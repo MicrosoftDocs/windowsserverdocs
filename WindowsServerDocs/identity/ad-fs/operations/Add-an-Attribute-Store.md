@@ -1,4 +1,5 @@
 ---
+ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Add an Attribute Store
 description:
 author: billmath

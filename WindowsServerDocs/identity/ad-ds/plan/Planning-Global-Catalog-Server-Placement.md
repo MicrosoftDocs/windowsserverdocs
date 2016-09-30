@@ -1,4 +1,5 @@
 ---
+ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: Planning Global Catalog Server Placement
 description:
 author: billmath

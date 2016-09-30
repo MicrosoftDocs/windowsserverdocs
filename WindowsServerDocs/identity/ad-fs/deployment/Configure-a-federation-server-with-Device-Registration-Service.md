@@ -1,4 +1,5 @@
 ---
+ms.assetid: fdd1c1fd-55aa-4eb8-ae84-53f811de042c
 title: Configure a federation server with Device Registration Service
 description:
 author: billmath

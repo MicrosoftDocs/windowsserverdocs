@@ -1,4 +1,5 @@
 ---
+ms.assetid: 63bc030a-b188-469a-9327-1e0476f6a48b
 title: What&#39;s new in Active Directory Federation Services for Windows Server 2016 Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold

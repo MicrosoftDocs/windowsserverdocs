@@ -1,4 +1,5 @@
 ---
+ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS 2016 Operations
 description:
 author: billmath

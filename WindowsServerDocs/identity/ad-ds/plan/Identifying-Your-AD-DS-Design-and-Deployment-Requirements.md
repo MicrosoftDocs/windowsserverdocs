@@ -1,4 +1,5 @@
 ---
+ms.assetid: f0398494-773d-4070-aa4e-25b4815b001e
 title: Identifying Your AD DS Design and Deployment Requirements
 description:
 author: billmath

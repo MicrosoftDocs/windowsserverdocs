@@ -1,4 +1,5 @@
 ---
+ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
 title: AD FS On-behalf-of Authentication in Windows Server 2016
 description:
 author: billmath

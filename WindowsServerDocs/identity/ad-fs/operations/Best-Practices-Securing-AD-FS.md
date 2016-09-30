@@ -1,4 +1,5 @@
 ---
+ms.assetid: b7bf7579-ca53-49e3-a26a-6f9f8690762f
 title: Best Practices for securing AD FS and Web Application Proxy
 description: "This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy."
 author: billmath
