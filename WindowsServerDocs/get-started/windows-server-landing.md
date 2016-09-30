@@ -16,7 +16,7 @@ manager: dongill
 ---
 # Windows Server 2016 
 
-<table border=0 width='845px;'>
+<table border=0 width="100%">
   <tr>
     <td colspan='4' style='padding:0;'><img src='wsbanner.png'/></td>
   </tr>
@@ -83,7 +83,7 @@ Both Standard and Datacenter editions offer three installation options:
 Now that you know which edition and installation option is right for you, click below to get started with Windows Server 2016.
 
 
-<table border=0 width='845px;'>
+<table border=0 width="100%">
   <tr style='text-align:center;'>
     <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server">![Nano](nano.png)</a></td>
     <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core">![Server core](servercore.png)</a></td>
