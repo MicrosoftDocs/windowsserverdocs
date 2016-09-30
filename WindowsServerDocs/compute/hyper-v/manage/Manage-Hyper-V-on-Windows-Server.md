@@ -1,5 +1,5 @@
 ---
-title: Manage Hyper-V on Windows Server 2016 Technical Preview
+title: Manage Hyper-V on Windows Server 2016
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,11 +12,10 @@ author: cwatsonmsft
 ms.author: cwatson
 ms.date: 8/16/2016
 ---
-# Manage Hyper-V on Windows Server 2016 Technical Preview
+# Manage Hyper-V on Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-**This is preliminary content and subject to change.**  
 Use the resources in this section to help you manage Hyper-V on Windows Server 2016 Technical Preview.   
 -   [Choose between standard or production checkpoints](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
 -   [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md)  

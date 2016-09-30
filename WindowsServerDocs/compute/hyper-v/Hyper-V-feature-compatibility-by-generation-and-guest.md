@@ -10,13 +10,11 @@ ms.topic: article
 ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 author: KBDAzure
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 9/30/2016
 ---
 # Hyper-V feature compatibility by generation and guest
 
->Applies To: Windows Server Technical Preview
-
-**This is preliminary content and subject to change.**  
+>Applies To: Windows Server 2016
   
 The tables in this article show you the generations and operating systems that are compatible with some of the Hyper-V features, grouped by categories. In general, you'll get the best availability of features with a generation 2 virtual machine that runs the newest operating system.  
   
