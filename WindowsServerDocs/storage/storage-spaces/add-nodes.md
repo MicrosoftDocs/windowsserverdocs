@@ -10,33 +10,30 @@ ms.date: 09/30/2016
 ---
 # Adding nodes or drives to Storage Spaces Direct
 
-This topic describes how to add nodes (scaling out) or drives (scaling up) to Storage Spaces Direct.
+This topic describes how to add nodes or drives to Storage Spaces Direct. 
+
+**Adding nodes** (also known as scaling out) adds storage capacity, unlocks greater storage efficiency, and improves storage performance. If you’re running a hyper-converged cluster, adding nodes also provides more compute resources for your workload. **Adding drives** (also known as scaling up) adds storage capacity and can also improve performance.
 
 ## Adding nodes
 
-**Scaling "out" refers to adding new nodes to your Storage Spaces Direct cluster.** Scaling out can expand storage capacity, unlock greater storage efficiency, improve storage performance, and if you’re running hyper-converged, provide more compute resources for your workload.
+Typical deployments are simple to scale out by adding nodes: 
 
-Typical deployments are simple to scale out. First, ensure the new node is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing nodes, has all the requisite roles and features installed, and has networking properly configured. You can verify that it's ready to join the cluster by running cluster validation again, including the new node. This should only take a few minutes:
+1. Run cluster validation by opening an elevated PowerShell session on the cluster and then running the following command, including the new node *\<NewNode>*:
 
-```PowerShell
-Test-Cluster -Node Node, Node, Node, NewNode -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
-```
+   ```PowerShell
+   Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
+   ```
+    This confirms that the new node is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing nodes, has all the required roles and features, and has networking properly configured. 
 
-   >[!TIP]
-   > You can further verify that the new drives are ready for use by running **Get-PhysicalDisk** in PowerShell on the new node. Check that they are listed and marked **CanPool = True**. If they aren’t, you can check their **CannotPoolReason**, and if they contain old data or metadata, consider using **Clear-Disk**.
+   You can further verify that the new drives are ready for use by running **Get-PhysicalDisk** in PowerShell on the new node. Check that they are listed and marked **CanPool = True**. If they aren’t, you can check their **CannotPoolReason**, and if they contain old data or metadata, consider using **Clear-Disk**.
 
-Now, the only step is to run the following PowerShell cmdlet on the cluster (as Administrator):
+2. Run the following command on the cluster to finish adding the node:
 
-```PowerShell
-Add-ClusterNode -Name NewNode 
-```
+   ```PowerShell
+   Add-ClusterNode -Name NewNode 
+   ```
 
-The node will join the cluster, its drives will automatically be added to the storage pool, and volumes will automatically be redistributed evenly across all the drives.
-
-   >[!TIP]
-   > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
-
-You’re done! You are now ready to create more volumes! 
+Note that automatic pooling depends on you having only one pool. If you manually created multiple pools, add new drives to your preferred pool manually by using the **Add-PhysicalDisk** cmdlet.
 
 ### Special case: from 2 to 3 nodes
 
@@ -128,33 +125,34 @@ As you scale beyond four nodes, new volumes can benefit from ever-greater parity
 However, any pre-existing volumes will *not* be "converted" to the new, wider encoding. One good reason is that to do so would require a massive calculation affecting literally *every single bit* in the entire deployment. If you would like pre-existing data to become encoded at the higher efficiency, you can migrate it to new volume(s).
 
 ### Adding nodes when using chassis or rack fault tolerance
+If your deployment uses chassis or rack fault tolerance, you must specify the chassis or rack of new nodes before adding them to the cluster. This tells Storage Spaces Direct how best to distribute data to maximize fault tolerance.
 
-**If your deployment uses chassis or rack fault tolerance, you must always specify the chassis or rack of new nodes before adding them to the cluster.** This lets Storage Spaces Direct know how best to distribute data to maximize fault tolerance. There are just two quick steps:
+1. Create a temporary fault domain for the node by opening an elevated PowerShell session and then using the following command, where *\<NewNode>* is the name of the new cluster node:
 
-First, create a temporary fault domain for the node with the following PowerShell cmdlet, where *\<NewNode>* is the name of the new cluster node.
-
-```PowerShell
-New-ClusterFaultDomain -Type Node -Name <NewNode> 
-```
+   ```PowerShell
+   New-ClusterFaultDomain -Type Node -Name <NewNode> 
+   ```
 
    >[!TIP]
-   > Tip: Double-check that you enter the correct name of the new node.
+   >Double-check that you enter the correct name of the new node.
 
-Then, move this temporary fault-domain into the chassis or rack where the new node is located in the real world, as specified by *\<ParentName>*:
+2. Move this temporary fault-domain into the chassis or rack where the new node is located in the real world, as specified by *\<ParentName>*:
 
-```PowerShell
-Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
-```
+   ```PowerShell
+   Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
+   ```
 
-For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
+   For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
 
-When the new node joins the cluster, it will automatically be associated (using its name) with the placeholder fault domain. 
-
-That’s it! You are now ready to add the new node!
+3. Add the node to the cluster as described in [Adding nodes](#adding-nodes). <br>When the new node joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
 
 ## Adding drives
 
-**Scaling up refers to adding new drives to existing nodes in your Storage Spaces Direct cluster.** If you have available slots, you can add drives to expand your storage capacity without adding nodes. You can add cache drives, or capacity drives, independently. That said, for best results, we strongly recommend always having the same number of drives in each node.
+If you have available slots, you can add drives to each node to expand your storage capacity without adding nodes. You can add cache drives, or capacity drives, independently. 
+
+   >[!IMPORTANT]
+   >We strongly recommend configuring all nodes with identical storage configurations.
+
 
 To scale up, connect the drives and verify that Windows discovers them. They should appear in the output of this PowerShell cmdlet (run as Administrator), on any cluster node, marked as **CanPool = True**.
 
@@ -162,10 +160,9 @@ To scale up, connect the drives and verify that Windows discovers them. They sho
 Get-PhysicalDisk 
 ```
 
-   >[!TIP]
-   > If they don’t appear, you may need to manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management**.
-
 Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be redistributed evenly across all the drives. At this point - you're finished and ready to create more volumes.
+
+If the drives don’t appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management**.
 
    >[!TIP]
    > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
