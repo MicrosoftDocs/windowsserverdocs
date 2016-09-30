@@ -23,7 +23,7 @@ manager: dongill
   <tr style='text-align:center;'>
     <td style='width:25%'>
     ![alt text](1system-requirements.png "Get started")<br/><br/>
-    [Get started](get-started/Server-Basics.md)</td>
+    [Get started](Server-Basics.md)</td>
     <td style='width:25%'>
     ![alt text](2whats-new.png "What's new in Windows Server 2016?")<br/><br/>
     [What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</td>
