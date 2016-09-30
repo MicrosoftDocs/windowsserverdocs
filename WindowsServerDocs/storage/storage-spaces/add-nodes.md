@@ -6,11 +6,11 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/22/2016
+ms.date: 09/30/2016
 ---
 # Adding nodes or drives to Storage Spaces Direct
 
-This topic describes how to add nodes (scaling "out") or drives (scaling "up") to Storage Spaces Direct.
+This topic describes how to add nodes (scaling out) or drives (scaling up) to Storage Spaces Direct.
 
 ## Adding nodes
 
@@ -131,22 +131,22 @@ However, any pre-existing volumes will *not* be "converted" to the new, wider en
 
 **If your deployment uses chassis or rack fault tolerance, you must always specify the chassis or rack of new nodes before adding them to the cluster.** This lets Storage Spaces Direct know how best to distribute data to maximize fault tolerance. There are just two quick steps:
 
-First, create a “placeholder” fault domain for the node with the following PowerShell cmdlet.
+First, create a temporary fault domain for the node with the following PowerShell cmdlet, where *\<NewNode>* is the name of the new cluster node.
 
 ```PowerShell
-New-ClusterFaultDomain -Type Node -Name NewNode 
+New-ClusterFaultDomain -Type Node -Name <NewNode> 
 ```
 
    >[!TIP]
-   > Tip: Make sure you use exactly the name of the new node.
+   > Tip: Double-check that you enter the correct name of the new node.
 
-Then, move this placeholder into the chassis or rack where the new node is located in the real world.
+Then, move this temporary fault-domain into the chassis or rack where the new node is located in the real world, as specified by *\<ParentName>*:
 
 ```PowerShell
-Set-ClusterFaultDomain -Name NewNode -Parent ParentName 
+Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
 ```
 
-For more information, check out [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
+For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
 
 When the new node joins the cluster, it will automatically be associated (using its name) with the placeholder fault domain. 
 
@@ -154,9 +154,9 @@ That’s it! You are now ready to add the new node!
 
 ## Adding drives
 
-**Scaling "Up" refers to adding new drives to existing nodes in your Storage Spaces Direct cluster.** If you have available slots, you can add drives to expand your storage capacity without adding nodes. You can add cache drives, or capacity drives, independently. That said, for best results, we strongly recommend always having the same number of drives in each node.
+**Scaling up refers to adding new drives to existing nodes in your Storage Spaces Direct cluster.** If you have available slots, you can add drives to expand your storage capacity without adding nodes. You can add cache drives, or capacity drives, independently. That said, for best results, we strongly recommend always having the same number of drives in each node.
 
-To scale up, simply connect the drives and verify that Windows discovers them. They should appear in the output of this PowerShell cmdlet (run as Administrator), on any cluster node, marked as **CanPool = True**.
+To scale up, connect the drives and verify that Windows discovers them. They should appear in the output of this PowerShell cmdlet (run as Administrator), on any cluster node, marked as **CanPool = True**.
 
 ```PowerShell
 Get-PhysicalDisk 
@@ -169,5 +169,3 @@ Within a short time, eligible drives will automatically be claimed by Storage Sp
 
    >[!TIP]
    > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
-
-
