@@ -1,4 +1,5 @@
 ---
+ms.assetid: d590c90e-9adf-4305-b226-eb2a5743337b
 title: Understanding AD DS Design
 description:
 author: billmath

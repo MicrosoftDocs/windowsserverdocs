@@ -1,4 +1,5 @@
 ---
+ms.assetid: 638c89bd-87e6-484b-9d2e-8ae2a74227e5
 title: Set a Service Communications Certificate
 description:
 author: billmath

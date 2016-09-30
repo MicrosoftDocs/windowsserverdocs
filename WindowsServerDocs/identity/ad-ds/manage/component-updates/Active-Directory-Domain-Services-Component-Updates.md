@@ -1,4 +1,5 @@
 ---
+ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 title: Active Directory Domain Services Component Updates
 description:
 author: billmath

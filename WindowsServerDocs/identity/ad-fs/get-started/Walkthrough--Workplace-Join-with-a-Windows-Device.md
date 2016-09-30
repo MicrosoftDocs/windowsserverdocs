@@ -1,4 +1,5 @@
 ---
+ms.assetid: c17d143b-86b4-47c0-b76e-1862dda8f0bd
 title: Walkthrough - Workplace Join with a Windows Device
 description:
 author: billmath

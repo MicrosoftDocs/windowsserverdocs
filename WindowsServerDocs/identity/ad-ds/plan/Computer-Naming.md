@@ -1,4 +1,5 @@
 ---
+ms.assetid: f7002265-60fa-40b8-9dd7-4bf131d9320a
 title: Computer Naming
 description:
 author: billmath

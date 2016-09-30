@@ -1,4 +1,5 @@
 ---
+ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: How LDAP Server Cookies Are Handled
 description:
 author: billmath

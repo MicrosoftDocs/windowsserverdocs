@@ -1,4 +1,5 @@
 ---
+ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementing Least-Privilege Administrative Models
 description:
 author: billmath

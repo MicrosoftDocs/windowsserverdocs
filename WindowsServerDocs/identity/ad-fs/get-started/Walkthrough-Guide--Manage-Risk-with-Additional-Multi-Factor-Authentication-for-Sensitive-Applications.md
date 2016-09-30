@@ -1,4 +1,5 @@
 ---
+ms.assetid: 5fd4063d-34dc-4b15-9a88-cc6c1fff455a
 title: Walkthrough Guide - Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
 description:
 author: billmath

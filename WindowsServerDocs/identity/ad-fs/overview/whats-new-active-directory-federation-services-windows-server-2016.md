@@ -1,4 +1,5 @@
 ---
+ms.assetid: aa892a85-f95a-4bf1-acbb-e3c36ef02b0d
 title: What&#39;s new in Active Directory Federation Services for Windows Server 2016 Technical Preview
 description:
 author: billmath

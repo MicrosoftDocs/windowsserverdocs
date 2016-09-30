@@ -1,4 +1,5 @@
 ---
+ms.assetid: 8f954004-40d5-4c5e-8e0d-e8700c8ec7b1
 title: Checklist: Setting Up a Federation Server
 description:
 author: billmath

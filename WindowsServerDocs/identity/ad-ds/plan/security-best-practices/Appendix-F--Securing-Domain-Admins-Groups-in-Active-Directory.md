@@ -1,4 +1,5 @@
 ---
+ms.assetid: 017b88a6-f29b-4787-99b6-b5c8eaf8c3df
 title: Appendix F - Securing Domain Admins Groups in Active Directory
 description:
 author: billmath

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
 description:
 author: billmath

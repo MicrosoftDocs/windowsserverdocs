@@ -1,4 +1,5 @@
 ---
+ms.assetid: 97999892-29c6-4076-be19-5e5259d8ada6
 title: Deploying Federation Servers
 description:
 author: billmath

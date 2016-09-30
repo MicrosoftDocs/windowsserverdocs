@@ -1,4 +1,5 @@
 ---
+ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 title: Install Active Directory Domain Services (Level 100)
 description:
 author: billmath

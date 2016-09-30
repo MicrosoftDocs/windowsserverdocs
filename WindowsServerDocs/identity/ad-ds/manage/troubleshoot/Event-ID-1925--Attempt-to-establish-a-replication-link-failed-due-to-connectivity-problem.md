@@ -1,4 +1,5 @@
 ---
+ms.assetid: 4325fe83-dc64-4660-9bf8-fc15fc648c3c
 title: Event ID 1925 - Attempt to establish a replication link failed due to connectivity problem
 description:
 author: billmath

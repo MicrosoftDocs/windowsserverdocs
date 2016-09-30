@@ -1,4 +1,5 @@
 ---
+ms.assetid: 09f335bb-896a-45dd-adc2-f215b8fba828
 title: Federated Web SSO Design
 description:
 author: billmath

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 5a1ae56b-adcb-447e-9e34-c0629d7cb241
 title: Manually Configure a Service Account for a Federation Server Farm
 description:
 author: billmath

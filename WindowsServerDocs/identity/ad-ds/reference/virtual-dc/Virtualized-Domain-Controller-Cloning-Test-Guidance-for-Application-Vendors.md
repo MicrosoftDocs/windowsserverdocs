@@ -1,4 +1,5 @@
 ---
+ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: Virtualized Domain Controller Cloning Test Guidance for Application Vendors
 description:
 author: billmath

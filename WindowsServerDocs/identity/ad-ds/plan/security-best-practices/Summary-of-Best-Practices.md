@@ -1,4 +1,5 @@
 ---
+ms.assetid: e48cc19d-65a7-4dca-b515-e08181ec7e71
 title: Summary of Best Practices
 description:
 author: billmath

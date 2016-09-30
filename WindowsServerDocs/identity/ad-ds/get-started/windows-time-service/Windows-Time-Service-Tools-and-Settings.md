@@ -1,4 +1,5 @@
 ---
+ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time Service Tools and Settings
 description:
 author: billmath

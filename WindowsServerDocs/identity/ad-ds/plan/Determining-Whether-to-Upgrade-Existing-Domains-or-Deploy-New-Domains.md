@@ -1,4 +1,5 @@
 ---
+ms.assetid: c20231dd-2b83-4494-9385-1172272e00d6
 title: Determining Whether to Upgrade Existing Domains or Deploy New Domains
 description:
 author: billmath
