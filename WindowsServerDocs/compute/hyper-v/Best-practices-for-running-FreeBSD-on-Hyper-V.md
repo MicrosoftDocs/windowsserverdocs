@@ -23,7 +23,7 @@ The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the
   
 -   Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.  
   
-    ![](media/Hyper-V_Settings_NetworkAdapter.png)  
+    ![Screenshot of virtual machine settings with network adapter selected](media/Hyper-V_Settings_NetworkAdapter.png)  
   
 -   Enable MAC address spoofing. To do this,  
   
