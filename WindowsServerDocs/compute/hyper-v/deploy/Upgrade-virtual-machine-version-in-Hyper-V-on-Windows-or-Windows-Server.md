@@ -3,14 +3,14 @@ title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Serve
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 9/30/2016
 ---
 # Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016
 
@@ -51,6 +51,7 @@ The following table shows which virtual machine configuration versions are suppo
 
 |Hyper-V host Windows version|  Supported virtual machine configuration versions|  
 |-|-|  
+|Windows Server 2016 | 8.0, 7.1, 7.0, 6.2, 5.0| 
 |Windows 10 Anniversary Update |8.0, 7.1, 7.0, 6.2, 5.0|
 |Windows Server 2016 Technical Preview| 7.1, 7.0, 6.2, 5.0|  
 |Windows 10 build 10565 or later|   7.0, 6.2, 5.0 |  
