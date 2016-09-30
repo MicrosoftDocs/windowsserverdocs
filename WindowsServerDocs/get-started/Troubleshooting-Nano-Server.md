@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
+ms.date: 09/30/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fbef4d91-e18c-4f1b-952f-a9a7ad46cd74
@@ -34,7 +34,7 @@ When you boot Nano Server in either a virtual machine or on a physical computer 
   
 The Recovery Console allows you to view and configure network adapters and TCP/IP settings, as well as firewall rules.
 > [!NOTE]  
-    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
+    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported. Only English keyboards and character set are supported.
 
 ## Accessing Nano Server over a serial port with Emergency Management Services  
 Emergency Management Services (EMS) lets you perform basic troubleshooting, get network status, and open console sessions (including CMD/PowerShell) by using a terminal emulator over a serial port. This replaces the need for a keyboard and monitor to troubleshoot a server. For more information about EMS, see [Emergency Management Services Technical Reference](https://technet.microsoft.com/library/cc784411(v=ws.10).aspx).
