@@ -4,11 +4,10 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: aa5b5d11-3921-44f9-8e14-e378c75fca76
 ms.author: jamesmci
 author: jamesmci
 ---

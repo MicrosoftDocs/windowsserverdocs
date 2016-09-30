@@ -5,8 +5,7 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
