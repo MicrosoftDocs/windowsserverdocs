@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration

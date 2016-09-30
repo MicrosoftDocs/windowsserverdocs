@@ -11,7 +11,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 # WSE_Migrate2008.cover
 ## Migrating Windows Small Business Server 2008 to Windows Server Essentials  

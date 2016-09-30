@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Deploy Windows Server Essentials Experience as a Hosted Server
@@ -100,8 +99,6 @@ This document includes information that is specific to hosters who intend to dep
   
  We recommend that you first deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, and then install the  Windows Server Essentials Experience role. With this deployment method, you get all the functionalities of  Windows Server Essentials edition, without the locks and limits.  
   
-
- For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
  For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
@@ -331,14 +328,6 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
   
 -   [Client experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)  
 
--   [Server deployment](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)  
-  
--   [Server configuration](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)  
-  
--   [Server management](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)  
-  
--   [Client experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)  
-
   
 ###  <a name="BKMK_ServerDeploy"></a> Server deployment  
  You can test the following server deployment scenarios:  
@@ -409,8 +398,8 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../What-s-New-in-Windows-Server-Essentials.md)  
+-   [What's New in Windows Server Essentials](../get-started/What-s-New-in-Windows-Server-Essentials.md)  
 
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
--   [Windows Server Essentials and Windows Server Essentials](../Windows-Server-Essentials-Overview.md)
+-   [Get started with Windows Server Essentials](../get-started/get-started-with-windows-server-essentials.md)

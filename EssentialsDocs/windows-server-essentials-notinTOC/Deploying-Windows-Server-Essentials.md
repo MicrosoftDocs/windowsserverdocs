@@ -12,7 +12,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Deploying Windows Server Essentials
@@ -276,4 +275,4 @@ ms.author: coreyp
   
 -   [Install and Configure Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
--   [Windows Server Essentials and Windows Server Essentials](../Windows-Server-Essentials-Overview.md)
+-   [Windows Server Essentials](../get-started/get-started-with-windows-server-essentials.md)

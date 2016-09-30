@@ -13,7 +13,6 @@ ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Use the My Server App to Connect to Windows Server Essentials

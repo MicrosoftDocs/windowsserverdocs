@@ -13,34 +13,16 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Install Windows Server Essentials
-The following documents provide step-by-step instructions for installing and configuring  Windows Server Essentials and  Windows Server Essentials, including pre-installation tasks and information about system requirements.  
-  
-## Install Windows Server Essentials  
-  
-
--   [System Requirements for Windows Server Essentials](System-Requirements-for-Windows-Server-Essentials.md)  
-  
--   [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
-  
--   [Deploy Windows Server Essentials Experience as a Hosted Server](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
-  
--   [Add Windows Server Essentials as a Member Server](Add-Windows-Server-Essentials-as-a-Member-Server.md)  
-  
--   [Hosting Windows Server Essentials Experience on Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn520828.aspx) (MSDN)  
-  
--   [Windows Server 2012 R2 - Customize and Deploy Windows Server Essentials](Customize-and-Deploy-Windows-Server-Essentials.md)  
-  
-## Install Windows Server Essentials  
+The following documents provide step-by-step instructions for installing and configuring  Windows Server Essentials and  Windows Server Essentials, including pre-installation tasks and information about system requirements.   
   
 -   [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md)  
   
--   [System Requirements for Windows Server Essentials](System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
   
--   [Release Documentation for Windows Server Essentials](Release-Documentation-for-Windows-Server-Essentials.md)  
+-   [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md)  
   
 -   [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials.md)  
   
@@ -48,31 +30,15 @@ The following documents provide step-by-step instructions for installing and con
   
 -   [Windows Server Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md)  
 
--   [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
   
--   [Install and Configure Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
+-   [Deploy Windows Server Essentials Experience as a Hosted Server](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
   
--   [Deploy Windows Server Essentials Experience as a Hosted Server](../install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
-  
--   [Add Windows Server Essentials as a Member Server](../install/Add-Windows-Server-Essentials-as-a-Member-Server.md)  
+-   [Add Windows Server Essentials as a Member Server](Add-Windows-Server-Essentials-as-a-Member-Server.md)  
   
 -   [Hosting Windows Server Essentials Experience on Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn520828.aspx) (MSDN)  
   
--   [Windows Server 2012 R2 - Customize and Deploy Windows Server Essentials](../install/Customize-and-Deploy-Windows-Server-Essentials.md)  
-  
-## Install Windows Server Essentials  
-  
--   [Before You Install Windows Server Essentials](../install/Before-You-Install-Windows-Server-Essentials.md)  
-  
--   [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md)  
-  
--   [Release Documentation for Windows Server Essentials](../install/Release-Documentation-for-Windows-Server-Essentials.md)  
-  
--   [Install and Configure Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials.md)  
-  
--   [Hosted Windows Server Essentials](../install/Hosted-Windows-Server-Essentials.md)  
-  
--   [Windows Server Essentials - Assessment and Deployment Kit](../install/Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md)  
+-   [Customize and Deploy Windows Server Essentials](Customize-and-Deploy-Windows-Server-Essentials.md)  
 
   
 ## End-to-end solution guides  
@@ -84,8 +50,7 @@ The following documents provide step-by-step instructions for installing and con
 -    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).  
   
 ## See also  
-  
--   [Upgrade Options for Windows Server 2012 R2](assetId:///54660ce8-d743-43c6-9806-9066a42aaa7b)  
+    
   
 -   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)  
   

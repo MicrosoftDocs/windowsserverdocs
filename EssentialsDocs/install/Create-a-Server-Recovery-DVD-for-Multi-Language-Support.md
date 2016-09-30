@@ -13,7 +13,6 @@ ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Create a Server Recovery DVD for Multi-Language Support

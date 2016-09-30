@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 # Getting Started with the Windows Server Essentials ADK
 The Assessment and Deployment Kit (ADK) for the  Windows Server Essentials server software is based on the ADK for the  Windows Server® 2012 operating system, so the documentation for that ADK applies here, unless otherwise noted. The information included here is specific to partners who intend to preinstall the operating system for their customers.  

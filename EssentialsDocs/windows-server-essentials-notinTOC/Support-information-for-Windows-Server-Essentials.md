@@ -12,7 +12,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 # Support information for Windows Server Essentials
 This content has moved to [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md).
