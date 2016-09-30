@@ -13,18 +13,14 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
-# System Requirements for Windows Server Essentials
- This topic applies to a server running Windows Server Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+# System Requirements for Windows Server Essentials 
   
   Windows Server Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for  Windows Server Essentials. Table 2 defines additional hardware and software requirements for the server.  
+    
   
-> [!NOTE]
->  Are you looking for system requirements for  Windows Server 2012 R2? If so, go to [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d) in the Windows Server TechNet Library.  
-  
-### Table 1. System requirements for Windows Server Essentials  
+## Table 1. System requirements for Windows Server Essentials  
   
 |Component|Minimum|Recommended*|Maximum|  
 |---------------|-------------|-------------------|-------------|  
@@ -34,7 +30,7 @@ ms.author: coreyp
   
  *The recommended hardware requirements support maximum user and device limits.  
   
-### Table 2. Additional hardware and software requirements for Windows Server Essentials  
+## Table 2. Additional hardware and software requirements for Windows Server Essentials  
   
 |Component|Description|  
 |---------------|-----------------|  
@@ -51,13 +47,9 @@ ms.author: coreyp
  All server hardware should meet the requirements established for the  Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](http://msdn.microsoft.com/windows/hardware/gg487403.aspx).  
   
 ## See also  
-  
-
--   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
+ 
+-   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   
 -   [System Requirements for Windows Server Essentials](System-Requirements-for-Windows-Server-Essentials.md)
 
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
-  
--   [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md)
 

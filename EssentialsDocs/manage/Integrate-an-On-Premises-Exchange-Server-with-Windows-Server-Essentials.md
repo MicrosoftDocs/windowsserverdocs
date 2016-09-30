@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Integrate an On-Premises Exchange Server with Windows Server Essentials
@@ -453,7 +452,7 @@ This guide provides information and basic instructions to help you set up and in
   
 ## See also  
   
--   [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
   
 -   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   

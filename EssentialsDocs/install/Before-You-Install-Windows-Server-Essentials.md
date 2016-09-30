@@ -13,18 +13,12 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Before You Install Windows Server Essentials
 ##  <a name="BKMK_BeforeYouBegin"></a> Before you begin your installation of  Windows Server Essentials, perform the following tasks:  
-  
--   **Read the  Windows Server Essentials FAQs and Evaluation Guide**. To view and print the FAQs, see [Windows Server Essentials Frequently Asked Questions](http://download.microsoft.com/download/0/B/2/0B22F531-338D-4843-B43B-814D922EB724/Windows-Server-Essentials-FAQ.pdf). To view and print the Evaluation Guide, visit the **Start Here** section of the [Windows Server Essentials Evaluation Resources](http://technet.microsoft.com/evalcenter/jj659308.aspx) page.  
-  
 
--   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](System-Requirements-for-Windows-Server-Essentials.md).  
-
--   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](../install/System-Requirements-for-Windows-Server-Essentials.md).  
+-   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md).   
 
   
     > [!IMPORTANT]
@@ -55,15 +49,9 @@ ms.author: coreyp
     |Port 443|HTTPS Web traffic|  
   
 
--   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](Release-Documentation-for-Windows-Server-Essentials.md).  
+-   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md).  
   
 ## See also  
   
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
-
--   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](../install/Release-Documentation-for-Windows-Server-Essentials.md).  
-  
-## See also  
-  
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
 

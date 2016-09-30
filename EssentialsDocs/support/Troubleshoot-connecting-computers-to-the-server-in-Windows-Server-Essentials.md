@@ -13,7 +13,6 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Troubleshoot connecting computers to the server in Windows Server Essentials

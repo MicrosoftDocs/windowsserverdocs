@@ -13,7 +13,6 @@ ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 ms.author: coreyp
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, and Windows Server 2012
 
 
 # Manage Office 365 in Windows Server Essentials
