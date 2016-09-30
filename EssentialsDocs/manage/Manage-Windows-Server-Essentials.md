@@ -1,20 +1,20 @@
 ---
 title: "Manage Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 05/20/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 4f1902f1-a0e0-49a6-afa7-3c4b61a11b48
-caps.latest.revision: 14
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Manage Windows Server Essentials
 The following topics provide information about the server and network management features that are included with Windows Server Essentials:  
   
@@ -32,7 +32,7 @@ The following topics provide information about the server and network management
   
 -   [Manage Devices](Manage-Devices-in-Windows-Server-Essentials.md)  
   
--   [Manage Digital Media](Manage-Digital-Media-in-Windows-Server-2012-Essentials.md)  
+-   [Manage Digital Media](Manage-Digital-Media-in-Windows-Server-Essentials.md)  
   
 -   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   

@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Create an Access Policy
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to create an access policy in the IPAM client console.  
   

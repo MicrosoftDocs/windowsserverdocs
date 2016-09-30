@@ -1,22 +1,22 @@
 ---
 title: "Add Top-Level Categories to the Launchpad (Macintosh Operating System)"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: ee2173c3-e464-4001-9f43-6d926a575092
-caps.latest.revision: 6
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Add Top-Level Categories to the Launchpad (Macintosh Operating System)
-You can add top-level categories to the Launchpad on a computer running the Macintosh operating system. To create a Launchpad add-in that adds top-level categories, you can use a combination of information from this page and from the topic titled â€œHow-to: Add Tasks and Categories to the Launchpadâ€? in the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
+You can add top-level categories to the Launchpad on a computer running the Macintosh operating system. To create a Launchpad add-in that adds top-level categories, you can use a combination of information from this page and from the topic titled How-to: Add Tasks and Categories to the Launchpad? in the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
   
  The following example shows how you can specify your Launchpad entry to be a top-level category in the .launchpad file:  
   

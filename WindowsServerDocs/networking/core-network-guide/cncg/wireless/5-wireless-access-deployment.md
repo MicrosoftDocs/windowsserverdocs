@@ -4,16 +4,16 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-networking
-  - networking
+ms.technology: networking
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid:
+ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: jamesmci
 author: jamesmci
 ---
 # Wireless Access Deployment
+
+>Applies To: Windows Server&reg; 2016
 
 Follow these steps to deploy wireless access:
 

@@ -1,6 +1,7 @@
 ---
 title: Installing and enabling Data Deduplication
 ms.technology: storage-deduplication
+ms.prod: windows-server-threshold
 ms.topic: article
 author: wmgries
 manager: eldenc
@@ -26,7 +27,7 @@ To install Data Deduplication, run the following PowerShell command as an admini
 
 To install Data Deduplication in a Nano Server installation:
 
-1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../compute/nano-server/getting-started-with-nano-server.md#BKMK_CreateImage).
+1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md#BKMK_CreateImage).
 2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
 	```PowerShell
 	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication

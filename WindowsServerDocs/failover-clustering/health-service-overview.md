@@ -10,7 +10,8 @@ author: kumudd
 ms.date: 09/15/2016
 ---
 # Health Service in Windows Server 2016
->Applies To: Windows Server 2016
+> Applies to Windows Server 2016
+
 The Health Service is a new feature in Windows Server 2016 which significantly improves the day-to-day monitoring, operations, and maintenance experience of cluster resources. In Windows Server 2016, it is supported only for Storage Spaces Direct.   
 
 ## Prerequisites  
@@ -36,13 +37,17 @@ In Windows Server 2016, the Health Service provides the following metrics:
 
 To get metrics for the entire Storage Spaces Direct cluster run the following PowerShell cmdlet. The **&lt;Count&gt;** parameter indicates how many sets of values to return, at one second intervals.  
 
-        Get-StorageSubSystem clus* | Get-StorageHealthReport -Count <Count>  
+```PowerShell
+Get-StorageSubSystem clus* | Get-StorageHealthReport -Count <Count>  
+```
 
 You can also get metrics for one specific volume or node using the following cmdlets:  
 
-         Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
+```PowerShell
+Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
 
-         Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>  
+Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>
+```
 
 > [!NOTE]
 > The metrics returned in each case will be the subset applicable to that scope.  
@@ -165,7 +170,9 @@ In Windows Server 2016, the Health Service provides the following Fault coverage
 
 To see any current Faults, run the following cmdlet in PowerShell:  
 
-        Get-StorageSubSystem clus* | Debug-StorageSubSystem  
+```PowerShell
+Get-StorageSubSystem clus* | Debug-StorageSubSystem  
+```
 
 This returns any Faults which affect the overall Storage Spaces Direct cluster. Most often, these Faults relate to hardware or configuration. If there are no Faults, this cmdlet will return nothing.  
 
@@ -174,18 +181,20 @@ This returns any Faults which affect the overall Storage Spaces Direct cluster. 
 
 You can also view Faults that are affecting only specific volumes or file shares with the following cmdlets:  
 
-        Get-Volume -FileSystemLabel <Label> | Debug-Volume  
+```PowerShell
+Get-Volume -FileSystemLabel <Label> | Debug-Volume  
 
-        Get-FileShare -Name <Name> | Debug-FileShare  
+Get-FileShare -Name <Name> | Debug-FileShare  
+```
 
-This returns returns any Faults which affect only the specific volume or file share. Most often, these Faults relate to data resiliency or features like Storage QoS or Storage Replica.  
+This returns any faults that affect only the specific volume or file share. Most often, these Faults relate to data resiliency or features like Storage QoS or Storage Replica.  
 
 >[!NOTE]
 > In Windows Server 2016, it may take up to 30 minutes for certain Faults to appear. Improvements are forthcoming in subsequent releases.   
 
 ### Root Cause Analysis  
 
-Starting in Technical Preview 5, the Health Service can assess the potential causality among faulting entities to identify and combine faults which are consequences of the same underlying problem. By recognizing chains of effect, this makes for less chatty reporting. For now, this functionality is limited to nodes, enclosures, and physical disks in the event of lost connectivity.  
+The Health Service can assess the potential causality among faulting entities to identify and combine faults which are consequences of the same underlying problem. By recognizing chains of effect, this makes for less chatty reporting. For now, this functionality is limited to nodes, enclosures, and physical disks in the event of lost connectivity.  
 
 For example, if an enclosure has lost connectivity, it follows that those physical disk devices within the enclosure will also be without connectivity. Therefore, only one Fault will be raised for the root cause - in this case, the enclosure.  
 
@@ -197,7 +206,9 @@ The next section describes workflows which are automated by the Health Service. 
 
 One new PowerShell cmdlet displays all Actions:  
 
-    Get-StorageHealthAction  
+```PowerShell
+Get-StorageHealthAction  
+```
 
 ### Coverage  
 
@@ -260,7 +271,7 @@ When the replacement disk is inserted, it will be verified against the Allow Lis
 If allowed, the replacement disk is automatically substituted into its predecessor's pool to enter use. At this point, the system is returned to its initial state of perfect health, and then the Fault disappears.  
 
 ## Quarantine  
-The Health Service provides an enforcement mechanism to restrict the components and devices used by a Spaces Direct cluster to those on an Allow List provided by the administrator or solution vendor. This can be used to prevent mistaken use of unsupported hardware by you or others, which may help with warranty or support contract compliance. As of Technical Preview 5, this functionality is limited to physical disk devices, including SSDs, HDDs, and NVMe devices. The Allow List can restrict on model, manufacturer (optional), and firmware version (optional).  
+The Health Service provides an enforcement mechanism to restrict the components and devices used by a Spaces Direct cluster to those on an Allow List provided by the administrator or solution vendor. This can be used to prevent mistaken use of unsupported hardware by you or others, which may help with warranty or support contract compliance. This functionality is currently limited to physical disk devices, including SSDs, HDDs, and NVMe devices. The Allow List can restrict on model, manufacturer (optional), and firmware version (optional).  
  If an Allow List is specified, unlisted disk devices are prevented from joining pools, which effectively precludes their use in production. If no Allow List is specified, any disk device will be allowed to join pools.   
 
 >[!IMPORTANT]
@@ -270,8 +281,9 @@ The Health Service provides an enforcement mechanism to restrict the components 
 
 The Allow List is specified using an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free [here](http://code.visualstudio.com/)) or Notepad, to create an XML document which you can save and reuse.  
 
-**Example Allow List**  
+#### Example Allow list  
 
+```XML
     <Components>  
      <Disks>  
        <Disk>  
@@ -285,21 +297,25 @@ The Allow List is specified using an XML-inspired syntax. We recommend using you
        </Disk>  
      </Disks>  
     </Components>         
+```
 
 To allow multiple disk devices, simply add additional **&lt;Disk&gt;** tags with the fields you'd like to restrict on.  
 
 To set the Allow List, run the following PowerShell cmdlet:  
 
-    $xml = Get-Content <Path/To/File.xml> | Out-String  
-    Get-StorageSubSystem clus* | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $xml  
-
+```PowerShell
+$xml = Get-Content <Path/To/File.xml> | Out-String  
+Get-StorageSubSystem clus* | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $xml  
+```
 
 >[!NOTE]
 >The model, manufacturer, and the firmware version properties should exactly match the values that you get using the **Get-PhysicalDisk** cmdlet. This may differ from your "common sense" expectation, depending on your vendor's implementation. For example, rather than "Contoso", the manufacturer may be "CONTOSO-LTD", or it may be blank while the model is "Contoso-XZY9000".  
 
 You can verify using the following PowerShell cmdlet:  
 
-    Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion  
+```PowerShell
+Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion  
+```
 
 ## See also  
 - [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  

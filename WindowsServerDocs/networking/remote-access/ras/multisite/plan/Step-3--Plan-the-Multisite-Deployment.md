@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 3 Plan the Multisite Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning the multisite infrastructure, plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.  
   

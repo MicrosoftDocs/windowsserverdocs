@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # DirectAccess Unsupported Configurations
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.  
   

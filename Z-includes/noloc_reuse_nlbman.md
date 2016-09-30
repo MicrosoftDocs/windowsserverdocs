@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">To start Network Load Balancing Manager, open a Command prompt. From the command window, type <legacyBold xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">NLBMgr</legacyBold>, and then press ENTER.</Token>

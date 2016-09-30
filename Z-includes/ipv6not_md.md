@@ -1,1 +1,0 @@
-IPv6 addresses are not supported.

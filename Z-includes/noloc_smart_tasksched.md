@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">To open Task Scheduler, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Start</ui>, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Control Panel</ui>, and then double-click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Scheduled Tasks</ui>.</Token>

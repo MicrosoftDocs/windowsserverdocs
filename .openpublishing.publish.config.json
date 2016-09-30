@@ -17,10 +17,24 @@
       },
       "build_entry_point": "op"
     },
-     {
+    {
       "docset_name": "WindowsServerDocs",
       "build_source_folder": "WindowsServerDocs",
       "build_output_subfolder": "windows-server",
+      "locale": "en-us",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "op"
+    },
+    {
+      "docset_name": "EssentialsDocs",
+      "build_source_folder": "EssentialsDocs",
+      "build_output_subfolder": "window-server-docs/essentials",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": false,
@@ -37,6 +51,6 @@
     ""
   ],
   "skip_source_output_uploading": false,
-  "dependent_repositories": [],
-  "need_preview_pull_request": "true"
+  "need_preview_pull_request": true,
+  "dependent_repositories": []
 }

@@ -1,20 +1,20 @@
 ---
 title: "Automate Installation of Add-Ins During Setup"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 2e6ff6e4-8d68-4d49-9e38-8088bc8bf95e
-caps.latest.revision: 6
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Automate Installation of Add-Ins During Setup
 ##  <a name="BKMK_AddIns"></a> Automate installing add-ins during setup  
  To install add-ins during setup, use the PostIC.cmd method described in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section of this document.  
@@ -54,8 +54,8 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   </Preinstall>  
   <UninstallConfirm>...</UninstallConfirm>      
 </Package>  
-<â€¦>  
-<â€¦>  
+<¦>  
+<¦>  
 ```  
   
  Wherein **exefile** is the executable file in the add-in package to perform the pre-install step, and must be specified. **NormalArgs** specifies arguments to be passed to exefile in command-line when interactive mode is used. In this mode, the exefile can popup some dialogs for user interaction. **SilentArgs** specifies arguments to be passed to exefile in command-line when silent mode is used (-q is specified when invoking installaddin.exe). The exefile should not popup any windows in this mode. If **IgnoreExitCode** is specified with true, the pre-install step is always considered successful, otherwise, exit code 0 indicates success, 1 indicates cancellation, and other values indicate failure. Tags **NormalArgs**, **SilentArgs**, and **IgnoreExitCode** are all optional.  
@@ -84,7 +84,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   <Location>...</Location>    
   <PrivacyStatement>...</PrivacyStatement>  
   <OtherBinaries>...</OtherBinaries>   
-  <Preinstall>â€¦</Preinstall>  
+  <Preinstall>¦</Preinstall>  
 <UninstallConfirm>  
 <Executable>full-path-to-exefile</Executable>  
 <Arguments>command-line-arguments</Arguments>  

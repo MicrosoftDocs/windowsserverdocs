@@ -1,25 +1,25 @@
 ---
 title: "Create a Server Recovery DVD for Multi-Language Support"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
-caps.latest.revision: 24
-author: coreyp-at-msft
+4author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Create a Server Recovery DVD for Multi-Language Support
 ##  <a name="BKMK_MLHeadedRecovery"></a> Create a server setup and server recovery DVD for multiple language support on locally administered servers  
   
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the  Windows Server 2012 Essentials langauage pack into install.wim.  
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the  Windows Server Essentials langauage pack into install.wim.  
   
  There are two phases of setup: the Windows Preinstallation Environment (Windows PE) and the initial configuration. By default, the language selection page in initial configuration will not be displayed.  
   
@@ -51,20 +51,20 @@ ms.author: coreyp
 -   A technician computer that provides all the tools and source files necessary to create a customized WinPE image. For more information, see [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md).  
 
   
--   A  Windows Server 2012 Essentials DVD.  
+-   A  Windows Server Essentials DVD.  
   
--   A  Windows Server 2012 Essentials Language Pack DVD.  
+-   A  Windows Server Essentials Language Pack DVD.  
   
 ###  <a name="BKMK_Steps"></a> Adding multiple language support  
- To add multiple language support to Windows Setup you update the Install.wim by adding the  Windows Server 2012 and the  Windows Server 2012 Essentials language packs to it.  
+ To add multiple language support to Windows Setup you update the Install.wim by adding the  Windows Server 2012 and the  Windows Server Essentials language packs to it.  
   
 #### Update Install.wim  
- In this step, you add  Windows Server 2012 and  Windows Server 2012 Essentials language packs into Install.wim.  
+ In this step, you add  Windows Server 2012 and  Windows Server Essentials language packs into Install.wim.  
   
 > [!NOTE]
->  Verify that you install language packs for  Windows Server 2012. This assures that you get the appropriate branding. The  Windows Server 2012 Multilingual User Interface Language Packs are available on [Microsoft.com](http://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Please follow the instructions as described in the [Walkthrough: Multilingual Windows Image Creation on creating a multilingual](http://technet.microsoft.com/library/jj126995.aspx) on creating a multilingual Windows image before you add the Windows Server 2012 Essentials language pack into install.wim.  
+>  Verify that you install language packs for  Windows Server 2012. This assures that you get the appropriate branding. The  Windows Server 2012 Multilingual User Interface Language Packs are available on [Microsoft.com](http://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Please follow the instructions as described in the [Walkthrough: Multilingual Windows Image Creation on creating a multilingual](http://technet.microsoft.com/library/jj126995.aspx) on creating a multilingual Windows image before you add the Windows Server Essentials language pack into install.wim.  
 >   
->  Windows Server 2012 Essentials language packs are available in the Language pack media at \Language Packs\\<CultureName\>.  
+>  Windows Server Essentials language packs are available in the Language pack media at \Language Packs\\<CultureName\>.  
   
 > [!NOTE]
 >  Not all language packs may not available prior to the release of  Windows Server 2012.  

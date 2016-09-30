@@ -6,7 +6,7 @@ ms.manager: eldenc
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/15/2016
+ms.date: 09/16/2016
 ---
 # Fault domain awareness in Windows Server 2016
 > Applies To: Windows Server 2016
@@ -25,13 +25,12 @@ This short video presents an overview of fault domains in Windows Server 2016:
 - **The [Health Service](health-service-overview.md) uses fault domains to provide more helpful alerts.**  
     Each fault domain can be associated with location metadata, which will automatically be included in any subsequent alerts. These descriptors can assist operations or maintenance personnel and reduce errors by disambiguating hardware.  
 
-- **Stretch clustering uses fault domains to determine preferred ownership.**  
-    Stretch clustering allows faraway servers to join a common cluster. For the best performance, applications or virtual machines should be run on servers that are nearby to those providing their storage. If fault domains are specified, the stretch cluster will do this automatically.  
+- **Stretch clustering uses fault domains for storage affinity.** Stretch clustering allows faraway servers to join a common cluster. For the best performance, applications or virtual machines should be run on servers that are nearby to those providing their storage. Fault domain awareness enables this storage affinity.   
 
 ## Levels of fault domains  
 There are four canonical levels of fault domains - site, rack, chassis, and node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the chassis level may not make sense for you.  
 
-![Diagram of the different levels of fault domains in Windows Server 2016](media/Fault-Domains-in-Windows-Server-2016/Clustering_FaultDomains.png)
+![Diagram of the different levels of fault domains]![](media/Fault-Domains-in-Windows-Server-2016/levels-of-fault-domains.png)
 
 ## Usage  
 You can use PowerShell or XML markup to specify fault domains. Both approaches are equivalent and provide full functionality.
@@ -116,7 +115,7 @@ Open the file, and add `<Site>`, `<Rack>`, and `<Chassis>` tags to specify how t
 > While all additional tags are optional, they must adhere to the transitive Site &gt; Rack &gt; Chassis &gt; Node hierarchy, and must be properly closed.  
 In addition to name, freeform `Location="..."` and `Description="..."` descriptors can be added to any tag.  
 
-### Example: Two sites, one rack each  
+#### Example: Two sites, one rack each  
 
 ```XML
 <Topology>  
@@ -137,7 +136,7 @@ In addition to name, freeform `Location="..."` and `Description="..."` descripto
 </Topology> 
 ``` 
 
-### Example: two chassis, blade servers  
+#### Example: two chassis, blade servers  
 ```XML
 <Topology>  
   <Rack Name="A01" Location="Contoso HQ, Room 4010, Aisle A, Rack 01">  
@@ -162,9 +161,11 @@ Set-ClusterFaultDomainXML -XML $xml
 
 This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, and `<Node>` tags can be mixed and matched in many additional ways to reflect the physical topology of your deployment, whatever that may be. We hope these examples illustrate the flexibility of these tags and the value of freeform location descriptors to disambiguate them.  
 
-This short video demonstrates the value of adding location descriptors to fault domains.
+### Optional: Location and description metadata
 
-[![Click this image to see a short video demostrating the value of adding location descriptors to fault domains](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
+You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service. This short video demonstrates the value of adding such descriptors.
+
+[![Click to see a short video demonstrating the value of adding location descriptors to fault domains](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## See Also  
 -   [Windows Server 2016](../get-started/Windows-Server-2016-Technical-Preview-5.md)  

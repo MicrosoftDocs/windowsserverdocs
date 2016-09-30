@@ -13,10 +13,8 @@ ms.date: 8/16/2016
 ---
 # Ensure sufficient physical disk space is available when virtual machines use dynamically expanding virtual hard disks
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  

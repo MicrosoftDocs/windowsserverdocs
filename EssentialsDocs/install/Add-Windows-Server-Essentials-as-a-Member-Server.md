@@ -1,25 +1,24 @@
 ---
 title: "Add Windows Server Essentials as a Member Server"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 02/25/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
-caps.latest.revision: 10
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
 # Add Windows Server Essentials as a Member Server
-This topic applies to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed. In the remainder of this document, the Windows Server Essentials Experience role will be referred to as Windows Server Essentials.  
+This topic applies to a server running Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter, or Windows Server 2016 with the Windows Server Essentials Experience role installed. In the remainder of this document, the Windows Server Essentials Experience role will be referred to as Windows Server Essentials.  
   
 > [!NOTE]
->   Windows Server 2012 R2 Essentials can only be deployed as domain controller. In this document, Windows Server Essentials does not include  Windows Server 2012 R2 Essentials.  
+>   Windows Server Essentials can only be deployed as domain controller. In this document, Windows Server Essentials does not include  Windows Server Essentials.  
   
  Windows Server Essentials does not need to be a primary server within a Windows domain. You can add Windows Server Essentials as a member server to an existing Active Directory domain environment and take advantage of the simple data protection, secure remote access, and cloud integration features that it provides. In addition, Windows Server Essentials can be deployed in an existing Active Directory environment without having to be a domain controller. This enables you to extend storage or to use a branch office for local storage and administration.  
   
@@ -27,16 +26,16 @@ This topic applies to a server running Windows Server 2012 R2 Standard or Window
   
 -   Add Windows Server Essentials in a branch office location and join it to the domain controller that is located in the main office at a separate location by using the native tools. You can turn on the BranchCache features for optimum bandwidth utilization on this member server.  
   
--   Add Windows Server Essentials as a member server within a  Windows Server 2012 R2 Essentials network to help extend storage on your network by adding additional server folders on your member server.  
+-   Add Windows Server Essentials as a member server within a  Windows Server Essentials network to help extend storage on your network by adding additional server folders on your member server.  
   
--   Add Windows Server Essentials as a member server in the local office if your primary server running  Windows Server 2012 R2 Essentials is hosted in  Microsoft Azure or hosted by a third-party hoster. Having Windows Server Essentials as a member server at your local office site helps to optimize bandwidth usage.  
+-   Add Windows Server Essentials as a member server in the local office if your primary server running  Windows Server Essentials is hosted in  Microsoft Azure or hosted by a third-party hoster. Having Windows Server Essentials as a member server at your local office site helps to optimize bandwidth usage.  
   
 ## Adding Windows Server Essentials as a member server  
- To add Windows Server Essentials as a member server to a primary server running  Windows Server 2012 R2 or  Windows Server 2012 R2 Essentials in an existing Active Directory environment, you must complete the following steps:  
+ To add Windows Server Essentials as a member server to a primary server running  Windows Server 2012 R2 or  Windows Server Essentials in an existing Active Directory environment, you must complete the following steps:  
   
 1.  Join the server running Windows Server Essentials to a workgroup.  
   
-2.  Join the server running Windows Server Essentials to the domain of a primary  Windows Server 2012 R2 Essentials server.  
+2.  Join the server running Windows Server Essentials to the domain of a primary  Windows Server Essentials server.  
   
 3.  Configure the  Windows Server Essentials Experience from Server Manager.  
   
@@ -50,7 +49,7 @@ This topic applies to a server running Windows Server 2012 R2 Standard or Window
   
 4.  In **Computer Name**, in the **Domain** section, click **Change**.  
   
-5.  In **Computer Name/Domain Changes**, in the **Member** section, choose if you want to join the server running  Windows Server 2012 R2 Essentials to a **Workgroup** or to a **Domain**.  
+5.  In **Computer Name/Domain Changes**, in the **Member** section, choose if you want to join the server running  Windows Server Essentials to a **Workgroup** or to a **Domain**.  
   
     -   To add the server to a workgroup, type **workgroup**, and then click **OK**.  
   
@@ -58,7 +57,7 @@ This topic applies to a server running Windows Server 2012 R2 Standard or Window
   
 6.  Restart the server to apply the changes.  
   
- After you have joined the server to your primary server’s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
+ After you have joined the server to your primary server™s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
   
 #### To configure Windows Server Essentials Experience on a member server  
   

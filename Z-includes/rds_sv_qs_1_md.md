@@ -1,1 +1,0 @@
-Remote Desktop Services Session Virtualization Quick Start deployment

@@ -4,21 +4,20 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 67576533-206b-428a-956c-ed8c53218d9b
-ms.author: vhorne
+ms.author: victorh
 author: vhorne
 ---
 # Datacenter Firewall Overview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Datacenter Firewall is a new service included with Windows Server&reg; 2016 Technical Preview. It is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall. When deployed and offered as a service by the service provider, tenant administrators can install and configure firewall policies to help protect their virtual networks from unwanted traffic originating from Internet and intranet networks.  
+Datacenter Firewall is a new service included with Windows Server 2016. It is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall. When deployed and offered as a service by the service provider, tenant administrators can install and configure firewall policies to help protect their virtual networks from unwanted traffic originating from Internet and intranet networks.  
   
-![](../../../media/Datacenter-Firewall-Overview/MultitenantFirewallOverview2.png)  
+![Datacenter Firewall in the network stack](../../../media/Datacenter-Firewall-Overview/MultitenantFirewallOverview2.png)  
   
 The service provider administrator or the tenant administrator can manage the Datacenter Firewall policies via the network controller and the northbound APIs.  
   

@@ -69,7 +69,7 @@ Software Defined Networking (SDN) provides a method to centrally configure and m
 -   [Remote Direct Memory Access and Switch Embedded Teaming](../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
 This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016 Technical Preview, in addition to information about Switch Embedded Teaming (SET).  
 
--   [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
+-   [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
 Windows Server 2016 Technical Preview offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for hosting in private clouds and datacenters. It is similar to Windows Server in Server Core mode, but markedly smaller. Also, there is no local logon capability, nor does it support Terminal Services. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server.  
 
 -   [Introducing Cloud Witness in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2014/11/14/10572766.aspx)  

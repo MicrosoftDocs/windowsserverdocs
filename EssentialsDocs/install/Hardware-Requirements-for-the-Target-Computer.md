@@ -1,27 +1,27 @@
 ---
 title: "Hardware Requirements for the Target Computer"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
-caps.latest.revision: 23
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Hardware Requirements for the Target Computer
-This section provides hardware requirements for  Windows Server 2012 Essentials.  
+This section provides hardware requirements for  Windows Server Essentials.  
   
-## Hardware requirements for Windows Server 2012 Essentials  
- You must install  Windows Server 2012 Essentials on the target computer that meets the requirements in the following table.  
+## Hardware requirements for Windows Server Essentials  
+ You must install  Windows Server Essentials on the target computer that meets the requirements in the following table.  
   
-### Table 1:  System Requirements for Windows Server 2012 Essentials  
+### Table 1:  System Requirements for Windows Server Essentials  
   
 |Component|Minimum|Recommended*|Maximum|  
 |---------------|-------------|-------------------|-------------|  
@@ -29,7 +29,7 @@ This section provides hardware requirements for  Windows Server 2012 Essentials.
 |Memory (RAM)|2 GB|16 GB|64 GB|  
 |Hard disks and available storage space|160 GB hard disk with a 60 GB system partition||No limit|  
   
- *Recommended hardware requirements to support  Windows Server 2012 Essentials maximum user and device limits.  
+ *Recommended hardware requirements to support  Windows Server Essentials maximum user and device limits.  
   
 ## Additional hardware and software requirements  
  The following table lists additional hardware and software requirements.  
@@ -50,13 +50,13 @@ This section provides hardware requirements for  Windows Server 2012 Essentials.
   
 ## See Also  
 
- [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Getting Started with the Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
 
- [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Getting Started with the Windows Server Essentials ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   

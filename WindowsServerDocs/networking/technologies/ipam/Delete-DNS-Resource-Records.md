@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Delete DNS Resource Records
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to delete one or more DNS resource records by using the IPAM client console.  
   

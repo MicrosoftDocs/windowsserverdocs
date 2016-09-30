@@ -1,22 +1,22 @@
 ---
 title: "Overview of the Dashboard in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 01/14/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
-caps.latest.revision: 17
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Overview of the Dashboard in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
  Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled include an administrative dashboard, which simplifies the tasks that you perform to manage your Windows Server Essentials network and server. By using the Windows Server Essentials Dashboard, you can:  
   
@@ -59,7 +59,7 @@ ms.author: coreyp
   
  Figure 1  
   
- ![Windows Server 2012 Essentials Dashboard Page](media/SBS8DashboardDevice.png "SBS8DashboardDevice")  
+ ![Windows Server Essentials Dashboard Page](media/SBS8DashboardDevice.png "SBS8DashboardDevice")  
   
 |Item|Dashboard Feature|Description|  
 |----------|-----------------------|-----------------|  
@@ -67,9 +67,9 @@ ms.author: coreyp
 |2|Subsection tabs|The subsection tabs provide access to a second layer of Windows Server Essentials administrative tasks.|  
 |3|List pane|The list view displays the objects that you can manage, and includes basic information about each object.|  
 |4|Details pane|The details pane displays additional information about an object that you select in the list view.|  
-|5|Tasks pane|The Tasks pane contains links to tools and to information that help you manage the properties for either a specific object (such as a user account or a computer), or for global settings for the object category. The Tasks pane is divided into these two sections:<br /><br /> **Object tasks** â€“ Contains links to tools and information that help you manage the properties for an object that you select in the list view (such as a user account or a computer).<br /><br /> **Global tasks** â€“ Contains links to tools and information that help you manage global tasks for a feature area. Global tasks include tasks to add new objects, set policy, and so on.|  
+|5|Tasks pane|The Tasks pane contains links to tools and to information that help you manage the properties for either a specific object (such as a user account or a computer), or for global settings for the object category. The Tasks pane is divided into these two sections:<br /><br /> **Object tasks** “ Contains links to tools and information that help you manage the properties for an object that you select in the list view (such as a user account or a computer).<br /><br /> **Global tasks** “ Contains links to tools and information that help you manage global tasks for a feature area. Global tasks include tasks to add new objects, set policy, and so on.|  
 |6|Information and Settings|This section provides direct access to the server settings, and a Help link to information about the dashboard page that you are viewing.|  
-|7|Alerts status|The alerts status provides a quick visual indication about the health of the server. Click the alert image to view critical and important alerts.<br /><br /> **Note:** In Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role installed, the Alerts status is available on the **Information and Settings** tab.|  
+|7|Alerts status|The alerts status provides a quick visual indication about the health of the server. Click the alert image to view critical and important alerts.<br /><br /> **Note:** In Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role installed, the Alerts status is available on the **Information and Settings** tab.|  
 |8|Status bar|The status bar displays the number of objects that appear in the list view. Add-in applications may also display other status.|  
   
 ##  <a name="BKMK_Home"></a> Features of the Dashboard Home page  
@@ -77,7 +77,7 @@ ms.author: coreyp
   
  Figure 2  
   
- ![Windows Server 2012 Essentials Dashboard Home Page](media/WSE12_Dashboard_Home_Page.png "WSE12_Dashboard_Home_Page")  
+ ![Windows Server Essentials Dashboard Home Page](media/WSE12_Dashboard_Home_Page.png "WSE12_Dashboard_Home_Page")  
   
 |Item|Feature|Description|  
 |----------|-------------|-----------------|  
@@ -93,12 +93,12 @@ ms.author: coreyp
   
 |Section|Description|  
 |-------------|-----------------|  
-|Home|The **Home** page appears by default each time that you open the Dashboard. It includes tasks and information in the following categories:<br /><br /> **SETUP** â€“ Complete the tasks in this category to configure your server for the first time. For information about these tasks, see [Install and Configure Windows Server 2012 Essentials](../install/Install-and-Configure-Windows-Server-2012-Essentials.md).<br /><br /> **EMAIL** â€“ Choose an option in this category to integrate an email service with the server.<br /><br /> **Note:** This category is only available in Windows Server 2012 Essentials.<br /><br /> **SERVICES** â€“ Choose a task in this category to integrate Microsoft online services with the server.<br /><br /> **Note:** This category is only available in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> **ADD-INS** â€“ Click this category to install valuable add-ins for your business.<br /><br /> **QUICK STATUS** â€“ Displays high-level server status. Click a status to view information and configuration options for that feature. If you complete all of the tasks in the SETUP category, this category appears at the top of the Category pane.<br /><br /> **HELP** â€“ Use the Search box to search for help on the Web. Click a link to visit the website for the selected support option.|  
+|Home|The **Home** page appears by default each time that you open the Dashboard. It includes tasks and information in the following categories:<br /><br /> **SETUP** “ Complete the tasks in this category to configure your server for the first time. For information about these tasks, see [Install and Configure Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials.md).<br /><br /> **EMAIL** “ Choose an option in this category to integrate an email service with the server.<br /><br /> **Note:** This category is only available in Windows Server Essentials.<br /><br /> **SERVICES** “ Choose a task in this category to integrate Microsoft online services with the server.<br /><br /> **Note:** This category is only available in Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> **ADD-INS** “ Click this category to install valuable add-ins for your business.<br /><br /> **QUICK STATUS** “ Displays high-level server status. Click a status to view information and configuration options for that feature. If you complete all of the tasks in the SETUP category, this category appears at the top of the Category pane.<br /><br /> **HELP** “ Use the Search box to search for help on the Web. Click a link to visit the website for the selected support option.|  
 |Users|For users to access the resources that Windows Server Essentials provides, you need to create user accounts by using the Windows Server Essentials Dashboard. After creating user accounts, you can manage the accounts by using the tasks that are available on the **Users** page of the Dashboard. Tasks that you can perform on this page include:<br /><br /> - View a list of user accounts.<br /><br /> - View and manage user account properties.<br /><br /> - Activate or deactivate user accounts.<br /><br /> - Add or remove user accounts.<br /><br /> - Assign local network accounts to Microsoft online services accounts if your server is integrated with Office 365.<br /><br /> - Change user account passwords and manage the password policy.<br /><br /> For information about managing user accounts, see [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).|  
-|User groups|**Note:** This feature is available only in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> Tasks that you can perform on this page include:<br /><br /> - View a list of user groups.<br /><br /> - View and manage user groups.<br /><br /> - Add or remove user groups.|  
-|Distribution groups|**Note:** This feature is available only in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled. This tab is only displayed when Windows Server Essentials is integrated with Office 365.<br /><br /> Tasks that you can perform on this page include:<br /><br /> - View a list of distribution groups.<br /><br /> - Add or remove distribution groups.|  
-|Devices|After you connect computers to the Windows Server Essentials network, you can manage the computers from the **Devices** page of the Dashboard. Tasks that you can perform on this page include:<br /><br /> - View a list of computers that are joined to your network.<br /><br /> - Manage mobile devices by leveraging the Office 365 Mobile Device Management capability.<br /><br /> **Note:** This feature is only available in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> - View the computer properties and health alerts for each computer.<br /><br /> - Set up and manage computer backups.<br /><br /> - Restore files and folders to computers.<br /><br /> - Establish a Remote Desktop connection to a computer<br /><br /> - Customize Computer Backup and File History settings<br /><br /> For information about managing computers and backups, see [Manage Devices](Manage-Devices-in-Windows-Server-Essentials.md).|  
-|Storage|Depending on the version of Windows Server Essentials you are running, the **Storage** section of the Dashboard contains the following sections by default.<br /><br /> - The **Server Folders** subsection includes tasks that help you view and manage the properties for server folders. The page also includes tasks to open and add server folders.<br /><br /> - The **Hard Drives** page includes tasks that help you view and check the health of the drives that are attached to the server.<br /><br /> - In Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled, the **SharePoint Libraries** page includes tasks that help you manage the SharePoint Libraries in Office 365 service.<br /><br /> For information about managing server folders, see [Manage Server Folders](Manage-Server-Folders-in-Windows-Server-Essentials.md).<br /><br /> For information about managing hard drives, see [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md).|  
+|User groups|**Note:** This feature is available only in Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> Tasks that you can perform on this page include:<br /><br /> - View a list of user groups.<br /><br /> - View and manage user groups.<br /><br /> - Add or remove user groups.|  
+|Distribution groups|**Note:** This feature is available only in Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled. This tab is only displayed when Windows Server Essentials is integrated with Office 365.<br /><br /> Tasks that you can perform on this page include:<br /><br /> - View a list of distribution groups.<br /><br /> - Add or remove distribution groups.|  
+|Devices|After you connect computers to the Windows Server Essentials network, you can manage the computers from the **Devices** page of the Dashboard. Tasks that you can perform on this page include:<br /><br /> - View a list of computers that are joined to your network.<br /><br /> - Manage mobile devices by leveraging the Office 365 Mobile Device Management capability.<br /><br /> **Note:** This feature is only available in Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> - View the computer properties and health alerts for each computer.<br /><br /> - Set up and manage computer backups.<br /><br /> - Restore files and folders to computers.<br /><br /> - Establish a Remote Desktop connection to a computer<br /><br /> - Customize Computer Backup and File History settings<br /><br /> For information about managing computers and backups, see [Manage Devices](Manage-Devices-in-Windows-Server-Essentials.md).|  
+|Storage|Depending on the version of Windows Server Essentials you are running, the **Storage** section of the Dashboard contains the following sections by default.<br /><br /> - The **Server Folders** subsection includes tasks that help you view and manage the properties for server folders. The page also includes tasks to open and add server folders.<br /><br /> - The **Hard Drives** page includes tasks that help you view and check the health of the drives that are attached to the server.<br /><br /> - In Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled, the **SharePoint Libraries** page includes tasks that help you manage the SharePoint Libraries in Office 365 service.<br /><br /> For information about managing server folders, see [Manage Server Folders](Manage-Server-Folders-in-Windows-Server-Essentials.md).<br /><br /> For information about managing hard drives, see [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md).|  
 |Applications|- The **Applications** section of the Windows Server Essentials Dashboard contains two subsections by default.<br /><br /> For information about managing add-in applications, see [Manage Applications](Manage-Applications-in-Windows-Server-Essentials.md).<br /><br /> - The **Add-ins** subsection displays a list of installed add-ins, and provides tasks that enable you to remove an add-in, and to access additional information about a selected add-in.<br /><br /> - The **Microsoft Pinpoint** subsection displays a list of applications that are available from Microsoft Pinpoint.|  
 |Office 365|The **Office 365** tab displays only when Windows Server Essentials is integrated with Microsoft Office 365. This section contains Office 365 subscription and administrator account information.|  
   
@@ -127,7 +127,7 @@ ms.author: coreyp
  In Windows Server Essentials, after you join a computer to the network, administrators can use the Launchpad to access the server Dashboard from the computer.  
   
 > [!WARNING]
->  In  Windows Server 2012 R2 Essentials, to connect to the Dashboard from the client computer, right-click the tray icon, and then open the Dashboard from the context menu.  
+>  In  Windows Server Essentials, to connect to the Dashboard from the client computer, right-click the tray icon, and then open the Dashboard from the context menu.  
   
 ##### To access the Dashboard by using the Launchpad  
   

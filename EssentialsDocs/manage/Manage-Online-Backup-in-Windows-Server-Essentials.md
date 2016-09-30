@@ -1,22 +1,22 @@
 ---
 title: "Manage Online Backup in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 04/22/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 95a9f593-fad7-4335-bd4d-c7bb8c033efb
-caps.latest.revision: 30
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Manage Online Backup in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+
   
  After you integrate with  Microsoft Azure Backup, the **Online Backup** management page appears in the Windows Server Essentials Dashboard. The **Online Backup** page makes it possible to perform common administrative tasks. The features on the Online Backup page include:  
   
@@ -66,7 +66,7 @@ ms.author: coreyp
   
 3.  In the **ONLINE BACKUP** area, click **Upload certificate to Azure Backup vault**.  
   
-     That opens **Recovery Services** in the  Azure Management Portal. If you aren’t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
+     That opens **Recovery Services** in the  Azure Management Portal. If you aren™t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
   
 4.  Click the name of the backup vault you'll use for online backups to open the **Quick Start** page for the backup vault.  
   
@@ -124,7 +124,7 @@ ms.author: coreyp
 6.  On the **Choose your bandwidth usage** page of the wizard, if you want to restrict the amount of Internet bandwidth that is allocated to online backup, select **Enable Internet bandwidth usage**. Use the options on the page to specify how much Internet bandwidth to allow your online backup to use during work hours and during non-work hours. Then define your business hours and business days.  
   
     > [!NOTE]
-    >   Azure Backup allows you to customize how the integration software utilizes the network bandwidth when backing up or restoring information. Using a technique commonly known as “throttling,�? you can control the amount of network bandwidth that is available for use by the backup and restore processes during specific day and time intervals. After selecting the **Enable Internet bandwidth usage** check box in the Configure Online Backup wizard, you can specify the workdays and work hours during which to apply the work-hours bandwidth limit. The non-work-hours limit is used at all other times. Valid bandwidth ranges are from 256 Kbps to Unlimited for both limits.  
+    >   Azure Backup allows you to customize how the integration software utilizes the network bandwidth when backing up or restoring information. Using a technique commonly known as throttling, you can control the amount of network bandwidth that is available for use by the backup and restore processes during specific day and time intervals. After selecting the **Enable Internet bandwidth usage** check box in the Configure Online Backup wizard, you can specify the workdays and work hours during which to apply the work-hours bandwidth limit. The non-work-hours limit is used at all other times. Valid bandwidth ranges are from 256 Kbps to Unlimited for both limits.  
   
 7.  When the online backup configuration completes, click **Close**.  
   
@@ -335,9 +335,9 @@ ms.author: coreyp
   
 2.  Do one of the following:  
   
-      Windows Server 2012 Essentials: On the navigation pane, click the alerts icon \(may be Critical, Warning, or Informational\). This opens the Alert Viewer.  
+      Windows Server Essentials: On the navigation pane, click the alerts icon \(may be Critical, Warning, or Informational\). This opens the Alert Viewer.  
   
-      Windows Server 2012 R2 Essentials: On the **Home** page, click the **Health Monitoring** tab.  
+      Windows Server Essentials: On the **Home** page, click the **Health Monitoring** tab.  
   
 3.  Review the list of alerts for issues that are related to  Azure Backup.  
   
@@ -371,7 +371,7 @@ ms.author: coreyp
   
      If you already have an  Azure subscription, click **Portal** in the upper-right corner of the web page to go to the  Azure Management Portal.  
   
-5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That’s where you’ll manage the backup vaults that store your online backups from Windows Server Essentials.  
+5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That™s where you™ll manage the backup vaults that store your online backups from Windows Server Essentials.  
   
 ####  <a name="BKMK_Createabackupvaulttostoreonlinebackups"></a> Create a backup vault to store online backups  
   
@@ -410,7 +410,7 @@ ms.author: coreyp
   
  After completing these steps, do the following:  
   
-1.  In  Windows Server 2012 Essentials, upload a certificate to use for online backups. For more information, see [Upload a certificate to the Azure Backup vault](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
+1.  In  Windows Server Essentials, upload a certificate to use for online backups. For more information, see [Upload a certificate to the Azure Backup vault](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
   
 2.  Register the server with the  Azure Backup vault. For more information, see [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
   
@@ -441,7 +441,7 @@ ms.author: coreyp
 |------------|-----------------|  
 |**Folder Name:**|The name of the folder that is included in the online backup.<br /><br /> To add or exclude a folder, run the **Configure online backup** task.|  
 |**Folder Path:**|The location of the folder.|  
-|**Status:**|There are three types of status – **Protected**, **Not protected**, and **Unknown**.|  
+|**Status:**|There are three types of status “ **Protected**, **Not protected**, and **Unknown**.|  
   
 ###  <a name="BKMK_19"></a> Online backup history in Windows Server Essentials  
  The **Backup History** sub-section in the Online Backup section of the Dashboard displays a list of recent online backups. You can use successful backups to restore file and folders. The following table describes the information that is included in the list.  
@@ -450,7 +450,7 @@ ms.author: coreyp
 |------------|-----------------|  
 |**Operation:**|There are two types of operations - **Backup** and **Restore**.|  
 |**Time:**|This is the time logged for the most recent status.|  
-|**Status:**|There are five types of status – **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
+|**Status:**|There are five types of status “ **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
   
 ## See also  
   

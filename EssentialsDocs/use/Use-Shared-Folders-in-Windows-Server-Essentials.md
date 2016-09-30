@@ -1,22 +1,22 @@
 ---
 title: "Use Shared Folders in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 04/01/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
-caps.latest.revision: 12
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Use Shared Folders in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
  Windows Server Essentials provides a central location for all of your data and files through the shared folders that are located on your server.  
   
@@ -72,15 +72,15 @@ ms.author: coreyp
   
 ###  <a name="BKMK_2"></a> Create, rename, move, delete, or copy files and folders in Remote Web Access  
 
- You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move or copy files and folders, and to delete files and folders on your server. For more information, see the section â€œCreate, rename, move, delete, or copy files and folders in Remote Web Accessâ€? in the topic [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move or copy files and folders, and to delete files and folders on your server. For more information, see the section Create, rename, move, delete, or copy files and folders in Remote Web Access? in the topic [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_3"></a> Upload and download files in Remote Web Access  
- On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section â€œUpload and download files in Remote Web Accessâ€? in the topic [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section Upload and download files in Remote Web Access? in the topic [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 
- You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move or copy files and folders, and to delete files and folders on your server. For more information, see the section â€œCreate, rename, move, delete, or copy files and folders in Remote Web Accessâ€? in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move or copy files and folders, and to delete files and folders on your server. For more information, see the section Create, rename, move, delete, or copy files and folders in Remote Web Access? in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_3"></a> Upload and download files in Remote Web Access  
- On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section â€œUpload and download files in Remote Web Accessâ€? in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section Upload and download files in Remote Web Access? in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 
   
 ##  <a name="BKMK_Phone"></a> Using My Server app for Windows Phone  
@@ -100,11 +100,11 @@ ms.author: coreyp
   
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
--   [Play Digital Media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md)
+-   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
 
 -   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
--   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md)
+-   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

@@ -14,12 +14,12 @@ author: jamesmci
 ---
 # Core Network Guide
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
 > [!NOTE]
-> This guide is available for download in Microsoft Word format from TechNet Gallery. For more information, see [Core Network Guide for Windows Server 2016 Technical Preview](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
+> This guide is available for download in Microsoft Word format from TechNet Gallery. For more information, see [Core Network Guide for  Windows Server 2016](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
 
 This guide contains the following sections.
 
@@ -56,7 +56,7 @@ A Windows Server core network provides you with many benefits, including the fol
 
 -   A user and computer account database. The directory service provides a centralized user accounts database that allows you to create user and computer accounts for people and computers that are authorized to connect to your network and access network resources, such as applications, databases, shared files and folders, and printers.
 
-A core network also allows you to scale your network as your organization grows and IT requirements change. For example, with a core network you can add domains, IP subnets, remote access services, wireless services, and other features and server roles provided by Windows Server 2016 Technical Preview.
+A core network also allows you to scale your network as your organization grows and IT requirements change. For example, with a core network you can add domains, IP subnets, remote access services, wireless services, and other features and server roles provided by  Windows Server 2016.
 
 ### Network hardware requirements
 To successfully deploy a core network, you must deploy network hardware, including the following:
@@ -102,7 +102,7 @@ DHCP allows you to use a DHCP server to dynamically assign an IP address to a co
 For TCP/IP-based networks, DHCP reduces the complexity and amount of administrative work involved in reconfiguring computers.
 
 ### TCP/IP
-TCP/IP in Windows Server 2016 Technical Preview is the following:
+TCP/IP in  Windows Server 2016 is the following:
 
 -   Networking software based on industry-standard networking protocols.
 
@@ -116,7 +116,7 @@ TCP/IP in Windows Server 2016 Technical Preview is the following:
 
 TCP/IP provides basic TCP/IP utilities that enable Windows-based computers to connect and share information with other Microsoft and non-Microsoft systems, including:
 
--   Windows Server 2016 Technical Preview
+-    Windows Server 2016
 
 -   Windows 10
 
@@ -269,19 +269,19 @@ Forest functionality enables features across all the domains in your forest. The
 
 -    Windows Server 2012 R2 . This forest functional level supports  Windows Server 2012 R2  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
--   Windows Server 2016 Technical Preview. This forest functional level supports only Windows Server 2016 Technical Preview domain controllers and domain controllers that are running later versions of the Windows Server operating system.
+-    Windows Server 2016. This forest functional level supports only  Windows Server 2016 domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
-If you are deploying a new domain in a new forest and all of your domain controllers will be running Windows Server 2016 Technical Preview, it is recommended that you configure AD DS with the Windows Server 2016 Technical Preview forest functional level during AD DS installation.
+If you are deploying a new domain in a new forest and all of your domain controllers will be running  Windows Server 2016, it is recommended that you configure AD DS with the  Windows Server 2016 forest functional level during AD DS installation.
 
 > [!IMPORTANT]
-> After the forest functional level is raised, domain controllers that are running earlier operating systems cannot be introduced into the forest. For example, if you raise the forest functional level to Windows Server 2016 Technical Preview, domain controllers running  Windows Server 2012 R2  or  Windows Server 2008  cannot be added to the forest.
+> After the forest functional level is raised, domain controllers that are running earlier operating systems cannot be introduced into the forest. For example, if you raise the forest functional level to  Windows Server 2016, domain controllers running  Windows Server 2012 R2  or  Windows Server 2008  cannot be added to the forest.
 
 Example configuration items for AD DS are provided in the following table.
 
 |Configuration items:|Example values:|
 |------------------------|-------------------|
 |Full DNS name|Examples:<br /><br />-   corp.contoso.com<br />-   example.com|
-|Forest functional level|-    Windows Server 2008 <br />-    Windows Server 2008 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2012 R2 <br />-   Windows Server 2016 Technical Preview|
+|Forest functional level|-    Windows Server 2008 <br />-    Windows Server 2008 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2012 R2 <br />-    Windows Server 2016|
 |Active Directory Domain Services Database folder location|E:\Configuration\\<br /><br />Or accept the default location.|
 |Active Directory Domain Services Log files folder location|E:\Configuration\\<br /><br />Or accept the default location.|
 |Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<br /><br />Or accept the default location|
@@ -452,7 +452,7 @@ You can use the procedure in this section to change the name of a computer. Rena
 >
 > `Restart-Computer`
 
-###### To rename computers running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012
+###### To rename computers running  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012
 
 1.  In Server Manager, click **Local Server**. The computer **Properties** are displayed in the details pane.
 
@@ -466,7 +466,7 @@ You can use the procedure in this section to change the name of a computer. Rena
 > For information on how to rename computers that are running other Microsoft operating systems, see [Appendix A - Renaming computers](#BKMK_A).
 
 #### <a name="BKMK_ip"></a>Configure a static IP address
-You can use the procedures in this topic to configure the Internet Protocol version 4 (IPv4) properties of a network connection with a static IP address for computers running Windows Server 2016 Technical Preview.
+You can use the procedures in this topic to configure the Internet Protocol version 4 (IPv4) properties of a network connection with a static IP address for computers running  Windows Server 2016.
 
 > [!NOTE]
 > To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlets on separate lines, and then press ENTER. You must also replace interface names and IP addresses in this example with the values that you want to use to configure your computer.
@@ -475,7 +475,7 @@ You can use the procedures in this topic to configure the Internet Protocol vers
 >
 > `Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 127.0.0.1`
 
-###### To configure a static IP address on  computers running Windows Server 2016 Technical Preview, Windows Server 2012 R2 , and  Windows Server 2012
+###### To configure a static IP address on  computers running  Windows Server 2016, Windows Server 2012 R2 , and  Windows Server 2012
 
 1.  In the task bar, right-click the Network icon, and then click **Open Network and Sharing Center**.
 
@@ -705,7 +705,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 >
 > `Restart-Computer`
 
-###### To join computers running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  to the domain
+###### To join computers running  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  to the domain
 
 1.  In Server Manager, click **Local Server**. In the details pane, click **WORKGROUP**. The **System Properties** dialog box opens.
 
@@ -724,7 +724,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 > [!NOTE]
 > For information on how to join computers that are running other Microsoft operating systems to the domain, see [Appendix C - Joining computers to the domain](#BKMK_C).
 
-###### To log on to the domain using computers running Windows Server 2016 Technical Preview
+###### To log on to the domain using computers running  Windows Server 2016
 
 1.  Log off the computer, or restart the computer.
 
@@ -949,7 +949,7 @@ Network Policy Server (NPS) allows you to centrally configure and manage network
 
 NPS is an optional component of a core network, but you should install NPS if any of the following are true:
 
--   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
+-   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running  Windows Server 2016,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
 
 -   You plan to deploy NAP.
 
@@ -1042,7 +1042,7 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 3.  In **Network Policy Server**, click **OK**, and then click **OK** again.
 
 #### <a name="BKMK_IIS"></a>Deploying WEB1
-The Web Server (IIS) role in Windows Server 2016 Technical Preview provides a secure, easy-to-manage, modular and extensible platform for reliably hosting web sites, services, and applications. With Internet Information Services (IIS), you can share information with users on the Internet, an intranet, or an extranet. IIS  is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).
+The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-manage, modular and extensible platform for reliably hosting web sites, services, and applications. With Internet Information Services (IIS), you can share information with users on the Internet, an intranet, or an extranet. IIS  is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).
 
 In addition to allowing you to publish a CRL for access by domain member computers, the Web Server (IIS) server role allows you to set up and manage multiple web sites, web applications, and FTP sites. IIS also provides the following benefits:
 
@@ -1092,24 +1092,24 @@ To complete this procedure, you must be a member of the **Administrators** group
 ## <a name="BKMK_resources"></a>Additional Technical Resources
 For more information about the technologies in this guide, see the following resources:
 
-Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
+ Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/en-us/library/mt163897.aspx)
+-   [What's new in Active Directory Domain Services (AD DS)](https://technet.microsoft.com/windows-server-docs/identity/whats-new-active-directory-domain-services)
 
--   [Active Directory Domain Services overview](http://technet.microsoft.com/library/hh831484.aspx) at http://technet.microsoft.com/library/hh831484.aspx.
+-   [Active Directory Domain Services overview](https://technet.microsoft.com/windows-server-docs/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview).
 
--   [Domain Name System (DNS) overview](http://technet.microsoft.com/library/hh831667.aspx) at http://technet.microsoft.com/library/hh831667.aspx.
+-   [Domain Name System (DNS)](https://technet.microsoft.com/windows-server-docs/networking/dns/domain-name-system--dns-)
 
--   [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152(WS.10).aspx)
+-   [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152.aspx)
 
--   [Dynamic Host Configuration Protocol (DHCP) overview](http://technet.microsoft.com/library/hh831825.aspx) at http://technet.microsoft.com/library/hh831825.aspx.
+-   [Dynamic Host Configuration Protocol (DHCP) overview](http://technet.microsoft.com/library/hh831825.aspx) 
 
--   [Network Policy and Access Services overview](http://technet.microsoft.com/library/hh831683.aspx) at http://technet.microsoft.com/library/hh831683.aspx.
+-   [Network Policy and Access Services overview](http://technet.microsoft.com/library/hh831683.aspx) 
 
--   [Web Server (IIS) overview](http://technet.microsoft.com/library/hh831725.aspx) at http://technet.microsoft.com/library/hh831725.aspx.
+-   [Web Server (IIS) overview](http://technet.microsoft.com/library/hh831725.aspx)
 
 ## <a name="BKMK_appendix"></a>Appendices A through E
-The following sections contain additional configuration information for computers that are running operating systems other than Windows Server 2016 Technical Preview, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
+The following sections contain additional configuration information for computers that are running operating systems other than  Windows Server 2016, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
 
 1.  [Appendix A - Renaming computers](#BKMK_A)
 

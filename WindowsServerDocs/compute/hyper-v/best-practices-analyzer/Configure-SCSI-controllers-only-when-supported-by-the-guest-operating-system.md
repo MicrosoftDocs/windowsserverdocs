@@ -13,9 +13,9 @@ ms.date: 8/16/2016
 ---
 # Configure SCSI controllers only when supported by the guest operating system
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
+
   
 |Property|Details|  
 |-|-|  

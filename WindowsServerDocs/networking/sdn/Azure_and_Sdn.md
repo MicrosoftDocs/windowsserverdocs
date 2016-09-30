@@ -4,15 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 79e87013-7f27-4031-8383-288bcb291731
 ms.author: jamesmci
 author: jamesmci
 ---
-# Microsoft Azure and Software Defined Networking  
+# Microsoft Azure and Software Defined Networking
+
+>Applies To: Windows Server&reg; 2016
+
 Microsoft Azure is Microsoft's cloud platform: a growing collection of integrated services - compute, storage, data, networking, and app - that help you move faster, do more, and save money.  
   
 Microsoft's approach to software defined networking includes designing, building, and operating global-scale datacenter networks for services like Microsoft Azure. Microsoft Azure global datacenters perform tens of thousands of network changes every day, which is possible only because of software defined networking.  

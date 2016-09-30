@@ -1,20 +1,20 @@
 ---
 title: "Add a Tab to Settings"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: aac6b7f3-9020-46c3-a83f-b81542300385
-caps.latest.revision: 10
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Add a Tab to Settings
 You can add a tab to Settings on the Dashboard by creating and installing a code assembly that is used by the Settings Manager in operating system.  
   

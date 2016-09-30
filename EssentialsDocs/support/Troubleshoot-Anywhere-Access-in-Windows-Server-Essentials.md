@@ -1,27 +1,27 @@
 ---
 title: "Troubleshoot Anywhere Access in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 07/31/2013
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Troubleshoot Anywhere Access in Windows Server Essentials
-This topic provides general instructions for using the Repair Anywhere Access wizard in  Windows Server 2012 Essentials to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities â€“ Remote Web Access, virtual private network (VPN), and DirectAccess â€“ enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
+This topic provides general instructions for using the Repair Anywhere Access wizard in  Windows Server Essentials to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities “ Remote Web Access, virtual private network (VPN), and DirectAccess “ enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
   
  The Repair Anywhere Access wizard attempts to identify and repair issues with your router, domain name, or firewall that are preventing network users from remotely accessing server resources.  
   
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ### To repair Anywhere Access  
   
@@ -54,4 +54,4 @@ This topic provides general instructions for using the Repair Anywhere Access wi
 -   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
 
   
--   Check the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads) for the most recent issues reported by the  Windows Server 2012 Essentials community.
+-   Check the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads) for the most recent issues reported by the  Windows Server Essentials community.

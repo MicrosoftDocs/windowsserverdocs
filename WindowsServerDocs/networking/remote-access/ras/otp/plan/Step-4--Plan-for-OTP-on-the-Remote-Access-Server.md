@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 4 Plan for OTP on the Remote Access Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning for the one-time password (OTP) RADIUS server and certificate settings, the final step in planning a Remote Access OTP deployment is to plan for client OTP settings on the Remote Access server.  
   

@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Troubleshooting DirectAccess
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Follow these steps to troubleshoot Remote Access (DirectAccess) issues.  
   

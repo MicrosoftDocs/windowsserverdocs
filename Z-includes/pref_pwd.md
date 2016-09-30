@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">This password is protected by 256-bit Advanced Encryption Standard (AES) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.</Token>

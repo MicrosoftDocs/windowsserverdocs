@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">This tool is not available on the x64-based versions of the Windows operating systems.</Token>

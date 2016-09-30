@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
@@ -14,9 +13,9 @@ author: jamesmci
 ---
 # Software Load Balancing (SLB) for SDN
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-You can use this topic to learn about Software Load Balancing  for Software Defined Networking in Windows Server 2016 Technical Preview.  
+You can use this topic to learn about Software Load Balancing  for Software Defined Networking in  Windows Server 2016.  
   
 This topic contains the following sections.  
   
@@ -27,7 +26,7 @@ This topic contains the following sections.
 -   [Software Load Balancing Features](#bkmk_features)  
   
 ## <a name="bkmk_overview"></a>Software Load Balancing Overview  
-Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources.  The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
+Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources.  The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
 Windows Server SLB includes the following capabilities.  
   
@@ -117,7 +116,7 @@ SLB includes health probes to validate the health of the network infrastructure,
 Unlike a traditional load balancer appliance where the probe originates on the appliance and travels across the wire to the DIP, the SLB probe originates on the host where the DIP is located and goes directly from the SLB host agent to the DIP, further distributing the work across the hosts.  
   
 ## <a name="bkmk_infrastructure"></a>Software Load Balancing Infrastructure  
-To deploy Windows Server SLB, you must first deploy Network Controller in Windows Server 2016 Technical Preview and one or more SLB MUX VMs.  
+To deploy Windows Server SLB, you must first deploy Network Controller in  Windows Server 2016 and one or more SLB MUX VMs.  
   
 In addition, you must configure Hyper-V hosts with the SDN-enabled Hyper-V Virtual Switch and ensure that the SLB Host Agent is running.  The routers that serve the hosts must support equal cost multipath (ECMP) routing and Border Gateway Protocol (BGP) and must be configured to accept BGP peering requests from the SLB MUXes.  
   
@@ -128,14 +127,12 @@ Following is an overview of the SLB infrastructure.
 The following sections provide more information about these elements of the SLB infrastructure.  
   
 ### SCVMM  
-With System Center 2016 Technical Preview 4, you can configure Network Controller on Windows Server 2016 Technical Preview, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running Windows Server 2016 Technical Preview and Hyper-V.  
+With System Center 2016, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
   
-For more information about System Center 2016 Technical Preview 4, see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
-  
-To download System Center 2016 Technical Preview 4, see [System Center 2016 Technical Preview 4](http://www.microsoft.com/en-us/evalcenter/evaluate-system-center-technical-preview)  
-  
+For more information about System Center 2016 , see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).
+
 > [!NOTE]  
-> If you do not want to use System Center 2016 Technical Preview 4, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
+> If you do not want to use System Center 2016, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
   
 ### Network Controller  
 Network Controller hosts the SLB Manager and performs the following actions for SLB.  
@@ -150,10 +147,10 @@ Network Controller hosts the SLB Manager and performs the following actions for 
 The SLB MUX processes inbound network traffic and maps VIPs to DIPs, then forwards the traffic to the correct DIP. Each MUX also uses BGP to publish VIP routes to edge routers. BGP Keep Alive notifies MUXes when a MUX fails, which allows active MUXes to redistribute the load in case of a MUX failure - essentially providing load balancing for the load balancers.  
   
 ### Hosts that are running Hyper-V  
-You can use SLB with computers that are running Windows Server 2016 Technical Preview and Hyper-V. The VMs on the Hyper-V host can run any operating system that is supported by Hyper-V.  
+You can use SLB with computers that are running  Windows Server 2016 and Hyper-V. The VMs on the Hyper-V host can run any operating system that is supported by Hyper-V.  
   
 ### SLB Host Agent  
-When you deploy SLB, you must use System Center, Windows PowerShell, or another management application to deploy the SLB Host Agent on every Hyper-V host computer. You can install the SLB Host Agent on all versions of Windows Server 2016 Technical Preview that provide Hyper-V support, including Nano Server.  
+When you deploy SLB, you must use System Center, Windows PowerShell, or another management application to deploy the SLB Host Agent on every Hyper-V host computer. You can install the SLB Host Agent on all versions of  Windows Server 2016 that provide Hyper-V support, including Nano Server.  
   
 The SLB Host Agent listens for SLB policy updates from Network Controller. In addition, the host agent programs rules for SLB into the SDN-enabled Hyper-V Virtual Switches that are configured on the local computer.  
   
@@ -204,7 +201,7 @@ Following are some of the features and capabilities of SLB.
   
 -   For site-to-site gateway scenarios, S:B provides NAT functionality to enable all site-to-site connections to utilize a single public IP  
   
--   You can install SLB, including the Host Agent and the MUX, on Windows Server 2016 Technical Preview, Full, Core, and Nano Install.  
+-   You can install SLB, including the Host Agent and the MUX, on  Windows Server 2016, Full, Core, and Nano Install.  
   
 **Scale and performance**  
   

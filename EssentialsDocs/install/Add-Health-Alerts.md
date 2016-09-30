@@ -1,20 +1,20 @@
 ---
 title: "Add Health Alerts"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Add Health Alerts
 A health add-in provides definitions for alerts, health checks, and repairs for network problems. A health add-in consists of xml files that annotate code or data that is used to evaluate health information for a specific feature. Health add-ins are created by developers and installed on the server and client computers by the administrator.  
   

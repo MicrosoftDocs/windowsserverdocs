@@ -1,1 +1,0 @@
-Windows® Internal Database

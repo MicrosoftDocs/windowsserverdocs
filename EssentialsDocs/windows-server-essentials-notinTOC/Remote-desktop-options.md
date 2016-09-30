@@ -1,24 +1,21 @@
 ---
 title: "Remote desktop options"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 11/26/2013
+ms.date: 10/03/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2012 R2
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
-  - Windows Storage Server 2012 R2 Essentials
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d
-caps.latest.revision: 7
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Remote desktop options
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ 
   
 ## Connection speed  
  The speed of the connection to a network computer using Remote Web Access determines the desktop options that are available to you on the host computer. The following table tells you which desktop options are available for speed that you are connecting to the remote computer through Remote Web Access.  

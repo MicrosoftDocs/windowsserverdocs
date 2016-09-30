@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">You can use Backup to back up and restore data on FAT16, FAT32, or NTFS volumes. However, if you have backed up data from an NTFS volume, it is recommended that you restore the data to an NTFS volume of the same version to prevent losing data. Some file systems might not support all of the features of other file systems.</Token>

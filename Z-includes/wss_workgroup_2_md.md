@@ -1,1 +1,0 @@
-Windows Storage Server 2012 Workgroup

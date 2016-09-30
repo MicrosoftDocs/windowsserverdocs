@@ -1,20 +1,20 @@
 ---
 title: "Customize the Image"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 9dc89e34-fd35-4fa9-8d2f-894bfb780a5f
-caps.latest.revision: 9
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Customize the Image
 You can use the information in this section to customize an image of the operating system.  
   

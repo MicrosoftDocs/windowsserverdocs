@@ -1,27 +1,27 @@
 ---
 title: "Customize Server Backup"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 19b2559c-6090-45af-9a08-2eefc28473c8
-caps.latest.revision: 7
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
 ---
+
+
+
 # Customize Server Backup
 ## Turn off Server Backup by Default  
  You can choose to turn off Server Backup by default. You need to set the value of **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Server\ServerBackup\ProviderDisabled** to 1 in order to enable this option.  
   
  When this key is set, the Server Backup User interface will not be exposed through Dashboard or Launchpad. This allows you to utilize third-party applications for Server Backup.  
   
-#### To add â€œServerBackup\ProviderDisabledâ€? registry key and set the value to 1  
+#### To add ServerBackup\ProviderDisabled? registry key and set the value to 1  
   
 1.  On the server, click **Start**, click **Run**, type **regedit** in the **Open** textbox, and then click **OK**.  
   
@@ -38,7 +38,7 @@ ms.author: coreyp
   
  You need to delete the key **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Server\ServerBackup\ProviderDisabled** in order to enable default server backup, change the service start type of Windows Server Server Backup Service and restart the server.  
   
-#### To delete â€œServerBackup\ProviderDisabledâ€? registry key  
+#### To delete ServerBackup\ProviderDisabled? registry key  
   
 1.  On the server, move your mouse to the upper right corner of the screen, and click **Search**.  
   
