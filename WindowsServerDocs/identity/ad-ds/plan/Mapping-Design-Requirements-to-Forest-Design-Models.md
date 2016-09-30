@@ -1,20 +1,19 @@
 ---
 title: Mapping Design Requirements to Forest Design Models
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: c7b00aad-8e05-4e28-90fb-52923b2bc38f
-author: Femila
 ---
+
 # Mapping Design Requirements to Forest Design Models
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Most groups in your organization can share a single organizational forest that is managed by a single information technology (IT) group and that contains the user accounts and resources for all of the groups that share the forest. This shared forest, called the initial organizational forest, is the foundation of the forest design model for the organization.  
   

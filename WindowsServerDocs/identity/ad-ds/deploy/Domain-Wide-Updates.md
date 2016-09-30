@@ -1,22 +1,19 @@
 ---
 title: Domain-Wide Updates
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 37ca8cea-0010-4084-a146-c07b788b807f
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Domain-Wide Updates
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server 2012. There are no domain-wide operations performed by the **domainprep** command in Windows Server 2012 R2.  
   

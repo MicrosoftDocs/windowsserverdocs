@@ -1,20 +1,19 @@
 ---
 title: Evaluating AD DS Deployment Strategy Examples
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 2e46219b-8b3a-454c-b6d6-60bee0080dde
-author: Femila
 ---
+
 # Evaluating AD DS Deployment Strategy Examples
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Consider the following example of a fictitious company, Contoso Pharmaceuticals, which is deploying Active Directory Domain Services (AD DS) in its environment. The Contoso environment consists of four domains. The forest functional level is Windows Server 2003. The following illustration shows the current domain structure for the Contoso organization.  
   

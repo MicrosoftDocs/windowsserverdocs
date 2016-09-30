@@ -25,17 +25,17 @@ For small deployments, we recommend a 2-node cluster with a cloud witness, where
 
 These instructions are for a 2-node deployment. The following table shows the VM and disk sizes you'll need to store UPDs for the number of users in your business. 
 
-| Users | Total (GB) | VM | # Disks | Disk type | Disk size (GB) | Configuration |
-|-------|------------|----|---------|-----------|----------------|---------------|
-| 10    | 50         | D1 | 2       | P10       | 128            | 2x(D1+2P10)   |
-| 25    | 125        | D1 | 2       | P10       | 128            | 2x(D1+2P10)   |
-|  50   | 250        | D1 | 2       | P10       | 128            | 2x(D1+2P10)   |
-| 100   | 500        | D1 | 2       | P20       | 512            | 2x(D1+2P20)   |
-| 250   | 1250       | D1 | 2       | P30       | 1024           | 2x(D1+2P30)   |
-| 500   | 2500       | D2 | 3       | P30       | 1024           | 2x(D2+2P30)   |
-| 1000  | 5000       | D3 | 5       | P30       | 1024           | 2x(D3+5P30)   |
-| 2500  | 12500      | D4 | 13      | P30       | 1024           | 2x(D4+13P30)  |
-| 5000  | 25000      | D5 | 25      | P30       | 1024           | 2x(D5+25P30)  | 
+| Users | Total (GB) | VM | # Disks | Disk type | Disk size (GB) | Configuration   |
+|-------|------------|----|---------|-----------|----------------|-----------------|
+| 10    | 50         | DS1 | 1       | P10       | 128            | 2x(DS1 + 1 P10)  |
+| 25    | 125        | DS1 | 1       | P10       | 128            | 2x(DS1 + 1 P10)  |
+| 50    | 250        | DS1 | 2       | P10       | 128            | 2x(DS1 + 2 P10)  |
+| 100   | 500        | DS1 | 1       | P20       | 512            | 2x(DS1 + 1 P20)  |
+| 250   | 1250       | DS1 | 2       | P30       | 1024           | 2x(DS1 + 2 P30)  |
+| 500   | 2500       | DS2 | 3       | P30       | 1024           | 2x(DS2 + 2 P30)  |
+| 1000  | 5000       | DS3 | 5       | P30       | 1024           | 2x(DS3 + 5 P30)  |
+| 2500  | 12500      | DS4 | 13      | P30       | 1024           | 2x(DS4 + 13 P30) |
+| 5000  | 25000      | DS5 | 25      | P30       | 1024           | 2x(DS5 + 25 P30) | 
 
 Use the following steps to create a domain controller (we called ours "my-dc" below) and two node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node S2D SOFS.
 

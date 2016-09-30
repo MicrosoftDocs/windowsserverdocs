@@ -1,134 +1,30 @@
 ---
-title: Getting Started with Nano Server
+title: Deploy Nano Server
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
+ms.date: 09/27/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
 ms.author: jaimeo
 ---
-# Getting Started with Nano Server
+# Deploy Nano Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. The Nano Server installation option is available for Standard and Datacenter editions of Windows Server 2016.  
-  
-Nano Server is ideal for a number of scenarios:  
-  
--   As a "compute" host for Hyper-V virtual machines, either in clusters or not  
-  
--   As a storage host for Scale-Out File Server.  
-  
--   As a DNS server  
-  
--   As a web server running Internet Information Services (IIS)  
-  
--   As a host for applications that are developed using cloud application patterns and run in a container or virtual machine guest operating system  
-  
-This guide describes how to configure a Nano Server image with the packages you'll need, add additional device drivers, and deploy it with an Unattend.xml file. It also explains the options for managing Nano Server remotely, managing the Hyper-V role running on Nano Server, and setup and management of a failover cluster of computers that are running Nano Server.  
-  
-> [!NOTE]  
-> This comprehensive guide covers a wide variety of options for working with Nano Server; you don't need to complete all sections. To just get up and running quickly with a basic deployment, use the **Nano Server Quick Start** section.  
-  
-## <a name="BKMK_QuickStart"></a>Nano Server Quick Start  
-Follow the steps in this section to get started quickly with a basic deployment of Nano Server using DHCP to obtain an IP address. The sections that come after go into more detail about further customizing the image for your specific needs, as well as remotely managing Nano Server. You can run a Nano Server VHD either in a virtual machine or boot to it on a physical computer; the steps are slightly different.  
-  
-**Nano Server in a virtual machine**  
-  
-Follow these steps to create a Nano Server VHD that will run in a virtual machine.  
-  
-#### To quickly deploy Nano Server in a virtual machine  
-  
-1.  Copy *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server Technical Preview ISO to a folder on your hard drive.  
-  
-2.  Start Windows PowerShell as an administrator, change directory to the folder where you have placed the NanoServerImageGenerator folder and then import the module with `Import-Module .\NanoServerImageGenerator -Verbose`  
->[!NOTE]  
->You might have to adjust the Windows PowerShell execution policy. `Set-ExecutionPolicy RemoteSigned` should work well.  
-  
-3.  Create a VHD for the Standard edition that sets a computer name and includes the Hyper-V **guest drivers** by running the following command which will prompt you for an administrator password for the new VHD:  
-  
-    `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` where  
-  
-    -   **-MediaPath <path to root of media\>** specifies a path to the root of the contents of the Technical Preview ISO. For example if you have copied the contents of the ISO to d:\TP5ISO you would use that path.  
-  
-    -   **-BasePath** (optional) specifies a folder that will be created to copy the Nano Server WIM and packages to.  
-  
-    -   **-TargetPath** specifies a path, including the filename and extension, where the resulting VHD or VHDX will be created.  
-  
-    -   **Computer_name** specifies the computer name that the Nano Server virtual machine you are creating will have.  
-  
-    **Example:** `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1`  
-  
-    This example creates a VHD from an ISO mounted as f:\\. When creating the VHD it will use a folder called Base in the same directory where you ran New-NanoServerImage; it will place the VHD (called Nano.vhd) in a folder called Nano1 in the folder from where the command is run. The computer name will be Nano1. The resulting VHD will contain the Standard edition of Windows Server 2016 and will be suitable for Hyper-V virtual machine deployment. If you want a Generation 1 virtual machine, create a VHD image by specifying a  **.vhd** extension for -TargetPath. For a Generation 2 virtual machine, create a VHDX image by specifying a  **.vhdx** extension for -TargetPath. You can also directly generate a WIM file by specifying a **.wim** extension for -TargetPath.  
-  
-    > [!NOTE]  
-    > New-NanoServerImage is supported on Windows 8.1, Windows 10, Windows Server 2012 R2, and Windows Server 2016 Threshold Preview.  
-  
-4.  In Hyper-V Manager, create a new virtual machine and use the VHD created in Step 3.  
-  
-5.  Boot the virtual machine and in Hyper-V Manager connect to the virtual machine.  
-  
-6.  Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.  
- > [!NOTE]  
-    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
-  
-7.  Obtain the IP address of the Nano Server virtual machine and use Windows PowerShell remoting or other remote management tool to connect to and remotely manage the virtual machine.  
-  
-**Nano Server on a physical computer**  
-  
-You can also create a VHD that will run Nano Server on a physical computer, using the pre-installed device drivers. If your hardware requires a driver that is not already provided in order to boot or connect to a network, follow the steps in the "Adding Additional Drivers" section of this guide.  
-  
-#### To quickly deploy Nano Server on a physical computer  
-  
-1.  Copy *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server Technical Preview ISO to a folder on your hard drive.  
-  
-2.  Start Windows PowerShell as an administrator, change directory to the folder where you have placed the NanoServerImageGenerator folder and then import the module with `Import-Module .\NanoServerImageGenerator -Verbose`  
-  
->[!NOTE]  
->You might have to adjust the Windows PowerShell execution policy. `Set-ExecutionPolicy RemoteSigned` should work well.  
-  
-3.  Create a VHD that sets a computer name and includes the OEM drivers and Hyper-V by running the following command which will prompt you for an administrator password for the new VHD:  
-  
-    `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` where  
-  
-    -   **-MediaPath <path to root of media\>** specifies a path to the root of the contents of the Technical Preview ISO. For example if you have copied the contents of the ISO to d:\TP5ISO you would use that path.  
-  
-    -   **BasePath** specifies a folder that will be created to copy the Nano Server WIM and packages to. (This parameter is optional.)  
-  
-    -   **TargetPath** specifies a path, including the filename and extension, where the resulting VHD or VHDX will be created.  
-  
-    -   **Computer_name** is the computer name for the Nano Server you are creating.  
-  
-    **Example:**`New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath F:\ -BasePath .\Base -TargetPath .\Nano1\NanoServer.vhd -ComputerName Nano-srv1 -OEMDrivers -Compute -Clustering`  
-  
-    This example creates a VHD from an ISO mounted as F:\\. When creating the VHD it will use a folder called Base in the same directory where you ran New-NanoServerImage; it will place the VHD in a folder called Nano1 in the folder from where the command is run. The computer name will be Nano-srv1 and will have OEM drivers installed for most common hardware and has the Hyper-V role and clustering feature enabled. The Standard Nano edition is used.  
-  
-4.  Log in as an administrator on the physical server where you want to run the Nano Server VHD.  
-  
-5.  Copy the VHD that this script creates to the physical computer and configure it to boot from this new VHD. To do that, follow these steps:  
-  
-    1.  Mount the generated VHD. In this example, it's mounted under D:\\.  
-  
-    2.  Run **bcdboot d:\windows**.  
-  
-    3.  Unmount the VHD.  
-  
-6.  Boot the physical computer into the Nano Server VHD.  
-  
-7.  Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.
-> [!NOTE]  
-    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported. 
-  
-8.  Obtain the IP address of the Nano Server computer and use Windows PowerShell remoting or other remote management tool to connect to and remotely manage the virtual machine.  
-  
+Windows Server 2016 offers 
+
+[comment]: # (##Using the Nano Server Image Creation wizard - info goes here)
+
+
 ## <a name="BKMK_CreateImage"></a>Creating a custom Nano Server image  
-For Windows Server 2016 Technical Preview, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
+For Windows Server 2016, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
   
-You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the [Installing roles and features online](Getting-Started-with-Nano-Server.md#BKMK_online) section of this topic.  
+You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the "Installing roles and features online" section of this topic.  
   
 This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Packages parameter, which you can combine in a comma-separated list. You can dynamically list available packages using Get-NanoServerPackage cmdlet.  
   
@@ -136,7 +32,7 @@ This table shows the roles and features that are available in this release of Na
 |-------------------|----------|  
 |Hyper-V role (including NetQoS|-Compute|  
 |Failover Clustering|-Clustering|  
-|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016 Technical Preview.|-OEMDrivers|  
+|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|  
 |File Server role and other storage components|-Storage|  
 |Windows Defender Antimalware, including a default signature file|-Defender|  
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default  
@@ -198,7 +94,7 @@ If you do not specify a computer name, a random name will be generated.
   
 ### Installing a Nano Server WIM  
   
-1.  Copy the *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server Technical Preview ISO a local folder on your computer.  
+1.  Copy the *NanoServerImageGenerator* folder from the \NanoServer folder in the Windows Server 2016 ISO a local folder on your computer.  
 2. Start Windows PowerShell as an administrator, change directory to the folder where you placed the NanoServerImageGenerator folder and then import the module with `Import-Module .\NanoServerImageGenerator -Verbose`.  
   
  >[!NOTE]  
@@ -209,7 +105,7 @@ To create a Nano Server image to serve as a Hyper-V host, run the following:
 `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.wim -ComputerName <computer name> -OEMDrivers -Compute -Clustering`  
   
 Where  
--   -MediaPath is the root of the DVD media or ISO image containing Windows Server Technical Preview .  
+-   -MediaPath is the root of the DVD media or ISO image containing Windows Server 2016 .  
 -   -BasePath will contain a copy of the Nano Server binaries, so you can use New-NanoServerImage -BasePath without having to specify -MediaPath in future runs.  
 -   -TargetPath will contain the resulting .wim file containing the roles & features you selected. Make sure to specify the .wim extension.  
 -   -Compute adds the Hyper-V role.  
@@ -248,7 +144,7 @@ Bcdboot.exe n:\Windows /s s:**
 Remove the DVD media or USB drive and reboot your system with **Wpeutil.exe reboot**  
   
   
- ### Editing files on Nano Server locally and remotely  
+### Editing files on Nano Server locally and remotely  
  In either case, connect to Nano Server, such as with Windows PowerShell remoting.  
    
  Once you've connected to Nano Server, you can edit a file residing on your local computer by passing the file's relative or absolute path to the psEdit command, for example:   
@@ -381,6 +277,13 @@ Though offline installation of server roles and other packages is recommended, y
   
     You should see "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~en-US~10.0.10586.0" listed twice, once for Release Type : Language Pack and once for Release Type : Feature Pack.  
   
+## Customizing an existing Nano Server VHD  
+You can change the details of an existing VHD by using the Edit-NanoServerImage cmdlet, as in this example:  
+  
+`Edit-NanoServerImage   -BasePath .\Base   -TargetPath .\BYOVHD.vhd`  
+  
+This cmdlet does the same things as New-NanoServerImage, but changes the existing image instead of converting a WIM to a VHD. It supports the same parameters as New-NanoServerImage with the exception of -MediaPath and -MaxSize, so the initial VHD must have been created with those parameters before you can make changes with Edit-NanoServerImage.  
+
 ## Additional tasks you can accomplish with New-NanoServerImage and Edit-NanoServerImage  
   
 ### Joining domains  
@@ -469,34 +372,6 @@ If you want to develop and test on Nano Server, you can use the -Development par
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`  
   
-### <a name="BKMK_Svcing"></a>Installation of servicing packages  
-If you want install a servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files):  
-  
-`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackages \\path\to\kb123456.cab`  
-  
-Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. Follow these steps to extract the .cab file, which you can then install with the -ServicingPackages parameter:  
-  
-1.  Download the servicing package (from the associated Knowledge Base article or from [Microsoft Update Catalog](http://catalog.update.microsoft.com/v7/site/home.aspx). Save it to a local directory or network share, for example: C:\ServicingPackages  
-2.  Create a folder in which you will save the extracted servicing package.  Example: c:\KB3157663_expanded  
-3.  Open a Windows PowerShell console and use the `Expand` command specifying the path to the .msu file of the servicing package, including the `-f:*` parameter and the path where you want servicing package to be extracted to.  For example:  `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
-  
-    The expanded files should look similar to this:  
-C:>dir C:\KB3157663_expanded   
-Volume in drive C is OS  
-Volume Serial Number is B05B-CC3D  
-   
-      Directory of C:\KB3157663_expanded  
-   
-      04/19/2016  01:17 PM    \<DIR>          .  
-      04/19/2016  01:17 PM    \<DIR>          ..  
-        04/17/2016  12:31 AM               517 Windows10.0-KB3157663-x64-pkgProperties.txt  
-04/17/2016  12:30 AM        93,886,347 Windows10.0-KB3157663-x64.cab  
-04/17/2016  12:31 AM               454 Windows10.0-KB3157663-x64.xml  
-04/17/2016  12:36 AM           185,818 WSUSSCAN.cab  
-               4 File(s)     94,073,136 bytes  
-               2 Dir(s)  328,559,427,584 bytes free  
-4.  Run `New-NanoServerImage` with the -ServicingPackages parameter pointing to the .cab file in this directory, for example: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackages C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
-  
   
 ### Custom unattend file  
 If you want to use your own unattend file, use the -UnattendPath parameter:  
@@ -504,14 +379,61 @@ If you want to use your own unattend file, use the -UnattendPath parameter:
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -UnattendPath \\path\to\unattend.xml`  
   
 Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName.  
-  
-  
+
+## Installing apps and drivers
+[comment]: # (From Xumin Sun, bug #68620.)  
+
+### Windows Server App installer
+Windows Server App (WSA) installer provides a reliable installation option for Nano Server. Since Windows Installer (MSI) is not supported on Nano Server, WSA also the only installation technology available for non-Microsoft products. WSA leverages Windows app package technology designed to install and service applications safely and reliably, using a declarative manifest. It extends the Windows app package installer to support Windows Server-specific extensions, with the limitation that WSA does not support installing drivers.
+
+Creating and installing a WSA package on Nano Server involves steps for both the publisher and the consumer of the package.
+
+The package publisher should do the following:
+
+1. Install [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk), which includes the tools needed to create a WSA package: MakeAppx, MakeCert, Pvk2Pfx, SignTool.
+2. Declare a manifest: Follow the [WSA manifest extension schema](https://msdn.microsoft.com/library/windows/apps/mt670653.aspx) to create the manifest file, AppxManifest.xml.
+3. Use the **MakeAppx** tool to create a WSA package.
+4. Use **MakeCert** and **Pvk2Pfx** tools to create the certificate, and the use **Signtool** to sign the package.
+
+Next, the package consumer should follow these steps:
+
+1. Run the [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet to import the publisher’s certificate from Step 4 above to Nano Server with the certStoreLocation at “Cert:\LocalMachine\TrustedPeople”. For example: `Import-Certificate -filepath ".\xyz.cer" -certStoreLocation "Cert:\LocalMachine\TrustedPeople"`
+2. Install the app on Nano Server by running the [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet to install a WSA package on Nano Server. For example: `Add-AppxPackage wsaSample.appx`
+
+#### Additional resources for creating apps
+WSA is server extension of Windows app package technology (though it is not hosted in Windows Store). If you want to publish apps with WSA,these topics will help you familiarize youself with the app package pipeline:
+
+- [How to create a basic package manifest](https://msdn.microsoft.com/library/windows/desktop/br211475.aspx)
+- [App Packager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)
+- [How to create an app package signing certificate](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+- [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx)
+
+### Installing drivers on Nano Server
+You can install non-Microsoft drivers on Nano Server by using INF driver packages. These include both Plug-and-Play (PnP) driver packages and File System Filter driver packages. Network Filter drivers are not currently supported on Nano Server.
+
+Both PnP and File System Filter driver packages must follow the Universal driver requirements and installation process, as well as general driver package guidelines such as signing. They are documented at these locations:
+
+- [Driver Signing](https://msdn.microsoft.com/windows/hardware/drivers/install/driver-signing)
+- [Using a Universal INF File](https://msdn.microsoft.com/windows/hardware/drivers/install/using-a-configurable-inf-file)
+
+#### Installing driver packages offline
+
+Supported driver packages can be installed on Nano Server offline via [DISM.exe](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/dism-driver-servicing-command-line-options-s14) or [DISM PowerShell](https://technet.microsoft.com/library/dn376497.aspx) cmdlets.
+
+#### Installing driver packages online
+PnP driver packages can be installed to Nano Server online by using [PnpUtil](https://msdn.microsoft.com/library/windows/hardware/ff550419(v=vs.85).aspx). Online driver installation for non-PnP driver packages is not currently supported on Nano Server.
+
+
+
+
+
+ 
 --------------------------------------------------  
   
   
 ## <a name="BKMK_JoinDomain"></a>Joining Nano Server to a domain  
   
-#### To add Nano Server to a domain online  
+### To add Nano Server to a domain online  
   
 1.  Harvest a data blob from a computer in the domain that is already running Windows Threshold Server using this command:  
   
@@ -592,153 +514,10 @@ Create a "Panther" folder (used by Windows systems for storing files during setu
 The first time you boot Nano Server from this VHD, the other settings will be applied.  
   
 After you have joined Nano Server to a domain, add the domain user account to the Administrators group on the Nano Server.  
-  
-## <a name="BKMK_RecoveryConsole"></a>Using the Nano Server Recovery Console  
-Starting with Windows Server 2016 Technical Preview, Nano Server includes an Recovery Console that ensures you can access your Nano Server even if a network mis-configuration interferes with connecting to the Nano Server. You can use the Recovery Console to fix the network and then use your usual remote management tools.  
-  
-When you boot Nano Server in either a virtual machine or on a physical computer that has a monitor and keyboard attached, you'll see a full-screen, text-mode logon prompt. Log into this prompt with an administrator account to see the computer name and IP address of the Nano Server. You can use these commands to navigate in this console:  
-  
--   Use arrow keys to scroll  
-  
--   Use TAB to move to any text that starts with **>**; then press ENTER to select.  
-  
--   To go back one screen or page, press ESC. If you're on the home page, pressing ESC will log you off.  
-  
--   Some screens have additional capabilities displayed on the last line of the screen. For example, if you explore a network adapter, F4 will disable the network adapter.  
-  
-In Windows Server 2016 Technical Preview, the Recovery Console allows you to view and configure network adapters and TCP/IP settings, as well as firewall rules.
-> [!NOTE]  
-    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
-  
-## <a name="BKMK_ManageRemote"></a>Managing Nano Server remotely  
-Nano Server is managed remotely. There is no local logon capability at all, nor does it support Terminal Services. However, you have a wide variety of options for managing Nano Server remotely, including Windows PowerShell, Windows Management Instrumentation (WMI), Windows Remote Management, and Emergency Management Services (EMS).  
-  
-To use any remote management tool, you will probably need to know the IP address of the Nano Server. Some ways to find out the IP address include:  
-  
--   Use the Nano Recovery Console (see the Using the Nano Server Recovery Console section of this topic for details).  
-  
--   Connect a serial cable to the computer and use EMS.  
-  
--   Using the computer name you assigned to the Nano Server while configuring it, you can get the IP address with ping. For example, `ping NanoServer-PC /4`.  
-  
-### Using Windows PowerShell remoting  
-To manage Nano Server with Windows PowerShell remoting, you need to add the IP address of the Nano Server to your management computer's list of trusted hosts, add the account you are using to the Nano Server's administrators, and enable CredSSP if you plan to use that feature.  
+ 
+## Working with server roles on Nano Server
 
- >[!NOTE]  
-    > If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
-    PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
-  
-  
-To add the Nano Server to the list of trusted hosts, run this command at an elevated Windows PowerShell prompt:  
-  
-`Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
-  
-To start the remote Windows PowerShell session, start an elevated local Windows PowerShell session, and then run these commands:  
-  
-  
-```  
-$ip = "\<IP address of Nano Server>"  
-$user = "$ip\Administrator"  
-Enter-PSSession -ComputerName $ip -Credential $user  
-```  
-  
-  
-You can now run Windows PowerShell commands on the Nano Server as normal.  
-  
-> [!NOTE]  
-> Not all Windows PowerShell commands are available in this release of Nano Server. To see which are available, run `Get-Command -CommandType Cmdlet`  
-  
-Stop the remote session with the command `Exit-PSSession`  
-  
-### Using Windows PowerShell CIM sessions over WinRM  
-You can use CIM sessions and instances in Windows PowerShell to run WMI commands over Windows Remote Management (WinRM).  
-  
-Start the CIM session by running these commands in a Windows PowerShell prompt:  
-  
-  
-```  
-$ip = "<IP address of the Nano Server\>"  
-$ip\Administrator  
-$cim = New-CimSession -Credential $user -ComputerName $ip  
-```  
-  
-  
-With the session established, you can run various WMI commands, for example:  
-  
-  
-```  
-Get-CimInstance -CimSession $cim -ClassName Win32_ComputerSystem | Format-List *  
-Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name LIKE 'p%'"  
-```  
-  
-  
-### Windows Remote Management  
-You can run programs remotely on the Nano Server with Windows Remote Management (WinRM). To use WinRM, first configure the service and set the code page with these commands at an elevated command prompt:  
-  
-**winrm quickconfig**  
-  
-**winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server"}**  
-  
-**chcp 65001**  
-  
-Now you can run commands remotely on the Nano Server. For example:  
-  
-**winrs -r:\<IP address of Nano Server> -u:Administrator -p:\<Nano Server administrator password> ipconfig**  
-  
-For more information about Windows Remote Management, see [Windows Remote Management (WinRM) Overview](https://technet.microsoft.com/library/dn265971.aspx).  
-   
-   
-  
-  ### Running a network trace on Nano Server  
- Netsh trace, Tracelog.exe, and Logman.exe are not available in Nano Server. To capture network packets, you can use these Windows PowerShell cmdlets:  
-   
-   
-```  
-New-NetEventSession [-Name]  
-Add-NetEventPacketCaptureProvider -SessionName  
-Start-NetEventSession [-Name]  
-Stop-NetEventSession [-Name]  
-```  
-These cmdlets are documented in detail at [Network Event Packet Capture Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
-  
-### Accessing a Distributed File System (DFS) host from a Nano Server  
-You can access files on a DFS host computer that is running Windows 10 or Windows Server 2016 Preview. To do this, you'll have to do some configuration on both the Nano Server and the host computer.  
-  
-First, on the Nano Server, do the following:  
-1. Join the Nano Server to the same domain as the DFS host (see the "Joining Nano Server to a domain" section of this topic).  
-2. Set up PowerShell remoting for the Nano Server (see "Using Windows PowerShell remoting" in this topic).  
-3. Start the remote Windows PowerShell session by opening an elevated local Windows PowerShell session, and then running these commands:  
-  
-```  
-$ip = "\<IP address of Nano Server>"  
-$user = "$ip\Administrator"  
-Enter-PSSession -ComputerName $ip -Credential $user  
-```  
-4. Enable CredSSP with these cmdlets:  
-  
-```  
-Enable-WSManCredSSP -Role Server  
-Net localgroup administrators <domain\user> /add  
-```  
-Now, on the DFS host, complete these steps:  
-1. In a local, elevated Windows PowerShell session, run these cmdlets (make sure to use the Nano Server *name*, not its IP address):  
-  
-```  
-Enable-WSManCredSSP -Role Client -DelegateComputer <client Nano Server name>  
-$s1=new-pssession -ComputerName <client Nano Server name>  -authentication CredSSP -Credential <domain\user>   
-```  
-Connect to the Nano Server again with PowerShell remoting using the new session:  
-  
-```  
-enter-psSession $s1   
-New-PSDrive -Name <drive label> -PSProvider FileSystem -Root <\\DFShost\share>  
-```  
-   
-   
-  
-  
-  
-## <a name="BKMK_HyperV"></a>Using Hyper-V on Nano Server  
+###Using Hyper-V on Nano Server  
 Hyper-V works the same on Nano Server as it does on Windows Server in Server Core mode, with two exceptions:  
   
 -   You must perform all management remotely and the management computer must be running the same build of Windows Server as the Nano Server. Older versions of Hyper-V Manager or Hyper-V Windows PowerShell cmdlets will not work.  
@@ -774,7 +553,7 @@ First, refer to the "Using Windows PowerShell remoting" section of this topic to
   
 Windows PowerShell cmdlets for Hyper-V can use CimSession or Credential parameters, either of which work with CredSSP.  
   
-## <a name="BKMK_Failover"></a>Using Failover Clustering on Nano Server  
+### <a name="BKMK_Failover"></a>Using Failover Clustering on Nano Server  
 Failover clustering works the same on Nano Server as it does on Windows Server in Server Core mode, but keep these caveats in mind:  
   
 -   Clusters must be managed remotely with Failover Cluster Manager or Windows PowerShell.  
@@ -805,56 +584,21 @@ Create a Scale-Out File Server with `Add-ClusterScaleoutFileServerRole -name <so
   
 You can find additional cmdlets for failover clustering at [Microsoft.FailoverClusters.PowerShell](https://technet.microsoft.com/library/ee461009.aspx).  
   
-## <a name="BKMK_DNS"></a>Using DNS Server on Nano Server  
+### <a name="BKMK_DNS"></a>Using DNS Server on Nano Server  
 To provide Nano Server with the DNS Server role, add the Microsoft-NanoServer-DNS-Package to the image (see the "Creating a custom Nano Server image" section of this topic. Once the Nano Server is running, connect to it and run this command from and elevated Windows PowerShell console to enable the feature:  
   
 `Enable-WindowsOptionalFeature -Online -FeatureName DNS-Server-Full-Role`  
   
-## <a name="BKMK_IIS"></a>Using IIS on Nano Server  
-For steps to use the Internet Information Services (IIS) role, see [IIS on Nano Server](IIS-on-Nano-Server.md).  
+### <a name="BKMK_IIS"></a>Using IIS on Nano Server  
+For steps to use the Internet Information Services (IIS) role, see [IIS on Nano Server](IIS-on-Nano-Server.md). 
 
-## <a name="BKMK_SSH"></a>Using SSH on Nano Server
+### Using MPIO on Nano Server
+For steps to use MPIO, see [MPIO on Nano Server](MPIO-on-Nano-Server.md) 
+
+### <a name="BKMK_SSH"></a>Using SSH on Nano Server
 For instructions on how to install and use SSH on Nano Server with the OpenSSH project, see the [Win32-OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki).
 
-## Appendix 1: Sample Unattend.xml file  
-In this sample, the **offlineServicing** section is applied by the DISM command as soon as you run it, but the other sections are added to the image later when the server starts for the first time.  
-  
-> [!NOTE]  
-> -   This sample Unattend.xml does not add the Nano Server to a domain, so you should use it if you want to run Nano Server as a standalone computer or if you want to wait to join it to a domain later. The values for ComputerName and AdministratorPassword are merely examples.  
-> -   This Unattend.xml file will not work with versions of Windows prior to Windows 10 or Windows Server 2016 Technical Preview.  
-  
-```  
-<?xml version='1.0' encoding='utf-8'?>  
-<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
-  
-  <settings pass="offlineServicing">  
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  
-      <ComputerName>NanoServer1503</ComputerName>  
-    </component>  
-  </settings>  
-  
-  <settings pass="oobeSystem">  
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  
-      <UserAccounts>  
-        <AdministratorPassword>  
-           <Value>Tuva</Value>  
-           <PlainText>true</PlainText>  
-        </AdministratorPassword>  
-      </UserAccounts>  
-      <TimeZone>Pacific Standard Time</TimeZone>  
-    </component>  
-  </settings>  
-  
-  <settings pass="specialize">  
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  
-      <RegisteredOwner>My Team</RegisteredOwner>  
-      <RegisteredOrganization>My Corporation</RegisteredOrganization>  
-    </component>  
-  </settings>  
-</unattend>  
-```  
-  
-## Appendix 2: Sample Unattend.xml file that joins Nano Server to a domain  
+## Appendix: Sample Unattend.xml file that joins Nano Server to a domain  
   
 > [!NOTE]  
 > Be sure to delete the trailing space in the contents of "odjblob" once you paste it into the Unattend file.  
@@ -895,54 +639,3 @@ In this sample, the **offlineServicing** section is applied by the DISM command 
 </unattend>  
 ```  
   
-## Appendix 3: Accessing Nano Server over a serial port with Emergency Management Services  
-Emergency Management Services (EMS) lets you perform basic troubleshooting, get network status, and open console sessions (including CMD/PowerShell) by using a terminal emulator over a serial port. This replaces the need for a keyboard and monitor to troubleshoot a server. For more information about EMS, see [Emergency Management Services Technical Reference](https://technet.microsoft.com/library/cc784411(v=ws.10).aspx).
-
-To enable EMS on a Nano Server image so that it's ready should you need it later, run this cmdlet:  
-  
-`New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\EnablingEMS.vhdx   -EnableEMS   -EMSPort 3   -EMSBaudRate 9600`  
-  
-This example cmdlet enables EMS on serial port 3 with a baud rate of 9600 bps. If you don't include those parameters, the defaults are port 1 and 115200 bps. To use this cmdlet for VHDX media, be sure to include the Hyper-V feature and the corresponding Windows PowerShell modules.  
-  
-## Appendix 4: Customizing an existing Nano Server VHD  
-You can change the details of an existing VHD by using the Edit-NanoServerImage cmdlet, as in this example:  
-  
-`Edit-NanoServerImage   -BasePath .\Base   -TargetPath .\BYOVHD.vhd`  
-  
-This cmdlet does the same things as New-NanoServerImage, but changes the existing image instead of converting a WIM to a VHD. It supports the same parameters as New-NanoServerImage with the exception of -MediaPath and -MaxSize, so the initial VHD must have been created with those parameters before you can make changes with Edit-NanoServerImage.  
-  
-## Appendix 5: Kernel debugging  
-You can configure the Nano Server image to support kernel debugging by a variety of methods. To use kernel debugging with a VHDX image, be sure to include the Hyper-V feature and the corresponding Windows PowerShell modules. For more information about remote kernel debugging generally see [Setting Up Kernel-Mode Debugging over a Network Cable Manually](https://msdn.microsoft.com/library/windows/hardware/hh439346%28v=vs.85%29.aspx) and  [Remote Debugging Using WinDbg](https://msdn.microsoft.com/library/windows/hardware/hh451173%28v=vs.85%29.aspx).  
-  
-### Debugging using a serial port  
-Use this example cmdlet to enable the image to be debugged using a serial port:  
-  
-`New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingSerial   -DebugMethod Serial   -DebugCOMPort 1   -DebugBaudRate 9600`  
-  
-This example enables serial debugging over port 2 with a baud rate of 9600 bps. If you don't specify these parameters, the defaults are prot 2 and 115200 bps. If you intend to use both EMS and kernel debugging, you'll have to configure them to use two separate serial ports.  
-  
-### Debugging over a TCP/IP network  
-Use this example cmdlet to enable the image to be debugged over a TCP/IP network:  
-  
-`New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingNetwork   -DebugMethod Net   -DebugRemoteIP 192.168.1.100   -DebugPort 64000`  
-  
-This cmdlet enables kernel debugging such that only the computer with the IP address of 192.168.1.100 is allowed to connect, with all communications over port 64000. The -DebugRemoteIP and -DebugPort parameters are mandatory, with a port number greater than 49152. This cmdlet generates an encryption key in a file alongside the resulting VHD which is required for communication over the port. Alternately, you can specify your own key with the -DebugKey parameter, as in this example:  
-  
-`New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingNetwork   -DebugMethod Net   -DebugRemoteIP 192.168.1.100   -DebugPort 64000   -DebugKey 1.2.3.4`  
-  
-### Debugging using the IEEE1394 protocol (Firewire)  
-To enable debugging over IEEE1394 use this example cmdlet:  
-  
-`New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingFireWire   -DebugMethod 1394   -DebugChannel 3`  
-  
-The -DebugChannel parameter is mandatory.  
-  
-### Debugging using USB  
-You can enable debugging over USB with this cmdlet:  
-  
-`New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingUSB   -DebugMethod USB   -DebugTargetName KernelDebuggingUSBNano`  
-  
-When you connect the remote debugger to the resulting Nano Server, specify the target name as set by the -DebugTargetName parameter.  
-  
-
-

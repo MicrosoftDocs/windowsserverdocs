@@ -1,22 +1,19 @@
 ---
 title: Virtualized Domain Controller Technical Reference (Level 300)
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: e8d7f1ac-5d94-4744-84d6-797f5e610757
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Virtualized Domain Controller Technical Reference (Level 300)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The virtualized domain controller (VDC) technical reference consists of the following topics:  
   
