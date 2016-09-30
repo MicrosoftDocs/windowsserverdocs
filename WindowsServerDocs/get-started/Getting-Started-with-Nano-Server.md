@@ -1,18 +1,18 @@
 ---
-title: Getting Started with Nano Server
+title: Install Nano Server
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
+ms.date: 09/29/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
 ms.author: jaimeo
 ---
-# Getting Started with Nano Server
+# Install Nano Server
 
 >Applies To: Windows Server 2016
 
@@ -34,6 +34,9 @@ These topics describe how to configure a Nano Server image with the packages you
 
 ## Installation scenarios
 
+### Evaluation
+You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). To try out Nano Server, choose the **Nano Server | 64-bit EXE option**, and then come back to either [Nano Server Quick Start](Nano-Server-Quick-Start.md) or [Deploy Nano Server](Deploy-Nano-Server.md) to get started.
+
 ### Clean installation
 Because you install Nano Server by configuring a VHD, a clean installation is the quickest and simplest deployment method.
 
@@ -46,8 +49,8 @@ Since Nano Server is new for Windows Server 2016, there isn't an upgrade path fr
 ### Migration
 Since Nano Server is new for Windows Server 2016, there isn't migration path from older operating system versions to Nano Server.
   
- 
-   
+-------------------------------------
+If you need a different installation option, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md) 
   
 
   

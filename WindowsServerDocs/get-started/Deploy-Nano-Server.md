@@ -380,7 +380,53 @@ If you want to use your own unattend file, use the -UnattendPath parameter:
   
 Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName.  
 
-[comment]: # (## Installing apps and drivers on Nano Server: Content goes here for OneView bug #68620.)  
+## Installing apps and drivers
+[comment]: # (From Xumin Sun, bug #68620.)  
+
+### Windows Server App installer
+Windows Server App (WSA) installer provides a reliable installation option for Nano Server. Since Windows Installer (MSI) is not supported on Nano Server, WSA also the only installation technology available for non-Microsoft products. WSA leverages Windows app package technology designed to install and service applications safely and reliably, using a declarative manifest. It extends the Windows app package installer to support Windows Server-specific extensions, with the limitation that WSA does not support installing drivers.
+
+Creating and installing a WSA package on Nano Server involves steps for both the publisher and the consumer of the package.
+
+The package publisher should do the following:
+
+1. Install [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk), which includes the tools needed to create a WSA package: MakeAppx, MakeCert, Pvk2Pfx, SignTool.
+2. Declare a manifest: Follow the [WSA manifest extension schema](https://msdn.microsoft.com/library/windows/apps/mt670653.aspx) to create the manifest file, AppxManifest.xml.
+3. Use the **MakeAppx** tool to create a WSA package.
+4. Use **MakeCert** and **Pvk2Pfx** tools to create the certificate, and the use **Signtool** to sign the package.
+
+Next, the package consumer should follow these steps:
+
+1. Run the [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet to import the publisher’s certificate from Step 4 above to Nano Server with the certStoreLocation at “Cert:\LocalMachine\TrustedPeople”. For example: `Import-Certificate -filepath ".\xyz.cer" -certStoreLocation "Cert:\LocalMachine\TrustedPeople"`
+2. Install the app on Nano Server by running the [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet to install a WSA package on Nano Server. For example: `Add-AppxPackage wsaSample.appx`
+
+#### Additional resources for creating apps
+WSA is server extension of Windows app package technology (though it is not hosted in Windows Store). If you want to publish apps with WSA,these topics will help you familiarize youself with the app package pipeline:
+
+- [How to create a basic package manifest](https://msdn.microsoft.com/library/windows/desktop/br211475.aspx)
+- [App Packager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)
+- [How to create an app package signing certificate](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+- [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx)
+
+### Installing drivers on Nano Server
+You can install non-Microsoft drivers on Nano Server by using INF driver packages. These include both Plug-and-Play (PnP) driver packages and File System Filter driver packages. Network Filter drivers are not currently supported on Nano Server.
+
+Both PnP and File System Filter driver packages must follow the Universal driver requirements and installation process, as well as general driver package guidelines such as signing. They are documented at these locations:
+
+- [Driver Signing](https://msdn.microsoft.com/windows/hardware/drivers/install/driver-signing)
+- [Using a Universal INF File](https://msdn.microsoft.com/windows/hardware/drivers/install/using-a-configurable-inf-file)
+
+#### Installing driver packages offline
+
+Supported driver packages can be installed on Nano Server offline via [DISM.exe](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/dism-driver-servicing-command-line-options-s14) or [DISM PowerShell](https://technet.microsoft.com/library/dn376497.aspx) cmdlets.
+
+#### Installing driver packages online
+PnP driver packages can be installed to Nano Server online by using [PnpUtil](https://msdn.microsoft.com/library/windows/hardware/ff550419(v=vs.85).aspx). Online driver installation for non-PnP driver packages is not currently supported on Nano Server.
+
+
+
+
+
  
 --------------------------------------------------  
   
