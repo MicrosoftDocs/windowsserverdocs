@@ -658,7 +658,7 @@ When changes are made to the staging GPOs, the domain administrator can review t
   
 The following diagram shows this configuration.  
   
-![](../../../media/Step-1--Plan-the-DirectAccess-Infrastructure/DA_Plan_Advanced_Step1_GPOS.png)  
+![Manage Remote Access GPOs](../../../media/Step-1--Plan-the-DirectAccess-Infrastructure/DA_Plan_Advanced_Step1_GPOS.png)  
   
 ### <a name="bkmk_delGPO"></a>1.8.5 Recover from a deleted GPO  
 If a client, DirectAccess server, or application server GPO has been deleted accidentally and there is no backup available, you must remove the configuration settings and reconfigure them. If a backup is available, you can restore the GPO from the backup.  

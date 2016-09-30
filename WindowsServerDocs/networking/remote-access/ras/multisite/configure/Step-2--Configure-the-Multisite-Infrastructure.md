@@ -55,7 +55,7 @@ For more information, see [Adding a Site to the Forest](http://technet.microsoft
   
 8.  Close Active Directory Sites and Services.  
   
-![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -166,7 +166,7 @@ A multisite deployment requires an additional security group for  Windows 7  cli
   
 8.  Repeat this procedure to create a security group for every entry point as required.  
   
-![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -257,7 +257,7 @@ In a minimal number of cases, two or more domain controllers that manage server 
   
 Domain controller association information is stored both in the registry of the Remote Access servers and in all server GPOs. In the following example, there are two entry points with two Remote Access servers, "DA1" in "Entry point 1" and "DA2" in "Entry point 2". The server GPO of "Entry point 1" is managed in the domain controller "DC1", while the server GPO of "Entry point 2" is managed in the domain controller "DC2". Both "DC1" and "DC2" are unavailable. A third domain controller is still available in the domain, "DC3", and the data from "DC1" and "DC2" was already replicated to "DC3".  
   
-![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc1.png)  
+![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc1.png)  
   
 ##### To change two or more domain controllers that manage server GPOs  
   
@@ -274,7 +274,7 @@ Domain controller association information is stored both in the registry of the 
   
     The resulting configuration is shown in the following diagram.  
   
-    ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc2.png)  
+    ![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc2.png)  
   
 2.  To replace the unavailable domain controller "DC1" with the domain controller "DC3", run the following command:  
   
@@ -284,7 +284,7 @@ Domain controller association information is stored both in the registry of the 
   
     This command updates the domain controller association for the "Entry point 1" server GPO in the registry of DA1 and in the "Entry point 1" and "Entry point 2" server GPOs. The resulting configuration is shown in the following diagram.  
   
-    ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc3.png)  
+    ![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc3.png)  
   
 3.  To synchronize the domain controller association for the "Entry point 2" server GPO in the "Entry point 1" server GPO, run the command to replace "DC2" with "DC3", and specify the Remote Access server whose server GPO is not synchronized, in this case "DA1", for the *ComputerName* parameter.  
   
@@ -294,7 +294,7 @@ Domain controller association information is stored both in the registry of the 
   
     The final configuration is shown in the following diagram.  
   
-    ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
+    ![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
 When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "http://technet.microsoft.com/en-us/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  

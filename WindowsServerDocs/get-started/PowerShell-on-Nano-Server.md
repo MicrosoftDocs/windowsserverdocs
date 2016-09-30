@@ -5,7 +5,6 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
@@ -15,8 +14,6 @@ ms.author: jaimeo
 # PowerShell on Nano Server
 
 >Applies To: Windows Server 2016
-
-  
   
   
 ## PowerShell Editions   

@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4fcb5354-b7cd-4015-b9e7-42aef98b55f7
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Show All Stations
