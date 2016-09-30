@@ -16,7 +16,6 @@ ms.date: 9/30/2016
 
 >Applies To: Windows Server 2016
 
-**This is preliminary content and subject to change.**  
 This article shows you how to set up hosts that aren't clustered so you can do live migrations between them. Use these instructions if you didn't set up live migration when you installed Hyper-V, or if you want to change the settings. To set up clustered hosts, use tools for Failover Clustering.  
   
 ## Requirements for setting up live migration  

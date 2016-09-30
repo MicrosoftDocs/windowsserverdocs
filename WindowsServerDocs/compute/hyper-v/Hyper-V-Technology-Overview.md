@@ -10,13 +10,12 @@ ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 9/30/2016
 ---
 # Hyper-V Technology Overview
 
 >Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
-
-**This is preliminary content and subject to change.**  
+ 
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.  
   
 Hyper-V runs each virtual machine in its own isolated space, which means you can run more than one virtual machine on the same hardware at the same time. You might want to do this to avoid problems such as a crash affecting the other workloads, or to give different people, groups or services access to different systems.  
