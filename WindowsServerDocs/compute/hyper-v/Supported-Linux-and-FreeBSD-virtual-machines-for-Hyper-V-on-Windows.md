@@ -3,14 +3,14 @@ title: Supported Linux and FreeBSD virtual machines for Hyper-V on Windows
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
 author: shirgall
-ms.author: cwatson
-ms.date: 8/16/2016
+ms.author: kathydav
+ms.date: 9/30/2016
 ---
 # Supported Linux and FreeBSD virtual machines for Hyper-V on Windows
 

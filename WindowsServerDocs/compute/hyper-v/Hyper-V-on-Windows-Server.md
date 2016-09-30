@@ -3,14 +3,14 @@ title: Hyper-V on Windows Server 2016 Technical Preview
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0baef6b8-598c-4fe0-9f31-5869fc4e0f69
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 9/30/2016
 ---
 # Hyper-V on Windows Server 2016 Technical Preview
 
