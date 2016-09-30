@@ -1,4 +1,5 @@
 ---
+ms.assetid: 30657638-5709-48c5-87aa-98f688e07b4c
 title: Checklist: Implementing a Web SSO Design
 description:
 author: billmath

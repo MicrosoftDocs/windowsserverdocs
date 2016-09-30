@@ -1,4 +1,5 @@
 ---
+ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What&#39;s New in Active Directory Domain Services Installation and Removal
 description:
 author: billmath

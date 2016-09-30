@@ -1,4 +1,5 @@
 ---
+ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
 title: Best Practices for Securing Active Directory
 description:
 author: billmath

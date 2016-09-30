@@ -1,4 +1,5 @@
 ---
+ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configure Authentication Policies
 description:
 author: billmath

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: Verify DNS Functionality to Support Directory Replication
 ms.custom: na
 ms.prod: windows-server-threshold

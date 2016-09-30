@@ -1,4 +1,5 @@
 ---
+ms.assetid: c48b0199-8a18-4d10-85b3-e9fde9901e94
 title: Fixing Replication Connectivity Problems (Event ID 1925)
 description:
 author: billmath

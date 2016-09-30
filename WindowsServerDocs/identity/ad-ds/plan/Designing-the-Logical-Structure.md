@@ -1,4 +1,5 @@
 ---
+ms.assetid: 9ad81367-f3fe-4b2e-bd7c-5900b2b9f77f
 title: Designing the Logical Structure
 description:
 author: billmath

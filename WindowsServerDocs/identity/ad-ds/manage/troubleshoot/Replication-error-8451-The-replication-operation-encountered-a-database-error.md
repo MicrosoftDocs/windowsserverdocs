@@ -1,4 +1,5 @@
 ---
+ms.assetid: 11dc987a-2c34-4d02-8286-fc7b8f747c46
 title: Replication error 8451 The replication operation encountered a database error
 description:
 author: billmath

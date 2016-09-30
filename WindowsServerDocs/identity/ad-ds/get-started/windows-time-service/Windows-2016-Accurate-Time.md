@@ -1,4 +1,5 @@
 ---
+ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows 2016 Accurate Time
 description:
 author: billmath

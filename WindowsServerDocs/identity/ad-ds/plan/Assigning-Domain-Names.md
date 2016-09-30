@@ -1,4 +1,5 @@
 ---
+ms.assetid: 73897497-b189-4305-b234-e057ffda163a
 title: Assigning Domain Names
 description:
 author: billmath

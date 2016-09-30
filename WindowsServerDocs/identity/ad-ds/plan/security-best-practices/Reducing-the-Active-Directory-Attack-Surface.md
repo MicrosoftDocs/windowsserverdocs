@@ -1,4 +1,5 @@
 ---
+ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Reducing the Active Directory Attack Surface
 description:
 author: billmath

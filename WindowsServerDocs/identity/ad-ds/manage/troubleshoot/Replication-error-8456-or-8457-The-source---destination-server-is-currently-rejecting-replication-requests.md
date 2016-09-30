@@ -1,4 +1,5 @@
 ---
+ms.assetid: 7fc8f228-9bd8-4615-8139-344be9b61eed
 title: Replication error 8456 or 8457 The source | destination server is currently rejecting replication requests
 description:
 author: billmath

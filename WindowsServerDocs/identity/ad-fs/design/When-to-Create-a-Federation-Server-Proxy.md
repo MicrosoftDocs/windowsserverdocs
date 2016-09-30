@@ -1,4 +1,5 @@
 ---
+ms.assetid: aa20c8b3-7f01-4165-8b73-92642bff9676
 title: When to Create a Federation Server Proxy
 description:
 author: billmath

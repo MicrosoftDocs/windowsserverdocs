@@ -1,4 +1,5 @@
 ---
+ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: Configuring Partner Organizations
 description:
 author: billmath

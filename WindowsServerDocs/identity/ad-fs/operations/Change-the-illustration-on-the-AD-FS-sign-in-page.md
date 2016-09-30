@@ -1,4 +1,5 @@
 ---
+ms.assetid: a4526500-24b3-423d-805c-24b0d8061aba
 title: Change the illustration on the AD FS sign-in page
 description:
 author: billmath

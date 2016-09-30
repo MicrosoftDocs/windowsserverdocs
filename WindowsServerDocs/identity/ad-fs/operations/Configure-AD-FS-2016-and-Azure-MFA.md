@@ -1,4 +1,5 @@
 ---
+ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: Configure AD FS 2016 and Azure MFA
 description:
 author: billmath

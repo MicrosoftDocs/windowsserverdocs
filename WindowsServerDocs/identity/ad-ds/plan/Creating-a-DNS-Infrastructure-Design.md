@@ -1,4 +1,5 @@
 ---
+ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
 title: Creating a DNS Infrastructure Design
 description:
 author: billmath

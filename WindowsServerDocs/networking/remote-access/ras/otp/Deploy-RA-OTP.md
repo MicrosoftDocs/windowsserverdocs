@@ -4,11 +4,10 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
 ms.author: coreyp
 author: coreyp-at-msft
 ---

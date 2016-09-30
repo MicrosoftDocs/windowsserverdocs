@@ -4,6 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
+ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
 ms.author: jamesmci
 author: jamesmci
 ---
