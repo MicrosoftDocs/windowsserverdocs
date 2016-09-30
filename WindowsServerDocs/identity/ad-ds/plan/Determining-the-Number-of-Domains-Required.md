@@ -1,4 +1,5 @@
 ---
+ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: Determining the Number of Domains Required
 description:
 author: billmath

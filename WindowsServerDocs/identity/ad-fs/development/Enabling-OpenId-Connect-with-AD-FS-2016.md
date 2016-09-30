@@ -1,4 +1,5 @@
 ---
+ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
 title: Enabling OpenId Connect with AD FS 2016
 description:
 author: billmath

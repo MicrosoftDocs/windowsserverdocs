@@ -1,4 +1,5 @@
 ---
+ms.assetid: af76ddbe-83a2-4a62-9989-873e3bb1c772
 title: Site Topology Owner Role
 description:
 author: billmath

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 8890ccc9-068d-4da2-bd51-8a2964173ff1
 title: Federation Server Farm Using WID and Proxies
 description:
 author: billmath

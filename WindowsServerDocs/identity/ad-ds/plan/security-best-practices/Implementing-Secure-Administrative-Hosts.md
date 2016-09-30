@@ -1,4 +1,5 @@
 ---
+ms.assetid: eafdddc3-40d7-4a75-8f4f-a45294aabfc8
 title: Implementing Secure Administrative Hosts
 description:
 author: billmath

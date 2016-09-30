@@ -1,4 +1,5 @@
 ---
+ms.assetid: ab97948a-c434-48f2-8313-c1a7a518e5f7
 title: Create a Stand-Alone Federation Server
 description:
 author: billmath

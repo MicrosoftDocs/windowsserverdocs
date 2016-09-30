@@ -1,4 +1,5 @@
 ---
+ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources_12
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -7,7 +8,6 @@ ms.service:
 ms.suite: na
 ms.technology: identity-adds
 ms.tgt_pltfrm: na
-ms.assetid: 16b28028-e0f9-483b-bf2a-3c2f43f0e462
 author: Femila
 ms.date: "06/24/2016"
 appliesto:  Windows Server Technical Preview

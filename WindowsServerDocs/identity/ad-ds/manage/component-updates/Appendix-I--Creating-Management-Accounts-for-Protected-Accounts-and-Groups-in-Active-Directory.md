@@ -1,4 +1,5 @@
 ---
+ms.assetid: 13fe87d9-75cf-45bc-a954-ef75d4423839
 title: Appendix I - Creating Management Accounts for Protected Accounts and Groups in Active Directory
 description:
 author: billmath

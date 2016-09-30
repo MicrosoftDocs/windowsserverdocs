@@ -1,4 +1,5 @@
 ---
+ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS Simplified Administration
 description:
 author: billmath

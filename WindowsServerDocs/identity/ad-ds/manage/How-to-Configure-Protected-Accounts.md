@@ -1,4 +1,5 @@
 ---
+ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: How to Configure Protected Accounts
 description:
 author: billmath

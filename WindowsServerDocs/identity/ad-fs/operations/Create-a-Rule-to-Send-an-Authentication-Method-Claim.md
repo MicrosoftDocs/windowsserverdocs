@@ -1,4 +1,5 @@
 ---
+ms.assetid: 96b9f4e6-f01c-4517-8299-017d187d447e
 title: Create a Rule to Send an Authentication Method Claim
 description:
 author: billmath

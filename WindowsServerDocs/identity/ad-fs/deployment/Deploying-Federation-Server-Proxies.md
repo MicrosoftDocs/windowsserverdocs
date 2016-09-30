@@ -1,4 +1,5 @@
 ---
+ms.assetid: 1b21b0a9-1fe6-4fd1-8a25-92e578d774ed
 title: Deploying Federation Server Proxies
 description:
 author: billmath

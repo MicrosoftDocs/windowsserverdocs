@@ -1,4 +1,5 @@
 ---
+ms.assetid: 9e7b0141-9b48-49a1-a9de-a3e8e90ce22b
 title: Replication error 8606 Insufficient attributes were given to create an object
 description:
 author: billmath

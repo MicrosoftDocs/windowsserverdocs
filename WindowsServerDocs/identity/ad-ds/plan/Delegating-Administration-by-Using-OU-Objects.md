@@ -1,4 +1,5 @@
 ---
+ms.assetid: d8e61aa4-8e4b-4097-83ca-70cf61366b75
 title: Delegating Administration by Using OU Objects
 description:
 author: billmath

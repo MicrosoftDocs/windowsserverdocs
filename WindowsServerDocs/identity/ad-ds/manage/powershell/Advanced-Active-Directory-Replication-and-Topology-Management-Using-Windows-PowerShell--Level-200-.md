@@ -1,4 +1,5 @@
 ---
+ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
 description:
 author: billmath

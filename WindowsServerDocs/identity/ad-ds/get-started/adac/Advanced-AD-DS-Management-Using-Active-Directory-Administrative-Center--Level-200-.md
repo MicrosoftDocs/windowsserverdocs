@@ -1,4 +1,5 @@
 ---
+ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 description:
 author: billmath

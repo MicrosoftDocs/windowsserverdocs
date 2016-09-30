@@ -1,4 +1,5 @@
 ---
+ms.assetid: 13397b74-982f-43d8-b6a5-485052c98c59
 title: Single Page Application with AD FS
 description:
 author: billmath

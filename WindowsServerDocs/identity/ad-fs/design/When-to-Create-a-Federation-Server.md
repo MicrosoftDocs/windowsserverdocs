@@ -1,4 +1,5 @@
 ---
+ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: When to Create a Federation Server
 description:
 author: billmath
