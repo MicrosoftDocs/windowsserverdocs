@@ -22,8 +22,8 @@ manager: dongill
   </tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
-    ![alt text](1system-requirements.png "System requirements and installation")<br/><br/>
-    [System Requirements and Installation](System-Requirements--and-Installation.md)</td>
+    ![alt text](1system-requirements.png "Get started")<br/><br/>
+    [Get started](Server-Basics.md)</td>
     <td style='width:25%'>
     ![alt text](2whats-new.png "What's new in Windows Server 2016?")<br/><br/>
     [What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</td>
@@ -56,7 +56,7 @@ manager: dongill
 
 ## Windows Server 2016 editions
 
-Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server 2016 Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server 2016 Standard offers enterprise-class features with limited virtualization rights. [Windows Server 2016 Essentials](http://go.microsoft.com/fwlink/?LinkID=827171) is an ideal cloud-connected first server. This table briefly summarizes the key differences between Standard and Datacenter editions:
+Windows Server 2016 is available in Standard, Datacenter, and Essentials editions. Windows Server 2016 Datacenter includes unlimited virtualization rights plus new features to build a software-defined datacenter. Windows Server 2016 Standard offers enterprise-class features with limited virtualization rights. Windows Server Essentials is an ideal cloud-connected first server. It has its own [extensive documentation](http://go.microsoft.com/fwlink/?LinkID=827171)—the content here focuses on Standard and Datacenter editions. The following table briefly summarizes the key differences between Standard and Datacenter editions:
 
 |Feature|Datacenter|Standard|  
 |-------------------|----------|-----------------------|  
