@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Assessment and Deployment Kit for Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The  Windows Server® 2012 Essentials Assessment and Deployment Kit (ADK) is a collection of tools, binaries, and operating system language packs that you can use to customize, assess, and deploy  Windows Server Essentials on new computers. This document includes information that is specific to partners who intend to preinstall the operating system for their customers and includes the following topics:  
   
 

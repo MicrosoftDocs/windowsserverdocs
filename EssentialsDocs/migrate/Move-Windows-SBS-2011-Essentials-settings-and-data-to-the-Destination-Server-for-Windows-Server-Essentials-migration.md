@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 Move settings and data to the Destination Server as follows:  
   
 
@@ -68,7 +69,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Run the following cmdlet, where `[AD username]` is the name of the Active Directory user account that you want to import:  
   
-     `Import-WssUser “SamAccountName [AD username]`  
+     `Import-WssUser â€œSamAccountName [AD username]`  
   
 ##  <a name="BKMK_Network"></a> Configure the network  
   

@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Support Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This topic provides support and troubleshooting options for Windows Server Essentials.  
   
 ##  <a name="BKMK_Top"></a> Top support solutions and updates  

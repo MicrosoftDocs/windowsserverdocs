@@ -13,10 +13,9 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Use Remote Web Access in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
   Remote Web Access helps you stay connected to your Windows Server Essentials network when you are away. When you log on to  Remote Web Access, you can connect to the computers on your Windows Server Essentials network, open the Dashboard to manage your Windows Server Essentials network, and access all of the shared folders and media files on the server.  
   

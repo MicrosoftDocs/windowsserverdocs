@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Change the Color Scheme of the Dashboard and Launchpad
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can change the color scheme of the Dashboard and the Launchpad by defining the colors that you want to use in an XML formatted file, installing the .xml file in a folder on the server, and by specifying the .xml file name in a registry entry.  
   
 ## Create the xml file  

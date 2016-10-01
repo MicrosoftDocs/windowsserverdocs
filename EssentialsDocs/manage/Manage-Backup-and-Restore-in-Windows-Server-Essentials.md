@@ -13,11 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Manage Backup and Restore in Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
  
-  
  Windows Server Essentials provides reliable ways to perform regular backups of your server and backups of your network computers. In the event of data loss, you can restore data from a successful backup on the server without restoring the entire computer. If necessary, you can perform a full system restore to your server or client computers in the network. The following table describes the different backup options available to you along with their advantages.  
   
 |Backup Feature|Description|Advantages|  

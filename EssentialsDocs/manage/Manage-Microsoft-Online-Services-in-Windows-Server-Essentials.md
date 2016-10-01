@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Manage Microsoft Online Services in Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following topics provide information about methods that you can use to manage online services for your organization:  
   
 -   [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)   

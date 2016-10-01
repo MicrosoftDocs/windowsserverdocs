@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Step 4: Move settings and data to the Destination Server for Windows Server Essentials migration
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This section provides information about migrating data and settings from the Source Server. Move settings and data to the Destination Server as follows:  
   
 -   [Copy data to the Destination Server](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
@@ -59,7 +60,7 @@ This section provides information about migrating data and settings from the Sou
   
 3.  If you use Windows PowerShell, type the following command, and then press ENTER.  
   
-     `Add-Wssfolder “Path \ -Name  -KeepPermission`  
+     `Add-Wssfolder â€œPath \ -Name  -KeepPermission`  
   
 4.  Repeat this process for each shared folder that you are migrating from the Source Server.  
   

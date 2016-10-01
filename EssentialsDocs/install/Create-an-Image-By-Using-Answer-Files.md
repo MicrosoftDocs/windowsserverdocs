@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Create an Image By Using Answer Files
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 When creating a custom image, you should take advantage of the support files that can be used to add, change, or keep track of data, settings and conditions. The following support files can be used in the installation process:  
   
 -   [Create the Oobe.xml File Including Logo and EULA](Create-the-Oobe.xml-File-Including-Logo-and-EULA.md)  

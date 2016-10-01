@@ -1,5 +1,5 @@
 ---
-title: "Enable folder redirection on the Windows Server Essentials Destination Server5"
+title: "Enable folder redirection on the Windows Server Essentials Destination Server1"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
@@ -8,14 +8,16 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 1614d8f2-2bf1-4c18-9159-44345d623fcd
+H1: Enable folder redirection on the Windows Server Essentials Destination Server
+ms.assetid: f67d195e-36f6-495a-8361-6d5faa889441
 author: nnamuhcs
 ms.author: coreyp
 ---
 
+# Enable folder redirection on the Windows Server Essentials Destination Server1
 
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-# Enable folder redirection on the Windows Server Essentials Destination Server5
 You can perform this task if folder redirection is enabled on the Source Server.  
   
  First, use the  Windows Server Essentials Dashboard to enable folder redirection on the Destination Server. Then, delete the old Folder Redirection Group Policy setting.  
@@ -38,7 +40,7 @@ You can perform this task if folder redirection is enabled on the Source Server.
   
 2.  In **Group Policy Management**, expand **Forest:***YourNetworkDomainName*, expand **Domains**, expand *YourNetworkDomainName*, and then expand **Group Policy Objects**.  
   
-3.  Right-click **Small Business Server Folder Redirection**, and then click **Delete**.  
+3.  Right-click **W7PVP Folder Redirection**, and then click **Delete**.  
   
 4.  Read the warning, and then click **Yes**.  
   

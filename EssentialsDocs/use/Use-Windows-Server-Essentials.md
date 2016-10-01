@@ -13,9 +13,11 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Use Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows 
+Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following topics provide information to help you get started using Windows Server Essentials:  
   
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)  

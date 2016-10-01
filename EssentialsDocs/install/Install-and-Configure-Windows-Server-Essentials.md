@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Install and Configure Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_InstallConfigure"></a>   
 
  This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md).  

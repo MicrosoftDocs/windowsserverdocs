@@ -13,9 +13,10 @@ ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 ms.author: coreyp
 ---
 
-
-
 # Create a Server Recovery DVD for Multi-Language Support
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_MLHeadedRecovery"></a> Create a server setup and server recovery DVD for multiple language support on locally administered servers  
   
 > [!NOTE]

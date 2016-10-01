@@ -1,5 +1,5 @@
 ---
-title: "Install Windows Server Essentials in migration mode3"
+title: "Install Windows Server Essentials in migration mode1"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
@@ -8,30 +8,33 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 8c4ab288-4886-4c27-9fcf-7d797d178c83
+ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 ---
 
+# Install Windows Server Essentials in migration mode1
 
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-# Install Windows Server Essentials in migration mode3
 You can have only one server on your network that is running  Windows Server Essentials, and that server must be a domain controller for the network.  
   
  When you install  Windows Server Essentials in migration mode, the installation wizard performs the following tasks:  
   
 1.  Installs and configures the  Windows Server Essentials server software on the Destination Server.  
   
-2.  Joins the Destination Server to the existing domain. The Source Server and the Destination Server can both be members of the same domain until the migration process is finished. After the migration is finished, you must remove the Source Server from the network within 21 days.  
+2.  Updates the domain schema to the most recent version.  
+  
+3.  Joins the Destination Server to the existing domain. The Source Server and the Destination Server can both be members of the same domain until the migration process is finished. After the migration is finished, you must remove the Source Server from the network within 21 days.  
   
     > [!WARNING]
     >  An error message is added to the event log each day during the 21-day grace period until you remove the Source Server from your network. The text of the message reads, "The FSMO Role Check detected a condition in your environment that is out of compliance with the licensing policy. The Management Server must hold the primary domain controller and domain naming master Active Directory roles. Please move the Active Directory roles to the Management Server now. This server will be automatically shut down if the issue is not corrected in 21 days from the time this condition was first detected." After the 21-day grace period, the Source Server will shut down.  
   
-3.  Transfers the operations master (also called flexible single master operations or FSMO) roles from the Source Server to the Destination Server. Operations master roles are specialized domain-controller tasks, which are used when standard data-transfer and update methods are inadequate. When the Destination Server becomes a domain controller, it must hold the operations master roles.  
+4.  Transfers the operations master (also called flexible single master operations or FSMO) roles from the Source Server to the Destination Server. Operations master roles are specialized domain-controller tasks, which are used when standard data-transfer and update methods are inadequate. When the Destination Server becomes a domain controller, it must hold the operations master roles.  
   
-4.  Configures the Destination Server as a global catalog server. The global catalog server is a domain controller that manages a distributed data repository. It contains a searchable, partial representation of every object in every domain in the Active Directory forest.  
+5.  Configures the Destination Server as a global catalog server. The global catalog server is a domain controller that manages a distributed data repository. It contains a searchable, partial representation of every object in every domain in the Active Directory forest.  
   
-5.  Configures the Destination Server as the site-licensing server.  
+6.  Configures the Destination Server as the site-licensing server.  
   
 ##  <a name="BKMK_Install"></a> Install Windows Server Essentials on the Destination Server  
  To install and configure  Windows Server Essentials on the Destination Server in migration mode, perform the following procedure.  
@@ -72,4 +75,7 @@ You can have only one server on your network that is running  Windows Server Ess
 |Dcdiag.exe|Analyzes the state of domain controllers in a forest or enterprise, and reports issues to assist you in troubleshooting. For more information and to download, see [Dcdiag](http://go.microsoft.com/fwlink/?LinkId=217389).|  
 |Repadmin.exe|Assists you in diagnosing replication issues between domain controllers. This tool requires command-line parameters to run. For more information and to download, see [Repadmin](http://go.microsoft.com/fwlink/?LinkId=217387).|  
   
- You should correct all the issues that these tools report before you proceed with the migration.
+ You should correct all the issues that these tools report before you proceed with the migration.  
+  
+> [!NOTE]
+>  If you plan to migrate email to another on-premises Exchange server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md) for information about how to set up your on-premises Exchange server.

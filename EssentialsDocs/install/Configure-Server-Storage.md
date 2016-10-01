@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Configure Server Storage
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ## Sample hard disk configurations  
  The following table suggests sample hard disk configurations. The estimates are based on typical usage and functionality, but they do not address issues that affect optimal performance. You can use any type of supported hard disks for these configurations (such as SATA or SCSI), based on the preferences and needs of your customer.  
   
@@ -24,11 +25,11 @@ ms.author: coreyp
   
 |Server level|Disk configuration|  
 |------------------|------------------------|  
-|Entry|- Two physical disks<br /><br /> - Configured as a RAID 1 mirrored set that contains the following:<br /><br /> - C: volume î 60 GB<br /><br /> - D: volume î 1000 GB|  
-|Medium|- Three physical disks<br /><br /> - Configured as a RAID 5 set that contains the following:<br /><br /> - C: volume î 60 GB<br /><br /> - D: volume î 1500 GB|  
-|High|- Five or more total physical disks<br /><br /> - Two disks in a RAID 1 mirrored set that contains the C: volume î 100 GB<br /><br /> - All remaining disks in a RAID 5 set that contains the following:<br /><br /> - D: volume î 1500 GB<br /><br /> - E: volume î 1500 GB|  
+|Entry|- Two physical disks<br /><br /> - Configured as a RAID 1 mirrored set that contains the following:<br /><br /> - C: volume ‚Äù 60 GB<br /><br /> - D: volume ‚Äù 1000 GB|  
+|Medium|- Three physical disks<br /><br /> - Configured as a RAID 5 set that contains the following:<br /><br /> - C: volume ‚Äù 60 GB<br /><br /> - D: volume ‚Äù 1500 GB|  
+|High|- Five or more total physical disks<br /><br /> - Two disks in a RAID 1 mirrored set that contains the C: volume ‚Äù 100 GB<br /><br /> - All remaining disks in a RAID 5 set that contains the following:<br /><br /> - D: volume ‚Äù 1500 GB<br /><br /> - E: volume ‚Äù 1500 GB|  
   
- These recommendations take into account the size of the installed operating system, the average size of the data storage that the server uses, and the expected data storage growth over the lifetime of the server. The volumes can be partitions on a single physical disk or they can be placed on separate physical disks. Because the server stores important data for your customer, it is recommended that you use multiple physical disks and help protect your customerôs data by using hardware RAID or Storage Spaces.  
+ These recommendations take into account the size of the installed operating system, the average size of the data storage that the server uses, and the expected data storage growth over the lifetime of the server. The volumes can be partitions on a single physical disk or they can be placed on separate physical disks. Because the server stores important data for your customer, it is recommended that you use multiple physical disks and help protect your customer‚Ñ¢s data by using hardware RAID or Storage Spaces.  
   
 ## Configuring your server backup  
  In addition to the internal hard disks on the server, customers should consider using external USB hard disks for backups. Ideally, the customer would have at least two external hard disks with enough capacity to back up all of the data on the server. If external hard disks are used, the customer can take one disk off-site each night to further protect the data.  

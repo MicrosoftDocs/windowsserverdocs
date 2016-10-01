@@ -12,10 +12,9 @@ ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddbauthor: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Get Connected in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  You can connect your computers to the Windows Server Essentials server by using the Connector software. The Connector software is installed when you connect a computer to the server by using the Connect a Computer to the Server Wizard. You can start this wizard by typing **http://<servername\>/connect**, where **<servername\>** is the name of your server.  
   
@@ -51,7 +50,7 @@ ms.author: coreyp
   
 -   [Network user name and password information](Get-Connected-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Server administratorôs account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Server administrator‚Ñ¢s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
   
 -   [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)  
   
@@ -70,7 +69,7 @@ ms.author: coreyp
   
 -   [Network user name and password information](Get-Connected-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Server administratorôs account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Server administrator‚Ñ¢s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
   
 -   [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)  
   
@@ -107,7 +106,7 @@ ms.author: coreyp
   
 -   The computer name does not include an underscore (_).  
   
--   The computerôs date and time settings align to the settings on the server.  
+-   The computer‚Ñ¢s date and time settings align to the settings on the server.  
   
 -   A client computer can be connected to only one Windows Server Essentials server at any given time.  
   
@@ -262,7 +261,7 @@ ms.author: coreyp
   
 -   Installs Microsoft .NET Framework 4.5 on the computer if it is not already installed  
   
--   Creates shortcuts on the computerôs desktop to the Dashboard and Launchpad  
+-   Creates shortcuts on the computer‚Ñ¢s desktop to the Dashboard and Launchpad  
   
 -   Configures Windows Firewall ports on the computer to allow the following features to work:  
   
@@ -300,7 +299,7 @@ ms.author: coreyp
   
  If you are the server administrator, you can create the network credentials by adding a user account from the **Users** tab of the Dashboard. For more information about user accounts, see [Manage user accounts using the Dashboard](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8).  
   
-###  <a name="BKMK_7"></a> Server administratorôs account  
+###  <a name="BKMK_7"></a> Server administrator‚Ñ¢s account  
  You must be able to provide a network administrator account name and password to install the Connector software. A network administrator account enables the user to manage the local area network for your organization and helps manage and maintain network devices such as switches and routers.  
   
  The tasks that can be performed by using a network administrator account can include:  
@@ -386,7 +385,7 @@ ms.author: coreyp
   
 -   The user name and password of the person who will use the computer on the new network  
   
--   The user name and password of the computerôs local administrator account  
+-   The user name and password of the computer‚Ñ¢s local administrator account  
   
 > [!NOTE]
 
@@ -423,7 +422,7 @@ ms.author: coreyp
   
     1.  Accept the end-user license agreement.  
   
-    2.  On the **Find my server** page, auto-detect the server in the local networks and select the server that you want to connect to. Or, if you have the information, you can manually input your serverôs name or domain address.  
+    2.  On the **Find my server** page, auto-detect the server in the local networks and select the server that you want to connect to. Or, if you have the information, you can manually input your server‚Ñ¢s name or domain address.  
   
     3.  On the **Type your new network user name and password** page, do the following:  
   
@@ -442,7 +441,7 @@ ms.author: coreyp
     > [!NOTE]
     >  When you log on to a computer that is running Windows 8 for the first time by using your network account, after it connects to the server, instructions for migrating files and applications from the old user account appear. Follow the instructions on the **How do I migrate files and applications from my old user account?** page to migrate all files and applications to the network user account.  
   
-9. After the computer is successfully connected to the server, shortcuts to the Connector TrayApp and the server Dashboard appear on the Start menu, which can be used as follows (if your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be available from the computerôs Start screen):  
+9. After the computer is successfully connected to the server, shortcuts to the Connector TrayApp and the server Dashboard appear on the Start menu, which can be used as follows (if your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be available from the computer‚Ñ¢s Start screen):  
   
     -   If your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be searchable as an App.  
   
@@ -458,7 +457,7 @@ ms.author: coreyp
 #### Feature limits  
  Some features are limited when a client computer is not added to the Windows Server Essentials domain:  
   
--   All features that require that the computer be joined to the domainîincluding domain credentials, Group Policy, and virtual private networks (VPNs)îare not available.  
+-   All features that require that the computer be joined to the domain‚Äùincluding domain credentials, Group Policy, and virtual private networks (VPNs)‚Äùare not available.  
   
 -   Any third-party add-ons that require that the computer be joined to the domain will not work properly.  
   
@@ -567,11 +566,11 @@ ms.author: coreyp
   
 -   Because client computer backup is not supported for the second server, the backup status is displayed as **Not supported**. In addition, if you select the second server and right-click, there are no backup and restore related tasks displayed for the second server.  
   
--   If you select the second server, and then click the **View the server properties** task, there is no **Backup** tab displayed on the serverôs properties page.  
+-   If you select the second server, and then click the **View the server properties** task, there is no **Backup** tab displayed on the server‚Ñ¢s properties page.  
   
--   Because there is no Security Center on a Windows Server operating system, the second serverôs security status displays as **Not applicable**.  
+-   Because there is no Security Center on a Windows Server operating system, the second server‚Ñ¢s security status displays as **Not applicable**.  
   
--   The second serverôs Group Policy status displays as **Not applicable**.  
+-   The second server‚Ñ¢s Group Policy status displays as **Not applicable**.  
   
 ###  <a name="BKMK_11"></a> Install the Connector software  
  The Connector software in Windows Server Essentials is installed when you connect your computer to the server by using the Connect a Computer to the Server Wizard. You can launch this wizard by typing **http://<ServerName\>/connect** in the address bar of your web browser (where *<ServerName\>* is the name of your server).  
@@ -621,7 +620,7 @@ ms.author: coreyp
   
 5.  In Windows Server Essentials, if the Windows Server Essentials Connector page appears suggesting to close the Launchpad, click **OK**.  
   
-6.  Wait for the program to uninstall. After the software is removed, **Windows Server Essentials Connector** no longer appears within the list of installed programs or updates. In addition, the shortcuts to the Launchpad and the Dashboard are no longer displayed on the computerôs desktop.  
+6.  Wait for the program to uninstall. After the software is removed, **Windows Server Essentials Connector** no longer appears within the list of installed programs or updates. In addition, the shortcuts to the Launchpad and the Dashboard are no longer displayed on the computer‚Ñ¢s desktop.  
   
 > [!NOTE]
 >  -   Uninstalling the Connector software does not remove the computer from the list of computers that are displayed on the **DEVICES** tab of the Dashboard. To remove the computer from the Dashboard, see [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3).  

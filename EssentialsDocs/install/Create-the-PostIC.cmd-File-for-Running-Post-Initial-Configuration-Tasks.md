@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Create the PostIC.cmd File for Running Post Initial Configuration Tasks
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can add post-initial configuration customizations by writing your own code, and then calling that code from a script file named PostIC.cmd. When using the PostIC.cmd file, you must adhere to the following guidelines:  
   
 -   Your customization code must run silently (it cannot display a User Interface).  

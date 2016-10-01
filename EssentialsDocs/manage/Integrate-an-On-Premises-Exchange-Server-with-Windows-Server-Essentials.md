@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Integrate an On-Premises Exchange Server with Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This guide provides information and basic instructions to help you set up and integrate an on-premises server that is running Exchange Server with a server that is running Windows Server Essentials.  
   
  You should read this guide before attempting to deploy an on-premises server that is running Exchange Server on a Windows Server Essentials network.  

@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Define Display Settings
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The screen resolution should be set according to the hardware that is attached to the server. For optimal display of the Dashboard, a setting of 1024 x 768 or greater is required. For more information about setting the screen resolution, see the [Windows Assessment and Deployment Kit](http://go.microsoft.com/fwlink/?LinkId=248694) documentation.  
   
 ## See Also  

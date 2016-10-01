@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Replace the List of Domain Name Providers
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can replace the list of domain name providers that is displayed in the Set Up Domain Name Wizard by completing the following tasks:  
   
 

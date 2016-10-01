@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Hardware Requirements for the Target Computer
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This section provides hardware requirements for  Windows Server Essentials.  
   
 ## Hardware requirements for Windows Server Essentials  

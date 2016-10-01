@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Join computers to the new Windows Server Essentials network1
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_JoinComputers"></a>   
  The next step in the migration process is to join client computers to the new  Windows Server Essentials network and update Group Policy settings.  
   

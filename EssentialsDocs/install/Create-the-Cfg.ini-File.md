@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Create the Cfg.ini File
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The cfg.ini file is used to automate an installation of the operating system in the following scenario:  
   
 -   When testing the experience of the end user with a preinstalled image on the target computer, the Initial Configuration section is used to walk through the installation in either an attended or unattended mode. To do this, see [Create the Initial Configuration section](Create-the-Cfg.ini-File.md#BKMK_CreateInit2).  

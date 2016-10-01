@@ -13,10 +13,13 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Manage Anywhere Access in Windows Server Essentials
-When you turn on the Anywhere Access functionalities”Remote Web Access, virtual private network, and DirectAccess”in  Windows Server Essentials, or in  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, they enable your network users to access server resources from any location with an Internet connection, at any time, and on any device. The following topics discuss configuring Remote Web Access, virtual private network (VPN), and DirectAccess features on your server.  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+When you turn on the Anywhere Access functionalities, Remote Web Access, virtual private network, and DirectAccess in  Windows Server Essentials, or in  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, they enable your network users to access server resources from any location with an Internet connection, at any time, and on any device. The following topics discuss configuring Remote Web Access, virtual private network (VPN), and DirectAccess features on your server.  
   
 -   [Manage Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
@@ -28,7 +31,7 @@ When you turn on the Anywhere Access functionalities”Remote Web Access, virtual 
   
 -   [Configure DirectAccess](Configure-DirectAccess-in-Windows-Server-Essentials.md)  
   
-     DirectAccess enables you to seamlessly connect to your organization™s network from any Internet-equipped remote location without having to establish a virtual private network (VPN) connection. DirectAccess provides increased productivity for your organization™s mobile workforce by offering the same connectivity experience inside and outside of the office.  
+     DirectAccess enables you to seamlessly connect to your organizationâ„¢s network from any Internet-equipped remote location without having to establish a virtual private network (VPN) connection. DirectAccess provides increased productivity for your organizationâ„¢s mobile workforce by offering the same connectivity experience inside and outside of the office.  
   
 ## See also  
   

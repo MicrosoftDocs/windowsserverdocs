@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Configure folder redirection on the Windows Server Essentials Destination Server
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 Perform this task if folder redirection is enabled on the Source Server.  
   
  First, delete the old Folder Redirection Group Policy setting. Then use the  Windows Server Essentials Dashboard to enable folder redirection on the Destination Server.  

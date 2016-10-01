@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Manage Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following topics provide information about the server and network management features that are included with Windows Server Essentials:  
   
 -   [Dashboard Overview](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)  

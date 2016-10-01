@@ -16,7 +16,8 @@ ms.author: coreyp
 
 
 # Manage Server Folders in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  As a server administrator, you can manage access to any server folders (known as shared folders when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
   
@@ -274,10 +275,10 @@ ms.author: coreyp
 5.  Follow the instructions to complete the wizard.  
   
 ##  <a name="BKMK_9"></a> Add a missing server folder  
- When the server detects that a pre-defined server folderîCompany, Users, Client Computer Backups, File History Backup, or Folder Redirectionîis no longer shared (for some reason or another), an alert is generated to guide the user to resolve this issue. It is recommended that you try and restore the folder from server backup. However, if the server has not been backed up, select the missing folder and then click **Recreate the missing folder** to reconfigure the location of the server folder.  
+ When the server detects that a pre-defined server folder‚ÄùCompany, Users, Client Computer Backups, File History Backup, or Folder Redirection‚Äùis no longer shared (for some reason or another), an alert is generated to guide the user to resolve this issue. It is recommended that you try and restore the folder from server backup. However, if the server has not been backed up, select the missing folder and then click **Recreate the missing folder** to reconfigure the location of the server folder.  
   
 > [!NOTE]
->  Only pre-defined foldersîCompany, Users, Client Computer Backups, File History Backup, or Folder Redirectionîcan be recreated. User-created server folders and media server folders cannot be recreated.  
+>  Only pre-defined folders‚ÄùCompany, Users, Client Computer Backups, File History Backup, or Folder Redirection‚Äùcan be recreated. User-created server folders and media server folders cannot be recreated.  
   
  After you restore or recreate the missing folder, it should no longer be listed as **Missing**.  
   

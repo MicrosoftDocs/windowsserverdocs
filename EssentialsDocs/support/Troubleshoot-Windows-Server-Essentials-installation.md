@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Troubleshoot Windows Server Essentials installation
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This topic provides troubleshooting for issues that occur when installing  Windows Server Essentials. Guidance is provided in the following areas:  
   
 

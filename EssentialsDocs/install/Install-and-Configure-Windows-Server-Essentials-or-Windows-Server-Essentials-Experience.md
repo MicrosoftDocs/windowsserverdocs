@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Install and Configure Windows Server Essentials or Windows Server Essentials Experience
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
  Windows Server Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
   
   Windows Server Essentials Experience, the new server role in  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter, enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in  Windows Server Essentials without the locks and limits that are enforced in  Windows Server Essentials. This server role is also available in  Windows Server Essentials and is enabled by default. For more information about this server role, see the [Windows Server Essentials Experience Overview &#91;fwlink_blue&#93;](assetId:///958ecbde-ba6f-4789-88da-58542b8b1faf).  

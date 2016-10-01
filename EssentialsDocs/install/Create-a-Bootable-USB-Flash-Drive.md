@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Create a Bootable USB Flash Drive
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can create a bootable USB flash drive to use to deploy  Windows Server Essentials . The first step is to prepare the USB flash drive by using DiskPart, which is a command-line utility. For information about DiskPart, see [DiskPart Command-Line Options](http://go.microsoft.com/fwlink/?LinkId=207073).  
   
  For additional scenarios in which you may want to create or use a bootable USB flash drive, see the following topics:  

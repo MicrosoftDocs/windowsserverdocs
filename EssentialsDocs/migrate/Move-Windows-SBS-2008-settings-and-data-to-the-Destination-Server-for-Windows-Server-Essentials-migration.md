@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Move Windows SBS 2008 settings and data to the Destination Server for Windows Server Essentials migration
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 Move settings and data to the Destination Server as follows:  
   
 
@@ -76,7 +77,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Run the following cmdlet, where `[AD username]` is the name of the Active Directory user account that you want to import:  
   
-     `Import-WssUser “SamAccountName [AD username]`  
+     `Import-WssUser â€œSamAccountName [AD username]`  
   
 ##  <a name="BKMK_MoveDHCP"></a> Move the DHCP Server role from the Source Server to the router  
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
@@ -113,7 +114,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Complete the instructions in the wizard to configure your router and domain names.  
   
- If your router does not support the UPnP„¢ framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
+ If your router does not support the UPnPâ€žÂ¢ framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
   
 -   Port 80: HTTP Web traffic  
   

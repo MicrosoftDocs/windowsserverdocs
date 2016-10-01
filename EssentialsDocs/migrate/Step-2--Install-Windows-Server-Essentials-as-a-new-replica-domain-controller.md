@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Step 2: Install Windows Server Essentials as a new replica domain controller
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This section describes how to install  Windows Server Essentials and  Windows Server 2012 R2 Standard (with the Windows Server Essentials Experience role enabled) as a domain controller.  
   
  For environments with up to 25 users and 50 devices, you can follow the steps in this guide to migrate from previous versions of Windows SBS to  Windows Server Essentials. For environments with up to 100 users and 200 devices, you can follow the same guidance to migrate to the Standard and Datacenter editions of  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. Both scenarios are covered in this documentation.  

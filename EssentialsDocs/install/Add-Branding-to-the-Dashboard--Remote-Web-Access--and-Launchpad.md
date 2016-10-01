@@ -13,9 +13,10 @@ author: nnamuhcs
 ms.author: coreyp
 ---
 
-
-
 # Add Branding to the Dashboard, Remote Web Access, and Launchpad
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_Branding"></a> Add Branding to the Dashboard, Remote Web Access, and Launchpad  
  You can make many branding additions by adding entries in the registry. All branding entries in the registry for the operating system are located under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\OEM.  
   
