@@ -56,4 +56,4 @@ A screenshot showing the use of the Search feature of the Windows Server Essenti
 
 See also
 --------
-[Get started with Windows Server Essentials](get-started-with-windows-server-essentials.md)
+[Get started with Windows Server Essentials](get-started.md)

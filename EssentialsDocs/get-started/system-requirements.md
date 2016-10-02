@@ -50,6 +50,6 @@ ms.author: coreyp
  
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   
--   [System Requirements for Windows Server Essentials](System-Requirements-for-Windows-Server-Essentials.md)
+-   [System Requirements for Windows Server Essentials](system-requirements.md)
 
 

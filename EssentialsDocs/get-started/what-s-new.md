@@ -47,4 +47,4 @@ Some larger small businesses need more functionality and capacity to implement W
 See also
 --------
 
-[Get started with Windows Server Essentials](get-started-with-windows-server-essentials.md)
+[Get started with Windows Server Essentials](get-started.md)

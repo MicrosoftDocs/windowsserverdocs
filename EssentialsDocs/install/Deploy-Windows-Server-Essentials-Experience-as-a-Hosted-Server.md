@@ -399,8 +399,8 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../get-started/What-s-New-in-Windows-Server-Essentials.md)  
+-   [What's New in Windows Server Essentials](../get-started/what-s-new.md)  
 
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
--   [Get started with Windows Server Essentials](../get-started/get-started-with-windows-server-essentials.md)
+-   [Get started with Windows Server Essentials](../get-started/get-started.md)

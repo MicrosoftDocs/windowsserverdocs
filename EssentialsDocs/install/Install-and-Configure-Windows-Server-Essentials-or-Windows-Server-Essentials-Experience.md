@@ -65,7 +65,7 @@ ms.author: coreyp
 -   [Windows Server Essentials Product Overview](http://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)  
   
 
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)   
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)   
 
   
 ##  <a name="BKMK_NewAD"></a> Deploy Windows Server Essentials to set up a new Active Directory environment  
@@ -221,7 +221,7 @@ ms.author: coreyp
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../get-started/What-s-New-in-Windows-Server-Essentials.md)  
+-   [What's New in Windows Server Essentials](../get-started/what-s-new.md)  
   
 
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
@@ -229,4 +229,4 @@ ms.author: coreyp
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
   
--   [Get Started with Windows Server Essentials](../get-started/get-started-with-windows-server-essentials.md)
+-   [Get Started with Windows Server Essentials](../get-started/get-started.md)

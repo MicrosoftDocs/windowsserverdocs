@@ -453,7 +453,7 @@ This guide provides information and basic instructions to help you set up and in
   
 ## See also  
   
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)  
   
 -   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   

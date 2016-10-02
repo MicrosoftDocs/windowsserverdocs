@@ -19,7 +19,7 @@ ms.author: coreyp
 
 ##  <a name="BKMK_BeforeYouBegin"></a> Before you begin your installation of  Windows Server Essentials, perform the following tasks:  
 
--   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md).   
+-   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](../get-started/system-requirements.md).   
 
   
     > [!IMPORTANT]
@@ -50,7 +50,7 @@ ms.author: coreyp
     |Port 443|HTTPS Web traffic|  
   
 
--   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md).  
+-   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](../get-started/release-notes.md).  
   
 ## See also  
   

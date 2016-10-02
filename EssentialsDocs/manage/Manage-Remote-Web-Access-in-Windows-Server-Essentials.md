@@ -454,7 +454,7 @@ ms.author: coreyp
   
 ## See also  
   
--   [Remote desktop options](../windows-server-essentials-notinTOC/Remote-desktop-options.md)  
+-   [Remote desktop options](Remote-desktop-options.md)  
   
 -   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   

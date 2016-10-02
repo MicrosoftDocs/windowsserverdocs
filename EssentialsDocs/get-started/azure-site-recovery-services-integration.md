@@ -63,4 +63,4 @@ In any of the three cases above, when a VM is failed over to Azure, the Windows 
 
 See also
 --------
-[Get started with Windows Server Essentials](get-started-with-windows-server-essentials.md)
+[Get started with Windows Server Essentials](get-started.md)

@@ -68,4 +68,4 @@ In the tasks pane on the right side of the dashboard are the various tasks that 
 
 See also
 --------
-[Get started with Windows Server Essentials](get-started-with-windows-server-essentials.md)
+[Get started with Windows Server Essentials](get-started.md)

@@ -23,9 +23,9 @@ The following documents provide step-by-step instructions for installing and con
   
 -   [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md)  
   
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)  
   
--   [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md)  
+-   [Release Documentation for Windows Server Essentials](../get-started/release-notes.md)  
   
 -   [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials.md)  
   
@@ -33,7 +33,7 @@ The following documents provide step-by-step instructions for installing and con
   
 -   [Windows Server Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md)  
 
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)  
   
 -   [Deploy Windows Server Essentials Experience as a Hosted Server](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
   
