@@ -22,7 +22,7 @@ The Best Practices Analyzer scans your computer using rules based on these best 
 For more details about Best Practices Analyzer and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 ## About Hyper-V  
-Hyper-V lets you run multiple operating systems at the same time on one physical computer, by running each one in a virtual machine. Virtual machines can help you use your computing resources more efficiently and flexibly. For more about Hyper-V, see [Hyper-V on Windows Server 2016 Technical Preview](../Hyper-V-on-Windows-Server.md).  
+Hyper-V lets you run multiple operating systems at the same time on one physical computer, by running each one in a virtual machine. Virtual machines can help you use your computing resources more efficiently and flexibly. For more about Hyper-V, see [Hyper-V on Windows Server 2016](../Hyper-V-on-Windows-Server.md).  
   
 
 
