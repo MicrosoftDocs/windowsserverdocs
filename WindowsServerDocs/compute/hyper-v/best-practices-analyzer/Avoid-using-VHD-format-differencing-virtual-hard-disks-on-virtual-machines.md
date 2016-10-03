@@ -3,7 +3,7 @@ title: Avoid using VHD-format differencing virtual hard disks on virtual machine
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article

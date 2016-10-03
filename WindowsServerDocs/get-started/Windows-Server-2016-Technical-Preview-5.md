@@ -20,16 +20,17 @@ manager: dongill
   <tr>
     <td colspan='4' style='padding:0;'><img src='wsbanner.png'/></td>
   </tr>
+  <tr style='text-align:center;'><td colspan='4' bgcolor="F3FBFF">![alt text](2whats-new.png "What's new in Windows Server 2016?")
+    &nbsp;&nbsp;<font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></td></tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
     ![alt text](1system-requirements.png "Get started")<br/><br/>
     [Get started](Server-Basics.md)</td>
     <td style='width:25%'>
-    ![alt text](2whats-new.png "What's new in Windows Server 2016?")<br/><br/>
-    [What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</td>
-    <td style='width:25%'>
     ![alt text](3compute.png "Windows Server Compute")<br/><br/>
     [Compute](../compute/Compute.md)</td>
+    <td style='width:25%'>![Failover clustering](cluster-server.png "Failover clustering")<br/><br/>[Failover clustering](../failover-clustering/failover-clustering-overview.md)
+    </td>
     <td style='width:25%'>
     ![alt text](4identity-and-access.png "Windows Server Identity and Access")<br/><br/>
     [Identity and Access](../identity/Identity-and-Access.md)</td>
@@ -69,7 +70,7 @@ Windows Server 2016 is available in Standard, Datacenter, and Essentials edition
 |Shielded Virtual Machines| yes| no|
 |Networking stack| yes| no|
 
-For more information, see [Pricing and licensing for Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server-pricing) and [Compare features in Windows Server versions](https://www.microsoft.com/cloud-platform/windows-server-comparison).
+For more information, see [Pricing and licensing for Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server-pricing) and [Compare features in Windows Server versions](https://www.microsoft.com/en-us/cloud-platform/windows-server-comparison).
 
 ## Installation options
 
