@@ -15,8 +15,6 @@ ms.date: 9/22/2016
 # Create a virtual switch for Hyper-V virtual machines
 
 >Applies To: Windows 10, Windows Server 2016
-
-**This is preliminary content and subject to change.**  
   
 A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server 2016. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
