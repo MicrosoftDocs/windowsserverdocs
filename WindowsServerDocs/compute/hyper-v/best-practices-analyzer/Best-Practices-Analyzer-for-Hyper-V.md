@@ -14,8 +14,6 @@ ms.date: 8/16/2016
 # Best Practices Analyzer for Hyper-V
 
 >Applies To: Windows Server 2016
-
-**This is preliminary content and subject to change.**  
   
 In Windows management, *best practices* are guidelines that are considered the ideal way, under normal circumstances, to configure a server as defined by experts. Best practice violations, even critical ones, might not necessarily cause problems. But, they can indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.  
   

@@ -29,17 +29,18 @@ The following chart shows the results of the high-end hardware performance test 
   
 ||||  
 |-|-|-|  
-|Configuration     -           Hardware|Low-end  Hardware (4GB ram, 4 core)|High-end Hardware (8 GB, 8 core)|  
+|Configuration - Hardware|Low-end  Hardware (4GB ram, 4 core)|High-end Hardware (8 GB, 8 core)|  
 |Double Tunnel<br /><br />-   PKI<br /><br />-   Including DNS64/NAT64|750 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 75 Mbps. Stretch target is 1000 users @ 50% CPU.|1500 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 150 Mbps.|  
-  
-## Test Environment  
+## Test Environment
+
 **Perf Bench Topology**  
   
 ![Test Environment](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning2.gif)  
   
 The performance test environment is a 5 machine bench. For the low-end test, one 4-core 4 Gig DirectAccess server was used and for the high-end hardware test, one 8-core, 16 Gig DirectAccess server was used. For low-end and high-end test environments the following was used: one Back end Server (the sender), and two client computers (the receivers).  Receivers are split among the two client computers. Otherwise, the receivers would be CPU bound and limit the number of clients and bandwidth. On the receiving side a simulator to simulate hundreds of clients (either HTTPS or Teredo clients are simulated). IPsec, DOSp are both configured. RSS is enabled on the DirectAccess server. RSS queue size is set to 8.  Without configuring RSS, a single processor will get pegged at a high utilization while the other cores are underutilized. Also of note is that the DirectAccess server is a 4 core machine with hyper threading turned off.  Hyper threading is off because RSS only works on physical cores and use of hyper threading produces skewed results. (This means that not all the cores will be uniformly loaded).  
   
-## Testing results for low-end hardware:  
+## Testing results for low-end hardware:
+
 Testing was performed both with 1000 & with 750 clients.  In all cases traffic split was 70% Teredo and 30% IPHTTPS.  All tests involved TCP traffic over Nat64 using 2 IPsec tunnels per client.  In all tests, memory utilization was light and CPU utilization was acceptable.  
   
 **Individual Test Results:**  
