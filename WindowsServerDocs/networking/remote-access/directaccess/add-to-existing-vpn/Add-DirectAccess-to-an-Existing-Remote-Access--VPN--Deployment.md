@@ -17,7 +17,7 @@ author: coreyp-at-msft
 >Applies To: Windows Server&reg; 2016
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 is configured as a DirectAccess server with recommended settings after you have already installed and configured VPN. If you want to configure DirectAccess with enterprise features, such as a load-balanced cluster, multisite deployment, or two-factor client authentication, complete the scenario described in this topic to set up a single server, and then set up the enterprise scenario as described in [Deploy Remote Access in an enterprise](assetId:///77ce3214-c029-4c4b-8f09-78bec490716e).  
+In this scenario, a single computer running  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 is configured as a DirectAccess server with recommended settings after you have already installed and configured VPN. If you want to configure DirectAccess with enterprise features, such as a load-balanced cluster, multisite deployment, or two-factor client authentication, complete the scenario described in this topic to set up a single server, and then set up the enterprise scenario as described in [Deploy Remote Access in an enterprise](../../ras/Deploy-Remote-Access-in-an-Enterprise).  
   
 ## In this scenario  
 To set up a single Remote Access server, a number of planning and deployment steps are required.  
@@ -76,7 +76,7 @@ Hardware requirements for this scenario include the following:
   
 -   The server must have at least one network adapter installed, enabled, and joined to the internal network. When two adapters are used, there should be one adapter connected to the internal corporate network, and one connected to the external network (Internet).  
   
--   If Teredo is required as an IPv4 to IPv6 transition protocol, the external adapter of the server requires two consecutive public IPv4 addresses. The Enable DirectAccess Wizard does not enable Teredo, even if two consecutive IP addresses are present. To enable Teredo, see [Deploying Advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6). If a single IP address is available, only IP-HTTPS can be used as the transition protocol.  
+-   If Teredo is required as an IPv4 to IPv6 transition protocol, the external adapter of the server requires two consecutive public IPv4 addresses. The Enable DirectAccess Wizard does not enable Teredo, even if two consecutive IP addresses are present. If a single IP address is available, only IP-HTTPS can be used as the transition protocol.  
   
 -   At least one domain controller. The Remote Access server and DirectAccess clients must be domain members.  
   
@@ -87,7 +87,7 @@ Hardware requirements for this scenario include the following:
 -   A client computer must be running Windows 8 or Windows 7.  
   
     > [!NOTE]  
-    > Only the following operating systems can be used as DirectAccess clients:  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8 Enterprise, Windows 7 Enterprise, and Windows 7 Ultimate.  
+    > Only the following operating systems can be used as DirectAccess clients: Windows Server 2012, Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 **Infrastructure and management server requirements**  
   
@@ -117,16 +117,6 @@ Software requirements for this scenario include the following:
     > [!NOTE]  
     > We recommend that you create a security group for each domain that contains computers that will be configured as DirectAccess clients.  
   
-## <a name="BKMK_LINKS"></a>See also  
-The following table provides links to additional resources.  
-  
-|Content type|References|  
-|----------------|--------------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/en-us/network/bb530961.aspx)|  
-|**Product evaluation**|[Demonstrate DirectAccess in a cluster with NLB](http://technet.microsoft.com/en-us/library/hh831830.aspx)<br /><br />[Demonstrate a DirectAccess multisite deployment](http://technet.microsoft.com/en-us/library/hh831461.aspx)<br /><br />[Demonstrate a DirectAccess multisite deployment](http://technet.microsoft.com/en-us/library/hh831461.aspx)|  
-|**Deployment**|[Remote Access](http://technet.microsoft.com/en-us/library/hh831416.aspx)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|-   [RRAS Product Team blog](http://blogs.technet.com/RRAS/)<br />-   [DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](http://technet.microsoft.com/en-us/library/cc781672(v=WS.10).aspx)|  
+
   
 
