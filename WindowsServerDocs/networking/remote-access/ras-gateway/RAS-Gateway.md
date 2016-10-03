@@ -22,7 +22,7 @@ This topic, which is intended for Information Technology (IT) professionals, pro
 > In addition to this topic, the following RAS Gateway content is available.  
 >   
 > -   [RAS Gateway High Availability](../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
-> -   [GRE Tunneling in Windows Server 2016](../../remote-access/ras-gateway/gre-tunneling-windows-server.md)  
+> -   [GRE Tunneling in Windows Server Technical Preview](../../remote-access/ras-gateway/gre-tunneling-windows-server.md)  
   
 This topic contains the following sections.  
   

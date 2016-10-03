@@ -1,5 +1,5 @@
 ---
-title: Deploy a S2D SOFS for UPD storage in Azure
+title: Deploy a two-node S2D SOFS for UPD storage in Azure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,18 +10,18 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 09/28/2016
+ms.date: 09/20/2016
 manager: scottman
 ---
-# Deploy a Storage Spaces Direct scale-out file server for UPD storage in Azure
+# Deploy a two-node S2D SOFS for UPD storage in Azure
 
 >Applies To: Windows Server Technical Preview
 
-Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a highly available scale-out file server (SOFS) in Azure for UPDs, use Storage Spaces Direct (S2D) with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
+Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct (S2D) with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
 
-We recommend deploying your SOFS with DS-series VMs and premium storage data disks, where there are the same number and size of data disks on each VM. You will need a minimum of two storage accounts, plus a third storage account to act as the cloud witness. 
+We recommend deploying your SOFS with DS-series VMs and premium storage data disks, where there are the same number and size of data disks on each VM. You will need a minimum of two storage accounts. 
 
-For small deployments, we recommend a 2-node cluster with a cloud witness, where the volume is mirrored with 2 copies. Grow small deployments by adding data disks and increasing the size of the VMs as needed. Grow larger deployments by adding nodes (VMs). 
+For small deployments, we recommend a 2-node cluster with a cloud witness, where the volume is mirrored with 2 copies. Grow small deployments by adding data disks. Grow larger deployments by adding nodes (VMs). 
 
 These instructions are for a 2-node deployment. The following table shows the VM and disk sizes you'll need to store UPDs for the number of users in your business. 
 
@@ -37,27 +37,26 @@ These instructions are for a 2-node deployment. The following table shows the VM
 | 2500  | 12500      | DS4 | 13      | P30       | 1024           | 2x(DS4 + 13 P30) |
 | 5000  | 25000      | DS5 | 25      | P30       | 1024           | 2x(DS5 + 25 P30) | 
 
-Use the following steps to create a domain controller (we called ours "my-dc" below) and 2 node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node S2D SOFS.
+Use the following steps to create a domain controller (we called ours "my-dc" below) and two node VMs ("my-fsn1" and "my-fsn2") and configure the VMs to be a 2-node S2D SOFS.
 
 1. Create a [Microsoft Azure subscription](https://azure.microsoft.com).
 2. Sign into the [Azure portal](https://ms.portal.azure.com).
-3. Create two [Azure storage accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) in Azure Resource Manager. Create them in a new resource group and use the following configurations:
+3. Create an [Azure storage account](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) in Azure Resource Manager. Create it in a new resource group and use the  following configurations:
    - Deployment model: Resource Manager
    - Type of storage account: General purpose
    - Performance tier: Premium
    - Replication option: LRS
 4. Set up an Active Directory forest by doing one of the following: 
-   1.  Alternative 1: Deploy using an Azure Quickstart template:
+   1.  Deploy using an Azure quickstart template:
       - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/documentation/templates/active-directory-new-domain/)
-            -or-
       - [Create a new AD domain with 2 domain controllers](https://azure.microsoft.com/documentation/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
-   2. Alternative 2: Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
+   2. Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
       - Create the virtual network in the same resource group as the storage account.
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
       - Use an automatically generated VNet.
       - Follow the steps to install AD DS.
-   3. Alternative 3: Enable [Azure AD Domain Services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-ds-getting-started/):
-      Note that this only works on an ASM VNet, while the rest of the deployment described below requires a ARM VNet. In order to allow communication between the cluster nodes and the domain controller, you will need to deploy [VNet peering](https://azure.microsoft.com/documentation/articles/virtual-network-peering-overview/) (you can also use an [Azure Quickstart template to deploy VNet peering](https://azure.microsoft.com/documentation/templates/201-vnet-to-vnet-peering/)).
+   3. Enable [Azure AD Domain Services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-ds-getting-started/):
+      Note that this only works on a V1 VNet, while the rest of the deployment described below requires a V2 VNet. In order to allow communication between the cluster nodes and the domain controller, you will need to deploy [VNet peering](https://azure.microsoft.com/documentation/articles/virtual-network-peering-overview/) (you can also use a [quickstart template to deploy VNet peering](https://azure.microsoft.com/documentation/templates/201-vnet-to-vnet-peering/)).
 5. Set up the file server cluster nodes:
    1. Create the first node: 
       1. Create a new virtual machine using the Windows Server 2016 Technical Preview 5 image. (Click **New > Virtual Machines > Windows Server 2016 Technical Preview 5.** Select **Resource Manager**, and then click **Create**.)
@@ -67,11 +66,10 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
          - Use an existing resource group, the one that you created in step 3. 
       3. Size: DS1, DS2, DS3, DS4, or DS5 depending on your user needs (see table at beginning of these instructions). Ensure premium disk support is selected.
       4. Settings: 
-         - Storage account: Choose one of the storage accounts you created in step 3.
+         - Storage account: Choose the storage account you created in step 3.
          - High Availability - create a new availability set. (Click **High Availability > Create new**, and then enter a name (for example, s2d-cluster). Use the default values for **Update domains** and **Fault domains**.)
    2. Create the second node. Repeat the step above with the following changes:
       - Name: my-fsn2
-      - Storage account: Use the other storage account you created in step 3.
       - High Availability - select the availability set you created above.  
 6. [Attach data disks](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) to the cluster node VMs according to your user needs (as seen in the table above). Set **host caching** to **None**.
 7. Set IP addresses for all VMS to **static**. 
@@ -81,48 +79,40 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
 9. Create an [Azure storage account to be your cloud witness](https://blogs.msdn.microsoft.com/clustering/2014/11/13/introducing-cloud-witness/). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
 10. Set up the S2D file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
    1. Install Failover Clustering Feature and File Server Feature on the two file server cluster node VMs:
-
       ```powershell
       $nodes = ("my-fsn1", "my-fsn2")
       icm $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
       icm $nodes {Install-WindowsFeature FS-FileServer} 
       ```
    2. Validate cluster node VMs and create 2-node SOFS cluster:
-
       ```powershell
       Test-Cluster -node $nodes
       New-Cluster -Name MY-CL1 -Node $nodes –NoStorage –StaticAddress [new address within your addr space]
       ``` 
    3. Configure the cloud witness. Use your cloud witness storage account name and access key.
-
       ```powershell
       Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
       ```
    4. Enable Storage Spaces Direct.
-
       ```powershell
       Enable-ClusterS2D -CacheMode Disabled -AutoConfig:0 -SkipEligibilityChecks 
       ```
    5. Create a storage pool.
-
       ```powershell
       New-StoragePool -StorageSubSystemFriendlyName *Cluster* -FriendlyName S2D -ProvisioningTypeDefault Fixed -ResiliencySettingNameDefault Mirror -PhysicalDisk (Get-PhysicalDisk | ? CanPool -eq $true) 
       ```
    6. Create a virtual disk volume.
-
       ```powershell
       New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
       ```
       To view information about the cluster shared volume on the SOFS cluster, run the following cmdlet:
-
       ```powershell
       Get-ClusterSharedVolume
       ```
    7. Create a new SMB file share on the SOFS cluster.
-   
       ```powershell
       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
       ```
 
-You now have a share at \\my-sofs1\UpdStorage, which you can use for UPD storage when you [enable UPDs](http://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) in your RDS deployment. 
+You now have a share at \\my-sofs1\UpdStorage, which you can use for UPD storage when you [enable UPD](http://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) for your users. 

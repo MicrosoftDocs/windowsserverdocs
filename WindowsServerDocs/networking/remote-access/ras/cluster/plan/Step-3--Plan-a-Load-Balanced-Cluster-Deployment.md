@@ -43,7 +43,7 @@ Remote Access can be deployed on a single server, or on a cluster of Remote Acce
 ### <a name="ELBConfigEx"></a>3.1.1 External Load Balancer configuration example  
 This section describes the configuration steps for enabling an external load balancer on a new Remote Access deployment. When using an external load balancer, the Remote Access cluster may look like the figure below, where the Remote Access servers are connected to the corporate network through a load balancer on the internal network, and to the Internet through a load balancer connected to the external network:  
   
-![](../../../../media/Step-3--Plan-a-Load-Balanced-Cluster-Deployment/ELBDiagram-URA_Enterprise_NLB-.png)  
+![External Load Balancer configuration example](../../../../media/Step-3--Plan-a-Load-Balanced-Cluster-Deployment/ELBDiagram-URA_Enterprise_NLB-.png)  
   
 ##### Planning information  
   
