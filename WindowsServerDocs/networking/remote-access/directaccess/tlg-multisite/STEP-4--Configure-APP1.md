@@ -18,9 +18,9 @@ author: coreyp-at-msft
 
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.  
   
--   [To configure the default gateway and DNS server](assetId:///a0ee655e-c01e-4bf3-a7b3-064e9614f810#IPv6). The multisite configuration uses the ROUTER1 computer as a default gateway. Configure the default gateway on APP1.  
+- To configure the default gateway and DNS server. The multisite configuration uses the ROUTER1 computer as a default gateway. Configure the default gateway on APP1.  
   
-## <a name="IPv6"></a>To configure the default gateway and DNS server  
+## To configure the default gateway and DNS server  
   
 1.  In the Server Manager console, click **Local Server**, and then in the **Properties** area, next to **Wired Ethernet Connection**, click the link.  
   
