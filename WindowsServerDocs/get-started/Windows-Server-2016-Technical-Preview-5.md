@@ -70,7 +70,7 @@ Windows Server 2016 is available in Standard, Datacenter, and Essentials edition
 |Shielded Virtual Machines| yes| no|
 |Networking stack| yes| no|
 
-For more information, see [Pricing and licensing for Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server-pricing) and [Compare features in Windows Server versions](https://www.microsoft.com/cloud-platform/windows-server-comparison).
+For more information, see [Pricing and licensing for Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server-pricing) and [Compare features in Windows Server versions](https://www.microsoft.com/en-us/cloud-platform/windows-server-comparison).
 
 ## Installation options
 
