@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: a0e07d1a-8409-429b-87d7-0f4a7e14d668
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Step 3: Join computers to the new Windows Server Essentials server
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The next step in the migration process is to connect client computers to the new server running  Windows Server Essentials.  
   
 > [!NOTE]

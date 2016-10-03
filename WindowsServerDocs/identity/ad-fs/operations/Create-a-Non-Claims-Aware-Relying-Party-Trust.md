@@ -1,4 +1,5 @@
 ---
+ms.assetid: 7b7ae389-5032-44f7-9c0a-94398c3e4d88
 title: Create a Non-Claims Aware Relying Party Trust
 description:
 author: billmath

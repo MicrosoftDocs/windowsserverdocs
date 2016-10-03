@@ -11,11 +11,14 @@ ms.topic: article
 ms.assetid: 86f158a5-c807-4242-b73d-e97b604adb5f
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Use Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows 
+Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following topics provide information to help you get started using Windows Server Essentials:  
   
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)  

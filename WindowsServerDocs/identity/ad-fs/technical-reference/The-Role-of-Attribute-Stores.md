@@ -1,4 +1,5 @@
 ---
+ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: The Role of Attribute Stores
 description:
 author: billmath

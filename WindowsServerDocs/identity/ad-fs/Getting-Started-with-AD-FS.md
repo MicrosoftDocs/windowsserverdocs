@@ -1,4 +1,5 @@
 ---
+ms.assetid: 18da4313-a35e-43b9-bf26-2d2f9cf55465
 title: Getting Started with AD FS
 description:
 author: billmath

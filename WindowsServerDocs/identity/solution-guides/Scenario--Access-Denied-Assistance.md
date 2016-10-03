@@ -1,4 +1,5 @@
 ---
+ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
 title: Scenario Access-Denied Assistance
 description:
 author: billmath

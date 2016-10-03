@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 2e6ff6e4-8d68-4d49-9e38-8088bc8bf95e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Automate Installation of Add-Ins During Setup
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_AddIns"></a> Automate installing add-ins during setup  
  To install add-ins during setup, use the PostIC.cmd method described in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section of this document.  
   
@@ -54,8 +56,8 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   </Preinstall>  
   <UninstallConfirm>...</UninstallConfirm>      
 </Package>  
-<¦>  
-<¦>  
+<Â¦>  
+<Â¦>  
 ```  
   
  Wherein **exefile** is the executable file in the add-in package to perform the pre-install step, and must be specified. **NormalArgs** specifies arguments to be passed to exefile in command-line when interactive mode is used. In this mode, the exefile can popup some dialogs for user interaction. **SilentArgs** specifies arguments to be passed to exefile in command-line when silent mode is used (-q is specified when invoking installaddin.exe). The exefile should not popup any windows in this mode. If **IgnoreExitCode** is specified with true, the pre-install step is always considered successful, otherwise, exit code 0 indicates success, 1 indicates cancellation, and other values indicate failure. Tags **NormalArgs**, **SilentArgs**, and **IgnoreExitCode** are all optional.  
@@ -84,7 +86,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   <Location>...</Location>    
   <PrivacyStatement>...</PrivacyStatement>  
   <OtherBinaries>...</OtherBinaries>   
-  <Preinstall>¦</Preinstall>  
+  <Preinstall>Â¦</Preinstall>  
 <UninstallConfirm>  
 <Executable>full-path-to-exefile</Executable>  
 <Arguments>command-line-arguments</Arguments>  

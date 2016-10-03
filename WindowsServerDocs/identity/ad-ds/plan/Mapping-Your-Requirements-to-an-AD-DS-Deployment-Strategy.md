@@ -1,4 +1,5 @@
 ---
+ms.assetid: ce3be131-06ad-41dc-a26b-1168fa68c8ed
 title: Mapping Your Requirements to an AD DS Deployment Strategy
 description:
 author: billmath

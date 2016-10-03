@@ -1,4 +1,5 @@
 ---
+ms.assetid: 7b22adfa-298d-413c-88d0-1231825b7d4d
 title: Dynamic Access Control Scenario Overview
 description:
 author: billmath

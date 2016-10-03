@@ -11,13 +11,15 @@ ms.topic: article
 ms.assetid: 1836682e-c7bb-4dd5-a2b5-6ff032693574
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 
 
 # Manage Server Storage in Windows Server Essentials
- 
-  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+   
  Windows Server Essentials enables you to manage all your server storage (including hard drives and storage spaces) from the **Hard Drives** pages on the **Storage** tab of the Dashboard.  
   
  The following sections provide information that will help you increase your server storage, understand and use storage spaces, and manage your hard drives:  
@@ -113,7 +115,7 @@ ms.author: coreyp
   
 2.  Format the hard drive and set it up for server backup. If you choose this option, the Set Up Server Backup Wizard is launched, and it walks you through the server backup configuration.  
   
-3.  If a storage space doesn™t exist, use the new hard drive to create a storage space. You must have at least two hard drives to create a storage space.  
+3.  If a storage space doesn „¢t exist, use the new hard drive to create a storage space. You must have at least two hard drives to create a storage space.  
   
 4.  If a storage space already exists, use the new hard drive to increase the capacity of a storage pool. This option is only displayed if there is an existing storage space created on the server. If you choose this option, the wizard will add this hard drive to the storage pool.  
   
@@ -186,7 +188,7 @@ ms.author: coreyp
 5.  Follow the instructions to finish the wizard.  
   
 ##  <a name="BKMK_5"></a> Storage Spaces Overview  
- Storage Spaces lets you group disks together in a storage pool. You can then use pool capacity to create storage spaces. Storage spaces are virtual drives that appear on the **Hard Drives** tab of the Dashboard. You can use storage spaces like any other drive, so it™s easy to work with files on them. When you run low on pool capacity, you can create large storage spaces and add more drives to the storage pool. If you have two or more disks within the storage pool, you can create storage spaces with a two-way mirror that won't be affected by a drive failure”or even the failure of two drives”if you create a three-way mirror storage space.  
+ Storage Spaces lets you group disks together in a storage pool. You can then use pool capacity to create storage spaces. Storage spaces are virtual drives that appear on the **Hard Drives** tab of the Dashboard. You can use storage spaces like any other drive, so it „¢s easy to work with files on them. When you run low on pool capacity, you can create large storage spaces and add more drives to the storage pool. If you have two or more disks within the storage pool, you can create storage spaces with a two-way mirror that won't be affected by a drive failure ?or even the failure of two drives ?if you create a three-way mirror storage space.  
   
  To create a storage space, all you need is one or more extra drives in addition to the drive on which Windows is installed. These drives can be internal or external hard drives, or solid state drives. You can use a variety of types of drives with Storage Spaces, including USB, SATA, and SAS drives.  
   

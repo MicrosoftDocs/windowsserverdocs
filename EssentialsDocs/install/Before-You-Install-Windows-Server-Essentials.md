@@ -11,14 +11,16 @@ ms.topic: article
 ms.assetid: 8d0893bd-e2b7-4494-9537-02b1cbbcd57a
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Before You Install Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_BeforeYouBegin"></a> Before you begin your installation of  Windows Server Essentials, perform the following tasks:  
 
--   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md).   
+-   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by  Windows Server Essentials. For more information, see [System Requirements for Windows Server Essentials](../get-started/system-requirements.md).   
 
   
     > [!IMPORTANT]
@@ -33,7 +35,7 @@ ms.author: coreyp
   
         -   The UPnP framework is enabled on your router.  
   
-        -   The Dynamic Host Configuration Protocol (DHCP) Server service for the LAN can be enabled or disabled.  Windows Server Essentials ensures that DHCP is not running on both the server and the routerâ€? when DHCP is enabled on the router, DHCP is not enabled on the server during installation.  
+        -   The Dynamic Host Configuration Protocol (DHCP) Server service for the LAN can be enabled or disabled.  Windows Server Essentials ensures that DHCP is not running on both the server and the router ? when DHCP is enabled on the router, DHCP is not enabled on the server during installation.  
   
         -   You have an IP address for the external interface of your router, which is supplied by your Internet service provider (ISP). The IP address can be dynamically assigned by the DHCP Server service at your ISP, or you must manually configure a static IP address by using the router management console.  
   
@@ -49,7 +51,7 @@ ms.author: coreyp
     |Port 443|HTTPS Web traffic|  
   
 
--   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md).  
+-   **Read the  Windows Server Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring  Windows Server Essentials. To view or print release documentation, see [Release Documentation for Windows Server Essentials](../get-started/release-notes.md).  
   
 ## See also  
   

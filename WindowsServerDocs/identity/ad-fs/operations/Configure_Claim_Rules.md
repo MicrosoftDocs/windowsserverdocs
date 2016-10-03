@@ -1,4 +1,5 @@
 ---
+ms.assetid: 20d48afc-2623-43e9-8ed9-aeb9a0505630
 title: Configure Claims Rules
 description:
 author: billmath

@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Troubleshoot connecting computers to the server in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials 
   
  This topic contains troubleshooting guidance for issues that you might encounter when you connect a computer to the server that is running  Windows Server Essentials or  Windows Server Essentials.  
   
@@ -160,7 +160,7 @@ ms.author: coreyp
   
  This can happen if the date and time on the connected computer are not synchronized with the date and time on the server.  Windows Server Essentials and  Windows Server Essentials use the time synchronization service to synchronize the date and time of computers running in a  Windows Server Essentials or  Windows Server Essentials network. Synchronized time is critical because the default authentication protocol uses server time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time,  Windows Server Essentials or  Windows Server Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
   
- This can happen if the serverâ„¢s free memory is less than 5 percent.  
+ This can happen if the server „¢s free memory is less than 5 percent.  
   
  This can happen if you already have a VPN connection to the Windows Essentials Server and you try to configure the Connector software off-premise by using a domain address.  
   

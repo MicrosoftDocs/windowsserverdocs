@@ -11,13 +11,13 @@ ms.topic: article
 ms.assetid: 27bf6f24-30c4-4935-9b24-069eb43e22f4
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Restore or repair your server running Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
  
-  
  This topic provides an overview and supporting procedures for restoring or repairing a server running  Windows Server Essentials, and includes the following sections:  
   
 -   [Overview of server system restores](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Overview)  
@@ -48,7 +48,7 @@ ms.author: coreyp
 ###  <a name="BKMK_RestoreFromBackup"></a> Restoring the server from a backup  
  This section provides guidance on what type of backup to choose.  
   
- If a backup is available, your best choice for restoring your server is to use the manufacturer™s installation media to restore from an external backup. The restoration will recover server settings and folders from the backup that you choose. You only need to configure settings and restore data created after the backup.  
+ If a backup is available, your best choice for restoring your server is to use the manufacturer „¢s installation media to restore from an external backup. The restoration will recover server settings and folders from the backup that you choose. You only need to configure settings and restore data created after the backup.  
   
  When you choose to recover your server by restoring from a previous backup, you must choose the specific backup that you want restored, and you must have a valid backup file on an external hard drive that is directly connected to the server:  
   
@@ -78,7 +78,7 @@ ms.author: coreyp
 -   If you choose to keep all your data, all data on the system volume is deleted, but the data on other volumes is retained.  
   
     > [!CAUTION]
-    >  If the disk settings do not match the default settings, all data on a disk will be deleted. If you replaced the system disk, the new disk must be larger than the original disk™s system volume.  
+    >  If the disk settings do not match the default settings, all data on a disk will be deleted. If you replaced the system disk, the new disk must be larger than the original disk „¢s system volume.  
     >   
     >  If the partition information for a system drive is unreadable, or if you replace the system drive, all data on the system drive will be removed, even if you choose to keep all your data.  
   
@@ -130,7 +130,7 @@ ms.author: coreyp
   
 4.  On the **Choose an option** page, click **Troubleshoot**.  
   
-5.  On the **System Image Recovery** page, select the current system”either **Windows Server Essentials** or **Windows Server Essentials**.  
+5.  On the **System Image Recovery** page, select the current system ?either **Windows Server Essentials** or **Windows Server Essentials**.  
   
      The Re-image Your Computer Wizard opens.  
   
@@ -212,7 +212,7 @@ ms.author: coreyp
 >  For more information about backing up and restoring files and folders, see [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_ConfigreSharedFolders"></a> Restore shared folders on the server  
- After you restore the server™s system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
+ After you restore the server „¢s system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
   
 ##### To add an existing folder to the server shared folders  
   

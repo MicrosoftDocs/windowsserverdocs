@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 1b1a2040-4cfd-48bf-8d04-3ffde9c26b9b
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Testing the Customer Experience
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 To verify the experience of the customer and check your partner customizations, run through Initial Configuration of a target computer. It is recommended that you complete the Initial Configuration at least one time manually to walk through the customer experience. If you cobranded the Dashboard you must complete Initial Configuration to verify the branding. If you cobranded the Remote Web Access site, you must access http://<servername\> to verify the branding (<servername\> is the name of the server). You can use the Initial Configuration section of the cfg.ini file to automate testing of the customer experience. For more information about creating this section in the cfg.ini file see [Create the Cfg.ini File](Create-the-Cfg.ini-File.md).  
   
 > [!IMPORTANT]

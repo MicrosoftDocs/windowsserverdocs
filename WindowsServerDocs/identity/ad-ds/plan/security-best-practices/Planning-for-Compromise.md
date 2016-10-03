@@ -1,4 +1,5 @@
 ---
+ms.assetid: 6f50476c-a1f1-48fb-999b-76c4c3816496
 title: Planning for Compromise
 description:
 author: billmath

@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: d3642575-b3ee-4488-b654-5bf9d3b8c935
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
-
-
 
 # Troubleshoot Remote Web Access connectivity in Windows Server Essentials
  
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  Typically, Windows Server Essentials can automatically configure a broadband router if the router is a UPnP certified device and if the UPnP setting is enabled on the router.  
   
@@ -48,7 +48,7 @@ ms.author: coreyp
   
          Before you manually configure the router to forward the required ports to Windows Server Essentials, you must set up a Dynamic Host Configuration Protocol (DHCP) reservation for your server that is running Windows Server Essentials on the router. This step guarantees that the IP address that you will be forwarding the ports to do not change.  
   
-         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer™s documentation for your router.  
+         For information about how to manually set up a DHCP reservation for your server on your router, see the manufacturer „¢s documentation for your router.  
   
     -   Configure port forwarding on your router for the following ports:  
   
@@ -57,7 +57,7 @@ ms.author: coreyp
         |HTTP|TCP 80|  
         |HTTPS|TCP 443|  
   
-     For information about how to manually set up port forwarding on your router, see the manufacturer™s documentation.  
+     For information about how to manually set up port forwarding on your router, see the manufacturer „¢s documentation.  
   
      A typical router configuration page includes a table that resembles the following.  
   

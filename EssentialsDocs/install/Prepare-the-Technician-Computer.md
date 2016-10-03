@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 8841c3aa-7aaa-4cc0-b1e1-ab0643f29586
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Prepare the Technician Computer
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The technician computer contains the tools and documentation in the Windows Assessment and Deployment Kit (ADK), and it is where you customize the image of the operating system that you intend to deploy. Complete the following to prepare the technician computer.  
   
 -   Prepare a computer with the Windows 7, Windows 8 or Windows 10.  

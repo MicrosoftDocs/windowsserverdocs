@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 51d94b67-8b9b-4159-80dd-f652d73a43cb
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
-
-
 
 # Troubleshoot your firewall in Windows Server Essentials
  
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  If you experience problems with remote access, run the Repair Anywhere Access Wizard.  
   

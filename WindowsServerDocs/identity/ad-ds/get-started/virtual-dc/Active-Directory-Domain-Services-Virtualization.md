@@ -1,4 +1,5 @@
 ---
+ms.assetid: 2f536fb8-16e5-471d-bafc-21b96197efb8
 title: Active Directory Domain Services Virtualization
 description:
 author: billmath

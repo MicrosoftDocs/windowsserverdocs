@@ -1,4 +1,5 @@
 ---
+ms.assetid: 198da604-9d18-4801-b805-39a9c624ee1a
 title: Replication error 1256 The remote system is not available
 description:
 author: billmath

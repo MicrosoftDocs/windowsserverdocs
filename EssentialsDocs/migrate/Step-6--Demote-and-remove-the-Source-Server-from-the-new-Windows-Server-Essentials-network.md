@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Step 6: Demote and remove the Source Server from the new Windows Server Essentials network
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 After you finish installing  Windows Server Essentials and you complete the migration, you must perform the following tasks:  
   
 1.  [Remove Active Directory Certificate Services](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_ADCS)  

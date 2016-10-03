@@ -4,7 +4,7 @@ ms.technology: compute-hyper-v
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 author: KBDAzure
@@ -13,17 +13,15 @@ ms.date: 8/16/2016
 ---
 # Set up Hyper-V Replica
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-**This is preliminary content and subject to change.**  
-
-Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available.  Hyper-V Replica creates a copy of a live virtual machine  to a replica offline virtual machine.  Note the following:  
+Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available.  Hyper-V Replica creates a copy of a live virtual machine  to a replica offline virtual machine. Note the following:  
 
 -   **Hyper-V hosts**: Primary and secondary host servers can be physically co-located or in separate geographical locations with replication over a WAN link. Hyper-V hosts can be  standalone, clustered, or a mixture of both. There's no Active Directory dependency between the servers and they don't need to be domain members.  
 
--   **Replication and change tracking**: When you enable Hyper-V Replica for a specific virtual machine initial replication is performed to create an identical replica virtual machine on a secondary host server. After initial replication Hyper-V Replica change tracking creates and maintains a log file that captures changes on a  virtual machine VHD. The log file is played in reverse order to the replica VHD in accordance with  replication frequency settings. This means that the latest changes are stored and replicated asynchronously. Replication can be over HTTP or HTTPS.  
+-   **Replication and change tracking**: When you enable Hyper-V Replica for a specific virtual machine, initial replication creates an identical replica virtual machine on a secondary host server. After that happens, Hyper-V Replica change tracking creates and maintains a log file that captures changes on a virtual machine VHD. The log file is played in reverse order to the replica VHD based on replication frequency settings. This means that the latest changes are stored and replicated asynchronously. Replication can be over HTTP or HTTPS.  
 
--   **Extended (chained) replication**: Hyper-V Replica supports extended replication which allows you to replicate a virtual machine from a primary host to a secondary host, and then again replicate the secondary host to a third host. Note that you can't replicate from the primary host directly to the second and the third.  
+-   **Extended (chained) replication**: This lets you replicate a virtual machine from a primary host to a secondary host, and then replicate the secondary host to a third host. Note that you can't replicate from the primary host directly to the second and the third.  
 
     This feature makes Hyper-V Replica more robust for disaster recovery because if an outage occurs you can recover from both the primary and extended replica.  You can fail over to the extended replica if your primary and secondary locations go down. Note that the extended replica doesn't support application-consistent replication and must use the same VHDs that the secondary replica is using.  
 
@@ -110,13 +108,13 @@ Do the following on each virtual machine you want to replicate:
 
 9. On the **Completing the Enable Replication** page, review the information in the Summary and then click **Finish.**. The virtual machine data will be transferred in accordance with your chosen settings. and a dialog box appears indicating that replication was successfully enabled.  
 
-10. If you want to configure extended (chained) replication open the replica server, and right-click on the virtual machine you want to replicate. Click **Replication** > **Extend Replication** and specify the replication settings.  
+10. If you want to configure extended (chained) replication, open the replica server, and right-click the virtual machine you want to replicate. Click **Replication** > **Extend Replication** and specify the replication settings.  
 
 ## Run a failover  
 After completing these deployment steps your replicated environment is up and running. Now you can run failovers as needed.  
 
 **Test failover**:  If you want to run a test failover right-click the primary virtual machine and select **Replication** > **Test Failover**. Pick the latest or other recovery point if configured. A new test virtual machine will be created and started on the secondary site. After you've finished testing, select  **Stop Test Failover** on the replica virtual machine to clean up it up. Note that for a virtual machine you can only run on test failover at a time. [Read more](http://blogs.technet.com/b/virtualization/archive/2012/07/26/types-of-failover-operations-in-hyper-v-replica.aspx).  
 
-**Planned failover**: To run a planned failover right-click the primary virtual machine and select **Replication** > **Planned Failover**. Planned failover performs prerequisites checks to ensure zero data loss. It checks that the primary virtual machine is shut down before beginning the failover. After the virtual machine is failed over, it starts replicating the changes back to the primary site when it's available. Note that for this to work the  primary server should be configured to recive replication from the secondary server or from the Hyper-V Replica Broker in the case of a primary cluster. Planned failover sends the last set of tracked changes.  [Read more](http://blogs.technet.com/b/virtualization/archive/2012/07/31/types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover.aspx).  
+**Planned failover**: To run a planned failover right-click the primary virtual machine and select **Replication** > **Planned Failover**. Planned failover performs prerequisites checks to ensure zero data loss. It checks that the primary virtual machine is shut down before beginning the failover. After the virtual machine is failed over, it starts replicating the changes back to the primary site when it's available. Note that for this to work the  primary server should be configured to recive replication from the secondary server or from the Hyper-V Replica Broker in the case of a primary cluster. Planned failover sends the last set of tracked changes. [Read more](http://blogs.technet.com/b/virtualization/archive/2012/07/31/types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover.aspx).  
 
-**Unplanned failover**: To run an unplanned failover right-click on the replica virtual machine and select **Replication** > **Unplanned Failover** from Hyper-V Manager or Failover Clustering Manager. You can recover from the latest recovery point or from previous recovery points if this option is enabled. After failover check everything's working as expected on the failed over virtual machine and then click Complete on the replica virtual machine to finish up the failover. [Read more](http://blogs.technet.com/b/virtualization/archive/2012/08/08/types-of-failover-operations-in-hyper-v-replica-part-iii-unplanned-failover.aspx).  
+**Unplanned failover**: To run an unplanned failover, right-click on the replica virtual machine and select **Replication** > **Unplanned Failover** from Hyper-V Manager or Failover Clustering Manager. You can recover from the latest recovery point or from previous recovery points if this option is enabled. After failover, check that everything is working as expected on the failed over virtual machine, then click **Complete** on the replica virtual machine. [Read more](http://blogs.technet.com/b/virtualization/archive/2012/08/08/types-of-failover-operations-in-hyper-v-replica-part-iii-unplanned-failover.aspx).  

@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 95a9f593-fad7-4335-bd4d-c7bb8c033efb
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
-
-
 
 # Manage Online Backup in Windows Server Essentials
 
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  After you integrate with  Microsoft Azure Backup, the **Online Backup** management page appears in the Windows Server Essentials Dashboard. The **Online Backup** page makes it possible to perform common administrative tasks. The features on the Online Backup page include:  
   
@@ -66,7 +66,7 @@ ms.author: coreyp
   
 3.  In the **ONLINE BACKUP** area, click **Upload certificate to Azure Backup vault**.  
   
-     That opens **Recovery Services** in the  Azure Management Portal. If you arenâ„¢t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
+     That opens **Recovery Services** in the  Azure Management Portal. If you aren „¢t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
   
 4.  Click the name of the backup vault you'll use for online backups to open the **Quick Start** page for the backup vault.  
   
@@ -371,7 +371,7 @@ ms.author: coreyp
   
      If you already have an  Azure subscription, click **Portal** in the upper-right corner of the web page to go to the  Azure Management Portal.  
   
-5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. Thatâ„¢s where youâ„¢ll manage the backup vaults that store your online backups from Windows Server Essentials.  
+5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That „¢s where you „¢ll manage the backup vaults that store your online backups from Windows Server Essentials.  
   
 ####  <a name="BKMK_Createabackupvaulttostoreonlinebackups"></a> Create a backup vault to store online backups  
   
@@ -441,7 +441,7 @@ ms.author: coreyp
 |------------|-----------------|  
 |**Folder Name:**|The name of the folder that is included in the online backup.<br /><br /> To add or exclude a folder, run the **Configure online backup** task.|  
 |**Folder Path:**|The location of the folder.|  
-|**Status:**|There are three types of status â€œ **Protected**, **Not protected**, and **Unknown**.|  
+|**Status:**|There are three types of status  œ **Protected**, **Not protected**, and **Unknown**.|  
   
 ###  <a name="BKMK_19"></a> Online backup history in Windows Server Essentials  
  The **Backup History** sub-section in the Online Backup section of the Dashboard displays a list of recent online backups. You can use successful backups to restore file and folders. The following table describes the information that is included in the list.  
@@ -450,7 +450,7 @@ ms.author: coreyp
 |------------|-----------------|  
 |**Operation:**|There are two types of operations - **Backup** and **Restore**.|  
 |**Time:**|This is the time logged for the most recent status.|  
-|**Status:**|There are five types of status â€œ **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
+|**Status:**|There are five types of status  œ **Success**, **In progress**, **Canceled**, **Warning**, and **Unsuccessful**.|  
   
 ## See also  
   

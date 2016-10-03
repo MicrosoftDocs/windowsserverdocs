@@ -1,4 +1,5 @@
 ---
+ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema Updates
 description:
 author: billmath

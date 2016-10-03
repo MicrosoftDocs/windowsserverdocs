@@ -1,4 +1,5 @@
 ---
+ms.assetid: ffb9d63c-ba7c-4ad1-b814-6db67f98c943
 title: The Role of the Claims Pipeline
 description:
 author: billmath

@@ -7,7 +7,7 @@ ms.suite: na
 ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: jamesmci
 author: jamesmci
 ---

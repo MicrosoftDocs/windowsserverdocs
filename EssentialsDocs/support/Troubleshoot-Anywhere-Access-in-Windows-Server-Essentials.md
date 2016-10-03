@@ -11,12 +11,14 @@ ms.topic: article
 ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Troubleshoot Anywhere Access in Windows Server Essentials
-This topic provides general instructions for using the Repair Anywhere Access wizard in  Windows Server Essentials to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities “ Remote Web Access, virtual private network (VPN), and DirectAccess “ enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+This topic provides general instructions for using the Repair Anywhere Access wizard in  Windows Server Essentials to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities  œ Remote Web Access, virtual private network (VPN), and DirectAccess  œ enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
   
  The Repair Anywhere Access wizard attempts to identify and repair issues with your router, domain name, or firewall that are preventing network users from remotely accessing server resources.  
   

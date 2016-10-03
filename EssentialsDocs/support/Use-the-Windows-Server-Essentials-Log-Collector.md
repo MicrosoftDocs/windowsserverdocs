@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Use the Windows Server Essentials Log Collector
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 When you are troubleshooting computer issues, a representative from Microsoft Customer Service and Support may ask you to gather logs from servers, computers on the network, or both by using the  Windows Server Essentials Log Collector.  
   
  The Log Collector copies program logs, event reviewer logs, and related environment information into a single zip file at a specified location. You can run the Log Collector directly from the server or any computer on the network, or by using a remote connection to the computers.  

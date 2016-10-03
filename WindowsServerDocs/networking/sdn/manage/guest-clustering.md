@@ -7,7 +7,7 @@ ms.suite: na
 ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
 author: jamesmci
 ---

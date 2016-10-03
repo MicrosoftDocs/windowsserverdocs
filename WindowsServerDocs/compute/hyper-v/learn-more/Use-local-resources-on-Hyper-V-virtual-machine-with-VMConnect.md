@@ -8,9 +8,9 @@ ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 9/01/2016
+author: KBDAzure
+ms.author: kathyDav
+ms.date: 9/30/2016
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
@@ -29,23 +29,23 @@ To turn on enhanced session mode,
   
 2.  In Hyper-V Manager, select the host's computer name.  
   
-    ![](media/Hyper-V-HyperVManager-HostNameSelected.png)  
+    ![Screenshot that shows a host computer name listed under Hyper-V Manager in the left pane.](media/Hyper-V-HyperVManager-HostNameSelected.png)  
   
 3.  Select **Hyper-V settings**.  
   
-    ![](media/HyperV-ActionsHyperVSettings.png)  
+    ![Screenshot that shows the Hyper-V settings option under Actions in the right pane.](media/HyperV-ActionsHyperVSettings.png)  
   
 4.  Under **Server**, select **Enhanced session mode policy**.  
   
-    ![](media/Hyper-V-Settings-ServerEnhancedSessionModePolicy.png)  
+    ![Screenshot that shows the Enhanced session mode policy option under the Security section.](media/Hyper-V-Settings-ServerEnhancedSessionModePolicy.png)  
   
 5.  Select the **Allow enhanced session mode** check box.  
   
-    ![](media/Hyper-V-Settings-EnhancedSessionModePolicyCheckBox.png)  
+    ![Screenshot that shows the Allow enhanced session mode checkbox for Enhanced session mode policy.](media/Hyper-V-Settings-EnhancedSessionModePolicyCheckBox.png)  
   
 6.  Under **User**, select **Enhanced session mode**.  
   
-    ![](media/Hyper-V-Settings-UserEnhancedSessionMode.png)  
+    ![Screenshot that shows the Enhanced session mode option under the User section. ](media/Hyper-V-Settings-UserEnhancedSessionMode.png)  
   
 7.  Select the **Allow enhanced session mode** check box.  
   
@@ -62,23 +62,23 @@ To select a local resource like a drive,
   
 3.  Click **Show options**.  
   
-    ![](media/HyperV-VMConnect-DisplayConfig.png)  
+    ![Screenshot that calls out Show options on the bottom left of the dialog box.](media/HyperV-VMConnect-DisplayConfig.png)  
   
 4.  Select **Local resources**.  
   
-    ![](media/HyperV-VMConnect-DisplayConfig-LocalResources.png)  
+    ![Screenshot that calls out the Local resources tab.](media/HyperV-VMConnect-DisplayConfig-LocalResources.png)  
   
 5.  Click **More**.  
   
-    ![](media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)  
+    ![Screenshot that calls out the More button.](media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)  
   
 6.  Select the drive that you want to use on the virtual machine and click **Ok**.  
   
-    ![](media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)  
+    ![Screenshot that shows the local resources and drives that you can select.](media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)  
   
 7.  Select **Save my settings for future connections to this virtual machine**.  
   
-    ![](media/HyperV-VMConnect-SaveSettings.png)  
+    ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)  
   
 8.  Click **Connect**.  
   

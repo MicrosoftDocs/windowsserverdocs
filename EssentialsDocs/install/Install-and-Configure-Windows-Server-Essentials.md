@@ -11,20 +11,18 @@ ms.topic: article
 ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Install and Configure Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_InstallConfigure"></a>   
 
  This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md).  
 
  This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](../install/Before-You-Install-Windows-Server-Essentials.md).  
-
-  
-> [!NOTE]
->  Are you looking for information about installing Windows Server 2012? If so, go to [Installing Windows Server 2012](assetId:///ddf71ebb-fc52-4ecb-aa88-109167c5f1c8) in the Windows Server TechNet Library.  
   
  You install and configure  Windows Server Essentials in two steps:  
   
@@ -163,21 +161,18 @@ ms.author: coreyp
   
  The following table defines items that can appear in the list of setup tasks.  
   
-|Task|Description|  
+|Task|Description
 |----------|-----------------|  
-|Get updates for other Microsoft products|Click this task to access a link that runs a tool that allows you to specify if you want to use Microsoft Update to automatically obtain updates for  Windows Server Essentials and other Microsoft products such as Office.|  
-|Add user accounts|Click this task to view brief information about adding user accounts. A link to run the **Add a User Account Wizard** is provided. For more information, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).|  
-|Add server folders|Click this task to view brief information about adding server folders. A link to run the **Add a Folder Wizard** is provided. Also provided is a link to an online help topic about using Server Folders. For more information, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).|  
-|Set up Server Backup|Click this task to view brief information about using Server Backup to protect your data. A link to run the **Set Up Server Backup Wizard** is provided. For more information, see [Set up or customize server backup](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1).|  
-|Set up Anywhere Access|Click this task to view brief information about the Anywhere Access feature in  Windows Server Essentials. A link to the **Anywhere Access Settings** page is provided. For more information, see [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).|  
-|Set up email alert notification|Click this task to view brief information about email alert notification. A link to run the **Set up email notification for alerts** tool is provided. For more information, see [Set up email notifications for alerts](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email).|  
-|Set up Media Server|Click this task to view brief information about using Media Server to share music, video, and image files. A link to the  **Media Settings** page is provided. Also provided is a link to an online help topic to learn more about Media Server. For more information, see [Manage Digital Media](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md).|  
-|Connect computers|Click this task to view brief information about how to connect a network computer to the server. For more information, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).|  
+|Get updates for other Microsoft products|Click this task to access a link that runs a tool that allows you to specify if you want to use Microsoft Update to automatically obtain updates for  Windows Server Essentials and other Microsoft products such as Office.  
+|Add user accounts|Click this task to view brief information about adding user accounts. A link to run the **Add a User Account Wizard** is provided. For more information, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).  
+|Add server folders|Click this task to view brief information about adding server folders. A link to run the **Add a Folder Wizard** is provided. Also provided is a link to an online help topic about using Server Folders. For more information, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5). 
+|Set up Server Backup|Click this task to view brief information about using Server Backup to protect your data. A link to run the **Set Up Server Backup Wizard** is provided. For more information, see [Set up or customize server backup](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1). 
+|Set up Anywhere Access|Click this task to view brief information about the Anywhere Access feature in  Windows Server Essentials. A link to the **Anywhere Access Settings** page is provided. For more information, see [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md). 
+|Set up email alert notification|Click this task to view brief information about email alert notification. A link to run the **Set up email notification for alerts** tool is provided. For more information, see [Set up email notifications for alerts](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email).  
+|Set up Media Server|Click this task to view brief information about using Media Server to share music, video, and image files. A link to the  **Media Settings** page is provided. Also provided is a link to an online help topic to learn more about Media Server. For more information, see [Manage Digital Media](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md). 
+|Connect computers|Click this task to view brief information about how to connect a network computer to the server. For more information, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).
   
 ## See also  
   
-
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
-
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
 

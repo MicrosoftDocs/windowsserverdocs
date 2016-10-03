@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 19b2559c-6090-45af-9a08-2eefc28473c8
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Customize Server Backup
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ## Turn off Server Backup by Default  
  You can choose to turn off Server Backup by default. You need to set the value of **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Server\ServerBackup\ProviderDisabled** to 1 in order to enable this option.  
   

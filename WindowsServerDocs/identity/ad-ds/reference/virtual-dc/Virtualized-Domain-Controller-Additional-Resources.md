@@ -1,4 +1,5 @@
 ---
+ms.assetid: 47a7cede-f94a-4233-872b-fa65a5b9d8f1
 title: Virtualized Domain Controller Additional Resources
 description:
 author: billmath

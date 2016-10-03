@@ -1,5 +1,6 @@
 
 ---
+ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 title: Multi-factor authentication and external authentication providers customization 
 description:
 author: billmath

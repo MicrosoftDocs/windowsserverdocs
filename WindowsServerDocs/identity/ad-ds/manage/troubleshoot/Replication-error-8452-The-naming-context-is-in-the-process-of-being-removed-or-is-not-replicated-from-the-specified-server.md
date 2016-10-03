@@ -1,4 +1,5 @@
 ---
+ms.assetid: 92a9eeb6-2ed8-424e-9e81-2c00cf300ded
 title: Replication error 8452 The naming context is in the process of being removed or is not replicated from the specified server
 description:
 author: billmath

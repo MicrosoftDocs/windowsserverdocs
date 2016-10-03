@@ -1,4 +1,5 @@
 ---
+ms.assetid: 8738c03d-6ae8-49a7-8b0c-bef7eab81057
 title: Deploy a Central Access Policy (Demonstration Steps)
 description:
 author: billmath
