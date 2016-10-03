@@ -29,7 +29,7 @@ manager: dongill
     <td style='width:25%'>
     ![alt text](3compute.png "Windows Server Compute")<br/><br/>
     [Compute](../compute/Compute.md)</td>
-    <td style='width:25%'>![Failover clustering](cluster-server.png "Failover clustering")[Failover clustering](../failover-clustering/failover-clustering-overview.md)
+    <td style='width:25%'>![Failover clustering](cluster-server.png "Failover clustering")<br/><br/>[Failover clustering](../failover-clustering/failover-clustering-overview.md)
     </td>
     <td style='width:25%'>
     ![alt text](4identity-and-access.png "Windows Server Identity and Access")<br/><br/>
