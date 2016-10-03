@@ -14,7 +14,7 @@ ms.assetid: e63110ed-41ce-458d-97a1-cd84cdad7749
 author: lizap
 manager: dongill
 ---
-# Welcome to Networking in Windows Server 2016 
+# Networking in Windows Server 2016 
 
 <img src="6networking.png" style='align:left'> Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 Technical Preview provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization.
 
