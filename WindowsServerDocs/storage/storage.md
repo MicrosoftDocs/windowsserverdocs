@@ -3,19 +3,19 @@ title: Storage overview
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
-author: kumudd
+author: JasonGerend
 manager: dongill
-ms.author: kumud
-ms.date: 10/3/2016
+ms.author: jgerend
+ms.date: 10/4/2016
 ---
 # Storage in Windows Server 2016
 >Applies To: Windows Server 2016
 
-![](media\storage\6storage.png)Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.
+![Icon representing a drive](media\storage\6storage.png) Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
 
-For info on what's new, see [What's new in storage](whats-new-in-storage) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
-Below is a listing of storage technologies, categorized roughly by workload.
+For an overview of storage technologies included in Windows Server, see the following list (categorized by workload).
 
 ## Software-defined storage for virtualized workloads
 
@@ -76,9 +76,9 @@ Storage reports are used to help you identify trends in disk usage and how your 
 
 iSCSI Target Server provides block storage to other servers and applications on the network by using the Internet SCSI (iSCSI) standard.
 
-### [iSCSI Target Boot](https://technet.microsoft.com/library/hh848273(v=ws.11).aspx)
+### [iSCSI Target Boot](iscsi/iscsi-boot-overview.md)
 
-iSCSI Target Server in Windows Server 2012 can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.
+iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.
 
 ## File systems, protocols, etc.
 
@@ -89,6 +89,10 @@ ReFS is a resilient file system that maximizes data availability, scales efficie
 ### [SMB](https://technet.microsoft.com/library/hh831795(v=ws.11).aspx)
 
 The Server Message Block (SMB) protocol is a network file sharing protocol that allows applications on a computer to read and write to files and to request services from server programs in a computer network. The SMB protocol can be used on top of its TCP/IP protocol or other network protocols. Using the SMB protocol, an application (or the user of an application) can access files or other resources at a remote server. This allows applications to read, create, and update files on the remote server. It can also communicate with any server program that is set up to receive an SMB client request.
+
+### [Storage-class memory](storage-spaces/Storage-class-memory-health.md)
+
+Storage-class memory such as NVDIMM-N devices provide performance similar to computer memory (really fast), but with the data persistence of normal storage drives. Windows treats storage-class memory similary to normal drives (just faster), but there are some differences in the way device health is managed.
 
 ### [BitLocker](https://technet.microsoft.com/library/cc766295(v=ws.10).aspx)
 
@@ -103,7 +107,8 @@ NTFS—the primary file system for recent versions of Windows and Windows Server
 Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that consist of both Windows and non-Windows computers.
 
 ## See also
-* [What's new in storage](whats-new-in-storage)
+* [PowerShell cmdlets in Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx)
+* [What's new in storage](whats-new-in-storage.md)
 * [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
 * [Azure Storage](https://azure.microsoft.com/en-us/documentation/services/storage/)
 * [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
