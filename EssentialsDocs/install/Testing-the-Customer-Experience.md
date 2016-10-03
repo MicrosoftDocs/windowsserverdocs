@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 1b1a2040-4cfd-48bf-8d04-3ffde9c26b9b
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Testing the Customer Experience

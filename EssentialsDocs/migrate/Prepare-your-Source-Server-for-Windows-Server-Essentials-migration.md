@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Prepare your Source Server for Windows Server Essentials migration1
@@ -202,10 +203,3 @@ Complete the following preliminary steps to ensure that the settings and data on
 > [!NOTE]
 >  If you used the Windows Small Business Server 2011 Essentials SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server Essentials, you must also update the add-in and deploy it on the Destination Server.  
   
- You can fill in the following table as you collect LOB application information. A good place to start collecting information is to open Windows Control Panel, click **Add/Remove Programs**, and look in the **Program Files (x86)** and the **Program Files** folders.  
-  
-|Application or general data folder name|Path to data|Notes|  
-|---------------------------------------------|------------------|-----------|  
-||||  
-||||  
-||||

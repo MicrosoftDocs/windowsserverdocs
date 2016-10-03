@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 7e50886e-08b8-4c97-95cf-456ba3800ebf
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Microsoft Online Services in Windows Server Essentials

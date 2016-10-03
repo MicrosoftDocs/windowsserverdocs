@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # System Requirements for Windows Server Essentials

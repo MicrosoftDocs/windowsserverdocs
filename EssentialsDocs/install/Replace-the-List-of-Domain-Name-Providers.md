@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 104d0412-2d77-4cd4-99f7-65a885522850
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Replace the List of Domain Name Providers

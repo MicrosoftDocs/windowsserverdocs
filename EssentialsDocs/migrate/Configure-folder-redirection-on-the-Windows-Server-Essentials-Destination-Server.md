@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: fe77ba67-128c-4fc3-9361-30fa6af42516
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Configure folder redirection on the Windows Server Essentials Destination Server

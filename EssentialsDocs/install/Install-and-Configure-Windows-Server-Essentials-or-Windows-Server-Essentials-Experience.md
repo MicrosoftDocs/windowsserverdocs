@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Install and Configure Windows Server Essentials or Windows Server Essentials Experience
@@ -19,16 +20,16 @@ ms.author: coreyp
 
  Windows Server Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
   
-  Windows Server Essentials Experience, the new server role in  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter, enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in  Windows Server Essentials without the locks and limits that are enforced in  Windows Server Essentials. This server role is also available in  Windows Server Essentials and is enabled by default. For more information about this server role, see the [Windows Server Essentials Experience Overview &#91;fwlink_blue&#93;](assetId:///958ecbde-ba6f-4789-88da-58542b8b1faf).  
+  Windows Server Essentials Experience, the new server role in  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter, enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in  Windows Server Essentials without the locks and limits that are enforced in  Windows Server Essentials. This server role is also available in  Windows Server Essentials and is enabled by default.
   
  The  Windows Server Essentials Experience role in  Windows Server Essentials or  Windows Server 2012 R2 has the following limitations.  
   
-|Windows Server Essentials Experience in Windows Server Essentials|Windows Server Essentials Experience in Windows Server 2012 R2 Standard or Datacenter|  
-|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|  
-|- Must be the domain controller at the root of the forest and domain, and must hold all the FSMO roles.<br /><br /> - Cannot be installed in an environment with a pre-existing Active Directory domain (however, there is a grace period of 21 days for performing migrations).|- Does not have to be a domain controller if it is installed in an environment with a pre-existing Active Directory domain.<br /><br /> - If an Active Directory domain does not exist, installing the role will create an Active Directory domain, and the server will become the domain controller at the root of the forest and domain, holding all the FSMO roles.|  
-|Can only be deployed into a single domain.|Can only be deployed into a single domain.|  
-|A read-only domain controller cannot exist in your domain.|A read-only domain controller cannot exist in your domain.|  
-  
+|Windows Server Essentials Experience in Windows Server Essentials|Windows Server Essentials Experience in Windows Server 2012 R2 Standard or Datacenter 
+|
+|- Must be the domain controller at the root of the forest and domain, and must hold all the FSMO roles.<br /><br /> - Cannot be installed in an environment with a pre-existing Active Directory domain (however, there is a grace period of 21 days for performing migrations).|- Does not have to be a domain controller if it is installed in an environment with a pre-existing Active Directory domain.<br /><br /> - If an Active Directory domain does not exist, installing the role will create an Active Directory domain, and the server will become the domain controller at the root of the forest and domain, holding all the FSMO roles.  
+|Can only be deployed into a single domain.|Can only be deployed into a single domain.  
+|A read-only domain controller cannot exist in your domain.|A read-only domain controller cannot exist in your domain.
+
 > [!NOTE]
 >  To download evaluation versions of the operating systems, visit the TechNet Evaluation Center:  
 >   
@@ -171,11 +172,11 @@ ms.author: coreyp
 12. Follow the wizard to configure Windows Server Essentials. Depending on your Active Directory configuration, you will be informed whether you are configuring Windows Server Essentials on a domain controller or as a domain member. Click **Configure** to begin the configuration. The configuration process takes approximately 10 minutes to complete.  
   
 ##  <a name="BKMK_VirtualWSE"></a> Virtualize your environment  
-  Windows Server Essentials,   Windows Server 2012 R2 Standard, and  Windows Server 2012 R2 Datacenter can be run as virtual machines. You run virtual machines by using the Hyper-V management tools on a server running Hyper-V. From a licensing perspective,  Windows Server Essentials allows you to set up the Hyper-V role and virtualize your environment. The license allows you to set up another guest operating system that is running  Windows Server Essentials. Depending on your system provider™s configuration,  Windows Server Essentials enables you to set up a virtualized environment seamlessly.  
+  Windows Server Essentials,   Windows Server 2012 R2 Standard, and  Windows Server 2012 R2 Datacenter can be run as virtual machines. You run virtual machines by using the Hyper-V management tools on a server running Hyper-V. From a licensing perspective,  Windows Server Essentials allows you to set up the Hyper-V role and virtualize your environment. The license allows you to set up another guest operating system that is running  Windows Server Essentials. Depending on your system provider „¢s configuration,  Windows Server Essentials enables you to set up a virtualized environment seamlessly.  
   
 #### To deploy Windows Server Essentials as a virtual machine  
   
-1.  After the Windows Welcome page (depending on your system provider™s configuration), the **Before you begin** page provides an option to set up Windows Server Essentials as a virtual instance or on physical hardware. The availability of these options is predefined by your system provider and both options may not always be available. To install  Windows Server Essentials as a virtual machine, in **Install Windows Server Essentials**, select **Install as virtual instance**, and then click **Configure**.  
+1.  After the Windows Welcome page (depending on your system provider „¢s configuration), the **Before you begin** page provides an option to set up Windows Server Essentials as a virtual instance or on physical hardware. The availability of these options is predefined by your system provider and both options may not always be available. To install  Windows Server Essentials as a virtual machine, in **Install Windows Server Essentials**, select **Install as virtual instance**, and then click **Configure**.  
   
 2.  The wizard will provision a virtual machine which takes about five minutes.  
   
@@ -203,19 +204,19 @@ ms.author: coreyp
     1.  Run the following command to start the configuration to set up Windows Server Essentials as a domain controller:  
   
         ```  
-        Start-WssConfigurationService -CompanyName "ContosoTest" -DNSName "ContosoTest.com" -NetBiosName "ContosoTest" -ComputerName "YourServerName “NewAdminCredential $cred  
+        Start-WssConfigurationService -CompanyName "ContosoTest" -DNSName "ContosoTest.com" -NetBiosName "ContosoTest" -ComputerName "YourServerName  œNewAdminCredential $cred  
         ```  
   
     2.  Run the following command to start the configuration to set up Windows Server Essentials as an existing domain member. You must be a member of the Enterprise Admin group and Domain Admin group in Active Directory to perform this task:  
   
         ```  
-        Start-WssConfigurationService “Credential <Your Credential>  
+        Start-WssConfigurationService  œCredential <Your Credential>  
   
         ```  
   
 4.  Monitor the progress of the installation by using the following commands:  
   
-    -   To have installation status displayed on the progress bar, run `Get-WssConfigurationStatus “ShowProgress`.  
+    -   To have installation status displayed on the progress bar, run `Get-WssConfigurationStatus  œShowProgress`.  
   
     -   To get the immediate progress without the progress bar, run `Get-WssConfigurationStatus`.  
   
@@ -223,10 +224,6 @@ ms.author: coreyp
   
 -   [What's New in Windows Server Essentials](../get-started/what-s-new.md)  
   
-
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
-
--   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
-
   
 -   [Get Started with Windows Server Essentials](../get-started/get-started.md)

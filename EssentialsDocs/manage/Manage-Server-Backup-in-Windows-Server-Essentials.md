@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Server Backup in Windows Server Essentials

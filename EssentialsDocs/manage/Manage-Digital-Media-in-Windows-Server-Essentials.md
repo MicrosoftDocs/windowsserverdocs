@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Digital Media in Windows Server Essentials
@@ -95,7 +96,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 -   A wired or wireless private network  
   
--   Either another computer on your network or a device known as a digital media receiver (sometimes called a networked digital media player). Digital media receivers are hardware devices connected to your wired or wireless network that you can control by using your computer‚Äùeven if your computer is in another room.  
+-   Either another computer on your network or a device known as a digital media receiver (sometimes called a networked digital media player). Digital media receivers are hardware devices connected to your wired or wireless network that you can control by using your computer ?even if your computer is in another room.  
   
  For more information, see [Turn media streaming on or off](Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4).  
   
@@ -145,7 +146,7 @@ The following topics discuss the media streaming features of your server, and ex
   
 ##  <a name="BKMK_6"></a> Allow or restrict access to a media library on the server  
   
--   When you turn on media sharing, it creates four predefined folders: Music, Pictures, Videos, and Recorded TV. If any of these folders preexists on the server, the existing folder is reused as a shared folder for media sharing. All the existing folder‚Ñ¢s media content and user permissions are preserved, and they are shared with all network users.  
+-   When you turn on media sharing, it creates four predefined folders: Music, Pictures, Videos, and Recorded TV. If any of these folders preexists on the server, the existing folder is reused as a shared folder for media sharing. All the existing folder Ñ¢s media content and user permissions are preserved, and they are shared with all network users.  
   
 -   Before you turn on Media Library Sharing for a shared folder, you should know that Media Library Sharing bypasses any type of user-account access that you set for the shared folder. For example, let's say that you turn on Media Library Sharing for the **Photos** shared folder, and you set the **Photos** shared folder to **No Access** for a user account named Bobby. Bobby can still stream any digital media from the **Videos** shared folder to any supported digital media player or DMR. If you have digital media that you do not want to stream in this manner, store the files in a folder that does not have Media Library Sharing turned on.  
   
@@ -198,7 +199,7 @@ The following topics discuss the media streaming features of your server, and ex
   
  The format and bit rate chosen for transcoding is highly dependent on the performance of the server processor. The processor performance is identified as part of the Windows Experience Index. To determine the performance score of your server, do one of the following:  
   
--   On a network computer running Windows 7 or Windows 8 that has the same processor as your server, go to the **Control Panel**, click **Performance Information and Tools**, and then review the information on the **Rate and improve your computer‚Ñ¢s performance** page.  
+-   On a network computer running Windows 7 or Windows 8 that has the same processor as your server, go to the **Control Panel**, click **Performance Information and Tools**, and then review the information on the **Rate and improve your computer Ñ¢s performance** page.  
   
 -   Contact the manufacturer of the processor.  
   

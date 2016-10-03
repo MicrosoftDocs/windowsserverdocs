@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 26cb2992-1250-4672-98ee-8b870baa45d5
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Important Information for Using the Windows Server Essentials ADK

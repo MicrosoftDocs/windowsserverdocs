@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Troubleshoot Windows Server Essentials Log Collector Errors

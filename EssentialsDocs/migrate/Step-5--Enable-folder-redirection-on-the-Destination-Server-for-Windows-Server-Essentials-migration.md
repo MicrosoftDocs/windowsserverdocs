@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Step 5: Enable folder redirection on the Destination Server for Windows Server Essentials migration

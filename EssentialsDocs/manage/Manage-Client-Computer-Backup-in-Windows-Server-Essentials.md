@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Client Computer Backup in Windows Server Essentials
@@ -103,7 +104,7 @@ ms.author: coreyp
 4.  Click **Close** when backup is set up for the computer.  
   
 ### Critical system files  
- When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the systemâ„¢s registry, are required for the operating system to run properly.  
+ When you install the Windows operating system, the Setup program creates folders on your system drive where it places files that the system requires to start and run. Critical system files include files with .dll, .exe, .ocx, and .sys file extensions. Some of these files are True Type fonts. In addition, system state files, such as the system „¢s registry, are required for the operating system to run properly.  
   
 ### Find the file you are looking for  
  You can restore all the folders for a computer, multiple files and folders, or a single file or folder from an existing backup.  

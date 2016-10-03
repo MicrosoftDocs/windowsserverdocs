@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Work Remotely in Windows Server Essentials

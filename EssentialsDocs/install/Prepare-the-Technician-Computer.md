@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 8841c3aa-7aaa-4cc0-b1e1-ab0643f29586
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Prepare the Technician Computer

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Troubleshoot computer monitoring in Windows Server Essentials
@@ -47,7 +48,7 @@ This topic provides troubleshooting for issues encountered while monitoring the 
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  To see the ProgramData folder, you must have hidden items displayed. If you donâ„¢t see the ProgramData folder, on the ribbonâ„¢s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
+    >  To see the ProgramData folder, you must have hidden items displayed. If you don „¢t see the ProgramData folder, on the ribbon „¢s **View** tab, in the **Show/hide** group, select the **Hidden items** text box.  
   
 ##### To update your email notification setup for alerts  
   

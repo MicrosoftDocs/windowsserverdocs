@@ -11,24 +11,25 @@ ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Hosted Windows Server Essentials
 
 >Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-This document includes information that is specific to hosters who intend to deploy Windows ServerÃ‚Â® 2012 Essentials in their lab and offer Windows Server Essentials as a service to their customers.  
+This document includes information that is specific to hosters who intend to deploy Windows ServerÃ �Â® 2012 Essentials in their lab and offer Windows Server Essentials as a service to their customers.  
   
 ## What is Windows Server Essentials?  
  Windows Server Essentials is a cross-premises small business solution, which incorporates best-of-breed, 64-bit product technologies to deliver a server environment well suited for the vast majority of small businesses. The following technologies are included in Windows Server Essentials.  
   
  **Server Operating System:** Windows Server 2012 product technologies provide the core of Windows Server Essentials. For more information, visit the [Windows Server 2012 website](http://www.microsoft.com/en-us/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh).  
   
- **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the networkâ€?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](http://technet.microsoft.com/library/hh831419.aspx) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the new File History feature of WindowsÃ‚Â® 8 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.  
+ **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the network ?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](http://technet.microsoft.com/library/hh831419.aspx) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the new File History feature of WindowsÃ �Â® 8 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.  
   
  **Anywhere Access:** Remote Web Access provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere you have an Internet connection and using almost any device. Windows Server Essentials also provides an updated Windows Phone app and a new app for Windows 8 client computers, allowing users to intuitively connect to, search across, and access files and folders on the server. Files are also automatically cached for offline access and synchronized when a connection to the server becomes available. Windows Server Essentials turns setting up virtual private networking (VPN) into a painless, wizard-driven process of just a few clicks, and simplifies the management of VPN access for users. Client computers can leverage a VPN connection to remotely join the Windows SBS environment without the need to commute to the office.  
   
- **Workload Flexibility:** Windows Server Essentials has been designed to allow customers the flexibility to choose which applications and services run on premises and which run in the cloud. In previous versions, Windows Small Business Server Standard included Exchange Server as a component product, which added expense and complexity for customers who wished to leverage cloud-based messaging and collaboration services. With Windows Server Essentials, customers can take advantage of the same type of integrated management experience whether they choose to run an on-premises copy of Exchange Server, subscribe to a hosted Exchange service, or subscribe to MicrosoftÃ‚Â® Office 365.  
+ **Workload Flexibility:** Windows Server Essentials has been designed to allow customers the flexibility to choose which applications and services run on premises and which run in the cloud. In previous versions, Windows Small Business Server Standard included Exchange Server as a component product, which added expense and complexity for customers who wished to leverage cloud-based messaging and collaboration services. With Windows Server Essentials, customers can take advantage of the same type of integrated management experience whether they choose to run an on-premises copy of Exchange Server, subscribe to a hosted Exchange service, or subscribe to MicrosoftÃ �Â® Office 365.  
   
  **Health Monitoring:** Windows Server Essentials monitors its own health status and the status of client computers running Windows 8, Windows 7, and Mac OS X version 10.5 and later. Health status notifies you of issues or problems related to computer backups, server storage, low disk space, and more.  
   
@@ -119,7 +120,7 @@ This document includes information that is specific to hosters who intend to dep
         ; All these are optional if you have DHCP Server Service on the subnet, otherwise provide static IP here.  
         ```  
   
-    5.  If you provide the WebDomainName parameter, make sure the DNS record is also being updated to point to the serverâ„¢s public IP.  
+    5.  If you provide the WebDomainName parameter, make sure the DNS record is also being updated to point to the server s public IP.  
   
     6.  If you did not provide the WebDomainName information above, make sure to open port 3389 so that customers can use RDP to connect to the server and finish VPN configurations.  
   
@@ -146,10 +147,10 @@ This document includes information that is specific to hosters who intend to dep
     ## To configure external domain and SSL certificate (if not yet done in unattended Initial Configuration).  
     ##  
   
-    $myExternalDomainName = 'remote.contoso.com';Ã‚Â Ã‚Â  ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
-    $mySslCertificateFile = 'C:\ssl.pfx';Ã‚Â Ã‚Â  ## full path to SSL certificate file  
-    $mySslCertificatePassword = ConvertTo-SecureString '******';Ã‚Â Ã‚Â  ## password for private key of the SSL certificate  
-    $skipCertificateVerification = $true;Ã‚Â Ã‚Â  ## whether or not, skip verification for the SSL certificate  
+    $myExternalDomainName = 'remote.contoso.com';Ã �Â Ã �Â  ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
+    $mySslCertificateFile = 'C:\ssl.pfx';Ã �Â Ã �Â  ## full path to SSL certificate file  
+    $mySslCertificatePassword = ConvertTo-SecureString '******';Ã �Â Ã �Â  ## password for private key of the SSL certificate  
+    $skipCertificateVerification = $true;Ã �Â Ã �Â  ## whether or not, skip verification for the SSL certificate  
   
     Add-Type -AssemblyName 'Wssg.Web.DomainManagerObjectModel';  
     [Microsoft.WindowsServerSolutions.RemoteAccess.Domains.DomainConfigurationHelper]::SetDomainNameAndCertificate($myExternalDomainName,$mySslCertificateFile,$mySslCertificatePassword,$skipCertificateVerification);  
@@ -182,7 +183,7 @@ This document includes information that is specific to hosters who intend to dep
   
     -   The server has a private IP address.  
   
-    -   Port 443 on the server is reachable from a public IP addressâ„¢s port 443.  
+    -   Port 443 on the server is reachable from a public IP address s port 443.  
   
     -   VPN passthrough is allowed for port 443.  
   
@@ -200,7 +201,7 @@ Enable-WssRemoteWebAccess [-SkipRouter] [-DenyAccessByDefault] [-ApplyToExisting
  Example:  
   
 ```  
-$Enable-WssRemoteWebAccess â€œDenyAccessByDefault â€œApplyToExistingUsers  
+$Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers  
 ```  
   
  This command will enable Remote Web Access with the router configured automatically, and change the default access permissions for all existing users.  
@@ -208,13 +209,13 @@ $Enable-WssRemoteWebAccess â€œDenyAccessByDefault â€œApplyToExistingUser
  **Add User**  
   
 ```  
-Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]Ã‚Â  [<CommonParameters>]  
+Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]Ã �Â  [<CommonParameters>]  
 ```  
   
  Example:  
   
 ```  
-$password = ConvertTo-SecureString "Passw0rd!" -asplaintext â€œforce  
+$password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce  
 $Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test  
 ```  
   
@@ -225,7 +226,7 @@ $Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -Fir
  Example:  
   
 ```  
-$CurrentUser = get-wssuser â€œname user2test  
+$CurrentUser = get-wssuser  œname user2test  
 $CurrentUser.UserStatus = 0  
 $CurrentUser.Commit()  
 ```  

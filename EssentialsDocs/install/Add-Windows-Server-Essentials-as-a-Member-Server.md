@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Add Windows Server Essentials as a Member Server
@@ -59,7 +60,7 @@ This topic applies to a server running Windows Server 2012 R2 Standard, Windows 
   
 6.  Restart the server to apply the changes.  
   
- After you have joined the server to your primary serverâ„¢s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
+ After you have joined the server to your primary server „¢s domain, you can continue to configure Windows Server Essentials by running the Configure Windows Server Essentials Wizard from Server Manager.  
   
 #### To configure Windows Server Essentials Experience on a member server  
   

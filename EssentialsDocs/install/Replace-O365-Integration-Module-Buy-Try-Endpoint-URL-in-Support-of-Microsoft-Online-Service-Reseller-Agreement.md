@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement

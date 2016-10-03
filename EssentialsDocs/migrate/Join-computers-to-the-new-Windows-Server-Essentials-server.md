@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Join computers to the new Windows Server Essentials server1

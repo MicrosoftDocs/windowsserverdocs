@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Change Media Streaming Settings

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 2b882e87-347a-4010-b7fd-9599d61198dd
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Move settings and data to the Destination Server for Windows Server Essentials migration
@@ -65,7 +66,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Complete the instructions in the wizard to configure your router and domain names.  
   
- If your router does not support the UPnP„¢ framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
+ If your router does not support the UPnP �¢ framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
   
 -   Port 80: HTTP Web traffic  
   

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 96959b7a-0267-41fd-9c5b-33c3ac89c1ee
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Domain Names and Domain Name Providers

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Create a Server Recovery DVD for Remotely Administered Servers
@@ -46,7 +47,7 @@ ms.author: coreyp
 ### Remotely administered server recovery  
  This section describes the required customizations that the partner must perform and the final media that must be shipped with each server. Before delving into the details, let us look at the customer experience.  
   
- In this scenario, the customer™s server is no longer working. This could be caused by a virus, a hard disk failure, or some other cause. The customer inserts the server recovery DVD into a client computer that is located on the same network as the server. The server recovery application walks them through three steps to recover their server:  
+ In this scenario, the customer „¢s server is no longer working. This could be caused by a virus, a hard disk failure, or some other cause. The customer inserts the server recovery DVD into a client computer that is located on the same network as the server. The server recovery application walks them through three steps to recover their server:  
   
 1.  Creates a bootable USB flash drive that is used to restart the server in recovery mode. The USB flash drive must be 8 GB or larger.  
   
@@ -134,10 +135,9 @@ ms.author: coreyp
 4.  Finalize the ISO file.  
   
  Supported culture names include:  
-  
-|||  
+
 |-|-|  
-|- cs-CZ<br /><br /> - de-DE<br /><br /> - en-US<br /><br /> - es-ES<br /><br /> - fr-FR<br /><br /> - hu-HU<br /><br /> - it-IT<br /><br /> - ja-JP<br /><br /> - ko-KR<br /><br /> - nl-NL|- pl-PL<br /><br /> - pt-BR<br /><br /> - pt-PT<br /><br /> - ru-RU<br /><br /> - sv-SE<br /><br /> - tr-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW|  
+|- cs-CZ<br /><br /> - de-DE<br /><br /> - en-US<br /><br /> - es-ES<br /><br /> - fr-FR<br /><br /> - hu-HU<br /><br /> - it-IT<br /><br /> - ja-JP<br /><br /> - ko-KR<br /><br /> - nl-NL|- pl-PL<br /><br /> - pt-BR<br /><br /> - pt-PT<br /><br /> - ru-RU<br /><br /> - sv-SE<br /><br /> - tr-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW
   
 ####  <a name="BKMK_CreatingISO"></a> Step 5: Create the ISO file  
  The folder that was created and all the contents can be burned to a DVD. This is the DVD that will be provided to customers with their new server.  

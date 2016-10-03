@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: aac6b7f3-9020-46c3-a83f-b81542300385
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Add a Tab to Settings

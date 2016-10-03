@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 71e3243e-2da9-409a-ae1f-813d4c9062e1
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Migrate Windows Small Business Server 2008 to Windows Server Essentials

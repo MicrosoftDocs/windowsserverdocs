@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 79a417fd-1b3e-47ab-ae33-bb1faf95c86d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Change the Order and Grouping of Tabs

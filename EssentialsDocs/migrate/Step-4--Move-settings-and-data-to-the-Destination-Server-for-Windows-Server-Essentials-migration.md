@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Step 4: Move settings and data to the Destination Server for Windows Server Essentials migration
@@ -60,7 +61,7 @@ This section provides information about migrating data and settings from the Sou
   
 3.  If you use Windows PowerShell, type the following command, and then press ENTER.  
   
-     `Add-Wssfolder â€œPath \ -Name  -KeepPermission`  
+     `Add-Wssfolder  œPath \ -Name  -KeepPermission`  
   
 4.  Repeat this process for each shared folder that you are migrating from the Source Server.  
   

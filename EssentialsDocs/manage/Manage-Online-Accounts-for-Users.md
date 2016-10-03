@@ -11,20 +11,21 @@ ms.topic: article
 ms.assetid: c09f4cf6-4d12-49fe-9ae4-e6cb14027b9d
 8author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Online Accounts for Windows Server Essentials Users
 
 >Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-When you integrate your  Windows Server Essentials server with Microsoft  Office 365, you can manage your online accounts along with user accounts from the Dashboard. In this topic, youâ„¢ll find out what you can gain by managing your usersâ„¢ Microsoft Online Services accounts from the Dashboard, how to create and manage online accounts from the Dashboard, and how to manage email addresses and distribution groups for Exchange Online from the Dashboard.  
+When you integrate your  Windows Server Essentials server with Microsoft  Office 365, you can manage your online accounts along with user accounts from the Dashboard. In this topic, you ll find out what you can gain by managing your users  Microsoft Online Services accounts from the Dashboard, how to create and manage online accounts from the Dashboard, and how to manage email addresses and distribution groups for Exchange Online from the Dashboard.  
 
   
 > [!NOTE]
 >  To manage your Microsoft Online Services accounts in  Windows Server Essentials, you must integrate your server with  Office 365. For instructions, see [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md).  
   
 > [!IMPORTANT]
->  If youâ„¢re managing online accounts in  Windows Server Essentials, youâ„¢re accustomed to seeing the Microsoft Online Services accounts referred to as *Office 365 accounts*. On the Dashboard in  Windows Server Essentials, the labels were changed to *Microsoft Online Services accounts*, or *Microsoft online accounts* for short. The accounts and the procedures are the same; only the labels changed. Most procedures in this topic use the term *online account*.  
+>  If you  managing online accounts in  Windows Server Essentials, you  accustomed to seeing the Microsoft Online Services accounts referred to as *Office 365 accounts*. On the Dashboard in  Windows Server Essentials, the labels were changed to *Microsoft Online Services accounts*, or *Microsoft online accounts* for short. The accounts and the procedures are the same; only the labels changed. Most procedures in this topic use the term *online account*.  
   
 ## In this topic  
   
@@ -39,12 +40,12 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 -   [Manage distribution groups for Exchange Online](#BKMK_SECTION_ManageDistributionGroups)  
   
 ##  <a name="BKMK_WhyManageOnlineAccounts"></a> Why should I manage my online accounts from the Dashboard?  
- When you use the Dashboard to assign a Microsoft Online Services account to a user account, the account passwords are automatically synchronized, and you can maintain the two accounts together throughout the user accountâ„¢s lifecycle.  
+ When you use the Dashboard to assign a Microsoft Online Services account to a user account, the account passwords are automatically synchronized, and you can maintain the two accounts together throughout the user account s lifecycle.  
   
- Itâ„¢s convenient for the user, who can use the same password to access resources on the server and in  Office 365. And you can apply the same password requirements for access to resources in  Office 365 that you require for your in-house resources.  
+ It s convenient for the user, who can use the same password to access resources on the server and in  Office 365. And you can apply the same password requirements for access to resources in  Office 365 that you require for your in-house resources.  
   
 ### How does password synchronization work?  
- When you use the Dashboard to assign a Microsoft Online Services account to a user account, the user account password is automatically synchronized with the userâ„¢s online account. This means that a user only needs a single password to access both the resources on the server and in  Office 365. Furthermore, you can use the same name for the user account and the userâ„¢s online ID.  
+ When you use the Dashboard to assign a Microsoft Online Services account to a user account, the user account password is automatically synchronized with the user s online account. This means that a user only needs a single password to access both the resources on the server and in  Office 365. Furthermore, you can use the same name for the user account and the user s online ID.  
   
  Password synchronization occurs immediately and automatically when a user changes the password for their user account from a domain-joined computer or by using Remote Web Access.  
   
@@ -52,20 +53,20 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 >  If  Office 365 is integrated with  Windows Server Essentials, users should not change the password for their Microsoft online account from the  Office 365 portal. Doing so will break the password synchronization.  
   
 ### Simplified account creation  
- Thereâ„¢s another advantage when you create your initial online accounts from the Dashboard. You can create online accounts for all of your users with a single action. On the other hand, if your employees are using  Office 365 already, and youâ„¢re setting up a new  Windows Server Essentials server, you can create all of your user accounts from the online accounts with a single action. For more information, see [Create online accounts](#BKMK_SECTION_CreateOnlineAccounts).  
+ There s another advantage when you create your initial online accounts from the Dashboard. You can create online accounts for all of your users with a single action. On the other hand, if your employees are using  Office 365 already, and you  setting up a new  Windows Server Essentials server, you can create all of your user accounts from the online accounts with a single action. For more information, see [Create online accounts](#BKMK_SECTION_CreateOnlineAccounts).  
   
 ### Manage email addresses and distribution groups from the Dashboard  
- You will be able to manage your email addresses and distribution groups for Exchange Online from the Dashboard. And you can use your organizationâ„¢s Internet domain in the email addresses. You can do all of this from the Dashboard, without signing in to  Office 365. (Youâ„¢ll need to be using  Windows Server Essentials to manage distribution groups from the Dashboard. This feature is not supported in  Windows Server Essentials.) For more information, see [Manage email addresses for Exchange Online](#BKMK_SECTION_ManageEmailAddresses) and [Manage distribution groups for Exchange Online](#BKMK_SECTION_ManageDistributionGroups).  
+ You will be able to manage your email addresses and distribution groups for Exchange Online from the Dashboard. And you can use your organization s Internet domain in the email addresses. You can do all of this from the Dashboard, without signing in to  Office 365. (You ll need to be using  Windows Server Essentials to manage distribution groups from the Dashboard. This feature is not supported in  Windows Server Essentials.) For more information, see [Manage email addresses for Exchange Online](#BKMK_SECTION_ManageEmailAddresses) and [Manage distribution groups for Exchange Online](#BKMK_SECTION_ManageDistributionGroups).  
   
 ### Manage the user account and online account together  
- And you can manage an online account along with the user account throughout the accountâ„¢s lifecycle. If you deactivate the user account, the online account also is deactivated in Microsoft Online Services. If you remove a user account, the online account also is removed. For more information, see [Manage online accounts](#BKMK_SECTION_ManageOnlineAccounts).  
+ And you can manage an online account along with the user account throughout the account s lifecycle. If you deactivate the user account, the online account also is deactivated in Microsoft Online Services. If you remove a user account, the online account also is removed. For more information, see [Manage online accounts](#BKMK_SECTION_ManageOnlineAccounts).  
   
 ##  <a name="BKMK_SECTION_CreateOnlineAccounts"></a> Create online accounts  
- After you integrate your server with  Office 365, itâ„¢s to your advantage to create Microsoft Online Services accounts for your users from the Dashboard. Youâ„¢ll have a lot of flexibility in creating the online accounts. If you have a new  Office 365 subscription, you can bulk-create online accounts for all of your users. If you have already created your online accounts in  Office 365, donâ„¢t worry. If youâ„¢re setting up a new server, you can create your user accounts on the server by importing the online accounts. And you can assign either a new or an existing online account when you create an individual user account â€œ or when you add an online account to an existing user account.  
+ After you integrate your server with  Office 365, it s to your advantage to create Microsoft Online Services accounts for your users from the Dashboard. You ll have a lot of flexibility in creating the online accounts. If you have a new  Office 365 subscription, you can bulk-create online accounts for all of your users. If you have already created your online accounts in  Office 365, don t worry. If you  setting up a new server, you can create your user accounts on the server by importing the online accounts. And you can assign either a new or an existing online account when you create an individual user account or when you add an online account to an existing user account.  
   
- **License requirements**â€?You will need a user license for each online account that you create. Check the **Office 365** page on the Dashboard to see how many user licenses are available through your  Office 365 subscription. If you need to add more user licenses, youâ„¢ll be able to open your  Office 365 subscription in  Office 365 to do that.  
+ **License requirements** You will need a user license for each online account that you create. Check the **Office 365** page on the Dashboard to see how many user licenses are available through your  Office 365 subscription. If you need to add more user licenses, you ll be able to open your  Office 365 subscription in  Office 365 to do that.  
   
- **Follow-up for users**â€?After you add an online account for a user account, the user is required to change the password for their user account the next time they sign in. The new password is synchronized immediately with their online account. After that, they can use the password to sign in to  Office 365 with their online ID.  
+ **Follow-up for users** After you add an online account for a user account, the user is required to change the password for their user account the next time they sign in. The new password is synchronized immediately with their online account. After that, they can use the password to sign in to  Office 365 with their online ID.  
   
 > [!IMPORTANT]
 >  Emphasize to your users that they should never change their online account password in  Office 365. The password will be changed automatically whenever they change the password for their user account. If they change the online password in  Office 365, password synchronization will be broken.  
@@ -81,7 +82,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 -   [Assign an online account to a user account](#BKMK_ToAssignAnOnlineAccount)  
   
 > [!NOTE]
->  If youâ„¢re using  Windows Server Essentials, you will see *Office 365 account* instead of *Microsoft Online Services account* throughout these procedures. The process is the same, but the terminology changed in  Windows Server Essentials.  
+>  If you  using  Windows Server Essentials, you will see *Office 365 account* instead of *Microsoft Online Services account* throughout these procedures. The process is the same, but the terminology changed in  Windows Server Essentials.  
   
 ###  <a name="BKMK_ToBulkCreateOnlineAccounts"></a> To bulk-create online accounts for your existing user accounts  
   
@@ -129,11 +130,11 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
     2.  Optionally click the link to view the temporary passwords that will be assigned to the user accounts. You will need to give your users their temporary password along with their new account name.  
   
-         (After you create the accounts, youâ„¢ll find these passwords listed in this file: *SystemDrive*\Users\\*Office365admin*\\*NewServerUser*.txt where *Office365admin* is the network account that is used to administer  Office 365 on the server and *NewServerUser* is the new user account name.)  
+         (After you create the accounts, you ll find these passwords listed in this file: *SystemDrive*\Users\\*Office365admin*\\*NewServerUser*.txt where *Office365admin* is the network account that is used to administer  Office 365 on the server and *NewServerUser* is the new user account name.)  
   
     3.  Click **Next** to create the user accounts.  
   
-4.  Let your users know their new user accounts and the temporary passwords they will use to sign in on the server for the first time â€œ and that they will have to change the password after they sign in. For instructions for your users, see [To begin using a new Microsoft online account](#BKMK_ToBeginUsingAnOnlineAccount).  
+4.  Let your users know their new user accounts and the temporary passwords they will use to sign in on the server for the first time  œ and that they will have to change the password after they sign in. For instructions for your users, see [To begin using a new Microsoft online account](#BKMK_ToBeginUsingAnOnlineAccount).  
   
      Be sure they know that the passwords for their online account will be synchronized with their user account going forward, and they should not change their online password in  Office 365.  
   
@@ -158,7 +159,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 6.  Notify the user that they will need to change their user account password before they can sign in to Office 365 with their new online account. For instructions, see [To begin using a new Microsoft online account](#BKMK_ToBeginUsingAnOnlineAccount).  
   
-#### To assign an online account to a user account  
+#### <a name="BKMK_ToAssignAnOnlineAccount"></a>To assign an online account to a user account  
   
 1.  On the Dashboard, click **Users**.  
   
@@ -171,26 +172,26 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 5.  Notify the user that they will need to change their user account password before they can sign in to Office 365 with their new online account. For instructions, see [To begin using a new Microsoft online account](#BKMK_ToBeginUsingAnOnlineAccount).  
   
 ##  <a name="BKMK_SECTION_ManageOnlineAccounts"></a> Manage online accounts  
- When you add an online account to a user account in Windows Server Essentials, you can manage both accounts together throughout the accountâ„¢s lifecycle.  
+ When you add an online account to a user account in Windows Server Essentials, you can manage both accounts together throughout the account s lifecycle.  
   
 ###  <a name="BKMK_UnderstandingAccountStatus"></a> Understanding the online account status  
  When you assign a Microsoft Online Services account to a user account, the email address for the account appears in the **Microsoft online account** column on the **Users** page of the Dashboard. (In  Windows Server Essentials, the column label is **Office 365 account**.)  
   
 -   A blue icon next to an email address indicates the online account is active. That is, the account has a current  Office 365 license, and the user can use the online ID to sign in to  Office 365.  
   
--   A shaded icon next to the email address indicates the online account is inactive â€œ either because the license is no longer active or the online account has been unassigned. When you unassign a userâ„¢s online account, the license is removed, and the user is blocked from signing in to  Office 365 using the account. However, the server maintains the mapping between the user account name and the  Office 365 email address.  
+-   A shaded icon next to the email address indicates the online account is inactive  œ either because the license is no longer active or the online account has been unassigned. When you unassign a user s online account, the license is removed, and the user is blocked from signing in to  Office 365 using the account. However, the server maintains the mapping between the user account name and the  Office 365 email address.  
   
 ###  <a name="BKMK_UnassignOnlineAccount"></a> Restrict access to an online account  
- What do you do if a user leaves your organization, or you want to restrict the userâ„¢s access to your  Office 365 services? If youâ„¢re managing your usersâ„¢ online accounts along with their user accounts in  Windows Server Essentials, you have three options:  
+ What do you do if a user leaves your organization, or you want to restrict the user s access to your  Office 365 services? If you  managing your users  online accounts along with their user accounts in  Windows Server Essentials, you have three options:  
   
--   **Unassign the online account**â€?If you want to keep a user from using  Office 365 without preventing access to resources on the server, you should unassign the online account. The  Office 365 license will be released, and the user is blocked from signing in to  Office 365. However, the server maintains the mapping between the user account name and the  Office 365 email address. For instructions, see [To unassign an online account from a user account](#BKMK_ToUnassignAnOnlineAccount).  
+-   **Unassign the online account** ?If you want to keep a user from using  Office 365 without preventing access to resources on the server, you should unassign the online account. The  Office 365 license will be released, and the user is blocked from signing in to  Office 365. However, the server maintains the mapping between the user account name and the  Office 365 email address. For instructions, see [To unassign an online account from a user account](#BKMK_ToUnassignAnOnlineAccount).  
   
--   **Deactivate the user account**â€?If you deactivate a user account because an employee leaves, either temporarily or permanently, the userâ„¢s online account also is deactivated. The online account cannot be used, but the user data, including email, is retained in Microsoft Online Services. For instructions, see [Deactivate a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage6) in [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+-   **Deactivate the user account** ?If you deactivate a user account because an employee leaves, either temporarily or permanently, the user s online account also is deactivated. The online account cannot be used, but the user data, including email, is retained in Microsoft Online Services. For instructions, see [Deactivate a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage6) in [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
--   **Remove the user account**â€?If you remove a user account, the online account is removed from Microsoft Online Services also. For instructions, see [Remove a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Remove) in [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+-   **Remove the user account** ?If you remove a user account, the online account is removed from Microsoft Online Services also. For instructions, see [Remove a user account](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Remove) in [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
     > [!WARNING]
-    >  Be aware that when an online account is removed, the user data is subject to the data retention policies of Microsoft Online Services. If you need to retain the personâ„¢s user data after an employee leaves, deactivate the user account instead of removing it.  
+    >  Be aware that when an online account is removed, the user data is subject to the data retention policies of Microsoft Online Services. If you need to retain the person s user data after an employee leaves, deactivate the user account instead of removing it.  
   
 ####  <a name="BKMK_ToUnassignAnOnlineAccount"></a> To unassign an online account from a user account  
   
@@ -201,9 +202,9 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 3.  At the confirmation prompt, click **Yes**.  
   
 ##  <a name="BKMK_SECTION_ManageEmailAddresses"></a> Manage email addresses for Exchange Online  
- By adding email addresses to the userâ„¢s online account in  Windows Server Essentials, you can allow the user to receive email at multiple email addresses in Exchange Online.  
+ By adding email addresses to the user s online account in  Windows Server Essentials, you can allow the user to receive email at multiple email addresses in Exchange Online.  
   
-###  <a name="BKMK_PROC_AddEmailAliases"></a> To add additional email addresses to a userâ„¢s Microsoft online account  
+###  <a name="BKMK_PROC_AddEmailAliases"></a> To add additional email addresses to a user s Microsoft online account  
   
 1.  On the  Windows Server Essentials Dashboard, click **Users**.  
   
@@ -216,7 +217,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 5.  Click **OK** twice.  
   
 ##  <a name="BKMK_SECTION_ManageDistributionGroups"></a> Manage distribution groups for Exchange Online (Windows Server Essentials only)  
- After you integrate your  Windows Server Essentials server with  Office 365, you can create and manage distribution groups for Exchange Online from the  Windows Server Essentials Dashboard. Youâ„¢ll do this on the **Distribution Groups** tab that is added to the **Users** page. You will only see this tab if you have an Exchange Online subscription. This feature is not available in  Windows Server Essentials.  
+ After you integrate your  Windows Server Essentials server with  Office 365, you can create and manage distribution groups for Exchange Online from the  Windows Server Essentials Dashboard. You ll do this on the **Distribution Groups** tab that is added to the **Users** page. You will only see this tab if you have an Exchange Online subscription. This feature is not available in  Windows Server Essentials.  
   
  Use the following procedures to:  
   
@@ -224,7 +225,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 -   [Change the members of a distribution group](#BKMK_ChangeGroupMembers)  
   
--   [Change a userâ„¢s distribution group memberships](#BKMK_EditUserMemberships)  
+-   [Change a user s distribution group memberships](#BKMK_EditUserMemberships)  
   
 -   [Remove a distribution group](#BKMK_RemoveDistributionGroup)  
   
@@ -254,7 +255,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 3.  Use the **Add** and **Remove** buttons to add or remove active online accounts from the distribution group. Then click **Next** to update the distribution group membership in Exchange Online.  
   
-###  <a name="BKMK_EditUserMemberships"></a> To change a userâ„¢s distribution group memberships  
+###  <a name="BKMK_EditUserMemberships"></a> To change a user s distribution group memberships  
   
 1.  On the Dashboard, click **Users**.  
   
@@ -279,8 +280,6 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 ## See also  
   
 -   [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md)  
-  
--   [Manage Hosted Emails in Windows Server Essentials &#91;WSE_OPE&#93;](assetId:///d632af3e-2bed-4a42-a0ff-9939b7282104)  
   
 -   [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)  
   
