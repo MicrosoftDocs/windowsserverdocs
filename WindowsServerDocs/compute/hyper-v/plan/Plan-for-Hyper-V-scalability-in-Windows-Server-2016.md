@@ -3,7 +3,7 @@ title: Plan for Hyper-V scalability in Windows Server 2016
 description: "Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory and how many virtual processors."
 ms.prod: windows-server-threshold
 ms.service: na
-ms.author: kathydav
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article

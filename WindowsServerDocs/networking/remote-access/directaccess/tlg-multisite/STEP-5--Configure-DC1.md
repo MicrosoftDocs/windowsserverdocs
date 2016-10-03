@@ -20,13 +20,13 @@ DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contos
   
 To configure Remote Access to use a multisite topology, it is necessary to add an additional Active Directory Domain Services (AD DS) site for the second domain controller 2-DC1, and to configure routing between the subnets.  
   
-1.  [To configure the default gateway on the domain controller](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#IPv6). Configure the default gateway on DC1.  
+1. To configure the default gateway on the domain controller. Configure the default gateway on DC1.  
   
-2.  [Create security groups for Windows 7 DirectAccess clients on DC1](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#SecGroup). When DirectAccess is configured, it automatically creates Group Policy Objects (GPOs) and GPO settings that are applied to DirectAccess clients and servers. The DirectAccess client GPO is applied to specific Active Directory security groups.  
+2. Create security groups for Windows 7 DirectAccess clients on DC1. When DirectAccess is configured, it automatically creates Group Policy Objects (GPOs) and GPO settings that are applied to DirectAccess clients and servers. The DirectAccess client GPO is applied to specific Active Directory security groups.  
   
-3.  [To add a new AD DS site](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#ADSite). Create a second AD DS site.  
+3. To add a new AD DS site. Create a second AD DS site.  
   
-## <a name="IPv6"></a>To configure the default gateway on the domain controller  
+## To configure the default gateway on the domain controller  
   
 1.  In the Server Manager console, click **Local Server**, and then in the **Properties** area, next to **Wired Ethernet Connection**, click the link.  
   
@@ -44,12 +44,12 @@ To configure Remote Access to use a multisite topology, it is necessary to add a
   
 8.  Close the **Network Connections** window.  
   
-## <a name="SecGroup"></a>Create security groups for Windows 7 DirectAccess clients on DC1  
+## Create security groups for Windows 7 DirectAccess clients on DC1  
 Create the DirectAccess security groups for  Windows 7  with the following procedure.  
   
  Windows 7  client computers must be members of separate security groups because they are able to connect to internal resources through a single entry point only. When enabling Multisite support or adding entry points, if  Windows 7  support is requested, then a separate GPO will be automatically created by DirectAccess for  Windows 7  clients for each entry point.  
   
-#### Create security groups  
+### Create security groups  
   
 1.  On the **Start** screen, type**dsa.msc**, and then press ENTER.  
   
@@ -75,7 +75,7 @@ Create the DirectAccess security groups for  Windows 7  with the following proce
   
 12. Close the **Active Directory Users and Computers** console.  
   
-## <a name="ADSite"></a>To add a new AD DS site  
+## To add a new AD DS site  
   
 1.  On the **Start** screen, type**dssite.msc**, and then press ENTER.  
   

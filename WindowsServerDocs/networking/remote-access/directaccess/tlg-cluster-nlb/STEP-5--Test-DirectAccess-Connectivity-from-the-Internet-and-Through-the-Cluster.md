@@ -18,14 +18,14 @@ author: coreyp-at-msft
 
 CLIENT1 is now ready for DirectAccess testing.  
   
--   [Test DirectAccess connectivity from the Internet](assetId:///1d10aefd-e240-491b-b7cf-6b8e1c0eb9a6#DAInternet). Connect CLIENT1 to the simulated Internet. When connected to the simulated Internet, the client is assigned public IPv4 addresses. When a DirectAccess client is assigned a public IPv4 address, it tries to establish a connection to the Remote Access server using an IPv6 transition technology.  
+- Test DirectAccess connectivity from the Internet. Connect CLIENT1 to the simulated Internet. When connected to the simulated Internet, the client is assigned public IPv4 addresses. When a DirectAccess client is assigned a public IPv4 address, it tries to establish a connection to the Remote Access server using an IPv6 transition technology.  
   
--   [Test DirectAccess client connectivity through the cluster](assetId:///1d10aefd-e240-491b-b7cf-6b8e1c0eb9a6#cluster). Test cluster functionality. Before you begin testing, we recommend that you shut down both EDGE1 and EDGE2 for at least five minutes. There are a number of reasons for this, which include ARP cache timeouts and changes related to NLB. When validating NLB configuration in a test lab, you will need to be patient as changes in configuration will not be immediately reflected in connectivity until after a period of time has elapsed. This is important to keep in mind when you carry out the following tasks.  
+- Test DirectAccess client connectivity through the cluster. Test cluster functionality. Before you begin testing, we recommend that you shut down both EDGE1 and EDGE2 for at least five minutes. There are a number of reasons for this, which include ARP cache timeouts and changes related to NLB. When validating NLB configuration in a test lab, you will need to be patient as changes in configuration will not be immediately reflected in connectivity until after a period of time has elapsed. This is important to keep in mind when you carry out the following tasks.  
   
     > [!TIP]  
     > We recommend that you clear the Internet Explorer cache before performing this procedure and each time you test the connection through a different Remote Access server to make sure that you are testing the connection and not retrieving the webpages from the cache.  
   
-## <a name="DAInternet"></a>Test DirectAccess connectivity from the Internet  
+## Test DirectAccess connectivity from the Internet  
   
 1.  Unplug CLIENT1 from the corpnet switch and connect it to the Internet switch. Wait for 30 seconds.  
   
@@ -59,7 +59,7 @@ CLIENT1 is now ready for DirectAccess testing.
   
 13. In the left pane of the console, expand the **Security Associations** node, and click the **Main Mode** node. Notice the infrastructure tunnel security associations using NTLMv2 and the intranet tunnel security association using Kerberos V5. Right-click the entry that shows **User (Kerberos V5)** as the **2nd Authentication Method** and click **Properties**. On the **General** tab, notice the **Second authentication Local ID** is **CORP\User1**, indicating that User1 was able to successfully authenticate to the CORP domain using Kerberos.  
   
-## <a name="cluster"></a>Test DirectAccess client connectivity through the cluster  
+## Test DirectAccess client connectivity through the cluster  
   
 1.  Perform a graceful shutdown on EDGE2.  
   
@@ -77,7 +77,4 @@ CLIENT1 is now ready for DirectAccess testing.
   
 7.  On EDGE1 perform a graceful shutdown.  
   
-8.  Wait for 5 minutes, and then return to CLIENT1. Perform steps 2-5. This confirms that CLIENT1 was able to transparently fail over to EDGE2 after EDGE1 became unavailable.  
-  
-
-
+8.  Wait for 5 minutes, and then return to CLIENT1. Perform steps 2-5. This confirms that CLIENT1 was able to transparently fail over to EDGE2 after EDGE1 became unavailable.
