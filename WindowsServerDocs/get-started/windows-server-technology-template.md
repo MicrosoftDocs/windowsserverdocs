@@ -1,5 +1,5 @@
 ---
-title: Welcome to Technology in Windows Server 2016
+title: Technology in Windows Server 2016
 description: Provides an overview of technology.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.assetid:
 author: 
 manager: 
 ---
-# Welcome to Technology in Windows Server 2016 
+# Technology in Windows Server 2016 
 
 <img src="6networking.png" style='align:left'> *Introduction to technology. This should help connect the marketing position for the technology to the content. Change the icon to the one used for your technology area on the [landing page](windows-server-landing.md).*
 
