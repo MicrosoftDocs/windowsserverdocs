@@ -16,18 +16,18 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-This topic describes how to configure the client and server settings that are required for an advanced Remote Access deployment that uses a single Remote Access server in a mixed IPv4 and IPv6 environment. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).  
+This topic describes how to configure the client and server settings that are required for an advanced Remote Access deployment that uses a single Remote Access server in a mixed IPv4 and IPv6 environment. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Plan an Advanced DirectAccess Deployment](Plan-an-Advanced-DirectAccess-Deployment.md).  
   
 |Task|Description|  
 |--------|---------------|  
-|[2.1. Install the Remote Access role](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_Role)|Install the Remote Access role.|  
-|[2.2. Configure the deployment type](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_Deploy)|Configure the deployment type as DirectAccess and VPN, DirectAccess only, or VPN only.|  
-|[Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md)|Configure the Remote Access server with the security groups that contain DirectAccess clients.|  
-|[2.4. Configure the Remote Access server](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_Server)|Configure Remote Access server settings.|  
-|[2.5. Configure the infrastructure servers](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_Infra)|Configure the infrastructure servers that are used in the organization.|  
-|[2.6. Configure application servers](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_App)|Configure application servers so that they require authentication and encryption.|  
-|[2.7. Configuration summary and alternate GPOs](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_GPO)|View the Remote Access configuration summary, and modify the GPOs if desired.|  
-|[2.8. How to configure the Remote Access server using Windows PowerShell](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_PS)|Configure Remote Access by using Windows PowerShell.|  
+|2.1. Install the Remote Access role|Install the Remote Access role.|  
+|2.2. Configure the deployment type|Configure the deployment type as DirectAccess and VPN, DirectAccess only, or VPN only.|  
+|[Plan an Advanced DirectAccess Deployment](Plan-an-Advanced-DirectAccess-Deployment.md)|Configure the Remote Access server with the security groups that contain DirectAccess clients.|  
+|2.4. Configure the Remote Access server|Configure Remote Access server settings.|  
+|2.5. Configure the infrastructure servers|Configure the infrastructure servers that are used in the organization.|  
+|2.6. Configure application servers|Configure application servers so that they require authentication and encryption.|  
+|2.7. Configuration summary and alternate GPOs|View the Remote Access configuration summary, and modify the GPOs if desired.|  
+|2.8. How to configure the Remote Access server using Windows PowerShell|Configure Remote Access by using Windows PowerShell.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -49,7 +49,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 6.  On the **Installation progress** page, verify that the installation was successful, and then click **Close**.  
   
-![](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -134,11 +134,11 @@ To deploy Remote Access, you need to configure the Remote Access server with the
   
 5.  On the **Authentication** page:  
   
-    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
+    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
   
     -   For multisite and two-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication, and select the IPsec root certificate.  
   
-    -   To enable  Windows 7  client computers to connect through DirectAccess, select the **Enable Windows 7 client computers to connect via DirectAccess** check box.  
+    -   To enable Windows 7 client computers to connect through DirectAccess, select the **Enable Windows 7 client computers to connect via DirectAccess** check box.  
   
         > [!NOTE]  
         > You must also use computer certificate authentication in this type of deployment.  
@@ -197,7 +197,7 @@ When the Remote Access configuration is complete, the **Remote Access Review** i
 5.  **Application Servers**: The DirectAccess remote management status is displayed, in addition to the status of the end-to-end authentication to specific application servers.  
   
 ## <a name="BKMK_PS"></a>2.8. How to configure the Remote Access server by using Windows PowerShell  
-![](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![PowerShell](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -236,11 +236,11 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 1: Configuring DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-advanced/Step-1--Configuring-DirectAccess-Infrastructure.md)  
+-   [Step 1: Configuring DirectAccess Infrastructure](Step-1--Configuring-DirectAccess-Infrastructure.md)  
   
 ## Next step  
   
--   [Step 3: Verify the Deployment](../../../remote-access/directaccess/single-server-advanced/Step-3--Verify-the-Deployment.md)  
+-   [Step 3: Verify the Deployment](Step-3--Verify-the-Deployment.md)  
   
 
 

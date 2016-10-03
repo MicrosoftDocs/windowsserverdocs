@@ -18,18 +18,18 @@ author: coreyp-at-msft
 
 In this multisite test lab guide, the router computer provides an IPv4 and IPv6 bridge between the Corpnet and 2-Corpnet subnets, and acts as a router for IP-HTTPS and Teredo traffic.  
   
--   [Install the operating system on ROUTER1](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9#bkmk_InstallOS)  
+- Install the operating system on ROUTER1 
   
--   [Configure TCP/IP properties and rename the computer](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9#bkmk_TCP)  
+- Configure TCP/IP properties and rename the computer  
   
--   [Turn off the firewall](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9#TurnOffFirewall)  
+- Turn off the firewall
   
--   [Configure routing and forwarding](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9#RouteandForward)  
+- Configure routing and forwarding
   
-## <a name="bkmk_InstallOS"></a>Install the operating system on ROUTER1  
+## Install the operating system on ROUTER1  
 First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
   
-#### To install the operating system on ROUTER1  
+### To install the operating system on ROUTER1  
   
 1.  Start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  (full installation).  
   
@@ -39,10 +39,10 @@ First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Serv
   
 4.  Connect ROUTER1 to the Corpnet and 2-Corpnet subnets.  
   
-## <a name="bkmk_TCP"></a>Configure TCP/IP properties and rename the computer  
+## Configure TCP/IP properties and rename the computer  
 Configure TCP/IP settings on the router and rename the computer to ROUTER1.  
   
-#### To configure TCP/IP properties and rename the computer  
+### To configure TCP/IP properties and rename the computer  
   
 1.  In the Server Manager console, click **Local Server**, and then in the **Properties** area, next to **Wired Ethernet Connection**, click the link.  
   
@@ -90,10 +90,10 @@ Configure TCP/IP settings on the router and rename the computer to ROUTER1.
   
 23. After the computer has restarted, log on with the local Administrator account.  
   
-## <a name="TurnOffFirewall"></a>Turn off the firewall  
+## Turn off the firewall  
 This computer is configured only to provide routing between the Corpnet and 2-Corpnet subnets; therefore, the firewall must be turned off.  
   
-#### To turn off the firewall  
+### To turn off the firewall  
   
 1.  On the **Start** screen, type**wf.msc**, and then press ENTER.  
   
@@ -107,10 +107,10 @@ This computer is configured only to provide routing between the Corpnet and 2-Co
   
 6.  Close Windows Firewall with Advanced Security.  
   
-## <a name="RouteandForward"></a>Configure routing and forwarding  
+## Configure routing and forwarding  
 To provide routing and forwarding services between the Corpnet and 2-Corpnet subnets, you must enable forwarding on the network interfaces and configure static routes between the subnets.  
   
-#### To configure static routes  
+### To configure static routes  
   
 1.  On the **Start** screen, type**cmd.exe**, and then press ENTER.  
   
@@ -137,7 +137,4 @@ To provide routing and forwarding services between the Corpnet and 2-Corpnet sub
     netsh interface IPv6 add route 2001:0:836b:14::/64 2-Corpnet 2001:db8:2::20  
     ```  
   
-5.  Close the Command Prompt window.  
-  
-
-
+5.  Close the Command Prompt window.
