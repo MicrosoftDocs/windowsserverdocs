@@ -20,16 +20,17 @@ manager: dongill
   <tr>
     <td colspan='4' style='padding:0;'><img src='wsbanner.png'/></td>
   </tr>
+  <tr colspan='4'>![alt text](2whats-new.png "What's new in Windows Server 2016?")
+    <font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
     ![alt text](1system-requirements.png "Get started")<br/><br/>
     [Get started](Server-Basics.md)</td>
     <td style='width:25%'>
-    ![alt text](2whats-new.png "What's new in Windows Server 2016?")<br/><br/>
-    [What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</td>
-    <td style='width:25%'>
     ![alt text](3compute.png "Windows Server Compute")<br/><br/>
     [Compute](../compute/Compute.md)</td>
+    <td style='width:25%'>![Failover clustering](cluster-server.png "Failover clustering")[Failover clustering](../failover-clustering/failover-clustering-overview.md)
+    </td>
     <td style='width:25%'>
     ![alt text](4identity-and-access.png "Windows Server Identity and Access")<br/><br/>
     [Identity and Access](../identity/Identity-and-Access.md)</td>
