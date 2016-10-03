@@ -4,7 +4,8 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: networking-sdn
+ms.technology: 
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
@@ -25,7 +26,7 @@ New in  Windows Server 2016, Network Controller provides a centralized, programm
 > - [Install the Network Controller server role using Server Manager](../../../sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [Post-Deployment Steps for Network Controller](post-deploy-steps-nc.md)
 > - [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx) 
-
+> - System Center Virtual Machine Manager Engineering Blog post [Deploying Network Controller using Microsoft Virtual Machine Manager 2016 Technical Preview 4](http://blogs.technet.com/b/scvmm/archive/2016/01/05/deploying-network-controller-using-microsoft-virtual-machine-manager-2016-technical-preview-4.aspx)  
   
 This topic contains the following sections.  
   
@@ -61,7 +62,7 @@ Using Windows PowerShell, the REST API, or a management application, you can use
   
 In the following illustration, an Administrator uses a Management Tool that interacts directly with Network Controller. Network Controller provides information about the network infrastructure, including both virtual and physical infrastructure, to the Management Tool, and makes configuration changes according to the Administrator's actions when using the tool.  
   
-![](../../../media/Network-Controller/NetController_overview.png)  
+![Network Controller overview](../../../media/Network-Controller/NetController_overview.png)  
   
 If you are deploying Network Controller in a test lab environment, you can run the Network Controller server role on a single physical server (without using Hyper-V) or on a Hyper-V virtual machine (VM) that is installed on a Hyper-V host.  
   

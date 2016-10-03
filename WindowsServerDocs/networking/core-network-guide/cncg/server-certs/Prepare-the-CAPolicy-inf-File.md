@@ -58,7 +58,7 @@ To perform this procedure, you must be a member of the Administrators group.
   
 5.  When you are prompted to overwrite the file, click **Yes**.  
   
-    ![](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)  
+    ![Notepad dialog box](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)  
   
     > [!CAUTION]  
     > Be sure to save the CAPolicy.inf with the inf extension. If you do not specifically type **.inf** at the end of the file name and select the options as described, the file will be saved as a text file and will not be used during CA installation.  
