@@ -3,7 +3,7 @@ title: Configure the server with a sufficient amount of dynamic MAC addresses
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
