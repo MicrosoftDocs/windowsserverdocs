@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Deploy BranchCache
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.  
   

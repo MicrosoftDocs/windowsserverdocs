@@ -1,1 +1,0 @@
-Click the **Common** tab and configure any options desired.

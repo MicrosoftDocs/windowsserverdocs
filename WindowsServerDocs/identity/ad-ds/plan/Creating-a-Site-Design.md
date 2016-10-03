@@ -1,19 +1,20 @@
 ---
+ms.assetid: 83f746e5-81db-4610-9977-1d5c57699f50
 title: Creating a Site Design
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 28882508-357e-43a3-a405-c573d830c5cc
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Creating a Site Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creating a site design involves deciding which locations will become sites, creating site objects, creating subnet objects, and associating the subnets with sites.  
   

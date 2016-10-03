@@ -1,21 +1,20 @@
 ---
+ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.custom: 
-  - AD
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: b7c6a691-b966-47a5-b80b-bc668e5104eb
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.  
   

@@ -1,1 +1,0 @@
-**Windows PowerShell equivalent commands**

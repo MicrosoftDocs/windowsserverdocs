@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Application ID Policy Management module for Windows PowerShell</Token>

@@ -1,19 +1,20 @@
 ---
+ms.assetid: f6e76ef0-2217-4cdb-980f-22a780a85ebb
 title: AD DS Design Requirements
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 5ed8b9ca-e88a-4e06-a203-83d37b54d9bb
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # AD DS Design Requirements
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 ## Designing the Active Directory logical structure  

@@ -1,13 +1,15 @@
 ---
+ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
 title: AD FS Scenarios for Developers
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # AD FS Scenarios for Developers

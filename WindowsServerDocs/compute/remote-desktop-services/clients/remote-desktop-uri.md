@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Remote Desktop client Universal Resource Identifier (URI) scheme support
 

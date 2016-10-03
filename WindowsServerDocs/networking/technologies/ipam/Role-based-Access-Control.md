@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
+ms.author: jamesmci
 author: jamesmci
 ---
 # Role-based Access Control
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides information about using role-based access control in IPAM.  
   

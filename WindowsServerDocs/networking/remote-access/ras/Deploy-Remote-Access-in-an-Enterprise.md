@@ -5,21 +5,22 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Deploy Remote Access in an Enterprise
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.  
   
   
 > [!IMPORTANT]  
-> To deploy DirectAccess using this guide, you must use a DirectAccess server that is running Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012.  
+> To deploy DirectAccess using this guide, you must use a DirectAccess server that is running  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.  
   
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites  
   

@@ -4,40 +4,42 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
+ms.author: jamesmci
 author: jamesmci
 ---
 # What&#39;s New in Networking
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-Following are the new or enhanced networking technologies in Windows Server 2016 Technical Preview.  
+Following are the new or enhanced networking technologies in Windows Server 2016.  
   
 This topic contains the following sections.  
   
 -   [New Networking Features and Technologies](#bkmk_features)  
   
--   [New Features for Other Technologies](#bkmk_existing)  
+-   [New Features for Additional Networking Technologies](#bkmk_existing)  
   
-## <a name="bkmk_features"></a>New Networking Features and Technologies  
-Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 Technical Preview provides new and improved Software Defined Networking (SDN) technologies   to help you move to a fully realized SDDC solution for your organization.  
+## <a name="bkmk_features"></a>New Networking Features and Technologies
+
+Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 provides new and improved Software Defined Networking (SDN) technologies   to help you move to a fully realized SDDC solution for your organization.  
   
 When you manage networks as a software defined resource, you can describe an application's infrastructure requirements one time, and then choose where the application  runs - on premises or in the cloud.  This consistency means that your applications are now easier to scale and you can seamlessly run  applications , anywhere, with equal confidence around security, performance, quality of service, and availability.  
   
 The following sections contain information about these new networking features and technologies.  
   
-### Software Defined Networking Infrastructure  
+### Software Defined Networking Infrastructure
+
 Following are the new or improved SDN infrastructure technologies.  
   
--   **Network Controller**. New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](https://technet.microsoft.com/library/mt427380.aspx).  
+-   **Network Controller**. New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](https://technet.microsoft.com/library/mt427380.aspx).  
   
 -   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
--   **Network Function Virtualization (NFV)**. In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being deployed as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. The following NFV technologies are available in Windows Server 2016 Technical Preview.  
+-   **Network Function Virtualization (NFV)**. In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being deployed as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. The following NFV technologies are available in Windows Server 2016.  
   
     -   **Datacenter Firewall**. This distributed firewall provides granular access control lists (ACLs),  enabling you to apply firewall policies at the VM interface level or at the subnet level.  
   
@@ -54,21 +56,23 @@ Following are the new or improved SDN infrastructure technologies.
   
 -   **Standardized Protocols**. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).  
   
--   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
+-   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in  Windows Server 2016](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
   
-### Cloud Scale Fundamentals  
+### Cloud Scale Fundamentals
+ 
 The following cloud scale fundamentals are now available.  
   
 -   **Converged Network Interface Card (NIC)**. The converged NIC allows you to use a single network adapter for management, Remote Direct Memory Access (RDMA)-enabled storage, and tenant traffic. This reduces the capital expenditures that are associated with each server in your datacenter, because you need fewer network adapters to manage different types of traffic per server.  
   
 -   **Packet Direct**.  Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.  
   
--   **Switch Embedded Teaming (SET)**.        SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016 Technical Preview, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+-   **Switch Embedded Teaming (SET)**.        SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
-## <a name="bkmk_existing"></a>New Features for Other Technologies  
-This section contains information about new features for familiar networking technologies.  
+## <a name="bkmk_existing"></a>New Features for Additional Networking Technologies
+
+This section contains information about new features for familiar networking technologies.
   
 ## <a name="bkmk_dhcp"></a>DHCP  
 DHCP is an Internet Engineering Task Force (IETF) standard that is designed to reduce the administrative burden and complexity of configuring hosts on a TCP/IP-based network, such as a private intranet. By using the DHCP Server service, the process of configuring TCP/IP on DHCP clients is automatic.  
@@ -85,14 +89,14 @@ Following are the new or improved DNS client technologies.
   
 -   **DNS Client service binding**. In Windows 10, the DNS Client service offers enhanced support for computers with more than one network interface.  
   
-For more information, see [What's New in DNS Client in Windows Server Technical Preview](dns/What-s-New-in-DNS-Client.md)  
+For more information, see [What's New in DNS Client in  Windows Server 2016](dns/What-s-New-in-DNS-Client.md)  
   
 ### <a name="bkmk_dnss"></a>DNS Server  
 Following are the new or improved DNS server technologies.  
   
 -   **DNS Policies**.  You can configure DNS policies to specify how a DNS server responds to DNS queries. DNS responses can be based on client IP address (location), time of the day, and several other parameters. DNS policies enable location-aware DNS, traffic management, load balancing, split-brain DNS, and other scenarios.  
   
--   **Nano Server support for file based DNS**,   You can deploy DNS server in Windows Server 2016 Technical Preview on a Nano Server image. This deployment option is available to you if you are using file based DNS. By running DNS server on a Nano Server image, you can run your DNS servers with reduced footprint, quick boot up, and minimized patching.  
+-   **Nano Server support for file based DNS**,   You can deploy DNS server in Windows Server 2016 on a Nano Server image. This deployment option is available to you if you are using file based DNS. By running DNS server on a Nano Server image, you can run your DNS servers with reduced footprint, quick boot up, and minimized patching.  
   
     > [!NOTE]   
     > Active Directory integrated DNS is not supported on Nano Server.  
@@ -110,17 +114,17 @@ Following are the new or improved DNS server technologies.
 -   **Improved Windows PowerShell Support**.   
       New Windows PowerShell cmdlets are available for DNS Server.  
   
-For more information, see [What's New in DNS Server in Windows Server Technical Preview](dns/What-s-New-in-DNS-Server.md)  
+For more information, see [What's New in DNS Server in  Windows Server 2016](dns/What-s-New-in-DNS-Server.md)  
   
 ## <a name="bkmk_GRE"></a>GRE Tunneling  
 RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site to site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork.  
   
-For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
+For more information, see [GRE Tunneling in  Windows Server 2016](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 ## <a name="HNV"></a>Hyper-V Network Virtualization  
 Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.  
   
-For more information, see [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
+For more information, see [What's New in Hyper-V Network Virtualization in  Windows Server 2016](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
   
 ## <a name="bkmk_ipam"></a>IPAM  
 IPAM provides highly customizable administrative and monitoring capabilities for the IP address and DNS infrastructure on an organization network. Using IPAM, you can monitor, audit, and manage servers that are running Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS).  

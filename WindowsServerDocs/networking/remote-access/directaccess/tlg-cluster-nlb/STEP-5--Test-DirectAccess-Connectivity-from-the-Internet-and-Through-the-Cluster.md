@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 CLIENT1 is now ready for DirectAccess testing.  
   

@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca521c65-eab4-458e-b762-456ff043c4f7
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Install SQL native client on each RD Connection Broker server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to install a SQL native client on each RD COnnection Broker server:  
   

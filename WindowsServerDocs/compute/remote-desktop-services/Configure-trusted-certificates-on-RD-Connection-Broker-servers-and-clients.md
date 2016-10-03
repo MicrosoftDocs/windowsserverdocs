@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb58cc93-d39a-4677-9bde-d8d816a7e636
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Configure trusted certificates on RD Connection Broker servers and clients
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to configure trusted certificates.  
   

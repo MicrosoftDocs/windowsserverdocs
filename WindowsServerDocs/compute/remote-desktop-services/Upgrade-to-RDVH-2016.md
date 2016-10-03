@@ -5,9 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
@@ -18,7 +16,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Virtualization Host to Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
 Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016 TP5.

@@ -1,13 +1,15 @@
 ---
+ms.assetid: 7b7ae389-5032-44f7-9c0a-94398c3e4d88
 title: Create a Non-Claims Aware Relying Party Trust
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 

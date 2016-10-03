@@ -1,20 +1,20 @@
 ---
+ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 71e76587-28f4-4272-a3d7-7f44ca50c018
-author: femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # How the Windows Time Service Works
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
   

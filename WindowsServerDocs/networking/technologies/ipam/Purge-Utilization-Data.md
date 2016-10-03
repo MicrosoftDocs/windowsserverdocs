@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
+ms.author: jamesmci
 author: jamesmci
 ---
 # Purge Utilization Data
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to delete utilization data from the IPAM database.  
   

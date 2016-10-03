@@ -1,13 +1,15 @@
 ---
+ms.assetid: 13397b74-982f-43d8-b6a5-485052c98c59
 title: Single Page Application with AD FS
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Single Page Application with AD FS

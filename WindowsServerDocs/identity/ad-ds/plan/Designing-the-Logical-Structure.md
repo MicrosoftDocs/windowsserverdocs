@@ -1,19 +1,20 @@
 ---
+ms.assetid: 9ad81367-f3fe-4b2e-bd7c-5900b2b9f77f
 title: Designing the Logical Structure
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 23d96652-a0d9-4f70-9742-514110c99da6
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Designing the Logical Structure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Domain Services (AD DS) enables organizations to create a scalable, secure, and manageable infrastructure for user and resource management. It also enables them to support directory-enabled applications.  
   

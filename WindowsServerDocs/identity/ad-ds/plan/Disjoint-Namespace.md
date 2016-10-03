@@ -1,19 +1,20 @@
 ---
+ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: Disjoint Namespace
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 9b519506-a37f-4810-b0c5-4bb151f553c0
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Disjoint Namespace
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A disjoint namespace occurs when one or more domain member computers have a primary Domain Name Service (DNS) suffix that does not match the DNS name of the Active Directory domain of which the computers are members. For example, a member computer that uses a primary DNS suffix of corp.fabrikam.com in an Active Directory domain named na.corp.fabrikam.com is using a disjoint namespace.  
   

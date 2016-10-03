@@ -1,13 +1,15 @@
 ---
+ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: Device Registration Technical Reference
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

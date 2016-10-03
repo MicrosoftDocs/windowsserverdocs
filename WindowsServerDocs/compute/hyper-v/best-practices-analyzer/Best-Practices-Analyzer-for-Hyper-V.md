@@ -3,10 +3,8 @@ title: Best Practices Analyzer for Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
@@ -15,7 +13,7 @@ ms.date: 8/16/2016
 ---
 # Best Practices Analyzer for Hyper-V
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **This is preliminary content and subject to change.**  
   

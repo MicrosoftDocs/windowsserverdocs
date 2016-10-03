@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa15d0c3-2aa1-48b0-9c39-6bfc0ca4299e
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Configure your desktop hosting environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Before you start deploying any of the desktop hosting solutions for Remote Desktop Services, there are some steps you need to take to prepare your environment:  
   

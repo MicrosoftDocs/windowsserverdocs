@@ -1,4 +1,5 @@
 ---
+ms.assetid: 77d40715-f09a-4fac-b584-7a40beea1170
 title: Using Device-based Conditional Access on-Premises
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -11,6 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f88d7774-b7f8-4eb8-8edd-7a980e24199d
 author: billmath
+ms.author: billmath
 ---
 # Using Device-based Conditional Access on-Premises
 

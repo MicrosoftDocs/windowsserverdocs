@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 #Step 1 Plan the Basic DirectAccess Infrastructure
@@ -133,7 +134,7 @@ In a DirectAccess deployment, DNS is required for the following:
   
 #### DNS server requirements  
   
--   For DirectAccess clients, you must use a DNS server that is running Windows Server&reg; 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 Technical Preview, or any DNS server that supports IPv6.  
+-   For DirectAccess clients, you must use a DNS server that is running Windows Server&reg; 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2,  Windows Server 2016, or any DNS server that supports IPv6.  
   
 > [!NOTE]  
 > It is not recommended that you use DNS servers that are running Windows Server 2003 when you are deploying DirectAccess. Although Windows Server 2003 DNS servers do support IPv6 records, Windows Server 2003 is no longer supported by Microsoft. In addition, you should not deploy DirectAccess if your domain controllers are running Windows Server 2003 due to an issue with the File Replication Service. For more information, see [DirectAccess Unsupported Configurations](../DirectAccess-Unsupported-Configurations.md).  
@@ -158,7 +159,7 @@ DirectAccess uses Active Directory and Active Directory Group policy objects as 
   
 When planning Active Directory for a DirectAccess deployment, the following is required:  
   
--   At least one domain controller installed on Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. 
+-   At least one domain controller installed on  Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. 
   
     If the domain controller is on a perimeter network \(and therefore reachable from the Internet\-facing network adapter of DirectAccess server\) prevent the DirectAccess server from reaching it by adding packet filters on the domain controller, to prevent connectivity to the IP address of the Internet adapter.  
   

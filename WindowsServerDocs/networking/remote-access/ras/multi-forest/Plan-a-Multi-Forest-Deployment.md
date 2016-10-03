@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Plan a Multi-Forest Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes the planning steps required when configuring Remote Access in a multi-forest deployment.  
   

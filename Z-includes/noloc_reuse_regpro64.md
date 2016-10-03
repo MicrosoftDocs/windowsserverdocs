@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft® Windows® XP 64-bit Edition (Itanium)</Token>

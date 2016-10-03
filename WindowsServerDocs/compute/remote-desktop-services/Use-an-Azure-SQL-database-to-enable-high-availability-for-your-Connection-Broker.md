@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 620fe24d-2b97-4e37-aa08-642d588c8700
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Use an Azure SQL database to enable high availability for your Connection Broker
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following article demonstrates the steps necessary to use Azure SQL Database to create a highly available environment for the Remote Desktop Connection Broker in a Remote Desktop Services (RDS) deployment. These steps serve to outline the new capabilities and features of RDS in Windows Server Technical Preview 5 and do not highlight all of the steps necessary for end-to-end configuration of high availability; for a full list of steps, see [Add the RD Connection Broker server to the deployment and configure high availability](Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md).  
   

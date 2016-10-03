@@ -1,21 +1,20 @@
 ---
+ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Appendix C - Protected Accounts and Groups in Active Directory
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: d0fe9fb4-65a0-4c35-8924-09839266f332
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix C: Protected Accounts and Groups in Active Directory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix C: Protected Accounts and Groups in Active Directory  

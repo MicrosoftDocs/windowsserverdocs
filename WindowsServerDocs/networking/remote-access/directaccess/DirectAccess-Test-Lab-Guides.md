@@ -5,17 +5,18 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # DirectAccess Test Lab Guides
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-Following are links to the test lab guides for DirectAccess in Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012.  
+Following are links to the test lab guides for DirectAccess in  Windows Server 2016, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012.  
   
 -   [Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](assetId:///f3e5209b-aaa9-49a7-b523-0a130ec10a4b)  
   

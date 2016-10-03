@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: manage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d33d4506-2dad-404e-a93e-0e0780dc1f85
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Management
 
 >Applies To: Windows Server Technical Preview
@@ -33,4 +35,6 @@ This collection contains tool and reference information for IT pros who want to 
     The content in this section describes how to configure and manage WSUS. In this section you will find information about installing the WSUS Server Role, configuring WSUS servers, as well as managing updates, and managing WSUS client computers and WSUS computer groups.  
 
 ## See Also  
-[Windows Server Technical Preview](http://technet.microsoft.com/library/mt126143.aspx)  
+- [Windows Server Technical Preview](http://technet.microsoft.com/library/mt126143.aspx)  
+- [Manage connections from Windows operating system components to Microsoft services](https://technet.microsoft.com/itpro/windows/manage/manage-connections-from-windows-operating-system-components-to-microsoft-services)
+- [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)

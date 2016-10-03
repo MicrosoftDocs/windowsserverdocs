@@ -5,8 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - server-general
+ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 08/09/2016
@@ -41,7 +40,7 @@ The Share and Storage Management snap-in for Microsoft Management Console has be
 The Journal.dll is removed from Windows Server Technical Preview. There is no replacement.  
 
 ### Security Configuration Wizard  
-The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or [Microsoft Security Compliance Manager](http://technet.microsoft.com/library/cc677002.aspx).  
+The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
 
 ### SQM  
 The opt-in components that manage participation in the Customer Experience Improvement Program have been removed.  

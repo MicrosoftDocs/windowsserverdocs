@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c73a50c-47f3-4470-a77f-fac1a6739942
+ms.author: jamesmci
 author: jamesmci
 ---
 # NIC Teaming in Virtual Machines (VMs)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides information about using NIC Teaming within Hyper-V VMs, and contains the following sections.  
   
@@ -24,7 +25,7 @@ This topic provides information about using NIC Teaming within Hyper-V VMs, and 
 ## <a name="bkmk_config"></a>NIC Teaming Configuration Requirements  
 If you want to use NIC Teaming in a VM, you must connect the virtual network adapters in the VM to external Hyper-V Virtual Switches only; virtual network adapters that are connected to internal or private Hyper-V Virtual Switches are not able to connect to the switch when they are in a team, and networking fails for the VM.  
   
-The Windows Server 2016 Technical Preview NIC Teaming solution supports teams with two members in VMs. Larger teams can be created but such teams are not supported.  Every team member must be connected to a different external Hyper-V Virtual Switch, and the VM's networking interfaces must be configured to allow teaming.For more information, see [Create a New NIC Team in a VM](../../technologies/nic-teaming/../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md).  
+The  Windows Server 2016 NIC Teaming solution supports teams with two members in VMs. Larger teams can be created but such teams are not supported.  Every team member must be connected to a different external Hyper-V Virtual Switch, and the VM's networking interfaces must be configured to allow teaming.For more information, see [Create a New NIC Team in a VM](../../technologies/nic-teaming/../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md).  
   
 NIC Teams within a VM must have their Teaming mode configured as Switch Independent.  In addition, Load Balancing mode for the NIC Team in a VM must be configured with the Address Hash distribution mode.  
   

@@ -1,19 +1,20 @@
 ---
+ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Appendix A - Reviewing Key AD DS Terms
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: dfee30ba-0b6b-4f7b-9c6d-ba016afb47b1
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix A: Reviewing Key AD DS Terms
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following terms are relevant to the deployment process for  Windows Server 2008  Active Directory Domain Services (AD DS).  
   

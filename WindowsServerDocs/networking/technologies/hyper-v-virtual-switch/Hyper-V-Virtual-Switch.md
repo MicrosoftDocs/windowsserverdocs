@@ -4,16 +4,16 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-hv-switch
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
+ms.author: jamesmci
 author: jamesmci
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides an overview of the Hyper-V Virtual Switch, and contains the following sections.  
   

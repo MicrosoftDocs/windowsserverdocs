@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Step 2 Prepare Cluster Servers
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Before you can configure a cluster deployment, you prepare additional servers to add to the cluster.  
   

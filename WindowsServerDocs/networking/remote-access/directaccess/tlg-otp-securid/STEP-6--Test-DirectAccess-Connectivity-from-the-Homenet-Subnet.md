@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The DirectAccess one-time password (OTP) deployment is now complete and you can start to test connectivity from the Homenet subnet.  
   

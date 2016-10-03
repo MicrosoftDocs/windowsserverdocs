@@ -5,12 +5,13 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
+ms.author: vhorne
 author: vhorne
+ms.author: victorh
 ---
 # Plan a Software Defined Network Infrastructure
 
@@ -72,9 +73,8 @@ The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peer
 The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.   
 #### Private VIP logical network  
   
-The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as GRE gateways or private services.  
->[!NOTE]
->At this time the the script deployment method does not use the Private VIP logical network.   
+The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as the SLB Mananger or private services.  
+   
   
 #### GRE VIP logical network  
   The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.   

@@ -1,13 +1,15 @@
 ---
+ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012

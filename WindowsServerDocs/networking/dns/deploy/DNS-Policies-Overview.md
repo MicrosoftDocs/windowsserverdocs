@@ -4,16 +4,16 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
+ms.author: jamesmci
 author: jamesmci
 ---
 # DNS Policies Overview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can create DNS policies to control how a DNS Server handles queries based on different parameters. For instance, you may create a DNS policy to respond to a query asking for the IP address of a web server to respond with a different IP address based on the closest datacenter to the client.  
   

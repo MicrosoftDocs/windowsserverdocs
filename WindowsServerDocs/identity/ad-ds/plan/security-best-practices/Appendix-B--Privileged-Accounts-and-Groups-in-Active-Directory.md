@@ -1,21 +1,20 @@
 ---
+ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: Appendix B - Privileged Accounts and Groups in Active Directory
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 95ab100e-c45f-4419-ac97-a3abc2666f71
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix B: Privileged Accounts and Groups in Active Directory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix B: Privileged Accounts and Groups in Active Directory  

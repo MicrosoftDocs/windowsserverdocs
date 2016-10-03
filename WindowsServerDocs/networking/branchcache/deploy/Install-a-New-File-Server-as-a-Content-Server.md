@@ -5,17 +5,18 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Install a New File Server as a Content Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server&reg; 2016 Technical Preview.  
+You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server&reg; 2016.  
   
 Membership in **Administrators**, or equivalent is the minimum required to perform this procedure.  
   

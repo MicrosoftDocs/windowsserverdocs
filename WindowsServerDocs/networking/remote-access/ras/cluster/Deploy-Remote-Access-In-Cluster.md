@@ -5,14 +5,15 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid:
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Deploy Remote Access in a Cluster
-Windows Server 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. You can deploy Remote Access in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing \(NLB\) or with an external load balancer \(ELB\), such as F5 Big\-IP.  
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. You can deploy Remote Access in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing \(NLB\) or with an external load balancer \(ELB\), such as F5 Big\-IP.  
 
 ## <a name="BKMK_OVER"></a>Scenario description  
 A cluster deployment gathers multiple Remote Access servers into a single unit, which then acts as a single point of contact for remote client computers connecting over DirectAccess or VPN to the internal corporate network using the external virtual IP \(VIP\) address of the Remote Access cluster.  Traffic to the cluster is load balanced using Windows NLB or with an external load balancer \(such as F5 Big\-IP\).  

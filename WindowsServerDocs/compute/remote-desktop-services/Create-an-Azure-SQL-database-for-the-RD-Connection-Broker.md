@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d04ba634-19bf-4f74-a834-138b738bc86c
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Create an Azure SQL database for the RD Connection Broker
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This article provides steps to deploy an Azure SQL Database instance for Remote Desktop. Alternatively, you could deploy a SQL server AlwaysOn Availability Group in multiple virtual machines or use a database in an existing SQL server deployment. For more details, see [Create a SQL AlwaysOn Availability Group in Microsoft Azure End-to-End](https://blogs.msdn.microsoft.com/sqlalwayson/2013/01/23/test-lab-create-an-alwayson-availability-group-in-windows-azure-end-to-end/).   
   

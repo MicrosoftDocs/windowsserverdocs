@@ -1,13 +1,15 @@
 ---
+ms.assetid: 9cafa3e1-8118-4a75-a7c2-1dbe40b1a444
 title: Configure Claims Rules
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Configure Claim Rules

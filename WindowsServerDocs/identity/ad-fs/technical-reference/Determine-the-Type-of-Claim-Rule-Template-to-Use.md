@@ -1,13 +1,15 @@
 ---
+ms.assetid: 696a29b2-d627-4c9a-a384-9c8aaf50bd23
 title: Determine the Type of Claim Rule Template to Use
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

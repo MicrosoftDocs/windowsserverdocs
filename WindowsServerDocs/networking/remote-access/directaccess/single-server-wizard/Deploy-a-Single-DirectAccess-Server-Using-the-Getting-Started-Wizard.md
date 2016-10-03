@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess in a few easy steps.  
   
@@ -25,7 +26,7 @@ You can use the following topics to review prerequisites and other information b
 -   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running either  Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with default settings in a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
+In this scenario, a single computer running either   Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with default settings in a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
   
 > [!NOTE]  
 > If you want to configure an advanced deployment with custom settings, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
@@ -98,7 +99,7 @@ Hardware requirements for this scenario include the following:
   
 -   Server requirements:  
   
-    -   A computer that meets the hardware requirements for Windows Server 2016 Technical Preview,   Windows Server 2012 R2 , or  Windows Server 2012 .  
+    -   A computer that meets the hardware requirements for  Windows Server 2016,   Windows Server 2012 R2 , or  Windows Server 2012 .  
   
     -   The server must have at least one network adapter installed, enabled, and connected to the internal network. When two adapters are used, there should be one adapter connected to the internal corporate network, and one connected to the external network (Internet, or private network).  
   
@@ -112,13 +113,13 @@ Hardware requirements for this scenario include the following:
         > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document does not support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.  
   
         > [!NOTE]  
-        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise, Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
+        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 -   Infrastructure and management server requirements:  
   
     -   If VPN is enabled and a static IP address pool is not configured, you must deploy a DHCP server to allocate IP addresses automatically to VPN clients.  
   
--   A DNS server running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 SP2, or Windows Server 2008 R2 is required.  
+-   A DNS server running  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 SP2, or Windows Server 2008 R2 is required.  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
@@ -135,7 +136,7 @@ There are a number of requirements for this scenario:
   
     -   DirectAccess clients must be domain members. Domains containing clients can belong to the same forest as the Remote Access server, or have a two-way trust with the Remote Access server forest.  
   
-    -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. If a security group is not specified when configuring DirectAccess client settings, by default the client GPO is applied on all laptop computers in the Domain Computers security group. Only the following operating systems can be used as DirectAccess clients: Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise, and Windows 7 Ultimate.  
+    -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. If a security group is not specified when configuring DirectAccess client settings, by default the client GPO is applied on all laptop computers in the Domain Computers security group. Only the following operating systems can be used as DirectAccess clients:  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 ## <a name="BKMK_LINKS"></a>See also  
 The following table provides links to additional resources.  

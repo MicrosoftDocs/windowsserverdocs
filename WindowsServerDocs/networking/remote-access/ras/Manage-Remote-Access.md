@@ -5,19 +5,20 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Manage Remote Access
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The DirectAccess Remote Client Management deployment scenario uses DirectAccess to maintain clients over the Internet. This section explains the scenario, including its phases, roles, features, and links to additional resources.  
   
-Windows Server&reg; 2016 Technical Preview and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.   
+ Windows Server 2016 and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.   
   
 > [!NOTE]  
 > In addition to this topic, the following Remote Access management topics are available.  
@@ -104,7 +105,7 @@ Hardware requirements for this scenario include the following:
   
 -   During remote management of DirectAccess client computers, clients initiate communications with management servers, such as domain controllers, System Center Configuration Servers, and Health Registration Authority (HRA) servers. These servers provide services that include Windows and antivirus updates and Network Access Protection (NAP) client compliance. You should deploy the required servers before you begin the Remote Access deployment.  
   
--   A DNS server running Windows Server&reg; 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 with SP2 is required.  
+-   A DNS server running  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 with SP2 is required.  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
 Software requirements for this scenario include the following:  

@@ -3,10 +3,8 @@ title: Configure virtual machines running Windows Vista with 1 or 2 virtual proc
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: e562bce3-fd68-42c9-821c-12022ae4746c
@@ -15,15 +13,13 @@ ms.date: 8/16/2016
 ---
 # Configure virtual machines running Windows Vista with 1 or 2 virtual processors
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Configuration|  
 |**Category**|Error|  

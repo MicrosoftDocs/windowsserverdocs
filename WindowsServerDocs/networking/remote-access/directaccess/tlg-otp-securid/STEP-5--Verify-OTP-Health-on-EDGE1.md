@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 5 Verify OTP Health on EDGE1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following procedures verify that OTP is configured and functioning correctly using DirectAccess Server Health Monitoring on EDGE1.  
   

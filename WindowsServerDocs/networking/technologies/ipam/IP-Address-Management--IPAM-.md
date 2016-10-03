@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
+ms.author: jamesmci
 author: jamesmci
 ---
 # IP Address Management (IPAM)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 IP Address Management (IPAM) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System (DNS) servers on your network and enables you to manage them from a central interface.  
   

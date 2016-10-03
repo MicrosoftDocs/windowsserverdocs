@@ -5,17 +5,18 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8228d1ed-0efc-4858-89df-eb2c426440f9
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Install and Configure Basic DirectAccess
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012with basic settings.  
+This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012with basic settings.  
   
 -   [Step 1: Configure the DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-wizard/Step-1--Configure-the-DirectAccess-Infrastructure.md). This step includes configuring network and server settings, DNS settings and Active Directory settings.  
   

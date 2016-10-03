@@ -1,13 +1,15 @@
 ---
+ms.assetid: c17d143b-86b4-47c0-b76e-1862dda8f0bd
 title: Walkthrough - Workplace Join with a Windows Device
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Walkthrough: Workplace Join with a Windows Device

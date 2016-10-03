@@ -5,11 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
+ms.author: vhorne
 author: vhorne
 ---
 # Deploy a Software Defined Network infrastructure using scripts
@@ -33,7 +33,7 @@ All Hyper-V hosts must have Windows Server 2016 installed.
 Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switch and  IP address assignment. Any storage type that is compatible with Hyper-V, shared or local may be used.  
 ### Install host networking  
 1. Install the latest network drivers available for your NIC hardware.  
-2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016 Technical Preview](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
+2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
   
    From an elevated Windows PowerShellcommand prompt:  
    ``Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart``  
@@ -164,58 +164,4 @@ To validate that the tenant deployment was successful, do the following:
    
    where `<VIP IP address>` is the web tier VIP IP address you configured in the TenantConfig.psd1 file. Search for the `VIPIP` variable in TenantConfig.psd1.
 
-   Run this muliple times to see the load balancer switch between the available DIPs. You can also observe this behavior using a web browser. Browse to `<VIP IP address>/unique.htm`. Close the brower and open a new instance and browse again. You will see the blue page and the green page alternate, except when the browser caches the page before the cache times out.  
-  
-## Deploy a simulated tenant enterprise infrastructure  
-  
-1.  To deploy simulated tenant enterprise site gateways and virtual machines, open the **EnterpriseConfig.psd1** file in the Powershell ISE, and customize the enterprise gateway settings that you need for your environment. Make sure you specify the Routing Type that you want (**Dynamic** for BGP Routing, **Static** otherwise).  
-  
-2.  Run the **SDNExpressEnterpriseExample.ps1** script to deploy the Enterprise site Gateways and (optionally) clients:  
-  
-    ``  
-    ./SDNExpressEnterpriseExample.ps1 -ConfigurationDataFile .\EnterpriseConfig.psd1 verbose  
-    ``  
-  
-    This script creates the following:  
-  
-    -   One or more tenant enterprise sites with a VPN S2S Gateway per site, connected to the "Internet" network.  
-  
-    -   An internal tenant enterprise network switch for this site's internal connectivity.  
-  
-    -   A S2S VPN interface on this gateway with a destination to the gateway's public IP address and post connect IPv4 route to the service provider BGP router IPv4 address.  
-  
-    -   Installs a BGP router on the tenant enterprise site and creates a BGP Peer with the destination IP address at the service provider BGP router.  
-  
-3.  Now you can run the following cmdlets on the tenant enterprise gateways to check the state of network connections (and/or connect them):  
-  
-    -   `Get-VpnS2SInterface | Connect-VpnS2SInterface`  
-  
-    -   `Get-BgpRouter`  
-  
-    -   `Get-BgpPeer | Start-BgpPeer`  
-  
-    -   `Get-BgpRouteInformation`  
-  
-4.  To check if the end-to-end connectivity is up, try the following:  
-  
-    -   From one of the tenant enterprise gateways, ping the other tenant enterprise network.  
-        
-        For example: `ping 14.1.20.1 -S 14.1.10.1`  
-  
-    -   From one of the tenant enterprise gateways, try to establish an RDP connection with the WebTier virtual machine in the virtual network hosted at the service provider.  
-
-        For example: `mstsc -v 192.168.0.10`  
-  
-        In this example, 192.168.0.10 is the DIP on one of the VNET VMs.  
-  
-5.  Optional - gateway failover scenario  
-  
-    To simulate a gateway failover scenario in M+N deployment mode, find out the currently active gateway for the tenant by using the following Windows PowerShell command: `Get-NCVirtualGateway -ResourceID <TenantName>`  
-  
-    Now log on to the gateway virtual machine and either shutdown the Remote Access service or shutdown the virtual machine to simulate failover. Check whether the tenant's virtual gateway has been re-provisioned on a standby Gateway virtual machine by running the above Windows PowerShell command again.  
-  
-This completes the configuration for SDN environment and the corresponding tenant enterprise sites.  
-If you need to configure additional tenant enterprise sites or network connections, you can modify the corresponding configuration and run it again.  
-  
-
-
+   Run this muliple times to see the load balancer switch between the available DIPs. You can also observe this behavior using a web browser. Browse to `<VIP IP address>/unique.htm`. Close the brower and open a new instance and browse again. You will see the blue page and the green page alternate, except when the browser caches the page before the cache times out.

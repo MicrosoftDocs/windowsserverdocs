@@ -5,18 +5,19 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Add DirectAccess to an Existing Remote Access (VPN) Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012 is configured as a DirectAccess server with recommended settings after you have already installed and configured VPN. If you want to configure DirectAccess with enterprise features, such as a load-balanced cluster, multisite deployment, or two-factor client authentication, complete the scenario described in this topic to set up a single server, and then set up the enterprise scenario as described in [Deploy Remote Access in an enterprise](assetId:///77ce3214-c029-4c4b-8f09-78bec490716e).  
+In this scenario, a single computer running  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 is configured as a DirectAccess server with recommended settings after you have already installed and configured VPN. If you want to configure DirectAccess with enterprise features, such as a load-balanced cluster, multisite deployment, or two-factor client authentication, complete the scenario described in this topic to set up a single server, and then set up the enterprise scenario as described in [Deploy Remote Access in an enterprise](assetId:///77ce3214-c029-4c4b-8f09-78bec490716e).  
   
 ## In this scenario  
 To set up a single Remote Access server, a number of planning and deployment steps are required.  

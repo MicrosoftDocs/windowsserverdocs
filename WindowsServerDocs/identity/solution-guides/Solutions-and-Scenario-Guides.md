@@ -1,20 +1,21 @@
 ---
+ms.assetid: bdb9ad4b-139c-4031-8f26-827432779829
 title: Solutions and Scenario Guides
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: 
+ms.technology: identity-adds
 ---
 
 # Solutions and Scenario Guides
 
->Applies To: Windows Server Technical Preview
-
-**[This information is preliminary and subject to change.]**  
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+ 
   
 With Microsoft's access and information protection solutions, you can deploy and configure access to corporate resources across your on-premises environment and cloud applications. And you can do it while protecting corporate information.  
   

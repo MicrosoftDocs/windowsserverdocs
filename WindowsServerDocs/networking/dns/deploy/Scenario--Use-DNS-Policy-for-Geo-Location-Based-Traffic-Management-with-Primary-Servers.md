@@ -4,16 +4,16 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To:  Windows Server 2016
 
 You can use this topic to learn how to configure DNS Policy to allow primary DNS servers to respond to DNS client queries based on the geographical location of both the client and the resource to which the client is attempting to connect, providing the client with the IP address of the closest resource.  
   
@@ -168,6 +168,6 @@ Now the DNS server is configured with the required DNS policies to redirect traf
   
 When the DNS server receives name resolution queries, the DNS server evaluates the fields in the DNS request against the configured DNS policies. If the source IP address in the name resolution request matches any of the policies, the associated zone scope is used to respond to the query, and the user is directed to the resource that is geographically closest to them.   
   
-You can create hundreds of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.  
+You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.  
   
   

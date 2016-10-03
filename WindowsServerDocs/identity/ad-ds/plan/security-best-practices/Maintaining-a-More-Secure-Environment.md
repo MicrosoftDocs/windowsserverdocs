@@ -1,21 +1,20 @@
 ---
+ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: Maintaining a More Secure Environment
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: b640d7c9-357c-474a-bad5-0f339c0be487
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Maintaining a More Secure Environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Ten: Technology is not a panacea.* - [10 Immutable Laws of Security Administration](http://technet.microsoft.com/library/cc722488.aspx)  
   

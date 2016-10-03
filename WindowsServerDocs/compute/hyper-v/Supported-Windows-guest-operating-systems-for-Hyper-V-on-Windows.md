@@ -1,12 +1,10 @@
 ---
-title: Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview
+title: Supported Windows guest operating systems for Hyper-V on Windows Server 2016
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
@@ -14,21 +12,20 @@ author: cwatsonmsft
 ms.author: cwatson
 ms.date: 8/16/2016
 ---
-# Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview
+# Supported Windows guest operating systems for Hyper-V on Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-**This is preliminary content and subject to change.**  
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run as virtual machine guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
     
 Some operating systems have the integration services built-in. Others require that you install or upgrade integration services as a separate step after you set up the operating system in the virtual machine. For more information, see the sections below and  [Integration Services](https://technet.microsoft.com/library/dn798297.aspx).  
   
 ## Supported Windows Server guest operating systems  
-The following table lists the Windows Server operating systems supported in Windows Server 2016 Technical Preview for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
+The following table lists the Windows Server operating systems supported in Windows Server 2016 for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
   
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  
-|Windows Server 2016 Technical Preview|64|Built-in||  
+|Windows Server 2016 |64|Built-in||  
 | Windows Server 2012 R2 |64|Built-in||  
 | Windows Server 2012 |64|Built-in||  
 |Windows Server 2008 R2 with Service Pack 1 (SP 1)|64|Install the integration services after you set up the operating system in the virtual machine.|Datacenter, Enterprise, Standard and Web editions.|  
@@ -37,7 +34,7 @@ The following table lists the Windows Server operating systems supported in Wind
 |Windows Small Business Server 2011|Essentials edition 2<br /><br />Standard edition 4|Install the integration services after you set up the operating system in the virtual machine.|Essentials and Standard editions.|  
   
 ## Supported Windows client guest operating systems  
-The following table lists the Windows client operating systems supported in Windows Server 2016 Technical Preview for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
+The following table lists the Windows client operating systems supported in Windows Server 2016 for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
   
 |Guest operating system (client)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  

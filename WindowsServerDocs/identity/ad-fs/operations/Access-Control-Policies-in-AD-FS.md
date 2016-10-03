@@ -1,17 +1,19 @@
 ---
+ms.assetid: 102eeeb1-6c55-42a2-b321-71a7dab46146
 title: Access Control Policies in AD FS
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Access Control Policies in AD FS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
   
 ## Access Control Policy Templates in AD FS  
@@ -177,5 +179,6 @@ From here you can select the access control policy and apply it to the applicati
   
 ![](media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)  
   
-
+## See Also  
+[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
 

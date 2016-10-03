@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ecf48ac5-ccd3-4fc6-a41b-319b3274903c
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Create a virtual machine for the Remote Desktop Session Host server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Note: To create a virtual machine from a custom image, see the steps provided in the Basic Deployment Guide.   
   

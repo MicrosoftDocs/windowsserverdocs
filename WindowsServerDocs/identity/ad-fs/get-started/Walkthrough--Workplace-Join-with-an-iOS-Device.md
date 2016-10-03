@@ -1,13 +1,15 @@
 ---
+ms.assetid: 299e4fb9-8f1a-4275-ad7d-dad4f1594657
 title: Walkthrough - Workplace Join with an iOS Device
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Walkthrough: Workplace Join with an iOS Device
@@ -29,8 +31,8 @@ In this demonstration, you join the device to the workplace.
 #### To join an iOS device to a workplace
 
 1.  -   **When Azure Active Directory Device Registration service is the configured DRS:**
-        Open Apple Safari and navigate to Azure Active Directory Device Registration service Over-the-Air Profile endpoint for iOS devices, <`https://enterpriseregisration.windows.net/enrollmentserver/otaprofile/<yourdomainname` >
-        Where <`yourdomainname`> is the domain name that you have configured with Azure Active Directory. For example, if your domain name is contoso.com, the URL would be: `https://enterpriseregisration.windows.net/enrollmentserver/otaprofile/contoso.com`
+        Open Apple Safari and navigate to Azure Active Directory Device Registration service Over-the-Air Profile endpoint for iOS devices, <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` >
+        Where <`yourdomainname`> is the domain name that you have configured with Azure Active Directory. For example, if your domain name is contoso.com, the URL would be: `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`
 
     -   **When On-premises DRS is the configured DRS**: 
         Open Apple Safari and navigate to the Device Registration Service (DRS) Over-the-Air Profile endpoint for iOS devices, `https://adf1s.contoso.com/enrollmentserver/otaprofile`

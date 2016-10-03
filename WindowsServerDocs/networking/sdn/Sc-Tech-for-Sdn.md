@@ -4,14 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
+ms.author: jamesmci
 author: jamesmci
 ---
-# System Center Technologies for Software Defined Networking  
+# System Center Technologies for Software Defined Networking
+
+>Applies To: Windows Server&reg; 2016
+
 System Center includes the following technologies for use with Software Defined Networking (SDN):  
   
 -   [System Center Operations Manager](#bkmk_scom)  

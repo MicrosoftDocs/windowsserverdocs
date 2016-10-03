@@ -1,13 +1,15 @@
 ---
+ms.assetid: 3d770385-9834-4ebe-b66c-b684e0245971
 title: Create a Rule to Permit or Deny Users Based on an Incoming Claim
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Create a Rule to Permit or Deny Users Based on an Incoming Claim 

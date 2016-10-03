@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
+ms.author: jamesmci
 author: jamesmci
 ---
 # View DNS Resource Records for a Specific IP Address
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to view the DNS resource records that are associated with the IP Address that you choose.  
   

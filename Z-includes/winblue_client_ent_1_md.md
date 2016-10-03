@@ -1,1 +1,0 @@
-Windows® 8.1 Enterprise

@@ -1,11 +1,11 @@
 ---
-title: Windows Server 2016 Technical Preview 5
+title: Windows Server 2016
 description: "Get started with Windows Server 2016. " 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 08/09/2016
+ms.date: 08/29/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,15 +14,16 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Windows Server 2016 Technical Preview 5
-
->Applies To: Windows Server Technical Preview
+# Windows Server 2016
+> Applies To: Windows Server
 
 **[This information is preliminary and subject to change.]**  
 
-Welcome to Windows Server&reg; 2016 Technical Preview 5.  
+To experience first-hand new features and functionality available in Windows Server 2016, you can download an evaluation version by visiting [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1).
 
-This is the fifth release of Windows Server 2016 Technical Preview. In this documentation, Windows Server is referred to as Windows Server Technical Preview unless there is a need to distinguish between this release and the previous release. This collection contains information about the following:  
+Welcome to Windows Server&reg; 2016.  
+
+This is the fifth release of Windows Server 2016. In this documentation, Windows Server is referred to as Windows Server unless there is a need to distinguish between this release and the previous release. This collection contains information about the following:  
 
 -   [System Requirements  and Installation](System-Requirements--and-Installation.md)  
 
@@ -36,8 +37,8 @@ This is the fifth release of Windows Server 2016 Technical Preview. In this docu
 
 -   [Networking](../networking/Networking.md)  
 
--   [Storage](../storage/Storage.md)  
+-   [Storage](../storage/storage.md)  
 
 -   [Security and Assurance](../security/Security-and-Assurance.md)  
 
-Want to provide feedback or make a suggestion? Is there something that  we could do better? You can use the [Windows Server User Voice site](http://windowsserver.uservoice.com/forums/295047-general-feedback) to give feedback, recommend features, and to see what others are saying.  
+Want to provide feedback or make a suggestion? Is there something that we could do better? You can use the [Windows Server User Voice site](http://windowsserver.uservoice.com/forums/295047-general-feedback) to give feedback, recommend features, and to see what others are saying.  

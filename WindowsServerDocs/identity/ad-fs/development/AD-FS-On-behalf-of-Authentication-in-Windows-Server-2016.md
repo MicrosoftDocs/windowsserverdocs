@@ -1,13 +1,15 @@
 ---
+ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
 title: AD FS On-behalf-of Authentication in Windows Server 2016
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # AD FS On-behalf-of Authentication in Windows Server 2016

@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 12 Test DirectAccess Connectivity
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Before you can test connectivity from the client computers when they are located on the Internet or Homenet networks, you must make sure they have the correct group policy settings.  
   

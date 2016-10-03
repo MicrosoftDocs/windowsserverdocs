@@ -1,1 +1,0 @@
- Windows Vista with SP1 

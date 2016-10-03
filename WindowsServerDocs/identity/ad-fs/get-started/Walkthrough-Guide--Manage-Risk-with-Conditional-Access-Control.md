@@ -1,13 +1,15 @@
 ---
+ms.assetid: 3a840b63-78b7-4e62-af7b-497026bfdb93
 title: Walkthrough Guide - Manage Risk with Conditional Access Control
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Walkthrough Guide: Manage Risk with Conditional Access Control
@@ -90,21 +92,18 @@ You can complete this task using either AD FS Management Console or via Windows 
 
 1.  On your federation server, open the Windows PowerShell command window and run the following command:
 
-    ```
-    $rp = Get-AdfsRelyingPartyTrust -Name claimapp
 
-    ```
+    `$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+
 
 2.  In the same Windows PowerShell command window, run the following command:
 
-    ```
-    $GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
-    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule
 
-    ```
+    `$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
+    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
 
-    > [!NOTE]
-    > Make sure to replace <group_SID> with the value of the SID of your AD **Finance** group.
+> [!NOTE]
+> Make sure to replace <group_SID> with the value of the SID of your AD **Finance** group.
 
 ## <a name="BKMK_4"></a>Step 4: Verify conditional access control mechanism
 In this step you will verify the conditional access control policy that you set up in the previous step. You can use the following procedure to verify that **Robert Hatley** AD user can access your sample application because he belongs to the **Finance** group and AD users who do not belong to the **Finance** group cannot access the sample application.

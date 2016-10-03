@@ -1,13 +1,15 @@
 ---
+ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: Configuring Alternate Login ID
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 

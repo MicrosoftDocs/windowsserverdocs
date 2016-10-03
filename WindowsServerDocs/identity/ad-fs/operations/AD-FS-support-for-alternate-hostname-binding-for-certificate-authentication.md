@@ -1,13 +1,15 @@
 ---
+ms.assetid: 4b71b212-7e5b-4fad-81ee-75b3d1f27869
 title: AD FS support for alternate hostname binding for certificate authentication
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # AD FS support for alternate hostname binding for certificate authentication
 

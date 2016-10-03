@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Install and Configure Deployment for Remote Management of DirectAccess Clients
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic introduces the configuration steps that are required to deploy a single  Remote Access server that can be used for remote management of DirectAccess clients.  
   

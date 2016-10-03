@@ -1,13 +1,15 @@
 ---
+ms.assetid: e9563792-cd73-4a32-b4a1-5bd6a2109016
 title: AD FS Development
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # AD FS Development
 

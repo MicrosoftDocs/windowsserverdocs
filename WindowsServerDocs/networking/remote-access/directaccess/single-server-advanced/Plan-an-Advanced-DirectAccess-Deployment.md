@@ -5,17 +5,18 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Plan an Advanced DirectAccess Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This topic lists the planning steps that are required to deploy a single DirectAccess server running Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
+This topic lists the planning steps that are required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
   
 -   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   

@@ -1,19 +1,20 @@
 ---
+ms.assetid: eb600904-24b8-4488-a278-c1c971dc2f2d
 title: Planning Regional Domain Controller Placement
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: a90604bc-ab0c-4f83-b8e5-85332a8f6e7c
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Planning Regional Domain Controller Placement
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" (DSSTOPO_1.doc) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.  
   

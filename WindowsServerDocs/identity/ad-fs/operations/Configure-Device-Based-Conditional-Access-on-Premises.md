@@ -1,13 +1,15 @@
 ---
+ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-Premises
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/20/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 

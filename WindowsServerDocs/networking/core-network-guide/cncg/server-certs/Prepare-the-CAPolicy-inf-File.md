@@ -6,11 +6,14 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c36201de-7eb6-4e38-87da-cf7dd981a442
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Prepare the CAPolicy.inf File
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 On CA1, you must prepare the CAPolicy.inf file before installing Active Directory Certificate Services.  
   

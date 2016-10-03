@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">To learn how to securely collaborate with partners and vendors, see <externalLink xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><linkText>Improve collaboration in small and midsize businesses</linkText><linkUri>http://technet.microsoft.com/library/dn747893.aspx</linkUri></externalLink>.</Token>

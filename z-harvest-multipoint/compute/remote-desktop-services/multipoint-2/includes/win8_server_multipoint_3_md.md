@@ -1,1 +1,0 @@
-MultiPoint Server

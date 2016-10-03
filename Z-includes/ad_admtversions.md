@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Applies to: Active Directory Migration Tool 3.2 (ADMT 3.2)</Token>

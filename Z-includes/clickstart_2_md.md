@@ -1,1 +1,0 @@
-on the **Start** screen, type

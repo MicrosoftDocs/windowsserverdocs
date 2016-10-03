@@ -1,31 +1,26 @@
 ---
-title: System requirements for Hyper-V on Windows Server 2016 Technical Preview
+title: System requirements for Hyper-V on Windows Server 2016
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 author: KBDAzure
 ms.author: kathydav
-ms.author: cwatson
-ms.date: 8/16/2016
+ms.date: 9/30/2016
 ---
-# System requirements for Hyper-V on Windows Server 2016 Technical Preview
+# System requirements for Hyper-V on Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
 
-**This is preliminary content and subject to change.** 
-
-Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server 2016 Technical Preview because a virtualization environment requires more computing resources.  
+Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server 2016 because a virtualization environment requires more computing resources.  
 
 If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from  Windows Server 2012 R2 .  But, you will need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.  
   
-For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).  
+For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).  
   
 ## General requirements  
 Regardless of the Hyper-V features you want to use, you'll need:  
@@ -50,7 +45,7 @@ Systeminfo.exe
 Scroll to the Hyper-V Requirements section to review the report.  
   
 ## Requirements for specific features  
-Here are the requirements for discrete device assignment and shielded virtual machines. For descriptions of these features, see [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows.md).  
+Here are the requirements for discrete device assignment and shielded virtual machines. For descriptions of these features, see [What's new in Hyper-V on Windows Server 2016](What-s-new-in-Hyper-V-on-Windows.md).  
   
 ### Discrete device assignment  
 **Host** requirements are similar to the existing requirements for the SR-IOV feature in Hyper-V.  
@@ -70,7 +65,7 @@ Here are the requirements for discrete device assignment and shielded virtual ma
 **Devices** need GPU or non-volatile memory express (NVMe). For GPU, only certain devices support discrete device assignment. To verify, see the hardware documentation or contact your hardware manufacturer. For details about this feature, including how to use it and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
   
 ### Shielded virtual machines  
-These virtual machines rely on virtualization-based security, which supports several new features in Windows Server 2016 Technical preview.  
+These virtual machines rely on virtualization-based security, which supports several new features in Windows Server 2016w.  
   
 **Host** requirements are:  
 -   UEFI 2.3.1c - supports secure, measured boot  
@@ -85,7 +80,7 @@ These virtual machines rely on virtualization-based security, which supports sev
   
 -   Generation 2  
   
--   Windows Server 2016 Technical Preview, Windows Server 2012R2 or Windows Server 2012 as the guest operating system  
+-   Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 as the guest operating system  
   
 
 

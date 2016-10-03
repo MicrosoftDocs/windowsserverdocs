@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # DirectAccess Offline Domain Join
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This guide explains the steps to perform an offline domain join with DirectAccess. During an offline domain join, a computer is configured to join a domain without physical or VPN connection.  
   
@@ -37,7 +38,7 @@ Introduced in Windows Server 2008 R2, domain controllers include a feature calle
 3.  Reboot the destination computer, and the computer will be joined to the domain.  
   
 ### <a name="BKMK_ODJOverview"></a>Offline domain join with DirectAccess policies scenario overview  
-DirectAccess offline domain join is a process that computers running Windows Server 2016 Technical Preview, Windows Server 2012, Windows 10 and Windows 8 can use to join a domain without being physically joined to the corporate network, or connected through VPN. This makes it possible to join computers to a domain from locations where there is no connectivity to a corporate network. Offline domain join for DirectAccess provides DirectAccess policies to clients to allow remote provisioning.  
+DirectAccess offline domain join is a process that computers running  Windows Server 2016, Windows Server 2012, Windows 10 and Windows 8 can use to join a domain without being physically joined to the corporate network, or connected through VPN. This makes it possible to join computers to a domain from locations where there is no connectivity to a corporate network. Offline domain join for DirectAccess provides DirectAccess policies to clients to allow remote provisioning.  
   
 A domain join creates a computer account and establishes a trust relationship between a computer running a Windows operating system and an Active Directory domain.  
   
@@ -52,7 +53,7 @@ A domain join creates a computer account and establishes a trust relationship be
 . The following sections explain operating system requirements and credential requirements for performing a DirectAccess offline domain join using Djoin.exe.  
   
 ### Operating system requirements  
-You can run Djoin.exe for DirectAccess only on computers that run Windows Server 2016 Technical Preview,  Windows Server 2012  or Windows 8. The computer on which you run Djoin.exe to provision computer account data into AD DS must be running Windows Server 2016 Technical Preview, Windows 10,  Windows Server 2012  or Windows 8. The computer that you want to join to the domain must also be running Windows Server 2016 Technical Preview, Windows 10,  Windows Server 2012 , or Windows 8.  
+You can run Djoin.exe for DirectAccess only on computers that run  Windows Server 2016,  Windows Server 2012  or Windows 8. The computer on which you run Djoin.exe to provision computer account data into AD DS must be running  Windows Server 2016, Windows 10,  Windows Server 2012  or Windows 8. The computer that you want to join to the domain must also be running  Windows Server 2016, Windows 10,  Windows Server 2012 , or Windows 8.  
   
 ### Credential requirements  
 To perform an offline domain join, you must have the rights that are necessary to join workstations to the domain. Members of the Domain Admins group have these rights by default. If you are not a member of the Domain Admins group, a member of the Domain Admins group must complete one of the following actions to enable you to join workstations to the domain:  

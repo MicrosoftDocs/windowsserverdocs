@@ -1,24 +1,21 @@
 ---
+ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS Installation and Removal Wizard Page Descriptions
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 2c1c453e-3852-4575-923b-f544f0212016
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # AD DS Installation and Removal Wizard Page Descriptions
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This is pre-release documentation that is subject to change in future releases. Blank sections are included as placeholders.  
-  
 This topic provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.  
   
 -   [Deployment Configuration](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DepConfigPage)  

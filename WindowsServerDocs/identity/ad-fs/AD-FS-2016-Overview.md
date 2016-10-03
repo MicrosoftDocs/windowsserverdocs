@@ -1,13 +1,15 @@
 ---
+ms.assetid: 5007a619-ef57-4636-9aa9-93b0f02be1fc
 title: AD FS 2016 Overview
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # AD FS 2016 Overview
 

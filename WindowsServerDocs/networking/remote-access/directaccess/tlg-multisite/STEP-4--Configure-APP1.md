@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7000e80f-31b1-43c5-b51e-1469d26909e5
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 4 Configure APP1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.  
   

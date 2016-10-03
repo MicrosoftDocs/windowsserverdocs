@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc20b1a0-540d-4531-a176-50b87c071600
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 2 Install and Configure ROUTER1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 In this multisite test lab guide, the router computer provides an IPv4 and IPv6 bridge between the Corpnet and 2-Corpnet subnets, and acts as a router for IP-HTTPS and Teredo traffic.  
   
@@ -26,15 +27,15 @@ In this multisite test lab guide, the router computer provides an IPv4 and IPv6 
 -   [Configure routing and forwarding](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9#RouteandForward)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on ROUTER1  
-First, install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
+First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
   
 #### To install the operating system on ROUTER1  
   
-1.  Start the installation of Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  (full installation).  
+1.  Start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  (full installation).  
   
 2.  Follow the instructions to complete the installation, specifying a strong password for the local Administrator account. Log on using the local Administrator account.  
   
-3.  Connect ROUTER1 to a network that has Internet access and run Windows Update to install the latest updates for Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
+3.  Connect ROUTER1 to a network that has Internet access and run Windows Update to install the latest updates for  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
   
 4.  Connect ROUTER1 to the Corpnet and 2-Corpnet subnets.  
   

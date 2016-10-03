@@ -4,20 +4,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: adc85c02-5391-4f8a-abd7-827a70746c4d
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Validate and secure your Remote Desktop deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Once you have deployed your Remote Desktop servers, you can validate the deployment by connecting to Remote Desktop from a client computer over the Internet.   
   

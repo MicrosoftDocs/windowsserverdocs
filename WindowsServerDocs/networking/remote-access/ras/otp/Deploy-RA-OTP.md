@@ -4,17 +4,19 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Deploy Remote Access with OTP Authentication
-Windows Server&reg; 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
-  
-  
+
+>Applies To: Windows Server&reg; 2016
+
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
+
 ## <a name="BKMK_OVER"></a>Scenario description  
 In this scenario a Remote Access server with DirectAccess enabled is configured to authenticate DirectAccess client users with two\-factor one-time password \(OTP\) authentication, in addition to standard Active Directory credentials.  
   

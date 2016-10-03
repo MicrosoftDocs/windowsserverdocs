@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">For information about how to use this extension to create and configure a preference item, see the following topics:</Token>

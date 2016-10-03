@@ -1,11 +1,11 @@
 --- 
-title: System Requirements and Installation
-description: "What's the minimum requirements for storage, CPU, network, memory, RAM in a clean installation." 
+title: System Requirements
+description: "What are the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option." 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 08/09/2016
+ms.date: 09/15/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,44 +14,29 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# System Requirements and Installation
+# System Requirements
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-This topic addresses the information you need to install Windows Server&reg; 2016 Technical Preview. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
+This topic addresses the minimum system requirements to run Windows Server&reg; 2016.
 
--   **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. Clean installation is the only supported option for this release  
 
--   **Upgrade** means moving from your existing operating system to Windows Server 2016 Technical Preview, while staying on the same hardware. For this release, upgrade to or from Windows Server 2016 Technical Preview is not supported  
-
--   **Migration** means moving from your existing operating system to Windows Server 2016 Technical Preview by transferring to a different set of hardware. For this release, migration is not supported.  
-
-> [!WARNING]  
-> In this release, only clean installations are supported.  
+> [!Note]  
+> In this release, clean installations are recommended.  
 >   
-> In this release, you cannot mount ReFS volumes formatted by using Windows Server 2016 Technical Preview 3. These volumes will appear as "raw," though the data is intact.  If you need to recover data from those volumes, mount them using Windows Server 2016 Technical Preview 3. ReFS volumes formatted by using Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 Technical Preview 4 can be mounted in this release without issues.  
 
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016 Technical Preview. For more information, see [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
 
-> [!IMPORTANT]  
-> For this release, use these product keys:  
->   
-> -   Windows Server Edition Family (Datacenter): 6XBNX-4JQGW-QX6QG-74P76-72V67  
->-   Windows Server Edition Family (Standard): MFY9F-XBN2F-TYFMP-CCV49-RMYVH  
-> -   Windows Server Essentials: NYK9H-Y2FDB-2XKGC-F2XHK-WTT88  
-
-[comment]: # (ID: 362; Submitter: milanp; state: signed off)  
-> [!IMPORTANT]  
-> Install Cumulative Update for Windows Server 2016 Technical Preview 5 (KB3157663) before installing any server roles, features, or other products.  
->  
->If you install roles before installing the update, a variety of issues can occur. If this happens, reinstall the preview release and then immediately install the update.  
 
 ## Review system requirements  
-The following are estimated system requirements for the Windows Server 2016 Technical Preview. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.  
+The following are estimated system requirements Windows Server 2016. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
+
+Unless otherwise specified, these minimum system requirements apply to all installation options (Server Core, Server with Desktop Experience, and Nano Server) and both Standard and Datacenter editions.  
 
 > [!IMPORTANT]  
 > The highly diverse scope of potential deployments makes it unrealistic to state "recommended" system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
+
 
 ## Processor  
 Processor performance depends not only on the clock frequency of the processor, but also on the number of processor cores and the size of the processor cache. The following are the processor requirements for this product:  
@@ -63,12 +48,13 @@ Processor performance depends not only on the clock frequency of the processor, 
 - Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW  
 - Supports Second Level Address Translation (EPT or NPT)  
 
+[Coreinfo] (https://technet.microsoft.com/sysinternals/cc835722.aspx) is a tool you can use to confirm which of these capabilities you CPU has.
 
 ## RAM  
 The following are the estimated RAM requirements for this product:  
 
 **Minimum**:  
-- 512 MB  
+- 512 MB (2 GB for Server with Desktop Experience installation option)
 - ECC (Error Correcting Code) type or similar technology  
 
 > [!IMPORTANT]  
@@ -80,14 +66,14 @@ The following are the estimated RAM requirements for this product:
 > -   Interrupt the boot process of this release on the virtual machine with SHIFT+F10. In the command prompt that opens, use Diskpart.exe to create and format an installation partition. Run **Wpeutil createpagefile /path=C:\pf.sys** (assuming the installation partition you created was C:). Close the command prompt and proceed with Setup.  
 
 ## Storage controller and disk space requirements  
-Computers that run Windows Server 2016 Technical Preview must include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives must not be PATA. Windows Server 2016 Technical Preview does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives.  
+Computers that run Windows Server 2016 must include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives must not be PATA. Windows Server 2016 does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives.  
 
 The following are the estimated **minimum** disk space requirements for the system partition.  
 
 **Minimum**: 32 GB  
 
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   
@@ -133,4 +119,4 @@ The following items are not strictly required, but are necessary for certain fea
 >- A UEFI option to turn off the TPM is not a requirement.  
 
 ## Installation of Nano Server  
-For detailed steps to install Windows Server 2016 as a Nano Server, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx)  
+For detailed steps to install Windows Server 2016 as a Nano Server, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md).

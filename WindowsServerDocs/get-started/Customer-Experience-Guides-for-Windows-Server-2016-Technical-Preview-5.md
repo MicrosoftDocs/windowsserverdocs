@@ -27,10 +27,10 @@ Customer Experience Guides are available for a number of new features present in
 ## Customer Experience Guides for Windows Server 2016 Technical Preview  
 The following experience guides have been created by the Windows Server 2016 Engineering and Content Development Teams to help get you started with technologies and features being released in Windows Server 2016.  
 
--   [Storage Spaces Direct in Windows Server Technical Preview](../storage/storage-spaces/storage-spaces-direct-windows-server-2016.md)  
+-   [Storage Spaces Direct in Windows Server Technical Preview](../storage/storage-spaces/storage-spaces-direct-overview.md)  
 Windows Server Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
--   [Storage Replica in Windows Server Technical Preview](../storage/storage-replica/storage-replica-windows-server-2016.md)  
+-   [Storage Replica in Windows Server Technical Preview](../storage/storage-replica/storage-replica-overview.md)  
 Storage Replica is a new feature in Windows Server 2016 Technical Preview that enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 -   [Increasing Resiliency of Virtual Machines in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx)  
@@ -45,7 +45,7 @@ Nodes in stretched clusters can now be grouped based on their physical location 
 -   [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
 In Windows Server 2012 R2 and previous versions, a cluster could only be created between member nodes joined to the same domain. Windows Server 2016 breaks down these barriers and introduces the ability to create a Failover Cluster without Active Directory dependencies. Failover Clusters can now therefore be created as single-domain clusters, multi-domain clusters, or as workgroup clusters.  
 
--  [Cluster Operating System Rolling Upgrade](../compute/failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)  
+-  [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)  
 Cluster Operating System (OS) Rolling Upgrade is a new feature in Windows Server Technical Preview that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server Technical Preview without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
 
 -   [Validate features of PowerShell DSC](http://blogs.msdn.com/b/powershell/archive/2015/07/06/validate-features-of-powershell-dsc.aspx)  
@@ -69,7 +69,7 @@ Software Defined Networking (SDN) provides a method to centrally configure and m
 -   [Remote Direct Memory Access and Switch Embedded Teaming](../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
 This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016 Technical Preview, in addition to information about Switch Embedded Teaming (SET).  
 
--   [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
+-   [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
 Windows Server 2016 Technical Preview offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for hosting in private clouds and datacenters. It is similar to Windows Server in Server Core mode, but markedly smaller. Also, there is no local logon capability, nor does it support Terminal Services. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server.  
 
 -   [Introducing Cloud Witness in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2014/11/14/10572766.aspx)  

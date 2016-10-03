@@ -4,20 +4,20 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Understanding Usage of Virtual Networks and VLANs
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn about Hyper-V Network Virtualization Virtual Networks and how they differ from virtual local area networks (VLANs).  
   
-Software Defined Networking (SDN) in Windows Server 2016 Technical Preview is based on programming policy for overlay virtual networks within a Hyper-V Virtual Switch. You can create overlay virtual networks, also called Virtual Networks, with Hyper-V Network Virtualization.   
+Software Defined Networking (SDN) in  Windows Server 2016 is based on programming policy for overlay virtual networks within a Hyper-V Virtual Switch. You can create overlay virtual networks, also called Virtual Networks, with Hyper-V Network Virtualization.   
   
 When you deploy Hyper-V Network Virtualization, overlay networks are created by encapsulating the original tenant virtual machine's Layer-2 Ethernet frame with an overlay -  or tunnel - header (for example, VXLAN or NVGRE) and Layer-3 IP and Layer-2 Ethernet headers from the underlay (or physical) network. The overlay virtual networks are identified by a 24-bit Virtual Network Identifier (VNI) to maintain tenant traffic isolation and to allow overlapping IP addresses. The VNI is composed of a virtual subnet ID (VSID), logical switch ID, and tunnel ID.  
   

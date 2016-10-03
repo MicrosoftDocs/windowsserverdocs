@@ -1,4 +1,5 @@
 ---
+ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
 title: Web Application Proxy in Windows Server Technical Preview
 description:
 author: kgremban

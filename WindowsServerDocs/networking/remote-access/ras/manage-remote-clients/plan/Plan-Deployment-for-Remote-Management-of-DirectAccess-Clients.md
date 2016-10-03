@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab518c0d-a496-414e-b9c7-f4378d8b13aa
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Plan Deployment for Remote Management of DirectAccess Clients
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following topics provide planning steps for deploying a single Remote Access server running that can be used for remote management of DirectAccess clients.  
   

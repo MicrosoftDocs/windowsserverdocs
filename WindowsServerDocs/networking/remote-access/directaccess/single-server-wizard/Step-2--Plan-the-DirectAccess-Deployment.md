@@ -5,15 +5,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Step 2 Plan the DirectAccess Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning the DirectAccess infrastructure, the next step in deploying DirectAccess on a single server with basic settings is to plan the settings for the Getting Started Wizard.  
   

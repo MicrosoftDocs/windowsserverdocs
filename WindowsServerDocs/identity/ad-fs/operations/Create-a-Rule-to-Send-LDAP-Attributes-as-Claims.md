@@ -1,13 +1,15 @@
 ---
+ms.assetid: 66664b80-2590-46c0-bfca-82402088e42c
 title: Create a Rule to Send LDAP Attributes as Claims
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Create a Rule to Send LDAP Attributes as Claims

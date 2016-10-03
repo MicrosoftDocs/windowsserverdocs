@@ -2,7 +2,8 @@
 title: View Hardware Status
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-servicesms.reviewer: na
+ms.technology: multipoint-services
+ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article

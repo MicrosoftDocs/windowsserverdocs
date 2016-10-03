@@ -5,19 +5,20 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d98d6f7a-a2e6-45b1-9c63-08e2986a5c03
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 10 Install and Configure 2-EDGE1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 2-EDGE1 configuration consists of the following:  
   
--   [Install the operating system on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#installOS). Install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 on 2-EDGE1.  
+-   [Install the operating system on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#installOS). Install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 on 2-EDGE1.  
   
 -   [Configure TCP/IP properties](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#tcpip). Configure 2-EDGE1 with static addresses on both network interfaces.  
   
@@ -35,11 +36,11 @@ author: coreyp-at-msft
   
 ## <a name="installOS"></a>Install the operating system on 2-EDGE1  
   
-1.  Start the installation of Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 .  
+1.  Start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 .  
   
-2.  Follow the instructions to complete the installation, specifying Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
+2.  Follow the instructions to complete the installation, specifying  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
   
-3.  Connect 2-EDGE1 to a network that has Internet access and run Windows Update to install the latest updates for Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
+3.  Connect 2-EDGE1 to a network that has Internet access and run Windows Update to install the latest updates for  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
   
 4.  Connect one network adapter to the 2-Corpnet subnet and the other to the simulated Internet.  
   

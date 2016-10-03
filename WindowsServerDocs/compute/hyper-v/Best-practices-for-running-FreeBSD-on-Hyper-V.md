@@ -4,9 +4,7 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
@@ -25,7 +23,7 @@ The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the
   
 -   Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.  
   
-    ![](media/Hyper-V_Settings_NetworkAdapter.png)  
+    ![Screenshot of virtual machine settings with network adapter selected](media/Hyper-V_Settings_NetworkAdapter.png)  
   
 -   Enable MAC address spoofing. To do this,  
   

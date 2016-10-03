@@ -1,13 +1,15 @@
 ---
+ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: AD FS 2016 Single Sign On Settings
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # AD FS 2016 Single Sign On Settings
 

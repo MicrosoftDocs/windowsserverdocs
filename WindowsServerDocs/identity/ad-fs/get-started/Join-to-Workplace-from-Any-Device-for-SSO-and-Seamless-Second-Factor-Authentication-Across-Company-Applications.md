@@ -1,13 +1,15 @@
 ---
+ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications

@@ -4,14 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219
+ms.author: jamesmci
 author: jamesmci
 ---
 # Manage Tenant Workloads
+
+>Applies To: Windows Server&reg; 2016
+
 This topic contains links to documentation that allows you to manage tenant workloads by adding tenant virtual machines (VMs), using network virtual appliances, configuring software load balancing, and more.
 
 This section includes the following topics.
@@ -21,3 +24,4 @@ This section includes the following topics.
 - [Configure Datacenter Firewall Access Control Lists (ACLs)](Configure-Datacenter-Firewall-ACLs.md)
 - [Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)](Configure-SLB-and-NAT.md)
 - [Use Network Virtual Appliances on a Virtual Network](Use-Network-Virtual-Appliances-on-a-VN.md)
+- [Guest Clustering in a Virtual Network](guest-clustering.md)

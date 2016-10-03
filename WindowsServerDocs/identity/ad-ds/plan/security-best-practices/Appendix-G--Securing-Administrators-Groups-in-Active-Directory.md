@@ -1,21 +1,20 @@
 ---
+ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Appendix G - Securing Administrators Groups in Active Directory
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 19f3f2c2-badf-4b5c-93ef-d0081d71843a
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix G: Securing Administrators Groups in Active Directory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix G: Securing Administrators Groups in Active Directory  

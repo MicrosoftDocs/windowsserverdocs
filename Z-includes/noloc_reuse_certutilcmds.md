@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Displays a list of <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">certutil</ui> commands.</Token>

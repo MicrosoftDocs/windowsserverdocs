@@ -5,21 +5,22 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 4 Install and Configure RSA and EDGE1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS and OTP.  
   
 You will perform the following steps to configure the RSA deployment:  
   
-1.  [Install the operating system on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstallOS). Install Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012 on the RSA server.  
+1.  [Install the operating system on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstallOS). Install  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 on the RSA server.  
   
 2.  [Configure TCP/IP on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#TCP). Configure TCP/IP settings on the RSA server.  
   
@@ -43,11 +44,11 @@ You will perform the following steps to configure the RSA deployment:
   
 ## <a name="InstallOS"></a>Install the operating system on the RSA server  
   
-1.  On RSA, start the installation of Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  .  
+1.  On RSA, start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  .  
   
-2.  Follow the instructions to complete the installation, specifying Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  (Full Installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
+2.  Follow the instructions to complete the installation, specifying  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  (Full Installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
   
-3.  Connect RSA to a network that has Internet access and run Windows Update to install the latest updates for Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  , and then disconnect from the Internet.  
+3.  Connect RSA to a network that has Internet access and run Windows Update to install the latest updates for  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  , and then disconnect from the Internet.  
   
 4.  Connect RSA to the Corpnet subnet.  
   
