@@ -18,15 +18,15 @@ author: coreyp-at-msft
 
 2-APP1 provides web and file sharing services. 2-APP1 configuration consists of the following:  
   
--   [Install the operating system on 2-APP1](assetId:///7d04b54e-590a-4d33-9766-415789859f29#bkmk_InstallOS)  
+- Install the operating system on 2-APP1  
   
--   [Configure TCP/IP properties](assetId:///7d04b54e-590a-4d33-9766-415789859f29#bkmk_TCP)  
+- Configure TCP/IP properties  
   
--   [Join 2-APP1 to the CORP2 domain](assetId:///7d04b54e-590a-4d33-9766-415789859f29#bkmk_JoinDomain)  
+- Join 2-APP1 to the CORP2 domain  
   
--   [Install the Web Server (IIS) role on 2-APP1](assetId:///7d04b54e-590a-4d33-9766-415789859f29#bkmk_IIS)  
+- Install the Web Server (IIS) role on 2-APP1  
   
--   [Create a shared folder on 2-APP1](assetId:///7d04b54e-590a-4d33-9766-415789859f29#bkmk_Share)  
+- Create a shared folder on 2-APP1 
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on 2-APP1  
 First, install  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.  

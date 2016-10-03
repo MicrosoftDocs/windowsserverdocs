@@ -9,13 +9,11 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 author: KBDAzure
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # The Hyper-V Virtual Machine Management service must be running
 
 >Applies To: Windows Server 2016
-
-*[This information is preliminary and subject to change.]*  
   
 For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   

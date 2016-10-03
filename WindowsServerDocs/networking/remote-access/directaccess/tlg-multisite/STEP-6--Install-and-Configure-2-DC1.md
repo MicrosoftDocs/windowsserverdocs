@@ -24,22 +24,22 @@ author: coreyp-at-msft
   
 2-DC1 configuration consists of the following:  
   
--   [Install the operating system on 2-DC1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#bkmk_InstallOS)  
+- Install the operating system on 2-DC1
   
--   [Configure TCP/IP properties](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#bkmk_TCP)  
+- Configure TCP/IP properties
+
+- Configure 2-DC1 as a domain controller and DNS server
+
+- Provide Group Policy permissions to CORP\User1
   
--   [Configure 2-DC1 as a domain controller and DNS server](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#bkmk_DCDNS)  
+- Allow CORP2 computers to obtain computer certificates
   
--   [Provide Group Policy permissions to CORP\User1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#policy_perms)  
+- Force replication between DC1 and 2-DC1
   
--   [Allow CORP2 computers to obtain computer certificates](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#certs)  
-  
--   [Force replication between DC1 and 2-DC1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#replication)  
-  
-## <a name="bkmk_InstallOS"></a>Install the operating system on 2-DC1  
+## Install the operating system on 2-DC1  
 First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
   
-#### To install the operating system on 2-DC1  
+### To install the operating system on 2-DC1  
   
 1.  Start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 .  
   
@@ -49,10 +49,10 @@ First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Serv
   
 4.  Connect 2-DC1 to the 2-Corpnet subnet.  
   
-## <a name="bkmk_TCP"></a>Configure TCP/IP properties  
+## Configure TCP/IP properties  
 Configure the TCP/IP protocol with static IP addresses.  
   
-#### To configure TCP/IP on 2-DC1  
+### To configure TCP/IP on 2-DC1  
   
 1.  In the Server Manager console, click **Local Server**, and then in the **Properties** area, next to **Wired Ethernet Connection**, click the link.  
   
@@ -92,10 +92,10 @@ Configure the TCP/IP protocol with static IP addresses.
   
 19. After restarting, login using the local administrator account.  
   
-## <a name="bkmk_DCDNS"></a>Configure 2-DC1 as a domain controller and DNS server  
+## Configure 2-DC1 as a domain controller and DNS server  
 Configure 2-DC1 as a domain controller for the corp2.corp.contoso.com domain and as a DNS server for the corp2.corp.contoso.com DNS domain.  
   
-#### To configure 2-DC1 as a domain controller and DNS server  
+### To configure 2-DC1 as a domain controller and DNS server  
   
 1.  In the Server Manager console, on the **Dashboard**, click **Add roles and features**.  
   
@@ -121,10 +121,10 @@ Configure 2-DC1 as a domain controller for the corp2.corp.contoso.com domain and
   
 12. After the computer restarts, log in to the CORP2 domain using the Administrator account.  
   
-## <a name="policy_perms"></a>Provide Group Policy permissions to CORP\User1  
+## Provide Group Policy permissions to CORP\User1  
 Use this procedure to provide the CORP\User1 user with full permissions to create and change corp2 Group Policy Objects.  
   
-#### To provide Group Policy permissions  
+### To provide Group Policy permissions  
   
 1.  On the **Start** screen, type**gpmc.msc**, and then press ENTER.  
   
@@ -156,10 +156,11 @@ Use this procedure to provide the CORP\User1 user with full permissions to creat
   
 15. Close the Group Policy Management console.  
   
-## <a name="certs"></a>Allow CORP2 computers to obtain computer certificates  
+## Allow CORP2 computers to obtain computer certificates 
+
 Computers in the CORP2 domain must obtain computer certificates from the certification authority on APP1. Perform this procedure on APP1.  
   
-#### To allow CORP2 computers to automatically obtain computer certificates  
+### To allow CORP2 computers to automatically obtain computer certificates  
   
 1.  On APP1, click **Start**, type **certtmpl.msc**, and then press ENTER.  
   
@@ -182,7 +183,7 @@ Computers in the CORP2 domain must obtain computer certificates from the certifi
 ## <a name="replication"></a>Force replication between DC1 and 2-DC1  
 Before you can enroll for certificates on 2-EDGE1, you must force the replication of settings from DC1 to 2-DC1. This operation should be done on DC1.  
   
-#### To force replication  
+### To force replication  
   
 1.  On DC1, click **Start**, and then click **Active Directory Sites and Services**.  
   
