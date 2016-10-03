@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: b2913e51-7979-4d48-a431-d2ec5f1042be
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Change the Color Scheme of the Dashboard and Launchpad

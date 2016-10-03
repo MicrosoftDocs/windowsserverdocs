@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 98f13f63-4480-40ba-a7ef-d1d9b7582e5f
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Install or Remove Language Packs

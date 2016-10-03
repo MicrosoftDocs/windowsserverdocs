@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: e62e4f07-c2ba-4c5e-b30c-bdc287cd654e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Install Add-Ins

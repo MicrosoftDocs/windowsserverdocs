@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: e6ba701d-7183-4c26-960e-44cc280bf3e6
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Step 8: Run the Windows Server Essentials Best Practices Analyzer

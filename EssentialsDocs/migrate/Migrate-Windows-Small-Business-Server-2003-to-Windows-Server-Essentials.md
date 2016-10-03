@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Migrate Windows Small Business Server 2003 to Windows Server Essentials

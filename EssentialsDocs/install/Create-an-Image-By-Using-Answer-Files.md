@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 72809c9d-c2c9-478c-a867-65d3b9a08b95
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Create an Image By Using Answer Files

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Perform post-migration tasks for Windows Server Essentials migration1

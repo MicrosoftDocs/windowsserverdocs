@@ -11,13 +11,14 @@ ms.topic: article
 ms.assetid: 3c96d66b-be4a-4572-9b9f-29555c00ae9a
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Customize Storage Spaces
 
 >Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-To preconfigure Storage Spaces for a better user experience, you can run the Storage Spaces configuration script from PostIC.cmd. The Storage Spaces configuration script must be run on the target computer, after you have completed the  Windows Server Essentials installation. For more information about scripts that automate Storage Spaces management tasks, see [Deploy and Manage Storage Spaces with PowerShell](http://www.microsoft.com/download/confirmation.aspx?id=30125).  
+To preconfigure Storage Spaces for a better user experience, you can run the Storage Spaces configuration script from PostIC.cmd. The Storage Spaces configuration script must be run on the target computer, after you have completed the  Windows Server Essentials installation.
   
 ## See Also  
 

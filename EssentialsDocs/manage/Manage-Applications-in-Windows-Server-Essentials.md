@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage Applications in Windows Server Essentials

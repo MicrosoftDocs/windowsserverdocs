@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f6e05aec-d07c-4e0b-94ab-f20279e9ffd1
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Manage BranchCache in Windows Server Essentials
@@ -38,7 +39,7 @@ BranchCache can help you optimize Internet usage, improve performance of network
  In  Windows Server Essentials, BranchCache is implemented in *distributed cache mode*, one of two cache modes available in BranchCache. In distributed cache mode, the content cache in the branch office is distributed among client computers. Because no additional hardware or topology changes are required, this mode works well for small offices that use a remote server or use a local server to access cloud-based services such as SharePoint Online. When you turn on BranchCache in  Windows Server Essentials, distributed cache mode is implemented.  
   
 > [!NOTE]
->  In larger branch offices with more than one subnet or with a large number of employees using networked applications, it can be beneficial to implement BranchCache in *hosted cache mode*. In hosted cache mode, the content cache is stored on one or more hosted cache servers in the branch office. For more information, see [Choosing a BranchCache Design](assetId:///eb9dc5d3-bfdd-4b90-88b5-a7ee0bc98e17). For information about setting up BranchCache in hosted cache mode, see the [BranchCache Deployment Guide](assetId:///9a8217ed-f85d-4b6b-a339-926e258b713d).  
+>  In larger branch offices with more than one subnet or with a large number of employees using networked applications, it can be beneficial to implement BranchCache in *hosted cache mode*. In hosted cache mode, the content cache is stored on one or more hosted cache servers in the branch office.
   
 ## Requirements  
  To use BranchCache in  Windows Server Essentials, your server and client computers must meet the following requirements:  
@@ -53,9 +54,7 @@ BranchCache can help you optimize Internet usage, improve performance of network
   
     > [!NOTE]
     >  If you connected client computers to your Windows Server Essentials server without joining them to the domain, those computers are excluded from caching by default. To include a client computer that is not domain-joined in caching, run the [Enable-BCDistributed](http://technet.microsoft.com/library/hh848398.aspx) Windows PowerShell cmdlet on the client computer. For more information, see [BranchCache Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh848392.aspx).  
-  
-> [!NOTE]
->  These requirements are for BranchCache in distributed cache mode. If you plan to use hosted cache mode, see the [BranchCache Deployment Guide](assetId:///9a8217ed-f85d-4b6b-a339-926e258b713d) for server and topology requirements.  
+ 
   
 ## Turn BranchCache on  
  To turn BranchCache on in distributed cache mode, you simply click a button on the  Windows Server Essentials Dashboard. Caching begins immediately and is performed transparently.  
@@ -100,9 +99,7 @@ BranchCache can help you optimize Internet usage, improve performance of network
         ```  
   
 ## See also  
-  
--   [Choosing a BranchCache Design](assetId:///eb9dc5d3-bfdd-4b90-88b5-a7ee0bc98e17)  
-  
+    
 -   [BranchCache Overview](http://technet.microsoft.com/library/hh831696.aspx)  
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

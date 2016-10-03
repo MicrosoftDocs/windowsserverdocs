@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Add Third-Level Domain Names

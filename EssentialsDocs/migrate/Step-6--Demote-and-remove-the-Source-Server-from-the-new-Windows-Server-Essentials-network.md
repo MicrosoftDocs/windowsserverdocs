@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Step 6: Demote and remove the Source Server from the new Windows Server Essentials network

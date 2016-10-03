@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f695ae90-3160-407b-bebf-9e460f22c86d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Migrate Windows Server Essentials to New Hardware

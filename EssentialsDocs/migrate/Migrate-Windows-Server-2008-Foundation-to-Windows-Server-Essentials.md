@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f22fc0a4-cb82-4e60-afe6-2d03145745e7
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Migrate Windows Server 2008 Foundation to Windows Server Essentials

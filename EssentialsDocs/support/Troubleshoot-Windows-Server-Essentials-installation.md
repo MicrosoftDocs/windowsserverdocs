@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: ecf19216-7aac-4aca-839a-342ac28f5329
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Troubleshoot Windows Server Essentials installation

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Assessment and Deployment Kit for Windows Server Essentials

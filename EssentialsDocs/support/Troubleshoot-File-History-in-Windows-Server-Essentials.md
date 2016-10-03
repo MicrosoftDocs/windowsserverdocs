@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: ed062945-27e9-4572-b1bb-6c8cf1b9c2f4
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Troubleshoot File History in Windows Server Essentials
@@ -23,7 +24,7 @@ ms.author: coreyp
 ### File History data is not automatically deleted  
  The File History data may not get deleted automatically if:  
   
--   When deleting a user account, you choose to not delete the user accountâ„¢s File History data, and opt to delete the data manually.  
+-   When deleting a user account, you choose to not delete the user account „¢s File History data, and opt to delete the data manually.  
   
 -   When you try to delete the File History data, the File History data is in use by other process.  
   
@@ -39,7 +40,7 @@ ms.author: coreyp
   
 4.  Delete the shared folder that stores the File History backup:  
   
-    -   To delete file history for a user, delete the File History backup child folder that has the userâ„¢s name.  
+    -   To delete file history for a user, delete the File History backup child folder that has the user „¢s name.  
   
     -   To delete file history for a computer, delete the File History backup child folder that has the computer name. For example, if a user retired <MyComputer01\> after she began working on her new laptop, <MyComputer02\>, you would delete C:\ServerFolders\File History Backups\\<MyAccount\>\\<MyComputer01\> after you verify with the user that she has transferred all files and folders to her new laptop and has no need for the file history in the future.  
   

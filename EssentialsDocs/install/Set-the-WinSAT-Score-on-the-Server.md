@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 911dc494-0f8f-4723-93d6-2106f914b906
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Set the WinSAT Score on the Server

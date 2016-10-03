@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Troubleshoot computer backup and restore errors in Windows Server Essentials
@@ -199,7 +200,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
         1.  Open a command prompt with administrator privileges, and run the following command:  
   
-             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe? â€œi**  
+             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe?  œi**  
   
         2.  Refresh Device Manager. The driver should appear.  
   

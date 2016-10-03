@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 4author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Create a Server Recovery DVD for Multi-Language Support

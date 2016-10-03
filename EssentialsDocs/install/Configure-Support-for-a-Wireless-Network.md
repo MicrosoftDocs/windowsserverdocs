@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 4d7020d4-fd46-4858-a406-de5c0f21ea06
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Configure Support for a Wireless Network

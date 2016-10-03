@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Get started with Windows Server 2016 Essentials 

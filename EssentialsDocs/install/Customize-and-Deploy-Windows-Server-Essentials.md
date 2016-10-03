@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: d1c70cf2-0db8-4b75-af46-73620b9e81c8
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Customize and Deploy Windows Server Essentials

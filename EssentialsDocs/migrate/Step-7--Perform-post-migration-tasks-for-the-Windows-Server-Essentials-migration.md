@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: d382e3fd-d393-4bd0-883f-db50104a969f
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Step 7: Perform post-migration tasks for the Windows Server Essentials migration

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 93a73556-22ef-402d-b8d4-582b74c22bcf
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Create the Cfg.ini File

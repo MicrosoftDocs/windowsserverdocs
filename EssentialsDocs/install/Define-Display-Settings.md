@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 505bfc3f-53d2-4835-ab1a-418e7557bfb6
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Define Display Settings

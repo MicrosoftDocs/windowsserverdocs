@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Create the PostIC.cmd File for Running Post Initial Configuration Tasks

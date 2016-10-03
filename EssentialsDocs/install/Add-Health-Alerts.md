@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Add Health Alerts

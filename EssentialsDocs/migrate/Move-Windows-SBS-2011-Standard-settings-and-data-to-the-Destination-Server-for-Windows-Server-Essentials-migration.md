@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 16b24026-2fe3-4bd0-b82f-900e1564be99
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Move Windows SBS 2011 Standard settings and data to the Destination Server for Windows Server Essentials migration
@@ -77,7 +78,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Run the following cmdlet, where `[AD username]` is the name of the Active Directory user account that you want to import:  
   
-     `Import-WssUser â€œSamAccountName [AD username]`  
+     `Import-WssUser  œSamAccountName [AD username]`  
   
 ##  <a name="BKMK_MoveDHCP"></a> Move the DHCP Server role from the Source Server to the router  
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
@@ -143,9 +144,9 @@ Move settings and data to the Destination Server as follows:
   
 6.  Repeat step 5 to delete the following GPOs that apply to your network:  
   
-    -   Windows SBS Client â€œ Windows 7 and Windows Vista Policy  
+    -   Windows SBS Client  œ Windows 7 and Windows Vista Policy  
   
-    -   Windows SBS Client â€œ Windows XP Policy  
+    -   Windows SBS Client  œ Windows XP Policy  
   
     -   Windows SBS CSE Policy  
   
@@ -171,9 +172,9 @@ Move settings and data to the Destination Server as follows:
   
 5.  Right-click **Windows SBS Client**, click **Delete**, and then click **Yes**.  
   
-6.  Right-click **Windows SBS Client â€œ Windows 7 and Windows Vista**, click **Delete**, and then click **Yes**.  
+6.  Right-click **Windows SBS Client  œ Windows 7 and Windows Vista**, click **Delete**, and then click **Yes**.  
   
-7.  Right-click **Windows SBS Client â€œ Windows XP**, click **Delete**, and then click **Yes**.  
+7.  Right-click **Windows SBS Client  œ Windows XP**, click **Delete**, and then click **Yes**.  
   
 8.  Confirm that these three WMI filters are deleted.  
   

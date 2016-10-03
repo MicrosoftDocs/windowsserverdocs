@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 # Migrate Windows Small Business Server 2011 Essentials to Windows Server Essentials
