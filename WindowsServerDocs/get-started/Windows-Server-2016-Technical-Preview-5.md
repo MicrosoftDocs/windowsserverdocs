@@ -20,7 +20,7 @@ manager: dongill
   <tr>
     <td colspan='4' style='padding:0;'><img src='wsbanner.png'/></td>
   </tr>
-  <tr style='text-align:center;'><td colspan='4'>![alt text](2whats-new.png "What's new in Windows Server 2016?")
+  <tr style='text-align:center;'><td colspan='4' bgcolor="#CEE3F6">![alt text](2whats-new.png "What's new in Windows Server 2016?")
     &nbsp;&nbsp;<font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></td></tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
