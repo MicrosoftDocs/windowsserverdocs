@@ -11,13 +11,15 @@ ms.topic: article
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 
 
 # Manage Devices in Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
  
-  
  The following sections discuss the device management features of a server, and explain how to set up and use devices on your network:  
   
 -   [Manage devices by using the Dashboard](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_1)  
@@ -135,7 +137,7 @@ ms.author: coreyp
 7.  Click **Finish** to implement the Group Policy settings.  
   
 ##  <a name="BKMK_7"></a> Connect to a network computer by using a Remote Desktop session  
- To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization™s Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
+ To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization „¢s Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
   
  The **Status** column shows you if you can connect to a computer on your network, and can contain the following values:  
   

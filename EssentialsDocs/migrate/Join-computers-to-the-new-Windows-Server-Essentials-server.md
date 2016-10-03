@@ -1,5 +1,5 @@
 ---
-title: "Join computers to the new Windows Server Essentials network1"
+title: "Join computers to the new Windows Server Essentials server1"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
@@ -8,25 +8,25 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: d94de050-3300-4323-a5ea-c824cb9cecc9
+ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
+# Join computers to the new Windows Server Essentials server1
 
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-# Join computers to the new Windows Server Essentials network1
 ##  <a name="BKMK_JoinComputers"></a>   
  The next step in the migration process is to join client computers to the new  Windows Server Essentials network and update Group Policy settings.  
   
-### Domain-joined client computers  
- Browse to **http://***destination-servername***/connect** and install the Windows Server Connector software as if this was a new computer. The installation process is the same for domain-joined or non-domain-joined client computers.  
-  
 > [!NOTE]
->  The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista. If you have computers running Windows XP or Windows Vista that are already joined to the domain, you can skip this step.  
+>  If a client computer is already joined to the Source Server, you must first uninstall the Connector software on the client computer before you can connect the computer to the Destination Server.  
   
-### Non-domain-joined client computers  
- Browse to **http://***destination-servername***/connect** and install the Windows Server Connector software as if this was a new computer. The installation process is the same for domain joined or non-domain joined client computers.  
+ The process to connect a client computer to the server is the same for domain-joined or non-domain-joined computers.  
+  
+-   Browse to **http://***destination-servername***/connect** and install the Windows Server Connector software as if this was a new computer.  
   
 > [!NOTE]
 >  The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista. If you have computers running Windows XP or Windows Vista that are already joined to the domain, you can skip this step.  
@@ -38,7 +38,7 @@ ms.author: coreyp
   
  While the Source Server and the Destination Server are still online, you should ensure that the Group Policy settings have replicated from the Destination Server to the client computers. Perform the following steps on each client computer:  
   
-1.  Open a Command Prompt window.  
+1.  Open a command prompt window.  
   
 2.  At the command prompt, type **GPRESULT /R**, and then press ENTER.  
   
@@ -52,7 +52,7 @@ ms.author: coreyp
         Group Policy was applied from:      DestinationSrv.Domain.local  
         Group Policy slow link threshold:   500 kbps  
         Domain Name:                        Domain  
-        Domain Type:                        Windows 2008  
+        Domain Type:                        Windows 2011  
   
     ```  
   

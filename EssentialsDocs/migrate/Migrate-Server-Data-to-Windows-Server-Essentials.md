@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Migrate Server Data to Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following guides provide information about how to migrate to Windows Server Essentials from an existing installation of Windows Small Business Server or Windows Server Essentials, and include information about how to prepare and plan for specific Windows Server Essentials migration scenarios.  
   
 ## Migrate to Windows Server Essentials  

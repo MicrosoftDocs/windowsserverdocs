@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Step 1: Prepare your Source Server for Windows Server Essentials migration
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This topic explains how to back up the Source Server, evaluate the Source Server system health, install the most recent service packs and fixes, and verify the network configuration.  
   
 ## To prepare for migration  
@@ -38,14 +40,14 @@ This topic explains how to back up the Source Server, evaluate the Source Server
   
 1.  Use one of the resources in the following table to guide you in performing a full backup of the Source Server.  
   
-    |For information about backing up¦|¦see|  
-    |---------------------------------------|----------|  
-    |Windows Small Business Server 2003|[Backing Up and Restoring Windows Small Business Server 2003](http://www.microsoft.com/download/details.aspx?id=1215)|  
-    |Windows Small Business Server 2008|[Backing Up and Restoring Data on Windows Small Business Server 2008](http://technet.microsoft.com/library/cc527505\(WS.10\).aspx)|  
-    |Windows Server 2008 Foundation|[Backup and Recovery](http://technet.microsoft.com/library/cc754097\(WS.10\).aspx)|  
-    |Windows Small Business Server 2011 Essentials|[Learn more about setting up server backup](http://technet.microsoft.com/library/server-backup-support-1.aspx)|  
-    |Windows Small Business Server 2011 Standard|[Managing Server Backup](http://technet.microsoft.com/library/cc527488.aspx)|  
-    |Windows Server Essentials|[Manage Backup and Restore in Windows Server Essentials](http://technet.microsoft.com/library/jj713536.aspx)|  
+|For information about backing up|see  
+|
+|Windows Small Business Server 2003|[Backing Up and Restoring Windows Small Business Server 2003](http://www.microsoft.com/download/details.aspx?id=1215) 
+|Windows Small Business Server 2008|[Backing Up and Restoring Data on Windows Small Business Server 2008](http://technet.microsoft.com/library/cc527505\(WS.10\).aspx)
+|Windows Server 2008 Foundation|[Backup and Recovery](http://technet.microsoft.com/library/cc754097\(WS.10\).aspx)  
+|Windows Small Business Server 2011 Essentials|[Learn more about setting up server backup](http://technet.microsoft.com/library/server-backup-support-1.aspx)
+|Windows Small Business Server 2011 Standard|[Managing Server Backup](http://technet.microsoft.com/library/cc527488.aspx)  
+|Windows Server Essentials|[Manage Backup and Restore in Windows Server Essentials](http://technet.microsoft.com/library/jj713536.aspx)
   
 2.  Verify that the backup ran successfully. To test the integrity of the backup, select random files from your backup, restore them to an alternate location, and then confirm that the restored files are the same as the original files.  
   
@@ -96,12 +98,12 @@ This topic explains how to back up the Source Server, evaluate the Source Server
   
 1.  The following table provides links to the Microsoft Download Center where you can download and install the Best Practices Analyzer (BPA) for the Source Server from.  
   
-    |If your Source Server is running¦|¦you can get the BPA tools from|  
-    |---------------------------------------|-------------------------------------|  
-    |Windows SBS 2003|[Microsoft Windows Small Business Server 2003 Best Practices Analyzer website](http://www.microsoft.com/download/details.aspx?id=5334)|  
-    |Windows SBS 2008|[Microsoft Windows Small Business Server 2008 Best Practices Analyzer website](http://www.microsoft.com/download/details.aspx?id=6231)|  
-    |Windows SBS 2011 Essentials or Windows SBS 2011 Standard|[Windows Server Solutions Best Practices Analyzer website](http://www.microsoft.com/download/details.aspx?id=15556)|  
-    |Windows Server Essentials or Windows Server 2012|The server dashboard|  
+|If your Source Server is running|you can get the BPA tools from  
+    |
+|Windows SBS 2003|[Microsoft Windows Small Business Server 2003 Best Practices Analyzer website](http://www.microsoft.com/download/details.aspx?id=5334)
+|Windows SBS 2008|[Microsoft Windows Small Business Server 2008 Best Practices Analyzer website](http://www.microsoft.com/download/details.aspx?id=6231)  
+|Windows SBS 2011 Essentials or Windows SBS 2011 Standard|[Windows Server Solutions Best Practices Analyzer website](http://www.microsoft.com/download/details.aspx?id=15556) 
+|Windows Server Essentials or Windows Server 2012|The server dashboard  
   
 2.  After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.  
   
@@ -124,12 +126,10 @@ This topic explains how to back up the Source Server, evaluate the Source Server
   
  After the BPA tool collects information about server configuration, it verifies that the information is correct and then presents administrators with a list of information and issues sorted by severity. The list describes each issue and provides a recommendation or possible solution. Three report types are available:  
   
-|Report type|Description|  
-|-----------------|-----------------|  
-|List Reports|Displays reports in a one-dimensional list.|  
-|Tree Reports|Displays reports in a hierarchical list.|  
-|Other Reports|Displays reports such as a Run-Time Log.|  
-  
+|Report type|Description
+|-----------------|----------------- 
+|List Reports|Displays reports in a one-dimensional list. 
+|Tree Reports|Displays reports in a hierarchical list.
  To view the description and the solutions for an issue, click the issue in the report. Not all of the issues that are reported by the BPA tool affect migration, but you should solve as many of the issues as possible to ensure that the migration is successful.  
   
 ####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> Synchronize the Source Server time with an external time source  
@@ -158,16 +158,9 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 > [!NOTE]
 >  If you used the Windows Small Business Server 2011 Essentials SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server Essentials, you must also update the add-in and deploy it on the Destination Server.  
   
- You can fill in the following table as you collect LOB application information. A good place to start collecting information is to open Windows Control Panel, click **Add/Remove Programs**, and look in the **Program Files (x86)** and the **Program Files** folders.  
-  
-|Application or general data folder name|Path to data|Notes|  
-|---------------------------------------------|------------------|-----------|  
-||||  
-||||  
-||||  
   
 ### Create a plan to migrate email hosted on Windows SBS 2011, Windows SBS 2008, and Windows SBS 2003  
- In Windows SBS 2011, Windows SBS 2008, and Windows SBS 2003, email is provided through the Microsoft Exchange Server. However,  Windows Server Essentials does not provide an inbox email service. If you are currently using a server running Windows SBS 2011, Windows SBS 2008, or Windows SBS 2003 to host your company™s email, you need to migrate to an alternate on-premises or hosted solution.  
+ In Windows SBS 2011, Windows SBS 2008, and Windows SBS 2003, email is provided through the Microsoft Exchange Server. However,  Windows Server Essentials does not provide an inbox email service. If you are currently using a server running Windows SBS 2011, Windows SBS 2008, or Windows SBS 2003 to host your company ��s email, you need to migrate to an alternate on-premises or hosted solution.  
   
 > [!NOTE]
 >  After you update and prepare your Source Server for migration, we recommend that you create a backup of the updated server before you continue the migration process.  

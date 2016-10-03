@@ -21,7 +21,8 @@ This topic, which is intended for Information Technology (IT) professionals, pro
 > In addition to this topic, the following BranchCache documentation is available.
 > 
 > - [BranchCache Network Shell and Windows PowerShell Commands](../branchcache/BranchCache-Network-Shell-and-Windows-PowerShell-Commands.md)
-> -   [BranchCache Deployment Guide](../branchcache/deploy/BranchCache-Deployment-Guide.md)
+> - [BranchCache Deployment Guide](../branchcache/deploy/BranchCache-Deployment-Guide.md)
+> - [Deploy BranchCache Hosted Cache Mode](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/bc-hcm/1-deploy-bc-hcm)
 
 **Who will be interested in BranchCache?**
 

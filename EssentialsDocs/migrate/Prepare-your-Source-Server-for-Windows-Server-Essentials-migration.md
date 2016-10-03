@@ -1,5 +1,5 @@
 ---
-title: "Prepare your Source Server for Windows Server Essentials migration2"
+title: "Prepare your Source Server for Windows Server Essentials migration1"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
@@ -8,42 +8,40 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: c6e25f9e-1018-42d2-ac20-0b08ca4f4630
+ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
+# Prepare your Source Server for Windows Server Essentials migration1
 
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
 
-# Prepare your Source Server for Windows Server Essentials migration2
 Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   
 #### To prepare for migration  
   
 
-1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
-2.  [Install the most recent service packs](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+2.  [Install the most recent service packs](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
   
-3.  [Verify the network configuration](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_Verify)  
+3.  [Evaluate the health of the Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
   
-4.  [Evaluate the health of the Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_UseWindowsBestPracticeAnalyzer)  
+4.  [Run the Migration Preparation Tool on the Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
   
-5.  [Run the Migration Preparation Tool on the Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_MPT)  
-  
-6.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+5.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
-1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
-2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
   
-3.  [Verify the network configuration](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_Verify)  
+3.  [Evaluate the health of the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
   
-4.  [Evaluate the health of the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_UseWindowsBestPracticeAnalyzer)  
+4.  [Run the Migration Preparation Tool on the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
   
-5.  [Run the Migration Preparation Tool on the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_MPT)  
-  
-6.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration2.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+5.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
@@ -51,37 +49,15 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ##### To back up the Source Server  
   
-1.  Perform a full backup of the Source Server. For more information about backing up Windows Server 2008 Foundation, see [Backup and Recovery](http://technet.microsoft.com/library/cc754097\(WS.10\).aspx).  
+1.  Perform a full backup of the Source Server. For more information about backing up Windows Small Business Server 2011 Essentials, see [Learn more about setting up server backup](http://technet.microsoft.com/library/server-backup-support-1.aspx).  
   
 2.  Verify that the backup ran successfully. To test the integrity of the backup, select random files from your backup, restore them to an alternate location, and then confirm that the restored files are the same as the original files.  
   
 ###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a> Install the most recent service packs  
- Before you begin the migration, you should install the latest updates and service packs on the Source Server.  
-  
-###  <a name="BKMK_Verify"></a> Verify the network configuration  
- Before you can migrate your network to  Windows Server Essentials, you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure.  
-  
-
- ![Example small business network](media/WSE_Network.png "WSE_Network")  
-
- ![Example small business network](../migrate/media/WSE_Network.png "WSE_Network")  
-
-  
-#### Disable the VPN on the Source Server  
- If you are using a VPN on the Source Server, disable it.  
-  
-####  <a name="BKMK_VerifyTheDHCPSettings"></a> Verify the settings for the DHCP Server role  
-  Windows Server Essentials does not run the DHCP Server role by default. During migration, you can manage the DHCP Server role from the Source Server or from the router, depending on your current network configuration:  
-  
--   If you are running the DHCP Server role on the Source Server, we recommend that you continue to run this role from the Source Server during migration. After you have removed the Source Server from the network, move the DHCP Server role to the router.  
-  
--   If your network already runs the DHCP Server role from the router, and it is running without issues, we recommend that you continue to run the DHCP Server role from the router during migration.  
-  
-> [!NOTE]
->  Ensure that your Source Server is in a healthy state before you proceed by performing the procedures in the following section.  
+ You must install the latest updates and service packs on the Source Server prior to migration.  
   
 ###  <a name="BKMK_UseWindowsBestPracticeAnalyzer"></a> Evaluate the health of the Source Server  
- It is important to evaluate the health of your Source Server before you begin the migration. Use the following procedures to ensure that the Source Server is in good health for migration.  
+ It is important to evaluate the health of your Source Server before you begin the migration. Use the following procedures to ensure that the updates are current, to generate a system health report, and to run the Windows Server Solutions Best Practice Analyzer (BPA).  
   
 #### Download and install critical and security updates  
  Installing critical and security updates on the Source Server helps ensure that your migration will be successful and helps protect your network during the migration process.  
@@ -90,9 +66,46 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 1.  From the Source Server, click **Start**, click **All Programs**, and then click **Windows Update**.  
   
-2.  Click **Check online for updates from Microsoft Update**.  
+2.  Click **Check for updates**.  
   
 3.  If updates are found, click **Install updates**.  
+  
+#### Check the alert viewer for critical errors  
+ You can check the alert viewer on the Dashboard for any critical errors.  
+  
+#### Run the Windows Server Solutions Best Practices Analyzer  
+ You can run the Windows Server Solutions Best Practices Analyzer (BPA) to verify that there are no issues on your server, network, or domain before you start the migration process. The BPA collects configuration information from the following sources:  
+  
+-   Active Directory® Windows Management Instrumentation (WMI)  
+  
+-   The registry  
+  
+-   The Internet Information Services (IIS) metabase  
+  
+###### To use the Windows Server Solutions BPA to analyze your Source Server  
+  
+1.  Download and install the [Windows Server Solutions Best Practices Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=15556) at the Microsoft Download Center.  
+  
+2.  After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.  
+  
+    > [!NOTE]
+    >  Check for updates before you scan the server.  
+  
+3.  In the navigation pane, click **Start a scan**.  
+  
+4.  In the details pane, type the scan label, and then click **Start scanning**. The scan label is the name of the scan report, for example, **SBS BPA Scan 1Jul2012**.  
+  
+5.  After the scan finishes, click **View a report of this Best Practices scan**.  
+  
+ After collecting information about server configuration, the Windows Server Solutions BPA verifies that the information is correct and then presents administrators with a list of information and issues sorted by severity. The list describes each issue and provides a recommendation or possible solution. Three report types are available:  
+  
+|Report Type|Description|  
+|-----------------|-----------------|  
+|List Reports|Displays reports in a one-dimensional list.|  
+|Tree Reports|Displays reports in a hierarchical list.|  
+|Other Reports|Displays reports such as a Run-Time Log.|  
+  
+ To view the description and the solutions for an issue, click the issue in the report. Not all of the issues that are reported by the Windows SBS 2011 Essentials BPA affect migration, but you should solve as many of the issues as possible to ensure that the migration is successful.  
   
 ####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> Synchronize the Source Server time with an external time source  
  The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that  Windows Server Essentials is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
@@ -103,11 +116,11 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 2.  Click **Start**, click **Run**, type **cmd** in the text box, and then press ENTER.  
   
-3.  At the command prompt, type **w32tm /config /syncfromflags:domhier /reliable:no /update**, and then press ENTER.  
+3.  At the command prompt, type w32tm /config /syncfromflags:domhier /reliable:no /update, and then press ENTER.  
   
-4.  At the command prompt, type **net stop w32time**, and then press ENTER.  
+4.  At the command prompt, type net stop w32time, and then press ENTER.  
   
-5.  At the command prompt, type **net start w32time**, and then press ENTER.  
+5.  At the command prompt, type net start w32time, and then press ENTER.  
   
 > [!IMPORTANT]
 >  During the  Windows Server Essentials installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
@@ -138,15 +151,13 @@ Complete the following preliminary steps to ensure that the settings and data on
   
      You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.  
   
-     Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.  
-  
  You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.  
   
  Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.  
   
 -   To download and install Windows PowerShell 2.0, see [article 968929](http://go.microsoft.com/fwlink/p/?LinkId=241483) in the Microsoft Knowledge Base.  
   
--   To download and install Microsoft Baseline Configuration Analyzer 2.0, see [Microsoft Baseline Configuration Analyzer 2.0](http://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.  
+-   To download and install Microsoft Baseline Configuration Analyzer 2.0, see the [Microsoft Baseline Configuration Analyzer 2.0](http://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.  
   
 -   To download and install the latest version of Windows Update Agent, see [article 949104](http://go.microsoft.com/fwlink/p/?LinkId=237493) in the Microsoft Knowledge Base.  
   
@@ -162,10 +173,10 @@ Complete the following preliminary steps to ensure that the settings and data on
   
      The wizard installs the Migration Preparation Tool on the Source Server. When the installation is complete, the Migration Preparation Tool runs automatically and installs the latest updates.  
   
-3.  In the **Migration Preparation Tool**, select **I have a backup and am ready to proceed**, and then click **Next**.  
+3.  In the Migration Preparation Tool, select **I have a backup and am ready to proceed**, and then click **Next**.  
   
-    > [!NOTE]
-    >  If you receive an error message relating to hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](http://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
+    > [!WARNING]
+    >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](http://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
   
      The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.  
   
@@ -190,12 +201,5 @@ Complete the following preliminary steps to ensure that the settings and data on
  When you plan to migrate your LOB applications, consult with the LOB application providers to determine the appropriate method for migrating each application. You also must locate the media that is used to install the LOB applications on the Destination Server.  
   
 > [!NOTE]
->  If you used the Windows Server 2008 Foundation SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server Essentials, you must also update the add-in and deploy it on the Destination Server.  
+>  If you used the Windows Small Business Server 2011 Essentials SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server Essentials, you must also update the add-in and deploy it on the Destination Server.  
   
- You can fill in the following table as you collect LOB application information. A good place to start collecting information is to open Windows Control Panel, click **Add/Remove Programs**, and look in the **Program Files (x86)** and the **Program Files** folders.  
-  
-|Application or general data folder name|Path to data|Notes|  
-|---------------------------------------------|------------------|-----------|  
-||||  
-||||  
-||||

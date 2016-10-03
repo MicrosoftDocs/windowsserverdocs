@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Work Remotely in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  There are multiple ways to access resources that are located on the server when you are away from your network if Anywhere Access functionalities (Remote Web Access, virtual private network, and DirectAccess) are configured on the server.  
   

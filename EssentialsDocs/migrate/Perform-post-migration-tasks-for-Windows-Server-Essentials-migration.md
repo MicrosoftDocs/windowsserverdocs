@@ -11,29 +11,31 @@ ms.topic: article
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Perform post-migration tasks for Windows Server Essentials migration1
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server. Or they are optional configuration steps that you may want to perform.  
   
 
--   [Delete DNS entries of the Source Server](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_DeleteDNSEntries)  
+-   [Delete DNS entries of the Source Server](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Share line-of-business and other application data folders](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+-   [Share line-of-business and other application data folders](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
--   [Fix client computer issues after migrating](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+-   [Fix client computer issues after migrating](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
--   [Give the built-in Administrators group the right to log on as a batch job](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_AdminGroup)  
+-   [Give the built-in Administrators group the right to log on as a batch job](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
 
--   [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_DeleteDNSEntries)  
+-   [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+-   [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
--   [Fix client computer issues after migrating](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+-   [Fix client computer issues after migrating](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
--   [Give the built-in Administrators group the right to log on as a batch job](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration1.md#BKMK_AdminGroup)  
+-   [Give the built-in Administrators group the right to log on as a batch job](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
 
   
 ##  <a name="BKMK_DeleteDNSEntries"></a> Delete DNS entries of the Source Server  

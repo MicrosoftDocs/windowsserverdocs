@@ -3,7 +3,7 @@ title: Configure a virtual machine with a SCSI controller to be able to hot plug
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
@@ -21,7 +21,7 @@ ms.date: 8/16/2016
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

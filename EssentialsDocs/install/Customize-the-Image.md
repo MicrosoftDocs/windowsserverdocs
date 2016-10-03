@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 9dc89e34-fd35-4fa9-8d2f-894bfb780a5f
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Customize the Image
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can use the information in this section to customize an image of the operating system.  
   
  This section includes the following topics:  

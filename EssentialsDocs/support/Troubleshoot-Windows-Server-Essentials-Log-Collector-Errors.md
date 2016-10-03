@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Troubleshoot Windows Server Essentials Log Collector Errors
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 When you run the Log Collector, you may encounter one of the following errors. To resolve an issue, follow the guidance provided for the associated error.  
   
 > [!NOTE]

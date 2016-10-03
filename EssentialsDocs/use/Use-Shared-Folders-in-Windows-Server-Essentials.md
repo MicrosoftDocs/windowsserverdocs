@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Use Shared Folders in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  Windows Server Essentials provides a central location for all of your data and files through the shared folders that are located on your server.  
   

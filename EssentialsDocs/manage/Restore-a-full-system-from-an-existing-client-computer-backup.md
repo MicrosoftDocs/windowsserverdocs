@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Restore a full system from an existing client computer backup
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials 
   
  Hardware and operating system failures are rare, but they can happen. A malfunctioning fan could overheat a computer motherboard and render it useless. The operating system could become corrupt and refuse to start. Fire and water damage can result in permanent hardware damage. A hard disk drive may fail or you may decide to replace it with a larger hard disk drive.  
   
@@ -124,7 +124,7 @@ ms.author: coreyp
 > [!NOTE]
 >   Windows Server Essentials does not support the following restore scenarios:  
 >   
->  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI)â€œbased computer.  
+>  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI) œbased computer.  
 > -   Restoring a UEFI/GPT backup to a BIOS system.  
 >   
 >  If you restore data in either of these scenarios, you will not be able to boot the system. In addition, you might not be able to use hard drives that are larger than two terabytes in size.  
@@ -235,7 +235,7 @@ ms.author: coreyp
         1.  Click **Run Disk Manager (advanced)**, and create a new volume that is the same size as the system reserved volume.  
   
             > [!NOTE]
-            >  If a client computer is Unified Extensible Firmware Interface (UEFI)â€œbased, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
+            >  If a client computer is Unified Extensible Firmware Interface (UEFI) œbased, you must use the **diskpart** tool to initialize the system disk. To do this, open a command window (press Ctrl+Alt+Shift for 5 seconds in the WinPE environment), run **diskpart.exe**, and then run the following diskpart commands:  
             >   
             >  1.  **DISKPART>  list disk**  
             > 2.  **DISKPART> select disk #** *<disk\>*  
@@ -269,7 +269,7 @@ ms.author: coreyp
     >  If BitLocker Drive Encryption was enabled on the computer before the restore, you must enable BitLocker manually after the computer restarts.  
   
 ##  <a name="BKMK_FindDrivers"></a> Where can I find the drivers for my hardware?  
- Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturerâ„¢s website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
+ Depending on the new or restored computer hardware, the restore media may not include all of the storage and network adapter drivers that are needed when you restart your restored computer. You must determine which drivers are missing, locate those drivers on existing media or on the manufacturer „¢s website, copy them to a flash drive, and then copy them from the flash drive to the new or restored computer when you run the Full System Restore Wizard.  
   
  When a computer is backed up, the drivers for the computer are saved in the backup. If your recovery media does not include all of the drivers that you need, you can open a backup for that computer, and then copy the drivers to a USB flash drive.  
   

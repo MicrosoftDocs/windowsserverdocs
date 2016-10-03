@@ -11,33 +11,35 @@ ms.topic: article
 ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Demote and remove the Source Server from the new Windows Server Essentials network1
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 After you finish installing  Windows Server Essentials and you complete the tasks in the Migration Wizard, you must perform the following tasks:  
   
 
-1.  [Uninstall Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
+1.  [Uninstall Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
   
-2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_PhysicallyDisconnect).  
+2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
   
-3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_DemoteTheSourceServer).  
+3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer).  
   
-4.  [Move the DHCP Server role from the Source Server to the router](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_MoveTheDHCPRole).  
+4.  [Move the DHCP Server role from the Source Server to the router](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
   
-5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
-1.  [Uninstall Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
+1.  [Uninstall Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
   
-2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_PhysicallyDisconnect).  
+2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
   
-3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_DemoteTheSourceServer).  
+3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer).  
   
-4.  [Move the DHCP Server role from the Source Server to the router](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_MoveTheDHCPRole).  
+4.  [Move the DHCP Server role from the Source Server to the router](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
   
-5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
   
 ###  <a name="BKMK_UninstallExchangeServer2003"></a> Uninstall Exchange Server 2003  
@@ -122,9 +124,9 @@ After you finish installing  Windows Server Essentials and you complete the task
   
 > [!NOTE]
 
->  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+>  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
->  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+>  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
   
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  

@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Deploy Windows Server Essentials Experience as a Hosted Server
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This document includes information that is specific to hosters who intend to deploy Microsoft Windows Server 16 with the Windows Server Essentials Experience role (referred to as Windows Server Essentials in the remainder of the document) installed in their lab and intend to offer Windows Server Essentials Experience as a service to their customers. This document includes the following sections:  
   
 
@@ -71,7 +73,7 @@ This document includes information that is specific to hosters who intend to dep
 ##  <a name="BKMK_WSEEOverview"></a> Windows Server Essentials Experience overview  
  The  Windows Server Essentials Experience is a server role that is available in the  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter. When the  Windows Server Essentials Experience role is installed on a server running  Windows Server 2012 R2, the customer can take advantage of all the features that are available in  Windows Server Essentials without the locks and limits. The  Windows Server Essentials Experience enables the following cross-premises solutions for small and midsize businesses:  
   
--   **Data storage and protection** You can store the customer™s data in a centralized location and protect server and client data by backing up the server and client computers (less than 75) within the network.  
+-   **Data storage and protection** You can store the customer „¢s data in a centralized location and protect server and client data by backing up the server and client computers (less than 75) within the network.  
   
 -   **User management** You can manage the users and groups through the simplified server dashboard. In addition, integration with  Microsoft Azure Active Directory (Azure AD) enables easy data access for Microsoft online services (for example, Office 365, Exchange Online, and SharePoint Online) for users by using their domain credentials.  
   
@@ -102,8 +104,7 @@ This document includes information that is specific to hosters who intend to dep
 
  For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
-  
- For more information about requirements, see [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d).  
+
   
 ##  <a name="BKMK_SupportedToplogy"></a> Supported network topologies  
  To use  Windows Server Essentials Experience from a roaming client, VPN should be enabled. To enable remote access to the server from roaming clients, you need to open port 443 and port 80 on the server.  
@@ -147,10 +148,10 @@ This document includes information that is specific to hosters who intend to dep
   
 $myExternalDomainName = 'remote.contoso.com';   ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
 $mySslCertificateFile = 'C:\ssl.pfx';   ## full path to SSL certificate file  
-$mySslCertificatePassword = ConvertTo-SecureString “AsPlainText “Force '******';   ## password for private key of the SSL certificate  
+$mySslCertificatePassword = ConvertTo-SecureString  œAsPlainText  œForce '******';   ## password for private key of the SSL certificate  
 $skipCertificateVerification = $true;   ## whether or not, skip verification for the SSL certificate  
   
-Set-WssDomainNameConfiguration “DomainName $myExternalDomainName “CertificatePath $mySslCertificateFile “CertificateFilePassword $mySslCertificatePassword “NoCertificateVerification  
+Set-WssDomainNameConfiguration  œDomainName $myExternalDomainName  œCertificatePath $mySslCertificateFile  œCertificateFilePassword $mySslCertificatePassword  œNoCertificateVerification  
 ##  
 ## To install VPN with static IPv4 pool (and allow all existing users to establish VPN).  
 ##  
@@ -200,7 +201,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
  The server will be restarted during the initial configuration. If you need to prevent this automatic restart, you can use the following command to add a registry key before you start the Initial Configuration:  
   
 ```  
-New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "WaitForReboot" -Value 1 -PropertyType "DWord" -Force -Confirm:$false  
+New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name "WaitForReboot" -Value 1 -PropertyType "DWord" -Force -Confirm:$false  
   
 ```  
   
@@ -212,7 +213,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
 > [!NOTE]
 >  We recommend that you put the source server and the destination server in the same subnet. If this is not possible, you should make sure that:  
 >   
->  -   The source server and the destination server can access each other™s internal DNS names.  
+>  -   The source server and the destination server can access each other „¢s internal DNS names.  
 > -   All the necessary ports are open.  
   
  After migration, you can upgrade your licenses to remove the locks and limits. For more information, see [Transition from Windows Server Essentials to Windows Server 2012 Standard](http://technet.microsoft.com/library/jj247582.aspx).  
@@ -227,7 +228,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
   
  **Example**:  
   
- $Enable-WssRemoteWebAccess “DenyAccessByDefault “ApplyToExistingUsers  
+ $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers  
   
  This command will enable Remote Web Access with the router configured automatically, and change the default access permissions for all existing users.  
   
@@ -238,7 +239,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
   
  **Example**:  
   
- $password = ConvertTo-SecureString "Passw0rd!" -asplaintext “force$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test  
+ $password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test  
   
  This command will add an administrator named User2Test with password Passw0rd!.  
   
@@ -398,8 +399,8 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Â  -Name "Wait
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../get-started/What-s-New-in-Windows-Server-Essentials.md)  
+-   [What's New in Windows Server Essentials](../get-started/what-s-new.md)  
 
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
--   [Get started with Windows Server Essentials](../get-started/get-started-with-windows-server-essentials.md)
+-   [Get started with Windows Server Essentials](../get-started/get-started.md)

@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Integrate an On-Premises Exchange Server with Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This guide provides information and basic instructions to help you set up and integrate an on-premises server that is running Exchange Server with a server that is running Windows Server Essentials.  
   
  You should read this guide before attempting to deploy an on-premises server that is running Exchange Server on a Windows Server Essentials network.  
@@ -75,7 +77,7 @@ This guide provides information and basic instructions to help you set up and in
   
 2.  Run Windows PowerShell as an administrator.  
   
-3.  At the Windows PowerShell command prompt, type **Add-ADGroupMember ËœEnterprise Adminsâ„¢ $env:username**, and then press Enter.  
+3.  At the Windows PowerShell command prompt, type **Add-ADGroupMember ËœEnterprise Admins „¢ $env:username**, and then press Enter.  
   
 #### To install Exchange Server  
   
@@ -118,7 +120,7 @@ This guide provides information and basic instructions to help you set up and in
   
      `Import-Module ServerManager`  
   
-     `Add-WindowsFeature NET-Framework,RSAT-ADDS,Web-Server,Web-Basic-Auth,Web-Windows-Auth,Web-Metabase,Web-Net-Ext,Web-Lgcy-Mgmt-Console,WAS-Process-Model,RSAT-Web-Server,Web-ISAPI-Ext,Web-Digest-Auth,Web-Dyn-Compression,NET-HTTP-Activation,Web-Asp-Net,Web-Client-Auth,Web-Dir-Browsing,Web-Http-Errors,Web-Http-Logging,Web-Http-Redirect,Web-Http-Tracing,Web-ISAPI-Filter,Web-Request-Monitor,Web-Static-Content,Web-WMI,RPC-Over-HTTP-Proxy â€œRestart`  
+     `Add-WindowsFeature NET-Framework,RSAT-ADDS,Web-Server,Web-Basic-Auth,Web-Windows-Auth,Web-Metabase,Web-Net-Ext,Web-Lgcy-Mgmt-Console,WAS-Process-Model,RSAT-Web-Server,Web-ISAPI-Ext,Web-Digest-Auth,Web-Dyn-Compression,NET-HTTP-Activation,Web-Asp-Net,Web-Client-Auth,Web-Dir-Browsing,Web-Http-Errors,Web-Http-Logging,Web-Http-Redirect,Web-Http-Tracing,Web-ISAPI-Filter,Web-Request-Monitor,Web-Static-Content,Web-WMI,RPC-Over-HTTP-Proxy  œRestart`  
   
 2.  Save the file as **InstallDependencies.ps1**.  
   
@@ -162,13 +164,13 @@ This guide provides information and basic instructions to help you set up and in
   
      `#Import Exchange Certificate, and Enable it for POP IIS IMAP SMTP services.`  
   
-     `Import-ExchangeCertificate â€œFileData ([Byte[]]$(Get-content -Path $CertPath â€œEncoding byte â€œReadCount 0)) -Password:$CertPassword -Force | Enable-ExchangeCertificate -Services 'POP, IIS, IMAP, SMTP' -Force`  
+     `Import-ExchangeCertificate  œFileData ([Byte[]]$(Get-content -Path $CertPath  œEncoding byte  œReadCount 0)) -Password:$CertPassword -Force | Enable-ExchangeCertificate -Services 'POP, IIS, IMAP, SMTP' -Force`  
   
      `#New AcceptedDomain and set it to default`  
   
-     `New-AcceptedDomain â€œName "official name" â€œDomainName $domainname`  
+     `New-AcceptedDomain  œName "official name"  œDomainName $domainname`  
   
-     `Set-AcceptedDomain â€œIdentity "official name" â€œMakeDefault $true`  
+     `Set-AcceptedDomain  œIdentity "official name"  œMakeDefault $true`  
   
      `#New EmailAddress Policy`  
   
@@ -190,11 +192,11 @@ This guide provides information and basic instructions to help you set up and in
   
      `$ews = "https://" + $hostname + "/EWS/Exchange.asmx"`  
   
-     `Get-OwaVirtualDirectory | Set-OwaVirtualDirectory â€œExternalUrl $owa â€œInternalUrl $owa`  
+     `Get-OwaVirtualDirectory | Set-OwaVirtualDirectory  œExternalUrl $owa  œInternalUrl $owa`  
   
-     `Get-EcpVirtualDirectory | Set-EcpVirtualDirectory â€œExternalUrl $ecp â€œInternalUrl $ecp`  
+     `Get-EcpVirtualDirectory | Set-EcpVirtualDirectory  œExternalUrl $ecp  œInternalUrl $ecp`  
   
-     `Get-ActiveSyncVirtualDirectory | Set-ActiveSyncVirtualDirectory -ExternalUrl $activesync â€œInternalUrl $activesync`  
+     `Get-ActiveSyncVirtualDirectory | Set-ActiveSyncVirtualDirectory -ExternalUrl $activesync  œInternalUrl $activesync`  
   
      `Get-OABVirtualDirectory | Set-OABVirtualDirectory -ExternalUrl $oab -InternalUrl $oab -RequireSSL:$true`  
   
@@ -202,7 +204,7 @@ This guide provides information and basic instructions to help you set up and in
   
      `#Enable outlook Anywhere`  
   
-     `Enable-OutlookAnywhere â€œClientAuthenticationMethod:Basic â€œExternalHostname:$hostname â€œSSLOffloading:$false`  
+     `Enable-OutlookAnywhere  œClientAuthenticationMethod:Basic  œExternalHostname:$hostname  œSSLOffloading:$false`  
   
      `#new receive/send connector`  
   
@@ -368,18 +370,18 @@ This guide provides information and basic instructions to help you set up and in
   
     -   If you are performing a clean setup, run the following command:  
   
-         **ARRConfig config â€œcert ** *path to the certificate file* ** â€œhostnames ** *host names for Exchange Server* ****  
+         **ARRConfig config  œcert ** *path to the certificate file* **  œhostnames ** *host names for Exchange Server* ****  
   
         > [!NOTE]
-        >  For example; **ARRConfig config â€œcert ***c:\temp\certificate.pfx*** â€œhostnames ***mail.contoso.com*****  
+        >  For example; **ARRConfig config  œcert ***c:\temp\certificate.pfx***  œhostnames ***mail.contoso.com*****  
         >   
         >  Replace *mail.contoso.com* with the name of your domain that is protected by the certificate.  
   
     -   In you are migrating from Windows Small Business Server, run the following command:  
   
-         **ARRConfig config â€œcert ** *path to the certificate file* ** â€œhostnames ** *host names for Exchange Server* ** â€œtargetserver ** *server name of Exchange Server* ****  
+         **ARRConfig config  œcert ** *path to the certificate file* **  œhostnames ** *host names for Exchange Server* **  œtargetserver ** *server name of Exchange Server* ****  
   
-         For example; **ARRConfig config â€œcert ***c:\temp\certificate.pfx*** â€œhostnames ***mail.contoso.com***â€œtargetserver ***ExchangeSvr*****  
+         For example; **ARRConfig config  œcert ***c:\temp\certificate.pfx***  œhostnames ***mail.contoso.com*** œtargetserver ***ExchangeSvr*****  
   
          Replace *mail.contoso.com* with the name of your domain. Replace *ExchangeSvr* with the name of your server that is running Exchange Server.  
   
@@ -437,22 +439,22 @@ This guide provides information and basic instructions to help you set up and in
 ### What do I need to know about email accounts?  
  A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft  Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.  
   
- The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is *FrankM*, the userâ„¢s email address might be *FrankM@Contoso.com*.  
+ The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is *FrankM*, the user „¢s email address might be *FrankM@Contoso.com*.  
   
  In addition, the password that you set for the user in the Add a User Account Wizard will be the initial password of the user in the hosted email solution.  
   
- Finally, if you delete the user by using the Delete a User Account Wizard on the server, the wizard also sends a request to the hosted email provider to delete the user from their system as well. The provider may delete both the userâ„¢s account and the email that is associated with the account.  
+ Finally, if you delete the user by using the Delete a User Account Wizard on the server, the wizard also sends a request to the hosted email provider to delete the user from their system as well. The provider may delete both the user „¢s account and the email that is associated with the account.  
   
  For user information about how to set up required email client software, or how to access an email account, refer to the help documentation provided by your hosted email provider.  
   
 ### What is a mailbox quota?  
- The amount of storage space that is allocated for a network userâ„¢s Exchange mailbox data is known as the mailbox quota.  
+ The amount of storage space that is allocated for a network user „¢s Exchange mailbox data is known as the mailbox quota.  
   
  When you run the **Set up Exchange Server Integration** task on the Dashboard, the wizard adds a page to the Add User Account Wizard that allows you to choose whether to enforce mailbox quotas, and to specify the quota size. By default, the **Enforce mailbox quotas** option is selected (on), and user mailboxes are assigned 2 GB of storage space. Exchange administrators can customize the mailbox quota settings to suit the needs of their business.  
   
 ## See also  
   
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)  
   
 -   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   

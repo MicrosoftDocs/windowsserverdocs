@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 5a1ed009-81f0-4884-b6b1-5037fe873b13
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Customize Disk Partitions
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 To customize the partition configuration, you can pre-create the image by using an unattend.xml file. It is strongly recommended that a dedicated data partition is used in all configurations to ensure that the server can be easily backed-up and restored.  
   
 ## See Also  

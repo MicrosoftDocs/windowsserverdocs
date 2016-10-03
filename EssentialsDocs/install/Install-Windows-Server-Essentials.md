@@ -11,18 +11,22 @@ ms.topic: article
 ms.assetid: fdf020cd-3184-4886-9f9d-7d729a89057e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 
 
 # Install Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The following documents provide step-by-step instructions for installing and configuring  Windows Server Essentials and  Windows Server Essentials, including pre-installation tasks and information about system requirements.   
   
 -   [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md)  
   
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)  
   
--   [Release Documentation for Windows Server Essentials](../get-started/Release-Documentation-for-Windows-Server-Essentials.md)  
+-   [Release Documentation for Windows Server Essentials](../get-started/release-notes.md)  
   
 -   [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials.md)  
   
@@ -30,7 +34,7 @@ The following documents provide step-by-step instructions for installing and con
   
 -   [Windows Server Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md)  
 
--   [System Requirements for Windows Server Essentials](../get-started/System-Requirements-for-Windows-Server-Essentials.md)  
+-   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)  
   
 -   [Deploy Windows Server Essentials Experience as a Hosted Server](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
   

@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 26cb2992-1250-4672-98ee-8b870baa45d5
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Important Information for Using the Windows Server Essentials ADK
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 To create and customize an image of  Windows Server Essentials, you use many of the tools in the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the  Windows Server Essentials ADK.  
   
  You should be aware of the following important differences:  

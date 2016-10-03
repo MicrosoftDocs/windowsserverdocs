@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Set up or customize server backup
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  Server backup is not automatically configured during installation. You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  
   
@@ -78,7 +78,7 @@ ms.author: coreyp
   
 -   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running  Windows Server Essentials.  
   
--   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you donâ„¢t need the data on the disk, you can reformat the disk and use it for backups.  
+-   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don „¢t need the data on the disk, you can reformat the disk and use it for backups.  
   
     > [!CAUTION]
     >  All data will be deleted when you reformat the disk.  

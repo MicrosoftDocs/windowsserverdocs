@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: a7eafbb3-7728-487e-b287-90bbd6fee7f0
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Customize Sign Up for Microsoft Online Backup Service task
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 By default, the **Sign up for Microsoft Online Backup Service** task on the **DEVICES** tab of the Dashboard opens the Microsoft Online Backup Service website. The website provides information about the service, and helps you subscribe to the service and download the required software.  
   
  You can customize the **Sign up for Microsoft Online Backup Service** task in two ways:  

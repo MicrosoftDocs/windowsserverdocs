@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Play Digital Media in Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 Digital media refers to audio, video, and photo content that has been digitally compressed.  Windows Server Essentials makes it possible for networked computers and some networked digital media devices to play digital media files that are stored on the server.  
   
  The following topics provide information about accessing and playing digital media files that are stored on  Windows Server Essentials:  

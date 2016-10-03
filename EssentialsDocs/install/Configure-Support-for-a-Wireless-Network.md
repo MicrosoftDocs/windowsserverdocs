@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 4d7020d4-fd46-4858-a406-de5c0f21ea06
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Configure Support for a Wireless Network
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can configure the operating system to support a wireless network. The following requirements must be met to enable wireless support on the server:  
   
 -   The server must have a wired network adapter installed.  

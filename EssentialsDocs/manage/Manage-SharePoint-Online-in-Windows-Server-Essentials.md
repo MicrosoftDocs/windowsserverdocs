@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 282f3634-6de6-4691-803c-df6c3c16660d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Manage SharePoint Online in Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can manage your  SharePoint Online libraries and team sites from the Dashboard, without signing in to  Office 365, if you integrate  Office 365 with your  Windows Server Essentials server. You get  SharePoint Online libraries and team sites with any  Office 365 business plan. [Find out how to integrate Office 365 with your server](Manage-Office-365-in-Windows-Server-Essentials.md)  
   
  As a bonus, your users will be able to use the My Server 2012 R2 app to access files in your  SharePoint Online libraries from anywhere using their mobile device or Windows phone. [Where can I get the My Server app?](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md)  
@@ -24,26 +26,23 @@ You can manage your  SharePoint Online libraries and team sites from the Dashboa
   
 ## Where on the Dashboard will I manage my libraries and team sites?  
  You'll use the new **SharePoint Online** tab, which is added to the **Storage** area of the Dashboard when you integrate  Office 365 with the server, to manage  SharePoint Online resources.  
-  
- ![SharePoint Libraries tab on the Storage page](media/O365Integration_SharePointLibraries.png "O365Integration_SharePointLibraries")  
+
   
 ## What can I manage from the Dashboard?  
   
 ### Manage your online libraries  
-  
-|||  
+   
 |-|-|  
 |Add a library|On the **SharePoint Libraries** tab, use **Add a library**. You'll be able to make all of the usual choices:<br /><br /> -   Choose a team site and the library type.<br />-   Decide whether to use version control.<br />-   Assign access permissions.<br /><br /> **Tip:** To find out what team site permissions your library will inherit if you don't assign permissions, use **View the site permissions**.|  
 |Open a library|To work with the contents of the library, you'll need to open it in  Office 365. Just select the library and click **Open the library**. What you can do with the content will depend on the credentials that you use to sign in to  SharePoint Online.|  
 |Change version controls or access permissions|You can use **View the library properties** to either view or change the version controls or access permissions for the library.|  
-|Delete a library|**Warning:** Before you delete a SharePoint Online library, be sure to save any files that want to keep to another location. When you delete a library from SharePoint, everything is deletedâ€?permanently. There's no way to retrieve anything.<br /><br /> After you've checked to make sure the library isn't storing anything you'll need later, select the library and click **Delete the library**.|  
+|Delete a library|**Warning:** Before you delete a SharePoint Online library, be sure to save any files that want to keep to another location. When you delete a library from SharePoint, everything is deleted   permanently. There's no way to retrieve anything.<br /><br /> After you've checked to make sure the library isn't storing anything you'll need later, select the library and click **Delete the library**.|  
   
 ### Manage your team sites  
-  
-|||  
+ 
 |-|-|  
-|Manage SharePoint team sites|The **Manage team sites** action lets you sign in to  Office 365 and manage your  SharePoint Online team sites. What you can do in  Office 365 will be determined by the online account that you sign in with.<br /><br /> When you close  Office 365 and return to the Dashboard, click **Refresh** to show the changes.|  
-|View or change team site permissions|Since a library inherits permissions from its team site by default, it's helpful to have easy access to the team site permissions. To viewâ€?or changeâ€?permissions for a team site, select the team site or any of its libraries, and click **View the site permissions**.<br /><br /> **Tip:** Need help with the fine points of SharePoint team site permissions? There's a useful [Learn more](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924) link in the team site permissions.|  
+|Manage SharePoint team sites|The **Manage team sites** action lets you sign in to  Office 365 and manage your  SharePoint Online team sites. What you can do in  Office 365 will be determined by the online account that you sign in with.<br /><br /> When you close  Office 365 and return to the Dashboard, click **Refresh** to show the changes. 
+|View or change team site permissions|Since a library inherits permissions from its team site by default, it's helpful to have easy access to the team site. To view or change   permissions for a team site, select the team site or any of its libraries, and click **View the site permissions**.<br /><br /> **Tip:** Need help with the fine points of SharePoint team site permissions? There's a useful [Learn more](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924) link in the team site permissions.  
   
 ## Tips  
   

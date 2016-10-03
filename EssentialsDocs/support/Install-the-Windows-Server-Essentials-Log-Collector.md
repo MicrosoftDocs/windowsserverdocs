@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Install the Windows Server Essentials Log Collector
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 The  Windows Server Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
   
 ###  <a name="BKMK_ToInstall"></a> To install the Log Collector  
@@ -61,6 +63,6 @@ The  Windows Server Essentials Log Collector installation wizard installs the Lo
   
 3.  Click **OK** if you are prompted.  
   
-4.  Double-click the file name ending with ˜.msi™ and select a folder in which to extract it.  
+4.  Double-click the file name ending with Ëœ.msi „¢ and select a folder in which to extract it.  
   
 5.  Navigate to the folder with the extracted file and double-click the installation file to use the wizard to finish the installation.

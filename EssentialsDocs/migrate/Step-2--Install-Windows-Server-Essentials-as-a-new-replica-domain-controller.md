@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Step 2: Install Windows Server Essentials as a new replica domain controller
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This section describes how to install  Windows Server Essentials and  Windows Server 2012 R2 Standard (with the Windows Server Essentials Experience role enabled) as a domain controller.  
   
  For environments with up to 25 users and 50 devices, you can follow the steps in this guide to migrate from previous versions of Windows SBS to  Windows Server Essentials. For environments with up to 100 users and 200 devices, you can follow the same guidance to migrate to the Standard and Datacenter editions of  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. Both scenarios are covered in this documentation.  
@@ -30,26 +32,24 @@ This section describes how to install  Windows Server Essentials and  Windows Se
     > [!NOTE]
     >  If the Configure Windows Server Essentials Wizard launches, cancel it.  
   
-2.  To install Windows Server Essentials as a replica  Windows Server 2012 R2 domain controller in an existing domain as global catalog, follow instructions in [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](assetId:///58d7ad85-007c-4b72-a07f-b7a13dcc4d07).  
-  
-3.  Transfer the FSMO roles from your Source Server.  
+2.  Transfer the FSMO roles from your Source Server.  
   
     > [!NOTE]
     >  If  Windows Server Essentials is the only domain controller in the domain, the FSMO role is automatically moved to the server running  Windows Server Essentials when you demote the Source Server.  
   
-4.  Open Server Manager and run the Add Roles and Features wizard.  
+3.  Open Server Manager and run the Add Roles and Features wizard.  
   
-5.  If not installed, add the Windows Server Essentials Experience role.  
+4.  If not installed, add the Windows Server Essentials Experience role.  
   
-6.  After you install the Windows Server Essentials Experience role, the Configure Windows Server Essentials task appears in the notification area. Click the task to launch   the Configure Windows Server Essentials wizard.  
+5.  After you install the Windows Server Essentials Experience role, the Configure Windows Server Essentials task appears in the notification area. Click the task to launch   the Configure Windows Server Essentials wizard.  
   
-7.  Follow the instructions to complete the configuration of Windows Server Essentials. Before you run the wizard, do the following:  
+6.  Follow the instructions to complete the configuration of Windows Server Essentials. Before you run the wizard, do the following:  
   
     -   Change the server name if needed, because you cannot change the name after you have completed the Configure Windows Server Essentials Wizard.  
   
-    -   Ensure that the server™s time and settings are correct.  
+    -   Ensure that the server „¢s time and settings are correct.  
   
-8.  Verify the installation as follows:  
+7.  Verify the installation as follows:  
   
     1.  Open the Dashboard.  
   

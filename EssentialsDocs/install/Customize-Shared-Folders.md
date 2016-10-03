@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Customize Shared Folders
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 By default, the server folders are created on the largest data partition on Disk 0. Partners can customize the location and specify additional server folders by using the following steps:  
   
 1.  Using a custom partition configuration, create the factory image, and then create a new Storage registry key before you use sysprep. During Initial Configuration (IC), the storage IC task checks for this registry key. If it exists, the default server folders are created in the C:\ServerFolders directory.  

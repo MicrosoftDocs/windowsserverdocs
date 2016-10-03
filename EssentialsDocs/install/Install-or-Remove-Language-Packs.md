@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 98f13f63-4480-40ba-a7ef-d1d9b7582e5f
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Install or Remove Language Packs
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 > [!NOTE]
 >  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](http://technet.microsoft.com/library/hh824829) before you add the  Windows Server Essentials language pack.  
   

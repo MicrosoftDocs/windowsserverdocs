@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
  Office 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. These tools include Microsoft Office Web Apps, which are web versions of the Microsoft Office desktop applications that you are already familiar with, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint. With Office Web Apps, you can create and edit documents on any computer with a web browser.  
   
  For a quick introduction to  Office 365, view the [Office 365: A tour for users](http://onlinehelp.microsoft.com/office365-smallbusinesses/hh534379.aspx) videos at the  Office 365 website.  
@@ -23,11 +25,11 @@ ms.author: coreyp
  If your organization uses  Office 365 web apps, you can open the apps in  Office 365 using familiar tools like the  Windows Server Essentials Launchpad and My Server 2012 R2. (You can also, of course, [sign in to Office 365 directly](https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=2&ct=1384059583&rver=6.1.6206.0&wp=MBI_KEY&wreply=https:%2F%2Fwww.outlook.com%2Fowa%2F&id=260563&whr=students.tamuk.edu&CBCXT=out) using your organizational online ID and your network password.)  
   
 > [!IMPORTANT]
->  If you lose a mobile device that you use to connect to Exchange Online, contact your administrator so they can remove sensitive data from the device the next time it™s turned on.  
+>  If you lose a mobile device that you use to connect to Exchange Online, contact your administrator so they can remove sensitive data from the device the next time it „¢s turned on.  
   
 ### Before you begin  
   
-1.  You must have a Microsoft Online Services account (in  Windows Server Essentials, it™s called an *Office 365 account*) assigned to your user account. If you don™t already have an online account for  Office 365, ask the person who maintains your computer network to create one for you.  
+1.  You must have a Microsoft Online Services account (in  Windows Server Essentials, it „¢s called an *Office 365 account*) assigned to your user account. If you don „¢t already have an online account for  Office 365, ask the person who maintains your computer network to create one for you.  
   
 2.  After you get your online account, sign in on the network and reset your Windows password. You will now use the same password to sign in to  Office 365 that you use on your network.  
   
@@ -65,7 +67,7 @@ ms.author: coreyp
 2.  Click **SharePoint Online**.  
   
     > [!NOTE]
-    >  If you don™t see **SharePoint Online**, ask your administrator whether  Office 365 has been integrated with the server.  
+    >  If you don „¢t see **SharePoint Online**, ask your administrator whether  Office 365 has been integrated with the server.  
   
 3.  Click a SharePoint Online library to display the documents in the library.  
   

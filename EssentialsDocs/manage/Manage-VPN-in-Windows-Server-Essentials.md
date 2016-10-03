@@ -11,12 +11,14 @@ ms.topic: article
 ms.assetid: cc2b264a-b9a8-4114-9f7b-8604f77096e5
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
 
 
 # Manage VPN in Windows Server Essentials
- 
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials 
   
  Virtual private network (VPN) connections enable users working at home or on the road to access a server on a private network by using the infrastructure provided by a public network, such as the Internet. To use VPN for accessing server resources, you must complete the following:  
   

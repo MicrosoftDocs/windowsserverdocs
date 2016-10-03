@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Support Windows Server Essentials
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This topic provides support and troubleshooting options for Windows Server Essentials.  
   
 ##  <a name="BKMK_Top"></a> Top support solutions and updates  

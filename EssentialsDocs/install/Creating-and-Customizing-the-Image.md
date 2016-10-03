@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 79ed973d-61e3-46d9-a626-3edfbc4e4d65
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Creating and Customizing the Image
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 This section describes aspects of the customization process that are specific to  Windows Server Essentials . You typically perform these procedures on the reference computer with an answer file, before you capture the image for final deployment.  
   
  This section includes the following topics:  

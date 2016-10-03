@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Additional Customizations
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can make the following additional customizations to create and customize an image of  Windows Server Essentials:  
   
 

@@ -11,11 +11,13 @@ ms.topic: article
 ms.assetid: 29f9a09f-e4e8-476d-ada1-ab9202a670d7
 author: nnamuhcs
 ms.author: coreyp
+manager: dongill
 ---
 
-
-
 # Create a Simple Customized Image
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can use the following procedure for creating a simple customized image:  
   
 #### To create the image  
