@@ -20,16 +20,16 @@ This topic describes how to configure the infrastructure that is required for an
   
 |Task|Description|  
 |--------|---------------|  
-|[1.1 Configure server network settings](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigNetworkSettings)|Configure the server network settings on the DirectAccess server.|  
-|[1.2 Configure force tunneling](assetId:///78197185-e82a-42e8-9db8-92976e939522#BKMK_forcetunnel)|Configure force tunneling.|  
-|[1.3 Configure routing in the corporate network](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigRouting)|Configure routing in the corporate network.|  
-|[1.4 Configure firewalls](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigFirewalls)|Configure additional firewalls, if required.|  
-|[1.5 Configure CAs and certificates](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigCAs)|Configure a certification authority (CA), if required, and any other certificate templates that are required in the deployment.|  
-|[1.6 Configure the DNS server](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigDNS)|Configure the Domain Name System (DNS) settings for the DirectAccess server.|  
-|[1.7 Configure Active Directory](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigAD)|Join client computers and the DirectAccess server to the Active Directory domain.|  
-|[1.8 Configure GPOs](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigGPOs)|Configure GPOs for the deployment, if required.|  
-|[1.9 Configure security groups](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigSGs)|Configure security groups that will contain DirectAccess client computers, and any other security groups that are required in the deployment.|  
-|[1.10 Configure the network location server](assetId:///78197185-e82a-42e8-9db8-92976e939522#ConfigNLS)|Configure the network location server, including installing the network location server website certificate.|  
+|1.1 Configure server network settings|Configure the server network settings on the DirectAccess server.|  
+|1.2 Configure force tunneling|Configure force tunneling.|  
+|1.3 Configure routing in the corporate network|Configure routing in the corporate network.|  
+|1.4 Configure firewalls|Configure additional firewalls, if required.|  
+|1.5 Configure CAs and certificates|Configure a certification authority (CA), if required, and any other certificate templates that are required in the deployment.|  
+|1.6 Configure the DNS server|Configure the Domain Name System (DNS) settings for the DirectAccess server.|  
+|1.7 Configure Active Directory|Join client computers and the DirectAccess server to the Active Directory domain.|  
+|1.8 Configure GPOs|Configure GPOs for the deployment, if required.|  
+|1.9 Configure security groups|Configure security groups that will contain DirectAccess client computers, and any other security groups that are required in the deployment.|  
+|1.10 Configure the network location server|Configure the network location server, including installing the network location server website certificate.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -168,7 +168,7 @@ A public certificate is supplied by a third party. If the certificate subject na
   
 If you use a private certificate, the following are required, if they do not already exist:  
   
--   A website certificate that is used for IP-HTTPS authentication. The certificate subject should be an externally resolvable FQDN that is reachable from the Internet. The certificate is based on the certificate template that you created by following the instructions in [1.5.2 Configure certificate templates](#ConfigCertTemp).  
+-   A website certificate that is used for IP-HTTPS authentication. The certificate subject should be an externally resolvable FQDN that is reachable from the Internet. The certificate is based on the certificate template that you created by following the instructions in 1.5.2 Configure certificate templates.  
   
 -   A certificate revocation list (CRL) distribution point that is reachable from a publicly resolvable FQDN.  
   
@@ -213,7 +213,7 @@ Make sure that the website certificate that is used for IP-HTTPS authentication 
   
 6.  Click **Next** twice.  
   
-7.  On the **Request Certificates** page, select the check box for the certificate template that you previously created (for more information, see [1.5.2 Configure certificate templates](#ConfigCertTemp)). If required, click **More information is required to enroll for this certificate**.  
+7.  On the **Request Certificates** page, select the check box for the certificate template that you previously created (for more information, see 1.5.2 Configure certificate templates). If required, click **More information is required to enroll for this certificate**.  
   
 8.  In the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   
@@ -256,7 +256,7 @@ You must manually configure a DNS entry for the network location server website 
   
 5.  In the **DNS** dialog box, click **OK**, and then click **Done**.  
   
-![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -328,7 +328,7 @@ The DirectAccess server and all DirectAccess client computers must be joined to 
   
 10. When you are prompted to restart the computer, click **Restart Now**.  
   
-![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -347,7 +347,7 @@ A minimum of two Group Policy Objects are required to deploy Remote Access:
   
 -   One contains settings for DirectAccess client computers  
   
-When you configure Remote Access, the wizard automatically creates the required Group Policy Objects. However, if your organization enforces a naming convention, you can type a name in the GPO dialog box in the Remote Access Management console. For more information, see [2.7. Configuration summary and alternate GPOs](assetId:///b3acb71a-282b-493f-b221-b0bde515f3a5#BKMK_GPO). If you have created permissions, the GPO will be created. If you do not have the required permissions to create GPOs, they must be created prior to configuring Remote Access.  
+When you configure Remote Access, the wizard automatically creates the required Group Policy Objects. However, if your organization enforces a naming convention, you can type a name in the GPO dialog box in the Remote Access Management console. For more information, see 2.7. Configuration summary and alternate GPOs. If you have created permissions, the GPO will be created. If you do not have the required permissions to create GPOs, they must be created prior to configuring Remote Access.  
   
 To create Group Policy Objects, see [Create and Edit a Group Policy Object](http://technet.microsoft.com/library/cc754740.aspx).  
   
@@ -365,7 +365,7 @@ To create Group Policy Objects, see [Create and Edit a Group Policy Object](http
 ### 1.8.1 Configure Remote Access GPOs with limited permissions  
 In a deployment that uses staging and production GPOs, the domain administrator should do the following:  
   
-1.  Obtain the list of required GPOs for the Remote Access deployment from the Remote Access administrator. For more information, see [1.8 Plan Group Policy Objects](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_7_GPOs).  
+1.  Obtain the list of required GPOs for the Remote Access deployment from the Remote Access administrator. For more information, see 1.8 Plan Group Policy Objects.  
   
 2.  For each GPO that is requested by the Remote Access administrator, create a pair of GPOs with different names. The first will be used as the staging GPO, and the second as the production GPO.  
   
@@ -386,11 +386,11 @@ After the Remote Access administrator completes any changes to the Remote Access
   
 ##### To copy settings to the production GPOs  
   
-1.  Verify that all of the staging GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. This is required to ensure the most up-to-date configuration is imported to the production GPOs. For more information, see [Check Group Policy Infrastructure Status](assetId:///444bc4b0-be08-407b-8aac-8a183b1c9d02).  
+1.  Verify that all of the staging GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. This is required to ensure the most up-to-date configuration is imported to the production GPOs. For more information, see Check Group Policy Infrastructure Status.  
   
-2.  Export the settings by backing up all of the staging GPOs in the Remote Access deployment. For more information, see [Back Up a Group Policy Object](http://technet.microsoft.com/library/cc770536).  
+2.  Export the settings by backing up all of the staging GPOs in the Remote Access deployment. For more information, see Back Up a Group Policy Object.  
   
-3.  For each production GPO, change the security filters to match the security filters of the corresponding staging GPO. For more information, see [Filter Using Security Groups](http://technet.microsoft.com/library/cc752992).  
+3.  For each production GPO, change the security filters to match the security filters of the corresponding staging GPO. For more information, see Filter Using Security Groups.  
   
     > [!NOTE]  
     > This is required because **Import Settings** does not copy the security filter of the source GPO.  
@@ -417,7 +417,7 @@ After the Remote Access administrator completes any changes to the Remote Access
   
     10. On the **Scanning Backup** page, click **Next**, and then click **Finish**.  
   
-![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -462,7 +462,7 @@ The DirectAccess settings that are contained in the client computer Group Policy
   
 6.  In the **Select Users, Contacts, Computers, or Service Accounts** dialog box, select the client computers that you want to enable for DirectAccess, and then click **OK**.  
   
-![](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![PowerShell](../../../media/Step-1--Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -506,7 +506,7 @@ The following are required for either type of certificate, if they do not alread
   
 6.  Click **Next** twice.  
   
-7.  On the **Request Certificates** page, select the check box for the certificate template that you created by following the instructions in [1.5.2 Configure certificate templates](#ConfigCertTemp). If required, click **More information is required to enroll for this certificate**.  
+7.  On the **Request Certificates** page, select the check box for the certificate template that you created by following the instructions in 1.5.2 Configure certificate templates. If required, click **More information is required to enroll for this certificate**.  
   
 8.  In the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   

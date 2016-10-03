@@ -32,7 +32,7 @@ This topic describes how to verify that you have correctly configured your Direc
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 2: Configuring DirectAccess Servers](../../../remote-access/directaccess/single-server-advanced/Step-2--Configuring-DirectAccess-Servers.md)  
+-   [Step 2: Configuring DirectAccess Servers](Step-2--Configuring-DirectAccess-Servers.md)  
   
 
 
