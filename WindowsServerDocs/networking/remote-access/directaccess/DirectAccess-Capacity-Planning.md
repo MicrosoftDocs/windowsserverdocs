@@ -22,24 +22,25 @@ Data was collected from both a low-end (4 core, 4 Gig) server, and from hardware
   
 These test results indicate that Teredo performs better than IPHTTPS in Windows 8, but that both Teredo and IPHTTPS bandwidth usage has improved when compared to Windows 7.  
   
-![](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning1.gif)  
+![Capacity planning](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning1.gif)  
   
 ## High-end hardware test environment  
 The following chart shows the results of the high-end hardware performance test environment. All test results and analysis are detailed in this document.  
   
 ||||  
 |-|-|-|  
-|Configuration     -           Hardware|Low-end  Hardware (4GB ram, 4 core)|High-end Hardware (8 GB, 8 core)|  
+|Configuration - Hardware|Low-end  Hardware (4GB ram, 4 core)|High-end Hardware (8 GB, 8 core)|  
 |Double Tunnel<br /><br />-   PKI<br /><br />-   Including DNS64/NAT64|750 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 75 Mbps. Stretch target is 1000 users @ 50% CPU.|1500 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 150 Mbps.|  
-  
-## Test Environment  
+## Test Environment
+
 **Perf Bench Topology**  
   
-![](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning2.gif)  
+![Capacity planning](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning2.gif)  
   
 The performance test environment is a 5 machine bench. For the low-end test, one 4-core 4 Gig DirectAccess server was used and for the high-end hardware test, one 8-core, 16 Gig DirectAccess server was used. For low-end and high-end test environments the following was used: one Back end Server (the sender), and two client computers (the receivers).  Receivers are split among the two client computers. Otherwise, the receivers would be CPU bound and limit the number of clients and bandwidth. On the receiving side a simulator to simulate hundreds of clients (either HTTPS or Teredo clients are simulated). IPsec, DOSp are both configured. RSS is enabled on the DirectAccess server. RSS queue size is set to 8.  Without configuring RSS, a single processor will get pegged at a high utilization while the other cores are underutilized. Also of note is that the DirectAccess server is a 4 core machine with hyper threading turned off.  Hyper threading is off because RSS only works on physical cores and use of hyper threading produces skewed results. (This means that not all the cores will be uniformly loaded).  
   
-## Testing results for low-end hardware:  
+## Testing results for low-end hardware:
+
 Testing was performed both with 1000 & with 750 clients.  In all cases traffic split was 70% Teredo and 30% IPHTTPS.  All tests involved TCP traffic over Nat64 using 2 IPsec tunnels per client.  In all tests, memory utilization was light and CPU utilization was acceptable.  
   
 **Individual Test Results:**  
@@ -100,7 +101,7 @@ The following five tests represent high-end hardware. In the below test runs the
 |**High-end HW.  1050 Teredo clients.  450  IPHTTPS clients.**|50.15751307|154.772|211.92|3000.9|3002.1|22.93%|  
 |**High-end HW.  1050 Teredo clients.  450  IPHTTPS clients.**|49.83665607|145.994|201.92|3000.51|3006|22.03%|  
   
-![](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning3.gif)  
+![Capacity planning](../../media/DirectAccess-Capacity-Planning/DACapacityPlanning3.gif)  
   
 
 

@@ -26,12 +26,12 @@ You can use this topic for a brief overview of DirectAccess, including the serve
 > -   [DirectAccess Unsupported Configurations](DirectAccess-Unsupported-Configurations.md)  
 > -   [DirectAccess Test Lab Guides](DirectAccess-Test-Lab-Guides.md)  
 > -   [DirectAccess Known Issues](DirectAccess-Known-Issues.md)  
-> -   [DirectAccess Capacity Planning](DirectAccess-Capacity-Planning.md)  
+> -   [DirectAccess Capacity Planning](DirectAccess-Capacity-Planning.md) 
 > -   [DirectAccess Offline Domain Join](DirectAccess-Offline-Domain-Join.md)  
 > -   [Troubleshooting DirectAccess](Troubleshooting-DirectAccess.md)  
-> -   [Deploy a Single DirectAccess Server Using the Getting Started Wizard](/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)  
-> -   [Deploy a Single DirectAccess Server with Advanced Settings](/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
-> -   [Add DirectAccess to an Existing Remote Access (VPN) Deployment](/add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access--VPN--Deployment.md)  
+> -   [Deploy a Single DirectAccess Server Using the Getting Started Wizard](single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)  
+> -   [Deploy a Single DirectAccess Server with Advanced Settings](single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
+> -   [Add DirectAccess to an Existing Remote Access (VPN) Deployment](add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access--VPN--Deployment.md)  
   
 DirectAccess  allows connectivity for remote users to organization network resources without the need for traditional Virtual Private Network (VPN) connections. With DirectAccess connections, remote client computers are always connected to your organization - there is no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they are running and Internet connected.  
   
@@ -57,7 +57,4 @@ The following client operating systems support DirectAccess.
   
 -   Windows 7 Ultimate  
   
--   Windows 7 Enterprise  
-  
-
-
+-   Windows 7 Enterprise

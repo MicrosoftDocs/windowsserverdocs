@@ -16,11 +16,9 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-The following procedure is performed on the DirectAccess server:  
-  
--   [Configure DirectAccess on EDGE1](assetId:///f292ee3b-ca77-41f4-9ac3-c6ed5b244855#configDA)-Configure DirectAccess for your organization.  
-  
-## <a name="configDA"></a>Configure DirectAccess on EDGE1  
+The following procedure is performed on the DirectAccess server:
+
+## To configure DirectAccess on EDGE1
   
 1.  On the **Start** screen, type**RAMgmtUI.exe**, and then press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
@@ -34,7 +32,4 @@ The following procedure is performed on the DirectAccess server:
   
 6.  In the middle pane of the console, click **Finish**.  
   
-7.  On the **Remote Access Review** dialog box, review the configuration settings, and then click **Apply**. On the **Applying Remote Access Setup Wizard Settings** dialog box, click **Close**.  
-  
-
-
+7.  On the **Remote Access Review** dialog box, review the configuration settings, and then click **Apply**. On the **Applying Remote Access Setup Wizard Settings** dialog box, click **Close**.
