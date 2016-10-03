@@ -18,28 +18,6 @@ author: coreyp-at-msft
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.  
   
-This topic contains the following sections.  
-  
--   [File Replication Service (FRS) distribution of Group Policy objects (SYSVOL replications)](#bkmk_frs)  
-  
--   [Network Access Protection for DirectAccess clients](#bkmk_nap)  
-  
--   [Multisite support for Windows 7 clients](#bkmk_multi)  
-  
--   [User-based access control](#bkmk_user)  
-  
--   [Customizing DirectAccess policy](#bkmk_policy)  
-  
--   [KerbProxy authentication](#bkmk_kerb)  
-  
--   [Using ISATAP](#bkmk_isa)  
-  
--   [IPHTTPS and one-time password (OTP) endpoint configuration](#bkmk_iphttps)  
-  
--   [Force Tunnel with OTP authentication](#bkmk_ft)  
-  
--   [Deploying DirectAccess with a Read-Only Domain Controller](#bkmk_rodc)  
-  
 ## <a name="bkmk_frs"></a>File Replication Service (FRS) distribution of Group Policy objects (SYSVOL replications)  
 Do not deploy DirectAccess in environments where your domain controllers are running the File Replication Service (FRS) for distribution of Group Policy objects (SYSVOL replications). Deployment of DirectAccess is not supported when you use FRS.  
   
