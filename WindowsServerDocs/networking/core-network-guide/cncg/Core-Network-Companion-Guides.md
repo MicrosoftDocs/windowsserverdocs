@@ -63,4 +63,4 @@ BranchCache hosted cache mode increases the cache efficiency because content is 
 
 When you deploy hosted cache mode, all clients in a multiple-subnet branch office can access a single cache, which is stored on the hosted cache server, even if the clients are on different subnets.
 
-For instructions on how to deploy BramchCache in Hosted Cache Mode, see [Deploy BranchCache Hosted Cache Mode](bc-hcm/1-Deploy-Bc-Hcm.md).
+For instructions on how to deploy BranchCache in Hosted Cache Mode, see [Deploy BranchCache Hosted Cache Mode](bc-hcm/1-Deploy-Bc-Hcm.md).
