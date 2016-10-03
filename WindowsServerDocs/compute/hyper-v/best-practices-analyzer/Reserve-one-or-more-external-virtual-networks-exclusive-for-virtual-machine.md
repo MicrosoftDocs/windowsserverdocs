@@ -3,7 +3,7 @@ title: Reserve one or more external virtual networks for exclusive use by virtua
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article

@@ -3,7 +3,7 @@ title: Windows Server 2012 should be configured with the recommended amount of m
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article

@@ -3,7 +3,7 @@ title: PVLAN configuration on a virtual switch must be consistent
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
