@@ -132,19 +132,19 @@ When using additional firewalls, apply the following internal network firewall e
 ## <a name="ConfigCAs"></a>1.5 Configure CAs and certificates  
 Remote Access in  Windows Server 2012  allows you to choose between using certificates for computer authentication or using a built in Kerberos proxy that authenticates using user names and passwords. You must also configure an IP-HTTPS certificate on the DirectAccess server.  
   
-For more information, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357(WS.10).aspx).  
+For more information, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357.aspx).  
   
 ### 1.5.1 Configure IPsec authentication  
 A computer certificate is required on the DirectAccess server and on all DirectAccess clients to use IPsec authentication. The certificate must be issued by an internal certification authority (CA), and DirectAccess servers and DirectAccess clients must trust the CA chain that issues root and intermediate certificates.  
   
 ##### To configure IPsec authentication  
   
-1.  In the internal CA, decide if you will use the **Computer** certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705(WS.10).aspx).  
+1.  In the internal CA, decide if you will use the **Computer** certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
   
     > [!NOTE]  
     > If you create a new template, it must be configured for Client Authentication.  
   
-2.  Deploy the certificate template, if required. For more information, see [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794(WS.10).aspx).  
+2.  Deploy the certificate template, if required. For more information, see [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
   
 3.  Configure the certificate template for autoenrollment, if required. For more information, see [Configure Certificate Autoenrollment](http://technet.microsoft.com/library/cc731522.aspx).  
   
@@ -153,9 +153,9 @@ When you use an internal CA to issue certificates, you must configure a certific
   
 ##### To configure a certificate template  
   
-1.  In the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705(WS.10).aspx).  
+1.  In the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
   
-2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794(WS.10).aspx).  
+2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
   
 ### 1.5.3 Configure the IP-HTTPS certificate  
 Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the DirectAccess server. There are three certificate options that are available for IP-HTTPS authentication:  
