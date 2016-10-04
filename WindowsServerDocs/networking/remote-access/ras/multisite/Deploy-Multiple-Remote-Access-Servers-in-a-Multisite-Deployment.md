@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
- Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 In a multisite deployment two or more Remote Access servers or server clusters are deployed and configured as different entry points in a single location, or in dispersed geographical locations. Deploying multiple entry points in a single location allows for server redundancy, or for the alignment of Remote Access servers with existing network architecture. Deployment by geographical location ensures efficient use of resources, as remote client computers can connect to internal network resources using an entry point closest to them. Traffic across a multisite deployment can be distributed and balanced with an external global load balancer.  
@@ -34,7 +34,7 @@ Support for clients running Windows 7 must be manually enabled on each entry poi
 ## Prerequisites  
 Before you begin deploying this scenario, review this list for important requirements:  
   
--   [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6) must be deployed before a multisite deployment.  
+-   [Deploy a single DirectAccess server with advanced settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before a multisite deployment.  
   
 -   Windows 7 clients will always connect to a specific site. They will not be able to connect to the closest site based on location of the client (unlike Windows 10, 8, or 8.1 clients).  
   
@@ -75,7 +75,7 @@ The following table lists the roles and features used in this scenario.
 ## <a name="BKMK_HARD"></a>Hardware requirements  
 Hardware requirements for this scenario include the following:  
   
--   At least two Remote Access computers to be gathered into a multisite deployment. Hardware requirements for these computers are described in [Deploying advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   At least two Remote Access computers to be gathered into a multisite deployment.   
   
 -   In order to test the scenario, at least one computer running Windows 8 and configured as a DirectAccess client is required. To test the scenario for clients running Windows 7 at least one computer running Windows 7 is required.  
   
@@ -84,7 +84,7 @@ Hardware requirements for this scenario include the following:
 ## <a name="BKMK_SOFT"></a>Software requirements  
 Software requirements for this scenario include the following:  
   
--   Software requirements for single server deployment. For more information see [Deploying advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   Software requirements for single server deployment.  
   
 -   In addition to software requirements for a single server there are a number of multisite-specific requirements:  
   
