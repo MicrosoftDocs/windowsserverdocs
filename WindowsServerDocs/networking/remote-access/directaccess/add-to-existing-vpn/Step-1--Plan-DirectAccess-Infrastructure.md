@@ -45,7 +45,7 @@ The planning tasks do not need to be done in a specific order.
   
     -   [IPv6 Transition Technologies](http://technet.microsoft.com/library/bb726951.aspx)  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571.aspx)  
   
 3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the 'Internal network adapter' column.  
   
@@ -175,7 +175,7 @@ Remote Access uses Active Directory and Active Directory Group Policy Objects as
   
 -   **Security groups** -Remote Access uses security groups to gather together and identify DirectAccess client computers, and Remote Access servers. The group policies are applied to the required security group.  
   
--   **Extended IPsec policies** -Remote Access can use IPsec authentication and encryption between clients and the Remote Access server. You can extend IPsec authentication and encryption through to specified internal application servers. To do this, see [Deploying Advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   **Extended IPsec policies** -Remote Access can use IPsec authentication and encryption between clients and the Remote Access server. You can extend IPsec authentication and encryption through to specified internal application servers.   
   
 **Active Directory Requirements**  
   

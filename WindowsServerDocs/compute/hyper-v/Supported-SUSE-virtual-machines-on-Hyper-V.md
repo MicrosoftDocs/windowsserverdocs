@@ -3,18 +3,18 @@ title: Supported SUSE virtual machines on Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: shirgall
 ms.author: cwatson
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Supported SUSE virtual machines on Hyper-V
 
->Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
@@ -81,13 +81,13 @@ SLES12 and SLES12SP1 are 64-bit only.
   
 5.  Dynamic memory support is only available on 64-bit virtual machines.  
   
-6.  If you are using Dynamic Memory on Windows Server 2016 Technical Preview or  Windows Server 2012  operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you may not see any memory increase in a guest operating system.  
+6.  If you are using Dynamic Memory on Windows Server 2016 or Windows Server 2012 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you may not see any memory increase in a guest operating system.  
   
-7.  In Windows Server 2016 Technical Preview or  Windows Server 2012 R2 , the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
+7.  In Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
   
 8.  VSS backup will fail if a single partition is mounted multiple times.  
   
-9. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper-V Manager or you can disable it using Powershell:  
+9. On  Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper-V Manager or you can disable it using Powershell:  
   
     ```  
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  

@@ -3,14 +3,14 @@ title: Supported Windows guest operating systems for Hyper-V on Windows Server 2
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: cwatsonmsft
 ms.author: cwatson
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server 2016
 
