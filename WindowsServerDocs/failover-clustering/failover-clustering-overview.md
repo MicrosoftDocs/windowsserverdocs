@@ -31,12 +31,48 @@ Here are some of the new features in Windows Server 2016 - for more details, see
 * **[VM Load Balancing](vm-load-balancing-overview.md)** - Helps load be evenly distributed across nodes in a Failover Cluster by identifying busy nodes and live-migrating VMs on these nodes to less busy nodes.
 * **[Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)** - Enables easier configuration of multiple network adapters in a cluster.
 
+## Planning
+
+* [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx)
+* [Validate Hardware for Failover Clustering](https://technet.microsoft.com/library/jj134244.aspx)
+* [Network Recommendations for a Hyper-V Cluster](https://technet.microsoft.com/library/dn550728.aspx)
+
+## Deployment
+
+* [Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342)
+* [Validate Hardware for a Failover Cluster](https://technet.microsoft.com/library/jj134244.aspx)
+* [Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519.aspx)
+* [Creating a Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)
+* [Deploy Hyper-V over SMB](https://technet.microsoft.com/library/jj134187)
+* [Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)
+* [iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)
+* [Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)
+* [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/jj863389.aspx)
+* [Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)
+* [Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)
+
+## Operations
+* [Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)
+* [Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)
+* [Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)
+
+## Tools and Settings
+
+* [Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)
+* [Cluster Aware Updating PowerShell Cmdlets](https://technet.microsoft.com/library/hh847221.aspx)
+
+## Community Resources
+
+* [High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
+* [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)
+
 ## See also
-| Content Type | References |
-|--------------|------------|
-| Planning | <ul><li>[Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx)</li><li>[Validate Hardware for Failover Clustering](https://technet.microsoft.com/library/jj134244.aspx)</li><li>[Network Recommendations for a Hyper-V Cluster](https://technet.microsoft.com/library/dn550728.aspx)</li></ul> |
-| Deployment | <ul><li>[Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342)</li><li>[Validate Hardware for a Failover Cluster](https://technet.microsoft.com/library/jj134244.aspx)</li><li>[Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519.aspx)</li><li>[Creating a Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)</li><li>[Deploy Hyper-V over SMB](https://technet.microsoft.com/library/jj134187)</li><li>[Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)</li><li>[iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)</li><li>[Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)</li><li>[Using Guest Clustering for High Availability](https://technet.microsoft.com/library/jj863389.aspx)</li><li>[Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)</li><li>[Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)</li></ul> |
-| Operations | <ul><li>[Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)</li><li>[Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)</li><li>[Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)</li></ul> |
-| Tools and Settings | <ul><li>[Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)</li></ul> |
-| Community Resources | <ul><li>[High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)</li><li>[Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)</li></ul> |
-| Related Technologies | <ul><li>[Compute in Windows Server 2016](../compute/Compute.md)</li><li>[Storage in Windows Server 2016](../storage/storage.md)</li><li>[Storage Spaces Overview](https://technet.microsoft.com/library/hh831739.aspx)</li><li>[Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx)</li><li>[Network Load Balancing Overview](https://technet.microsoft.com/library/hh831698.aspx)</li><li>[Microsoft SQL Server](https://www.microsoft.com/sqlserver/default.aspx)</li><li>[Microsoft Server and Cloud Platform](https://www.microsoft.com/server-cloud/)</li><li>[System Center Virtual Machine Manager](https://technet.microsoft.com/systemcenter/vmm/default.aspx)</li></ul> 
+
+* [Compute in Windows Server 2016](../compute/Compute.md)
+* [Storage in Windows Server 2016](../storage/storage.md)
+* [Storage Spaces Overview](https://technet.microsoft.com/library/hh831739.aspx)
+* [Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx)
+* [Network Load Balancing Overview](https://technet.microsoft.com/library/hh831698.aspx)
+* [Microsoft SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+* [Microsoft Server and Cloud Platform](https://www.microsoft.com/server-cloud/)
+* [System Center Virtual Machine Manager](https://technet.microsoft.com/systemcenter/vmm/default.aspx)
