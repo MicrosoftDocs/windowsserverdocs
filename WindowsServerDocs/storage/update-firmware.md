@@ -76,15 +76,15 @@ This drive performed the firmware update within ~5.8 seconds, as shown here:
 Measure-Command {$pd | Update-StorageFirmware -ImagePath C:\\Firmware\\J3E16101.enc -SlotNumber 0}
 
  Days : 0
- Hours : 0                                                                                                   
- Minutes : 0                                                                                             
- Seconds : 5                                                                                                     
- Milliseconds : 791                                                                                              
- Ticks : 57913910                                                                                                
- TotalDays : 6.70299884259259E-05                                                                                
- TotalHours : 0.00160871972222222                                                                                
- TotalMinutes : 0.0965231833333333                                                                               
- TotalSeconds : 5.791391                                                                                         
+ Hours : 0
+ Minutes : 0
+ Seconds : 5
+ Milliseconds : 791
+ Ticks : 57913910
+ TotalDays : 6.70299884259259E-05
+ TotalHours : 0.00160871972222222
+ TotalMinutes : 0.0965231833333333
+ TotalSeconds : 5.791391
  TotalMilliseconds : 5791.391                                                                                    |
  ```
 
@@ -182,19 +182,19 @@ The cmdlets can perform their function on clustered drives as well, but keep in 
 
 On Windows Server 2016 with the Health Service deployed on Storage Spaces Direct, you can perform this operation without taking your workloads offline, assuming the drives support Windows Server updating the firmware.
 
-### What happens if the update fails?
+### What happens if the update fails
 
 The update could fail for various reasons, some of them are: 1) The drive doesn’t support the correct commands for Windows to update its firmware. In this case the new firmware image never activates and the drive continues functioning with the old image. 2) The image cannot download to or be applied to this drive (version mismatch, corrupt image, …). In this case the drive fails the activate command. Again, the old firmware image will continue function.
 
 If the drive does not respond at all after a firmware update, you are likely hitting a bug in the drive firmware itself. Test all firmware updates in a lab environment before putting them in production. The only remediation may be to replace the drive.
 
-### How do I stop an in-progress firmware roll-out?
+### How do I stop an in-progress firmware roll-out
 
 Disable the roll-out in PowerShell via:
 ```powershell
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.PhysicalDisk.AutoFirmwareUpdate.RollOut.Enabled" -Value false
 ```
 
-### I am seeing an access denied or path-not-found error during roll out. How do I fix this?
+### I am seeing an access denied or path-not-found error during roll out. How do I fix this
 
 Ensure that the firmware image you would like to use for the update is accessible by all cluster nodes. The easiest way to ensure this is to place it on a cluster shared volume.
