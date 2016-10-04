@@ -49,7 +49,7 @@ Before you use this guide to deploy wireless access with the PEAP\-MS\-CHAP v2 a
 1. Follow the instructions in the Core Network Guide to deploy your core network infrastructure, or already have the technologies presented in that guide deployed on your network.
 2. Follow the instructions in the Core Network Companion Guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments, or already have the technologies presented in that guide deployed on your network.
 
-For instructions on how to deploy wireless access with PEAP\-MS\-CHAP v2, see [Deploy Password-Based 802.1X Authenticated Wireless Access](wireless/1-deploy-8021X-wireless-access.md).
+For instructions on how to deploy wireless access with PEAP\-MS\-CHAP v2, see [Deploy Password-Based 802.1X Authenticated Wireless Access](wireless/a-deploy-8021X-wireless-access.md).
 
 ## Core Network Companion Guide: Deploy BranchCache Hosted Cache Mode
 

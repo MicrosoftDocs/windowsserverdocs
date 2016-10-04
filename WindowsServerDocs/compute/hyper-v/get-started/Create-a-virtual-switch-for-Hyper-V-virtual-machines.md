@@ -89,7 +89,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access and Switch Embedded Teaming](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016, see [Remote Direct Memory Access and Switch Embedded Teaming](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
 
   
 ## Next step  

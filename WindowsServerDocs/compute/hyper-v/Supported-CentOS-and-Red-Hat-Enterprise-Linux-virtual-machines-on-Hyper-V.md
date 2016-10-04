@@ -3,18 +3,18 @@ title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: shirgall
 ms.author: cwatson
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 
->Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 The following feature distribution maps indicate the features that are present in built-in and downloadable versions of Linux Integration Services. The known issues and workarounds for each distribution are listed after the tables.  
   
@@ -189,7 +189,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
   
     -   Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.  
   
-10. If you are using Dynamic Memory on a Windows Server 2016 Technical Preview or   Windows Server 2012 R2  operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to hot-add failures, and you may not see any memory increase in a guest operating system.  
+10. If you are using Dynamic Memory on a Windows Server 2016 or Windows Server 2012 R2  operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to hot-add failures, and you may not see any memory increase in a guest operating system.  
   
 11. Certain distributions, including those using LIS 4.0 and 4.1, only provide Ballooning support and do not provide Hot-Add support. In such a scenario, the dynamic memory feature can be used by setting the Startup memory parameter to a value which is equal to the Maximum memory parameter. This results in all the requisite memory being Hot-Added to the virtual machine at boot time and then later depending upon the memory requirements of the host, Hyper-V can freely allocate or deallocate memory from the guest using Ballooning. Please configure **Startup Memory** and **Minimum Memory** at or above the recommended value for the distribution.  
   
