@@ -19,7 +19,7 @@ ms.date: 8/16/2016
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|[Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

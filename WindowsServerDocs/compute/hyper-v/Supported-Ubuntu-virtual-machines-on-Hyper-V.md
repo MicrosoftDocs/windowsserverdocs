@@ -3,18 +3,18 @@ title: Supported Ubuntu virtual machines on Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: cwatson
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 Beginning with Ubuntu 12.04, loading the "linux-virtual" package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers and may boot faster and have less memory overhead than a generic image.  
   
@@ -140,11 +140,11 @@ The following feature distribution map indicates the features in each version. T
     -   Startup memory and minimal memory should be equal to or greater than the amount of memory that the distribution vendor recommends.  
     -   Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.  
   
-9. If you are using Dynamic Memory on Windows Server 2016 Technical Preview or  Windows Server 2012  operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.  
+9. If you are using Dynamic Memory on Windows Server 2016 or Windows Server 2012 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.  
   
-10. In Windows Server 2016 Technical Preview or  Windows Server 2012 R2 , the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
+10. In Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
   
-11. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:  
+11. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:  
    
     ```  
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  

@@ -37,7 +37,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *This is expected behavior if the virtual machine is booting. If the virtual machine is not booting, make sure that integration services are upgraded to the latest version and that the guest operating system supports Dynamic Memory.*  
   
-As of Windows Server 2016 Technical Preview, integration services are delivered through Windows Update. Ensure the virtual machines are configured to receive updates to get the latest version of integration services.  
+As of Windows Server 2016, integration services are delivered through Windows Update. Ensure the virtual machines are configured to receive updates to get the latest version of integration services.  
   
 Dynamic Memory works with specific versions of supported guests. See [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx) for versions older than Windows Server 2016 and Windows 10.  
   

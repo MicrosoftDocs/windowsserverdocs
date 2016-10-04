@@ -20,13 +20,13 @@ This guide explains the steps to perform an offline domain join with DirectAcces
   
 This guide includes the following sections:  
   
--   [Offline domain join overview](assetId:///e47d8cbc-16db-47b5-a63a-35cf3582b37e#BKMK_ODJOverview)  
+- Offline domain join overview  
   
--   [Requirements for offline domain join](assetId:///e47d8cbc-16db-47b5-a63a-35cf3582b37e#BKMK_ODJRequirements)  
+- Requirements for offline domain join
   
--   [Offline domain join process](assetId:///e47d8cbc-16db-47b5-a63a-35cf3582b37e#BKMK_ODKSxS)  
+- Offline domain join process
   
--   [Steps for performing an offline domain join](assetId:///e47d8cbc-16db-47b5-a63a-35cf3582b37e#BKMK_ODJSteps)  
+- Steps for performing an offline domain join  
   
 ## Offline domain join overview  
 Introduced in Windows Server 2008 R2, domain controllers include a feature called Offline Domain Join. A command line utility named Djoin.exe lets you join a computer to a domain without physically contacting a domain controller while completing the domain join operation. The general steps for using Djoin.exe are:  

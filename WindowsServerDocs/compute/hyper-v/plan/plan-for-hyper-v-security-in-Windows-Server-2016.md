@@ -21,7 +21,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 
 ## Secure the Hyper-V host
 - **Keep the host OS secure.**
-    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see [Installation Options for Windows Server 2016 Technical Preview](../../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md) and [Getting started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). We don't recommend that you run production workloads on Hyper-V on Windows 10.
+    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see [Installation Options for Windows Server 2016](../../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md) and [Getting started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). We don't recommend that you run production workloads on Hyper-V on Windows 10.
     - Keep the Hyper-V host operating system, firmware, and device drivers up to date with the latest security updates. Check your vendor's recommendations to update firmware and drivers.
     - Don't use the Hyper-V host as a workstation or install any unnecessary software.
     - Remotely manage the Hyper-V host. If you must manage the Hyper-V host locally, use Credential Guard. For more information, see [Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).

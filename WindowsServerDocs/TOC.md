@@ -933,7 +933,7 @@
 #### [Storage Replica: Frequently Asked Questions](storage/storage-replica/storage-replica--frequently-asked-questions.md)
 ### [Storage Quality of Service](storage/storage-qos/storage-qos-overview.md)
 ### [Storage-class Memory Health Management](storage/storage-spaces/Storage-class-memory-health.md)
-#### [iSCSI Boot](storage/iscsi/iscsi-boot-overview.md)
+### [iSCSI Boot](storage/iscsi/iscsi-boot-overview.md)
 ### [Format](storage/commands/format.md)
 ## [Security and Assurance](security/Security-and-Assurance.md)
 ### [Windows Defender Overview for Windows Server Technical Preview](security/windows-defender/windows-defender-overview-windows-server.md)
