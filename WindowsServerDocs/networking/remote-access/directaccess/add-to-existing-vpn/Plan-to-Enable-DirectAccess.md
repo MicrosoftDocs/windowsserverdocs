@@ -24,7 +24,7 @@ The planning phase includes the following steps:
   
     In this phase, you describe the planning that is required to set up the network infrastructure before you begin the Remote Access deployment. It includes planning for the network and server topology, certificates, Domain Name System (DNS), Active Directory and Group Policy Object (GPO) configuration, and the DirectAccess network location server.  
   
--   [Step 2: Plan DirectAccess deployment](Step-2--Plan-the-DirectAccess-Deployment_4)  
+-   [Step 2: Plan DirectAccess deployment](Step-2--Plan-the-DirectAccess-Deployment_4.md)  
   
     In this phase, you describe the planning steps that are required to prepare for the Remote Access deployment. It includes planning for Remote Access client computers, server and client authentication requirements, and infrastructure servers.  
   

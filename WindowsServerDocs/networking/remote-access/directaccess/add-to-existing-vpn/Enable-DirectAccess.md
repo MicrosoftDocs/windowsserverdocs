@@ -20,9 +20,9 @@ author: coreyp-at-msft
   
 -   [Step 1: Configure the DirectAccess infrastructure](Step-1--Configure-the-DirectAccess-Infrastructure_3.md). This step includes configuring network and server settings, DNS settings and Active Directory settings.  
   
--   [Step 2: Configure the Remote Access server](ahttps://technet.microsoft.com/library/jj574177.aspx). This step includes configuring DirectAccess client computers, server settings.  
+-   [Step 2: Configure the Remote Access server](https://technet.microsoft.com/library/jj574177.aspx). This step includes configuring DirectAccess client computers, server settings.  
   
--   [Step 3: Verify the deployment](Step-3--Verify-the-Deployment_5). This step includes steps for verifying the deployment.  
+-   [Step 3: Verify the deployment](Step-3--Verify-the-Deployment_5.md). This step includes steps for verifying the deployment.  
   
 Before starting the deployment, verify the planning steps described in [Plan to Enable DirectAccess](Plan-to-Enable-DirectAccess.md).  
   
