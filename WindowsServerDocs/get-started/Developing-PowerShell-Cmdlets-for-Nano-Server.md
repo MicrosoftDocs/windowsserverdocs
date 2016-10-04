@@ -5,7 +5,6 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
@@ -14,7 +13,7 @@ ms.author: jaimeo
 ---
 # Developing PowerShell Cmdlets for Nano Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server Technical Preview
 
   
 ## Overview  
@@ -151,7 +150,7 @@ The SDK module also depends on the following feature to be installed in Visual S
 Review your Visual Studio installation before using the SDK module to ensure these prerequisites are satisfied. Make sure you select to install the above feature during the Visual Studio installation, or modify your existing Visual Studio 2015 installation to install it.  
   
 The PowerShell Core SDK module includes the following cmdlets:  
-- New-NanoCSharpProject: Creates a new Visual Studio C# project targeting CoreCLR and PowerShell Core included in the Windows Server 2016 release of Nano Server.  
+- New-NanoCSharpProject: Creates a new Visual Studio C# project targeting CoreCLR and PowerShell Core included in the Windows Server 2016 Technical Preview 5 release of Nano Server.  
 - Show-SdkSetupReadMe: Opens the SDK root folder in File Explorer and opens the README.txt file for manual setup.  
 - Install-RemoteDebugger: Installs and configures the Visual Studio remote debugger on a Nano Server machine.  
 - Start-RemoteDebugger: Starts the remote debugger on a remote machine running Nano Server.  
@@ -180,7 +179,7 @@ Managed C++ is not supported for CoreCLR. When porting to CoreCLR, rewrite manag
   
 ## Porting PowerShell script cmdlets  
   
-PowerShell Core has full PowerShell language parity with other editions of PowerShell, including the edition running on Windows Server 2016 and Windows 10. However, when porting PowerShell script cmdlets to Nano Server, keep these factors in mind:  
+PowerShell Core has full PowerShell language parity with other editions of PowerShell, including the edition running on Windows Server 2016 Preview and Windows 10. However, when porting PowerShell script cmdlets to Nano Server, keep these factors in mind:  
 * Are there dependencies on other cmdlets? If so, are those cmdlets available on Nano Server. See [PowerShell on Nano Server](PowerShell-on-Nano-Server.md) for information about what is not available.  
 * If you have dependencies on assemblies that are loaded at runtime, will they still work?   
 * How can you debug the script remotely?   
