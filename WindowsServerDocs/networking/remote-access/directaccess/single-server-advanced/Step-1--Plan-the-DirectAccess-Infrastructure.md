@@ -163,7 +163,7 @@ The certification authority (CA) requirements for each scenario are summarized i
 ||**Recommended**<br /><br />Public CA:<br /><br />It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
   
 ### <a name="BKMK_compcert"></a>1.3.1 Plan computer certificates for IPsec authentication  
-If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357(WS.10).aspx).  
+If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357.aspx).  
   
 This certificate has the following requirements:  
   

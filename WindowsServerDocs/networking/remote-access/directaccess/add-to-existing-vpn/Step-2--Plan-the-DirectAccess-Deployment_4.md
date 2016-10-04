@@ -58,9 +58,7 @@ There are a number of decisions to make when planning to deploy your Remote Acce
   
 -   **Authentication**-The Enable DirectAccess wizard uses Active Directory to authenticate the user credentials. To deploy two-factor authentication, see [Deploy Remote Access with OTP authentication](../../ras/otp/Deploy-RA-OTP.md).  
   
-## <a name="BKMK_Links"></a>See also  
-  
--   Step 1: Plan the Remote Access infrastructure  
+
   
 
 

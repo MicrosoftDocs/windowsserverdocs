@@ -18,11 +18,6 @@ author: coreyp-at-msft
 
 This topic contains troubleshooting information for issues related to the `Add-DAEntryPoint` command. To confirm that the error you received is related to adding an entry point, check in the Windows Event log for the event ID 10067.  
   
-## <a name="InternalServerError"></a>Internal error occurred  
-**Error received**. An internal error occurred.  
-  
-To troubleshoot this error, see [Internal error occurred](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#InternalServerError).  
-  
 ## Missing RemoteAccessServer parameter  
 **Error received**. You must supply a value for the parameter RemoteAccessServer.  
   
@@ -235,7 +230,7 @@ When you add name suffixes without specifying a server address, the suffix is tr
 ## Saving server GPO settings  
 **Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
-To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
+To troubleshoot this error, see Saving server GPO settings in [Troubleshooting Enabling Multisite](https://technet.microsoft.com/library/jj591658.aspx).  
   
 ## GPO updates cannot be applied  
 **Warning received**. GPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
