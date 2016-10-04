@@ -27,7 +27,7 @@ This is the fifth release of Windows Server 2016. In this documentation, Windows
 
 -   [System Requirements  and Installation](System-Requirements--and-Installation.md)  
 
--   [What's New in Windows Server Technical Preview 5](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
+-   [What's New in Windows Server 2016](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [Compute](../compute/Compute.md)  
 
