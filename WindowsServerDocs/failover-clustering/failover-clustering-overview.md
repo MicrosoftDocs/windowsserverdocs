@@ -13,7 +13,7 @@ ms.date: 10/04/2016
 
 ![Cluster icon](media/failover-clustering-overview/cluster-server.png) Failover clustering - a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster - provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
 
-## <a id="what-is-failover-clustering"></a>What is Failover Clustering?
+## What is Failover Clustering?
 A failover cluster is a group of independent computers that work together to increase the availability and scalability of clustered roles (formerly called clustered applications and services). The clustered servers (called nodes) are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). In addition, the clustered roles are proactively monitored to verify that they are working properly. If they are not working, they are restarted or moved to another node. Failover clusters also provide Cluster Shared Volume (CSV) functionality that provides a consistent, distributed namespace that clustered roles can use to access shared storage from all nodes. With the Failover Clustering feature, users experience a minimum of disruptions in service.
 
 This has many practical applications, including:
@@ -56,12 +56,12 @@ Here are some of the new features in Windows Server 2016 - for more details, see
 * [Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)
 * [Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)
 
-## Tools and Settings
+## Tools and settings
 
 * [Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)
 * [Cluster Aware Updating PowerShell Cmdlets](https://technet.microsoft.com/library/hh847221.aspx)
 
-## Community Resources
+## Community resources
 
 * [High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
 * [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)
