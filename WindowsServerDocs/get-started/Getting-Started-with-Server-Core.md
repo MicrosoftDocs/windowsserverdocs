@@ -134,5 +134,10 @@ The ability to migrate varies among different server roles. The follwogin grid e
 |Windows Server Essentials Experience|	Yes|	N/A – new feature|	Yes|	No|
 |Windows Server Update Services|	Yes|	Yes|	Yes|	No|
 |Work Folders|	Yes|	Yes|	Yes|	Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+
+> [!IMPORTANT]  
+> Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016 by using Windows Update or other update methods.
+
 ------------------------------------------
 If you need a different installation option, or if you've completed installation and are ready to deploy specific workloads, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md).
+
