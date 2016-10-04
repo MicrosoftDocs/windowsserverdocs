@@ -213,4 +213,4 @@ To join a computer to the domain by using a wireless connection or for users to 
 
 2. **The user manually configures wireless computer with bootstrap wireless profile, and then joins the domain.** With this method, users manually configure their wireless computers with a bootstrap wireless profile based on instructions from an IT administrator. The bootstrap wireless profile allows users to establish a wireless connection, and then join the computer to the domain. After joining the computer to the domain and restarting the computer, the user can log on to the domain by using a wireless connection and their domain account credentials.
 
-To deploy wireless access, see [Wireless Access Deployment](5-wireless-access-deployment.md).
+To deploy wireless access, see [Wireless Access Deployment](e-wireless-access-deployment.md).

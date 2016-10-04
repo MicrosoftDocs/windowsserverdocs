@@ -286,4 +286,4 @@ A *bootstrap profile* removes the requirement to validate the RADIUS server's co
 
 When Group Policy is applied, one or more wireless connection profiles that enforce the requirement for mutual authentication are applied on the computer; the bootstrap profile is no longer required and is removed. After joining the computer to the domain and restarting the computer, the user can use a wireless connection to log on to the domain.
 
-For an overview of the wireless access deployment process using these technologies, see [Wireless Access Deployment Overview](2-wireless-access-deploy-overview.md).
+For an overview of the wireless access deployment process using these technologies, see [Wireless Access Deployment Overview](b-wireless-access-deploy-overview.md).
