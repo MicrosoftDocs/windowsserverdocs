@@ -12,25 +12,22 @@ ms.date: 08/24/2016
 Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. You can use this new functionality to update the firmware of in-production drives if there's a critically important drive firmware advisory from your hardware vendor or OEM, and your hardware supports this. However, if you’re going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
 
-The long-term goal is to provide a simple way to update drive firmware without downtime when using Storage Spaces.
+The was to provide a simple way to update drive firmware without downtime when using Storage Spaces Direct.
 
   > [!Warning]
   > Firmware updates are a potentially risky maintenance operation and you should only apply them after thorough testing of the new firmware image. It is possible that new firmware on unsupported hardware could negatively affect reliability and stability, or even cause data loss. Administrators should read the release notes a given update comes with to determine its impact and applicability.
 
 ## First steps
 
-To ensure common device behavior, we began by defining new and currently optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. Here are links to the various requirements:
+To ensure common device behavior, we began by defining new and - for Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. Here are links to the various requirements:
 
 -   SATA: <https://msdn.microsoft.com/en-us/library/windows/hardware/dn932747(v=vs.85).aspx>
-
     -   Section \[If Implemented\] Firmware Download & Activate
-
+    
 -   SAS: <https://msdn.microsoft.com/en-us/library/windows/hardware/dn932746(v=vs.85).aspx>
-
     -   Section: \[If Implemented\] Firmware Download & Activate
-
+    
 -   NVMe: <https://msdn.microsoft.com/en-us/library/windows/hardware/dn932708(v=vs.85).aspx>
-
     -   Sections: 5.7 and 5.8
 
 ## PowerShell cmdlets
@@ -38,7 +35,6 @@ To ensure common device behavior, we began by defining new and currently optiona
 The two cmdlets added to Windows Server 2016 are:
 
 -   Get-StorageFirmwareInformation
-
 -   Update-StorageFirmware
 
 The first cmdlet provides you with detailed information about the device’s capabilities, firmware images, and revisions. In this case, the machine only contains a single SATA SSD with 1 firmware slot. Here’s an example:
@@ -61,7 +57,7 @@ The second cmdlet will allow administrators to update the drive firmware with an
   > [!Note]
   > Before updating any production hardware, test the particular firmware image on identical hardware in a lab setting.
 
-The drive will first load the new firmware image to an internal staging area. While this happens, I/O typically continues. The image activates after downloading. During this time the drive will not be able to respond to I/O commands as an internal reset occurs. This means that this drive serves no data during the update. An application accessing data on this drive would have to wait for a response until the firmware update completes. Here’s an example of the cmdlet in action:
+The drive will first load the new firmware image to an internal staging area. While this happens, I/O typically continues. The image activates after downloading. During this time the drive will not be able to respond to I/O commands as an internal reset occurs. This means that this drive serves no data during the activation. An application accessing data on this drive would have to wait for a response until the firmware activation completes. Here’s an example of the cmdlet in action:
 
    ```powershell 
    $pd | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.enc -SlotNumber 0
@@ -82,28 +78,18 @@ This drive performed the firmware update within ~5.8 seconds, as shown here:
 ```powershell 
 Measure-Command {$pd | Update-StorageFirmware -ImagePath C:\\Firmware\\J3E16101.enc -SlotNumber 0}
 
- Days : 0                                                                                                        
-                                                                                                                 
- Hours : 0                                                                                                       
-                                                                                                                 
- Minutes : 0                                                                                                     
-                                                                                                                 
+ Days : 0
+ Hours : 0                                                                                                   
+ Minutes : 0                                                                                             
  Seconds : 5                                                                                                     
-                                                                                                                 
  Milliseconds : 791                                                                                              
-                                                                                                                 
  Ticks : 57913910                                                                                                
-                                                                                                                 
  TotalDays : 6.70299884259259E-05                                                                                
-                                                                                                                 
  TotalHours : 0.00160871972222222                                                                                
-                                                                                                                 
  TotalMinutes : 0.0965231833333333                                                                               
-                                                                                                                 
  TotalSeconds : 5.791391                                                                                         
-                                                                                                                 
  TotalMilliseconds : 5791.391                                                                                    |
-```
+ ```
 
 ## Updating drives in production
 
@@ -117,19 +103,16 @@ Once a server is in production, it’s a good idea to make as few changes to the
 
 ## Automated firmware updates with Storage Spaces Direct
 
-Windows Server 2016 includes a Health Service for Storage Spaces Direct deployments (including Microsoft Azure Stack solutions). The main purpose of the Health Service is to make monitoring and management of your hardware deployment easier. As part of its management functions, it has the capability to roll-out drive firmware across an entire cluster without taking any workloads off-line or incurring down-time. This capability is policy-driven, with the control in the admin’s hands.
+Windows Server 2016 includes a Health Service for Storage Spaces Direct deployments (including Microsoft Azure Stack solutions). The main purpose of the Health Service is to make monitoring and management of your hardware deployment easier. As part of its management functions, it has the capability to roll-out drive firmware across an entire cluster without taking any workloads offline or incurring downtime. This capability is policy-driven, with the control in the admin’s hands.
 
 Using the Health Service to roll-out firmware across a cluster is very simple and involves the following steps:
 
 -   Identify what HDD and SSD devices you expect to be part of your Storage Spaces Direct cluster
-
 -   List those drives in the Supported Components xml file
-
--   Identify the firmware versions you expect those drives to have in the Supported Components xml (including locations of the firmware images)
-
+-   Identify the firmware versions you expect those drives to have in the Supported Components xml (including location paths of the firmware images)
 -   Upload the xml file to the cluster DB
 
-At this point, the Health Service will inspect and parse the xml and identify any drives that do not have the desired firmware version deployed. It will then proceed to re-direct I/O away from the affected drives – going node-by-node – and updating the firmware on them. A Storage Spaces Direct cluster achieves resiliency by spreading data across multiple server nodes; it is possible for the health service to isolate an entire node worth of drives for updates. Once a node updates, it will initiate a repair in Storage Spaces, bringing all copies of data across the cluster back in sync with each other, before moving on to the next node.
+At this point, the Health Service will inspect and parse the xml and identify any drives that do not have the desired firmware version deployed. It will then proceed to re-direct I/O away from the affected drives – going node-by-node – and updating the firmware on them. A Storage Spaces Direct cluster achieves resiliency by spreading data across multiple server nodes; it is possible for the health service to isolate an entire node worth of drives for updates. Once a node updates, it will initiate a repair in Storage Spaces, bringing all copies of data across the cluster back in sync with each other, before moving on to the next node. It is expected and normal for Storage Spaces to transition to a "degraded" mode of operation while firmware is rolled out.
 
 To ensure a stable roll-out and sufficient validation time of a new firmware image, there exists a significant delay between the updates of several servers. Per default, the Health Service will wait 7 days before updating the 2<sup>nd</sup> server. Any subsequent server (3<sup>rd</sup>, 4<sup>th</sup>, …) updates with a 1 day delay. Should an administrator find the firmware to be unstable or otherwise undesirable, she can stop further roll-out by the health service at any time. If the firmware has been previously validated and a quicker roll-out is desired, these default values can be modified from days, to hours or minutes.
 
@@ -197,7 +180,7 @@ If you would like to see the Health Service in action and learn more about its r
 
 -   Will this work on clustered drives?
 
-    -   The cmdlets can perform their function on clustered drives as well, but keep in mind that the Health Service orchestration mitigates the I/O impact on running workloads. If the cmdlets are used directly on clustered drives, I/O is likely to stall. In general, it is best to perform drive firmware updates when there is no, or just a minimal workload on the underlying drives.
+    -   The cmdlets can perform their function on clustered drives as well, but keep in mind that the Health Service orchestration mitigates the I/O impact on running workloads. If the cmdlets are used directly on clustered drives, I/O is likely to stall. In general, it is a best practice to perform drive firmware updates when there is no, or just a minimal workload on the underlying drives.
 
 -   What happens when I update firmware on Storage Spaces?
 
