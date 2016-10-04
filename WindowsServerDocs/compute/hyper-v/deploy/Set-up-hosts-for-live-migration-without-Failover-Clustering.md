@@ -24,7 +24,7 @@ To set up non-clustered hosts for live migration, you'll need:
   
 -  A user account with permission to perform the various steps. Membership in the local Hyper-V Administrators group or the Administrators group on both the source and destination computers meets this requirement, unless you're configuring constrained delegation. Membership in the Domain Administrators group is required to configure constrained delegation.  
   
-- The Hyper-V role in Windows Server 2016 installed on the source and destination servers. For instructions, see [Install the Hyper-V role on Windows Server Technical Preview](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
+- The Hyper-V role in Windows Server 2016 installed on the source and destination servers. For instructions, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
   
 - Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.  
   
