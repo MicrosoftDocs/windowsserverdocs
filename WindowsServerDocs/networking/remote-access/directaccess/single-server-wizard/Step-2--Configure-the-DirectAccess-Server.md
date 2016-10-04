@@ -99,7 +99,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 ## Next step  
   
--   [Step 3: Verify the Deployment](Step-3--Verify-the-Deployment.md)  
+-   [Step 3 Verify Deployments](Step-3--Verify-Deployments.md)  
   
 
 

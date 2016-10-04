@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [../install/Step 2: Plan the Remote Access Deployment](Step-2--Plan-the-Remote-Access-Deployment.md).  
+This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Step 2 Plan the Remote Access Deployment](../plan/Step-2--Plan-the-Remote-Access-Deployment.md).  
   
 |Task|Description|  
 |--------|---------------|  
@@ -198,7 +198,7 @@ When the Remote Access configuration is complete, the **Remote Access Review** i
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 3: Verify the Deployment](Step-3--Verify-the-Deployment_2)  
+-   [Step 3: Verify the Deployment](Step-3--Verify-the-Deployment_2.md)  
   
   
 
