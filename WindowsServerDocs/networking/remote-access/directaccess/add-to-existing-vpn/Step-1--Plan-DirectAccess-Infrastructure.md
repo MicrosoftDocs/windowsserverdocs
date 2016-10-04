@@ -265,10 +265,4 @@ If a Remote Access server, client, or application server GPO has been deleted by
 2.  Re-open **Remote Access Management**.  
   
 3.  You will see an error message that the GPO is not found. Click **Remove configuration settings**. After completion, the server will be restored to an un-configured state.  
-  
-### <a name="BKMK_Links"></a>See also  
-  
--   Step 2: Plan the Remote Access Deployment [Enable]  
-  
-
 

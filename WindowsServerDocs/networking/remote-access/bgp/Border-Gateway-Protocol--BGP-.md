@@ -76,7 +76,7 @@ The following sections contain additional information on each supported BGP topo
 ### <a name="bkmk_top1"></a>RAS VPN Site-to-Site Gateway with BGP at Enterprise site edge  
 This topology depicts an Enterprise site connected to a CSP. The Enterprise routing topology includes an internal router, a  Windows Server 2016 RAS Gateway configured for VPN site-to-site connections with the CSP, and an edge firewall device. The RAS Gateway terminates the S2S VPN and BGP connections.  
   
-![](../../media/Border-Gateway-Protocol--BGP-/bgp_01.jpg)  
+![RAS VPN Site-to-Site Gateway with BGP at Enterprise site edge](../../media/Border-Gateway-Protocol--BGP-/bgp_01.jpg)  
   
 Both sites are connected using External Border Gateway Protocol (eBGP), which can transmit information between BGP-enabled routers in separate autonomous systems (AS). This requires that both the Enterprise and the CSP have distinct Autonomous System Numbers (ASN), which is a parameter that is integral to the BGP protocol.  
   
@@ -93,7 +93,7 @@ In this scenario, BGP works in the following way.
 ### <a name="bkmk_top2"></a>Third party Gateway with BGP at Enterprise site edge  
 This topology depicts an Enterprise site using a third party edge router to connect to a CSP. The edge router also serves as a site-to-site VPN gateway.  
   
-![](../../media/Border-Gateway-Protocol--BGP-/bgp_02.jpg)  
+![Third party Gateway with BGP at Enterprise site edge](../../media/Border-Gateway-Protocol--BGP-/bgp_02.jpg)  
   
 The Enterprise edge router learns on-premises internal routes through one of the following mechanisms:  
   
@@ -104,7 +104,7 @@ The Enterprise edge router learns on-premises internal routes through one of the
 ### <a name="bkmk_top3"></a>Multiple Enterprise sites connecting to CSP cloud datacenter  
 This topology depicts multiple Enterprise sites that use third party gateways to connect to a CSP. The third party edge devices serve as site-to-site VPN gateways and as BGP routers.  
   
-![](../../media/Border-Gateway-Protocol--BGP-/bgp_03.jpg)  
+![Multiple Enterprise sites connecting to CSP cloud datacenter](../../media/Border-Gateway-Protocol--BGP-/bgp_03.jpg)  
   
 The customer edge routers learn on-premises internal routes through one of the following mechanisms:  
   
@@ -121,7 +121,7 @@ If the BGP router at Enterprise Site 1 cannot connect with the Enterprise Site 2
 ### <a name="bkmk_top4"></a>Separate termination points for BGP and VPN  
 This topology depicts an Enterprise that uses two different routers as the BGP and site-to-site VPN endpoints. Site-to-site VPN is terminated on the  Windows Server 2016 RAS Gateway, while BGP is terminated on an internal router. At the CSP side of the connections, the CSP terminates both the VPN and BGP connections with the RAS Gateway. With this configuration, the internal third party router hardware must support redistribution of IGP routes to BGP, as well as redistributing BGP routes to IGP.  
   
-![](../../media/Border-Gateway-Protocol--BGP-/bgp_04.jpg)  
+![Separate termination points for BGP and VPN](../../media/Border-Gateway-Protocol--BGP-/bgp_04.jpg)  
   
 The internal router learns Enterprise routes through one of the following mechanisms:  
   

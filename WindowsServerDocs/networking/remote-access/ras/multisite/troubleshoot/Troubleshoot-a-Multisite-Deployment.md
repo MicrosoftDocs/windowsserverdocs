@@ -16,17 +16,17 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-This topic describes how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment. For a list of known issues when configuring multisite Remote Access, see [Known issues](assetId:///a9249820-3563-499c-9da6-143ede2a1eb7#KnownIssues).  
+This topic describes how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment.   
   
--   [Troubleshooting enabling multisite](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b)  
+-   [Troubleshooting enabling multisite](Troubleshooting-Enabling-Multisite.md)  
   
--   [Troubleshooting adding entry points](assetId:///b8f2e947-1248-4bb0-adf0-2a633f3cdca9)  
+-   [Troubleshooting adding entry points](Troubleshooting-Adding-Entry-Points.md)  
   
--   [Troubleshooting setting the entry point domain controller](assetId:///749226cf-7665-4292-856a-9a29c5577046)  
+-   [Troubleshooting setting the entry point domain controller](Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md)  
   
--   [Troubleshooting web probe URLs](assetId:///2fe0352b-6b5d-4b46-8f9e-5ae396a03e18)  
+-   [Troubleshooting web probe URLs](Troubleshooting-Web-Probe-URLs.md)  
   
--   [Troubleshooting general issues](assetId:///71fe9fa9-2f9c-4dbd-8a42-ee8152edcfc4)  
+-   [Troubleshooting general issues](Troubleshooting-General-Issues.md)  
   
 
 

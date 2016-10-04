@@ -21,7 +21,7 @@ This topic contains troubleshooting information for issues related to the `Set-D
 ## <a name="SaveGPOSettings"></a>Saving server GPO settings  
 **Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
-To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
+To troubleshoot this error, see Saving server GPO settings.  
   
 ## Remote Access is not configured  
 **Error received**. Remote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  

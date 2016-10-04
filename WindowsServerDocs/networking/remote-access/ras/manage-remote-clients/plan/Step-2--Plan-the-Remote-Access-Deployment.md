@@ -19,15 +19,15 @@ author: coreyp-at-msft
 After you plan for the infrastructure that you intend to use to set up your single Remote Access server for remote management of DirectAccess clients, you are ready to plan the settings that the Remote Access Setup Wizard will use.  
   
 > [!NOTE]  
-> Before you continue with these tasks, see [Step 1: Plan the Remote Access Infrastructure](assetId:///f7e327cd-5efb-4601-b567-c2576c414be1).  
+> Before you continue with these tasks, see [Step 1: Plan the Remote Access Infrastructure](Step-1--Plan-the-Remote-Access-Infrastructure.md).  
   
 |Task|Description|  
 |--------|---------------|  
-|[Plan a client deployment strategy](#bkmk_2_1_client)|Decide which managed computers will be configured as DirectAccess clients.|  
-|[Plan a Remote Access server deployment strategy](#bkmk_2_2_servers)|Plan how to deploy the Remote Access server.|  
-|[Plan the infrastructure servers' configurations](#bkmk_2_3_Inf_servers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
+|[Plan a client deployment strategy](#bkmk_21client)|Decide which managed computers will be configured as DirectAccess clients.|  
+|[Plan a Remote Access server deployment strategy](#bkmk_22servers)|Plan how to deploy the Remote Access server.|  
+|[Plan the infrastructure servers' configurations](#bkmk_23Infservers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
   
-## <a name="bkmk_2_1_client"></a>Plan a client deployment strategy  
+## <a name="bkmk_21client"></a>Plan a client deployment strategy  
 There are three decisions to make when you are planning your client deployment:  
   
 1.  Will DirectAccess be available to mobile computers only, or to every computer in a specified security group?  
@@ -62,7 +62,7 @@ There are three decisions to make when you are planning your client deployment:
   
         Clients require a means of resolving names locally. If you allow DirectAccess clients to use local name resolution, end users can use local DNS servers to resolve names. When end users choose to use local DNS servers for name resolution, DirectAccess does not send resolution requests for single label names to the internal corporate DNS server. It uses local name resolution instead (by using the Link-Local Multicast Name Resolution (LLMNR) and NetBios over TCP/IP protocols).  
   
-## <a name="bkmk_2_2_server"></a>Plan a Remote Access server deployment strategy  
+## <a name="bkmk_22server"></a>Plan a Remote Access server deployment strategy  
 Decisions that you need to make when you are planning to deploy your Remote Access server include:  
   
 -   **Network topology**  
@@ -93,7 +93,7 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
   
     -   **User authentication**: You can enable users to authenticate with Active Directory credentials or with two-factor authentication.  
   
-    -   **Computer authentication**: You can configure computer authentication to use certificates. Or the Remote Access server can act as a proxy for Kerberos authentication without requiring certificates.. For more information, see [Planning certification authorities and certificates](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_2_CAs_and_certs).  
+    -   **Computer authentication**: You can configure computer authentication to use certificates. Or the Remote Access server can act as a proxy for Kerberos authentication without requiring certificates. 
   
     -   **Windows 7 clients** By default, client computers running  Windows 7  cannot connect to a Remote Access deployment running  Windows Server 2012 . If you have clients running  Windows 7  in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the DirectAccess Client Setup Wizard.  
   
@@ -115,7 +115,7 @@ Remote Access requires three types of infrastructure servers:
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 1: Plan the Remote Access Infrastructure [client]](assetId:///f7e327cd-5efb-4601-b567-c2576c414be1)  
+-   [Step 1: Plan the Remote Access Infrastructure](Step-1--Plan-the-Remote-Access-Infrastructure.md)  
   
 
 
