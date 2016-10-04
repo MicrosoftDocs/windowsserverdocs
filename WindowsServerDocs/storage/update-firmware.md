@@ -85,7 +85,7 @@ Measure-Command {$pd | Update-StorageFirmware -ImagePath C:\\Firmware\\J3E16101.
  TotalHours : 0.00160871972222222
  TotalMinutes : 0.0965231833333333
  TotalSeconds : 5.791391
- TotalMilliseconds : 5791.391                                                                                    |
+ TotalMilliseconds : 5791.391
  ```
 
 ## Updating drives in production
@@ -134,7 +134,7 @@ Here is an example of the supported components xml for a generic Storage Spaces 
         ...
         ...
     </Disks>
- </Components>                                           |
+ </Components>
 ```
 
 To get the roll-out of the new firmware started in this Storage Spaces Direct cluster, simply upload the .xml to the cluster DB:
