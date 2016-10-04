@@ -43,6 +43,9 @@ Because you install Nano Server by configuring a VHD, a clean installation is th
 - To get started quickly with a basic deployment of Nano Server using DHCP to obtain an IP address, see the [Nano Server Quick Start](Nano-Server-Quick-Start.md) 
 - If you're already familiar with the basics of Nano Server, the more detailed topics starting with [Deploy Nano Server](Deploy-Nano-Server.md) offer a full set of instructions for customizing images, working with domains, installing packages for server roles and other features both online and offline, and much more.
 
+> [!IMPORTANT]  
+> Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016. For Nano Server, see the "Managing updates in Nano Server" section of [Manage Nano Server](Manage-Nano-Server.md).
+
 ### Upgrade
 Since Nano Server is new for Windows Server 2016, there isn't an upgrade path from older operating system versions to Nano Server.
 
