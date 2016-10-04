@@ -13,7 +13,7 @@ ms.author: jaimeo
 ---
 # IIS on Nano Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 
 ## Overview of IIS on Nano Server  
