@@ -1,21 +1,23 @@
 ---
 title: "Change the Order and Grouping of Tabs"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 79a417fd-1b3e-47ab-ae33-bb1faf95c86d
-caps.latest.revision: 6
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Change the Order and Grouping of Tabs
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can change the order of tabs in the Dashboard so that your tab is the first one (on the left) in the row of tabs. To do this you add an entry to the registry. You can also affect the grouping of tabs by adding entries to the registry. The order of the tabs can be your main tab followed by Microsoft built-in tabs, followed by any of your additional tabs, and then followed by third-party tabs.  
   
 ## Change the order of the tabs in the Dashboard  

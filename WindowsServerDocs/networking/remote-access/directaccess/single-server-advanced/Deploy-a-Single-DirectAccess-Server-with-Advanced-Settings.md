@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.  
   
@@ -26,7 +26,7 @@ You can use the following topics to review prerequisites and other information b
 -   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running either  Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with advanced settings.  
+In this scenario, a single computer running either   Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with advanced settings.  
   
 > [!NOTE]  
 > If you want to configure a basic deployment with simple settings only, see [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md). In the simple scenario, DirectAccess is configured with default settings by using a wizard, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
@@ -86,7 +86,7 @@ Hardware requirements for this scenario include the following:
   
 -   Server requirements:  
   
-    -   A computer that meets the hardware requirements for   Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 .  
+    -   A computer that meets the hardware requirements for    Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 .  
   
     -   The server must have at least one network adapter installed, enabled, and connected to the internal network. When two adapters are used, there should be one adapter connected to the internal corporate network, and one connected to the external network (Internet, or private network).  
   

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
 title: AD FS Rapid Restore Tool
 description:
 author: billmath

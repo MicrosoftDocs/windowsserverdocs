@@ -1,22 +1,22 @@
 ---
 title: "Use Remote Web Access in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 04/01/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
-caps.latest.revision: 13
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Use Remote Web Access in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
   Remote Web Access helps you stay connected to your Windows Server Essentials network when you are away. When you log on to  Remote Web Access, you can connect to the computers on your Windows Server Essentials network, open the Dashboard to manage your Windows Server Essentials network, and access all of the shared folders and media files on the server.  
   
@@ -56,7 +56,7 @@ ms.author: coreyp
 1.  Open a Web browser, type **https://***<YourServerName\>***/remote** in the address bar, and then press Enter.  
   
     > [!NOTE]
-    >  Make sure that you include the “s�? in https.  
+    >  Make sure that you include the s in https.  
   
 2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow.  
   
@@ -65,7 +65,7 @@ ms.author: coreyp
 1.  Open a Web browser, type **https://***<YourDomainName\>***/remote** in the address bar, and then press Enter.  
   
     > [!NOTE]
-    >  You can get your domain name information from your network administrator. Make sure that you include the “s�? in https.  
+    >  You can get your domain name information from your network administrator. Make sure that you include the s in https.  
   
 2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow.  
   
@@ -189,7 +189,7 @@ ms.author: coreyp
 -   **Self-extracting executable file (.exe)**  
   
     > [!NOTE]
-    >   This section applies to a server running Windows Server 2012 Essentials.  
+    >   This section applies to a server running Windows Server Essentials.  
   
      A self-extracting executable file is a file that you can download that combines the decompression (executable) program with the compressed files. When you run the executable program, it automatically decompresses the compressed files (self-extracting). This is a common way to distribute compressed data without worrying about whether the recipient has the right decompression utility.  
   
@@ -201,7 +201,7 @@ ms.author: coreyp
      Zipping a file creates a compressed version of the file that is smaller than the original file. The zipped version of the file has a .zip file name extension. File types that are reduced the most by zipping are text-oriented file types, such as .txt, .doc, .xls, and graphics files that use non-compressed file types such as .bmp. Some graphic files, such as .jpg and .gif files, already use compression, and the file size is reduced very little by zipping. Also, a Word document that contains a lot of graphics is not reduced as much as a document that is mostly text.  
   
     > [!NOTE]
-    >  This option provides limited support for international file names in  Windows Server 2012 Essentials.  
+    >  This option provides limited support for international file names in  Windows Server Essentials.  
   
  Before the actual download begins, the exe or zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
   
@@ -222,7 +222,7 @@ ms.author: coreyp
 #### Retrieve compressed files downloaded to your computer  
   
 > [!NOTE]
->   This section applies to a server running Windows Server 2012 Essentials.  
+>   This section applies to a server running Windows Server Essentials.  
   
  If you select multiple files or folders to download, you can receive a self-extracting compressed executable file (.exe) or a compressed (.zip) file.  
   
@@ -307,13 +307,13 @@ ms.author: coreyp
   
 ##### To log on to Remote Web Access from a mobile device  
   
-1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the “s�? in https.  
+1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the s in https.  
   
 2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of Remote Web Access.  
   
 ##### To switch to the desktop version of Remote Web Access  
   
-1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the “s�? in https.  
+1.  Open a Web browser and type **https://***<YourDomainName\>***/remote** in the address bar.  Make sure that you include the s in https.  
   
 2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, click **View desktop version**, and then click the arrow. You are logged on to the desktop version of Remote Web Access.  
   
@@ -321,7 +321,7 @@ ms.author: coreyp
   
 1.  Log off.  
   
-2.  Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the “s�? in https.  
+2.  Open a Web browser and type **https://***<YourDomainName\>***/remote/m** in the address bar. Make sure that you include the s in https.  
   
 3.  The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.  
   

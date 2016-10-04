@@ -1,6 +1,7 @@
 ---
 title: What's New in Data Deduplication
 ms.technology: storage-deduplication
+ms.prod: windows-server-threshold
 ms.topic: article
 author: wmgries
 manager: eldenc
@@ -46,7 +47,7 @@ In Windows Server 2016, Data Deduplication makes use of new stream map structure
 
 ## <a name="nano-server-support"></a>Support for Nano Server
 **What value does this change add?**  
-Nano Server is a new headless deployment option in Windows Server 2016 that requires a far smaller system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/nano-server/getting-started-with-nano-server.md).
+Nano Server is a new headless deployment option in Windows Server 2016 that requires a far smaller system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md).
 
 ## <a name="simple-backup-support">Simplified configuration for Virtualized Backup Applications</a>
 **What value does this change add?**  

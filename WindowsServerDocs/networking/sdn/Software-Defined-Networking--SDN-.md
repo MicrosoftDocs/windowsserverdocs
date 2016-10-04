@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
@@ -14,7 +13,7 @@ author: jamesmci
 ---
 # Software Defined Networking (SDN)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.  
   
@@ -71,7 +70,7 @@ Windows Server includes the following software defined networking technologies.
  
   
 ### <a name="bkmk_nc"></a>Network Controller  
-New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
+New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
   
 Network Controller is a highly available and scalable server role, and provides one application programming interface (API) - the Southbound API - that allows Network Controller to communicate with the network, and a second API - the Northbound API - that allows you to communicate with Network Controller.  
   
@@ -99,7 +98,7 @@ For more information, see [Hyper-V Network Virtualization](../sdn/technologies/h
 ### <a name="bkmk_switch"></a>Hyper-V Virtual Switch  
 The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
   
-In Hyper-V Virtual Switch in Windows Server 2016 Technical Preview, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
+In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
   
 For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
@@ -124,9 +123,9 @@ The following NFV technologies are now available.
 For more information, see [Network Function Virtualization](../sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
 ### <a name="bkmk_rdma"></a>Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)  
-In Windows Server 2016 Technical Preview, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET). This allows you to use fewer network adapters when you want to use RDMA and SET at the same time.  
+In  Windows Server 2016, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET). This allows you to use fewer network adapters when you want to use RDMA and SET at the same time.  
   
-SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016 Technical Preview. SET integrates some of the NIC Teaming functionality into the Hyper-V Virtual Switch.  
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in  Windows Server 2016. SET integrates some of the NIC Teaming functionality into the Hyper-V Virtual Switch.  
   
 SET allows you to group between one and eight physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
 SET member network adapters must all be installed in the same physical Hyper-V host to be placed in a team.  
@@ -136,13 +135,13 @@ In addition,  you can use Windows PowerShell commands to enable Data Center Brid
 For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://technet.microsoft.com/library/mt403349.aspx).  
   
 ### <a name="bkmk_rras"></a>RAS Gateway for SDN  
-RAS Gateway is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
+RAS Gateway is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016 that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
   
 RAS Gateway provides gateway pools, M+N redundancy, multiple types of site-to-site VPN connections, and BGP Route Reflector to provide you with flexible design choices for your gateway infrastructure.  
   
 For more information, see [RAS Gateway for SDN](../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
   
 ### <a name="bkmk_slb"></a>Software Load Balancing (SLB)  
-Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
+Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
 For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).

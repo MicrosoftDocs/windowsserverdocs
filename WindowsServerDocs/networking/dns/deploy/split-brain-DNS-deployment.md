@@ -4,15 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-dns
+ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: jamesmci
 author: jamesmci
 ---
 # Use DNS Policy for Split-Brain DNS Deployment
+
+>Applies To: Windows Server&reg; 2016
+
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 for split-brain DNS deployments, where there are two versions of a single zone - one for the internal users on your organization intranet, and one for the external users, who are typically users on the Internet. 
 
 Previously, this scenario required that DNS administrators maintain two different DNS servers, each providing services to each set of users, internal and external. If only a few records inside the zone were split-brained or both instances of the zone (internal and external) were delegated to the same parent domain, this became a management conundrum. 

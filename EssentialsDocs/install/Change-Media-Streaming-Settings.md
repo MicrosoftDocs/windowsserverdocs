@@ -1,21 +1,23 @@
 ---
 title: "Change Media Streaming Settings"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Change Media Streaming Settings
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 Multiple options are available for you to change media streaming settings. The following options are available:  
   
 -   [Hide remote media streaming add-in](Change-Media-Streaming-Settings.md#BKMK_DisableRemote)  

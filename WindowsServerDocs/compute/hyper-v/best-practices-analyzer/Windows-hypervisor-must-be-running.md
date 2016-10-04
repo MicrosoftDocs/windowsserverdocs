@@ -3,23 +3,21 @@ title: Windows hypervisor must be running
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
 author: KBDAzure
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Windows hypervisor must be running
 
->Applies To: Windows Server Technical Preview
-
-*[This information is preliminary and subject to change.]*  
+>Applies To: Windows Server 2016
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Prerequisites|  

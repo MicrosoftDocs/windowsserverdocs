@@ -1,22 +1,20 @@
 ---
+ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 title: Install Active Directory Domain Services (Level 100)
-ms.custom: 
-  - AD
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 4fff7ac7-b90f-41d0-8c87-9ffe08dc6c01
-author: Femila
 ---
+
 # Install Active Directory Domain Services (Level 100)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to install AD DS in  Windows Server 2012  by using any of the following methods:  
   

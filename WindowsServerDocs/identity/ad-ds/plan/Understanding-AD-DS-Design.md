@@ -1,20 +1,20 @@
 ---
+ms.assetid: d590c90e-9adf-4305-b226-eb2a5743337b
 title: Understanding AD DS Design
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 9ef87047-a095-4499-8e56-ee57f926b4a6
-author: Femila
 ---
+
 # Understanding AD DS Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Organizations can use Active Directory Domain Services (AD DS) in  Windows Server 2008  to simplify user and resource management while creating scalable, secure, and manageable infrastructures. You can use AD DS to manage your network infrastructure, including branch office, Microsoft Exchange Server, and multiple forest environments.  
   

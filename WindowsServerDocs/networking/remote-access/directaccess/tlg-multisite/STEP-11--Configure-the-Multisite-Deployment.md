@@ -14,15 +14,15 @@ author: coreyp-at-msft
 ---
 # STEP 11 Configure the Multisite Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 To configure a multisite deployment, make changes to the current Remote Access configuration wizard on EDGE1, enable the multisite feature, and then add 2-EDGE1 as a second entry point.  
   
--   [Configure Remote Access on EDGE1](assetId:///537e4b68-043f-49c9-94d8-15ce8c4b18e2#configDA)  
+- Configure Remote Access on EDGE1  
   
--   [Enable multisite configuration on EDGE1](assetId:///537e4b68-043f-49c9-94d8-15ce8c4b18e2#EnabledMultisite)  
+- Enable multisite configuration on EDGE1  
   
--   [Add 2-EDGE1 as a second entry-point](assetId:///537e4b68-043f-49c9-94d8-15ce8c4b18e2#AddEP)  
+- Add 2-EDGE1 as a second entry-point  
   
 ## <a name="configDA"></a>Configure Remote Access on EDGE1  
   

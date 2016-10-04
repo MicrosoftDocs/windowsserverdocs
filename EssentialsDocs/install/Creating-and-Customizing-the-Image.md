@@ -1,22 +1,24 @@
 ---
 title: "Creating and Customizing the Image"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 79ed973d-61e3-46d9-a626-3edfbc4e4d65
-caps.latest.revision: 9
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Creating and Customizing the Image
-This section describes aspects of the customization process that are specific to  Windows Server 2012 Essentials . You typically perform these procedures on the reference computer with an answer file, before you capture the image for final deployment.  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+This section describes aspects of the customization process that are specific to  Windows Server Essentials . You typically perform these procedures on the reference computer with an answer file, before you capture the image for final deployment.  
   
  This section includes the following topics:  
   

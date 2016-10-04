@@ -1,22 +1,20 @@
 ---
+ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 title: Active Directory Domain Services Component Updates
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 32e3f2f3-7b65-49ca-b092-e9a6650deb15
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Active Directory Domain Services Component Updates
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This module introduces the components that received minor updates in the Directory Services and Identity spaces.  
   

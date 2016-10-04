@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this procedure to configure the web server WEB1 to distribute CRLs.  
   

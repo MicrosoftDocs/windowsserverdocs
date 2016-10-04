@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Troubleshoot an OTP Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes how to troubleshoot the most common errors that may occur when configuring a Remote Access deployment using OTP authentication.  
   

@@ -1,22 +1,20 @@
 ---
+ms.assetid: 249ba1be-b0d3-4a77-99af-3699074a2b6e
 title: Virtualized Domain Controller Troubleshooting
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: e34cc328-7f53-4978-b477-1c5339825729
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Virtualized Domain Controller Troubleshooting
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides detailed methodology on troubleshooting the virtualized domain controller feature.  
   

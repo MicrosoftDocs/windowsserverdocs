@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Choosing a BranchCache Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn about BranchCache modes and to select the best modes for your deployment.  
   

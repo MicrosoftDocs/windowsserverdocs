@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Remote Access Server Role Documentation
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Remote Access Server Role documentation includes topics that you can use when you deploy any of the three role services (DirectAccess, Routing and Remote Access Service, Web Application Proxy) individually or on the same server. For example, these documents apply to situations where you have deployed any combination of the three role services, such as deploying both RRAS and DirectAccess on the same server.  
   

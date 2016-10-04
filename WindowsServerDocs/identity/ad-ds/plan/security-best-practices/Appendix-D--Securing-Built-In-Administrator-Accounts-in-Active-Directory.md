@@ -1,21 +1,20 @@
 ---
+ms.assetid: 11f36f2b-9981-4da0-9e7c-4eca78035f37
 title: Appendix D - Securing Built-In Administrator Accounts in Active Directory
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 9fc56513-bb7f-4a89-a866-f9442f1a46ba
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix D: Securing Built-In Administrator Accounts in Active Directory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix D: Securing Built-In Administrator Accounts in Active Directory  

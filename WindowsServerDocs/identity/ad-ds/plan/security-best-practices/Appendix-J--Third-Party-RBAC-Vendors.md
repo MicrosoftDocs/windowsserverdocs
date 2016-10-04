@@ -1,21 +1,20 @@
 ---
+ms.assetid: e4b58d6a-c347-4b1c-8110-73c2d238305d
 title: Appendix J - Third-Party RBAC Vendors
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: b5e41fb4-c11e-4fc4-802d-59c12c98eabc
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix J: Third-Party RBAC Vendors
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix J: Third-Party RBAC Vendors  

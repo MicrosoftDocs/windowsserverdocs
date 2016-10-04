@@ -1,21 +1,20 @@
 ---
+ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon Automatic Restart Sign-On (ARSO)
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Winlogon Automatic Restart Sign-On (ARSO)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

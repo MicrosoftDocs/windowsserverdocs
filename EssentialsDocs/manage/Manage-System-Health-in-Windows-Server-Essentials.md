@@ -1,29 +1,29 @@
 ---
 title: "Manage System Health in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 04/01/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
-caps.latest.revision: 13
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Manage System Health in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
-  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+ 
  This topic discusses how to view and respond to all alerts in your network by using the Dashboard.  
   
 > [!NOTE]
->  In  Windows Server 2012 R2 Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, the health alerts for the server and client computers in the network are no longer displayed in the Alert Viewer, but instead can be viewed on the **Health Reports** tab of the **Home** page.  
+>  In  Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, the health alerts for the server and client computers in the network are no longer displayed in the Alert Viewer, but instead can be viewed on the **Health Reports** tab of the **Home** page.  
   
- Windows Server Essentials actively monitors every computer that is connected to the server and alerts the administrator to issues related to the systemâ€™s health, including critical updates, missing malware protection, out-of-date virus definitions on client computers, and other important issues that require action. These issues are displayed as alerts in the Alert Viewer, which can be launched from the serverâ€™s Dashboard or the client computerâ€™s Launchpad in  Windows Server 2012 Essentials, or on the **Health Reports** tab in  Windows Server 2012 R2 Essentials. By default, the alerts are refreshed every thirty minutes, but you can evaluate your network for alerts at any time by clicking **Refresh** in the Alert Viewer or on the **Health Reports** tab.  
+ Windows Server Essentials actively monitors every computer that is connected to the server and alerts the administrator to issues related to the system „¢s health, including critical updates, missing malware protection, out-of-date virus definitions on client computers, and other important issues that require action. These issues are displayed as alerts in the Alert Viewer, which can be launched from the server „¢s Dashboard or the client computer „¢s Launchpad in  Windows Server Essentials, or on the **Health Reports** tab in  Windows Server Essentials. By default, the alerts are refreshed every thirty minutes, but you can evaluate your network for alerts at any time by clicking **Refresh** in the Alert Viewer or on the **Health Reports** tab.  
   
  The following topics will help you understand, view, and respond to alerts in the Alert Viewer, and also provide instructions to configure your server to receive alert notifications in email:  
   
@@ -49,9 +49,9 @@ ms.author: coreyp
 -   [Email the report](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_emailreport)  
   
 > [!NOTE]
->  **Windows Server 2012 Essentials:** You can download the Health Report add-in for  Windows Server 2012 Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
+>  **Windows Server Essentials:** You can download the Health Report add-in for  Windows Server Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
 >   
->  **Windows Server 2012 R2 Essentials:** By default, the Health Report add-in is integrated with  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboardâ€™s **Home** page.  
+>  **Windows Server Essentials:** By default, the Health Report add-in is integrated with  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard „¢s **Home** page.  
   
 ###  <a name="BKMK_Generate"></a> Generate a report on demand or on schedule  
  After installing the Health Report add-in and restarting the Dashboard, a new tab, **Reports** is added to the Dashboard. You can generate a health report on demand at any time by clicking the **Generate a health report** task on the **Reports** tab.  
@@ -77,7 +77,7 @@ ms.author: coreyp
   
  In the Health Report, first view the **Summary**, and then for those items with a red error icon or a yellow warning icon, click the **Details** link on the same row to view the details about the item.  
   
- If you are not interested in some of the data points that are included in the report by default, you can customize the content of the report by clicking **Customize health report settings** in the task pane, and then clicking the **Content** tab. Clear the check boxes for the content that you donâ€™t want to see in the report. For example, if you have your own server backup plan and donâ€™t want to see the warnings about server backups, you could exclude server backups from the report by clearing the **Server backup** check box.  
+ If you are not interested in some of the data points that are included in the report by default, you can customize the content of the report by clicking **Customize health report settings** in the task pane, and then clicking the **Content** tab. Clear the check boxes for the content that you don „¢t want to see in the report. For example, if you have your own server backup plan and don „¢t want to see the warnings about server backups, you could exclude server backups from the report by clearing the **Server backup** check box.  
   
 ###  <a name="BKMK_emailreport"></a> Email the report  
  Having to log on to the Dashboard to read reports is still inconvenient for some administrators, especially if they have more than one server to manage. With the email feature turned on, after a report is generated, an email will be sent to a list of specified email addresses with the content of the report. The administrator can easily view this report from any device or any client application, and ensure that the server is running at its best state.  
@@ -255,11 +255,11 @@ ms.author: coreyp
   
 -   One or more drives are not functioning and are offline.  
   
-###  <a name="BKMK_SMTP"></a> Configuring SMTP on your server to send alert notifications by email in Windows Server 2012 Essentials  
+###  <a name="BKMK_SMTP"></a> Configuring SMTP on your server to send alert notifications by email in Windows Server Essentials  
  This section discusses how to configure your server to send email notifications for alerts.  
   
 > [!NOTE]
->  You can download the Health Report add-in for  Windows Server 2012 Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
+>  You can download the Health Report add-in for  Windows Server Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
   
 ##### To set up email notification for alerts  
   
@@ -271,7 +271,7 @@ ms.author: coreyp
   
 4.  In the **SMTP Settings** window, do the following:  
   
-    1.  For **From email address**, type the email address that you want use for sending the email alerts from. This email address will be displayed as the senderâ€™s address in the alert notification.  
+    1.  For **From email address**, type the email address that you want use for sending the email alerts from. This email address will be displayed as the sender „¢s address in the alert notification.  
   
     2.  For **SMTP server name**, in the **From email address** text box, type the name of the SMTP server that you specified in step 4a. (Refer to Table 1 for a list of some SMTP server names).  
   
@@ -300,11 +300,11 @@ ms.author: coreyp
     > [!NOTE]
     >  When you click **Apply and send email**, typically you will receive a sample email notification with no health alerts listed. However, if a health alert that is configured to send an email notification is identified during this test process, this alert is included in the test email.  
   
-### Configuring SMTP on your server to send health reports in Windows Server 2012 R2 Essentials  
+### Configuring SMTP on your server to send health reports in Windows Server Essentials  
  This section discusses how to configure the SMTP settings for your server so that you can receive health reports via email.  
   
 > [!NOTE]
->  By default, the Health Report add-in is integrated with  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboardâ€™s **Home** page.  
+>  By default, the Health Report add-in is integrated with  Windows Server Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard „¢s **Home** page.  
   
 ##### To set up email notification for health reports  
   
@@ -316,7 +316,7 @@ ms.author: coreyp
   
 4.  In the **Schedule and Email** tab, in the **Email** section, do the following:  
   
-    1.  Click **Enable**, and type the email address that you want use for sending the health reports from. This email address will be displayed as the senderâ€™s address in the health reports that are emailed.  
+    1.  Click **Enable**, and type the email address that you want use for sending the health reports from. This email address will be displayed as the sender „¢s address in the health reports that are emailed.  
   
         1.  For **SMTP server name**, type the name of the SMTP server. (Refer to Table 1 for a list of some SMTP server names).  
   

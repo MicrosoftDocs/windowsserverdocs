@@ -10,14 +10,11 @@ ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 9/30/2016
 ---
 # Use live migration without Failover Clustering to move a virtual machine
 
->Applies To: Windows Server Technical Preview
-
-
-**This is preliminary content and subject to change.**
+>Applies To: Windows Server 2016
 
 This article shows you how to move a virtual machine by doing a live migration without using Failover Clustering. A live migration moves running virtual machines between Hyper-V hosts without any noticeable downtime.   
   
@@ -25,9 +22,9 @@ To be able to do this, you'll need:
 
 - A user account that's a member of the local Hyper-V Administrators group or the Administrators group on both the source and destination computers. 
   
-- The Hyper-V role in Windows Server 2016 Technical Preview installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
+- The Hyper-V role in Windows Server 2016 installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
   
-- The Hyper-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run them from there.  
+- The Hyper-V management tools installed on a computer running Windows Server 2016 or Windows 10, unless the tools are installed on the source or destination server and you'll run them from there.  
    
 ## <a name="BKMK_Step3"></a>Use Hyper-V Manager to move a running virtual machine  
   

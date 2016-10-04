@@ -1,4 +1,5 @@
 ---
+ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrading to AD FS in Windows Server 2016
 description:
 author: billmath
@@ -13,14 +14,8 @@ ms.author:  billmath
 
 # Upgrading to AD FS in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-
-**Note:** The Farm Behavior Level values have changed with Windows Server 2016 Technical Preview 5 (TP5).  The values are now integers and not strings.  The new values are:   
-* TP5 or RTM: 3  
-* TP4: 2  
-* Windows Server 2012 R2: 1  
-  
 
 ## Moving from a Windows Server 2012 R2 AD FS farm to a Windows Server 2016 AD FS farm  
 The following document will describe how to upgrade your AD FS Windows Server 2012 R2 farm to AD FS in Windows Server 2016.  

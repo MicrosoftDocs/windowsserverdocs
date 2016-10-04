@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Plan the DirectAccess Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning the Remote Access infrastructure, the next step in enabling DirectAccess is to plan the settings for the Enable DirectAccesss Wizard.  
   
@@ -49,14 +49,14 @@ There are a number of decisions to make when planning to deploy your Remote Acce
   
 -   **IP-HTTPS certificate**-If SSTP VPN is configured, the Enable DirectAccess wizard picks up the certificate used by SSTP for IP-HTTPS. If SSTP VPN is not configured, the wizard will try to see if a certificate for IP-HTTPS has been configured. If not, it will automatically provision self-signed certificates for IP-HTTPS.The wizard automatically enables Kerberos authentication. The wizard will also enable NAT64 and DNS64 for protocol translation in the IPv4-only environment.  
   
--   **IPv6 prefixes**-If the wizard detects that IPv6 has been deployed on the network adapters, it automatically creates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 or ISATAP infrastructure, you must manually change them. See [1.1 Planning network and server topology and settings](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_1_Network_svr_top_settings).  
+-   **IPv6 prefixes**-If the wizard detects that IPv6 has been deployed on the network adapters, it automatically creates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 or ISATAP infrastructure, you must manually change them. See 1.1 Planning network and server topology and settings.  
   
--   **Windows 7 clients**-By default,  Windows 7  client computers cannot connect to a  Windows Server 2012  Remote Access deployment. If you have  Windows 7  client computers in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the Enable DirectAccess wizard.  
+-   **Windows 7 clients**-By default, Windows 7 client computers cannot connect to a Windows Server 2012 Remote Access deployment. If you have  Windows 7 client computers in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the Enable DirectAccess wizard.  
   
-    > [!NOTE]  
-    > Allowing  Windows 7  client computers to connect using DirectAccess requires you to use computer certificate authentication.  
+    > [!NOTE]
+    > Allowing Windows 7 client computers to connect using DirectAccess requires you to use computer certificate authentication.
   
--   **Authentication**-The Enable DirectAccess wizard uses Active Directory to authenticate the user credentials. To deploy two-factor authentication, see [Deploy Remote Access with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
+-   **Authentication**-The Enable DirectAccess wizard uses Active Directory to authenticate the user credentials. To deploy two-factor authentication, see [Deploy Remote Access with OTP authentication](../../ras/otp/Deploy-RA-OTP.md).  
   
 ## <a name="BKMK_Links"></a>See also  
   

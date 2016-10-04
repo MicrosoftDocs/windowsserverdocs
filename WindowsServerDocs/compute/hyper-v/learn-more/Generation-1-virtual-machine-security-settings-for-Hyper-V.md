@@ -3,18 +3,18 @@ title: Generation 1 virtual machine security settings for Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: cwatsonmsft
 ms.author: cwatson
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Generation 1 virtual machine security settings
 
->Applies To: Windows Server 2016 Technical Preview, Windows 10
+>Applies To: Windows Server 2016, Windows 10
 
 Use the generation 1 virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. 
 

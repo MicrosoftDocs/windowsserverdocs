@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-dns
+ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
@@ -14,7 +13,7 @@ author: jamesmci
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.  
   

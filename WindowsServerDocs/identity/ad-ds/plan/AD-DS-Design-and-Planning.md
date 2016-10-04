@@ -1,20 +1,19 @@
 ---
+ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS Design and Planning
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 817d84f0-a0c3-4776-8ea3-20054f342a70
-author: Femila
 ---
 # AD DS Design and Planning
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 By deploying  Windows Server 2008  Active Directory Domain Services (AD DS) in your environment, you can take advantage of the centralized, delegated administrative model and single sign-on (SSO) capability that AD DS provides. After you identify the deployment tasks and current environment for your organization, you can create the AD DS deployment strategy that meets your organization's needs.  
   

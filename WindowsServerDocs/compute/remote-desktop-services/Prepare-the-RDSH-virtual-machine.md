@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Prepare the RDSH virtual machine
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to prepare the virtual machine for the Remote Desktop Session Host server:  
   

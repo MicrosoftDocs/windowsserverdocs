@@ -14,19 +14,20 @@ author: coreyp-at-msft
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012 enable you to create clusters of Remote Access servers. A cluster acts as a single logical server and provides centralized configuration and management for the servers in the cluster. When using Network Load Balancing (NLB) there is support for up to 8 Remote Access members in a single cluster. Remote Access clusters provide high availability and load balancing of connections from DirectAccess clients to the internal network.  
+ Windows Server 2016, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012 enable you to create clusters of Remote Access servers. A cluster acts as a single logical server and provides centralized configuration and management for the servers in the cluster. When using Network Load Balancing (NLB) there is support for up to 8 Remote Access members in a single cluster. Remote Access clusters provide high availability and load balancing of connections from DirectAccess clients to the internal network.  
   
 The following procedures enable you to create and test a Remote Access cluster:  
   
-1.  [Install the Network Load Balancing feature on EDGE1 and EDGE2](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#NLBfeature)-Before enabling load balancing, you must install the Network Load Balancing feature on both EDGE1 and EDGE2.  
+1. Install the Network Load Balancing feature on EDGE1 and EDGE2. Before enabling load balancing, you must install the Network Load Balancing feature on both EDGE1 and EDGE2.
   
-2.  [Enable load balancing on EDGE1](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#EnableNLB)-EDGE1 was originally installed in single server mode. To enable load balancing, you configure new external and internal dedicated IP addresses (DIPs) for EDGE1. The previous DIPs on EDGE1 are automatically configured as virtual IP addresses (VIPs) for the cluster. The new external DIP is 131.107.0.10, the new internal IPv4 DIP is 10.0.0.10, the new internal IPv6 DIP is 2001:db8:1::10. The cluster VIPs are 131.107.0.2 and 131.107.0.3 (external), and 10.0.0.2 and 2001:db8:1::2 (internal).  
+2. Enable load balancing on EDGE1. EDGE1 was originally installed in single server mode. To enable load balancing, you configure new external and internal dedicated IP addresses (DIPs) for EDGE1. The previous DIPs on EDGE1 are automatically configured as virtual IP addresses (VIPs) for the cluster. The new external DIP is 131.107.0.10, the new internal IPv4 DIP is 10.0.0.10, the new internal IPv6 DIP is 2001:db8:1::10. The cluster VIPs are 131.107.0.2 and 131.107.0.3 (external), and 10.0.0.2 and 2001:db8:1::2 (internal).
   
-3.  [Add EDGE2 to the load balanced cluster](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#AddDA2)-After enabling load balancing, you can now add EDGE2 to the cluster to provide load balancing and high availability for DirectAccess client connections.  
-  
-## Prerequisites  
+3. Add EDGE2 to the load balanced cluster. After enabling load balancing, you can now add EDGE2 to the cluster to provide load balancing and high availability for DirectAccess client connections.
+
+## Prerequisites
+
 If you are creating this test lab on virtual machines, you must enable MAC address spoofing on EDGE1 and EDGE2.  
   
 ### Enable MAC address spoofing on EDGE1 and EDGE2  
@@ -43,10 +44,10 @@ If you are creating this test lab on virtual machines, you must enable MAC addre
   
 6.  Repeat this procedure from step 2 on EDGE2.  
   
-## <a name="NLBfeature"></a>Install the Network Load Balancing feature on EDGE1 and EDGE2  
+## Install the Network Load Balancing feature on EDGE1 and EDGE2  
 To configure EDGE1 and EDGE2 in a cluster, you must install the Network Load Balancing feature on both EDGE1 and EDGE2.  
   
-#### To install Network Load Balancing  
+### To install Network Load Balancing  
   
 1.  On EDGE1, in the Server Manager console, in the **Dashboard**, click **Add roles and features**.  
   
@@ -58,10 +59,10 @@ To configure EDGE1 and EDGE2 in a cluster, you must install the Network Load Bal
   
 5.  Repeat this procedure on EDGE2.  
   
-## <a name="EnableNLB"></a>Enable load balancing on EDGE1  
+## Enable load balancing on EDGE1  
 Use this procedure to enable load balancing and configure the new DIPs on EDGE1.  
   
-#### Enable load balancing  
+### Enable load balancing  
   
 1.  On EDGE1, click **Start**, type **RAMgmtUI.exe**, and then press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
@@ -85,13 +86,13 @@ Use this procedure to enable load balancing and configure the new DIPs on EDGE1.
   
 9. In the Enable Load Balancing Wizard, click **Close**.  
   
-## <a name="AddDA2"></a>Add EDGE2 to the load balanced cluster  
+## Add EDGE2 to the load balanced cluster  
 Use this procedure to add EDGE2 to the NLB cluster.  
   
 > [!NOTE]  
 > You should wait two minutes after completing the previous steps before proceeding. After enabling NLB, the RAConfigTask runs and configures the machine with NLB settings. This might take a few minutes to complete, and if the administrator runs another NLB related configuration before the task ends, that configuration will fail.  
   
-#### Add EDGE2 to the cluster  
+### Add EDGE2 to the cluster  
   
 1.  On the EDGE1 computer or virtual machine, in the Remote Access Management Console, in the **Tasks** pane, under **Load Balanced Cluster**, click **Add or Remove Servers**.  
   
@@ -117,7 +118,4 @@ Use this procedure to add EDGE2 to the NLB cluster.
   
 12. In the **Network Load Balancing Manager**, click **Internet DA cluster**. Make sure that in the details pane, both **EDGE1(Internet)** and **EDGE2(Internet)** have the status **Converged**.  
   
-13. If a server is not **Converged**, in the console tree, right-click the server, point to **Control Host**, and then click **Start**.  
-  
-
-
+13. If a server is not **Converged**, in the console tree, right-click the server, point to **Control Host**, and then click **Start**.

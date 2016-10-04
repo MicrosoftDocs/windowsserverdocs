@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
@@ -14,7 +13,7 @@ author: jamesmci
 ---
 # RAS Gateway High Availability
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN).  
   
@@ -35,12 +34,12 @@ You can deploy RAS Gateway in multitenant mode as an edge gateway to route tenan
   
 When you deploy multiple instances of RAS Gateway VMs that provide high availability and failover, you are deploying a gateway pool. In Windows Server 2012 R2, all the gateway VMs formed a single pool, which made a logical separation of the gateway deployment a little difficult.  Windows Server 2012 R2  gateway  offered a 1:1 redundancy deployment for the gateway VMs, which resulted in under-utilization of the available capacity for site-to-site (S2S) VPN connections.  
   
-This issue is resolved in Windows Server 2016 Technical Preview, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
+This issue is resolved in  Windows Server 2016, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
   
 For more overview information about RAS Gateway, see [RAS Gateway](../../../remote-access/ras-gateway/RAS-Gateway.md).  
   
 ## <a name="bkmk_pools"></a>Gateway Pools Overview  
-In Windows Server 2016 Technical Preview, you can deploy gateways in one or more pools.  
+In  Windows Server 2016, you can deploy gateways in one or more pools.  
   
 The following illustration shows different types of gateway pools that provide traffic routing between virtual networks.  
   
@@ -78,7 +77,7 @@ In the illustration, the MT BGP device is a RAS Multitenant Gateway with BGP. Mu
 The BGP router is separated out in the diagram to depict this centralized routing concept. The gateway BGP implementation also provides transit routing, which enables the cloud to act as a transit point for routing between two tenant sites. These BGP capabilities are applicable to all gateway functions.  
   
 ## <a name="bkmk_integration"></a>RAS Gateway Integration with Network Controller  
-RAS Gateway is fully integrated with Network Controller in Windows Server 2016 Technical Preview. When RAS Gateway and Network Controller are deployed, Network Controller performs the following functions.  
+RAS Gateway is fully integrated with Network Controller in  Windows Server 2016. When RAS Gateway and Network Controller are deployed, Network Controller performs the following functions.  
   
 -   Deployment of the gateway pools  
   

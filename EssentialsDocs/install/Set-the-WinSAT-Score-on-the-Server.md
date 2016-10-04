@@ -1,22 +1,24 @@
 ---
 title: "Set the WinSAT Score on the Server"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 911dc494-0f8f-4723-93d6-2106f914b906
-caps.latest.revision: 9
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Set the WinSAT Score on the Server
-You should set the WinSAT CPU score for a server that is running the  Windows Server 2012 Essentials operating system to optimize the video streaming resolution. You do this by creating and installing the .xml file that contains the WinSAT score information.  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+You should set the WinSAT CPU score for a server that is running the  Windows Server Essentials operating system to optimize the video streaming resolution. You do this by creating and installing the .xml file that contains the WinSAT score information.  
   
 ## Obtain the WinSAT CPU score  
  You are provided a program with the OPK called WinServerSAT.exe that discovers the WinSAT CPU score and puts that information in the WinServerSAT.xml file that the operating system reads.  

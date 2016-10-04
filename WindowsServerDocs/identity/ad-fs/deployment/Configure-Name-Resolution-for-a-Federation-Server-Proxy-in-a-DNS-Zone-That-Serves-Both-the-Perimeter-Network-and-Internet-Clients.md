@@ -1,4 +1,5 @@
 ---
+ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
 title: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
 description:
 author: billmath

@@ -1,23 +1,23 @@
 ---
 title: "Manage Applications in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 01/14/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
-caps.latest.revision: 12
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Manage Applications in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
-  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+ 
  The server Dashboard in Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed makes it possible to perform common administrative tasks. To perform these tasks, see the following:  
   
 -   [Application management tasks in the Dashboard](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_1)  
