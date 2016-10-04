@@ -6,29 +6,26 @@ ms.manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima
-ms.date: 08/24/2016
+ms.date: 10/04/2016
 ---
 # Updating drive firmware in Windows Server 2016
-Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. You can use this new functionality to update the firmware of in-production drives if there's a critically important drive firmware advisory from your hardware vendor or OEM, and your hardware supports this. However, if you’re going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
-
-
-The goal was to provide a simple way to update drive firmware without downtime when using Storage Spaces Direct.
+Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. If you have drives that support the new firmware update mechanism included in Windows Server, you can update drive firmware of in-production drives without downtime. However, if you’re going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
   > [!Warning]
   > Firmware updates are a potentially risky maintenance operation and you should only apply them after thorough testing of the new firmware image. It is possible that new firmware on unsupported hardware could negatively affect reliability and stability, or even cause data loss. Administrators should read the release notes a given update comes with to determine its impact and applicability.
 
-## First steps
+## Drive compatibility
 
-To ensure common device behavior, we began by defining new and - for Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. Here are links to the various requirements:
+To use Windows Server to update drive firmware, you must have supported drives. To ensure common device behavior, we began by defining new and - for Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. 
 
--   SATA: <https://msdn.microsoft.com/en-us/library/windows/hardware/dn932747(v=vs.85).aspx>
-    -   Section \[If Implemented\] Firmware Download & Activate
+Contact your solution vendor for info about whether your hardware supports Windows updating the drive firmware.
+Here are links to the various requirements:
+
+-   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) - in the **[If Implemented\] Firmware Download & Activate** section
     
--   SAS: <https://msdn.microsoft.com/en-us/library/windows/hardware/dn932746(v=vs.85).aspx>
-    -   Section: \[If Implemented\] Firmware Download & Activate
-    
--   NVMe: <https://msdn.microsoft.com/en-us/library/windows/hardware/dn932708(v=vs.85).aspx>
-    -   Sections: 5.7 and 5.8
+-   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) - in the **[If Implemented\] Firmware Download & Activate** section
+
+-   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) - in sections **5.7** and **5.8**.
 
 ## PowerShell cmdlets
 
@@ -52,7 +49,7 @@ The first cmdlet provides you with detailed information about the device’s cap
 
 Note that SAS devices always report “SupportsUpdate” as “True”, since there is no way of explicitly querying the device for support of these commands.
 
-The second cmdlet will allow administrators to update the drive firmware with an image file. You should obtain this image file from the OEM or drive vendor directly.
+The second cmdlet, Update-StorageFirmware, enables administrators to update the drive firmware with an image file, if the drive supports the new firmware update mechanism. You should obtain this image file from the OEM or drive vendor directly.
 
   > [!Note]
   > Before updating any production hardware, test the particular firmware image on identical hardware in a lab setting.
@@ -107,7 +104,7 @@ Windows Server 2016 includes a Health Service for Storage Spaces Direct deployme
 
 Using the Health Service to roll-out firmware across a cluster is very simple and involves the following steps:
 
--   Identify what HDD and SSD devices you expect to be part of your Storage Spaces Direct cluster
+-   Identify what HDD and SSD drives you expect to be part of your Storage Spaces Direct cluster, and whether the drives support Windows performing firmware updates
 -   List those drives in the Supported Components xml file
 -   Identify the firmware versions you expect those drives to have in the Supported Components xml (including location paths of the firmware images)
 -   Upload the xml file to the cluster DB
@@ -162,43 +159,42 @@ If you would like to see the Health Service in action and learn more about its r
 
 ## Frequently asked questions
 
--   After I update a SATA drive, it reports to no longer support the update mechanism. Is something wrong with the drive?
+### Will this work on any storage device
 
-    -   No, the drive is fine, unless the new firmware doesn’t allow updates anymore. You are hitting a known issue whereby a cached version of the drive’s capabilities is incorrect. Running “Update-StorageProviderCache -DiscoveryLevel Full” will re-enumerate the drive capabilities and update the cached copy. As a work-around, we recommend running the above command once before initiating a firmware update or complete roll-out on a Spaces Direct cluster.
+This will work on storage devices that implement the correct commands in their firmware. The Get-StorageFirmwareInformation cmdlet will show if a drive’s firmware indeed does support the correct commands (for SATA/NVMe) and the HLK test allows vendors and OEMs to test this behavior.
 
--   Can I update firmware on my SAN through this mechanism?
+### After I update a SATA drive, it reports to no longer support the update mechanism. Is something wrong with the drive
 
-    -   No - SANs usually have their own utilities and interfaces for such maintenance operations. This new mechanism is for directly attached storage, such as SATA, SAS, or NVMe devices.
+No, the drive is fine, unless the new firmware doesn’t allow updates anymore. You are hitting a known issue whereby a cached version of the drive’s capabilities is incorrect. Running “Update-StorageProviderCache -DiscoveryLevel Full” will re-enumerate the drive capabilities and update the cached copy. As a work-around, we recommend running the above command once before initiating a firmware update or complete roll-out on a Spaces Direct cluster.
 
--   Will this work on any storage device?
+### Can I update firmware on my SAN through this mechanism
+No - SANs usually have their own utilities and interfaces for such maintenance operations. This new mechanism is for directly attached storage, such as SATA, SAS, or NVMe devices.
 
-    -   This will work on storage devices that implement the correct commands in their firmware. The Get-StorageFirmwareInformation cmdlet will show if a drive’s firmware indeed does support the correct commands (for SATA/NVMe) and the HLK test allows vendors and OEMs to test this behavior.
+### From where do I get the firmware image
 
--   From where do I get the firmware image?
+You should always obtain any firmware directly from your OEM, solution vendor, or drive vendor and not download it from other parties. Windows provides the mechanism to get the image to the drive, but cannot verify its integrity.
 
-    -   You should always obtain any firmware directly from your OEM, solution vendor, or drive vendor and not download it from other parties. Windows provides the mechanism to get the image to the drive, but cannot verify its integrity.
+### Will this work on clustered drives
 
--   Will this work on clustered drives?
+The cmdlets can perform their function on clustered drives as well, but keep in mind that the Health Service orchestration mitigates the I/O impact on running workloads. If the cmdlets are used directly on clustered drives, I/O is likely to stall. In general, it is a best practice to perform drive firmware updates when there is no, or just a minimal workload on the underlying drives.
 
-    -   The cmdlets can perform their function on clustered drives as well, but keep in mind that the Health Service orchestration mitigates the I/O impact on running workloads. If the cmdlets are used directly on clustered drives, I/O is likely to stall. In general, it is a best practice to perform drive firmware updates when there is no, or just a minimal workload on the underlying drives.
+### What happens when I update firmware on Storage Spaces
 
--   What happens when I update firmware on Storage Spaces?
+On Windows Server 2016 with the Health Service deployed on Storage Spaces Direct, you can perform this operation without taking your workloads offline, assuming the drives support Windows Server updating the firmware.
 
-    -   On Windows Server 2016 with the Health Service deployed on Storage Spaces Direct, you can perform this operation without taking your workloads offline.
+### What happens if the update fails?
 
--   What happens if the update fails?
+The update could fail for various reasons, some of them are: 1) The drive doesn’t support the correct commands for Windows to update its firmware. In this case the new firmware image never activates and the drive continues functioning with the old image. 2) The image cannot download to or be applied to this drive (version mismatch, corrupt image, …). In this case the drive fails the activate command. Again, the old firmware image will continue function.
 
-    -   The update could fail for various reasons, some of them are: 1) The drive doesn’t support the correct commands for Windows to update its firmware. In this case the new firmware image never activates and the drive continues functioning with the old image. 2) The image cannot download to or be applied to this drive (version mismatch, corrupt image, …). In this case the drive fails the activate command. Again, the old firmware image will continue function.
+If the drive does not respond at all after a firmware update, you are likely hitting a bug in the drive firmware itself. Test all firmware updates in a lab environment before putting them in production. The only remediation may be to replace the drive.
 
-    -   If the drive does not respond at all after a firmware update, you are likely hitting a bug in the drive firmware itself. Test all firmware updates in a lab environment before putting them in production. The only remediation may be to replace the drive.
+### How do I stop an in-progress firmware roll-out?
 
--   How do I stop an in-progress firmware roll-out?
+Disable the roll-out in PowerShell via:
+```powershell
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.PhysicalDisk.AutoFirmwareUpdate.RollOut.Enabled" -Value false
+```
 
-    -   Disable the roll-out in PowerShell via:
-     ```powershell
-     Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.PhysicalDisk.AutoFirmwareUpdate.RollOut.Enabled" -Value false
-     ```
+### I am seeing an access denied or path-not-found error during roll out. How do I fix this?
 
--   I am seeing an access denied or path-not-found error during roll out. How do I fix this?
-
-    -   Ensure that the firmware image you would like to use for the update is accessible by all cluster nodes. The easiest way to ensure this is to place it on a cluster shared volume.
+Ensure that the firmware image you would like to use for the update is accessible by all cluster nodes. The easiest way to ensure this is to place it on a cluster shared volume.
