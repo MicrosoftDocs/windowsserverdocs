@@ -11,7 +11,7 @@ ms.date: 10/04/2016
 # Failover Clustering in Windows Server 2016
 > Applies To: Windows Server 2016
 
-![Cluster icon](media/failover-clustering-overview/cluster-server.png) Failover clustering provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
+![Cluster icon](media/failover-clustering-overview/cluster-server.png) Failover clustering - a Windows Server feature that enables you to group multiple servers together into a cluster - provides new and improved features for software-defined datacenter customers and many other workloads running clusters on physical hardware or in virtual machines.
 
 ## <a id="what-is-failover-clustering"></a>What is Failover Clustering?
 A failover cluster is a group of independent computers that work together to increase the availability and scalability of clustered roles (formerly called clustered applications and services). The clustered servers (called nodes) are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). In addition, the clustered roles are proactively monitored to verify that they are working properly. If they are not working, they are restarted or moved to another node. Failover clusters also provide Cluster Shared Volume (CSV) functionality that provides a consistent, distributed namespace that clustered roles can use to access shared storage from all nodes. With the Failover Clustering feature, users experience a minimum of disruptions in service.
@@ -22,17 +22,14 @@ This has many practical applications, including:
 
 
 ## What's new
-Here are some of the new features in Windows Server 2016:
- 
+Here are some of the new features in Windows Server 2016 - for more details, see [What's new in Failover Clustering](whats-new-in-failover-clustering.md):
+
 * **[Cluster Operating System Rolling Upgrade](Cluster-Operating-System-Rolling-Upgrade.md)** - Enables an administrator to upgrade the operating system of the cluster nodes from without stopping the Hyper-V or the Scale-Out File Server workloads.
 * **[Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)** - A new type of quorum witness that leverages Microsoft Azure to help determine which cluster node should be considered authoritative if a node goes offline. 
-* **[Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)** - Enables easier configuration of multiple network adapters in a cluster.
 * **[Health Service](health-service-overview.md)** - Improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct clusters.
 * **[Fault Domains](fault-domains.md)** - Enables you to define what fault domain to use with a Storage Spaces Direct cluster. A fault domain is a set of hardware that share a single point of failure, such as a server node, server chassis, or rack.
-
-This topic describes the Failover Clustering feature and provides links to additional guidance about creating, configuring, and managing failover clusters that can scale to 64 physical nodes and to 8,000 virtual machines.
-
-
+* **[VM Load Balancing](vm-load-balancing-overview.md)** - Helps load be evenly distributed across nodes in a Failover Cluster by identifying busy nodes and live-migrating VMs on these nodes to less busy nodes.
+* **[Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)** - Enables easier configuration of multiple network adapters in a cluster.
 
 ## See also
 | Content Type | References |
