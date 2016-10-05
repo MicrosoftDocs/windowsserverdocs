@@ -4,8 +4,8 @@ ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
-author: vhorne
-ms.author: victorh
+author: JMesser81
+ms.author: jmesser
 ---
 # Troubleshoot the Windows Server 2016 Software Defined Networking Stack
 
@@ -16,14 +16,14 @@ This guide examines the common Software Defined Networking (SDN) errors and fail
 For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../../sdn/Software-Defined-Networking--SDN-.md).  
 
 ## Error types  
-The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012R2 from in-market production deployments and coincides in many ways with the same types of problems seen in the new SDN Stack.  
+The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012 R2 from in-market production deployments and coincides in many ways with the same types of problems seen in Windows Server 2016 HNVv2.  
 
 Most errors can be classified into a small set of classes:   
 * **Invalid or unsupported configuration**  
    A user invokes the NorthBound API incorrectly or with invalid policy.   
 
 * **Error in policy application**  
-     Policy from Network Controller was not delivered to a Hyper-V Host, significantly delayed and / or not up to date on all Hyper-V hosts (e.g. after Live Migration).  
+     Policy from Network Controller was not delivered to a Hyper-V Host, significantly delayed and / or not up to date on all Hyper-V hosts (for example, after a Live Migration).  
 * **Configuration drift or software bug**  
  Data-path issues resulting in dropped packets.  
 
@@ -51,7 +51,7 @@ Import-Module hnvdiagnostics
 ```  
 
 ### Network controller diagnostics  
-These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490456.aspx). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between Network Controller and the NC Host Agents running on the Hyper-V hosts.
+These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490456.aspx). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between the Network Controller and the NC Host Agents running on the Hyper-V hosts.
 
  The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node virtual machines. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller. 
    
@@ -73,7 +73,7 @@ To check configuration state, run the following from any Hyper-V host with conne
 >[!NOTE] 
 >The value for the *NetworkController* parameter should either be the FQDN or IP address based on the subject name of the X.509 >certificate created for Network Controller.
 >
->The *Credential* parameter only needs to be specified if the network controller is using Kerberos authentication (typical in SCVMM deployments). The credential must be for a user who is in the Network Controller Management Security Group.
+>The *Credential* parameter only needs to be specified if the network controller is using Kerberos authentication (typical in VMM deployments). The credential must be for a user who is in the Network Controller Management Security Group.
 
 ```none
 Debug-NetworkControllerConfigurationState -NetworkController <FQDN or NC IP> [-Credential <PS Credential>]
@@ -179,7 +179,7 @@ If there are not three ESTABLISHED connections or if the Network Controller appe
 # Prints a DIFF state (status is automatically updated if state is changed) of a particular service module replica 
 Debug-ServiceFabricNodeStatus [-ServiceTypeName] <Service Module>
 ```
-The network controller service modules are given below:
+The network controller service modules are:
 - ControllerService
 - ApiService
 - SlbManagerService
@@ -191,9 +191,9 @@ The network controller service modules are given below:
 - HelperService
 - UpdateService
 
-Check that ReplicaStatus is Ready and HealthState is Ok.
+Check that ReplicaStatus is **Ready** and HealthState is **Ok**.
 
-In a production deployment with a multi-node Network Controller, you can also check which node each service is primary on and its individual replica status.
+In a production deployment is with a multi-node Network Controller, you can also check which node each service is primary on and its individual replica status.
 
 ```none  
 Get-NetworkControllerReplica
@@ -229,7 +229,7 @@ Properties       : Microsoft.Windows.NetworkController.ServerProperties
 
 *Remediation*
 If using SDNExpress scripts or manual deployment, update the HostId key in the registry to match the Instance Id of the server resource. Restart the Network Controller Host Agent on the Hyper-V host (physical server)
-If using SCVMM, delete the Hyper-V Server from SCVMM and remove the HostId registry key. Then, re-add the server through SCVMM.
+If using VMM, delete the Hyper-V Server from VMM and remove the HostId registry key. Then, re-add the server through VMM.
 
 
 Check that the thumbprints of the X.509 certificates used by the Hyper-V host (the hostname will be the cert's Subject Name) for (SouthBound) communication between the Hyper-V Host (NC Host Agent service) and Network Controller nodes are the same. Also check that the Network Controller's REST certificate has subject name of *CN=<FQDN or IP>*.
@@ -266,7 +266,7 @@ You can also check the following parameters of each cert to make sure the subjec
 - Trusted by Root Authority  
 
 *Remediation*
-If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent will randomly choose one to present to the Network Controller. This may not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then re-start the Network Controller Host Agent service. If a connection can still not be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in SCVMM. Then, re-create the server resource in SCVMM which will generate a new X.509 certificate and install it on the Hyper-V host.
+If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent will randomly choose one to present to the Network Controller. This may not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then re-start the Network Controller Host Agent service. If a connection can still not be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in VMM. Then, re-create the server resource in VMM which will generate a new X.509 certificate and install it on the Hyper-V host.
   
 
 #### Check the SLB Configuration State
@@ -419,7 +419,7 @@ ConnectorPresent           : True
 *VlanID                     : 0*
 DriverInformation          : Driver Date 2016-08-28 Version 5.25.12665.0 NDIS 6.60
 
-# SCVMM uses the older PowerShell cmdlet <Verb>-VMNetworkAdapterVlan to set VLAN isolation
+# VMM uses the older PowerShell cmdlet <Verb>-VMNetworkAdapterVlan to set VLAN isolation
 PS C:\> Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName <Mgmt>
 
 VMName VMNetworkAdapterName Mode     VlanList
@@ -526,7 +526,7 @@ With this information, a tenant VM ping can now be initiated by the Hoster from 
 2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running _ipconfig_. 
 3.  [Hoster] Run ``Test-VirtualNetworkConnection`` from the Hyper-V host to validate connectivity between the two tenant virtual machines in question. 
 
-> Note: the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this value by running the Get-PACAMapping cmdlet.
+>[!NOTE] the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this >value by running the Get-PACAMapping cmdlet.
 
 ```none
 # Example
@@ -613,7 +613,7 @@ By default, you will have a maximum 75 GB of logging data if using centralized l
 
 
 #### Collecting Logs and Traces
-SCVMM deployments use centralized logging for the Network Controller by default. The file share location for these logs is specified when deploying the Network Controller service template. If a file location has not been specified, local logging will be used on each Network Controller node with logs saved under C:\Windows\tracing\SDNDiagnostics. These logs are saved using the following hierarchy:
+VMM deployments use centralized logging for the Network Controller by default. The file share location for these logs is specified when deploying the Network Controller service template. If a file location has not been specified, local logging will be used on each Network Controller node with logs saved under C:\Windows\tracing\SDNDiagnostics. These logs are saved using the following hierarchy:
 
 * CrashDumps
 * NCApplicationCrashDumps
