@@ -4,13 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/31/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Hyper-V Virtual Machine Connection
 
@@ -40,9 +41,9 @@ You may find the following information helpful for using VMConnect:
 |Connect to a DVD image \(.iso file\) or a virtual floppy disk \(.vfd file\)|Select **Media**.<br /><br />Virtual floppy disks are not supported for generation 2 virtual machines. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md).|  
 |Use a host’s local resources on Hyper\-V virtual machine like a USB flash drive|Turn on enhanced session mode on the Hyper-V host, use VMConnect to connect to the virtual machine, and before you connect, choose the local resource that you want to use. For the specific steps, see [Use local resources on Hyper\-V virtual machine with VMConnect](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md).|  
 |Change saved VMConnect settings for a virtual machine|Run the following command in Windows PowerShell or the command prompt:<br /><br />`VMConnect.exe <ServerName> <VMName> \/edit`|  
-|Prevent a VMConnect user from taking over another user’s VMConnect session|[Turn on enhanced session mode on Hyper-V host](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect#BKMK_OVER).<br /><br />Not having enhanced session mode turned on may pose a security and privacy risk. If a user is connected and logged on to a virtual machine through VMConnect and another authorized user connects to the same virtual machine, the session will be taken over by the second user and the first user will lose the session. The second user will be able to view the first user's desktop, documents, and applications.|
+|Prevent a VMConnect user from taking over another user’s VMConnect session|[Turn on enhanced session mode on Hyper-V host](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md#BKMK_OVER).<br /><br />Not having enhanced session mode turned on may pose a security and privacy risk. If a user is connected and logged on to a virtual machine through VMConnect and another authorized user connects to the same virtual machine, the session will be taken over by the second user and the first user will lose the session. The second user will be able to view the first user's desktop, documents, and applications.|
 |Manage integration services or components that allow the VM to communicate with the Hyper-V host| On Hyper-V hosts that run Windows 10 or Windows Server 2016, you can't manage integration services with VMConnect. See these topics: <br />- [Turn on/turn off integration services from the Hyper-V host](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics) <br />- [Turn on/turn off integration services from a Windows virtual machine](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-windows)<br />- [Turn on/turn off integration services from a Linux virtual machine](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-linux) <br />- [Keep integration services updated for the virtual machine](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics#integration-service-maintenance)  <br />For hosts that run Windows Server 2012 or Windows Server 2012 R2, see [Integration Services](https://technet.microsoft.com/library/dn798297(v=ws.11).aspx).|
-|Resize the VMConnect window|You can change the size of the VMConnect window for generation 2 virtual machines that run a Windows operating system. To do this, you may need to turn on enhanced session mode on the Hyper-V host. For more information, see [Turn on enhanced session mode on Hyper-V host](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect#BKMK_OVER). For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/).|
+|Resize the VMConnect window|You can change the size of the VMConnect window for generation 2 virtual machines that run a Windows operating system. To do this, you may need to turn on enhanced session mode on the Hyper-V host. For more information, see [Turn on enhanced session mode on Hyper-V host](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md#BKMK_OVER). For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/).|
 
 
 ## Keyboard shortcuts  
