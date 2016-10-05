@@ -14,7 +14,7 @@ ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 
 You will configure these computers and storage in a server-to-server configuration, where one node replicates its own set of storage with another node and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for standalone replication.  
+Graphical Management of Storage Replica is supported using the free Server Manager Tool (SMT). Please examine Azure documentation for Preview availability of this set of management tools. This document will be updated afer SMT reaches general availability.
 
 > [!IMPORTANT]
 >  In this test, one node will need to be in a physical or logical site, and the other node in a different physical or logical site. Each server must be able to communicate with the other via a network.  
@@ -36,7 +36,7 @@ This walkthrough uses the following environment as an example:
 * Two servers with Windows Server 2016 installed.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the servers, with no shared access.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
-* At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
+* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
@@ -93,8 +93,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The data volume should be no larger than 10TB (for a first test, we recommend no more than 1TB, in order to lower initial replication sync times).  
-    > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
+    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.  
     > -   The File Server role is only necessary for Test-SRTopology to operate, as it opens the necessary firewall ports for testing.
     
     - **For JBOD enclosures:**  
@@ -130,9 +129,9 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
         Test-SRTopology -SourceComputerName SR-SRV05 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV06 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:temp  
 
     > [!IMPORTANT]
-      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
+      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:  
       >
-      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test` 
+      > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 d:\test` 
 
 10. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
@@ -140,6 +139,8 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
 ## Configure Server to Server Replication using Windows PowerShell  
 Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
+
+Graphical Management of Storage Replica is supported using the free Server Manager Tool (SMT). Please examine Azure documentation for Preview availability of this set of management tools. This document will be updated afer SMT reaches general availability.
 
 1. Ensure you are using an elevated Powershell console as an administrator.  
 2. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.  
