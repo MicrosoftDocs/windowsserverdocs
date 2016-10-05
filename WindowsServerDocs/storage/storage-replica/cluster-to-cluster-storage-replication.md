@@ -1,5 +1,5 @@
 ---
-title: Cluster to Cluster Storage Replication
+title: Cluster to cluster Storage Replication
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
@@ -9,7 +9,7 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: kumudd
 ms.date: 08/18/2016
 ---
-# Cluster to Cluster Storage Replication
+# Cluster to cluster Storage Replication
 > Applies To: Windows Server 2016
 
 Cluster-to-cluster replication is now available in Windows Server 2016, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct attached storage). The management and configuration is similar to server-to-server replication.  
@@ -34,7 +34,7 @@ This walkthrough uses the following environment as an example:
 
 ![Diagram showing an example environment with a cluster in the Redmond site replicating with a cluster in the Bellevue site](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
 
-**FIGURE 1: Cluster to Cluster Replication**  
+**FIGURE 1: Cluster to cluster Replication**  
 
 ### Prerequisites  
 
@@ -172,7 +172,7 @@ You will now create two normal failover clusters. After configuration, validatio
 
 5.  Add one disk in the **Redmond** site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.comlibrary/hh831718.aspx)  
+6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.com/library/hh831718.aspx)  
 
 #### Windows PowerShell method  
 
