@@ -31,11 +31,16 @@ To simplify configuration, a sample script is available to enable dump encryptio
 
 1. In a trusted environment: Create a certificate with a 2048 Bit RSA key and export the public certificate
 2. On target hosts: Import the public certificate to the local certificate store
-3. Run the sample configuration script `.\Set-DumpEncryptionConfiguration.ps1 -Certificate (Cert:\CurrentUser\My\093568AB328DF385544FAFD57EE53D73EFAAF519) -Force`
+3. Run the sample configuration script 
+    ```
+    .\Set-DumpEncryptionConfiguration.ps1 -Certificate (Cert:\CurrentUser\My\093568AB328DF385544FAFD57EE53D73EFAAF519) -Force
+    ```
 
 # Decrypting encrypted dumps
 To decrypt an existing encrypted dump file, you need to download and install the Debugging Tools for Windows. This tool set contains KernelDumpDecrypt.exe which can be used to decrypt an encrypted dump file.
 If the certificate including the private key is present in the current user’s certificate store, the dump file can be decrypted by calling
-`KernelDumpDecrypt.exe memory.dmp memory_decr.dmp`
 
+```
+    KernelDumpDecrypt.exe memory.dmp memory_decr.dmp
+```
 After decryption, tools like WinDbg can open the decrypted dump file.
