@@ -122,7 +122,7 @@ This area covers storage products and features for the IT professional to design
 
     Through enhancements in NTFS, Windows Server 2016 is able to grant applications direct access (DAX) to the byte-ranges of an NVDIMM and fully unlock the potential of this technology.
 
-These video provide more information:
+    These videos provide more information:
 
 - [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
 - [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
