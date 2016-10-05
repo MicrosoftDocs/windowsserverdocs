@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Configure AD FS 2016 and Azure MFA
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
   
 The following topic describes how to get started and configure AD FS for enabling multi-factor authentication with Azure.  

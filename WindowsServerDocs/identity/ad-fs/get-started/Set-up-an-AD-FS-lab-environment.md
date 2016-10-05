@@ -3,9 +3,6 @@ ms.assetid: 276a7f7d-5faa-4c00-a51c-3fa511fe52f9
 title: Set up an AD FS lab environment
 description:
 author: billmath
-ms.author: billmath
-ms.author: billmath
-ms.author: billmath
 manager: femila
 ms.date: 08/31/2016
 ms.topic: article
@@ -13,9 +10,7 @@ ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adfs
 ms.author: billmath
-ms.author: billmath
-ms.author: billmath
-ms.author: billmath
+
 ---
 # Set up an AD FS lab environment
 

@@ -13,7 +13,7 @@ ms.technology: web-app-proxy
 
 # Troubleshooting Web Application Proxy
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   

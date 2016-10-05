@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # AD FS Scenarios for Developers
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 AD FS in Windows Server 2016 [AD FS 2016] enables you to add industry standard OpenID Connect and OAuth 2.0 based authentication and authorization to applications you are developing, and have those applications authenticate users directly against AD FS.    
   

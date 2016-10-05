@@ -6,16 +6,14 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: 
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: web-app-proxy
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 31e5931b-6a4c-4c28-b4ab-438915cef6dc
 author: kgremban
 ---
 # Web Application Proxy in Windows Server Technical Preview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
