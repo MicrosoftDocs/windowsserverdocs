@@ -33,7 +33,7 @@ Note the following when planning a RADIUS server for OTP authentication:
   
 -   When you deploy the RADIUS server, you configure a shared secret and the port number for RADIUS traffic. Make a note of these details; they are required when you configure the Remote Access server.  
   
-You can view an example test lab guide that sets up OTP authentication with an RSA SecurID server in [Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](assetId:///616db45d-f151-4abe-aecf-5f5060095a67).  
+You can view an example test lab guide that sets up OTP authentication with an RSA SecurID server in [Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/tlg-otp-securid/test-lab-guide--demonstrate-directaccess-with-otp-authentication-and-rsa-securid).  
   
   
   
