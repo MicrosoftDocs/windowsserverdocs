@@ -32,7 +32,7 @@ After planning the RADIUS server, you must plan for certification authority (CA)
 |--------|---------------|  
 |[3.1 Plan the OTP CA](#bkmk_3_1_CA)|Plan the certification authority (CA) to use to issue certificates to DirectAccess clients for OTP authentication.|  
 |[3.2 Plan the OTP certificate template](#bkmk_3_2_OTP_Cert)|Plan the OTP certificate template.|
-|[3.3 Plan the registration authority certificate](bkmk_3_3_RA_Cert)|Plan the registration authority certificate to sign all OTP authentication certificate requests.|
+|[3.3 Plan the registration authority certificate](bkmk_33RACert)|Plan the registration authority certificate to sign all OTP authentication certificate requests.|
 
 ## <a name="bkmk_3_1_CA"></a>3.1 Plan the OTP CA  
 To deploy DirectAccess using one-time password authentication (OTP), you require an internal CA to issue the OTP authentication certificates to DirectAccess client computers. For this purpose, you can use the same internal CA that you use to issue the certificates that are used for regular IPsec computer authentication.  
@@ -63,7 +63,7 @@ Each DirectAccess client requires an OTP authentication certificate in order to 
   
     -   For the OTP authentication certificate template use the key 1.3.6.1.4.1.311.20.2.2 key.  
   
-## <a name="bkmk_3_3_RA_Cert"></a>3.3 Plan the registration authority certificate  
+## <a name="bkmk_33RACert"></a>3.3 Plan the registration authority certificate  
 When DirectAccess clients request an OTP certificate, the Remote Access server receives the request from the client. The Remote Access server signs all OTP certificate requests from clients using the registration authority certificate. The CA issues certificates only if the request is signed by the registration authority certificate on the Remote Access server. The certificate must be issued by an internal CA, the certificate cannot be self-signed. It does not have to be issued by the CA that issued the OTP certificates but the CA that issues the OTP certificates must trust the CA that issues the registration authority signing certificate.  
   
 ## <a name="BKMK_Links"></a>See also  
