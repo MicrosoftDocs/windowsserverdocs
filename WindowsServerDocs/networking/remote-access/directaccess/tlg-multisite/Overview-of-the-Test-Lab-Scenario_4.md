@@ -48,7 +48,7 @@ The test lab consists of four subnets that simulate the following:
   
 Computers on each subnet connect using either a physical or virtual hub or switch, as shown in the following figure.  
   
-![](../../../media/Overview-of-the-Test-Lab-Scenario_4/TLG_DA_Multisite.png)  
+![Test lab overview](../../../media/Overview-of-the-Test-Lab-Scenario_4/TLG_DA_Multisite.png)  
   
 
 

@@ -47,7 +47,7 @@ Using DNS policies these zones can now be hosted on the same DNS server.
 
 The following illustration depicts this scenario.
 
-![](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
+![Split brain DNS deployment](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)  
 
 
 ##<a name="bkmk_sbhow"></a>How DNS Split-Brain Deployment Works
@@ -144,7 +144,7 @@ Because of this, Contoso DNS administrators do not want the DNS server for conto
 
 The following illustration depicts this scenario.
 
-![](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg)  
+![DNS Selective Recursion Control](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg)  
 
 
 
