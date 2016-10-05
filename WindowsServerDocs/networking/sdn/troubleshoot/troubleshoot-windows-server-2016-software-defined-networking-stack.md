@@ -16,7 +16,7 @@ This guide examines the common Software Defined Networking (SDN) errors and fail
 For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../../sdn/Software-Defined-Networking--SDN-.md).  
 
 ## Error types  
-The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012 R2 from in-market production deployments and coincides in many ways with the same types of problems seen in Windows Server 2016 HNVv2.  
+The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012 R2 from in-market production deployments and coincides in many ways with the same types of problems seen in Windows Server 2016 HNVv2 with the new Software Defined Network (SDN) Stack.  
 
 Most errors can be classified into a small set of classes:   
 * **Invalid or unsupported configuration**  
@@ -304,7 +304,37 @@ This JSON file can be broken down into the following sections:
 > [!NOTE]
 > SLB State can be ascertained directly by using the [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) script available on the [Microsoft SDN GitHub repository](https://github.com/microsoft/sdn). 
 
-#### _TODO: Gateway Validation_
+#### Gateway Validation
+
+**From Network Controller:**
+Get-NetworkControllerLogicalNetwork
+Get-NetworkControllerPublicIPAddress
+Get-NetworkControllerGatewayPool
+Get-NetworkControllerGateway
+Get-NetworkControllerVirtualGateway
+Get-NetworkControllerNetworkInterface
+
+
+**From Gateway VM:**
+Ipconfig /allcompartments /all
+Get-NetRoute –IncludeAllCompartments –AddressFamily
+Get-NetBgpRouter
+Get-NetBgpRouter | Get-BgpPeer
+Get-NetBgpRouter | Get-BgpRouteInformation
+
+
+**From Top of Rack (ToR) Switch:**
+sh ip bgp summary (for 3rd party BGP Routers)
+Windows BGP Router
+Get-BgpRouter
+Get-BgpPeer
+Get-BgpRouteInformation
+
+In addition to these, from the issues we have seen so far (especially on SDNExpress based deployments), the most common reason for Tenant Compartment not getting configured on GW VMs seem to be the fact that the GW Capacity in FabricConfig.psd1 is less compared to what folks try to assign to the Network Connections (S2S Tunnels) in TenantConfig.psd1. This can be checked easily by comparing outputs of the following
+
+PS > (Get-NetworkControllerGatewayPool –ConnectionUri $uri).properties.Capacity
+PS > (Get-NetworkControllerVirtualgatewayNetworkConnection –ConnectionUri $uri -VirtualGatewayId "TenantName").properties.OutboundKiloBitsPerSecond
+PS > (Get-NetworkControllerVirtualgatewayNetworkConnection –ConnectionUri $uri -VirtualGatewayId "TenantName").propertie
 
 ### [Hoster] Validate Data-Plane
 After the Network Controller has been deployed, tenant virtual networks and subnets have been created, and VMs have been attached to the virtual subnets, additional fabric level tests can be performed by the hoster to check tenant connectivity.
