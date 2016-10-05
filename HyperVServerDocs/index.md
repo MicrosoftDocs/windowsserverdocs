@@ -13,7 +13,6 @@ ms.author: cwatson
 ms.date: 8/31/2016
 ---
 # Microsoft Hyper-V Server 2016 
-**This is preliminary content and subject to change.**  
   
 Microsoft Hyper-V Server 2016 is a stand\-alone product that contains only the Windows hypervisor, a Windows Server driver model, and virtualization components. It provides a simple and reliable virtualization solution to help you improve your server utilization and reduce costs.  
   

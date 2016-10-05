@@ -3,14 +3,14 @@ title: Manage Windows virtual machines with PowerShell Direct
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc09093ba2d
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Manage Windows virtual machines with PowerShell Direct
 

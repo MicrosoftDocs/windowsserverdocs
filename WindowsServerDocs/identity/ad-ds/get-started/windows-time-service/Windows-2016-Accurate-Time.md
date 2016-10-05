@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/19/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -425,7 +425,7 @@ Using the all the w32time performance counters, collect data for at least a week
 For manual NTP Server configuration used with non-domain joined machines or the PDC, having more than one server is a good redundancy measure in case of availability.  It might also give better accuracy, assuming the all the sources are accurate and stable.  However, if the topology is not well designed, or the time sources are not stable, the resulting accuracy could be worse so caution is advised.  The limit of supported time servers w32time can manually reference is 10. 
 
 ## Leap Seconds
-The earth’s rotation period varies over time, caused by climatic and geological events. Typically, the variation is about a second every couple of years. Whenever the variation from atomic time grows to large, a correction of one second (up or down) is inserted, called a leap second. This is done in such a way that the difference never exceeds 0.9 seconds. This correction is determined and decided on years before it actually is needed. Before Windows Server 2016, the Microsoft Time Service was not aware of leap seconds, but relied on the external time service to take care of this. With the increased time accuracy of Windows Server 2016, Microsoft is working on a more suitable solution for the leap second problem.
+The earth’s rotation period varies over time, caused by climatic and geological events. Typically, the variation is about a second every couple of years. Whenever the variation from atomic time grows to large, a correction of one second (up or down) is inserted, called a leap second. This is done in such a way that the difference never exceeds 0.9 seconds. This correction is determined and decided on years before it actually is needed. Before Windows Server 2016, the Microsoft Time Service was not aware of leap seconds, but relied on the external time service to take care of this. With the increased time accuracy of Windows Server 2016, Microsoft is investigating potential improvements for the leap second problem.
 
 
 
