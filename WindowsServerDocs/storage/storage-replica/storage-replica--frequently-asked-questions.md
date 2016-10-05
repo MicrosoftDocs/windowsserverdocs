@@ -89,7 +89,7 @@ while($true) {
 
 ## <a name="FAQ3"></a>Can I specify specific network interfaces to be used for replication?  
 
-Yes, using `Set-SRNetworkConstraint`. This is a new cmdlet in Windows Server 2016 Technical Preview 5. It operates at the interface layer and be used on both cluster and non-cluster scenarios.  
+Yes, using `Set-SRNetworkConstraint`. This cmdlet operates at the interface layer and be used on both cluster and non-cluster scenarios.  
 For example, with a standalone server (on each node):  
 
 ```  
@@ -186,7 +186,7 @@ To remove the bandwidth limit, use:
     Remove-SmbBandwidthLimit -Category StorageReplication
 
 ## <a name="FAQ14"></a> How do I report an issue with Storage Replica or this guide?  
-For technical assistance with Storage Replica, you can post at the Microsoft TechNet forums: [https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation.  
+For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation.  
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md) 
