@@ -2,7 +2,7 @@
 ## [Get Started](get-started/Server-Basics.md)
 ### [System Requirements  and Installation](get-started/System-Requirements--and-Installation.md)
 ### [Release Notes: Important Issues in Windows Server](get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)
-### [Upgrade Options](get-started/Supported-Upgrade-Paths.md)
+### [Upgrade and Conversion Options](get-started/Supported-Upgrade-Paths.md)
 ### [Server Role Upgrade and Migration](get-started/Server-Role-Upgradeability-Table.md)
 ### [Server Application Compatibility Table](get-started/Server-Application-Compatibility.md)
 ### [Installation Options for Windows Server 2016](get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md)
