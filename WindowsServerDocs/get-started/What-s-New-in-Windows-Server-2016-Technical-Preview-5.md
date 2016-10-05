@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/03/2016
+ms.date: 10/05/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -78,13 +78,13 @@ Includes security solutions and features for the IT professional to deploy in yo
 ### Just Enough Administration  
 Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default For more details, see [JEA on GitHub](http://aka.ms/JEA).
 
-###Credential Guard
+### Credential Guard
 Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. See [Protect derived domain credentials with Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
 
-###Remote Credential Guard
+###  Remote Credential Guard
 Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect Remote Desktop credentials with Remote Credential Guard] (https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).   
   
-###Device Guard (Code Integrity)
+### Device Guard (Code Integrity)
 Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See [Introduction to Device Guard: virtualization-based security and code integrity policies] (https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
 
 ### Shielded Virtual Machines  
@@ -109,14 +109,26 @@ For more details and instructions for working with shielded virtual machines, se
 ### Windows Defender  
 [Windows Defender Overview for Windows Server Technical Preview](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
 
-###Control Flow Guard
+### Control Flow Guard
 Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard] (https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx) for more information. 
   
   
 ## <a name="BKMK_Storage"></a>Storage  
 This area covers storage products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
   
--   [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.   
+-   [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.
+
+- Windows Server 2016 enables the use of persistent memory devices in the form of NVDIMM-N. NVDIMMs provide a persistent storage medium with near-DRAM speeds and reside on the memory bus, significantly reducing I/O latencies.
+
+    Through enhancements in NTFS, Windows Server 2016 is able to grant applications direct access (DAX) to the byte-ranges of an NVDIMM and fully unlock the potential of this technology.
+
+These video provide more information:
+
+- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
+- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
+- [Accelerating SQL Server 2016 peformance with Persistent Memory in Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
+
+    To learn more about health management of NVDIMM-N devices in Windows, see [Storage-class Memory (NVDIMM-N) Health Management in Windows](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-class-memory-health).  
   
 -   [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
   
