@@ -1,16 +1,17 @@
 ---
 title: Attributes volume
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e40e8284-3d57-4de8-a46c-e4ade34a0d53
-author: coreyp
-ms.author: coreyp-at-msft
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
 ms.date: 09/14/2016
 
 ---

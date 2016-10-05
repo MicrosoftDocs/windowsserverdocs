@@ -1,16 +1,15 @@
 ---
 title: Group Policy Overview
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: efaa8001-67d6-4e4d-804f-220c1092e5a3
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
-
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Group Policy Overview
 Use this topic to find the documentation resources and other technical information you need to accomplish key Group Policy tasks. You can learn about new and updated functionality for Group Policy in  Windows Server 2012 R2  and Windows 8.1and ways to automate common Group Policy tasks by using Windows PowerShell.  

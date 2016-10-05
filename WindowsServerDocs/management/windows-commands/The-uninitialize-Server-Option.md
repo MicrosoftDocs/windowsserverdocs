@@ -1,17 +1,18 @@
 ---
 title: The uninitialize-Server Option
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # The uninitialize-Server Option
 Reverts changes made to the server during the initial server configuration. This includes changes made by either the **/initialize-server** option or the Windows Deployment Services MMC snap-in. Note that this command resets the server to an unconfigured state. This command does not modify the contents of the RemoteInstall shared folder. Rather, it resets the server's state so that you can reinitialize the server.

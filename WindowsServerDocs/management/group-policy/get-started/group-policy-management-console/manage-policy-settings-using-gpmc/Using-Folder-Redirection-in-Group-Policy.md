@@ -1,16 +1,18 @@
 ---
 title: Using Folder Redirection in Group Policy
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dd8ecd23-db37-4db7-a5bc-ba7bdac086e4
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Using Folder Redirection in Group Policy
 This topic presents conceptual information about folder redirection and procedures using the GPMC.
 
@@ -67,7 +69,7 @@ You can use the GPMC to redirect the following folders:
 ## Selecting a Folder Redirection target
 The **Target** tab of the folder's **Properties** box enables you to select the location of the redirected folder on a network or in the local user profile. You can choose between the following settings:
 
--   **Basic—Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
+-   **Basicâ€�?Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
 
     -   **Create a folder for each user under the root path**. This option creates a folder in the form **\\\server\share\User Account Name\Folder Name**. Each user has a unique path for their redirected folder.
 
@@ -75,7 +77,7 @@ The **Target** tab of the folder's **Properties** box enables you to select the 
 
 -   **Redirect to the local user profile location**. This option moves the location of the folder to the local user profile under the **Users** folder.
 
--   **Advanced—Specify locations for various user groups**. This setting enables you to specify redirection behavior for the folder based on the security group memberships for the GPO.
+-   **Advancedâ€�?Specify locations for various user groups**. This setting enables you to specify redirection behavior for the folder based on the security group memberships for the GPO.
 
 -   **Not configured**. This is the default setting. This setting specifies that policy-based folder redirection was removed for that GPO and the folders are redirected to the local user profile location or stay where they are based on the redirection options selected if any existing redirection policies were set. No changes are being made to the current location of this folder.
 
@@ -105,7 +107,7 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
 3.  In the **Target** tab, under **Settings**, choose one of the following settings, follow the steps for that setting, and then click **OK**:
 
-    **Basic—Redirect everyone's folder to the same location**
+    **Basicâ€�?Redirect everyone's folder to the same location**
 
     1.  Under **Target folder location**, select a location.
 
@@ -119,7 +121,7 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
     -   Specify policy removal settings (**Leave the folder in the new location when policy is removed** is selected by default).
 
-    **Advanced—Specify locations for various user groups**
+    **Advancedâ€�?Specify locations for various user groups**
 
     1.  Under **Security Group Membership**, click **Add**.
 
@@ -147,9 +149,9 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
     -   You can also use the GPMC to configure the following Folder Redirection policy settings:
 
-        -   **Use localized subfolder names when redirecting Start and My Documents**—This policy is located in the following paths: **Computer Configuration\Policies\Administrative Templates\System\Folder Redirection**, or **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
+        -   **Use localized subfolder names when redirecting Start and My Documents**â€�?This policy is located in the following paths: **Computer Configuration\Policies\Administrative Templates\System\Folder Redirection**, or **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
 
-        -   **Do not automatically make redirected folders available offline**—This policy is located in the following path: **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
+        -   **Do not automatically make redirected folders available offline**â€�?This policy is located in the following path: **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
 
     -   For more information about User Profiles and Folder Redirection, see [http://go.microsoft.com/fwlink/?LinkId=66003](http://go.microsoft.com/fwlink/?LinkId=66003).
 

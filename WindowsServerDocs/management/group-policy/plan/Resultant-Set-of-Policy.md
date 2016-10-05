@@ -1,16 +1,18 @@
 ---
 title: Resultant Set of Policy
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 836cc651-9e3d-4e6c-a5ff-f2b6809951d1
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Resultant Set of Policy
 You can use Resultant Set of Policy (RSoP) to simulate and test policy settings that are applied to computers or users using Group Policy.
 

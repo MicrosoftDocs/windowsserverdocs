@@ -1,14 +1,18 @@
 ---
 title: Create partition primary
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be JasonGerend
+ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create partition primary
 Creates a primary partition on the basic disk with focus.  

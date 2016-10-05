@@ -1,14 +1,18 @@
 ---
 title: Detail partition
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 672a2c7a-1721-4845-9c23-7af50367170e JasonGerend
+ms.assetid: 672a2c7a-1721-4845-9c23-7af50367170e
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Detail partition
 Displays the properties of the selected partition.  

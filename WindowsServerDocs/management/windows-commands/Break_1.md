@@ -1,18 +1,19 @@
 ---
 title: Break_1
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c89b7357-d69e-4141-826e-73c9ba0fc630
 
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Break_1
 Sets or clears extended CTRL+C checking on MS-DOS systems. If used without parameters, **break** displays the current setting.  

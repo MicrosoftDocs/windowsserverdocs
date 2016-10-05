@@ -1,14 +1,18 @@
 ---
 title: Format
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 56863741-c5f3-4681-8667-2d566c8ddf23 JasonGerend
+ms.assetid: 56863741-c5f3-4681-8667-2d566c8ddf23
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Format
 Formats the partition or volume with focus for use with Windows.  

@@ -1,16 +1,18 @@
 ---
 title: Editing Software Settings Using GPMC
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3641488e-c0a6-469c-8d3e-5e47e75d7827
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Editing Software Settings Using GPMC
 This topic contains procedures for using the GPMC tool to edit Group Policy Software Settings.
 
@@ -155,7 +157,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   Before you can perform this procedure, you must first assign or publish the upgrade package.
 
-    -   Depending on the GPO, the list of packages under **Package to upgrade** might have zero or more entries. If this is an upgrade under **Computer Configuration** in the Group Policy console tree, the **Required upgrade for existing packages** check box is selected and unavailable because packages can only be assigned to computers—they cannot be published.
+    -   Depending on the GPO, the list of packages under **Package to upgrade** might have zero or more entries. If this is an upgrade under **Computer Configuration** in the Group Policy console tree, the **Required upgrade for existing packages** check box is selected and unavailable because packages can only be assigned to computersâ€�?they cannot be published.
 
 #### To remove a managed application
 
@@ -205,7 +207,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   **Ignore language when deploying this package**: Select this check box if you are installing an application whose language differs from the language of the operating system.
 
-    -   **Remove existing installs of this product for users, if the product was not installed by Group Policy–based Software Installation**: This option might be useful, for example, if company policy does not allow users to install applications from their own compact discs.
+    -   **Remove existing installs of this product for users, if the product was not installed by Group Policyâ€“based Software Installation**: This option might be useful, for example, if company policy does not allow users to install applications from their own compact discs.
 
     -   **Make this 32-bit X86 application available to Win64 machines**: Specifies whether the 32-bit application should be assigned or published to 64-bit computers.
 

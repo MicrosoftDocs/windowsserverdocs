@@ -1,14 +1,18 @@
 ---
 title: Select partition
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670 JasonGerend
+ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Select partition
 Selects the specified partition and shifts the focus to it. This command can also be used to display the partition that currently has the focus in the selected disk.  

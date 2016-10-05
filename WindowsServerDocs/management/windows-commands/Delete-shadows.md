@@ -1,14 +1,18 @@
 ---
 title: Delete shadows
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d JasonGerend
+ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Delete shadows
 Deletes shadow copies.  

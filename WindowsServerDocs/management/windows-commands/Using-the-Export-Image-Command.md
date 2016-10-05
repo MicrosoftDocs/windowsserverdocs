@@ -1,17 +1,18 @@
 ---
 title: Using the Export-Image Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the Export-Image Command
 Exports an existing image from the image store to another Windows Image (.wim) file.

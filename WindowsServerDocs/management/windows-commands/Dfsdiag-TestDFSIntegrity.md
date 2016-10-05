@@ -1,14 +1,18 @@
 ---
 title: Dfsdiag TestDFSIntegrity
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 173ee832-26e1-4ec8-a23a-38a7d6229ac3 JasonGerend
+ms.assetid: 173ee832-26e1-4ec8-a23a-38a7d6229ac3
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Dfsdiag TestDFSIntegrity
 Checks the integrity of the Distributed File System \(DFS\) namespace by performing the following tests:  

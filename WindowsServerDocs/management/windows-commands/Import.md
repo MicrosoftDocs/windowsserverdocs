@@ -1,14 +1,18 @@
 ---
 title: Import
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b JasonGerend
+ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Import
 Imports a transportable shadow copy from a loaded metadata file into the system.  

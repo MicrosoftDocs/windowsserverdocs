@@ -1,6 +1,10 @@
 ---
 title: Server Performance Advisor Pack Development Guide
 description: Server Performance Advisor Pack Development Guide
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Server Performance Advisor Pack Development Guide
@@ -246,8 +250,8 @@ Windows Registry Editor Version 5.00
 "ActivePowerScheme"="db310065-829b-4671-9647-2261c00e86ef"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef]
-"Description"=””
-“FriendlyName”=”Power Source Optimized”
+"Description"=�?�?
+“FriendlyName�?=�?Power Source Optimized�?
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef \0012ee47-9041-4b5d-9b77-535fba8b1442\6738e2c4-e8a5-4a42-b16a-e040e769756e
 "ACSettingIndex"=dword:000000b4
@@ -975,7 +979,7 @@ Here’s an example of a simple rule:
 Threshold is a configurable factor that enables the system administrators to decide when a rule should show a good or a bad status. The following example shows a rule to detect free space on a system drive and a warning when free space is less than 10 GB.
 
 ``` syntax
-<threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size” value="10" />
+<threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size�? value="10" />
 ```
 
 However, in this case, the system administrator has a smaller hard drive. He thinks 5 GB of free space might still be a good condition, and he does not want to see a warning. He can update the default value from 10 to 5 through the SPA console without having to understand how to develop an advisor pack.
@@ -1578,7 +1582,7 @@ Continuing with the previous example, for a threshold, the definition will be as
 
 ``` syntax
 <thresholds>
-  <threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size” value="10" />
+  <threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size�? value="10" />
 </thresholds>
 <rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on system drive ">
   <advice name="SuccessAdvice" level="Success" message="No issue found.">No recommendation.</advice>
@@ -1714,7 +1718,7 @@ The SPA console can run in two modes, Debug or Release. Release mode is the defa
 
 1.  Install Microsoft SQL Server Management Studio (SSMS).
 
-2.  After SSMS is launched, connect to localhost\\SQLExpress. Be aware that you must use localhost, instead of “.”. Otherwise, you might not be able to start the debugger in SQL Server.
+2.  After SSMS is launched, connect to localhost\\SQLExpress. Be aware that you must use localhost, instead of “.�?. Otherwise, you might not be able to start the debugger in SQL Server.
 
 3.  Run the following script to enable Debug mode:
 

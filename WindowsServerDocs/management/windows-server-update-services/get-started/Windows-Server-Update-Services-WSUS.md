@@ -1,5 +1,6 @@
 ---
 title: Get Started with Windows Server Update Services (WSUS)
+description: "Windows Server Update Service"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -7,9 +8,10 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Windows Server Update Services (WSUS)
 

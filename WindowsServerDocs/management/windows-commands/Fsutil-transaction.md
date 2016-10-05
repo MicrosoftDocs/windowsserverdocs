@@ -1,14 +1,18 @@
 ---
 title: Fsutil transaction
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ac0d3be7-3e19-4b79-8aa5-daf8d5affd28 JasonGerend
+ms.assetid: ac0d3be7-3e19-4b79-8aa5-daf8d5affd28
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil transaction
 Manages NTFS transactions.  

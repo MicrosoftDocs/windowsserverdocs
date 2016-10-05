@@ -1,17 +1,18 @@
 ---
 title: winsat mem
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cda017bf-6193-43c1-b71f-e379c23e1152
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # winsat mem
 Tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.

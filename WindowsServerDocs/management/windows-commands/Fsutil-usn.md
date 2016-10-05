@@ -1,14 +1,18 @@
 ---
 title: Fsutil usn
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 213d36d1-f4ba-4390-93be-72e23df03a67 JasonGerend
+ms.assetid: 213d36d1-f4ba-4390-93be-72e23df03a67
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil usn
 Manages the update sequence number \(USN\) change journal.  

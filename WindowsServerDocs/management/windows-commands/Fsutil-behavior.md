@@ -1,14 +1,18 @@
 ---
 title: Fsutil behavior
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ac19653e-6082-4d73-b4b4-c1b5f907bb05 JasonGerend
+ms.assetid: ac19653e-6082-4d73-b4b4-c1b5f907bb05
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil behavior
 Queries or sets NTFS volume behavior, which includes:  

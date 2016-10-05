@@ -1,17 +1,18 @@
 ---
 title: Chkdsk
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 62912a3c-d2cc-4ef6-9679-43709a286035 JasonGerend
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+ms.assetid: 62912a3c-d2cc-4ef6-9679-43709a286035
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Chkdsk
 Checks the file system and file system metadata of a volume for logical and physical errors. If used without parameters, **chkdsk** displays only the status of the volume and does not fix any errors. If used with the **\/f**, **\/r**, **\/x**, or **\/b** parameters, it fixes errors on the volume.  

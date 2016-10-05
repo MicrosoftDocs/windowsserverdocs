@@ -1,14 +1,18 @@
 ---
 title: Convert dynamic
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c JasonGerend
+ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Convert dynamic
 Converts a basic disk into a dynamic disk.  

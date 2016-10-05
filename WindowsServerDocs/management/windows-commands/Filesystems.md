@@ -1,17 +1,18 @@
 ---
 title: Filesystems
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c4915a6-bd20-4af6-a94a-5fc7c20410bf
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Filesystems
 Displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.

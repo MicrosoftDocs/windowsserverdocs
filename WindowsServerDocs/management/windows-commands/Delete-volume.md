@@ -1,14 +1,18 @@
 ---
 title: Delete volume
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: f625933d-0f47-409e-93b2-a3e234049a5d JasonGerend
+ms.assetid: f625933d-0f47-409e-93b2-a3e234049a5d
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Delete volume
 Deletes the selected volume.  

@@ -1,14 +1,18 @@
 ---
 title: Delete disk
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636 JasonGerend
+ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Delete disk
 Deletes a missing dynamic disk from the list of disks.  

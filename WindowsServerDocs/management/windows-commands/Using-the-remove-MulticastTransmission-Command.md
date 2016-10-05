@@ -1,17 +1,18 @@
 ---
 title: Using the remove-MulticastTransmission Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the remove-MulticastTransmission Command
 Disables multicast transmitting for an image. Unless you specify **/Force**, existing clients will complete the image transfer but new clients will not be allowed to join.

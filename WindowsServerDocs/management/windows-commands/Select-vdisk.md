@@ -1,14 +1,18 @@
 ---
 title: Select vdisk
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 8808872a-3523-4205-a6c6-83fa738ee37a JasonGerend
+ms.assetid: 8808872a-3523-4205-a6c6-83fa738ee37a
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Select vdisk
 Selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  

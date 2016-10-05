@@ -1,17 +1,18 @@
 ---
 title: Subcommand: start-TransportServer
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e93bc84-5b9e-4f9d-8cf0-1634417da0f6
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Subcommand: start-TransportServer
 Starts all services for a Transport Server.

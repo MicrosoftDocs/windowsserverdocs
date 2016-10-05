@@ -1,14 +1,18 @@
 ---
 title: Create partition msr
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 04fba033-23cb-4521-bd5d-db96131f2e73 JasonGerend
+ms.assetid: 04fba033-23cb-4521-bd5d-db96131f2e73
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create partition msr
 Creates a Microsoft Reserved \(MSR\) partition on a GUID partition table \(GPT\) disk.  

@@ -1,14 +1,18 @@
 ---
 title: Fsutil fsinfo
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 6c00b3c9-bb26-4538-a73f-43db1ddd204a JasonGerend
+ms.assetid: 6c00b3c9-bb26-4538-a73f-43db1ddd204a
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil fsinfo
 Lists all drives, queries the drive type, queries volume information, queries NTFS\-specific volume information, or queries file system statistics.  

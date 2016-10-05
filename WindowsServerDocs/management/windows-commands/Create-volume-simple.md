@@ -1,14 +1,18 @@
 ---
 title: Create volume simple
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6 JasonGerend
+ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create volume simple
 Creates a simple volume on the specified dynamic disk.  

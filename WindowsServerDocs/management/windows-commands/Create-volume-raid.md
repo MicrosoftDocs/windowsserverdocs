@@ -1,14 +1,18 @@
 ---
 title: Create volume raid
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf JasonGerend
+ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create volume raid
 Creates a RAID\-5 volume using three or more specified dynamic disks.  

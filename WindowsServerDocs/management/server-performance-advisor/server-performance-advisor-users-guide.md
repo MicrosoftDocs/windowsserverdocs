@@ -1,6 +1,10 @@
 ---
 title: Server Performance Advisor User's Guide
 description: Server Performance Advisor User's Guide
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Server Performance Advisor User's Guide
@@ -116,7 +120,7 @@ The following are the target scenarios for SPA:
 
     You can use SPA as a performance troubleshooting tool. It provides the ability to collect high-level performance data, it performs a thorough post processing on the data to give you a better understanding of their overall system behavior, and it flags any anomalies. When a performance issue is suspected by a customer, you can use SPA to collect and analyze performance data from the server.
 
-    SPA generates a report that you can view. SPA reports provide a notification list that highlights potential issues, and a data section that includes various performance index, configurations, and settings for the server. You can use this report to identify the specific performance issue and use the recommendations to find solutions for the issue. Reports can be compared with other reports that were generated at a different time or by a different server. Using this side-by-side comparison, you can determine differences between baseline “normal” versus “abnormal” behavior.
+    SPA generates a report that you can view. SPA reports provide a notification list that highlights potential issues, and a data section that includes various performance index, configurations, and settings for the server. You can use this report to identify the specific performance issue and use the recommendations to find solutions for the issue. Reports can be compared with other reports that were generated at a different time or by a different server. Using this side-by-side comparison, you can determine differences between baseline “normal�? versus “abnormal�? behavior.
 
     **Note**  
     SPA is not designed to be a debugging or metering tool. Furthermore, from the perspective of the servers, it can be considered a read-only tool, and it does not modify the servers’ configurations.
@@ -307,7 +311,7 @@ Every time the SPA console launches, the last project that was used by the curre
 
 -   **Current Status** Shows the status of performance analysis tasks currently running on the server. You can cancel a running task by clicking the **Cancel** icon, which is designated by a red X.
 
--   **Remark** Describes the current target server. For example, you can describe your server by using the server role (for example, “SQL Server”) or a location (for example, “Kent”). SPA uses the **Server name** and **Remark** to help search and find the proper server. You can type in the search text box. If the **Server name** or **Remark** columns contains the exact string that you entered in the search box, the server will be displayed in the server list.
+-   **Remark** Describes the current target server. For example, you can describe your server by using the server role (for example, “SQL Server�?) or a location (for example, “Kent�?). SPA uses the **Server name** and **Remark** to help search and find the proper server. You can type in the search text box. If the **Server name** or **Remark** columns contains the exact string that you entered in the search box, the server will be displayed in the server list.
 
 The following controls are also available on the console:
 
@@ -633,7 +637,7 @@ The following table describes the SPA Windows PowerShell cmdlets:
 <td><p>Start-SpaAnalysis</p></td>
 <td><ul>
 <li><p><strong>-ServerName</strong> Name of the target server</p></li>
-<li><p><strong>-AdvisorPackName</strong> Full name of the advisor pack to be queued on server. When more than one pack is scheduled to run at the same time, the value of the parameter should be formatted as “AP1name”, “AP2name.”</p></li>
+<li><p><strong>-AdvisorPackName</strong> Full name of the advisor pack to be queued on server. When more than one pack is scheduled to run at the same time, the value of the parameter should be formatted as “AP1name�?, “AP2name.�?</p></li>
 <li><p><strong>-Duration</strong> Duration for the data collection</p></li>
 <li><p><strong>-Credential</strong> User credentials for the account that will run data collection on the target server</p></li>
 <li><p><strong>-SqlInstanceName</strong> Name of the SQL Server instance</p></li>
@@ -804,7 +808,7 @@ When you run performance analysis on target servers, the user account that runs 
 
 ### Failure to create PLA Data Collection Set on the target server
 
-If you get a “Cannot create PLA Data Collection Set on target server” message, make sure to do the following:
+If you get a “Cannot create PLA Data Collection Set on target server�? message, make sure to do the following:
 
 -   Make sure the **Performance Logs & Alerts** service is running
 

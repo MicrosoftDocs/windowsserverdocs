@@ -1,16 +1,17 @@
 ---
 title: Add volume
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d4d35d-8bda-46d2-8df5-eb598cecaaba
-author: coreyp
-ms.author: coreyp-at-msft
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
 ms.date: 09/14/2016
 
 ---

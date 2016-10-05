@@ -1,16 +1,18 @@
 ---
 title: Working with the Administrative Template Policy Settings Using GPMC
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33b16754-d7bb-4f3f-94dc-4b61bb90a583
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Working with the Administrative Template Policy Settings Using GPMC
 This topic describes how to manage the Group Policy Administrative Template Policy using the GPMC
 

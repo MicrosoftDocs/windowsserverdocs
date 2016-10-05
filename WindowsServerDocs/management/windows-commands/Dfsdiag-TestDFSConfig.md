@@ -1,14 +1,18 @@
 ---
 title: Dfsdiag TestDFSConfig
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2 JasonGerend
+ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Dfsdiag TestDFSConfig
 Checks the configuration of a Distributed File System \(DFS\) namespace by performing the following actions:  

@@ -1,5 +1,6 @@
 ---
 title: Running WSUS Replica Mode
+description: "Windows Server Update Service"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -7,9 +8,10 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Running WSUS Replica Mode
 

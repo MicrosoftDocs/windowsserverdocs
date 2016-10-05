@@ -1,17 +1,18 @@
 ---
 title: Pubprn.vbs
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0bc7f7e3-84e1-4359-b477-7b1a1a0bd639
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Pubprn.vbs
 Publishes a printer to the Active Directory Domain Services.

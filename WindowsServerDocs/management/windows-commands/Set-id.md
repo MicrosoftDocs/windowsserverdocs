@@ -1,14 +1,18 @@
 ---
 title: Set id
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886 JasonGerend
+ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Set id
 The Diskpart Set ID command changes the partition type field for the partition with focus.  

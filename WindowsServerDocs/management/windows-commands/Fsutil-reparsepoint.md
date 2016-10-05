@@ -1,14 +1,18 @@
 ---
 title: Fsutil reparsepoint
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: c2e983b6-3222-4d2e-a196-12fc3ff92586 JasonGerend
+ms.assetid: c2e983b6-3222-4d2e-a196-12fc3ff92586
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil reparsepoint
 Queries or deletes reparse points.  The **fsutil reparsepoint** command is typically used by support professionals.  

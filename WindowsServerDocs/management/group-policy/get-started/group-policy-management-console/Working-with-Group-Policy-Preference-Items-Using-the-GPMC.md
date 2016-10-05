@@ -1,20 +1,22 @@
 ---
 title: Working with Group Policy Preference Items Using the GPMC
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b068ca77-94d8-4e19-be5e-cbee5ac759f1
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Working with Group Policy Preference Items Using the GPMC
 This topic describes Group Policy Preferences and explains some common configuration procedures. It also contains links to topics about working with Preferences using the GPMC for Windows settings and Control Panel settings as well as item-level targeting.
 
-Group Policy Preferences, introduced in  Windows Server® 2008 , provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a Group Policy Object. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.
+Group Policy Preferences, introduced in  Windows ServerÂ® 2008 , provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a Group Policy Object. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.
 
 For procedural information about using Preferences for Windows settings, Control Panel settings, and item-level targeting, see:
 
@@ -224,7 +226,7 @@ Preference extensions implement the process variables that are listed here.
 |**%LogonUserSid%**|The SID of the current user.|
 |**%MacAddress%**|The first detected MAC address on the computer.|
 |**%NetPlacesDir%**|The current user's My Network Places directory.|
-|**%OsVersion%**|The operating system:  Windows Server® 2008 R2 ,  Windows 7® ,  Windows Server® 2008 , Windows Vista®, Windows Server 2003, Windows XP, or Unknown.|
+|**%OsVersion%**|The operating system:  Windows ServerÂ® 2008 R2 ,  Windows 7Â® ,  Windows ServerÂ® 2008 , Windows VistaÂ®, Windows Server 2003, Windows XP, or Unknown.|
 |**%ProgramFilesDir%**|The Windows Program Files directory.|
 |**%ProgramsDir%**|The current user's Programs directory.|
 |**%RecentDocumentsDir%**|The current user's Recent Documents directory.|

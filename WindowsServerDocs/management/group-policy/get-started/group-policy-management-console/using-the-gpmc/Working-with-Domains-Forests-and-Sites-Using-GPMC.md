@@ -1,16 +1,18 @@
 ---
 title: Working with Domains, Forests, and Sites Using GPMC
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e443c0d-c7e9-4425-b603-5cc6e019605e
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Working with Domains, Forests, and Sites Using GPMC
 This topic contains procedures for managing domains, forests and sites as a Group Policy administrator using the Group Policy Management Console.
 

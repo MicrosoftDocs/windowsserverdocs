@@ -1,17 +1,18 @@
 ---
 title: Ksetup:addkpasswd
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3196995-1b38-48ff-ba08-911cfab77317
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Ksetup:addkpasswd
 Adds a Kerberos password (Kpasswd) server address for a realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).

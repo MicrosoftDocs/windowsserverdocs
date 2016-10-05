@@ -1,14 +1,18 @@
 ---
 title: Nfsadmin
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 7375b2cf-c6b8-45b5-abf6-6c10e462defd JasonGerend
+ms.assetid: 7375b2cf-c6b8-45b5-abf6-6c10e462defd
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Nfsadmin
 You can use **nfsadmin** to manage Server for NFS and Client for NFS.  

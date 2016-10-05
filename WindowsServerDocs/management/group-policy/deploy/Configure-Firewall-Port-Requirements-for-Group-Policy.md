@@ -1,16 +1,18 @@
 ---
 title: Configure Firewall Port Requirements for Group Policy
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Configure Firewall Port Requirements for Group Policy
 You can use the information in this topic to configure the firewall port requirements for Group Policy. Group Policy requires that firewall ports are opened on client computers for an administrator to perform these two remote operations:
 
@@ -44,7 +46,7 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called, **Group Po
 
 ### <a name="BKMK_remoteProc1"></a>To create a GPO from the Group Policy Reporting Firewall Ports Starter GPO and link to the domain
 
-1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it here…**
+1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it hereâ€¦**
 
 2.  In the **New GPO** dialog box, type the name of the new Group Policy Object in the **Name** box.
 
@@ -66,12 +68,12 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called, **Group Po
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-You can use the **New-GPO** cmdlet with the **–StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
+You can use the **New-GPO** cmdlet with the **â€“StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
 
 For example, to create a new GPO, called *Configure firewall rules for remote reporting*, based on the **Group Policy Reporting Firewall Ports** Starter GPO, and link the GPO to the Contoso.com domain, type the following:
 
 ```
-New-GPO –Name "Configure firewall rules for remote reporting" –StarterGpoName "Group Policy Reporting Firewall Ports" | New-GPLink –target "dc=Contoso,dc=com" –LinkEnabled yes
+New-GPO â€“Name "Configure firewall rules for remote reporting" â€“StarterGpoName "Group Policy Reporting Firewall Ports" | New-GPLink â€“target "dc=Contoso,dc=com" â€“LinkEnabled yes
 ```
 
 For more information about the **New-GPO** cmdlet and the **New-GPLink** cmdlet, see:
@@ -94,7 +96,7 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called **Group Pol
 
 ### <a name="BKMK_remoteProc2"></a>To create a GPO from the Group Policy Remote Update Firewall Ports Starter GPO and link to the domain
 
-1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it here…**
+1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it hereâ€¦**
 
 2.  In the **New GPO** dialog box, type the name of the new Group Policy Object in the **Name** box.
 
@@ -116,12 +118,12 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called **Group Pol
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-You can use the **New-GPO** cmdlet with the **–StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
+You can use the **New-GPO** cmdlet with the **â€“StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
 
 For example, to create a new GPO, called *Configure firewall rules for remote gpupdate*, which is based on the **Group Policy Remote Update Firewall Ports** Starter GPO, and link the GPO to the Contoso.com domain, type the following:
 
 ```
-New-GPO –Name "Configure firewall rules for remote gpupdate" –StarterGpoName "Group Policy Remote Update Firewall Ports" | New-GPLink –target "dc=Contoso,dc=com" –LinkEnabled yes
+New-GPO â€“Name "Configure firewall rules for remote gpupdate" â€“StarterGpoName "Group Policy Remote Update Firewall Ports" | New-GPLink â€“target "dc=Contoso,dc=com" â€“LinkEnabled yes
 ```
 
 For more information about the **New-GPO** cmdlet and the **New-GPLink** cmdlet, see:

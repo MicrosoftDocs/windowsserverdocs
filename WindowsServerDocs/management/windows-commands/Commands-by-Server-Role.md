@@ -1,17 +1,18 @@
 ---
 title: Commands by Server Role
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 343597ec-9b92-4b92-8d6c-faef4b565068
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Commands by Server Role
 A server role describes the primary function of the server. Administrators can choose to dedicate an entire server to one role, or install multiple server roles and sub roles on a single computer. Each role may include additional command-line tools, installed as part of the role. The following topics provide a list of commands associated with each server role.

@@ -1,18 +1,19 @@
 ---
 title: logman start | stop
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a40006a1-876e-474b-aaf1-f365c730deea
 
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # logman start | stop
 Start a data collector and set the begin time to manual, or stop a data collector set and set the end time to manual.  

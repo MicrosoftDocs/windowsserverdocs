@@ -1,17 +1,18 @@
 ---
 title: Logman
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 574a5203-5b3b-4759-a678-f26d00dde447
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Logman
 **Logman** creates and manages Event Trace Session and Performance logs and supports many functions of Performance Monitor from the command line.

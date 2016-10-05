@@ -1,14 +1,18 @@
 ---
 title: Set option
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84 JasonGerend
+ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Set option
 Sets the options for shadow copy creation. If used without parameters, **set option** displays help at the command prompt.  

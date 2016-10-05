@@ -1,14 +1,18 @@
 ---
 title: Fsutil sparse
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 05827d0f-3b2b-4d14-96d7-173d6f7d939a JasonGerend
+ms.assetid: 05827d0f-3b2b-4d14-96d7-173d6f7d939a
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil sparse
 Manages sparse files.  

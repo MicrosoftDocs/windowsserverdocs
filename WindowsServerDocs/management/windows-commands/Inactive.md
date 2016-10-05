@@ -1,14 +1,18 @@
 ---
 title: Inactive
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: f4fb4695-4e66-4166-b4ab-2c86a4605580 JasonGerend
+ms.assetid: f4fb4695-4e66-4166-b4ab-2c86a4605580
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Inactive
 On basic master boot record \(MBR\) disks, marks the system partition or boot partition with focus as inactive.  

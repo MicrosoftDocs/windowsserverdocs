@@ -1,18 +1,19 @@
 ---
 title: Bdehdcfg
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c92cd74-188e-4fec-b7c4-fe4e8903e032
 
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Bdehdcfg
 Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption. Most installations of  Windows 7  will not need to use this tool because BitLocker setup includes the ability to prepare and repartition drives as required.

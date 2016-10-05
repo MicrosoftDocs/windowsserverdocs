@@ -1,18 +1,19 @@
 ---
 title: Append
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9c3fea20-9502-40ad-a442-7a927aad88eb
 
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Append
 Allows programs to open data files in specified directories as if they were in the current directory. If used without parameters, **append** displays the appended directory list.

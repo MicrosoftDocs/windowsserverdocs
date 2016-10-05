@@ -1,5 +1,6 @@
 ---
 title: Remote Server Administration Tools
+description: "Remote Server Administration Tools"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,9 +9,10 @@ ms.technology: manage-rsat
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Remote Server Administration Tools

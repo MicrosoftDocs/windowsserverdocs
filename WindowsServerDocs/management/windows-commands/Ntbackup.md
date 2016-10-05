@@ -1,17 +1,18 @@
 ---
 title: Ntbackup
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bce6b0d-646b-46b6-b833-0ff1d6f082c2
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Ntbackup
 The **ntbackup** command is not available in Windows Vista or  Windows Server 2008 . Instead, you should use the **wbadmin** command and subcommands to back up and restore your computer and files from a command prompt.

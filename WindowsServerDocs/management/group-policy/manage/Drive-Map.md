@@ -1,16 +1,18 @@
 ---
 title: Drive Map
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+description: "Group Policy"
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3061ddf8-8786-473b-811a-0dd77eb428c7
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Drive Map
 File servers revolutionized centralized storage of user data.  However, it also introduced usability problems for end users attempting to remember long and complex paths to access their files and folders. IT Professionals resolved that problem by introducing users to Drive Mappings.  Drive maps enable users to simply associate a single drive letter to files and folders that reside on file servers.  Drive maps reduced returned usability back to the end user because it removed the requirement of users remembering long and complex paths to access centralized data.  Now, when a user needs access to their data, they can simply select the H drive from Windows Explorer, which represents the users HOME folder. Or, they can access the S drive for data that is shared among the department or organization.
 
@@ -129,7 +131,7 @@ Extensions specific data configured to apply to computers is saved to the **gPCM
 The **gPCMachineExtensionNames** and the **gPCUserExtensionNames** attribute can hold one or more groups of unique identifiers.  Each identifier group is comprised of an extension identifier followed by one or more snap-in identifiers.  The group of identifiers are bracketed accordingly by surrounding both identifiers within square brackets ([ ]).
 
 ```
-extensionID1snapinID1snapinID2…… [ extensionIDnsnapinIDn…]
+extensionID1snapinID1snapinID2â€¦â€¦ [ extensionIDnsnapinIDnâ€¦]
 
 ```
 
@@ -138,7 +140,7 @@ The unique identifier grouping must be listed in ascending alphanumeric order.  
 Storing the extension identifier and the snap-in identifiers in the Group Policy object provides hints that optimize Group Policy processing and management.  Processing is optimal because the Group Policy infrastructure knows prior to processing which extensions are required to apply the data hosted in the Group Policy object.  Authoring is optimal because the editor has hints to determine what specific snap-ins are needed to edit the data.
 
 ### XML File Configuration
-The Group Policy Drive Map preference extension stores all configuration data associated with the Group Policy object in an XML-formatted file.  The **Drives.xml** file resides in the **Drives** folder in the Group Policy template that is hosted and shared on all domain controllers’ SYSVOL share.  The Group Policy template location varies for each Group Policy object and is the string value stored in the **gPCFileSysPath** attribute on the Group Policy container object.
+The Group Policy Drive Map preference extension stores all configuration data associated with the Group Policy object in an XML-formatted file.  The **Drives.xml** file resides in the **Drives** folder in the Group Policy template that is hosted and shared on all domain controllersâ€™ SYSVOL share.  The Group Policy template location varies for each Group Policy object and is the string value stored in the **gPCFileSysPath** attribute on the Group Policy container object.
 
 ```
 \\dns_domain_name\Sysvol\dns_domain_name\Policies\group_policy_id
@@ -156,7 +158,7 @@ The **Drives** outer element of the Group Policy Drive Map configuration file co
 
 ***Clsid***
 
-The **clsid** attribute is a 128-bit unique identifier represented as global unique identifier (GUID).  The **clsid** value identifies the type of outer element.  The Group Policy Drive Map client-side extension expects the outer element’s **clsid** value to equal {8FDDCC1A-0C3C-43cd-A6B4-71A6DF20DA8C}.  This is how the client-side extension identifies and validates the outer-element is of type **Drives**.
+The **clsid** attribute is a 128-bit unique identifier represented as global unique identifier (GUID).  The **clsid** value identifies the type of outer element.  The Group Policy Drive Map client-side extension expects the outer elementâ€™s **clsid** value to equal {8FDDCC1A-0C3C-43cd-A6B4-71A6DF20DA8C}.  This is how the client-side extension identifies and validates the outer-element is of type **Drives**.
 
 ***Disabled***
 
@@ -190,7 +192,7 @@ The **changed** attribute is an optional attribute for the **Drives** inner elem
 
 ***Clsid***
 
-The **clsid** attribute is a 128-bit unique identifier represented as global unique identifier (GUID).  The **clsid** value identifies the type of inner element.  The Group Policy Drive Map client-side extension expects each inner element’s **clsid** value to equal {935D1B74-9CB8-4e3c-9914-7DD559B7A417}.  This is how the client-side extension identifies and validates the inner element is of type **Drive**
+The **clsid** attribute is a 128-bit unique identifier represented as global unique identifier (GUID).  The **clsid** value identifies the type of inner element.  The Group Policy Drive Map client-side extension expects each inner elementâ€™s **clsid** value to equal {935D1B74-9CB8-4e3c-9914-7DD559B7A417}.  This is how the client-side extension identifies and validates the inner element is of type **Drive**
 
 ***Disabled***
 
@@ -261,7 +263,7 @@ The **Properties** element shares unique and common attributes among all the Gro
 
 ***Action***
 
-The **action** attribute is an optional, string attribute in the **Properties** element used to describe the action the Group Policy Drive Map extension performs for the associated inner element.  That **action** attribute value is a single, uppercase letter of C, R, U, or D.  If the **action** attribute’s is not present in the **Properties** element then the default value is U.
+The **action** attribute is an optional, string attribute in the **Properties** element used to describe the action the Group Policy Drive Map extension performs for the associated inner element.  That **action** attribute value is a single, uppercase letter of C, R, U, or D.  If the **action** attributeâ€™s is not present in the **Properties** element then the default value is U.
 
 **Create**
 
@@ -328,7 +330,7 @@ The SHOW value instructs the extension to show all the drive letters for all the
 
 Remember, drive visibility and labels extend beyond mapped drive letters and include physical drive letters.
 
-The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is important to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attribute’s value of the **Properties** element.
+The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is important to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attributeâ€™s value of the **Properties** element.
 
 The default value for the **allDrives** attribute is NOCHANGE.
 
@@ -370,7 +372,7 @@ A Properties element within a Drive inner element with a persistent attribute eq
 
 A Properties element within a Drive inner element with a persistent attribute equaling false indicates the Group Policy Drive Map extension creates the drive mapping not to persist between user logons and computer reboots.  Windows does not remember the mapped drive and does not reestablish the drive mapping on subsequent reboots.
 
-It’s important to understand that Windows configures drive persistency at the time it creates the mapped drive.  Therefore, if you want need to use the Replace action if you need to change a mapped drive persistent state.
+Itâ€™s important to understand that Windows configures drive persistency at the time it creates the mapped drive.  Therefore, if you want need to use the Replace action if you need to change a mapped drive persistent state.
 
 ***Useletter***
 
@@ -384,9 +386,9 @@ The username attribute is an optional string attribute in the **Properties** ele
 
 ***thisDrive***
 
-The **thisdrive** attribute is an optional attribute for the **Properties** element used to configure the Windows Explorer visibility for the **letter** attribute’s value in the **Properties** element.  The **thisDrives** attribute value is a string value represented using all upper case characters.  Acceptable values for the **thisDrives** attribute included NOCHANGE, HIDE, and SHOW.
+The **thisdrive** attribute is an optional attribute for the **Properties** element used to configure the Windows Explorer visibility for the **letter** attributeâ€™s value in the **Properties** element.  The **thisDrives** attribute value is a string value represented using all upper case characters.  Acceptable values for the **thisDrives** attribute included NOCHANGE, HIDE, and SHOW.
 
-The NOCHANGE value instructs the extension not to change configured drive letter’s visibility for the current user.  Therefore, a drive letter visible before the extensions processes and remains visible after the extension completes.  The same behavior is observed for hidden drive letters.
+The NOCHANGE value instructs the extension not to change configured drive letterâ€™s visibility for the current user.  Therefore, a drive letter visible before the extensions processes and remains visible after the extension completes.  The same behavior is observed for hidden drive letters.
 
 The HIDE value instructs the extension to hide the configured drive letter for the current user.  The results of this configuration hides the configured drive letter, physical or mapped, from view in Windows Explorer.
 
@@ -394,7 +396,7 @@ The SHOW value instructs the extension to show the configured drive letter for c
 
 Remember, drive visibility and labels extend beyond mapped drive letters and include physical drive letters.
 
-The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is important to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attribute’s value of the **Properties** element.
+The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is important to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attributeâ€™s value of the **Properties** element.
 
 The default value for the **thisDrives** attribute is NOCHANGE.
 
@@ -416,7 +418,7 @@ Evaluation of XML
 
 The extension reads the entire XML file into memory subsequently processes each element in the XML file starting with the outer element.  The outer element defines the overarching class of preference items that appear in the inner elements of the file.  Additionally, the outer element may contain the disabled attribute.  A disabled attribute value equaling 1 in the outer element stop any further evaluation of the XML, effectively preventing all of the Drive inner elements from processing (applying to the user).
 
-After reading the Drives element, the extension focuses its attention to the next element in the XML file—one of possibly many Drive inner element.  As noted in the attribute section of this document, the Drive inner element contains metadata and processing control information used be the Group Policy management snap-ins and the client-side extensions.
+After reading the Drives element, the extension focuses its attention to the next element in the XML fileâ€�?one of possibly many Drive inner element.  As noted in the attribute section of this document, the Drive inner element contains metadata and processing control information used be the Group Policy management snap-ins and the client-side extensions.
 
 The extension reads the attributes and values from the entire Drive inner element, which includes the attributes and values of the Drive element, the attributes and values of the Properties element and the attributes and values of an optional Filters element along with all its child elements and their attributes and values.
 
@@ -456,7 +458,7 @@ Group Policy client side extensions enable Group Policy to process a variety of 
 
 The Group Policy Drive Maps client side extension is one of many extensions included in the gpprefcl.dll file that is included in the Windows operating system starting with Windows Server 2008 and Windows Vista Service Pack 1.
 
-Group Policy’s modular design enables each extension to process the data that is relevant to them.  Therefore, the implementation of each Group Policy client side extension may be different.
+Group Policyâ€™s modular design enables each extension to process the data that is relevant to them.  Therefore, the implementation of each Group Policy client side extension may be different.
 
 The Group Policy Drive Map extension is one CSE in a family of Group Policy client side extensions known as Group Policy Preferences.  The goal of this extension is to manage drive letters associated with network specific shared folders and visibility properties of driver letters (remotely mapped drives or physical).   The extension comes registered on the Windows operating system by virtue of CSE specific metadata stored in the following registry location
 
@@ -499,7 +501,7 @@ The Group Policy Drives Maps processes the entire list of out-of-scope GPOs sequ
 The extension cycles through the list of Group Policy objects in the list starting with the first entry in the list.  The extension collects the prerequisite information about the current GPO.  From this information and its own information, the extension builds file path location to the configuration file.  The configuration file location path begins with the extensions history path.
 
 ### Group Policy Preference History
-The history path is a local data store of the last successfully applied data configuration files for each Group Policy object.  The extension saves the last applied configuration files in the user’s local application folder, which holds a value equivalent to the environment variable %LOCALAPPDATA% on Windows 8 and Windows Server 2012.  The root of the history folder looks similar to
+The history path is a local data store of the last successfully applied data configuration files for each Group Policy object.  The extension saves the last applied configuration files in the userâ€™s local application folder, which holds a value equivalent to the environment variable %LOCALAPPDATA% on Windows 8 and Windows Server 2012.  The root of the history folder looks similar to
 
 ```
 C:\users\[username]\AppData\Local\Microsoft\Group Policy\History
@@ -517,7 +519,7 @@ C:\users\[username]\AppData\Local\Microsoft\Group Policy\History\[GUID]\SID\Pref
 
 ```
 
-The extension then concatenates the string \User\Preferences\Drives\Drives.xml to the end of the GPO’s file system path.  This creates a full path, including file name, to the configuration file.
+The extension then concatenates the string \User\Preferences\Drives\Drives.xml to the end of the GPOâ€™s file system path.  This creates a full path, including file name, to the configuration file.
 
 > [!NOTE]
 > Windows only allows the configuration and application of Group Policy Drives Map to users.
@@ -536,7 +538,7 @@ The extension then moves to the next Group Policy object in the list and process
 ## New and Changed Group Policy objects
 The Group Policy Drives Maps processes the entire list of new and changed GPOs sequentially.  The extension logs any errors reading the Group Policy objects and continues processing until it reaches the end of the list.
 
-The extension cycles through the list of Group Policy objects in the list starting with the first entry in the list.  The extension collects the prerequisite information about the current GPO.  From this information, the extension builds file path location to the configuration file.  The configuration file location path begins with the GPO’s file system path.  The extension then concatenates the string \User\Preferences\Drives\Drives.xml to the end of the GPO’s file system path.  This creates a full path, including file name, to the configuration file.
+The extension cycles through the list of Group Policy objects in the list starting with the first entry in the list.  The extension collects the prerequisite information about the current GPO.  From this information, the extension builds file path location to the configuration file.  The configuration file location path begins with the GPOâ€™s file system path.  The extension then concatenates the string \User\Preferences\Drives\Drives.xml to the end of the GPOâ€™s file system path.  This creates a full path, including file name, to the configuration file.
 
 > [!NOTE]
 > Windows only allows the configuration and application of Group Policy Drives Map to users.
@@ -562,7 +564,7 @@ The create actions represents a configuration where the extension creates a new 
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user’s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the userâ€™s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -580,19 +582,19 @@ A <letter> value that currently exists for the user but is not a mapped drive or
 
 *Create Mapped Network Drive*
 
-The extension determines if the current user’s token is not a restricted token and the <persistent> attribute value equals false (zero [0]). Upon validating these factors, the extension uses the WNetUseConnection API to create a newly mapped drive using the value of the <letter> attribute as the drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
+The extension determines if the current userâ€™s token is not a restricted token and the <persistent> attribute value equals false (zero [0]). Upon validating these factors, the extension uses the WNetUseConnection API to create a newly mapped drive using the value of the <letter> attribute as the drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response from the Windows API instructs the extension to abort its processing and to return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log.
+An unsuccessful response from the Windows API instructs the extension to abort its processing and to return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log.
 
-If the extension determines the current user’s token is a restricted token (User Account Control is enabled) then the extension must create the mapped drive under the restricted token rather than the full token.  This explains why mapped drives for administrators and some users are not always visible in Windows Explorer.
+If the extension determines the current userâ€™s token is a restricted token (User Account Control is enabled) then the extension must create the mapped drive under the restricted token rather than the full token.  This explains why mapped drives for administrators and some users are not always visible in Windows Explorer.
 
-The extension stops impersonating the current user with the user’s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write “Failed to revert from the user’s full token” to the trace log, and return the underlying error code that is the result of failure to cease impersonation.  Any failure in requesting a restricted token for the current user instructs the extension to abort its processing, write “Failed to impersonate with user’s restricted token” to the trace log, and return the underlying error code that is the result of the failure to impersonate using the restricted token.
+The extension stops impersonating the current user with the userâ€™s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write â€œFailed to revert from the userâ€™s full tokenâ€? to the trace log, and return the underlying error code that is the result of failure to cease impersonation.  Any failure in requesting a restricted token for the current user instructs the extension to abort its processing, write â€œFailed to impersonate with userâ€™s restricted tokenâ€? to the trace log, and return the underlying error code that is the result of the failure to impersonate using the restricted token.
 
 While impersonating the user using the restricted token, the extension use the WNetUseConnnection API to create a new mapped drive where the drive letter used is the value of the <letter> attribute.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response instructs the extension to abort its processing, write “Failed to connect drive with restricted token” along with the underlying error code it received from the Windows API to the trace log.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
+An unsuccessful response instructs the extension to abort its processing, write â€œFailed to connect drive with restricted tokenâ€? along with the underlying error code it received from the Windows API to the trace log.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
 
-A failure reverting from impersonating the user with a restricted token causes the extension to write “Failed to revert user from restricted context” to the trace log.  A failure impersonating the user with their full token causes the extension to write “Failed to impersonate with user’s full token” to the trace log.  The extension continues processing by applying the configured label to the newly created mapped drive.
+A failure reverting from impersonating the user with a restricted token causes the extension to write â€œFailed to revert user from restricted contextâ€? to the trace log.  A failure impersonating the user with their full token causes the extension to write â€œFailed to impersonate with userâ€™s full tokenâ€? to the trace log.  The extension continues processing by applying the configured label to the newly created mapped drive.
 
 **First Available Drive Letter, Starting at**
 
@@ -600,7 +602,7 @@ A <useletter> attribute value equaling false (zero [0]) determines the desired c
 
 *Determine the First Available Drive Letter*
 
-The extension needs to determine the first available drive letter before it can map any network location.  To accomplish this, the extensions creates a list of lower case letters starting with the <letter> attribute’s value and ending with the letter ‘z’.  The extension then iterates through each letter in the list of letter to determine the first available drive letter, starting with the <letter> attribute’s value.
+The extension needs to determine the first available drive letter before it can map any network location.  To accomplish this, the extensions creates a list of lower case letters starting with the <letter> attributeâ€™s value and ending with the letter â€˜zâ€™.  The extension then iterates through each letter in the list of letter to determine the first available drive letter, starting with the <letter> attributeâ€™s value.
 
 The extension determines a letter qualifies as available first by using the WNetGetConnection API to determine if the current letter in the list of letters is mapped to a network drive or associated with a physical device.
 
@@ -610,9 +612,9 @@ A drive letter not mapped to a shared folder instructs the extension to check if
 
 *Drive Letter in use by a Mapped Drive*
 
-A drive letter mapped to a shared folder instructs the extension to evaluate the shared folder location of the existing mapped drive to the <path> attribute’s value in the inner element configuration.
+A drive letter mapped to a shared folder instructs the extension to evaluate the shared folder location of the existing mapped drive to the <path> attributeâ€™s value in the inner element configuration.
 
-If the shared folder path matches the <path> attribute value, then the extension considers the mapped drive already successfully created.  The extension writes “Path is connected already on letter” along with the current drive letter to the trace log, discontinues iterating the drive letters, and proceeds to the Drive Label portion of the core processing phase.
+If the shared folder path matches the <path> attribute value, then the extension considers the mapped drive already successfully created.  The extension writes â€œPath is connected already on letterâ€? along with the current drive letter to the trace log, discontinues iterating the drive letters, and proceeds to the Drive Label portion of the core processing phase.
 
 If the shared folder path does not match the <path> attribute value, then the extension considers the current drive letter unavailable.  The extension performs no other actions on the current drive letter and starts the evaluation over again using the next letter in the list.
 
@@ -620,33 +622,33 @@ The extension completes its iteration through the drive letter list and validate
 
 *Connecting to First Available Drive*
 
-The extension must create a new mapped drive using the discovered first available drive letter and the <path> attribute’s value.  To do this, the extension determines the type of token used by the current user and the value of the <persistent> attribute.
+The extension must create a new mapped drive using the discovered first available drive letter and the <path> attributeâ€™s value.  To do this, the extension determines the type of token used by the current user and the value of the <persistent> attribute.
 
 If the user has a full token or if the <persistent> attribute equals false (zero [1]), then the extension use the WNetUseConnection API to create a new mapped drive where the drive letter used is the discovered first available drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value, which is false, is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
 If the user has a full token or if the <persistent> attribute equals false (zero [1]), then the extension use the WNetUseConnection API to create a new mapped drive where the drive letter used is the discovered first available drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value, which is false, is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response from the Windows API instructs the extension to abort its processing and return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log.
+An unsuccessful response from the Windows API instructs the extension to abort its processing and return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log.
 
-A user with a restricted token (User Account Control enabled) indicates to the extension that it must also create the new drive mapping while impersonating the user using the user’s restricted token.
+A user with a restricted token (User Account Control enabled) indicates to the extension that it must also create the new drive mapping while impersonating the user using the userâ€™s restricted token.
 
-The extension stops impersonating the current user with the user’s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write “Failed to revert from the user’s full token” to the trace log, and return the underlying error code that is the result of failure to cease impersonation.
+The extension stops impersonating the current user with the userâ€™s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write â€œFailed to revert from the userâ€™s full tokenâ€? to the trace log, and return the underlying error code that is the result of failure to cease impersonation.
 
 Any failure in requesting a restricted token for the current user instructs the extension to abort its processing and to return the underlying error code that is the result of the failure to when requesting the restricted token.
 
-A failure occurring when extension impersonates the user using the restricted token cause the extension to abort its processing, write “Failed to impersonate with user’s restricted token” to the trace log, and return the underlying error code that is the result of the failure to impersonate using the restricted token.
+A failure occurring when extension impersonates the user using the restricted token cause the extension to abort its processing, write â€œFailed to impersonate with userâ€™s restricted tokenâ€? to the trace log, and return the underlying error code that is the result of the failure to impersonate using the restricted token.
 
 While impersonating the user using the restricted token, the extension use the WNetUseConnnection API to create a new mapped drive where the drive letter used is the value of the <letter> attribute.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response instructs the extension to abort its processing, write “Failed to connect drive with restricted token” to the trace log along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
+An unsuccessful response instructs the extension to abort its processing, write â€œFailed to connect drive with restricted tokenâ€? to the trace log along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
 
-A failure reverting from impersonating the user with a restricted token cases the extension to write “Failed to revert user from restricted context” to the trace log.  A failure impersonating the user with their full token causes the extension to write “Failed to impersonate with user’s full token” to the trace log.  The extension continues processing by applying the configured label to the newly created mapped drive.
+A failure reverting from impersonating the user with a restricted token cases the extension to write â€œFailed to revert user from restricted contextâ€? to the trace log.  A failure impersonating the user with their full token causes the extension to write â€œFailed to impersonate with userâ€™s full tokenâ€? to the trace log.  The extension continues processing by applying the configured label to the newly created mapped drive.
 
 **Drive Label**
 
-To this point in the process, the extension has successfully created a mapped network drive using either a specific drive letter or a first available drive letter.   And, the extension has mapped the drive using the user’s full token and restricted token, if needed.
+To this point in the process, the extension has successfully created a mapped network drive using either a specific drive letter or a first available drive letter.   And, the extension has mapped the drive using the userâ€™s full token and restricted token, if needed.
 
-The extension needs to apply the <label> attribute value to the newly created drive letter.  The extension ensures a value is present for the <label> attribute and that the mapped drive was newly created and not an existing local or remote drive letter.  Once the extensions confirms these conditions, it replaces any backslash (\\) characters in the <path> attribute’s value with pounds (#) characters.  Next, the extension creates a registry key using the modified <path> value under
+The extension needs to apply the <label> attribute value to the newly created drive letter.  The extension ensures a value is present for the <label> attribute and that the mapped drive was newly created and not an existing local or remote drive letter.  Once the extensions confirms these conditions, it replaces any backslash (\\) characters in the <path> attributeâ€™s value with pounds (#) characters.  Next, the extension creates a registry key using the modified <path> value under
 
 ```
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Mountpoints2
@@ -659,22 +661,22 @@ The extension creates a new registry value named _LabelFromReg.  The value assig
 
 The Group Policy Drive Map extension can show or hide drives using two configurations.  It can hide or show a single, specified drive letter and it can hide or show all drive letters.  The extension processes all drives first and specified drive last.  Thus, the outcome of configuring both results in the specified drive configuration have precedence over the all drives configuration.
 
-The extension determines if it needs to show or hide any drive letters by checking the <thisDrive> and <AllDrives> attribute values.  If both attribute values equal “NOCHANGE’ then the extension performs no other actions and processes the epilog portion of core processing. Otherwise, the extension begins the hide or show drives process by changing to the security context to System.   Any failure in changing to System security context causes the extension to abort its processing and return the underlying error responsible for the failure.
+The extension determines if it needs to show or hide any drive letters by checking the <thisDrive> and <AllDrives> attribute values.  If both attribute values equal â€œNOCHANGEâ€™ then the extension performs no other actions and processes the epilog portion of core processing. Otherwise, the extension begins the hide or show drives process by changing to the security context to System.   Any failure in changing to System security context causes the extension to abort its processing and return the underlying error responsible for the failure.
 
 *All Drives*
 
-The extension determines if it needs to hide or show all drive letters by evaluating the value of the <AllDrives> attribute.  If the attribute’s value equals “SHOW” then the extension deletes the NoDrives registry value from the following registry hive of the current user.
+The extension determines if it needs to hide or show all drive letters by evaluating the value of the <AllDrives> attribute.  If the attributeâ€™s value equals â€œSHOWâ€? then the extension deletes the NoDrives registry value from the following registry hive of the current user.
 
 ```
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
 
 ```
 
-If the attribute’s value equals “HIDE” then the extension writes the hexadecimal value 0x03FFFFFF to the NoDrives registry value of the previously mentioned registry hive of the current user (the extension creates the NoDrives registry value if it does not exist).  The extension then processes hide or show settings for a specific drive letter.
+If the attributeâ€™s value equals â€œHIDEâ€? then the extension writes the hexadecimal value 0x03FFFFFF to the NoDrives registry value of the previously mentioned registry hive of the current user (the extension creates the NoDrives registry value if it does not exist).  The extension then processes hide or show settings for a specific drive letter.
 
 *Specified Drive*
 
-The extension validates that the <thisDrive> attribute equals “SHOW” or “HIDE”.  Next, the extension validates the <letter> attribute value is not blank.  If the <letter> attribute value is blank, then the extension aborts its processing and returns an invalid argument error.
+The extension validates that the <thisDrive> attribute equals â€œSHOWâ€? or â€œHIDEâ€?.  Next, the extension validates the <letter> attribute value is not blank.  If the <letter> attribute value is blank, then the extension aborts its processing and returns an invalid argument error.
 
 The extension retrieves the NoDrives registry value from the following registry hive of the current user
 
@@ -685,7 +687,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
 
 The extension uses an algorithm based on information in Microsoft Knowledgebase article 231289, Using Group Policy Objects to hide specified drives, to determine equivalent bit value of the <letter> attribute value.
 
-If the <thisDrive> attribute value equals “HIDE” then the extension enables that bit in the NoDrives registry value.  If the <thisDrive> attribute value equals “SHOW” then the extension disabled the bit in the NoDrives registry value.
+If the <thisDrive> attribute value equals â€œHIDEâ€? then the extension enables that bit in the NoDrives registry value.  If the <thisDrive> attribute value equals â€œSHOWâ€? then the extension disabled the bit in the NoDrives registry value.
 
 After modifying the NoDrives registry value, the extension checks its value to ensure it does not equal zero (0).  If the newly calculated NoDrives registry value equals zero, then the extension deletes the NoDrives registry value.  Otherwise, the extension saves the newly calculated NoDrives registry value to the registry.
 
@@ -700,7 +702,7 @@ The delete action represents a configuration where the extension deletes all map
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user’s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the userâ€™s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -718,7 +720,7 @@ A <letter> value that currently exists for the user and is associated with a phy
 
 *Delete Mapped Drive*
 
-A <letter> value that currently exists for the user and is remotely connected to a network share causes the extension to use the Windows API WNetCancelConnection2 to remove the connection and its persistent state from the user’s session.
+A <letter> value that currently exists for the user and is remotely connected to a network share causes the extension to use the Windows API WNetCancelConnection2 to remove the connection and its persistent state from the userâ€™s session.
 
 If the Windows API failed to delete the mapped drive, then the extension aborts its processing and returns the underlying error it received from the Windows API.  A successful response from the Windows API causes the extension to proceed to the epilog phase.
 
@@ -726,13 +728,13 @@ If the Windows API failed to delete the mapped drive, then the extension aborts 
 
 A <useletter> attribute value equaling false (zero [0]) determines the desired configuration is to delete all mapped drives starting with starting with the <letter> attribute value.
 
-The extensions creates a list of lower case letters starting with the <letter> attribute value and ending with the letter ‘z’.  The extension iterates through each letter in the list to determine if the drive is mapped to a shared network folder using the WNetGetConnection Windows API.
+The extensions creates a list of lower case letters starting with the <letter> attribute value and ending with the letter â€˜zâ€™.  The extension iterates through each letter in the list to determine if the drive is mapped to a shared network folder using the WNetGetConnection Windows API.
 
 If the extension determines the current drive letter is not mapped to a shared network folder, then it completes the current iteration and begins a new integration using the next drive letter in the list as the current drive letter.
 
 If the extension determines the current drive letter is mapped to a shared network folder, then it uses the Windows API WNetCancelConnection2 to delete the connection and its persistent state from the user session.  The extension then completes the current iteration and begins a new iteration using the next drive letter in the list as the current drive letter.
 
-This cycles completes until the extension has evaluated all drive letters starting with the <letter> attribute value through the letter ‘z’. The extension then proceeds to the epilogue phase.
+This cycles completes until the extension has evaluated all drive letters starting with the <letter> attribute value through the letter â€˜zâ€™. The extension then proceeds to the epilogue phase.
 
 ***Epilogue***
 
@@ -743,11 +745,11 @@ Delete action processing is complete.  The extension moves to the next inner ele
 ### Replace
 The replace action represents a configuration where the extension replaces a new mapped drive with a new mapped drive based on the configuration in the current inner element.
 
-It is important to understand the difference between replace and update.  The replace action typically deletes the existing mapped drive and creates a new one—essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
+It is important to understand the difference between replace and update.  The replace action typically deletes the existing mapped drive and creates a new oneâ€�?essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user’s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the userâ€™s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -765,23 +767,23 @@ A <letter> value that currently exists for the user but is not a mapped drive or
 
 *Delete Mapped Drive*
 
-A <letter> value that currently exists for the user and is remotely connected to a network share causes the extension to use the Windows API WNetCancelConnection2 to remove the connection and its persistent state from the user’s session.  A <letter> value that currently exists for the user and is associated with a physical device cause the extension to abort its processing and return an already assigned error.
+A <letter> value that currently exists for the user and is remotely connected to a network share causes the extension to use the Windows API WNetCancelConnection2 to remove the connection and its persistent state from the userâ€™s session.  A <letter> value that currently exists for the user and is associated with a physical device cause the extension to abort its processing and return an already assigned error.
 
 *Create Mapped Network Drive*
 
-The extension determines if the current user’s token is not a restricted token and the <persistent> attribute value equals false (zero [0]). Upon validating these factors, the extension uses the WNetUseConnection API to create a newly mapped drive using the value of the <letter> attribute as the drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
+The extension determines if the current userâ€™s token is not a restricted token and the <persistent> attribute value equals false (zero [0]). Upon validating these factors, the extension uses the WNetUseConnection API to create a newly mapped drive using the value of the <letter> attribute as the drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response from the Windows API instructs the extension to abort its processing and to return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log.
+An unsuccessful response from the Windows API instructs the extension to abort its processing and to return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log.
 
-If the extension determines the current user’s token is a restricted token (User Account Control is enabled) then the extension must create the mapped drive under the restricted token rather than the full token.  This explains why mapped drives for administrators and some users are not always visible in Windows Explorer.
+If the extension determines the current userâ€™s token is a restricted token (User Account Control is enabled) then the extension must create the mapped drive under the restricted token rather than the full token.  This explains why mapped drives for administrators and some users are not always visible in Windows Explorer.
 
-The extension stops impersonating the current user with the user’s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write “Failed to revert from the user’s full token” to the trace log and to return the underlying error code that is the result of failure to cease impersonation.  Any failure in requesting a restricted token for the current user instructs the extension to abort its processing, write “Failed to impersonate with user’s restricted token”, and to return the underlying error code that is the result of the failure to impersonate using the restricted token.
+The extension stops impersonating the current user with the userâ€™s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write â€œFailed to revert from the userâ€™s full tokenâ€? to the trace log and to return the underlying error code that is the result of failure to cease impersonation.  Any failure in requesting a restricted token for the current user instructs the extension to abort its processing, write â€œFailed to impersonate with userâ€™s restricted tokenâ€?, and to return the underlying error code that is the result of the failure to impersonate using the restricted token.
 
 While impersonating the user using the restricted token, the extension use the WNetUseConnnection API to create a new mapped drive where the drive letter used is the value of the <letter> attribute.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response instructs the extension to abort its processing, write “Failed to connect drive with restricted token” along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
+An unsuccessful response instructs the extension to abort its processing, write â€œFailed to connect drive with restricted tokenâ€? along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
 
-A failure reverting from impersonating the user with a restricted token causes the extension to write “Failed to revert user from restricted context” to the trace log.  A failure impersonating the user with their full token causes the extension to write “Failed to impersonate with user’s full token” to the trace log.  The extension continues processing by apply the configured label to the newly created mapped drive.
+A failure reverting from impersonating the user with a restricted token causes the extension to write â€œFailed to revert user from restricted contextâ€? to the trace log.  A failure impersonating the user with their full token causes the extension to write â€œFailed to impersonate with userâ€™s full tokenâ€? to the trace log.  The extension continues processing by apply the configured label to the newly created mapped drive.
 
 *First Available Drive Letter, Starting at*
 
@@ -791,7 +793,7 @@ In this configuration, the extension uses the <letter> attribute value as the st
 
 *Determine the First Available Drive Letter*
 
-The extension needs to determine the first available drive letter before it can map any network location.  To accomplish this, the extensions creates a list of lower case letters starting with the <letter> attribute value and ending with the letter ‘z’.  The extension iterates through each letter in the list to determine the first available drive letter, starting with the <letter> attribute value.
+The extension needs to determine the first available drive letter before it can map any network location.  To accomplish this, the extensions creates a list of lower case letters starting with the <letter> attribute value and ending with the letter â€˜zâ€™.  The extension iterates through each letter in the list to determine the first available drive letter, starting with the <letter> attribute value.
 
 The extension determines a letter qualifies as available by using the WNetGetConnection API to determine if the current letter in the list of letters is mapped to a network drive or associated with a physical device.
 
@@ -805,7 +807,7 @@ If the extension is unaware of any previously saved available drive letter, then
 
 A drive letter mapped to a shared folder instructs the extension to evaluate the shared folder location of the existing mapped drive to the <path> attribute value in the inner element configuration.
 
-If the shared folder path matches the <path> attribute value, then the extension considers the mapped drive already connected.  The extension writes “Path is connected already on letter” along with the current drive letter to the trace log, discontinues iterating the drive letters, and proceeds to the Drive Label portion of the core processing phase.
+If the shared folder path matches the <path> attribute value, then the extension considers the mapped drive already connected.  The extension writes â€œPath is connected already on letterâ€? along with the current drive letter to the trace log, discontinues iterating the drive letters, and proceeds to the Drive Label portion of the core processing phase.
 
 The extension completes its iteration through the drive letter list and validates a free drive letter exits.  If the extension remains unaware of an available drive letter and it did not locate an existing drive letter mapped to the network path identical to the <path> attribute value, then the extension aborts its processing, and returns a not connected error.  Otherwise, the extension is aware of an available drive letter and must now connect the shared network folder to the available drive letter.
 
@@ -815,27 +817,27 @@ The extension must create a new mapped drive using the discovered first availabl
 
 If the user has a full token or if the <persistent> attribute equals false (zero [1]), then the extension use the WNetUseConnection API to create a new mapped drive where the drive letter used is the discovered first available drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value, which is false, is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response from the Windows API instructs the extension to abort its processing and return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log.
+An unsuccessful response from the Windows API instructs the extension to abort its processing and return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log.
 
-A user with a restricted token (User Account Control enabled) indicates to the extension that it must also create the new drive mapping while impersonating the user using the user’s restricted token.
+A user with a restricted token (User Account Control enabled) indicates to the extension that it must also create the new drive mapping while impersonating the user using the userâ€™s restricted token.
 
-The extension stops impersonating the current user with the user’s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write “Failed to revert from the user’s full token” to the trace log, and to return the underlying error code that is the result of failure to cease impersonation.
+The extension stops impersonating the current user with the userâ€™s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write â€œFailed to revert from the userâ€™s full tokenâ€? to the trace log, and to return the underlying error code that is the result of failure to cease impersonation.
 
 Any failure in requesting a restricted token for the current user instructs the extension to abort its processing and to return the underlying error code that is the result of the failure to when requesting the restricted token.
 
-A failure occurring when extension impersonates the user using the restricted token cause the extension to abort its processing, write “Failed to impersonate with user’s restricted token” to the trace log,  and return the underlying error code that is the result of the failure to impersonate using the restricted token.
+A failure occurring when extension impersonates the user using the restricted token cause the extension to abort its processing, write â€œFailed to impersonate with userâ€™s restricted tokenâ€? to the trace log,  and return the underlying error code that is the result of the failure to impersonate using the restricted token.
 
 While impersonating the user using the restricted token, the extension use the WNetUseConnnection API to create a new mapped drive where the drive letter used is the value of the <letter> attribute.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response instructs the extension to abort its processing, write “Failed to connect drive with restricted token” to the trace log along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
+An unsuccessful response instructs the extension to abort its processing, write â€œFailed to connect drive with restricted tokenâ€? to the trace log along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
 
-A failure reverting from impersonating the user with a restricted token cases the extension to write “Failed to revert user from restricted context” to the trace log.  A failure impersonating the user with their full token causes the extension to write “Failed to impersonate with user’s full token” to the trace log.  The extension continues processing by apply the configured label to the newly created mapped drive.
+A failure reverting from impersonating the user with a restricted token cases the extension to write â€œFailed to revert user from restricted contextâ€? to the trace log.  A failure impersonating the user with their full token causes the extension to write â€œFailed to impersonate with userâ€™s full tokenâ€? to the trace log.  The extension continues processing by apply the configured label to the newly created mapped drive.
 
 *Drive Label*
 
-To this point in the process, the extension has successfully deleted a mapped drive, if discovered and created a mapped network drive using either a specific drive letter or a first available drive letter.   Also, the extension has mapped the drive using the user’s full token and restricted token, if needed.
+To this point in the process, the extension has successfully deleted a mapped drive, if discovered and created a mapped network drive using either a specific drive letter or a first available drive letter.   Also, the extension has mapped the drive using the userâ€™s full token and restricted token, if needed.
 
-The extension needs to apply the <label> attribute value to the newly created drive letter.  The extension ensures a value is present for the <label> attribute and that the mapped drive was newly created and not an existing local or remote drive letter.  Once the extensions confirms these conditions, it replaces any backslash (\\) characters in the <path> attribute’s value with pound (#) characters.  Next, the extension creates a registry key using the modified <path> value under
+The extension needs to apply the <label> attribute value to the newly created drive letter.  The extension ensures a value is present for the <label> attribute and that the mapped drive was newly created and not an existing local or remote drive letter.  Once the extensions confirms these conditions, it replaces any backslash (\\) characters in the <path> attributeâ€™s value with pound (#) characters.  Next, the extension creates a registry key using the modified <path> value under
 
 ```
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Mountpoints2
@@ -848,22 +850,22 @@ The extension creates a new registry value named _LabelFromReg.  The value assig
 
 The Group Policy Drive Map extension can show or hide drives using two configurations during the replace, create, and update actions.  It can hide or show a single, specified drive letter and it can hide or show all drive letters.  The extension processes all drives first and specified drive last.  Thus, the outcome of configuring both results in the specified drive configuration have precedence over the all drives configuration.
 
-The extension determines if it needs to show or hide any drive letters by checking the <thisDrive> and <AllDrives> attribute values.  If both attribute values equal “NOCHANGE’ then the extension performs no other actions and processes the epilog portion of core processing. Otherwise, the extension begins the hide or show drives process by changing to the security context to System.   Any failure in changing to System security context causes the extension to abort its processing and return the underlying error responsible for the failure.
+The extension determines if it needs to show or hide any drive letters by checking the <thisDrive> and <AllDrives> attribute values.  If both attribute values equal â€œNOCHANGEâ€™ then the extension performs no other actions and processes the epilog portion of core processing. Otherwise, the extension begins the hide or show drives process by changing to the security context to System.   Any failure in changing to System security context causes the extension to abort its processing and return the underlying error responsible for the failure.
 
 *All Drives*
 
-The extension determines if it needs to hide or show all drive letters by evaluating the value of the <AllDrives> attribute.  If the attribute’s value equals “SHOW” then the extension deletes the NoDrives registry value from the following registry hive of the current user.
+The extension determines if it needs to hide or show all drive letters by evaluating the value of the <AllDrives> attribute.  If the attributeâ€™s value equals â€œSHOWâ€? then the extension deletes the NoDrives registry value from the following registry hive of the current user.
 
 ```
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
 
 ```
 
-If the attribute’s value equals “HIDE” then the extension writes the hexadecimal value 0x03FFFFFF to the NoDrives registry value of the previously mentioned registry hive of the current user (the extension creates the NoDrives registry value if it does not exist).  The extension then processes hide or show settings for a specific drive letter.
+If the attributeâ€™s value equals â€œHIDEâ€? then the extension writes the hexadecimal value 0x03FFFFFF to the NoDrives registry value of the previously mentioned registry hive of the current user (the extension creates the NoDrives registry value if it does not exist).  The extension then processes hide or show settings for a specific drive letter.
 
 *Specified Drive*
 
-The extension validates that the <thisDrive> attribute equals “SHOW” or “HIDE”.  Next, the extension validates the <letter> attribute value is not blank.  If the <letter> attribute value is blank, then the extension aborts its processing and returns an invalid argument error.
+The extension validates that the <thisDrive> attribute equals â€œSHOWâ€? or â€œHIDEâ€?.  Next, the extension validates the <letter> attribute value is not blank.  If the <letter> attribute value is blank, then the extension aborts its processing and returns an invalid argument error.
 
 The extension retrieves the NoDrives registry value from the following registry hive of the current user
 
@@ -874,7 +876,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
 
 The extension uses an algorithm based on information in Microsoft Knowledgebase article 231289, Using Group Policy Objects to hide specified drives, to determine equivalent bit value of the <letter> attribute value.
 
-If the <thisDrive> attribute value equals “HIDE” then the extension enables that bit in the NoDrives registry value.  If the <thisDrive> attribute value equals “SHOW” then the extension disabled the bit in the NoDrives registry value.
+If the <thisDrive> attribute value equals â€œHIDEâ€? then the extension enables that bit in the NoDrives registry value.  If the <thisDrive> attribute value equals â€œSHOWâ€? then the extension disabled the bit in the NoDrives registry value.
 
 After modifying the NoDrives registry value, the extension checks its value to ensure it does not equal zero (0).  If the newly calculated NoDrives registry value equals zero, then the extension deletes the NoDrives registry value.  Otherwise, the extension saves the newly calculated NoDrives registry value to the registry.
 
@@ -887,11 +889,11 @@ Replace action processing is complete.  The extension moves to the next inner el
 ## Update
 The update action represents a configuration where the extension refreshes an existing mapped drive based on the configuration in the current inner element.  It is important to understand the difference between replace and update.
 
-The replace action typically deletes the existing mapped drive and creates a new one—essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
+The replace action typically deletes the existing mapped drive and creates a new oneâ€�?essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user’s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the userâ€™s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -907,19 +909,19 @@ A <letter> value that does not exists for the user causes the extension to creat
 
 *Create Mapped Network Drive*
 
-The extension determines if the current user’s token is not a restricted token and the <persistent> attribute value equals false (zero [0]). Upon validating these factors, the extension uses the WNetUseConnection API to create a newly mapped drive using the value of the <letter> attribute as the drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
+The extension determines if the current userâ€™s token is not a restricted token and the <persistent> attribute value equals false (zero [0]). Upon validating these factors, the extension uses the WNetUseConnection API to create a newly mapped drive using the value of the <letter> attribute as the drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response from the Windows API instructs the extension to abort its processing and to return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log.
+An unsuccessful response from the Windows API instructs the extension to abort its processing and to return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log.
 
-If the extension determines the current user’s token is a restricted token (User Account Control is enabled) then the extension must create the mapped drive under the restricted token rather than the full token.  This explains why mapped drives for administrators and some users are not always visible in Windows Explorer.
+If the extension determines the current userâ€™s token is a restricted token (User Account Control is enabled) then the extension must create the mapped drive under the restricted token rather than the full token.  This explains why mapped drives for administrators and some users are not always visible in Windows Explorer.
 
-The extension stops impersonating the current user with the user’s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write “Failed to revert from the user’s full token” to the trace log, and return the underlying error code that is the result of failure to cease impersonation.  Any failure in requesting a restricted token for the current user instructs the extension to abort its processing, write “Failed to impersonate with user’s restricted token” to the trace log, and return the underlying error code that is the result of the failure to impersonate using the restricted token.
+The extension stops impersonating the current user with the userâ€™s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write â€œFailed to revert from the userâ€™s full tokenâ€? to the trace log, and return the underlying error code that is the result of failure to cease impersonation.  Any failure in requesting a restricted token for the current user instructs the extension to abort its processing, write â€œFailed to impersonate with userâ€™s restricted tokenâ€? to the trace log, and return the underlying error code that is the result of the failure to impersonate using the restricted token.
 
 While impersonating the user using the restricted token, the extension use the WNetUseConnnection API to create a new mapped drive where the drive letter used is the value of the <letter> attribute.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response instructs the extension to abort its processing, write “Failed to connect drive with restricted token” along with the underlying error code it received from the Windows API to the trace log.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
+An unsuccessful response instructs the extension to abort its processing, write â€œFailed to connect drive with restricted tokenâ€? along with the underlying error code it received from the Windows API to the trace log.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
 
-A failure reverting from impersonating the user with a restricted token causes the extension to write “Failed to revert user from restricted context” to the trace log.  A failure impersonating the user with their full token causes the extension to write “Failed to impersonate with user’s full token” to the trace log.  The extension continues processing by applying the configured label to the newly created mapped drive.
+A failure reverting from impersonating the user with a restricted token causes the extension to write â€œFailed to revert user from restricted contextâ€? to the trace log.  A failure impersonating the user with their full token causes the extension to write â€œFailed to impersonate with userâ€™s full tokenâ€? to the trace log.  The extension continues processing by applying the configured label to the newly created mapped drive.
 
 *First Available Drive Letter, Starting at*
 
@@ -929,7 +931,7 @@ In this configuration, the extension uses the <letter> attribute value as the st
 
 *Determine the First Available Drive Letter*
 
-The extension needs to determine the first available drive letter before it can map any network location.  To accomplish this, the extension creates a list of lower case letters starting with the <letter> attribute value and ending with the letter ‘z’.  The extension iterates through each letter in the list to determine the first available drive letter, starting with the <letter> attribute value.
+The extension needs to determine the first available drive letter before it can map any network location.  To accomplish this, the extension creates a list of lower case letters starting with the <letter> attribute value and ending with the letter â€˜zâ€™.  The extension iterates through each letter in the list to determine the first available drive letter, starting with the <letter> attribute value.
 
 The extension determines a letter qualifies as available by using the WNetGetConnection API to determine if the current letter in the list of letters is mapped to a network drive or associated with a physical device.
 
@@ -943,7 +945,7 @@ If the extension is unaware of any previously saved available drive letter, then
 
 A drive letter mapped to a shared folder instructs the extension to evaluate the shared folder location of the existing mapped drive to the <path> attribute value in the inner element configuration.
 
-If the shared folder path matches the <path> attribute value, then the extension considers the mapped drive already connected.  The extension writes “Path is connected already on letter” along with the current drive letter to the trace log, discontinues iterating the drive letters, and proceeds to the Drive Label portion of the core processing phase.
+If the shared folder path matches the <path> attribute value, then the extension considers the mapped drive already connected.  The extension writes â€œPath is connected already on letterâ€? along with the current drive letter to the trace log, discontinues iterating the drive letters, and proceeds to the Drive Label portion of the core processing phase.
 
 The extension completes its iteration through the drive letter list and validates a free drive letter exits.  If the extension remains unaware of an available drive letter and it did not locate an existing drive letter mapped to the network path identical to the <path> attribute value, then the extension aborts its processing, and returns a not connected error.  Otherwise, the extension is aware of an available drive letter and must now connect the shared network folder to the available drive letter.
 
@@ -953,27 +955,27 @@ The extension must create a new mapped drive using the discovered first availabl
 
 If the user has a full token or if the <persistent> attribute equals false (zero [1]), then the extension use the WNetUseConnection API to create a new mapped drive where the drive letter used is the discovered first available drive letter.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value, which is false, is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response from the Windows API instructs the extension to abort its processing and return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log.
+An unsuccessful response from the Windows API instructs the extension to abort its processing and return the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log.
 
-A user with a restricted token (User Account Control enabled) indicates to the extension that it must also create the new drive mapping while impersonating the user using the user’s restricted token.
+A user with a restricted token (User Account Control enabled) indicates to the extension that it must also create the new drive mapping while impersonating the user using the userâ€™s restricted token.
 
-The extension stops impersonating the current user with the user’s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write “Failed to revert from the user’s full token” to the trace log, and to return the underlying error code that is the result of failure to cease impersonation.
+The extension stops impersonating the current user with the userâ€™s full token and requests Windows to provide a restricted token for the user.  Any failure in the cessation of impersonation instructs the extension to abort its processing, write â€œFailed to revert from the userâ€™s full tokenâ€? to the trace log, and to return the underlying error code that is the result of failure to cease impersonation.
 
 Any failure in requesting a restricted token for the current user instructs the extension to abort its processing and to return the underlying error code that is the result of the failure to when requesting the restricted token.
 
-A failure occurring when extension impersonates the user using the restricted token cause the extension to abort its processing, write “Failed to impersonate with user’s restricted token” to the trace log,  and return the underlying error code that is the result of the failure to impersonate using the restricted token.
+A failure occurring when extension impersonates the user using the restricted token cause the extension to abort its processing, write â€œFailed to impersonate with userâ€™s restricted tokenâ€? to the trace log,  and return the underlying error code that is the result of the failure to impersonate using the restricted token.
 
 While impersonating the user using the restricted token, the extension use the WNetUseConnnection API to create a new mapped drive where the drive letter used is the value of the <letter> attribute.  The shared folder used for the mapped drive is the value of the <path> attribute.  If the <username> and <cPassword> attributes contains values, then their respective values are the credentials used to authenticate and authorize the connection to the shared folder.  Additionally, the <persistent> attribute value is passed to the Windows API to indicate if the newly created mapped drive should persist between logons and reboots.
 
-An unsuccessful response instructs the extension to abort its processing, write “Failed to connect drive with restricted token” to the trace log along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write “Connected with access name…” to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
+An unsuccessful response instructs the extension to abort its processing, write â€œFailed to connect drive with restricted tokenâ€? to the trace log along with the underlying error code it received from the Windows API.  A successful response from Windows API instructs the extension to write â€œConnected with access nameâ€¦â€? to the trace log. Then, the extension discontinues impersonating the current user under the restricted token and returns impersonating the user using the full token.
 
-A failure reverting from impersonating the user with a restricted token cases the extension to write “Failed to revert user from restricted context” to the trace log.  A failure impersonating the user with their full token causes the extension to write “Failed to impersonate with user’s full token” to the trace log.  The extension continues processing by apply the configured label to the newly created mapped drive.
+A failure reverting from impersonating the user with a restricted token cases the extension to write â€œFailed to revert user from restricted contextâ€? to the trace log.  A failure impersonating the user with their full token causes the extension to write â€œFailed to impersonate with userâ€™s full tokenâ€? to the trace log.  The extension continues processing by apply the configured label to the newly created mapped drive.
 
 *Drive Label*
 
-To this point in the process, the extension has successfully deleted a mapped drive, if discovered and created a mapped network drive using either a specific drive letter or a first available drive letter.   Also, the extension has mapped the drive using the user’s full token and restricted token, if needed.
+To this point in the process, the extension has successfully deleted a mapped drive, if discovered and created a mapped network drive using either a specific drive letter or a first available drive letter.   Also, the extension has mapped the drive using the userâ€™s full token and restricted token, if needed.
 
-The extension needs to apply the <label> attribute value to the newly created drive letter.  The extension ensures a value is present for the <label> attribute and that the mapped drive was newly created and not an existing local or remote drive letter.  Once the extensions confirms these conditions, it replaces any backslash (\\) characters in the <path> attribute’s value with pound (#) characters.  Next, the extension creates a registry key using the modified <path> value under
+The extension needs to apply the <label> attribute value to the newly created drive letter.  The extension ensures a value is present for the <label> attribute and that the mapped drive was newly created and not an existing local or remote drive letter.  Once the extensions confirms these conditions, it replaces any backslash (\\) characters in the <path> attributeâ€™s value with pound (#) characters.  Next, the extension creates a registry key using the modified <path> value under
 
 ```
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Mountpoints2
@@ -986,22 +988,22 @@ The extension creates a new registry value named _LabelFromReg.  The value assig
 
 The Group Policy Drive Map extension can show or hide drives using two configurations during the replace, create, and update actions.  It can hide or show a single, specified drive letter and it can hide or show all drive letters.  The extension processes all drives first and specified drive last.  Thus, the outcome of configuring both results in the specified drive configuration have precedence over the all drives configuration.
 
-The extension determines if it needs to show or hide any drive letters by checking the <thisDrive> and <AllDrives> attribute values.  If both attribute values equal “NOCHANGE’ then the extension performs no other actions and processes the epilog portion of core processing. Otherwise, the extension begins the hide or show drives process by changing to the security context to System.   Any failure in changing to System security context causes the extension to abort its processing and return the underlying error responsible for the failure.
+The extension determines if it needs to show or hide any drive letters by checking the <thisDrive> and <AllDrives> attribute values.  If both attribute values equal â€œNOCHANGEâ€™ then the extension performs no other actions and processes the epilog portion of core processing. Otherwise, the extension begins the hide or show drives process by changing to the security context to System.   Any failure in changing to System security context causes the extension to abort its processing and return the underlying error responsible for the failure.
 
 *All Drives*
 
-The extension determines if it needs to hide or show all drive letters by evaluating the value of the <AllDrives> attribute.  If the attribute’s value equals “SHOW” then the extension deletes the NoDrives registry value from the following registry hive of the current user.
+The extension determines if it needs to hide or show all drive letters by evaluating the value of the <AllDrives> attribute.  If the attributeâ€™s value equals â€œSHOWâ€? then the extension deletes the NoDrives registry value from the following registry hive of the current user.
 
 ```
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
 
 ```
 
-If the attribute’s value equals “HIDE” then the extension writes the hexadecimal value 0x03FFFFFF to the NoDrives registry value of the previously mentioned registry hive of the current user (the extension creates the NoDrives registry value if it does not exist).  The extension then processes hide or show settings for a specific drive letter.
+If the attributeâ€™s value equals â€œHIDEâ€? then the extension writes the hexadecimal value 0x03FFFFFF to the NoDrives registry value of the previously mentioned registry hive of the current user (the extension creates the NoDrives registry value if it does not exist).  The extension then processes hide or show settings for a specific drive letter.
 
 *Specified Drive*
 
-The extension validates that the <thisDrive> attribute equals “SHOW” or “HIDE”.  Next, the extension validates the <letter> attribute value is not blank.  If the <letter> attribute value is blank, then the extension aborts its processing and returns an invalid argument error.
+The extension validates that the <thisDrive> attribute equals â€œSHOWâ€? or â€œHIDEâ€?.  Next, the extension validates the <letter> attribute value is not blank.  If the <letter> attribute value is blank, then the extension aborts its processing and returns an invalid argument error.
 
 The extension retrieves the NoDrives registry value from the following registry hive of the current user
 
@@ -1012,7 +1014,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
 
 The extension uses an algorithm based on information in Microsoft Knowledgebase article 231289, Using Group Policy Objects to hide specified drives, to determine equivalent bit value of the <letter> attribute value.
 
-If the <thisDrive> attribute value equals “HIDE” then the extension enables that bit in the NoDrives registry value.  If the <thisDrive> attribute value equals “SHOW” then the extension disabled the bit in the NoDrives registry value.
+If the <thisDrive> attribute value equals â€œHIDEâ€? then the extension enables that bit in the NoDrives registry value.  If the <thisDrive> attribute value equals â€œSHOWâ€? then the extension disabled the bit in the NoDrives registry value.
 
 After modifying the NoDrives registry value, the extension checks its value to ensure it does not equal zero (0).  If the newly calculated NoDrives registry value equals zero, then the extension deletes the NoDrives registry value.  Otherwise, the extension saves the newly calculated NoDrives registry value to the registry.
 
@@ -1080,7 +1082,7 @@ The Group Policy Drive Maps extension is one of many extensions provided in a si
 ## Interaction with other components
 The Windows operating system enables many different configurations to accomplish a single task.  Mapping shared network folders to local drive letters is one of those tasks.
 
-The most common configuration for mapping network drives occurs during the user logon. Historically, IT departments have accomplished this configuration using network logon scripts—scripts that process as part of the user logon.  Another configuration for mapping Home drives is to configure the shared network folder on the user’s object in Active Directory.  Windows clients looking for this configuration and automatically connect the shared network folder to the configured drive letter. Users can map network drives using Windows Explorer and make them persistent between computer reboots.  Lastly, you can use the Group Policy Drive Map extension to map drives during logon.
+The most common configuration for mapping network drives occurs during the user logon. Historically, IT departments have accomplished this configuration using network logon scriptsâ€�?scripts that process as part of the user logon.  Another configuration for mapping Home drives is to configure the shared network folder on the userâ€™s object in Active Directory.  Windows clients looking for this configuration and automatically connect the shared network folder to the configured drive letter. Users can map network drives using Windows Explorer and make them persistent between computer reboots.  Lastly, you can use the Group Policy Drive Map extension to map drives during logon.
 
 Flexible configurations are important; however, understanding that incorporating the one or more of the configurations into one solution needs to be thoroughly tested for each specific environment as many of these technologies can encroach on the other thereby creating unpredictable results.  A suggested best practice is to pick one configuration and use it exclusively in your environment, especially when mapping network drives during logon.  Each configuration maps the drive during different stages of the logon process.  Incorporating multiple configurations could be counterproductive and cause conflict between the two configurations.  This conflict is likely to produce unwanted results, increases the complexity of the solution, increases administrative overhead of the solution, and increase the difficulty of troubleshooting the cause of the problem.
 
@@ -1093,8 +1095,8 @@ You enable Group Policy Drive Map logging using Computer\Policies namespace of t
 
 The best configuration for capturing Group Policy Drive Map information for troubleshooting is to configure **Event Logging** using the **Informational, Warnings, and Errors** option and configure **Tracing** to **On**.
 
-Trace logging file name and locations are configurable to any name and location to where the user or computer has read and write permissions.  The default paths for these files use a Group Policy Preference **variable %COMMONAPPDATA%\GroupPolicy\Preference\Trace\\<filename>**.  The Group Policy Preference %COMMONAPPDATA% variable equates to the All Users’ application data folder.
+Trace logging file name and locations are configurable to any name and location to where the user or computer has read and write permissions.  The default paths for these files use a Group Policy Preference **variable %COMMONAPPDATA%\GroupPolicy\Preference\Trace\\<filename>**.  The Group Policy Preference %COMMONAPPDATA% variable equates to the All Usersâ€™ application data folder.
 
-Starting with Windows Vista, the All Users’ folder was deprecated with the introduction of the version 2 user profile structure.  To ensure compatibility among applications, Windows creates a symbolic link named All Users in the file system under the %SYSTEMDRIVE%\Users folder.  The symbolic link redirects file system requests to the All Users folder to the **C:\ProgramData** folder.  Therefore, the default location for Group Policy Preference trace logs is **C:\ProgramData\GroupPolicy\Preference\Trace\\<filename>**.
+Starting with Windows Vista, the All Usersâ€™ folder was deprecated with the introduction of the version 2 user profile structure.  To ensure compatibility among applications, Windows creates a symbolic link named All Users in the file system under the %SYSTEMDRIVE%\Users folder.  The symbolic link redirects file system requests to the All Users folder to the **C:\ProgramData** folder.  Therefore, the default location for Group Policy Preference trace logs is **C:\ProgramData\GroupPolicy\Preference\Trace\\<filename>**.
 
 

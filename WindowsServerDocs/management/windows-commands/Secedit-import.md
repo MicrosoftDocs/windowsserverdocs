@@ -1,17 +1,18 @@
 ---
 title: Secedit:import
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Secedit:import
 Imports security settings stored in an inf file previously exported from the database configured with security templates. For examples of how this command can be used, see [Examples](Secedit-import.md#BKMK_Examples).

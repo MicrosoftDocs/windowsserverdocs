@@ -1,16 +1,18 @@
 ---
 title: Working with Group Policy Objects using GPMC
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9933e6fd-ea3c-493f-9ce7-853b46f08896
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Working with Group Policy Objects using GPMC
 This topic describes procedures for configuring, filtering, backing up, restoring and importing Group Policy Objects using the Group Policy Management Console (GPMC).
 
@@ -334,11 +336,11 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
     -   You must have privileges to create WMI filters in the domain in which you want to create the filter. By default, the Domain Administrators, Enterprise Administrators, and Group Policy Creator Owners groups have this permission.
 
-    -   **WMI Filters** is only available if at least one domain controller in the domain is running Microsoft Windows Server™ 2003. The same is true for **WMI Filtering** on the **Scope** tab for **Group Policy Objects**.
+    -   **WMI Filters** is only available if at least one domain controller in the domain is running Microsoft Windows Serverâ„¢ 2003. The same is true for **WMI Filtering** on the **Scope** tab for **Group Policy Objects**.
 
     -   To delete a WMI filter, in the console tree, right-click the WMI filter and then click **Delete**. When asked to confirm whether you want to delete the WMI filter, click **Yes**.
 
-    -   WMI Filters are not evaluated on Microsoft Windows® 2000. A GPO targeted to a Windows 2000 machine will always apply the GPO regardless of the query associated with the WMI Filter (the filter is ignored)
+    -   WMI Filters are not evaluated on Microsoft WindowsÂ® 2000. A GPO targeted to a Windows 2000 machine will always apply the GPO regardless of the query associated with the WMI Filter (the filter is ignored)
 
 #### Import a WMI Filter
 

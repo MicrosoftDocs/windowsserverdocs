@@ -1,17 +1,18 @@
 ---
 title: Manage-bde: autounlock
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Manage-bde: autounlock
 Manages the automatic unlocking of BitLocker-protected data drives. For examples of how this command can be used, see [Examples](#BKMK_Examples).

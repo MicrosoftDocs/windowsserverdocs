@@ -1,14 +1,18 @@
 ---
 title: Exit_1
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 8ac45e72-eb3e-4c88-8d92-0b71a58bea36 JasonGerend
+ms.assetid: 8ac45e72-eb3e-4c88-8d92-0b71a58bea36
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Exit_1
 Exits DiskShadow.  

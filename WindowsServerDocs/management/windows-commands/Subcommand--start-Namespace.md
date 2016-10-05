@@ -1,17 +1,18 @@
 ---
 title: Subcommand: start-Namespace
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2dd1c11e-6ab7-4129-9e3a-3f80e0ba59c0
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Subcommand: start-Namespace
 Starts a Scheduled-Cast namespace.

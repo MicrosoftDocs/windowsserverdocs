@@ -1,17 +1,18 @@
 ---
 title: Using the new-MulticastTransmission Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the new-MulticastTransmission Command
 Creates a new multicast transmission for an image. This command is equivalent to creating a transmission by using the Windows Deployment Services MMC snap-in (right-click the **Multicast Transmissions** node, and then click **Create Multicast Transmission**). You should use this command when you have both the Deployment Server role service and the Transport Server role service installed (which is the default installation). If you have only the Transport Server role service installed, use [Using the new-Namespace Command](Using-the-new-Namespace-Command.md).

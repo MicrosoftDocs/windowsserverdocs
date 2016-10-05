@@ -1,14 +1,18 @@
 ---
 title: Repair
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 9f84f661-f3cd-48c8-bf08-87819cf626fe JasonGerend
+ms.assetid: 9f84f661-f3cd-48c8-bf08-87819cf626fe
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Repair
 Repairs the RAID\-5 volume with focus by replacing the failed disk region with the specified dynamic disk.  

@@ -1,17 +1,18 @@
 ---
 title: Vol
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 398b3aa1-2442-42be-a4fb-78701080b0df
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Vol
 Displays the disk volume label and serial number, if they exist.  If used without parameters, **vol** displays information for the current drive.

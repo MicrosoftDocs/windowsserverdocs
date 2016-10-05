@@ -1,17 +1,18 @@
 ---
 title: Subcommand: set-DriverGroup
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4ba9b1c-8c52-4fd5-969b-f7905611b364
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Subcommand: set-DriverGroup
 Sets the properties of an existing driver group on a server.

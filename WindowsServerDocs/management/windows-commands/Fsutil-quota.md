@@ -1,14 +1,18 @@
 ---
 title: Fsutil quota
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ba654192-e712-4e22-95e9-7049f23bd7ac JasonGerend
+ms.assetid: ba654192-e712-4e22-95e9-7049f23bd7ac
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil quota
 Manages disk quotas on NTFS volumes to provide more precise control of network\-based storage.  

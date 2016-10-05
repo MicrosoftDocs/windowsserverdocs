@@ -1,17 +1,19 @@
 ---
 title: Edit, Filter, and Comment Policy Settings Using GPMC
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.topic: article
 ms.assetid: 04756cea-9b34-459f-ae44-74f833aafb76
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Edit, Filter, and Comment Policy Settings Using GPMC
 This topic provides links to tasks associated with configuring policy settings using the Group Policy Management Console (GPMC).
 

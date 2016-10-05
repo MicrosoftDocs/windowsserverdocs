@@ -1,12 +1,18 @@
 ---
 title: Manage-bde
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 276a7841-7289-48d4-a57d-bc7c300affbb
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Manage-bde
 Used to turn on or turn off BitLocker, specify unlock mechanisms, update recovery methods, and unlock BitLocker-protected data drives. This command-line tool can be used in place of the **BitLocker Drive Encryption** Control Panel item. For examples of how this command can be used, see [Examples](#BKMK_Examples).  

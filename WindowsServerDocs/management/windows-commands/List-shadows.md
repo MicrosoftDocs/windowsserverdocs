@@ -1,14 +1,18 @@
 ---
 title: List shadows
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1 JasonGerend
+ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # List shadows
 Lists persistent and existing non\-persistent shadow copies that are on the system.  

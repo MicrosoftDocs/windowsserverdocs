@@ -1,14 +1,18 @@
 ---
 title: Mask
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: bf301474-d74a-44e7-9fad-c8a11e7ca3bd JasonGerend
+ms.assetid: bf301474-d74a-44e7-9fad-c8a11e7ca3bd
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Mask
 Removes hardware shadow copies that were imported by using the **import** command.  

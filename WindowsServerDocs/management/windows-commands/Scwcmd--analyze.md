@@ -1,17 +1,18 @@
 ---
 title: Scwcmd: analyze
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Scwcmd: analyze
 Determines whether a computer is in compliance with a policy. Results are returned in an .xml file. Also accepts a list of computer names as input. To view the results in your browser, use **scwcmd view** and specify **%windir%\security\msscw\TransformFiles\scwanalysis.xsl** as the .xsl transform. For examples of how this command can be used, see [Examples](#BKMK_Examples).

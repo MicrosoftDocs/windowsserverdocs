@@ -1,14 +1,18 @@
 ---
 title: Ntfrsutl
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: d7721a19-5a87-4ab6-b816-65d2da2c811f JasonGerend
+ms.assetid: d7721a19-5a87-4ab6-b816-65d2da2c811f
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Ntfrsutl
 Dumps the internal tables, thread, and memory information for the NT File Replication Service \(NTFRS\). It runs against local and remote servers. The recovery setting for NTFRS in Service Control Manager \(SCM\) can be critical to locating and keeping important log events on the computer. This tool provides a convenient method of reviewing those settings. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  

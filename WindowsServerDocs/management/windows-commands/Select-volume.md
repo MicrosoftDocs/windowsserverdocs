@@ -1,14 +1,18 @@
 ---
 title: Select volume
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28 JasonGerend
+ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Select volume
 Selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.  

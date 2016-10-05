@@ -1,16 +1,18 @@
 ---
 title: Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b478ee48-6122-40f4-890c-6386d5e2963b
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy
 This topic contains procedures for using the GPMC tool to configure and run four types of Group Policy.  
   

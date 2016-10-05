@@ -1,16 +1,18 @@
 ---
 title: Use Resultant Set of Policy to Manage Group Policy
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16fe9efd-ccef-4c46-a688-e10e3248eab0
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Use Resultant Set of Policy to Manage Group Policy
 This topic describes how Resultant Set of Policy (RSoP) is used by Group Policy Management Console (GPMC) and describes the procedures to use.
 
@@ -65,7 +67,7 @@ Group Policy Resultant Set of Policy (RSoP) reports Group Policy settings that a
 6.  Click **Next**, and then click **Next**. Note that only computer-specific settings are displayed.
 
 ## How to simulate RSoP using Group Policy Modeling
-You can use a Group Policy management feature that allows you to simulate a policy deployment that would be applied to users and computers before actually applying the policies. This feature, known as Resultant Set of Policy (RSoP) – Planning Mode, is integrated into GPMC as Group Policy Modeling.
+You can use a Group Policy management feature that allows you to simulate a policy deployment that would be applied to users and computers before actually applying the policies. This feature, known as Resultant Set of Policy (RSoP) â€“ Planning Mode, is integrated into GPMC as Group Policy Modeling.
 
 #### To simulate Resultant Set of Policy using Group Policy Modeling
 
@@ -93,6 +95,6 @@ You can use a Group Policy management feature that allows you to simulate a poli
 
 -   If you open a previously saved console and want to save a Group Policy Modeling or Group Policy Results report in XML, rerun the report by using the **Rerun Query** option.
 
--   To view a saved report in a Web browser, you must use Internet Explorer® 6 or later.
+-   To view a saved report in a Web browser, you must use Internet ExplorerÂ® 6 or later.
 
 

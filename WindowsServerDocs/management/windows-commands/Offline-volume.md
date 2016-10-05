@@ -1,14 +1,18 @@
 ---
 title: Offline volume
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6 JasonGerend
+ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Offline volume
 Takes the online volume with focus to the offline state.  

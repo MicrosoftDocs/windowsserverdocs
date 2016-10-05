@@ -1,14 +1,18 @@
 ---
 title: Detail
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291 JasonGerend
+ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Detail
 Displays information about the selected disk, partition, volume, or virtual hard disk \(VHD\).  

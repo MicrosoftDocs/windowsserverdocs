@@ -1,14 +1,18 @@
 ---
 title: Create partition extended
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070 JasonGerend
+ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create partition extended
 Creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  

@@ -1,14 +1,18 @@
 ---
 title: Convert_1
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ae151297-af21-4701-bd69-21d775518e03 JasonGerend
+ms.assetid: ae151297-af21-4701-bd69-21d775518e03
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Convert_1
 Converts a disk from one disk type to another.  

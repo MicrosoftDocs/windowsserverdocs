@@ -1,16 +1,18 @@
 ---
 title: Group Policy Management Console
+description: "Group Policy"
 mms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0bc23d72-34e0-414e-aa55-5461658ce8ea
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Group Policy Management Console
 
 ## Install Group Policy Management Console (GPMC)

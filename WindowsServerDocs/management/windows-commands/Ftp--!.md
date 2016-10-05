@@ -1,17 +1,18 @@
 ---
 title: Ftp: !
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5551b800-1ed7-42c6-bf65-df4346c23d0d vhorne
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Ftp: !
 Exits the ftp subsystem to a command prompt temporarily so that the operating system commands can be run. To return to the ftp subsystem, type **exit** at the command prompt. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  

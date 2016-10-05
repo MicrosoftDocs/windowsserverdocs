@@ -1,14 +1,18 @@
 ---
 title: Expose
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947 JasonGerend
+ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Expose
 Exposes a persistent shadow copy as a drive letter, share, or mount point.  

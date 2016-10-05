@@ -1,14 +1,18 @@
 ---
 title: Recover_1
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 8cc3a73d-9456-41a0-b375-2b4cc37c3992 JasonGerend
+ms.assetid: 8cc3a73d-9456-41a0-b375-2b4cc37c3992
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Recover_1
 Refreshes the state of all disks in a disk group, attempt to recover disks in an invalid disk group, and resynchronizes mirrored volumes and RAID\-5 volumes that have stale data.  

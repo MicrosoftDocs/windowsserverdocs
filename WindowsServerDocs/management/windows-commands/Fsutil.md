@@ -1,14 +1,18 @@
 ---
 title: Fsutil
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 097de37c-812c-47b0-872b-4b55ea32b27f JasonGerend
+ms.assetid: 097de37c-812c-47b0-872b-4b55ea32b27f
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil
 Performs tasks that are related to file allocation table \(FAT\) and NTFS file systems, such as managing reparse points, managing sparse files, or dismounting a volume. If it is used without parameters, **fsutil** displays a list of supported subcommands.  

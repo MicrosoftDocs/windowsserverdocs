@@ -1,14 +1,18 @@
 ---
 title: List_1
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5 JasonGerend
+ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # List_1
 Displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks \(VHDs\).  

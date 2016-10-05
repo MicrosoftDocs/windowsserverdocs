@@ -1,17 +1,18 @@
 ---
 title: Manage-bde: unlock
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7852bf7d-9102-40be-adcb-71e8f4dfde72
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Manage-bde: unlock
 Unlocks a BitLocker-protected drive by using a recovery password or a recovery key. For examples of how this command can be used, see [Examples](#BKMK_Examples).

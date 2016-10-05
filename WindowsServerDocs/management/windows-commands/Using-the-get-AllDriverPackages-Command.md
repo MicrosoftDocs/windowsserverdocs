@@ -1,17 +1,18 @@
 ---
 title: Using the get-AllDriverPackages Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the get-AllDriverPackages Command
 Displays information about all the driver packages on a server that match the specified search criteria.

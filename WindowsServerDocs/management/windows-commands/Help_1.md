@@ -1,14 +1,18 @@
 ---
 title: Help_1
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 75dbf94f-d79c-45b2-9463-c06648218f4a JasonGerend
+ms.assetid: 75dbf94f-d79c-45b2-9463-c06648218f4a
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Help_1
 Displays a list of the available commands or detailed help information on a specified command.  

@@ -1,17 +1,18 @@
 ---
 title: Using the get-AutoAddDevices Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the get-AutoAddDevices Command
 Displays all computers that are in the Auto-Add database on a Windows Deployment Services server.

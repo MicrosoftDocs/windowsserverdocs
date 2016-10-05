@@ -1,14 +1,18 @@
 ---
 title: Showmount
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e JasonGerend
+ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Showmount
 You can use **showmount** to display mounted directories.  

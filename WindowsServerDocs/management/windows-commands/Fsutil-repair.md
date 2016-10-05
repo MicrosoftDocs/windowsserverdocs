@@ -1,14 +1,18 @@
 ---
 title: Fsutil repair
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: b5990ea6-b578-4459-ae7f-ca441c213e5f JasonGerend
+ms.assetid: b5990ea6-b578-4459-ae7f-ca441c213e5f
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil repair
 Administers and monitors NTFS self\-healing repair operations.  

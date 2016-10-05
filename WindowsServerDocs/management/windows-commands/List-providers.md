@@ -1,14 +1,18 @@
 ---
 title: List providers
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 844b4036-c0b9-449d-8347-7d58ef9bf16d JasonGerend
+ms.assetid: 844b4036-c0b9-449d-8347-7d58ef9bf16d
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # List providers
 Lists shadow copy providers that are currently registered on the system.  

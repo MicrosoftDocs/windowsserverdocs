@@ -1,18 +1,19 @@
 ---
 title: Auditpol get
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
 
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Auditpol get
 Retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.

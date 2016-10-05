@@ -1,6 +1,10 @@
 ---
 title: Server Performance Advisor Pack for Tiered Storage Spaces
 description: Server Performance Advisor Pack for Tiered Storage Spaces
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Server Performance Advisor Pack for Tiered Storage Spaces
@@ -26,7 +30,7 @@ The computer running SPA should have administrative rights to the system under t
 Once you have the SPA Advisor Pack for Tiered Storage Spaces Pack installed, you need to run the following from an elevated command prompt. This command modifies the routine storage tier optimization pack to pipe out to a file that can be read by using SPA:
 
 ``` syntax
-SCHTASKS /Change /TN “\Microsoft\Windows\Storage Tiers Management\Storage Tiers Optimization” /TR “cmd /C %windir%\System32\defrag.exe /c /h /g -# > %windir%\tieringOut.txt”
+SCHTASKS /Change /TN “\Microsoft\Windows\Storage Tiers Management\Storage Tiers Optimization�? /TR “cmd /C %windir%\System32\defrag.exe /c /h /g -# > %windir%\tieringOut.txt�?
 ```
 
 The SPA Advisor Pack for Tiered Storage Spaces expects to find the results of the optimizer in the Windows folder. The report will not collect this file if it is moved to another location.

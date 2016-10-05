@@ -1,5 +1,6 @@
 ---
 title: Setting up Update Synchronizations
+description: "Windows Server Update Services"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,9 +9,10 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Setting up Update Synchronizations

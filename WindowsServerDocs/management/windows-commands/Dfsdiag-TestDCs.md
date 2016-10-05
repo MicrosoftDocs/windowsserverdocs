@@ -1,14 +1,18 @@
 ---
 title: Dfsdiag TestDCs
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70 JasonGerend
+ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Dfsdiag TestDCs
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  

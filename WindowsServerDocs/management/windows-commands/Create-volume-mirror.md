@@ -1,14 +1,18 @@
 ---
 title: Create volume mirror
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b JasonGerend
+ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create volume mirror
 Creates a volume mirror by using the two specified dynamic disks.  

@@ -1,14 +1,16 @@
 ---
 title: Plan Your WSUS Deployment
+description: "Windows Server Update Service"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.technology: manage-wsus
 558b59af6ba89cfa315744ad81ca589c0ecb5a7a:WindowsServerDocs/management/windows-server-update-services/plan/Plan-Your-WSUS-Deployment.md
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Plan Your WSUS Deployment
 

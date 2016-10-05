@@ -1,17 +1,18 @@
 ---
 title: Mmc
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7bfa4030-ce42-40fb-922f-2f5145a80872
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Mmc
 Using MMC command-line options, you can open a specific **MMC** console, open **MMC** in author mode, or specify that the 32-bit or 64-bit version of **MMC** is opened.

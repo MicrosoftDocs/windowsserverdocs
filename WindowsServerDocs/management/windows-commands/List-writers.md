@@ -1,14 +1,18 @@
 ---
 title: List writers
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 1c30cbc4-f568-4fa7-b564-66c41d3ca82d JasonGerend
+ms.assetid: 1c30cbc4-f568-4fa7-b564-66c41d3ca82d
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # List writers
 Lists writers that are on the system. If used without parameters, **list** displays the output for **list metadata** by default.  

@@ -1,17 +1,18 @@
 ---
 title: Secedit:generaterollback
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Secedit:generaterollback
 Allows you to generate a rollback template for a specified configuration template. For examples of how this command can be used, see [Examples](Secedit-generaterollback.md#BKMK_Examples).  

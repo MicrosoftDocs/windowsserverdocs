@@ -1,17 +1,18 @@
 ---
 title: Rundll32 printui.dll,PrintUIEntry
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84 jpjofre
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Rundll32 printui.dll,PrintUIEntry
 Automates many printer configuration tasks. Printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt. For examples of how this command can be used, see [Examples](#BKMK_Examples).  

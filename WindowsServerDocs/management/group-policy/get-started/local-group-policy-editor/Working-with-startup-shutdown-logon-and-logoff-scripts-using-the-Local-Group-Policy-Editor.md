@@ -1,16 +1,18 @@
 ---
 title: Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5079255a-674b-4c8c-b890-184c8b7b32a4
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
+manager: dongill
+ms.date: 10/04/2016
 ---
+
+
 # Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor
 This topic describes how to use the Local Group Policy Editor (gpedit) to manage four types of event-driven scripting files.  
   

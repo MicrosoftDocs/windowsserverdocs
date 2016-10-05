@@ -1,14 +1,18 @@
 ---
 title: Create partition logical
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 1f59b79a-d690-4d0e-ad38-40df5a0ce38e JasonGerend
+ms.assetid: 1f59b79a-d690-4d0e-ad38-40df5a0ce38e
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create partition logical
 Creates a logical partition in an existing extended partition. You can only use this command on master boot record \(MBR\) disks.  

@@ -1,14 +1,18 @@
 ---
 title: Select disk
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb JasonGerend
+ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Select disk
 Selects the specified disk and shifts the focus to it.  

@@ -1,14 +1,18 @@
 ---
 title: Online disk
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3 JasonGerend
+ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Online disk
 Brings disks that are currently offline to an online state.  

@@ -1,14 +1,18 @@
 ---
 title: Fsutil hardlink
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 940b06f3-c078-4bf2-bb58-3ef1dbe208a3 JasonGerend
+ms.assetid: 940b06f3-c078-4bf2-bb58-3ef1dbe208a3
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil hardlink
 Creates a hard link between an existing file and a new file.  

@@ -1,14 +1,18 @@
 ---
 title: Dfsdiag TestSites
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 39a0d415-7eb7-4a26-861b-7ff00c45dcda JasonGerend
+ms.assetid: 39a0d415-7eb7-4a26-861b-7ff00c45dcda
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Dfsdiag TestSites
 Checks the configuration of Active Directory Domain Services \(AD DS\) sites by verifying that servers that act as namespace servers or folder \(link\) targets have the same site associations on all domain controllers.  

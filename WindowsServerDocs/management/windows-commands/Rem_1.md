@@ -1,14 +1,18 @@
 ---
 title: Rem_1
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 7245aedb-ba6f-49bb-9f77-848c4853c68f JasonGerend
+ms.assetid: 7245aedb-ba6f-49bb-9f77-848c4853c68f
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Rem_1
 Provides a way to add comments to a script.  

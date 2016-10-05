@@ -1,14 +1,18 @@
 ---
 title: Detail volume
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 38f2bc75-2ed6-4e80-aa74-ab83133db1cd JasonGerend
+ms.assetid: 38f2bc75-2ed6-4e80-aa74-ab83133db1cd
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Detail volume
 Displays the disks on which the current volume resides.  

@@ -1,17 +1,18 @@
 ---
 title: Lpr
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: afc8790b-8b52-45c4-acdf-be0ffa9da534 jpjofre
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Lpr
 Sends a file to a computer or printer sharing device running the Line Printer Daemon (LPD) service in preparation for printing.  

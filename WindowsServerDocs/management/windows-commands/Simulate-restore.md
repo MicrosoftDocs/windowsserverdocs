@@ -1,14 +1,18 @@
 ---
 title: Simulate restore
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: d883d94c-3cb1-4848-9d74-1b4378044b31 JasonGerend
+ms.assetid: d883d94c-3cb1-4848-9d74-1b4378044b31
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Simulate restore
 Tests writer involvement in restore sessions on the computer without issuing **PreRestore** or **PostRestore** events to writers.  

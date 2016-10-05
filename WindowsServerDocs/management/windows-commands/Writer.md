@@ -1,14 +1,18 @@
 ---
 title: Writer
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140 JasonGerend
+ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Writer
 Verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. If used without parameters, **writer** displays help at the command prompt.  
@@ -35,7 +39,7 @@ To verify a writer by specifying its GUID \(for this example, 4dc3bdd4\-ab48\-4d
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}  
 ```  
   
-To exclude a writer with the name “System Writer,�? type:  
+To exclude a writer with the name “System Writer,�? type:  
   
 ```  
 writer exclude "System Writer"  

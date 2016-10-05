@@ -1,15 +1,18 @@
 ---
 title: Break_2
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
-author: JasonGerend
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Break_2
 Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume. The volume can then be accessed using a drive letter \(if assigned\) or volume name. If used without parameters, **break** displays help at the command prompt.  

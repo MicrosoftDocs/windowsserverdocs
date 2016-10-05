@@ -1,16 +1,15 @@
 ---
 title: Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
+description: "Group Policy"
 ms.prod: windows-server-threshold
-ms.technology: 
-  - group-policy
-  - techgroup-management
+ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8136e3ce-9db4-412d-8680-b73051587e8c
-author: coreyp
+author: coreyp-at-msft
 ms.author: coreyp
-ms.date: 8/18/2016
-
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy

@@ -1,17 +1,18 @@
 ---
 title: Eventtriggers
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8f78050b-24b2-4f67-a58a-77eeb66f7755
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Eventtriggers
 Eventtriggers is deprecated, and is not guaranteed to be supported in future releases of Windows.

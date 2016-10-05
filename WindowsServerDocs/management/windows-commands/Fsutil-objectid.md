@@ -1,14 +1,18 @@
 ---
 title: Fsutil objectid
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 8703cc8d-5112-4a13-927e-00f6e5d15549 JasonGerend
+ms.assetid: 8703cc8d-5112-4a13-927e-00f6e5d15549
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil objectid
 Manages object identifiers \(OIDs\), which are internal objects used by the Distributed Link Tracking \(DLT\) Client service and File Replication Service \(FRS\) to track other objects such as files, directories, and links. Object identifiers are invisible to most programs and should never be modified.  

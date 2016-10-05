@@ -1,17 +1,18 @@
 ---
 title: Using the delete-AutoAddDevices Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the delete-AutoAddDevices Command
 Deletes computers that are pending, rejected, or approved from the Auto-Add database. This database stores information about these computers on the server.

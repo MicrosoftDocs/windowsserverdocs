@@ -1,12 +1,18 @@
 ---
 title: Services for Network File System Command Reference
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c JasonGerend
+ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Services for Network File System Command Reference
 Services for Network File System \(NFS\) provides a file sharing solution that enables you to transfer files between computers running Windows Server 2008 and UNIX operating systems using the NFS protocol.  

@@ -1,12 +1,18 @@
 ---
 title: Using the add-DriverGroupFilter Command
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the add-DriverGroupFilter Command
 Adds a filter to a driver group on a server.  

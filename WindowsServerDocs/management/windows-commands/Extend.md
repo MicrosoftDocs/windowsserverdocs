@@ -1,14 +1,18 @@
 ---
 title: Extend
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 2414e21d-fc0b-40e8-9e33-3e072f8ad76b JasonGerend
+ms.assetid: 2414e21d-fc0b-40e8-9e33-3e072f8ad76b
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Extend
 Extends the volume or partition with focus and its file system into free \(unallocated\) space on a disk.  

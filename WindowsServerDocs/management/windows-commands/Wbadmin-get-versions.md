@@ -1,17 +1,18 @@
 ---
 title: Wbadmin get versions
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Wbadmin get versions
 Lists details about the available backups that are stored on the local computer or another computer. When this subcommand is used without parameters, it lists all backups of the local computer, even if those backups are not available. The details provided for a backup include the backup time, the backup storage location, the version identifier (needed for the **wbadmin get items** subcommand and to perform recoveries), and the type of recoveries you can perform.

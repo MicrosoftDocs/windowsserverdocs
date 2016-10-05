@@ -1,17 +1,18 @@
 ---
 title: Using the Initialize-Server Command
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68a26ad9-5eb2-4490-b782-b7cd46b8000d
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Using the Initialize-Server Command
 Configures a Windows Deployment Services server for initial use after the server role has been installed. After you run this command, you should use the [Using the add-Image Command](Using-the-add-Image-Command.md) command to add images to the server.

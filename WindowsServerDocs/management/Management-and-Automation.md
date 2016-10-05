@@ -1,5 +1,6 @@
 ---
 title: Management and Automation
+description: "Management and Automation"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,9 +9,10 @@ ms.technology: manage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d33d4506-2dad-404e-a93e-0e0780dc1f85
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Management

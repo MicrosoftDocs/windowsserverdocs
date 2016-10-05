@@ -1,14 +1,18 @@
 ---
 title: Fsutil 8dot3name
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: de99ab45-1b22-44d0-9c45-4852abbf8d9b JasonGerend
+ms.assetid: de99ab45-1b22-44d0-9c45-4852abbf8d9b
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Fsutil 8dot3name
 Queries or changes the settings for short name \(8dot3 name\) behavior, which include:  

@@ -1,17 +1,18 @@
 ---
 title: Bitsadmin setminretrydelay
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce8674ca-6cc5-4bb2-8dda-7dfbb1cd6830
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Bitsadmin setminretrydelay
 Sets the length of time, in seconds, that the service waits after encountering a transient error before retrying to transfer the file.

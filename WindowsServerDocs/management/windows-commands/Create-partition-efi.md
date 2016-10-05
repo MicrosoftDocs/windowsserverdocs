@@ -1,14 +1,18 @@
 ---
 title: Create partition efi
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 3cfc1fca-6515-4a4d-bfae-615fa8045ea9 JasonGerend
+ms.assetid: 3cfc1fca-6515-4a4d-bfae-615fa8045ea9
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Create partition efi
 On Itanium\-based computers, creates an Extensible Firmware Interface \(EFI\) system partition on a GUID Partition Table \(GPT\) disk.  

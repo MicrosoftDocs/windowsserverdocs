@@ -1,17 +1,18 @@
 ---
 title: Secedit:configure
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Secedit:configure
 Allows you to configure the current system settings using security settings stored in a database. For examples of how this command can be used, see [Examples](Secedit-configure.md#BKMK_Examples).

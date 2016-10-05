@@ -1,17 +1,18 @@
 ---
 title: GPT
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # GPT
 On basic GUID partition table (GPT) disks, assigns the GPT attribute(s) to the partition with focus.  GPT partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.

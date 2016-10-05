@@ -1,14 +1,18 @@
 ---
 title: Online volume
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e JasonGerend
+ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Online volume
 Brings volumes that are currently offline to an online state  

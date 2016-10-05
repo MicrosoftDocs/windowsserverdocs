@@ -1,14 +1,18 @@
 ---
 title: Dfsdiag TestReferral
+description: "Windows Commands"
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-storage
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 877c60dc-e993-4bd5-87dd-e892e3f98a1a JasonGerend
+ms.assetid: 877c60dc-e993-4bd5-87dd-e892e3f98a1a
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Dfsdiag TestReferral
 Checks Distributed File System \(DFS\) referrals by performing the following tests:  

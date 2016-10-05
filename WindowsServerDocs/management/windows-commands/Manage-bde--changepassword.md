@@ -1,17 +1,18 @@
 ---
 title: Manage-bde: changepassword
+description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - management
+ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b174e152-8442-4fba-8b33-56a81ff4f547
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Manage-bde: changepassword
 Modifies the password for a data drive. The user is prompted for a new password. For examples of how this command can be used, see [Examples](#BKMK_Examples).
