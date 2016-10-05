@@ -14,8 +14,6 @@ ms.date: 8/16/2016
 # Best Practices Analyzer for Hyper-V
 
 >Applies To: Windows Server 2016
-
-**This is preliminary content and subject to change.**  
   
 In Windows management, *best practices* are guidelines that are considered the ideal way, under normal circumstances, to configure a server as defined by experts. Best practice violations, even critical ones, might not necessarily cause problems. But, they can indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.  
   
@@ -24,7 +22,7 @@ The Best Practices Analyzer scans your computer using rules based on these best 
 For more details about Best Practices Analyzer and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 ## About Hyper-V  
-Hyper-V lets you run multiple operating systems at the same time on one physical computer, by running each one in a virtual machine. Virtual machines can help you use your computing resources more efficiently and flexibly. For more about Hyper-V, see [Hyper-V on Windows Server 2016 Technical Preview](../Hyper-V-on-Windows-Server.md).  
+Hyper-V lets you run multiple operating systems at the same time on one physical computer, by running each one in a virtual machine. Virtual machines can help you use your computing resources more efficiently and flexibly. For more about Hyper-V, see [Hyper-V on Windows Server 2016](../Hyper-V-on-Windows-Server.md).  
   
 
 

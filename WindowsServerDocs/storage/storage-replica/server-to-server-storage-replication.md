@@ -307,7 +307,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     ```  
 
     > [!WARNING]  
-    > Windows Server 2016 does not prevent role switching when the initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until the initial sync is complete.  
+    > Windows Server 2016 prevents role switching when the initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not force switch directions until the initial sync is complete.  
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 
@@ -329,7 +329,7 @@ Many Microsoft customers deploy DFS Replication as a disaster recovery solution 
 
 Storage Replica has none of these limitations. It does, however, have several that might make it less interesting in some environments:  
 
-* It only allows one-to-one replication between volumes in Windows Server 2016 Technical Preview. It is possible to replicate different volumes between multiple servers.  
+* It only allows one-to-one replication between volumes. It is possible to replicate different volumes between multiple servers.  
 * While it supports asynchronous replication, it is not designed for low bandwidth, high latency networks.  
 * It does not allow user access to the protected data on the destination while replication is ongoing  
 

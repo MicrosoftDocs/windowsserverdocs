@@ -3,13 +3,13 @@ title: Plan for Hyper-V scalability in Windows Server 2016
 description: "Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory and how many virtual processors."
 ms.prod: windows-server-threshold
 ms.service: na
-ms.author: kathydav
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 author: KBDAzure
 ms.author: kathydav
-ms.date: 09/28/2016
+ms.date: 10/04/2016
 ---
 # Plan for Hyper-V scalability in Windows Server 2016
 
@@ -34,7 +34,7 @@ These maximums apply to each virtual machine. Not all components are available i
 |Virtual hard disk capacity|64 TB for VHDX format;<br>2040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|  
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|  
 |Virtual processors|240 for generation 2;<br>64 for generation 1|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|  
-|Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) and [Supported Windows guest operating systems](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows).|  
+|Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|  
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|  
 |Virtual network adapters|12 total:<br> - 8 Hyper-V specific network adapters<br>- 4 legacy network adapters|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server 2016](Plan-for-Hyper-V-networking-in-Windows-Server-2016.md).|  
   

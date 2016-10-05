@@ -9,13 +9,11 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 0c739e7c-4403-4eff-9e69-213ba1ab7336
 author: KBDAzure
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Windows 8 should be configured with the recommended amount of memory
 
 >Applies To: Windows Server 2016
-
-[This information is preliminary and subject to change.  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   

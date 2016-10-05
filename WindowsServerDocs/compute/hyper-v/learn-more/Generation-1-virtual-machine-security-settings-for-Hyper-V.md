@@ -3,18 +3,18 @@ title: Generation 1 virtual machine security settings for Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: larsiwer
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Generation 1 virtual machine security settings
 
->Applies To: Windows Server 2016 Technical Preview, Windows 10
+>Applies To: Windows Server 2016, Windows 10
 
 Use the generation 1 virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. 
 
@@ -31,10 +31,10 @@ To decrypt the contents of the key storage drive and start the virtual machine, 
 - Part of an authorized guarded fabric for this virtual machine, or 
 - Have the private key from one of the virtual machine's guardians. 
 
-To learn more about guarded fabrics, please see the Introducing Shielded VMs section in [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx).
+To learn more about guarded fabrics, please see the Introducing Shielded VMs section in [Security and Assurance](../../../security/Security-and-Assurance.md).
 
 You can add a key storage drive to an empty slot on one of the virtual machine's IDE controllers. To do this, click **Add Key Storage Drive** to add a key storage drive to the first free IDE controller slot of this virtual machine.
 
 ##See also
-- [Generation 2 virtual machine security settings in Hyper-V manager](https://technet.microsoft.com/library/mt403347.aspx)
-- [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx)
+- [Generation 2 virtual machine security settings in Hyper-V manager](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
+- [Security and Assurance](../../../security/Security-and-Assurance.md)

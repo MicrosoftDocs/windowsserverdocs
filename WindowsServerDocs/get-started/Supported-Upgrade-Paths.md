@@ -1,5 +1,5 @@
 ---
-title: Upgrade Paths for Windows Server 2016
+title: Upgrade and Conversion Options for Windows Server 2016
 description: "Explains all supported upgrade paths to Windows Server 2016."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Supported upgrade paths for Windows Server 2016
+# Upgrade and conversion options for Windows Server 2016
 
 >Applies To: Windows Server 2016
 
@@ -31,10 +31,10 @@ and Migration](http://technet.microsoft.com/windowsserver/dn458795).
 
 - **License conversion** In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. We call this “license conversion.” For example, if you are running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter.
 
-- **Upgrade** means moving from your existing operating system release to a more recent release while staying on the same hardware. For example, if your server is running Windows Server 2012, or Windows Server 2012 R2, you can upgrade it to Windows Server 2016. You can upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition.
+- **Upgrade** means moving from your existing operating system release to a more recent release while staying on the same hardware. (This is sometimes called "in-place" upgrade.) For example, if your server is running Windows Server 2012, or Windows Server 2012 R2, you can upgrade it to Windows Server 2016. You can upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition.
 
 > [!IMPORTANT]  
-> In this release, upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.  
+> Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.  
 
 ## Upgrading previous retail versions of Windows Server to Windows Server 2016
 
@@ -42,8 +42,8 @@ The table below briefly summarizes which **already licensed** (that is, not eval
 
 Note the following general guidelines for supported paths:
 
-- In-place upgrades from 32-bit to 64-bit architectures are not supported. All editions of Windows Server 2016 are 64-bit only.
-- In-place upgrades from one language to another are not supported.
+- Upgrades from 32-bit to 64-bit architectures are not supported. All editions of Windows Server 2016 are 64-bit only.
+- Upgrades from one language to another are not supported.
 - If the server is a domain controller, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](http://technet.microsoft.com/library/hh994618.aspx) for important information.
 - Upgrades from pre-release versions (previews) of Windows Server 2016 are not supported. Perform a clean installation to Windows Server 2016.
 - Upgrades that switch from a Server Core installation to a Server with a Desktop installation (or vice versa) are not supported.
@@ -63,6 +63,9 @@ If you see more than one edition in the right column, upgrading to **either** ed
 |Windows Storage Server 2012 Workgroup|Windows Storage Server 2016 Workgroup|
 |Windows Storage Server 2012 R2 Standard|Windows Storage Server 2016 Standard|
 |Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 Workgroup|
+
+> [!IMPORTANT]  
+> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
 
 ## Per-server-role considerations for upgrading
 

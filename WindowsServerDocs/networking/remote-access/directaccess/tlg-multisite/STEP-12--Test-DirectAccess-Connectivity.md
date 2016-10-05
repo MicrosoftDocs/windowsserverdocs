@@ -18,13 +18,13 @@ author: coreyp-at-msft
 
 Before you can test connectivity from the client computers when they are located on the Internet or Homenet networks, you must make sure they have the correct group policy settings.  
   
--   [To verify clients have the correct group policy](assetId:///aa293b5d-4b6f-4004-95f3-0ab54804b15c#policy)  
+- To verify clients have the correct group policy  
   
--   [Test DirectAccess connectivity from the Internet through EDGE1](assetId:///aa293b5d-4b6f-4004-95f3-0ab54804b15c#EDGE1)  
+- Test DirectAccess connectivity from the Internet through EDGE1  
   
--   [Move CLIENT2 to the Win7_Clients_Site2 security group](assetId:///aa293b5d-4b6f-4004-95f3-0ab54804b15c#secgroup)  
+- Move CLIENT2 to the Win7_Clients_Site2 security group  
   
--   [Test DirectAccess connectivity from the Internet through 2-EDGE1](assetId:///aa293b5d-4b6f-4004-95f3-0ab54804b15c#DAConnect)  
+- Test DirectAccess connectivity from the Internet through 2-EDGE1  
   
 ## Prerequisites  
 Connect both client computers to the Corpnet network, and then restart both client computers.  

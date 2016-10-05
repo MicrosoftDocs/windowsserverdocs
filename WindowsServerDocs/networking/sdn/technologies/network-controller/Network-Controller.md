@@ -61,7 +61,7 @@ Using Windows PowerShell, the REST API, or a management application, you can use
   
 In the following illustration, an Administrator uses a Management Tool that interacts directly with Network Controller. Network Controller provides information about the network infrastructure, including both virtual and physical infrastructure, to the Management Tool, and makes configuration changes according to the Administrator's actions when using the tool.  
   
-![](../../../media/Network-Controller/NetController_overview.png)  
+![Network Controller overview](../../../media/Network-Controller/NetController_overview.png)  
   
 If you are deploying Network Controller in a test lab environment, you can run the Network Controller server role on a single physical server (without using Hyper-V) or on a Hyper-V virtual machine (VM) that is installed on a Hyper-V host.  
   

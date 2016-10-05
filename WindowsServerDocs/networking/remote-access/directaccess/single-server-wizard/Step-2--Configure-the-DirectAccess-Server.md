@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](../../../remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md).  
+This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](Plan-a-Basic-DirectAccess-Deployment.md).  
   
 |Task|Description|  
 |--------|---------------|  
@@ -46,7 +46,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 7.  On the **Installation progress** dialog, verify that the installation was successful, and then click **Close**.  
   
-![](../../../media/Step-2--Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-2--Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -95,11 +95,11 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 1: Configure the DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-wizard/Step-1--Configure-the-DirectAccess-Infrastructure.md)  
+-   [Step 1: Configure the DirectAccess Infrastructure](Step-1--Configure-the-DirectAccess-Infrastructure.md)  
   
 ## Next step  
   
--   [Step 3: Verify the Deployment](../../../remote-access/directaccess/single-server-advanced/Step-3--Verify-the-Deployment.md)  
+-   [Step 3 Verify Deployments](Step-3--Verify-Deployments.md)  
   
 
 

@@ -10,20 +10,18 @@ ms.topic: article
 manager: dongill
 author: larsiwer
 ms.author: kathyDav
-ms.date: 9/19/2016
+ms.date: 10/03/2016
 ---
 
 # Plan for Hyper-V security in Windows Server 2016
 
 >Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
 
-**This is preliminary content and subject to change.**  
-
 Secure the Hyper-V host operating system, the virtual machines, configuration files, and virtual machine data. Use the following list of recommended practices as a checklist to help you secure your Hyper-V environment.
 
 ## Secure the Hyper-V host
 - **Keep the host OS secure.**
-    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see [Installation Options for Windows Server 2016 Technical Preview](../../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md) and [Getting started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). We don't recommend that you run production workloads on Hyper-V on Windows 10.
+    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see [Installation Options for Windows Server 2016](../../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md) and [Getting started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). We don't recommend that you run production workloads on Hyper-V on Windows 10.
     - Keep the Hyper-V host operating system, firmware, and device drivers up to date with the latest security updates. Check your vendor's recommendations to update firmware and drivers.
     - Don't use the Hyper-V host as a workstation or install any unnecessary software.
     - Remotely manage the Hyper-V host. If you must manage the Hyper-V host locally, use Credential Guard. For more information, see [Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
@@ -56,7 +54,7 @@ For more secure environments:
     - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the [Windows Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines). See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
 - **Use a secure network.** Make sure virtual network adapters connect to the correct virtual switch and have the appropriate security setting and limits applied.
 - **Store virtual hard disks and snapshot files in a secure location.**
-- **Secure devices.**	Configure only required devices for a virtual machine. Don't enable discrete device assignment in your production environment unless you need it for a specific scenario. If you do enable it, make sure to only expose devices from trusted vendors. 
+- **Secure devices.** Configure only required devices for a virtual machine. Don't enable discrete device assignment in your production environment unless you need it for a specific scenario. If you do enable it, make sure to only expose devices from trusted vendors. 
 - **Configure antivirus, firewall, and intrusion detection software** within virtual machines as appropriate based on the virtual machine role.
 - **Enable virtualization based security for guests that run Windows 10 or Windows Server 2016.** For more information, see the [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
 - **Only enable Discrete Device Assignment if needed for a specific workload**. Due to the nature of passing through a physical device, work with the device manufacturer to understand if it should be used in a secure environment.

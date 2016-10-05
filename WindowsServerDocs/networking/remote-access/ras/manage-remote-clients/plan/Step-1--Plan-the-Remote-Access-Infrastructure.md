@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
+**Note:** Windows Server 2016 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 This topic describes the steps for planning an infrastructure that you can use to set up a single Remote Access server for remote management of DirectAccess clients. The following table lists the steps, but these planning tasks do not need to be done in a specific order.  
   
@@ -24,8 +24,8 @@ This topic describes the steps for planning an infrastructure that you can use t
 |--------|---------------|  
 |[Plan network topology and server settings](#BKMK_Network)|Decide where to place the Remote Access server (at the edge or behind a Network Address Translation (NAT) device or firewall), and plan IP addressing and routing.|  
 |[Plan firewall requirements](#BKMK_Firewall)|Plan for allowing Remote Access through edge firewalls.|  
-|[Plan certificate requirements](assetId:///f7e327cd-5efb-4601-b567-c2576c414be1#bkmk_1_2_CAs_and_certs)|Decide if you will use Kerberos protocol or certificates for client authentication, and plan your website certificates.<br /><br />IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate IP-HTTPS for the server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the Remote Access server.|  
-|[Plan DNS requirements](#BKMK_DNS)|Plan the Domain Name System (DNS) settings for the Remote Access server, infrastructure servers, local name resolution options, and client connectivity.|  
+|[Plan certificate requirements](#bkmk_12CAsandcerts)|Decide if you will use Kerberos protocol or certificates for client authentication, and plan your website certificates.<br /><br />IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate IP-HTTPS for the server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the Remote Access server.|  
+|[Plan DNS requirements](#BKMK_DNS)|Plan the Domain Name System (DNS) settings for the Remote Access server, infrastructure servers, local name resolution options, and client connectivity.| 
 |[Plan the network location server configuration](#BKMK_Location)|Decide where to place the network location server website in your organization (on the Remote Access server or an alternative server), and plan the certificate requirements if the network location server will be located on the Remote Access server. **Note:** The network location server is used by DirectAccess clients to determine whether they are located on the internal network.|  
 |[Plan management servers' configurations](#BKMK_Management)|Plan for management servers (such as update servers) that are used during remote client management. **Note:** Administrators can remotely manage DirectAccess client computers that are located outside the corporate network by using the Internet.|  
 |[Plan Active Directory requirements](#BKMK_ActiveDirectory)|Plan your domain controllers, your Active Directory requirements, client authentication, and multiple domain structure.|  
@@ -50,7 +50,7 @@ When you plan your network, you need to consider the network adapter topology, s
   
     -   [IPv6 Transition Technologies](http://technet.microsoft.com/library/bb726951.aspx)  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571.aspx)  
   
 3.  Configure required adapters and addressing according to the following table. For deployments that are behind a NAT device using a single network adapter, configure your IP addresses by using only the **Internal network adapter** column.  
   
@@ -113,7 +113,7 @@ When you are using additional firewalls, apply the following internal network fi
   
 -   For Teredo: ICMP for all IPv4/IPv6 traffic  
   
-### <a name="bkmk_1_2_CAs_and_certs"></a>Plan certificate requirements  
+### <a name="bkmk_12CAsandcerts"></a>Plan certificate requirements  
 There are three scenarios that require certificates when you deploy a single Remote Access server.  
   
 -   **IPsec authentication**: Certificate requirements for IPsec include a computer certificate that is used by DirectAccess client computers when they establish the IPsec connection with the Remote Access server, and a computer certificate that is used by Remote Access servers to establish IPsec connections with DirectAccess clients.  
@@ -133,7 +133,7 @@ The certification authority (CA) requirements for each of these scenarios is sum
 ||Public CA: We recommend that you use a public CA to issue the IP-HTTPS certificate, this ensures that the CRL distribution point is available externally.||  
   
 #### Plan computer certificates for IPsec authentication  
-If you are using certificate-based IPsec authentication, the Remote Access server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to use Group Policy to configure automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357(WS.10).aspx).  
+If you are using certificate-based IPsec authentication, the Remote Access server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to use Group Policy to configure automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357.aspx).  
   
 This certificate has the following requirements:  
   
@@ -446,12 +446,6 @@ If a backup is available, you can restore the GPO from the backup. If there is n
 2.  Open **Remote Access Management**.  
   
 3.  You will see an error message that the GPO is not found. Click **Remove configuration settings**. After completion, the server will be restored to an unconfigured state, and you can reconfigure the settings.  
-  
-### <a name="BKMK_Links"></a>See also  
-  
--   [Manage DirectAccess Clients Remotely](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
-  
--   [Step 2: Plan the Remote Access Deployment [client]](assetId:///d68d8d84-d08a-4ee9-b113-5e391166f8dd)  
   
 
 

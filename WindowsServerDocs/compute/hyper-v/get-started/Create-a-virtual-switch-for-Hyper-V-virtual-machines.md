@@ -8,15 +8,13 @@ ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 9/22/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Create a virtual switch for Hyper-V virtual machines
 
 >Applies To: Windows 10, Windows Server 2016
-
-**This is preliminary content and subject to change.**  
   
 A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server 2016. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
@@ -91,7 +89,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access and Switch Embedded Teaming](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016, see [Remote Direct Memory Access and Switch Embedded Teaming](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
 
   
 ## Next step  

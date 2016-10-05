@@ -19,7 +19,7 @@ author: coreyp-at-msft
 The first step in planning a Remote Access with one-time password (OTP) client authentication deployment is to plan and configure an advanced single server deployment.  
   
 ## Plan a single server deployment  
-Before you deploy Remote Access with OTP, make sure that you have completed all the steps to deploy a single Remote Access server. See [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6). Then continue to [Step 2: Plan the RADIUS server deployment](assetId:///913954de-8be6-4fb8-82f5-fa9c0944a959).  
+Before you deploy Remote Access with OTP, make sure that you have completed all the steps to deploy a single Remote Access server. See [Deploy a Single DirectAccess Server with Advanced Settings](https://technet.microsoft.com/en-us/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).  
   
 
 
