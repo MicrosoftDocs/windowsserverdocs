@@ -1,0 +1,28 @@
+---
+title: Nslookup help
+description: "Windows Commands"
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 20ffe3e4-4cf3-4bc4-9392-a6be4ccd2c23
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
+---
+# Nslookup help
+Displays a short summary of **nslookup** subcommands.
+## Syntax
+```
+{help | ?}
+```
+## Parameters
+|Parameter|Description|
+|-------------|---------------|
+|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
+## Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)

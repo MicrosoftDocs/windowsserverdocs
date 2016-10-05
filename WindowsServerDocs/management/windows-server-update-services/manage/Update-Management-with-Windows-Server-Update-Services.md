@@ -1,5 +1,6 @@
 ---
 title: Update Management with Windows Server Update Services
+description: "Windows Server Update Services"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,9 +9,10 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28fde77a-f5fc-4e51-835d-8bc304dcfa54
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Update Management with Windows Server Update Services
@@ -37,5 +39,3 @@ In this guide, you will find information about:
 -   [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md)  
   
 -   [WSUS Messages and Troubleshooting Tips](WSUS-Messages-and-Troubleshooting-Tips.md)  
-  
-

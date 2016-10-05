@@ -19,12 +19,6 @@ You can use this topic to learn how to distribute application traffic across dif
   
 This scenario is useful in situations where you want to direct traffic in one time zone to alternate application servers, such as Web servers, that are located in another time zone. This allows you to load balance traffic across application instances during peak time periods when your primary servers are overloaded with traffic.   
   
-This topic contains the following sections.  
-  
-- [Example of Intelligent DNS Responses Based on the Time of Day](#bkmk_example1)  
-- [How Intelligent DNS Responses Based on Time of Day Works](#bkmk_works1)  
-- [How to Configure DNS Policy for Intelligent DNS Responses Based on Time of Day](#bkmk_how1)  
-  
 ### <a name="bkmk_example1"></a>Example of Intelligent DNS Responses Based on the Time of Day  
 Following is an example of how you can use DNS policy to balance application traffic based on the time of day.  
   
