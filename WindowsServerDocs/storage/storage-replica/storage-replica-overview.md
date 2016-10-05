@@ -139,7 +139,6 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 |**Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO|![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
 
 ### Key Evaluation Points and Behaviors  
--   Performance. The Windows Server 2016 Technical Preview version of Storage Replica has not been fully optimized for performance.  
 
 -   Network bandwidth and latency with fastest storage. There are physical limitations around synchronous replication. Because SR implements an IO filtering mechanism using logs and requiring network round trips, synchronous replication is likely make application writes slower. By using low latency, high-bandwidth networks as well as high-throughput disk subsystems for the logs, you will minimize performance overhead.  
 

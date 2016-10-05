@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-This topic contains troubleshooting information for issues related to enabling DirectAccess OTP authentication using either the `Enable-DAOtpAuthentication` PowerShell cmdlet or the Remote Access Management console.  
+This topic contains troubleshooting information for issues related to enabling DirectAccess OTP authentication using either the **Enable-DAOtpAuthentication** PowerShell cmdlet or the Remote Access Management console.
   
 ## Failed to enroll the OTP signing certificate  
 **Error received** (server event log). An OTP signing certificate cannot be enrolled using certificate template <OTP_signing_template_name>  
@@ -39,7 +39,7 @@ There are three possible causes for this error:
   
     2.  Is set to be issued by at least one CA that can issue certificates to the DirectAccess server.  
   
-2.  If the template doesn't exist, create it as described in [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert), or if another matching template exists reconfigure DirectAccess OTP with the new template name.  
+2.  If the template doesn't exist, create it as described in 3.3 Plan the registration authority certificate, or if another matching template exists reconfigure DirectAccess OTP with the new template name.  
   
 ## Failed to enable DirectAccess OTP when WebDAV is installed  
 **Scenario**. While attempting to apply the DirectAccess OTP configuration in the Remote Access Management console or by using the `Enable-DAOtpAuthentication` PowerShell cmdlet, the operation fails.  
@@ -77,7 +77,7 @@ There are two possible causes for this error:
   
 **Solution**  
   
-1.  Make sure that the OTP logon template and the OTP signing certificate template are configured properly as described in [3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert) and [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert).  
+1.  Make sure that the OTP logon template and the OTP signing certificate template are configured properly as described in 3.2 Plan the OTP certificate template and 3.3 Plan the registration authority certificate.  
   
 2.  Make sure that the configured CAs in the **OTP CA Servers** list are configured to issues the relevant templates:  
   

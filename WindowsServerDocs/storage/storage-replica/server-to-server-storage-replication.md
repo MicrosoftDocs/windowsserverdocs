@@ -329,7 +329,7 @@ Many Microsoft customers deploy DFS Replication as a disaster recovery solution 
 
 Storage Replica has none of these limitations. It does, however, have several that might make it less interesting in some environments:  
 
-* It only allows one-to-one replication between volumes in Windows Server 2016 Technical Preview. It is possible to replicate different volumes between multiple servers.  
+* It only allows one-to-one replication between volumes. It is possible to replicate different volumes between multiple servers.  
 * While it supports asynchronous replication, it is not designed for low bandwidth, high latency networks.  
 * It does not allow user access to the protected data on the destination while replication is ongoing  
 
