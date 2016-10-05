@@ -20,11 +20,11 @@ After planning for the one-time password (OTP) RADIUS server and certificate set
   
 |Task|Description|  
 |--------|---------------|  
-|[4.1 Plan for OTP client exemptions](assetId:///0beff91b-3815-4438-9b0e-420704cc5510#bkmk_4_1_Examptions)|Plan for exemptions for users that you do not require to authentication using OTP.|  
-|[4.2 Plan for Windows 7 clients](assetId:///0beff91b-3815-4438-9b0e-420704cc5510#bkmk_4_2_Win7)|Plan to deploy the DirectAccess Connectivity Assistant (DCA) 2.0 to  Windows 7  client computers.|  
-|[4.3 Plan for smart cards](assetId:///0beff91b-3815-4438-9b0e-420704cc5510#BKMK_smartcard)|Plan for the use of smart cards for additional authorization.|  
+|[4.1 Plan for OTP client exemptions](#bkmk_4_1_Exemptions)|Plan for exemptions for users that you do not require to authentication using OTP.|  
+|[4.2 Plan for Windows 7 clients](#bkmk_4_2_Win7)|Plan to deploy the DirectAccess Connectivity Assistant (DCA) 2.0 to  Windows 7  client computers.|  
+|[4.3 Plan for smart cards](#BKMK_smartcard)|Plan for the use of smart cards for additional authorization.|  
   
-## <a name="bkmk_4_1_Examptions"></a>4.1 Plan for OTP client exemptions  
+## <a name="bkmk_4_1_Exemptions"></a>4.1 Plan for OTP client exemptions  
 When OTP authentication is enabled, by default all users are required to authenticate using a combination of user name and password, and OTP credentials. However, you can allow selected users to authenticate using a user name and password only, without OTP. To do this, create a security group and add any users that you want to exempt from OTP authentication.  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ When OTP authentication is enabled, the option to enable the use of smart cards 
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Configure DirectAccess with OTP authentication](assetId:///bde70218-fcef-4ff5-ac78-31319cc2ea16)  
+-   [Configure DirectAccess with OTP authentication](https://technet.microsoft.com/windows-server-docs/networking/remote-access/ras/otp/deploy-ra-otp)  
   
 
 

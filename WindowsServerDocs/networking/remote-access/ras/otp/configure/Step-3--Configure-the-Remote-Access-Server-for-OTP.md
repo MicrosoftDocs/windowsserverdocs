@@ -20,9 +20,9 @@ Once the RADIUS server has been configured with software distribution tokens, co
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Exempt users from OTP authentication (optional)](assetId:///26462967-f450-476b-ae90-b1b2e7248699#BKMK_Exempt)|If specific users will be exempted from DirectAccess with OTP authentication, then follow these preliminary steps.|  
-|[3.2 Configure the Remote Access server to support OTP](assetId:///26462967-f450-476b-ae90-b1b2e7248699#BKMK_Config)|On the Remote Access server update the Remote Access configuration to support OTP two-factor authentication.|  
-|[3.3 Smart cards for additional authorization](assetId:///26462967-f450-476b-ae90-b1b2e7248699#BKMK_Smartcard)|Additional information regarding the use of smart cards.|  
+|[3.1 Exempt users from OTP authentication (optional)](#BKMK_Exempt)|If specific users will be exempted from DirectAccess with OTP authentication, then follow these preliminary steps.|  
+|[3.2 Configure the Remote Access server to support OTP](#BKMK_Config)|On the Remote Access server update the Remote Access configuration to support OTP two-factor authentication.|  
+|[3.3 Smart cards for additional authorization](#BKMK_Smartcard)|Additional information regarding the use of smart cards.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -98,7 +98,7 @@ To configure Remote Access to use two-factor authentication and OTP with the RAD
   
 To configure Remote Access for OTP using PowerShell commands:  
   
-![](../../../../media/Step-3--Configure-the-Remote-Access-Server-for-OTP/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![Windows PowerShell](../../../../media/Step-3--Configure-the-Remote-Access-Server-for-OTP/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

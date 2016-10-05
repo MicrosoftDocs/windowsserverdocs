@@ -30,10 +30,10 @@ After planning the RADIUS server, you must plan for certification authority (CA)
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Plan the OTP CA](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_1_CA)|Plan the certification authority (CA) to use to issue certificates to DirectAccess clients for OTP authentication.|  
-|[3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert)|Plan the OTP certificate template.|  
-|[3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert)|Plan the registration authority certificate to sign all OTP authentication certificate requests.|  
-  
+|[3.1 Plan the OTP CA](#bkmk_3_1_CA)|Plan the certification authority (CA) to use to issue certificates to DirectAccess clients for OTP authentication.|  
+|[3.2 Plan the OTP certificate template](#bkmk_3_2_OTP_Cert)|Plan the OTP certificate template.|
+|[3.3 Plan the registration authority certificate](bkmk_3_3_RA_Cert)|Plan the registration authority certificate to sign all OTP authentication certificate requests.|
+
 ## <a name="bkmk_3_1_CA"></a>3.1 Plan the OTP CA  
 To deploy DirectAccess using one-time password authentication (OTP), you require an internal CA to issue the OTP authentication certificates to DirectAccess client computers. For this purpose, you can use the same internal CA that you use to issue the certificates that are used for regular IPsec computer authentication.  
   
@@ -68,7 +68,7 @@ When DirectAccess clients request an OTP certificate, the Remote Access server r
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 4: Plan OTP for the Remote Access server](assetId:///0beff91b-3815-4438-9b0e-420704cc5510)  
+-   [Step 4: Plan OTP for the Remote Access server](Step-4--Plan-for-OTP-on-the-Remote-Access-Server.md)  
   
 
 

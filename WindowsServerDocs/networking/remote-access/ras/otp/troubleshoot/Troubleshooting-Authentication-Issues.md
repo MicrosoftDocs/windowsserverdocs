@@ -69,7 +69,7 @@ The one-time password provided by the user was correct, but the issuing certific
   
 **Solution**  
   
-Make sure that DirectAccess OTP users have permission to enroll for the DirectAccess OTP logon certificate and that the proper "Application Policy" is included in the DA OTP registration authority signing template. Also make sure that the DirectAccess registration authority certificate on the Remote Access server is valid. See [3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert) and [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert).  
+Make sure that DirectAccess OTP users have permission to enroll for the DirectAccess OTP logon certificate and that the proper "Application Policy" is included in the DA OTP registration authority signing template. Also make sure that the DirectAccess registration authority certificate on the Remote Access server is valid. See 3.2 Plan the OTP certificate template and 3.3 Plan the registration authority certificate.  
   
 ## Missing or invalid computer account certificate  
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"  
@@ -145,7 +145,7 @@ There are two possible causes for this error:
   
 -   Review the permissions setting on the OTP logon template and make sure that all users provisioned for DirectAccess OTP have 'Read' permission.  
   
--   Make sure that the domain controller is configured as a management server and that the client machine can reach the domain controller over the infrastructure tunnel. See [3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert).  
+-   Make sure that the domain controller is configured as a management server and that the client machine can reach the domain controller over the infrastructure tunnel. See 3.2 Plan the OTP certificate template.  
   
 ## No connection to the domain controller  
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"  
@@ -215,7 +215,7 @@ Perform these steps on the Remote Access server.
   
 3.  If no such certificate exists, delete the expired certificate (if one exists) and enroll for a new certificate based on this template.  
   
-To create the OTP signing certificate template see [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert).  
+To create the OTP signing certificate template see 3.3 Plan the registration authority certificate.  
   
 ## Missing or incorrect UPN/DN for the user  
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"  
