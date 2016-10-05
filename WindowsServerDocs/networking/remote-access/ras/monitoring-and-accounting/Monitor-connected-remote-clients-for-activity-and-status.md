@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
+**Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.  
   
 You can use the management console on the Remote Access server to monitor remote client activity and status.  
   

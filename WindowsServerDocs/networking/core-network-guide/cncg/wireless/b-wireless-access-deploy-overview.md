@@ -97,4 +97,4 @@ After install and server restart, the WLAN AutoConfig service is in a stopped st
 
 The WLAN AutoConfig service enumerates wireless adapters and manages both wireless connections and the wireless profiles that contain settings that are required to configure the server to connect to a wireless network.
 
-For an overview of wireless access deployment, see [Wireless Access Deployment Process](3-wireless-access-deploy-process.md).
+For an overview of wireless access deployment, see [Wireless Access Deployment Process](c-wireless-access-deploy-process.md).

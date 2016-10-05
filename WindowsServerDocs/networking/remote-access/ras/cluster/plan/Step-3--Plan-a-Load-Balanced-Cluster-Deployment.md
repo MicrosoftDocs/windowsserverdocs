@@ -20,10 +20,10 @@ The next step is to plan the load-balancing configuration and cluster deployment
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Plan load balancing](#bkmk_2_1_Plan_LB)|Decide whether to use Windows Network Load Balancing (NLB), or an external load balancer (ELB).|  
-|[3.2 Plan IP-HTTPS](#bkmk_2_2_NLB)|If a self-signed certificate is not used, the Remote Access server needs an SSL certificate on each server in the cluster, in order to authenticate IP-HTTPS connections.|  
-|[3.3 Plan for VPN client connections](#BKMK_3.3)|Note the requirements for VPN client connections.|  
-|[3.4 Plan the network location server](#BKMK_nls)|If the network location server website is hosted on the Remote Access server, and a self-signed certificate is not used, ensure that each server in the cluster has a server certificate to authenticate the connection to the website.|  
+|3.1 Plan load balancing|Decide whether to use Windows Network Load Balancing (NLB), or an external load balancer (ELB).|  
+|3.2 Plan IP-HTTPS|If a self-signed certificate is not used, the Remote Access server needs an SSL certificate on each server in the cluster, in order to authenticate IP-HTTPS connections.|  
+|3.3 Plan for VPN client connections|Note the requirements for VPN client connections.|  
+|3.4 Plan the network location server|If the network location server website is hosted on the Remote Access server, and a self-signed certificate is not used, ensure that each server in the cluster has a server certificate to authenticate the connection to the website.|  
   
 ## <a name="bkmk_2_1_Plan_LB"></a>3.1 Plan load balancing  
 Remote Access can be deployed on a single server, or on a cluster of Remote Access servers. Traffic to the cluster can be load balanced to provide high availability and scalability for DirectAccess clients. There are two load balancing options:  
@@ -32,7 +32,7 @@ Remote Access can be deployed on a single server, or on a cluster of Remote Acce
   
 -   **External load balancer**-Using an external load balancer requires external hardware to manage the traffic load between the Remote Access cluster servers. In addition, using an external load balancer supports a maximum of 32 Remote Access servers in a cluster. Some points to keep in mind when configuring external load balancing are:  
   
-    -   The administrator must ensure that the Virtual IPs configured through the Remote Access load balancing wizard are used on the external load balancers (like F5 Big-Ip Local Traffic Manager system). When external load balancing is enabled, the IP addresses on the external and internal interfaces will be promoted to Virtual IP addresses, and have to be plumbed on the load balancers. This is done so that the administrator does not have to change the DNS entry for the public name of the cluster deployment. Also, the IPsec tunnel endpoints are derived from the server IPs. If the administrator provides separate Virtual IPs, then the client will not be able to connect to the server. See example for configuring DirectAccess with External Load Balancing in [3.1.1 External Load Balancer configuration example](assetId:///22e3a2dc-4f9c-417c-9630-c329506a3e8b#ELBConfigEx).  
+    -   The administrator must ensure that the Virtual IPs configured through the Remote Access load balancing wizard are used on the external load balancers (like F5 Big-Ip Local Traffic Manager system). When external load balancing is enabled, the IP addresses on the external and internal interfaces will be promoted to Virtual IP addresses, and have to be plumbed on the load balancers. This is done so that the administrator does not have to change the DNS entry for the public name of the cluster deployment. Also, the IPsec tunnel endpoints are derived from the server IPs. If the administrator provides separate Virtual IPs, then the client will not be able to connect to the server. See example for configuring DirectAccess with External Load Balancing in 3.1.1 External Load Balancer configuration example.  
   
     -   Many external load balancers (including F5) do not support load balancing of 6to4 and ISATAP. If the Remote Access server is an ISATAP router, the ISATAP function should be moved to a different computer. Also, when ISATAP function is on a different computer, the DirectAccess servers must have native IPv6 connectivity with the ISATAP router. Note that this connectivity should be present before configuring DirectAccess.  
   
@@ -108,10 +108,3 @@ If you are running the network location server website on the single Remote Acce
 3.  If you used a self-signed certificate, a self-signed certificate will be configured automatically for each server during cluster deployment.  
   
 4.  The subject name of the certificate must not be identical to the name of any of the servers in the Remote Access deployment.  
-  
-## <a name="BKMK_Links"></a>See also  
-  
--   [Configure a Remote Access cluster](assetId:///dad5ada5-746a-4c29-aca9-15f20624c151)  
-  
-
-

@@ -410,13 +410,12 @@ In the event that you already have a node in the domain with the same computer n
 ### Adding additional drivers
 Nano Server offers a package that includes a set of basic drivers for a variety of network adapters and storage controllers; it's possible that drivers for your network adapters might not be included. You can use these steps to find drivers in a working system, extract them, and then add them to the Nano Server image.
 
-<<<<<<< HEAD:WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md
 ### Evaluation
 You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). To try out Nano Server, choose the **Nano Server | 64-bit EXE option**, and then come back to either [Nano Server Quick Start](Nano-Server-Quick-Start.md) or [Deploy Nano Server](Deploy-Nano-Server.md) to get started.
 
 ### Clean installation
 Because you install Nano Server by configuring a VHD, a clean installation is the quickest and simplest deployment method.
-=======
+
 1.	Install Windows Server 2016 on the physical computer where you will run Nano Server.
 2.	Open Device Manager and identify devices in the following categories:
 * Network adapters
@@ -434,7 +433,6 @@ Because you install Nano Server by configuring a VHD, a clean installation is th
      
      **dism\dism /Unmount-Image /MountDir:.\MountDir /Commit**
 7.	Repeat these steps for each driver file you need.
->>>>>>> 27aed3e4f77ab4c08d64866361ce6c7cae96afcd:WindowsServerDocs/compute/nano-server/Getting-Started-with-Nano-Server.md
 
 > [!NOTE]  
 > In the folder where you keep your drivers, both the SYS files and corresponding INF files must be present. Also, Nano Server only supports signed, 64\-bit drivers. 
@@ -472,6 +470,12 @@ To run custom commands as part of setupcomplete.cmd, use the -SetupCompleteComma
   
 `New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -SetupCompleteCommands @("echo foo", "echo bar")`  
   
+
+> [!IMPORTANT]  
+> Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016. For Nano Server, see the "Managing updates in Nano Server" section of [Manage Nano Server](Manage-Nano-Server.md).
+
+### Upgrade
+Since Nano Server is new for Windows Server 2016, there isn't an upgrade path from older operating system versions to Nano Server.
 
 ### Support for development scenarios  
 If you want to develop and test on Nano Server, you can use the -Development parameter. This will enable installation of unsigned drivers, copy debugger binaries, open a port for debugging, enable test signing and enable installation of AppX packages without a developer license:  
@@ -694,10 +698,8 @@ Now you can run commands remotely on the Nano Server. For example:
   
 **winrs -r:\<IP address of Nano Server> -u:Administrator -p:\<Nano Server administrator password> ipconfig**  
   
-<<<<<<< HEAD:WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md
--------------------------------------
-If you need a different installation option, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md) 
-=======
+<If you need a different installation option, you can head [back to the main Windows Server 2016 page](Windows-Server-2016-Technical-Preview-5.md) 
+
 For more information about Windows Remote Management, see [Windows Remote Management (WinRM) Overview](https://technet.microsoft.com/library/dn265971.aspx).  
    
    
@@ -807,7 +809,6 @@ Failover clustering works the same on Nano Server as it does on Windows Server i
 You'll find these Windows PowerShell cmdlets useful in managing Failover clusters:  
   
 You can create a new cluster with `New-Cluster -Name <clustername> -Node <comma-separated cluster node list>`  
->>>>>>> 27aed3e4f77ab4c08d64866361ce6c7cae96afcd:WindowsServerDocs/compute/nano-server/Getting-Started-with-Nano-Server.md
   
 Once you've established a new cluster, you should run `Set-StorageSetting -NewDiskPolicy OfflineShared` on all nodes.  
   

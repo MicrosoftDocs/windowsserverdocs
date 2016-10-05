@@ -59,4 +59,4 @@ If you have enabled the setting in Wireless Network \(IEEE 802.11\) Policies to 
 
 To connect to the wireless network, users need only supply their domain user name and password credentials when prompted by Windows.
 
-To plan your wireless access deployment, see [Wireless Access Deployment Planning](4-wireless-access-planning.md).
+To plan your wireless access deployment, see [Wireless Access Deployment Planning](d-wireless-access-planning.md).

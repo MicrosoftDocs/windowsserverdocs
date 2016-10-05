@@ -1,5 +1,5 @@
 ---
-title: Features Removed or Deprecated in  Windows Server 2016 Technical Preview
+title: Features Removed or Deprecated in  Windows Server 2016
 description: "Features and functionalities removed or planned for removal in releases."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -8,19 +8,19 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 08/09/2016
+ms.date: 10/04/2016
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Features Removed or Deprecated in  Windows Server 2016 Technical Preview
+# Features Removed or Deprecated in  Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following is a list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment. This list is subject to change in subsequent releases and may not include every deprecated feature or functionality. For more details about a particular feature or functionality and its replacement, see the documentation for that feature.  
 
-## Features removed from Windows Server Technical Preview  
+## Features removed from Windows Server 2016 
 The following features and functionalities have been removed from this release of Windows Server 2016. Applications, code, or usage that depend on these features will not function in this release unless you employ an alternate method.  
 
 > [!NOTE]  
@@ -30,14 +30,14 @@ The following features and functionalities have been removed from this release o
 ### File server  
 The Share and Storage Management snap-in for Microsoft Management Console has been removed. Instead, do any of the following:  
 
--   If the computer you want to manage is running an operating system older than Windows Server Technical Preview, connect to it with Remote Desktop and use the local version of the Share and Storage Management snap-in.  
+-   If the computer you want to manage is running an operating system older than Windows Server 2016, connect to it with Remote Desktop and use the local version of the Share and Storage Management snap-in.  
 
 -   On a computer running Windows 8.1 or earlier, use the Share and Storage Management snap-in from RSAT to view the computer you want to manage.  
 
 -   Use Hyper-V on a client computer to run a virtual machine running Windows 7, Windows 8, or Windows 8.1 that has the Share and Storage Management snap-in in RSAT.  
 
 ### Journal.dll  
-The Journal.dll is removed from Windows Server Technical Preview. There is no replacement.  
+The Journal.dll is removed from Windows Server 2016. There is no replacement.  
 
 ### Security Configuration Wizard  
 The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
@@ -45,7 +45,7 @@ The Security Configuration Wizard is removed. Instead, features are secured by d
 ### SQM  
 The opt-in components that manage participation in the Customer Experience Improvement Program have been removed.  
 
-## Features deprecated starting with Windows Server Technical Preview  
+## Features deprecated starting with Windows Server 2016 
 The following features and functionalities are deprecated starting with this release. Eventually, they will be completely removed from the product, but they are still available in this release, sometimes with certain functionality removed. You should begin planning now to employ alternate methods for any applications, code, or usage that depend on these features.  
 
 ### Configuration tools  

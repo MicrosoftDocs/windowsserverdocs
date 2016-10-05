@@ -25,11 +25,11 @@ You can using the following procedures to identify Remote Access server operatio
   
 This topic includes information about performing the following tasks:  
   
-[Simulate an operations issue](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Simulate)  
+- Simulate an operations issue  
   
-[Identify the operations issue and take corrective action](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Identify)  
+- Identify the operations issue and take corrective action  
   
-[Restore the IP Helper service](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Restart)  
+- Restore the IP Helper service  
   
 ### <a name="BKMK_Simulate"></a>Simulate an operations issue  
   

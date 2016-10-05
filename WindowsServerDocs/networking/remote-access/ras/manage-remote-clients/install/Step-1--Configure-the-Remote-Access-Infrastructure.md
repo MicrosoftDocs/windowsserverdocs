@@ -18,19 +18,19 @@ author: coreyp-at-msft
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
-This topic describes how to configure the infrastructure that is required for an advanced Remote Access deployment using a single Remote Access server in a mixed IPv4 and IPv6 environment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan the Remote Access Infrastructure [client]](assetId:///f7e327cd-5efb-4601-b567-c2576c414be1).  
+This topic describes how to configure the infrastructure that is required for an advanced Remote Access deployment using a single Remote Access server in a mixed IPv4 and IPv6 environment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan the Remote Access Infrastructure](../plan/Step-1--Plan-the-Remote-Access-Infrastructure.md).  
   
 |Task|Description|  
 |--------|---------------|  
-|[Configure server network settings](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigNetworkSettings)|Configure the server network settings on the Remote Access server.|  
-|[Configure routing in the corporate network](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigRouting)|Configure routing in the corporate network to make sure traffic is appropriately routed.|  
-|[Configure firewalls](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigFirewalls)|Configure additional firewalls, if required.|  
-|[Configure CAs and certificates](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigCAs)|Configure a certification authority (CA), if required, and any other certificate templates required in the deployment.|  
-|[Configure the DNS server](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigDNS)|Configure DNS settings for the Remote Access server.|  
-|[Configure Active Directory](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigAD)|Join client computers and the Remote Access server to the Active Directory domain.|  
-|[Configure GPOs](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigGPOs)|Configure Group Policy Objects (GPOs) for the deployment, if required.|  
-|[Configure security groups](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigSGs)|Configure security groups that will contain DirectAccess client computers, and any other security groups that are required in the deployment.|  
-|[Configure the network location server](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigNLS)|Configure the network location server, including installing the network location server website certificate.|  
+|Configure server network settings|Configure the server network settings on the Remote Access server.|  
+|Configure routing in the corporate network|Configure routing in the corporate network to make sure traffic is appropriately routed.|  
+|Configure firewalls|Configure additional firewalls, if required.|  
+|Configure CAs and certificates|Configure a certification authority (CA), if required, and any other certificate templates required in the deployment.|  
+|Configure the DNS server|Configure DNS settings for the Remote Access server.|  
+|Configure Active Directory|Join client computers and the Remote Access server to the Active Directory domain.|  
+|Configure GPOs|Configure Group Policy Objects (GPOs) for the deployment, if required.|  
+|Configure security groups|Configure security groups that will contain DirectAccess client computers, and any other security groups that are required in the deployment.|  
+|Configure the network location server|Configure the network location server, including installing the network location server website certificate.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -120,19 +120,19 @@ Apply the following internal network firewall exceptions for Remote Access traff
 ## <a name="BKMK_ConfigCAs"></a>Configure CAs and certificates  
 With Remote Access in  Windows Server 2012 , you to choose between using certificates for computer authentication or using a built-in Kerberos authentication that uses user names and passwords. You must also configure an IP-HTTPS certificate on the Remote Access server. This section explains how to configure these certificates.  
   
-For information about setting up a public key infrastructure (PKI), see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357(WS.10).aspx).  
+For information about setting up a public key infrastructure (PKI), see [Active Directory Certificate Services](http://technet.microsoft.com/library/cc770357.aspx).  
   
 ### <a name="BKMK_ConfigIPsec"></a>Configure IPsec authentication  
 A certificate is required on the Remote Access server and all DirectAccess clients so that they can use IPsec authentication. The certificate must be issued by an internal certification authority (CA). Remote Access servers and DirectAccess clients must trust the CA that issues the root and intermediate certificates.  
   
 ##### To configure IPsec authentication  
   
-1.  On the internal CA, decide if you will use the default computer certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705(WS.10).aspx).  
+1.  On the internal CA, decide if you will use the default computer certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
   
     > [!NOTE]  
     > If you create a new template, it must be configured for client authentication.  
   
-2.  Deploy the certificate template if required. For more information, see [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794(WS.10).aspx).  
+2.  Deploy the certificate template if required. For more information, see [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
   
 3.  Configure the template for autoenrollment if required.  
   
@@ -143,15 +143,15 @@ When you use an internal CA to issue certificates, you must configure certificat
   
 ##### To configure a certificate template  
   
-1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705(WS.10).aspx).  
+1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
   
-2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794(WS.10).aspx).  
+2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
   
 After you prepare your templates, you can use them to configure the certificates. See the following procedures for details:  
   
--   [Configure the IP-HTTPS certificate](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_IPHTTPS)  
+-   [Configure the IP-HTTPS certificate](#BKMK_IPHTTPS)  
   
--   [Configure the network location server](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e#BKMK_ConfigNLS)  
+-   [Configure the network location server](#BKMK_ConfigNLS)  
   
 ### <a name="BKMK_IPHTTPS"></a>Configure the IP-HTTPS certificate  
 Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the Remote Access server. There are three certificate options for the IP-HTTPS certificate:  
@@ -201,7 +201,7 @@ Make sure that the website certificate used for IP-HTTPS authentication meets th
   
 5.  Right-click **Certificates**, point to **All Tasks**, click **Request New Certificate**, and then click **Next** twice..  
   
-6.  On the **Request Certificates** page, select the check box for the certificate template that you created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp), and if required, click **More information is required to enroll for this certificate**.  
+6.  On the **Request Certificates** page, select the check box for the certificate template that you created in Configuring certificate templates, and if required, click **More information is required to enroll for this certificate**.  
   
 7.  In the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   
@@ -408,7 +408,7 @@ Whether you use a private certificate or a self-signed certificate, they require
   
 5.  Right-click **Certificates**, point to **All Tasks**, click **Request New Certificate**, and then click **Next** twice.  
   
-6.  On the **Request Certificates** page, select the check box for the certificate template that you created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp), and if required, click **More information is required to enroll for this certificate**.  
+6.  On the **Request Certificates** page, select the check box for the certificate template that you created in Configuring certificate templates, and if required, click **More information is required to enroll for this certificate**.  
   
 7.  In the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   
@@ -448,9 +448,5 @@ Whether you use a private certificate or a self-signed certificate, they require
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 2: Configure the Remote Access Server [Client]](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3)  
-  
--   [Manage DirectAccess Clients Remotely](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
-  
-
+-   [Step 2: Configure the Remote Access Server](Step-2--Configure-the-Remote-Access-Server.md)
 
