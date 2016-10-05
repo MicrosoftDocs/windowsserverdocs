@@ -1,4 +1,5 @@
 ---
+ms.assetid: 134840f3-c416-4a10-ad73-ef7855b206f7
 title: iSCSI target boot overview
 ms.prod: windows-server-threshold
 ms.technology: storage-iscsi

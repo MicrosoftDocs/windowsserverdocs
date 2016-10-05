@@ -1,4 +1,5 @@
 ---
+ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a Cloud Witness for a Failover Cluster
 ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering

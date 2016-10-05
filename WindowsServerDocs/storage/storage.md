@@ -1,4 +1,5 @@
 ---
+ms.assetid: 6b74bc7c-a58d-4915-af8e-2cc27f2c4726
 title: Storage overview
 ms.prod: windows-server-threshold
 ms.technology: storage
