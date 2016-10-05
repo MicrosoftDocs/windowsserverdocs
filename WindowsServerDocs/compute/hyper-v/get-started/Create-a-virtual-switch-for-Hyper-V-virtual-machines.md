@@ -8,9 +8,9 @@ ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 9/22/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Create a virtual switch for Hyper-V virtual machines
 
