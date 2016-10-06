@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # The Verbose Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Displays verbose output for a specified command. You can use **/verbose** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
 ## Syntax
 ```

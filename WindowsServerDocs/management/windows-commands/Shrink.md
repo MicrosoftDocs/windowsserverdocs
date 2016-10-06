@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Shrink
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 The Diskpart Shrink command reduces the size of the selected volume by the amount you specify. This command makes free disk space available from the unused space at the end of the volume.
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 ## Syntax

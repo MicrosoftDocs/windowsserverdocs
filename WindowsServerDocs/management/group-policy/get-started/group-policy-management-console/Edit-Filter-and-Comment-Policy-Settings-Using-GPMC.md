@@ -13,8 +13,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Edit, Filter, and Comment Policy Settings Using GPMC
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic provides links to tasks associated with configuring policy settings using the Group Policy Management Console (GPMC).
 
 The Group Policy Management Console or the Group Policy Management Editor, can help you manage policy settings through the following tasks.

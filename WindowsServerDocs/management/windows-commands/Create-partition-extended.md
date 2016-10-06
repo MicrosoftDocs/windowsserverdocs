@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Create partition extended
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  

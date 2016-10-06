@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Drive Map
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 File servers revolutionized centralized storage of user data.  However, it also introduced usability problems for end users attempting to remember long and complex paths to access their files and folders. IT Professionals resolved that problem by introducing users to Drive Mappings.  Drive maps enable users to simply associate a single drive letter to files and folders that reside on file servers.  Drive maps reduced returned usability back to the end user because it removed the requirement of users remembering long and complex paths to access centralized data.  Now, when a user needs access to their data, they can simply select the H drive from Windows Explorer, which represents the users HOME folder. Or, they can access the S drive for data that is shared among the department or organization.
 
 While mapped drives returned usability to end users, it created complexity for IT professionals.   To facilitate mapped drives for users, IT Professionals created a large and complicated matrix of users who belongs to groups that correlated to specific mapped drives needed by the users.  And, this mess of user-to-group-to-mapped-drives complexity was implemented in an elaborate logon script.  This limited the number of IT Professionals that could support and update the script to only those that had scripting knowledge.  Additionally, complex scripts are difficult to troubleshoot and support.  Group Policy Preferences Drive Maps resolve this problem.

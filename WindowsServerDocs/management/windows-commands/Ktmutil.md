@@ -15,7 +15,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Ktmutil
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Starts the Kernel Transaction Manager utility. If used without parameters, **ktmutil** displays available subcommands.  
 For examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  

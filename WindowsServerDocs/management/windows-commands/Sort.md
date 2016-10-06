@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Sort
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

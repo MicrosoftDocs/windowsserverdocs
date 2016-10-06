@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Using the add-ImageDriverPackage Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Adds a driver package that is in the driver store to an existing boot image on the server. The image version must be Windows 7 or Windows Server 2008 R2 or later.
 ## Syntax
 ```

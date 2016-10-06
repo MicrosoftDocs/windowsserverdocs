@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e763ca5-21a2-45d2-b26d-a9c44c99091a
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Attrib
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Displays, sets, or removes attributes assigned to files or directories. If used without parameters, **attrib** displays attributes of all files in the current directory.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

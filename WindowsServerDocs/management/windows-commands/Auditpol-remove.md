@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: be42ec55-235c-44f7-9abd-ed1cf3f5b1f5
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Auditpol remove
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Removes the per-user audit policy for a specified account or all accounts.
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 ## Syntax

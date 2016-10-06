@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Repair
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Repairs the RAID\-5 volume with focus by replacing the failed disk region with the specified dynamic disk.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  

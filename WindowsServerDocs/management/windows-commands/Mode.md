@@ -15,7 +15,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Mode
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Displays system status, changes system settings, or reconfigures ports or devices. If used without parameters, **mode** displays all the controllable attributes of the console and the available COM devices.  
 You can use **mode** to perform the following tasks—each task uses a different syntax:  
 -   [To configure a serial communications port](#BKMK_1)  

@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Fsutil
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Performs tasks that are related to file allocation table \(FAT\) and NTFS file systems, such as managing reparse points, managing sparse files, or dismounting a volume. If it is used without parameters, **fsutil** displays a list of supported subcommands.  
   
 > [!NOTE]  

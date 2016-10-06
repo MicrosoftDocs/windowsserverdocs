@@ -14,5 +14,9 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Erase
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This command is the same as the **del** command. See [Del](Del.md) for syntax and parameters.

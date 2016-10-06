@@ -14,6 +14,9 @@ ms.date: 10/12/2016
 
 
 # Using Folder Redirection in Group Policy
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic presents conceptual information about folder redirection and procedures using the GPMC.
 
 Folder Redirection enables you to redirect the location of specific folders within user profiles to a new location, such as a shared network location. Folder redirection is used in the process of administering user profiles and roaming user profiles. You can configure Folder Redirection using the Group Policy Management Console to redirect specific user profile folders, as well as edit Folder Redirection policy settings.

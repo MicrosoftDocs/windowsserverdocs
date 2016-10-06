@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc8aa6f0-c1d9-47ea-937a-28152148e774
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Unlodctr_1
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Removes Performance counter names and Explain text for a service or device driver from the system registry. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
 ## Syntax  
 ```  

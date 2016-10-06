@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Subst
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

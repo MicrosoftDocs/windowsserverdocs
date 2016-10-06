@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bitsadmin setnotifycmdline
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Sets the command-line command that will run when the job finishes transferring data or when a job enters a state..
 ## Syntax
 ```

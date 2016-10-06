@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Create partition logical
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Creates a logical partition in an existing extended partition. You can only use this command on master boot record \(MBR\) disks.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  

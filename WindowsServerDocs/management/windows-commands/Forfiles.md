@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Forfiles
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Selects and executes a command on a file or set of files. This command is useful for batch processing.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

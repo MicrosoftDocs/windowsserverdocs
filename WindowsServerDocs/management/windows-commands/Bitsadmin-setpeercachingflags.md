@@ -13,7 +13,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bitsadmin setpeercachingflags
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
 
 ## Syntax

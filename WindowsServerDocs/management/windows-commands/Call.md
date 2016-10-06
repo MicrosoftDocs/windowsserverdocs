@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Call
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.
 > [!NOTE]
 > **Call** has no effect at the command prompt when it is used outside of a script or batch file.

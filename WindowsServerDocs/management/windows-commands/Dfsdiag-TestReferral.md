@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Dfsdiag TestReferral
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Checks Distributed File System \(DFS\) referrals by performing the following tests:  
   
 -   When you use the DFSPath parameter without arguments, this command validates that the referral list includes all trusted domains.  

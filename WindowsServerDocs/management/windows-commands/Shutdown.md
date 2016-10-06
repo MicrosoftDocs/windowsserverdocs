@@ -15,7 +15,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Shutdown
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Enables you to shut down or restart local or remote computers one at a time.  
 For examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  

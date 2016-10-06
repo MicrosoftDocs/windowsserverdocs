@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Sc config
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Modifies the value of a service's entries in the registry and in the Service Control Manager database.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

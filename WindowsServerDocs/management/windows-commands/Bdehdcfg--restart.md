@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a98b76bb-36f1-4790-b337-7dc35f606bc6
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bdehdcfg: restart
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Informs the Bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```

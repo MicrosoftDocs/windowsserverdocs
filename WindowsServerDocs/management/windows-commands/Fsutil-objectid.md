@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Fsutil objectid
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Manages object identifiers \(OIDs\), which are internal objects used by the Distributed Link Tracking \(DLT\) Client service and File Replication Service \(FRS\) to track other objects such as files, directories, and links. Object identifiers are invisible to most programs and should never be modified.  
   
 > [!CAUTION]  

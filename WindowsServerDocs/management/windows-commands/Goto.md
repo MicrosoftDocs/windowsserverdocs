@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Goto
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Directs cmd.exe to a labeled line in a batch program. Within a batch program, **goto** directs command processing to a line that is identified by a label. When the label is found, processing continues starting with the commands that begin on the next line.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

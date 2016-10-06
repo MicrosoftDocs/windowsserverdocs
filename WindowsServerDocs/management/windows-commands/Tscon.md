@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Tscon
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Connects to another session on a Remote Desktop Session Host (RD Session Host) server.  
 For examples of how to use this command, see [Examples](#BKMK_examples).  
 > [!NOTE]  

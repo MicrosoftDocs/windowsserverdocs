@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Wbadmin start sysrecovery
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Performs a system recovery (bare metal recovery) using the parameters that you specify.
 > [!NOTE]
 > This subcommand can be run only from the Windows Recovery Environment, and it is not listed by default in the usage text of **Wbadmin**. For more information, see [Windows Recovery Environment (Windows RE) Overview](http://technet.microsoft.com/library/hh825173.aspx).

@@ -15,7 +15,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Set_1
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Displays, sets, or removes CMD.EXE environment variables. If used without parameters, **set** displays the current environment variable settings.  
 For examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  

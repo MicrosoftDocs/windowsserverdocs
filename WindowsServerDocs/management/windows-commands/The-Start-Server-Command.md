@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # The Start Server Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Starts the multicast transmission, namespace, Transport Server or all services on the Windows Deployment Services server.
 ## Subcommands
 |Subcommand|Description|

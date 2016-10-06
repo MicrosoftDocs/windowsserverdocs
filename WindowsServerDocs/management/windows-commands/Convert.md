@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Convert
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Converts file allocation table (FAT) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact. Volumes converted to the NTFS file system cannot be converted back to FAT or FAT32.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

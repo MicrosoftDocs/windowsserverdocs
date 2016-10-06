@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Using the new-MulticastTransmission Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Creates a new multicast transmission for an image. This command is equivalent to creating a transmission by using the Windows Deployment Services MMC snap-in (right-click the **Multicast Transmissions** node, and then click **Create Multicast Transmission**). You should use this command when you have both the Deployment Server role service and the Transport Server role service installed (which is the default installation). If you have only the Transport Server role service installed, use [Using the new-Namespace Command](Using-the-new-Namespace-Command.md).
 ## Syntax
 For install images transmissions:

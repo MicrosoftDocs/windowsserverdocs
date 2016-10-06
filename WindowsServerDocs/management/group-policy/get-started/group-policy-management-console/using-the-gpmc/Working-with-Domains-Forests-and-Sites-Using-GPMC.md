@@ -14,6 +14,9 @@ ms.date: 10/12/2016
 
 
 # Working with Domains, Forests, and Sites Using GPMC
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic contains procedures for managing domains, forests and sites as a Group Policy administrator using the Group Policy Management Console.
 
 ## About domains, forests and sites

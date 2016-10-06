@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # The uninitialize-Server Option
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Reverts changes made to the server during the initial server configuration. This includes changes made by either the **/initialize-server** option or the Windows Deployment Services MMC snap-in. Note that this command resets the server to an unconfigured state. This command does not modify the contents of the RemoteInstall shared folder. Rather, it resets the server's state so that you can reinitialize the server.
 ## Syntax
 ```

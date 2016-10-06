@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Taskkill
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **Taskkill** replaces the **kill** tool.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

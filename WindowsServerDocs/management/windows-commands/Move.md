@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Move
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Moves one or more files from one directory to another directory.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

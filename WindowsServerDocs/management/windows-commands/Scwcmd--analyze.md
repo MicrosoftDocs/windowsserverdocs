@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Scwcmd: analyze
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Determines whether a computer is in compliance with a policy. Results are returned in an .xml file. Also accepts a list of computer names as input. To view the results in your browser, use **scwcmd view** and specify **%windir%\security\msscw\TransformFiles\scwanalysis.xsl** as the .xsl transform. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```

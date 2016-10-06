@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Resultant Set of Policy
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 You can use Resultant Set of Policy (RSoP) to simulate and test policy settings that are applied to computers or users using Group Policy.
 
 #### Open RSoP as an MMC snap-in

@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4874fd43-d5ea-45f3-ae24-388ae925ed76
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Doskey
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Calls Doskey.exe (which recalls previously entered command-line commands), edits command lines, and creates macros.  
 For examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  

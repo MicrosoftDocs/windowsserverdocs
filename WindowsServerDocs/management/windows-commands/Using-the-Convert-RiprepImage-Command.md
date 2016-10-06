@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Using the Convert-RiprepImage Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Converts an existing Remote Installation Preparation (RIPrep) image to Windows Image (.wim) format.
 ## Syntax
 ```

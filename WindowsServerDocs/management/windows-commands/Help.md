@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Help
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

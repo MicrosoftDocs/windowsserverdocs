@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Configure Firewall Port Requirements for Group Policy
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 You can use the information in this topic to configure the firewall port requirements for Group Policy. Group Policy requires that firewall ports are opened on client computers for an administrator to perform these two remote operations:
 
 -   [Remote Resultant Set of Policy (RSoP) Group Policy results: ports that require firewall rules](Configure-Firewall-Port-Requirements-for-Group-Policy.md#BKMK_RemoteRSoP)

@@ -14,8 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Mklink
 Creates a symbolic link.
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```

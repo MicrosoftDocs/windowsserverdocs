@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Mmc
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Using MMC command-line options, you can open a specific **MMC** console, open **MMC** in author mode, or specify that the 32-bit or 64-bit version of **MMC** is opened.
 ## Syntax
 ```

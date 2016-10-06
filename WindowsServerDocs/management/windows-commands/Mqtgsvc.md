@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Mqtgsvc
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true. For examples of how the Message Queuing Triggers service can be used, see [Message Queuing Triggers](http://go.microsoft.com/fwlink/?LinkId=248725)on MSDN.
 ## Syntax
 ```

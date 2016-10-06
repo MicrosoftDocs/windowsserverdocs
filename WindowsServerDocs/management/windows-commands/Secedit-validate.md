@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Secedit:validate
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Validates the security settings stored in a security template (.inf file). For examples of how this command can be used, see [Examples](Secedit-validate.md#BKMK_Examples).
 ## Syntax
 ```

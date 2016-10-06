@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Ksetup:delkpasswd
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Removes a Kerberos password server (Kpasswd) for a realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```

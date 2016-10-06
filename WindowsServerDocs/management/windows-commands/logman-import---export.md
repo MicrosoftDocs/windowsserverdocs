@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # logman import | export
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
 For examples of how this command can be used, see [Examples](#BKMK_examples).  
 ## Syntax  

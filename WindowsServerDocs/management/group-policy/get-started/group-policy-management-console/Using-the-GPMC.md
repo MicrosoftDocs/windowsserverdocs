@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Using the GPMC
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 The Group Policy Management Console (GPMC) is a comprehensive administrative tool that administrators use to perform most Group Policy management tasks.  
   
 > [!NOTE]  

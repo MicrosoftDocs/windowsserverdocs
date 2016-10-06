@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45502abe-3d6e-4e13-94f0-8e6fcb6db860
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Auditpol list
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 ## Syntax

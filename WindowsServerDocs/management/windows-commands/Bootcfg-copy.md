@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bootcfg copy
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Makes a copy of an existing boot entry, to which you can add command-line options.
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 ## Syntax

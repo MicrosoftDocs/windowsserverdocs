@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Using the remove-MulticastTransmission Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Disables multicast transmitting for an image. Unless you specify **/Force**, existing clients will complete the image transfer but new clients will not be allowed to join.
 ## Syntax
 **Windows Server 2008**

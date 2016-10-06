@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Reg import
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Copies the contents of a file that contains exported registry subkeys, entries, and values into the registry of the local computer.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

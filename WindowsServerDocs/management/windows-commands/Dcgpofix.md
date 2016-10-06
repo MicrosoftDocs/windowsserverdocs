@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 81d5fa65-2aea-49d3-b353-357441846c00
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Dcgpofix
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Recreates the default Group Policy Objects (GPOs) for a domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
 ## Syntax  
 ```  

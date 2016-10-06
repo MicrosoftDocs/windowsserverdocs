@@ -13,7 +13,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # The Server Cleanup Wizard
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 The Server Cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
 

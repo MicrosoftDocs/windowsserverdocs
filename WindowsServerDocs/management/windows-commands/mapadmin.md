@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # mapadmin
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 You can use **Mapadmin** to manage User Name Mapping for Microsoft Services for Network File System.
 ## Syntax
 ```

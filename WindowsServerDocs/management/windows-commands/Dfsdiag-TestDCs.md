@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Dfsdiag TestDCs
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  
   
 -   Verifies that the Distributed File System \(DFS\) Namespace service is running and that its Startup Type is set to Automatic.  

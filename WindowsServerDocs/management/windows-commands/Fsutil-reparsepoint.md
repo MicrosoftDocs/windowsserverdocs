@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Fsutil reparsepoint
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Queries or deletes reparse points.  The **fsutil reparsepoint** command is typically used by support professionals.  
   
 For examples of how to use this command, see [Examples](#BKMK_examples).  

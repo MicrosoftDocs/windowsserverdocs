@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Check Group Policy Infrastructure Status
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Group Policy is a complicated infrastructure that allows you to apply policy settings to remotely configure computer and user experiences within a domain. Most of the troubleshooting advice comes to IT administrators when Group Policy fails to perform in the expected manner. But this advice does not scale well when you have thousands of Group Policy Objects (GPOs) that apply to thousands of computers and users.
 
 In some cases, when you have a large enterprise spread over multiple countries and time zones, there could be a significant replication delay between domain controllers. GPO mismatches in version numbers between the Group Policy container and the Group Policy template, or GPO mismatches between different domain controllers, can be expected due to a delay in replication. They can also indicate an issue with Group Policy. In previous versions of Windows, there were tools (such as **GPOTool.exe**) to provide a view of the GPO replication, but they provided inconsistent information.

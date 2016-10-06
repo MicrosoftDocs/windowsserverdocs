@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Certutil
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Certutil.exe is a command-line program that is installed as part of Certificate Services. You can use Certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
 When certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. When cerutil is run on a non-certification authority, the command defaults to running the certutil [-dump](Certutil.md#BKMK_dump) verb.
 > [!WARNING]

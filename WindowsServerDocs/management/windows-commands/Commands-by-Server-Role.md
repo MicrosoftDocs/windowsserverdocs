@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Commands by Server Role
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 A server role describes the primary function of the server. Administrators can choose to dedicate an entire server to one role, or install multiple server roles and sub roles on a single computer. Each role may include additional command-line tools, installed as part of the role. The following topics provide a list of commands associated with each server role.
 -   [Active Directory Certificate Services Command Reference](assetId:///fc67f57a-aa62-4fd1-b9da-d45ff281e982)
 -   [Active Directory Domain Services Command Reference](assetId:///360c8278-1d01-4782-af61-21a89dcd58dc)

@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Defrag
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Locates and consolidates fragmented files on local volumes to improve system performance.
 Membership in the local **Administrators** group, or equivalent, is the minimum required to run this command.
 For examples of how this command can be used, see [Examples](#BKMK_examples).

@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Fsutil 8dot3name
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Queries or changes the settings for short name \(8dot3 name\) behavior, which include:  
   
 -   Query the current setting for the short name behavior  

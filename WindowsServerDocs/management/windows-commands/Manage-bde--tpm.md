@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Manage-bde: tpm
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 > [!IMPORTANT]
 > This command is not supported for use on computers running Windows 8,  Windows Server 2012  or later operating systems. For those computers, you can use the [TPM Management cmdlets for Windows PowerShell](http://technet.microsoft.com/library/jj603116.aspx).
 If you are using this command on computer running Windows 7 or Windows Server 2008, you can still configure the computer's Trusted Platform Module (TPM) using this command. For examples of how this command can be used, see [Examples](#BKMK_Examples).

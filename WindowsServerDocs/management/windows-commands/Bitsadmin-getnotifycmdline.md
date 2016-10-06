@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bitsadmin getnotifycmdline
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Retrieves the command-line command that is ran when the job finishes transferring data.
 ## Syntax
 ```

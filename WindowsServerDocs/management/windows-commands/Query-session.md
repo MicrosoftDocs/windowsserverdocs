@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Query session
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Displays information about sessions on a Remote Desktop Session Host (RD Session Host) server.
 The list includes information not only about active sessions but also about other sessions that the server runs.
 For examples of how to use this command, see [Examples](#BKMK_examples).

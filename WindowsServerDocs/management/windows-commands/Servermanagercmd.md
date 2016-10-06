@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Servermanagercmd
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 > [!IMPORTANT]
 > This command is available only on servers that are running  Windows Server 2008  or  Windows Server 2008 R2 . **Servermanagercmd.exe** has been deprecated, and is not available in  Windows Server 2012 . For information about how to install or remove roles, role services, and features in  Windows Server 2012 , see [Install or uninstall roles, role services, and features](http://go.microsoft.com/fwlink/?LinkID=239563) on Microsoft TechNet.
 Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer. For additional information about the roles, role services, and features that you can specify by using this tool, see the [Server Manager Help](http://go.microsoft.com/fwlink/?LinkID=137387). (http://go.microsoft.com/fwlink/?LinkID=137387).

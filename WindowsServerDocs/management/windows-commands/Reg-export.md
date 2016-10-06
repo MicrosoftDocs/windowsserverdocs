@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Reg export
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Copies the specified subkeys, entries, and values of the local computer into a file for transfer to other servers.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

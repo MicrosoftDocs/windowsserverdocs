@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Wdsutil
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 WDSUTIL is a command-line utility used for managing your Windows Deployment Services server. To run these commands, click **Start**, right-click **Command Prompt**, and click **Run as administrator**.  
 ## Commands  
 |Command|Description|  

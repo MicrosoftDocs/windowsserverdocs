@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Sc query
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Obtains and displays information about the specified service, driver, type of service, or type of driver.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

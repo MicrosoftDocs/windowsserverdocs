@@ -14,6 +14,9 @@ ms.date: 10/12/2016
 
 
 # Working with Group Policy Preference Items Using the GPMC
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic describes Group Policy Preferences and explains some common configuration procedures. It also contains links to topics about working with Preferences using the GPMC for Windows settings and Control Panel settings as well as item-level targeting.
 
 Group Policy Preferences, introduced in  Windows ServerÂ® 2008 , provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a Group Policy Object. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.

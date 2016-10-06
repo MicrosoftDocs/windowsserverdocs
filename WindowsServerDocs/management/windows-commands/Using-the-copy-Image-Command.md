@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Using the copy-Image Command
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Copies images that are within the same image group. To copy images between image groups, use the [Using the Export-Image Command](Using-the-Export-Image-Command.md) command and then the [Using the add-Image Command](Using-the-add-Image-Command.md) command.
 For examples of how you can use this command, see [Examples](#BKMK_examples).
 ## Syntax

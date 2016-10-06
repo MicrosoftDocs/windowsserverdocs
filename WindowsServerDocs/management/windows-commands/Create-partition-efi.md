@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Create partition efi
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 On Itanium\-based computers, creates an Extensible Firmware Interface \(EFI\) system partition on a GUID Partition Table \(GPT\) disk.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  

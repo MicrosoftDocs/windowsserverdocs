@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Convert dynamic
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Converts a basic disk into a dynamic disk.  
   
 For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207047) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207047\).  

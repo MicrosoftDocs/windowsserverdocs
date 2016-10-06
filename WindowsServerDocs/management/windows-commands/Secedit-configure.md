@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Secedit:configure
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Allows you to configure the current system settings using security settings stored in a database. For examples of how this command can be used, see [Examples](Secedit-configure.md#BKMK_Examples).
 ## Syntax
 ```

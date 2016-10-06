@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Dfsrmig
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 The `dfsrmig` command migrates SYSVOL replication from File Replication Service (FRS) to Distributed File System (DFS) Replication, provides information about the progress of the migration, and modifies Active Directory Domain Services (AD DS) objects to support the migration.
 For examples of how to use this command, see the [Examples](#BKMK_examples) section later in this document.
 ## Syntax

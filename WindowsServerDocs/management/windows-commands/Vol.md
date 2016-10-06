@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Vol
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Displays the disk volume label and serial number, if they exist.  If used without parameters, **vol** displays information for the current drive.
 ## Syntax
 ```

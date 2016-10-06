@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Mount
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 You can use **mount** to mount Network File System (NFS) network shares.
 ## Syntax
 mount [-o <Option>[...]] [-u:<UserName>] [-p:{<Password> | *}] {\\\\<ComputerName>\\<ShareName> | <ComputerName>:/<ShareName>} {<DeviceName> | \*}

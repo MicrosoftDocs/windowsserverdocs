@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1116a0f0-5415-4369-a045-12f79f8f66de
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # logman query
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Query data collector or data collector set properties.  
 For examples of how this command can be used, see [Examples](#BKMK_examples).  
 ## Syntax  

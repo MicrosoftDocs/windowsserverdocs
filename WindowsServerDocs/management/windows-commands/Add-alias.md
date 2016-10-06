@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fe12f5d-11e9-4f3d-b7f9-40b26c8685e5
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Add alias
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt.  
   
 For examples of how to use this command, see [Examples](#BKMK_examples).  

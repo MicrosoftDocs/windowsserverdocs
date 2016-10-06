@@ -13,7 +13,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Updates Operations
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 After updates have been synchronized to your WSUS server, they will be scanned automatically for relevance to the server's client computers. However, you must approve the updates before they are deployed to the computers on your network. When you approve an update, you are essentially telling WSUS what to do with it (your choices are **Install** or **Decline** for a new update). You can approve updates for the **All Computers** group or for subgroups. If you do not approve an update, its approval status remains **Not approved**, and your WSUS server allows clients to evaluate whether or not they need the update.
 

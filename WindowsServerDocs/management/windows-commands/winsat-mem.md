@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # winsat mem
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Working with Control Panel Settings Preference Items Using the GPMC
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic describes how to configure Control Panel settings preferences when you edit any domain-based Group Policy Object using the GPMC. The preferences node appears under **Computer Configuration** and **User Configuration**.  
   
 The Group Policy Management Console allows you to configure preferences when you edit any domain-based Group Policy object. Group Policy Preferences let you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language. You can use preference items to reduce scripting and the number of custom system images needed, standardize management, and help secure your networks. By using preference item-level targeting, you can streamline desktop management by reducing the number of Group Policy objects needed.  

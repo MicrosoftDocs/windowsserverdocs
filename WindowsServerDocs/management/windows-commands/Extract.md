@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Extract
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 ## Syntax
 ```
 EXTRACT [/Y] [/A] [/D | /E] [/L dir] cabinet [filename ...]

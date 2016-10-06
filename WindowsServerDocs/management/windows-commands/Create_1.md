@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Create_1
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Starts the shadow copy creation process, using the current context and option settings. Requires at least one volume in the Shadow Copy Set.  
   
 ## Syntax  

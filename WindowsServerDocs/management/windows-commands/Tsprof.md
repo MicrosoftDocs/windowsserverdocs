@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Tsprof
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Copies the Remote Desktop Services user configuration information from one user to another.
 The Remote Desktop Services user configuration information is displayed in the Remote Desktop Services extensions to Local Users and Groups and Active Directory Users and Computers.
 **Tsprof** can also set the profile path for a user.

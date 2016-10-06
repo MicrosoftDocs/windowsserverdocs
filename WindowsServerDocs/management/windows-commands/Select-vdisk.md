@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Select vdisk
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  
   
 > [!NOTE]  

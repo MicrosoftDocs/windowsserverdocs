@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Delete disk
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Deletes a missing dynamic disk from the list of disks.  
   
 For instructions regarding how to use this command, see [Remove a Missing Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207055) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207055\).  

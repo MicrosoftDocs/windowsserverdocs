@@ -14,6 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
 >Applies To: Windows Server 2016

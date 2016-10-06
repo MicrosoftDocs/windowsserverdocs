@@ -12,8 +12,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic contains procedures for using the GPMC tool to configure and run four types of Group Policy.  
   
 This topic describes how to install and use scripts on a domain controller. If you want information about script use for the local computer, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor](../local-group-policy-editor/Working-with-startup-shutdown-logon-and-logoff-scripts-using-the-Local-Group-Policy-Editor.md).  

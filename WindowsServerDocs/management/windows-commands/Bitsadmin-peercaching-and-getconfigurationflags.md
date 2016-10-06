@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bitsadmin peercaching and getconfigurationflags
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.
 ## Syntax
 ```

@@ -15,6 +15,9 @@ ms.date: 10/12/2016 Reg flags
 Insert introduction here.
 
 ## Section Heading
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Insert section body here.
 
 ### Subsection Heading

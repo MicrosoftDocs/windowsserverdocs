@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Reg
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Performs operations on registry subkey information and values in registry entries. The **reg** commands include:
 [Reg add](Reg-add.md)
 [Reg compare](Reg-compare.md)

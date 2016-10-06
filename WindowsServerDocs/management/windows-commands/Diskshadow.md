@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Diskshadow
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 DiskShadow.exe is a tool that exposes the functionality offered by the Volume Shadow Copy Service \(VSS\). By default, DiskShadow uses an interactive command interpreter similar to that of DiskRAID or DiskPart. DiskShadow also includes a scriptable mode.  
   
 > [!NOTE]  

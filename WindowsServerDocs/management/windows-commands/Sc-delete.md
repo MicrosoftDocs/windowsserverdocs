@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Sc delete
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Deletes a service subkey from the registry. If the service is running or if another process has an open handle to the service, the service is marked for deletion.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

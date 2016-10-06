@@ -14,6 +14,9 @@ ms.date: 10/12/2016
 
 
 # Editing Software Settings Using GPMC
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 This topic contains procedures for using the GPMC tool to edit Group Policy Software Settings.
 
 Group Policy Software Installation enables you to provide on-demand software installation and automatic repair of applications. Group Policy offers a convenient method for delivering software, especially if you are already using Group Policy for other purposes such as securing your client and server computers.

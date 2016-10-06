@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Del
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Deletes one or more files. This command is the same as the **erase** command.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

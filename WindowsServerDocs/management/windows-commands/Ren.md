@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Ren
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Renames files or directories. This command is the same as the **rename** command.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax

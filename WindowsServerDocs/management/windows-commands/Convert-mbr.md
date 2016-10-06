@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Convert mbr
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Converts an empty basic disk with the GUID Partition Table \(GPT\) partition style into a basic disk with the master boot record \(MBR\) partition style.  
   
 > [!IMPORTANT]  

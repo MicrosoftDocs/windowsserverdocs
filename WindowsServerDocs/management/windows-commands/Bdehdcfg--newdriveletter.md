@@ -9,13 +9,16 @@ ms.technology: manage-windows-commands
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f1f200a0-6850-4f0d-9047-f9f982a590f8
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Bdehdcfg: newdriveletter
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Assigns a new drive letter to the portion of a drive used as the system drive. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```

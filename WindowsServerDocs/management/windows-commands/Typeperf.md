@@ -15,7 +15,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Typeperf
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL+C.  
 For examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).  
 ## Syntax  

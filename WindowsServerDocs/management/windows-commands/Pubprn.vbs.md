@@ -14,7 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
+
 # Pubprn.vbs
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
 Publishes a printer to the Active Directory Domain Services.
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 ## Syntax
