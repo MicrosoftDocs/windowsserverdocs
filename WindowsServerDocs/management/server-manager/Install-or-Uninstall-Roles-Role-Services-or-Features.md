@@ -17,12 +17,12 @@ ms.date: 10/12/2016
 
 # Install or Uninstall Roles, Role Services, or Features
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-In Windows Server 2016 Technical Preview, the Server Manager console and Windows PowerShell cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks (VHDs). You can install multiple roles and features on a single remote server or offline VHD in a single Add Roles and Features Wizard or Windows PowerShell session.  
+In Windows Server, the Server Manager console and Windows PowerShell cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks (VHDs). You can install multiple roles and features on a single remote server or offline VHD in a single Add Roles and Features Wizard or Windows PowerShell session.  
   
 > [!IMPORTANT]  
-> Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012 R2  or Windows 8.1 cannot be used to install roles, role services, and features on servers that are running Windows Server 2016 Technical Preview.  
+> Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012 R2  or Windows 8.1 cannot be used to install roles, role services, and features on servers that are running Windows Server 2016.  
   
 You must be logged on to a server as an administrator to install or uninstall roles, role services, and features. If you are logged on to the local computer with an account that does not have administrator rights on your target server, right-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to Server Manager, and you must have Administrator rights on that server.  
   
@@ -46,7 +46,7 @@ This topic contains the following sections.
 In a single session in the Add Roles and Features Wizard, you can install roles, role services, and features on the local server, a remote server that has been added to Server Manager, or an offline VHD. For more information about how to add a server to Server Manager to manage, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md).  
   
 > [!NOTE]  
-> If you are running Server Manager on Windows Server 2016 Technical Preview or Windows 10, you can use the Add Roles and Features Wizard to install roles and features only on servers and offline VHDs that are running Windows Server 2016 Technical Preview.  
+> If you are running Server Manager on Windows Server 2016  or Windows 10, you can use the Add Roles and Features Wizard to install roles and features only on servers and offline VHDs that are running Windows Server 2016.  
   
 #### To install roles and features by using the Add Roles and Features Wizard  
   
@@ -104,7 +104,7 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
   
     -   On the Windows **Start** screen, right-click the tile for Windows PowerShell, and then on the app bar, click **Run as Administrator**.  
   
-2.  Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -ComputerName <***computer_name***>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016 Technical Preview. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
+2.  Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -ComputerName <***computer_name***>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
   
     > [!NOTE]  
     > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case-sensitive.  
@@ -169,7 +169,7 @@ You must be logged on to a server as an administrator to uninstall roles, role s
     For information about how to add servers to your server pool, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md). After you have selected the destination server, click **Next**.  
   
     > [!NOTE]  
-    > You can use the Remove Roles and Features Wizard to remove roles and features from servers that are running the same release of Windows Server that supports the version of Server Manager that you are using. You cannot remove roles, role services, or features from servers that are running Windows Server 2016 Technical Preview, if you are running Server Manager on  Windows Server 2012 R2 ,  Windows Server 2012 , or Windows 8. You cannot use the Remove Roles and Features Wizard to remove roles and features from servers that are running  Windows Server 2008  or  Windows Server 2008 R2 .  
+    > You can use the Remove Roles and Features Wizard to remove roles and features from servers that are running the same release of Windows Server that supports the version of Server Manager that you are using. You cannot remove roles, role services, or features from servers that are running Windows Server 2016, if you are running Server Manager on  Windows Server 2012 R2 ,  Windows Server 2012 , or Windows 8. You cannot use the Remove Roles and Features Wizard to remove roles and features from servers that are running  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 5.  Select roles, select role services for the role if applicable, and then click **Next** to select features.  
   
@@ -195,7 +195,7 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
   
     -   On the Windows **Start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
   
-2.  Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -ComputerName <***computer_name***>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016 Technical Preview. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
+2.  Type **Get-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get-WindowsFeature -ComputerName <***computer_name***>**, in which *computer_name* represents the name of a remote computer that is running Windows Server 2016. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
   
     > [!NOTE]  
     > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case-sensitive.  
@@ -234,7 +234,7 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
 Although you cannot use the Add Roles and Features Wizard to install roles, role services, and features on more than one target server in a single wizard session, you can use a Windows PowerShell script to install roles, role services, and features on multiple target servers that you are managing by using Server Manager. The script that you use to perform batch deployment, as this process is called, points to an XML configuration file that you can create easily by using the Add Roles and Features Wizard, and clicking **Export configuration settings** after advancing through the wizard to the **Confirm installation selections** page of the Add Roles and Features Wizard.  
   
 > [!IMPORTANT]  
-> All target servers that are specified in your script must be running the release of Windows Server that matches the version of Server Manager you are running on the local computer. For example, if you are running Server Manager on Windows 10, you can install roles, role services, and features on servers that are running Windows Server 2016 Technical Preview. If GUI-based management tools are added to the installation, the installation process automatically converts target servers that are running the Server Core installation option of Windows Server to the full installation option (server with a full GUI, also known as running Server Graphical Shell).  
+> All target servers that are specified in your script must be running the release of Windows Server that matches the version of Server Manager you are running on the local computer. For example, if you are running Server Manager on Windows 10, you can install roles, role services, and features on servers that are running Windows Server 2016. If GUI-based management tools are added to the installation, the installation process automatically converts target servers that are running the Server Core installation option of Windows Server to the full installation option (server with a full GUI, also known as running Server Graphical Shell).  
 >   
 > The script provided in this section is an example of how batch deployment can be performed by using the `Install-WindowsFeature` cmdlet and a Windows PowerShell script. There are other possible scripts and methods of performing batch deployment to multiple servers. To search for or provide other scripts for deploying roles and features, search the [Script Center Repository](http://gallery.technet.microsoft.com/ScriptCenter).  
   
@@ -334,7 +334,7 @@ You can install .NET Framework 3.5 by doing one of the following.
   
 1.  On the **Manage** menu in Server Manager, click **Add Roles and Features**.  
   
-2.  Select a destination server that is running Windows Server 2016 Technical Preview.  
+2.  Select a destination server that is running Windows Server 2016.  
   
 3.  On the **Select features** page of the Add Roles and Features Wizard, select **.NET Framework 3.5**.  
   

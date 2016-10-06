@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 
 # View Task Details and Notifications
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016
 
 In Server Manager in Windows Server 2012 R2 or Windows Server 2012, when you perform management tasks such as adding roles and features, starting services, refreshing data that is displayed in the Server Manager console, or creating a custom group of servers, a notification is displayed in the **Notifications** area of the Server Manager console header. Notifications, and the **Task Details** dialog box that you can open from the **Notifications** menu by clicking the flag icon, display the status of user tasks or requests, show you if a task failed, and help you troubleshoot problems by pointing to detailed error messages about task failures.
 

@@ -12,7 +12,7 @@ ms.assetid: b7d4d35d-8bda-46d2-8df5-eb598cecaaba
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 09/14/2016
+ms.date: 10/12/2016
 
 ---
 # Add volume

@@ -17,11 +17,11 @@ ms.date: 10/12/2016
 
 # View and Configure Performance, Event, and Service Data
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic describes how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.  
 
-Event, service, and performance log data is displayed in two places in the Server Manager console in Windows Server 2016 Technical Preview.  
+Event, service, and performance log data is displayed in two places in the Server Manager console in Windows Server.  
 
 -   On the dashboard, you can click the **Events**, **Performance**, and **Services** rows of thumbnails to configure event, performance, and service log data that you want to see for roles, the entire Server Manager server pool, user-created groups of servers, and the local server. Clicking the hypertext rows opens **Detail View** dialog boxes that let you specify the data about which you want to be alerted in the dashboard. After you configure event, service, and performance log data that you want to be highlighted in the dashboard thumbnails, log entries that match the criteria you have specified are listed at the bottom of the **Detail View** dialog boxes.  
 

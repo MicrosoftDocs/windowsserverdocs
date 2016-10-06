@@ -18,24 +18,24 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016
 
-This topic introduces automatic exclusions for Windows Defender on Windows Server 2016 Technical Preview.
+This topic introduces automatic exclusions for Windows Defender on Windows Server 2016.
 
 Are you looking for information about Windows Defender on Windows 8 or Windows 8.1? If so, see the information [Using Windows Defender](http://windows.microsoft.com/windows/using-defender).
 
 ## About Windows Defender automatic exclusions
-Windows Server 2016 Technical Preview includes Windows Defender. To help ensure security and performance, certain exclusions are needed based on the roles and features you install.
+Windows Server 2016 includes Windows Defender. To help ensure security and performance, certain exclusions are needed based on the roles and features you install.
 
-Windows Defender delivers automatic exclusions for Windows Server 2016 Technical Preview roles via the regularly scheduled definition update process. Definitions are published 3 times a day, 7 days a week. The automatic exclusions are used only by real-time protection scans when a process accesses a file or folder. Scheduled scans and full scans scan all locations.
+Windows Defender delivers automatic exclusions for Windows Server 2016 roles via the regularly scheduled definition update process. Definitions are published 3 times a day, 7 days a week. The automatic exclusions are used only by real-time protection scans when a process accesses a file or folder. Scheduled scans and full scans scan all locations.
 
 Automatic exclusions do not appear in the Windows Defender exclusions list. You can create custom exclusions in addition to the automatic exclusions. Custom exclusions take precedence over the automatic exclusions.
 
 Windows Defender uses the Deployment Image Servicing and Management (DSIM) tools to determine which roles are installed on your computer.
 
 ### Opting out of automatic exclusions
-In Windows Server 2016 Technical Preview the predefined exclusions delivered by definition updates only exclude the default paths for a role or feature. If you installed a role or feature in a custom path, or you want to manually control the set of exclusions, you need to opt-out of the automatic exclusions delivered in definition updates.
+In Windows Server 2016 the predefined exclusions delivered by definition updates only exclude the default paths for a role or feature. If you installed a role or feature in a custom path, or you want to manually control the set of exclusions, you need to opt-out of the automatic exclusions delivered in definition updates.
 
 > [!WARNING]
-> Opting out of automatic exclusions may adversely impact performance, or result in data corruption. The exclusions that are delivered automatically are optimized for Windows Server 2016 Technical Preview roles.
+> Opting out of automatic exclusions may adversely impact performance, or result in data corruption. The exclusions that are delivered automatically are optimized for Windows Server 2016 roles.
 
 To opt out of automatic exclusions, start a Windows PowerShell console as an administrator, and run the following command:
 
@@ -45,7 +45,7 @@ To opt out of automatic exclusions, start a Windows PowerShell console as an adm
 The following sections contain the exclusions that are delivered with automatic exclusions file paths and file types.
 
 ### Default exclusions for all roles
-This section lists the default exclusions for all Windows Server 2016 Technical Preview roles.
+This section lists the default exclusions for all Windows Server 2016 roles.
 
 -   Windows "temp.edb" files:
 
@@ -337,7 +337,7 @@ This section lists the folder exclusions that are delivered automatically when y
 -   *%systemroot%*\SoftwareDistribution\Download
 
 ## See Also
-[Windows Defender Overview for Windows Server Technical Preview](windows-defender-overview-windows-server.md)
+[Windows Defender Overview for Windows Server](windows-defender-overview-windows-server.md)
 [Windows Defender Events](Windows-Defender-Events.md)
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
 

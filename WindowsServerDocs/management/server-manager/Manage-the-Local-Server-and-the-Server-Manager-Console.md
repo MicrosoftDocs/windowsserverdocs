@@ -17,9 +17,9 @@ ms.date: 10/12/2016
 
 # Manage the Local Server and the Server Manager Console
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-In Windows Server 2016 Technical Preview, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
+In Windows Server, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
 The **Local Server** page in Server Manager displays server properties, events, service and performance counter data, and Best Practices Analyzer (BPA) results for the local server. Event, service, BPA, and performance tiles function as they do on role and server group pages. For more information about configuring the data that is displayed in these tiles, see [View and Configure Performance, Event, and Service Data](View-and-Configure-Performance-Event-and-Service-Data.md) and [Run Best Practices Analyzer Scans and Manage Scan Results](Run-Best-Practices-Analyzer-Scans-and-Manage-Scan-Results.md).
 
@@ -40,7 +40,7 @@ This topic contains the following sections.
 ## <a name="BKMK_shutdown"></a>Shut down the local server
 The **Tasks** menu in the local server **Properties** tile lets you start a Windows PowerShell session on the local server, open the **Computer Management** MMC snap-in, or open MMC snap-ins for roles or features that are installed on the local server. You can also shut down the local server by using the **Shut Down Local Server** command in this **Tasks** menu. The **Shut Down Local Server** command is also available for the local server in the **Servers** tile on the **All Servers** page, or on any role or group page in which the local server is represented.
 
-Shutting down the local server by using this method, unlike shutting down Windows Server 2016 Technical Preview from the **Start** screen, opens the **Shut Down Windows** dialog box, which lets you specify reasons for shutdown in the **Shutdown Event Tracker** area.
+Shutting down the local server by using this method, unlike shutting down Windows Server 2016 from the **Start** screen, opens the **Shut Down Windows** dialog box, which lets you specify reasons for shutdown in the **Shutdown Event Tracker** area.
 
 > [!NOTE]
 > Only members of the Administrators group can shut down or restart a server. Standard users cannot shut down or restart a server. Clicking the **Shut Down Local Server** command logs standard users off server sessions. This matches the experience of a standard user running the **Alt+F4** shutdown command from the server desktop.
@@ -71,7 +71,7 @@ You can view or change the following settings in the **Properties** tile on the 
 |Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkID=245992).|
 |Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/?LinkId=253461).|
 |Time zone|Displays the local server's time zone. Opens the **Date and Time** dialog box.|
-|Product ID|Displays the Windows activation status and product ID number (if Windows has been activated) of the Windows Server 2016 Technical Preview operating system. This is not the same number as the Windows product key. Opens the **Windows Activation** dialog box.|
+|Product ID|Displays the Windows activation status and product ID number (if Windows has been activated) of the Windows Server 2016 operating system. This is not the same number as the Windows product key. Opens the **Windows Activation** dialog box.|
 |Processors|This read-only field displays manufacturer, model name, and speed information about the local server's processors.|
 |Installed memory (RAM)|This read-only field displays the amount of available RAM, in gigabytes.|
 |Total disk space|This read-only field displays the amount of available disk space, in gigabytes.|
@@ -156,7 +156,7 @@ The following procedure describes how to create an example folder called *MyTool
 ## <a name="BKMK_roles"></a>Manage roles on role home pages
 After you add servers to the Server Manager server pool, and Server Manager collects inventory data about servers in your pool, Server Manager adds pages to the navigation pane for roles that are discovered on managed servers. The **Servers** tile on role pages lists managed servers that are running the role. By default, **Events**, **Best Practices Analyzer**, **Services**, and **Performance** tiles display data for all servers that are running the role; selecting specific servers in the **Servers** tile limits the scope of events, services, performance counters, and BPA results to selected servers only. Management tools are typically available in the Server Manager console **Tools** menu, after a role or feature has been installed or discovered on a managed server. You can also right-click server entries in the **Servers** tile for a role or group, and then start the management tool that you want to use.
 
-In Windows Server 2016 Technical Preview, the following roles and feature have management tools that are integrated into Server Manager console as pages.
+In Windows Server 2016, the following roles and feature have management tools that are integrated into Server Manager console as pages.
 
 -   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530).
 

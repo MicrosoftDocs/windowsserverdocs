@@ -6,14 +6,14 @@ ms.prod: windows-server-threshold
 ms.technology: techgroup-security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 09/26/2016
+ms.date: 10/12/2016
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ---
 # Security and Assurance
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 ## Overview of Security in Windows Server 2016  
 
@@ -32,7 +32,7 @@ ms.author: coreyp
 |-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Shielded VM in Channel 9](http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016) | A walkthrough of Shielded VM technology and benefits                                                                                                                                                                                                |
 | [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)                                                                           | This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.                                                                                                                                        |
-| [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)                                                                         | This video walkthrough shows how the Host Guardian Service, a new role available in Windows Server 2016 Technical Preview, enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators. |
+| [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)                                                                         | This video walkthrough shows how the Host Guardian Service, a new role available in Windows Server 2016, enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators. |
 | [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/events/ignite/2015/brk3457)             | This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Guardian Server role to enable shielded VMs.                                                                                                               |
 | [Guarded Fabric Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=708624)                                                                                                          | This guide provides installation and validation information for Windows Server 2016 and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.                                                                |
 | [Shielded VM and Guarded Fabric Operations Guide](http://go.microsoft.com/fwlink/?LinkId=708320)                                          | This guide provides best practices and recommendations for how to configure your Shielded VM environment, including information specific to Guarded Hosts and tenants.                                                                                    |

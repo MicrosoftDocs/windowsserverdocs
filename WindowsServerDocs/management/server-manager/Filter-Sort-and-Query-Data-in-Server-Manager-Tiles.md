@@ -17,9 +17,9 @@ ms.date: 10/12/2016
 
 # Filter, Sort, and Query Data in Server Manager Tiles
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-In Windows Server 2016 Technical Preview, tiles in Server Manager let you filter and sort data, and create and save custom queries. You can sort, use keyword filters, and run queries on list entries in the Events, Performance, Best Practices Analyzer, Services, and Roles and Features tiles on server role or group pages in Server Manager.  
+In Windows Server, tiles in Server Manager let you filter and sort data, and create and save custom queries. You can sort, use keyword filters, and run queries on list entries in the Events, Performance, Best Practices Analyzer, Services, and Roles and Features tiles on server role or group pages in Server Manager.  
   
 This topic contains the following sections.  
   
