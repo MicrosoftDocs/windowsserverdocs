@@ -7,6 +7,7 @@ manager: DonGill
 ms.technology: server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.date: 10/06/2016
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
