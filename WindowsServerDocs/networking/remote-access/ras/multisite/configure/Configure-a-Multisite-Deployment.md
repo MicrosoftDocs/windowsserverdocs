@@ -16,15 +16,15 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server&reg; 2016
 
- Windows Server 2016 and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single  Windows Server 2016 or  Windows Server 2012  Remote Access multisite deployment.  
+ Windows Server 2016 combines DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 or Windows Server 2012 Remote Access multisite deployment.  
   
--   [Step 1: Implement a single server Remote Access deployment](assetId:///a811b73d-56af-4457-aa82-0c23b4c57b4f)-Install and configure a single Remote Access server. The multisite deployment requires you to install a single server before configuring a multisite deployment. For instructions, see [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   Step 1: [Deploy a Single DirectAccess Server with Advanced Settings](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings). Install and configure a single Remote Access server. The multisite deployment requires you to install a single server before configuring a multisite deployment.  
   
--   [Step 2: Configure the multisite infrastructure](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43)-For a multisite deployment you must configure additional Active Directory sites and domain controllers. Additional security groups and Group Policy Objects (GPOs) are also required if you are not using automatically configured GPOs.  
+-   [Step 2: Configure the multisite infrastructure](Step-2--Configure-the-Multisite-Infrastructure.md). For a multisite deployment you must configure additional Active Directory sites and domain controllers. Additional security groups and Group Policy Objects (GPOs) are also required if you are not using automatically configured GPOs.  
   
--   [Step 3: Configure the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1)-Install the Remote Access role on additional Remote Access servers, enable the multisite deployment, and configure the additional servers as entry points for the deployment.  
+-   [Step 3: Configure the multisite deployment](Step-3--Configure-the-Multisite-Deployment.md)-Install the Remote Access role on additional Remote Access servers, enable the multisite deployment, and configure the additional servers as entry points for the deployment.  
   
--   [Step 4: Verify the multisite deployment](assetId:///9d278e9a-2e1f-49a9-a4b1-8b02de484c18).  
+-   [Step 4: Verify the multisite deployment](Step-4--Verify-the-Multisite-Deployment.md) 
   
 
 

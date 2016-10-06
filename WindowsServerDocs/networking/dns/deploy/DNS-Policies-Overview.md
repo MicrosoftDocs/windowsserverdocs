@@ -84,7 +84,7 @@ Using the table above as a starting point, the table below could be used to defi
   
 You can create multiple query resolution policies of the same level, as long as they have a different value for the processing order. When multiple policies are available, the DNS server processes incoming queries in the following manner:  
   
-![](../../media/DNS-Policies-Overview/DNSQueryResolutionPolicyFlowchart.png)  
+![DNS policy processing](../../media/DNS-Policies-Overview/DNSQueryResolutionPolicyFlowchart.png)  
   
 ### Recursion Policies  
 Recursion policies are a special **type** of server level policies. Recursion policies control how the DNS server performs recursion for a query. Recursion policies apply only when query processing reaches the recursion path. You can choose a value of DENY or IGNORE for recursion for a set of queries. Alternatively, you can choose a set of forwarders for a set of queries.  

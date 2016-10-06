@@ -23,8 +23,8 @@ The DirectAccess Remote Client Management deployment scenario uses DirectAccess 
 > [!NOTE]  
 > In addition to this topic, the following Remote Access management topics are available.  
 >   
-> -   [Use Remote Access Monitoring and Accounting](assetId:///0198ef6e-3213-4ab3-ac13-bb38f50e08af)  
-> -   [Manage DirectAccess Clients Remotely](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
+> -   [Use Remote Access Monitoring and Accounting](monitoring-and-accounting/Use-Remote-Access-Monitoring-and-Accounting.md)  
+> -   [Manage DirectAccess Clients Remotely](manage-remote-clients/Manage-DirectAccess-Clients-Remotely.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 DirectAccess client computers are connected to the intranet whenever they are connected to the Internet, regardless of whether the user has signed in to the computer. They can be managed as intranet resources and kept current with Group Policy changes, operating system updates, antimalware updates, and other organizational changes.  
@@ -57,7 +57,7 @@ Configuring your deployment consists of a number of steps. These include:
   
 2.  **Configure Remote Access server and network settings**: Configure network adapters, IP addresses, and routing.  
   
-3.  **Configure certificate settings**: In this deployment scenario, the Getting Started Wizard creates self-signed certificates, so there is no need to configure the more advanced certificate infrastructure that is explained in the topic [Deploying advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+3.  **Configure certificate settings**: In this deployment scenario, the Getting Started Wizard creates self-signed certificates, so there is no need to configure the more advanced certificate infrastructure.  
   
 4.  **Configure the network location server**:  In this scenario, the network location server is installed on the Remote Access server.  
   
@@ -87,7 +87,7 @@ Hardware requirements for this scenario include the following:
   
 ### Server requirements  
   
--   A computer that meets the hardware requirements for  Windows Server 2012 . For more information, see [Installing Windows Server 2012](http://technet.microsoft.com/library/jj134246.aspx).  
+-   A computer that meets the hardware requirements for  Windows Server 2016. For more information, see Windows Server 2016 [System Requirements](https://technet.microsoft.com/windows-server-docs/get-started/system-requirements--and-installation).  
   
 -   The server must have at least one network adapter installed and enabled. There should be only one adapter connected to the corporate internal network, and only one connected to the external network (Internet).  
   
@@ -126,16 +126,4 @@ Software requirements for this scenario include the following:
   
 -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. Computers should not be included in more than one security group that includes DirectAccess clients. If clients are included in multiple groups, name resolution for client requests will not work as expected.  
   
-## <a name="BKMK_LINKS"></a>See also  
-The following table provides links to additional resources.  
-  
-|Content type|References|  
-|----------------|--------------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb545655.aspx)|  
-|**Product evaluation**|[Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](assetId:///f3e5209b-aaa9-49a7-b523-0a130ec10a4b)<br /><br />[Test Lab Guide: Demonstrate a DirectAccess multisite deployment](assetId:///3f2308e3-aa31-49db-b69b-91d1827ef7a2)<br /><br />[Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](assetId:///616db45d-f151-4abe-aecf-5f5060095a67)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|[RRAS Product Team blog](http://blogs.technet.com/RRAS/) &#124; [Remote Access  TechNet Forum](http://social.technet.microsoft.com/Forums/RRAS/threads)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
-  
-
 

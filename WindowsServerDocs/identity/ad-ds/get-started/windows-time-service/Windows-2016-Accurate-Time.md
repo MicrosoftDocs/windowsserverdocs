@@ -2,17 +2,17 @@
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows 2016 Accurate Time
 description:
-author: billmath
-ms.author: billmath
+author: paullo
+ms.author: paullo
 manager: femila
-ms.date: 09/19/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adds
 ---
 
-# Windows 2016 Accurate Time
+# Windows Server 2016 Accurate Time
 
 >Applies To: Windows Server 2016
 
@@ -23,6 +23,9 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 - Improvements
 - Measurements
 - Best Practices
+
+>[!NOTE]
+>For a quick overview, take a look at this high level overview video at [https://aka.ms/WS2016TimeVideo](https://aka.ms/WS2016TimeVideo).
 
 ## Overview
 The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1304)](https://tools.ietf.org/html/rfc1305) to synchronize the local system time to a NTP reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider, using stratum level first, followed by root delay dispersion and then time offset.
@@ -43,7 +46,7 @@ Domain and Standalone configurations work differently.
 Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
 > [!NOTE]
-> Stratum is a concept used in both the NTP and Hyper-V providers, and its value indicates the clocks location in the hierarchy.  Stratum 1 is reserved for the highest level clock, and stratum 0 is reserved for the hardware assumed to be accurate and has little or no delay associated with it.  Stratum 2 talk to stratum 1 servers, stratum 3 to stratum 2 and so on.  While a lower stratum often indicates a more accurate clock, it is possible to find discrepancies.  Also, W32time only accepts time from stratum 15 or below.
+> Stratum is a concept used in both the NTP and Hyper-V providers, and its value indicates the clocks location in the hierarchy.  Stratum 1 is reserved for the highest level clock, and stratum 0 is reserved for the hardware assumed to be accurate and has little or no delay associated with it.  Stratum 2 talk to stratum 1 servers, stratum 3 to stratum 2 and so on.  While a lower stratum often indicates a more accurate clock, it is possible to find discrepancies.  Also, W32time only accepts time from stratum 15 or below.  To see the stratum of a client, use *w32tm /query /status*.
 
 ### Three Critical Factors
 In every case for accurate time, there are three critical factors:
@@ -105,7 +108,7 @@ In this section shows the changes in default configuration based on various envi
 ![](media/Windows-2016-Accurate-Time/table1.png)
 
 >[!NOTE]
->For Linux in Hyper-V, see the Allowing Linux to use Hyper-V Host Time section below.
+>For Linux in Hyper-V, see the [Allowing Linux to use Hyper-V Host Time](#AllowingLinux) section below.
 
 ### Impact of increased polling and clock update frequency
 In order to provide more accurate time, the defaults for polling frequencies and clock updates are increased which allow us to make small adjustments more frequently.  This will cause more UDP/NTP traffic, however, these packets are small so there should be very little or no impact over broadband links. The benefit, however, is that time should be better on a wider variety of hardware and environments.
@@ -197,7 +200,7 @@ To disable the Hyper-V TimeSync service from providing samples to w32time, set t
 	HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider 
 	"Enabled"=dword:00000000
 
-### Allowing Linux to use Hyper-V Host Time
+### <a name="AllowingLinux"></a>Allowing Linux to use Hyper-V Host Time
 For Linux guests running in Hyper-V, clients are typically configured to use the NTP daemon for time synchronization against NTP servers.  If the Linux distribution supports the TimeSync version 4 protocol and the Linux guest has the TimeSync integration service enabled, then it will synchronize against the host time. This could lead to inconsistent time keeping if both methods are enabled.
 To synchronize exclusively against the host time, it is recommended to disable NTP time synchronization by either:
 
@@ -208,6 +211,9 @@ To synchronize exclusively against the host time, it is recommended to disable N
 In this configuration, the Time Server parameter is this host.  Its Polling Frequency is 5 seconds and the Clock Update Frequency is also 5 seconds.
 
 To synchronize exclusively over NTP, it is recommended to disable the TimeSync integration service in the guest.
+
+> [!NOTE]
+> Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet.
 
 ### Specify a Local Reliable Time Service Using GTIMESERV
 You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the solid source clock.

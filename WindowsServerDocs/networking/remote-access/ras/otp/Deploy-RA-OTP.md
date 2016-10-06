@@ -105,7 +105,7 @@ There are a number of requirements for this scenario:
   
         4.  In a Remote Access multisite deployment, OTP settings are global and identify for all entry points. If multiple RADIUS or CA servers are configured for OTP, they are sorted by each Remote Access server according to availability and proximity.  
   
-        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842(WS.10).aspx).  
+        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842.aspx).  
   
         6.  Users who are using a KEY FOB OTP token should insert the PIN followed by the tokencode \(without any separators\) in the DirectAccess OTP dialog. Users who are using PIN PAD OTP token should insert only the tokencode in the dialog.  
   

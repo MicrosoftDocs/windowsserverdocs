@@ -40,13 +40,13 @@ Using this guide and Windows Server 2016, you can deploy storage replication in 
 
 **FIGURE 1: Storage replication in a stretch cluster using Storage Replica**  
 
-**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and requires manual intervention for failover.  
+**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces Direct, Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and Azure Site Recovery, and requires manual intervention for failover.  
 
 ![Diagram showing a cluster in Los Angeles using Storage Replica to replicate its storage with a different cluster in Las Vegas](./media/Storage-Replica-Overview/Storage_SR_ClustertoCluster.png)  
 
 **FIGURE 2: Cluster-to-cluster storage replication using Storage Replica**  
 
-**Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs, and local drives. It is managed with PowerShell and requires manual intervention for failover.  
+**Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs, and local drives. It is managed with PowerShell and the Server Manager Tool, and requires manual intervention for failover.  
 
 ![Diagram showing a server in Building 5 replicating with a server in Building 9](./media/Storage-Replica-Overview/Storage_SR_ServertoServer.png)  
 
@@ -106,8 +106,8 @@ Windows Server 2016 implements the following features in Storage Replica:
 ## <a name="BKMK_SR3"></a> Storage Replica Prerequisites  
 
 * Active Directory Domain Services forest.  
-* SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives.  
-* At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
+* Storage Spaces with SAS JBODs, Storage Spaces Direct, fibre channel SAN, shared VHDX, iSCSI Target, or local SAS/SCSI/SATA storage. SSD or faster recommended for replication log drives.  
+* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * At least 2GB of RAM and two cores per server.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of 5ms round trip latency or lower, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 
@@ -139,7 +139,6 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 |**Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO|![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
 
 ### Key Evaluation Points and Behaviors  
--   Performance. The Windows Server 2016 Technical Preview version of Storage Replica has not been fully optimized for performance.  
 
 -   Network bandwidth and latency with fastest storage. There are physical limitations around synchronous replication. Because SR implements an IO filtering mechanism using logs and requiring network round trips, synchronous replication is likely make application writes slower. By using low latency, high-bandwidth networks as well as high-throughput disk subsystems for the logs, you will minimize performance overhead.  
 
