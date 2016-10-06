@@ -54,7 +54,7 @@ When you configure network adapters into a NIC team, they are connected into the
   
 The following illustration depicts a NIC Team with multiple tNICs.  
   
-![](../../media/NIC-Teaming/nict_overview.jpg)  
+![NIC Team with multiple tNICs](../../media/NIC-Teaming/nict_overview.jpg)  
   
 In addition, you can connect your teamed NICs to the same switch or to different switches. If you connect NICs to different switches, both switches must be on the same subnet.  
   
