@@ -28,19 +28,19 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the lower navigation pane, click **Forward Lookup**, and then expand the domain and zone list to locate and select the zone you want to view. For example, if you have a zone named dublin, click **dublin**.  
   
-    ![](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01a.jpg)  
+    ![Select the zone](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01a.jpg)  
   
 4.  In the display pane, the default view is of the DNS servers for the zone. To change the view, click **Current view**, and then click **Resource Records**.  
   
-    ![](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_Zone_RR_02.jpg)  
+    ![Change the view to Resource Records](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_Zone_RR_02.jpg)  
   
 5.  The DNS resource records for the zone are displayed. To filter the records, type the text you want to find in **Filter**.  
   
-    ![](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01c.jpg)  
+    ![Type text to filter records](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01c.jpg)  
   
 6.  To filter the resource records by record type, access scope, or other criteria, click **Add criteria**, and then make selections from the criteria list and click **Add**.  
   
-    ![](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01d.jpg)  
+    ![Use criteria to filter records](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01d.jpg)  
   
 ## See Also  
 [DNS Zone Management](DNS-Zone-Management.md)  
