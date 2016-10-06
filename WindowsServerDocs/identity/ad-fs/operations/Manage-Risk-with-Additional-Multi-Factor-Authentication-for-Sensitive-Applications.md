@@ -17,23 +17,23 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2012 R2
 
 
--   [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+-   [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
--   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
--   [Configure Additional Authentication Methods for AD FS](../../ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
+-   [Configure Additional Authentication Methods for AD FS](../../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)
 
 ## In this guide
 This guide provides the following information:
 
--   [Authentication mechanisms in AD FS](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_1) - description of the authentication mechanisms available in Active Directory Federation Services (AD FS) in Windows Server 2012 R2
+-   [Authentication mechanisms in AD FS](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_1) - description of the authentication mechanisms available in Active Directory Federation Services (AD FS) in Windows Server 2012 R2
 
--   [Scenario Overview](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2) - a description of a scenario where you use Active Directory Federation Services (AD FS) to enable multifactor authentication (MFA) based on user's group membership.
+-   [Scenario Overview](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2) - a description of a scenario where you use Active Directory Federation Services (AD FS) to enable multifactor authentication (MFA) based on user's group membership.
 
     > [!NOTE]
     > In AD FS in Windows Server 2012 R2 you can enable MFA based on the network location, device identity, and user identity or group membership.
 
-    For detailed step-by-step walkthrough instructions for configuring and verifying this scenario, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
+    For detailed step-by-step walkthrough instructions for configuring and verifying this scenario, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
 
 ## <a name="BKMK_1"></a>Key Concepts - Authentication mechanisms in AD FS
 
@@ -47,7 +47,7 @@ Active Directory Federation Services (AD FS) in Windows Server 2012 R2 provides 
     -   Enable device authentication for seamless second-factor authentication. This ties the user's identity to the registered device that is used to access the resource, thus offering more secure compound identity verification before protected resources are accessed.
 
         > [!NOTE]
-        > For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+        > For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
     -   Set MFA requirement for all extranet access or conditionally based on the user's identity, network location or a device that is used to access protected resources.
 
