@@ -307,34 +307,42 @@ This JSON file can be broken down into the following sections:
 #### Gateway Validation
 
 **From Network Controller:**
+```
 Get-NetworkControllerLogicalNetwork
 Get-NetworkControllerPublicIPAddress
 Get-NetworkControllerGatewayPool
 Get-NetworkControllerGateway
 Get-NetworkControllerVirtualGateway
 Get-NetworkControllerNetworkInterface
-
+```
 
 **From Gateway VM:**
+```
 Ipconfig /allcompartments /all
-Get-NetRoute –IncludeAllCompartments –AddressFamily
+Get-NetRoute -IncludeAllCompartments -AddressFamily
 Get-NetBgpRouter
 Get-NetBgpRouter | Get-BgpPeer
 Get-NetBgpRouter | Get-BgpRouteInformation
-
+```
 
 **From Top of Rack (ToR) Switch:**
-sh ip bgp summary (for 3rd party BGP Routers)
-Windows BGP Router
+
+`sh ip bgp summary (for 3rd party BGP Routers)`
+
+**Windows BGP Router**
+```
 Get-BgpRouter
 Get-BgpPeer
 Get-BgpRouteInformation
+```
 
-In addition to these, from the issues we have seen so far (especially on SDNExpress based deployments), the most common reason for Tenant Compartment not getting configured on GW VMs seem to be the fact that the GW Capacity in FabricConfig.psd1 is less compared to what folks try to assign to the Network Connections (S2S Tunnels) in TenantConfig.psd1. This can be checked easily by comparing outputs of the following
+In addition to these, from the issues we have seen so far (especially on SDNExpress based deployments), the most common reason for Tenant Compartment not getting configured on GW VMs seem to be the fact that the GW Capacity in FabricConfig.psd1 is less compared to what folks try to assign to the Network Connections (S2S Tunnels) in TenantConfig.psd1. This can be checked easily by comparing outputs of the following commands:
 
-PS > (Get-NetworkControllerGatewayPool –ConnectionUri $uri).properties.Capacity
-PS > (Get-NetworkControllerVirtualgatewayNetworkConnection –ConnectionUri $uri -VirtualGatewayId "TenantName").properties.OutboundKiloBitsPerSecond
-PS > (Get-NetworkControllerVirtualgatewayNetworkConnection –ConnectionUri $uri -VirtualGatewayId "TenantName").propertie
+```
+PS > (Get-NetworkControllerGatewayPool -ConnectionUri $uri).properties.Capacity
+PS > (Get-NetworkControllerVirtualgatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "TenantName").properties.OutboundKiloBitsPerSecond
+PS > (Get-NetworkControllerVirtualgatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "TenantName").property
+```
 
 ### [Hoster] Validate Data-Plane
 After the Network Controller has been deployed, tenant virtual networks and subnets have been created, and VMs have been attached to the virtual subnets, additional fabric level tests can be performed by the hoster to check tenant connectivity.
