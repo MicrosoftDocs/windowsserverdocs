@@ -26,7 +26,7 @@ This walkthrough uses the following environment as an example:
 -   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and the other called **Bellevue.**  
 
 > [!NOTE]  
-> You can use only two nodes instead of four, where one node each is in each site. However, you will not be able to perform intra-site failover with only two servers.  
+> You can use only as few as two nodes, where one node each is in each site. However, you will not be able to perform intra-site failover with only two servers. You can use as many as 64 nodes.
 
 ![Diagram showing two nodes in Redmond replicating with two nodes of the same cluster in the Bellevue site](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)  
 
@@ -46,9 +46,6 @@ This walkthrough uses the following environment as an example:
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.  
 
 ## Provision operating system, features, roles, storage, and network  
-
-> [!WARNING]
-> Windows Server 2016 does not support Storage Replica on production servers.  
 
 1.  Install Windows Server 2016 Datacenter Edition on all server nodes. Do not choose Standard Edition if it is available, as it does not contain Storage Replica. Use of Windows Server Desktop Experience, Core, and Nano installation modes are all supported.  
     > [!IMPORTANT]
@@ -103,7 +100,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log  disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage and high performance resiliency settings.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-        > -   The log volume must be at least 9GB and may need to be larger based on log requirements.  
+        > -   The log volume must be at least 9GB by default and can to be larger or smaller based on log requirements.  
     > - The volumes must be formatted with NTFS or ReFS.
     > - The File Server role is only necessary for Test-SRTopology to operate, as it opens the necessary firewall ports for testing.  
 
@@ -145,8 +142,8 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
             Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
 
       > [!IMPORTANT]
-      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for five thirty minutes to the D: volume:   
-        `Diskspd.exe -c1g -d1800 -W5 -C5 -b4k -t2 -o2 -r -w5 d:\test.dat`  
+      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:   
+        `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
 
 11. Examine the **TestSrTopologyReport-< date >.html** report to ensure you meet the Storage Replica requirements and note the initial sync time prediction and log recommendations.  
 
@@ -474,7 +471,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
         3.  On the destination server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.  
 
             > [!WARNING]
-            > Windows Server 2016, CPU and memory usage are likely to be higher than normal until initial synchronization completes.  
+            > CPU and memory usage are likely to be higher than normal until initial synchronization completes.  
 
 #### Windows PowerShell method  
 
