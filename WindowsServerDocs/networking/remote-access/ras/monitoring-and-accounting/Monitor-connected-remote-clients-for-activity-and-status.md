@@ -14,9 +14,9 @@ author: coreyp-at-msft
 ---
 # Monitor connected remote clients for activity and status
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
+**Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.  
   
 You can use the management console on the Remote Access server to monitor remote client activity and status.  
   
@@ -33,7 +33,7 @@ You can use the management console on the Remote Access server to monitor remote
   
 4.  You will see the list of users who are connected to the Remote Access server and detailed statistics about them. Click the first row in the list that corresponds to a client. When you select a row, the remote user activity is shown in the preview pane.  
   
-![](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Monitor-connected-remote-clients-for-activity-and-status/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

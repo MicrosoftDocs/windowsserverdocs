@@ -1,4 +1,5 @@
 ---
+ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
 ms.prod: windows-server-threshold
 ms.author: cosdar
@@ -30,7 +31,7 @@ This short video presents an overview of fault domains in Windows Server 2016:
 ## Levels of fault domains  
 There are four canonical levels of fault domains - site, rack, chassis, and node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the chassis level may not make sense for you.  
 
-![Diagram of the different levels of fault domains]![](media/Fault-Domains-in-Windows-Server-2016/levels-of-fault-domains.png)
+![Diagram of the different levels of fault domains](media/Fault-Domains-in-Windows-Server-2016/levels-of-fault-domains.png)
 
 ## Usage  
 You can use PowerShell or XML markup to specify fault domains. Both approaches are equivalent and provide full functionality.

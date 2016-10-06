@@ -3,30 +3,20 @@ title: Create a virtual machine in Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Create a virtual machine in Hyper-V
 
->Applies To: Windows 10, Windows Server Technical Preview
-
-**This is preliminary content and subject to change.**  
+>Applies To: Windows 10, Windows Server 2016
 
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.  
-
-In this article,  
-
--   [Create a virtual machine by using Hyper-V Manager](#BKMK_HyperVManager)  
-
--   [Create a virtual machine by using Windows PowerShell](#BKMK_PowerShell)  
-
--   [Options in Hyper-V Manager New Virtual Machine Wizard](#BKMK_Options)  
 
 ## <a name="BKMK_HyperVManager"></a>Create a virtual machine by using Hyper-V Manager  
 
@@ -59,7 +49,7 @@ In this article,
 4.  Use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet to create the  virtual machine.  See the following examples.  
 
     > [!NOTE]  
-    > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 Technical Preview isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#BKMK_SupportedConfigVersions).  
+    > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#BKMK_SupportedConfigVersions).  
 
     - **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
         -   **-Name** is the name that you provide for the virtual machine that you're creating.  
@@ -111,7 +101,7 @@ In this article,
 ## <a name="BKMK_Options"></a>Options in Hyper-V Manager New Virtual Machine Wizard  
 The following table lists the options you can pick when you create a virtual machine in Hyper-V Manager and the defaults for each.  
 
-|Page|Default for Windows Server 2016 Technical Preview and Windows 10|Other options|  
+|Page|Default for Windows Server 2016 and Windows 10|Other options|  
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |**Specify Name and Location**|Name:  New Virtual Machine.<br /><br />Location:  **C:\ProgramData\Microsoft\Windows\Hyper-V\\**.|You can also enter your own name and choose another location for the virtual machine.<br /><br />This is where the virtual machine configuration files will be stored.|  
 |**Specify Generation**|Generation 1|You can also choose to create a Generation 2 virtual machine. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)|  

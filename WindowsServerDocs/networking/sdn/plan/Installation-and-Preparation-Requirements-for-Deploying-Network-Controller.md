@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-sdn
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
@@ -14,7 +13,7 @@ author: jamesmci
 ---
 # Installation and Preparation Requirements for Deploying Network Controller
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to prepare your datacenter for Network Controller deployment.  
   
@@ -31,12 +30,12 @@ Following are the installation, software, and other requirements and preparation
 ### Installation requirements  
 Following are the installation requirements for Network Controller.  
   
--   For Windows Server 2016 Technical Preview deployments, you can deploy Network Controller on one or more computers, one or more  VMs, or a combination of computers and VMs.  
+-   For  Windows Server 2016 deployments, you can deploy Network Controller on one or more computers, one or more  VMs, or a combination of computers and VMs.  
   
 ### Software requirements  
 Network Controller deployment requires one or more computers or VMs that will serve as the Network Controller, and one computer or VM to serve as a management client for Network Controller. These computers or VMs must run the following operating systems.  
   
--   Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016 Technical Preview.  
+-   Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of  Windows Server 2016.  
   
 -   The management client computer or VM for Network Controller must be running Windows&reg; 8, Windows&reg; 8.1, or Windows 10&reg;.  
   

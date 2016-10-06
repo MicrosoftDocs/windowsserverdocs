@@ -4,18 +4,19 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
 ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Deploy Remote Access with OTP Authentication
-Windows Server&reg; 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
-  
-  
+
+>Applies To: Windows Server&reg; 2016
+
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
+
 ## <a name="BKMK_OVER"></a>Scenario description  
 In this scenario a Remote Access server with DirectAccess enabled is configured to authenticate DirectAccess client users with two\-factor one-time password \(OTP\) authentication, in addition to standard Active Directory credentials.  
   
@@ -104,7 +105,7 @@ There are a number of requirements for this scenario:
   
         4.  In a Remote Access multisite deployment, OTP settings are global and identify for all entry points. If multiple RADIUS or CA servers are configured for OTP, they are sorted by each Remote Access server according to availability and proximity.  
   
-        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842(WS.10).aspx).  
+        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842.aspx).  
   
         6.  Users who are using a KEY FOB OTP token should insert the PIN followed by the tokencode \(without any separators\) in the DirectAccess OTP dialog. Users who are using PIN PAD OTP token should insert only the tokencode in the dialog.  
   

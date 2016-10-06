@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 3 Verify the Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.  
   
@@ -32,7 +32,7 @@ This topic describes how to verify that you have correctly configured your Direc
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 2: Configuring DirectAccess Servers](../../../remote-access/directaccess/single-server-advanced/Step-2--Configuring-DirectAccess-Servers.md)  
+-   [Step 2: Configuring DirectAccess Servers](Step-2--Configuring-DirectAccess-Servers.md)  
   
 
 

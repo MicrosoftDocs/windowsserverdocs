@@ -14,16 +14,16 @@ author: coreyp-at-msft
 ---
 # Step 1 Implement a Single Server Remote Access Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The first configuration step to deploy Remote Access with OTP is to implement an advanced single server deployment and then plan to add the RADIUS server.  
   
 ## Implement a single server deployment  
-Before you can configure Remote Access with OTP, you must configure an advanced single server Remote Access deployment as described in [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+Before you can configure Remote Access with OTP, you must configure an advanced single server Remote Access deployment as described in [Deploy a Single DirectAccess Server with Advanced Settings](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).  
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 2: Configure the RADIUS server](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461)  
+-   [Step 2: Configure the RADIUS server](Step-2--Configure-the-RADIUS-Server.md)  
   
 
 

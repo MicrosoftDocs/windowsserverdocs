@@ -2,22 +2,15 @@
 
 <tags ms.service="contributor-guide" ms.devlang="" ms.topic="article" ms.tgt_pltfrm="" ms.workload="" ms.date="08/24/16" ms.author="kathydav" />
 
-# Git commands for creating or updating an article
+# Git commands to create or update an article
 
-If you're new to Git, learning how to work effectively can be frustrating. Here are some tips:
+>!NOTE: These commands assume you've configured Github to specify the default repo where you pull files from. In Github terminology, where you pull files from is your *upstream*. Where you push files to is your *origin*. Based on how our repo and workflow are designed, your upstream should be set to our repo, which is under the Microsoft organization - https://github.com/Microsoft/WindowsServerDocs-pr and your origin should be your fork of this repo, under your own Github account. For example, Kathy's is https://github.com/KBDAzure/WindowsServerDocs-pr 
 
--  Base your local branches on a branch in the shared repo, not on your remote fork. Then, you'll push your local branches to your remote fork. From your remote fork, you'll request to have the updates in your fork merged into the shared repo. The commands in this article show you how to do this.
+>To check your settings, type ```git config -l```. Look at the URLs to make sure they refer to location you intended.
 
--  Work in branches, not in your local copy of Master. This makes it easier to recover from problems in your branches and go back to a good, known point.
+## Add or update an article
 
--  When you create a local branch, your command tells Git what branch you want to base your new branch on. This is when and how you specify master, or a milestone or feature branch.
-
->!NOTE: These commands assume you've configured Github to specify the default repo where you pull files from. In Github terminology, where you pull files from is your 'upstream'. Your 'origin' is where you push files.
-
->To check your settings, type ```git config -l```
-
-## 
-Here's how to create a branch, save your changes, and submit them for integration into the shared repo.
+Here's how to create a local branch, save your changes, and then push them to your remote fork.
 
 1. Start Git Bash (or the command-line tool you use for Git).
 
@@ -25,25 +18,27 @@ Here's how to create a branch, save your changes, and submit them for integratio
 
         cd WindowsServerDocs-pr
 
-3. Check out the master branch:
+3. It's best to keep your local Master branch and the remote Master branch in your fork in sync with the repo's Master branch. This can help save you a lot of frustration and lost time -- you're more likely to catch issues early and keep things in a good, known working state. Run:
 
         git checkout master
+        git pull upstream master
+        git push origin master
 
- The best way to create a local working branch from a release branch is to use to run:
+4. Now you're ready to create a branch to do your daily or deliverable-based work in. The best way to create a local working branch from a release branch is to use to run:
 
-    git checkout upstream/<upstream branch name> -b <local working branch name>
+        git checkout upstream/upstream-branch-name -b your-local-branch-name
 
-This creates the local branch directly from the upstream branch and avoids inadvertently merging files from the remote repo to the wrong local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
+  This creates the local branch directly from the upstream branch and helps you avoid merging the wrong files into your new local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
       
-      git checkout upstream/ga-threshold -b working-8-31  
+        git checkout upstream/ga-threshold -b working-8-31  
 
-4. Add the local working branch to your fork:
+5. Add the local working branch to your fork:
 
         git push origin <working branch>
 
-5. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. After you've done this, go to the next step.
+6. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. After you've done this, go to the next step.
 
-6. Check status, then add and commit the changes you made:
+7. Check status, then add and commit your changes:
 
         git status
 
@@ -52,15 +47,13 @@ This creates the local branch directly from the upstream branch and avoids inadv
         git add .
         git commit –m "<comment>"
 
-   To add only the specific files (for example, if `git status` lists files that you don't want to submit), run:
+  To add only the specific files (for example, if ```git status``` lists files that you don't want to submit), instead you MUST run:
 
         git add <file path>
         git commit –m "<comment>"
 
-   If you deleted files, you have to use this:
-
-        git add --all
-        git commit -m "<comment>"
+>[!IMPORTANT]
+>The command ```git add .``` adds ALL pending changes reported by ```git status```. This means that if ```git status``` shows untracked updates that you don't want to add, use ```git add <file path>``` instead.  
 
 7. Update your local working branch with changes from upstream:
 
@@ -70,33 +63,22 @@ This creates the local branch directly from the upstream branch and avoids inadv
 
         git push origin <working branch>
 
-9. When you're ready to submit your content for staging, validation, and/or publishing, use the GitHub UI to create a pull request from your fork.
+## Submit your changes
 
->[!IMPORTANT]
-> When you open a PR, triggers quality checks and publication to our internal staging site. It's your responsibility to review both, from links in comments \(from the Conversation tab of the PR\). After you've done this, indicate it by adding the "ready-to-merge" label to the PR. \(Click **Labels** or the gear icon to the right of the comment stream in the PR.)
+When you're ready to submit your content for staging, validation, and/or publishing, use the GitHub UI to create a pull request. 
 
-10. The pull request acceptor reviews your pull request, provides feedback, and/or accepts your pull request.
+When you open a pull request (PR), this triggers a test pass, builds the project and publishes to our internal staging site. It's okay to open a pull request that you're not ready to have merged because this is how you get a test pass and check your updates on the staging site. Build details and staging links are posted as comments to the PR. 
 
+It's your responsibility to do the following **before you ask to have your changes merged**:
+  - Review build details to make sure it contains no errors. 
+  - Review your updates on the staging site.
+
+After you've done this, indicate it by either:
+- Adding the "ready-to-merge" label to the PR. \(Click **Labels** or the gear icon to the right of the comment stream in the PR.)
+- Adding ready-to-merge as a comment and send email to the WSSC Pull Reviewers alias: wssc-pra
+
+The PR reviewer checks your changes and accepts the PR unless there are issues or questions. Feedback or requests to fix issues are added as comments. Review [Quality criteria for pull request review](contributor-guide-pr-criteria.md) to learn what's expected.
 
 ## Publishing
 
-- Articles are published at approximately 10:00 AM and 3:00 PM Pacific Time, Monday-Friday. It can take up to 30 minutes for articles to appear online after publishing. Remember your pull request has to be merged by a pull request reviewer before the changes can be included in the next scheduled publishing cycle. If you need an article published for a specific publication cycle, let a pull request reviewer know ahead of time.
-
-- Before the pull request can be merged, you need to:
-  - Review build details to make sure it passed quality checks
-  - Review your updates on the staging site
-  - Indicate you've done this by adding the **ready-to-merge** label to the pull request.
-
- See [Quality criteria for pull request review](contributor-guide-pr-criteria.md) for details.
- 
-## Another way to with release/milestone branches
-
-1.      Create a new local working branch based off the appropriate remote branch:
-
-        git pull upstream <remote-branch>:<working-branch>
-
-2.      Move into the new working branch:
-
-        git checkout <working branch>
-
-3.      Push the new branch to your remote         
+- Articles are published at around 10:00 AM and 3:00 PM Pacific Time, Monday-Friday. Keep in mind that a pull request reviewer needs time to review and accept your changes before they can merged. Changes must be merged to be picked up in the next scheduled publishing cycle. If you need an article published for a specific publication cycle, let a pull request reviewer know ahead of time. When your PR is accepted, your changes are merged into the repo and will be included in the next time publication run. It can take up to 30 minutes for articles to appear online after publishing. 

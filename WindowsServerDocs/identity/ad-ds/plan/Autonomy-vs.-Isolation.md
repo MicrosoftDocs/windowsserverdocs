@@ -1,20 +1,20 @@
 ---
+ms.assetid: ef63d40c-a262-4a18-938d-b95c10680c0b
 title: Autonomy vs. Isolation
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 022fd4ef-c9c3-403b-8561-7bd21190bff0
-author: Femila
 ---
+
 # Autonomy vs. Isolation
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can design your Active Directory logical structure to achieve either of the following:  
   

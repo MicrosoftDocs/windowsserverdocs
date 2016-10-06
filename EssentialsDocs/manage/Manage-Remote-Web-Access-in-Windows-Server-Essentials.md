@@ -1,23 +1,23 @@
 ---
 title: "Manage Remote Web Access in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 04/01/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
-caps.latest.revision: 15
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Manage Remote Web Access in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
-  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+ 
  Remote Web Access in Windows Server Essentials, or in  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere that you have an Internet connection and by using almost any device. To use the Remote Web Access functionality, you must first turn it on by using the Set Up Anywhere Access Wizard, and then set up your router and domain name.  
   
 ## In this topic  
@@ -89,7 +89,7 @@ ms.author: coreyp
 4.  From the drop-down list, select the new region, and then click **Apply** to accept the new region setting.  
   
 ###  <a name="BKMK_ManagePerms"></a> Manage Remote Web Access permissions  
- When you add a user account in Windows Server Essentials, the new user is allowed by default to use Remote Web Access. If you chose not to allow Remote Web Access for a user account, and then find that the user needs to use Remote Web Access, you can update the user accountâ€™s properties.  
+ When you add a user account in Windows Server Essentials, the new user is allowed by default to use Remote Web Access. If you chose not to allow Remote Web Access for a user account, and then find that the user needs to use Remote Web Access, you can update the user account „¢s properties.  
   
 ##### To manage Remote Web Access permissions for a user account  
   
@@ -154,7 +154,7 @@ ms.author: coreyp
  If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see [Router Setup](http://social.technet.microsoft.com/wiki/contents/articles/windows-small-business-server-2011-essentials-router-setup.aspx).  
   
 ###  <a name="BKMK_ReplaceRouter"></a> Replace a router  
- Replace the router according to the manufacturerâ€™s instructions, and then run the Set Up Your Router Wizard to configure the new router.  
+ Replace the router according to the manufacturer „¢s instructions, and then run the Set Up Your Router Wizard to configure the new router.  
   
 ##### To set up your new router  
   
@@ -224,7 +224,7 @@ ms.author: coreyp
 -   [Find your domain name service provider](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Find)  
   
 ###  <a name="BKMK_DNOverview"></a> Domain names overview  
- A domain name uniquely identifies your server on the Internet. Domain names consist of at least two parts: a top level domain name (TLD) and a second level domain name. For example, in contoso.com, â€œcomï¿½? is the TLD and â€œcontosoï¿½? is the second level domain name.  
+ A domain name uniquely identifies your server on the Internet. Domain names consist of at least two parts: a top level domain name (TLD) and a second level domain name. For example, in contoso.com, com is the TLD and contoso is the second level domain name.  
   
  While you are away from your office, you can use your domain name to access shared files on the server or computers on the network. You can also manage your server when you are away. For example, you register contoso.com for your server. When you are away from your office, you can open a web browser on your laptop and type **contoso.com** in the address text box to connect to the instance of Remote Web Access that you set up on Windows Server Essentials.  
   
@@ -233,7 +233,7 @@ ms.author: coreyp
   
 -   A custom domain name for  Remote Web Access (for example, *yourhostname*.remotewebaccess.com). Your domain name is associated with your public IP address.  
   
--   A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organizationâ€™s broadband connections provide dynamic public IP addresses that can change.  
+-   A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization „¢s broadband connections provide dynamic public IP addresses that can change.  
   
 -   A trusted certificate associated with the domain name.  
   
@@ -249,7 +249,7 @@ ms.author: coreyp
   
 -   If you have an existing domain name that you purchased from one of the supported domain name service providers, you can use the Set Up Your Domain Name Wizard to set up the domain name for your server. Click **I want to use a domain name I already own**, and then type the domain name in the **Set Up Your Domain Name** text box. You must provide the user name and password that you used to purchase the domain name.  
   
--   If you have an existing domain name that you purchased from a domain name service provider that is not supported by Windows Server Essentials, and you want to use the Set Up Your Domain Name Wizard to set up the domain name for your server, you can transfer the domain name to one of the domain name service providers listed in the wizard. Click **I want to use a domain name I already own**, type the domain name in the **Domain Name** text box, and then follow the instructions on the domain name service providerâ€™s website to transfer the domain name.  
+-   If you have an existing domain name that you purchased from a domain name service provider that is not supported by Windows Server Essentials, and you want to use the Set Up Your Domain Name Wizard to set up the domain name for your server, you can transfer the domain name to one of the domain name service providers listed in the wizard. Click **I want to use a domain name I already own**, type the domain name in the **Domain Name** text box, and then follow the instructions on the domain name service provider „¢s website to transfer the domain name.  
   
 ###  <a name="BKMK_SetUpName"></a> Set up a domain name  
  When you turn on Remote Web Access, you can choose to set up the Internet domain name of the server.  
@@ -265,7 +265,7 @@ ms.author: coreyp
 4.  Follow the instructions to complete the wizard. If you do not already own a domain name and certificate, the wizard helps you find a domain name provider to purchase a domain name and certificate, or you can get a personalized Microsoft domain name.  
   
 ###  <a name="BKMK_ChooseProvider"></a> Choose a domain name service provider  
- You should choose a domain name service provider that supports the domain name extension that you want to use. The Set Up Your Domain Name Wizard includes a list of qualified providers that you can use with a link to each providerâ€™s website. Click the **More Info** link beside each providerâ€™s name to obtain information about the services and prices that are offered by the provider.  
+ You should choose a domain name service provider that supports the domain name extension that you want to use. The Set Up Your Domain Name Wizard includes a list of qualified providers that you can use with a link to each provider „¢s website. Click the **More Info** link beside each provider „¢s name to obtain information about the services and prices that are offered by the provider.  
   
 > [!NOTE]
 >  Some domain name service providers serve broad international regions and others serve smaller markets. Because of this, some providers may not offer a website that is translated into your language of preference.  
@@ -287,9 +287,9 @@ ms.author: coreyp
 ###  <a name="BKMK_Prefixes"></a> Choose a domain name prefix  
  A domain name consists of hierarchical labels.  
   
- **The top-level domain extension** is the right-most label in the domain name. For example, in www.contoso.com, â€œcomï¿½? is the top-level domain name extension.  
+ **The top-level domain extension** is the right-most label in the domain name. For example, in www.contoso.com, com is the top-level domain name extension.  
   
- **The second-level domain name** is the label next to the top-level domain name extension. The second-level domain name is often created based on the company name, products, or services. For example, in www.contoso.com, â€œcontosoï¿½? is the second-level domain name and was chosen for the company name Contoso Pharmaceuticals. The second-level domain is sometimes referred to as the hostname, which has an IP address associated with it.  
+ **The second-level domain name** is the label next to the top-level domain name extension. The second-level domain name is often created based on the company name, products, or services. For example, in www.contoso.com, contoso is the second-level domain name and was chosen for the company name Contoso Pharmaceuticals. The second-level domain is sometimes referred to as the hostname, which has an IP address associated with it.  
   
  **The domain name prefix** identifies a subdomain. The subdomain name can be used to identify services, devices, or regions. For example, Contoso Pharmaceuticals wants to allow remote users to log on to Remote Web Access, but does not want the website to be available to the public, so they create a subdomain that allows only users with appropriate permissions to access the website. Contoso Pharmaceuticals sets up remote.contoso.com as the subdomain, and remote is the domain name prefix.  
   
@@ -297,7 +297,7 @@ ms.author: coreyp
 >  It is recommended that you use the default **Remote** as the prefix for your domain name.  
   
 ###  <a name="BKMK_Extension"></a> Choose a domain name extension  
- When you choose a domain name for your Internet website, you also need to specify the domain name extension that you want to use. The extension is identified by the letters that follow the final period of any domain name. (The formal term for the extension is the â€œtop-level domainï¿½? or â€œTLD.ï¿½?)  
+ When you choose a domain name for your Internet website, you also need to specify the domain name extension that you want to use. The extension is identified by the letters that follow the final period of any domain name. (The formal term for the extension is the top-level domain or TLD.)  
   
  There are two main types of domain extensions that you can use: generic and country-code.  
   
@@ -350,13 +350,13 @@ ms.author: coreyp
   
 -   The wizard does not list the domain name extension that you want to use, but the extension is available from a domain name provider that is not currently a partner.  
   
- If you choose to set up your domain name manually, work with your domain name service provider to create an â€œA Recordï¿½? for your domain.  
+ If you choose to set up your domain name manually, work with your domain name service provider to create an A Record for your domain.  
   
-##### To create an â€œA Recordï¿½?  
+##### To create an A Record  
   
-1.  Decide on a host name, such as â€œremote.ï¿½? This is the domain name prefix. The domain name prefix plus your domain name will define the URL to open your Remote Web Access logon page; for example, **http://remote.contoso.com**.  
+1.  Decide on a host name, such as remote. This is the domain name prefix. The domain name prefix plus your domain name will define the URL to open your Remote Web Access logon page; for example, **http://remote.contoso.com**.  
   
-2.  In your domain name service providers configuration dashboard (usually on their webpage), create the â€œA recordï¿½? for the host name that you decided on in Step 1. Ensure that the IP address that you specify in the â€œA recordï¿½? is the IP address on the WAN side of your router (the Internet facing side). Consult your router documentation to find your WAN IP address.  
+2.  In your domain name service providers configuration dashboard (usually on their webpage), create the A record for the host name that you decided on in Step 1. Ensure that the IP address that you specify in the A record is the IP address on the WAN side of your router (the Internet facing side). Consult your router documentation to find your WAN IP address.  
   
 3.  It is recommended that you contact your Internet Service Provider (ISP) to purchase a static IP address for your network. This ensures that the IP address does not change and that your DNS entry does not become outdated.  
   
@@ -455,7 +455,7 @@ ms.author: coreyp
   
 ## See also  
   
--   [Remote desktop options](../windows-server-essentials-notinTOC/Remote-desktop-options.md)  
+-   [Remote desktop options](Remote-desktop-options.md)  
   
 -   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   

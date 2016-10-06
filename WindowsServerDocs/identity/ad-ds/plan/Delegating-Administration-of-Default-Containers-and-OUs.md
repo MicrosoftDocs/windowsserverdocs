@@ -1,20 +1,20 @@
 ---
+ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: Delegating Administration of Default Containers and OUs
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: f61b875f-7c1e-4810-b39b-db7fd5e574e9
-author: Femila
 ---
+
 # Delegating Administration of Default Containers and OUs
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Every Active Directory domain contains a standard set of containers and organizational units (OUs) that are created during the installation of Active Directory Domain Services (AD DS). These include the following:  
   

@@ -14,19 +14,11 @@ author: coreyp-at-msft
 ---
 # Step 3 Plan the Multisite Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning the multisite infrastructure, plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.  
-  
-|Task|Description|  
-|--------|---------------|  
-|[3.1 Plan IP-HTTPS certificates](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_1_IPHTTPS)|Plan the certificate to use for the IP-HTTPS website for each entry point.|  
-|[3.2 Plan the network location server](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_2_NLS)|Decide where to host the network location server website and the certificate to use.|  
-|[3.3 Plan the IPsec root certificate for all Remote Access servers](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_3_IPsec)|Plan to configure all Remote Access servers with the same IPsec root certificate.|  
-|[3.4 Plan global server load balancing](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_4_GSLB)|Decide whether to use global server load balancing.|  
-|[3.5 Plan DirectAccess client entry point selection](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_5_EP_Selection)|Plan how DirectAccess client computers will select the entry point to connect to.|  
-|[3.6 Plan IPv6 prefixes](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_6_IPv6)|Plan the IPv6 prefixes for your deployment.|  
-|[3.7 Plan the transition to IPv6 when multisite Remote Access is deployed](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#bkmk_3_7_TransitionIPv6)|Plan for a transition to an IPv6-only multisite deployment.|  
+
+The following sections provide detailed planning information.
   
 ## <a name="bkmk_3_1_IPHTTPS"></a>3.1 Plan IP-HTTPS certificates  
 When you configure the entry points, you configure each entry point with a specific ConnectTo address. The IP-HTTPS certificate for each entry point must match the ConnectTo address. Note the following when obtaining the certificate:  
@@ -222,13 +214,13 @@ When adding IPv6 addresses to an IPv4-only corporate network, you may want to ad
   
 Remote Access allows you to add servers with both IPv4 and IPv6 addresses to a deployment that was originally configured with only IPv4 addresses. These servers are added as IPv4-only servers and their IPv6 addresses are ignored by DirectAccess; consequently, your organization cannot take advantage of the benefits of native IPv6 connectivity on these new servers.  
   
-To transform the deployment to an IPv6+IPv4 deployment and take advantage of the native IPv6 capabilities, you must reinstall DirectAccess. To maintain client connectivity throughout the reinstallation see [Transition from an IPv4-only to an IPv6-only deployment using dual DirectAccess deployments](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#DualDeployment).  
+To transform the deployment to an IPv6+IPv4 deployment and take advantage of the native IPv6 capabilities, you must reinstall DirectAccess. To maintain client connectivity throughout the reinstallation see Transition from an IPv4-only to an IPv6-only deployment using dual DirectAccess deployments.  
   
 > [!NOTE]  
 > As with an IPv4-only network, in a mixed IPv4+IPv6 network, the address of the DNS server that is used to resolve client DNS requests must be configured with the DNS64 that is deployed on Remote Access servers themselves, and not with a corporate DNS.  
   
 ### <a name="TransitionMixedtoIPv6"></a>Transition from an IPv6+IPv4 to an IPv6-only corporate network  
-DirectAccess enables you to add IPv6-only entry points only if the first Remote Access server in the deployment originally had either both IPv4 and IPv6 addresses or only an IPv6 address. That is, you cannot transition from an IPv4-only network to an IPv6-only network in a single step without reinstalling DirectAccess. To transition directly from an IPv4-only network to an IPv6-only network, see [Transition from an IPv4-only to an IPv6-only deployment using dual DirectAccess deployments](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d#DualDeployment).  
+DirectAccess enables you to add IPv6-only entry points only if the first Remote Access server in the deployment originally had either both IPv4 and IPv6 addresses or only an IPv6 address. That is, you cannot transition from an IPv4-only network to an IPv6-only network in a single step without reinstalling DirectAccess. To transition directly from an IPv4-only network to an IPv6-only network, see Transition from an IPv4-only to an IPv6-only deployment using dual DirectAccess deployments.  
   
 After you have completed the transition from an IPv4-only deployment to an IPv6+IPv4 deployment, you can transition to an IPv6-only network. During, and after the transition, note the following:  
   
@@ -273,9 +265,7 @@ When you have completed the transition, you can uninstall the first DirectAccess
   
     -   Type: AAAA  
   
-## <a name="BKMK_Links"></a>See also  
   
--   [Configure a multisite deployment](assetId:///68492f3d-772e-4e68-a0ae-572be4e7d35f)  
   
 
 

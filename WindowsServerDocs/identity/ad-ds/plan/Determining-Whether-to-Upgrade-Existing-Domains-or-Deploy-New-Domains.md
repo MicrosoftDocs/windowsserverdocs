@@ -1,20 +1,20 @@
 ---
+ms.assetid: c20231dd-2b83-4494-9385-1172272e00d6
 title: Determining Whether to Upgrade Existing Domains or Deploy New Domains
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 6499cf42-558a-48ce-a16c-edfcbad43d49
-author: Femila
 ---
+
 # Determining Whether to Upgrade Existing Domains or Deploy New Domains
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Each domain in your design will either be a new domain or an existing upgraded domain. Users from existing domains that you do not upgrade must be moved into new domains.  
   

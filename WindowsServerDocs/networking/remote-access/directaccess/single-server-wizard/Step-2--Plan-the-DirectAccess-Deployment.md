@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 2 Plan the DirectAccess Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After planning the DirectAccess infrastructure, the next step in deploying DirectAccess on a single server with basic settings is to plan the settings for the Getting Started Wizard.  
   
@@ -47,15 +47,15 @@ There are a number of decisions to make when planning to deploy your DirectAcces
   
 -   **IP-HTTPS certificate** -Since there is no PKI required in this deployment, the wizard automatically provisions self-signed certificates for IP-HTTPS and the Network Location Server (if no certificates are present), and automatically enables Kerberos proxy. The wizard also enables NAT64 and DNS64 for protocol translation in the IPv4-only environment. After the wizard successfully completes applying the configuration, click **Close**.  
   
--   **Windows 7 clients** -You cannot enable support for Windows 7 clients from the Getting Started wizard. This can be enabled from the Advanced Setup Wizard. For more details, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
+-   **Windows 7 clients** -You cannot enable support for Windows 7 clients from the Getting Started wizard. This can be enabled from the Advanced Setup Wizard. For more details, see [Deploy a Single DirectAccess Server with Advanced Settings](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
   
 -   **VPN configuration** -Before you configure DirectAccess, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (either because they are unmanaged or run an operating system for which DirectAccess is not supported). The Getting Started Wizard configures VPN IP address assignment using DHCP and configures VPN clients to be authenticated using Active Directory.  
   
--   **Force Tunneling** -If you plan to use Force Tunneling, or might add it in the future, you should use [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) to deploy a two tunnel configuration. Because of security considerations, Force Tunneling in a single tunnel configuration is not supported.  
+-   **Force Tunneling** -If you plan to use Force Tunneling, or might add it in the future, you should use [Deploy a Single DirectAccess Server with Advanced Settings](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) to deploy a two tunnel configuration. Because of security considerations, Force Tunneling in a single tunnel configuration is not supported.  
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 1: Plan the DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-advanced/Step-1--Plan-the-DirectAccess-Infrastructure.md)  
+-   [Step 1: Plan the Basic DirectAccess Infrastructure](Step-1-Plan-Basic-DA-Infrastructure.md)  
   
 
 

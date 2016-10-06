@@ -3,18 +3,18 @@ title: Supported Linux and FreeBSD virtual machines for Hyper-V on Windows
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
 author: shirgall
-ms.author: cwatson
-ms.date: 8/16/2016
+ms.author: kathydav
+ms.date: 10/03/2016
 ---
 # Supported Linux and FreeBSD virtual machines for Hyper-V on Windows
 
->Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 Hyper-V supports both emulated and Hyper-V-specific devices for Linux and FreeBSD virtual machines. When running with emulated devices, no additional software is required to be installed. However emulated devices do not provide high performance and cannot leverage the rich virtual machine management infrastructure that the Hyper-V technology offers. In order to make full use of all benefits that Hyper-V provides, it is best to use Hyper-V-specific devices for Linux and FreeBSD. The collection of drivers that are required to run Hyper-V-specific devices are known as Linux Integration Services (LIS) or FreeBSD Integration Services (BIS).  
   
@@ -25,8 +25,8 @@ For other Linux distributions LIS changes are regularly integrated into the oper
 For older FreeBSD releases (before 10.0), Microsoft provides ports that contain the installable BIS drivers and corresponding daemons for FreeBSD virtual machines. For newer FreeBSD releases, BIS is built in to the FreeBSD operating system, and no separate download or installation is required except for a KVP ports download that is needed for FreeBSD 10.0.  
   
 > [!TIP]  
-> -   Download [Windows Server 2016 Technical Prevew](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview) from the Evaluation Center.  
-> -   Download  [Microsoft Hyper-V  Server 2016 Technical Prevew](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-technical-preview) from the Evaluation Center.  
+> -   Download [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016) from the Evaluation Center.  
+> -   Download  [Microsoft Hyper-V Server 2016](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-technical-preview) from the Evaluation Center.  
   
 The goal of this content is to provide information that helps facilitate your Linux or FreeBSD deployment on Hyper-V. Specific details include:  
   

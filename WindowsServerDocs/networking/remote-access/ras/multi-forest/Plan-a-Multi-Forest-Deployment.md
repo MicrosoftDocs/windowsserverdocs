@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Plan a Multi-Forest Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic describes the planning steps required when configuring Remote Access in a multi-forest deployment.  
   
@@ -43,7 +43,7 @@ You must configure at least one security group in the new forest for DirectAcces
 > Note that if you add a client from a new domain to an existing security group that is already configured as a DirectAccess client security group, the client GPO will not be created automatically by DirectAccess on the new domain. The client in the new domain will not receive the DirectAccess settings and will not be able to connect using DirectAcecss.  
   
 ## Plan certification authorities  
-If the DirectAccess deployment is configured to use One-Time Password (OTP) authentication, each forest contains the same signing certificate templates but with different Oid values. This results in the forests not being able to be configured as a single configuration unit. To resolve this issue and configure OTP in a multi-forest environment, see [Configure OTP in a multi-forest deployment](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#OTPMultiForest).  
+If the DirectAccess deployment is configured to use One-Time Password (OTP) authentication, each forest contains the same signing certificate templates but with different Oid values. This results in the forests not being able to be configured as a single configuration unit. To resolve this issue and configure OTP in a multi-forest environment, see the section " Configure OTP in a multi-forest deployment" in the topic [Configure a Multi-Forest Deployment](Configure-a-Multi-Forest-Deployment.md).  
   
 When using IPsec machine certificate authentication, all client and server computers must have a computer certificate issued by the same root or intermediate certification authority, regardless of the forest to which they belong.  
   

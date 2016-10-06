@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Purge Utilization Data
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to delete utilization data from the IPAM database.  
   

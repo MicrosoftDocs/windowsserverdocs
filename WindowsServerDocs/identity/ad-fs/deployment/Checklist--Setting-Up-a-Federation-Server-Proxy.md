@@ -1,0 +1,40 @@
+---
+ms.assetid: 38c9bcd3-c6f8-4153-8e42-5fd31568c65a
+title: Checklist: Setting Up a Federation Server Proxy
+author: billmath
+manager: femila
+ms.date: 09/12/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adfs
+ms.author: billmath
+ms.author: billmath
+---
+
+# Checklist: Setting Up a Federation Server Proxy
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+This checklist includes the deployment tasks for preparing a server running Windows Server® 2012 for the federation server proxy role in Active Directory Federation Services \(AD FS\).  
+  
+> [!NOTE]  
+> Complete the tasks in this checklist in order. When a reference link takes you to a procedure, return to this topic after you complete the steps in that procedure so that you can proceed with the remaining tasks in this checklist.  
+  
+![](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Setting Up a federation server proxy**  
+  
+||Task|Reference|  
+|-|--------|-------------|  
+|![](media/icon_checkboxo.gif)|Before you begin deploying your AD FS federation server proxies, review the AD FS deployment topology types and their associated server placement and network layout recommendations.|![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Determine Your AD FS Deployment Topology](https://technet.microsoft.com/library/gg982491.aspx)<br /><br />![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Planning Federation Server Proxy Placement](https://technet.microsoft.com/library/dd807130.aspx)<br /><br />![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Where to Place a Federation Server Proxy](https://technet.microsoft.com/library/dd807048.aspx)|  
+|![](media/icon_checkboxo.gif)|Review AD FS capacity planning guidance to determine the proper number of federation server proxies you should use in your production environment.|![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Planning for Federation Server Proxy Capacity](https://technet.microsoft.com/library/gg749898.aspx)|  
+|![](media/icon_checkboxo.gif)|Determine whether a single federation server proxy or a federation server proxy farm is better for your deployment. **Note:** Federation servers also perform federation server proxy responsibilities.|![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[When to Create a Federation Server Proxy](https://technet.microsoft.com/library/dd807032.aspx)<br /><br />![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[When to Create a Federation Server Proxy Farm](https://technet.microsoft.com/library/dd807082.aspx)|  
+|![](media/icon_checkboxo.gif)|Determine whether this new federation server proxy will be created in the perimeter network of the account partner organization or the resource partner organization.|![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Review the Role of the Federation Server Proxy in the Account Partner](https://technet.microsoft.com/library/dd807109.aspx)<br /><br />![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Review the Role of the Federation Server Proxy in the Resource Partner](https://technet.microsoft.com/en-us/library/dd807052.aspx)|  
+|![](media/icon_checkboxo.gif)|Before you install AD FS on a computer that will become a federation server proxy, read about the importance of obtaining a server authentication certificate—for federation server proxy farms—adding or sharing certificates across all the servers in a farm.|![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Certificate Requirements for Federation Server Proxies](https://technet.microsoft.com/library/dd807054.aspx)|  
+|![](media/icon_checkboxo.gif)|Review information in the AD FS Design Guide about how to update Domain Name System \(DNS\) in the perimeter network so that successful name resolution for federation servers and federation server proxies can occur.|![](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Name Resolution Requirements for Federation Server Proxies](https://technet.microsoft.com/library/dd807055.aspx)|  
+|![](media/icon_checkboxo.gif)|Determine whether the federation server proxy must be joined to a domain. Although federation server proxies do not have to be joined to a domain, they are easier to manage with remote administration and Group Policy features when they are joined to a domain.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Join a Computer to a Domain](Join-a-Computer-to-a-Domain.md)|  
+|![](media/icon_checkboxo.gif)|Depending on how the DNS infrastructure in your perimeter network is configured, complete one of the procedures in the topics on the right before you deploy a federation server proxy in your organization. **Note:** Do not perform both procedures. Read [Name Resolution Requirements for Federation Server Proxies](https://technet.microsoft.com/library/dd807055.aspx) to determine which procedure best suits the requirements of your organization.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md)<br /><br />![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)|  
+|![](media/icon_checkboxo.gif)|After you obtain a server authentication certificate, you must install it in Internet Information Services \(IIS\) on the default Web site of the federation server proxy.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Import a Server Authentication Certificate to the Default Web Site](Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)|  
+|![](media/icon_checkboxo.gif)|\(Optional\) As an alternative to obtaining a server authentication certificate from a certification authority \(CA\), you can use IIS to acquire a sample certificate for your federation server proxy.<br /><br />Because IIS generates a self\-signed certificate that does not originate from a trusted source, use it to create a self\-signed certificate only in the following scenarios:<br /><br />-   When you have to create a Secure Sockets Layer \(SSL\) channel between your server and a limited, known group of users<br />-   When you have to troubleshoot third\-party certificate problems **Caution:** It is not a security best practice to deploy a federation server proxy in a production environment using a self\-signed, server authentication certificate.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[IIS: Create a Self\-Signed Server Certificate](http://go.microsoft.com/fwlink/?LinkID=108271)|  
+|![](media/icon_checkboxo.gif)|Install the Federation Service Proxy role service on the computer that will become the federation server proxy.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Install the Federation Service Proxy Role Service](Install-the-Federation-Service-Proxy-Role-Service.md)|  
+|![](media/icon_checkboxo.gif)|Configure the AD FS software on the computer to act in the federation server proxy role by using the AD FSFederation Server Proxy Configuration Wizard.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Configure a Computer for the Federation Server Proxy Role](Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md)|  
+|![](media/icon_checkboxo.gif)|Using Event Viewer, verify that the federation server proxy service has started.|![](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Verify That a Federation Server Proxy Is Operational](Verify-That-a-Federation-Server-Proxy-Is-Operational.md)|  

@@ -14,17 +14,17 @@ author: coreyp-at-msft
 ---
 # Step 2 Configure the RADIUS Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Before you configure the Remote Access server to support DirectAccess with OTP support, you configure the RADIUS server.  
   
 |Task|Description|  
 |--------|---------------|  
-|[2.1. Configure the RADIUS software distribution tokens](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461#BKMK_1.1)|On the RADIUS server configure software distribution tokens.|  
-|[2.2. Configure the RADIUS security information](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461#BKMK_1.2)|On the RADIUS server configure the ports and shared secret to be used.|  
-|[2.3 Adding user account for OTP probing](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461#BKMK_Probe)|On the RADIUS server create a new user account for OTP probing.|  
-|[2.4 Synchronize with Active Directory](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461#BKMK_Active)|On the RADIUS server create user accounts synchronized with Active Directory accounts.|  
-|[2.5 Configure the RADIUS authentication agent](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461#BKMK_AuthAgent)|Configure the Remote Access server as a RADIUS authentication agent.|  
+|[2.1. Configure the RADIUS software distribution tokens](#BKMK_1.1)|On the RADIUS server configure software distribution tokens.|  
+|[2.2. Configure the RADIUS security information](#BKMK_1.2)|On the RADIUS server configure the ports and shared secret to be used.|  
+|[2.3 Adding user account for OTP probing](#BKMK_Probe)|On the RADIUS server create a new user account for OTP probing.|  
+|[2.4 Synchronize with Active Directory](#BKMK_Active)|On the RADIUS server create user accounts synchronized with Active Directory accounts.|  
+|[2.5 Configure the RADIUS authentication agent](#BKMK_AuthAgent)|Configure the Remote Access server as a RADIUS authentication agent.|  
   
 ## <a name="BKMK_1.1"></a>2.1 Configure the RADIUS software distribution tokens  
 The RADIUS server must be configured with the necessary license and software and/or hardware distribution tokens to be used by DirectAccess with OTP. This process will be specific to each RADIUS vendor implementation.  

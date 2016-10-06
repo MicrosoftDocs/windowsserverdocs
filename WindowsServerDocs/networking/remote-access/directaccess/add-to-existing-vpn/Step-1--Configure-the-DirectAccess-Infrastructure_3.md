@@ -14,9 +14,9 @@ author: coreyp-at-msft
 ---
 # Step 1 Configure the DirectAccess Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan the DirectAccess Infrastructure](assetId:///27cdb4a4-189b-413c-9e52-c7c29d5cccb5).  
+This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan DirectAccess Infrastructure](Step-1--Plan-DirectAccess-Infrastructure.md).  
   
 |Task|Description|  
 |--------|---------------|  
@@ -93,9 +93,9 @@ When you use an internal CA to issue certificates, you must configure a certific
   
 ##### To configure a certificate template  
   
-1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705(WS.10).aspx).  
+1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](http://technet.microsoft.com/library/cc731705.aspx).  
   
-2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794(WS.10).aspx).  
+2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794.aspx).  
   
 ### Configure the IP-HTTPS certificate  
 Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the Remote Access server. There are three certificate options for the IP-HTTPS certificate:  
@@ -106,7 +106,7 @@ Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connecti
   
 -   **Private**-The following are required, if they do not already exist:  
   
-    -   A website certificate used for IP-HTTPS authentication. The certificate subject should be an externally resolvable fully qualified domain name (FQDN) reachable from the Internet. The certificate is based on the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp).  
+    -   A website certificate used for IP-HTTPS authentication. The certificate subject should be an externally resolvable fully qualified domain name (FQDN) reachable from the Internet.  
   
     -   A certificate revocation list (CRL) distribution point that is reachable from a publicly resolvable FQDN.  
   
@@ -149,7 +149,7 @@ Make sure that the website certificate used for IP-HTTPS authentication meets th
   
 6.  Click **Next** twice.  
   
-7.  On the **Request Certificates** page, select the check box for the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp), and if required, click **More information is required to enroll for this certificate**.  
+7.  On the **Request Certificates** page, select the check box for the certificate template, and if required, click **More information is required to enroll for this certificate**.  
   
 8.  On the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   
@@ -182,7 +182,7 @@ You must manually configure a DNS entry for the network location server website 
   
 5.  Click **Done**.  
   
-![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -226,7 +226,7 @@ The Remote Access server and all DirectAccess client computers must be joined to
   
 9. On the **System Properties** dialog box, click Close. Click **Restart Now** when prompted.  
   
-![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -270,7 +270,7 @@ The DirectAccess settings contained in the client computer Group Policy Object a
   
 6.  On the **Select Users, Contacts, Computers, or Service Accounts** dialog box, select the client computers that you want to enable for DirectAccess, and then click **OK**.  
   
-![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -284,7 +284,7 @@ The network location server should be on a server with high availability, and a 
   
 -   **Private**-The following are required, if they do not already exist:  
   
-    -   A website certificate used for the network location server. The certificate subject should be the URL of the network location server. The certificate is based on the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp).  
+    -   A website certificate used for the network location server. The certificate subject should be the URL of the network location server.   
   
     -   A CRL distribution point that is highly available from the internal network.  
   
@@ -312,7 +312,7 @@ The network location server should be on a server with high availability, and a 
   
 6.  Click **Next** twice.  
   
-7.  On the **Request Certificates** page, select the check box for the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp), and if required, click **More information is required to enroll for this certificate**.  
+7.  On the **Request Certificates** page, select the check box for the certificate template, and if required, click **More information is required to enroll for this certificate**.  
   
 8.  On the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   
@@ -328,13 +328,7 @@ The network location server should be on a server with high availability, and a 
   
 14. In the details pane of the Certificates snap-in, verify that new certificate was enrolled with Intended Purposes of Server Authentication.  
   
-## <a name="BKMK_Links"></a>See also  
-  
--   Step 2: Configure the Remote Access server  
-  
--   Install and configure advanced Remote Access  
-  
--   Deploy advanced Remote Access  
+
   
 
 

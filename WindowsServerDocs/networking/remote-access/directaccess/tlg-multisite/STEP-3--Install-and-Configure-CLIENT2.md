@@ -14,17 +14,17 @@ author: coreyp-at-msft
 ---
 # STEP 3 Install and Configure CLIENT2
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server&reg; 2012 servers.  
+CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server&reg; 2016 servers.  
   
-1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS). Install Windows&reg; 7 Enterprise or Windows&reg; 7 Ultimate on CLIENT2.  
+1. To install the operating system on CLIENT2. Install Windows&reg; 7 Enterprise or Windows&reg; 7 Ultimate on CLIENT2.  
   
-2.  [To join CLIENT2 to the CORP domain](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#Join). Join CLIENT2 to the corp.contoso.com domain.  
+2. To join CLIENT2 to the CORP domain. Join CLIENT2 to the corp.contoso.com domain.  
   
-## <a name="installOS"></a>To install the operating system on CLIENT2  
+## To install the operating system on CLIENT2  
   
-1.  Start the installation of  Windows 7 .  
+1.  Start the installation of  Windows 7.  
   
 2.  When you are prompted for a user name, type **User1**. When you are prompted for a computer name, type **CLIENT2**.  
   
@@ -41,7 +41,7 @@ CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards
 ## User account control  
 When you configure the  Windows 7  operating system, you are required to click **Continue** on the **User Account Control** (UAC) dialog box for some tasks. Several of the configuration tasks require UAC approval. When you are prompted, always click **Continue** to authorize these changes.  
   
-## <a name="Join"></a>To join CLIENT2 to the CORP domain  
+## To join CLIENT2 to the CORP domain  
   
 1.  Click **Start**, right-click **Computer**, and then click **Properties**.  
   
@@ -59,7 +59,4 @@ When you configure the  Windows 7  operating system, you are required to click *
   
 8.  On the **System Properties** dialog box, click **Close**, and when you see a dialog that prompts you to restart the computer, click **Restart Now**.  
   
-9. After the computer restarts, log on as CORP\User1.  
-  
-
-
+9. After the computer restarts, log on as CORP\User1.

@@ -1,21 +1,23 @@
 ---
 title: "Create the Oobe.xml File Including Logo and EULA"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
-caps.latest.revision: 15
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Create the Oobe.xml File Including Logo and EULA
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 You can add your own End User License Agreement (EULA) to Initial Configuration by using the Oobe.xml file. The Oobe.xml is a file used to provide text and images for Initial Configuration, Windows Welcome, and other pages presented to the end user. You can add multiple Oobe.xml files to customize the content based on the language and country or region selections of the end user. For more information, see the [Windows Assessment and Deployment Kit for Windows 8](http://go.microsoft.com/fwlink/?LinkId=248694) documentation.  
   
  The EULA for your company is displayed in addition to the Microsoft EULA. The Microsoft EULA will be the first EULA displayed during the initial configuration end user experience, and then your EULA will be displayed. Your EULA can be placed anywhere on the server and you specify the location in the Oobe.xml file.  
@@ -81,7 +83,7 @@ You can add your own End User License Agreement (EULA) to Initial Configuration 
 8.  Enter the path that contains the logo image, and then click OK.  
   
 ## See Also  
- [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Getting Started with the Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   

@@ -13,7 +13,7 @@ author: jamesmci
 ---
 # Server Certificate Deployment Planning
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Before you deploy server certificates, you must plan the following items:  
   
@@ -34,14 +34,14 @@ Before you deploy server certificates, you must plan the following items:
 -   [Plan the configuration of the server certificate template on the CA](#bkmk_template)  
   
 ## <a name="bkmk_basic"></a>Plan basic server configuration  
-After you install Windows Server 2016 Technical Preview on the computers that you are planning to use as your certification authority and Web server, you must rename the computer and assign and configure a static IP address for the local computer.  
+After you install  Windows Server 2016 on the computers that you are planning to use as your certification authority and Web server, you must rename the computer and assign and configure a static IP address for the local computer.  
   
-For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
+For more information, see the  Windows Server 2016 [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
   
 ## <a name="bkmk_domain"></a>Plan domain access  
 To log on to the domain, the computer must be a domain member computer and the user account must be created in AD DS before the logon attempt. In addition, most procedures in this guide require that the user account is a member of the Enterprise Admins or Domain Admins groups in Active Directory Users and Computers, so you must log on to the CA with an account that has the appropriate group membership.  
   
-For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
+For more information, see the  Windows Server 2016 [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
   
 ## <a name="bkmk_virtual"></a>Plan the location and name of the virtual directory on your Web server  
 To provide access to the CRL and the CA certificate to other computers, you must store these items in a virtual directory on your Web server. In this guide, the virtual directory is located on the Web server WEB1. This folder is on the "C:" drive and is named "pki." You can locate your virtual directory on your Web server at any folder location that is appropriate for your deployment.  

@@ -14,29 +14,21 @@ author: coreyp-at-msft
 ---
 # Step 2 Plan the Multisite Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The next step in deploying Remote Access in a multisite topology is to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.  
-  
-|Task|Description|  
-|--------|---------------|  
-|[2.1 Plan Active Directory](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_1_AD)|Plan your Active Directory topology including Active Directory sites and Remote Access entry points.|  
-|[2.2 Plan security groups](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_2_SG)|Plan to create additional security groups if required.|  
-|[2.3 Plan Group Policy Objects](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_3_GPO)|Plan additional Group Policy Objects (GPOs) for your deployment.|  
-|[2.4 Plan DNS entries for the ConnectTo address](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_4_DNS)|Plan additional DNS entries for each entry point in your deployment.|  
-  
 ## <a name="bkmk_2_1_AD"></a>2.1 Plan Active Directory  
 A Remote Access multisite deployment can be configured in a number of topologies:  
   
 -   **Single Active Directory site, multiple entry points**-In this topology, you have a single Active Directory site for your entire organization with fast intranet links throughout the site, but you have multiple Remote Access servers deployed throughout your organization, each acting as an entry point. A geographical example of this topology is to have a single Active Directory site for the United States with entry points on the East coast and the West coast.  
   
-    ![](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo1.png)  
+    ![Remote Access Multisite Topology](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo1.png)  
   
 -   **Multiple Active Directory sites, multiple entry points**-In this topology, you have two or more Active Directory sites with a Remote Access server deployed as an entry point for each site. Each Remote Access server is associated with the Active Directory domain controller for the site. A geographical example of this topology is to have an Active Directory site for the United States and one for Europe with a single entry point for each site. Note that if you have multiple Active Directory sites you do not need to have an entry point associated with each site. In addition, some Active Directory sites can have more than one entry point associated with it.  
   
     ![](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo2.png)  
   
-In a multisite entry point, you can configure a single Remote Access server, multiple Remote Access servers, or a Remote Access server clusters. For information on planning and deploying a cluster, see [Deploy Remote Access in a cluster with Windows NLB overview_Beta](assetId:///77c15ad0-1fb7-4b80-a188-d80eb161222e).  
+In a multisite entry point, you can configure a single Remote Access server, multiple Remote Access servers, or a Remote Access server clusters.   
   
 ### Active Directory best practices and recommendations  
 Note the following recommendations and constraints for Active Directory deployment in a multisite scenario:  
@@ -55,7 +47,7 @@ Note the following recommendations and constraints for Active Directory deployme
   
     1.  If the server running as the PDC emulator is unavailable, you must designate an available domain controller that has updated GPOs as the PDC emulator.  
   
-    2.  If the domain controller that manages a server GPO is unavailable, use the Set-DAEntryPointDC PowerShell cmdlet to associate a new domain controller with the entry point. The new domain controller should have up-to-date GPOs before running the cmdlet. For more information about unavailable domain controllers, see [Domain controller maintenance and downtime](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#DCMaintandDowntime).  
+    2.  If the domain controller that manages a server GPO is unavailable, use the Set-DAEntryPointDC PowerShell cmdlet to associate a new domain controller with the entry point. The new domain controller should have up-to-date GPOs before running the cmdlet.  
   
 ## <a name="bkmk_2_2_SG"></a>2.2 Plan security groups  
 During deployment of a single server with advanced settings, all client computers accessing the internal network via DirectAccess were gathered into a security group. In a multisite deployment, this security group is used for Windows 8 client computers only. For a multisite deployment,  Windows 7  client computers will be gathered into separate security groups for each entry point in the multisite deployment. For example, if you previously grouped all client computers in the group DA_Clients, you must now remove any  Windows 7  computers from that group and put them in a different security group. For example, in the multiple Active Directory sites, multiple entry points topology, you create a security group for the United States entry point (DA_Clients_US) and one for the Europe entry point (DA_Clients_Europe). Place any Windows 7 client computers located in the United States in the DA_Clients_US group and any located in Europe in the DA_Clients_Europe group. If you do not have any  Windows 7  client computers, you do not need to plan security groups for  Windows 7  computers.  
@@ -162,14 +154,14 @@ If you want to manually modify GPO settings note the following:
 #### Modifying domain controller association  
 To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. In some scenarios, it may be required to assign a different domain controller for a GPO:  
   
--   **Domain controller maintenance and downtime**-When the domain controller that manages a GPO is not available, it may be required to manage the GPO on a different domain controller. See [Domain controller maintenance and downtime](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#DCMaintandDowntime).  
+-   **Domain controller maintenance and downtime**-When the domain controller that manages a GPO is not available, it may be required to manage the GPO on a different domain controller.  
   
--   **Optimization of configuration distribution**-After network infrastructure changes, it may be required to manage the server GPO of an entry point on a domain controller in the same Active Directory site as the entry point. See [Optimization of configuration distribution](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigDistOptimization).  
+-   **Optimization of configuration distribution**-After network infrastructure changes, it may be required to manage the server GPO of an entry point on a domain controller in the same Active Directory site as the entry point.   
   
 ## <a name="bkmk_2_4_DNS"></a>2.4 Plan DNS  
 Note the following when planning DNS for a multisite deployment:  
   
-1.  Client computers use the ConnectTo address in order to connect to the Remote Access server. Each entry point in your deployment requires a different ConnectTo address. Each entry point ConnectTo address must be available in the public DNS and the address that you choose must match the subject name of the IP-HTTPS certificate that you deploy for the IP-HTTPS connection. See [Planning website certificates for IP-HTTPS](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_website_cert_IPHTTPS).  
+1.  Client computers use the ConnectTo address in order to connect to the Remote Access server. Each entry point in your deployment requires a different ConnectTo address. Each entry point ConnectTo address must be available in the public DNS and the address that you choose must match the subject name of the IP-HTTPS certificate that you deploy for the IP-HTTPS connection.   
   
 2.  In addition, Remote Access enforces symmetric routing; therefore, only Teredo and IP-HTTPS clients can connect when a multisite deployment is enabled. To allow native IPv6 clients to connect, the ConnectTo address (the IP-HTTPS URL) must resolve to both the external (Internet-facing) IPv6 and IPv4 addresses on the Remote Access server.  
   
@@ -184,18 +176,8 @@ Note the following when planning DNS for a multisite deployment:
     > [!NOTE]  
     > When DNS scavenging is enabled in your DNS infrastructure, it is recommended to disable scavenging on the DNS entries created automatically by Remote Access.  
   
-> [!NOTE]  
-> DNS requirements for the network location server are discussed in [Step 3: Plan the multisite deployment](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d).  
+
   
-## <a name="BKMK_Links"></a>See also  
-  
--   [Step 3: Plan multisite entry points](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d)  
-  
--   [Step 1: Plan a single server Remote Access deployment](assetId:///d85aa8a8-ef06-4021-a4ea-38de816f19cd)  
-  
--   [Deploying Remote Access in a multisite deployment](assetId:///a9249820-3563-499c-9da6-143ede2a1eb7)  
-  
--   [Deploy Remote Access in an Enterprise_Beta](assetId:///59cb282f-ddbf-494d-9392-1c79607c28cc)  
-  
+
 
 

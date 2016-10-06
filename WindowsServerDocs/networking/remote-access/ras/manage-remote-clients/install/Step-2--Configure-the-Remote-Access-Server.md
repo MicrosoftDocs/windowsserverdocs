@@ -14,19 +14,19 @@ author: coreyp-at-msft
 ---
 # Step 2 Configure the Remote Access Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Step 2: Plan the Remote Access Deployment](assetId:///d68d8d84-d08a-4ee9-b113-5e391166f8dd).  
+This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Step 2 Plan the Remote Access Deployment](../plan/Step-2--Plan-the-Remote-Access-Deployment.md).  
   
 |Task|Description|  
 |--------|---------------|  
-|[Install the Remote Access role](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_Role)|Install the Remote Access role.|  
-|[Configure the deployment type](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_Deploy)|Configure the deployment type as DirectAccess and VPN, DirectAccess only, or VPN only.|  
-|[Configure DirectAccess clients](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_Clients)|Configure the Remote Access server with the security groups that contain DirectAccess clients.|  
-|[Configure the Remote Access server](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_Server)|Configure the Remote Access server settings.|  
-|[Configure the infrastructure servers](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_Infra)|Configure the infrastructure servers that are used in the organization.|  
-|[Configure application servers](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_App)|Configure the application servers to require authentication and encryption.|  
-|[Configuration summary and alternate GPOs](assetId:///ab8c0761-5ed0-4018-9c69-b4b1af28ddf3#BKMK_GPO)|View the Remote Access configuration summary, and modify the GPOs if desired.|  
+|Install the Remote Access role|Install the Remote Access role.|  
+|Configure the deployment type|Configure the deployment type as DirectAccess and VPN, DirectAccess only, or VPN only.|  
+|Configure DirectAccess clients|Configure the Remote Access server with the security groups that contain DirectAccess clients.|  
+|Configure the Remote Access server|Configure the Remote Access server settings.|  
+|Configure the infrastructure servers|Configure the infrastructure servers that are used in the organization.|  
+|Configure application servers|Configure the application servers to require authentication and encryption.|  
+|Configuration summary and alternate GPOs|View the Remote Access configuration summary, and modify the GPOs if desired.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -54,7 +54,7 @@ You must install the Remote Access role on a server in your organization that wi
   
 8.  On the **Installation progress** dialog, verify that the installation was successful, and then click **Close**.  
   
-![](../../../../media/Step-2--Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../../media/Step-2--Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -198,9 +198,8 @@ When the Remote Access configuration is complete, the **Remote Access Review** i
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 3: Verify the Deployment](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
+-   [Step 3: Verify the Deployment](Step-3--Verify-the-Deployment_2.md)  
   
--   Manage DirectAccess Clients Remotely  
   
 
 

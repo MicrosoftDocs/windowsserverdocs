@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Install the BranchCache Feature
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this procedure to install the BranchCache feature and start the BranchCache service on a computer running Windows Server&reg; 2016, Windows Server 2012 R2, or Windows Server 2012.  
   

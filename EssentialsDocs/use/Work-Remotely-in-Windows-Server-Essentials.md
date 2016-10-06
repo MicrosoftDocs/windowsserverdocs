@@ -1,22 +1,22 @@
 ---
 title: "Work Remotely in Windows Server Essentials"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 04/22/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
-caps.latest.revision: 17
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Work Remotely in Windows Server Essentials
- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
   
  There are multiple ways to access resources that are located on the server when you are away from your network if Anywhere Access functionalities (Remote Web Access, virtual private network, and DirectAccess) are configured on the server.  
   
@@ -68,9 +68,9 @@ ms.author: coreyp
 4.  Log on to the Windows Server Essentials network by using your network user name and password.  
   
 ##  <a name="BKMK_App"></a> Use the My Server app to connect to Windows Server Essentials  
- The My Server app lets you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running  Windows Server 2012, download the original My Server app from [Apps for Windows](http://windows.microsoft.com/windows-8/apps). If your server is running  Windows Server 2012 R2 Essentials, you must download the My Server 2012 R2 app instead.  
+ The My Server app lets you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running  Windows Server 2012, download the original My Server app from [Apps for Windows](http://windows.microsoft.com/windows-8/apps). If your server is running  Windows Server Essentials, you must download the My Server 2012 R2 app instead.  
   
- With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your  Windows Server 2012 R2 Essentials server is integrated with  Office 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.  
+ With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your  Windows Server Essentials server is integrated with  Office 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.  
   
 
  For information about installing and using these apps, see [Use the My Server App](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
@@ -79,7 +79,7 @@ ms.author: coreyp
 
   
 ##  <a name="BKMK_2"></a> Use the My Server app for Windows Phone  
- The My Server Windows app for Windows Phone (for  Windows Server 2012) and the My Server 2012 R2 app for Windows Phone (for  Windows Server 2012 R2 Essentials) are designed to help you stay seamlessly connected to your servers through smart phones while working at remote locations. This is one of the various ways to access  Windows Server Essentials after you configure your server for remote access.  
+ The My Server Windows app for Windows Phone (for  Windows Server 2012) and the My Server 2012 R2 app for Windows Phone (for  Windows Server Essentials) are designed to help you stay seamlessly connected to your servers through smart phones while working at remote locations. This is one of the various ways to access  Windows Server Essentials after you configure your server for remote access.  
   
  You can download either app from the Windows Phone store:  
   
@@ -87,7 +87,7 @@ ms.author: coreyp
   
 -   [Install My Server 2012 R2 for Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
   
- For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server 2012 Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
+ For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
   
 ##  <a name="BKMK_O365"></a> Use Microsoft Office 365 with Windows Server Essentials  
 
@@ -105,11 +105,11 @@ ms.author: coreyp
   
 -   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
--   [Play Digital Media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md)
+-   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
 
 -   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
--   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md)
+-   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

@@ -1,23 +1,25 @@
 ---
 title: "Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
-caps.latest.revision: 8
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_O365"></a>   
- If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the  Windows Server 2012 Essentials Office 365 integration module.  
+ If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the  Windows Server Essentials Office 365 integration module.  
   
  The integration module uses the following four endpoint URLs:  
   
@@ -91,7 +93,6 @@ ms.author: coreyp
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   

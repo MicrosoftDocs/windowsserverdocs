@@ -14,17 +14,17 @@ author: jamesmci
 ---
 # Remote Access
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-This topic provides an overview of the Remote Access server role in Windows Server 2016 Technical Preview.  
+This topic provides an overview of the Remote Access server role in Windows Server 2016.  
   
 > [!NOTE]  
 > In addition to this topic, the following RAS documentation is available.  
 >   
-> -   [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol--BGP-.md)  
-> -   [DirectAccess](../remote-access/directaccess/DirectAccess.md)  
-> -   [RAS Gateway](../remote-access/ras-gateway/RAS-Gateway.md)  
-> -   [Remote Access Server Role Documentation](../remote-access/ras/Remote-Access-Server-Role-Documentation.md)  
+> -   [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol--BGP-.md)  
+> -   [DirectAccess](directaccess/DirectAccess.md)  
+> -   [RAS Gateway](ras-gateway/RAS-Gateway.md)  
+> -   [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md) 
 > -   [RAS Gateway for SDN](../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
   
 The Remote Access server role is a logical grouping of the following related network access technologies.  
@@ -61,7 +61,7 @@ Install-RemoteAccess -VpnType RoutingOnly
 ```  
   
 ## <a name="bkmk_proxy"></a>Web Application Proxy  
-Web Application Proxy is a Remote Access role service in Windows Server 2016 Technical Preview. Web Application Proxy provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network. Web Application Proxy pre-authenticates access to web applications using Active Directory Federation Services (AD FS), and also functions as an AD FS proxy.  
+Web Application Proxy is a Remote Access role service in Windows Server 2016. Web Application Proxy provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network. Web Application Proxy pre-authenticates access to web applications using Active Directory Federation Services (AD FS), and also functions as an AD FS proxy.  
   
 To install Remote Access as a Web Application Proxy, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Web Application Proxy** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.  
   
@@ -69,6 +69,6 @@ To install Remote Access as a Web Application Proxy, either use the Add Roles an
 Install-RemoteAccess -VpnType SstpProxy  
 ```  
 
-  
+For more information, see [Web Application Proxy](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).
 
 

@@ -1,20 +1,20 @@
 ---
+ms.assetid: eca5bbf0-088e-4753-bf49-4d6c1125f689
 title: Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: 3dfcd7e0-7fbc-4c36-964e-04ae62e9a66f
-author: Femila
 ---
+
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   

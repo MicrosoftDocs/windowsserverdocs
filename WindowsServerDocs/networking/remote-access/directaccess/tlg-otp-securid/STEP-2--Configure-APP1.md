@@ -14,13 +14,13 @@ author: coreyp-at-msft
 ---
 # STEP 2 Configure APP1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Use the following steps to prepare APP1 for OTP support:  
   
-1.  [To create and deploy a certificate template used to sign OTP certificate requests](assetId:///c1bb590f-91d4-4ed5-bceb-b0e36eabd4ff#DAOTPRA). Configure a certificate template used to sign OTP certificate requests.  
+1. To create and deploy a certificate template used to sign OTP certificate requests. Configure a certificate template used to sign OTP certificate requests.  
   
-2.  [To create and deploy a certificate template for OTP certificates issued by the corporate CA](assetId:///c1bb590f-91d4-4ed5-bceb-b0e36eabd4ff#DAOTPLogon). Configure a certificate template for OTP certificates issued by the corporate CA.  
+2. To create and deploy a certificate template for OTP certificates issued by the corporate CA. Configure a certificate template for OTP certificates issued by the corporate CA.  
   
 > [!WARNING]  
 > The design of this test lab guide includes infrastructure servers, such as a domain controller and a certification authority (CA) that are running either Windows Server 2012 R2 or Windows Server 2012. Using this test lab guide to configure infrastructure servers that are running other operating systems has not been tested, and instructions for configuring other operating systems are not included in this guide.  

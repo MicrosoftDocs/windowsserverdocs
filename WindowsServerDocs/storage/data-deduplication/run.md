@@ -1,6 +1,8 @@
 ---
+ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: Running Data Deduplication
 ms.technology: storage-deduplication
+ms.prod: windows-server-threshold
 ms.topic: article
 author: wmgries
 manager: eldenc

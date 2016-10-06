@@ -1,20 +1,20 @@
 ---
+ms.assetid: ce3be131-06ad-41dc-a26b-1168fa68c8ed
 title: Mapping Your Requirements to an AD DS Deployment Strategy
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.service: active-directory
 ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
-ms.assetid: bf5da04d-c247-40cc-a77d-95a41343a7a8
-author: Femila
 ---
+
 # Mapping Your Requirements to an AD DS Deployment Strategy
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you finish reviewing and identifying the Active Directory Domain Services (AD DS) design and deployment requirements and you determine which of them are related to your specific deployment, you can map those requirements to a specific AD DS deployment strategy.  
   

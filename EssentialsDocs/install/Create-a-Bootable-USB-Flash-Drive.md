@@ -1,22 +1,24 @@
 ---
 title: "Create a Bootable USB Flash Drive"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 07/15/2014
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
-caps.latest.revision: 14
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Create a Bootable USB Flash Drive
-You can create a bootable USB flash drive to use to deploy  Windows Server 2012 Essentials . The first step is to prepare the USB flash drive by using DiskPart, which is a command-line utility. For information about DiskPart, see [DiskPart Command-Line Options](http://go.microsoft.com/fwlink/?LinkId=207073).  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+You can create a bootable USB flash drive to use to deploy  Windows Server Essentials . The first step is to prepare the USB flash drive by using DiskPart, which is a command-line utility. For information about DiskPart, see [DiskPart Command-Line Options](http://go.microsoft.com/fwlink/?LinkId=207073).  
   
  For additional scenarios in which you may want to create or use a bootable USB flash drive, see the following topics:  
   
@@ -55,13 +57,13 @@ You can create a bootable USB flash drive to use to deploy  Windows Server 2012 
   
 ## See Also  
 
- [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Getting Started with the Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)   
 
- [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Getting Started with the Windows Server Essentials ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   

@@ -1,4 +1,5 @@
 ---
+ms.assetid: a33bd54c-e6db-4b58-8264-c0f34bd8ba39
 title: Walkthrough - Workplace Join to an Android device
 description:
 author: billmath

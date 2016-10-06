@@ -13,35 +13,35 @@ author: jamesmci
 ---
 # Server Certificate Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.  
   
 > [!IMPORTANT]  
-> Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. After you install AD CS, you cannot change the computer name or the domain membership of the computer, however you can change the IP address if needed. For more information on how to accomplish these tasks, see the Windows Server&reg; 2016 Technical Preview [Core Network Guide](../../Core-Network-Guide.md) at http://technet.microsoft.com/library/mt604042.aspx.  
+> Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. After you install AD CS, you cannot change the computer name or the domain membership of the computer, however you can change the IP address if needed. For more information on how to accomplish these tasks, see the Windows Server&reg; 2016 [Core Network Guide](../../Core-Network-Guide.md) at http://technet.microsoft.com/library/mt604042.aspx.  
 
   
--   [Install the Web Server WEB1](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
+-   [Install the Web Server WEB1](Install-the-Web-Server-WEB1.md)  
   
--   [Create an alias (CNAME) record in DNS for WEB1](../../../core-network-guide/cncg/server-certs/Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
+-   [Create an alias (CNAME) record in DNS for WEB1](Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
   
--   [Configure WEB1 to distribute Certificate Revocation Lists (CRLs)](../../../core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-Lists.md)  
+-   [Configure WEB1 to distribute Certificate Revocation Lists (CRLs)](Configure-WEB1-to-Distribute-Certificate-Revocation-Lists.md)  
   
--   [Prepare the CAPolicy inf file](../../../core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)  
+-   [Prepare the CAPolicy inf file](Prepare-the-CAPolicy-inf-File.md)  
   
--   [Install the Certification Authority](../../../core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md)  
+-   [Install the Certification Authority](Install-the-Certification-Authority.md)  
   
--   [Configure the CDP and AIA extensions on CA1](../../../core-network-guide/cncg/server-certs/Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
+-   [Configure the CDP and AIA extensions on CA1](Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
   
--   [Copy the CA certificate and CRL to the virtual directory](../../../core-network-guide/cncg/server-certs/Copy-the-CA-Certificate-and-CRL-to-the-Virtual-Directory.md)  
+-   [Copy the CA certificate and CRL to the virtual directory](Copy-the-CA-Certificate-and-CRL-to-the-Virtual-Directory.md)  
   
--   [Configure the server certificate template](../../../core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md)  
+-   [Configure the server certificate template](Configure-the-Server-Certificate-Template.md)  
   
--   [Configure server certificate autoenrollment](../../../core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)  
+-   [Configure server certificate autoenrollment](Configure-Server-Certificate-Autoenrollment.md)  
   
--   [Refresh Group Policy](../../../core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)  
+-   [Refresh Group Policy](Refresh-Group-Policy.md)  
   
--   [Verify Server Enrollment of a Server Certificate](../../../core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)  
+-   [Verify Server Enrollment of a Server Certificate](Verify-Server-Enrollment-of-a-Server-Certificate.md)  
   
 > [!NOTE]  
 > The procedures in this guide do not include instructions for cases in which the **User Account Control** dialog box opens to request your permission to continue. If this dialog box opens while you are performing the procedures in this guide, and if the dialog box was opened in response to your actions, click **Continue**.  

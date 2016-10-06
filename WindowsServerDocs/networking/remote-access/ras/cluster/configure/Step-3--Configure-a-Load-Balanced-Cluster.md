@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 3 Configure a Load-Balanced Cluster
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 After preparing servers for the cluster, configure load-balancing on the single server, configure the required certificates, and deploy the cluster.  
   

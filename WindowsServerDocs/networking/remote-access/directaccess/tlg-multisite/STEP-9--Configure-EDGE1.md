@@ -14,13 +14,13 @@ author: coreyp-at-msft
 ---
 # STEP 9 Configure EDGE1
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following procedures are performed on the EDGE1 server:  
   
-1.  [Configure the DNS servers on EDGE1](assetId:///562744dc-30f6-42fa-bd5f-60a013b2179e#IPv6). It is necessary to configure the DNS server from the corp2.corp.contoso.com domain on EDGE1.  
+1. Configure the DNS servers on EDGE1. It is necessary to configure the DNS server from the corp2.corp.contoso.com domain on EDGE1.  
   
-2.  [Configure routing between subnets](assetId:///562744dc-30f6-42fa-bd5f-60a013b2179e#ConfigRouting). Configure routing on EDGE1 to enable communication between the Corpnet and 2-Corpnet subnets.  
+2. Configure routing between subnets. Configure routing on EDGE1 to enable communication between the Corpnet and 2-Corpnet subnets.  
   
 ## <a name="IPv6"></a>Configure the DNS servers on EDGE1  
   

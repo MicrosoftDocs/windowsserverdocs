@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Deploy BranchCache
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.  
   

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
 title: Enabling Oauth Confidential Clients with AD FS 2016
 description:
 author: billmath

@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Step 1 Plan DirectAccess Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 The first step of planning for a basic Remote Access deployment on a single server is to perform planning for the infrastructure required for the deployment. This topic describes the infrastructure planning steps:  
   
@@ -45,7 +45,7 @@ The planning tasks do not need to be done in a specific order.
   
     -   [IPv6 Transition Technologies](http://technet.microsoft.com/library/bb726951.aspx)  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571.aspx)  
   
 3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the 'Internal network adapter' column.  
   
@@ -175,7 +175,7 @@ Remote Access uses Active Directory and Active Directory Group Policy Objects as
   
 -   **Security groups** -Remote Access uses security groups to gather together and identify DirectAccess client computers, and Remote Access servers. The group policies are applied to the required security group.  
   
--   **Extended IPsec policies** -Remote Access can use IPsec authentication and encryption between clients and the Remote Access server. You can extend IPsec authentication and encryption through to specified internal application servers. To do this, see [Deploying Advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   **Extended IPsec policies** -Remote Access can use IPsec authentication and encryption between clients and the Remote Access server. You can extend IPsec authentication and encryption through to specified internal application servers.   
   
 **Active Directory Requirements**  
   
@@ -265,10 +265,4 @@ If a Remote Access server, client, or application server GPO has been deleted by
 2.  Re-open **Remote Access Management**.  
   
 3.  You will see an error message that the GPO is not found. Click **Remove configuration settings**. After completion, the server will be restored to an un-configured state.  
-  
-### <a name="BKMK_Links"></a>See also  
-  
--   Step 2: Plan the Remote Access Deployment [Enable]  
-  
-
 

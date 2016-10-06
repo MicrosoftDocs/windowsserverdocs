@@ -1,4 +1,5 @@
 ---
+ms.assetid: d31006b1-c468-4196-be5a-9b293622e710
 title: AD FS 2016 Deployment
 description:
 author: billmath
@@ -19,4 +20,8 @@ This document contains a list of all of the documentation for deploying AD FS fo
   
   
 * [Upgrading to AD FS in Windows Server 2016](../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
+
+* [Windows Server 2012 R2 Deployment Guide](../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
+
+* [Windows Server 2012 Deployment Guide](../ad-fs/deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md)
   

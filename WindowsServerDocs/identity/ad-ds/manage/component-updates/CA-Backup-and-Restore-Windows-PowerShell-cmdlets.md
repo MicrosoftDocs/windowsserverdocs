@@ -1,23 +1,21 @@
 ---
+ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 7cd66583-e0e0-447f-8004-3fc43458c640
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # CA Backup and Restore Windows PowerShell cmdlets
 
->Applies To: Windows Server Technical Preview
-
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
 > [!NOTE]  

@@ -14,7 +14,7 @@ author: jamesmci
 ---
 # Create a New NIC Team on a Host Computer or VM
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic provides information about NIC Teaming configuration so that you understand the selections you must make when you are configuring a new NIC Team. This topic contains the following sections.  
   
@@ -48,7 +48,7 @@ You can also optionally configure the primary team interface and configure a vir
   
 These NIC Team properties are displayed in the following illustration, which contains example values for some NIC Team properties.  
   
-![](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_06_properties.jpg)  
+![NIC Team properties](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_06_properties.jpg)  
   
 ## <a name="bkmk_teaming"></a>Choosing a Teaming Mode  
 The options for Teaming mode are **Switch Independent**, **Static Teaming**, and **Link Aggregation Control Protocol (LACP)**. Both Static Teaming and LACP are Switch Dependent modes. For best NIC Team performance with all three Teaming modes, it is recommended that you use a Load Balancing mode of Dynamic distribution.  
@@ -129,11 +129,11 @@ If you have a two-NIC team and you choose to configure one NIC as a Standby adap
 ## <a name="bkmk_primary"></a>Using the Primary Team Interface Property  
 To access the Primary Team Interface dialog box, you must click the link that is highlighted in the illustration below.  
   
-![](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_10_primaryteaminterface.jpg)  
+![Primary Team Interface Property](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_10_primaryteaminterface.jpg)  
   
 After you click the highlighted link, the following **New Team Interface** dialog box opens.  
   
-![](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_newteaminterface.jpg)  
+![New Team Interface dialog box](../../media/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM/nict_newteaminterface.jpg)  
   
 If you are using VLANs, you can use this dialog box to specify a VLAN number.  
   

@@ -3,20 +3,18 @@ title: Enable or disable checkpoints in Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92e1d0d0-f2c1-4ba2-8510-c8eb091cf5d6
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Enable or disable checkpoints in Hyper-V
 
->Applies To: Windows 10, Windows Server Technical Preview
-
-**This is preliminary content and subject to change.**  
+>Applies To: Windows 10, Windows Server 2016
   
 You can choose to enable or disable checkpoints for each virtual machine.  
   

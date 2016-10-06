@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Identify and resolve Remote Access server operations problems
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
@@ -25,11 +25,11 @@ You can using the following procedures to identify Remote Access server operatio
   
 This topic includes information about performing the following tasks:  
   
-[Simulate an operations issue](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Simulate)  
+- Simulate an operations issue  
   
-[Identify the operations issue and take corrective action](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Identify)  
+- Identify the operations issue and take corrective action  
   
-[Restore the IP Helper service](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Restart)  
+- Restore the IP Helper service  
   
 ### <a name="BKMK_Simulate"></a>Simulate an operations issue  
   
@@ -84,7 +84,7 @@ To restore the IP Helper service on your Remote Access server, you can follow th
   
 2.  In the list of **Services**, scroll down and right-click **IP Helper**, and then click **Start**.  
   
-![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![PowerShell](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

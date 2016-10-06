@@ -20,24 +20,22 @@ To configure a multisite deployment, there are a number of steps required to mod
   
 |Task|Description|  
 |--------|---------------|  
-|[2.1. Configure additional Active Directory sites](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#BKMK_ConfigAD)|Configure additional Active Directory sites for the deployment.|  
-|[2.2. Configure additional domain controllers](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#BKMK_AddDC)|Configure additional Active Directory domain controllers as required.|  
-|[2.3. Configure security groups](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#BKMK_ConfigSG)|Configure security groups for any  Windows 7  client computers.|  
-|[2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs)|Configure additional Group Policy Objects as required.|  
+|2.1. Configure additional Active Directory sites|Configure additional Active Directory sites for the deployment.|  
+|2.2. Configure additional domain controllers|Configure additional Active Directory domain controllers as required.|  
+|2.3. Configure security groups|Configure security groups for any Windows 7 client computers.|  
+|2.4. Configure GPOs|Configure additional Group Policy Objects as required.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_ConfigAD"></a>2.1. Configure additional Active Directory sites  
-As discussed in [2.1 Plan Active Directory](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_1_AD), all entry points can reside in a single Active Directory site. Therefore, at least one Active Directory site is required for the implementation of Remote Access servers in a multisite configuration. Use this procedure if you need to create the first Active Directory site, or if you desire to use additional Active Directory sites for the multisite deployment. Use the Active Directory Sites and Services snap-in to create new sites in your organization"s network.  
-  
+All entry points can reside in a single Active Directory site. Therefore, at least one Active Directory site is required for the implementation of Remote Access servers in a multisite configuration. Use this procedure if you need to create the first Active Directory site, or if you desire to use additional Active Directory sites for the multisite deployment. Use the Active Directory Sites and Services snap-in to create new sites in your organization"s network.  
+
 Membership in the **Enterprise Admins** group in the forest or the **Domain Admins** group in the forest root domain, or equivalent, at a minimum is required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).  
-  
+
 For more information, see [Adding a Site to the Forest](http://technet.microsoft.com/library/cc732761.aspx).  
-  
-[Do this step using Windows PowerShell](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#BKMK_PSstep1)  
-  
-#### To configure additional Active Directory sites  
+
+### To configure additional Active Directory sites  
   
 1.  On the primary domain controller, click **Start**, and then click **Active Directory Sites and Services**.  
   
@@ -55,7 +53,7 @@ For more information, see [Adding a Site to the Forest](http://technet.microsoft
   
 8.  Close Active Directory Sites and Services.  
   
-![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -92,9 +90,9 @@ To configure a multisite deployment in a single domain, it is recommended that y
   
 To perform this procedure, at a minimum you must be a member of the Domain Admins group in the domain in which the domain controller is being installed.  
   
-For more information, see [Installing an Additional Domain Controller](http://technet.microsoft.com/library/cc733027(WS.10).aspx).  
+For more information, see [Installing an Additional Domain Controller](http://technet.microsoft.com/library/cc733027.aspx).
   
-#### To configure additional domain controllers  
+### To configure additional domain controllers  
   
 1.  On the server that will act as a domain controller, in **Server Manager**, on the **Dashboard**, click **add roles and features**.  
   
@@ -146,9 +144,7 @@ For more information, see [Installing an Additional Domain Controller](http://te
 ## <a name="BKMK_ConfigSG"></a>2.3. Configure security groups  
 A multisite deployment requires an additional security group for  Windows 7  client computers for every entry point in the deployment that allows access to  Windows 7  client computers. If there are multiple domains containing  Windows 7  client computers, then it is recommended to create a security group in each domain for the same entry point. Alternatively, one universal security group containing the client computers from both domains can be used. For example, in an environment with two domains, if you want to allow access to  Windows 7  client computers in entry points 1 and 3, but not in entry point 2, then create two new security groups to contain the  Windows 7  client computers for each entry point in each of the domains.  
   
-[Do this step using Windows PowerShell](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#BKMK_PSstep2_3)  
-  
-#### To configure additional security groups  
+### To configure additional security groups  
   
 1.  On the primary domain controller, click **Start**, and then click **Active Directory Users and Computers**.  
   
@@ -166,7 +162,7 @@ A multisite deployment requires an additional security group for  Windows 7  cli
   
 8.  Repeat this procedure to create a security group for every entry point as required.  
   
-![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -198,10 +194,10 @@ A multisite Remote Access deployment requires the following Group Policy Objects
   
 -   A GPO for any Windows 8 client computers for each domain.  
   
--   A GPO in each domain that contains  Windows 7  client computers for each entry point configured to support  Windows 7  clients.  
+-   A GPO in each domain that contains Windows 7 client computers for each entry point configured to support Windows 7 clients.  
   
     > [!NOTE]  
-    > If you do not have any  Windows 7  client computers, you do not need to create GPOs for  Windows 7  computers.  
+    > If you do not have any Windows 7 client computers, you do not need to create GPOs for  Windows 7  computers.  
   
 When you configure Remote Access, the wizard automatically creates the required Group Policy Objects if they don"t already exist. If you do not have the required permissions to create Group Policy Objects, they must be created prior to configuring Remote Access. The DirectAccess administrator must have full permissions on the GPOs (Edit + modify security + delete).  
   
@@ -219,7 +215,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
 > This operation can be performed only by a domain administrator. The impact of changing the primary domain controller is not confined to Remote Access; therefore, use caution when transferring the PDC emulator role.  
   
 > [!NOTE]  
-> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](assetId:///444bc4b0-be08-407b-8aac-8a183b1c9d02).  
+> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](https://technet.microsoft.com/library/jj134176.aspx).  
   
 #### <a name="TransferPDC"></a>To transfer the PDC emulator role  
   
@@ -257,7 +253,7 @@ In a minimal number of cases, two or more domain controllers that manage server 
   
 Domain controller association information is stored both in the registry of the Remote Access servers and in all server GPOs. In the following example, there are two entry points with two Remote Access servers, "DA1" in "Entry point 1" and "DA2" in "Entry point 2". The server GPO of "Entry point 1" is managed in the domain controller "DC1", while the server GPO of "Entry point 2" is managed in the domain controller "DC2". Both "DC1" and "DC2" are unavailable. A third domain controller is still available in the domain, "DC3", and the data from "DC1" and "DC2" was already replicated to "DC3".  
   
-![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc1.png)  
+![Configure Multisite Infrastructure](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc1.png)  
   
 ##### To change two or more domain controllers that manage server GPOs  
   
@@ -310,7 +306,7 @@ In some scenarios, it may be required to manually modify the domain controller t
 In these scenarios, run the PowerShell cmdlet `Set-DAEntryPointDC` on the Remote Access server and specify the name of the entry point you want to optimize using the parameter *EntryPointName*. You should do this only after the GPO data from the domain controller currently storing the server GPO was already fully replicated to the desired new domain controller.  
   
 > [!NOTE]  
-> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](assetId:///444bc4b0-be08-407b-8aac-8a183b1c9d02).  
+> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](https://technet.microsoft.com/library/jj134176.aspx).  
   
 To optimize the configuration distribution time, do one of the following:  
   
@@ -331,13 +327,6 @@ To optimize the configuration distribution time, do one of the following:
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 3: Configure the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1)  
-  
--   [Step 1: Implement a single server Remote Access deployment](assetId:///a811b73d-56af-4457-aa82-0c23b4c57b4f)  
-  
--   [Configure a multisite deployment](assetId:///68492f3d-772e-4e68-a0ae-572be4e7d35f)  
-  
--   [Deploy multisite Remote Access](assetId:///a9249820-3563-499c-9da6-143ede2a1eb7)  
-  
-
+-   [Step 3: Configure the multisite deployment](Step-3--Configure-the-Multisite-Deployment.md)  
+-   [Step 1: Implement a single server Remote Access deployment](Step-1--Implement-a-Single-Server-Remote-Access-Deployment.md)  
 

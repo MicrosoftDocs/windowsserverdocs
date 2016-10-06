@@ -14,7 +14,7 @@ ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 
 You will configure these computers and storage in a server-to-server configuration, where one node replicates its own set of storage with another node and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for standalone replication.  
+Graphical Management of Storage Replica is supported using the free Server Manager Tool (SMT). Please examine Azure documentation for Preview availability of this set of management tools. This document will be updated afer SMT reaches general availability.
 
 > [!IMPORTANT]
 >  In this test, one node will need to be in a physical or logical site, and the other node in a different physical or logical site. Each server must be able to communicate with the other via a network.  
@@ -26,9 +26,9 @@ This walkthrough uses the following environment as an example:
 
 -   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
-![](media/Server-to-Server-Storage-Replication/Storage_SR_ServertoServer.png)  
+![Diagram showing a server in Building 5 replicating with a server in Building 9](media/Server-to-Server-Storage-Replication/Storage_SR_ServertoServer.png)  
 
-**FIGURE: Server to Server Replication**  
+**Figure 1: Server to server replication**  
 
 ## Prerequisites  
 
@@ -36,7 +36,7 @@ This walkthrough uses the following environment as an example:
 * Two servers with Windows Server 2016 installed.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the servers, with no shared access.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
-* At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
+* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
@@ -93,8 +93,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The data volume should be no larger than 10TB (for a first test, we recommend no more than 1TB, in order to lower initial replication sync times).  
-    > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
+    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.  
     > -   The File Server role is only necessary for Test-SRTopology to operate, as it opens the necessary firewall ports for testing.
     
     - **For JBOD enclosures:**  
@@ -130,50 +129,72 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
         Test-SRTopology -SourceComputerName SR-SRV05 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV06 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:temp  
 
     > [!IMPORTANT]
-      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
+      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:  
       >
-      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test` 
+      > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 d:\test` 
 
 10. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
-    ![](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)  
+    ![Screen showing the topology report](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)  
 
 ## Configure Server to Server Replication using Windows PowerShell  
 Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
+Graphical Management of Storage Replica is supported using the free Server Manager Tool (SMT). Please examine Azure documentation for Preview availability of this set of management tools. This document will be updated afer SMT reaches general availability.
+
 1. Ensure you are using an elevated Powershell console as an administrator.  
 2. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.  
 
-    ```  
+    ```PowerShell  
     New-SRPartnership -SourceComputerName sr-srv05 -SourceRGName rg01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName sr-srv06 -DestinationRGName rg02 -DestinationVolumeName f: -DestinationLogVolumeName g:  
     ```  
 
-    ![](media/Server-to-Server-Storage-Replication/Storage_SR_PS_NewSRPartnership.png)  
+   Output:
+   ```PowerShell
+   DestinationComputerName : SR-SRV06
+   DestinationRGName       : rg02
+   SourceComputerName      : SR-SRV05
+   PSComputerName          :
+   ```
 
     > [!IMPORTANT]
     > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use -LogSizeInBytes with a  higher or lower value.  
 
 2.  To get replication source and destination state, use `Get-SRGroup` and `Get-SRPartnership` as follows:  
 
-    ```  
+    ```PowerShell  
     Get-SRGroup  
     Get-SRPartnership  
     (Get-SRGroup).replicas  
-    ```  
+    ```
+    Output:
 
-    ![](media/Server-to-Server-Storage-Replication/Storage_SR_PS_GetSRGroup.png)  
+    ```PowerShell
+    CurrentLsn             : 0
+    DataVolume             : F:\
+    LastInSyncTime         :
+    LastKnownPrimaryLsn    : 1
+    LastOutOfSyncTime      :
+    NumOfBytesRecovered    : 37731958784
+    NumOfBytesRemaining    : 30851203072
+    PartitionId            : c3999f10-dbc9-4a8e-8f9c-dd2ee6ef3e9f
+    PartitionSize          : 68583161856
+    ReplicationMode        : synchronous
+    ReplicationStatus      : InitialBlockCopy
+    PSComputerName         :
+    ```
 
 3.  Determine the replication progress as follows:  
 
     1.  On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:  
 
-        ```  
+        ```PowerShell  
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20  
         ```  
 
     2.  On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:  
 
-        ```  
+        ```PowerShell  
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | fl  
 
         TimeCreated  : 4/8/2016 4:12:37 PM  
@@ -287,7 +308,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     ```  
 
     > [!WARNING]  
-    > Windows Server 2016 does not prevent role switching when the initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until the initial sync is complete.  
+    > Windows Server 2016 prevents role switching when the initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not force switch directions until the initial sync is complete.  
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 
@@ -300,7 +321,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     ```  
 
 ## Replacing DFS Replication with Storage Replica  
-Many Microsoft customers deploy DFS Replication as a disaster recovery solution for unstructured user data like home folders and departmental shares. DFSR has shipped in Windows Server 2003 R2 and all later operating systems and operates on low bandwidth networks, which makes it attractive for high latency and low change environments with many nodes. However, DFSR has notable limitations as a DR solution:  
+Many Microsoft customers deploy DFS Replication as a disaster recovery solution for unstructured user data like home folders and departmental shares. DFS Replication has shipped in Windows Server 2003 R2 and all later operating systems and operates on low bandwidth networks, which makes it attractive for high latency and low change environments with many nodes. However, DFS Replication has notable limitations as a data replication solution:  
 * It does not replicate in-use or open files.  
 * It does not replicate synchronously.  
 * Its asynchronous replication latency can be many minutes, hours, or even days.  
@@ -309,19 +330,19 @@ Many Microsoft customers deploy DFS Replication as a disaster recovery solution 
 
 Storage Replica has none of these limitations. It does, however, have several that might make it less interesting in some environments:  
 
-* It only allows one-to-one replication between volumes in Windows Server 2016 Technical Preview. It is possible to replicate different volumes between multiple servers.  
+* It only allows one-to-one replication between volumes. It is possible to replicate different volumes between multiple servers.  
 * While it supports asynchronous replication, it is not designed for low bandwidth, high latency networks.  
 * It does not allow user access to the protected data on the destination while replication is ongoing  
 
-If these are not blocking factors, Storage Replica allows you to replace DFSR servers with this newer technology.   
+If these are not blocking factors, Storage Replica allows you to replace DFS Replication servers with this newer technology.   
 The process is, at a high level:  
 
 1.  Install Windows Server 2016 on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
 2.  Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.   
-a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFSR.  
+a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.  
 3.  Share the data on your source server and make it accessible through a DFS Namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
 a.  You can create matching shares on the destination server, which will be unavailable during normal operations,   
-b.  Do not add the destination server to the DFSN namespace, or if you do, ensure that all its folder targets are disabled.  
+b.  Do not add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.  
 4.  Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.   
 a.  However, synchronous is recommended in order to guarantee IO data consistency on the destination server.   
 b.  We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots with VSSADMIN or your other tools of choice. This will guarantee applications flush their data files to disk consistently. In the event of a disaster, you can recover files from snapshots on the destination server that might have been partially replicated asynchronously. Snapshots replicate along with files.  

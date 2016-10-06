@@ -1,22 +1,20 @@
 ---
+ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Avenues to Compromise
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 898a34f7-fe09-4345-866a-843ff7c6ebaa
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Avenues to Compromise
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](http://technet.microsoft.com/library/cc722488.aspx)  
   

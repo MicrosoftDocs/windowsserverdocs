@@ -1,22 +1,24 @@
 ---
 title: "Deploy Windows Server Essentials Experience as a Hosted Server"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 08/29/2016
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
-caps.latest.revision: 12
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Deploy Windows Server Essentials Experience as a Hosted Server
-This document includes information that is specific to hosters who intend to deploy  Windows Server 2012 R2 with the Windows Server Essentials Experience role (referred to as Windows Server Essentials in the remainder of the document) installed in their lab and intend to offer Windows Server Essentials Experience as a service to their customers. This document includes the following sections:  
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
+This document includes information that is specific to hosters who intend to deploy Microsoft Windows Server 16 with the Windows Server Essentials Experience role (referred to as Windows Server Essentials in the remainder of the document) installed in their lab and intend to offer Windows Server Essentials Experience as a service to their customers. This document includes the following sections:  
   
 
 -   [Windows Server Essentials Experience overview](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
@@ -69,9 +71,9 @@ This document includes information that is specific to hosters who intend to dep
 
   
 ##  <a name="BKMK_WSEEOverview"></a> Windows Server Essentials Experience overview  
- The  Windows Server Essentials Experience is a server role that is available in the  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter. When the  Windows Server Essentials Experience role is installed on a server running  Windows Server 2012 R2, the customer can take advantage of all the features that are available in  Windows Server 2012 R2 Essentials without the locks and limits. The  Windows Server Essentials Experience enables the following cross-premises solutions for small and midsize businesses:  
+ The  Windows Server Essentials Experience is a server role that is available in the  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter. When the  Windows Server Essentials Experience role is installed on a server running  Windows Server 2012 R2, the customer can take advantage of all the features that are available in  Windows Server Essentials without the locks and limits. The  Windows Server Essentials Experience enables the following cross-premises solutions for small and midsize businesses:  
   
--   **Data storage and protection** You can store the customer’s data in a centralized location and protect server and client data by backing up the server and client computers (less than 75) within the network.  
+-   **Data storage and protection** You can store the customer „¢s data in a centralized location and protect server and client data by backing up the server and client computers (less than 75) within the network.  
   
 -   **User management** You can manage the users and groups through the simplified server dashboard. In addition, integration with  Microsoft Azure Active Directory (Azure AD) enables easy data access for Microsoft online services (for example, Office 365, Exchange Online, and SharePoint Online) for users by using their domain credentials.  
   
@@ -92,20 +94,17 @@ This document includes information that is specific to hosters who intend to dep
   
 -   **Extensibility** The Windows Server Essentials Dashboard and Windows Server Essentials Connector software are extensible. You can add your own branding and service integration, so that your customers have one entry point for everything about their server and service.  
   
--   **Monitor** A new version of the System Center Monitoring Pack is available to monitor and manage multiple servers running Windows Server Essentials. To download the management pack, see [System Center Management Pack for Windows Server 2012 R2 Essentials](http://www.microsoft.com/download/details.aspx?id=40809).  
+-   **Monitor** A new version of the System Center Monitoring Pack is available to monitor and manage multiple servers running Windows Server Essentials. To download the management pack, see [System Center Management Pack for Windows Server Essentials](http://www.microsoft.com/download/details.aspx?id=40809).  
   
 ##  <a name="BKMK_SupportedDeployment"></a> Supported deployment options  
   Windows Server Essentials Experience can be deployed as a domain controller in a new Active Directory environment; or it can be deployed into an existing Active Directory environment as a domain member.  
   
- We recommend that you first deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, and then install the  Windows Server Essentials Experience role. With this deployment method, you get all the functionalities of  Windows Server 2012 R2 Essentials edition, without the locks and limits.  
+ We recommend that you first deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, and then install the  Windows Server Essentials Experience role. With this deployment method, you get all the functionalities of  Windows Server Essentials edition, without the locks and limits.  
   
 
- For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
+ For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
- For more information about installing  Windows Server 2012 R2 with the  Windows Server Essentials Experience role, see [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
-  
- For more information about requirements, see [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d).  
   
 ##  <a name="BKMK_SupportedToplogy"></a> Supported network topologies  
  To use  Windows Server Essentials Experience from a roaming client, VPN should be enabled. To enable remote access to the server from roaming clients, you need to open port 443 and port 80 on the server.  
@@ -149,10 +148,10 @@ This document includes information that is specific to hosters who intend to dep
   
 $myExternalDomainName = 'remote.contoso.com';   ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
 $mySslCertificateFile = 'C:\ssl.pfx';   ## full path to SSL certificate file  
-$mySslCertificatePassword = ConvertTo-SecureString –AsPlainText –Force '******';   ## password for private key of the SSL certificate  
+$mySslCertificatePassword = ConvertTo-SecureString  œAsPlainText  œForce '******';   ## password for private key of the SSL certificate  
 $skipCertificateVerification = $true;   ## whether or not, skip verification for the SSL certificate  
   
-Set-WssDomainNameConfiguration –DomainName $myExternalDomainName –CertificatePath $mySslCertificateFile –CertificateFilePassword $mySslCertificatePassword –NoCertificateVerification  
+Set-WssDomainNameConfiguration  œDomainName $myExternalDomainName  œCertificatePath $mySslCertificateFile  œCertificateFilePassword $mySslCertificatePassword  œNoCertificateVerification  
 ##  
 ## To install VPN with static IPv4 pool (and allow all existing users to establish VPN).  
 ##  
@@ -192,7 +191,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
   
 -   To automatically deploy  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter, follow the instructions in [Windows Assessment and Deployment Kit](http://msdn.microsoft.com/library/hh825420.aspx).  
   
--   To learn how to install the  Windows Server Essentials Experience role by using Windows PowerShell, see [Install and Configure Windows Server 2012 R2 Essentials](http://technet.microsoft.com/library/dn281793.aspx).  
+-   To learn how to install the  Windows Server Essentials Experience role by using Windows PowerShell, see [Install and Configure Windows Server Essentials](http://technet.microsoft.com/library/dn281793.aspx).  
   
 > [!NOTE]
 >  Ensure that the time zone settings of the host virtual machine and the  Windows Server Essentials Experience are the same. Otherwise, you may experience several errors. These include: the initial configuration of the server may not be successful on certificate related tasks, the certificate may not work for a few hours after the  Windows Server Essentials Experience role is installed, and device information will not update correctly.  
@@ -202,22 +201,22 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
  The server will be restarted during the initial configuration. If you need to prevent this automatic restart, you can use the following command to add a registry key before you start the Initial Configuration:  
   
 ```  
-New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitForReboot" -Value 1 -PropertyType "DWord" -Force -Confirm:$false  
+New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name "WaitForReboot" -Value 1 -PropertyType "DWord" -Force -Confirm:$false  
   
 ```  
   
  After the initial configuration starts, you can use **Get-WssConfigurationStatus** to check the initial configuration status, and when the status is **PendingReboot**, you can restart your server.  
   
 ##  <a name="BKMK_Migrate"></a> Migrate data from Windows Small Business Server to Windows Server Essentials Experience  
- You can migrate data from servers running Windows Small Business Server 2011, Windows Small Business Server 2008, Windows Small Business Server 2003, or Windows Server 2012 Essentials to the server running  Windows Server 2012 R2 Essentials. Review the [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md) migration guide for on-premises  2migrations, and make necessary customizations based on your hosting environment.  
+ You can migrate data from servers running Windows Small Business Server 2011, Windows Small Business Server 2008, Windows Small Business Server 2003, or Windows Server Essentials to the server running  Windows Server Essentials. Review the [Migrate to Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md) migration guide for on-premises  2migrations, and make necessary customizations based on your hosting environment.  
   
 > [!NOTE]
 >  We recommend that you put the source server and the destination server in the same subnet. If this is not possible, you should make sure that:  
 >   
->  -   The source server and the destination server can access each other’s internal DNS names.  
+>  -   The source server and the destination server can access each other „¢s internal DNS names.  
 > -   All the necessary ports are open.  
   
- After migration, you can upgrade your licenses to remove the locks and limits. For more information, see [Transition from Windows Server 2012 Essentials to Windows Server 2012 Standard](http://technet.microsoft.com/library/jj247582.aspx).  
+ After migration, you can upgrade your licenses to remove the locks and limits. For more information, see [Transition from Windows Server Essentials to Windows Server 2012 Standard](http://technet.microsoft.com/library/jj247582.aspx).  
   
 ##  <a name="BKMK_PowerShell"></a> Perform common tasks by using Windows PowerShell  
  This section explains some of the common tasks that you can perform by using Windows PowerShell.  
@@ -229,7 +228,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
   
  **Example**:  
   
- $Enable-WssRemoteWebAccess –DenyAccessByDefault –ApplyToExistingUsers  
+ $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers  
   
  This command will enable Remote Web Access with the router configured automatically, and change the default access permissions for all existing users.  
   
@@ -240,9 +239,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
   
  **Example**:  
   
- $password = ConvertTo-SecureString "Passw0rd!" -asplaintext –force$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test  
+ $password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test  
   
- This command will add an administrator named “User2Test�? with password “Passw0rd!�?.  
+ This command will add an administrator named User2Test with password Passw0rd!.  
   
 ### Add Server Folder  
  **Syntax**:  
@@ -253,7 +252,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
   
  $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"  
   
- This command will add a server folder named “MyTestFolder�? at the specified location.  
+ This command will add a server folder named MyTestFolder at the specified location.  
   
 ##  <a name="BKMK_EmailIntegration"></a> Email integration with Windows Server Essentials  
  You can integrate  Windows Server Essentials Experience with Office 365 or hosted Exchange Server. If you want your  customer to use your hosted email, you need to develop an add-in to integrate Windows Server Essentials Experience with your hosted email solution. For more information, see [Windows Server Essentials SDK](http://msdn.microsoft.com/library/gg513877.aspx).  
@@ -268,7 +267,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
 >  In a hosted environment, if Folder Redirection for a user profile is enabled, it can increase the time for end user to sign in when the data size is big.  
   
 ### System Center Monitoring Pack  
- System Center Monitoring Pack for  Windows Server Essentials Experience monitors the health alert system to help you manage large numbers of servers running Windows Server Essentials that are dedicated to small business organizations. For more information, see [System Center Management Pack for Windows Server 2012 R2 Essentials](http://www.microsoft.com/download/details.aspx?id=40809).  
+ System Center Monitoring Pack for  Windows Server Essentials Experience monitors the health alert system to help you manage large numbers of servers running Windows Server Essentials that are dedicated to small business organizations. For more information, see [System Center Management Pack for Windows Server Essentials](http://www.microsoft.com/download/details.aspx?id=40809).  
   
 ### Backup and restore  
   Windows Server 2012 R2 with Windows Server Essentials Experience allows you to back up server and client computers in the network.  
@@ -283,7 +282,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
   
 -   **Off-premises backup** Allows you to periodically back up your server data to a cloud-based service. You can download and install the  Microsoft Azure Backup Integration Module for Windows Server Essentials to leverage the  Azure Backup that is provided by Microsoft.  
   
-     For more information, see the “Integrate Windows Azure Backup with Windows Server 2012 Essentials�? section in [Manage Server Backup](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md).  
+     For more information, see the Integrate Windows Azure Backup with Windows Server Essentials section in [Manage Server Backup](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md).  
   
      If you or your users prefer another cloud service, you should consider the following:  
   
@@ -298,7 +297,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
 >  Backing up the client might impact performance because the data needs to be transferred from the client to the server over VPN.  
   
 ##### Full client backup  
- Full client backup is on by default for all the client devices that are connected to the Windows Server Essentials network. It fully backs up the system information and data for the client and supports data deduplication. The backup data will be stored on the server running  Windows Server 2012 R2 Essentials. This enables a failed client to retrieve data from a previous backup point.  
+ Full client backup is on by default for all the client devices that are connected to the Windows Server Essentials network. It fully backs up the system information and data for the client and supports data deduplication. The backup data will be stored on the server running  Windows Server Essentials. This enables a failed client to retrieve data from a previous backup point.  
   
  Some considerations for full client computer backup are:  
   
@@ -321,14 +320,6 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
 ##  <a name="BKMK_Scenarios"></a> Test scenarios  
  From the hosting perspective, we recommend that you test the following scenarios:  
   
-
--   [Server deployment](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)  
-  
--   [Server configuration](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)  
-  
--   [Server management](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)  
-  
--   [Client experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)  
 
 -   [Server deployment](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)  
   
@@ -400,16 +391,16 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"  -Name "WaitFo
 -   (If applicable) Verify the email integration experience.  
   
 ##  <a name="BKMK_Support"></a> Support information  
- You can download the Windows Server 2012 Essentials Software Development Kit (SDK) and the Windows Server Essentials Assessment and Deployment Kit (ADK):  
+ You can download the Windows Server Essentials Software Development Kit (SDK) and the Windows Server Essentials Assessment and Deployment Kit (ADK):  
   
--   [Windows Server 2012 Essentials Software Development Kit](http://msdn.microsoft.com/library/gg513877.aspx)SDK  
+-   [Windows Server Essentials Software Development Kit](http://msdn.microsoft.com/library/gg513877.aspx)SDK  
   
 -   [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](http://technet.microsoft.com/library/dn293241.aspx)  
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../What-s-New-in-Windows-Server-Essentials.md)  
+-   [What's New in Windows Server Essentials](../get-started/what-s-new.md)  
 
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 
--   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+-   [Get started with Windows Server Essentials](../get-started/get-started.md)

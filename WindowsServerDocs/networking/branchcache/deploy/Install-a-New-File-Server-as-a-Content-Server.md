@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-bc
+ms.technology: networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
@@ -14,9 +13,9 @@ author: jamesmci
 ---
 # Install a New File Server as a Content Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server&reg; 2016 Technical Preview.  
+You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server&reg; 2016.  
   
 Membership in **Administrators**, or equivalent is the minimum required to perform this procedure.  
   
@@ -44,13 +43,10 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
 5.  Select the check boxes for **File Server** and **BranchCache for Network Files**.  
   
     > [!TIP]  
-    > It is recommended that you also select the check box for **Data Deduplication**. For more information about Data Deduplication, see [Additional Resources](assetId:///2f134c2d-456c-46bf-8571-52baa0df75e7).  
+    > It is recommended that you also select the check box for **Data Deduplication**.
   
     Click **Next**.  
   
 6.  In **Select features**, click **Next**.  
   
-7.  In **Confirm installation selections**, review your selections, and then click **Install**. The **Installation progress** pane is displayed during installation. When installation is complete, click **Close**.  
-  
-
-
+7.  In **Confirm installation selections**, review your selections, and then click **Install**. The **Installation progress** pane is displayed during installation. When installation is complete, click **Close**.

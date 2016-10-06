@@ -1,4 +1,5 @@
 ---
+ms.assetid: ddfbbda3-30ca-4537-af12-667efc6f63ff
 title: Configure Additional Authentication Methods for AD FS
 description:
 author: billmath

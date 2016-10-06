@@ -1,22 +1,20 @@
 ---
+ms.assetid: 2f536fb8-16e5-471d-bafc-21b96197efb8
 title: Active Directory Domain Services Virtualization
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: identity-adds
-ms.author: markvi
-  
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: c0a900bf-2a0d-4240-b209-1c6a5502fcdf
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Active Directory Domain Services Virtualization
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists resources that are available for using virtualized domain controllers.  
   

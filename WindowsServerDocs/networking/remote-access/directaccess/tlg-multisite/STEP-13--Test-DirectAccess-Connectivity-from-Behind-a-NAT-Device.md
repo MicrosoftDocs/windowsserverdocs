@@ -14,15 +14,15 @@ author: coreyp-at-msft
 ---
 # STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 When a DirectAccess client is connected to the Internet from behind a NAT device or a web proxy server, the DirectAccess client uses either Teredo or IP-HTTPS to connect to the Remote Access server. If the NAT device enables outbound UDP port 3544 to the Remote Access server's public IP address, then Teredo is used. If Teredo access is not available, the DirectAccess client falls back to IP-HTTPS over outbound TCP port 443, which enables access through firewalls or web proxy servers over the traditional SSL port. If the web proxy requires authentication, the IP-HTTPS connection will fail. IP-HTTPS connections also fail if the web proxy performs outbound SSL inspection, due to the fact that the HTTPS session is terminated at the web proxy instead of the Remote Access server.  
   
 The following procedures are performed on both client computers:  
   
-1.  [Test Teredo connectivity](assetId:///41f8195b-00a1-4991-9db8-3703514dbe0c#TeredoCLIENT1). The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
+1. Test Teredo connectivity. The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
   
-2.  [Test IP-HTTPS connectivity](assetId:///41f8195b-00a1-4991-9db8-3703514dbe0c#IPHTTPS_CLIENT1). The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
+2. Test IP-HTTPS connectivity. The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
   
 ## Prerequisites  
 Start EDGE1 and 2-EDGE1 if they are not already running, and make sure they are connected to the Internet subnet.  

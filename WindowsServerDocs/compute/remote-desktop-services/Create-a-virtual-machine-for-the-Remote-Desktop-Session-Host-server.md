@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Create a virtual machine for the Remote Desktop Session Host server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Note: To create a virtual machine from a custom image, see the steps provided in the Basic Deployment Guide.   
   

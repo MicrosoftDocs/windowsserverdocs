@@ -4,8 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - networking-dns
+ms.technology: networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
@@ -14,7 +13,7 @@ author: jamesmci
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.  
   
@@ -39,7 +38,7 @@ To ensure that contosogiftservices.com customers get a responsive experience fro
   
 The following illustration depicts this scenario.  
   
-![](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
+![Time of Day DNS Policy example](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
   
 ### <a name="bkmk_works1"></a>How Intelligent DNS Responses Based on Time of Day Works  
   

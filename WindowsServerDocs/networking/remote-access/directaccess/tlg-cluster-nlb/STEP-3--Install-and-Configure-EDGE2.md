@@ -14,29 +14,19 @@ author: coreyp-at-msft
 ---
 # STEP 3 Install and Configure EDGE2
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
-EDGE2 is the second member of a Remote Access cluster. EDGE2 is installed and configured before enabling the cluster configuration.  
-  
-You will perform the following steps to configure EDGE2:  
-  
-1.  [Install the operating system on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#installOS)-Install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 on EDGE2.  
-  
-2.  [Configure TCP/IP properties](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#TCP)-After installing the operating system on EDGE2, configure static IP addressing information on its internal and external network adapters.  
-  
-3.  [Rename EDGE2 and join it to the domain](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#rename)-Rename the computer to EDGE2 and join it to the CORP domain.  
-  
-4.  [Install the IP-HTTPS certificate](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#IPHTTPSCert)-To accept incoming IP-HTTPS requests, the EDGE2 Remote Access cluster member must have an IP-HTTPS website certificate installed in its machine certificate store. The certificate must have the same name as the IP-HTTPS certificate on EDGE1.  
-  
-5.  [Install the Remote Access role on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#InstallDA)-Before you can join EDGE2 to the Remote Access cluster, you must install the Remote Access server role on EDGE2.  
-  
+EDGE2 is the second member of a Remote Access cluster. EDGE2 is installed and configured before enabling the cluster configuration.
+
+Perform the following steps to configure EDGE2:
+
 ## <a name="installOS"></a>Install the operating system on EDGE2  
   
-1.  On EDGE2, start the installation of Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 .  
+1.  On EDGE2, start the installation of  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 .  
   
-2.  Follow the instructions to complete the installation, specifying Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
+2.  Follow the instructions to complete the installation, specifying  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.  
   
-3.  Connect EDGE2 to a network that has Internet access and run Windows Update to install the latest updates for Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
+3.  Connect EDGE2 to a network that has Internet access and run Windows Update to install the latest updates for  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 , and then disconnect from the Internet.  
   
 4.  Connect one network adapter to the Corpnet subnet or the virtual switch representing the corpnet subnet and the other to the Internet subnet or virtual switch representing the Internet subnet.  
   

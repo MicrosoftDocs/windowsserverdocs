@@ -4,6 +4,7 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
+ms.manager: dongill
 author: kumudd
 ms.author: kumud
 ms.date: 09/15/2016

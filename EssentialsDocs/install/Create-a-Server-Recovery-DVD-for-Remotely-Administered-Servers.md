@@ -1,21 +1,23 @@
 ---
 title: "Create a Server Recovery DVD for Remotely Administered Servers"
+description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2012
+ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-applies_to: 
-  - Windows Server 2016 Essentials
 ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
-caps.latest.revision: 7
-author: coreyp-at-msft
+author: nnamuhcs
 ms.author: coreyp
-
+manager: dongill
 ---
+
 # Create a Server Recovery DVD for Remotely Administered Servers
+
+>Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+
 ##  <a name="BKMK_HeadlessRecovery"></a> Create a server recovery DVD for remotely administered servers  
  There are two models for factory reset and server recovery, and they differ based on the hardware that the customer received.  
   
@@ -34,7 +36,7 @@ ms.author: coreyp
   
  **Factory reset**  
   
- This recovery returns the server to the original state that existed when the server was shipped from the factory. Following a factory reset, you are asked to perform the initial configuration of the server just as you were the first time you turned it on, and all settings and customizations are lost. This is also referred to as “Day 0.�? Because factory reset requires that a hardware-specific image be shipped with the server, the partner must author the server recovery DVD.  
+ This recovery returns the server to the original state that existed when the server was shipped from the factory. Following a factory reset, you are asked to perform the initial configuration of the server just as you were the first time you turned it on, and all settings and customizations are lost. This is also referred to as Day 0.? Because factory reset requires that a hardware-specific image be shipped with the server, the partner must author the server recovery DVD.  
   
  **Bare-metal restore**  
   
@@ -45,7 +47,7 @@ ms.author: coreyp
 ### Remotely administered server recovery  
  This section describes the required customizations that the partner must perform and the final media that must be shipped with each server. Before delving into the details, let us look at the customer experience.  
   
- In this scenario, the customer’s server is no longer working. This could be caused by a virus, a hard disk failure, or some other cause. The customer inserts the server recovery DVD into a client computer that is located on the same network as the server. The server recovery application walks them through three steps to recover their server:  
+ In this scenario, the customer „¢s server is no longer working. This could be caused by a virus, a hard disk failure, or some other cause. The customer inserts the server recovery DVD into a client computer that is located on the same network as the server. The server recovery application walks them through three steps to recover their server:  
   
 1.  Creates a bootable USB flash drive that is used to restart the server in recovery mode. The USB flash drive must be 8 GB or larger.  
   
@@ -133,10 +135,9 @@ ms.author: coreyp
 4.  Finalize the ISO file.  
   
  Supported culture names include:  
-  
-|||  
+
 |-|-|  
-|- cs-CZ<br /><br /> - de-DE<br /><br /> - en-US<br /><br /> - es-ES<br /><br /> - fr-FR<br /><br /> - hu-HU<br /><br /> - it-IT<br /><br /> - ja-JP<br /><br /> - ko-KR<br /><br /> - nl-NL|- pl-PL<br /><br /> - pt-BR<br /><br /> - pt-PT<br /><br /> - ru-RU<br /><br /> - sv-SE<br /><br /> - tr-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW|  
+|- cs-CZ<br /><br /> - de-DE<br /><br /> - en-US<br /><br /> - es-ES<br /><br /> - fr-FR<br /><br /> - hu-HU<br /><br /> - it-IT<br /><br /> - ja-JP<br /><br /> - ko-KR<br /><br /> - nl-NL|- pl-PL<br /><br /> - pt-BR<br /><br /> - pt-PT<br /><br /> - ru-RU<br /><br /> - sv-SE<br /><br /> - tr-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW
   
 ####  <a name="BKMK_CreatingISO"></a> Step 5: Create the ISO file  
  The folder that was created and all the contents can be burned to a DVD. This is the DVD that will be provided to customers with their new server.  

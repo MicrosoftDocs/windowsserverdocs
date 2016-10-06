@@ -14,7 +14,7 @@ author: coreyp-at-msft
 ---
 # Troubleshooting General Issues
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic contains troubleshooting information for general issues related to Remote Access.  
   
