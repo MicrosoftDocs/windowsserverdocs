@@ -73,7 +73,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 **Minimum**: 32 GB  
 
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. 
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   
