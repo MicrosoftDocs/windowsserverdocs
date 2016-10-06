@@ -19,7 +19,7 @@ ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
 > [!IMPORTANT]  
 > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 or higher.
   
-If you are using SQL Server as your AD FS configuration database, you can set up geo\-redundancy for your AD FS farm using SQL Server replication. Geo\-redundancy replicates data between two geographically distant sites so that applications can switch from one site to another. This way, in case of the failure of one site, you can still have all the configuration data available at the second site. For more information, see the “SQL Server geographic redundancy section” in [Federation Server Farm Using SQL Server_1](Federation-Server-Farm-Using-SQL-Server_1.md).  
+If you are using SQL Server as your AD FS configuration database, you can set up geo\-redundancy for your AD FS farm using SQL Server replication. Geo\-redundancy replicates data between two geographically distant sites so that applications can switch from one site to another. This way, in case of the failure of one site, you can still have all the configuration data available at the second site. For more information, see the “SQL Server geographic redundancy section” in [Federation Server Farm Using SQL Server](Federation-Server-Farm-Using-SQL-Server.md).  
   
 ## Prerequisites  
 Install and configure a SQL server farm. For more information, see [http://technet.microsoft.com/evalcenter/hh225126.aspx](http://technet.microsoft.com/evalcenter/hh225126.aspx). On the initial SQL Server, make sure that the SQL Server Agent service is running and set to automatic start.  
@@ -64,7 +64,7 @@ Install and configure a SQL server farm. For more information, see [http://techn
   
 11. On the **Snapshot Agent** page, choose defaults of Immediate and 14 days, click **Next**.  
   
-    You may need to create a domain account for the SQL agent. Use the steps in [Configure SQL login for the domain account CONTOSO\\sqlagent](Setup-Geographic-Redundancy-with-SQL-Server-Replication.md#BKMK_1)to create SQL login for this new AD user and assign specific permissions.  
+You may need to create a domain account for the SQL agent. Use the steps in [Configure SQL login for the domain account CONTOSO\\sqlagent](Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md#sqlagent) to create SQL login for this new AD user and assign specific permissions.  
   
 12. On the **Agent Security** page, click **Security Settings** and enter the username\/password of a domain account \(not a GMSA\) created for the SQL agent.  
   
@@ -83,7 +83,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
   
 3.  On the **Merge Agent Location** page, select **Run each agent at its Subscriber \(pull subscriptions\)** \(the default\).  
   
-    This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](http://technet.microsoft.com/library/ms151191.aspx).  
+This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](http://technet.microsoft.com/library/ms151191.aspx).  
   
 4.  On the **Subscribers** page, enter **AdfsConfiguration** as the subscriber database.  
   
@@ -111,7 +111,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
   
 4.  Additionally, you can look under the **SQL Server Agent\\Jobs** node to see the job\(s\) scheduled to execute the operations of the publication\/subscription.  Only local jobs are shown, so make sure to check on the publisher and the subscriber for troubleshooting.  Right\-click a job and select **View History** to view execution history and results.  
   
-## <a name="BKMK_1"></a>Configure SQL login for the domain account CONTOSO\\sqlagent  
+## <a name="sqlagent"></a>Configure SQL login for the domain account CONTOSO\\sqlagent  
   
 1.  Create a new login on the primary and replica SQL Server called CONTOSO\\sqlagent \(the name of the new domain user created and configured on the **Agent Security** page in the procedures above.\)  
   

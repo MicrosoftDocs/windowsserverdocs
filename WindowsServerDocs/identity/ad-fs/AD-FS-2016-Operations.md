@@ -46,6 +46,8 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Manage Risk with Conditional Access Control](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [Plan Device-based Conditional Access on-Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
 - [Set up an AD FS lab environment](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+- [Set up the lab environment for AD FS in Windows Server 2012 R2](../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+- [Set up Geographic Redundancy with SQL Server Replication](../ad-fs/operations/Steup-Geographic-Redundancy-with-SQL-Server-Replication.md)
 - [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)

@@ -47,7 +47,7 @@ Active Directory Federation Services (AD FS) in Windows Server 2012 R2 provides 
     -   Enable device authentication for seamless second-factor authentication. This ties the user's identity to the registered device that is used to access the resource, thus offering more secure compound identity verification before protected resources are accessed.
 
         > [!NOTE]
-        > For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+        > For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/../../ad-fs/operations/../../ad-fs/operations/../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
     -   Set MFA requirement for all extranet access or conditionally based on the user's identity, network location or a device that is used to access protected resources.
 
@@ -68,7 +68,7 @@ A global authentication policy applies to all relying parties that are secured b
 
 -   Settings and methods for MFA
 
--   Whether device authentication is enabled. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+-   Whether device authentication is enabled. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 Per-relying party trust authentication policies apply specifically to attempts to access that relying party trust (application or service). You can configure the following settings as part of the per-relying party trust authentication policy:
 
@@ -90,7 +90,7 @@ By selecting more than one authentication method, you enable your users to have 
 You can also enable device authentication for seamless second-factor authentication. This ties the user's identity to the registered device that is used to access the resource, thus offering more secure compound identity verification before protected resources are accessed.
 
 > [!NOTE]
-> For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+> For more information about device object, Device Registration Service, Workplace Join, and the device as seamless second-factor authentication and SSO, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 If you specify Windows Authentication method (default option) for your intranet resources, authentication requests undergo this method seamlessly on browsers that support Windows authentication.
 
@@ -98,7 +98,7 @@ If you specify Windows Authentication method (default option) for your intranet 
 > Windows authentication is not supported on all browsers. The authentication mechanism in AD FS in Windows Server 2012 R2 detects the user's browser user agent and uses a configurable setting to determine whether that user agent supports Windows Authentication. Administrators can add to this list of user agents (via the Windows PowerShell `Set-AdfsProperties -WIASupportedUserAgents` command, in order to specify alternate user agent strings for browsers that support Windows Authentication. If the client's user agent does not support Windows Authentication, the default fallback method is Forms Authentication.
 
 ### Configuring MFA
-There are two parts to configure MFA in AD FS in Windows Server 2012 R2: specifying the conditions under which MFA is required, and selecting an additional authentication method. For more information about additional authentication methods, see [Configure Additional Authentication Methods for AD FS](../../ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md).
+There are two parts to configure MFA in AD FS in Windows Server 2012 R2: specifying the conditions under which MFA is required, and selecting an additional authentication method. For more information about additional authentication methods, see [Configure Additional Authentication Methods for AD FS](../../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).
 
 **MFA settings**
 
@@ -110,7 +110,7 @@ The following options are available for MFA settings (conditions under which to 
 
     Windows Server 2012 R2 takes a user-centric approach to modern devices where device objects represent a relationship between user@device and a company. Device objects are a new class in AD in Windows Server 2012 R2 that can be used to offer compound-identity when providing access to applications and services. A new component of AD FS - the device registration service (DRS) - provisions a device identity in Active Directory and sets a certificate on the consumer device that will be used to represent the device identity. You can then use this device identity to workplace join your device, in other words, to connect your personal device to the Active Directory of your workplace. When you join your personal device to your workplace, it becomes a known device and will provide seamless second-factor authentication to protected resources and applications. In other words, after a device is workplace joined, the user's identity is tied to this device and can be used for a seamless compound identity verification before a protected resource is accessed.
 
-    For more information on workplace join and leave, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+    For more information on workplace join and leave, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 -   You can require MFA when the access request for the protected resources comes from either the extranet or the intranet.
 
@@ -119,24 +119,24 @@ In this scenario, you enable MFA based on the user's group membership data for a
 
 More specifically, in this scenario, you enable an authentication policy for a claims-based test application called **claimapp**, whereby an AD user **Robert Hatley** will be required to undergo MFA since he belongs to an AD group **Finance**.
 
-The step-by step instructions to set up and verify this scenario are provided in [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+The step-by step instructions to set up and verify this scenario are provided in [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 Other scenarios of enabling MFA in AD FS include the following:
 
--   Enable MFA, if the access request comes from the extranet. You can modify the code presented in the "Set up MFA Policy" section of [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) with the following:
+-   Enable MFA, if the access request comes from the extranet. You can modify the code presented in the "Set up MFA Policy" section of [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) with the following:
 
     ```
     'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type="http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
     ```
 
--   Enable MFA, if the access request comes from a non-workplace joined device.  You can modify the code presented in the "Set up MFA Policy" section of [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) with the following:
+-   Enable MFA, if the access request comes from a non-workplace joined device.  You can modify the code presented in the "Set up MFA Policy" section of [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) with the following:
 
     ```
     'NOT EXISTS([type=="http://schemas.microsoft.com/2012/01/devicecontext/claims/registrationid"]) => issue (type="http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn");'
 
     ```
 
--   Enable MFA, if the access is coming from a user with a device that is workplace joined but not registered to this user. You can modify the code presented in the "Set up MFA Policy" section of [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) with the following:
+-   Enable MFA, if the access is coming from a user with a device that is workplace joined but not registered to this user. You can modify the code presented in the "Set up MFA Policy" section of [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) with the following:
 
     ```
     'c:[type=="http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser", value == "false"] => issue (type="http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn");'
@@ -144,8 +144,8 @@ Other scenarios of enabling MFA in AD FS include the following:
     ```
 
 ## See Also
-[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 
 

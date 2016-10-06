@@ -602,6 +602,8 @@
 ##### [Manage Risk with Conditional Access Control](identity/ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 ##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
 ##### [Set up an AD FS lab environment](identity/ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/operations/Steup-Geographic-Redundancy-with-SQL-Server-Replication.md)
+##### [Set up the lab environment for AD FS in Windows Server 2012 R2](identity/ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 ##### [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 ##### [Walkthrough Guide: Manage Risk with Conditional Access Control](identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 ##### [Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
