@@ -6,7 +6,7 @@ ms.author: JGerend
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: kumudd
-ms.date: 08/18/2016
+ms.date: 10/06/2016
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known Issues with Storage Replica
@@ -18,7 +18,7 @@ This section discusses known issues with Storage Replica in Windows Server 2016.
 ## After removing replication, disks are offline and you cannot configure replication again  
 In Windows Server 2016, you may be unable to provision replication on a volume that was previously replicated or may find un-mountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.  
 
-To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state using cmdlet named `Clear-SRMetadata`.  
+To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state using the `Clear-SRMetadata` cmdlet.  
 
 -   To remove all orphaned Storage Replica  partition databases slots and remount all partitions, use the `-AllPartitions` parameter as follows:  
 
@@ -119,4 +119,4 @@ This is caused by selecting a data volume that is on the same partition as the S
 - [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
 
 ## See Also  
--  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-overview.md)  
+-  [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
