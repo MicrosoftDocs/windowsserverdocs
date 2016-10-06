@@ -1,4 +1,4 @@
-# [Windows Server 2016](get-started/Windows-Server-2016-Technical-Preview-5.md)
+# [Windows Server 2016](get-started/Windows-Server-2016.md)
 ## [Get Started](get-started/Server-Basics.md)
 ### [System Requirements  and Installation](get-started/System-Requirements--and-Installation.md)
 ### [Release Notes: Important Issues in Windows Server](get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)
