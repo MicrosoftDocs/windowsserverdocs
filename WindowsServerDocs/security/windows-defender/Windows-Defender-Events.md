@@ -1,20 +1,22 @@
 ---
 title: Windows Defender Events
+description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-security
+ms.technology: security-windows-defender
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69b2f433-7f56-4496-bf3a-49549ce237ef
-manager: dongill
 author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Windows Defender Events
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Windows Defender Events
 

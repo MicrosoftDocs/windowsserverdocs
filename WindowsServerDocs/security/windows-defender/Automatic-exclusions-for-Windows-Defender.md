@@ -1,20 +1,22 @@
 ---
 title: Automatic exclusions for Windows Defender
+description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-security
+ms.technology: security-windows-defender
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cbf1e025-73a5-4576-a280-b697bb9aaead
-manager: dongill
 author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Automatic exclusions for Windows Defender
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 This topic introduces automatic exclusions for Windows Defender on Windows Server 2016 Technical Preview.
 

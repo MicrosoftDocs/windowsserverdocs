@@ -1,14 +1,21 @@
 ---
 title: Securing Privileged Access
-ms.technology: security
+description: "Windows Server Security"
+ms.custom: na
 ms.prod: windows-server-threshold
-
+ms.reviewer: na
+ms.suite: na
+ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
-ms.author: YuriDio
-author: YuriDio
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Securing Privileged Access
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 >Applies To: Windows Server Technical Preview
 
