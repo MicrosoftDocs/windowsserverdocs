@@ -1,4 +1,4 @@
-r---
+---
 title: Get Started
 description: " "
 ms.prod: windows-server-threshold
