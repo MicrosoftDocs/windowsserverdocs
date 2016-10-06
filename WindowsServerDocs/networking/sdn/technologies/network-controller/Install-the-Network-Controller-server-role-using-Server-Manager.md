@@ -30,15 +30,15 @@ This topic provides instructions on how to install the Network Controller server
   
 4.  In **Select Server Roles**, in **Roles**, click **Network Controller**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
+    ![Network Controller](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
 5.  The **Add features that are required for Network Controller** dialog box opens. Click **Add Features**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_06.jpg)  
+    ![Add Features](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_06.jpg)  
   
 6.  In **Select Server Roles**, click **Next**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
+    ![Select Server Roles](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
 7.  In **Select Features**, click **Next**.  
   
@@ -46,7 +46,7 @@ This topic provides instructions on how to install the Network Controller server
   
 9. In **Confirm installation selections**, review your choices. Installation of Network Controller requires that you restart the computer after the wizard runs. Because of this, click **Restart the destination server automatically if required**. The **Add Roles and Features Wizard** dialog box opens. Click **Yes**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_11.jpg)  
+    ![Add Roles and Features Wizard](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_11.jpg)  
   
 10. In **Confirm installation selections**, click **Install**.  
   
@@ -54,7 +54,7 @@ This topic provides instructions on how to install the Network Controller server
   
 12. After the computer restarts, log on to the computer and verify Network Controller installation by viewing Server Manager.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
+    ![Server Manager](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
   
 ## See Also  
 [Network Controller](Network-Controller.md)  

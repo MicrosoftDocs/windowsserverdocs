@@ -1,5 +1,5 @@
 ---
-title: Cluster to Cluster Storage Replication
+title: Cluster to cluster Storage Replication
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
@@ -9,19 +9,19 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: kumudd
 ms.date: 08/18/2016
 ---
-# Cluster to Cluster Storage Replication
+# Cluster to cluster Storage Replication
 > Applies To: Windows Server 2016
 
-Cluster-to-cluster replication is now available in Windows Server 2016, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct attached storage). The management and configuration is similar to server-to-server replication.  
+Cluster-to-cluster replication is now available in Windows Server 2016, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication.  
+There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication. Azure Site Recovery will be able to configure this scenario. When that feature reaches general availability, this document will be updated.
 
 > [!IMPORTANT]
-> In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster.  
+> In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 16 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
 >   
-> If you wish to use Storage Spaces Direct, you will need a minimum of four nodes per cluster, for a total of eight. This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md).  
+> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md).  
 
 ### Terms  
 This walkthrough uses the following environment as an example:  
@@ -34,7 +34,7 @@ This walkthrough uses the following environment as an example:
 
 ![Diagram showing an example environment with a cluster in the Redmond site replicating with a cluster in the Bellevue site](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
 
-**FIGURE 1: Cluster to Cluster Replication**  
+**FIGURE 1: Cluster to cluster Replication**  
 
 ### Prerequisites  
 
@@ -42,7 +42,7 @@ This walkthrough uses the following environment as an example:
 * At least four servers (two servers in two clusters) with Windows Server 2016 installed. Supports up to two 64 node clusters.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
-* At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
+* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
@@ -99,7 +99,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
+    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.  
 
     -   **For JBOD enclosures:**  
 
@@ -172,7 +172,7 @@ You will now create two normal failover clusters. After configuration, validatio
 
 5.  Add one disk in the **Redmond** site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.comlibrary/hh831718.aspx)  
+6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.com/library/hh831718.aspx)  
 
 #### Windows PowerShell method  
 
@@ -354,7 +354,7 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     ```  
 
     > [!NOTE]  
-    > Windows Server 2016 does not prevent role switching when initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until initial sync is complete.  
+    > Windows Server 2016 prevents role switching when initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not force switch directions until initial sync is complete.
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 

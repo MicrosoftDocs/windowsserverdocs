@@ -15,13 +15,9 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of  Windows Server 2016.  
-  
-This topic contains the following sections.  
-  
--   [Supported Networking Scenarios](#bkmk_supp)  
-  
--   [Unsupported Networking Scenarios](#bkmk_unsupp)  
+This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.  
+>[!IMPORTANT]
+>For all production scenarios, use the latest signed hardware drivers from your original equipment manufacturer \(OEM\) or independent hardware vendor \(IHV\).
   
 ## <a name="bkmk_supp"></a>Supported Networking Scenarios
 
