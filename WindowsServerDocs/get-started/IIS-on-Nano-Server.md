@@ -69,11 +69,12 @@ For offline installation, add the package with the -Packages parameter of New-Na
 If you have an existing VHD file, you can install IIS offline with DISM.exe by mounting the VHD, and then using the **Add-Package** option.   
 The following example steps assume that you are running from the directory specified by BasePath option, which was created after running New-NanoServerImage.  
 
-1.  mountdir  
-2. .\Tools\dism.exe /Mount-ImagmediaFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir  
-3. .\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.camedia:.\mountdir  
-4. .\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.camedia:.\mountdir  
-5. .\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit  
+1.	mkdir mountdir
+2.	.\Tools\dism.exe /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
+3.	.\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.cab /Image:.\mountdir
+4.	.\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab /Image:.\mountdir
+5.	.\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit
+ 
 
 > [!NOTE]  
 > Note that Step 4 adds the language pack--this example installs EN-US.  

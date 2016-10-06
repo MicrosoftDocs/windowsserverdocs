@@ -47,6 +47,7 @@ Note the following general guidelines for supported paths:
 - If the server is a domain controller, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](http://technet.microsoft.com/library/hh994618.aspx) for important information.
 - Upgrades from pre-release versions (previews) of Windows Server 2016 are not supported. Perform a clean installation to Windows Server 2016.
 - Upgrades that switch from a Server Core installation to a Server with a Desktop installation (or vice versa) are not supported.
+- Upgrades from a previous Windows Server installation to an evaluation copy of Windows Server are not supported. Perform a clean installation of an evaluation edition.
 
 If you do not see your current version in the left column, upgrading to this release of Windows Server 2016 is not supported.
 
