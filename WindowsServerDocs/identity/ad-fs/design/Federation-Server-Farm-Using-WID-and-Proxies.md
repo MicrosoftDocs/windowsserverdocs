@@ -46,13 +46,18 @@ This section describes various considerations about the intended audience, benef
 ### What are the limitations of using this topology?  
   
 -   The same limitations as listed for the [Federation Server Farm Using WID](Federation-Server-Farm-Using-WID.md) topology  
+
+||1 \- 100 RP Trusts|More than 100 RP Trusts 
+| ----- |-----| ------ |
+|1 \- 30 AD FS Nodes|WID Supported|Not supported using WID \- SQL Required 
+|More than 30 AD FS Nodes|Not supported using WID \- SQL Required|Not supported using WID \- SQL Required  
   
 ## Server placement and network layout recommendations  
 To deploy this topology, in addition to adding two web application proxies, you must make sure that your perimeter network can also provide access to a Domain Name System \(DNS\) server and to a second Network Load Balancing \(NLB\) host. The second NLB host must be configured with an NLB cluster that uses an Internet\-accessible cluster IP address, and it must use the same cluster DNS name setting as the previous NLB cluster that you configured on the corporate network \(fs.fabrikam.com\). The web application proxies should also be configured with Internet\-accessible IP addresses.  
   
 The following illustration shows the existing federation server farm with WID topology that was described previously and how the fictional Fabrikam, Inc., company provides access to a perimeter DNS server, adds a second NLB host with the same cluster DNS name \(fs.fabrikam.com\), and adds two web application proxies \(wap1 and wap2\) to the perimeter network.  
   
-![](media/WIDFarmADFSBlue.gif)  
+![WID Farm and Proxies](media/WIDFarmADFSBlue.gif)  
   
 For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
   

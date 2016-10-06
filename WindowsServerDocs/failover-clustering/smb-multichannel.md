@@ -26,7 +26,7 @@ Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the followin
 -   Multiple NICs per server, using the same switch / subnet.  
 
 ## How to take advantage of multi-NIC clusters networks and simplified SMB multichannel  
-This section describes how to take advantage of the new multi-NIC clusters networks and simplified SMB multichannel features in Windows Server 2016 Preview.  
+This section describes how to take advantage of the new multi-NIC clusters networks and simplified SMB multichannel features in Windows Server 2016.  
 
 ### Use at least two networks for Failover Clustering   
 Although it is rare, network switches can fail - it is still best practice to use at least two networks for Failover Clustering. All networks that are found are used for cluster heartbeats. Avoid using a single network for your Failover Cluster in order to avoid a single point of failure. Ideally, there should be multiple physical communication paths between the nodes in the cluster, and no single point of failure.  

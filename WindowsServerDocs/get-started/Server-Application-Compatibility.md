@@ -27,7 +27,7 @@ For customers and software vendor partners looking for more information on Windo
 |Microsoft SQL Server 2016|	Yes|	[SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server)| 
 |Microsoft System Center Virtual Machine Manager 2016|	Yes|	[Preparing your environment for System Center 2016 - Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/deploy/preparing-your-environment-for-system-center-2016---virtual-machine-manager)|
 |Microsoft System Center Operations Manager 2016|	Yes|	[Operations Manager](https://technet.microsoft.com/system-center-docs/om/operations-manager)|
-|Microsoft System Center Data Protection Manager 2016|	Yes|	[What's new in DPM in System Center Technical Preview](https://technet.microsoft.com/system-center-docs/dpm/get-started/what-s-new-in-dpm-in-system-center-technical-preview)|
+|Microsoft System Center Data Protection Manager 2016|	Yes|	[What's new in DPM in System Center 2016](https://technet.microsoft.com/system-center-docs/dpm/get-started/what-s-new-in-dpm-in-system-center-technical-preview)|
 |Microsoft System Center Configuration Manager (version 1606)|	Yes|	[What's new in version 1606 of System Center Configuration Manager](https://technet.microsoft.com/library/mt752488.aspx)|  
 |SharePoint Server 2016|	Yes|	[Hardware and software requirements for SharePoint Server 2016](https://technet.microsoft.com/library/cc262485(v=office.16).aspx)|
 |Project Server 2016|	Yes|	[Software requirements for Project Server 2016](https://technet.microsoft.com/library/ee683978(v=office.16).aspx)|

@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configure Authentication Policies
 description:
@@ -27,11 +27,11 @@ In AD FS, in Windows Server 2012 R2, both access control and the authentication 
 For more information about MFA and multi\-factor access control in Active Directory Federation Services \(AD FS\) in  Windows Server 2012 R2 , see the following topics:  
 
 
--   [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+-   [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 
--   [Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
+-   [Manage Risk with Conditional Access Control](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 
--   [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 ## Configure authentication policies via the AD FS Management snap\-in  
 Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).   
@@ -51,7 +51,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
   
     -   Authentication methods to be used for primary authentication. You can select available authentication methods under the **Extranet** and **Intranet**.  
   
-    -   Device authentication via the **Enable device authentication** check box. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).  
+    -   Device authentication via the **Enable device authentication** check box. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).  
 ![](media/Configure-Authentication-Policies/authpolicy2.png)  
 
 ## To configure primary authentication per relying party trust  
@@ -81,7 +81,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
   
     -   Settings or conditions for MFA via available options under the **Users\/Groups**, **Devices**, and **Locations** sections.  
   
-    -   To enable MFA for any of these settings, you must select at least one additional authentication method. **Certificate Authentication** is the default available option. You can also configure other custom additional authentication methods, for example, Windows Azure Active Authentication. For more information, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
+    -   To enable MFA for any of these settings, you must select at least one additional authentication method. **Certificate Authentication** is the default available option. You can also configure other custom additional authentication methods, for example, Windows Azure Active Authentication. For more information, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
   
 > [!WARNING]  
 > You can only configure additional authentication methods at a globally.  

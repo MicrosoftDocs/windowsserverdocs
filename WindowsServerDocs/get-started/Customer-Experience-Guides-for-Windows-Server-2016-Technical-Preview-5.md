@@ -1,5 +1,5 @@
 ---
-title: Customer Experience Guides for Windows Server 2016 Technical Preview
+title: Customer Experience Guides for Windows Server 2016
 description: "Guides introduce new features and offer walkthroughs to try."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -8,30 +8,30 @@ ms.suite: na
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 08/09/2016
+ms.date: 10/06/2016
 ms.assetid: bd2a2a8f-5640-416d-ac8d-a9a1987b892e
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
-# Customer Experience Guides for Windows Server 2016 Technical Preview 5
+# Customer Experience Guides for Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Customer Experience Guides are available for a number of new features present in Windows Server 2016. These guides introduce the new feature and offer walkthroughs and other information can use to try out the feature in your deployment.  
 
 > [!NOTE]  
 >This information is preliminary and subject to change.  
 
-## Customer Experience Guides for Windows Server 2016 Technical Preview  
+## Customer Experience Guides for Windows Server 2016
 The following experience guides have been created by the Windows Server 2016 Engineering and Content Development Teams to help get you started with technologies and features being released in Windows Server 2016.  
 
--   [Storage Spaces Direct in Windows Server Technical Preview](../storage/storage-spaces/storage-spaces-direct-overview.md)  
-Windows Server Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+-   [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md)  
+Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
--   [Storage Replica in Windows Server Technical Preview](../storage/storage-replica/storage-replica-overview.md)  
-Storage Replica is a new feature in Windows Server 2016 Technical Preview that enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
+-   [Storage Replica](../storage/storage-replica/storage-replica-overview.md)  
+Storage Replica is a new feature in Windows Server 2016 that enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 -   [Increasing Resiliency of Virtual Machines in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx)  
 In today's cloud scale environments, commonly comprising of commodity hardware, transient failures have become more common than hard failures. In these circumstances, reacting aggressively to handle these transient failures can cause more downtime than it prevents. Windows Server 2016, therefore introduces increased virtual machine resiliency to intra-cluster communication failures in your compute cluster.  
@@ -46,7 +46,7 @@ Nodes in stretched clusters can now be grouped based on their physical location 
 In Windows Server 2012 R2 and previous versions, a cluster could only be created between member nodes joined to the same domain. Windows Server 2016 breaks down these barriers and introduces the ability to create a Failover Cluster without Active Directory dependencies. Failover Clusters can now therefore be created as single-domain clusters, multi-domain clusters, or as workgroup clusters.  
 
 -  [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)  
-Cluster Operating System (OS) Rolling Upgrade is a new feature in Windows Server Technical Preview that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server Technical Preview without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
+Cluster Operating System (OS) Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
 
 -   [Validate features of PowerShell DSC](http://blogs.msdn.com/b/powershell/archive/2015/07/06/validate-features-of-powershell-dsc.aspx)  
 This topic introduces Windows Management Framework 5 Preview and provides links to blog postings about some of the new features included. It also includes information about how to provide feedback.  
@@ -58,10 +58,10 @@ Windows Server 2016 includes a new PackageManagement feature (formerly called On
 This post discusses some important advances we've made in scripting security and protection in the preview versions of Windows PowerShell 5.0 and Windows 10.   
 
 -   [Experience guide for Enabling OpenGL Support for vGPU in Server 2016](http://social.technet.microsoft.com/wiki/contents/articles/31771.experience-guide-for-enabling-opengl-support-for-vgpu-in-server-2016.aspx)  
-RemoteFX vGPU is constantly evolving and Windows Server 2016 is no exception.  Since Windows Server 2012 R2 the team has been working hard addressing some of the key features that have been requested.  For this technical preview we invite you to experience some of these improvements.  
+RemoteFX vGPU is constantly evolving and Windows Server 2016 is no exception.  Since Windows Server 2012 R2 the team has been working hard addressing some of the key features that have been requested.  
 
 - [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md)  
-With the release of Technical Preview 5, deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
+With the release of Windows Server 2016, deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
 
 -   [Deploy Software Defined Networks using scripts](../networking/sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
 Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. This topic covers how to deploy a Microsoft Software Defined Network infrastructure using scripts. The infrastructure includes a network controller, an SLB/MUX, virtual networks, and associated ACLs. Additionally, another script deploys a tenant workload for you to experiment with.  
@@ -70,7 +70,7 @@ Software Defined Networking (SDN) provides a method to centrally configure and m
 This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016 Technical Preview, in addition to information about Switch Embedded Teaming (SET).  
 
 -   [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
-Windows Server 2016 Technical Preview offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for hosting in private clouds and datacenters. It is similar to Windows Server in Server Core mode, but markedly smaller. Also, there is no local logon capability, nor does it support Terminal Services. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server.  
+Windows Server 2016 offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for hosting in private clouds and datacenters. It is similar to Windows Server in Server Core mode, but markedly smaller. Also, there is no local logon capability, nor does it support Terminal Services. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server.  
 
 -   [Introducing Cloud Witness in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2014/11/14/10572766.aspx)  
 Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This blog posting gives a quick overview of Cloud Witness and the steps required to configure it.  
