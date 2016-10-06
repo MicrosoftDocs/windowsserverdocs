@@ -17,13 +17,11 @@ ms.date: 10/12/2016
 <img src="3compute.png" style='align:left'> Compute in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, compute features deliver the flexibility you need to power the workloads for your customers.
 
 >[!Note]
-> To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
+> To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server).
 
-Compute in Windows Server 2016 includes updates to Hyper-V that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies along with Hyper-V. For details, see [What's new in Hyper-V on Windows Server 2016](./hyper-v/what-s-new-in-hyper-v-on-windows.md).   
+Compute in Windows Server 2016 includes updates to Hyper-V that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies when used with Hyper-V. For details, see [What's new in Hyper-V on Windows Server 2016](./hyper-v/what-s-new-in-hyper-v-on-windows.md).   
 
-New to compute is Windows Containers, which offers flexible, software-based computing power without deploying and managing virtual machines. To try this out, see [Windows Containers Quick Start](https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/quick_start).
-
-Updates to Remote Desktop Services include the ability to offer desktop sessions with high-end graphics support when run on Hyper-V hosts using discrete device assignment. For details, see 
+New to compute is Windows Containers, which offers another way to deploy flexible, software-based computing power. To try this out, see [Windows Containers Quick Start](https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/quick_start).
 
 ## Containers
 
@@ -43,7 +41,7 @@ Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows
 [Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome).
 
 ### Microsoft Hyper-V Server 2016
-The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment. For an overview, see [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/).
+The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment. For links to resources, see [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/).
 
 ## Remote Desktop Services
 
