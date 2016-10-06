@@ -17,8 +17,8 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
--   [AD FS Design Guide in Windows Server 2012 R2](../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
--   [AD FS Design Guide in Windows Server 2012](../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012.md)
+-   [AD FS Design Guide](../ad-fs/design/AD-FS-Design-Guide.md)
+
   
 
   
