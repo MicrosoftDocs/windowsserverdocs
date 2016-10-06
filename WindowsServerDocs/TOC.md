@@ -445,7 +445,7 @@
 
 
 ####[AD FS Design](identity/ad-fs/AD-FS-Design.md)
-#####[AD FS Design Guide](identity/ad-fs/AD-FS-Design-Guide.md)
+#####[AD FS Design Guide](identity/ad-fs/design/AD-FS-Design-Guide.md)
 ######[AD FS Design Guide in Windows Server 2012 R2](identity/ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
 #######[Identify Your AD FS Deployment Goals](identity/ad-fs/design/Identify-Your-AD-FS-Deployment-Goals.md)
 #######[Plan Your AD FS Deployment Topology](identity/ad-fs/design/Plan-Your-AD-FS-Deployment-Topology.md)

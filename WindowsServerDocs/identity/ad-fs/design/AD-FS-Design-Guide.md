@@ -25,4 +25,4 @@ The AD FS design guide is a comprehensive guide for designing AD FS deployments.
 ## See Also  
 For capacity planning for AD FS in Windows Server 2016 see the [AD FS capcity planning worksheet.](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
   
-[Active Directory Federation Services Overview](../Active-Directory-Federation-Services.md)
+[Active Directory Federation Services Overview](../../Active-Directory-Federation-Services.md)
