@@ -19,11 +19,15 @@ ms.date: 10/12/2016
 >[!Note]
 > To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
 
-Compute in Windows Server 2016 includes updates to Hyper-V that improve security, scalability. New to compute is Windows Containers, which offers another way to provide flexible, software-based computing power. Updates to Remote Desktop Services 
+Compute in Windows Server 2016 includes updates to Hyper-V that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies along with Hyper-V. For details, see [What's new in Hyper-V on Windows Server 2016](./hyper-v/what-s-new-in-hyper-v-on-windows.md).   
+
+New to compute is Windows Containers, which offers flexible, software-based computing power without deploying and managing virtual machines. To try this out, see [Windows Containers Quick Start](https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/quick_start).
+
+Updates to Remote Desktop Services include the ability to offer desktop sessions with high-end graphics support when run on Hyper-V hosts using discrete device assignment. For details, see 
 
 ## Containers
 
-Use Windows Server and Hyper-V containers to provide standardized environments for development, test, and production teams. For details, see [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers).
+Use Windows Server and Hyper-V containers to provide standardized runtime environments for development, test, and production teams. For details, see [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers).
 
 ## Hyper-V
 
@@ -32,19 +36,18 @@ The Hyper-V technology provides computing resources through hardware virtualizat
 Hyper-V requires specific hardware to create the virtualization environment. For details, see [System requirements for Hyper-V on Windows Server 2016](./hyper-v/system-requirements-for-hyper-v-on-windows.md). 
 
 ### Hyper-V in Windows Server 2016
-Discover what's new in the Windows Server 2016 Technical Preview and get started with Hyper-V.[Hyper-V](hyper-v/Hyper-V-on-Windows-Server.md)
+Learn more about Hyper-V, the hardware you need, the operating systems you can run in your virtual machines, and more. For details, see [Hyper-V](./hyper-v/Hyper-V-on-Windows-Server.md). If you're new to Hyper-V, start with the [Hyper-V Technology Overview](./hyper-v/hyper-v-technology-overview.md).
 
 ### Hyper-V on Windows 10
-Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows 8. 
-[Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome)
+Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows 8. Hyper-V on Windows is geared toward development and test activities and gives you a quick and easy way to run different operating systems without deploying more hardware. To learn more, see 
+[Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome).
 
 ### Microsoft Hyper-V Server 2016
-The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment. 
+The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment. For an overview, see [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/).
 
 ## Remote Desktop Services
 
-Learn how to create a desktop hosting environment based on Remote Desktop Services and Azure services. Also included is information about using MultiPoint Services in Windows Server 2016.  
-For details, see [Remote Desktop Services](./remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
+Learn how to create a desktop hosting environment based on Remote Desktop Services and Azure services. Also included is information about using MultiPoint Services in Windows Server 2016. For details, see [Remote Desktop Services](./remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md).
 
 ## Setup and Boot Event Collection
 
