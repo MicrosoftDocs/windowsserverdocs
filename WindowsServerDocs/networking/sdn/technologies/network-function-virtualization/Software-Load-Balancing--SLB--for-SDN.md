@@ -97,7 +97,7 @@ In the following illustration, a client computer performs a DNS query for the IP
   
 -   The host forwards the packet directly to the default gateway for the physical network which uses its standard routing table to forward the packet on to the client which eventually receives the response.  
   
-![](../../../media/Software-Load-Balancing--SLB--for-SDN/slb_process.jpg)  
+![Software Load Balancing process](../../../media/Software-Load-Balancing--SLB--for-SDN/slb_process.jpg)  
   
 **Load balancing internal datacenter traffic**  
   
@@ -122,7 +122,7 @@ In addition, you must configure Hyper-V hosts with the SDN-enabled Hyper-V Virtu
   
 Following is an overview of the SLB infrastructure.  
   
-![](../../../media/Software-Load-Balancing--SLB--for-SDN/slb_overview1.png)  
+![Software Load Balancing infrastructure](../../../media/Software-Load-Balancing--SLB--for-SDN/slb_overview1.png)  
   
 The following sections provide more information about these elements of the SLB infrastructure.  
   

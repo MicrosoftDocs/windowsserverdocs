@@ -27,11 +27,13 @@ This topic contains the following sections.
 -   [Switch Embedded Teaming (SET)](#bkmk_sswitchembedded)  
   
 ## <a name="bkmk_rdma"></a>Configuring RDMA Interfaces with Hyper-V  
-In Windows Server 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch.  This increases the number of physical network adapters that are required to be installed in the Hyper-V host.    In  Windows Server 2016, you can use fewer network adapters while using RDMA with or without SET.  
+In Windows Server 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch.  This increases the number of physical network adapters that are required to be installed in the Hyper-V host.
+
+In  Windows Server 2016, you can use fewer network adapters while using RDMA with or without SET.  
   
-The image below illustrates the software architecture changes between  Windows Server 2012 R2  and  Windows Server 2016.  
+The image below illustrates the software architecture changes between  Windows Server 2012 R2 and Windows Server 2016.
   
-![](../../media/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/rdma_over.jpg)  
+![Architectural changes](../../media/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/rdma_over.jpg)  
   
 The following sections provide instructions on how to use Windows PowerShell commands to enable Data Center Bridging (DCB), create a Hyper-V Virtual Switch with an RDMA virtual NIC (vNIC), and create a Hyper-V Virtual Switch with SET and RDMA vNICs.  
   
@@ -155,7 +157,7 @@ In addition, you can connect your teamed NICs to the same physical switch or to 
   
 The following illustration depicts SET architecture.  
   
-![](../../media/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/set_architecture.jpg)  
+![SET architecture](../../media/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-/set_architecture.jpg)  
   
 Because SET is integrated into the Hyper-V Virtual Switch, you cannot use SET inside of a virtual machine (VM). You can, however use NIC Teaming within VMs. For more information, see [NIC Teaming in Virtual Machines (VMs)](https://technet.microsoft.com/library/mt179272.aspx).  
   

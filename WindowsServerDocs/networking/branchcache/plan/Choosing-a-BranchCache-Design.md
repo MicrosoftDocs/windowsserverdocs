@@ -28,7 +28,7 @@ You can use this guide to deploy BranchCache in the following modes and mode com
   
 The following illustration depicts a dual mode installation, with one branch office configured for distributed cache mode and one branch office configured for hosted cache mode.  
   
-![](../../media/Choosing-a-BranchCache-Design/bc_new_modes.jpg)  
+![Choosing a BranchCache design](../../media/Choosing-a-BranchCache-Design/bc_new_modes.jpg)  
   
 Before you deploy BranchCache, select the mode you prefer for each branch office in your organization.  
   
