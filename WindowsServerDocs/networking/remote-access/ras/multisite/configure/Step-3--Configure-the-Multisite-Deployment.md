@@ -20,23 +20,23 @@ After configuring the multisite infrastructure follow these steps to set up the 
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1. Configure Remote Access servers](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_ConfigServer)|Configure additional Remote Access servers by setting up IP addresses, joining them to the domain, and installing the Remote Access role.|  
-|[3.2. Grant administrator access](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_Admin)|Grant privileges on the additional Remote Access servers to the DirectAccess administrator.|  
-|[3.3. Configure IP-HTTPS for a multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_IPHTTPS)|Configure the IP-HTTPS certificate used in a multisite deployment.|  
-|[3.4. Configure the network location server for a multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_NLS)|Configure the network location server certificate used in a multisite deployment.|  
-|[3.5. Configure DirectAccess clients for a multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_Client)|Remove  Windows 7  client computers from Windows 8 security groups.|  
-|[3.6. Enable the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_Enable)|Enable the multisite deployment on the first Remote Access server.|  
-|[3.7. Add entry points to the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_EntryPoint)|Add additional entry points to the multisite deployment.|  
+|3.1. Configure Remote Access servers|Configure additional Remote Access servers by setting up IP addresses, joining them to the domain, and installing the Remote Access role.|  
+|3.2. Grant administrator access|Grant privileges on the additional Remote Access servers to the DirectAccess administrator.|  
+|3.3. Configure IP-HTTPS for a multisite deployment|Configure the IP-HTTPS certificate used in a multisite deployment.|  
+|3.4. Configure the network location server for a multisite deployment|Configure the network location server certificate used in a multisite deployment.|  
+|3.5. Configure DirectAccess clients for a multisite deployment|Remove  Windows 7  client computers from Windows 8 security groups.|  
+|3.6. Enable the multisite deployment|Enable the multisite deployment on the first Remote Access server.|  
+|3.7. Add entry points to the multisite deployment|Add additional entry points to the multisite deployment.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_ConfigServer"></a>3.1. Configure Remote Access servers  
-[Do this step using Windows PowerShell](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_PSstep1)  
+
   
-#### To install the Remote Access role  
+### To install the Remote Access role  
   
-1.  Make sure that each Remote Access server is configured with the proper deployment topology (Edge, behind a NAT, single network interface), and corresponding routes as described in [Step 1: Implement a single server Remote Access deployment](assetId:///a811b73d-56af-4457-aa82-0c23b4c57b4f).  
+1.  Make sure that each Remote Access server is configured with the proper deployment topology (Edge, behind a NAT, single network interface), and corresponding routes.  
   
 2.  Configure the IP addresses on each Remote Access server according to the site topology and your organization's IP addressing scheme.  
   
@@ -60,6 +60,7 @@ After configuring the multisite infrastructure follow these steps to set up the 
   
   
 ![Windows PowerShell](../../../../media/Step-3--Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+
   
 Steps 1 - 3 must be performed manually, and are not accomplished using this Windows PowerShell cmdlet.  
   
@@ -130,7 +131,7 @@ On each Remote Access server that will be added to the multisite deployment, an 
 14. Repeat this procedure on all Remote Access servers in your deployment.  
   
 ## <a name="BKMK_NLS"></a>3.4. Configure the network location server for a multisite deployment  
-If you selected to set up the network location server website on the Remote Access server when you set up your first server using [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6), each new Remote Access server that you add needs to be configured with a Web Server certificate that has the same subject name that was selected for the network location server for the first server. Each server requires a certificate to authenticate the connection to the network location server, and client computers located in the internal network must be able to resolve the name of the website in DNS.  
+If you selected to set up the network location server website on the Remote Access server when you set up your first server, each new Remote Access server that you add needs to be configured with a Web Server certificate that has the same subject name that was selected for the network location server for the first server. Each server requires a certificate to authenticate the connection to the network location server, and client computers located in the internal network must be able to resolve the name of the website in DNS.  
   
 #### To install a certificate for network location  
   
@@ -211,8 +212,6 @@ To configure a multisite deployment, enable the multisite feature on your existi
   
 3.  Group Policy Object names, if you are required to use non-default Group Policy Objects, which are applied on  Windows 7  client computers for the first entry point in your deployment, if you require support for  Windows 7  client computers.  
   
-[Do this step using Windows PowerShell](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1)  
-  
 ### <a name="EnabledMultisite"></a>To enable a multisite configuration  
   
 1.  On your existing Remote Access server: On the **Start** screen, type **RAMgmtUI.exe**, and then press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
@@ -281,8 +280,6 @@ After enabling multisite in your deployment, you can add additional entry points
   
 -   In the case where IPv6 is deployed in the organization's network you will need to prepare the IP-HTTPS prefix for the new entry point.  
   
-[Do this step using Windows PowerShell](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_PSstep10)  
-  
 ### <a name="AddEP"></a>To add entry-points to your multisite deployment  
   
 1.  On your existing Remote Access server: On the **Start** screen, type **RAMgmtUI.exe**, and then press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
@@ -338,7 +335,11 @@ After enabling multisite in your deployment, you can add additional entry points
   
 16. Repeat this procedure from step 2 for every entry point that you want to add to your multisite deployment.  
   
+<<<<<<< HEAD
+![PowerShell](../../../../media/Step-3--Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+=======
 ![Windows PowerShell](../../../../media/Step-3--Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -356,11 +357,4 @@ Add-DAClient -EntrypointName 'Edge2-Europe' -DownlevelGpoName @('corp.contoso.co
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 2: Configure the multisite infrastructure](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43)  
-  
--   [Configure a multisite deployment](assetId:///68492f3d-772e-4e68-a0ae-572be4e7d35f)  
-  
--   [Deploy multisite Remote Access](assetId:///a9249820-3563-499c-9da6-143ede2a1eb7)  
-  
-
-
+-   [Step 2: Configure the multisite infrastructure](Step-2--Configure-the-Multisite-Infrastructure.md)

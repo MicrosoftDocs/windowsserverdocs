@@ -32,7 +32,7 @@ To ensure that contosogiftservices.com customers get a responsive experience fro
   
 The following illustration depicts this scenario.  
   
-![DNS Policy for time of day based responses](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
+![Time of Day DNS Policy example](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
   
 ### <a name="bkmk_works1"></a>How Intelligent DNS Responses Based on Time of Day Works  
   

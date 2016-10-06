@@ -1,4 +1,5 @@
 ---
+ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding nodes or drives to Storage Spaces Direct
 ms.prod: windows-server-threshold
 ms.author: cosdar

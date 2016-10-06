@@ -20,9 +20,9 @@ Once the RADIUS server has been configured with software distribution tokens, co
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Exempt users from OTP authentication (optional)](assetId:///26462967-f450-476b-ae90-b1b2e7248699#BKMK_Exempt)|If specific users will be exempted from DirectAccess with OTP authentication, then follow these preliminary steps.|  
-|[3.2 Configure the Remote Access server to support OTP](assetId:///26462967-f450-476b-ae90-b1b2e7248699#BKMK_Config)|On the Remote Access server update the Remote Access configuration to support OTP two-factor authentication.|  
-|[3.3 Smart cards for additional authorization](assetId:///26462967-f450-476b-ae90-b1b2e7248699#BKMK_Smartcard)|Additional information regarding the use of smart cards.|  
+|[3.1 Exempt users from OTP authentication (optional)](#BKMK_Exempt)|If specific users will be exempted from DirectAccess with OTP authentication, then follow these preliminary steps.|  
+|[3.2 Configure the Remote Access server to support OTP](#BKMK_Config)|On the Remote Access server update the Remote Access configuration to support OTP two-factor authentication.|  
+|[3.3 Smart cards for additional authorization](#BKMK_Smartcard)|Additional information regarding the use of smart cards.|  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
