@@ -17,8 +17,8 @@ ms.technology: identity-adfs
 
 The AD FS design guide is a comprehensive guide for designing AD FS deployments.  This guide is made up of the following:
 
--   [AD FS Design Guide in Windows Server 2012 R2](../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
--   [AD FS Design Guide in Windows Server 2012](../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012.md)
+-   [AD FS Design Guide in Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
+-   [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
   
 
   
