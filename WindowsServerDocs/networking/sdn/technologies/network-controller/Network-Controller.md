@@ -26,14 +26,8 @@ New in  Windows Server 2016, Network Controller provides a centralized, programm
 > - [Post-Deployment Steps for Network Controller](post-deploy-steps-nc.md)
 > - [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx) 
 
-  
-This topic contains the following sections.  
-  
--   [Network Controller Overview](#bkmk_overview)  
-  
--   [Network Controller Features](#bkmk_features)  
-  
-## <a name="bkmk_overview"></a>Network Controller Overview  
+## <a name="bkmk_overview"></a>Network Controller Overview
+
 Network Controller is a highly available and scalable server role, and provides one application programming interface (API) that allows Network Controller to communicate with the network, and a second API that allows you to communicate with Network Controller.  
   
 You can deploy Network Controller in both domain and non-domain environments. In domain environments, Network Controller authenticates users and network devices by using Kerberos; in non-domain environments, you must deploy certificates for authentication.  
@@ -76,7 +70,10 @@ The following Network Controller features allow you to configure and manage virt
   
 -   [Virtual Network Management](#bkmk_virtual)  
   
--   [RAS Gateway Management](#bkmk_gateway)  
+-   [RAS Gateway Management](#bkmk_gateway)
+
+>[!IMPORTANT]
+>Network Controller Backup and Restore is not currently available in Windows Server 2016.
   
 ### <a name="bkmk_firewall"></a>Firewall Management  
 This Network Controller feature allows you to configure and manage allow/deny firewall Access Control rules for your workload VMs for both East/West and North/South network traffic in your datacenter. The firewall rules are plumbed in the vSwitch port of workload VMs, and so they are distributed across your workload in the datacenter. Using the Northbound API, you can define the firewall rules for both incoming and outgoing traffic from the workload VM. You can also configure each firewall rule to log the traffic that was allowed or denied by the rule.  
