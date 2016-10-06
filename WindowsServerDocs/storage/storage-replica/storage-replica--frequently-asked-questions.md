@@ -101,7 +101,7 @@ Note the gateway and interface information (on both servers) and the partnership
 
 ```  
 Set-SRNetworkConstraint -SourceComputerName sr-srv06 -SourceRGName rg02 -  
-SourceNWInterfaceIndex 2 -DestinationComputerName sr-srv05 -DestinationNWInterfaceIndex 3 -DestinationRGName rg01  
+SourceNWInterface 2 -DestinationComputerName sr-srv05 -DestinationNWInterface 3 -DestinationRGName rg01  
 
 Get-SRNetworkConstraint  
 
@@ -111,7 +111,7 @@ Update-SmbMultichannelConnection
 
 For configuring network constraints on a stretch cluster:  
 
-    Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterfaceIndex "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterfaceIndex "Cluster Network 1","Cluster Network 2"  
+    Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterface "Cluster Network 1","Cluster Network 2"  
 
 ## <a name="FAQ4"></a> Can I configure one-to-many replication or transitive (A to B to C) replication?  
 Not in Windows Server 2016. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release. You can of course configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
