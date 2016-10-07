@@ -316,7 +316,8 @@ MaxAllowedPhaseOffset|	1, if more than on second, set clock to correct time.|
 
 The MaxAllowedPhaseOffset setting is located under System\Windows Time Service using the Global Configuration settings.
 
-For more information on group policy and related entries, see [Windows Time Service Tools](windows-time-service-tools-and-settings.md) and Settings article on TechNet.
+> [!NOTE]
+> For more information on group policy and related entries, see [Windows Time Service Tools](windows-time-service-tools-and-settings.md) and Settings article on TechNet.
 
 ### Azure
 #### Windows IAAS consideration
