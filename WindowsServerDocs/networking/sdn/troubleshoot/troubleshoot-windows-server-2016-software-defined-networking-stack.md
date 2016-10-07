@@ -564,7 +564,8 @@ With this information, a tenant VM ping can now be initiated by the Hoster from 
 2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running _ipconfig_. 
 3.  [Hoster] Run ``Test-VirtualNetworkConnection`` from the Hyper-V host to validate connectivity between the two tenant virtual machines in question. 
 
->[!NOTE] the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this >value by running the Get-PACAMapping cmdlet.
+>[!NOTE]
+>The VSID refers to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this >value by running the Get-PACAMapping cmdlet.
 
 ```none
 # Example
