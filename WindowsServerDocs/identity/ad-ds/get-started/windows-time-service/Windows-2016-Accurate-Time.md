@@ -186,7 +186,7 @@ Domain members use the domain hierarchy to determine which machine they use as a
 
 Based on the available candidates, a scoring system is used to find the best time source.  This system takes into account the reliability of the time source and its relative location.  This happens once when the time is service started.  If you need to have finer control of how time synchronizes, you can add good time servers in specific locations or add redundancy.  See the [Specify a Local Reliable Time Service Using GTIMESERV](#GTIMESERV) section for more information.
 
-### Mixed OS Environments (Win2012R2 and Win2008R2)
+#### Mixed OS Environments (Win2012R2 and Win2008R2)
 While a pure Windows Server 2016 Domain environment is required for the best accuracy, there are still benefits in a mixed environment.  Deploying Windows Server 2016 Hyper-V in a Windows 2012 domain will benefit the guests because of the improvements we mentioned above, but only if the guests are also Windows Server 2016.  A Windows Server 2016 PDC, will be able to deliver more accurate time because of the improved algorithms it will be a more stable source.  As replacing your PDC might not be an option, you can instead add a Windows Server 2016 DC with the [GTIMESERV](#GTIMESERV) roll set which would be an upgrade in accuracy for your domain.  A Windows Server 2016 DC can deliver better time to downstream time clients, however, it’s only as good as its source NTP time.
 
 Also as stated above, the clock polling and refresh frequencies have been modified with Windows Server 2016.  These can be changed manually to your down-level DCs or applied via group policy.  While we haven’t tested these configurations, they should behave well in Win2008R2 and Win2012R2 and deliver some benefits.
@@ -200,7 +200,7 @@ To disable the Hyper-V TimeSync service from providing samples to w32time, set t
 	HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider 
 	"Enabled"=dword:00000000
 
-### <a name="AllowingLinux"></a>Allowing Linux to use Hyper-V Host Time
+#### <a name="AllowingLinux"></a>Allowing Linux to use Hyper-V Host Time
 For Linux guests running in Hyper-V, clients are typically configured to use the NTP daemon for time synchronization against NTP servers.  If the Linux distribution supports the TimeSync version 4 protocol and the Linux guest has the TimeSync integration service enabled, then it will synchronize against the host time. This could lead to inconsistent time keeping if both methods are enabled.
 
 To synchronize exclusively against the host time, it is recommended to disable NTP time synchronization by either:
@@ -215,7 +215,7 @@ To synchronize exclusively over NTP, it is recommended to disable the TimeSync i
 > [!NOTE]
 > Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet.
 
-### <a name="GTIMESERV"></a>Specify a Local Reliable Time Service Using GTIMESERV
+#### <a name="GTIMESERV"></a>Specify a Local Reliable Time Service Using GTIMESERV
 You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the GPS hardware.
 
 > [!NOTE]
@@ -268,7 +268,7 @@ Source|	Local CMOS Clock|
 Phase Offset|	0.0000000s|
 Server Role|	576 (Reliable Time Service)|
 
-### Discovering the Hierarchy
+#### Discovering the Hierarchy
 Since the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you will need to query the status of a particular machine to understand it’s time source and chain to the master source clock.  This can help diagnose time synchronization problems.
 
 Given you want to troubleshoot a specific client; the first step is to understand its time source by using this w32tm command.
@@ -286,7 +286,7 @@ Also useful, the following command lists each domain controller it can find in t
 
 Using the list, you can trace the results through the domain and understand the hierarchy as well as the time offset at each step.  By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time.  From there you can try to understand why that time is incorrect by turning on [w32tm logging](#W32Logging). 
 
-### Using Group Policy
+#### Using Group Policy
 You can use Group Policy to accomplish stricter accuracy by, for instance, assigning clients to use specific NTP servers or to control how down-level OS’s are configured when virtualized.  
 Below is a list of possible scenarios and relevant Group Policy settings:
 
@@ -319,22 +319,22 @@ The MaxAllowedPhaseOffset setting is located under System\Windows Time Service u
 > [!NOTE]
 > For more information on group policy and related entries, see [Windows Time Service Tools](windows-time-service-tools-and-settings.md) and Settings article on TechNet.
 
-### Azure and Windows IaaS considerations
+#### Azure and Windows IaaS considerations
 
-#### Azure Virtual Machine: Active Directory Domain Services
+##### Azure Virtual Machine: Active Directory Domain Services
 If the Azure VM running Active Directory Domain Services is part of an existing on-premise Active Directory Forest, then TimeSync(VMIC), should be disabled. This is to allow all DCs in the Forest, both physical and virtual, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](https://technet.microsoft.com/en-us/library/virtual_active_directory_domain_controller_virtualization_hyperv.aspx)
 
-#### Azure Virtual Machine: Domain-joined machine
+##### Azure Virtual Machine: Domain-joined machine
 If you are hosting a machine which is domain joined to an existing Active Directory Forest, virtual or physical, the best practice is to disable TimeSync for the guest and ensure W32Time is configured to synchronize with its Domain Controller via configuring time for Type=NTP5
 
-#### Azure Virtual Machine: Standalone workgroup machine
+##### Azure Virtual Machine: Standalone workgroup machine
 If the Azure VM is not joined to a domain, nor is it a Domain Controller, the recommendation is to keep the default time configuration and have the VM synchronize with the host.
 
-## Windows Application Requiring Accurate Time
-### Time Stamp API
+### Windows Application Requiring Accurate Time
+#### Time Stamp API
 Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemPreciseTimeAsFileTime API](https://msdn.microsoft.com/library/windows/desktop/Hh706895.aspx).  This assures your application gets System Time, which is conditioned by the Windows Time service.
 
-### UDP Performance
+#### UDP Performance
 If you have an application that uses UDP communication for transactions and it’s important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from port the base filtering engine.  This will improve both the latency and increase your throughput.  However, changes to the registry should be limited to experienced administrators.  Additionally, this work around excludes ports from being secured by the firewall.  See the article reference below for more information.
 
 For Windows 2012 and Windows 2008, you will need to install a Hotfix first.  You can reference this KB article: [Datagram loss when you run a multicast receiver application in Windows 8 and in Windows Server 2012](https://support.microsoft.com/en-gb/kb/2808584)
