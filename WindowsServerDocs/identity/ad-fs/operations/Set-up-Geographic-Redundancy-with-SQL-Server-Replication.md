@@ -104,27 +104,43 @@ You may need to create a domain account for the SQL agent. Use the steps in [Con
 ## Create subscription settings on the replica SQL Server  
 Make sure that you created the publisher settings on the initial SQL Server as described above and then complete the following procedure:  
   
-1.  On the replica SQL Server, from SQL Server Management studio, under **Replication**, right click **Local Subscriptions** and choose **New Subscription...**.  
+1.  On the replica SQL Server, from SQL Server Management studio, under **Replication**, right click **Local Subscriptions** and choose **New Subscription...**. 
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql24.png) </br>  
+
+2.  On the **New Subscription Wizard** page, click **Next**.
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql25.png) </br>   
   
-2.  On the **Publication** page, enter the hostname\\instancename of your publishing SQL server.  Enter connection credentials if necessary to select the **AdfsConfiguration** publication created above.  
+3.  On the **Publication** page, select the publisher from the drop-down.  Expand **AdfsConfigurationV3** and select the name of the publication created above and click **Next**.  
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql26.png) </br> 
   
-3.  On the **Merge Agent Location** page, select **Run each agent at its Subscriber \(pull subscriptions\)** \(the default\).  
+4.  On the **Merge Agent Location** page, select **Run each agent at its Subscriber \(pull subscriptions\)** \(the default\) and click **Next**.  
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql27.png) </br> This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](http://technet.microsoft.com/library/ms151191.aspx). </br>
+ 
+5.  On the **Subscribers** page, select **AdfsConfigurationV3** as the subscriber database and click **Next**.  
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql28.png) </br> 
   
-This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](http://technet.microsoft.com/library/ms151191.aspx).  
+6.  On the **Merge Agent Security** page, click **...** and enter the username and password of a domain account \(not a GMSA\) created for the SQL agent by using the ellipses box and and click **Next**.
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql30.png) </br> 
   
-4.  On the **Subscribers** page, enter **AdfsConfiguration** as the subscriber database.  
+7.  On **Synchronization Schedule**, choose **Run Continuously** and click **Next**. 
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql31.png) </br> 
+ 
+8.  On **Initialize Subscriptions**, click **Next**.  
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql32.png) </br> 
   
-5.  On the **Merge Agent Security** page, click **...** and enter the username\/password of a domain account \(not a GMSA\) created for the SQL agent.  Leave defaults for **Connect to the Publisher**, **Distributor**, and **Connect to the Subscriber**.  
-  
-6.  On **Synchronization Schedule**, choose **Run Continuously**.  
-  
-7.  On **Initialize Subscriptions**, click **Next** to select the default Immediately.  
-  
-8.  On **Subscription Type**, choose **Client** \(the default\).  
+9.  On **Subscription Type**, choose **Client** and click **Next**.  
   
     Implications of this are documented [here](http://technet.microsoft.com/library/ms151191.aspx) and [here](http://technet.microsoft.com/library/ms151170.aspx).  Essentially, we take the simple “first to publisher wins” conflict resolution and we do not need to republish to other subscribers.  
-  
-9. **Finish** the wizard, click **Close**.  
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql33.png) </br>
+   
+10. On the **Wizard Actions** page, ensure **Create the subscription** is checked and click **Next**. 
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql34.png) </br>
+
+11. On the **Complete the Wizard** page, click **Finish**. 
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql35.png) </br>
+
+12. Once the subscription has finished the creation process, you should see success. Click **Close**. 
+![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql36.png) </br>
   
 ## Verify the process of initialization and replication  
   
