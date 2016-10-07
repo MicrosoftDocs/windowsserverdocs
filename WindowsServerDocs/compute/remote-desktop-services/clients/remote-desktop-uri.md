@@ -4,13 +4,13 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Remote Desktop client Universal Resource Identifier (URI) scheme support
 

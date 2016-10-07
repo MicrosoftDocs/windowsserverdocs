@@ -15,7 +15,7 @@ manager: scottman
 ---
 # Deploy a two-node S2D SOFS for UPD storage in Azure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct (S2D) with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
 
@@ -59,7 +59,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       Note that this only works on a V1 VNet, while the rest of the deployment described below requires a V2 VNet. In order to allow communication between the cluster nodes and the domain controller, you will need to deploy [VNet peering](https://azure.microsoft.com/documentation/articles/virtual-network-peering-overview/) (you can also use a [quickstart template to deploy VNet peering](https://azure.microsoft.com/documentation/templates/201-vnet-to-vnet-peering/)).
 5. Set up the file server cluster nodes:
    1. Create the first node: 
-      1. Create a new virtual machine using the Windows Server 2016 Technical Preview 5 image. (Click **New > Virtual Machines > Windows Server 2016 Technical Preview 5.** Select **Resource Manager**, and then click **Create**.)
+      1. Create a new virtual machine using the Windows Server 2016 image. (Click **New > Virtual Machines > Windows Server 2016.** Select **Resource Manager**, and then click **Create**.)
       2. Set the basic configuration as follows:
          - Name: my-fsn1
          - VM disk type SSD

@@ -4,17 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Get started with Remote Desktop on iOS
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 Devices running iOS 6.x and newer are supported.
 
