@@ -49,7 +49,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 6.  On the **Installation progress** page, verify that the installation was successful, and then click **Close**.  
   
-![PowerShell](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Installation progress success](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -197,7 +197,7 @@ When the Remote Access configuration is complete, the **Remote Access Review** i
 5.  **Application Servers**: The DirectAccess remote management status is displayed, in addition to the status of the end-to-end authentication to specific application servers.  
   
 ## <a name="BKMK_PS"></a>2.8. How to configure the Remote Access server by using Windows PowerShell  
-![PowerShell](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![Windows PowerShell](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

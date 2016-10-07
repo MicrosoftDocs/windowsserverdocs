@@ -270,7 +270,7 @@ Domain controller association information is stored both in the registry of the 
   
     The resulting configuration is shown in the following diagram.  
   
-    ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc2.png)  
+    ![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc2.png)  
   
 2.  To replace the unavailable domain controller "DC1" with the domain controller "DC3", run the following command:  
   
@@ -280,7 +280,7 @@ Domain controller association information is stored both in the registry of the 
   
     This command updates the domain controller association for the "Entry point 1" server GPO in the registry of DA1 and in the "Entry point 1" and "Entry point 2" server GPOs. The resulting configuration is shown in the following diagram.  
   
-    ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc3.png)  
+    ![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc3.png)  
   
 3.  To synchronize the domain controller association for the "Entry point 2" server GPO in the "Entry point 1" server GPO, run the command to replace "DC2" with "DC3", and specify the Remote Access server whose server GPO is not synchronized, in this case "DA1", for the *ComputerName* parameter.  
   
@@ -290,7 +290,7 @@ Domain controller association information is stored both in the registry of the 
   
     The final configuration is shown in the following diagram.  
   
-    ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
+    ![Windows PowerShell](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
 When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "http://technet.microsoft.com/en-us/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  

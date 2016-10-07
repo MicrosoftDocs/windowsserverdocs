@@ -1,6 +1,6 @@
 ---
 title: Viewing and Managing Updates
-ms.custom: na
+description: "Windows Server Update Service"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -8,14 +8,15 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Viewing and Managing Updates
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 You can use the WSUS console to view and manage updates.
 
@@ -121,7 +122,7 @@ Updates are used for updating or providing a full file replacement for software 
 
 -   Update files: The actual files required to install an update on a computer.
 
-When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored either on your WSUS server or on Microsoft Update servers, depending on how you have configured your synchronization options. If you choose to store update files on Microsoft Update servers, only metadata is downloaded at the time of synchronization; you approve the updates through the WSUS console, and then client computers get the update files directly from Microsoft Update at the time of installation. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../deploy/Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.3.) of Step 1: Prepare for Your WSUS Deployment, in the WSUS deployment guide.
+When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored either on your WSUS server or on Microsoft Update servers, depending on how you have configured your synchronization options. If you choose to store update files on Microsoft Update servers, only metadata is downloaded at the time of synchronization; you approve the updates through the WSUS console, and then client computers get the update files directly from Microsoft Update at the time of installation. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/Plan-Your-WSUS-Deployment.md#BKMK_1.3.) of Step 1: Prepare for Your WSUS Deployment, in the WSUS deployment guide.
 
 You will be setting up and running synchronizations, adding computers and computer groups, and deploying updates on a regular basis. The following list gives examples of general tasks you might undertake in updating computers with WSUS.
 

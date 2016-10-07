@@ -76,7 +76,7 @@ The following sections contain additional information on each supported BGP topo
 ### <a name="bkmk_top1"></a>RAS VPN Site-to-Site Gateway with BGP at Enterprise site edge  
 This topology depicts an Enterprise site connected to a CSP. The Enterprise routing topology includes an internal router, a  Windows Server 2016 RAS Gateway configured for VPN site-to-site connections with the CSP, and an edge firewall device. The RAS Gateway terminates the S2S VPN and BGP connections.  
   
-![RAS VPN Site-to-Site Gateway with BGP at Enterprise site edge](../../media/Border-Gateway-Protocol--BGP-/bgp_01.jpg)  
+![RAS VPN Site-to-Site Gateway](../../media/Border-Gateway-Protocol--BGP-/bgp_01.jpg)  
   
 Both sites are connected using External Border Gateway Protocol (eBGP), which can transmit information between BGP-enabled routers in separate autonomous systems (AS). This requires that both the Enterprise and the CSP have distinct Autonomous System Numbers (ASN), which is a parameter that is integral to the BGP protocol.  
   

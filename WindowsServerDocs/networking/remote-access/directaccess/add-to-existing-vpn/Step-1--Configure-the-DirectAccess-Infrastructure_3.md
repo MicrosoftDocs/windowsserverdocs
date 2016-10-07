@@ -181,8 +181,8 @@ You must manually configure a DNS entry for the network location server website 
 4.  On the **New Host** dialog box, in the **Name (uses parent domain name if blank)** box, enter the DNS name for the web probe (the name for the default web probe is directaccess-webprobehost). In the **IP address** box, enter the IPv4 address of the web probe, and then click **Add Host**. Repeat this process for directaccess-corpconnectivityhost and any manually created connectivity verifiers. On the **DNS** dialog box, click **OK**.  
   
 5.  Click **Done**.  
-  
-![PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+
+![Windows PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -226,7 +226,7 @@ The Remote Access server and all DirectAccess client computers must be joined to
   
 9. On the **System Properties** dialog box, click Close. Click **Restart Now** when prompted.  
   
-![PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -270,7 +270,7 @@ The DirectAccess settings contained in the client computer Group Policy Object a
   
 6.  On the **Select Users, Contacts, Computers, or Service Accounts** dialog box, select the client computers that you want to enable for DirectAccess, and then click **OK**.  
   
-![PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
+![Windows PowerShell](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

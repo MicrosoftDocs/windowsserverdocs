@@ -1,5 +1,6 @@
 ---
 title: Setting up Update Synchronizations
+description: "Windows Server Update Services"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,14 +9,15 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Setting up Update Synchronizations
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 During synchronization, a WSUS server downloads updates (update metadata and files) from an update source. It also downloads new product classifications and categories, if any. When your WSUS server synchronizes for the first time, it will download all of the updates that you specified when you configured synchronization options. After the first synchronization, your WSUS server downloads only updates from the update source, as well as revisions in metadata for existing updates, and expirations to updates.
 
@@ -31,7 +33,7 @@ A WSUS server downloads updates based on the products or product families (for e
 
 You can specify update products and classifications on the **Options** page under **Products and Classifications**. Products are listed in a hierarchy, grouped by product family. If you select Windows, you automatically select every product that falls under that product hierarchy. By selecting the parent check box you select all items under it, as well as all future versions. Selecting the child check boxes will not select the parent check boxes. The default setting for products is all Windows products, and the default setting for classifications is critical and security updates.
 
-If a WSUS server is running in replica mode, you will not be able to perform this task. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md), and [Step 1: Prepare for Your WSUS Deployment](../deploy/Step-1--Prepare-for-Your-WSUS-Deployment.md).
+If a WSUS server is running in replica mode, you will not be able to perform this task. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md), and [Step 1: Prepare for Your WSUS Deployment](../plan/plan-Your-WSUS-Deployment.md).
 
 ##### To specify update products and classifications for synchronization
 
@@ -92,9 +94,9 @@ The update source is the location from which your WSUS server gets its updates a
 
 Options for customizing how your WSUS server synchronizes with the update source include the following:
 
--   You can specify a custom port for synchronization. For information about configuring ports, see [Step 3: Configure WSUS](../deploy/Step-3--Configure-WSUS.md) in the WSUS deployment guide.
+-   You can specify a custom port for synchronization. For information about configuring ports, see [Step 3: Configure WSUS](../deploy/2--Configure-WSUS.md) in the WSUS deployment guide.
 
--   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/Step-3--Configure-WSUS.md) in the WSUS deployment guide.
+-   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/2--Configure-WSUS.md) in the WSUS deployment guide.
 
 ## Synchronizing Manually or Automatically
 You can either synchronize your WSUS server manually or specify a time for it to synchronize automatically.
@@ -128,6 +130,3 @@ You can either synchronize your WSUS server manually or specify a time for it to
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
 -   [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md)
-
-
-
