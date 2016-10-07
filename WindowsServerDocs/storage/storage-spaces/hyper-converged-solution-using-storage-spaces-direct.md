@@ -60,7 +60,7 @@ The following information will be needed as inputs to configure provision and ma
 
 ## Installation options
 
-Hyper-converged deployments can be done using a Nano Server, Server Core, or Server with Desktop Experience installation of Windows Server 2016. Nano Server is a new install type for Windows Server 2016, see [Getting Started with Nano Server](../../get-started/Getting-Started-with-Nano-Server.md) for more information on the advantages of using Nano Server and deploying and managing Nano server.
+Hyper-converged deployments can be done using a Nano Server, Server Core, or Server with Desktop Experience installation of Windows Server 2016. Nano Server is a new installation option for Windows Server 2016, see [Getting Started with Nano Server](../../get-started/Getting-Started-with-Nano-Server.md) for more information on the advantages of using Nano Server and deploying and managing Nano server.
 
 This guide focuses on deploying hyper-converged systems using the Server Core installation option.
 
@@ -81,8 +81,8 @@ For the purposes of this document, the machine that has the management tools to 
 
 When you install Windows Server 2016 using the Setup wizard, you may be able to choose between Windows Server 2016 and Windows Server 2016 (Server with Desktop Experience). The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you don't make a choice in the Setup wizard, Windows Server 2016 is installed with the Server Core installation option. The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option.
 
-For more information about these two installation options, see [Installation Options for Windows Server 2016](../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md).
-For detailed information about deploying Windows Server 2016 in Server Core mode, see [Configure and Manage Server Core Installations](../../get-started/Getting-Started-with-Server-Core.md).
+For more information about these two installation options, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
+For detailed information about deploying Windows Server 2016 in Server Core mode, see [Install Server Core](../../get-started/Getting-Started-with-Server-Core.md).
 
 ### Step 1.1: Connecting to the cluster nodes
 
