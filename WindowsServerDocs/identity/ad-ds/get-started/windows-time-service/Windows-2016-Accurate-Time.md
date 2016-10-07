@@ -142,7 +142,7 @@ W32tm is built-in, but the other tools we used during our testing are available 
 The test results shown below are a subset of measurements we made in one of the test environments.  They illustrate the accuracy maintained at the start of the time hierarchy, and child domain client at the end of the time hierarchy.  This is compared to the same machines in a 2012 based topology for comparison.
 
 ### Topology
-For comparison, We tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows guests, which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
+For comparison, we tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows guests, which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
 
 ![](media/Windows-2016-Accurate-Time/topology1.png)
 
