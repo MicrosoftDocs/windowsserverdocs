@@ -53,7 +53,7 @@ Install and configure a SQL server farm. For more information, see [http://techn
 1.  From the SQL Server Management studio, under **Replication**, right click **Local Publications** and choose **New Publication...**
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql7.png) </br>  
 
-2.  On the New Publication Wizard screen click **Next**.
+2.  On the New Publication Wizard screen click **Next**.</br>
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql8.png) </br> 
   
 3.  On **Distributor** page, choose local server as distributor and click **Next**.  
@@ -71,7 +71,7 @@ Install and configure a SQL server farm. For more information, see [http://techn
 7.  On **Subscriber Types**, choose **SQL Server 2008 or later** and click **Next**.  
  ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql13.png) </br> 
 
-8.  On the **Articles** page select **Tables** node to select all tables, then **un\-check SyncProperties** table \(this one should not be replicated\)
+8.  On the **Articles** page select **Tables** node to select all tables, then **un\-check SyncProperties** table \(this one should not be replicated\)</br>
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql14.png) </br>    
   
 9.  On the **Articles** page, select **User Defined Functions** node to select all User Defined Functions and click **Next**..  
