@@ -19,7 +19,7 @@ ms.technology: identity-adfs
 To add the home link that is displayed on the sign\-in page, use the following Windows PowerShell cmdlet and syntax. 
 
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
+![add home link](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
   
 
 `Set-AdfsGlobalWebContent -HomeLink https://fs1.contoso.com/home/ -HomeLinkText Home ` 

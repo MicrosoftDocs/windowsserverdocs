@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: c28c60ff-693d-49ee-a75b-58f24866217b
 title: Name Resolution Requirements for Federation Server Proxies
 description:
@@ -31,7 +31,7 @@ In this scenario, your organization has one or two DNS zones in the perimeter ne
   
 The following illustration and corresponding steps show how each of these conditions is achieved for a given example. In this illustration, Microsoft Network Load Balancing \(NLB\) technology provides a single, cluster FQDN and a single, cluster IP address for an existing federation server farm.  
   
-![](media/adfs2_deploy_single_fs.gif)  
+![name requirements](media/adfs2_deploy_single_fs.gif)  
   
 For more information about configuring a cluster IP address or a cluster FQDN using NLB, see [Specifying the Cluster Parameters](http://go.microsoft.com/fwlink/?LinkId=75282).  
   
@@ -52,7 +52,7 @@ In this scenario, your organization controls the DNS zone in the perimeter netwo
   
 The following illustration and corresponding steps show how each of these conditions is achieved for a given example.  
   
-![](media/adfs2_deploy_fsp_3DNS.gif)  
+![name requirements](media/adfs2_deploy_fsp_3DNS.gif)  
   
 ### 1. Configure perimeter DNS  
 For this scenario, because it is assumed that you will configure the Internet DNS zone that you control to resolve requests that are made for a specific endpoint URL \(that is, fs.fabrikam.com\) to the federation server proxy in the perimeter network, you must also configure the zone in the perimeter DNS to forward these requests to the federation server in the corporate network.  

@@ -25,7 +25,7 @@ You can customize the update password page by providing your own description for
 >   
 > To enable the password update page, go to AD FS Management under Endpoints. The endpoint for update password is located at the bottom under Other - /adfs/portal/updatepassword/. Once you have enabled the endpoint, you must restart the AD FS service. This must be done manually. You can then navigate to https://<fqdn>/adfs/portal/updatepassword/ on a workplace joined device and you should see the update password page.  
   
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
+![update](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
   
 ## Customize the Update Password page description  
 To customize the update password page description, use the following Windows PowerShell cmdlet and syntax.  

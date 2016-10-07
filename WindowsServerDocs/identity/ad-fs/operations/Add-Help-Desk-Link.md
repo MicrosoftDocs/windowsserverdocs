@@ -20,7 +20,7 @@ ms.technology: identity-adfs
 ## To Add a Help Desk Link  
 To add the help desk link that is displayed on the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax.  
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
+![add help desk](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   
 
 `Set-AdfsGlobalWebContent -HelpDeskLink https://fs1.contoso.com/help/ -HelpDeskLinkText Help`  

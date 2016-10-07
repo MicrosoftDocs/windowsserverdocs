@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 38eb3726-e97b-484e-9926-67e8a046b0c5
 title: Create a Rule to Send Claims Using a Custom Rule
 description:
@@ -29,19 +29,19 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Claims Using a Custom Rule** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom3.PNG)   
+![create rule](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom3.PNG)   
   
 6.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule. Under **Custom rule**, type or paste the claim rule language syntax that you want for this rule.  
-![](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom4.PNG)     
+![create rule](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom4.PNG)     
 
 7.  Click **Finish**.  
   
@@ -52,19 +52,19 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Claims Using a Custom Rule** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom3.PNG)   
+![create rule](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom3.PNG)   
   
 6.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule. Under **Custom rule**, type or paste the claim rule language syntax that you want for this rule.  
-![](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom4.PNG)     
+![create rule](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom4.PNG)     
 
 7.  Click **Finish**.  
   
@@ -95,7 +95,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
   
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, which depends on the trust that you are editing and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
@@ -106,13 +106,13 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
   
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Claims Using a Custom Rule** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom1.PNG)   
+![create rule](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom1.PNG)   
   
 6.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule. Under **Custom rule**, type or paste the claim rule language syntax that you want for this rule.  
-![](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom2.PNG)     
+![create rule](media/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule/custom2.PNG)     
 
 7.  Click **Finish**.  
   

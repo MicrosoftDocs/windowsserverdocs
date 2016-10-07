@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 28043fc4-a34d-4710-ac3b-5c9d4d6a895c
 title: Change the  company name on the AD FS sign-in page
 description:
@@ -17,7 +17,7 @@ ms.technology: identity-adfs
  
 To change the name of the company that is displayed on the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax. This value is set by default by using the value from the Federation Service display name that you entered during setup.  
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png)
+![change name](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png)
   
   
     Set-AdfsGlobalWebContent –CompanyName "Contoso Corp"  

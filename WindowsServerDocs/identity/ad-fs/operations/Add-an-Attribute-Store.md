@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Add an Attribute Store
 description:
@@ -28,7 +28,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 2.  Under **Actions** click **Add an attribute store**.  
 
-![](media/Add-an-Attribute-Store/addstore1.PNG)
+![add attribute store](media/Add-an-Attribute-Store/addstore1.PNG)
   
 3.  In the **Add an attribute store** dialog box, configure the following properties for the attribute store that you want to add:  
   
@@ -41,7 +41,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
         > [!NOTE]  
         > AD FS automatically creates an Active Directory attribute store, by default.  
  
-![](media/Add-an-Attribute-Store/addstore2.PNG) 
+![add attribute store](media/Add-an-Attribute-Store/addstore2.PNG) 
 
 4.  Click **OK**.  
   

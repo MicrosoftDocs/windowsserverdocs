@@ -50,7 +50,7 @@ This sections covers:
   
 The troubleshooting strategy for virtualized domain controller cloning follows this general format:  
   
-![](media/Virtualized-Domain-Controller-Troubleshooting/ADDS_VDC_TroublehsootingFlowchart.png)  
+![virtual dc troubleshooting](media/Virtualized-Domain-Controller-Troubleshooting/ADDS_VDC_TroublehsootingFlowchart.png)  
   
 ### <a name="BKMK_Tools"></a>Tools for Troubleshooting  
   
