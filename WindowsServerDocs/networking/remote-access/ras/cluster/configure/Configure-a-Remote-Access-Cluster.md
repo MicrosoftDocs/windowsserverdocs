@@ -20,11 +20,11 @@ author: coreyp-at-msft
   
 -  Step 1: [Deploy a Single DirectAccess Server with Advanced Settings](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).  
   
--   [Step 2: Prepare cluster servers](configure/Step-2--Prepare-Cluster-Servers.md).  
+-   [Step 2: Prepare cluster servers](Step-2--Prepare-Cluster-Servers.md).  
   
--   [Step 3: Configure a load-balanced cluster](configure/Step-3--Configure-a-Load-Balanced-Cluster.md).  
+-   [Step 3: Configure a load-balanced cluster](Step-3--Configure-a-Load-Balanced-Cluster.md).  
   
--   [Step 4: Verify the cluster](configure/Step-4--Verify-the-Cluster.md).  
+-   [Step 4: Verify the cluster](Step-4--Verify-the-Cluster.md).  
   
 
 
