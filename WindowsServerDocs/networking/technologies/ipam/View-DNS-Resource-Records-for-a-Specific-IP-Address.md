@@ -26,11 +26,11 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 2.  In the navigation pane, in **IP ADDRESS SPACE**, click **IP Address Inventory**. In the lower navigation pane, click either **IPv4** or **IPv6**. The IP address inventory appears in the display pane search view. Locate and select the IP address whose DNS resource records you want to view.  
   
-    ![IP Address Inventory](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_01.jpg)  
+    ![View IP address inventory](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_01.jpg)  
   
 3.  In the display pane **Details View**, click **DNS resource records**. The resource records that are associated with the selected IP address are displayed.  
   
-    ![DNS resource records](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_02.jpg)  
+    ![View DNS resource records](../../media/View-DNS-Resource-Records-for-a-Specific-IP-Address/ipam_IPInventory_02.jpg)  
   
 ## See Also  
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  

@@ -16,12 +16,12 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2012 R2
 
-This topic demonstrates Workplace Join on an iOS device. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough. You can use the device to access the same company web application that you accessed in [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md).
+This topic demonstrates Workplace Join on an iOS device. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough. You can use the device to access the same company web application that you accessed in [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md).
 
 ## Join an iOS device with Workplace Join
 
 > [!IMPORTANT]
-> When on-premises DRS is configured, the iOS device must trust the Secure Socket Layer (SSL) certificate that was used to configure Active Directory Federation Services (AD FS) in [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4), for Workplace Join to succeed.
+> When on-premises DRS is configured, the iOS device must trust the Secure Socket Layer (SSL) certificate that was used to configure Active Directory Federation Services (AD FS) in [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4), for Workplace Join to succeed.
 > 
 > -   If the AD FS SSL certificate was issued from a test certification authority (CA), you must install the certification authority certificate on your iOS device.
 > -   If your certification authority certificate is published on a website, you can browse to the website from your iOS device and install the certificate.
@@ -55,9 +55,11 @@ In this demonstration, you join the device to the workplace.
 > To view or remove the Workplace Join profile, browse to **Settings**, click **General**, and then click **Profiles** on your iOS device.
 
 ## See Also
-[Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
-[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
-[Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+
+
+- [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+- [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+- [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 
 

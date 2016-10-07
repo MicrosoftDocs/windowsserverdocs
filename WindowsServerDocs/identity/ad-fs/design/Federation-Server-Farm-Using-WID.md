@@ -55,11 +55,11 @@ This section describes various considerations about the intended audience, benef
   
 The following table provides a summary for using a WID farm.  Use it to plan your implementation.  
   
-||||  
+ 
 |-|-|-|  
-||1 \- 100 RP Trusts|More than 100 RP Trusts|  
-|1 \- 30 AD FS Nodes|WID Supported|Not supported using WID \- SQL Required|  
-|More than 30 AD FS Nodes|Not supported using WID \- SQL Required|Not supported using WID \- SQL Required|  
+||1 \- 100 RP Trusts|More than 100 RP Trusts 
+|1 \- 30 AD FS Nodes|WID Supported|Not supported using WID \- SQL Required 
+|More than 30 AD FS Nodes|Not supported using WID \- SQL Required|Not supported using WID \- SQL Required  
   
 ## Server placement and network layout recommendations  
 When you are ready to start deploying this topology in your network, you should plan on placing all of the federation servers in your corporate network behind a Network Load Balancing \(NLB\) host that can be configured for an NLB cluster with a dedicated cluster Domain Name System \(DNS\) name and cluster IP address.  

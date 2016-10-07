@@ -4,18 +4,12 @@ title: Create a Rule to Transform an Incoming Claim
 description:
 author: billmath
 ms.author: billmath
-ms.author: billmath
-ms.author: billmath
 manager: femila
 ms.date: 08/26/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adfs
-ms.author: billmath
-ms.author: billmath
-ms.author: billmath
-ms.author: billmath
 ---
 
 # Create a Rule to Send an AD FS 1.x Compatible Claim

@@ -17,9 +17,9 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2012 R2
 
 
--   [Key concepts-conditional access control in AD FS](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
+-   [Key concepts-conditional access control in AD FS](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Managing Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
+-   [Managing Risk with Conditional Access Control](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
 ## <a name="BKMK_1"></a>Key concepts - conditional access control in AD FS
 The overall function of AD FS is to issue an access token that contains a set of claims. The decision regarding what claims AD FS accepts and then issues is governed by claim rules.
@@ -34,7 +34,7 @@ Access control in AD FS is implemented with issuance authorization claim rules t
 
 For more information about these rule options and logic, see [When to Use an Authorization Claim Rule](https://technet.microsoft.com/library/ee913560.aspx).
 
-In AD FS in Windows Server 2012 R2, access control is enhanced with multiple factors, including user, device, location, and authentication data. This is made possible by a greater variety of claim types available for the authorization claim rules.  In other words, in AD FS in Windows Server 2012 R2, you can enforce conditional access control based on user identity or group membership, network location, device (whether it is workplace joined, for more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)), and the authentication state (whether multifactor authentication (MFA) was performed ).
+In AD FS in Windows Server 2012 R2, access control is enhanced with multiple factors, including user, device, location, and authentication data. This is made possible by a greater variety of claim types available for the authorization claim rules.  In other words, in AD FS in Windows Server 2012 R2, you can enforce conditional access control based on user identity or group membership, network location, device (whether it is workplace joined, for more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)), and the authentication state (whether multifactor authentication (MFA) was performed ).
 
 Conditional access control in AD FS in Windows Server 2012 R2, offers the following benefits:
 
@@ -46,7 +46,7 @@ Conditional access control in AD FS in Windows Server 2012 R2, offers the follow
 
 -   Rich claims language & Windows PowerShell support for advanced conditional access control scenarios
 
--   Custom (per relying party application) 'Access Denied' messages. For more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx). By being able to customize these messages, you can explain why a user is being denied access and also facilitate self-service remediation where it is possible, for example, prompt users to workplace join their devices. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+-   Custom (per relying party application) 'Access Denied' messages. For more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx). By being able to customize these messages, you can explain why a user is being denied access and also facilitate self-service remediation where it is possible, for example, prompt users to workplace join their devices. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 The following table includes all the claim types available in AD FS in Windows Server 2012 R2 to be used for implementing conditional access control.
 
@@ -119,7 +119,7 @@ The following table includes all the claim types available in AD FS in Windows S
 Using the available settings, there are many ways in which you can manage risk by implementing conditional access control.
 
 ### Common Scenarios
-For example, imagine a simple scenario of implementing conditional access control based on the user's group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+For example, imagine a simple scenario of implementing conditional access control based on the user's group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 ### Advanced Scenarios
 Other examples of implementing conditional access control in AD FS in Windows Server 2012 R2 include the following:
@@ -171,7 +171,7 @@ Other examples of implementing conditional access control in AD FS in Windows Se
     ```
 
 ## See Also
-[Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+[Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 

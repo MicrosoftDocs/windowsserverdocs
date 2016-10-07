@@ -50,9 +50,9 @@ As part of this solution, you learn how to use Workplace Join on a supported dev
 
 This solution guides takes you through the following walkthrough steps:
 
-1.  [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+1.  [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
-2.  [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+2.  [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
 ## See Also
 [Configure a federation server with Device Registration Service](assetId:///007016d9-b1c9-4ee1-a30f-13865f784c80)

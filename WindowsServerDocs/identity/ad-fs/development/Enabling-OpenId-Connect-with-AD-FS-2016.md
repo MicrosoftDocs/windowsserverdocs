@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Enabling OpenId Connect with AD FS 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 2016 introduces support for using the OpenId  Connect sign-on.  
   

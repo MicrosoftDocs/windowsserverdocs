@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 ---
 # AD FS 2016 Single Sign On Settings
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This article describes the default AD FS behavior for how often users have to provide credentials before being prompted again, as well as the configuration settings that allow you to customize this behavior.  
   

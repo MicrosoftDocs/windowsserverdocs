@@ -32,7 +32,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 4.  The **Create DNS Zone** dialog box opens. In **General Properties**, select a zone category, a zone type , and enter a name in **Zone name**. Also select values appropriate for your deployment in **Advanced Properties**, and then click **OK**.  
   
-    ![Configure the new zone](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_02a.jpg)  
+    ![Advanced Properties](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_02a.jpg)  
   
 ## See Also  
 [DNS Zone Management](DNS-Zone-Management.md)  

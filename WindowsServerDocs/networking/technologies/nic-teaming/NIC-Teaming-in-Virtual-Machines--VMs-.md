@@ -34,7 +34,7 @@ Configuring NIC Teaming in a VM with two virtual network adapters that are conne
 ## <a name="bkmk_sriov"></a>NIC Teaming with SR-IOV-Capable Network Adapters  
 This failover protection is particularly important when working with Single Root I/O Virtualization (SR-IOV), because SR-IOV traffic doesn't go through the Hyper-V Virtual Switch and cannot be protected by a NIC team in or under the Hyper-V host. With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
   
-![](../../media/NIC-Teaming-in-Virtual-Machines--VMs-/nict_in_vm.jpg)  
+![NIC Teaming with SR-IOV-Capable Network Adapters](../../media/NIC-Teaming-in-Virtual-Machines--VMs-/nict_in_vm.jpg)  
   
 Each VM can have a virtual function (VF) from one or both SR-IOV NICs and, in the event of a NIC disconnect, failover from the primary VF to the back-up adapter (VF). Alternately, the VM may have a VF from one NIC and a non-VF vmNIC connected to another virtual switch. If the NIC associated with the VF gets disconnected, the traffic can failover to the other switch without loss of connectivity.  
   
