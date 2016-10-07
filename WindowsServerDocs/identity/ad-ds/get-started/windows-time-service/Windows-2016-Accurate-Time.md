@@ -36,7 +36,7 @@ The Windows Time service is a component which uses a plug-in model for client an
 Domain and Standalone configurations work differently.
 
 
-- Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the “Specify a Local Reliable Time Service Using GTIMESERV section below.
+- Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the [Specify a Local Reliable Time Service Using GTIMESERV](#GTIMESERV) section below.
 
 - Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point back to a Microsoft time reference service resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
 
@@ -215,7 +215,7 @@ To synchronize exclusively over NTP, it is recommended to disable the TimeSync i
 > [!NOTE]
 > Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet.
 
-### Specify a Local Reliable Time Service Using GTIMESERV
+### <a name="GTIMESERV"></a>Specify a Local Reliable Time Service Using GTIMESERV
 You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the solid source clock.
 
 > [!NOTE]
