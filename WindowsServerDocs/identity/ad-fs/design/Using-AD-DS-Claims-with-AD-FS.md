@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 460792e4-9f1d-4e7b-b6b2-53e057f839df
 title: AD FS Deployment Topology Considerations
 description:
@@ -57,7 +57,7 @@ There are two differentiating factors that are important to understand about cla
 ## How AD DS Issued Claims Work with AD FS  
 AD DS issued claims can be used with AD FS to access both user and device claims directly from the user’s authentication context, rather than making a separate LDAP call to Active Directory. The following illustration and corresponding steps discusses how this process works in more detail to enable claims\-based access control for the Dynamic Access Control scenario.  
   
-![](media/UsingADDSClaimswithADFS.gif)  
+![using claims](media/UsingADDSClaimswithADFS.gif)  
   
 1.  An AD DS administrator uses the Active Directory Administrative Center console or PowerShell cmdlets to enables specific claim type objects in the AD DS schema.  
   

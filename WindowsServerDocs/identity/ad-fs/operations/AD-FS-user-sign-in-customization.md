@@ -19,7 +19,7 @@ AD FS provides a number of options for administrators to customize and tailor th
 
 
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
+![AD FS customization](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
     
   
 

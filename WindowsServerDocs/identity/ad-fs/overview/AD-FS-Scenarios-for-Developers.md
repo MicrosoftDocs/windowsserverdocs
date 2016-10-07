@@ -44,7 +44,7 @@ In AD FS scenarios of course, it is AD FS and not Azure AD that serves as the id
   
 The most basic scenario consists of a user or "resource owner", interacting with a browser to access a web application:  
   
-![](media/ADFS_DEV_1.png)  
+![AD FS for developers](media/ADFS_DEV_1.png)  
   
 The web application is called a "client" because it initiates the request to the authorization server (AD FS) for an access token to the resource.  The resource may be hosted by the web app itself or may be accessible as a web API somewhere on the network or internet.   The user or "resource owner" authorizes the client web app to receive that access token by providing credentials to the authorization server.    
   
@@ -55,7 +55,7 @@ OAuth 2.0 and OpenID Connect scenarios in AD FS make use of the same set of tool
   
 The roles of these components are shown in the diagram below:  
   
-![](media/ADFS_DEV_2.png)  
+![AD FS for developers](media/ADFS_DEV_2.png)  
   
 ## Modeling these scenarios in AD FS 2016  
   

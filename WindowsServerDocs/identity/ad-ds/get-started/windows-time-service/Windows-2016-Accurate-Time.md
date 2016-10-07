@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows 2016 Accurate Time
 description:
@@ -105,7 +105,7 @@ The last 3 counters cover NTP server scenarios and are helpful when determine th
 ### Configuration Updates per Environment
 In this section shows the changes in default configuration based on various environments between Windows 2016 and previous versions.  
 
-![](media/Windows-2016-Accurate-Time/table1.png)
+![Windows Time](media/Windows-2016-Accurate-Time/table1.png)
 
 >[!NOTE]
 >For Linux in Hyper-V, see the [Allowing Linux to use Hyper-V Host Time](#AllowingLinux) section below.
@@ -144,30 +144,30 @@ The test results shown below are a subset of measurements we made in one of the 
 ### Topology
 We tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows machines which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
 
-![](media/Windows-2016-Accurate-Time/topology1.png)
+![Windows Time](media/Windows-2016-Accurate-Time/topology1.png)
 
-![](media/Windows-2016-Accurate-Time/topology2.png)
+![Windows Time](media/Windows-2016-Accurate-Time/topology2.png)
 
 ### Graphical Results Overview
 The following two graphs represent the time accuracy for two specific members in a domain based on the topology above.  Each graph displays both the Windows Server 2012R2 and 2016 results overlaid, which demonstrates the improvements visually.  The accuracy was measure from with-in the guest machine compared to the host.  The graphical data represents a subset of the entire set of tests we’ve done and shows the best case and worst case scenarios.  
 
-![](media/Windows-2016-Accurate-Time/topology3.png)
+![Windows Time](media/Windows-2016-Accurate-Time/topology3.png)
 
 ### Performance of the Root Domain PDC
 The Root PDC is synchronized to the Hyper-V host (using VMIC) which is a Windows Server 2016 with GPS hardware that is proven to be both accurate and stable.  This is a critical requirement for 1 ms accuracy, which is shown as the green shaded area.
 
-![](media/Windows-2016-Accurate-Time/chart1.png)
+![Windows Time](media/Windows-2016-Accurate-Time/chart1.png)
 
 ### Performance of the Child Domain Client
 The Child Domain Client is attached to a Child Domain PDC which communicates to the Root PDC.  It time is also within the 1 ms requirement.
 
-![](media/Windows-2016-Accurate-Time/chart2.png)
+![Windows Time](media/Windows-2016-Accurate-Time/chart2.png)
 
 
 ### Long Distance Test
 The following chart compares 1 virtual network hop to 6 physical network hops with Windows Server 2016.  Two charts are overlaid on each other with transparency to show overlapping data.  Increasing network hops mean higher latency, and larger time deviations.  The chart is magnified and so the 1 ms bounds, represented by the green area, is larger.  As you can see, the time is still within 1 ms with multiple hops.  It’s negatively shifted, which demonstrates a network asymmetry.  Of course, every network is different, and measurements depend on a multitude of environmental factors.
 
-![](media/Windows-2016-Accurate-Time/chart3.png)
+![Windows Time](media/Windows-2016-Accurate-Time/chart3.png)
 
 ## Best Practices for accurate timekeeping
 ### Solid Source Clock

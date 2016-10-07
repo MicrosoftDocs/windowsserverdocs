@@ -30,11 +30,11 @@ By default, AD FS in Windows Server 2016 has basic auditing enabled.  With basic
   
 To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.  
   
-![](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)  
+![audit enhancements](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)  
   
 The auditing level can be raised or lowered using the PowerShell cmdlt:  Set-AdfsProperties -AuditLevel.  
   
-![](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)  
+![audit enhancements](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)  
   
 ## Types of Audit Events  
 AD FS Audit Events can be of different types, based on the different types of requests processed by AD FS. Each type of Audit Event has specific data associated with it.  The type of audit events can be differentiated between login requests (i.e. token requests) versus system requests (server-server calls including fetching configuration information).    

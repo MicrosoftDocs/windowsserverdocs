@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: Federation Server Farm Using SQL Server
 description:
@@ -61,7 +61,7 @@ Similar to the federation server farm with WID topology, all of the federation s
   
 The following illustration shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network. It also shows how that company configured the perimeter network with access to a DNS server, an additional NLB host that uses the same cluster DNS name \(fs.contoso.com\) that is used on the corporate network NLB cluster, and with two web application proxies \(wap1 and wap2\).  
   
-![](media/SQLFarmADFSBlue.gif)  
+![server farm using SQL](media/SQLFarmADFSBlue.gif)  
   
 For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
   
@@ -101,7 +101,7 @@ From the perspective of the nodes of an AD FS SQL Server farm, the AlwaysOn Avai
   
 The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability group.  
   
-![](media/alwaysonavailabilitygroups.jpg)  
+![server farm using SQL](media/alwaysonavailabilitygroups.jpg)  
   
 > [!NOTE]  
 > AlwaysOn Availability groups require that the SQL Server instances reside on Windows Server Failover Clustering \(WSFC\) nodes.  
@@ -147,7 +147,7 @@ Also introduced in SQL Server 2012, merge replication allows for AD FS policy da
   
 The following diagram shows a geographically redundant AD FS SQL Server farms with merge replication \(1 publisher, 2 subscribers\):  
   
-![](media/ADFSSQLGeoRedundancy3.png)  
+![server farm using SQL](media/ADFSSQLGeoRedundancy3.png)  
   
 **Key Deployment Considerations for using AD FS with SQL Server Merge Replication \(note numbers in the diagram above\)**  
   

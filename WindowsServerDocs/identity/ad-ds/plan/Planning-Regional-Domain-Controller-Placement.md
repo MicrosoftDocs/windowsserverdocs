@@ -34,7 +34,7 @@ In locations with inadequate physical security, deploying a read-only domain con
   
 To authenticate client logons and access to local file servers, most organizations place regional domain controllers for all regional domains that are represented in a given location. However, you must consider many variables when evaluating whether a business location requires its clients to have local authentication or the clients can rely on authentication and query over a wide area network (WAN) link. The following illustration shows how to determine whether to place domain controllers at satellite locations.  
   
-![](media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
+![plan regional dc placement](media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
   
 ## Onsite technical expertise availability  
 Domain controllers need to be managed continuously for various reasons. Place a regional domain controller only in locations that include personnel who can administer the domain controller, or be sure that the domain controller can be managed remotely.  

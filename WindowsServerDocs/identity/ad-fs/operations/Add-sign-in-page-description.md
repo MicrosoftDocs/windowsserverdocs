@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 ## To Add sign\-in page description  
 To add a sign\-in page description to the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax.  
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
+![add sign in description](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
 
     Set-AdfsGlobalWebContent -SignInPageDescriptionText "<p>Sign-in to Contoso requires device registration. Click <A href='http://fs1.contoso.com/deviceregistration/'>here</A> for more information.</p>" 
  
