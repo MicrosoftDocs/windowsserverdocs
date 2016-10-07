@@ -77,7 +77,7 @@ There are many different reasons you might need accurate time.  The typical case
 Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.  NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response.  However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency.  Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock.  Additionally, the source we use for accurate time references an improved API which gives us better resolution.  With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
 
 ### Hyper-V
-Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which describe the variance), of 50µs, even on a machine with %75 load.
+Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with %75 load.
 
 > [!NOTE]
 > See this article on [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx) for more information.
@@ -85,7 +85,7 @@ Windows 2016 has improved the Hyper-V TimeSync service. Improvements include mor
 > [!NOTE]
 > Load was created using prime95 benchmark using balanced profile.
 
-Additionally, the stratum level that the Host reports to the guest is more transparent.  Previously the Host would present a fixed stratum of 2, regardless of its accuracy.  With the changes in Windows Server 2016, the host reports and stratum one greater than the host stratum, which results in better time for guest virtual machines.  The host stratum is determined by w32time through normal means based on its source time.  Domain joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host.  It was for this reason that we advised to manually disable Hyper-V Time Provider setting for machines participating in a domain in Windows 2012R2 and below.
+Additionally, the stratum level that the Host reports to the guest is more transparent.  Previously the Host would present a fixed stratum of 2, regardless of its accuracy.  With the changes in Windows Server 2016, the host reports and stratum one greater than the host stratum, which results in better time for virtual guests.  The host stratum is determined by w32time through normal means based on its source time.  Domain joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host.  It was for this reason that we advised to manually disable Hyper-V Time Provider setting for machines participating in a domain in Windows 2012R2 and below.
 
 ### Monitoring
 Performance monitor counters have been added.  These allow you to baseline, monitor, and troubleshoot time accuracy.  These counters include:
