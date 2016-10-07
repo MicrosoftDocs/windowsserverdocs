@@ -19,9 +19,5 @@ This document contains a list of all of the documentation for deploying AD FS fo
   
   
   
-* [Upgrading to AD FS in Windows Server 2016](../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
+* [AD FS Deployment Guide](../ad-fs/deployment/AD-FS-Deployment-Guide.md)  
 
-* [Windows Server 2012 R2 Deployment Guide](../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
-
-* [Windows Server 2012 Deployment Guide](../ad-fs/deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md)
-  
