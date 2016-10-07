@@ -202,11 +202,11 @@ To disable the Hyper-V TimeSync service from providing samples to w32time, set t
 
 ### <a name="AllowingLinux"></a>Allowing Linux to use Hyper-V Host Time
 For Linux guests running in Hyper-V, clients are typically configured to use the NTP daemon for time synchronization against NTP servers.  If the Linux distribution supports the TimeSync version 4 protocol and the Linux guest has the TimeSync integration service enabled, then it will synchronize against the host time. This could lead to inconsistent time keeping if both methods are enabled.
+
 To synchronize exclusively against the host time, it is recommended to disable NTP time synchronization by either:
 
-
-1. Disabling any NTP servers in the ntp.conf file
-2. Disabling the NTP daemon
+- Disabling any NTP servers in the ntp.conf file
+- or Disabling the NTP daemon
 
 In this configuration, the Time Server parameter is this host.  Its Polling Frequency is 5 seconds and the Clock Update Frequency is also 5 seconds.
 
@@ -216,7 +216,7 @@ To synchronize exclusively over NTP, it is recommended to disable the TimeSync i
 > Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet.
 
 ### <a name="GTIMESERV"></a>Specify a Local Reliable Time Service Using GTIMESERV
-You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the solid source clock.
+You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the GPS hardware.
 
 > [!NOTE]
 > More information about domain flags can be found in the [MS-ADTS protocol documentation](https://msdn.microsoft.com/library/mt226583.aspx).
@@ -237,6 +237,7 @@ Start by disabling the NTP Client and enable the NTP Server using these registry
 	reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpClient /v Enabled /t REG_DWORD /d 0 /f
 
 	reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpServer /v Enabled /t REG_DWORD /d 1 /f
+
 Next, restart the Windows Time Service
 
 	net stop w32time && net start w32time
