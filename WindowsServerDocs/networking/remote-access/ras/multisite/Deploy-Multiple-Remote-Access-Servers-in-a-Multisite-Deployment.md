@@ -34,7 +34,7 @@ Support for clients running Windows 7 must be manually enabled on each entry poi
 ## Prerequisites  
 Before you begin deploying this scenario, review this list for important requirements:  
   
--   [Deploy a single DirectAccess server with advanced settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before a multisite deployment.  
+-   [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before a multisite deployment.  
   
 -   Windows 7 clients will always connect to a specific site. They will not be able to connect to the closest site based on location of the client (unlike Windows 10, 8, or 8.1 clients).  
   
