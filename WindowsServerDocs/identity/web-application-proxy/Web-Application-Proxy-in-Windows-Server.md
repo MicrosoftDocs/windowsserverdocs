@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
-title: Web Application Proxy in Windows Server Technical Preview
+title: Web Application Proxy in Windows Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: kgremban
 ---
-# Web Application Proxy in Windows Server Technical Preview
+# Web Application Proxy in Windows Server
 
 >Applies To: Windows Server 2016
 
