@@ -13,7 +13,9 @@ ms.technology: identity-adfs
 ---
 
 
-# Configure On-Premises Conditional Access using registered devices (TP5)  
+# Configure On-Premises Conditional Access using registered devices
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2  
 
 The following document will guide you through installing and configuring on-premises conditional access with registered devices.
 

@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/30/2016
+ms.date: 10/06/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
@@ -408,7 +408,7 @@ Specifying an administrator password or computer name in this unattend file will
 [comment]: # (From Xumin Sun, bug #68620.)  
 
 ### Windows Server App installer
-Windows Server App (WSA) installer provides a reliable installation option for Nano Server. Since Windows Installer (MSI) is not supported on Nano Server, WSA also the only installation technology available for non-Microsoft products. WSA leverages Windows app package technology designed to install and service applications safely and reliably, using a declarative manifest. It extends the Windows app package installer to support Windows Server-specific extensions, with the limitation that WSA does not support installing drivers.
+Windows Server App (WSA) installer provides a reliable installation option for Nano Server. Since Windows Installer (MSI) is not supported on Nano Server, WSA is also the only installation technology available for non-Microsoft products. WSA leverages Windows app package technology designed to install and service applications safely and reliably, using a declarative manifest. It extends the Windows app package installer to support Windows Server-specific extensions, with the limitation that WSA does not support installing drivers.
 
 Creating and installing a WSA package on Nano Server involves steps for both the publisher and the consumer of the package.
 
@@ -417,7 +417,7 @@ The package publisher should do the following:
 1. Install [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk), which includes the tools needed to create a WSA package: MakeAppx, MakeCert, Pvk2Pfx, SignTool.
 2. Declare a manifest: Follow the [WSA manifest extension schema](https://msdn.microsoft.com/library/windows/apps/mt670653.aspx) to create the manifest file, AppxManifest.xml.
 3. Use the **MakeAppx** tool to create a WSA package.
-4. Use **MakeCert** and **Pvk2Pfx** tools to create the certificate, and the use **Signtool** to sign the package.
+4. Use **MakeCert** and **Pvk2Pfx** tools to create the certificate, and then use **Signtool** to sign the package.
 
 Next, the package consumer should follow these steps:
 

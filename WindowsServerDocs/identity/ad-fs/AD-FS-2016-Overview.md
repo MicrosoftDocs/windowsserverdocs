@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 ---
 # AD FS 2016 Overview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document contains a list of all of the documentation overviews for AD FS for Windows Server 2016. This includes the following:
   
