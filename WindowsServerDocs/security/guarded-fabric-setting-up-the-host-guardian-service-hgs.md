@@ -77,7 +77,7 @@ If you are unable to obtain a PFX or are unable to obtain one with the private k
 
 3. In the Security dialog box, add the group managed service account (gMSA) for HGS to the list of accounts. To do this, click **Add** and in the resulting dialog box, click **Object Types**, select **Service Accounts**, and click **OK**. Under **Enter the object names to select**, type the account name—by default, **HGSSVC**—and click **Check Names**. If you originally set up HGS in an existing domain, you'll type the name of the gMSA that you provided to the Initialize-HgsServer command.
 
-    ![Select the account that can access the certificate](images/guarded-host-account-for-certificate.png)
+    ![Select the account that can access the certificate](media/Guarded-Fabric-Shielded-VM/guarded-host-account-for-certificate.png)
 
 4. Give the account **Read** access to the private keys for the certificate.
 
@@ -316,7 +316,7 @@ For hardware-based (TPM) attestation, these steps do not apply. Instead, see [TP
 
     To obtain the SID, use the following PowerShell command against the fabric AD and copy the SID as formatted in the output (don’t forget to wrap it in quotes).
 
-    <img src="images/guarded-host-get-adgroup.png" alt="Get-AdGroup command with output" width="464" height="139" />
+    <img src="media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png" alt="Get-AdGroup command with output" width="464" height="139" />
 
 3.  To verify that the guarded host group was successfully added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx). The friendly name of your group should appear.
 

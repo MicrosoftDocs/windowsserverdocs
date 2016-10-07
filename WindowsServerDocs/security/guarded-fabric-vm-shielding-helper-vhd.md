@@ -41,7 +41,7 @@ For information about other configuration options for shielded VMs, see [Configu
 
 In the VMM Console, open the settings pane and then **Host Guardian Service Settings** under **General**. At the bottom of this window, there is a field to configure the location of your helper VHD. Use the browse button to select the VHD from your library share. If you do not see your disk in the share, you may need to manually refresh the library in VMM for it to show up.
 
-![VMM - Host Guardian Service Settings](images/guarded-host-vmm-hgs-settings-01.png)
+![VMM - Host Guardian Service Settings](media/Guarded-Fabric-Shielded-VM/guarded-host-vmm-hgs-settings-01.png)
 
 ## See also
 

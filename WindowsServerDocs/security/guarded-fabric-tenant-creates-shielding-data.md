@@ -142,7 +142,7 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
     >- **Shielding data for existing VMs and non-Shielded templates**<br>
     > The first option is used when creating new shielded VMs from shielded templates. The second option allows you to create shielding data that can only be used when converting existing VMs or creating shielded VMs from non-shielded templates.
 
-    <img src="images/guarded-host-shielding-data-wizard-01.png" alt="Shielding Data File Wizard, file selection" width="691" height="509" />
+    <img src="media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-wizard-01.png" alt="Shielding Data File Wizard, file selection" width="691" height="509" />
 
     Additionally, you must choose whether VMs created using this shielding data file will be truly shielded or configured in “encryption supported” mode. For more information about these two options, see [What are the types of virtual machines that a guarded fabric can run?](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-and-shielded-vms#what-are-the-types-of-virtual-machines-that-a-guarded-fabric-can-run).
 
@@ -160,7 +160,7 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
     Next, we import the guardian metadata downloaded earlier again using the **Owner and Guardians** page. Select **Manage Local Guardians** from the lower right corner. Use the **Import** feature to import the guardian metadata file. Click OK once you have imported or added all of the necessary guardians. As a best practice, name guardians after the hosting service provider or enterprise datacenter they represent. Finally, select all the guardians that represent the datacenters in which your shielded VM is authorized to run. You do not need to select the owner guardian again. Click Next once finished.
 
-    <img src="images/guarded-host-shielding-data-wizard-02.png" alt="Shielding Data File Wizard, owner and guardians" width="691" height="509" />
+    <img src="media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-wizard-02.png" alt="Shielding Data File Wizard, owner and guardians" width="691" height="509" />
 
 5.  On the Volume ID Qualifiers page, click **Add** to authorize a signed template disk in your shielding data file. When you select a VSC in the dialog box, it will show you information about that disk’s name, version, and the certificate that was used to sign it. Repeat this process for each template disk you wish to authorize.
 

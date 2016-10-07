@@ -70,15 +70,15 @@ The following screenshots show the IP pools that you can configure in Virtual Ma
 
 Currently, the function supports only one DNS server. Here is what your DNS settings would look like:
 
-![Configuring DNS Server with static IP pool](images\guarded-host-unattend-static-ip-address-pool-dns-settings.png)
+![Configuring DNS Server with static IP pool](media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-dns-settings.png)
 
 Here is what your summary for creating the static IP address pool would look like. In short, you must have only one network route, one gateway, and one DNS server—and you must specify your IP address.
 
-![Summary of static IP pool creation](images\guarded-host-unattend-static-ip-address-pool-summary.png)
+![Summary of static IP pool creation](media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-summary.png)
 
 You need to configure your network adapter for your virtual machine. The following screenshot shows where to set that configuration and how to switch it to static IP.
 
-![Configure hardware to use Static IP](images\guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
+![Configure hardware to use Static IP](media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
 Then, you can use the function with the switch `-StaticIP` turned on. The function will fill the `unattend.xml` file with static IP configurations. The parameters `@IPAddr-1@`, `@NextHop-1-1@`, and `@DNSAddr-1-1@` in `unattend.xml` will then be translated to real values that you specified in Virtual Machine Manager.
 
@@ -103,7 +103,7 @@ New-ShieldingDataAnswerFile -AdminPassword $myadminpwd -RDPCertificateFilePath C
 ```
 The following screenshot shows how to add the script to your shielding data file by using the Shielding Data File Wizard. Open the wizard as described in [Create a shielding data file and add guardians](guarded-fabric-tenant-creates-shielding-data.md#create-a-shielding-data-file-and-add-guardians), and add guardians. In the **Specialization Values** section, click **Add** and select your desired script.
 
-![Shielding Data File Wizard adding the setup script on Specialization Values](images\guarded-host-unattend-add-script-to-shielding-data-file.png)
+![Shielding Data File Wizard adding the setup script on Specialization Values](media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-add-script-to-shielding-data-file.png)
 
 Note that the name of the script must be the same as the script that you will include in your shielding data file. The setup process will put the file in `C:\Temp`, and the `unattend.xml` file will invoke your Windows PowerShell script from there. The `unattend.xml` file will append a Windows PowerShell command to start the script onto the `SetupComplete.cmd` file. This command runs after setup is complete.
 
@@ -145,7 +145,7 @@ OperatingSystem   C:    24.55      FullyEncrypted  100        {Tpm, RecoveryPass
 ```
 You can also check Event Viewer to see if the key has been successfully backed up. It should look like this:
 
-![Event Viewer to verify the Bitlocker key has been backed up successfully to AD](images\guarded-host-unattend-event-viewer.png)
+![Event Viewer to verify the Bitlocker key has been backed up successfully to AD](media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-event-viewer.png)
 
 The location of BitLocker-API is **Event Viewer (Local) > Applications and Services Logs > Microsoft > Windows > BitLocker-API > Management**.
 
