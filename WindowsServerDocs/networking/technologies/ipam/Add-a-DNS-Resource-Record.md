@@ -28,7 +28,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the lower navigation pane, click **Forward Lookup**. All IPAM-managed DNS Forward Lookup zones are displayed in the display pane search results. Right-click the zone where you want to add a resource record, and then click **Add DNS resource record**.  
   
-    ![Add DNS resource record](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_01.jpg)  
+    ![Add DNS resource record](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_01.jpg)
   
 4.  The **Add DNS Resource Records** dialog box opens. In **Resource record properties**, click **DNS server** and select the DNS server where you want to add one or more new resource records. In **Configure DNS resource records**, click **New**.  
   
@@ -48,7 +48,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 8.  If you do not want to create additional new resource records, click **OK**. If you want to create additional new resource records, click **New**.  
   
-    ![Click OK or New](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_01.jpg)  
+    ![Click OK or New](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_01.jpg)
   
 9. The dialog box expands to reveal **New Resource Record**. Click **Resource record type**. The list of resource record types is displayed. Click the resource record type that you want to add.  
   

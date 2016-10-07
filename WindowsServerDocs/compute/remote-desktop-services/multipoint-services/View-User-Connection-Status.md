@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 426df382-07a0-4be1-a87a-12e63bd8157b
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # View User Connection Status

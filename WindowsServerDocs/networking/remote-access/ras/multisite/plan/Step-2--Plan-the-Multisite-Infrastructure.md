@@ -22,11 +22,11 @@ A Remote Access multisite deployment can be configured in a number of topologies
   
 -   **Single Active Directory site, multiple entry points**-In this topology, you have a single Active Directory site for your entire organization with fast intranet links throughout the site, but you have multiple Remote Access servers deployed throughout your organization, each acting as an entry point. A geographical example of this topology is to have a single Active Directory site for the United States with entry points on the East coast and the West coast.  
   
-    ![Remote Access Multisite Topology](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo1.png)  
+    ![Multisite Infrastructure](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo1.png)  
   
 -   **Multiple Active Directory sites, multiple entry points**-In this topology, you have two or more Active Directory sites with a Remote Access server deployed as an entry point for each site. Each Remote Access server is associated with the Active Directory domain controller for the site. A geographical example of this topology is to have an Active Directory site for the United States and one for Europe with a single entry point for each site. Note that if you have multiple Active Directory sites you do not need to have an entry point associated with each site. In addition, some Active Directory sites can have more than one entry point associated with it.  
   
-    ![](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo2.png)  
+    ![Multisite Topology](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo2.png)  
   
 In a multisite entry point, you can configure a single Remote Access server, multiple Remote Access servers, or a Remote Access server clusters.   
   

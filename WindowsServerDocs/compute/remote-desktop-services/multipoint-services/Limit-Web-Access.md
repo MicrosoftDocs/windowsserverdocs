@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Limit Web Access

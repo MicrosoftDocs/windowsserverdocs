@@ -12,7 +12,11 @@ ms.date: 08/18/2016
 # Storage Quality of Service
 > Applies To: Windows Server 2016
 
+<<<<<<< HEAD
 Storage Quality of Service (QoS) in Windows Server 2016 provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy-based minimum and maximum performance goals to be configured in units of normalized IOPs.  
+=======
+Storage Quality of Service (Storage QoS) in Windows Server 2016 provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy based minimum and maximum performance goals to be configured in units of normalized IOPs.  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 You can use Storage QoS in Windows Server 2016 to accomplish the following:  
 
@@ -22,23 +26,32 @@ You can use Storage QoS in Windows Server 2016 to accomplish the following:
 
 -   **Manage Storage I/O per workload business needs** Storage QoS policies define performance minimums and maximums for virtual machines and ensures that they are met. This provides consistent performance to virtual machines, even in dense and overprovisioned environments. If policies cannot be met, alerts are available to track when VMs are out of policy or have invalid policies assigned.  
 
+<<<<<<< HEAD
 This document outlines how your business can benefit from the new Storage QoS functionality. It assumes that you have a previous working knowledge of Windows Server, Windows Server Failover Clustering, Scale-Out File Server, Hyper-V, and Windows PowerShell.
+=======
+This document outlines how your business can benefit from the new Storage QoS functionality. It assumes that you have a previous working knowledge of Windows Server, Windows Server Failover Clustering, Scale-Out File Server, Hyper-V, and Windows PowerShell and includes the following sections:  
+
+-   [Overview](#BKMK_Overview)  
+
+-   [How to set up Storage QoS and monitor basic performance](#BKMK_SetUpQoS)  
+
+-   [How to create storage QoS policies](#BKMK_CreateQoSPolicies)  
+
+-   [How to identify and address common issues](#BKMK_KnownIssues)  
+
+-   [Monitor Health using Storage QoS](#BKMK_Health)  
+
+-   [Updates from previous version of Windows Server Technical Preview](#BKMK_Updates)  
+
+> [!NOTE]  
+> There are two changes Windows Server 2016 for Storage Quality of Service (sQoS). The policy type names have been changed in the PowerShell scripts. The new type names are **Dedicated** and **Aggregated**. This document includes more information on these features and also contains examples of configuring and managing them.  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 ## <a name="BKMK_Overview"></a>Overview  
 This section describes the requirements for using Storage QoS, an overview of a software-defined solution using Storage QoS, and a list of Storage QoS related terminologies.  
 
 ### <a name="BKMK_Requirements"></a>Storage QoS Requirements  
-Storage QoS supports two deployment scenarios:  
-
--   **Hyper-V using a Scale-Out File Server** This scenario requires both of the following:  
-
-    -   Storage cluster that is a Scale-Out File Server cluster  
-
-    -   Compute cluster that has least one server with the Hyper-V role enabled  
-
-    For Storage QoS, the Failover Cluster is required on Storage servers, but the compute servers are not required to be in a failover cluster. All servers (used for both Storage and Compute) must be running Windows Server 2016.  
-
-    If you do not have a Scale-Out File Server cluster deployed for evaluation purposes, for step by step instructions to build one using either existing servers or virtual machines, see [Windows Server 2012 R2 Storage: Step-by-step with Storage Spaces, SMB Scale-Out and Shared VHDX (Physical)](http://blogs.technet.com/b/josebda/archive/2013/07/31/windows-server-2012-r2-storage-step-by-step-with-storage-spaces-smb-scale-out-and-shared-vhdx-physical.aspx).  
+Storage QoS supports the following deployment scenarios:  
 
 -   **Hyper-V using Cluster Shared Volumes.** This scenario requires both of the following:  
 
@@ -78,13 +91,13 @@ When there are changes to Storage QoS policies or to the performance demands by 
 This section describes how to enable the new Storage QoS feature and how to monitor storage performance without applying custom policies.  
 
 ### <a name="BKMK_SetupStorageQoSonStorageCluster"></a>Set up Storage QoS on a Storage Cluster  
-This section discusses how to enable Storage QoS on either a new or an existing Failover Cluster and Scale-Out File Server that is running Windows Server 2016.  
+This section discusses how to enable Storage QoS on either a new or an existing Failover Cluster that is running Windows Server 2016.  
 
 #### Set up Storage QoS on a new installation  
 If you have configured a new Failover Cluster and configured a Cluster Shared Volume(CSV) on Windows Server 2016, then the Storage QoS feature will be set up automatically.  
 
 #### Verify Storage QoS installation  
-After you have created a Failover Cluster and configured a CSV disk, , **Storage QoS Resource** is displayed as a Cluster Core Resource and visible in both Failover Cluster Manager and Windows PowerShell. The intent is that the failover cluster system will manage this resource and you should not have to do any actions against this resource.  We display  it in both Failover Cluster Manager and PowerShell to be consistent with the other failover cluster system resources like the new Health Service.  
+After you have created a Failover Cluster and configured a CSV disk, **Storage QoS Resource** is displayed as a Cluster Core Resource and visible in both Failover Cluster Manager and Windows PowerShell. The intent is that the failover cluster system will manage this resource and you should not have to do any actions against this resource.  We display  it in both Failover Cluster Manager and PowerShell to be consistent with the other failover cluster system resources like the new Health Service.  
 
 ![Storage QoS Resource appears in Cluster Core Resources](media/overview-Clustering_StorageQoSFCM.png)  
 
@@ -101,7 +114,11 @@ Storage Qos Resource   Online     Cluster Group     Storage QoS Policy Manager
 ```  
 
 ### <a name="BKMK_SetupStorageQoSonComputeCluster"></a>Set up Storage QoS on a Compute Cluster  
+<<<<<<< HEAD
 The Hyper-V role in Windows Server 2016 has built-in support for Storage QoS and is enabled by default.  
+=======
+The Hyper-V role in Windows Server 2016 has built-in support for Storage QoS and is set up by default.  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 #### Install Remote Administration Tools to manage Storage QoS policies from remote computers  
 You can manage Storage QoS policies and monitor flows from compute hosts using the Remote Server Administration Tools.  These are available as optional features on all Windows Server 2016 installations, and can be downloaded separately for Windows 10 at the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45520) website.
@@ -295,9 +312,9 @@ If you create multiple similar policies for different virtual machines and the v
 ### Types of Storage QoS Policies  
 There are two types of policies: Aggregated (previously known as SingleInstance) and Dedicated (previously known as MultiInstance). Aggregated policies apply maximums and minimum for the combined set of VHD/VHDX files and virtual machines where they apply. In effect, they share a specified set of IOPS and bandwidth. Dedicated policies apply the minimum and maximum values for each VHD/VHDx, separately. This makes it easy to create a single policy that applies similar limits to multiple VHD/VHDx files.  
 
-For instance, if you create a Aggregated policy with a minimum of 300 IOPs and a maximum of 500 IOPs. If you apply this policy to 5 different VHD/VHDx files, you are making sure that the 5 VHD/VHDx files combined will be guaranteed at least 300 IOPs (if there is demand and the storage system can provide that performance) and no more than 500 IOPs. If the VHD/VHDx files have similar high demand for IOPs and the storage system can keep up, each VHD/VHDx files will get about 100 IOPs.  
+For instance, if you create an Aggregated policy with a minimum of 300 IOPs and a maximum of 500 IOPs. If you apply this policy to 5 different VHD/VHDx files, you are making sure that the 5 VHD/VHDx files combined will be guaranteed at least 300 IOPs (if there is demand and the storage system can provide that performance) and no more than 500 IOPs. If the VHD/VHDx files have similar high demand for IOPs and the storage system can keep up, each VHD/VHDx files will get about 100 IOPs.  
 
-However, if you create a Dedicated policy with similar limits and apply it to VHD/VHDx files on 5 different virtual machines, each virtual machine will get at least 300 IOPs and no more than 500 IOPs. If the virtual machines have similar high demand for IOPs and the storage system can keep up, each virtual machine will get about 500 IOPs. .  If one of the virtual machines has multiple VHD/VHDx files with the same MulitInstance policy configured, they will share the limit so that the total IO from the VM from files with that policy will not exceed the limits.  
+However, if you create a Dedicated policy with similar limits and apply it to VHD/VHDx files on 5 different virtual machines, each virtual machine will get at least 300 IOPs and no more than 500 IOPs. If the virtual machines have similar high demand for IOPs and the storage system can keep up, each virtual machine will get about 500 IOPs.
 
 Hence, if you have a group of VHD/VHDx files that you want to exhibit the same performance characteristics and you don't want the trouble of creating multiple, similar policies, you can use a single Dedicated policy and apply to the files of each virtual machine.  
 
@@ -418,7 +435,7 @@ BuildVM3              200         100           194             169     Ok C:\C.
 ### Create an Aggregated Policy  
 Aggregated policies may be used if you want multiple virtual hard disks to share a single pool of IOPs and bandwidth.  For example, if you apply the same Aggregated policy to hard disks from two virtual machines, the minimum will be split between them according to demand.  Both disks will be guaranteed a combined minimum, and together they will not exceed the specified maximum IOPs or bandwidth.  
 
-The same approach could also be used to provide a single allocation to all VHD/VHDx files for the virtual machines  comprising a service or belonging to a tenant in a multihosted environment.  
+The same approach could also be used to provide a single allocation to all VHD/VHDx files for the virtual machines  comprising a service or belonging to a tenant in a multi-hosted environment.  
 
 There is no difference in the process to create Dedicated and Aggregated policies other than the PolicyType that is specified.  
 
@@ -494,7 +511,7 @@ FilePath        : C:\ClusterStorage\Volume3\SHARES\THREE\WINOLTP1\IOMETER.VHDX
 Each virtual hard disk will have the MinimumIOPs and MaximumIOPs and MaximumIobandwidth value adjusted based on its load.  This ensures that the total amount of bandwidth used for the group of disks stays within the range defined by policy.  In the example above, the first two disks are idle, and the third one is allowed to use up to the maximum IOPs.  If the first two disks start issuing IO again, then the maximum IOPs of the third disk will be lowered automatically.  
 
 ### Modify an existing policy  
-The properties of Name, MinimumIOPs,  MaximumIOPs, and MaximumIoBandwidthcan be changed after a policy is created.  However, the Policy Type (Aggregated/Dedicated) cannot be changed once the policy is created.  
+The properties of Name, MinimumIOPs,  MaximumIOPs, and MaximumIoBandwidth can be changed after a policy is created.  However, the Policy Type (Aggregated/Dedicated) cannot be changed once the policy is created.  
 
 The following Windows PowerShell cmdlet shows how to change the MaximumIOPs property for an existing policy:  
 
@@ -803,6 +820,7 @@ while ($true)
 }  
 ```  
 
+<<<<<<< HEAD
 ## Frequently Asked Questions  
 
 ### How do I retain a Storage QoS policy being enforced for my virtual machine if I move its VHD/VHDx files to another storage cluster  
@@ -813,6 +831,11 @@ System Center Virtual Machine Manager can be used to apply policies across multi
 ### If I change the Storage QoS Policy, why don't I see it take effect immediately when I run Get-StorageQoSFlow  
 
 If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency/IOPS/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.
+=======
+## <a name="BKMK_Updates"></a>Updates from previous Technical Preview version of Windows Server 2016  
+
+This section lists what's new from the previous Technical Preview version of Windows Server 2016.  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 ### <a name="BKMK_Updates"></a>What new functionality was added in Windows Server 2016 Technical Preview 5  
 
@@ -820,16 +843,21 @@ In Windows Server 2016 Technical Preview 5 the Storage QoS Policy type names wer
 
 ### What new functionality was added in Windows Server 2016 Technical Preview 4  
 
+<<<<<<< HEAD
 There are two new Storage QoS features Windows Server 2016 Technical Preview 4:  
+=======
+### New functionality for Windows Server 2016  
+There are 2 new features in this release of Windows Server 2016  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 -   **Maximum Bandwidth**  
 
-    Storage QoS in Technical Preview 4 introduces the ability to specify the maximum bandwidth that the flows assigned to the policy may consume.  The parameter when specifying it in the **StorageQosPolicy** cmdlets is **MaximumIOBandwidth** and the output is expressed in bytes per second.  
+    Storage QoS in Windows Server 2016 introduces the ability to specify the maximum bandwidth that the flows assigned to the policy may consume.  The parameter when specifying it in the **StorageQosPolicy** cmdlets is **MaximumIOBandwidth** and the output is expressed in bytes per second.  
     If both **MaximimIops** and **MaximumIOBandwidth** are set in a policy, they will both be in effect and the first one to be reached by the flow(s) will limit the I/O of the flows.  
 
 -   **IOPS normalization is configurable**  
 
-    Storage QoSin  uses normalization of IOPS.  The default is to use a normalization size of 8K.  Storage QoS in Technical Preview 4  introduces the ability to specify a different normalization size for the storage cluster.  This normalization size effects all flows on the storage cluster and takes effect immediately (within a few seconds) once it is changed.  The minimum is 1KB and the maximum is 4GB (recommend not setting more than 4MB since it's unusual to have more than 4MB IOs).  
+    Storage QoS in  uses normalization of IOPS.  The default is to use a normalization size of 8K.  Storage QoS in Windows Server 2016 introduces the ability to specify a different normalization size for the storage cluster.  This normalization size effects all flows on the storage cluster and takes effect immediately (within a few seconds) once it is changed.  The minimum is 1KB and the maximum is 4GB (recommend not setting more than 4MB since it's unusual to have more than 4MB IOs).  
 
     Something to consider is that the same IO pattern/throughput shows up with different IOPS numbers in the Storage QoS output when you change the IOPS normalization due to the change in normalization calculation.  If you are comparing IOPS between storage clusters, you may also want to verify what normalization value each is using since that will effect the normalized IOPS reported.    
 
@@ -876,7 +904,27 @@ PS C:\Windows\system32> Get-StorageQosPolicyStore
 IOPSNormalizationSize  
 ---------------------  
 32768  
+<<<<<<< HEAD
 ```    
+=======
+```  
+
+
+## New functionality for Windows Server 2016
+
+In Windows Server 2016 the Storage QoS Policy type names have been renamed.  The **Multi-instance** policy type is renamed as **Dedicated** and **Single-instance** was renamed as **Aggregated**. The management behavior of Dedicated policies is also modified - VHD/VHDX files within the same virtual machine that have the same **Dedicated** policy applied to them will not share I/O allocations.  
+
+## Frequently Asked Questions  
+
+-   **How do I retain a Storage QoS policy being enforced for my virtual machine if I move its VHD/VHDx files to another storage cluster?**  
+
+    The setting on the VHD/VHDx file that specifies the policy is the GUID of a policy ID.  When a policy is created, the GUID can be specified using the **PolicyID** parameter.  If that parameter is not specified, a random GUID is created.  Therefore, you can get the PolicyID on the storage cluster where the VMs currently store their VHD/VHDx files and create an identical policy on the destination storage cluster and then specify that it be created with the same GUID.  When the VMs files are moved to the new storage clusters, the policy with the same GUID will be in effect.  
+    System Center Virtual Machine Manager can be used to apply policies across multiple storage clusters, which makes this scenario much easier.  
+
+-   **If I change the sQoS Policy, why don't I see it take effect immediately when I run Get-StorageQoSFlow?**  
+
+    If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency/IOPS/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.  
+>>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 ## See Also  
 - [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  

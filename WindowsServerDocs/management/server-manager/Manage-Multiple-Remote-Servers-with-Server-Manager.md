@@ -1,5 +1,6 @@
 ---
 title: Manage Multiple, Remote Servers with Server Manager
+description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,14 +9,15 @@ ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Manage Multiple, Remote Servers with Server Manager
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016
 
 Server Manager is a management console in Windows Server 2012 R2 and Windows Server 2012 that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (RDP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2 and Windows Server 2008, Server Manager was updated in  Windows Server 2012, to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 
