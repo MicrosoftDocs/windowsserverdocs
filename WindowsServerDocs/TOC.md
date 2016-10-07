@@ -502,7 +502,7 @@
 ####[AD FS Deployment](identity/ad-fs/AD-FS-Deployment.md)
 ##### [AD FS Deployment Guide](identity/ad-fs/deployment/AD-FS-Deployment-Guide.md)
 ###### [Upgrading to AD FS in Windows Server 2016](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
-######[Windows Server 2012 R2 AD FS Deployment Guide](identity/ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
+######[Windows Server 2016 and 2012 R2 AD FS Deployment Guide](identity/ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 #######[Deploying a Federation Server Farm](identity/ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)
 ########[Join a Computer to a Domain](identity/ad-fs/deployment/Join-a-Computer-to-a-Domain.md)
 ########[Enroll an SSL Certificate for AD FS](identity/ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md)
