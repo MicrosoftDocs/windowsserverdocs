@@ -45,14 +45,14 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
 2.  In AD FS snap\-in, click **Authentication Policies**.  
   
 3.  In the **Primary Authentication** section, click **Edit** next to **Global Settings**. You can also right\-click **Authentication Policies**, and select **Edit Global Primary Authentication**, or, under the **Actions** pane, select **Edit Global Primary Authentication**.  
-![](media/Configure-Authentication-Policies/authpolicy1.png)
+![auth policies](media/Configure-Authentication-Policies/authpolicy1.png)
   
 4.  In the **Edit Global Authentication Policy** window, on the **Primary** tab, you can configure the following settings as part of the global authentication policy:  
   
     -   Authentication methods to be used for primary authentication. You can select available authentication methods under the **Extranet** and **Intranet**.  
   
     -   Device authentication via the **Enable device authentication** check box. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).  
-![](media/Configure-Authentication-Policies/authpolicy2.png)  
+![auth policies](media/Configure-Authentication-Policies/authpolicy2.png)  
 
 ## To configure primary authentication per relying party trust  
   
@@ -61,12 +61,12 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
 2.  In AD FS snap\-in, click **Authentication Policies**\\**Per Relying Party Trust**, and then click the relying party trust for which you want to configure authentication policies.  
   
 3.  Either right\-click the relying party trust for which you want to configure authentication policies, and then select **Edit Custom Primary Authentication**, or, under the **Actions** pane, select **Edit Custom Primary Authentication**.  
-![](media/Configure-Authentication-Policies/authpolicy5.png)   
+![auth policies](media/Configure-Authentication-Policies/authpolicy5.png)   
 
 4.  In the **Edit Authentication Policy for <relying\_party\_trust\_name>** window, under the **Primary** tab, you can configure the following setting as part of the **Per Relying Party Trust** authentication policy:  
   
     -   Whether users are required to provide their credentials each time at sign\-in via the **Users are required to provide their credentials each time at sign\-in** check box.  
-![](media/Configure-Authentication-Policies/authpolicy6.png) 
+![auth policies](media/Configure-Authentication-Policies/authpolicy6.png) 
 
 ## To configure multi-factor authentication globally  
   
@@ -75,7 +75,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
 2.  In AD FS snap\-in, click **Authentication Policies**.  
   
 3.  In the **Multi\-factor Authentication** section, click **Edit** next to **Global Settings**. You can also right\-click **Authentication Policies**, and select **Edit Global Multi\-factor Authentication**, or, under the **Actions** pane, select **Edit Global Multi\-factor Authentication**.  
-![](media/Configure-Authentication-Policies/authpolicy8.png)   
+![auth policies](media/Configure-Authentication-Policies/authpolicy8.png)   
 
 4.  In the **Edit Global Authentication Policy** window, under the **Multi\-factor** tab, you can configure the following settings as part of the global multi\-factor authentication policy:  
   
@@ -85,7 +85,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
   
 > [!WARNING]  
 > You can only configure additional authentication methods at a globally.  
-![](media/Configure-Authentication-Policies/authpolicy9.png)  
+![auth policies](media/Configure-Authentication-Policies/authpolicy9.png)  
 
 ## To configure multi\-factor authentication per relying party trust  
   

@@ -1,4 +1,4 @@
-
+﻿
 ---
 ms.assetid: 1df78c2a-5054-4b54-8310-c48ea62e6e0b
 title: Custom error messages for AD FS sign-in page 
@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 
 You can configure custom error messages that can be tailored to your organization. The following illustration shows a customized error page description and a generic error message. Use the following Windows PowerShell cmdlets to customize your error messages.  
   
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom3.png)  
+![custom error](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom3.png)  
   
 ## Customize the error page description  
 To customize the error page description, use the following Windows PowerShell cmdlet and syntax.  

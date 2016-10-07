@@ -18,7 +18,7 @@ ms.technology: identity-adds
 
 Consider the following example of a fictitious company, Contoso Pharmaceuticals, which is deploying Active Directory Domain Services (AD DS) in its environment. The Contoso environment consists of four domains. The forest functional level is Windows Server 2003. The following illustration shows the current domain structure for the Contoso organization.  
   
-![](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)  
+![AD DS deployment strategy](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)  
   
 After reviewing its existing environment and identifying its deployment goals, Contoso established the following AD DS deployment strategy:  
   
@@ -30,7 +30,7 @@ After reviewing its existing environment and identifying its deployment goals, C
   
 Raising the forest functional level to Windows Server 2008 will enable Contoso to take full advantage of the new AD DS features. Restructuring the domains within the forest, as shown in the following illustration, will reduce the amount of administration that is necessary for managing the domains.  
   
-![](media/Evaluating-AD-DS-Deployment-Strategy-Examples/1c061755-413d-452d-b121-6910f8555327.gif)  
+![AD DS deployment strategy](media/Evaluating-AD-DS-Deployment-Strategy-Examples/1c061755-413d-452d-b121-6910f8555327.gif)  
   
 
 

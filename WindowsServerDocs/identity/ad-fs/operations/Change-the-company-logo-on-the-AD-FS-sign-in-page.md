@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 #### Change company logo  
 To change the logo of the company that is displayed on the sign\-in page, use the following PowerShell Windows PowerShell cmdlet and syntax.  
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
+![change logo](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   
 > [!IMPORTANT]  
 > We recommend the dimensions for the logo to be 260x35 @ 96 dpi with a file size of no greater than 10 KB.  

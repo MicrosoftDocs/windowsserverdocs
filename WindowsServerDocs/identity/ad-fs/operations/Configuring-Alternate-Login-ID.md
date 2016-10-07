@@ -42,11 +42,11 @@ Please refer to the table below for the user experience with Alternate ID using 
 |OneDrive for Business|Supported - client side registry key recommended|With Alternate ID configured you will see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
 |OneDrive for Business Mobile Client|Supported|||
 
-![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID1.png)
+![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID1.png)
 
-![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID2.png)
+![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID2.png)
 
-![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID3.png)
+![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID3.png)
 
 ## To configure alternate login ID
 In order to configure alternate login ID, you must perform the following tasks:

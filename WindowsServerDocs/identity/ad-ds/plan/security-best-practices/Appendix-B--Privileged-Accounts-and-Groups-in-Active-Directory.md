@@ -28,7 +28,7 @@ The differences between rights, permissions, and privileges can be confusing and
 #### Rights and Privileges  
 Rights and privileges are effectively the same system-wide capabilities that are granted to security principals such as users, services, computers, or groups. In interfaces typically used by IT professionals, these are usually referred to as "rights" or "user rights," and they are often assigned by Group Policy Objects. The following screenshot shows some of the most common user rights that can be assigned to security principals (it represents the Default Domain Controllers GPO in a Windows Server 2012 domain). Some of these rights apply to Active Directory, such as the **Enable computer and user accounts to be trusted for delegation** user right, while other rights apply to the Windows operating system, such as **Change the system time**.  
 
-![](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
+![privileged accounts and groups](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
 
 In interfaces such as the Group Policy Object Editor, all of these assignable capabilities are referred to broadly as user rights. In reality however, some user rights are programmatically referred to as rights, while others are programmatically referred to as privileges. Table B-1: User Rights and Privileges provides some of the most common assignable user rights and their programmatic constants. Although Group Policy and other interfaces refer to all of these as user rights, some are programmatically identified as rights, while others are defined as privileges.  
 

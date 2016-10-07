@@ -4,7 +4,8 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: networking-sdn
+ms.technology: 
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893

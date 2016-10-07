@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Remove the Microsoft copyright
 description:
@@ -17,7 +17,7 @@ ms.technology: identity-adfs
  
 By default, the AD FS pages contain the Microsoft copyright. To remove this copyright from your customized pages, you can use the following procedure. 
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png) 
+![remove copyright](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png) 
   
 ## To remove the Microsoft copyright  
   
@@ -51,7 +51,7 @@ By default, the AD FS pages contain the Microsoft copyright. To remove this copy
 
 Now, you should no longer see the copyright at the bottom of the sign-in page.
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1a.png) 
+![remove copyright](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1a.png) 
 
 ## Additional references 
 [AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md) 

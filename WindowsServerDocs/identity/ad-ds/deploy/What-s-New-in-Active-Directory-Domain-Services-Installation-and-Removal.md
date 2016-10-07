@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What&#39;s New in Active Directory Domain Services Installation and Removal
 description:
@@ -70,7 +70,7 @@ The  Windows Server 2012  version of adprep.exe can run on any server that runs 
 >   
 > Adprep.exe is not a valid Win32 application.  
   
-![](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
+![What's new](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
   
 For information about resolving other errors returned by Adprep.exe, see [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).  
   

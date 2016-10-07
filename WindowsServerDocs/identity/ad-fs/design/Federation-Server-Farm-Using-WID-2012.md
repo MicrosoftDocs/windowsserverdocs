@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: Federation Server Farm Using WID
 description:
@@ -63,7 +63,7 @@ When you are ready to start deploying this topology in your network, you should 
   
 The NLB host can use the settings that are defined in this NLB cluster to allocate client requests to the individual federation servers. The following illustration shows how the fictional Fabrikam, Inc., company sets up the first phase of its deployment using a two\-computer federation server farm \(fs1 and fs2\) with WID and the positioning of a DNS server and a single NLB host that is wired to the corporate network.  
   
-![](media/FarmWID.gif)  
+![server farm using WID](media/FarmWID.gif)  
   
 > [!NOTE]  
 > If there is a failure on this single NLB host, users will not be able to access federated applications or services. Add additional NLB hosts if your business requirements do not allow having a single point of failure.  

@@ -1,5 +1,6 @@
 ---
 title: Remote Server Administration Tools
+description: "Remote Server Administration Tools"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,25 +9,26 @@ ms.technology: manage-rsat
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Remote Server Administration Tools
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic supports Remote Server Administration Tools for Windows 10&reg;.
 
 To help ease remote server management, you can [download and install Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=404281). Remote Server Administration Tools includes Server Manager, Microsoft Management Console (MMC) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server.
 
-Remote Server Administration Tools includes Windows PowerShell cmdlet modules that can be used to manage roles and features that are running on remote servers. Although Windows PowerShell remote management is enabled by default on Windows Server 2016 Technical Preview, it is not enabled by default on Windows 10. To run cmdlets that are part of Remote Server Administration Tools against a remote server, run `Enable-PSRemoting` in a Windows PowerShell session that has been opened with elevated user rights (that is, Run as Administrator) on your Windows client computer after installing Remote Server Administration Tools.
+Remote Server Administration Tools includes Windows PowerShell cmdlet modules that can be used to manage roles and features that are running on remote servers. Although Windows PowerShell remote management is enabled by default on Windows Server 2016, it is not enabled by default on Windows 10. To run cmdlets that are part of Remote Server Administration Tools against a remote server, run `Enable-PSRemoting` in a Windows PowerShell session that has been opened with elevated user rights (that is, Run as Administrator) on your Windows client computer after installing Remote Server Administration Tools.
 
 ## <a name="BKMK_Thresh"></a>Remote Server Administration Tools for Windows 10
-Use Remote Server Administration Tools for Windows 10 to manage specific technologies on computers that are running Windows Server 2016 Technical Preview, Windows Server 2012 R2, and in limited cases,  Windows Server 2012 , or  Windows Server 2008 R2 .
+Use Remote Server Administration Tools for Windows 10 to manage specific technologies on computers that are running Windows Server 2016, Windows Server 2012 R2, and in limited cases,  Windows Server 2012 , or  Windows Server 2008 R2 .
 
-Remote Server Administration Tools for Windows 10 includes support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and in limited cases, the Server Core installation options of Windows Server 2012. However, Remote Server Administration Tools for Windows 10 cannot be installed on any versions of the Windows Server operating system.
+Remote Server Administration Tools for Windows 10 includes support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016,  Windows Server 2012 R2 , and in limited cases, the Server Core installation options of Windows Server 2012. However, Remote Server Administration Tools for Windows 10 cannot be installed on any versions of the Windows Server operating system.
 
 ### Tools available in this release
 For a list of the tools available in Remote Server Administration Tools for Windows 10, see the table in [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](http://go.microsoft.com/fwlink/p/?LinkID=221055).
@@ -55,7 +57,7 @@ Remote Server Administration Tools for Windows 10 runs on both x86- and x64-base
 
 To use this release of Server Manager to access and manage remote servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2 , you must install several updates to make the older Windows Server operating systems manageable by using Server Manager. For detailed information about how to prepare  Windows Server 2012 R2 ,  Windows Server 2012 , and  Windows Server 2008 R2  for management by using Server Manager in Remote Server Administration Tools for Windows 10, see [Manage Multiple, Remote Servers with Server Manager](http://technet.microsoft.com/library/hh831456.aspx).
 
-Windows PowerShell and Server Manager remote management must be enabled on remote servers to manage them by using tools that are part of Remote Server Administration Tools for Windows 10. Remote management is enabled by default on servers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012 . For more information about how to enable remote management if it has been disabled, see [Manage multiple, remote servers with Server Manager](http://go.microsoft.com/fwlink/p/?LinkId=241358).
+Windows PowerShell and Server Manager remote management must be enabled on remote servers to manage them by using tools that are part of Remote Server Administration Tools for Windows 10. Remote management is enabled by default on servers that are running Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012 . For more information about how to enable remote management if it has been disabled, see [Manage multiple, remote servers with Server Manager](http://go.microsoft.com/fwlink/p/?LinkId=241358).
 
 ### Install, uninstall, or disable Remote Server Administration Tools for Windows 10
 Remote Server Administration Tools for Windows 10 has the same one-step installation process as Remote Server Administration Tools for Windows 8.1. Before the release of Remote Server Administration Tools for Windows 8, after running the MSU installer program, users were required to turn on specific tools that they wanted to use in the **Turn Windows features on or off** dialog box. This step has been eliminated; after you run the MSU installation program, all tools are enabled by default.

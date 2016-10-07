@@ -43,7 +43,7 @@ By default, DC Locator does not consider any site that contains a read-only doma
   
 For example, assume that a site topology has four sites with the site link values in the following illustration. In this example, all the domain controllers are writable domain controllers that run  Windows Server 2008  or  Windows Server 2008 R2 .  
   
-![](media/Enabling-Clients-to-Locate-the-Next-Closest-Domain-Controller/beff4087-fb2a-463b-96ac-d440a9e29b75.gif)  
+![enabling clients to locate dc](media/Enabling-Clients-to-Locate-the-Next-Closest-Domain-Controller/beff4087-fb2a-463b-96ac-d440a9e29b75.gif)  
   
 When the **Try Next Closest Site** Group Policy setting is enabled in this example, if a client computer that runs Windows Vista, Windows 7,  Windows Server 2008 , or  Windows Server 2008 R2  in Site_B tries to locate a domain controller, it first tries to find a domain controller in its own Site_B. If none is available in Site_B, it tries to find a domain controller in Site_A.  
   

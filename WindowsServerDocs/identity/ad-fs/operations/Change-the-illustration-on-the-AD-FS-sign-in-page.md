@@ -20,7 +20,7 @@ ms.technology: identity-adfs
 
 To change the illustration, the graphic on the left, which is displayed on the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax.  
 
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
+![change illustration](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   
 > [!IMPORTANT]  
 > We recommend the dimensions for the illustration to be 1420x1080 pixels @ 96 DPI with a file size of no greater than 200 KB.  

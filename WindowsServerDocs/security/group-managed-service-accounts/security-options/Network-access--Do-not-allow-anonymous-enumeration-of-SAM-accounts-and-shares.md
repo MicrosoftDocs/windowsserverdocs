@@ -1,0 +1,88 @@
+---
+title: Network access: Do not allow anonymous enumeration of SAM accounts and shares
+description: "Windows Server Security"
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: security-gmsa
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 2b6eb59e-ad3c-42f5-ae53-fd9f328b267d
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
+---
+# Network access: Do not allow anonymous enumeration of SAM accounts and shares
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
+This security policy reference topic for the IT professional describes the best practices, location, values, and security considerations for this policy setting.
+
+## Reference
+This policy setting determines which additional permissions will be assigned for anonymous connections to the computer. Windows allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares. This is convenient, for example, when an administrator wants to give access to users in a trusted domain that does not maintain a reciprocal trust. However, even with this policy setting enabled, anonymous users will have access to resources with permissions that explicitly include the built-in group, ANONYMOUS LOGON.
+
+This policy setting has no impact on domain controllers.
+
+Misuse of this policy setting is a common error that can cause data loss or problems with data access or security.
+
+### Possible values
+
+-   Enabled
+
+    It will be impossible to establish trusts with Windows NT 4.0–based domains. This value will also cause problems with earlier-version client computers (such as those running Windows NT 3.51 and Windows 95) that are trying to use resources on the server.
+
+-   Disabled
+
+    No additional permissions can be assigned by the administrator for anonymous connections to the computer. Anonymous connections will rely on default permissions. However, an unauthorized user could anonymously list account names and use the information to attempt to guess passwords or perform social-engineering attacks.
+
+-   Not defined
+
+### Best practices
+
+1.  Set this policy to Enabled. Note that when this is enabled, it will be impossible to establish trusts with Windows NT 4.0–based domains. This policy setting will also cause problems with earlier-version clients, such as Windows NT 3.51 and Windows 95, that are trying to use resources on the server.
+
+### Location
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
+
+### Default values
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
+
+|Server type or GPO|Default value|
+|----------------------|-----------------|
+|Default Domain Policy|Not defined|
+|Default Domain Controller Policy|Not defined|
+|Stand-Alone Server Default Settings|Disabled|
+|DC Effective Default Settings|Disabled|
+|Member Server Effective Default Settings|Disabled|
+|Client Computer Effective Default Settings|Disabled|
+
+### Operating system version differences
+Windows 2000 Server has a similar policy setting named **Additional Restrictions for Anonymous Connections** managed a registry entry **RestrictAnonymous**, located in the HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA key. In Windows Server 2003, the policy settings **Network access: Do not allow anonymous enumeration of SAM accounts** and **Network access: Do not allow anonymous enumeration of SAM accounts and shares** replace the Windows 2000 policy setting. They manage the registry entries **RestrictAnonymousSAM** and **RestrictAnonymous**, respectively, both located in the HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\ key.
+
+## Policy management
+This section describes features and tools that are available to help you manage this policy.
+
+### Restart requirement
+None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.
+
+### Policy conflicts
+Even with this policy setting enabled, anonymous users will have access to resources with permissions that explicitly include the built-in group, ANONYMOUS LOGON (on systems earlier than Windows Server 2008 and Windows Vista).
+
+### Group Policy
+This policy has no impact on domain controllers.
+
+## Security considerations
+This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
+
+### Vulnerability
+An unauthorized user could anonymously list account names and shared resources and use the information to attempt to guess passwords or perform social-engineering attacks.
+
+### Countermeasure
+Enable the **Network access: Do not allow anonymous enumeration of SAM accounts and shares** setting.
+
+### Potential impact
+It is impossible to grant access to users of another domain across a one-way trust because administrators in the trusting domain are unable to enumerate lists of accounts in the other domain. Users who access file and print servers anonymously are unable to list the shared network resources on those servers; the users must be authenticated before they can view the lists of shared folders and printers.
+
+

@@ -23,7 +23,7 @@ This topic covers detailed methodology on troubleshooting domain controller conf
 -   [Troubleshooting Options](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Options)  
   
 ## <a name="BKMK_Intro"></a>Introduction to Troubleshooting  
-![](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
+![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
   
 ## <a name="BKMK_Options"></a>Troubleshooting Options  
   
@@ -105,7 +105,7 @@ Domain controller promotion and demotion always returns a code at the end of ope
   
     Errors in prerequisite validation and verification do not continue on to a reboot, so they are visible in all cases. For example:  
   
-  ![](media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)  
+  ![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)  
   
 3.  In any scenario, examine the dcpromo.log and dcpromoui.log.  
   

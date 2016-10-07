@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 09f335bb-896a-45dd-adc2-f215b8fba828
 title: Federated Web SSO Design
 description:
@@ -22,7 +22,7 @@ Typically, this design is used when two organizations agree to create a federati
   
 In other words, a federation trust relationship is the embodiment of a business\-level agreement or partnership between two organizations. As shown in the following illustration, you can establish a federation trust relationship between two businesses, which results in an end\-to\-end federation scenario.  
   
-![](media/adfs2_FederatedWebSSODesign.gif)  
+![federated web sso](media/adfs2_FederatedWebSSODesign.gif)  
   
 The one\-way arrow in the illustration signifies the direction of the federation trust, which—like the direction of Windows trusts—always points to the account side of the forest. This means that authentication flows from the account partner organization to the resource partner organization.  
   
