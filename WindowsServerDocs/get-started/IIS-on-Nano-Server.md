@@ -7,6 +7,7 @@ manager: DonGill
 ms.technology: server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.date: 10/06/2016
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
@@ -17,7 +18,7 @@ ms.author: jaimeo
 
 
 ## Overview of IIS on Nano Server  
-You can install the Internet Information Services (IIS) server role on Nano Server by using the -Packages parameter with Microsoft-NanoServer-IIS-Package. For information about configuring Nano Server, including installing packages, see [Get Started with Nano Server](Getting-Started-with-Nano-Server.md).  
+You can install the Internet Information Services (IIS) server role on Nano Server by using the -Packages parameter with Microsoft-NanoServer-IIS-Package. For information about configuring Nano Server, including installing packages, see [Install Nano Server](Getting-Started-with-Nano-Server.md).  
 
 In this release of Nano Server, the following IIS features are available:  
 
@@ -63,16 +64,17 @@ You can install this server role either offline (with the Nano Server off) or on
 
 For offline installation, add the package with the -Packages parameter of New-NanoServerImage, as in this example:  
 
-`New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1.vhd -ComputerName Nano1 -Packages Microsoft-NanoServer-IIS-Package`  
+`New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1.vhd -ComputerName Nano1 -Package Microsoft-NanoServer-IIS-Package`  
 
 If you have an existing VHD file, you can install IIS offline with DISM.exe by mounting the VHD, and then using the **Add-Package** option.   
 The following example steps assume that you are running from the directory specified by BasePath option, which was created after running New-NanoServerImage.  
 
-1.  mountdir  
-2. .\Tools\dism.exe /Mount-ImagmediaFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir  
-3. .\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.camedia:.\mountdir  
-4. .\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.camedia:.\mountdir  
-5. .\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit  
+1.	mkdir mountdir
+2.	.\Tools\dism.exe /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir
+3.	.\Tools\dism.exe /Add-Package /PackagePath:.\packages\Microsoft-NanoServer-IIS-Package.cab /Image:.\mountdir
+4.	.\Tools\dism.exe /Add-Package /PackagePath:.\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab /Image:.\mountdir
+5.	.\Tools\dism.exe /Unmount-Image /MountDir:.\MountDir /Commit
+ 
 
 > [!NOTE]  
 > Note that Step 4 adds the language pack--this example installs EN-US.  
@@ -93,11 +95,11 @@ Though offline installation of the server role is recommended, you might need to
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14300.1000" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
+            <assemblyIdentity name="Microsoft-NanoServer-IIS-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
             <source location="c:\packages\Microsoft-NanoServer-IIS-Package.cab" />  
         </package>  
         <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14300.1000" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
+            <assemblyIdentity name="Microsoft-NanoServer-IIS-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
             <source location="c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab" />  
         </package>  
     </servicing>  
@@ -115,12 +117,11 @@ Though offline installation of the server role is recommended, you might need to
     **dism /online /apply-unattend:.\unattend.xml**  
 
 
-
 5.  Confirm that the IIS package and its associated language pack is installed correctly by running:  
 
     **dism /online /get-packages**  
 
-    You should see "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~en-US~10.0.10586.0" listed twice, once for Release Type : Language Pack and once for Release Type : Feature Pack.  
+    You should see "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000" listed twice, once for Release Type : Language Pack and once for Release Type : Feature Pack.  
 
 6.  Start the W3SVC service either with **net start w3svc** or by restarting the Nano Server.  
 
@@ -132,15 +133,7 @@ Once IIS is installed and running, it is ready to serve web requests. Verify tha
 If you are not able to access the default IIS web page, double-check the IIS installation by looking for the **c:\inetpub** directory on the Nano Server.  
 
 ## Enabling and disabling IIS features  
-A number of IIS features are enabled by default when you install the IIS role (see the table in the "Overview of IIS on Nano Server" section of this topic). You can enable (or disable) additional features in three ways:  
-
--   Using the IISAdministration module for Windows PowerShell remotely  
-
--   Using AppCmd.exe remotely  
-
--   Manually editing the IIS configuration store  
-
-This topic will detail using the IISAdministration module. For examples of using AppCmd.exe, see [IISModules Overview](http://www.iis.net/learn/get-started/introduction-to-iis/iis-modules-overview). For general information about the IISAdminstration module, see [IISAdministration PowerShell Cmdlets](http://blogs.iis.net/bariscaglar/iisadministration-powershell-cmdlets-new-feature-in-windows-10-server-2016).  
+A number of IIS features are enabled by default when you install the IIS role (see the table in the "Overview of IIS on Nano Server" section of this topic). You can enable (or disable) additional features using DISM.exe
 
 Each feature of IIS exists as a set of configuration elements. For example, the Windows authentication feature comprises these elements:  
 
@@ -150,133 +143,30 @@ Each feature of IIS exists as a set of configuration elements. For example, the 
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" \/>`|  
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><providers><add value="Negotiate" /><add value="NTLM" /><br /></providers><br /></windowsAuthentication>`|  
 
-The full set of these configuration elements for all of the IIS features available in this release is included in Appendix 1 of this topic.  
-
-The IISAdministration module of Windows PowerShell allows you to easily add or remove these configuration elements to the applicationhost.config file. Here are three examples using this method: one for installing the Windows authentication feature, one for removing the Windows authentication feature, and one for installing the Default Document feature.  
+The full set of IIS sub-features are included in Appendix 1 of this topic and their corresponding configuration elements is included in Appendix 2 of this topic.  
+ 
 
 ### Example: installing Windows authentication  
 
-1.  In a Windows PowerShell remote session console on the Nano Server, import the Windows PowerShell module for IISAdministration with `Import-Module IISAdministration`.  
+1.  Open a Windows PowerShell remote session console on the Nano Server.  
 
-2.  Add the configuration elements to the \<globalModules> section with this scriptlet:  
+2.  Use `DISM.exe` to install the Windows authentication module:
 
-    ```  
-    # refresh the in-memory image of the config  
-    Reset-IISServerManager -Confirm:$false  
+    ```
+    dism /Enable-Feature /online /featurename:IIS-WindowsAuthentication /all
+    ```
 
-    $section = Get-IISConfigSection "system.webServer/globalModules"  
-    $collection = Get-IISConfigCollection -ConfigElement  $section  
-    New-IISConfigCollectionElement $collection -ConfigAttribute @{"name"="WindowsAuthenticationModule";"image"="%windir%\System32\inetsrv\authsspi.dll"}  
-    ```  
-
-3.  Add the configuration elements to the \<modules> section with this scriptlet:  
-
-    ```  
-    $section = Get-IISConfigSection "system.webServer/modules"  
-    $collection = Get-IISConfigCollection -ConfigElement  $section  
-    New-IISConfigCollectionElement $collection -ConfigAttribute @{"name"="WindowsAuthenticationModule"}  
-    ```  
-
-4.  Add the configuration elements to the \<windowsAuthentication> section with this scriptlet. You might find it helpful to view the IIS schema file (%windir%\system32\inetsrv\config\schema\iis_schema.xml) to see how to navigate through the XML.  
-
-    ```  
-    # delay writes for the New-, Set-* calls, since we're writing to the same section multiple times and we don't want to have to  
-    # keep calling Get-IISConfigSection to get a fresh copy.  
-        Start-IISCommitDelay  
-
-    $section = Get-IISConfigSection "system.webServer/security/authentication/windowsAuthentication"  
-
-    Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "enabled" -AttributeValue $false  
-  
-    Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "authPersistNonNTLM" -AttributeValue $true  
-  
-    $collection = Get-IISConfigElement -ConfigElement $section -ChildElementName "providers" | Get-IISConfigCollection  
-  
-    New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="Negotiate"}  
-  
-    New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="NTLM"}   
-
-    # commit the changes to disk   
-    Stop-IISCommitDelay  
-    ```  
+    The `/all` switch will install any feature that the chosen feature depends on.
 
 ### Example: uninstalling Windows authentication  
-To uninstall a feature, delete the \<globalModules> and \<modules> elements, and then delete the contents of the \<windowsAuthentication> section (in this example). To do this with Windows PowerShell, pipe commands transfer the output of one cmdlet to following cmdlets.  
 
-The exact operations required might vary for different features. For example, for Windows authentication, the \<windowsAuthentication> section has five attributes and two child elements. Deleting the two collection elements and the providers element is adequate for uninstalling the feature, but you could delete all five attributes and the \<extendedProtection> element as well.  
+1.  Open a Windows PowerShell remote session console on the Nano Server.  
 
-1.  In a Windows PowerShell remote session console on Nano Server, import the Windows PowerShell module for IISAdministration with `Import-Module IISAdministration`.  
+2.  Use `DISM.exe` to uninstall the Windows authentication module:
 
-2.  Run this scriptlet:  
-
-    ```  
-    Get-IISConfigSection "system.webServer/globalModules" | Get-IISConfigCollection | `  
-        Remove-IISConfigCollectionElement -ConfigAttribute @{"name"="WindowsAuthenticationModule"} -Confirm:$false  
-
-    Get-IISConfigSection "system.webServer/modules" | Get-IISConfigCollection | `  
-        Remove-IISConfigCollectionElement -ConfigAttribute @{"name"="WindowsAuthenticationModule"} -Confirm:$false  
-    ```  
-
-3.  Run this scriptlet:  
-
-    ```  
-    Start-IISCommitDelay  
-
-    $section = Get-IISConfigSection   "system.webServer/security/authentication/windowsAuthentication"  
-
-    Remove-IISConfigAttribute -ConfigElement $section -AttributeName "enabled" -confirm:$false  
-
-    Remove-IISConfigAttribute -ConfigElement $section -AttributeName "authPersistNonNTLM"  
-
-    Get-IISConfigElement -ConfigElement $section -ChildElementName "providers" | Remove-IISConfigElement -Confirm:$false  
-
-    # commit the changes to disk  
-    Stop-IISCommitDelay  
-    ```  
-
-### Example: Installing Default Document  
-Though Default Document is installed by default, it makes a good example because it includes further elements such as StaticFile in the \<handlers> section. In addition to adding elements to \<globalModules> and \<modules> as in the Windows authentication example, you must also add or modify these additional elements. Before installing or uninstalling any IIS features, refer to the detailed elements in the Appendix to note all elements that you must modify.  
-
-> [!NOTE]  
-> The order that elements are listed in the \<modules> section is important. See [Execution order of modules in IIS7](http://www.ksingla.net/2006/06/execution_order_of_modules_in_iis7/) for more details.  
-
-1.  In a Windows PowerShell remote session console on the Nano Server, import the Windows PowerShell module for IISAdministration with `Import-Module IISAdministration`.  
-
-2.  Add the required elements to \<globalModules> and \<modules> with scriptlets similar to the ones in Steps 2 and 3 of the Windows authentication example.  
-
-3.  Add or modify the StaticFile element in the \<handlers> section and add additional elements that \<defaultDocument> requires with this scriptlet:  
-
-    ```  
-    # refresh the in-memory image of the config  
-    Reset-IISServerManager -Confirm:$false  
-
-    # delay writes until we're done working with this section  
-    Start-IISCommitDelay  
-
-    $collection = Get-IISConfigSection "system.webServer/handlers" | Get-IISConfigCollection   
-    $element = Get-IISConfigCollectionElement $collection -ConfigAttribute @{"name"="StaticFile"}  
-
-    if($element -eq $null)  
-    {  
-        # we didn't find the element, so create it  
-        New-IISConfigCollectionElement $collection -ConfigAttribute @{"name"="StaticFile";"path"="*"; `  
-            "verb"="*";"modules"="DefaultDocumentModule";"resourceType"="Either";"requireAccess"="Read"}  
-    }  
-    else  
-    {  
-        # we found the element, so read the modules attribute  
-        $modules = Get-IISConfigAttributeValue -ConfigElement $element -AttributeName "modules"  
-
-        if(-not $modules.Contains("DefaultDocumentModule"))  
-        {  
-            $modules = "$modules,DefaultDocumentModule"  
-            Set-IISConfigAttributeValue -ConfigElement $element -AttributeName "modules" -AttributeValue $modules  
-        }  
-    }  
-
-    # now commit the changes to disk  
-    Stop-IISCommitDelay  
-    ```  
+    ```
+    dism /Disable-Feature /online /featurename:IIS-WindowsAuthentication
+    ```
 
 ## Other common IIS configuration tasks  
 **Creating websites**  
@@ -346,7 +236,43 @@ Use the Certoc.exe utility to import certificates, as in this example, which sho
 
     You could also use Server Name Indication (SNI) with a specific host name with this syntax: `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
 
-## Appendix 1: Elements of HTTP features  
+## Appendix 1: List of IIS sub-features
+
+- IIS-WebServer
+- IIS-CommonHttpFeatures
+- IIS-StaticContent
+- IIS-DefaultDocument
+- IIS-DirectoryBrowsing
+- IIS-HttpErrors
+- IIS-HttpRedirect
+- IIS-ApplicationDevelopment
+- IIS-CGI
+- IIS-ISAPIExtensions
+- IIS-ISAPIFilter
+- IIS-ServerSideIncludes
+- IIS-WebSockets
+- IIS-ApplicationInit
+- IIS-Security
+- IIS-BasicAuthentication
+- IIS-WindowsAuthentication
+- IIS-DigestAuthentication
+- IIS-ClientCertificateMappingAuthentication
+- IIS-IISCertificateMappingAuthentication
+- IIS-URLAuthorization
+- IIS-RequestFiltering
+- IIS-IPSecurity
+- IIS-CertProvider
+- IIS-Performance
+- IIS-HttpCompressionStatic
+- IIS-HttpCompressionDynamic
+- IIS-HealthAndDiagnostics
+- IIS-HttpLogging
+- IIS-LoggingLibraries
+- IIS-RequestMonitor
+- IIS-HttpTracing
+- IIS-CustomLogging
+
+## Appendix 2: Elements of HTTP features  
 Each feature of IIS exists as a set of configuration elements. This appendix lists the configuration elements for all of the features in this release of Nano Server  
 
 ### Common HTTP features  

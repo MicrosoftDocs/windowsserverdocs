@@ -55,11 +55,11 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 1.  On the Hyper-V host, open Hyper-V Manager, and then click **Virtual Switch Manager**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)  
+    ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)  
   
 2.  Virtual Switch Manager opens. In **What type of virtual switch do you want to create?**, ensure that **External** is selected, and then click **Create Virtual Switch**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)  
+    ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)  
   
 3.  The Virtual Switch Properties page opens. Type a **Name** for the virtual switch, and add **Notes** as needed.  
   
@@ -76,36 +76,36 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 8.  In **Hardware**, click **Network Adapter**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)  
+    ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)  
   
 9. In **Network Adapter** properties, select one of the virtual switches that you created in previous steps, and then click **Apply**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)  
+    ![Select a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)  
   
 10. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. Click **Advanced Features**.  
   
     > [!NOTE]  
     > Steps 10 through 12 demonstrate how to enable NIC Teaming by using the graphical user interface. You can also enable NIC Teaming by running the following Windows PowerShell command: `Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming On`  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_03.jpg)  
+    ![Network adapter advanced features](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_03.jpg)  
   
 11. In **Advanced Features**, scroll down to **NIC Teaming**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_04.jpg)  
+    ![NIC Teaming](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_04.jpg)  
   
 12. In **NIC Teaming**, click to select **Enable this network adapter to be part of a team in the guest operating system**. Click **OK**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
+    ![Add a network adapter to a team](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
   
 13. To add a second network adapter, in Hyper-V Manager, in **Virtual Machines**, right-click the same VM, and then click **Settings**. The VM **Settings** dialog box opens.  
   
 14. In **Add Hardware**, click **Network Adapter**, and then click **Add**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)  
+    ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)  
   
 15. In **Network Adapter** properties, select the second virtual switch that you created in previous steps, and then click **Apply**.  
   
-    ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)  
+    ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)  
   
 16. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. Click **Advanced Features**.  
   

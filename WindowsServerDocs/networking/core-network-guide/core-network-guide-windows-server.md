@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic provides an overview of the Core Network Guide for Windows Server&reg; 2016 Technical Preview, and contains the following sections.  
+This topic provides an overview of the Core Network Guide for Windows Server&reg; 2016, and contains the following sections.  
   
 -   [Introduction to the Windows Server Core Network](#bkmk_intro)  
   

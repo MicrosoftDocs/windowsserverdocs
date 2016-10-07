@@ -107,11 +107,11 @@ Stop-NetEventSession [-Name]
 These cmdlets are documented in detail at [Network Event Packet Capture Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
 
 ##Installing servicing packages  
-If you want install a servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files):  
+If you want install a servicing packages, use the -ServicingPackagePath parameter (you can pass an array of paths to .cab files):  
   
-`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackages \\path\to\kb123456.cab`  
+`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath \\path\to\kb123456.cab`  
   
-Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. Follow these steps to extract the .cab file, which you can then install with the -ServicingPackages parameter:  
+Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. Follow these steps to extract the .cab file, which you can then install with the -ServicingPackagePath parameter:  
   
 1.  Download the servicing package (from the associated Knowledge Base article or from [Microsoft Update Catalog](http://catalog.update.microsoft.com/v7/site/home.aspx). Save it to a local directory or network share, for example: C:\ServicingPackages  
 2.  Create a folder in which you will save the extracted servicing package.  Example: c:\KB3157663_expanded  
@@ -132,7 +132,7 @@ Volume Serial Number is B05B-CC3D
 04/17/2016  12:36 AM           185,818 WSUSSCAN.cab  
                4 File(s)     94,073,136 bytes  
                2 Dir(s)  328,559,427,584 bytes free  
-4.  Run `New-NanoServerImage` with the -ServicingPackages parameter pointing to the .cab file in this directory, for example: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackages C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
+4.  Run `New-NanoServerImage` with the -ServicingPackagePath parameter pointing to the .cab file in this directory, for example: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
 
 ## Managing updates in Nano Server
 

@@ -55,7 +55,7 @@ Install Storage Replica on Nano Server using  PowerShell remoting as follows:
 On the Nano server (through a remote PSSession) :  
 
     >[!NOTE]
-    >CREDSSP is needed for Kerberos double-hop support in the `Test-SRTopology` cmdlet, and not needed by other Storage Replica cmdlets. Using CREDSSP is not recommended under typical circumstances.  
+    >CREDSSP is needed for Kerberos double-hop support in the `Test-SRTopology` cmdlet, and not needed by other Storage Replica cmdlets, which handle distributed system credentials automatically. Using CREDSSP is not recommended under typical circumstances. For an alternative to CREDSSP, review the following Microsoft blog post: "PowerShell Remoting Kerberos Double Hop Solved Securely" - https://blogs.technet.microsoft.com/ashleymcglone/2016/08/30/powershell-remoting-kerberos-double-hop-solved-securely/ 
 
         Enable-WSManCredSSP -role server       
 
@@ -101,7 +101,7 @@ Note the gateway and interface information (on both servers) and the partnership
 
 ```  
 Set-SRNetworkConstraint -SourceComputerName sr-srv06 -SourceRGName rg02 -  
-SourceNWInterfaceIndex 2 -DestinationComputerName sr-srv05 -DestinationNWInterfaceIndex 3 -DestinationRGName rg01  
+SourceNWInterface 2 -DestinationComputerName sr-srv05 -DestinationNWInterface 3 -DestinationRGName rg01  
 
 Get-SRNetworkConstraint  
 
@@ -111,19 +111,21 @@ Update-SmbMultichannelConnection
 
 For configuring network constraints on a stretch cluster:  
 
-    Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterfaceIndex "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterfaceIndex "Cluster Network 1","Cluster Network 2"  
+    Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterface "Cluster Network 1","Cluster Network 2"  
 
 ## <a name="FAQ4"></a> Can I configure one-to-many replication or transitive (A to B to C) replication?  
-Not in Windows Server 2016. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release.  
+Not in Windows Server 2016. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release. You can of course configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
 
 ## <a name="FAQ5"></a> Can I expand or shrink replicated volumes replicated by Storage Replica?  
-Not in Windows Server 2016. You must remove replication, resize volumes, and then add replication back to the volumes. This may change in a later release.  
+You can expand (grow) volumes, but not shrink them. This is prevented by default; use the `Set-SRGroup -AllowVolumeResize $TRUE` option to allow it on both groups, prior to resizing.
+
+Note that ReFS does not support shrinking drives regardless of replication, unlike NTFS.
 
 ## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
 Not in Windows Server 2016. Storage Replica dismounts the destination volume and its drive letter or mount point when replication begins. This may change in a later release.  
 
 ## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
-While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration will probably work without issues.   
+While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works works without issues.   
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
@@ -144,13 +146,13 @@ To prevent the new Hyper-V virtual machine resiliency feature from running and t
 
 You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs.  
 
-You can also use seeded data volumes, by ensuring that the destination volume has some subset of data from the primary - via a restored backup, old snapshot, previous replication, copied files, etc. - then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`.  
+You can also use seeded data volumes to reduce bandwidth usage and sometimes time, by ensuring that the destination volume has some subset of data from the primary - via a restored backup, old snapshot, previous replication, copied files, etc. - then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`. If the volume is mostly empty, using seeded sync may reduce time and bandwidth usage.
 
 ## <a name="FAQ13"></a> Can I delegate users to administer replication?  
 
 You can use the `Grant-SRDelegation` cmdlet in Windows Server 2016. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
 
-    Grant-SRDelegation -UserName threshold\sradmin  
+    Grant-SRDelegation -UserName contso\tonywang  
 
 The cmdlet will remind you that the user needs to log off and on of the server they are planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control this.  
 
@@ -167,7 +169,7 @@ You can also schedule this tool to run periodically using a scheduled task. For 
 Use of Windows Server Backup, Microsoft Azure Backup, Microsoft DPM, or other snapshot, VSS, virtual machine, or file-based technologies are supported by Storage Replica as long as they operate within the volume layer. Storage Replica does not support block-based backup and restore.
 
 ## <a name="FAQ14"></a> Can I configure replication to restrict bandwidth usage?
-Yes, via the SMB 3 bandwidth limiter. This is a global setting for all Storage Replica traffic and therefore affects all replication from this server. Typically, this is needed only with Storage Replica initial sync setup, where all the volume data must transfer. If needed after initial sync, your network bandwidth is too low for your IO workload.
+Yes, via the SMB bandwidth limiter. This is a global setting for all Storage Replica traffic and therefore affects all replication from this server. Typically, this is needed only with Storage Replica initial sync setup, where all the volume data must transfer. If needed after initial sync, your network bandwidth is too low for your IO workload; reduce the IO or increase the bandwidth.
 
 This should only be used with asynchronous replication (note: initial sync is always asynchronous even if you have specified synchronous).
 You can also use network QoS policies to shape Storage Replica traffic. Use of highly matched seeded Storage Replica replication will also lower overall initial sync bandwidth usage considerably.
@@ -186,7 +188,7 @@ To remove the bandwidth limit, use:
     Remove-SmbBandwidthLimit -Category StorageReplication
 
 ## <a name="FAQ14"></a> How do I report an issue with Storage Replica or this guide?  
-For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation.  
+For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md) 

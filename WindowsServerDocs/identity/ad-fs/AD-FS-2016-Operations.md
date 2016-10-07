@@ -13,45 +13,46 @@ ms.technology: identity-adfs
 ---
 # AD FS 2016 Operations
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document contains a list of all of the documentation operations for AD FS for Windows Server 2016. This includes the following:  
   
-* [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md) 
 
-* [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md)
 
-* [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
+- [Access Control Policies in AD FS](../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
+- [AD FS 2016 Single Sign On Settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
+- [AD FS Rapid Restore Tool](../ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
+- [AD FS support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
+- [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
+- [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)
+- [Auditing Enhancements to AD FS in Windows Server 2016](../ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
+- [Best Practices for Securing AD FS](../ad-fs/operations/Best-Practices-Securing-AD-FS.md)
+- [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
+- [Configure AD FS Extranet Lockout](../ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+- [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
+- [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
+- [Configure Additional Authentication Methods for AD FS](../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)
+- [Configure Authentication Policies](../ad-fs/operations/Configure-Authentication-Policies.md)
+- [Configure Claim Rules](../ad-fs/operations/Configure-Claim-Rules.md) 
+- [Configure Device-based Conditional Access on-Premises](../ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md)
+- [Configure intranet forms-based authentication for devices that do not support WIA](../ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
+- [Configuring Alternate Login ID](../ad-fs/operations/Configuring-Alternate-Login-ID.md)
+- [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
+- [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
+- [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md) 
+- [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
+- [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+- [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+- [Manage Risk with Conditional Access Control](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
+- [Plan Device-based Conditional Access on-Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
+- [Set up an AD FS lab environment](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+- [Set up Geographic Redundancy with SQL Server Replication](../ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
+- [Set up the lab environment for AD FS in Windows Server 2012 R2](../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+- [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+- [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+- [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [Walkthrough: Workplace Join with an iOS Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
-* [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md)
-
-* [Configure Claim Rules](../ad-fs/operations/Configure-Claim-Rules.md)      
-  
-* [AD FS 2016 Single Sign on settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)  
-
-* [Auditing Enhancements to AD FS in Windows Server 2016](../ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)  
-    
-*   [Access Control Policies in AD FS](../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
-  
-* [AD FS Support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)  
-  
-* [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)  
-  
-* [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)  
-
-* [Configure intranet forms-based authentication for devices that do not support WIA](../ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
-  
-* [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)  
-  
-* [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)  
-  
-* [Plan Device-based Conditional Access on Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md) 
-
-*  [Configure Device-based Conditional Access on Premises](../ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md)   
-  
-* [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)  
-  
-  
   
 
 

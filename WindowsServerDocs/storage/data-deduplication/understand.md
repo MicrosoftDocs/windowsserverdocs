@@ -1,4 +1,5 @@
 ---
+ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: Understanding Data Deduplication
 ms.technology: storage-deduplication
 ms.prod: windows-server-threshold

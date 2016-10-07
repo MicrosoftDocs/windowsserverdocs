@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/03/2016
+ms.date: 10/05/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -31,6 +31,7 @@ The grid on this page explains your server role upgrade and migration options sp
 |DNS Server|	Yes|	Yes|	Yes|	No|
 |Failover Cluster|Yes with [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade) process which includes node Pause-Drain, Evict, upgrade to Windows Server 2016 and rejoin the original cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.|Not while the server is part of a cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.	|Yes|No for Windows Server 2012 Failover Clusters. Yes for Windows Server 2012 R2 Failover Clusters with Hyper-V VMs or Windows Server 2012 R2 Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
 |File and Storage Services|	Yes|	Yes|	Varies by sub-feature|	No|
+|Hyper-V| Yes. (When the host is part of a cluster with Cluster OS Rolling Upgrade process which includes node Pause-Drain, Evict, upgrade to Windows Server 2016 and rejoin the original cluster.)|  No|   Yes|  No for Windows Server 2012 Failover Clusters. Yes for Windows Server 2012 R2 Failover Clusters with Hyper-V VMs or Windows Server 2012 R2 Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).| 
 |Print and Fax Services|	No|	No|	Yes (Printbrm.exe)|	No|
 |Remote Desktop Services|	Yes, for all sub-roles, but mixed mode farm is not supported|	Yes, for all sub-roles, but mixed mode farm is not supported|	Yes|	No|
 |Web Server (IIS)|	Yes|	Yes|	Yes|	No|
