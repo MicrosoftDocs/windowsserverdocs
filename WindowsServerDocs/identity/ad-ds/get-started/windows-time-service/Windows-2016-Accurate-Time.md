@@ -28,10 +28,10 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 >For a quick overview, take a look at this high level overview video at [https://aka.ms/WS2016TimeVideo](https://aka.ms/WS2016TimeVideo).
 
 ## Overview
-The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1304)](https://tools.ietf.org/html/rfc1305) to synchronize the local system time to a NTP reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider, using stratum level first, followed by root delay dispersion and then time offset.
+The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) to synchronize the local system time to a NTP reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider, using stratum level first, followed by root delay dispersion and then time offset.
 
 > [!NOTE] 
-> The windows time provider plugin model is documented on TechNet.
+> The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475(v=vs.85).aspx).
 
 Domain and Standalone configurations work differently.
 
