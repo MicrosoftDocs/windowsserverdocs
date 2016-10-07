@@ -269,7 +269,7 @@ Phase Offset|	0.0000000s|
 Server Role|	576 (Reliable Time Service)|
 
 ### Discovering the Hierarchy
-Since the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you will need to query the status of a particular machine to understand it’s time source and chain to the master source clock.  This can help diagnosis time synchronization problems.
+Since the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you will need to query the status of a particular machine to understand it’s time source and chain to the master source clock.  This can help diagnose time synchronization problems.
 
 Given you want to troubleshoot a specific client; the first step is to understand its time source by using this w32tm command.
 
@@ -284,11 +284,10 @@ Also useful, the following command lists each domain controller it can find in t
 	
 	w32tm /monitor /domain:my_domain
 
-Using the list, you can trace the results through the domain and understand the hierarchy as well as the time offset at each step.  By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time.  From there you can try to understand why that time is incorrect by turning on w32tm logging. 
+Using the list, you can trace the results through the domain and understand the hierarchy as well as the time offset at each step.  By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time.  From there you can try to understand why that time is incorrect by turning on [w32tm logging](#W32Logging). 
 
 ### Using Group Policy
 You can use Group Policy to accomplish stricter accuracy by, for instance, assigning clients to use specific NTP servers or to control how down-level OS’s are configured when virtualized.  
-
 Below is a list of possible scenarios and relevant Group Policy settings:
 
 **Virtualized Domains** - In order control Virtualized Domain Controllers in Windows 2012R2 so that they synchronize time with their domain, rather than with the Hyper-V host, you can disable this registry entry.   For the PDC, you don’t want to disable the entry as the Hyper-V host will deliver the most stable time source.  The registry entry requires that you restart the w32time service after it is changed.
@@ -355,7 +354,7 @@ To comply with time tracing regulations you can manually archive w32tm logs, eve
 To get the complete story, you will also need Event log information.  By collecting the System Event log, and filtering on Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel-General, you may be able to discover if there are other influences that have changed the time, like third parties.  This might be necessary to rule out external interference.
 Group policy can affect which event logs are written to the log.  See the section above on Using Group Policy for more details.
 
-#### W32time Debug Logging
+#### <a name="W32Logging"></a>W32time Debug Logging
 To enable w32tm for auditing purposes, the following command provides logging showing the periodic updates of the clock and indicates the source clock.  Restart the service to enable the new logging.  
 
 For more information, see [How to turn on debug logging in the Windows Time Service](https://support.microsoft.com/en-us/kb/816043).
