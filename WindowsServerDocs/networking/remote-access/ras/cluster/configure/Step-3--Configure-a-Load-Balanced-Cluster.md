@@ -20,13 +20,13 @@ After preparing servers for the cluster, configure load-balancing on the single 
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Configure the IPv6 prefix](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_Prefix)|If the corporate environment is IPv4+IPv6, or IPv6-only, then on the single Remote Access server, ensure that the IPv6 prefix assigned to DirectAccess client computers is large enough to cover all of the servers in your cluster.|  
-|[3.2 Enable load balancing](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_NLB)|Enable load balancing on the single Remote Access server.|  
-|[3.3 Install the IP-HTTPS certificate](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_InstallIPHTTP)|Each server in the cluster requires a server certificate to authenticate IP-HTTPS connection.  Export the IP-HTTPS certificate from the single Remote Access server and deploy it on each server you will add to the cluster. This is required only if using non-self-signed certificates.|  
-|[3.4 Install the network location server certificate](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_NLS)|If the single server has the network location server deployed locally, then you will need to deploy the network location server certificate on each server in the cluster. If the network location server is hosted on an external server, a certificate on each server is not required. This is required only if using non-self-signed certificates.|  
-|[3.5 Add servers to the cluster](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_Add)|Add all servers to the cluster. Remote Access must not be configured on the servers to be added.|  
-|[3.6 Remove a server from the cluster](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_remove)|Instructions for removing a server from the cluster.|  
-|[3.7 Disable load balancing](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKBK_disable)|Instructions for disabling load balancing.|  
+|[3.1 Configure the IPv6 prefix](#BKMK_Prefix)|If the corporate environment is IPv4+IPv6, or IPv6-only, then on the single Remote Access server, ensure that the IPv6 prefix assigned to DirectAccess client computers is large enough to cover all of the servers in your cluster.|  
+|[3.2 Enable load balancing](#BKMK_NLB)|Enable load balancing on the single Remote Access server.|  
+|[3.3 Install the IP-HTTPS certificate](#BKMK_InstallIPHTTP)|Each server in the cluster requires a server certificate to authenticate IP-HTTPS connection.  Export the IP-HTTPS certificate from the single Remote Access server and deploy it on each server you will add to the cluster. This is required only if using non-self-signed certificates.|  
+|[3.4 Install the network location server certificate](#BKMK_NLS)|If the single server has the network location server deployed locally, then you will need to deploy the network location server certificate on each server in the cluster. If the network location server is hosted on an external server, a certificate on each server is not required. This is required only if using non-self-signed certificates.|  
+|[3.5 Add servers to the cluster](#BKMK_Add)|Add all servers to the cluster. Remote Access must not be configured on the servers to be added.|  
+|[3.6 Remove a server from the cluster](#BKMK_remove)|Instructions for removing a server from the cluster.|  
+|[3.7 Disable load balancing](#BKBK_disable)|Instructions for disabling load balancing.|  
   
 > [!NOTE]  
 > The IP address that is selected for the DIP must not be in use on the network adapters of the first Remote Access server in the cluster. Beginning the DirectAccess deployment with both VIP and DIP added to the network adapter will result in failure.  
@@ -51,7 +51,6 @@ After preparing servers for the cluster, configure load-balancing on the single 
 6.  On the **Remote Access Review** dialog box, review the configuration settings, and then click **Apply**. On the **Applying Remote Access Setup Wizard Settings** dialog box, click **Close**.  
   
 ## <a name="BKMK_NLB"></a>3.2 Enable load balancing  
-[Do this step using Windows PowerShell](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
   
 #### To enable load balancing  
   
@@ -111,7 +110,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
 ```  
   
 > [!NOTE]  
-> It is recommended to not include changes to load-balancer settings with changes to any other settings, if you are using staging GPOs, see [1.8.4 Managing Remote Access GPOs with limited permissions](assetId:///0064848b-b82e-4397-8fde-0c660c596076). Any changes to load-balancer settings must be applied first and then other configuration changes should be made. Also, after configuring load-balancer on a new DirectAccess server, please allow some time for the IP changes to be applied and replicated across the DNS servers in the enterprise, before you change other DirectAccess settings related to the new cluster.  
+> It is recommended to not include changes to load-balancer settings with changes to any other settings, if you are using staging GPOs. Any changes to load-balancer settings must be applied first and then other configuration changes should be made. Also, after configuring load-balancer on a new DirectAccess server, please allow some time for the IP changes to be applied and replicated across the DNS servers in the enterprise, before you change other DirectAccess settings related to the new cluster.  
   
 ## <a name="BKMK_InstallIPHTTP"></a>3.3 Install the IP-HTTPS certificate  
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.  
@@ -203,7 +202,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 14. Repeat this procedure on all servers that you want to be cluster members.  
   
 ## <a name="BKMK_Add"></a>3.5 Add servers to the cluster  
-[Do this step using Windows PowerShell](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
+ 
   
 #### To add servers to the cluster  
   
@@ -253,7 +252,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 > If VPN has not been enabled in a load balanced cluster, you should not provide any VPN address ranges when adding a new server to the cluster using Windows PowerShell cmdlets. If you have done so by mistake, remove the server from the cluster, and add it again to the cluster without specifying the VPN address ranges.  
   
 ## <a name="BKMK_remove"></a>3.6 Remove a server from the cluster  
-[Do this step using Windows PowerShell](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
+ 
   
 #### To remove a server from the cluster  
   
@@ -311,7 +310,7 @@ Clicking **Remove configuration settings** will remove Remote Access and NLB (if
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 4: Verifying the cluster](assetId:///eaa5ec3a-8a69-48c5-b458-fd5165951b52)  
+-   [Step 4: Verifying the cluster](Step-4--Verify-the-Cluster.md)  
   
 
 
