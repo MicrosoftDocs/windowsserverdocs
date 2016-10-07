@@ -1,13 +1,13 @@
 ---
 title: Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: eldenc
+ms.author: stevenek
 ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
-author: kumudd
-ms.date: 10/07/2016
+author: stevenek
+ms.date: 10/11/2016
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
@@ -58,11 +58,11 @@ The following information will be needed as inputs to configure provision and ma
 
 -   **For RDMA configurations:**  
 
-    -   Top of Rack switch make/model (required when using RoCE NICs)  
+    -   Top of Rack switch make/model (required when using RoCE v2 NICs)
 
-    -   Network adapter make/model  
+    -   Network adapter make/model
 
-        -   There are 2 types of RDMA protocols, note which type your RDMA adapter is (RoCEv2 or iWarp)  
+        There are 2 types of RDMA protocols, note which type your RDMA adapter is (RoCE v2 or iWarp).
 
     -   VLAN ID to be used for the 2 network interfaces used by the management OS on the hyper-converged hosts. You should be able to obtain this from your network administrator.  
 -   **[Service Package KB3157663](https://support.microsoft.com/kb/3157663)**  This package has updates that are important to have the hyper-converged nodes, as well as any server managing a Windows Server 2016 hyper-converged deployment.
@@ -432,7 +432,7 @@ When Storage Spaces Direct was enabled, it created a single pool using all the d
 Storage Spaces Direct includes the ability to create a virtual disk with tiers using different resiliency types. For instance, the example below sets the virtual disk to create a three-way mirror *and* dual-parity tier. This optimizes writes to the mirror for performance and in the background writes to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes.
 
 > [!Important]
-> Leave enough unused capacity in the storage pool to allow for a disks to fail and still be able to repair the virtual disks with the remaining disks. For example, if you have 20 disks of 2TB each and you want to allow the system to have 1 disk failure with automatic repair of the virtual disks, you would create a volume that leaves a minimum of 2TB of unused capacity in the storage pool. If you allocate all of the pool capacity to virtual disks and a disk fails, the virtual disks will not be able to repair until the failed disk is replaced or new disks are added to the pool.
+> Leave enough available capacity in the storage pool to allow for a disks to fail and still be able to repair the virtual disks with the remaining disks. For example, if you have 20 disks of 2TB each and you want to allow the system to have 1 disk failure with automatic repair of the virtual disks, you would create a volume that leaves a minimum of 2TB of available capacity in the storage pool. If you allocate all of the pool capacity to virtual disks and a disk fails, the virtual disks will not be able to repair until the failed disk is replaced or new disks are added to the pool.
 
 The following PowerShell command creates a virtual disk with two tiers, a mirror tier and a parity tier from a management system:
 
