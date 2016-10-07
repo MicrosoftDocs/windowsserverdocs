@@ -28,22 +28,22 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 >For a quick overview, take a look at this high level overview video at [https://aka.ms/WS2016TimeVideo](https://aka.ms/WS2016TimeVideo).
 
 ## Overview
-The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1304)](https://tools.ietf.org/html/rfc1305) to synchronize the local system time to a NTP reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider, using stratum level first, followed by root delay dispersion and then time offset.
+The Windows Time service is a component which uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are also 3rd party plugins available as well.  One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) to synchronize the local system time to a NTP reference server.  The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider, using stratum level first, followed by root delay dispersion and then time offset.
 
 > [!NOTE] 
-> The windows time provider plugin model is documented on TechNet.
+> The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/en-us/library/windows/desktop/ms725475(v=vs.85).aspx).
 
 Domain and Standalone configurations work differently.
 
 
-- Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the “Specify a Local Reliable Time Service Using GTIMESERV section below.
+- Domain members use a secure NTP protocol, which uses authentication to ensure the security and authenticity of the time reference.  Domain members synchronize with a master clock determined by the domain hierarchy and a scoring system.  In a domain, there is a hierarchical layer of time stratums, whereby each DC points to a parent DC with a more accurate time stratum.  The hierarchy resolves to the PDC or a DC in the root forest, or a DC with the GTIMESERV domain flag, which denotes a Good Time Server for the domain.  See the [Specify a Local Reliable Time Service Using GTIMESERV](#GTIMESERV) section below.
 
-- Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point back to a Microsoft time reference service resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
+- Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point to a Microsoft owned resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
+
+Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
 > [!NOTE] 
 > For more information about the domain hierarchy and scoring system, see the [“What is Windows Time Service?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/).
-
-Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
 > [!NOTE]
 > Stratum is a concept used in both the NTP and Hyper-V providers, and its value indicates the clocks location in the hierarchy.  Stratum 1 is reserved for the highest level clock, and stratum 0 is reserved for the hardware assumed to be accurate and has little or no delay associated with it.  Stratum 2 talk to stratum 1 servers, stratum 3 to stratum 2 and so on.  While a lower stratum often indicates a more accurate clock, it is possible to find discrepancies.  Also, W32time only accepts time from stratum 15 or below.  To see the stratum of a client, use *w32tm /query /status*.
@@ -51,8 +51,8 @@ Since Hyper-V guests will have at least two Windows Time providers to choose fro
 ### Three Critical Factors
 In every case for accurate time, there are three critical factors:
 
-1. **Solid Source Clock** - The source clock in your domain needs to be stable and accurate.  This usually means installing a GPS device or pointing to a Stratum 1 source, taking #1 into account.  The analogy goes, if you have two boats on the water, and you are trying to measure the altitude of one compared to the other, your accuracy is best if the source boat is very stable and not moving.  The same goes for time, and if your source clock isn’t stable, then the entire chain of synchronized clocks is affected and magnified at each stage.  It also must be accessible, because disruptions in the connection will interfere with time synchronization.  And finally it must be secure.  If the time reference is not properly maintained, or operated by a potentially malicious party, is can risky to trust it and exposes your domain to time based attacks.
-2. **Stable client clock** - A stable client clocks assures that the natural drift of the oscillator is containable.  NTP uses multiple samples from potentially multiple NTP servers to condition and discipline your local computers clock.  It does not step the time changes, but rather slows or speeds up the local clock that that you approach the accurate time quickly and stay accurate between NTP requests.  However, if you’re the client computer clock’s oscillator is not stable, then more fluctuations in between adjustments can occur and the algorithms Windows uses to condition the clock don’t work accurately.  In some cases, firmware updates might be needed for accurate time.
+1. **Solid Source Clock** - The source clock in your domain needs to be stable and accurate.  This usually means installing a GPS device or pointing to a Stratum 1 source, taking #3 into account.  The analogy goes, if you have two boats on the water, and you are trying to measure the altitude of one compared to the other, your accuracy is best if the source boat is very stable and not moving.  The same goes for time, and if your source clock isn’t stable, then the entire chain of synchronized clocks is affected and magnified at each stage.  It also must be accessible, because disruptions in the connection will interfere with time synchronization.  And finally it must be secure.  If the time reference is not properly maintained, or operated by a potentially malicious party, is can risky to trust it and exposes your domain to time based attacks.
+2. **Stable client clock** - A stable client clocks assures that the natural drift of the oscillator is containable.  NTP uses multiple samples from potentially multiple NTP servers to condition and discipline your local computers clock.  It does not step the time changes, but rather slows or speeds up the local clock that that you approach the accurate time quickly and stay accurate between NTP requests.  However, if the client computer clock’s oscillator is not stable, then more fluctuations in between adjustments can occur and the algorithms Windows uses to condition the clock don’t work accurately.  In some cases, firmware updates might be needed for accurate time.
 3. **Symmetrical NTP communication** - It is critical that the connection for NTP communication is symmetrical.  NTP uses calculations to adjust the time that assume the network patch is symmetrical.  If the path the NTP packet takes going to the server takes a different amount of time to return, the accuracy is affected.  For example, the path could change due to changes in network topology, or packets being routed through devices that have different interface speeds.
 
 
@@ -74,10 +74,10 @@ There are many different reasons you might need accurate time.  The typical case
 
 ## Windows Server 2016 Improvements
 ### Windows Time Service and NTP
-Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.  NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response.  However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency.  Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock.  Additionally, the source we use for accurate time references the improved API.  With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
+Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.  NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response.  However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency.  Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock.  Additionally, the source we use for accurate time references an improved API which gives us better resolution.  With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
 
 ### Hyper-V
-Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which describe the variance), of 50µs, even on a machine with %75 load.
+Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time.  This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with %75 load.
 
 > [!NOTE]
 > See this article on [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx) for more information.
@@ -85,7 +85,7 @@ Windows 2016 has improved the Hyper-V TimeSync service. Improvements include mor
 > [!NOTE]
 > Load was created using prime95 benchmark using balanced profile.
 
-Additionally, the stratum level that the Host reports to the guest is more transparent.  Previously the Host would present a fixed stratum of 2, regardless of its accuracy.  With the changes in Windows Server 2016, the host reports and stratum one greater than the host stratum, which results in better time for guest virtual machines.  The host stratum is determined by w32time through normal means based on its source time.  Domain joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host.  It was for this reason that we advised to manually disable Hyper-V Time Provider setting for machines participating in a domain in Windows 2012R2 and below.
+Additionally, the stratum level that the Host reports to the guest is more transparent.  Previously the Host would present a fixed stratum of 2, regardless of its accuracy.  With the changes in Windows Server 2016, the host reports and stratum one greater than the host stratum, which results in better time for virtual guests.  The host stratum is determined by w32time through normal means based on its source time.  Domain joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host.  It was for this reason that we advised to manually disable Hyper-V Time Provider setting for machines participating in a domain in Windows 2012R2 and below.
 
 ### Monitoring
 Performance monitor counters have been added.  These allow you to baseline, monitor, and troubleshoot time accuracy.  These counters include:
@@ -99,7 +99,7 @@ NTP Client Source Count|	Active number of NTP Time sources being used by the NTP
 NTP Server Incoming Requests|	Number of requests received by the NTP Server (Requests/Sec).|
 NTP Server Outgoing Responses|	Number of requests answered by NTP Server (Responses/Sec).|
 
-The first 3 counters target scenarios for troubleshooting accuracy issues.  The Troubleshooting Time Accuracy and NTP section below, under Best Practices, has more detail.
+The first 3 counters target scenarios for troubleshooting accuracy issues.  The Troubleshooting Time Accuracy and NTP section below, under [Best Practices](#BestPractices), has more detail.
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ### Configuration Updates per Environment
@@ -133,16 +133,16 @@ We used four different methods to measure accuracy with both physical and virtua
 1. Measure the local clock, that is conditioned by w32tm, against our reference test machine which has separate GPS hardware.  
 2.	Measure NTP pings from the NTP server to clients using W32tm “stripchart”
 3.	Measure NTP pings from the client to the NTP server using W32tm “stripchart”
-4.	Measure Hyper-V results from the host to the guest using the Time Stamp Counter (TSC).  This counter is shared between both partitions and the system time in both partitions.  We calculated the difference of the host time and the client time in the virtual machine.  Then we used the TSC clock to interpolate the host time from the guest, since the measurements don’t happen at the same time.  Also, we used the TSV clock factor out delays and latency in the API.
+4.	Measure Hyper-V results from the host to the guest using the Time Stamp Counter (TSC).  This counter is shared between both partitions and the system time in both partitions.  We calculated the difference of the host time and the client time in the virtual machine.  Then we use the TSC clock to interpolate the host time from the guest, since the measurements don’t happen at the same time.  Also, we use the TSV clock factor out delays and latency in the API.
 
 W32tm is built-in, but the other tools we used during our testing are available for the Microsoft repository on GitHub as open source for your testing and usage.  The WIKI on the repository has more information describing how to use the tools to do measurements.
 
-[https://github.com/Microsoft/Windows-Time-Calibration-Tools](https://github.com/Microsoft/Windows-Time-Calibration-Tools)
+> [https://github.com/Microsoft/Windows-Time-Calibration-Tools](https://github.com/Microsoft/Windows-Time-Calibration-Tools)
 
 The test results shown below are a subset of measurements we made in one of the test environments.  They illustrate the accuracy maintained at the start of the time hierarchy, and child domain client at the end of the time hierarchy.  This is compared to the same machines in a 2012 based topology for comparison.
 
 ### Topology
-We tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows machines which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
+For comparison, we tested both a Windows Server 2012R2 and Windows Server 2016 based topology.  Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed.  Each host runs 3 domain joined windows guests, which are arranged according to the following topology.  The lines represent the time hierarchy, and the protocol/transport that is used.
 
 ![Windows Time](media/Windows-2016-Accurate-Time/topology1.png)
 
@@ -169,7 +169,7 @@ The following chart compares 1 virtual network hop to 6 physical network hops wi
 
 ![Windows Time](media/Windows-2016-Accurate-Time/chart3.png)
 
-## Best Practices for accurate timekeeping
+## <a Name=BestPractices></a>Best Practices for accurate timekeeping
 ### Solid Source Clock
 A machines time is only as good as the source clock it synchronizes with.  In order to achieve 1 ms of accuracy, you’ll need GPS hardware or a time appliance on your network you reference as the master source clock.  Using the default of time.windows.com, may not provide a stable and local time source.  Additionally, as you get further away from the source clock, the network affects the accuracy.  Having a master source clock in each data center is required for the best accuracy.
 
@@ -215,7 +215,7 @@ To synchronize exclusively over NTP, it is recommended to disable the TimeSync i
 > [!NOTE]
 > Note:  Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn’t something that’s widely available across all Linux distros yet.
 
-### Specify a Local Reliable Time Service Using GTIMESERV
+### <a name="GTIMESERV"></a>Specify a Local Reliable Time Service Using GTIMESERV
 You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags.  For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV.  This will insure your domain references a clock based on the solid source clock.
 
 > [!NOTE]
