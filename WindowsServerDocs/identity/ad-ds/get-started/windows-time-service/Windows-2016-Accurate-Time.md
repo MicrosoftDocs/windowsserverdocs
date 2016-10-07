@@ -99,7 +99,7 @@ NTP Client Source Count|	Active number of NTP Time sources being used by the NTP
 NTP Server Incoming Requests|	Number of requests received by the NTP Server (Requests/Sec).|
 NTP Server Outgoing Responses|	Number of requests answered by NTP Server (Responses/Sec).|
 
-The first 3 counters target scenarios for troubleshooting accuracy issues.  The Troubleshooting Time Accuracy and NTP section below, under Best Practices, has more detail.
+The first 3 counters target scenarios for troubleshooting accuracy issues.  The Troubleshooting Time Accuracy and NTP section below, under [Best Practices](#BestPractices), has more detail.
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ### Configuration Updates per Environment
@@ -169,7 +169,7 @@ The following chart compares 1 virtual network hop to 6 physical network hops wi
 
 ![](media/Windows-2016-Accurate-Time/chart3.png)
 
-## Best Practices for accurate timekeeping
+## <a Name=BestPractices></a>Best Practices for accurate timekeeping
 ### Solid Source Clock
 A machines time is only as good as the source clock it synchronizes with.  In order to achieve 1 ms of accuracy, you’ll need GPS hardware or a time appliance on your network you reference as the master source clock.  Using the default of time.windows.com, may not provide a stable and local time source.  Additionally, as you get further away from the source clock, the network affects the accuracy.  Having a master source clock in each data center is required for the best accuracy.
 
