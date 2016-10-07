@@ -133,11 +133,11 @@ We used four different methods to measure accuracy with both physical and virtua
 1. Measure the local clock, that is conditioned by w32tm, against our reference test machine which has separate GPS hardware.  
 2.	Measure NTP pings from the NTP server to clients using W32tm “stripchart”
 3.	Measure NTP pings from the client to the NTP server using W32tm “stripchart”
-4.	Measure Hyper-V results from the host to the guest using the Time Stamp Counter (TSC).  This counter is shared between both partitions and the system time in both partitions.  We calculated the difference of the host time and the client time in the virtual machine.  Then we used the TSC clock to interpolate the host time from the guest, since the measurements don’t happen at the same time.  Also, we used the TSV clock factor out delays and latency in the API.
+4.	Measure Hyper-V results from the host to the guest using the Time Stamp Counter (TSC).  This counter is shared between both partitions and the system time in both partitions.  We calculated the difference of the host time and the client time in the virtual machine.  Then we use the TSC clock to interpolate the host time from the guest, since the measurements don’t happen at the same time.  Also, we use the TSV clock factor out delays and latency in the API.
 
 W32tm is built-in, but the other tools we used during our testing are available for the Microsoft repository on GitHub as open source for your testing and usage.  The WIKI on the repository has more information describing how to use the tools to do measurements.
 
-[https://github.com/Microsoft/Windows-Time-Calibration-Tools](https://github.com/Microsoft/Windows-Time-Calibration-Tools)
+	[https://github.com/Microsoft/Windows-Time-Calibration-Tools](https://github.com/Microsoft/Windows-Time-Calibration-Tools)
 
 The test results shown below are a subset of measurements we made in one of the test environments.  They illustrate the accuracy maintained at the start of the time hierarchy, and child domain client at the end of the time hierarchy.  This is compared to the same machines in a 2012 based topology for comparison.
 
