@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 9831b421-8fb7-4e15-ac27-c013cbca6d05
 title: Certificate Requirements for Federation Servers
 description:
@@ -45,7 +45,7 @@ As an alternative to using the Certificates snap\-in, you can also import the SS
   
 Depending on your security and budget requirements, carefully consider which of your certificates will be obtained by a public CA or a corporate CA. The following figure shows the recommended CA issuers for a given certificate type. This recommendation reflects a best\-practice approach regarding security and cost.  
   
-![](media/adfs2_fedserver_certstory_1.png)  
+![cert requirements](media/adfs2_fedserver_certstory_1.png)  
   
 ## Certificate revocation lists  
 If any certificate that you use has CRLs, the server with the configured certificate must be able to contact the server that distributes the CRLs.  

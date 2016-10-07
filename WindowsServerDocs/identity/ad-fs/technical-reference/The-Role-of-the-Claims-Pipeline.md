@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: ffb9d63c-ba7c-4ad1-b814-6db67f98c943
 title: The Role of the Claims Pipeline
 description:
@@ -38,7 +38,7 @@ Claims rules contain the administrator\-defined logic by which the claims engine
   
 As shown in the following illustration, the claims pipeline is responsible for the entire end\-to\-end process of flowing a claim through the various pipeline stages in order to end up with an issued claim that will be sent over a relying party trust. The outgoing claim in the illustration represents the issued claim.  
   
-![](media/adfs2_pipeline.gif)  
+![AD FS roles](media/adfs2_pipeline.gif)  
   
 Although it is not shown in the illustration, it is the claims engine that performs the actual processing of the rules at each stage. For more information, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).  
   

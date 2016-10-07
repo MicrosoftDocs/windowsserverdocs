@@ -21,7 +21,7 @@ This document describes conditional access policies based on devices in a hybrid
 
 AD FS provides the on premises component of conditional access policies in a hybrid scenario.  When you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.  
 
-![](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
+![conditional access](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
 
 ### Types of registered devices  
 There are three kinds of registered devices, all of which are represented as Device objects in Azure AD and can be used for conditional access with AD FS on premises as well.  

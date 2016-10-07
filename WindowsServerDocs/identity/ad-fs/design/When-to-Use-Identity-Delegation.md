@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: When to Use Identity Delegation
 description:
@@ -23,14 +23,14 @@ For example, an existing parts\-ordering Web site can be enhanced programmatical
   
 For this data\-retrieval process to succeed, some succession of authorization “hand\-shaking” must take place between the Web application and the Web service for the parts database, as shown in the following illustration.  
   
-![](media/adfs2_identitydelegationconcept.gif)  
+![identity delegation](media/adfs2_identitydelegationconcept.gif)  
   
 Because the original request was made to the Web server itself, which is likely to be located in a completely different organization from the organization of the user who is attempting to access the Web server, the security token that is sent along with the request does not meet the authorization criteria required to access any other computer besides the Web server. Therefore, the only way that the originating user request can be fulfilled is by placing an intermediate federation server in the resource partner organization to help with reissuing a security token that does have the appropriate access privileges.  
   
 ## How does identity delegation work?  
 Web applications in multitier application architectures often call Web services to access common data or functionality. It is important for these Web services to know the identity of the original user so that the service can make authorization decisions and facilitate auditing. In this case, the front\-end Web application represents the user to the Web service as a delegate. AD FS facilitates this scenario by allowing Active Directory accounts to act as a user to another relying party. An identity delegation scenario is shown in the following illustration.  
   
-![](media/adfs2_identitydelegationsteps.gif)  
+![identity delegation](media/adfs2_identitydelegationsteps.gif)  
   
 1.  Frank attempts to access part\-ordering history from a Web application in another organization. His client computer requests and receives a token from AD FS for the front\-end part\-ordering Web application.  
   

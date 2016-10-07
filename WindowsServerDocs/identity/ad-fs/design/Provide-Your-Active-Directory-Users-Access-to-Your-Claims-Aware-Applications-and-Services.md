@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services
 description:
@@ -51,7 +51,7 @@ After reviewing the information in the linked topics, you can begin deploying th
   
 The following illustration shows each of the required components for this AD FS deployment goal.  
   
-![](media/31394ea8-fecb-4372-ac3f-cc3cf566ffc9.gif)  
+![access to your claims](media/31394ea8-fecb-4372-ac3f-cc3cf566ffc9.gif)  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

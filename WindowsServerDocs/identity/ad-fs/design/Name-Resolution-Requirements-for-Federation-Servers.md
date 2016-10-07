@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 74ef34c8-e13f-499b-b2bb-952ad7036622
 title: Name Resolution Requirements for Federation Servers
 description:
@@ -23,7 +23,7 @@ So that successful name resolution through Windows Integrated Authentication on 
   
 In the following illustration, you can see how this task is accomplished for a given scenario. In this scenario, Microsoft Network Load Balancing \(NLB\) provides a single cluster FQDN name and a single cluster IP address for an existing federation server farm.  
   
-![](media/adfs2_deploy_single_fs.gif)  
+![name requirements](media/adfs2_deploy_single_fs.gif)  
   
 For information about how to configure a cluster IP address or cluster FQDN using NLB, see [Specifying the Cluster Parameters](http://go.microsoft.com/fwlink/?LinkId=75282).  
   
