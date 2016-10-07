@@ -12,14 +12,14 @@ ms.date: 10/11/2016
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
 
-You can use Storage Spaces Direct to deploy software-defined storage (SDS) for virtual machines, and host the virtual machines on the same cluster in a hyper-converged solution. This guide provides background info about the solution and shows you one way to deploy it.
+You can use Storage Spaces Direct to deploy software-defined storage (SDS) for virtual machines, and host the virtual machines on the same cluster in a hyper-converged solution. This guide provides background info about the solution and shows you one way to deploy it. For an overview of Storage Spaces Direct, see [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
-Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates!
+Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! 
 
-For background info, see [Storage Spaces Direct](storage-spaces-direct-overview.md).
+If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, as described in [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).
 
    > [!TIP]
-   > Before deploying Storage Spaces Direct, we recommended briefly reading this document to familiarize yourself with the overall approach, to get a sense for the important **Notes** associated with some steps, and to acquaint yourself with the additional supporting resources and documentation.
+   > Before deploying Storage Spaces Direct, we recommended briefly reading this document to familiarize yourself with the overall approach, to get a sense for the important notes associated with some steps, and to acquaint yourself with the additional supporting resources and documentation.
 
 This guide includes instructions to install and configure the components of a hyper-converged system using Windows Server 2016 with either the Server with Desktop Experience or Server Core installation options. The act of deploying a hyper-converged system can be divided into three high level phases:
 
@@ -38,15 +38,6 @@ The hyper-converged deployment scenario has the Hyper-V (compute) and Storage Sp
 ![Diagram showing the hyper-converged stack with a single cluster hosting the storage and virtual machines](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/StorageSpacesDirectHyperconverged.png)  
 
 **FIGURE 1: Hyperconverged - same cluster configured for Storage Spaces Direct and the hosting of virtual machines**
-
-## Hardware requirements
-
-For production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation.
-
-If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
-
-  > [!NOTE]
-  > Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.
 
 ## Information gathering
 
