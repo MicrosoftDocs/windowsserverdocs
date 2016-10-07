@@ -1726,7 +1726,7 @@
 ### [iSCSI boot](storage/iscsi/iscsi-boot-overview.md)
 ### [Format](storage/commands/format.md)
 ## [Security and Assurance](security/Security-and-Assurance.md)
-### [Windows Defender Overview for Windows Server Technical Preview](security/windows-defender/windows-defender-overview-windows-server.md)
+### [Windows Defender Overview](security/windows-defender/windows-defender-overview-windows-server.md)
 #### [Windows Defender Events](security/windows-defender/Windows-Defender-Events.md)
 #### [Automatic exclusions for Windows Defender](security/windows-defender/Automatic-exclusions-for-Windows-Defender.md)
 ### [Guarded Fabric and Shielded VMs](security/Guarded-Fabric-and-Shielded-VMs.md)
