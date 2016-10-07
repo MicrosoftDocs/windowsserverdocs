@@ -40,10 +40,10 @@ Domain and Standalone configurations work differently.
 
 - Standalone machines are configured to use time.windows.com by default.  This name is resolved by your ISP, which should point to a Microsoft owned resource.  Like all remotely located time references, network outages, may prevent synchronization.  Network traffic loads and asymmetrical network paths may reduce the accuracy of the time synchronization.  For 1 ms accuracy, you can’t depend on a remote time sources.
 
+Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
+
 > [!NOTE] 
 > For more information about the domain hierarchy and scoring system, see the [“What is Windows Time Service?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/).
-
-Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
 > [!NOTE]
 > Stratum is a concept used in both the NTP and Hyper-V providers, and its value indicates the clocks location in the hierarchy.  Stratum 1 is reserved for the highest level clock, and stratum 0 is reserved for the hardware assumed to be accurate and has little or no delay associated with it.  Stratum 2 talk to stratum 1 servers, stratum 3 to stratum 2 and so on.  While a lower stratum often indicates a more accurate clock, it is possible to find discrepancies.  Also, W32time only accepts time from stratum 15 or below.  To see the stratum of a client, use *w32tm /query /status*.
