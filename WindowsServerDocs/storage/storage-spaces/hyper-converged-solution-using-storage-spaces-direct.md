@@ -12,14 +12,22 @@ ms.date: 10/07/2016
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
 
-You can use Storage Spaces Direct to deploy software-defined storage (SDS) for virtual machines, and host the virtual machines on the same cluster in a hyper-converged solution. This guide outlines the solution and tells you how to deploy it.
+You can use Storage Spaces Direct to deploy software-defined storage (SDS) for virtual machines, and host the virtual machines on the same cluster in a hyper-converged solution. This guide provides background info about the solution and shows you one way to deploy it.
 
-However, for production environments, we recommend acquiring a *Windows Server Software-Defined* hardware + software offering. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year, including production deployment tools and procedures - check back for updates!
+Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates!
 
 For background info, see [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
    > [!TIP]
    > Before deploying Storage Spaces Direct, we recommended briefly reading this document to familiarize yourself with the overall approach, to get a sense for the important **Notes** associated with some steps, and to acquaint yourself with the additional supporting resources and documentation.
+
+This guide includes instructions to install and configure the components of a hyper-converged system using Windows Server 2016 with either the Server with Desktop Experience or Server Core installation options. The act of deploying a hyper-converged system can be divided into three high level phases:
+
+1. [Deploy Windows Server](#deploy-windows-server)
+2. [Configure the network](#configure-the-network)
+3. [Configure Storage Spaces Direct](#configure-storage-spaces-direct)
+
+You can work on these steps a few at a time or all at once. However, they do need to be completed in order. After describing some prerequisites and terminology, this guide describes each of the three phases in more detail and provides examples.  
 
 ## Solution overview
 
@@ -67,19 +75,7 @@ This guide focuses on deploying hyper-converged systems using the Server Core in
 
 However, the steps in the "Configure the Network" and "Configure Storage Spaces Direct" sections are identical whether you are using Server with Desktop Experience, Server Core, or Nano Server installations.
 
-## Installing and configuring a hyper-converged solution with Storage Spaces Direct
-
-This section includes instructions to install and configure the components of a hyper-converged system using Windows Server 2016 with either the Server with Desktop Experience or Server Core installation options. The act of deploying a hyper-converged system can be divided into three high level phases:  
-
-1.  [Deploy Windows Server](#deploy-windows-server)  
-
-2.  [Configure the network](#BKMK_S2D5b)  
-
-3.  [Configure Storage Spaces Direct](#BKMK_S2D5c)  
-
-You can work on these steps a few at a time or all at once. However, they do need to be completed in the order shown in Figure 2. After describing some prerequisites and terminology, this guide describes each of the three phases in more detail and provides examples.  
-
-### Management system
+## Management system
 For the purposes of this document, the machine that has the management tools to locally or remotely manage the cluster is referred to as the management system. The management system machine has the following requirements:  
 
 - Running Windows Server 2016 with the same updates as the servers it's managing, and also joined to the same domain or a fully trusted domain.
@@ -90,14 +86,14 @@ For the purposes of this document, the machine that has the management tools to 
 
 - Requires network connectivity to the servers it's managing.
 
-### Deploy Windows Server
+## Step 1: Deploy Windows Server
 
 When you install Windows Server 2016 using the Setup wizard, you may be able to choose between Windows Server 2016 and Windows Server 2016 (Server with Desktop Experience). The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you don't make a choice in the Setup wizard, Windows Server 2016 Technical Preview is installed; this is the Server Core installation option. The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option.
 
 For more information about these two installation options, see [Installation Options for Windows Server 2016](../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md).
 For detailed information about deploying Windows Server 2016 in Server Core mode, see [Configure and Manage Server Core Installations](../../get-started/Getting-Started-with-Server-Core.md).
 
-#### Step 1. Connecting to and managing the Full/Core OS Servers from the Management system machine
+### Step 1.1: Connecting to and managing the Full/Core OS Servers from the Management system machine
 
 You will need a Management system machine that has Windows Server 2016 with the same updates to manage and configure your Full/Core OS deployment. If it's a Server with Desktop Experience deployment, you can manage it from a remote machine or by logging into one of the servers in the deployment. You may also use a Windows 10 client machine that has the latest updates installed, and the client Remote Server Administration Tools (RSAT) for Windows Server 2016 tools installed.
 
@@ -137,7 +133,7 @@ Examples of doing the same thing in a way that is more useful in scripts, in cas
    Enter-PSSession -ComputerName $myServer1 -Credential $user
    ```
 
-#### Step 2. Adding domain accounts
+### Step 1.2: Adding domain accounts
 
 So far this guide has had you deploying and configuring individual nodes with the local administrator account &lt;ComputerName&gt;\\Administrator.
 
@@ -153,11 +149,11 @@ Use a PowerShell console that was opened with Administrator privileges and in a 
 Net localgroup Administrators <Domain\Account> /add
 ```
 
-### Configure the network
+## Step 2: Configure the network
 
 Storage Spaces Direct requires high bandwidth and low latency network connections between nodes. This network connectivity is important for both system performance and reliability. It is recommended to have at least 2 10gb connections between the nodes. RDMA is also recommended since it provides significantly better throughput and reduces the CPU usage for network traffic.
 
-There are 2 common versions of RDMA network adapters. RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo. Top of Rack switches and server configurations may vary, depending on the network adapter and switch. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
+There are two common versions of RDMA network adapters. RoCE and iWARP. You can use either with Storage Spaces Direct as long as it has the Windows Server 2016 logo. Top of Rack switches and server configurations may vary, depending on the network adapter and switch. Configuring the server and switch correctly is important to ensure reliability and performance of Storage Spaces Direct.
 
 Windows Server 2016 also introduces a new virtual switch that has network teaming built in called Switch Embedded Teaming (SET). This new virtual switch allows the same 2 physical NIC ports to be used both for VMs as well as the parent partition of the server to have RDMA connectivity. The result is reducing the number of physical NIC ports that would otherwise be required and allows managing the networking through the Software Defined Network features of Windows Server 2016. The steps in this guide are for implementing the new virtual switch with RDMA enabled to the parent partition and SET configured.
 
@@ -165,11 +161,11 @@ The following assumes 2 RDMA physical NIC Ports (1 dual port, or 2 single port) 
 
 Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.
 
-#### Step 1. Configure the Top of Rack (TOR) Switch
+### Step 2.1: Configure the Top of Rack (TOR) Switch
 
 Our example configuration is using a network adapter that implements RDMA using RoCEv2. Network QoS and reliable flow of data for this type of RDMA requires that the TOR have specific capabilities set for the network ports that the NICs are connected to. If you are deploying with iWarp, the TOR may not need any configuration.
 
-#### Step 2. Enable Network Quality of Service (Network QoS)
+### Step 2.2: Enable Network Quality of Service (Network QoS)
 
 Network QoS is used to in this hyper-converged configuration to ensure that the Software Defined Storage system has enough bandwidth to communicate between the nodes to ensure resiliency and performance. Do the following steps from a management system using [*Enter-PSSession*](https://technet.microsoft.com/library/hh849707(v=wps.630).aspx) to connect and do the following to each of the servers.
 
@@ -240,7 +236,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
     New-NetQosTrafficClass “SMB” –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
     ```
 
-#### Step 3. Create a Hyper-V Virtual Switch with SET and RDMA vNIC
+### Step 2.3: Create a Hyper-V Virtual Switch with SET and RDMA vNIC
 
 The Hyper-V virtual switch allows the physical NIC ports to be used for both the host and virtual machines and enables RDMA from the host which allows for more throughput, lower latency, and less system (CPU) impact. The physical network interfaces are teamed using the Switch Embedded Teaming (SET) feature that is new in Windows Server 2016.
 
@@ -316,27 +312,27 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 
     Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB\_1)** and **vEthernet (SMB\_2)**.
 
-### Configure Storage Spaces Direct
+## Step 3: Configure Storage Spaces Direct
 
 Configuring Storage Spaces Direct in Windows Server 2016 includes the following steps:
 
--   *Step 1. Run cluster validation tool*
+-   *Step 3.1: Run cluster validation tool*
 
--   *Step 2. Create a cluster*
+-   *Step 3.2: Create a cluster*
 
--   *Step 3. Configure a Cluster Witness*
+-   *Step 3.3: Configure a Cluster Witness*
 
--   *Step 4. Clean disks used for Storage Spaces Direct*
+-   *Step 3.4: Clean disks used for Storage Spaces Direct*
 
--   *Step 5. Enable Storage Spaces Direct*
+-   *Step 3.5: Enable Storage Spaces Direct*
 
--   *Step 6. Create virtual disks*
+-   *Step 3.6: Create virtual disks*
 
--   *Step 7. Create or deploy virtual machines*
+-   *Step 3.7: Create or deploy virtual machines*
 
 The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be done using a PSSession, but run in a Windows PowerShell session that was opened as administrator on the management system.
 
-#### Step 1. Run the cluster validation tool
+### Step 3.1: Run the cluster validation tool
 
 In this step, you will run the cluster validation tool to ensure that the server nodes are configured correctly to create a cluster using Storage Spaces Direct. When cluster validation (Test-Cluster) is run before the cluster is created, it runs the tests that verify that the configuration appears suitable to successfully function as a failover cluster. The example directly below uses the “-Include” parameter, and then the specific categories of tests are specified. This ensures that the Storage Spaces Direct specific tests are included in the validation.
 
@@ -346,7 +342,7 @@ Use the following PowerShell command to validate a set of servers for use as a S
 Test-Cluster –Node <MachineName1,MachineName2,MachineName3,MachineName4> –Include “Storage Spaces Direct”,”Inventory”,”Network”,”System Configuration”
 ```
 
-#### Step 2. Create a cluster
+### Step 3.2: Create a cluster
 
 In this step, you will create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet. The **–NoStorage parameter is important** to be added to the cmdlet, otherwise disks may be automatically added to the cluster and you will need to remove them before enabling Storage Spaces Direct otherwise they will not be included in the Storage Spaces Direct storage pool.
 
@@ -361,13 +357,13 @@ When creating the cluster, you will get a warning that states - “There were is
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn’t successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
 
-#### Step 3. Configure a Cluster Witness
+### Step 3.3: Configure a Cluster Witness
 
 It is recommended that you configure a witness for the cluster, so that a 3 or more node system can withstand two nodes failing or being offline. A 2 node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
 
 For more information about configuring a file share witness, see [*Configuring a File Share Witness on a Scale-Out File Server*](https://blogs.msdn.microsoft.com/clustering/2014/03/31/configuring-a-file-share-witness-on-a-scale-out-file-server/).
 
-#### Step 4. Clean disks used for Storage Spaces Direct
+### Step 3.4: Clean disks used for Storage Spaces Direct
 
 The disks intended to be used for Storage Spaces Direct need to be empty and without partitions or other data. If a disk has partitions or other data, it will not be included in the Storage Spaces Direct system. 
 
@@ -383,25 +379,25 @@ icm (Get-Cluster -Name <cluster or node name> | Get-ClusterNode) {
 
 Update-StorageProviderCache
 
-Get-StoragePool |? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
+Get-StoragePool | ? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
 
-Get-StoragePool |? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
+Get-StoragePool | ? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
 
-Get-StoragePool |? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue
+Get-StoragePool | ? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue
 
 Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue
 
-Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -ne RAW |% {
+Get-Disk | ? Number -ne $null | ? IsBoot -ne $true | ? IsSystem -ne $true | ? PartitionStyle -ne RAW | % {
 
-$\_ | Set-Disk -isoffline:$false
+$_ | Set-Disk -isoffline:$false
 
-$\_ | Set-Disk -isreadonly:$false
+$_ | Set-Disk -isreadonly:$false
 
-$\_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false
+$_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false
 
-$\_ | Set-Disk -isreadonly:$true
+$_ | Set-Disk -isreadonly:$true
 
-$\_ | Set-Disk -isoffline:$true
+$_ | Set-Disk -isoffline:$true
 
 }
 
@@ -425,7 +421,7 @@ Count Name                          PSComputerName
 10    ATA ST4000NM0033              StorageClusterNode1
 ```
 
-#### Step 5. Enable Storage Spaces Direct
+### Step 3.5: Enable Storage Spaces Direct
 
 After creating the cluster, use the Enable-ClusterStorageSpacesDirect PowerShell cmdlet, which will put the storage system into the Storage Spaces Direct mode and do the following automatically:
 
@@ -445,7 +441,7 @@ To enable Storage Spaces Direct using the above command, you can also use the no
 
 When this command is finished, which may take several minutes, the system will be ready for virtual disks to be created.
 
-#### Step 6. Create volumes
+### Step 3.6: Create volumes
 
 When Storage Spaces Direct was enabled, it created a single pool using all the disks and named the pool something similar to “S2D on Cluster1”, with the name of the cluster that is on specified in the name. So the next step is to create some volumes, specifying whether to use multiple tiers.
 
@@ -468,7 +464,7 @@ New-Volume -StoragePoolFriendlyName “S2D\*” -FriendlyName <VirtualDiskName> 
 
 The **New-Volume** cmdlet simplifies deployments as it ties together a long list of operations that would otherwise have to be done in individual commands such as creating the virtual disk, partitioning and formatting the virtual disk, adding the virtual disk to the cluster, and converting it into CSVFS.
 
-#### Step 7. Create or deploy virtual machines
+### Step 3.7: Create or deploy virtual machines
 
 At this point you can provision virtual machines on to the nodes of the hyper-converged Storage Spaces Direct cluster.
 
