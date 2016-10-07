@@ -27,7 +27,7 @@ The Compute area includes virtualization products and features for the IT profes
 Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
   
 ### Hyper-V  
--   [What's new in Hyper-V on Windows Server 2016 Technical Preview](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016 Technical Preview, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server Technical Preview.  
+-   [What's new in Hyper-V on Windows Server 2016](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.  
   
 -   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
   
@@ -46,13 +46,13 @@ New features in Identity improve the ability for organizations to secure Active 
 What's New in Active Directory Certificate Services. Active Directory Certificate Services (AD CS) in Windows Server 2016 increases support for TPM key attestation: You can now use Smart Card KSP for key attestation, and devices that are not joined to the domain can now use NDES enrollment to get certificates that can be attested for keys being in a TPM.  
   
 ### Active Directory Domain Services  
-Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/library/mt163897.aspx).   
+Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/library/mt163897.aspx).   
   
 ### Active Directory Federation Services  
 What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see   [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md).  
   
 ### Web Application Proxy  
-The latest version of Web Application Proxyfocuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server Technical Preview](https://technet.microsoft.com/library/dn765473.aspx).  
+The latest version of Web Application Proxyfocuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/library/dn765473.aspx).  
   
 ##  <a name="BKMK_ManagAuto"></a>Management and Automation  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server Technical Preview, including Windows PowerShell.  
@@ -107,7 +107,7 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](http://aka.ms/shieldedvms).  
   
 ### Windows Defender  
-[Windows Defender Overview for Windows Server Technical Preview](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
+[Windows Defender Overview for Windows Server 2016](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
 
 ### Control Flow Guard
 Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard] (https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx) for more information. 

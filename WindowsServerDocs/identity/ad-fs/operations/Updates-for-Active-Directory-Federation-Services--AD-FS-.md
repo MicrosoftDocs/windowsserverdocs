@@ -13,7 +13,7 @@ ms.technology: identity-adfs
 ---
 # Updates for Active Directory Federation Services (AD FS)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
   
 ## Updates for Active Directory Federation Services \(AD FS\)  
 Updates have been released for Active Directory Federation Services \(AD FS\) 2.0, AD FS in Windows Server 2012 and AD FS in Windows Server 2012 R2. This following tables capture the updates that are available for download.  

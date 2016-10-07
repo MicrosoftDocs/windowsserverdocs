@@ -38,19 +38,19 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 7.  Select a criteria from the drop-down list. For example, if you want to view a specific record type, click **Record Type**.  
   
-    ![Record Type](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_02.jpg)  
+    ![Select a criteria](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_02.jpg)  
   
 8.  Click **Add**.  
   
-    ![Add criteria Record Type](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_03.jpg)  
+    ![Add the criteria](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_03.jpg)  
   
 9. **Record Type** is added as a search parameter. Enter text for the type of record that you want to find. For example, if you want to view only SRV records, type **SRV**.  
   
-    ![Enter text for the type of record that you want to find](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_04.jpg)  
+    ![Specify the type of record that you want to find](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_04.jpg)  
   
 10. Press ENTER. The DNS resource records are filtered according to the criteria and search phrase that you specified.  
   
-    ![Press ENTER - DNS resource records are filtered](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_05.jpg)  
+    ![Run the filter](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_05.jpg)  
   
 ## See Also  
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  

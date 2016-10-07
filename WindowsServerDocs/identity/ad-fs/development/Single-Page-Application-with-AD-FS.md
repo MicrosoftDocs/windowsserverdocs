@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Single Page Application with AD FS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 

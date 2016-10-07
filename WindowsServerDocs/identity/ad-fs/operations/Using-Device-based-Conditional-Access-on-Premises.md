@@ -6,18 +6,16 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: 
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: identity-adfs
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: f88d7774-b7f8-4eb8-8edd-7a980e24199d
 author: billmath
 ms.author: billmath
 ---
 # Using Device-based Conditional Access on-Premises
 
->Applies To: Windows Server Technical Preview
-
+>Applies To: Windows Server 2016
+>
 This document describes conditional access policies based on devices in a hybrid scenario where the on-premises directories are connected to Azure AD using Azure AD Connect.     
   
 ## AD FS and Hybrid conditional access  

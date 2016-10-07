@@ -20,17 +20,17 @@ ms.technology: identity-adfs
 ## About This Guide
 This walkthrough provides instructions for configuring multifactor authentication (MFA) in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 based on the user's group membership data.
 
-For more information about MFA and authentication mechanisms in AD FS, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
+For more information about MFA and authentication mechanisms in AD FS, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
 
 This walkthrough consists of the following sections:
 
--   [Step 1: Setting up the lab environment](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
+-   [Step 1: Setting up the lab environment](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Step 2: Verify the default AD FS authentication mechanism](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
+-   [Step 2: Verify the default AD FS authentication mechanism](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
 
--   [Step 3: Configure MFA on your federation server](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
+-   [Step 3: Configure MFA on your federation server](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
 
--   [Step 4: Verify MFA mechanism](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
+-   [Step 4: Verify MFA mechanism](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
@@ -48,32 +48,32 @@ In order to complete this walkthrough, you need an environment that consists of 
 
 In this environment, the federation server issues the claims that are required so that users can access the sample application. The Web server hosts a sample application that will trust the users who present the claims that the federation server issues.
 
-For instructions on how to set up this environment, see [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+For instructions on how to set up this environment, see [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 ## <a name="BKMK_2"></a>Step 2: Verify the default AD FS authentication mechanism
-In this step you will verify the default AD FS access control mechanism (**Forms Authentication** for extranet and **Windows Authentication** for intranet), where the user is redirected to the AD FS sign-in page, provides valid credentials, and is granted access to the application. You can use the **Robert Hatley** AD account and the **claimapp** sample application that you configured in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+In this step you will verify the default AD FS access control mechanism (**Forms Authentication** for extranet and **Windows Authentication** for intranet), where the user is redirected to the AD FS sign-in page, provides valid credentials, and is granted access to the application. You can use the **Robert Hatley** AD account and the **claimapp** sample application that you configured in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 1.  On your client computer, open a browser window, and navigate to your sample application: **https://webserv1.contoso.com/claimapp**.
 
     This action automatically redirects the request to the federation server and you are prompted to sign in with a username and password.
 
-2.  Type in the credentials of the **Robert Hatley** AD account that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+2.  Type in the credentials of the **Robert Hatley** AD account that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
     You will be granted access to the application.
 
 ## <a name="BKMK_3"></a>Step 3: Configure MFA on your federation server
 There are two parts to configuring MFA in AD FS in Windows Server 2012 R2:
 
--   [Select an additional authentication method](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
+-   [Select an additional authentication method](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
 
--   [Set up MFA policy](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_6)
+-   [Set up MFA policy](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_6)
 
 ### <a name="BKMK_5"></a>Select an additional authentication method
 In order to set up MFA, you must select an additional authentication method. In this walkthrough, for additional authentication method, you can choose between the following options:
 
--   Select [Certificate authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server 2012 R2 by default
+-   Select [Certificate authentication](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server 2012 R2 by default
 
--   Configure and select [Windows Azure Multi-Factor Authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8)
+-   Configure and select [Windows Azure Multi-Factor Authentication](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8)
 
 #### <a name="BKMK_7"></a>Certificate authentication
 Complete either of the following procedures to select Certificate authentication as the additional authentication method:
@@ -99,13 +99,13 @@ Complete either of the following procedures to select Certificate authentication
 #### <a name="BKMK_8"></a>Windows Azure Multi-Factor Authentication
 Complete the following procedures in order to download and configure and select **Windows Azure Multi-Factor Authentication** as additional authentication on your federation server:
 
-1.  [Create a Multi-Factor Authentication Provider via the Windows Azure Portal](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
+1.  [Create a Multi-Factor Authentication Provider via the Windows Azure Portal](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
 
-2.  [Download the Windows Azure Multi-Factor Authentication Server](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
+2.  [Download the Windows Azure Multi-Factor Authentication Server](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
 
-3.  [Install the Windows Azure Multi-Factor Authentication Server on your Federation Server](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
+3.  [Install the Windows Azure Multi-Factor Authentication Server on your Federation Server](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
 
-4.  [Configure Windows Azure Multi-Factor Authentication as an additional authentication method](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
+4.  [Configure Windows Azure Multi-Factor Authentication as an additional authentication method](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
 
 ##### <a name="BKMK_a"></a>Create a Multi-Factor Authentication Provider via the Windows Azure Portal
 
@@ -195,7 +195,7 @@ You are now ready to launch the Windows Azure Multi-Factor Authentication server
     > You can customize the name and description of the Windows Azure Multi-Factor Authentication method, as well as any configured third-party authentication method, as it appears in your AD FS UI, by running the **Set-AdfsAuthenticationProviderWebContent** cmdlet. For more information, see [http://technet.microsoft.com/library/dn479401.aspx](http://technet.microsoft.com/library/dn479401.aspx)
 
 ### <a name="BKMK_6"></a>Set up MFA policy
-In order to enable MFA, you must set up the MFA policy on your federation server. For this walkthrough, per our MFA policy, **Robert Hatley** account is required to undergo MFA because he belongs to the **Finance** group that you set up in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+In order to enable MFA, you must set up the MFA policy on your federation server. For this walkthrough, per our MFA policy, **Robert Hatley** account is required to undergo MFA because he belongs to the **Finance** group that you set up in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 You can set up the MFA policy either via the AD FS Management Console or using the Windows PowerShell.
 
@@ -205,7 +205,7 @@ You can set up the MFA policy either via the AD FS Management Console or using t
 
 2.  Either in the **Actions** page or by right-clicking **claimapp**, select **Edit Custom Multi-factor Authentication**.
 
-3.  In the **Edit Relying Party Trust for claimapp** window, click the **Add** button next to the **Users/Groups** list. Type in **Finance** for the name of your AD group that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md), and click **Check Names**, and when the name is resolved, click **OK**.
+3.  In the **Edit Relying Party Trust for claimapp** window, click the **Add** button next to the **Users/Groups** list. Type in **Finance** for the name of your AD group that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md), and click **Check Names**, and when the name is resolved, click **OK**.
 
 4.  Click **OK** in the **Edit Relying Party Trust for claimapp** window.
 
@@ -244,8 +244,8 @@ In this step you will verify the MFA functionality that you set up in the previo
     If you configured Windows Azure Multi-Factor Authentication as the additional authentication method, the default message text is **A call will be placed to your phone to complete your authentication.** For more information about signing in with Windows Azure Multi-Factor Authentication and using various options for the preferred method of verification, see [Windows Azure Multi-Factor Authentication Overview](http://technet.microsoft.com/library/dn249479.aspx).
 
 ## See Also
-[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 
 
