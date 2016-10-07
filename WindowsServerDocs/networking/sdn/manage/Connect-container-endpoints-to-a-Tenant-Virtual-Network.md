@@ -30,7 +30,16 @@ As documented in the [Container Networking](https://msdn.microsoft.com/en-us/vir
 ## Prerequistes
  * An SDN infrastructure with the Network Controller has been deployed
  * A tenant virtual network has been created
- * A tenant virtual machine has been deployed with the Windows Container feature enabled and Docker installed
+ * A tenant virtual machine has been deployed with the Windows Container feature enabled, Docker installed, and Hyper-V feature enabled
+
+>[!Note]
+>[Nested virtualization](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/nesting) and exposing virtualization extensions is not required unless using Hyper-V Containers
+>The HyperV feature is required to install several binaries for l2bridge and l2tunnel networks
+
+```powershell
+# To install HyperV feature without checks for nested virtualization
+dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V /All 
+```
 
  
 
