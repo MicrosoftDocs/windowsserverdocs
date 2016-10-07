@@ -1,5 +1,5 @@
 ---
-title: Guarded Fabric and Shielded VMs
+title: Guarded Fabric and Shielded VMs overview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -8,7 +8,7 @@ manager: dongill
 author: coreyp-at-msft
 ms.technology: security-guarded-fabric
 ---
-# Guarded fabric and shielded VMs
+# Guarded fabric and shielded VMs overview
 
 >Applies To: Windows Server 2016 Technical Preview
 
