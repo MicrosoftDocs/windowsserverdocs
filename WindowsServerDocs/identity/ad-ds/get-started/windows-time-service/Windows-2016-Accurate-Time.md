@@ -319,17 +319,16 @@ The MaxAllowedPhaseOffset setting is located under System\Windows Time Service u
 > [!NOTE]
 > For more information on group policy and related entries, see [Windows Time Service Tools](windows-time-service-tools-and-settings.md) and Settings article on TechNet.
 
-### Azure
-#### Windows IAAS consideration
+### Azure and Windows IaaS considerations
 
-Azure Virtual Machine: Active Directory Domain Services
-If the Azure VM running Active Directory Domain Services is part of an existing on-premise Active Directory Forest, then VMIC time synchronization should be disabled. This is to allow all DCs in the Forest, both Physical and VM, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](https://technet.microsoft.com/en-us/library/virtual_active_directory_domain_controller_virtualization_hyperv.aspx)
+#### Azure Virtual Machine: Active Directory Domain Services
+If the Azure VM running Active Directory Domain Services is part of an existing on-premise Active Directory Forest, then TimeSync(VMIC), should be disabled. This is to allow all DCs in the Forest, both physical and virtual, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](https://technet.microsoft.com/en-us/library/virtual_active_directory_domain_controller_virtualization_hyperv.aspx)
 
 #### Azure Virtual Machine: Domain-joined machine
-If you are hosting a machine which is domain joined to an existing Active Directory Forest (virtual or physical), the best practice is to disable VMIC time synchronization from the host and ensure W32Time is configured to synchronize with its Domain Controller via configuring time for Type=NTP5
+If you are hosting a machine which is domain joined to an existing Active Directory Forest, virtual or physical, the best practice is to disable TimeSync for the guest and ensure W32Time is configured to synchronize with its Domain Controller via configuring time for Type=NTP5
 
 #### Azure Virtual Machine: Standalone workgroup machine
-If the Azure VM is not joined to a domain, nor is it a Domain Controller, the recommendation is to keep the default time configuration and have the VM synchronize with the host
+If the Azure VM is not joined to a domain, nor is it a Domain Controller, the recommendation is to keep the default time configuration and have the VM synchronize with the host.
 
 ## Windows Application Requiring Accurate Time
 ### Time Stamp API
