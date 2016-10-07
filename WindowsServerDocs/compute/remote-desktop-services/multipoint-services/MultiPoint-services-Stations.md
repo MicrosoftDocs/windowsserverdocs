@@ -75,7 +75,7 @@ From a deployment and administration perspective, the following differences exis
   
 -   No split-screen functionality.  
   
-    For more information, see [Split-screen Stations](#split--screen-stations) later in this topic  
+    For more information, see [Split-screen Stations](#a-namebkmksplitscreenstationsasplit-screen-stations) later in this topic  
   
 -   No station rename or configuring automatic logon through the MultiPoint Manager console  
   
