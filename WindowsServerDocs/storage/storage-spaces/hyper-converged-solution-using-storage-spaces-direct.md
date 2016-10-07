@@ -23,9 +23,9 @@ For background info, see [Storage Spaces Direct](storage-spaces-direct-overview.
 
 This guide includes instructions to install and configure the components of a hyper-converged system using Windows Server 2016 with either the Server with Desktop Experience or Server Core installation options. The act of deploying a hyper-converged system can be divided into three high level phases:
 
-1. [Deploy Windows Server](#deploy-windows-server)
-2. [Configure the network](#configure-the-network)
-3. [Configure Storage Spaces Direct](#configure-storage-spaces-direct)
+* [Step 1: Deploy Windows Server](#step-1-deploy-windows-server)
+* [Step 2: Configure the network](#step-2-configure-the-network)
+* [Step 3: Configure Storage Spaces Direct](#step-3-configure-storage-spaces-direct)
 
 You can work on these steps a few at a time or all at once. However, they do need to be completed in order. After describing some prerequisites and terminology, this guide describes each of the three phases in more detail and provides examples.  
 
@@ -41,7 +41,7 @@ The hyper-converged deployment scenario has the Hyper-V (compute) and Storage Sp
 
 ## Hardware requirements
 
-We are working with our hardware partners to define and validate specific hardware configurations, including SAS HBA, SATA SSD and HDD, RDMA enabled network adapters etc. to ensure a good user experience. You should contact your hardware vendors for the solutions that they have verified are compatible for use with Storage Spaces Direct.  
+For production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation.
 
 If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
 
@@ -52,7 +52,7 @@ If you would like to evaluate Storage Spaces Direct in Windows Server 2016 witho
 
 The following information will be needed as inputs to configure provision and manage the hyper-converged system, and therefore it will speed up the process and make it easier for you if you have it on hand when you start:  
 
--   **Server Names** You should be familiar with your organization's naming policies for computers, files, paths, and other resources as you will be provisioning several servers with Nano installations and each will need to have a unique server name.  
+-   **Server Names** You should be familiar with your organization's naming policies for computers, files, paths, and other resources as you will be provisioning several servers each will need to have a unique server name.  
 
 -   **Domain name** You will be joining computers to your domain, and you will need to specify the domain name. It would be good to familiarize with your internal domain naming and domain joining policies.  
 
@@ -95,22 +95,22 @@ For detailed information about deploying Windows Server 2016 in Server Core mode
 
 ### Step 1.1: Connecting to the cluster nodes
 
-You will need a Management system machine that has Windows Server 2016 with the same updates to manage and configure your Full/Core OS deployment. If it's a Server with Desktop Experience deployment, you can manage it from a remote machine or by logging into one of the servers in the deployment. You may also use a Windows 10 client machine that has the latest updates installed, and the client Remote Server Administration Tools (RSAT) for Windows Server 2016 tools installed.
+You will need a management system that has Windows Server 2016 with the same updates to manage and configuration as the cluster nodes. If it's a Server with Desktop Experience deployment, you can manage it from a remote machine or by logging into one of the cluster nodes. You may also use a Windows 10 client machine that has the latest updates installed, and the client Remote Server Administration Tools (RSAT) for Windows Server 2016 tools installed.
 
 1. On the Management system install the Failover Cluster and Hyper-V management tools. This can be done through Server Manager using the **Add Roles and Features** wizard. On the **Features** page, select **Remote Server Administration Tools**, and then select the tools to install.
 
     Open a PowerShell session with Administrator privileges and execute the following. This will configure the trusted hosts to all hosts.
 
     ```PowerShell
-    Set-Item WSMan:\\localhost\\Client\\TrustedHosts "\*"
+    Set-Item WSMan:\localhost\Client\TrustedHosts "*"
     ```
 
-    After the onetime configuration above, you will not need to repeat Set-Item. However, each time you close and reopen the PowerShell console you should establish a new remote PS Session to the Nano Server by running the commands below:
+    After the onetime configuration above, you will not need to repeat Set-Item. However, each time you close and reopen the PowerShell console you should establish a new remote PS Session to the server by running the commands below:
 
-2. Enter the PS session and use either the Server name or the IP address. You will be prompted for a password after you execute this command, enter the administrator password you specified when creating the Nano VHDx.
+2. Enter the PS session and use either the server name or the IP address of the node you want to connect to. You will be prompted for a password after you execute this command, enter the administrator password you specified when setting up Windows.
 
    ```PowerShell
-   Enter-PSSession -ComputerName <myComputerName> -Credential LocalHost\\Administrator
+   Enter-PSSession -ComputerName <myComputerName> -Credential LocalHost\Administrator
    ```
 
 Examples of doing the same thing in a way that is more useful in scripts, in case you need to do this more than once:
@@ -119,7 +119,7 @@ Examples of doing the same thing in a way that is more useful in scripts, in cas
 
    ```PowerShell
    $ip = "10.100.0.1"
-   $user = "$ip\\Administrator"
+   $user = "$ip\Administrator"
 
    Enter-PSSession -ComputerName $ip -Credential $user
    ```
@@ -128,7 +128,7 @@ Examples of doing the same thing in a way that is more useful in scripts, in cas
 
    ```PowerShell
    $myServer1 = "myServer-1"
-   $user = "$myServer1\\Administrator"
+   $user = "$myServer1\Administrator"
 
    Enter-PSSession -ComputerName $myServer1 -Credential $user
    ```
@@ -139,15 +139,15 @@ So far this guide has had you deploying and configuring individual nodes with th
 
 Managing a hyper-converged system, including the cluster and storage and virtualization components, often requires using a domain account that is in the Administrators group on each node.
 
-The following steps are done from the management system.
+From the management system, perform the following steps:
 
-For each server of the hyper-converged system:
+1. On the management system, open a PowerShell console with Administrator privileges.
+2. Use Enter-PSSession to connect to each node and then run the following command to add your domain account(s) to the Administrators local security group. See the section above for information about how to connect to the servers using PSSession.
 
-Use a PowerShell console that was opened with Administrator privileges and in a PSSession issue the following command to add your domain account(s) in the Administrators local security group. See the section above for information about how to connect to the servers using PSSession.
+    ```
+    Net localgroup Administrators <Domain\Account> /add
+    ```
 
-```
-Net localgroup Administrators <Domain\Account> /add
-```
 
 ## Step 2: Configure the network
 
@@ -177,7 +177,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 
     The output should look something like this:
 
-    ```PowerShell
+    ```
     Name : SMB
     Owner : Group Policy (Machine)
     NetworkProfile : All
@@ -207,7 +207,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 
     The output should look something like the following. The Mellanox ConnectX03 Pro adapters are the RDMA network adapters and are the only ones connected to a switch, in this example configuration.
 
-    ```PowerShell
+    ```
     Name       InterfaceDescription                                      Status       LinkSpeed
     ----       --------------------------------------------------------- ----------   ----------
     NIC3       QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #46    Disconnected 0 bps
@@ -276,7 +276,7 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 
     The output should look like this:
 
-    ```PowerShell
+    ```
     VMName VMNetworkAdapterName Mode VlanList
     ------ ------------------- ---- --------
            SMB_1               Access 13
@@ -314,23 +314,7 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 
 ## Step 3: Configure Storage Spaces Direct
 
-Configuring Storage Spaces Direct in Windows Server 2016 includes the following steps:
-
--   *Step 3.1: Run cluster validation tool*
-
--   *Step 3.2: Create a cluster*
-
--   *Step 3.3: Configure a Cluster Witness*
-
--   *Step 3.4: Clean disks used for Storage Spaces Direct*
-
--   *Step 3.5: Enable Storage Spaces Direct*
-
--   *Step 3.6: Create virtual disks*
-
--   *Step 3.7: Create or deploy virtual machines*
-
-The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be done using a PSSession, but run in a Windows PowerShell session that was opened as administrator on the management system.
+The following steps are done on a management system that is the same version as the servers being configured. The following steps should NOT be run remotely using a PSSession, but instead run in a local PowerShell session on the management system, with adminsitrative permissions.
 
 ### Step 3.1: Run cluster validation
 
@@ -346,7 +330,7 @@ Test-Cluster –Node <MachineName1,MachineName2,MachineName3,MachineName4> –In
 
 In this step, you will create a cluster with the nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet. The **–NoStorage parameter is important** to be added to the cmdlet, otherwise disks may be automatically added to the cluster and you will need to remove them before enabling Storage Spaces Direct otherwise they will not be included in the Storage Spaces Direct storage pool.
 
-When creating the cluster, you will get a warning that states - “There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below.” You can safely ignore this warning. It’s due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster. |
+When creating the cluster, you will get a warning that states - “There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below.” You can safely ignore this warning. It’s due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
 
 > [!Note]
 > If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
@@ -453,13 +437,13 @@ Storage Spaces Direct includes the ability to create a virtual disk with tiers u
 The following PowerShell command creates a virtual disk with two tiers, a mirror tier and a parity tier from a management system:
 
 ```PowerShell
-New-Volume -StoragePoolFriendlyName “S2D\*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS\_ReFS -StorageTierfriendlyNames Capacity,Performance -StorageTierSizes <Size of capacity tier in size units, example: 800GB>, <Size of Performance tier in size units, example: 80GB> –CimSession <ClusterName>
+New-Volume -StoragePoolFriendlyName “S2D*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS_ReFS -StorageTierfriendlyNames Capacity,Performance -StorageTierSizes <Size of capacity tier in size units, example: 800GB>, <Size of Performance tier in size units, example: 80GB> –CimSession <ClusterName>
 ```
 
 The following PowerShell command creates a virtual disk with mirror resiliency only:
 
 ```PowerShell
-New-Volume -StoragePoolFriendlyName “S2D\*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS\_ReFS -StorageTierfriendlyNames Performance -StorageTierSizes <Size of Performance tier in size units, example: 800GB> –CimSession <ClusterName>
+New-Volume -StoragePoolFriendlyName “S2D*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS_ReFS -StorageTierfriendlyNames Performance -StorageTierSizes <Size of Performance tier in size units, example: 800GB> –CimSession <ClusterName>
 ```
 
 The **New-Volume** cmdlet simplifies deployments as it ties together a long list of operations that would otherwise have to be done in individual commands such as creating the virtual disk, partitioning and formatting the virtual disk, adding the virtual disk to the cluster, and converting it into CSVFS.
