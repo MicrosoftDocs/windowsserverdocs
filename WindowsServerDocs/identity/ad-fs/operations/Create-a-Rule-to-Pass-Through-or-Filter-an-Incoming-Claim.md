@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 6127963f-71b2-4d8f-8b53-7c525bf06521
 title: Create a Rule to Pass Through or Filter an Incoming Claim
 description:
@@ -27,16 +27,16 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
 
 6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **Incoming claim type** select a claim type in the list, and then select one of the following options, depending on the needs of your organization:  
   
@@ -47,7 +47,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
 
 7.  Click the **Finish** button.  
   
@@ -58,16 +58,16 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
 
 6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **Incoming claim type** select a claim type in the list, and then select one of the following options, depending on the needs of your organization:  
   
@@ -78,7 +78,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)    
 
 7.  Click the **Finish** button.  
   
@@ -91,7 +91,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 2.  In the console tree, under **AD FSAD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, depending on the trust you are editing and which rule set you want to create this rule in, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
@@ -102,10 +102,10 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)    
+![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)    
 
 6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, in **Incoming claim type** select a claim type in the list, and then select one of the following options, depending on the needs of your organization:  
   
@@ -116,7 +116,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule8.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule8.PNG)    
 
 7.  Click the **Finish** button.  
   

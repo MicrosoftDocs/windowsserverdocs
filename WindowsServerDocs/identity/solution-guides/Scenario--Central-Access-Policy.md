@@ -50,11 +50,11 @@ A central access policy rule has the following logical parts:
   
 The following two figures show the workflow in central access and audit policies.  
   
-![](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)  
+![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)  
   
 **Figure 1** Central access and audit policy concepts  
   
-![](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)  
+![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)  
   
 **Figure 2** Central access policy workflow  
   
@@ -68,7 +68,7 @@ The central authorization policy combines the following components:
   
 The following figure demonstrates how you can combine policies into policy lists to centrally control access to files.  
   
-![](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide3.JPG)  
+![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide3.JPG)  
   
 **Figure 3** Combining policies  
   

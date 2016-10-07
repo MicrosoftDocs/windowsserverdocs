@@ -50,7 +50,7 @@ For the built-in Administrator account in each domain in your forest, you should
 > We recommend restricting local Administrator accounts on member servers and workstations in the same manner as domain-based Administrator accounts. Therefore you should generally add the Administrator account for each domain in the forest and the Administrator account for the local computers to these user rights settings. The following screenshot shows an example of configuring these user rights to block local Administrator accounts and a domain's Administrator account from performing logons that should not be needed for these accounts.  
 
 
-![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)  
+![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)  
 
 -   Configure GPOs to restrict Administrator accounts on domain controllers  
     -   In each domain in the forest, the Default Domain Controllers GPO or a policy linked to the domain controllers OU should be modified to add each domain's Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:   
@@ -81,7 +81,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Under **Account options**, select **Account is sensitive and cannot be delegated** flag as indicated in the following screenshot, and click **OK**.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_24.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_24.gif)  
 
 3.  To enable the **Smart card is required for interactive logon** flag on the account, perform the following steps:  
 
@@ -91,7 +91,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Under **Account** options, select the **Smart card is required for interactive logon** flag as indicated in the following screenshot, and click **OK**.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif)  
 
 4.  To disable the account, perform the following steps:  
 
@@ -101,7 +101,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  In the **Account** options field, select the **Account is disabled** flag as indicated in the following screenshot, and click **OK**.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_26.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_26.gif)  
 
 ##### Configuring GPOs to Restrict Administrator Accounts at the Domain-Level  
 
@@ -114,17 +114,17 @@ For the built-in Administrator account in each domain in your forest, you should
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)  
 
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO) as indicated in the following screenshot.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)  
 
 5.  In the details pane, right-click <GPO Name>, and click **Edit**.  
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_29.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_29.gif)  
 
 7.  Configure the user rights to prevent the Administrator account from accessing members servers and workstations over the network by doing the following:  
 
@@ -134,7 +134,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)  
 
     4.  Click **OK**, and **OK** again.  
 
@@ -146,7 +146,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)  
 
     4.  Click **OK**, and **OK** again.  
 
@@ -158,7 +158,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)  
 
     4.  Click **OK**, and **OK** again.  
 
@@ -170,7 +170,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)  
 
     4.  Click **OK**, and **OK** again.  
 
@@ -182,11 +182,11 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_34.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_34.gif)  
 
     3.  Select the GPO that you created and click **OK**.  
 
-        ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_35.gif)  
+        ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_35.gif)  
 
     4.  Create links to all other OUs that contain workstations.  
 
@@ -202,13 +202,13 @@ The verification steps outlined here are specific to Windows 8 and Windows Serve
 
 1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain's built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.  
 
-![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)  
+![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)  
 
 ##### Verify "Account is disabled" Account Option  
 
 1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain's built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.  
 
-![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)  
+![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)  
 
 ##### Verify "Deny access to this computer from the network" GPO Settings  
 From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:  
@@ -221,13 +221,13 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 4.  When prompted to approve the elevation, click **Yes**.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)  
 
 5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you are attempting to access over the network.  
 
 6.  The following screenshot shows the error message that should appear.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_39.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_39.gif)  
 
 ##### Verify "Deny log on as a batch job" GPO Settings  
 
@@ -282,7 +282,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 16. A dialog box similar to the following should appear.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_40.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_40.gif)  
 
 ##### Verify "Deny log on as a service" GPO Settings  
 
@@ -308,7 +308,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 11. When the service is restarted, a dialog box similar to the following should appear.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_41.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_41.gif)  
 
 ##### Revert Changes to the Printer Spooler Service  
 
@@ -336,4 +336,4 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 5.  A dialog box similar to the following should appear.  
 
-    ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_42.gif)  
+    ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_42.gif)  

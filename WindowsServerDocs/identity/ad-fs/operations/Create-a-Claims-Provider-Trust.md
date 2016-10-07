@@ -25,31 +25,31 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  Under **Actions**, click **Add Relying Party Trust**.  
-![](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)   
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)   
   
 3.  On the **Welcome** page, click **Start**. 
-![](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)    
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)    
   
 4.  On the **Select Data Source** page, click **Enter claims provider trust data manually**, and then click **Next**.  
-![](media/Create-a-Claims-Provider-Trust/addclaim3.PNG)     
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim3.PNG)     
 
 5.  On the **Specify Display Name** page, type a **Display name**, under **Notes**, type a description for this claims provider trust, and then click **Next**.  
-![](media/Create-a-Claims-Provider-Trust/addclaim4.PNG)     
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim4.PNG)     
 
 6.  On the **Configure URL** page, specify the **WS-Federation Passive URL** if applicable and click **Next**.
-![](media/Create-a-Claims-Provider-Trust/addclaim5.PNG)     
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim5.PNG)     
 
 8. On the **Configure Identifier** page, under **Claims provider trust identifier**, type the appropriate identifier, and then click **Next**.  
-![](media/Create-a-Claims-Provider-Trust/addclaim6.PNG)    
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim6.PNG)    
 
 9. On the **Configure Certificates** page, click **Add** to locate a certificate file and add it to the list of certificates, and then click **Next**.  
-![](media/Create-a-Claims-Provider-Trust/addclaim7.PNG)    
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim7.PNG)    
 
 10. On the **Ready to Add Trust** page, click **Next** to save your claims provider trust information.  
-![](media/Create-a-Claims-Provider-Trust/addclaim8.PNG)    
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim8.PNG)    
 
 11. On the **Finish** page, click **Close**. This action automatically displays the **Edit Claim Rules** dialog box. For more information about how to proceed with adding claim rules for this claims provider trust, see the following additional references.  
-![](media/Create-a-Claims-Provider-Trust/addclaim9.PNG)
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim9.PNG)
 
 ## To create a claims provider trust using federation metadata
 To add a new claims provider trust, using the AD FS Management snap-in, by automatically importing configuration data about the partner from federation metadata that the partner has published to a local network or to the Internet, perform the following procedure on a federation server in the resource partner organization.
@@ -60,13 +60,13 @@ To add a new claims provider trust, using the AD FS Management snap-in, by autom
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  Under **Actions**, click **Add Relying Party Trust**.  
-![](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)   
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)   
   
 3.  On the **Welcome** page, click **Start**. 
-![](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)    
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)    
   
 4.  On the **Select Data Source** page, click **Import data about the claims provider published online or on a local network**. In Federation metadata address (host name or URL), type the **federation metadata URL** or host name for the partner, and then click **Next**.
-![](media/Create-a-Claims-Provider-Trust/addclaim10.PNG)    
+![claims provider trust](media/Create-a-Claims-Provider-Trust/addclaim10.PNG)    
 
 5.  On the Specify Display Name page type a **Display name**, under Notes type a description for this claims provider trust, and then click **Next**.
 

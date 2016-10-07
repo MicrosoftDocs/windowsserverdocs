@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 0039fbbb-b981-4526-a550-f3456ff27635
 title: Create a Rule to Transform an Incoming Claim
 description:
@@ -50,16 +50,16 @@ Depending on the needs of your organization, use one of the following procedures
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
 
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -82,7 +82,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
 
 10. Click **Finish**, and then click **OK** to save the rule.  
 
@@ -92,16 +92,16 @@ Depending on the needs of your organization, use one of the following procedures
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)    
 
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -124,7 +124,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
 
 10. Click **Finish**, and then click **OK** to save the rule.  
 
@@ -135,16 +135,16 @@ Depending on the needs of your organization, use one of the following procedures
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
 
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -167,7 +167,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
 
 11. Click **Finish**, and then click **OK** to save the rule.  
 
@@ -179,16 +179,16 @@ Depending on the needs of your organization, use one of the following procedures
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
 
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -211,7 +211,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
 
 11. Click **Finish**, and then click **OK** to save the rule.  
 
@@ -235,7 +235,7 @@ Depending on the needs of your organization, use one of the following procedures
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
   
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, depending on the trust you are editing and which rule set you want to create this rule in, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
@@ -246,10 +246,10 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)    
+![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)  
   
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -272,7 +272,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Pass through only claim values that match a specific email suffix value**  
   
     -   **Pass through only claim values that start with a specific value**  
-![](media/\Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)   
+![create rule](media/\Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)   
 
 10. Click **Finish**, and then click **OK** to save the rule.  
 
@@ -284,7 +284,7 @@ Depending on the needs of your organization, use one of the following procedures
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
   
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, which depends on the trust that you are editing and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
@@ -295,10 +295,10 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
   
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)   
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)   
   
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -321,7 +321,7 @@ Depending on the needs of your organization, use one of the following procedures
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs2.PNG)    
+![create rule](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs2.PNG)    
 
 11. Click **Finish**, and then click **OK** to save the rule.  
 

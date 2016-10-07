@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
 description:
@@ -59,7 +59,7 @@ Because of the important role that the AD FS configuration database plays, it i
   
 When you add a federation server to the farm, the new computer that will become a secondary federation server connects to the primary federation server to replicate the copy of the AD FS configuration database. From this point forward, the new federation server continues to pull updates from the primary federation server on a regular basis, as shown in the following illustration.  
   
-![](media/adfs2_WID.png)  
+![AD FS roles](media/adfs2_WID.png)  
   
 Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).  
   
@@ -79,7 +79,7 @@ You can create the AD FS configuration database using a single SQL Server data
   
 The term “primary federation server” does not apply when the AD FS configuration database is stored in a SQL database instance because all federation servers can equally read and write to the AD FS configuration database that is using the same clustered SQL Server instance, as shown in the following illustration.  
   
-![](media/adfs2_SQL.png)  
+![AD FS roles](media/adfs2_SQL.png)  
   
 You can use SQL Server to configure two or more servers to work together as a server cluster to ensure that AD FS is made highly available to service incoming client requests. High availability provides a scale\-out architecture in which you can increase server capacity by adding additional servers. Single points of failure are mitigated by automatic cluster failover.  
   

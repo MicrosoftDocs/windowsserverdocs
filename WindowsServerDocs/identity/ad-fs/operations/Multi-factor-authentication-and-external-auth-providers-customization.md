@@ -1,4 +1,4 @@
-
+﻿
 ---
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 title: Multi-factor authentication and external authentication providers customization 
@@ -26,13 +26,13 @@ We recommend that an external authentication provider use the classes that are d
   
 The following is an example of the sign\-in user interface, which is highlighted in RED, by an external authentication provider. The user interface uses the UI classes in the AD FS .css file.  
   
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)  
+![AD FS and MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)  
   
 Before you write a new custom authentication method, we recommend that you study the AD FS theme and style definitions to understand the content authoring requirements.  
   
 -   A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. You should use AD FS’s style definition to get the consistent appearance and behavior.  
   
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom9.png)  
+![AD FS and MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom9.png)  
   
 -   Be aware that AD FS administrators can customize the AD FS styles. . We do not recommend to hardcode your own styles. Instead, we recommend to use AD FS styles whenever possible.  
   

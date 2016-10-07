@@ -1,5 +1,6 @@
 ---
 title: Run Best Practices Analyzer Scans and Manage Scan Results_1
+description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,13 +9,15 @@ ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
+
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 

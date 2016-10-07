@@ -75,7 +75,7 @@ In this step, you will raise the forest functional level. You must first raise t
 
 3.  Click the target domain in the left navigation pane and in the **Tasks** pane, click **Raise the forest functional level**. Select a forest functional level that is at least  Windows Server 2008 R2  or higher and then click **OK**.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -98,7 +98,7 @@ In this step, you will enable the Recycle Bin to restore deleted objects in AD D
 
 4.  Press F5 to refresh ADAC.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -117,7 +117,7 @@ In the following procedures, you will create two test users. You will then creat
 
 3.  In the **Tasks** pane, click **New** and then click **User**.
 
-    ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
+    ![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
 
 4.  Enter the following information under **Account** and then click OK:
 
@@ -147,7 +147,7 @@ In the following procedures, you will create two test users. You will then creat
 
 6.  Click **Members**, click **Add**, type **test1;test2**, and then click **OK**.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -167,7 +167,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 
     -   **NameOU1**
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -189,7 +189,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
 
 3.  Select users **test1** and **test2**, click **Delete** in the **Tasks** pane and then click **Yes** to confirm the deletion.
 
-    ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+    ![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -206,7 +206,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 ```
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
@@ -226,7 +226,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 6.  To confirm the objects were restored to **OU1**, navigate to the target domain, double click **OU1** and verify the user accounts are listed.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -281,7 +281,7 @@ In the following procedure, you will raise the domain functional level of the ta
 
 3.  Click the target domain in the left navigation pane and in the **Tasks** pane, click **Raise the domain functional level**. Select a forest functional level that is at least  Windows Server 2008  or higher and then click **OK**.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -307,7 +307,7 @@ In the following procedure you will create a new fine-grained password policy us
 
     Fill in or edit fields inside the property page to create a new **Password Settings** object. The **Name** and **Precedence** fields are required.
 
-    ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
+    ![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
 
 5.  Under **Directly Applies To**, click **Add**, type **group1**, and then click **OK**.
 
@@ -315,7 +315,7 @@ In the following procedure you will create a new fine-grained password policy us
 
 6.  Click **OK** to submit the creation.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -339,7 +339,7 @@ In the following procedure, you will view the resultant password settings for a 
 
 5.  Examine the password setting policy and then click **Cancel**.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -364,7 +364,7 @@ In the following procedure, you will edit the fine grained password policy you c
 
 6.  Click **OK**.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -390,7 +390,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 7.  Click **OK** in the confirmation dialog.
 
-![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 

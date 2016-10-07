@@ -35,7 +35,7 @@ AD DS replication uses InvocationID and USNs on each domain controller to determ
 
 For example, the following illustration shows the sequence of events that occurs in Windows Server 2008 R2 and earlier operating systems when USN rollback is detected on VDC2, the destination domain controller that is running on a virtual machine. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value that was seen previously by the replication partner, which indicates that VDC2's database has rolled back in time improperly.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
 
 A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller's USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller's awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](http://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
 
@@ -52,7 +52,7 @@ AD DS also compares the current value of the VM GenerationID from the virtual ma
 
 The following illustration shows how virtualization safeguards are applied when the same USN rollback is detected on a virtualized domain controller that runs  Windows Server 2012  on a hypervisor that supports VM-GenerationID.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_VDC_Exampleofhowsafeguardswork.gif)
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_VDC_Exampleofhowsafeguardswork.gif)
 
 In this case, when the hypervisor detects a change to VM-GenerationID value, virtualization safeguards are triggered, including the reset of the InvocationID for the virtualized DC (from A to B in the preceding example) and updating the VM-GenerationID value saved on the VM to match the new value (G2) stored by the hypervisor. The safeguards ensure that replication converges for both domain controllers.
 
@@ -275,7 +275,7 @@ In this procedure, you grant the source domain controller the permission to be c
     > [!NOTE]
     > To open ADAC on a  Windows Server 2012  domain controller, open Windows PowerShell and type **dsac.exe**.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet performs the same function as the preceding procedure:
 
@@ -409,7 +409,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
 1.  On **HyperV1**, shutdown the source domain controller (**VirtualDC1**).
 
-    ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+    ![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     Stop-VM -Name VirtualDC1 -ComputerName HyperV1
 
@@ -419,7 +419,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 > [!NOTE]
 > You should delete all the associated snapshots because each time a snapshot is taken, a new AVHD file is created that acts as differencing disk. This creates a chain affect. If you have taken snapshots and insert the DCCLoneConfig.xml file into the VHD, you may end up creating a clone from an older DIT version or inserting the configuration file into the wrong VHD file. Deleting the snapshot merges all these AVHDs into the base VHD.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 
     Get-VMSnapshot VirtualDC1 | Remove-VMSnapshot -IncludeAllChildSnapshots
@@ -432,7 +432,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
 Use the **Copy the virtual machine (create new unique ID)** option when importing the virtual machine.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines"
     $vm = Import-VM -Path $path.fullname -Copy -GenerateNewId
@@ -454,14 +454,14 @@ To create multiple clone domain controllers from the same source domain controll
 
 5.  On **HyperV1**, restart the source domain controller (**(VirtualDC1**) to bring it back online.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     Start-VM -Name VirtualDC1 -ComputerName HyperV1
 
 
 6.  On **HyperV2**, start the virtual machine (**VirtualDC2**) to bring it online as a clone domain controller in the domain.
 
-![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Intro to AD DS](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 
     Start-VM -Name VirtualDC2 -ComputerName HyperV2

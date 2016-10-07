@@ -8,7 +8,7 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da522a18-c33f-468e-b9d6-3ad7d3cfba26
-author: lizap
+author: spatnaik
 ms.author: spatnaik
 ms.date: 09/23/2016
 manager: scottman

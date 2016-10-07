@@ -25,7 +25,7 @@ Before you can add a domain controller running  Windows Server 2008  to an exist
   
 The following illustration shows the steps for deploying the  Windows Server 2008  AD DS in a network environment that is currently running Windows 2000 Active Directory.  
   
-![](media/Deploying-AD-DS-in-a-Windows-2000-Organization/ee51218a-a858-49d9-8b99-9986679191c1.gif)  
+![deploying in a windows 2000 org](media/Deploying-AD-DS-in-a-Windows-2000-Organization/ee51218a-a858-49d9-8b99-9986679191c1.gif)  
   
 > [!NOTE]  
 > If you want to set the domain or forest functional level to  Windows Server 2008 , all domain controllers in your environment must run the  Windows Server 2008  operating system.  

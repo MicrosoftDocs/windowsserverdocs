@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 66664b80-2590-46c0-bfca-82402088e42c
 title: Create a Rule to Send LDAP Attributes as Claims
 description:
@@ -27,19 +27,19 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send LDAP Attributes as Claims** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)    
+![create rule](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)    
 
 6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, select the **Attribute Store**, and then select the LDAP attribute and map it to the outgoing claim type. 
-![](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)    
+![create rule](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)    
 
 7.  Click the **Finish** button.  
   
@@ -50,19 +50,19 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send LDAP Attributes as Claims** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)       
+![create rule](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)       
 
 6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, select the **Attribute Store**, and then select the LDAP attribute and map it to the outgoing claim type. 
-![](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)      
+![create rule](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)      
 
 7.  Click the **Finish** button.  
   
@@ -77,7 +77,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 2.  In the console tree, under **AD FSAD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)  
   
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, depending on the trust that you are editing and which rule set you want to create this rule in, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
@@ -88,15 +88,15 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG) 
+![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG) 
   
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send LDAP Attributes as Claims** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap3.PNG)  
+![create rule](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap3.PNG)  
   
 6.  On the **Configure Rule** page under **Claim rule name** type the display name for this rule, under **Attribute store** select **Active Directory**, and under **Mapping of LDAP attributes to outgoing claim types** select the desired **LDAP Attribute** and corresponding **Outgoing Claim Type** types from the drop\-down lists.  
   
     You have to select a new LDAP attribute and outgoing claim type pair on a different row for each Active Directory attribute that you want to issue a claim for as part of this rule.  
-![](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap4.PNG)    
+![create rule](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap4.PNG)    
 7.  Click the **Finish** button.  
   
 8.  In the **Edit Claim Rules** dialog box, click **OK** to save the rule.  

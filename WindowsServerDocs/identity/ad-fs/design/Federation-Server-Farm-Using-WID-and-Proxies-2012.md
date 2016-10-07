@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 8890ccc9-068d-4da2-bd51-8a2964173ff1
 title: Federation Server Farm Using WID and Proxies
 description:
@@ -42,7 +42,7 @@ To deploy this topology, in addition to adding two federation server proxies, yo
   
 The following illustration shows the existing federation server farm with WID topology that was described previously and how the fictional Fabrikam, Inc., company provides access to a perimeter DNS server, adds a second NLB host with the same cluster DNS name \(fs.fabrikam.com\), and adds two federation server proxies \(fsp1 and fsp2\) to the perimeter network.  
   
-![](media/FarmWIDProxies.gif)  
+![server farm using WID](media/FarmWIDProxies.gif)  
   
 For more information about how to configure your networking environment for use with federation servers or federation server proxies, see either [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md) or [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   

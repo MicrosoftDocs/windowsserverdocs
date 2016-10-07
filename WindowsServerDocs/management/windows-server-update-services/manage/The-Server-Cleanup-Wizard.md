@@ -1,6 +1,6 @@
 ---
 title: The Server Cleanup Wizard
-ms.custom: na
+description: "Windows Server Update Service"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -8,14 +8,15 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # The Server Cleanup Wizard
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 The Server Cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
 
@@ -47,7 +48,7 @@ If updates are approved using an auto-approval rule, they might still be in the 
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
--   [Windows Server Update Services](../Windows-Server-Update-Services-WSUS.md)
+-   [Windows Server Update Services](../get-started/Windows-Server-Update-Services-WSUS.md)
 
 
 

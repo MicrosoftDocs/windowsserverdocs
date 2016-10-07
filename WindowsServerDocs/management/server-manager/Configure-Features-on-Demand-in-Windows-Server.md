@@ -1,5 +1,6 @@
 ---
 title: Configure Features on Demand in Windows Server
+description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,14 +9,15 @@ ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Configure Features on Demand in Windows Server
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016
 
 This topic describes how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
 

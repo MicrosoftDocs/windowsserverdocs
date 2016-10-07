@@ -115,7 +115,7 @@ Add-DnsServerZoneTransferPolicy -Name DenyTransferOfCOnsotostoFabrikam -Zone con
   
 You can create multiple zone transfer policies of the same level, as long as they have a different value for the processing order. When multiple policies are available, the DNS server processes incoming queries in the following manner:  
   
-![](../../media/DNS-Policies-Overview/DNSPolicyZone.png)  
+![DNS process for multiple zone transfer policies](../../media/DNS-Policies-Overview/DNSPolicyZone.png)  
   
 ## Managing DNS Policies  
 You can create and manage DNS Policies by using PowerShell. The examples below go through different sample scenarios that you can configure through DNS Policies:  
