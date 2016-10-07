@@ -15,7 +15,7 @@ manager: dongill
 # MultiPoint Services migration in Windows Server 2016
 >Applies To: Windows Server 2016
 
-You can migrate from the Windows Server 2016 Technical Preview 5 version of MultiPoint Services to the RTM version of MultiPoint Services. The following information provides preparation information and migration and verification steps.
+You can migrate from a previous release of Windows Server 2016 MultiPoint Services to the RTM version of MultiPoint Services. The following information provides preparation information and migration and verification steps.
 
 Migration documentation and tools ease the migration of server role settings and data from an existing server to a destination server that is running Windows Server 2016. By using the process described in this guide, you can simplify the migration process, reduce migration time, increase the accuracy of the migration process, and help eliminate possible conflicts that might otherwise occur during the migration process. 
 

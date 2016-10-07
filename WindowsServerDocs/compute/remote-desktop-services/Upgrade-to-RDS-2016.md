@@ -20,7 +20,7 @@ notes: http://social.technet.microsoft.com/wiki/contents/articles/22069.remote-d
 >Applies To: Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016 Technical Preview 5.
+Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016.
 
 ## Flow for deployment upgrades
 In order to keep the down-time to a minimum, it is best to follow the steps below:

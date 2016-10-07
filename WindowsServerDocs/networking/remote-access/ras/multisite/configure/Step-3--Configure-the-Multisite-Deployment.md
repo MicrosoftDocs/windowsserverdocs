@@ -335,11 +335,7 @@ After enabling multisite in your deployment, you can add additional entry points
   
 16. Repeat this procedure from step 2 for every entry point that you want to add to your multisite deployment.  
   
-<<<<<<< HEAD
-![PowerShell](../../../../media/Step-3--Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
-=======
 ![Windows PowerShell](../../../../media/Step-3--Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
->>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
