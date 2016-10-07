@@ -649,7 +649,7 @@
 ## [Networking](networking/Networking.md)
 ### [Windows Server 2016 Supported Networking Scenarios](networking/windows-server-2016-supported-networking-scenarios.md)
 ### [What's New in Networking](networking/What-s-New-in-Networking.md)
-### [Core Network Guide for Windows Server Technical Preview](networking/core-network-guide/core-network-guide-windows-server.md)
+### [Core Network Guide for Windows Server 2016](networking/core-network-guide/core-network-guide-windows-server.md)
 #### [Core Network Guide](networking/core-network-guide/Core-Network-Guide.md)
 #### [Core Network Companion Guides](networking/core-network-guide/cncg/Core-Network-Companion-Guides.md)
 ##### [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](networking/core-network-guide/cncg/server-certs/Deploy-Server-Certificates-for-802.1X-Wired-and-Wireless-Deployments.md)
