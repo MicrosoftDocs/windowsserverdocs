@@ -8,8 +8,8 @@ ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
-author: cwatsonmsft
-ms.author: cwatson
+author: kathydavmsft
+ms.author: kathydav
 ms.date: 10/03/2016
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server 2016
