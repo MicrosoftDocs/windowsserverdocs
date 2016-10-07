@@ -10,12 +10,15 @@ ms.topic: article
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
+
 ---
 # Plan for Hyper-V scalability in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016 Technical Preview
+
+**This is preliminary content and subject to change.**  
   
-This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, as well as those that apply to the Hyper-V host. Maximums for memory and logical processors are the biggest increases from Windows Server 2012, in response to requests to support newer scenarios such as machine learning and data analytics. The Windows Server blog recently published the performance results of  a virtual machine with 5.5 terabytes of memory and 128 virtual processors running 4 TB in-memory database. Performance was greater than 95% of the performance of a physical server. For details, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Other numbers are similar to those that apply to Windows Server 2012. \(Maximums for Windows Server 2012 R2 were the same as Windows Server 2012.\) 
+This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, as well as those that apply to the Hyper-V host. Maximums for memory and logical processors are the biggest increases from Windows Server 2012, in response to requests to support newer scenarios such as machine learning and data analytics. For a comparison of these numbers, see the blog post [Windows Server scalability and more!](https://blogs.technet.microsoft.com/windowsserver/2016/08/25/windows-server-scalability-and-more/) Other numbers are similar to those that apply to Windows Server 2012. \(Maximums for Windows Server 2012 R2 were the same as Windows Server 2012.\) 
   
 > [!NOTE]  
 > For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/vmm). VMM is a Microsoft product for managing a virtualized data center that is sold separately.  

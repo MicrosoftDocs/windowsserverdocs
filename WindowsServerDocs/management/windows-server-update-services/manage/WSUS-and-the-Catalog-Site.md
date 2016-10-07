@@ -1,6 +1,6 @@
 ---
 title: WSUS and the Catalog Site
-ms.custom: na
+description: "Windows Server Update Service"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -8,14 +8,15 @@ ms.technology: manage-wsus
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # WSUS and the Catalog Site
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 The catalog site is the Microsoft location from which you can import hotfixes and hardware drivers.
 
@@ -58,7 +59,7 @@ WSUS administrators might consider restricting access to the hotfixes they have 
 
     -   Select **Windows Authentication** and click **Enable** in the **Actions** pane on the right.
 
-2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/Step-3--Configure-WSUS.md#BKMK_ConfigComputerGroups) of Step 3: Configure WSUS, in the WSUS deployment guide.
+2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/2--Configure-WSUS.md#BKMK_ConfigComputerGroups) of Step 3: Configure WSUS, in the WSUS deployment guide.
 
 3.  Download the files for the hotfix.
 

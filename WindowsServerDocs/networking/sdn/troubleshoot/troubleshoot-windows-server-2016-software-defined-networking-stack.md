@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot the Windows Server 2016 Software Defined Networking Stack
+title: Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
@@ -7,9 +7,9 @@ ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 author: JMesser81
 ms.author: jmesser
 ---
-# Troubleshoot the Windows Server 2016 Software Defined Networking Stack
+# Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server Technical Preview
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.  
 
@@ -564,7 +564,8 @@ With this information, a tenant VM ping can now be initiated by the Hoster from 
 2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running _ipconfig_. 
 3.  [Hoster] Run ``Test-VirtualNetworkConnection`` from the Hyper-V host to validate connectivity between the two tenant virtual machines in question. 
 
->[!NOTE] the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this >value by running the Get-PACAMapping cmdlet.
+>[!NOTE]
+>The VSID refers to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this >value by running the Get-PACAMapping cmdlet.
 
 ```none
 # Example

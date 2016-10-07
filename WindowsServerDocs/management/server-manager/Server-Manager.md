@@ -1,5 +1,6 @@
 ---
 title: Server Manager
+description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,18 +9,19 @@ ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Server Manager
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Server Manager is a management console in Windows Server 2016 Technical Preview that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (RDP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2  and  Windows Server 2008, Server Manager was updated in  Windows Server 2012  to support remote, multi-server management, and help increase the number of servers an administrator can manage.
+Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (RDP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2  and  Windows Server 2008, Server Manager was updated in  Windows Server 2012  to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 
-In our tests, Server Manager in Windows Server 2016 Technical Preview,  Windows Server 2012 R2, and  Windows Server 2012  can be used to manage up to 100 servers, depending on the workloads that the servers are running. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
+In our tests, Server Manager in Windows Server 2016,  Windows Server 2012 R2, and  Windows Server 2012  can be used to manage up to 100 servers, depending on the workloads that the servers are running. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
 
 This topic and its subtopics provide information about how to use features in the Server Manager console. This topic contains the following sections.
 
@@ -37,14 +39,14 @@ This topic and its subtopics provide information about how to use features in th
 The following sections list some initial considerations that you need to review, as well as hardware and software requirements for Server Manager.
 
 ### Hardware requirements
-Server Manager is installed by default with all editions of Windows Server 2016 Technical Preview. No additional hardware requirements exist for Server Manager.
+Server Manager is installed by default with all editions of Windows Server 2016. No additional hardware requirements exist for Server Manager.
 
 ### <a name="BKMK_softconfig"></a>Software and configuration requirements
-Server Manager is installed by default with all editions of Windows Server 2016 Technical Preview. You can use Server Manager in Windows Server 2016 Technical Preview to manage [Server Core installation options](http://go.microsoft.com/fwlink/p/?LinkID=241573) of Windows Server 2016 Technical Preview,  Windows Server 2012 , and  Windows Server 2008 R2  that are running on remote computers. Server Manager does run on the Server Core installation option of Windows Server 2016 Technical Preview.
+Server Manager is installed by default with all editions of Windows Server 2016. You can use Server Manager in Windows Server 2016 to manage [Server Core installation options](http://go.microsoft.com/fwlink/p/?LinkID=241573) of Windows Server 2016,  Windows Server 2012 , and  Windows Server 2008 R2  that are running on remote computers. Server Manager does run on the Server Core installation option of Windows Server 2016.
 
-Server Manager runs in the Minimal Server Graphical Interface; that is, when the Server Graphical Shell feature is not installed. The Server Graphical Shell feature is not installed by default on Windows Server 2016 Technical Preview. If you are not running Server Graphical Shell, the Server Manager console runs, but some applications or tools available from the console are not available. Internet browsers cannot run without Server Graphical Shell, so webpages and applications such as HTML Help (The MMC F1 Help, for example) cannot be opened. You cannot open dialog boxes for configuring Windows automatic updating and feedback when Server Graphical Shell is not installed; commands that open these dialog boxes in the Server Manager console are redirected to run **sconfig.cmd**.
+Server Manager runs in the Minimal Server Graphical Interface; that is, when the Server Graphical Shell feature is not installed. The Server Graphical Shell feature is not installed by default on Windows Server 2016. If you are not running Server Graphical Shell, the Server Manager console runs, but some applications or tools available from the console are not available. Internet browsers cannot run without Server Graphical Shell, so webpages and applications such as HTML Help (The MMC F1 Help, for example) cannot be opened. You cannot open dialog boxes for configuring Windows automatic updating and feedback when Server Graphical Shell is not installed; commands that open these dialog boxes in the Server Manager console are redirected to run **sconfig.cmd**.
 
-To manage servers that are running Windows Server releases older than Windows Server 2016 Technical Preview, install the following software and updates to make the older releases of Windows Server manageable by using Server Manager in Windows Server 2016 Technical Preview.
+To manage servers that are running Windows Server releases older than Windows Server 2016, install the following software and updates to make the older releases of Windows Server manageable by using Server Manager in Windows Server 2016.
 
 |Operating System|Required Software|
 |--------------------|---------------------|
@@ -55,9 +57,9 @@ To manage servers that are running Windows Server releases older than Windows Se
 #### Manage remote computers from a client computer
 The Server Manager console is included with [Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=404281) for Windows 10. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
 
-|Server Manager Source Operating System|Targeted at Windows Server 2016 Technical Preview|Targeted at  Windows Server 2012 R2 |Targeted at  Windows Server 2012 |Targeted at  Windows Server 2008 R2  or  Windows Server 2008 |Targeted at Windows Server 2003|
+|Server Manager Source Operating System|Targeted at Windows Server 2016|Targeted at  Windows Server 2012 R2 |Targeted at  Windows Server 2012 |Targeted at  Windows Server 2008 R2  or  Windows Server 2008 |Targeted at Windows Server 2003|
 |-------------------------------------------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-|Windows 10 or Windows Server 2016 Technical Preview|Full support|Full support|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Not supported|
+|Windows 10 or Windows Server 2016|Full support|Full support|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Not supported|
 |Windows 8.1 or  Windows Server 2012 R2 |Not supported|Full support|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|
 |Windows 8 or  Windows Server 2012 |Not supported|Not supported|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|
 
@@ -74,7 +76,7 @@ For more information about running Remote Server Administration Tools for Window
 #### Configure remote management on servers that you want to manage
 
 > [!IMPORTANT]
-> By default, Server Manager and Windows PowerShell remote management is enabled in Windows Server 2016 Technical Preview.
+> By default, Server Manager and Windows PowerShell remote management is enabled in Windows Server 2016.
 
 To perform management tasks on remote servers by using Server Manager, remote servers that you want to manage must be configured to allow remote management by using Server Manager and Windows PowerShell. If remote management has been disabled on  Windows Server 2012 R2  or  Windows Server 2012 , and you want to enable it again, perform the following steps.
 
@@ -149,7 +151,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 > Server Manager cannot be used to add roles and features to servers that are running  Windows Server 2008 R2  or  Windows Server 2008 .
 
 ## <a name="BKMK_start"></a>Start Server Manager
-Server Manager starts automatically by default on servers that are running Windows Server 2016 Technical Preview when a member of the Administrators group logs on to a server. If you close Server Manager, restart it in one of the following ways. This section also contains steps for changing the default behavior, and preventing Server Manager from starting automatically.
+Server Manager starts automatically by default on servers that are running Windows Server 2016 when a member of the Administrators group logs on to a server. If you close Server Manager, restart it in one of the following ways. This section also contains steps for changing the default behavior, and preventing Server Manager from starting automatically.
 
 #### To start Server Manager from the Start screen
 

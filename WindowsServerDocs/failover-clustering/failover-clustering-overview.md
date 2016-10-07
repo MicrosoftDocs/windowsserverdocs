@@ -4,8 +4,8 @@ title: Failover Clustering
 ms.prod: windows-server-threshold  
 ms.topic: article
 ms.manager: dongill
-author: JasonGerend
-ms.author: jgerend  
+author: KumudD
+ms.author: kumud  
 ms.technology: storage-failover-clustering
 ms.date: 10/04/2016
 ---

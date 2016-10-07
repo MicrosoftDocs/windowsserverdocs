@@ -10,7 +10,7 @@ ms.topic: article
 manager: dongill
 author: larsiwer
 ms.author: kathyDav
-ms.date: 10/03/2016
+ms.date: 10/07/2016
 ---
 
 # Plan for Hyper-V security in Windows Server 2016

@@ -1,16 +1,21 @@
 ---
 title: Securing Privileged Access
-ms.technology: security
+description: "Windows Server Security"
+ms.custom: na
 ms.prod: windows-server-threshold
-
+ms.reviewer: na
+ms.suite: na
+ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
-ms.author: YuriDio
-author: YuriDio
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 # Securing Privileged Access
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016
 
 Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](http://www.microsoft.com/pth).
 
@@ -147,9 +152,6 @@ Stage 3 of the roadmap builds on the mitigations from Stages 1 and 2 to strength
 ![](../media/Securing-Privileged-Access/PAW_LP_Fig8.JPG)
 
 These capabilities will build on the mitigations from previous phases and move your defenses into a more proactive posture.
-
-> [!NOTE]
-> Some of these steps require Windows Server 2016 Technical Preview, which has not been released yet.
 
 **1. Modernize Roles and Delegation Model**
 

@@ -133,8 +133,13 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 -   **Workgroup Clusters.** Clusters with nodes which are member servers / workgroup (not domain joined).  
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
+<<<<<<< HEAD:WindowsServerDocs/failover-clustering/whats-new-in-failover-clustering.md
 ## <a name="BKMK_VMNodeFairness"></a>Virtual Machine Node Fairness  
 Virtual machine Node Fairness is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Overcommitted nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an overcommitted node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  By default, Node Fairness is enabled by default in Windows Sever 2016. However, Node Fairness is disabled when SCVMM Dynamic Optimization is enabled.  
+=======
+## <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
+Virtual machine Load Balacing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Overcommitted nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an overcommitted node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  Load Balancing is enabled by default in Windows Sever 2016 Technical Preview. However, Load Balacing is disabled when SCVMM Dynamic Optimization is enabled.  
+>>>>>>> 558b59af6ba89cfa315744ad81ca589c0ecb5a7a:WindowsServerDocs/compute/failover-clustering/whats-new-failover-clustering-windows-server.md
 ## <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order  
 Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines are not started until the virtual machines that they have a dependency on are also started.  
 
