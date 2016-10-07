@@ -21,7 +21,8 @@ Use the following resources to set up and try out Hyper-V on the Nano Server, Se
 -   [Download and install Windows Server](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016)  
       
 **To use Nano Server as a virtual machine host:**  
--   [Deploy Nano Server](../../get-started/Deploy-Nano-Server.md) 
+-   [Deploy Nano Server](../../get-started/Deploy-Nano-Server.md)
+-   [Use Hyper-V on Nano Server](../../get-started/Deploy-Nano-Server.md#using-hyper-v-on-nano-server)
   
 **To use the Server Core or GUI installation option of  Windows Server 2016 as a virtual machine host:**  
 -   [Install the Hyper-V role on Windows Server 2016](Install-the-Hyper-V-role-on-Windows-Server.md)  
