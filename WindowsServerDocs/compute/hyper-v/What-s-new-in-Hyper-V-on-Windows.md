@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 09/26/2016
+ms.date: 10/12/2016
 ---
 # What's new in Hyper-V on Windows Server 2016
 
@@ -26,7 +26,11 @@ Here's what's included in this article and whether the functionality is new or u
 When the Hyper-V role is installed on a computer that uses the Always On/Always Connected (AOAC) power model, the **Connected Standby** power state is now available.  
   
 ## <a name="BKMK_device"></a>Discrete device assignment \(new\) 
-This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
+This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.
+
+## Encryption support for the operating system disk in generation 1 virtual machines \(new)
+
+You can now protect the operating system disk using BitLocker drive encryption in generation 1 virtual machines. A new feature, key storage, creates a small, dedicated drive to store the system drive’s BitLocker key. This is done instead of using a virtual Trusted Platform Module (TPM), which is available only in generation 2 virtual machines. To decrypt the disk and start the virtual machine, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the virtual machine's guardians. Key storage requires a version 8 virtual machine. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).  
   
 ## <a name="BKMK_host"></a>Host resource protection \(new\)
 This feature helps prevent a virtual machine from using more than its share of system resources by looking for excessive levels of activity. This can help prevent a virtual machine's excessive activity from degrading the performance of the host or other virtual machines. When monitoring detects a virtual machine with excessive activity, the virtual machine is given fewer resources. This monitoring and enforcement is off by default. Use Windows PowerShell to turn it on or off. To turn it on, run this command:  
@@ -159,6 +163,10 @@ For instructions on checking and upgrading the version, see [Upgrade virtual mac
 > -   You can't downgrade the configuration to a previous version.  
 > -   The Update-VMVersion cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2 .  
 
+## Virtualization-based security for generation 2 virtual machines \(new)
+Virtualization-based security powers features such as Device Guard and Credential Guard, offering increased protection of the operating system against exploits from malware. Virtualization based-security is available in generation 2 guest virtual machines starting with version 8. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
+
+
 ## <a name="BKMK_Containers"></a>Windows Containers \(new\) 
 Windows Containers allow many isolated applications to run on one computer system. They're fast to build and are highly scalable and portable. Two types of container runtime are available, each with a different degree of application isolation. Windows Server Containers use namespace and process isolation. Hyper-V Containers use a light-weight virtual machine for each container.  
   
@@ -189,8 +197,3 @@ For requirements and instructions, see [Manage Windows virtual machines with Pow
   
 ## See also  
 [What's new in Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/whats_new)  
-  
-  
-
-
-
