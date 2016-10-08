@@ -1,6 +1,6 @@
 ---
 ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
-title: Web Application Proxy in Windows Server Technical Preview
+title: Web Application Proxy in Windows Server 2016
 description:
 author: kgremban
 manager: femila
@@ -11,7 +11,7 @@ ms.service: active-directory
 ms.technology: web-app-proxy
 ---
 
-# Web Application Proxy in Windows Server Technical Preview
+# Web Application Proxy in Windows Server 2016
 
 >Applies To: Windows Server 2016
 
