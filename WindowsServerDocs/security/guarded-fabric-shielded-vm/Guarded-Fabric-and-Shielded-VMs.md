@@ -26,7 +26,7 @@ A guarded fabric consists of:
 
 When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hosts and the shielded VMs themselves are protected by the HGS. The HGS provides two distinct services: attestation and key protection. The Attestation service ensures only trusted Hyper-V hosts can run shielded VMs while the Key Protection Service provides the keys necessary to power them on and to live migrate them to other guarded hosts.
 
-![Guarded host fabric](./media/Guarded-Host-Overview-Diagram.png)
+![Guarded host fabric](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
 
 ### Attestation modes in the Guarded Fabric solution
 
@@ -97,11 +97,11 @@ The shielding data file (PDK file) provides assurances that the VM will be creat
 
 The following figure shows the shielding data file and related configuration elements.
 
-![Shielding data file](./media/shielded-vms-shielding-data-file.png)
+![Shielding data file](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
 
 ## The Host Guardian Service in action: How a shielded VM is powered on
 
-![Shielding data file](./media/shielded-vms-how-a-shielded-vm-is-powered-on.png)
+![Shielding data file](../media/Guarded-Fabric-Shielded-VM/shielded-vms-how-a-shielded-vm-is-powered-on.png)
 
 1. VM01 is powered on.
 

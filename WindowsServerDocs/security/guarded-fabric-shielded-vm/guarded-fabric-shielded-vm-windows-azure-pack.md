@@ -100,7 +100,7 @@ Before you use Windows Azure Pack, you should already have it installed and conf
 
 3.  Connect Windows Azure Pack to the SAP to the Service Provider Foundation instance you already configured by clicking “Register System Center Service Provider Foundation.” You will need to specify the URL for Service Provider Foundation, as well as a username and password.
 
-    ![Register System Center Service Provider Foundation](media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-01-register-spf.png)
+    ![Register System Center Service Provider Foundation](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-01-register-spf.png)
 
 4.  Once completed, you should be able to see the VM clouds set up in your VMM environment. Ensure you have at least one VM cloud that supports shielded VMs available to WAP before continuing.
 
@@ -118,7 +118,7 @@ In order to allow tenants to create VMs in WAP, you must first create a hosting 
 
 5.  Click **OK** (check mark) to create the plan. Although this creates the plan, it is not yet in a configured state.
 
-    ![Plans in Windows Azure Pack](media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-02-create-plan.png)
+    ![Plans in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-02-create-plan.png)
 
 6.  To begin configuring the Plan, click its name.
 
@@ -128,8 +128,8 @@ In order to allow tenants to create VMs in WAP, you must first create a hosting 
 
 9.  Select the quotas you want to apply in this Plan. (For example, limits on CPU core and RAM usage). Make sure to leave the **Allow Virtual Machines To Be Shielded** checkbox selected.
 
-    <img src="media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png" alt="Settings for virtual machine clouds in Windows Azure Pack" width="601" height="338" />
-
+    ![Settings for virtual machine clouds in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
+    
 10.  Scroll down to the section titled “**templates**”, and then select one or more templates to offer to your tenants. You can offer both shielded and unshielded templates to tenants, but a shielded template must be offered to give tenants end-to-end assurances about the integrity of the VM and their secrets.
 
 11.  In the “**networks**” section, add one or more networks for your tenants.
@@ -140,7 +140,7 @@ In order to allow tenants to create VMs in WAP, you must first create a hosting 
 
 14.  At the bottom of the screen change the Plan from being **Private** to **Public** so that tenants can subscribe to the Plan.
 
-    ![Change access for a plan in Windows Azure Pack](media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-04-change-access.png)
+    ![Change access for a plan in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-04-change-access.png)
 
     At this point, Windows Azure Pack is configured and tenants will be able to subscribe to the plan you just created and deploy shielded VMs. For the steps tenants will take, see [Steps tenants take to create shielded VMs with Windows Azure Pack](#steps-tenants-take-to-create-shielded-vms-with-windows-azure-pack), earlier in this topic.
 
