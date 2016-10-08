@@ -4,17 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Get started with Remote Desktop on Android
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 Devices running Android version 4.0.3 and newer are supported.
 

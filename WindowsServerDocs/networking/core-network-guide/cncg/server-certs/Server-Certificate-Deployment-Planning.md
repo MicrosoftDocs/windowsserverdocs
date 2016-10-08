@@ -82,7 +82,7 @@ You must plan the following items for this file:
   
 -   **CRLPeriodUnits**. The example CAPolicy.inf file has a CRLPeriodUnits value of 1. This is because the example refresh interval for the certificate revocation list in this guide is 1 week. At the interval value that you specify with this setting, you must publish the CRL on the CA to the Web server virtual directory where you store the CRL and provide access to it for computers that are in the authentication process.  
   
--   **AlternateSignatureAlgorithm**. This CAPolicy.inf implements an improved security mechanism by implementing alternate signature formats. You should not implement this setting if you still have Windows XP clients that require certificates from this CA. For more information, see [Additional Resources](assetId:///fdb5b540-45c6-46c8-b6c0-a992661c1165).  
+-   **AlternateSignatureAlgorithm**. This CAPolicy.inf implements an improved security mechanism by implementing alternate signature formats. You should not implement this setting if you still have Windows XP clients that require certificates from this CA.  
   
 If you do not plan on adding any subordinate CAs to your public key infrastructure at a later time, and if you want to prevent the addition of any subordinate CAs, you can add the PathLength key to your CAPolicy.inf file with a value of 0. To add this key, copy and paste the following code into your file:  
   

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 38816b32-84bd-4b19-9ab8-a05ec838a156
-title: Windows Server 2012 R2 AD FS Deployment Guide
+title: Windows Server 2016 and 2012 R2 AD FS Deployment Guide
 description:
 author: billmath
 ms.author:  billmath
@@ -12,11 +12,11 @@ ms.service: active-directory
 ms.technology: identity-adfs
 ---
 
-# Windows Server 2012 R2 AD FS Deployment Guide
+# Windows Server 2016 and 2012 R2 AD FS Deployment Guide
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-You can use Active Directory Federation Services \(AD FS\) with the  Windows Server 2012 R2  operating system to build a federated identity management solution that extends distributed identification, authentication, and authorization services to Web\-based applications across organization and platform boundaries. By deploying AD FS, you can extend your organization’s existing identity management capabilities to the Internet.  
+You can use Active Directory Federation Services \(AD FS\) with the  Windows Server 2016 and 2012 R2  operating system to build a federated identity management solutions that extend distributed identification, authentication, and authorization services to Web\-based applications across organization and platform boundaries. By deploying AD FS, you can extend your organization’s existing identity management capabilities to the Internet.  
   
 -   [Deploying a Federation Server Farm](Deploying-a-Federation-Server-Farm.md)  
   

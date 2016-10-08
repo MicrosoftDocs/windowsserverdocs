@@ -37,7 +37,7 @@ To prepare to create station virtual desktops, ensure that your MultiPoint Servi
 ## Procedures  
 Use the following procedures to:  
   
--   [Create a template for virtual desktops](#create-a-template-for-virtual-desktops)  
+-   [Create a template for virtual desktops](#a-namebkmkcreateatemplateacreate-a-template-for-virtual-desktops)  
   
 -   [Create virtual desktops from the template](#BKMK_CreateVirtualDesktopsfromTemplate)  
   

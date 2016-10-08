@@ -22,7 +22,7 @@ You can connect devices to either the computer in your MultiPoint Services syste
   
 -   If you connect certain types of devices to the computer, such as a keyboard or mouse, the devices are not available to any users on the system.  
   
-The following table shows a list of devices and how they behave, depending on where they are connected to the system. Information about how to connect station hubs is described in [Working with station hubs](#working-with-stations-hubs). More information about how to connect video monitors to a station is described in [Work with Video Devices](Work-with-Video-Devices.md).  
+The following table shows a list of devices and how they behave, depending on where they are connected to the system. Information about how to connect station hubs is described in [Working with station hubs](#working-with-station-hubs). More information about how to connect video monitors to a station is described in [Work with Video Devices](Work-with-Video-Devices.md).  
   
 |||||  
 |-|-|-|-|  

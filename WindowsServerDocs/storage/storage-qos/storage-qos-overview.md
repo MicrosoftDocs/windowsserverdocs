@@ -12,11 +12,7 @@ ms.date: 08/18/2016
 # Storage Quality of Service
 > Applies To: Windows Server 2016
 
-<<<<<<< HEAD
-Storage Quality of Service (QoS) in Windows Server 2016 provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy-based minimum and maximum performance goals to be configured in units of normalized IOPs.  
-=======
 Storage Quality of Service (Storage QoS) in Windows Server 2016 provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy based minimum and maximum performance goals to be configured in units of normalized IOPs.  
->>>>>>> b1e25e8f636af8fde76b91d4c8f66c3d82235abf
 
 You can use Storage QoS in Windows Server 2016 to accomplish the following:  
 

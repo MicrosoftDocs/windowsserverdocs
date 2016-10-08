@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
-ms.author: cwatson
+ms.author: kathydav
 ms.date: 10/03/2016
 ---
 # Supported Oracle Linux virtual machines on Hyper-V
