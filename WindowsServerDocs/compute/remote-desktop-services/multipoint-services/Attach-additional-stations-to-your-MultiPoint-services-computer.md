@@ -35,7 +35,7 @@ For instructions that explain how to set up each type of station, see the follow
   
 -   [Set up an RDP-over-LAN connected station](Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md)  
   
-For a detailed comparison of station types, see [Station type comparison](multipoint-services-stations.md#Station-Type-Comparison).  
+For a detailed comparison of station types, see [Station type comparison](multipoint-services-stations.md#a-namebkmkstationtypecomparisonastation-type-comparison).  
   
 > [!NOTE]  
 > -   The procedures for attaching stations do not describe how to set up intermediate hubs or downstream hubs. For information about where to install these hubs, see [MultiPoint Stations](MultiPoint-services-Stations.md).  

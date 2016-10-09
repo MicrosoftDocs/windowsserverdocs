@@ -12,6 +12,7 @@ author: lizap
 ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
+
 ---
 # Remote Desktop Services - Build anywhere
 

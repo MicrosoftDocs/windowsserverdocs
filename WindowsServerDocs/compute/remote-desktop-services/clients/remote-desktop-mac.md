@@ -4,17 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Get started with Remote Desktop on Mac
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 Devices running OS 10.7 and newer are supported.
 
