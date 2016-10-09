@@ -77,7 +77,7 @@ If you are unable to obtain a PFX or are unable to obtain one with the private k
 
 3. In the Security dialog box, add the group managed service account (gMSA) for HGS to the list of accounts. To do this, click **Add** and in the resulting dialog box, click **Object Types**, select **Service Accounts**, and click **OK**. Under **Enter the object names to select**, type the account name—by default, **HGSSVC**—and click **Check Names**. If you originally set up HGS in an existing domain, you'll type the name of the gMSA that you provided to the Initialize-HgsServer command.
 
-    ![Select the account that can access the certificate](media/Guarded-Fabric-Shielded-VM/guarded-host-account-for-certificate.png)
+    ![Select the account that can access the certificate](../media/Guarded-Fabric-Shielded-VM/guarded-host-account-for-certificate.png)
 
 4. Give the account **Read** access to the private keys for the certificate.
 
@@ -316,8 +316,8 @@ For hardware-based (TPM) attestation, these steps do not apply. Instead, see [TP
 
     To obtain the SID, use the following PowerShell command against the fabric AD and copy the SID as formatted in the output (don’t forget to wrap it in quotes).
 
-    <img src="media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png" alt="Get-AdGroup command with output" width="464" height="139" />
-
+    ![Get-AdGroup command with output](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
+    
 3.  To verify that the guarded host group was successfully added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx). The friendly name of your group should appear.
 
 <span id="tpm-trusted-attestation-capturing-hardware"/>
@@ -374,7 +374,7 @@ Each guarded host must have a code integrity policy applied in order to run shie
 - [Planning and getting started on the Device Guard deployment process](https://technet.microsoft.com/itpro/windows/keep-secure/planning-and-getting-started-on-the-device-guard-deployment-process#getting-started-on-the-deployment-process)
 - [Deploy Device Guard: deploy code integrity policies](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies)
 
-Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) cmdlet to generate a Code Integrity policy, you will need to decide the “rule levels” to use. We recommend a primary level of **FilePublisher** with fallback to **Hash**. This allows files with publishers to be updated without changing the CI policy. Addition of new files or modifications to files without publishers (which are measured with a hash) will require you to create a new CI policy matching the new system requirements. More information about the available CI policy rule levels can be found in [Deploy code integrity policies: policy rules and file rules](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-policy-rules-and-file-rules) and cmdlet help.
+Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) cmdlet to generate a Code Integrity policy, you will need to decide the rule levels to use. For Server Core, we recommend a primary level of **FilePublisher** with fallback to **Hash**. This allows files with publishers to be updated without changing the CI policy. Addition of new files or modifications to files without publishers (which are measured with a hash) will require you to create a new CI policy matching the new system requirements. For Server with Desktop Experience, we recommend a primary level of **Publisher** with fallback to **Hash**. For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-code-integrity-policies-policy-rules-and-file-rules) and cmdlet help.
 
 1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **FilePublisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
