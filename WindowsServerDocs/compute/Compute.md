@@ -12,7 +12,9 @@ author: KBDAzure
 ms.author: kathydav
 ms.date: 10/12/2016
 ---
-# Compute in Windows Server 2016 
+# Compute in Windows Server 2016
+
+>Applies To: Windows Server 2016 
 
 <img src="3compute.png" style='align:left'> Compute in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, compute features deliver the flexibility you need to power the workloads for your customers.
 
