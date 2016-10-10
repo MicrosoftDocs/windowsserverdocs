@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/05/2016
+ms.date: 10/10/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -55,11 +55,11 @@ What's New in Active Directory Federation Services. Active Directory Federation 
 The latest version of Web Application Proxyfocuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/library/dn765473.aspx).  
   
 ##  <a name="BKMK_ManagAuto"></a>Management and Automation  
-The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server Technical Preview, including Windows PowerShell.  
+The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.  
   
 Windows PowerShell 5.0 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/5.0/releasenotes) for details. 
 
-**Starting in Technical Preview 5**, new additions include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.   
+New additions for Windows Server 2016 include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.   
   
 ## <a name="BKMK_Networking"></a>Networking  
 This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
@@ -88,7 +88,7 @@ Credential Guard includes support for RDP sessions so that the user credentials 
 Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See [Introduction to Device Guard: virtualization-based security and code integrity policies] (https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
 
 ### Shielded Virtual Machines  
-Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Among the features introduced starting with Technical Preview 5 are the following:  
+Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Among the features introduced in Windows Server 2016 are the following:  
   
 - New "Encryption Supported" mode that offers more protections than for an ordinary virtual machine, but less than "Shielded" mode, while still supporting vTPM, disk encryption, Live Migration traffic encryption, and other features, including direct fabric administration conveniences such as virtual machine console connections and Powershell Direct.  
   
@@ -116,7 +116,7 @@ Control Flow Guard (CFG) is a platform security feature that was created to comb
 ## <a name="BKMK_Storage"></a>Storage  
 This area covers storage products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
   
--   [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.
+-   [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md). In Windows Server 2016, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.
 
 - Windows Server 2016 enables the use of persistent memory devices in the form of NVDIMM-N. NVDIMMs provide a persistent storage medium with near-DRAM speeds and reside on the memory bus, significantly reducing I/O latencies.
 
@@ -130,9 +130,9 @@ This area covers storage products and features for the IT professional to design
 
     To learn more about health management of NVDIMM-N devices in Windows, see [Storage-class Memory (NVDIMM-N) Health Management in Windows](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-class-memory-health).  
   
--   [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
+-   [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md). In Windows Server 2016, new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
   
 ## See Also  
--   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
   
 
