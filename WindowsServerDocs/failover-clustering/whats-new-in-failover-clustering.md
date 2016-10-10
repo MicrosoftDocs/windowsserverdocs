@@ -1,13 +1,13 @@
 ---
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
-title: What's new in Failover Clustering in Windows Server
+title: What's new in Failover Clustering in Windows Server 2016
 ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 manager: dongill
 author: kumudd
-ms.author: kumud
-ms.date: 09/15/2016
+ms.author: jgerend
+ms.date: 10/10/2016
 ---
 # What's new in Failover Clustering in Windows Server 2016
 > Applies To: Windows Server 2016
@@ -134,7 +134,7 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
 ## <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
-Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  Load Balancing is enabled by default in Windows Sever 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.  
+Virtual machine Load Balancing is a new feature in Failover Clustering that facilitates the seamless load balancing of virtual machines across the nodes in a cluster. Over-committed nodes are identified based on virtual machine Memory and CPU utilization on the node. Virtual machines are then moved (live migrated) from an over-committed node to nodes with available bandwidth (if applicable). The aggressiveness of the balancing can be tuned to ensure optimal cluster performance and utilization.  Load Balancing is enabled by default in Windows Sever 2016. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.  
 
 ## <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order  
 Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines are not started until the virtual machines that they have a dependency on are also started.  
