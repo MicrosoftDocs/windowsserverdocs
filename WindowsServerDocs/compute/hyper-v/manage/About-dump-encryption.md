@@ -51,7 +51,7 @@ If dump encryption is enabled on a system but no dumps are being generated, plea
 | Detailed error message | Steps to mitigate |
 | ---------------------- | ----------------- |
 | Public Key or Thumbprint registry missing | Check if both registry values exist in the expected location |
-| Invalid Public Key | Make sure that the public key stored in the PublicKey registry value is stored as as [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx). |
+| Invalid Public Key | Make sure that the public key stored in the PublicKey registry value is stored as [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx). |
 | Unsupported Public Key Size | Currently, only 2048 Bit RSA keys are supported. Configure a key that matches this requirement |
 
 Also check if the value `ForceDumpsDisabled` under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl` is set to a value other than 0. This disables crash dumps completely. If this is the case, set it to 0.
