@@ -347,15 +347,14 @@ To comply with time tracing regulations you can manually archive w32tm logs, eve
 
 
 1. Clock accuracy using the Computed Time Offset performance monitor counter.  This shows the clock with in the desired accuracy.
-2.	Clock source using the w32tm logs looking for “Peer Response from”.  Following the message text is the IP address or VMIC, which describes the time source and the next in chain of reference clocks to validate.
-3.	Clock condition status using the w32tm logs to validate that “ClockDispl Discipline: *SKEW*TIME*” are occurring.  This indicates that w32tm is active at the time.
+2.	Clock source looking for “Peer Response from” in the w32tm logs.   Following the message text is the IP address or VMIC, which describes the time source and the next in chain of reference clocks to validate.
+3.	Clock condition status using the w32tm logs to validate that “ClockDispl Discipline: \*SKEW\*TIME\*” are occurring.  This indicates that w32tm is active at the time.
 
 #### Event Logging
-To get the complete story, you will also need Event log information.  By collecting the System Event log, and filtering on Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel-General, you may be able to discover if there are other influences that have changed the time, like third parties.  This might be necessary to rule out external interference.
-Group policy can affect which event logs are written to the log.  See the section above on Using Group Policy for more details.
+To get the complete story, you will also need Event log information.  By collecting the System Event log, and filtering on Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel-General, you may be able to discover if there are other influences that have changed the time, for instance, third parties.  These logs might be necessary to rule out external interference.  Group policy can affect which event logs are written to the log.  See the section above on Using Group Policy for more details.
 
 #### <a name="W32Logging"></a>W32time Debug Logging
-To enable w32tm for auditing purposes, the following command provides logging showing the periodic updates of the clock and indicates the source clock.  Restart the service to enable the new logging.  
+To enable w32tm for auditing purposes, the following command enables logging that shows the periodic updates of the clock and indicates the source clock.  Restart the service to enable the new logging.  
 
 For more information, see [How to turn on debug logging in the Windows Time Service](https://support.microsoft.com/en-us/kb/816043).
 
@@ -394,7 +393,7 @@ Both the domain and non-domain joined protocols requires UDP port 123.  For more
 ### Reliable Hardware Clock (RTC)
 Windows does not step time, unless certain bounds are exceeded, but rather skews the clock.  That means w32tm adjusts the frequency of the clock at a regular interval, using the Clock Update Frequency setting, which defaults to once a second with Windows Server 2016.  If the clock is behind, it accelerates the frequency and if it’s ahead, it slows the frequency down.  However, during that time between clock frequency adjustments, the hardware clock is in control.  If there’s an issue with the firmware or the hardware clock, the time on the machine can become less accurate.
 
-This is another reason you need to test and baseline in your environment.  If the “Computed Time Offset” performance counter does not stabilize at the accuracy you are targeting, then you might want to verify your firmware is up to date.  As another test, you can see if duplicate hardware doesn’t reproduce the same issue.
+This is another reason you need to test and baseline in your environment.  If the “Computed Time Offset” performance counter does not stabilize at the accuracy you are targeting, then you might want to verify your firmware is up to date.  As another test, you can see if duplicate hardware reproduce the same issue.
 
 ### Troubleshooting Time Accuracy and NTP
 You can use the Discovering the Hierarchy section above to understand the source of the inaccurate time.  Looking at the time offset, find the point in the hierarchy where time diverges the most from its NTP Source.  Once you understand the hierarchy, you’ll want to try and understand why that particular time source doesn’t receive accurate time.  
