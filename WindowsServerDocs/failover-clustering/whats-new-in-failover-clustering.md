@@ -5,8 +5,8 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 manager: dongill
-author: jgerend
-ms.author: JasonGerend
+author: JasonGerend
+ms.author: jgerend
 ms.date: 10/11/2016
 ---
 # What's new in Failover Clustering in Windows Server 2016

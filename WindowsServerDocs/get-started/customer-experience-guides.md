@@ -6,8 +6,8 @@ ms.technology: server-general
 ms.topic: article
 ms.date: 10/11/2016
 ms.assetid: bd2a2a8f-5640-416d-ac8d-a9a1987b892e
-author: jgerend
-ms.author: jasongerend
+author: jasongerend
+ms.author: jgerend
 manager: dongill
 ---
 # Customer Experience Guides for Windows Server 2016
@@ -16,7 +16,7 @@ manager: dongill
 
 Customer Experience Guides are a series of blog posts that highlight some of the new features in Windows Server 2016 that we haven't yet discussed in our formal TechNet content.
 
-If there's a new feature that's not discussed here, it's probably discussed in our formal documentation - see [Windows Server 2016](Windows-Server-2016.md) and [What's new in Windows Server 2016](What-s-New-in-Windows-Server-2016-Technical-Preview-5) for more info.
+If there's a new feature that's not discussed here, it's probably discussed in our formal documentation - see [Windows Server 2016](Windows-Server-2016.md) and [What's new in Windows Server 2016](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md) for more info.
 
 The following experience guides have been created by the Windows Server 2016 Engineering and Content Development Teams to help get you started with technologies and features being released in Windows Server 2016:
 
