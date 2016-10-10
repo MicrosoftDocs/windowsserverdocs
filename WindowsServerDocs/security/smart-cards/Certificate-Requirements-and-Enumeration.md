@@ -89,7 +89,7 @@ If you enable the **Allow signature keys valid for Logon** credential provider p
 
 The following diagram illustrates how smart card sign-in works in the supported versions of Windows.
 
-![](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_08.PNG)
+![Diagram showing how smart card sign-in works in the supported versions of Windows](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_08.PNG)
 
 **Smart card sign-in flow**
 
@@ -209,21 +209,21 @@ SSL/TLS can map certificates that do not have SAN, and the mapping is done by us
 
 **Certificate revocation list distribution points**
 
-![](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_09.PNG)
+![Screenshot showing Certificate revocation list distribution points](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_09.PNG)
 
 **UPN in Subject Alternative Name field**
 
-![](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_10.PNG)
+![Screnshot showing UPN in Subject Alternative Name field](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_10.PNG)
 
 **Subject and Issue fields**
 
-![](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_11.PNG)
+![Screnshot showing Subject and Issue fields](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_11.PNG)
 
 This account mapping is supported by the KDC in addition to six other mapping methods. The following figure demonstrates a flow of user account mapping logic that is used by the KDC.
 
 **High-level flow of certificate processing for sign-in**
 
-![](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_12.PNG)
+![Flowchart showing High-level flow of certificate processing for sign-in](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_12.PNG)
 
 The certificate object is parsed to look for content to perform user account mapping.
 
@@ -239,7 +239,7 @@ The following figure illustrates the process of mapping user accounts for sign-i
 
 **Certificate processing logic**
 
-![](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_13.PNG)
+![Figure showing the process of mapping user accounts for sign-in in the directory by viewing various entries in the certificate](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_13.PNG)
 
 NT_AUTH policy is best described in the CERT_CHAIN_POLICY_NT_AUTH parameter section of the CertVerifyCertificateChainPolicy function. For more information, see [CertVerifyCertificateChainPolicy](http://go.microsoft.com/fwlink/?LinkId=93738).
 
