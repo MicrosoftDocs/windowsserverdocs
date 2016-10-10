@@ -133,6 +133,6 @@ This area covers storage products and features for the IT professional to design
 -   [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
   
 ## See Also  
--   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
   
 
