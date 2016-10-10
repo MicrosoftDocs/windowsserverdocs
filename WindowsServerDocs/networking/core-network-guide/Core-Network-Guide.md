@@ -1093,7 +1093,7 @@ For more information about the technologies in this guide, see the following res
 
  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/en-us/library/mt163897.aspx)
+-   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/en-us/library/mt163897.aspx)
 
 -   [Active Directory Domain Services overview](http://technet.microsoft.com/library/hh831484.aspx) at http://technet.microsoft.com/library/hh831484.aspx.
 
