@@ -50,7 +50,7 @@ For Windows Server 2016, Nano Server is distributed on the physical media, where
   
 You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the "Installing roles and features online" section of this topic.  
   
-This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Packages parameter, which you can combine in a comma-separated list. You can dynamically list available packages using Get-NanoServerPackage cmdlet.  
+This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Package parameter, which you can combine in a comma-separated list. You can dynamically list available packages using Get-NanoServerPackage cmdlet.  
   
 |Role or feature|Option|  
 |-------------------|----------|  
@@ -60,17 +60,17 @@ This table shows the roles and features that are available in this release of Na
 |File Server role and other storage components|-Storage|  
 |Windows Defender Antimalware, including a default signature file|-Defender|  
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default  
-|DNS Server role|-Packages Microsoft-NanoServer-DNS-Package|  
-|Desired State Configuration (DSC)|-Packages Microsoft-NanoServer-DSC-Package **Note:** For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc) .|  
-|Internet Information Server (IIS)|-Packages Microsoft-NanoServer-IIS-Package **Note:** See the IIS on Nano Server sub-topic for details about working with IIS.|  
+|DNS Server role|-Package Microsoft-NanoServer-DNS-Package|  
+|Desired State Configuration (DSC)|-Package Microsoft-NanoServer-DSC-Package **Note:** For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc) .|  
+|Internet Information Server (IIS)|-Package Microsoft-NanoServer-IIS-Package **Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS.|  
 |Host support for Windows Containers|-Containers|  
-|System Center Virtual Machine Manager agent|   -Packages Microsoft-NanoServer-SCVMM-Package<br />   -Packages Microsoft-NanoServer-SCVMM-Compute-Package <br>**Note:**     Use the SCVMM Compute package only if you are monitoring Hyper-V.|  
-|Network Performance Diagnostics Service (NPDS) (**Note:** Requires Windows Defender Anti-Malware package, which you should install before installing NPDS)|-Packages Microsoft-NanoServer-NPDS-Package |  
-|Data Center Bridging (including DCBQoS|-Packages Microsoft-NanoServer-DCB-Package|  
+|System Center Virtual Machine Manager agent|   -Package Microsoft-NanoServer-SCVMM-Package<br />   -Package Microsoft-NanoServer-SCVMM-Compute-Package <br>**Note:**     Use the SCVMM Compute package only if you are monitoring Hyper-V.|  
+|Network Performance Diagnostics Service (NPDS) (**Note:** Requires Windows Defender Anti-Malware package, which you should install before installing NPDS)|-Package Microsoft-NanoServer-NPDS-Package |  
+|Data Center Bridging (including DCBQoS|-Package Microsoft-NanoServer-DCB-Package|  
 |Deploying on a virtual machine|Microsoft-NanoServer-Guest-Package|  
 |Deploying on a physical machine|Microsoft-NanoServer-Host-Package|  
-|Secure Startup|-Packages Microsoft-NanoServer-SecureStartup-Package|  
-|Shielded VM|-Packages Microsoft-NanoServer-ShieldedVM-Package **Note:** This package is only available for the Datacenter edition of Nano Server.|  
+|Secure Startup|-Package Microsoft-NanoServer-SecureStartup-Package|  
+|Shielded VM|-Package Microsoft-NanoServer-ShieldedVM-Package **Note:** This package is only available for the Datacenter edition of Nano Server.|  
   
 > [!NOTE]  
 > When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in subfolders named for the locale of the image.  
@@ -272,11 +272,11 @@ Though offline installation of server roles and other packages is recommended, y
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14300.1000" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
+            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
             <source location="c:\packages\Microsoft-NanoServer-IIS-Package.cab" />  
         </package>  
         <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14300.1000" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
+            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
             <source location="c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab" />  
         </package>  
     </servicing>  

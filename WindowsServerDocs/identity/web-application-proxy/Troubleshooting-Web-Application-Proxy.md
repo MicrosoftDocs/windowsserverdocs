@@ -89,7 +89,7 @@ The following administrator console events are usually indicative of problems ha
 |13007<br /><br />The HTTP response from the backend server was not received within the expected interval.|The back end server request timed out or is slow or unresponsive.|Check the backend server configuration. If it's very slow, check the connectivity to the backend server and also consider changing the Web Application Proxy global configuration parameter cmdlet for InactiveTransactionsTimeoutSec.|  
   
 ## See Also  
-[What's New in Web Application Proxy in Windows Server Technical Preview](web-application-proxy-windows-server.md)  
+[What's New in Web Application Proxy in Windows Server 2016](web-application-proxy-windows-server.md)  
 [Working with Web Application Proxy](assetId:///b607b717-2172-4271-98d1-fa8162e0bb2e)  
   
 

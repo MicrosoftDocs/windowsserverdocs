@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016 Technical Preview.  
+This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.  
 
 This topic contains the following sections.
 
@@ -55,9 +55,10 @@ Installation of Network Controller requires that you restart the computer. To do
 The Network Controller cluster provides high availability and scalability to the Network Controller application, which you can configure after creating the cluster, and which is  hosted on top of the cluster.
 
 >[!NOTE]
->You can perform the procedures in the following sections either directly on the computer or VM where you installed Network Controller, or you can use the Remote Server Administration Tools for Windows Server 2016 Technical Preview to perform the procedures from a remote computer that is running either Windows Server 2016 Technical Preview or Windows 10. In addition membership in **Administrators**, or equivalent, is the minimum required to perform this procedure. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.
+>You can perform the procedures in the following sections either directly on the computer or VM where you installed Network Controller, or you can use the Remote Server Administration Tools for Windows Server 2016 to perform the procedures from a remote computer that is running either Windows Server 2016 or Windows 10. In addition, membership in **Administrators**, or equivalent, is the minimum required to perform this procedure. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.
 
-You can create a Network Controller cluster by creating a node object and then configuring the cluster. 
+You can create a Network Controller cluster by creating a node object and then configuring the cluster.
+
 ### Create a node object
 
 You need to create a node object for each computer or VM that is a member of the Network Controller cluster.
