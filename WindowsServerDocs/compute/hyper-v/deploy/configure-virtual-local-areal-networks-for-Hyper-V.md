@@ -3,7 +3,7 @@ title: Configure virtual local area networks for Hyper-V
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-manager:dongill
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
