@@ -64,7 +64,7 @@ For more info, see [PowerShell hearts the Blue Team](http://blogs.msdn.com/b/pow
 ### OpenGL support for higher video-memory virtual GPUs
 Windows Server 2016 includes capabilities that improve the experience for end users in a Windows virtualized desktop infrastructure (VDI) environment for ‘Engineering/Designer’ application workloads that require OpenGL API support and all graphics applications (DX and OpenGL) that require more video memory.
 
-For more info, see [RemoteFX vGPU Updates in Windows Server Next](https://blogs.technet.microsoft.com/enterprisemobility/2014/11/05/remotefx-vgpu-updates-in-windows-server-next/) [Experience guide for Enabling OpenGL Support for vGPU in Server 2016](http://social.technet.microsoft.com/wiki/contents/articles/31771.experience-guide-for-enabling-opengl-support-for-vgpu-in-server-2016.aspx).
+For more info, see [RemoteFX vGPU Updates in Windows Server Next](https://blogs.technet.microsoft.com/enterprisemobility/2014/11/05/remotefx-vgpu-updates-in-windows-server-next/) and [Experience guide for Enabling OpenGL Support for vGPU in Server 2016](http://social.technet.microsoft.com/wiki/contents/articles/31771.experience-guide-for-enabling-opengl-support-for-vgpu-in-server-2016.aspx).
 
 ### Using Azure SQL DB for your Remote Desktop Connection Broker high availability environment
 With the release of Windows Server 2016, deploying a highly available Remote Desktop Services deployment enables you to leverage an Azure SQL database for your Remote Desktop Connection Brokers in high availability mode.
