@@ -46,7 +46,7 @@ If the certificate including the private key is present in the current user’s 
 After decryption, tools like WinDbg can open the decrypted dump file.
 
 # Troubleshooting dump encryption
-If dump encryption is enabled on a system but no dumps are being generated, please check the system's event log for `Kernel-IO` event 1207. When dump encryption cannot be initialized, this event is created and dumps are disabled.
+If dump encryption is enabled on a system but no dumps are being generated, please check the system's `System` event log for `Kernel-IO` event 1207. When dump encryption cannot be initialized, this event is created and dumps are disabled.
 
 | Detailed error message | Steps to mitigate |
 | ---------------------- | ----------------- |
