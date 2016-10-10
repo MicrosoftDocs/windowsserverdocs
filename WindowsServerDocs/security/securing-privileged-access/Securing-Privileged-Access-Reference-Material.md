@@ -33,7 +33,7 @@ This section contains reference information for Securing Privileged Access inclu
 ## <a name="ADATM_BM"></a>Active Directory administrative tier model
 The purpose of this tier model is to protect identity systems using a set of buffer zones between full control of the Environment (Tier 0) and the high risk workstation assets that attackers frequently compromise.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig1.JPG)
+![Diagram showing the three layers of the Tier model](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig1.JPG)
 
 The Tier model is composed of three levels and only includes administrative accounts, not standard user accounts:
 
@@ -49,14 +49,14 @@ The Tier model is composed of three levels and only includes administrative acco
 ### Containment and security zones
 The tiers are relative to a specific security zone. While they have gone by many names, security zones are a well-established approach that provide containment of security threats through network layer isolation between them. The tier model complements the isolation by providing containment of adversaries within a security zone where network isolation isn't effective. Security zones can span both on-premises and cloud infrastructure, such as in the example where Domain Controllers and domain members in the same domain are hosted on-premises and in Azure.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig2.JPG)
+![Diagram showing how Security zones can span both on-premises and cloud infrastructure](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig2.JPG)
 
 The Tier model prevents escalation of privilege by restricting what administrators can control and where they can log on (because logging on to a computer grants control of those credentials and all assets managed by those credentials).
 
 ### Control restrictions
 Control restrictions are shown in the figure below:
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig3.JPG)
+![Diagram of Control restrictions](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig3.JPG)
 
 ### Primary responsibilities and critical restrictions
 **Tier 0 administrator** -  manage the identity store and a small number of systems that are in effective control of it, and:
@@ -84,7 +84,7 @@ Control restrictions are shown in the figure below:
 ### Logon restrictions
 Logon restrictions are shown in the figure below:
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig4.JPG)
+![Diagram of logon restrictions](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig4.JPG)
 
 > [!NOTE]
 > Note that some assets can have Tier 0 impact to availability of the environment, but do not directly impact the confidentiality or integrity of the assets. These include the DNS Server service and critical network devices like Internet proxies.
@@ -92,7 +92,7 @@ Logon restrictions are shown in the figure below:
 ## <a name="CSP_BM"></a>Clean source principle
 The clean source principle requires all security dependencies to be as trustworthy as the object being secured.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig5.JPG)
+![Diagram showing how a subject in control of an object is a security dependency of that object](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig5.JPG)
 
 Any subject in control of an object is a security dependency of that object. If an adversary can control anything in effective control of a target object, they can control that target object. Because of this, you must ensure that the assurances for all security dependencies are at or above the desired security level of the object itself.
 
@@ -100,18 +100,18 @@ While simple in principle, applying this requires understanding the control rela
 
 Because control is transitive, this principle has to be repeated recursively. For example if A controls B and B controls C, then A also indirectly controls C.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig6.JPG)
+![Diagram showing how if A controls B, and B controls C, then A also indirectly controls C](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig6.JPG)
 
 An attacker that compromises A gets access to everything A controls (including B), and everything B controls (including C). Using the language of security dependencies on this same example, both B and A are security dependencies of C and have to be secured at the desired assurance level of C in order for C to have that assurance level.
 
 For IT infrastructure and identity systems, this principle should be applied to the most common means of control including the hardware where systems are installed, the installation media for the systems, the architecture and configuration of the system, and daily operations.
 
 ### Clean Source for installation media
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_CSIM.JPG)
+![Diagram showing a clean source for installation media](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_CSIM.JPG)
 
 Applying the clean source principle to installation media requires you to ensure that the installation media has not been tampered with since being released by the manufacturer (as best you are able to determine). This figure depicts an attacker using this path to compromise a computer:
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig8.JPG)
+![Figure showing an attacker using a path to compromise a computer](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig8.JPG)
 
 Applying the clean source principle to installation media requires validating the software integrity throughout the cycle you possess it including during acquisition, storage, and transfer up until it is used.
 
@@ -143,7 +143,7 @@ Applying the clean source principle to the system architecture requires you to e
 
 As an example, its acceptable for Active Directory to control a standard user desktop but it's a significant escalation of privilege risk for a standard user desktop to be in control of the Active Directory.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig09.JPG)
+![Diagram showing how a system can be dependent on a higher trust system, but not on a lower trust system with lower security standards](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig09.JPG)
 
 The control relationship can be introduced through many means including security Access Control Lists (ACLs) on objects like filesystems, membership in the local administrators group on a computer, or agents installed on a computer running as System (with the ability to run arbitrary code and scripts).
 
@@ -151,14 +151,14 @@ A frequently overlooked example is exposure through logon, which creates a contr
 
 Because of the large number of assets that depend on identity systems like Active Directory, you should minimize the number of systems your Active Directory and Domain Controllers depend on.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig010.JPG)
+![Diagram showing that you should minimize the number of systems your Active Directory and Domain Controllers depend on](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig010.JPG)
 
 For more information on hardening the top risks of active directory, see [this page](http://aka.ms/hardenAD).
 
 ### <a name="OSBCS_BM"></a>Operational standards based on clean source principle
 This section describes the operational standards and expectations for administrative personnel. These standards are designed to secure administrative control of an organization's information technology systems against risks that could be created by operational practices and processes.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig11.JPG)
+![Diagram showing how standards are designed to secure administrative control of an organization's information technology systems against risks that could be created by operational practices and processes](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig11.JPG)
 
 #### Integrating the standards
 You can integrate these standards into your organization's overall standards and practices. You can adapt these to the specific requirements, available tools, and risk appetite of your organization, but we recommend only minimum modifications to reduce risk. We recommend you use the defaults in this guidance as the benchmark for your ideal end state and manage any deltas as exceptions to be addressed in priority order.
@@ -212,7 +212,7 @@ A Change Advisory Board (CAB) is the discussion forum and approval authority for
 
 Each standard in this document is broken out by the criticality of meeting the standard for a given Tier level.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig12.JPG)
+![Diagram showing the standard for given Tier levels](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig12.JPG)
 
 All exceptions for Mandatory items (marked with red octagon   or an orange triangle   in this document) are considered temporary, and they need to be approved by the CAB. Guidelines include:
 
@@ -229,7 +229,7 @@ All exceptions for Recommended items (marked with a yellow circle   in this docu
 #### Operational practices standards summary
 The Tier columns in this table refer to the Tier level of the administrative account, the control of which typically impacts all assets in that tier.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig13.JPG)
+![Table showing Tier levels of the admninistrative account](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig13.JPG)
 
 Operational decisions that are made on a regular basis are critical to maintaining the security posture of the environment. These standards for processes and practices help ensure that an operational error does not lead to an exploitable operational vulnerability in the environment.
 
@@ -531,7 +531,7 @@ While this approach does add a forest to an Active Directory environment, the co
 
 This figure depicts an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Manager's Privileged Access Management capability. For more information on deploying a MIM PAM instance, see [Privileged Identity Management for Active Directory Domain Services (AD DS)](https://technet.microsoft.com/en-us/library/mt150258.aspx) article.
 
-![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig14.JPG)
+![Figure showing an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Manager's Privileged Access Management capability](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig14.JPG)
 
 A dedicated administrative forest is a standard single domain Active Directory forest dedicated to the function of Active Directory management. Administrative forests and domains may be hardened more stringently than production forests because of the limited use cases.
 
@@ -609,8 +609,6 @@ An administrative forest design should include the following considerations:
     -   Multi-factor authentication should be configured for all accounts in the admin forest, except one account. At least one administrative account should be password based to ensure access will work in case the multi-factor authentication process breaks. This account should be protected by a stringent physical control process.
 
     -   Accounts configured for multi-factor authentication should be configured to set a new NTLM hash on accounts regularly. This can be accomplished by disabling and enabling the account attribute Smart card is required for interactive logon.
-
-        ![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig15.JPG)
 
         > [!NOTE]
         > This can interrupt operations in progress that are using this account, so this process should be initiated only when administrators won't be using the account, such as at night or on weekends.

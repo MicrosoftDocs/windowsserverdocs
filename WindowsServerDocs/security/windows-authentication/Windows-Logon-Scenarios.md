@@ -43,7 +43,7 @@ The logon process begins either when a user enters credentials in the credential
 
 The following diagram shows the interactive logon elements and logon process.
 
-![](../media/Windows-Logon-Scenarios/AuthN_LSA_Architecture_Client.gif)
+![Diagram showing the interactive logon elements and logon process](../media/Windows-Logon-Scenarios/AuthN_LSA_Architecture_Client.gif)
 
 **Windows Client Authentication Architecture**
 
@@ -97,7 +97,7 @@ To initiate a typical logon session, a user must prove his or her identity by pr
 
 The following diagram shows the elements and processes required for smart card logon.
 
-![](../media/Windows-Logon-Scenarios/SmartCardCredArchitecture.gif)
+![Diagram showing the elements and processes required for smart card logon](../media/Windows-Logon-Scenarios/SmartCardCredArchitecture.gif)
 
 **Smart Card credential provider architecture**
 

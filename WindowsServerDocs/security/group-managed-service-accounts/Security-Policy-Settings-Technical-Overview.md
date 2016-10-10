@@ -161,7 +161,7 @@ The following diagram shows Security Settings and related features.
 
 **Security Settings Policies and Related Features**
 
-![](../media/Security-Policy-Settings-Technical-Overview/secpol_components.gif)
+![Diagram showing Security Settings and related features](../media/Security-Policy-Settings-Technical-Overview/secpol_components.gif)
 
 -   **Scesrv.dll**
 
@@ -184,7 +184,7 @@ The Security Settings extension of the Local Group Policy Editor is part of the 
 
 **Security Settings Architecture**
 
-![](../media/Security-Policy-Settings-Technical-Overview/secpol_architecture.gif)
+![Diagram showing the Security Settings extension of the Local Group Policy Editor](../media/Security-Policy-Settings-Technical-Overview/secpol_architecture.gif)
 
 The security settings configuration and analysis tools include a security configuration engine, which provides local computer (non-domain member) and Group Policyâˆ’based configuration and analysis of security settings policies. The security configuration engine also supports the creation of security policy files. The primary features of the security configuration engine are Scecli.dll and Scesrv.dll.
 
@@ -341,7 +341,7 @@ In the context of Group Policy processing, Security Settings policy is processed
 
     **Multiple GPOs and Merging of Security Policy**
 
-    ![](../media/Security-Policy-Settings-Technical-Overview/secpol_multiGPOmerge.gif)
+    ![Diagram showing multiple GPOs and Merging of Security Policy](../media/Security-Policy-Settings-Technical-Overview/secpol_multiGPOmerge.gif)
 
 5.  The resultant security policies are stored in Secedit.sdb, the security settings database. The security engine gets the security template files and imports them to Secedit.sdb.
 
@@ -351,7 +351,7 @@ The following figure illustrates the security settings policy processing.
 
 **Security Settings Policy Processing**
 
-![](../media/Security-Policy-Settings-Technical-Overview/secpol_processes.gif)
+![Diagram showing security settings policy processing](../media/Security-Policy-Settings-Technical-Overview/secpol_processes.gif)
 
 #### Merging of security policies on domain controllers
 Password policies, Kerberos, and some security options are only merged from GPOs that are linked at the root level on the domain. This is done to keep those settings synchronized across all domain controllers in the domain. The following security options are merged:

@@ -354,7 +354,7 @@ The following procedure describes how to block Internet access by creating a Gro
     > [!NOTE]
     > You might have to delegate permissions to join the domain by using [KB 932455](https://support.microsoft.com/en-us/kb/932455) if the account that joins the workstations to the domain does not already have permissions to join computers to the domain.
 
-    ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample1.gif)
+    ![Create computer accounts for the new workstations](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample1.gif)
 
 3.  Close Active Directory Users and Computers.
 
@@ -362,13 +362,13 @@ The following procedure describes how to block Internet access by creating a Gro
 
 5.  Right-click the new OU, and > **Create a GPO in this domain, and Link it here**.
 
-    ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample2.png)
+    ![Right-click the new OU, and > **Create a GPO in this domain, and Link it here**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample2.png)
 
 6.  Name the GPO, and > **OK**.
 
 7.  Expand the GPO, right-click the new GPO, and > **Edit**.
 
-    ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample3.png)
+    ![Expand the GPO, right-click the new GPO, and > **Edit**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample3.png)
 
 8.  Configure which members of accounts can log on locally to these administrative workstations as follows:
 
@@ -385,7 +385,7 @@ The following procedure describes how to block Internet access by creating a Gro
 
     5.  Click **Add User or Group**, type **Administrators**, and > **OK**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample4.png)
+        ![Click **Add User or Group**, type **Administrators**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample4.png)
 
 9. Configure the proxy configuration:
 
@@ -393,7 +393,7 @@ The following procedure describes how to block Internet access by creating a Gro
 
     2.  Double-click **Proxy Settings**, select the **Enable proxy settings** check box, type **127.0.0.1** (the network Loopback IP address) as the proxy address, and > **OK**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample5.png)
+        ![Double-click **Proxy Settings**, select the **Enable proxy settings** check box, type **127.0.0.1** (the network Loopback IP address) as the proxy address, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample5.png)
 
 10. Configure the loopback processing mode to enable the user Group Policy proxy setting to apply to all users on the computer as follows:
 
@@ -427,11 +427,11 @@ The following procedure describes how to block Internet access by creating a Gro
 
     1.  Right-click **Windows Firewall with Advanced Security LDAP://path**, and > **Properties**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample6.png)
+        ![Right-click **Windows Firewall with Advanced Security LDAP://path**, and > **Properties**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample6.png)
 
     2.  On each profile, ensure that the firewall is enabled and that inbound connections are set to **Block all connections**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample7.png)
+        ![On each profile, ensure that the firewall is enabled and that inbound connections are set to **Block all connections**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample7.png)
 
     3.  Click **OK** to complete the configuration.
 
@@ -464,11 +464,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 3.  Right-click **Group Policy Objects**, and > **New**.
 
-    ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample1.png)
+    ![Right-click **Group Policy Objects**, and > **New**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample1.png)
 
 4.  In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and > **OK**.
 
-    ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample2.png)
+    ![In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample2.png)
 
 5.  Right-click **New GPO**, and > **Edit**.
 
@@ -482,7 +482,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     3.  Click **Add User or Group**, click **Browse**, type **Domain Admins**, and > **OK**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample3.png)
+        ![Click **Add User or Group**, click **Browse**, type **Domain Admins**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample3.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -500,7 +500,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     3.  Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample4.png)
+        ![Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample4.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -511,7 +511,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     6.  Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample5.png)
+        ![Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample5.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -522,11 +522,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     1.  Right-click the workstation OU, and then > **Link an Existing GPO**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample6.png)
+        ![Right-click the workstation OU, and then > **Link an Existing GPO**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample6.png)
 
     2.  Select the GPO that you just created, and > **OK**.
 
-        ![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample7.png)
+        ![Select the GPO that you just created, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample7.png)
 
 10. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
 
@@ -546,7 +546,7 @@ It is a best practice to configure the user objects for all sensitive accounts i
 
 As with any configuration change, test this enabled setting fully to ensure that it performs correctly before you implement it.
 
-![](../media/Active-Directory-Accounts/ADLocalAccounts-Proc3-Sample1.png)
+![Screen shot showing how to select **Account is sensitive and cannot be delegated** check box under **Account options** to prevent accounts from being delegated](../media/Active-Directory-Accounts/ADLocalAccounts-Proc3-Sample1.png)
 
 ## <a name="Sec_Secure_Manage_DCs"></a>Secure and manage domain controllers
 It is a best practice to strictly enforce restrictions on the domain controllers in your environment. This ensures that the domain controllers:

@@ -34,7 +34,6 @@ The TLS and SSL protocols can be divided into two layers. The first layer consis
 
 **TLS and SSL protocol layers**
 
-![](../media/Transport-Layer-Security-protocol/trsc_tls_120c.gif)
 
 The Schannel SSP implements the TLS and SSL protocols without modification. The SSL protocol is proprietary, but the Internet Engineering Task Force produces the public TLS specifications. The following table lists the specifications for each TLS version. Each specification contains information about:
 
