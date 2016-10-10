@@ -5,6 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-sbec
+ms.date: 10/10/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
@@ -13,11 +14,11 @@ ms.author: jaimeo
 ---
 # Get started with Setup and Boot Event Collection
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
   
 ## Overview  
-Setup and Boot Event Collection is a new feature starting in Windows Server 2016 Technical Preview that allows you to designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.  
+Setup and Boot Event Collection is a new feature starting in Windows Server 2016 that allows you to designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.  
   
 Previously, these events have been impossible to monitor because the infrastructure needed to collect them doesn't exist until a computer is already set up. The kinds of setup and boot events you can monitor include:  
   
@@ -33,17 +34,17 @@ Previously, these events have been impossible to monitor because the infrastruct
   
 -   The points when the system becomes available for logon, establishes connection with a domain controller, completion of service starts, and availability of network shares  
   
-The collector computer must be running Windows Server 2016 Technical Preview (it can be in either Server with Desktop Experience or Server Core mode). The target computer must be running either Windows 10 or Windows Server 2016 Technical Preview. You can also run this service on a virtual machine which is hosted on a computer that is **not** running Windows Server 2016 Technical Preview. The following combinations of virtualized collector and target computers are known to work:  
+The collector computer must be running Windows Server 2016 (it can be in either Server with Desktop Experience or Server Core mode). The target computer must be running either Windows 10 or Windows Server 2016. You can also run this service on a virtual machine which is hosted on a computer that is **not** running Windows Server 2016. The following combinations of virtualized collector and target computers are known to work:  
   
 |Virtualization host|Collector virtual machine|Target virtual machine|  
 |-----------------------|-----------------------------|--------------------------|  
 |Windows 8.1|yes|yes|  
 |Windows 10|yes|yes|  
-|Windows Server 2016 Technical Preview|yes|yes|  
+|Windows Server 2016|yes|yes|  
 |Windows Server 2012 R2|yes|no|  
   
 ## Installing the collector service  
-Starting with the Windows Server 2016  Technical Preview, the event collector service is available as an optional feature. In this release, you can install it using DISM.exe with this command at an elevated Windows PowerShell prompt:  
+Starting with the Windows Server 2016, the event collector service is available as an optional feature. In this release, you can install it using DISM.exe with this command at an elevated Windows PowerShell prompt:  
   
 `dism /online /enable-feature /featurename:SetupAndBootEventCollection`  
   
