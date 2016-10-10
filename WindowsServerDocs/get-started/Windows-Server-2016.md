@@ -24,30 +24,25 @@ manager: dongill
     &nbsp;&nbsp;<font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></td></tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
-    ![alt text](1system-requirements.png "Get started")<br/><br/>
-    [Get started](Server-Basics.md)</td>
-    <td style='width:25%'>
-    ![alt text](3compute.png "Windows Server Compute")<br/><br/>
-    [Compute](../compute/Compute.md)</td>
-    <td style='width:25%'>![Failover clustering](9failover-clustering.png "Failover clustering")<br/><br/>[Failover clustering](../failover-clustering/failover-clustering-overview.md)
+    <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">![alt text](1-getstarted.png "Get started")</a>
     </td>
     <td style='width:25%'>
-    ![alt text](4identity-and-access.png "Windows Server Identity and Access")<br/><br/>
-    [Identity and Access](../identity/Identity-and-Access.md)</td>
+    <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">![alt text](2-compute.png "Windows Server Compute")</a>
+    </td>
+    <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/failover-clustering/failover-clustering-overview">![Failover clustering](3-failover.png "Failover clustering")</a>
+    </td>
+    <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/identity/identity-and-access">
+    ![alt text](4-identity.png "Windows Server Identity and Access")</a></td>
   </tr>
   <tr style='text-align:center;'>
-  <td style='width:25%'>
-  ![alt text](8security-and-assurance.png "Windows Server Security and Assurance")<br/><br/>
-  [Security and Assurance](../security/Security-and-Assurance.md)</td>
-  <td style='width:25%'>
-  ![alt text](6networking.png "Windows Server Networking")<br/><br/>
-  [Networking](../networking/Networking.md)</td>
-  <td style='width:25%'>
-  ![alt text](6storage.png "Windows Server Storage")<br/><br/>
-  [Storage](../storage/storage.md)</td>
-  <td style='width:25%'>
-  ![alt text](5management-and-automation.png "Windows Server Management and Automation")<br/><br/>
-  [Management and  Automation](../management/Management-and-Automation.md)</td>
+  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/security/security-and-assurance">
+  ![alt text](5-security.png "Windows Server Security and Assurance")</a></td>
+  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/networking/networking">
+  ![alt text](6-networking.png "Windows Server Networking")</a></td>
+  <td style='width:25%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage">
+  ![alt text](7-storage.png "Windows Server Storage")</a></td>
+  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
+  ![alt text](8-management.png "Windows Server Management and Automation")</a></td>
   </tr>
 </table>
 
