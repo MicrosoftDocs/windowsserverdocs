@@ -41,7 +41,7 @@ expand vdisk maximum=20000
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 -   [Attach vdisk](Attach-vdisk.md)
 -   [Compact vdisk](Compact-vdisk.md)
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+
 -   [Detach vdisk](Detach-vdisk.md)
 -   [Detail vdisk](Detail-vdisk.md)
 -   [Merge vdisk](Merge-vdisk.md)

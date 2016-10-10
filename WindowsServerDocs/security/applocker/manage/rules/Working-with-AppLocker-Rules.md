@@ -262,7 +262,6 @@ You can create rules by using two AppLocker wizards:
 
 -   Expect an increase in the number of Help Desk calls initially because of blocked applications until users understand that they cannot run applications that are not allowed.
 
-## See Also
-[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)
+
 
 

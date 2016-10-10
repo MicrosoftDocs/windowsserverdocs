@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets options. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+Sets options.   
 ## Syntax  
 ```  
 set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] [logging] [mode {console | stream}] [ntlm] [term {ansi | vt100 | vt52 | vtnt}] [?]  
@@ -28,7 +28,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 |Parameter|Description|  
 |-------------|---------------|  
 |bsasdel|Sends **Backspace** as a **Delete**.|  
-|crlf|Sends CR & LF (0x0D, 0x 0A) when the **Enter** key is pressed. Known as “New line mode�?.|  
+|crlf|Sends CR & LF (0x0D, 0x 0A) when the **Enter** key is pressed. Known as ???New line mode????.|  
 |delasbs|Sends **Delete** as a **Backspace**.|  
 |escape <Character>|Sets the escape character used to enter the Telnet client prompt. The escape character can be a single character, or it can be a combination of the **CTRL** key plus a character. To set a control-key combination, hold down the **CTRL** key while you type the character that you want to assign.|  
 |localecho|Turns on local echo.|  

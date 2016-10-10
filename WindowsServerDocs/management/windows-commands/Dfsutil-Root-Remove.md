@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 The **dfsutil root remove** command deletes the namespace root.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 

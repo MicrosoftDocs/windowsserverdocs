@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Communicates with a computer running the Telnet Server service. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Communicates with a computer running the Telnet Server service. 
 ## Syntax
 ```
 telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 | ansi | vtnt}] [<Host> [<Port>]] [/?]
@@ -27,7 +27,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 ### Parameters
 |Parameter|Description|
 |-------------|---------------|
-|/a|Attempt automatic logon. Same as /l option except uses the currently logged on user’s name.|
+|/a|Attempt automatic logon. Same as /l option except uses the currently logged on user???s name.|
 |/e <EscapeChar>|Escape character used to enter the Telnet client prompt.|
 |/f <FileName>|File name used for client side logging.|
 |/l <UserName>|Specifies the user name to log on with on the remote computer.|

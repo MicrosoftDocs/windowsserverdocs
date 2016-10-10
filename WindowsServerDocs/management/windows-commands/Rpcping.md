@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Confirms the RPC connectivity between the computer running Microsoft Exchange Server and any of the supported Microsoft Exchange Client workstations on the network. This utility can be used to check if the Microsoft Exchange Server services are responding to RPC requests from the client workstations via the network. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Confirms the RPC connectivity between the computer running Microsoft Exchange Server and any of the supported Microsoft Exchange Client workstations on the network. This utility can be used to check if the Microsoft Exchange Server services are responding to RPC requests from the client workstations via the network. 
 ## Syntax
 ```
 rpcping [/t <protseq>] [/s <server_addr>] [/e <endpoint>
@@ -74,7 +74,7 @@ rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P "usernam
 ```
 <Here is where you put a detailed description of another example.>
 ```
-This /is /a:â€?differentâ€? /example
+This /is /a:???different??? /example
 ```
 ## Additional references
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

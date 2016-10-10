@@ -42,6 +42,4 @@ To assign the letter E to the volume in focus, type:
 ```
 assign letter=e
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

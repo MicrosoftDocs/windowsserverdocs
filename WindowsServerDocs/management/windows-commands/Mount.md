@@ -40,7 +40,3 @@ The following options and arguments can be used with the **mount** utility.
 |-o lang={euc-jp&#124;euc-tw&#124;euc-kr&#124;shift-jis&#124;big5&#124;ksc5601&#124;gb2312-80&#124;ansi}|Specifies the default encoding used for file and directory names and, if used, must be set to one of the following:<br /><br />-   **ansi**<br />-   **big5** (Chinese)<br />-   **euc-jp** (Japanese)<br />-   **euc-kr** (Korean)<br />-   **euc-tw** (Chinese)<br />-   **gb2312-80** (Simplified Chinese)<br />-   **ksc5601** (Korean)<br />-   **shift-jis** (Japanese)<br /><br />If this option is set to **ansi** on systems configured for non-English locales, the encoding scheme is set to the default encoding scheme for the locale. The following are the default encoding schemes for the indicated locales:<br /><br />-   Japanese: SHIFT-JIS<br />-   Korean: KS_C_5601-1987<br />-   Simplified Chinese: GB2312-80<br />-   Traditional Chinese: BIG5|
 |-u:<UserName>|Specifies the user name to use for mounting the share. If *username* is not preceded by a backslash (**\\**), it is treated as a UNIX user name.|
 |-p:<Password>|The password to use for mounting the share. If you use an asterisk (**\***), you will be prompted for the password.|
-> [!NOTE]
-> If you make a persistent connection with **mount**, you must use [umount](assetId:///0726324c-c45a-444d-a753-99daf5e1c83a) to delete the connection. Neither the **net use** command nor Microsoft Windows Explorer will delete these connections.
-## See Also
-[umount](assetId:///0726324c-c45a-444d-a753-99daf5e1c83a)

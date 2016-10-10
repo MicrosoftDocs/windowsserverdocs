@@ -46,11 +46,11 @@ In summary, including AppLocker rules for packaged apps in your policy design pr
 
 |Resource|Windows Server 2008 R2 and Windows 7|Windows Server 2012 and Windows 8|
 |------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-|Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step\-by\-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|[AppLocker Technical Overview](assetId:///358610e4-88b2-40d0-b34d-dfd7ddee0ed9)|
+|Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step\-by\-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|
 |Procedures|[AppLocker Operations Guide](http://technet.microsoft.com/library/ee791916(WS.10).aspx)|[Administer AppLocker](../applocker/manage/Administer-AppLocker.md)<br /><br />[Manage Packaged Apps with AppLocker](../applocker/manage/Manage-Packaged-Apps-with-AppLocker.md)|
 |Scripting|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|
 |Technical content|[AppLocker Technical Reference](http://technet.microsoft.com/library/ee844115(v=WS.10).aspx)|[AppLocker Technical Reference](http://technet.microsoft.com/library/ee844115(v=WS.10).aspx)|
 |Design, planning and deployment|[AppLocker Policies Design Guide](http://technet.microsoft.com/library/ee449480(WS.10).aspx)<br /><br />[AppLocker Policies Deployment Guide](http://technet.microsoft.com/library/ee791890(WS.10).aspx)|[AppLocker Policies Design Guide](http://technet.microsoft.com/library/ee449480(WS.10).aspx)<br /><br />[AppLocker Policies Deployment Guide](http://technet.microsoft.com/library/ee791890(WS.10).aspx)|
-|General information and additional resources|[AppLocker Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/dd723678(v=WS.10).aspx)|[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)|
+|General information and additional resources|[AppLocker Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/dd723678(v=WS.10).aspx)|
 
 

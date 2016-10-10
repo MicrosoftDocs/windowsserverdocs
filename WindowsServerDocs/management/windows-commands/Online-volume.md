@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Brings volumes that are currently offline to an online state  
   
 > [!IMPORTANT]  
-> This command is not available in any edition of Windows Vista.  
+> This command is not available in any edition of Windows??Vista.  
   
 > [!IMPORTANT]  
 > This command will fail if it is used on a read\-only volume.  
@@ -55,6 +55,6 @@ online volume
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

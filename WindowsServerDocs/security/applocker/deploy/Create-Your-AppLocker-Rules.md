@@ -26,8 +26,6 @@ AppLocker rules apply to the targeted application, and they are the components t
 ### Automatically generate your rules
 You can use a reference computer to automatically create a set of default rules for each of the installed applications, test and modify each rule as necessary, and deploy the policies. Creating most of the rules for all the installed applications gives you a starting point to build and test your policies. For information about performing this task, see the following topics:
 
--   [Configure the AppLocker Reference Computer](assetId:///615506e9-fc32-4003-a241-01794c3a9bd3)
-
 -   [Run the Automatically Generate Rules Wizard](../manage/rules/Run-the-Automatically-Generate-Rules-Wizard.md)
 
 -   [Create AppLocker Default Rules](../manage/rules/Create-AppLocker-Default-Rules.md)

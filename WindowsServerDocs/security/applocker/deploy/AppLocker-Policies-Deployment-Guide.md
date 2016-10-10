@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional introduces the concepts and describes the steps required to deploy AppLocker™ policies introduced in  Windows Server 2008 R2  and  Windows 7 .
+This topic for the IT professional introduces the concepts and describes the steps required to deploy AppLocker™ policies introduced in  Windows Server 2008 R2  and  Windows 7.
 
 ## Purpose of this guide
 This guide provides steps based on your design and planning investigation for deploying application control policies by using AppLocker. It is intended for security architects, security administrators, and system administrators. Through a sequential and iterative deployment process, you can create application control policies, test and adjust the policies, and implement a method for maintaining those policies as the needs in your organization change.
@@ -81,9 +81,5 @@ This guide provides steps based on your design and planning investigation for de
     Windows Server 2003 product help [Software Restriction Policies](https://technet.microsoft.com/library/cc779607(v=ws.10).aspx). This collection of topics describes the concepts to understand and the steps to implement and maintain SRP.
 
     More recent guidance to [Administer Software Restriction Policies](http://technet.microsoft.com/library/hh994606.aspx). This collection contains procedures how to administer application control policies using Software Restriction Policies (SRP).
-
--   [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)
-
-    This topic lists AppLocker documentation resources for the IT professional.
 
 

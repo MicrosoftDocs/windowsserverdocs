@@ -52,13 +52,12 @@ After using **Get-AppLockerFileInformation** to determine how many times that a 
 After you have identified which rules need to be edited or added to the policy, you can use the Group Policy Management Console to modify the AppLocker rules in the relevant GPOs. For AppLocker policies that are not managed by a GPO, you can use the Local Security Policy snap-in. For information how to modify an AppLocker policy, see, [Edit an AppLocker Policy](Edit-an-AppLocker-Policy.md).
 
 ## Step 6: Repeat policy testing, analysis, and policy modification
-Repeat the previous steps 3–5 until all the rules perform as intended before applying enforcement.
+Repeat the previous steps 3???5 until all the rules perform as intended before applying enforcement.
 
 ## Additional resources
 
 -   For steps to perform other AppLocker policy tasks, see [Administer AppLocker](Administer-AppLocker.md).
 
-## See Also
-[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)
+
 
 

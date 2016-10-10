@@ -32,6 +32,4 @@ delete volume
 |[Delete disk](Delete-disk.md)|Deletes a missing dynamic disk from the list of disks.|
 |[Delete partition](Delete-partition.md)|Deletes a partition.|
 |[Delete volume](Delete-volume.md)|Deletes a volume.|
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

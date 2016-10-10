@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Creates a RAID\-5 volume using three or more specified dynamic disks.  
   
 > [!IMPORTANT]  
-> This DiskPart command is not available in any edition of Windows Vista.  
+> This DiskPart command is not available in any edition of Windows??Vista.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  
   
@@ -55,6 +55,6 @@ create volume raid size=1000 disk=1,2,3
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 
