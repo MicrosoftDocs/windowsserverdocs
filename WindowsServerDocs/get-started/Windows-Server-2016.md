@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/06/2016
+ms.date: 10/10/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -62,13 +62,13 @@ Windows Server 2016 is available in Standard, Datacenter, and Essentials edition
 |Feature|Datacenter|Standard|  
 |-------------------|----------|-----------------------|  
 |Core functionality of Windows Server| yes| yes|
-|OSEs / Hyper-V containers|Unlimited|	2|
-|Windows Server containers|Unlimited|	Unlimited|
+|OSEs / Hyper-V containers|unlimited|	2|
+|Windows Server containers|unlimited|	unlimited|
 |Host Guardian Service| yes| yes|
 |Nano Server installation option| yes| yes|
 |Storage features including Storage Spaces Direct and Storage Replica| yes| no|
 |Shielded Virtual Machines| yes| no|
-|Networking stack| yes| no|
+|Software Defined Networking Infrastructure (Network Controller, Software Load Balancer, and Multi-tenant Gateway)| yes| no|
 
 For more information, see [Pricing and licensing for Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server-pricing) and [Compare features in Windows Server versions](https://www.microsoft.com/en-us/cloud-platform/windows-server-comparison).
 
