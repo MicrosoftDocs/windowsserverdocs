@@ -17,7 +17,7 @@ Note: If you configure dump encryption, also disable Windows Error Reporting. WE
 
 # Configuring dump encryption
 ## Manual configuration
-To turn on dump encryption using the registry, configure the following registry values under `HKEY_LOCAL_MACHINE:\\SYSTEM\CurrentControlSet\Control\CrashControl`
+To turn on dump encryption using the registry, configure the following registry values under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl`
 
 | Value Name | Type | Value |
 | ---------- | ---- | ----- |
@@ -44,3 +44,12 @@ If the certificate including the private key is present in the current user’s 
     KernelDumpDecrypt.exe memory.dmp memory_decr.dmp
 ```
 After decryption, tools like WinDbg can open the decrypted dump file.
+
+# Troubleshooting dump encryption
+If dump encryption is enabled on a system but no dumps are being generated, please check the system's event log for `Kernel-IO` event 1207. When dump encryption cannot be initialized, this event is created and dumps are disabled.
+
+| Detailed error message | Steps to mitigate |
+| ---------------------- | ----------------- |
+| Public Key or Thumbprint registry missing | Check if both registry values exist in the expected location |
+| Invalid Public Key | Make sure that the public key stored in the PublicKey registry value is stored as as [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx). |
+| Unsupported Public Key Size | Currently, only 2048 Bit RSA keys are supported. Configure a key that matches this requirement |
