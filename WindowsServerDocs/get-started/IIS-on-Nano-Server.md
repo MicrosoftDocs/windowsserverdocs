@@ -18,7 +18,7 @@ ms.author: jaimeo
 
 
 ## Overview of IIS on Nano Server  
-You can install the Internet Information Services (IIS) server role on Nano Server by using the -Packages parameter with Microsoft-NanoServer-IIS-Package. For information about configuring Nano Server, including installing packages, see [Install Nano Server](Getting-Started-with-Nano-Server.md).  
+You can install the Internet Information Services (IIS) server role on Nano Server by using the -Package parameter with Microsoft-NanoServer-IIS-Package. For information about configuring Nano Server, including installing packages, see [Install Nano Server](Getting-Started-with-Nano-Server.md).  
 
 In this release of Nano Server, the following IIS features are available:  
 
