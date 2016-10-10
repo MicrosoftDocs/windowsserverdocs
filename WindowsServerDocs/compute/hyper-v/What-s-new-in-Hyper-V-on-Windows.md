@@ -10,13 +10,11 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 10/12/2016
+ms.date: 10/10/2016
 ---
 # What's new in Hyper-V on Windows Server 2016
 
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
-
-**This is preliminary content and subject to change.**  
   
 This article explains the new and changed functionality of Hyper-V on Windows Server 2016 and Microsoft Hyper-V Server 2016. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).  
   
