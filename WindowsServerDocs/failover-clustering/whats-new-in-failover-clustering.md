@@ -5,9 +5,9 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 manager: dongill
-author: kumudd
-ms.author: kumud
-ms.date: 09/15/2016
+author: jgerend
+ms.author: JasonGerend
+ms.date: 10/11/2016
 ---
 # What's new in Failover Clustering in Windows Server 2016
 > Applies To: Windows Server 2016
@@ -42,11 +42,11 @@ The cluster operating systems for the upgrade in phases are as follows for each 
 For more information, see [Cluster Operating System Rolling Upgrade](cluster-operating-system-rolling-upgrade.md).  
 
 ## <a name="BKMK_SR"></a>Storage Replica  
-Storage Replica (SR) is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
+Storage Replica is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 **What value does this change add?**  
 
-Storage Replication enables you to do the following:  
+Storage Replica enables you to do the following:  
 
 -   Provide a single vendor disaster recovery solution for planned and unplanned outages of mission critical workloads.  
 
@@ -54,7 +54,7 @@ Storage Replication enables you to do the following:
 
 -   Stretch Windows failover clusters to metropolitan distances.  
 
--   Use Microsoft software end to end for storage and clustering, such as Hyper-V, Storage Replica, Storage Spaces, Cluster, Scale-Out File Server, SMB3, Deduplication, and ReFS/NTFS.  
+-   Use Microsoft software end to end for storage and clustering, such as Hyper-V, Storage Replica, Storage Spaces, Cluster, Scale-Out File Server, SMB3, Data Deduplication, and ReFS/NTFS.  
 
 -   Help reduce cost and complexity as follows:  
 
@@ -82,7 +82,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Leverages Microsoft Azure and eliminates the need for a third separate datacenter.  
 
--   Uses the standard publically available Microsoft Azure Blob Storage which eliminates the extra maintenance overhead of VMs hosted in a public cloud.  
+-   Uses the standard publicly available Microsoft Azure Blob Storage which eliminates the extra maintenance overhead of VMs hosted in a public cloud.  
 
 -   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).  
 
@@ -95,7 +95,7 @@ For more information, see [Deploy a Cloud Witness For a Failover Cluster](deploy
 This capability is new in Windows Server 2016.  
 
 ## <a name="BKMK_VMs"></a>Virtual Machine Resiliency  
-**Compute Resiliency**Windows Server 2016 includes increased virtual machines compute resiliency to help reduce intra-cluster communication issues in your compute cluster as follows: .  
+**Compute Resiliency** Windows Server 2016 includes increased virtual machines compute resiliency to help reduce intra-cluster communication issues in your compute cluster as follows: 
 
 -   **Resiliency options  available for virtual machines:**  You can now configure virtual machine resiliency options that define behavior of the virtual machines during transient failures:  
 
@@ -105,7 +105,7 @@ This capability is new in Windows Server 2016.
 
 -   **Quarantine of unhealthy nodes:** Unhealthy nodes are quarantined and are no longer allowed to join the cluster. This prevents flapping nodes from negatively effecting other nodes and the overall cluster.  
 
-For more information virtual machine compute resiliency workflow and node quarantine settings that control how your node is placed in isolation or quarantine, see [Virtual Machine Compute Resiliency in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx)  
+For more information virtual machine compute resiliency workflow and node quarantine settings that control how your node is placed in isolation or quarantine, see [Virtual Machine Compute Resiliency in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx).  
 
 **Storage Resiliency** In Windows Server 2016, virtual machines are more resilient to transient storage failures. The improved virtual machine resiliency helps preserve tenant virtual machine session states in the event of a storage disruption. This is achieved by intelligent and quick virtual machine response to storage infrastructure issues.  
 
