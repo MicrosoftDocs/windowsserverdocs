@@ -22,7 +22,7 @@ The following experience guides have been created by the Windows Server 2016 Eng
 
 ## Failover Clustering technologies
 
-### Increasing resiliency of Virtual Machines in Windows Server 2016
+### Increased resiliency of virtual machines to transient failures
 In today's cloud-scale environments, transient failures have become more common than equipment failures. In these circumstances, reacting aggressively to handle these transient failures can cause more downtime than it prevents. Windows Server 2016 therefore introduces increased virtual machine resiliency to transient intra-cluster communication failures in your compute cluster.
 
 For more info, see [Increasing Resiliency of Virtual Machines in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx).  
@@ -55,7 +55,7 @@ Windows Server 2016 and Windows 10 includes a new PackageManagement feature (for
 For more info, see [https://github.com/OneGet/oneget/wiki](https://github.com/OneGet/oneget/wiki).
 
 ### PowerShell enhancements to assist digital forensics and help reduce security breaches
-Security professionals often assume that an attacker has already compromised (breached) a system through a malicious phishing email, security flaw in a custom website, or a similar attack. To help the team responsible for investigating such breaches - sometimes known as the "blue team" - we've added additional PowerShell logging and other digital forensics functionality, and we've added functionality to help reduce vulnerabilities in scripts, such as constrained PowerShell, and secure CodeGeneration APIs.
+To help the team responsible for investigating comprimised systems - sometimes known as the "blue team" - we've added additional PowerShell logging and other digital forensics functionality, and we've added functionality to help reduce vulnerabilities in scripts, such as constrained PowerShell, and secure CodeGeneration APIs.
 
 For more info, see [PowerShell hearts the Blue Team](http://blogs.msdn.com/b/powershell/archive/2015/06/09/powershell-the-blue-team.aspx).
 
