@@ -24,25 +24,25 @@ manager: dongill
     &nbsp;&nbsp;<font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></td></tr>
   <tr style='text-align:center;'>
     <td style='width:25%'>
-    <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">![alt text](1-getstarted.png "Get started")</a>
+    <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">![alt text](1-getstarted-color.png "Get started")</a>
     </td>
     <td style='width:25%'>
-    <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">![alt text](2-compute.png "Windows Server Compute")</a>
+    <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">![alt text](2-compute-color.png "Windows Server Compute")</a>
     </td>
     <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/failover-clustering/failover-clustering-overview">![Failover clustering](3-failover.png "Failover clustering")</a>
     </td>
     <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/identity/identity-and-access">
-    ![alt text](4-identity.png "Windows Server Identity and Access")</a></td>
+    ![alt text](4-identity-color.png "Windows Server Identity and Access")</a></td>
   </tr>
   <tr style='text-align:center;'>
   <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/security/security-and-assurance">
-  ![alt text](5-security.png "Windows Server Security and Assurance")</a></td>
+  ![alt text](5-security-color.png "Windows Server Security and Assurance")</a></td>
   <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/networking/networking">
   ![alt text](6-networking.png "Windows Server Networking")</a></td>
-  <td style='width:25%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage">
-  ![alt text](7-storage.png "Windows Server Storage")</a></td>
+  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/storage/storage">
+  ![alt text](7-storage-color.png "Windows Server Storage")</a></td>
   <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
-  ![alt text](8-management.png "Windows Server Management and Automation")</a></td>
+  ![alt text](8-management-color.png "Windows Server Management and Automation")</a></td>
   </tr>
 </table>
 
