@@ -28,7 +28,7 @@ Local security information is stored in the registry under **HKEY_LOCAL_MACHINE\
 
 The following diagram shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.
 
-![](../media/Credentials-Processes-in-Windows-Authentication/AuthN_LSA_Architecture_Client.gif)
+![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/Credentials-Processes-in-Windows-Authentication/AuthN_LSA_Architecture_Client.gif)
 
 The following table describes each component that manages credentials in the authentication process at the point of logon.
 
@@ -74,7 +74,7 @@ The instances of Winlogon for an interactive logon run in Session 0. Session 0 h
 
 The following diagram shows the credential process for Windows Server 2003, Microsoft Windows 2000 Server, Windows XP, and Microsoft Windows 2000 Professional.
 
-![](../media/Credentials-Processes-in-Windows-Authentication/AuthN_GINA_Architecture.gif)
+![Diagram showing the credential process for Windows Server 2003, Microsoft Windows 2000 Server, Windows XP, and Microsoft Windows 2000 Professional](../media/Credentials-Processes-in-Windows-Authentication/AuthN_GINA_Architecture.gif)
 
 **Credential provider architecture**
 
@@ -130,7 +130,7 @@ The credential provider enumerates logon tiles in the following instances:
 
 The following diagram shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.
 
-![](../media/Credentials-Processes-in-Windows-Authentication/AuthN_CredMan_CredProv.gif)
+![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic](../media/Credentials-Processes-in-Windows-Authentication/AuthN_CredMan_CredProv.gif)
 
 ## <a name="BKMK_CredentialInputForApplicationAndServiceLogon"></a>Credential input for application and service logon
 Windows authentication is designed to manage credentials for applications or services that do not require user interaction. Applications in user mode are limited in terms of what system resources they have access to, while services can have unrestricted access to the system memory and external devices.

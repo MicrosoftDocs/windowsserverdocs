@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 Group Policy is a complicated infrastructure that enables you to apply policy settings to remotely configure a computer and user experience within a domain. When the Resultant Set of Policy settings does not conform to your expectations, a best practice is to first verify that the computer or user has received the latest policy settings. In previous versions of Windows, this was accomplished by having the user run **GPUpdate.exe** on their computer.
 
-With  Windows Server 2012  and Windows 8, you can remotely refresh Group Policy settings for all computers in an organizational unit (OU) from one central location by using the Group Policy Management Console (GPMC). Or you can use the **Invoke-GPUpdate** Windows PowerShell cmdlet to refresh Group Policy for a set of computers, including computers that are not within the OU structureâ€�?for example, if the computers are located in the default computers container.
+With  Windows Server 2012  and Windows 8, you can remotely refresh Group Policy settings for all computers in an organizational unit (OU) from one central location by using the Group Policy Management Console (GPMC). Or you can use the **Invoke-GPUpdate** Windows PowerShell cmdlet to refresh Group Policy for a set of computers, including computers that are not within the OU structureÃ¢â‚¬â€?for example, if the computers are located in the default computers container.
 
 The remote Group Policy refresh updates all Group Policy settings, including security settings that are set on a group of remote computers, by using the functionality that is added to the context menu for an OU in the Group Policy Management Console (GPMC). When you select an OU to remotely refresh the Group Policy settings on all the computers in that OU, the following operations happen:
 
@@ -81,7 +81,7 @@ In  Windows Server 2012 , Group Policy added a Starter GPO called, **Group Polic
 
 1.  In the GPMC console tree, locate the domain for which you want to configure all the computers to enable a remote Group Policy refresh.
 
-2.  Right-click the selected domain, and click **Create a GPO in this domain, and link it hereâ€¦**
+2.  Right-click the selected domain, and click **Create a GPO in this domain, and link it hereÃ¢â‚¬Â¦**
 
 3.  In the **New GPO** dialog box, type the name of the new Group Policy object in the **Name** box.
 
@@ -91,16 +91,16 @@ In  Windows Server 2012 , Group Policy added a Starter GPO called, **Group Polic
 
 6.  Select the GPO that you just created, and click the Up arrow until the GPO is listed above the Default Domain Policy. The new GPO will have a smaller link order value than the Default Domain Policy.
 
-![](../../media/Force-a-Remote-Group-Policy-Refresh--GPUpdate-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Icon representing the PowerShell logo](../../media/Force-a-Remote-Group-Policy-Refresh--GPUpdate-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-Use the **New-GPO** cmdlet with the **â€“StarterGpoName** parameter, and then pipe the output to the **New-GPLink** cmdlet.
+Use the **New-GPO** cmdlet with the **Ã¢â‚¬â€œStarterGpoName** parameter, and then pipe the output to the **New-GPLink** cmdlet.
 
 For example, to create a new GPO called *Configure firewall rules for remote gpupdate* by using the **Group Policy Remote Update Firewall Ports** Starter GPO, then link the  new GPO to the Contoso.com domain, use the following script:
 
 ```
-New-GPO â€“Name "Configure firewall rules for remote gpupdate" â€“StarterGpoName "Group Policy Remote Update Firewall Ports" | New-GPLink â€“target "dc=Contoso,dc=com" â€“LinkEnabled yes
+New-GPO Ã¢â‚¬â€œName "Configure firewall rules for remote gpupdate" Ã¢â‚¬â€œStarterGpoName "Group Policy Remote Update Firewall Ports" | New-GPLink Ã¢â‚¬â€œtarget "dc=Contoso,dc=com" Ã¢â‚¬â€œLinkEnabled yes
 ```
 
 For more information about the **New-GPO** cmdlet and the **New-GPLink** cmdlet, see:
@@ -119,7 +119,7 @@ You can schedule **gpupdate.exe** to run on multiple computers from the GPMC or 
     > [!NOTE]
     > Group Policy will also be refreshed for all computers that are located in the OUs contained in the selected OU.
 
-2.  Right-click the selected OU, and click **Group Policy Updateâ€¦**
+2.  Right-click the selected OU, and click **Group Policy UpdateÃ¢â‚¬Â¦**
 
 3.  Click **Yes** in the **Force Group Policy update** dialog box. This is the equivalent to running **GPUpdate.exe /force** from the command line.
 
@@ -130,11 +130,11 @@ You can schedule **gpupdate.exe** to run on multiple computers from the GPMC or 
     > [!NOTE]
     > You should plan a delay of up to 10 minutes to start a Group Policy refresh when you are verifying the results for each computer.
 
-![](../../media/Force-a-Remote-Group-Policy-Refresh--GPUpdate-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Icon representing the PowerShell logo](../../media/Force-a-Remote-Group-Policy-Refresh--GPUpdate-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-The **Invoke-GPUpdate** cmdlet allows you to schedule a remote Group Policy update for a specified computer with all the options that the **GPUpdate.exe** command-line utility provides. This allows more freedom to determine which set of computers is to be refreshed than if you schedule the refresh through the GPMC. Additionally, you have the freedom to configure the interval of time to wait before a Group Policy refresh is performed by using the **â€“RandomDelayInMinutes** parameter. If set to a zero (0) value, the scheduled task for the Group Policy refresh is configured to start immediately. For more information, see [Invoke-GPUpdate](http://technet.microsoft.com/library/hh967455.aspx).
+The **Invoke-GPUpdate** cmdlet allows you to schedule a remote Group Policy update for a specified computer with all the options that the **GPUpdate.exe** command-line utility provides. This allows more freedom to determine which set of computers is to be refreshed than if you schedule the refresh through the GPMC. Additionally, you have the freedom to configure the interval of time to wait before a Group Policy refresh is performed by using the **Ã¢â‚¬â€œRandomDelayInMinutes** parameter. If set to a zero (0) value, the scheduled task for the Group Policy refresh is configured to start immediately. For more information, see [Invoke-GPUpdate](http://technet.microsoft.com/library/hh967455.aspx).
 
 You can refresh the changed Group Policy settings for the computer that you are signed in to by running the **Invoke-GPUpdate** cmdlet without including any parameters, for example:
 
@@ -142,24 +142,24 @@ You can refresh the changed Group Policy settings for the computer that you are 
 Invoke-GPUpdate
 ```
 
-You cannot schedule a Group Policy refresh for the **Computers** container by using the GPMC **Group Policy Updateâ€¦** functionality. The **Computers** container is a default location for computer accounts. It is not implemented as an OU that can be managed by the GPMC. However, by combining the use of the Windows PowerShell cmdlet, **Get-ADComputer**, with the **Invoke-GPUpdate** cmdlet, you can schedule a remote refresh for all computers in the **Computers** container. For more information about available Windows PowerShell cmdlets for Active Directory, see [AD DS Administration Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh852274.aspx).
+You cannot schedule a Group Policy refresh for the **Computers** container by using the GPMC **Group Policy UpdateÃ¢â‚¬Â¦** functionality. The **Computers** container is a default location for computer accounts. It is not implemented as an OU that can be managed by the GPMC. However, by combining the use of the Windows PowerShell cmdlet, **Get-ADComputer**, with the **Invoke-GPUpdate** cmdlet, you can schedule a remote refresh for all computers in the **Computers** container. For more information about available Windows PowerShell cmdlets for Active Directory, see [AD DS Administration Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh852274.aspx).
 
 First obtain the list of computers in the **Computers** container by using the **Get-ADComputer** cmdlet. Then supply the name of each computer that is returned to the **Invoke-GPUpdate** cmdlet. For example, to force a refresh of all Group Policy settings for all computers in the **Computers** container for the Contoso.com domain, use the following script:
 
 ```
-Get-ADComputer â€“filter * -Searchbase "cn=computers, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate â€“computer $_.name -force}
+Get-ADComputer Ã¢â‚¬â€œfilter * -Searchbase "cn=computers, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate Ã¢â‚¬â€œcomputer $_.name -force}
 ```
 
 You can force a Group Policy refresh for all Group Policy settings for all computers in a single OU when you combine the **Get-ADComputer** with the **Invoke-GPUpdate** cmdlet. For example, to force a refresh of all Group Policy settings for all computers in the *Accounting* OU of the Contoso.com domain, use the following script:
 
 ```
-Get-ADComputer â€“filter * -Searchbase "ou=Accounting, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate â€“computer $_.name -force}
+Get-ADComputer Ã¢â‚¬â€œfilter * -Searchbase "ou=Accounting, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate Ã¢â‚¬â€œcomputer $_.name -force}
 ```
 
-You can force an immediate Group Policy refresh for all Group Policy settings for all computers in a single OU when you combine the **Get-ADComputer** with the **Invoke-GPUpdate** cmdlet and set the **â€“-RandomDelayInMinutes** to 0. For example, to force a refresh of all Group Policy settings for all computers in the *Accounting* OU of the Contoso.com domain, use the following script:
+You can force an immediate Group Policy refresh for all Group Policy settings for all computers in a single OU when you combine the **Get-ADComputer** with the **Invoke-GPUpdate** cmdlet and set the **Ã¢â‚¬â€œ-RandomDelayInMinutes** to 0. For example, to force a refresh of all Group Policy settings for all computers in the *Accounting* OU of the Contoso.com domain, use the following script:
 
 ```
-Get-ADComputer â€“filter * -Searchbase "ou=Accounting, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate â€“computer $_.name â€“force â€“-RandomDelayInMinutes 0}
+Get-ADComputer Ã¢â‚¬â€œfilter * -Searchbase "ou=Accounting, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate Ã¢â‚¬â€œcomputer $_.name Ã¢â‚¬â€œforce Ã¢â‚¬â€œ-RandomDelayInMinutes 0}
 ```
 
 

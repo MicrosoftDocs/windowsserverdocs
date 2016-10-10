@@ -208,15 +208,15 @@ The following table shows the Group Policy and registry settings that are used t
 
 3.  In the console tree, right-click **Group Policy Objects**, and > **New**.
 
-    ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample1.png)
+    ![Group Policy Objects](../media/Local-Accounts/LocalAccounts_Proc1_Sample1.png)
 
 4.  In the **New GPO** dialog box, type <***gpo_name***>, and > **OK** where *gpo_name* is the name of the new GPO. The GPO name indicates that the GPO is used to restrict local administrator rights from being carried over to another computer.
 
-    ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample2.png)
+    ![New GPO](../media/Local-Accounts/LocalAccounts_Proc1_Sample2.png)
 
 5.  In the details pane, right-click <***gpo_name***>, and > **Edit**.
 
-    ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample3.png)
+    ![details pane](../media/Local-Accounts/LocalAccounts_Proc1_Sample3.png)
 
 6.  Ensure that UAC is enabled and that UAC restrictions apply to the default Administrator account by doing the following:
 
@@ -232,7 +232,7 @@ The following table shows the Group Policy and registry settings that are used t
 
     2.  Right-click **Registry**, and > **New** > **Registry Item**.
 
-        ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample4.png)
+        ![Registry](../media/Local-Accounts/LocalAccounts_Proc1_Sample4.png)
 
     3.  In the **New Registry Properties** dialog box, on the **General** tab, change the setting in the **Action** box to **Replace**.
 
@@ -248,7 +248,7 @@ The following table shows the Group Policy and registry settings that are used t
 
     9. Verify this configuration, and > **OK**.
 
-        ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample5.png)
+        ![Verify and > **OK**](../media/Local-Accounts/LocalAccounts_Proc1_Sample5.png)
 
 8.  Link the GPO to the first **Workstations** organizational unit (OU) by doing the following:
 
@@ -256,7 +256,7 @@ The following table shows the Group Policy and registry settings that are used t
 
     2.  Right-click the **Workstations** OU, and > **Link an existing GPO**.
 
-        ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample6.png)
+        ![Workstations](../media/Local-Accounts/LocalAccounts_Proc1_Sample6.png)
 
     3.  Select the GPO that you just created, and > **OK**.
 
@@ -294,11 +294,11 @@ The following table shows the Group Policy settings that are used to deny networ
 
 4.  In the **New GPO** dialog box, type <***gpo_name***>, and then > **OK** where *gpo_name* is the name of the new GPO indicates that it is being used to restrict the local administrative accounts from interactively signing in to the computer.
 
-    ![](../media/Local-Accounts/LocalAccounts_Proc2_Sample1.png)
+    ![New GPO](../media/Local-Accounts/LocalAccounts_Proc2_Sample1.png)
 
 5.  In the details pane, right-click <***gpo_name***>, and > **Edit**.
 
-    ![](../media/Local-Accounts/LocalAccounts_Proc2_Sample2.png)
+    ![details pane](../media/Local-Accounts/LocalAccounts_Proc2_Sample2.png)
 
 6.  Configure the user rights to deny network logons for administrative local accounts as follows:
 
@@ -308,7 +308,7 @@ The following table shows the Group Policy settings that are used to deny networ
 
     3.  Click **Add User or Group**, type the name of the default Administrator account, and > **OK**. The default name is Administrator on US English installations, but it can be renamed either by policy or manually.
 
-        ![](../media/Local-Accounts/LocalAccounts_Proc2_Sample3.png)
+        ![Add User or Group](../media/Local-Accounts/LocalAccounts_Proc2_Sample3.png)
 
         > [!IMPORTANT]
         > In the **User and group names** box, type the user name of the account that you identified at the start of this process. Do not click **Browse** and do not type the domain name or the local computer name in this dialog box. For example, type only **Administrator**. If the text that you typed resolved to a name that is underlined, includes a computer name, or includes the domain, it restricts the wrong account and causes this mitigation to work incorrectly. Also, be careful that you do not enter the group name Administrator to prevent blocking domain accounts in that group.

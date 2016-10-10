@@ -28,7 +28,7 @@ The default Security Support Providers (SSPs) that invoke specific authenticatio
 
 As shown in the following image, the SSPI in Windows provides a mechanism that carries authentication tokens over the existing communication channel between the client computer and the server. When two computers or devices need to be authenticated so that they can communicate securely, the requests for authentication are routed to the SSPI, which completes the authentication process, regardless of the network protocol currently in use. The SSPI returns transparent binary large objects. These are passed between the applications, at which point they can be passed to the SSPI layer. Thus, the SSPI enables an application to use various security models available on a computer or network without changing the interface to the security system.
 
-![](../media/Security-Support-Provider-Interface-Architecture/AuthN_SecuritySupportProviderInterfaceArchitecture.jpg)
+![Diagram showing the Security Support Provider Interface Architecture](../media/Security-Support-Provider-Interface-Architecture/AuthN_SecuritySupportProviderInterfaceArchitecture.jpg)
 
 The following sections describe the default SSPs that interact with the SSPI. The SSPs are used in different ways in Windows operating systems to promote secure communication in an unsecure network environment.
 

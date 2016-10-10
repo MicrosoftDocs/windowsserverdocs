@@ -34,11 +34,11 @@ ms.date: 10/12/2016
 
 2.  To open **Add Navigation Nodes**, click **Manage**, then click **Add Navigation Nodes** as shown in the following illustration.
 
-     ![](media/ADDS_ADACAddNavNode.gif)
+     ![Screenshot showing **Add Navigation Nodes** UI](media/ADDS_ADACAddNavNode.gif)
 
 3.  In **Add Navigation Nodes**, click **Connect to other domains** as shown in the following illustration.
 
-     ![](media/ADDS_ADACConnectToDomain.gif)
+     ![Screenshot showing **Add Navigation Nodes** UI](media/ADDS_ADACConnectToDomain.gif)
 
 4.  In **Connect to**, type the name of the foreign domain that you want to manage \(for example, **contoso.com**\), and then click **OK**.
 
@@ -53,14 +53,14 @@ ms.date: 10/12/2016
 
 2.  To open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, click **Add Navigation Nodes** as shown in the following illustration.
 
-     ![](media/click_add_nav_nodes.gif)
+     ![Screenshot showing **Add Navigation Nodes** UI](media/click_add_nav_nodes.gif)
 
     > [!NOTE]
     >  Another way to open **Add Navigation Nodes** is to right\-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then click **Add Navigation Nodes**.
 
 3.  In **Add Navigation Nodes**, click **Connect to other domains** as shown in the following illustration.
 
-     ![](media/add_nav_nodes.gif)
+     ![Screenshot showing **Add Navigation Nodes** **Connect to other domains** UI](media/add_nav_nodes.gif)
 
 4.  In **Connect to**, type the name of the foreign domain that you want to manage \(for example, **contoso.com**\), and then click **OK**.
 

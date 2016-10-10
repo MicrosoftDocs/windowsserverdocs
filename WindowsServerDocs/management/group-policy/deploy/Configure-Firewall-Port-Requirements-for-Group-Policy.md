@@ -66,7 +66,7 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called, **Group Po
 
 6.  Select the GPO that you just created. Click the Up arrow until the GPO you just created is located above the Default Domain Policy. The new GPO will then have a smaller link-order value than the Default Domain Policy.
 
-![](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Icon representing the PowerShell logo](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -116,7 +116,7 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called **Group Pol
 
 6.  Select the GPO that you just created. Click the up arrow until the GPO you just created is above the Default Domain Policy in link order. The new GPO will then have a smaller link order value than the Default Domain Policy.
 
-![](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![Icon representing the PowerShell logo](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
