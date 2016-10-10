@@ -25,7 +25,7 @@ You can use this topic to learn about Network Function Virtualization, which all
   
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
-Microsoft included a standalone gateway as a virtual appliance starting with  Windows Server 2012 R2 . For more information, see [Windows Server Gateway](assetId:///e39e8b8c-a23c-4dbd-b895-d1e3f2885e9e). Now with Windows Server 2016 Microsoft continues to expand and invest in the network function virtualization market.  
+Microsoft included a standalone gateway as a virtual appliance starting with  Windows Server 2012 R2 . For more information, see [Windows Server Gateway](https://technet.microsoft.com/library/dn313101.aspx). Now with Windows Server 2016 Microsoft continues to expand and invest in the network function virtualization market.  
   
 ## Virtual appliance benefits  
 A virtual appliance is dynamic and easy to change because it is a pre-built, customized virtual machine. It can be one or more virtual machines packaged, updated, and maintained as a unit. Together with software defined networking (SDN), you get the agility and flexibility needed in today's cloud-based infrastructure. For example:  
@@ -46,7 +46,7 @@ A virtual appliance is dynamic and easy to change because it is a pre-built, cus
   
     -   Customers can scale virtual appliances up or down dynamically based on demand.  
   
-For more information about Microsoft SDN see [Software Defined Networking](assetId:///42e98b43-126b-4e4f-a169-0df56daf4a4a).  
+For more information about Microsoft SDN see [Software Defined Networking](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking--sdn-).  
   
 ### What network functions are being virtualized?  
 The marketplace for virtualized network functions is growing quickly. The following network functions are being virtualized:  

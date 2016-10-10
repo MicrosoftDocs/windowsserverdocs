@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New in DNS Server in Windows Server Technical Preview
+title: What's New in DNS Server in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,13 +12,12 @@ ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: jamesmci
 author: jamesmci
 ---
-# What&#39;s New in DNS Server in Windows Server Technical Preview
+# What's New in DNS Server in Windows Server 2016
 
 >Applies To: Windows Server&reg; 2016
 
 This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   
-## <a name="BKMK_DNSClient2012R2"></a>What's new in DNS Server in Windows Server Technical Preview  
 In Windows Server 2016, DNS Server offers enhanced support in the following areas.  
   
 |Functionality|New or Improved|Description|  
@@ -141,8 +140,6 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
   
 -   [What's New in DNS Client](What-s-New-in-DNS-Client.md)  
   
--   [Windows DNS Server team blogs](http://blogs.technet.com/b/networking/archive/tags/dns/)  
-  
--   [DNS PowerShell cmdlets](https://technet.microsoft.com/en-us/library/jj649863.aspx)  
+
   
 
