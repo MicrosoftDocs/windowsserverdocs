@@ -39,7 +39,7 @@ Additional information: [Improved Remote Desktop Connection Broker Performance](
 ## RDP 10 - new capabilities built into the protocol
 RDP 10 now uses the H.264/AVC 444 codec, appropriately optimizing across both video and text. With this release, pen remoting is also supported. With these capabilities, your remote sessions start to feel even more like a local session.  
 
-Additional information: [RDP 10 AVC/H.264 improvements in Windows 10 and Windows Server 2016 Technical Preview](https://blogs.technet.microsoft.com/enterprisemobility/2016/01/11/remote-desktop-protocol-rdp-10-avch-264-improvements-in-windows-10-and-windows-server-2016-technical-preview/)
+Additional information: [RDP 10 AVC/H.264 improvements in Windows 10 and Windows Server 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/01/11/remote-desktop-protocol-rdp-10-avch-264-improvements-in-windows-10-and-windows-server-2016-technical-preview/)
 
 ## Personal session desktops - providing individual desktops to any end-user
 Personal session desktops is a new way to have your own personal desktop hosted for you in the cloud. Administrative privileges and dedicated session hosts removes the complexity of hosting environments where users want to manage the desktop like it's their own.

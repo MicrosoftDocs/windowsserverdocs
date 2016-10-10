@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 author: shirgall
-ms.author: cwatson
+ms.author: kathydav
 ms.date: 10/03/2016
 ---
 # Supported Debian virtual machines on Hyper-V

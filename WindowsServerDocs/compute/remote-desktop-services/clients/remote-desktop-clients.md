@@ -4,17 +4,17 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8 
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Remote Desktop clients
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use the Microsoft Remote Desktop Client to connect to a remote PC and your work resources from almost anywhere using just about any device. You can connect to your work PC and have access to all of your apps, files, and network resources as if you were sitting at your desk. You can leave apps open at work and then see those same apps at home - all by using the RD client.
 

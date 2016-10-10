@@ -7,6 +7,7 @@ ms.suite: na
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
 manager: dongill
 author: larsiwer
 ms.author: kathyDav
