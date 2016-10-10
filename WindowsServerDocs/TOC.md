@@ -621,7 +621,7 @@
 ######[Determine the Type of Claim Rule Template to Use](identity/ad-fs/technical-reference/Determine-the-Type-of-Claim-Rule-Template-to-Use.md)
 ######[How URIs Are Used in AD FS](identity/ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 ##### [Device Registration Technical Reference](identity/ad-fs/technical-reference/device-registration-technical-reference.md)
-### [Web Application Proxy in Windows Server Technical Preview](identity/web-application-proxy/web-application-proxy-windows-server.md)
+### [Web Application Proxy in Windows Server 2016](identity/web-application-proxy/web-application-proxy-windows-server.md)
 #### [Publishing Applications using AD FS Preauthentication](identity/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 #### [Publishing Applications with SharePoint, Exchange and RDG](identity/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)
 #### [Troubleshooting Web Application Proxy](identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md)
