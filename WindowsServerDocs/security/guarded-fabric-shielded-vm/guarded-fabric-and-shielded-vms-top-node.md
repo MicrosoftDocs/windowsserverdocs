@@ -52,7 +52,8 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 | [Verify HGS configuration](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#verify-hgs-is-configured-properly) |    |  |
 | &nbsp;| [Confirm hosts can attest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#confirm-hosts-can-attest-successfully)  | |
 | &nbsp;| [Configure VMM (optional)](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview) |   |
-| &nbsp;| [Create template disks and VM shielding helper disk for VMM (optional)](guarded-fabric-vm-shielding-helper-vhd.md) |  |
+| &nbsp;| [Create template disks (optional)](guarded-fabric-create-a-shielded-vm-template.md) |  |
+| &nbsp;| [Create a VM shielding helper disk for VMM (optional)](guarded-fabric-vm-shielding-helper-vhd.md) |  |
 | &nbsp;| [Set up Windows Azure Pack (optional)](guarded-fabric-shielded-vm-windows-azure-pack.md) | |
 | &nbsp;| &nbsp;| [Creating shielding data file(s)](guarded-fabric-tenant-creates-shielding-data.md)  |
 | &nbsp;| &nbsp;| [Create shielded VMs using Windows Azure Pack](https://technet.microsoft.com/library/mt720674.aspx)<br>[Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) |
