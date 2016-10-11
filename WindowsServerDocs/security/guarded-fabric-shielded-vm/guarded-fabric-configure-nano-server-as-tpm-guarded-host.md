@@ -15,7 +15,7 @@ ms.technology: security-guarded-fabric
 
 The following procedures illustrate how to create and configure Nano servers to be TPM trusted guarded hosts. For information about configuring the service that supports guarded hosts, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md).
 
-There are a few different ways to deploy Nano servers. This section follows the instructions illustrated in [Getting Started with Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server). In a nutshell, you will create a VHDX file using the New-NanoServerImage cmdlet, and on a physical computer, modify the boot entry to set the default boot option to the VHDX file. All the management of the Nano server is done through Windows PowerShell remoting.
+There are a few different ways to deploy Nano servers. This section follows the instructions illustrated in [Nano Server Quick Start](https://technet.microsoft.com/windows-server-docs/get-started/nano-server-quick-start#to-quickly-deploy-nano-server-on-a-physical-computer). In a nutshell, you will create a VHDX file using the New-NanoServerImage cmdlet, and on a physical computer, modify the boot entry to set the default boot option to the VHDX file. All the management of the Nano server is done through Windows PowerShell remoting.
 
 ## Nano server as a guarded host
 
@@ -27,7 +27,7 @@ You can run shielded VMs on a Nano server configured as a guarded host. However,
 
 ## Creating a Nano server image
 
-The following steps are from [Getting Started with Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server):
+The following steps are from [Nano Server Quick Start](https://technet.microsoft.com/windows-server-docs/get-started/nano-server-quick-start#to-quickly-deploy-nano-server-on-a-physical-computer):
 
 1.  Copy the **NanoServerImageGenerator** folder from the \\NanoServer folder in the Windows Server 2016 ISO to a folder on your hard drive.
 
