@@ -412,7 +412,7 @@ Copy-Item 'C:\temp\ws2016-hardware01-ci.p7b' 'C:\Windows\System32\CodeIntegrity\
 Restart-Computer
 ```
 
-Once you have your policy created, tested and enforced, copy the binary file (*.p7b) to your HGS server and register the policy.
+Once you have your policy created, tested and enforced, copy the binary file (.p7b) to your HGS server and register the policy.
 ```powershell
 Add-HgsAttestationCiPolicy -Name 'WS2016-Hardware01' -Path 'C:\temp\ws2016-hardware01-ci.p7b'
 ```
