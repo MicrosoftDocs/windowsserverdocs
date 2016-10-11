@@ -15,7 +15,7 @@ ms.technology: security-guarded-fabric
 
 This topic describes the steps to create a shielded VM using only Hyper-V; that is, without Virtual Machine Manager, template disks, or a shielding data file. This is an uncommon scenario for most public cloud hosting environments, but may be useful when testing a guarded fabric or in enterprise scenarios where a VM is being moved from a departmental fabric to shared IT infrastructure and must be encrypted before migration.
 
-To see this topic in context with other topics about configuring shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 ## Import the guardian configuration on the tenant Hyper-V server
 

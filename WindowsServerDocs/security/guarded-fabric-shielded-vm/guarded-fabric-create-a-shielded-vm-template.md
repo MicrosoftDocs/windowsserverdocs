@@ -13,6 +13,8 @@ ms.technology: security-guarded-fabric
 
 As with regular VMs, you can [create a VM template in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This section will cover the steps a VMM administrator needs to take to create a shielded template disk and a VM template in VMM.
 
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+
 ## Prepare an operating system VHDX
 
 In order to create a shielded template disk, you need to first prepare an OS disk that will be run through the template disk wizard. This disk will be used as the OS disk in your tenant’s VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs: 
@@ -122,3 +124,4 @@ After the template is created, tenants can use it to create new virtual machines
 ## See also
 
 - [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

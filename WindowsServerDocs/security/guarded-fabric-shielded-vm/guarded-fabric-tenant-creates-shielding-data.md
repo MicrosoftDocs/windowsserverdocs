@@ -13,11 +13,11 @@ ms.technology: security-guarded-fabric
 
 >Applies To: Windows Server 2016
 
-This topic provided information about steps that tenants can take after a hosting service provider has configured guarded hosts, which can be done by using System Center 2016 - Virtual Machine Manager (VMM) as described in [Scenario 1 - Provision guarded hosts in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts).
+This topic provided information about what is included in a shielding data file, how to create a shielding data file, and how to create a shielded VM in VMM. To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+
+For a diagram of the contents of a shielding data file, see [What is shielding data and why is it necessary?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
 In order to leverage the signed template disks configured in VMM, tenants must prepare at least one shielding data file – a file that contains all of the tenant’s secrets necessary to deploy a VM. These secrets include the unattend file used to specialize the VM, any certificates that need to be deployed, administrator account passwords, and more. The shielding data file also identifies which guarded fabrics a tenant trusts to host their VM, as well as which signed template disks the shielding data can be applied to. Everything in the shielding data file is encrypted such that only a host in a guarded fabric the tenant trusts is able to decrypt the shielding data file and apply its contents and settings to a signed template disk for provisioning.
-
-For a diagram of the contents of a shielding data file, see [What is shielding data and why is it necessary?](https://technet.microsoft.com/en-us/windows-server-docs/security/guarded-fabric-and-shielded-vms#what-is-shielding-data-and-why-is-it-necessary).
 
 This section covers the necessary steps to create a shielding data file, including some of the supporting files that go into the shielding data file.
 
@@ -200,4 +200,5 @@ VMM creates a new shielded virtual machine from the VM template using informatio
 
 ## See also
 
-[Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

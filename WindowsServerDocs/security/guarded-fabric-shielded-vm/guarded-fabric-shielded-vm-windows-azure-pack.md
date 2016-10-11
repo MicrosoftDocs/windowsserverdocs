@@ -13,13 +13,9 @@ ms.technology: security-guarded-fabric
 
 >Applies To: Windows Server 2016
 
-This topic continues the process begun in the following topics:
-
-- [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-
-- [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
- 
 This topic describes how to deploy a shielded VM by using Windows Azure Pack, a web portal that extends the functionality of System Center Virtual Machine Manager to allow tenants to deploy and manage their own VMs through a simple web interface. Windows Azure Pack fully supports shielded VMs and makes it even easier for tenants to create and manage their shielding data files.
+
+Before you can begin the steps in this topic, other configuration procedures must be complete, as described in [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 ## Setting up Windows Azure Pack
 
