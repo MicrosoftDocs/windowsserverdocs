@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-<img src="../get-started/8-management.png" style='float:left; padding:.5em;'> Management and automation features and tools help IT pros run and manage Windows Server.  
+<img src="../get-started/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Management and automation features and tools help IT pros run and manage Windows Server.  
 
 ## [Server Manager](http://technet.microsoft.com/library/mt126175.aspx)
 
