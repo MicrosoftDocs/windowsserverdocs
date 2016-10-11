@@ -116,12 +116,10 @@ When attempting to create a new replication partnership with `New-SRPartnership`
 
 This is caused by selecting a data volume that is on the same partition as the System Drive (i.e. the **C:** drive with its Windows folder). For instance, on a drive that contains both the **C:** and **D:** volumes created from the same partition. This is not supported in Storage Replica; you must pick a different volume to replicate.
 
-### Related Topics  
-- [Storage Replica in Windows Server 2016](storage-replica-overview.md)  
+## See also  
+- [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
 - [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
-
-## See Also  
--  [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
+- [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  

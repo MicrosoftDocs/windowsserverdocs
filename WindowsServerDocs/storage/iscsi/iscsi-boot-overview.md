@@ -7,9 +7,11 @@ ms.topic: article
 author: MicGray-MS
 manager: dongill
 ms.author: micgray
-ms.date: 09/28/2016
+ms.date: 10/11/2016
 ---
 # iSCSI target boot overview
+> Applies To: Windows Server 2016
+
 iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.  
   
 ## <a name="BKMK_OVER"></a>Feature description  
@@ -37,8 +39,8 @@ iSCSI Target Server can be installed as part of the File and iSCSI Services role
 
 > [!NOTE]
 > Booting Nano Server from iSCSI (either from the Windows iSCSI Target Server, or a 3rd party target implementation) is not supported.
-  
-For automation, you can use the corresponding Windows PowerShell cmdlets:
-* [iSCSI cmdlets](https://technet.microsoft.com/library/hh826099(v=wps.640).aspx)
-* [iSCSI Target cmdlets](https://technet.microsoft.com/library/jj612803(v=wps.630).aspx)
-  
+
+## See also
+* [iSCSI Target Server](https://technet.microsoft.com/library/hh848272(v=ws.11).aspx)
+* [iSCSI initiator cmdlets](https://technet.microsoft.com/library/hh826099(v=wps.640).aspx)
+* [iSCSI Target Server cmdlets](https://technet.microsoft.com/library/jj612803(v=wps.630).aspx)
