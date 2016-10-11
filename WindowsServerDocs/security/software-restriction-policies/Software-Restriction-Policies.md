@@ -22,12 +22,6 @@ This topic for the IT professional describes Software Restriction Policies (SRP)
 
 For procedures and troubleshooting tips, see [Administer Software Restriction Policies](Administer-Software-Restriction-Policies.md) and [Troubleshoot Software Restriction Policies](Troubleshoot-Software-Restriction-Policies.md).
 
-**Did you mean…**
-
--   Security policies (see [Security Policy Settings Overview](../security-policy-settings/Security-Policy-Settings-Overview.md))
-
--   AppLocker (see [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7))
-
 ## <a name="BKMK_OVER"></a>Software Restriction Policies description
 Software Restriction Policies (SRP) is Group Policy-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. Software restriction policies are part of the Microsoft security and management strategy to assist enterprises in increasing the reliability, integrity, and manageability of their computers.
 
@@ -97,6 +91,6 @@ The following table provides links to relevant resources in understanding and us
 |**Security**|[Threats and Countermeasures for Software Restriction Polices](http://technet.microsoft.com/library/dd349795(v=WS.10).aspx) (Windows Server 2008)<br /><br />[Threats and Countermeasures for Software Restriction Polices](http://technet.microsoft.com/library/hh125926(v=WS.10).aspx) (Windows Server 2008 R2)|
 |**Tools and settings**|[Software Restriction Policies Tools and Settings](http://technet.microsoft.com/library/cc782454(v=WS.10).aspx) (Windows Server 2003)|
 |**Community resources**|[Application Lockdown with Software Restriction Policies](http://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
-|**Related technologies**|[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)|
+
 
 

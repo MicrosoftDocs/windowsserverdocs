@@ -46,7 +46,7 @@ detail vdisk
   
 -   [Compact vdisk](Compact-vdisk.md)  
   
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)  
+  
   
 -   [Detach vdisk](Detach-vdisk.md)  
   

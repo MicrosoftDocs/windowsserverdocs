@@ -69,6 +69,6 @@ extend filesystem
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Creates a volume mirror by using the two specified dynamic disks.  
   
 > [!NOTE]  
-> This command is only available in Windows 7 and Windows Server 2008 R2.  
+> This command is only available in Windows??7 and Windows Server??2008??R2.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  
   
@@ -55,6 +55,6 @@ create volume mirror size=1000 disk=1,2
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

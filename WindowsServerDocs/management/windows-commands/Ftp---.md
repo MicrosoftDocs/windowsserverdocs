@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays the valid ftp commands that are available from the ftp prompt. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+Displays the valid ftp commands that are available from the ftp prompt.   
 ## Syntax  
 ```  
 ? [!] [?] [append] [ascii] [bell [binary] [bye] [cd] [close] [delete] [debug] [dir] [disconnect] [get] [glob] [hash] [help] [lcd] [literal] [ls] [mdelete] [mdir] [mget] [mkdir] [mls] [mput] [open] [prompt] [put] [pwd] [quit] [quote] [recv] [remotehelp] [rename] [rmdir] [send] [status] [trace] [type] [user] [verbose]  

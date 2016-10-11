@@ -59,15 +59,6 @@ Depending on your deployment method, import the AppLocker policy to the GPO in y
 ## Step 7: Test the effect of the policy and adjust
 Validate the effect of the policy by analyzing the AppLocker logs for application usage, and then modify the policy as necessary. To do this, see [Monitor Application Usage with AppLocker](../manage/Monitor-Application-Usage-with-AppLocker.md).
 
-## Next steps
-Follow the steps described in the following topics to continue the deployment process:
-
-1.  [Create Your AppLocker Rules](Create-Your-AppLocker-Rules.md)
-
-2.  [Testing and Updating an AppLocker Policy](assetId:///3cf7fe80-37fe-4818-ba43-576f2e811791)
-
-3.  [Deploy the AppLocker Policy into Production](Deploy-the-AppLocker-Policy-into-Production.md)
-
 ## See also
 [AppLocker Policies Deployment Guide](AppLocker-Policies-Deployment-Guide.md)
 

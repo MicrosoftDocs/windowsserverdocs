@@ -113,8 +113,7 @@ If you enable the **Audit: Audit the access of global system objects** setting, 
   
 To reduce the number of audit events generated, use the advanced audit policy. There are some restrictions that apply. For more information, see [Which Versions of Windows Support Advanced Audit Policy Configuration?](https://technet.microsoft.com/library/dd692792.aspx)  
   
-## Additional resources  
-For the advanced audit policy options, see [Audit Kernel Object](assetId:///d67051ac-67fc-4325-8257-3311b41b5e08).  
+## Additional resources    
   
 For basic audit policy, see [Audit object access](https://technet.microsoft.com/library/cc776774.aspx).  
   

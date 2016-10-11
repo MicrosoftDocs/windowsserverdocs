@@ -50,7 +50,5 @@ When a policy is deployed, it is important to monitor the actual implementation 
 
 -   For steps to perform other AppLocker policy tasks, see [Administer AppLocker](Administer-AppLocker.md).
 
-## See Also
-[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)
 
 

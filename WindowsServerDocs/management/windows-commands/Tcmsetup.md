@@ -46,5 +46,3 @@ tcmsetup  [/q] /c /d
 [Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)  
 [Specify telephony servers on a client computer](https://technet.microsoft.com/library/cc759226(v=ws.10).aspx)  
 [Assign a telephony user to a line or phone](https://technet.microsoft.com/library/cc736875(v=ws.10).aspx)  
-[Runas](assetId:///7b710f79-d28a-4297-b5fc-0c1868d236fc)  
-[Using Run as](https://technet.microsoft.com/library/cc780931(v=ws.10).aspx)  

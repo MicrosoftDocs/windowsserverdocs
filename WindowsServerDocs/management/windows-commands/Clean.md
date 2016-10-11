@@ -37,7 +37,5 @@ To remove all formatting from the selected disk, type:
 ```
 clean
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+
 [Clear-Disk](http://technet.microsoft.com/library/hh848661.aspx)

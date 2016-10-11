@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Configures the translation of events to traps, trap destinations, or both based on information in a configuration file. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+Configures the translation of events to traps, trap destinations, or both based on information in a configuration file.   
 ## Syntax  
 ```  
 evntcmd [/s <ComputerName>] [/v <VerbosityLevel>] [/n] <FileName>  

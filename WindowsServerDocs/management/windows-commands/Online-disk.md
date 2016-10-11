@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Brings disks that are currently offline to an online state.  
   
 > [!IMPORTANT]  
-> This command is not available in any edition of Windows Vista.  
+> This command is not available in any edition of Windows??Vista.  
   
 > [!IMPORTANT]  
 > This command will fail if it is used on a read\-only disk.  
@@ -43,7 +43,7 @@ online disk [noerr]
   
 ## Remarks  
   
--   When used without parameters in Windows Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.  
+-   When used without parameters in Windows??Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.  
   
 -   For basic disks, this command will attempt to bring online the selected disk and all volumes on that disk.  
   
@@ -65,6 +65,6 @@ online disk
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

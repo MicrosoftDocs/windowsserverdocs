@@ -30,6 +30,4 @@ Offline volume
 |-------------|---------------|
 |[Offline disk](Offline-disk.md)|Takes the online disk with focus to the offline state.|
 |[Offline volume](Offline-volume.md)|Takes the online volume with focus to the offline state.|
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

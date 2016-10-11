@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 The **dfsutil target** command displays information about the folder target \(link target\) or namespace server \(root target\). Target commands are used to add, remove or modify the properties of a folder target or namespace server.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 
@@ -35,8 +35,8 @@ dfsutil target [<DfsPath>] \\server\sharepath | Add | Remove | /?
 |-------------|---------------|
 |<DfsPath>|UNC path of DFS link.|
 |<\\\\server\\sharepath>|UNC path to the share on the Target Server.|
-|[Dfsutil Target Add](assetId:///adf63edf-6670-49a3-b9d1-ae7c5ee691c8)|Adds a new folder target.|
-|[Dfsutil Target Remove](assetId:///5c0dee64-0e88-421a-83a4-78cf5558961e)|Removes the folder target.|
+|Dfsutil Target Add|Adds a new folder target.|
+|Dfsutil Target Remove|Removes the folder target.|
 |\/?||
 
 ## Remarks

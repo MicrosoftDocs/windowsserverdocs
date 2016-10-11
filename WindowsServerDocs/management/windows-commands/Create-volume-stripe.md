@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Creates a striped volume using two or more specified dynamic disks.  
   
 > [!IMPORTANT]  
-> For Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.  
+> For Windows??Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.  
   
 For examples of how this command can be used, see [Examples](#BKMK_examples).  
   
@@ -55,6 +55,6 @@ create volume stripe size=1000 disk=1,2
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

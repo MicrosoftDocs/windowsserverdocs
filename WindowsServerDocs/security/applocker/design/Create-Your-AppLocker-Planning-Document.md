@@ -115,6 +115,5 @@ You can use the following form to construct your own AppLocker planning document
 
 -   The AppLocker Policies Design Guide is the predecessor to the AppLocker Policies Deployment Guide. When planning is complete, see the [AppLocker Policies Deployment Guide](../deploy/AppLocker-Policies-Deployment-Guide.md).
 
--   For a complete list of AppLocker documentation and other resources, see [AppLocker Overview](assetId:///358610e4-88b2-40d0-b34d-dfd7ddee0ed9) in the Windows Server Technical Library.
 
 

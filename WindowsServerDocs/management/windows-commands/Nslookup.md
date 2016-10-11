@@ -65,9 +65,9 @@ Nslookup /view <FileName>
 |[Nslookup set class](Nslookup-set-class.md)|Changes the query class. The class specifies the protocol group of the information.|
 |[Nslookup set d2](Nslookup-set-d2.md)|Turns exhaustive Debugging Mode on or off. All fields of every packet are printed.|
 |[Nslookup set debug](Nslookup-set-debug.md)|Turns Debugging Mode on or off.|
-|[Nslookup /set defname](assetId:///755ed486-d04d-4b6c-85f0-66ddb8ab6dab)|Appends the default DNS domain name to a single component lookup request. A single component is a component that contains no periods.|
+|Nslookup /set defname|Appends the default DNS domain name to a single component lookup request. A single component is a component that contains no periods.|
 |[Nslookup set domain](Nslookup-set-domain.md)|Changes the default DNS domain name to the name specified.|
-|[Nslookup /set ignore](assetId:///7ebc431b-cc44-4cee-b520-0d6879071275)|Ignores packet truncation errors.|
+|Nslookup /set ignore|Ignores packet truncation errors.|
 |[Nslookup set port](Nslookup-set-port.md)|Changes the default TCP/UDP DNS name server port to the value specified.|
 |[Nslookup set querytype](Nslookup-set-querytype.md)|Changes the resource record type for the query.|
 |[Nslookup set recurse](Nslookup-set-recurse.md)|Tells the DNS name server to query other servers if it does not have the information.|

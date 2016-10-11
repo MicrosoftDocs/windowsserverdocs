@@ -20,4 +20,3 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The Wlbs command has been replaced by Nlb.exe. For more information, see [Nlb](assetId:///7d4bba93-2bb5-4c71-92c2-570468ac25da)  

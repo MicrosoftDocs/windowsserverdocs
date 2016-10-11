@@ -20,8 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
-To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports as described in the topic, [Remote Resultant Set of Policy (RSoP) Group Policy results: ports that require firewall rules](assetId:///91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd#BKMK_RemoteRSoP).
-For examples of how this command can be used, see [Examples](#BKMK_Examples).
+To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports.
 ## Syntax
 ```
 gpresult [/s <COMPUTER> [/u <USERNAME> [/p [<PASSWORD>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
@@ -62,5 +61,5 @@ gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
 ```
 ## Additional references
 -   [Group Policy TechCenter](http://go.microsoft.com/fwlink/?LinkID=145531)
--   [Remote Resultant Set of Policy (RSoP) Group Policy results: ports that require firewall rules](assetId:///91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd#BKMK_RemoteRSoP)
+
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

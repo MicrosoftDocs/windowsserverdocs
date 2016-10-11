@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Displays, sets, or clears the attributes of a disk.  
   
 > [!IMPORTANT]  
-> This parameter is not available in any edition of Windows Vista.  
+> This parameter is not available in any edition of Windows??Vista.  
   
 ## Syntax  
   
@@ -61,6 +61,6 @@ attributes disk set readonly
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

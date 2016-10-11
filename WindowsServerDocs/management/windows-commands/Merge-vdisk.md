@@ -42,7 +42,7 @@ merge vdisk depth=1
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 -   [Attach vdisk](Attach-vdisk.md)
 -   [Compact vdisk](Compact-vdisk.md)
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+
 -   [Detail vdisk](Detail-vdisk.md)
 -   [Detach vdisk](Detach-vdisk.md)
 -   [Expand vdisk](Expand-vdisk.md)

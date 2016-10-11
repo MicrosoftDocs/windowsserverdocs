@@ -34,7 +34,7 @@ list { disk | partition | volume | vdisk }
 |disk|Displays a list of disks and information about them, such as their size, amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the master boot record \(MBR\) or GUID partition table \(GPT\) partition style.|  
 |partition|Displays the partitions listed in the partition table of the current disk.|  
 |volume|Displays a list of basic and dynamic volumes on all disks.|  
-|vdisk|Displays a list of the VHDs that are attached and\/or selected. This command lists detached VHDs if they are currently selected; however, the disk type is set to Unknown until the VHD is attached. The VHD marked with an asterisk \(\*\) has focus. **Note:** This command is only available for Windows 7 and Windows Server 2008 R2.|  
+|vdisk|Displays a list of the VHDs that are attached and\/or selected. This command lists detached VHDs if they are currently selected; however, the disk type is set to Unknown until the VHD is attached. The VHD marked with an asterisk \(\*\) has focus. **Note:** This command is only available for Windows 7 and Windows??Server??2008??R2.|  
   
 ## Remarks  
   
@@ -56,6 +56,6 @@ list vdisk
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

@@ -27,6 +27,4 @@ retain
 ## Remarks
 -   On a master boot record (MBR) dynamic disk, this command creates a partition entry in the master boot record.
 -   On a GUID partition table (GPT) dynamic disk, this command creates a partition entry in the GUID partition table.
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

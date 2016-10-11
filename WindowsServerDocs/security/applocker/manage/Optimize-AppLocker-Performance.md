@@ -31,7 +31,6 @@ The more rules per GPO, the longer AppLocker requires for evaluation. There is n
 ### Using the DLL rule collection
 When the DLL rule collection is enabled, AppLocker must check each DLL that an application loads. The more DLLs, the longer AppLocker requires to complete the evaluation.
 
-## See Also
-[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)
+
 
 

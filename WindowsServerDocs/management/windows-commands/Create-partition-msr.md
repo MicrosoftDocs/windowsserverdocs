@@ -46,7 +46,7 @@ create partition msr [size=<n>] [offset=<n>] [noerr]
   
 -   Windows does not mount Microsoft Reserved partitions. You cannot store data on them and you cannot delete them.  
   
--   A Microsoft Reserved partition is required on every GPT disk. The size of this partition depends on the total size of the GPT disk. The size of the GPT disk must be at least 32 MB to create a Microsoft Reserved partition.  
+-   A Microsoft Reserved partition is required on every GPT disk. The size of this partition depends on the total size of the GPT disk. The size of the GPT disk must be at least 32??MB to create a Microsoft Reserved partition.  
   
 -   A basic GPT disk must be selected for this operation to succeed. Use the **select disk** command to select a basic GPT disk and shift the focus to it.  
   
@@ -60,6 +60,6 @@ create partition msr size=1000
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)  
+
   
 

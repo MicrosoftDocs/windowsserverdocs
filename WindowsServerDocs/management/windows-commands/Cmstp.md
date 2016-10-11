@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Installs or removes a Connection Manager service profile. Used without optional parameters, **cmstp** installs a service profile with default settings appropriate to the operating system and to the user's permissions. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Installs or removes a Connection Manager service profile. Used without optional parameters, **cmstp** installs a service profile with default settings appropriate to the operating system and to the user's permissions. 
 ## Syntax
 Syntax 1:
 ```
@@ -27,7 +27,7 @@ ServiceProfileFileName .exe /q:a /c:"cmstp.exe ServiceProfileFileName .inf [/nf]
 ```
 Syntax 2:
 ```
-cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u] “[Drive:][Path]ServiceProfileFileName.inf"
+cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u] ???[Drive:][Path]ServiceProfileFileName.inf"
 ```
 ### Parameters
 |Parameter|Description|

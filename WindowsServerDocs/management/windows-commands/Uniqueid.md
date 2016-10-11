@@ -47,6 +47,4 @@ To set the identifier of the GPT disk with focus to baf784e7-6bbd-4cfb-aaac-e86c
 ```
 uniqueid disk id=baf784e7-6bbd-4cfb-aaac-e86c96e166ee
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

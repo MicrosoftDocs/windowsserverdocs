@@ -19,10 +19,10 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Copies remote files to the local computer using the current file transfer type. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+Copies remote files to the local computer using the current file transfer type.   
 ## Syntax  
 ```  
-mget <RemoteFile>[…]  
+mget <RemoteFile>[???]  
 ```  
 ### Parameters  
 |Parameter|Description|  

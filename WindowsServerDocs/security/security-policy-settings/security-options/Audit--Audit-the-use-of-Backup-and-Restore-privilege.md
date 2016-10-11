@@ -64,7 +64,7 @@ Enabling this policy setting in conjunction with the **Audit privilege use** pol
   
 Enabling this policy setting when the **Audit privilege use** policy setting is also enabled generates an audit event for every file that is backed up or restored. This can help you to track down an administrator who is accidentally or maliciously restoring data in an unauthorized manner.  
   
-Alternately, you can use the advanced audit policy, **Audit Sensitive Privilege Use**, which can help you manage the number of events generated. For information about this policy, see [Audit Sensitive Privilege Use](assetId:///84086936-ae56-4874-affe-eb9a322f728a).  
+Alternately, you can use the advanced audit policy, **Audit Sensitive Privilege Use**, which can help you manage the number of events generated.
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
