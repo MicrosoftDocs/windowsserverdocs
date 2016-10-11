@@ -1,37 +1,38 @@
 ---
 title: Storage Replica Overview
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: siroy
+ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
-author: kumudd
-ms.date: 09/23/2016
+author: nedpyle
+ms.date: 10/11/2016
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
-# Storage Replica Overview
+# Storage Replica overview
 
 >Applies To: Windows Server 2016
 
-This topic provides an overview of the new Storage Replica feature in Windows Server 2016 and includes the following sections:  
-* [Goals and Supported Replication Scenarios](#BKMK_SR1)  
-* [Storage Replica Features](#BKMK_SR2)  
-* [Storage Replica Prerequisites](#BKMK_SR3)  
-* [Background](#BKMK_SR4)    
+Storage Replica is Windows Server technology that enables synchronous replication of volumes between servers or clusters for disaster recovery. It also enables you to use asynchronous replication to create failover clusters that span two sites, with all nodes staying in sync.
 
-## <a name="BKMK_SR1"></a> Goals and Supported Replication Scenarios  
+Storage Replica supports synchronous and asynchronous replication:
+
+* **Synchronous replication** mirrors data within a low-latency network site with crash-consistent volumes to ensure zero data loss at the file-system level during a failure.
+* **Asynchronous replication** mirrors data across sites beyond metropolitan ranges over network links with higher latencies, but without a guarantee that both sites have identical copies of the data at the time of a failure.
+
 This guide outlines how your business can benefit from this new functionality and the different replication scenarios that are supported by Storage Replica. It assumes that you have a previous working knowledge of Windows Server, Failover Clustering, File Servers, and Hyper-V, to include basic administration.  
 
-### Why use Storage Replica?  
+## Why use Storage Replica?  
 Storage Replica offers new disaster recovery and preparedness capabilities in Windows Server 2016. For the first time, Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data will exist elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.  
 
 Storage Replica allows more efficient use of multiple datacenters. By stretching clusters or replicating clusters, workloads can be run in multiple datacenters for quicker data access by local proximity users and applications, as well as better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can move its typical workloads to the other site temporarily.  
 
-Storage Replica may allow you to decommission existing file replication systems like DFSR that were pressed into duty as low-end disaster recovery solutions. While DFSR works very well over extremely low bandwidth networks, its latency is very high - often measured in hours or days. This is caused by its requirement for files to close and its artificial throttles meant to prevent network congestion. With those design characteristics, the newest and hottest files in a DFSR replica are the least likely to replicate. Storage Replica operates below the file level and has none of these restrictions.  
+Storage Replica may allow you to decommission existing file replication systems such as DFS Replication that were pressed into duty as low-end disaster recovery solutions. While DFS Replication works well over extremely low bandwidth networks, its latency is very high - often measured in hours or days. This is caused by its requirement for files to close and its artificial throttles meant to prevent network congestion. With those design characteristics, the newest and hottest files in a DFS Replication replica are the least likely to replicate. Storage Replica operates below the file level and has none of these restrictions.  
 
 Storage Replica also supports asynchronous replication for longer ranges and higher latency networks. Because it is not checkpoint-based, and instead continuously replicates, the delta of changes will tend to be far lower than snapshot-based products. Furthermore, Storage Replica operates at the partition layer and therefore replicates all VSS snapshots created by Windows Server or backup software; this allows use of application-consistent data snapshots for point in time recovery, especially unstructured user data replicated asynchronously.  
 
-### <a name="BKMK_SRSupportedScenarios"></a>Supported Storage Replica configurations in Windows Server 2016  
+## <a name="BKMK_SRSupportedScenarios"></a>Supported configurations
+
 Using this guide and Windows Server 2016, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
 
 **Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
@@ -140,15 +141,15 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 ### Key Evaluation Points and Behaviors  
 
--   Network bandwidth and latency with fastest storage. There are physical limitations around synchronous replication. Because SR implements an IO filtering mechanism using logs and requiring network round trips, synchronous replication is likely make application writes slower. By using low latency, high-bandwidth networks as well as high-throughput disk subsystems for the logs, you will minimize performance overhead.  
+-   Network bandwidth and latency with fastest storage. There are physical limitations around synchronous replication. Because Storage Replica implements an IO filtering mechanism using logs and requiring network round trips, synchronous replication is likely make application writes slower. By using low latency, high-bandwidth networks as well as high-throughput disk subsystems for the logs, you will minimize performance overhead.  
 
 -   The destination volume is not accessible while replicating. When you configure replication, the destination volume dismounts, making it inaccessible to any writes by users or visible in typical interfaces like File Explorer. Block-level replication technologies are incompatible with allowing access to the destination target's mounted file system in a volume; NTFS and ReFS do not support users writing data to the volume while blocks change underneath them.  
 
--   The Microsoft implementation of asynchronous replication is different than most. Most industry implementations of asynchronous replication rely on snapshot-based replication, where periodic differential transfers move to the other node and merge. Storage Replica asynchronous replication operates just like synchronous replication, except that it removes the requirement for a serialized synchronous acknowledgment from the destination. This means that SR theoretically has a lower RPO as it continuously replicates. However, this also means it relies on internal application consistency guarantees rather than using snapshots to force consistency in application files. SR guarantees crash consistency in all replication modes  
+-   The Microsoft implementation of asynchronous replication is different than most. Most industry implementations of asynchronous replication rely on snapshot-based replication, where periodic differential transfers move to the other node and merge. Storage Replica asynchronous replication operates just like synchronous replication, except that it removes the requirement for a serialized synchronous acknowledgment from the destination. This means that Storage Replica theoretically has a lower RPO as it continuously replicates. However, this also means it relies on internal application consistency guarantees rather than using snapshots to force consistency in application files. Storage Replica guarantees crash consistency in all replication modes  
 
--   Many customers use DFSR as a disaster recovery solution even though often impractical for that scenario - DFSR cannot replicate open files and is designed to minimize bandwidth usage at the expense of performance, leading to large recovery point deltas. SR may allow you to retire DFSR from some of these types of disaster recovery duties.  
+-   Many customers use DFS Replication as a disaster recovery solution even though often impractical for that scenario - DFS Replication cannot replicate open files and is designed to minimize bandwidth usage at the expense of performance, leading to large recovery point deltas. Storage Replica may allow you to retire DFS Replication from some of these types of disaster recovery duties.  
 
--   Storage Replica is not backup. Some IT environments deploy replication systems as backup solutions, due to their zero data loss options when compared to daily backups. SR replicates all changes to all blocks of data on the volume, regardless of the change type. If a user deletes all data from a volume, Storage Replica will replicate the deletion instantly to the other volume, irrevocably removing the data from both servers. Do not use SR as a replacement for a point-in-time backup solution.  
+-   Storage Replica is not backup. Some IT environments deploy replication systems as backup solutions, due to their zero data loss options when compared to daily backups. Storage Replica replicates all changes to all blocks of data on the volume, regardless of the change type. If a user deletes all data from a volume, Storage Replica will replicate the deletion instantly to the other volume, irrevocably removing the data from both servers. Do not use Storage Replica as a replacement for a point-in-time backup solution.  
 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 
@@ -166,13 +167,10 @@ This guide frequently uses the following terms:
 
 -   A replication group is the organization of volumes and their replication configuration within a partnership, on a per server basis. A group may contain one or more volumes.  
 
-## Related Topics  
+## See also
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
 - [Storage Replica: Known Issues](storage-replica--known-issues.md)  
 - [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
-
-## See Also  
-- [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
