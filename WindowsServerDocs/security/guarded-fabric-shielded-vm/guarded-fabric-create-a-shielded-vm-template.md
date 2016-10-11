@@ -1,9 +1,9 @@
 ---
-title: Shielded VMs - hosting service provider shielded VM template
+title: Shielded VMs - hosting service provider creates a shielded VM template
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
-ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
+ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
