@@ -61,7 +61,7 @@ As part of the procedure, you will create a Key Protector that contains two impo
 
 -   **Guardians**: Also in the Key Protector, your hosting provider or enterprise datacenter (which runs HGS and guarded hosts) is identified as a “guardian.” The guardian is represented by the guardian key that you imported in the previous procedure, [Import the guardian configuration on the tenant Hyper-V server](#import-the-guardian-configuration-on-the-tenant-hyper-v-server).
 
-For an illustration showing the Key Protector, which is an element in a shielding data file, see [What is shielding data and why is it necessary?](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-and-shielded-vms#what-is-shielding-data-and-why-is-it-necessary).
+For an illustration showing the Key Protector, which is an element in a shielding data file, see [What is shielding data and why is it necessary?](Guarded-Fabric-and-Shielded-VMs.md#what-is-shielding-data-and-why-is-it-necessary).
 
 1.  On a tenant Hyper-V host, to create a new generation 2 virtual machine, run the following command.
 

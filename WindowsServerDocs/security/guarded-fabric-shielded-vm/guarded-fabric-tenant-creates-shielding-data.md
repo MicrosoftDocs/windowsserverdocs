@@ -144,7 +144,7 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
     ![Shielding Data File Wizard, file selection](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-wizard-01.png)
 
-       Additionally, you must choose whether VMs created using this shielding data file will be truly shielded or configured in “encryption supported” mode. For more information about these two options, see [What are the types of virtual machines that a guarded fabric can run?](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-and-shielded-vms#what-are-the-types-of-virtual-machines-that-a-guarded-fabric-can-run).
+       Additionally, you must choose whether VMs created using this shielding data file will be truly shielded or configured in “encryption supported” mode. For more information about these two options, see [What are the types of virtual machines that a guarded fabric can run?](Guarded-Fabric-and-Shielded-VMs.md#what-are-the-types-of-virtual-machines-that-a-guarded-fabric-can-run).
 
     >**Important**&nbsp;&nbsp;Pay careful attention to the next step as it defines the owner of your shielded VMs and which fabrics your shielded VMs will be authorized to run on.<br>
     
