@@ -67,7 +67,7 @@ When using the `New-Volume` cmdlet along with differing sets of storage on the s
 
 Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you have already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other (this cannot be done with ReFS volumes). If using **Diskmgmt** or **Server Manager**, no rounding will occur.  
 
-## Running Test-SRTopology fails with errors "Invalid value entered for target computer name" or "Invalid value entered for source computer name"  
+## Running Test-SRTopology fails with name-related errors
 
 When attempting to use `Test-SRTopology`, you receive one of the following errors:  
 
@@ -90,6 +90,10 @@ When attempting to use `Test-SRTopology`, you receive one of the following error
 
     WARNING: Invalid value entered for source computer name
 
+**ERROR EXAMPLE 3:**
+
+    The specified volume cannot be found G: cannot be found on computer SRCLUSTERNODE1
+
 This cmdlet has limited error reporting in Windows Server 2016 and will return the same output for many common issues. The error can appear for the following reasons:  
 
 * You are logged on to the source computer as a local user, not a domain user.  
@@ -98,7 +102,8 @@ This cmdlet has limited error reporting in Windows Server 2016 and will return t
 * You specified an IP address for the destination server.  
 * The destination computer firewall is blocking access to PowerShell and/or CIM calls.  
 * The destination computer is not running the WMI service.   
-* You did not use CREDSSP when running the `Test-SRTopology` cmdlet remotely from a management computer.  
+* You did not use CREDSSP when running the `Test-SRTopology` cmdlet remotely from a management computer.
+* The source or destination volume specified are local disks on a cluster node, not clustered disks.  
 
 ## Configuring new Storage Replica partnership returns an error - "Failed to provision partition"
 When attempting to create a new replication partnership with `New-SRPartnership`, you receive the following error:
