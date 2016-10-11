@@ -1789,7 +1789,7 @@
 ##### [Prerequisites for deploying Host Guardian Service and guarded hosts](security/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites.md)
 ##### [Setting up the Host Guardian Service - HGS](security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
 #### [Configuration scenarios for shielded VMs in a guarded fabric](security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-##### [Shielded VMs - Hosting service provider create a shielded VM template](security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
+##### [Shielded VMs - Hosting service provider creates a shielded VM template](security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
 ##### [Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD](security/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)
 ##### [Shielded VMs - Tenant creates shielding data to define a shielded VM](security/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md)
 ##### [Scenario 2 - Deploy a shielded VM by using Windows Azure Pack](security/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack.md)
