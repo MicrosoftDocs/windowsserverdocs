@@ -10,6 +10,7 @@ ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 author: KBDAzure
 ms.author: kathydav
+ms.date: 10/11/2016
 ---
 # Configure virtual local area networks for Hyper-V
 Virtual local area networks \(VLANs\) offer one way to isolate network traffic. VLANs are configured in switches and routers that support 802.1q. If you configure multiple VLANs and want communication to occur between them, you'll need to configure the network devices to allow that. 

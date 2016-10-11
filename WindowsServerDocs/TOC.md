@@ -42,15 +42,15 @@
 ##### [Install Hyper-V](compute/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
 ##### [Create a virtual switch](compute/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines.md)
 ##### [Create a virtual machine](compute/hyper-v/get-started/Create-a-virtual-machine-in-Hyper-V.md)
-#### Plan
+#### [Plan](compute/hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md)
 ##### [VM Generation](compute/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 ##### [Networking](compute/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.md)
 ##### [Scalability](compute/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
 ##### [Security](compute/hyper-v/plan/plan-for-hyper-v-security-in-Windows-Server-2016.md)
-#### Deploy
+#### [Deploy](compute/hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md)
 ##### [Set up hosts for live migration](compute/hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)
 ##### [Upgrade virtual machine version](compute/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
-#### Manage
+#### [Manage](compute/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
 ##### [Choose between standard or production checkpoints](compute/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
 ##### [Enable or disable checkpoints](compute/hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md)
 ##### [Manage Windows VMs with PowerShell Direct](compute/hyper-v/manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)
@@ -58,7 +58,7 @@
 ##### [Use live migration without Failover Clustering](compute/hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
 ### [Get started with Setup and Boot Event Collection](compute/Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
-#### Get started
+#### [Get started](compute/remote-desktop-services/welcome-to-rds.md)
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
 ##### [Planning poster for Remote Desktop Services](compute/remote-desktop-services/rds-poster.md)
 ##### [Host Windows Desktop and Applications using Remote Desktop Services in Azure](compute/remote-desktop-services/rds-hosting-partners.md)
