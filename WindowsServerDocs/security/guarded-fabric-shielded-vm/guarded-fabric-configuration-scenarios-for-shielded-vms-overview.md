@@ -39,13 +39,13 @@ The following topics describe configuration scenarios for shielded VMs in a guar
 <p>The procedures that use VMM in this topic describe how to copy a disk to the VMM library and how to create a shielded VM template.</p></td>
 </tr>
 <tr class="odd">
+<td><ul><li><p>**Continuation of Scenario 1**: [Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)</p></li></ul></td>
+<td><p>A Windows PowerShell cmdlet included in **Remote Server Administration Tools &gt; Feature Administration Tools &gt; Shielded VM Tools**. With the cmdlet, a hosting service provider can create a VM Shielding Helper VHD to use when converting existing VMs to shielded VMs.</p></td>
+</tr>
+<tr class="even">
 <td><ul><li><p>**Continuation of Scenario 1**: [Shielded VMs - Tenant creates shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md)</p></li></ul></td>
 <td><p>Windows PowerShell, plus the Shielding Data File Wizard, which is included in **Remote Server Administration Tools &gt; Feature Administration Tools &gt; Shielded VM Tools**, and VMM.</p>
 <p>The procedure that uses VMM in this topic describes how to create a shielded VM.</p></td>
-</tr>
-<tr class="even">
-<td><ul><li><p>**Continuation of Scenario 1**: [Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)</p></li></ul></td>
-<td><p>A Windows PowerShell cmdlet included in **Remote Server Administration Tools &gt; Feature Administration Tools &gt; Shielded VM Tools**. With the cmdlet, a hosting service provider can create a VM Shielding Helper VHD to use when converting existing VMs to shielded VMs.</p></td>
 </tr>
 <tr class="odd">
 <td><p>**Scenario 2** - [Deploy a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)</p></td>
