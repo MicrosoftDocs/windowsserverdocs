@@ -11,7 +11,7 @@ ms.technology: security-guarded-fabric
 
 # Create a shielded VM template in VMM
 
-As with regular VMs, you can [create a VM template in VMM](https://technet.microsoft.com/library/hh427282.aspx) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This section will cover the steps a VMM administrator needs to take to create a shielded template disk and a VM template in VMM.
+As with regular VMs, you can [create a VM template in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This section will cover the steps a VMM administrator needs to take to create a shielded template disk and a VM template in VMM.
 
 ## Prepare an operating system VHDX
 
@@ -59,7 +59,7 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
         New-SelfSignedCertificate -DnsName publisher.fabrikam.com
 
-4. Start the **Template Disk Wizard** from the **Administrative Tools** folder on the Start menu or by typing _TemplateDiskWizard.exe_ into a command prompt.
+4. Start the **Template Disk Wizard** from the **Administrative Tools** folder on the Start menu or by typing **TemplateDiskWizard.exe** into a command prompt.
 
 5. On the **Certificate** page, click **Browse** to display a list of certificates. Select the certificate with which to sign the disk template. Click **OK** and then click **Next**.
 
@@ -109,7 +109,7 @@ With a signed template disk in your VMM library, you are ready to create a VM te
 
 4. Specify a VM template name and optionally a description, and then click **Next**.
 
-5. On the Configure Hardware page, specify the capabilities of VMs created from this template. Ensure that at least one NIC is available and configured on the VM template. The only way for a tenant to connect to a shielded VM is through Remote Desktop Connection, Windows Remote Management, or other pre-configured remote management tools that work over networking protocols.
+5. On the **Configure Hardware** page, specify the capabilities of VMs created from this template. Ensure that at least one NIC is available and configured on the VM template. The only way for a tenant to connect to a shielded VM is through Remote Desktop Connection, Windows Remote Management, or other pre-configured remote management tools that work over networking protocols.
 
     If you choose to leverage static IP pools in VMM instead of running a DHCP server on the tenant network, you will need to alert your tenants to this configuration. When a tenant supplies their shielding data file, which contains the unattend file for the VMM, they will need to provide special placeholder values for the static IP pool information. For more information about VMM placeholders in tenant unattend files, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file). 
 
@@ -118,3 +118,7 @@ With a signed template disk in your VMM library, you are ready to create a VM te
     >**Note**&nbsp;&nbsp;If you choose to specify a product key on this page, ensure it is valid for the operating system on the template disk. If an incorrect product key is used, the VM creation will fail.
 
 After the template is created, tenants can use it to create new virtual machines. You will need to verify that the VM template is one of the resources available to the Tenant Administrator user role (in VMM, user roles are in the **Settings** workspace).
+
+## See also
+
+- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
