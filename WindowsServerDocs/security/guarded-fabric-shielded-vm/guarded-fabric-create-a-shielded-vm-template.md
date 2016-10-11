@@ -51,7 +51,7 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
 1. Copy the generalized VHDX created in [Prepare an operating system VHDX](#prepare-an-operating-system-vhdx) to the server, if it is not already there.
 
-2. Install the **Shielded VM Tools** feature from R**emote Server Administration Tools** on the machine.
+2. Install the **Shielded VM Tools** feature from **Remote Server Administration Tools** on the machine.
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools –Restart
 
