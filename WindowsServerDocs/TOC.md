@@ -58,7 +58,7 @@
 ##### [Use live migration without Failover Clustering](compute/hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
 ### [Get started with Setup and Boot Event Collection](compute/Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
-#### Get started
+#### [Get started](compute/remote-desktop-services/welcome-to-rds.md)
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
 ##### [Planning poster for Remote Desktop Services](compute/remote-desktop-services/rds-poster.md)
 ##### [Host Windows Desktop and Applications using Remote Desktop Services in Azure](compute/remote-desktop-services/rds-hosting-partners.md)
