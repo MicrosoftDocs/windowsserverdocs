@@ -31,7 +31,7 @@ The following sections show how you can use the function parameters for an `unat
 
 - [Answer file without joining a domain](#answer-file-without-joining-a-domain)
 - [Answer file that includes joining a domain](#answer-file-that-includes-joining-a-domain)
-- [Answer file that uses static IP](#answer-file-that-uses-static-IP)
+- [Answer file that uses static IP](#answer-file-that-uses-static-ip)
 - [Answer file that includes a setup script](#answer-file-that-includes-a-setup-script)
 - [Answer file that configures BitLocker to back up the recovery password](#answer-file-that-configures-bitlocker-to-back-up-the-recovery-password)
 
