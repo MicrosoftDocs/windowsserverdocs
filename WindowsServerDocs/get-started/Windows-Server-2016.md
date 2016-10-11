@@ -18,7 +18,7 @@ manager: dongill
 
 <table border=0 width="100%">
   <tr>
-    <td colspan='4' style='padding:0;'><img src='wsbanner.png'/></td>
+    <td colspan='4' style='padding:0;'><img src='wsbanner.png' alt="Banner inviting you to build your future with Windows Server 2016"></td>
   </tr>
   <tr style='text-align:center;'><td colspan='4' bgcolor="F3FBFF">![alt text](2whats-new.png "What's new in Windows Server 2016?")
     &nbsp;&nbsp;<font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></td></tr>

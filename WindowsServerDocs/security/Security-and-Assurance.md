@@ -15,7 +15,7 @@ ms.author: coreyp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-<img src="../get-started/5-security.png" style='float:left; padding:.5em;'> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
+<img src="../get-started/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
 ## Overview of Security in Windows Server 2016  
 
