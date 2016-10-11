@@ -1,13 +1,13 @@
 ---
 title: Cluster to cluster Storage Replication
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: siroy
+ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
-author: kumudd
-ms.date: 08/18/2016
+author: nedpyle
+ms.date: 10/11/2016
 ---
 # Cluster to cluster Storage Replication
 > Applies To: Windows Server 2016
@@ -16,7 +16,7 @@ Cluster-to-cluster replication is now available in Windows Server 2016, includin
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication. Azure Site Recovery will be able to configure this scenario. When that feature reaches general availability, this document will be updated.
+There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 16 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
