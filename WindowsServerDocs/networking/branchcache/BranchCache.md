@@ -1,5 +1,7 @@
 ---
 title: BranchCache
+description: This topic provides an overview of BranchCache in Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
