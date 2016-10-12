@@ -24,7 +24,7 @@ One of the most important goals of providing a hosted environment is to guarante
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
     - [Prerequisites for deploying Host Guardian Service and guarded hosts](guarded-fabric-deployment-prerequisites.md)
     - [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-    - [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md)
+    - [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md)<br>
 
 - [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
     - [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
@@ -53,4 +53,4 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 | &nbsp;| [Create a VM shielding helper disk for VMM (optional)](guarded-fabric-vm-shielding-helper-vhd.md) |  |
 | &nbsp;| [Set up Windows Azure Pack (optional)](guarded-fabric-shielded-vm-windows-azure-pack.md) | |
 | &nbsp;| &nbsp;| [Creating shielding data file(s)](guarded-fabric-tenant-creates-shielding-data.md)  |
-| &nbsp;| &nbsp;| [Create shielded VMs using Windows Azure Pack]((guarded-fabric-shielded-vm-windows-azure-pack.md#steps-tenants-take-to-create-shielded-vms-with-windows-azure-pack))<br>[Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) |
+| &nbsp;| &nbsp;| [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md#steps-tenants-take-to-create-shielded-vms-with-windows-azure-pack)<br>[Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) |
