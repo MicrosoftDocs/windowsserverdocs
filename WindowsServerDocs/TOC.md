@@ -115,6 +115,7 @@
 ###### [Install RDS CALs on the license server](compute/remote-desktop-services/rds-install-cals.md)
 ###### [Track the CALs used in your deployment](compute/remote-desktop-services/rds-track-cals.md)
 #### [Run and tune](compute/remote-desktop-services/rds-run-and-tune.md)
+#### [Additional Remote Desktop support](compute/remote-desktop-services/rds-get-support.md)
 #### [Remote Desktop clients](compute/remote-desktop-services/clients/remote-desktop-clients.md)
 ##### [Getting started with Remote Desktop client on Android](compute/remote-desktop-services/clients/remote-desktop-android.md)
 ##### [Remote Desktop client on Android FAQ](compute/remote-desktop-services/clients/remote-desktop-android-faq.md)

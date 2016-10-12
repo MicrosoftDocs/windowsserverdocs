@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/05/2016
+ms.date: 10/12/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -28,16 +28,34 @@ When you install Windows Server 2016 by using the Server Core installation optio
 
 To avoid this, after the first boot, set the print spooler to disabled.
 
+
 ## Containers  
 
 [comment]: # (ID: 371; Submitter: taylorb; state: signed off)  
-Before you use containers, install [Servicing stack update for Windows 10 Version 1607: August 23, 2016](https://support.microsoft.com/en-us/kb/3176936) or any later updates that are available. Otherwise, a number of problems can occur, including failures in building, starting, or running containers, and errors similar to "CreateProcess failed in Win32: The RPC server is unavailable." 
+- Before you use containers, install [Servicing stack update for Windows 10 Version 1607: August 23, 2016](https://support.microsoft.com/en-us/kb/3176936) or any later updates that are available. Otherwise, a number of problems can occur, including failures in building, starting, or running containers, and errors similar to "CreateProcess failed in Win32: The RPC server is unavailable."
+
+[comment]: # (ID: 373; Submitter: plang; state: signed off)  
+- The NanoServerPackage OneGet provider does not work in Windows Containers. To work around this, use Find-NanoServerPackage and Save-NanoServerPackage on a different computer (not a container) to download the needed package. Then copy the packages into the container and install them.
+
+## Remote Server Administration Tools (RSAT)
+[comment]: # (ID: 374; Submitter: ryanpu; state: signed off)
+If you are running a version of Windows 10 older than the Anniversary Update, and are using Hyper-V and virtual machines with an enabled virtual Trusted Platform Module (including shielded virtual machines), and then install the version of RSAT provided for Windows Server 2016, attempts to start those virtual machines will fail.
+
+To avoid this, upgrade the client computer to Windows 10 Anniversary Update (or later) prior to installing RSAT. If this has already occurred, uninstall RSAT, upgrade the client to Window 10 Anniversary Update, and then reinstall RSAT.
 
 
 ## Shielded virtual machines
 [comment]: # (ID: 369; Submitter: nirb; state: signed off)  
 - Shielded virtual machines should be deployed only in non-production environments until an update is available.
 - You cannot convert existing non-shielded virtual machines to Shielded virtual machines. There is no workaround at this time. If you need to deploy Shielded virtual machines, create new ones directly from shielded templates.
+
+## Start menu
+[comment]: # (ID: 372; Submitter: samli; state: signed off)
+This issue affects Windows Server 2016 installed with the Server with Desktop Experience option.
+
+If you install any applications which add shortcut items inside a folder on the Start menu, the shortcuts will not work until you log out and log back in again.
+
+
 
 Go back to the main [Windows Server 2016](Windows-Server-2016.md) hub.
 
