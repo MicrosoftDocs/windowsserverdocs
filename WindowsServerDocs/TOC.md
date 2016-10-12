@@ -998,7 +998,7 @@
 ### [iSCSI boot](storage/iscsi/iscsi-boot-overview.md)
 ### [Format](storage/commands/format.md)
 ## [Security and Assurance](security/Security-and-Assurance.md)
-### [Get started with AppLocker](security/applocker/get-started/get-started-with-applocker.md)
+### [AppLocker](security/applocker/get-started/get-started-with-applocker.md)
 #### [Administer AppLocker](security/applocker/manage/Administer-AppLocker.md)
 ##### [Maintain AppLocker Policies](security/applocker/manage/Maintain-AppLocker-Policies.md)
 ##### [Edit an AppLocker Policy](security/applocker/manage/Edit-an-AppLocker-Policy.md)

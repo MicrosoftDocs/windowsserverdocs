@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-#Get started with AppLocker
+#AppLocker
 
 This topic provides a description of AppLocker. This information can help you decide if your organization can benefit from deploying AppLocker application control policies. AppLocker helps administrators control which applications and files users can run. These include executable files, scripts, Windows Installer files, dynamic-link libraries (DLLs), packaged apps, and packaged app installers.
 
