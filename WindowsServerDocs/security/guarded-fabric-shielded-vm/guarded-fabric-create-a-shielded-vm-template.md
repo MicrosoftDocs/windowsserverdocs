@@ -1,5 +1,5 @@
 ---
-title: Shielded VMs - hosting service provider creates a shielded VM template
+title: Shielded VMs - Hosting service provider creates a shielded VM template
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,9 +9,11 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
 
-# Create a shielded VM template in VMM
+# Shielded VMs - Hosting service provider creates a shielded VM template
 
 As with regular VMs, you can [create a VM template in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This section will cover the steps a VMM administrator needs to take to create a shielded template disk and a VM template in VMM.
+
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 ## Prepare an operating system VHDX
 
@@ -49,7 +51,7 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
 1. Copy the generalized VHDX created in [Prepare an operating system VHDX](#prepare-an-operating-system-vhdx) to the server, if it is not already there.
 
-2. Install the **Shielded VM Tools** feature from R**emote Server Administration Tools** on the machine.
+2. Install the **Shielded VM Tools** feature from **Remote Server Administration Tools** on the machine.
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools –Restart
 
@@ -122,3 +124,4 @@ After the template is created, tenants can use it to create new virtual machines
 ## See also
 
 - [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
