@@ -1,5 +1,7 @@
 ---
-title: Create the BranchCache File Servers Organizational Unit_1
+title: Create the BranchCache File Servers Organizational Unit
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,7 +14,7 @@ ms.assetid: 2cda192f-6b45-4e6c-88d9-70ca179ddb94
 ms.author: jamesmci
 author: jamesmci
 ---
-# Create the BranchCache File Servers Organizational Unit_1
+# Create the BranchCache File Servers Organizational Unit
 
 >Applies To: Windows Server&reg; 2016
 

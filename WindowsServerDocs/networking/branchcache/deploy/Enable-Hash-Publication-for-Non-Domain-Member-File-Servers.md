@@ -1,5 +1,7 @@
 ---
-title: Enable Hash Publication for Non-Domain Member File Servers_2
+title: Enable Hash Publication for Non-Domain Member File Servers
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,7 +14,7 @@ ms.assetid: 11584b73-f9e2-4530-afa5-b8df970e6b24
 ms.author: jamesmci
 author: jamesmci
 ---
-# Enable Hash Publication for Non-Domain Member File Servers_2
+# Enable Hash Publication for Non-Domain Member File Servers
 
 >Applies To: Windows Server&reg; 2016
 
