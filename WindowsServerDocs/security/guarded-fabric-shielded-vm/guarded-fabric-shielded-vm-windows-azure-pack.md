@@ -64,7 +64,7 @@ When the preceding steps are complete, tenants can take the following steps:
 
 ## Set up System Center 2016 - Service Provider Foundation
 
-System Center 2016 - Service Provider Foundation (SPF) allows Windows Azure Pack to communicate with your VMM servers that manage the hosting fabric. Before installing Windows Azure Pack, you must set up System Center 2016 - SPF. For information about installing SPF, see [How to Install Service Provider Foundation](https://technet.microsoft.com/system-center-docs/spf/deploy/how-to-install-service-provider-foundation-for-system-center-technical-preview).
+System Center 2016 - Service Provider Foundation (SPF) allows Windows Azure Pack to communicate with your VMM servers that manage the hosting fabric. Before installing Windows Azure Pack, you must set up System Center 2016 - SPF. For information about installing SPF, see [Deploying Service Provider Foundation - SPF](https://technet.microsoft.com/system-center-docs/spf/deploy/deploying-service-provider-foundation).
 
 <!-- I have a question out to Erik Kjerland about whether the blog post in the following sentence is still helpful. If it's not, delete the sentence. -->
 

@@ -1790,6 +1790,7 @@
 ##### [Setting up the Host Guardian Service - HGS](security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
 ##### [Appendix A - Configure Nano server as TPM attested guarded host](security/guarded-fabric-shielded-vm/guarded-fabric-configure-nano-server-as-tpm-guarded-host.md)
 #### [Configuration scenarios for shielded VMs in a guarded fabric](security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+##### [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
 ##### [Shielded VMs - Hosting service provider creates a shielded VM template](security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md)
 ##### [Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD](security/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md)
 ##### [Shielded VMs - Tenant creates shielding data to define a shielded VM](security/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md)
