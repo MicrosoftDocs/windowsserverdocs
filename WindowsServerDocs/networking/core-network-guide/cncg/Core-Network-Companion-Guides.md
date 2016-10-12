@@ -1,7 +1,9 @@
 ---
 title: Core Network Companion Guides
+description: This topic provides an overview of the companion guides to the Windows Server 2016 Core Network Guide
+manager: dongill
 ms.custom: na
-description: This topic provides an overview of the companion guides to the Windows Server 2016 Core Network Guide.
+Core Network Guide.
 ms.technology: networking
 ms.prod: windows-server-threshold
 ms.reviewer: na

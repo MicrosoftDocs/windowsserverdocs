@@ -1,5 +1,7 @@
 ---
 title: Copy the CA Certificate and CRL to the Virtual Directory
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: dongill
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
