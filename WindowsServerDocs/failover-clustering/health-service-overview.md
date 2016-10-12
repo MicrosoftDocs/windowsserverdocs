@@ -1,18 +1,18 @@
 ---
 title: Health Service in Windows Server 2016
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: eldenc
+ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
-author: kumudd
-ms.date: 09/15/2016
+author: cosmosdarwin
+ms.date: 10/12/2016
 ---
 # Health Service in Windows Server 2016
 > Applies to Windows Server 2016
 
-The Health Service is a new feature in Windows Server 2016 which significantly improves the day-to-day monitoring, operations, and maintenance experience of cluster resources. In Windows Server 2016, it is supported only for Storage Spaces Direct.   
+The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
 
 ## Prerequisites  
 
@@ -20,7 +20,7 @@ The Health Service is enabled by default with Storage Spaces Direct. No addition
 
 ## Metrics  
 
-The Health Service vastly reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
+The Health Service reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
 
 ### Coverage  
 In Windows Server 2016, the Health Service provides the following metrics:  

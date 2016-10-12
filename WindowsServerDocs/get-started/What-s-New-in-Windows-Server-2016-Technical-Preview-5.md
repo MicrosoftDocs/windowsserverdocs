@@ -113,25 +113,50 @@ For more details and instructions for working with shielded virtual machines, se
 Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard](https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx) for more information. 
   
   
-## [Storage](../storage/storage.md)  
-This area covers storage products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
+## [Storage](../storage/storage.md)
+
+Storage in Windows Server 2016 includes new features and enhancements for software-defined storage, as well as for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
+
+### Storage Spaces Direct
+
+Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies the deployment and management of software-defined storage systems and unlocks use of new classes of disk devices, such as SATA SSD and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks. 
+
+For more info, see [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md).
+
+### Storage Replica
+
+Storage Replica enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss. 
+
+For more info, see [Storage Replica](../storage/storage-replica/storage-replica-overview.md).
+
+### Storage Quality of Service (QoS)
+
+You can now use storage quality of service (QoS) to centrally monitor end-to-end storage performance and create management policies using Hyper-V and CSV clusters in Windows Server 2016.
+
+For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
   
--   [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md). In Windows Server 2016, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.
+## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
 
-- Windows Server 2016 enables the use of persistent memory devices in the form of NVDIMM-N. NVDIMMs provide a persistent storage medium with near-DRAM speeds and reside on the memory bus, significantly reducing I/O latencies.
+Windows Server 2016 includes a number of new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
 
-    Through enhancements in NTFS, Windows Server 2016 is able to grant applications direct access (DAX) to the byte-ranges of an NVDIMM and fully unlock the potential of this technology.
+### Cluster Operating System Rolling Upgrade
 
-    These videos provide more information:
+Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 
-- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
-- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
-- [Accelerating SQL Server 2016 peformance with Persistent Memory in Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
+For more info, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 
-    To learn more about health management of NVDIMM-N devices in Windows, see [Storage-class Memory (NVDIMM-N) Health Management in Windows](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-class-memory-health).  
-  
--   [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md). In Windows Server 2016, new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
-  
+### Cloud Witness
+
+Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in the  quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum Wizard.
+
+For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-witness.md).
+
+### Health Service
+
+The Health Service improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
+
+For more info, see [Health Service](../failover-clustering/health-service-overview.md).
+
 ## See Also  
 -   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
   
