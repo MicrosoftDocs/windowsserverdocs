@@ -33,7 +33,7 @@ After the role is added, the next step is to run the [Install-HgsServer](https:/
 
 When you install HGS, it creates its own forest by default. Another option is to add HGS to an existing bastion forest. The next sections covers the two options.
 
-#### Choose whether to install HGS in its own new forest or in an existing bastion forest+
+#### Choose whether to install HGS in its own new forest or in an existing bastion forest
 
 The default installation will set up a new Active Directory forest for HGS and configure other dependencies. This option is recommended because the environment is self-contained and known to be secure when it is created. 
 

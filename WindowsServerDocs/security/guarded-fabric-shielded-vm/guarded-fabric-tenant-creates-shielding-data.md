@@ -81,7 +81,10 @@ When creating an unattend.xml file for shielded VMs, keep in mind the following 
 
 When using substitution strings, it is important to ensure that the strings will be populated during the VM provisioning process. If a string such as @ProductKey@ is not supplied at deployment time, leaving the &lt;ProductKey&gt; node in the unattend file blank, the specialization process will fail and you will be unable to connect to your VM.
 
-Also, note that the networking-related substitution strings towards the end of the table are only used if you are leveraging VMM Static IP Address Pools. For more information about static IP addresses in VMM templates see [Static IP Address Pools](https://technet.microsoft.com/library/jj721568.aspx#BKMK_StaticIPAddressPools) in the VMM documentation. Your hosting service provider should be able to tell you if these substitution strings are required.
+Also, note that the networking-related substitution strings towards the end of the table are only used if you are leveraging VMM Static IP Address Pools. Your hosting service provider should be able to tell you if these substitution strings are required. For more information about static IP addresses in VMM templates, see the following in the VMM documentation:
+
+- [Guidelines for IP address pools](https://technet.microsoft.com/system-center-docs/vmm/plan/plan-network#guidelines-for-ip-address-pools) 
+- [Set up static IP address pools in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-network-static-address-pools)
 
 Finally, it is important to note that the shielded VM deployment process will only encrypt the OS drive. If you deploy a shielded VM with one or more data drives, it is strongly recommended that you add an unattend command or Group Policy setting in the tenant domain to automatically encrypt the data drives.
 
