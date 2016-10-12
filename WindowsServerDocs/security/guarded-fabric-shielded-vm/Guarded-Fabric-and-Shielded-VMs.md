@@ -164,8 +164,6 @@ The following figure shows the shielding data file and related configuration ele
 | Virtualization-based Security (VBS) | A Hyper-V based processing and storage environment on Windows Server 2016 Technical Preview that is protected from administrators. Virtual Secure Mode provides the system with the ability to store operating system keys that are not visible to an operating system administrator.|
 | virtual TPM | A virtualized version of a Trusted Platform Module (TPM). In Windows Server 2016 Technical Preview, with the Hyper-V role, you can provide a virtual TPM 2.0 device so that virtual machines can be encrypted, just as a physical TPM allows a physical machine to be encrypted.|
 
-## Next steps
+## See also
 
-* [Shielded VMs and Guarded Fabric Deployment Guide for Windows Server 2016 TP5](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-98d2b045)
-* [Shielded VMs and Guarded Fabric Operations Guide for Windows Server 2016](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-b05d8078)
-* [Shielded VMs and Guarded Fabric Troubleshooting Guide for Windows Server 2016](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-70c5b471)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
