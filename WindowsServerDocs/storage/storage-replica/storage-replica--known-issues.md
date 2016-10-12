@@ -116,6 +116,24 @@ When attempting to create a new replication partnership with `New-SRPartnership`
 
 This is caused by selecting a data volume that is on the same partition as the System Drive (i.e. the **C:** drive with its Windows folder). For instance, on a drive that contains both the **C:** and **D:** volumes created from the same partition. This is not supported in Storage Replica; you must pick a different volume to replicate.
 
+## Attempting to grow a replicated volume fails
+When attempting to grow or tended a replicated volume, you receive the following error:
+
+    PS C:\> Resize-Partition -DriveLetter d -Size 44GB
+    Resize-Partition : The operation failed with return code 8
+    At line:1 char:1
+    + Resize-Partition -DriveLetter d -Size 44GB
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (StorageWMI:ROOT/Microsoft/.../MSFT_Partition
+    [Resize-Partition], CimException
+    + FullyQualifiedErrorId : StorageWMI 8,Resize-Partition
+
+If using the DISKMGMT.MSC snapin, you receive error: 
+
+    Element not found
+
+This occurs even if you correctly enable volume resizing using `Set-SRGroup -Name rg01 -AllowVolumeResize $true`.  This issue is caused by a code defect in the RTM version fo Windows Server 2016. A cumulative update packge will be issued to resolve this problem. For more information, email srfeed@microsoft.com. 
+
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
