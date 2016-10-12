@@ -532,11 +532,7 @@ Complete the following steps on at least one host that you want to run as a guar
 
 ## Next steps
 
-Try these optional steps for hosters and tenant administrators who need to prepare and create shielded VMs:
-
-- [Hosting service provider creates a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
-- [Hosting service provider prepares a VM Shielding Helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)
-- [Tenant creates shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md)
+For hosters and tenant administrators, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md) for more information about how to deploy guarded hosts and prepare and create shielded VMs.
 
 ## See also
 
