@@ -1,5 +1,6 @@
 ---
 title: Keyboard Shortcuts for Server Manager
+description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,14 +9,15 @@ ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Keyboard Shortcuts for Server Manager
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Because Server Manager was fully redesigned starting in Windows Server 2012, keyboard shortcuts that worked in the Server Manager console in  Windows Server 2008 R2  or  Windows Server 2008  are not necessarily the same commands. This topic describes the new keyboard shortcuts and access keys for Server Manager in  Windows Server 2012  and newer releases of Windows Server.
 

@@ -1,5 +1,6 @@
 ---
 title: Configure Remote Management in Server Manager
+description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,20 +9,21 @@ ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
-author: coreyp
-ms.author: coreyp-at-msft
-ms.date: 09/14/2016
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
 
 # Configure Remote Management in Server Manager
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-In Windows Server 2016 Technical Preview, you can use Server Manager to perform management tasks on remote servers. Remote management is enabled by default on servers that are running Windows Server 2016 Technical Preview. To manage a server remotely by using Server Manager, you add the server to the Server Manager server pool.
+In Windows Server, you can use Server Manager to perform management tasks on remote servers. Remote management is enabled by default on servers that are running Windows Server 2016. To manage a server remotely by using Server Manager, you add the server to the Server Manager server pool.
 
 You can use Server Manager to manage remote servers that are running older releases of Windows Server, but the following updates are required to fully manage these older operating systems.
 
-To manage servers that are running Windows Server releases older than Windows Server 2016 Technical Preview, install the following software and updates to make the older releases of Windows Server manageable by using Server Manager in Windows Server 2016 Technical Preview.
+To manage servers that are running Windows Server releases older than Windows Server 2016, install the following software and updates to make the older releases of Windows Server manageable by using Server Manager in Windows Server 2016.
 
 |Operating System|Required Software|Manageability|
 |--------------------|---------------------|-----------------|
@@ -32,11 +34,11 @@ To manage servers that are running Windows Server releases older than Windows Se
 For detailed information about how to add servers that are in workgroups to manage, or manage remote servers from a workgroup computer that is running Server Manager, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md).
 
 ## <a name="BKMK_remote"></a>Enabling or disabling remote management
-In Windows Server 2016 Technical Preview, remote management is enabled by default. Before you can connect to a computer that is running Windows Server 2016 Technical Preview remotely by using Server Manager, Server Manager remote management must be enabled on the destination computer if it has been disabled. The procedures in this section describe how to disable remote management, and how to re-enable remote management if it has been disabled. In the Server Manager console, the remote management status for the local server is displayed in the **Properties** area of the **Local Server** page.
+In Windows Server 2016, remote management is enabled by default. Before you can connect to a computer that is running Windows Server 2016 remotely by using Server Manager, Server Manager remote management must be enabled on the destination computer if it has been disabled. The procedures in this section describe how to disable remote management, and how to re-enable remote management if it has been disabled. In the Server Manager console, the remote management status for the local server is displayed in the **Properties** area of the **Local Server** page.
 
 Local administrator accounts other than the built-in Administrator account may not have rights to manage a server remotely, even if remote management is enabled. The Remote User Account Control (UAC) **LocalAccountTokenFilterPolicy** registry setting must be configured to allow local accounts of the Administrators group other than the built-in administrator account to remotely manage the server.
 
-In Windows Server 2016 Technical Preview, Server Manager relies on Windows Remote Management (WinRM) and the Distributed Component Object Model (DCOM) for remote communications. The settings that are controlled by the **Configure Remote Management** dialog box only affect parts of Server Manager and Windows PowerShell that use WinRM for remote communications. They do not affect parts of Server Manager that use DCOM for remote communications. For example, Server Manager uses WinRM to communicate with remote servers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2, or  Windows Server 2012, but uses DCOM to communicate with servers that are running  Windows Server 2008  and  Windows Server 2008 R2, but do not have the [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) or [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) updates applied. Microsoft Management Console (MMC) and other legacy management tools use DCOM. For more information about how to change these settings, see [To configure MMC or other tool remote management over DCOM](#BKMK_dcom) in this topic.
+In Windows Server 2016, Server Manager relies on Windows Remote Management (WinRM) and the Distributed Component Object Model (DCOM) for remote communications. The settings that are controlled by the **Configure Remote Management** dialog box only affect parts of Server Manager and Windows PowerShell that use WinRM for remote communications. They do not affect parts of Server Manager that use DCOM for remote communications. For example, Server Manager uses WinRM to communicate with remote servers that are running Windows Server 2016,  Windows Server 2012 R2, or  Windows Server 2012, but uses DCOM to communicate with servers that are running  Windows Server 2008  and  Windows Server 2008 R2, but do not have the [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) or [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) updates applied. Microsoft Management Console (MMC) and other legacy management tools use DCOM. For more information about how to change these settings, see [To configure MMC or other tool remote management over DCOM](#BKMK_dcom) in this topic.
 
 > [!NOTE]
 > Procedures in this section can be completed only on computers that are running Windows Server. You cannot enable or disable remote management on a computer that is running Windows 10 by using these procedures, because the client operating system cannot be managed by using Server Manager.
@@ -140,7 +142,7 @@ In Windows Server 2016 Technical Preview, Server Manager relies on Windows Remot
 
 1.  Do one of the following to open Local Group Policy Editor.
 
-    -   On a server that is running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , or  Windows Server 2012 , on the **Start** screen, type **gpedit.msc**, and then click the **gpedit** tile when it is displayed.
+    -   On a server that is running Windows Server 2016,  Windows Server 2012 R2 , or  Windows Server 2012 , on the **Start** screen, type **gpedit.msc**, and then click the **gpedit** tile when it is displayed.
 
     -   On a server that is running  Windows Server 2008 R2  or  Windows Server 2008 , in the **Run** dialog box, type **gpedit.msc**, and then press **Enter**.
 
@@ -152,7 +154,7 @@ In Windows Server 2016 Technical Preview, Server Manager relies on Windows Remot
 
 ### <a name="BKMK_unattend"></a>To disable remote management by using an answer file during unattended installation
 
-1.  Create an unattended installation answer file for Windows Server 2016 Technical Preview installations by using Windows System Image Manager (Windows SIM). For more information about how to create an answer file and use Windows SIM, see [What is Windows System Image Manager?](http://technet.microsoft.com/library/cc766347.aspx) and [Step-by-Step: Basic Windows Deployment for IT Professionals](http://technet.microsoft.com/library/dd349348.aspx).
+1.  Create an unattended installation answer file for Windows Server 2016 installations by using Windows System Image Manager (Windows SIM). For more information about how to create an answer file and use Windows SIM, see [What is Windows System Image Manager?](http://technet.microsoft.com/library/cc766347.aspx) and [Step-by-Step: Basic Windows Deployment for IT Professionals](http://technet.microsoft.com/library/dd349348.aspx).
 
 2.  In your answer file, locate the setting **Microsoft-Windows-Web-Services-for-Management-Core\EnableServerRemoteManagement**.
 
@@ -161,7 +163,7 @@ In Windows Server 2016 Technical Preview, Server Manager relies on Windows Remot
     > [!NOTE]
     > This setting disables remote management as part of the operating system setup process. Configuring this setting does not prevent an administrator from enabling Server Manager remote management on a server after operating system setup is complete. Administrators can enable Server Manager remote management again by using steps in [To configure Server Manager remote management by using the Windows interface](#BKMK_windows) or [To enable Server Manager remote management by using Windows PowerShell](#BKMK_ps) in this topic.
     > 
-    > If you disable remote management by default as part of an unattended installation, and do not enable remote management on the server again after installation, servers to which this answer file is applied cannot be fully managed by using Server Manager. Servers that are running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , or  Windows Server 2012 (and that have remote management disabled by default) generate manageability status errors in the Server Manager console after they are added to the Server Manager server pool.
+    > If you disable remote management by default as part of an unattended installation, and do not enable remote management on the server again after installation, servers to which this answer file is applied cannot be fully managed by using Server Manager. Servers that are running Windows Server 2016,  Windows Server 2012 R2 , or  Windows Server 2012 (and that have remote management disabled by default) generate manageability status errors in the Server Manager console after they are added to the Server Manager server pool.
 
 ## Windows Remote Management (WinRM) listener settings
 Server Manager relies on default WinRM listener settings on the remote servers that you want to manage. If the default authentication mechanism or the WinRM listener port number on a remote server has been changed from default settings, Server Manager cannot communicate with the remote server.

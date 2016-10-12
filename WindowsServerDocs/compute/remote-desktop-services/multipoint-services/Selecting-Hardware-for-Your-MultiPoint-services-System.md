@@ -42,8 +42,8 @@ A MultiPoint Services system typically includes the following components:
   
 Use the following information to make hardware decisions:  
   
--   [Selecting a CPU](#selecting-a-cpu)  
--   [Selecting hardware components](#selecting-hardware-components)  
+-   [Selecting a CPU](#a-namebkmkcpuaselecting-a-cpu)  
+-   [Selecting hardware components](#a-namebkmkhardwareaselecting-hardware-components)  
   
 ## <a name="BKMK_CPU"></a>Selecting a CPU  
 A MultiPoint Services system is a multiple\-user environment, with all users connected to a single host computer. This increases the CPU usage because all users share the same computer. Some tasks, such as multimedia programs \(for example, media players or video\-editing software\), have larger processing demands. Therefore, make sure to select a CPU that can handle the processing requirements for the number of users and types of user scenarios that it will need to support.  
@@ -88,11 +88,11 @@ When you have selected the hardware components for your MultiPoint Services syst
   
 The following topics provide detailed information to help you select components for your MultiPoint Services system:  
   
-[Selecting video hardware](#selecting-video-hardware)  
+[Selecting video hardware](#a-namebkmkselectingvideohardwareaselecting-video-hardware)  
 [Selecting direct\-video\-connected or USB zero client station devices](#BKMK_Selectingdirect-video-connectedorUSBzeroclientstationdevices)   
-[Selecting other station peripheral devices](#Selecting-peripheral-devices)  
+[Selecting other station peripheral devices](#a-namebkmkselectingperipheraldevicesaselecting-other-station-peripheral-devices)  
 [Selecting RDP\-over\-LAN\-connected station hardware](#BKMK_SelectingRDP-over-LAN-connectedstationhardware)  
-[Selecting audio devices](#Selecting-audio-devices)  
+[Selecting audio devices](#a-namebkmkselectingaudiodevicesaselecting-audio-devices)  
   
 ## <a name="BKMK_Selectingvideohardware"></a>Selecting video hardware  
 The video hardware that you select should support the number of monitors that you will require for the number of users you intend to have working at MultiPoint Services stations. In addition, different types of video hardware can provide a higher\-performance solution for graphics\-intensive programs, such as multimedia content.  
@@ -127,10 +127,10 @@ A MultiPoint Services station consists of a station hub or USB zero client with 
   
 The devices that you select to create a MultiPoint Services station should meet minimum requirements to work with MultiPoint Services. Details about the requirements for the following MultiPoint Services station devices are provided in this topic:  
   
--   [Selecting USB hubs](#Selecting-USB-hubs)  
--   [Selecting USB zero clients](#Selecting-USB-zero-clients)  
--   [Selecting keyboards and mouse devices](#Selecting-keyboards-and-mouse-devices)  
--   [Selecting monitors](#Selecting-monitors)  
+-   [Selecting USB hubs](#a-namebkmkselectingusbhubsaselecting-usb-hubs)  
+-   [Selecting USB zero clients](#a-namebkmkselectingusbzeroclientsaselecting-usb-zero-clients)  
+-   [Selecting keyboards and mouse devices](#a-namebkmkselectingkeyboardsandmousedevicesaselecting-keyboards-and-mouse-devices)  
+-   [Selecting monitors](#a-namebkmkselectingmonitorsaselecting-monitors)  
   
 ### <a name="BKMK_SelectingUSBhubs"></a>Selecting USB hubs  
 The USB hubs that are used in a MultiPoint Services system can be a generic USB hub. Such hubs typically have four or more USB ports, and they allow multiple USB devices to be connected to a single USB port on the computer. Some other devices, such as keyboards and video monitors, may also incorporate a USB hub into their design.  
@@ -179,9 +179,9 @@ MultiPoint Services supports peripheral devices that are connected to a station 
   
 ||Connected to Host Computer|Connected to Station Hub or Downstream Hub|  
 |-|------------------------------|----------------------------------------------|  
-|Keyboard|Not functional, unless it is part of a PS\/2 station. Refer to [PS\/2 stations](#PS--2-stations) for more information|Available to individual station<br /><br />Cannot be connected to a downstream hub|  
-|Mouse|Not functional, unless it is part of a PS\/2 station. Refer to [PS\/2 stations](#PS--2-stations) for more information|Available to individual station|  
-|Speaker\/headphones|Not functional, unless it is part of a PS\/2 station. Refer to [PS\/2 stations](#PS--2-stations) for more information|Available to individual station|  
+|Keyboard|Not functional, unless it is part of a PS/2 station. |Available to individual station<br /><br />Cannot be connected to a downstream hub|  
+|Mouse|Not functional, unless it is part of a PS/2 station. |Available to individual station|  
+|Speaker/headphones|Not functional, unless it is part of a PS/2 station.|Available to individual station|  
 |USB storage device|Available to all stations|Available to individual station|  
 |HID Consumer Control|Not functional|Available to individual station|  
 |Other USB devices, such as cameras, document readers, and DVD drives|Available to all stations if supported by Windows Server 2012|Available to all stations if supported by Windows Server 2008 R2 Remote Desktop Services|  

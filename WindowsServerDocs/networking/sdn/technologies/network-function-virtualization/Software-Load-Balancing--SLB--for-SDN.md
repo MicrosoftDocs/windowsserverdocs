@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-You can use this topic to learn about Software Load Balancing  for Software Defined Networking in  Windows Server 2016.  
+You can use this topic to learn about Software Load Balancing  for Software Defined Networking in Windows Server 2016.  
   
 This topic contains the following sections.  
   
@@ -25,8 +25,9 @@ This topic contains the following sections.
   
 -   [Software Load Balancing Features](#bkmk_features)  
   
-## <a name="bkmk_overview"></a>Software Load Balancing Overview  
-Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources.  The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
+## <a name="bkmk_overview"></a>Software Load Balancing Overview
+
+Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
   
 Windows Server SLB includes the following capabilities.  
   
@@ -121,7 +122,7 @@ To deploy Windows Server SLB, you must first deploy Network Controller in  Windo
 In addition, you must configure Hyper-V hosts with the SDN-enabled Hyper-V Virtual Switch and ensure that the SLB Host Agent is running.  The routers that serve the hosts must support equal cost multipath (ECMP) routing and Border Gateway Protocol (BGP) and must be configured to accept BGP peering requests from the SLB MUXes.  
   
 Following is an overview of the SLB infrastructure.  
-  
+
 ![Software Load Balancing infrastructure](../../../media/Software-Load-Balancing--SLB--for-SDN/slb_overview1.png)  
   
 The following sections provide more information about these elements of the SLB infrastructure.  
@@ -129,8 +130,8 @@ The following sections provide more information about these elements of the SLB 
 ### SCVMM  
 With System Center 2016, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
   
-For more information about System Center 2016 , see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).
-
+For more information about System Center 2016, see [System Center 2016](http://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
+  
 > [!NOTE]  
 > If you do not want to use System Center 2016, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
   

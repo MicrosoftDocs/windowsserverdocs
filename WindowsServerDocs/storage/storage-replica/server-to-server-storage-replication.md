@@ -1,23 +1,23 @@
 ---
 title: Server to Server Storage Replication
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: siroy
+ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
-author: kumudd
-ms.date: 08/18/2016
+author: nedpyle
+ms.date: 10/11/2016
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server to Server Storage Replication
 > Applies To: Windows Server 2016
 
-You will configure these computers and storage in a server-to-server configuration, where one node replicates its own set of storage with another node and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
+You can use Storage Replica to configure two servers to sync data so that each has an identical copy of the same volume. This topic provides some background of this server-to-server replication configuration, as well as how to set it up and manage the environment.
 
-Graphical Management of Storage Replica is supported using the free Server Manager Tool (SMT). Please examine Azure documentation for Preview availability of this set of management tools. This document will be updated afer SMT reaches general availability.
+To manage Storage Replica you can use PowerShell, or the [Azure Server management tools](https://blogs.technet.microsoft.com/servermanagement/).
 
 > [!IMPORTANT]
->  In this test, one node will need to be in a physical or logical site, and the other node in a different physical or logical site. Each server must be able to communicate with the other via a network.  
+>  In this scenario, each server should be in a different physical or logical site. Each server must be able to communicate with the other via a network.  
 
 ## Terms  
 This walkthrough uses the following environment as an example:  

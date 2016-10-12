@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 6618b3ce-0e94-4009-b887-d8e05453358b
 title: Federation Server Farm Using SQL Server
 description:
@@ -56,7 +56,7 @@ Similar to the federation server farm with WID topology, all of the federation s
   
 The following illustration shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network. It also shows how that company configured the perimeter network with access to a DNS server, an additional NLB host that uses the same cluster DNS name \(fs.contoso.com\) that is used on the corporate network NLB cluster, and with two federation server proxies \(fsp1 and fsp2\).  
   
-![](media/FarmSQLProxies.gif)  
+![server farm using SQL](media/FarmSQLProxies.gif)  
   
 For more information about how to configure your networking environment for use with federation servers or federation server proxies, see either [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md) or [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   

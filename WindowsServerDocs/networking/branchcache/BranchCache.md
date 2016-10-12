@@ -21,8 +21,7 @@ This topic, which is intended for Information Technology (IT) professionals, pro
 > In addition to this topic, the following BranchCache documentation is available.
 > 
 > - [BranchCache Network Shell and Windows PowerShell Commands](../branchcache/BranchCache-Network-Shell-and-Windows-PowerShell-Commands.md)
-> - [BranchCache Deployment Guide](../branchcache/deploy/BranchCache-Deployment-Guide.md)
-> - [Deploy BranchCache Hosted Cache Mode](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/bc-hcm/1-deploy-bc-hcm)
+> -   [BranchCache Deployment Guide](../branchcache/deploy/BranchCache-Deployment-Guide.md)
 
 **Who will be interested in BranchCache?**
 
@@ -36,52 +35,43 @@ If you are a system administrator, network or storage solution architect, or oth
 
 - You have deployed or are planning on deploying content servers at your main office that match the configurations that are described in this topic.
 
-- The client computers in your branch offices are running Windows 10,  Windows 8.1, Windows 8, or  Windows 7.
+- The client computers in your branch offices are running Windows 10,  Windows 8.1, Windows 8, or  Windows 7 .
 
 This topic includes the following sections:
 
-- [What is BranchCache?](#bkmk_what)
+-   [What is BranchCache?](#bkmk_what)
 
-- [BranchCache modes](#BKMK_2)
-
-- [BranchCache-enabled content servers](#BKMK_3)
-
-- [BranchCache and the cloud](#BKMK_3a)
-
-- [Content information versions](#bkmk_version)
-
-- [How BranchCache handles content updates in files](#bkmk_handles)
-
-- [BranchCache installation guide](#BKMK_4)
-
-- [Operating system versions for BranchCache](#bkmk_os)
-
-- [BranchCache security](#bkmk_security)
-
-- [Content flow and processes](#bkmk_flow)
-
-- [Cache Security](#bkmk_cache)
-
+-   [BranchCache modes](#BKMK_2)
+  
+-   [BranchCache-enabled content servers](#BKMK_3)
+  
+-   [BranchCache and the cloud](#BKMK_3a)
+  
+-   [Content information versions](#bkmk_version)  
+  
+-   [How BranchCache handles content updates in files](#bkmk_handles)  
+  
+-   [BranchCache installation guide](#BKMK_4)  
+  
+-   [Operating system versions for BranchCache](#bkmk_os)  
+  
+-   [BranchCache security](#bkmk_security)  
+  
+-   [Content flow and processes](#bkmk_flow)  
+  
+-   [Cache Security](#bkmk_cache)  
+  
 ## <a name="bkmk_what"></a>What is BranchCache?
 
-BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of the Windows Server 2016 and Windows 10 operating systems, as well as in some editions of Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, and  Windows 7. To optimize WAN bandwidth when users access content on remote servers, BranchCache downloads content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.
+BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of the Windows Server 2016 and Windows 10 operating systems, as well as in some editions of Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2 and  Windows 7. To optimize WAN bandwidth when users access content on remote servers, BranchCache fetches content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.
+  
+At branch offices, content is stored either on servers that are configured to host the cache or, when no server is available in the branch office, on client computers that are running Windows 10, Windows 8.1, Windows 8 or Windows 7. After a client computer requests and receives content from the main office and the content is cached at the branch office, other computers at the same branch office can obtain the content locally rather than downloading the content from the content server over the WAN link.
 
-At branch offices, content is stored either on servers that are configured to host the cache or, when no server is available in the branch office, on client computers that are running Windows 10, Windows 8.1, Windows 8 or Windows 7.
-
-After a client computer requests and receives content from the main office and the content is cached at the branch office, other computers at the same branch office can obtain the content locally rather than downloading the content from the content server over the WAN link.
-
-When subsequent requests for the same content are made by client computers, the clients download *content information* from the server instead of the actual content.
-
-Content information consists of hashes that are calculated by using chunks of the original content. Content information hashes are extremely small compared to the content in the original data.
-
-Client computers then use the content information to locate the content from a cache in the branch office, whether the cache is located on a client computer or on a server.
-
-Client computers and servers also use content information to secure cached content so that it cannot be accessed by unauthorized users.
+When subsequent requests for the same content are made by client computers, the clients download *content information* from the server instead of the actual content. Content information consists of hashes that are calculated using chunks of the original content, and are extremely small compared to the content in the original data. Client computers then use the content information to locate the content from a cache in the branch office, whether the cache is located on a client computer or on a server. Client computers and servers also use content information to secure cached content so that it cannot be accessed by unauthorized users.
 
 BranchCache increases end user productivity by improving content query response times for clients and servers in branch offices, and can also help improve network performance by reducing traffic over WAN links.
 
 ## <a name="BKMK_2"></a>BranchCache modes
-
 BranchCache has two modes of operation: distributed cache mode and hosted cache mode.
 
 When you deploy BranchCache in distributed cache mode, the content cache at a branch office is distributed among client computers.
@@ -104,6 +94,7 @@ If the branch office where you want to deploy BranchCache contains additional in
 Hosted cache mode increases the cache efficiency because content is available even if the client that originally requested and cached the data is offline. Because the hosted cache server is always available, more content is cached, providing greater WAN bandwidth savings, and BranchCache efficiency is improved.
 
 ### Centralized caching for multiple-subnet branch offices
+
 
 Distributed cache mode operates on a single subnet. At a multiple-subnet branch office that is configured for distributed cache mode, a file downloaded to one subnet cannot be shared with client computers on other subnets. 
 
@@ -150,6 +141,7 @@ Because BranchCache does not require new hardware or network topology changes, i
 > [!NOTE]
 > Because some Web proxies cannot process non-standard Content-Encoding headers, it is recommended that you use BranchCache with Hyper Text Transfer Protocol Secure (HTTPS) and not HTTP.
   
+=======
 For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](../sdn/Software-Defined-Networking--SDN-.md).
   
 ## <a name="bkmk_version"></a>Content information versions

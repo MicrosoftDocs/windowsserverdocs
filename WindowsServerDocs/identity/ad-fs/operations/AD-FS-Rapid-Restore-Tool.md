@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
 title: AD FS Rapid Restore Tool
 description:
@@ -63,7 +63,7 @@ The cmdlet takes the following parameters:
 	
 Parameter Sets
 
-![](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
+![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
 
 ### Detailed Description
 
@@ -120,7 +120,7 @@ The user has to be both local and domain admin to run this cmdlet.
 
 The cmdlet takes the following parameters: 
 
-![](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
+![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
 
 ### Detailed Description
 

@@ -23,6 +23,7 @@ To use IPAM to manage resources in remote Active Directory forests, each forest 
 To start the discovery process for different Active Directory forests, open Server Manager and click IPAM. In the IPAM client console, click **Configure Server Discovery**, and then click **Get forests**. This initiates a background task that discovers trusted forests and their domains. After the discovery process completes, click **Configure Server Discovery**, which opens the following dialog box.  
   
 ![Configure Server Discovery](../../media/Manage-Resources-in-Multiple-Active-Directory-Forests/ipam_serverdiscovery.jpg)  
+
 >[!NOTE]
 >For Group Policy\-based provisioning for an Active Directory Cross Forest scenario, ensure that you run the following Windows PowerShell cmdlet on the IPAM server and not on the trusting domain DCs. As an example, if your IPAM server is joined to the forest corp.contoso.com and the trusting forest is fabrikam.com, you can run the following Windows PowerShell cmdlet on the IPAM server in corp.contoso.com for Group Policy\-based provisioning on the fabrikam.com forest. To run this cmdlet, you must be a member of the Domain Admins group in the fabrikam.com forest.
 

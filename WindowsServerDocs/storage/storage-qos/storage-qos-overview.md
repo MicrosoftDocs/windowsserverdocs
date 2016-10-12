@@ -7,7 +7,7 @@ ms.technology: storage-qos
 ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
-ms.date: 08/18/2016
+ms.date: 10/10/2016
 ---
 # Storage Quality of Service
 > Applies To: Windows Server 2016
@@ -814,22 +814,20 @@ System Center Virtual Machine Manager can be used to apply policies across multi
 
 If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency/IOPS/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.
 
-### <a name="BKMK_Updates"></a>What new functionality was added in Windows Server 2016 Technical Preview 5  
+### <a name="BKMK_Updates"></a>What new functionality was added in Windows Server 2016
 
-In Windows Server 2016 Technical Preview 5 the Storage QoS Policy type names were renamed.  The **Multi-instance** policy type is renamed as **Dedicated** and **Single-instance** was renamed as **Aggregated**. The management behavior of Dedicated policies is also modified - VHD/VHDX files within the same virtual machine that have the same **Dedicated** policy applied to them will not share I/O allocations.  
+In Windows Server 2016 the Storage QoS Policy type names were renamed.  The **Multi-instance** policy type is renamed as **Dedicated** and **Single-instance** was renamed as **Aggregated**. The management behavior of Dedicated policies is also modified - VHD/VHDX files within the same virtual machine that have the same **Dedicated** policy applied to them will not share I/O allocations.  
 
-### What new functionality was added in Windows Server 2016 Technical Preview 4  
-
-There are two new Storage QoS features Windows Server 2016 Technical Preview 4:  
+There are two new Storage QoS features Windows Server 2016:  
 
 -   **Maximum Bandwidth**  
 
-    Storage QoS in Technical Preview 4 introduces the ability to specify the maximum bandwidth that the flows assigned to the policy may consume.  The parameter when specifying it in the **StorageQosPolicy** cmdlets is **MaximumIOBandwidth** and the output is expressed in bytes per second.  
+    Storage QoS in Windows Server 2016 introduces the ability to specify the maximum bandwidth that the flows assigned to the policy may consume.  The parameter when specifying it in the **StorageQosPolicy** cmdlets is **MaximumIOBandwidth** and the output is expressed in bytes per second.  
     If both **MaximimIops** and **MaximumIOBandwidth** are set in a policy, they will both be in effect and the first one to be reached by the flow(s) will limit the I/O of the flows.  
 
 -   **IOPS normalization is configurable**  
 
-    Storage QoSin  uses normalization of IOPS.  The default is to use a normalization size of 8K.  Storage QoS in Technical Preview 4  introduces the ability to specify a different normalization size for the storage cluster.  This normalization size effects all flows on the storage cluster and takes effect immediately (within a few seconds) once it is changed.  The minimum is 1KB and the maximum is 4GB (recommend not setting more than 4MB since it's unusual to have more than 4MB IOs).  
+    Storage QoSin  uses normalization of IOPS.  The default is to use a normalization size of 8K.  Storage QoS in Windows Server 2016 introduces the ability to specify a different normalization size for the storage cluster.  This normalization size effects all flows on the storage cluster and takes effect immediately (within a few seconds) once it is changed.  The minimum is 1KB and the maximum is 4GB (recommend not setting more than 4MB since it's unusual to have more than 4MB IOs).  
 
     Something to consider is that the same IO pattern/throughput shows up with different IOPS numbers in the Storage QoS output when you change the IOPS normalization due to the change in normalization calculation.  If you are comparing IOPS between storage clusters, you may also want to verify what normalization value each is using since that will effect the normalized IOPS reported.    
 

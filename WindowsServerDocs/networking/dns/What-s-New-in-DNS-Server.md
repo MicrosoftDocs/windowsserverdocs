@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New in DNS Server in Windows Server 2016
+title: What's New in DNS Server in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,13 +12,13 @@ ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: jamesmci
 author: jamesmci
 ---
-# What&#39;s New in DNS Server in Windows Server 2016
+# What's New in DNS Server in Windows Server 2016
 
 >Applies To: Windows Server&reg; 2016
 
-This topic describes the Domain Name System (DNS) server functionality that is new or changed in  Windows Server 2016.
+This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   
-In  Windows Server 2016, DNS Server offers enhanced support in the following areas.  
+In Windows Server 2016, DNS Server offers enhanced support in the following areas.  
   
 |Functionality|New or Improved|Description|  
 |-----------------|-------------------|---------------|  
@@ -80,7 +80,7 @@ An "Unknown Record" is an RR whose RDATA format is not known to the DNS server. 
 The IPV6 root hints, as published by IANA, have been added to the windows DNS server. The internet name queries can now use IPv6 root servers for performing name resolutions.  
   
 ## Windows PowerShell support  
-The following new Windows PowerShell cmdlets and parameters are introduced in Windows Server 2016.  
+The following new Windows PowerShell cmdlets and parameters are introduced in Windows Server Technical Preview.  
   
 -   **Add-DnsServerRecursionScope**. This cmdlet creates a new recursion scope on the DNS server. Recursion scopes are used by DNS policies to specify a list of forwarders to be used in a DNS query.  
   
@@ -107,6 +107,7 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
 -   **Get-DnsServerQueryResolutionPolicy**. This cmdlet retrieves information about existing DNS policies.  
   
 -   **Enable-DnsServerPolicy**. This cmdlet enables existing DNS policies.  
+  
 -   **Disable-DnsServerPolicy**. This cmdlet disables existing DNS policies.  
   
 -   **Add-DnsServerZoneTransferPolicy**. This cmdlet creates a new DNS server zone transfer policy. DNS zone transfer policies specify whether to deny or ignore a zone transfer based on different criteria.  
@@ -139,8 +140,6 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
   
 -   [What's New in DNS Client](What-s-New-in-DNS-Client.md)  
   
--   [Windows DNS Server team blogs](http://blogs.technet.com/b/networking/archive/tags/dns/)  
-  
--   [DNS PowerShell cmdlets](https://technet.microsoft.com/en-us/library/jj649863.aspx)  
+
   
 

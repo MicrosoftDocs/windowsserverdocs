@@ -20,7 +20,7 @@ manager: dongill
 Use the following steps to create a virtual machine to host the RD Connection Broker role service:  
   
 1. In the Azure portal, click **Browse > Virtual machines > Add > Windows Server**.   
-2. Click **Windows Server 2016 Technical Preview 5**.  
+2. Click **Windows Server 2016**.  
 3. Choose **Resource Manager** for the deployment model, and then click **Create**.  
 4. Enter a name for the virtual machine (for example, Contoso-CB2).  
 5. Enter a user name and password to add to the local administrators group.  

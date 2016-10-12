@@ -20,7 +20,7 @@ In the organizational domain forest model, several autonomous groups each own a 
   
 The following illustration shows an organizational domain forest model.  
   
-![](../../media/Using-the-Organizational-Domain-Forest-Model/c50a3c6a-b0e4-43ec-ad62-f05d05f0bbd2.gif)  
+![using the org domain forest model](../../media/Using-the-Organizational-Domain-Forest-Model/c50a3c6a-b0e4-43ec-ad62-f05d05f0bbd2.gif)  
   
 ## Domain-level service autonomy  
 The organizational domain forest model enables the delegation of authority for domain-level service management. The following table lists the types of service management that can be controlled at the domain level.  

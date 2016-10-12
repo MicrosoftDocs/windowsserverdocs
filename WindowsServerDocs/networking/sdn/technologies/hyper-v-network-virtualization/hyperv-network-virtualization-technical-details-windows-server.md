@@ -21,7 +21,7 @@ Server virtualization enables multiple server instances to run concurrently on a
   
 Network virtualization provides a similar capability, in which multiple virtual networks (potentially with overlapping IP addresses) run on the same physical network infrastructure and each virtual network operates as if it is the only virtual network running on the shared network infrastructure. Figure 1 shows this relationship.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF1.gif)  
+![Server virtualization versus network virtualization](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF1.gif)  
   
 Figure 1: Server virtualization versus network virtualization  
   
@@ -55,7 +55,7 @@ There are two HNV implementations which will be available in  Windows Server 201
   
 A key advantage of the virtual network and routing domain is that it allows customers to bring their own network topologies (for example, IP subnets) to the cloud. Figure 2 shows an example where the Contoso Corp has two separate networks, the R&D Net and the Sales Net. Because these networks have different routing domain IDs, they cannot interact with each other. That is, Contoso R&D Net is isolated from Contoso Sales Net even though both are owned by Contoso Corp. Contoso R&D Net contains three virtual subnets. Note that both the RDID and VSID are unique within a datacenter.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF6.gif)  
+![Customer networks and virtual subnets](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF6.gif)  
   
 Figure 2: Customer networks and virtual subnets  
   
@@ -118,7 +118,7 @@ Each virtual network adapter in HNV is associated with two IP addresses:
   
 The CAs maintain the customer's network topology, which is virtualized and decoupled from the actual underlying physical network topology and addresses, as implemented by the PAs. The following diagram shows the conceptual relationship between virtual machine CAs and network infrastructure PAs as a result of network virtualization.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF2.gif)  
+![Conceptual diagram of network virtualization over physical infrastructure](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF2.gif)  
   
 Figure 6: Conceptual diagram of network virtualization over physical infrastructure  
   
@@ -140,12 +140,12 @@ HNV implements overlay tenant networks using either Network Virtualization Gener
 ### Virtual eXtensible Local Area Network (VXLAN)  
 The Virtual eXtensible Local Area Network (VXLAN) ([RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Arista, Dell, HP and others. The VXLAN protocol uses UDP as the transport. The IANA-assigned UDP destination port for VXLAN is 4789 and the UDP source port should be a hash of information from the inner packet to be used for ECMP spreading. After the UDP header, a VXLAN header is appended to the packet which includes a reserved 4-byte field followed by a 3-byte field for the VXLAN Network Identifier (VNI) - VSID - followed by another reserved 1-byte field. After the VXLAN header, the original CA L2 frame (without the CA Ethernet frame FCS) is appended.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VXLAN-packet-header.png)  
+![VXLAN packet header](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VXLAN-packet-header.png)  
   
 ### Generic Routing Encapsulation (NVGRE)  
 This network virtualization mechanism uses the Generic Routing Encapsulation (NVGRE) as part of the tunnel header. In NVGRE, the virtual machine's packet is encapsulated inside another packet. The header of this new packet has the appropriate source and destination PA IP addresses in addition to the Virtual Subnet ID, which is stored in the Key field of the GRE header, as shown in Figure 7.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF3.gif)  
+![NVGRE encapsulation](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF3.gif)  
   
 Figure 7: Network virtualization - NVGRE encapsulation  
   
@@ -160,7 +160,7 @@ With  Windows Server 2016 and later, HNV fully supports NVGRE and VXLAN out of t
 ## Multi-tenant deployment example  
 The following diagram shows an example deployment of two customers located in a cloud datacenter with the CA-PA relationship defined by the network policies.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF5.png)  
+![Multi-tenant deployment example](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF5.png)  
   
 Figure 8: Multi-tenant deployment example  
   
@@ -270,7 +270,7 @@ The VFP extension has a slow-path and fast-path for packet traversal. The first 
   
 HNV policy is programmed by the host agent. Each virtual machine network adapter is configured with an IPv4 address. These are the CAs that will be used by the virtual machines to communicate with each other, and they are carried in the IP packets from the virtual machines. HNV encapsulates the CA frame in a PA frame based on the network virtualization policies stored in the host agent's database.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF7.png)  
+![HNV Architecture](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF7.png)  
   
 Figure 9: HNV Architecture  
   

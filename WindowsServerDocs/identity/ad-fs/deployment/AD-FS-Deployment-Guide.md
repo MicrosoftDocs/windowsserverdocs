@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adfs
 ---
-# AD FS 2016 Design Guide
+# AD FS 2016 Deployment Guide
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -20,7 +20,7 @@ The AD FS deployment guide is a comprehensive guide for deploying AD FS.  This g
   
 * [Upgrading to AD FS in Windows Server 2016](Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
 
-* [Windows Server 2012 R2 Deployment Guide](Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
+* [Windows Server 2016 and 2012 R2 Deployment Guide](Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 * [Windows Server 2012 Deployment Guide](Windows-Server-2012-AD-FS-Deployment-Guide.md)
 

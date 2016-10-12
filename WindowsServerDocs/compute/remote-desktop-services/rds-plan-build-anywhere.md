@@ -12,6 +12,7 @@ author: lizap
 ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
+
 ---
 # Remote Desktop Services - Build anywhere
 
@@ -22,7 +23,7 @@ Deploy on-premises, in the cloud, or a hybrid of the two. Modify your deployment
 Regardless of where you are, the underlying [architecture](desktop-hosting-logical-architecture.md) of the Remote Desktop Services environment remains the same:
 - You still must have an internet-facing server to utilize RD Web Access and RD Gateway for external users
 - You still must have an Active Directory and--for highly available environments--a SQL database to house user and Remote Desktop properties
-- You still must have communication access between the RD infrastructure roles (RD Connection Broker, RD Gateway, RD Licensing, and RD Web Access) and the end RDSH or RDVH hosts to be able to connect end-users to their desktops or applicaitons.
+- You still must have communication access between the RD infrastructure roles (RD Connection Broker, RD Gateway, RD Licensing, and RD Web Access) and the end RDSH or RDVH hosts to be able to connect end-users to their desktops or applications.
 
 This flexibility allows you to get the best of both worlds:
 - The simplicity and pay-as-you-go methods associated with the cloud and the online world.

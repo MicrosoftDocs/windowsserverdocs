@@ -68,7 +68,7 @@ Get-Module
   
 ```  
   
-![](media/Simplified-Administration-Appendix/ADDS_PSGetModule.gif)  
+![Simplified Administration](media/Simplified-Administration-Appendix/ADDS_PSGetModule.gif)  
   
 To see all installed modules with their exported functions and cmdlets, use:  
   
@@ -100,9 +100,9 @@ The following table describes the two new menu items:
 |Create Full NoDefrag %s|Create IFM media without defragmenting for a full AD DC or an AD/LDS instance into folder %s|  
 |Create Sysvol Full NoDefrag %s|Create IFM media with SYSVOL and without defragmenting for a full AD DC into folder %s|  
   
-![](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)  
+![Simplified Administration](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)  
   
-![](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)  
+![Simplified Administration](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)  
   
 
 

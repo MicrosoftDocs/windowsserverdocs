@@ -20,9 +20,9 @@ Before you can configure a cluster deployment, you prepare additional servers to
   
 |Task|Description|  
 |--------|---------------|  
-|[2.1 Configure the Remote Access infrastructure](assetId:///586b8014-32ef-4c24-a51d-27c0b0e5dcfa#BKMK_config)|On each server you want to add to the cluster, configure the server topology, IP addressing, routing, and forwarding. If you configure a load balanced cluster of virtual machines, you must configure the virtual machines to use MAC address spoofing.<br /><br />In addition, join each server to the same domain, and connect all the servers to the same subnet.|  
-|[2.2 Install the Remote Access role](assetId:///586b8014-32ef-4c24-a51d-27c0b0e5dcfa#BKMK_Install)|On each additional server you want to add to the cluster, install the Remote Access role|  
-|[2.3 Install NLB](assetId:///586b8014-32ef-4c24-a51d-27c0b0e5dcfa#BKMK_NLB)|On the deployed Remote Access server and on each additional server you want to add to the cluster, install the NLB feature. Note that this step is not required when using an External Load Balancer.|  
+|[2.1 Configure the Remote Access infrastructure](#BKMK_config)|On each server you want to add to the cluster, configure the server topology, IP addressing, routing, and forwarding. If you configure a load balanced cluster of virtual machines, you must configure the virtual machines to use MAC address spoofing.<br /><br />In addition, join each server to the same domain, and connect all the servers to the same subnet.|  
+|[2.2 Install the Remote Access role](#BKMK_Install)|On each additional server you want to add to the cluster, install the Remote Access role|  
+|[2.3 Install NLB](#BKMK_NLB)|On the deployed Remote Access server and on each additional server you want to add to the cluster, install the NLB feature. Note that this step is not required when using an External Load Balancer.|  
   
 ## <a name="BKMK_config"></a>2.1 Configure the Remote Access infrastructure  
 To configure a Remote Access cluster, you must configure the server topology, IP addressing, routing, and forwarding on every server that will form part of the cluster.  
@@ -78,7 +78,7 @@ To configure a Remote Access cluster, you must install the Network Load Balancin
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Step 3: Configure a load-balanced cluster](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
+-   [Step 3: Configure a load-balanced cluster](Step-3--Configure-a-Load-Balanced-Cluster.md)  
   
 
 

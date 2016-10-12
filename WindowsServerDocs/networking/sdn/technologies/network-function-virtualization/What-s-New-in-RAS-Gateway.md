@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New in RAS Gateway
+title: What's New in RAS Gateway
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
 ms.author: jamesmci
 author: jamesmci
 ---
-# What&#39;s New in RAS Gateway
+# What's New in RAS Gateway
 
 >Applies To: Windows Server&reg; 2016
 
@@ -50,17 +50,17 @@ You can create gateway pools using any logic that you prefer based on your infra
   
 -   Customized separation for customers  
   
-For more information, see [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
+For more information, see [RAS Gateway High Availability](RAS-Gateway-High-Availability.md).  
   
 ## <a name="bkmk_gps"></a>Gateway Pool Scalability  
 You can easily scale a gateway pool up or down by adding or removing gateway VMs in the pool. Removal or addition of gateways does not disrupt the services that are provided by a pool. You can also add and remove entire pools of gateways.  
   
-For more information, see [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
+For more information, see [RAS Gateway High Availability](RAS-Gateway-High-Availability.md).  
   
 ## <a name="bkmk_m"></a>M+N Gateway Pool Redundancy  
 Every gateway pool is M+N redundant. This means that an 'M' number of active gateway virtual machines (VMs) are backed up by an 'N' number of standby gateway VMs. M+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway. Rather than using only one standby RAS Gateway per active RAS Gateway VM - which is the only configuration option with  Windows Server 2012 R2  - you can now configure as many  standby VMs as you require. The Network Controller Gateway Service Manager feature efficiently uses the standby RAS Gateway VM capacity to provide reliable failover if an active RAS Gateway VM fails or loses connectivity.  
   
-For more information, see [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
+For more information, see [RAS Gateway High Availability](RAS-Gateway-High-Availability.md).  
   
 ## <a name="bkmk_rr"></a>Route Reflector  
 The Border Gateway Protocol (BGP) Route Reflector is now included with RAS Gateway, and provides an alternative to BGP full mesh topology that is required for route synchronization between routers. With full mesh synchronization, all BGP routers must connect with all other routers in the routing topology. When you use Route Reflector, however, the Route Reflector is the only router that connects with all of the other routers, called BGP clients, thereby simplifying route synchronization and reducing network traffic. The Route Reflector learns all routes, calculates best routes, and redistributes the best routes to its BGP clients.  
@@ -85,6 +85,6 @@ A BGP Route Reflector in the control plane addresses these problems and makes th
   
 -   If your Enterprise customers use BGP Routing in the Customer Address space, the RAS Gateway  Route Reflector is the only external BGP (eBGP) neighbor for all of the sites of the corresponding tenant. This is true regardless of the Enterprise tenant's tunnel termination points. In other words, no matter which RAS Gateway VM in the CSP datacenter terminates the site-to-site VPN tunnel for a tenant site, the eBGP Peer for all the tenant sites is the Route Reflector.  
   
-For more information, see [RAS Gateway Deployment Architecture](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md) and the Internet Engineering Task Force (IETF) Request for Comments topic [RFC 4456 BGP Route Reflection: An Alternative to Full Mesh Internal BGP (IBGP)](https://tools.ietf.org/html/rfc4456).  
+For more information, see [RAS Gateway Deployment Architecture](RAS-Gateway-Deployment-Architecture.md) and the Internet Engineering Task Force (IETF) Request for Comments topic [RFC 4456 BGP Route Reflection: An Alternative to Full Mesh Internal BGP (IBGP)](https://tools.ietf.org/html/rfc4456).  
   
 

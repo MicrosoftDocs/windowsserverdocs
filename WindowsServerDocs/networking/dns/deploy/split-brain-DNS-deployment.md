@@ -144,8 +144,7 @@ Because of this, Contoso DNS administrators do not want the DNS server for conto
 
 The following illustration depicts this scenario.
 
-![Selective Recursion Control](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg)  
-
+![Selective Recursion Control](../../media/DNS-Split-Brain/Dns-Split-Brain-02.jpg) 
 
 
 ### <a name="bkmk_recursionhow"></a>How DNS Selective Recursion Control Works

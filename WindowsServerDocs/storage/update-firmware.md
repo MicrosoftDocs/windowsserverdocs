@@ -10,6 +10,8 @@ author: toklima
 ms.date: 10/04/2016
 ---
 # Updating drive firmware in Windows Server 2016
+>Applies To: Windows Server 2016
+
 Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces and Windows Server 2016. If you have drives that support the new firmware update mechanism included in Windows Server, you can update drive firmware of in-production drives without downtime. However, if you’re going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
   > [!Warning]

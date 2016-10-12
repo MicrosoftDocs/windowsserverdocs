@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 65e474b5-3076-4ba3-809d-a09160f7c2bd
 title: The Role of Claim Rules
 description:
@@ -87,7 +87,7 @@ You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to 
 ## What is a claim rule set?  
 As shown in the following illustration, a claim rule set is a grouping of one or more rules for a given federated trust that will define how claims will be processed by the claims rule engine. When an incoming claim is received by the Federation Service the claim rule engine applies the logic specified by the appropriate claim rule set. It is the final sum of the logic from each rule in the set that will determine how claims will be issued for a given trust in its entirety.  
   
-![](media/adfs2_claimruleset.gif)  
+![AD FS roles](media/adfs2_claimruleset.gif)  
   
 Claim rules are processed by the claims engine in chronological order within a given rule set. This order is important, because the output of one rule can be used as the input to the next rule in the set.  
   

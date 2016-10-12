@@ -5,7 +5,6 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
@@ -15,8 +14,6 @@ ms.author: jaimeo
 # PowerShell on Nano Server
 
 >Applies To: Windows Server 2016
-
-  
   
   
 ## PowerShell Editions   
@@ -108,7 +105,7 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
 * Get-PfxCertificate cmdlet   
 * TraceSource cmdlets { Get | Set }   
 * Counter cmdlets { Get | Export | Import }   
-* Web-related cmdlets  { Invoke-WebRequest, Invoke-RestMethod, New-WebServiceProxy, Send-MailMessage, ConvertTo-Html }  
+* Some web-related cmdlets  { New-WebServiceProxy, Send-MailMessage, ConvertTo-Html }  
 * Logging and tracing using PSDiagnostics module    
 * Get-HotFix (to obtain and manage updates on Nano Server, see [Manage Nano Server](Manage-Nano-Server.md)).  
 * Implicit remoting cmdlets { Export-PSSession | Import-PSSession }   

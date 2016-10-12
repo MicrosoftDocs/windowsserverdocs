@@ -28,7 +28,8 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the lower navigation pane, click **Forward Lookup**, and then expand the domain and zone list to locate and select the zone you want to view. For example, if you have a zone named dublin, click **dublin**.  
   
-    ![Select the zone](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01a.jpg)  
+    ![Select the zone you want to view](../../media/View-DNS-Resource-Records-for-a-DNS-Zone/ipam_DNSzones_01a.jpg)  
+
   
 4.  In the display pane, the default view is of the DNS servers for the zone. To change the view, click **Current view**, and then click **Resource Records**.  
   

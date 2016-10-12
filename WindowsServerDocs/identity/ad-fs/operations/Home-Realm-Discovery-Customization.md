@@ -18,7 +18,7 @@ ms.technology: identity-adfs
 
 When the AD FS client first requests a resource, the resource federation server has no information about the realm of the client. The resource federation server responds to the AD FS client with a **Client Realm Discovery** page, where the user selects the home realm from a list. The list values are populated from the display name property in the Claims Provider Trusts. Use the following Windows PowerShell cmdlets to modify and customize the AD FS Home Realm Discovery experience.  
   
-![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom4.png)  
+![home realm](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom4.png)  
   
 > [!WARNING]  
 > Be aware that the Claims Provider name that shows up for local Active Directory is the federation service display name.  

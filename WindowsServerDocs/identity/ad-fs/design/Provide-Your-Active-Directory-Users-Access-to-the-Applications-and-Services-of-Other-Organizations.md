@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 2d62386c-b466-4a54-b6fa-5d16cda120d8
 title: Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
 description:
@@ -40,7 +40,7 @@ After reviewing the information in the linked topics, you can begin deploying th
   
 The following illustration shows each of the required components for this AD FS deployment goal.  
   
-![](media/50af4837-31e0-451f-a942-e705c2300065.gif)  
+![access to your apps](media/50af4837-31e0-451f-a942-e705c2300065.gif)  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -7,10 +7,11 @@ ms.suite: na
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
 manager: dongill
 author: larsiwer
 ms.author: kathyDav
-ms.date: 10/03/2016
+ms.date: 10/07/2016
 ---
 
 # Plan for Hyper-V security in Windows Server 2016

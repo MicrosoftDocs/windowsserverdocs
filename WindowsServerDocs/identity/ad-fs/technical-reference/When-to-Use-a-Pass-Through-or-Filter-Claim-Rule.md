@@ -1,4 +1,4 @@
----
+﻿---
 ms.assetid: 606df285-259c-4c6b-8583-9aca1d614c43
 title: When to Use a Pass Through or Filter Claim Rule
 description:
@@ -51,7 +51,7 @@ When you use a filter condition with this rule, all incoming claims are examined
   
 For example, as shown in the following illustration, when a rule is set with the condition to filter only incoming claims that are keyed to the UPN claim type and also end with @fabrikam.com, all other incoming claims are ignored unless they meet this criteria. This includes the incoming claim with the claim type of E\-Mail Address even though its claim value ends in @fabrikam.com. In this case, only the claim containing the value of Nick@fabrikam.com is sent to the relying party.  
   
-![](media/adfs2_filter.gif)  
+![when to use pass through](media/adfs2_filter.gif)  
   
 ## Configuring this rule on a claims provider trust  
 When you use a claims provider trust, this rule can be configured to pass through only incoming claims from the claims provider that match certain constraints. For example, you might want to only accept e\-mail claims from the claims provider; therefore, you would use this rule template to accept e\-mail claim types that end in the claims provider’s Domain Name System \(DNS\) name.  
