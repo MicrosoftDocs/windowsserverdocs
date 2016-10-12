@@ -19,18 +19,22 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Use this topic to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
+
 To read introductory information about the command shell and command-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_OVER). To see a listing of new and deprecated command-line tools see [New and deprecated functionality](Command-Line-Reference_1.md#BKMK_NEW).
+
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+
 [A](#bkmk_a) | [B](#BKMK_b) | [C](#BKMK_c) | [D](#BKMK_d) | [E](#BKMK_e) | [F](#BKMK_f) | [G](#BKMK_g) | [H](#BKMK_h) | [I](#BKMK_i) | [J](Command-Line-Reference_1.md#BKMK_j)| [K](Command-Line-Reference_1.md#BKMK_k) | [L](#BKMK_l) | [M](#BKMK_m) | [N](#BKMK_n) | [O](#BKMK_o) | [P](#BKMK_p) | [Q](#BKMK_q) | [R](#BKMK_r) | [S](#BKMK_s) | [T](#BKMK_t) | [U](#bkmk_u) | [V](#bkmk_v) | [W](#bkmk_w) | [X](#bkmk_x) | [Y](Command-Line-Reference_1.md#BKMK_y) | [Z](Command-Line-Reference_1.md#BKMK_z)
+
 ## <a name="BKMK_PREREQ"></a>Prerequisites
 The information that is contained in this overview applies to:
--    Windows Server 2012 
+-   Windows Server 2012 
 -   Windows Server 2008 R2
 -   Windows Server 2008
 -   Windows Server 2003 R2
 -   Windows Server 2003
 -   Windows 8
--    Windows 7 
+-   Windows 7 
 -   Windows Vista
 -   Windows XP
 ## <a name="BKMK_OVER"></a>Feature description
