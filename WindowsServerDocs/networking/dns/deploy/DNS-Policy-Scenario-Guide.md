@@ -32,5 +32,5 @@ This guide contains the following sections.
 - [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md)
 - [Use DNS Policy for Applying Filters on DNS Queries](apply-filters-on-dns-queries.md)
 - [Use DNS Policy for Application Load Balancing](app-lb.md)
-
+- [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)
 
