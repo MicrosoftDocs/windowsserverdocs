@@ -9,7 +9,7 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
 
-# Shielded VMs - hosting service provider prepares a VM Shielding Helper VHD
+# Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
 
 >Applies To: Windows Server 2016
 

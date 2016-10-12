@@ -31,7 +31,7 @@ Add the Host Guardian Service role by using Server Manager or by running the fol
 
 After the role is added, the next step is to run the [Install-HgsServer](https://technet.microsoft.com/library/mt652169.aspx) cmdlet to install the HGS. HGS is a critical component in a guarded fabric and is responsible for attesting to a Hyper-V host's health as well as releasing keys needed to work with shielded VMs. The HGS forest is sensitive because its administrators have access to the keys that control shielded VMs. 
 
-When you install HGS, it creates its own forest by default. Another option is to add HGS to an existing bastion forest. The next sections covers the two options.
+When you install HGS, it creates its own forest by default. Another option is to add HGS to an existing bastion forest. The next sections cover these two options.
 
 #### Choose whether to install HGS in its own new forest or in an existing bastion forest
 
@@ -529,6 +529,14 @@ Complete the following steps on at least one host that you want to run as a guar
         Get-HgsClientConfiguration
 
     The display shows whether attestation succeeded, that is, whether the host is now a guarded host.
+
+## Next steps
+
+Try these optional steps for hosters and tenant administrators who need to prepare and create shielded VMs:
+
+- [Hosting service provider creates a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
+- [Hosting service provider prepares a VM Shielding Helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)
+- [Tenant creates shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md)
 
 ## See also
 
