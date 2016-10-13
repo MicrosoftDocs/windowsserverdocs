@@ -1,5 +1,7 @@
 ---
 title: Domain Name System (DNS)
+description: This topic provides an overview of DNS in Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
