@@ -347,15 +347,14 @@ To comply with time tracing regulations you can manually archive w32tm logs, eve
 
 
 1. Clock accuracy using the Computed Time Offset performance monitor counter.  This shows the clock with in the desired accuracy.
-2.	Clock source using the w32tm logs looking for “Peer Response from”.  Following the message text is the IP address or VMIC, which describes the time source and the next in chain of reference clocks to validate.
-3.	Clock condition status using the w32tm logs to validate that “ClockDispl Discipline: *SKEW*TIME*” are occurring.  This indicates that w32tm is active at the time.
+2.	Clock source looking for “Peer Response from” in the w32tm logs.   Following the message text is the IP address or VMIC, which describes the time source and the next in chain of reference clocks to validate.
+3.	Clock condition status using the w32tm logs to validate that “ClockDispl Discipline: \*SKEW\*TIME\*” are occurring.  This indicates that w32tm is active at the time.
 
 #### Event Logging
-To get the complete story, you will also need Event log information.  By collecting the System Event log, and filtering on Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel-General, you may be able to discover if there are other influences that have changed the time, like third parties.  This might be necessary to rule out external interference.
-Group policy can affect which event logs are written to the log.  See the section above on Using Group Policy for more details.
+To get the complete story, you will also need Event log information.  By collecting the System Event log, and filtering on Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel-General, you may be able to discover if there are other influences that have changed the time, for instance, third parties.  These logs might be necessary to rule out external interference.  Group policy can affect which event logs are written to the log.  See the section above on Using Group Policy for more details.
 
 #### <a name="W32Logging"></a>W32time Debug Logging
-To enable w32tm for auditing purposes, the following command provides logging showing the periodic updates of the clock and indicates the source clock.  Restart the service to enable the new logging.  
+To enable w32tm for auditing purposes, the following command enables logging that shows the periodic updates of the clock and indicates the source clock.  Restart the service to enable the new logging.  
 
 For more information, see [How to turn on debug logging in the Windows Time Service](https://support.microsoft.com/en-us/kb/816043).
 
@@ -394,7 +393,7 @@ Both the domain and non-domain joined protocols requires UDP port 123.  For more
 ### Reliable Hardware Clock (RTC)
 Windows does not step time, unless certain bounds are exceeded, but rather skews the clock.  That means w32tm adjusts the frequency of the clock at a regular interval, using the Clock Update Frequency setting, which defaults to once a second with Windows Server 2016.  If the clock is behind, it accelerates the frequency and if it’s ahead, it slows the frequency down.  However, during that time between clock frequency adjustments, the hardware clock is in control.  If there’s an issue with the firmware or the hardware clock, the time on the machine can become less accurate.
 
-This is another reason you need to test and baseline in your environment.  If the “Computed Time Offset” performance counter does not stabilize at the accuracy you are targeting, then you might want to verify your firmware is up to date.  As another test, you can see if duplicate hardware doesn’t reproduce the same issue.
+This is another reason you need to test and baseline in your environment.  If the “Computed Time Offset” performance counter does not stabilize at the accuracy you are targeting, then you might want to verify your firmware is up to date.  As another test, you can see if duplicate hardware reproduce the same issue.
 
 ### Troubleshooting Time Accuracy and NTP
 You can use the Discovering the Hierarchy section above to understand the source of the inaccurate time.  Looking at the time offset, find the point in the hierarchy where time diverges the most from its NTP Source.  Once you understand the hierarchy, you’ll want to try and understand why that particular time source doesn’t receive accurate time.  
@@ -432,6 +431,25 @@ For manual NTP Server configuration used with non-domain joined machines or the 
 
 ## Leap Seconds
 The earth’s rotation period varies over time, caused by climatic and geological events. Typically, the variation is about a second every couple of years. Whenever the variation from atomic time grows to large, a correction of one second (up or down) is inserted, called a leap second. This is done in such a way that the difference never exceeds 0.9 seconds. This correction is determined and decided on years before it actually is needed. Before Windows Server 2016, the Microsoft Time Service was not aware of leap seconds, but relied on the external time service to take care of this. With the increased time accuracy of Windows Server 2016, Microsoft is working on a more suitable solution for the leap second problem.
+
+## Secure Time Seeding
+W32time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections.  This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [this blog post](https://blogs.msdn.microsoft.com/w32time/2016/09/28/secure-time-seeding-improving-time-keeping-in-windows/).  In deployments with a reliable time source(s) and well monitored machines that include monitoring for time offsets, you may choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead. 
+
+You can disable the feature with these steps:
+
+1.	Set the UtilizeSSLTimeData registry configuration value to 0 on a specific machine:
+
+	reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
+
+
+2.	If you are unable to reboot the machine immediately due to some reason, you can notify W32time service about the configuration update. This stops time monitoring and enforcement based on time data collected from SSL connections. 
+
+	W32tm.exe /config /update
+
+3.	Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections.  The latter part has a very small overhead and should not be a perf concern.
+
+4.	To apply this setting in an entire domain, please set the UtilizeSSLTimeData value in W32time group policy setting to 0 and publish the setting.  When the setting is picked up by a Group Policy Client, W32time service is notified and it will stop time monitoring and enforcement using SSL time data. The SSL time data collection will stop when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you may want to exclude such machines from this policy change. These devices will eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
+
 
 
 
