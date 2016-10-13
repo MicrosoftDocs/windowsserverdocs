@@ -1,5 +1,7 @@
 ---
 title: DNS Responses Based on Time of Day with an Azure Cloud App Server
+description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
