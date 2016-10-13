@@ -1,5 +1,7 @@
 ---
 title: Dynamic Host Configuration Protocol (DHCP)
+description: This topic provides a brief overview of Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

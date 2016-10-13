@@ -1,5 +1,7 @@
 ---
 title: Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)
+description: This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016, in addition to information about Switch Embedded Teaming (SET). 
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +17,7 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in  Windows Server 2016, in addition fo information about Switch Embedded Teaming (SET).  
+This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016, in addition to information about Switch Embedded Teaming (SET).  
   
 > [!NOTE]  
 > In editions of Windows Server previous to  Windows Server 2016, it is not possible to configure RDMA on network adapters that  are bound to a NIC Team or to a Hyper-V Virtual Switch.  In  Windows Server 2016, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET).  

@@ -1,5 +1,7 @@
 ---
 title: NIC Teaming and Virtual Local Area Networks (VLANs)
+description: This topic provides information about using NIC Teaming with virtual Local Area Networks (VLANs) on both host computers and VMs in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,7 @@
 ---
 title: Role-based Access Control
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

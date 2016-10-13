@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting NIC Teaming
+description: This topic provides information about troubleshooting NIC Teaming in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
