@@ -1,5 +1,7 @@
 ---
-title: What&#39;s New in DHCP
+title: What's New in DHCP
+description: This topic provides an overview of new features for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

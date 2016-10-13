@@ -1,5 +1,7 @@
 ---
 title: NIC Teaming
+description: This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

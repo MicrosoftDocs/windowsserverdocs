@@ -1,5 +1,7 @@
 ---
 title: NIC Teaming MAC Address Use and Management
+description: This topic provides information about how NIC Teaming uses the media access control (MAC) address in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

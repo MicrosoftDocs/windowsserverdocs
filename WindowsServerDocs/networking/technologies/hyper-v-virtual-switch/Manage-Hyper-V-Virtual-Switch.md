@@ -1,5 +1,7 @@
 ---
 title: Manage Hyper-V Virtual Switch
+description: This topic provides links to Hyper-V Virtual Switch management content for Windows Server 2016. 
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
