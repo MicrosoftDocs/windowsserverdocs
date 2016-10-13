@@ -9,23 +9,23 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
 
-# Shielded VMs - hosting service provider prepares a VM Shielding Helper VHD
+# Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
 
 >Applies To: Windows Server 2016
+
+<!-- This comment creates a break between the Applies To above and the Important note below. -->
 
 >**Important**&nbsp;&nbsp;You cannot convert existing non-shielded VMs to Shielded VMs. There is no workaround at this time. If you need to deploy Shielded VMs, create new ones directly from shielded templates. For more information, see [Deploy shielded VMs](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview). 
 
 This section outlines steps performed by a hosting service provider to enable support for converting existing VMs to shielded VMs.
 
-For information about other configuration options for shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 ## Prepare Helper VHD
 
-<!--In the Important below, change "the template disks you signed and protected with the template disk wizard" to something like "the template disks you created in <LINK-GOES-HERE-TO-SUBSECTION-IN-VMM-SECTION>." -->
-
 1.  On a machine with Hyper-V and the Remote Server Administration Tools feature “Shielded VM Tools” installed, create a new generation 2 VM with a blank VHDX and install Windows Server 2016 on it using the Windows Server ISO installation media. This VM should not be shielded and cannot use the Nano server installation option (it must be Server Core or Server with Desktop Experience).
 
-    >**Important**&nbsp;&nbsp;The VM Shielding Helper VHD **must not** be related to the template disks you signed and protected with the template disk wizard. If you re-use a template disk, there will be a disk signature collision during the shielding process because both disks will have the same GPT disk identifier. You can avoid this by creating a new (blank) VHD and installing Windows Server 2016 onto it using your ISO installation media.
+    >**Important**&nbsp;&nbsp;The VM Shielding Helper VHD **must not** be related to the template disks you created in [Hosting service provider creates a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md). If you re-use a template disk, there will be a disk signature collision during the shielding process because both disks will have the same GPT disk identifier. You can avoid this by creating a new (blank) VHD and installing Windows Server 2016 onto it using your ISO installation media.
 
 2.  Start the VM, complete any setup steps, and log into the desktop. Once you have verified the VM is in a working state, shut down the VM.
 
@@ -45,4 +45,5 @@ In the VMM Console, open the settings pane and then **Host Guardian Service Sett
 
 ## See also
 
-[Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

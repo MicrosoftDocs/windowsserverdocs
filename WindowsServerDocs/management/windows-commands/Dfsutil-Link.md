@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 The **dfsutil link** command displays the information about the link\(folder\) and link\(folder\) targets.Link commands are used to create a new link, delete a link or move the links.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 
@@ -34,9 +34,9 @@ dfsutil link <DfsPath> | add | Remove | move | /?
 |Parameter|Description|
 |-------------|---------------|
 |<DfsPath>|UNC path of the link.|
-|[Dfsutil Link Add](assetId:///76205257-121c-40d3-8030-9dc575aa809f)|Creates a new folder.|
-|[Dfsutil Link Remove](assetId:///d168f210-0ca3-422e-b5fa-8c56b15d751e)|Removes the specified folder.|
-|[Dfsutil Link Move](assetId:///5d17b72d-68ee-4b8a-90a1-cead0b21ee9f)|Moves the folder to another location in the namespace.|
+|Dfsutil Link Add|Creates a new folder.|
+|Dfsutil Link Remove|Removes the specified folder.|
+|Dfsutil Link Move|Moves the folder to another location in the namespace.|
 |\/?||
 
 ## <a name="BKMK_Examples"></a>Examples

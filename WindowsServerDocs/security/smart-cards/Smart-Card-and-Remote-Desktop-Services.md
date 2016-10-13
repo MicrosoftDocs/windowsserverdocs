@@ -31,7 +31,7 @@ Smart card support is required to enable many Remote Desktop Services scenarios.
 ## Remote Desktop Services redirection
 In a Remote Desktop scenario, a user is using a remote server for running services, and the smart card is local to the computer that the user is using. In a smart card sign-in scenario, the smart card service on the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in.
 
-![](../media/Smart-Card-and-Remote-Desktop-Services/WindowsSmartCardTechnicalReference_14.PNG)
+![Diagram showing the how the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in ](../media/Smart-Card-and-Remote-Desktop-Services/WindowsSmartCardTechnicalReference_14.PNG)
 
 Notes about the redirection model:
 

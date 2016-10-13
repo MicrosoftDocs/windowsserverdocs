@@ -1,13 +1,13 @@
 ---
 title: Cluster to cluster Storage Replication
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: siroy
+ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
-author: kumudd
-ms.date: 08/18/2016
+author: nedpyle
+ms.date: 10/11/2016
 ---
 # Cluster to cluster Storage Replication
 > Applies To: Windows Server 2016
@@ -16,7 +16,7 @@ Cluster-to-cluster replication is now available in Windows Server 2016, includin
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication. Azure Site Recovery will be able to configure this scenario. When that feature reaches general availability, this document will be updated.
+There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 16 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
@@ -80,7 +80,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         On SR-SRV04 or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles for a stretch cluster on the four nodes and restart them:  
 
-        ```  
+        ```PowerShell
         $Servers = 'SR-SRV01','SR-SRV02','SR-SRV03','SR-SRV04'  
 
         $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,Failover-Clustering,FS-FileServer -IncludeManagementTools -restart }  
@@ -120,7 +120,8 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         2.  Provision the storage using your vendor documentation.  
 
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.  
-For example, to validate two of the proposed stretch cluster nodes that each have D: and E: volume and run the test for230 minutes:  
+For example, to validate two of the proposed stretch cluster nodes that each have D: and E: volume and run the test for230 minutes:
+
     1.  Move all available storage to **SR-SRV01**.  
 
     2.  Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
@@ -139,9 +140,11 @@ For example, to validate two of the proposed stretch cluster nodes that each hav
 
         For example:  
 
-            MD c:\temp  
+        ```PowerShell
+        MD c:\temp
 
-            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
+        Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
+        ```
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
@@ -192,7 +195,7 @@ You will now create two normal failover clusters. After configuration, validatio
 
 3.  Configure a File Share Witness or Cloud (Azure) witness in each cluster that points to a share hosted on the domain controller or some other independent server. For example:  
 
-    ```  
+    ```PowerShell  
     Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
     ```  
 
@@ -221,7 +224,7 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
 
 3.  Configure the cluster-to-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.  
 
-    ```  
+    ```PowerShell  
     New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
     ```  
 
@@ -230,7 +233,7 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
 
 4.  To get replication source and destination state, use **Get-SRGroup** and **Get-SRPartnership** as follows:  
 
-    ```  
+    ```PowerShell
     Get-SRGroup  
     Get-SRPartnership  
     (Get-SRGroup).replicas  
@@ -263,26 +266,29 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
             CLSFLsn: 0xFFFFFFFF  
             Number of Bytes Recovered: 68583161856  
             Elapsed Time (seconds): 117  
-        ```  
+        ```
 
+    1. Alternately, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:
 
-1. Alternately, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:  
+       ```PowerShell
+       (Get-SRGroup).Replicas | Select-Object numofbytesremaining
+       ```
 
+       As a progress sample (that will not terminate):  
 
-        (Get-SRGroup).Replicas | Select-Object numofbytesremaining  
-
-   As a progress sample (that will not terminate):  
-
+       ```PowerShell
          while($true) {  
          $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
          [System.Console]::Write("Number of bytes remaining: {0}`r", $v.numofbytesremaining)  
          Start-Sleep -s 5  
-        }  
+        }
+        ```
+
 1. On the destination server in the destination cluster, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.  
-
-
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
-
+    
+   ```PowerShell
+   Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
+   ```
    > [!NOTE]  
         > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 

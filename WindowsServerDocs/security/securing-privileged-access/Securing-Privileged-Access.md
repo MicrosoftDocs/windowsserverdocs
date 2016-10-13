@@ -21,7 +21,7 @@ Securing privileged access is a critical first step to establishing security ass
 
 Protecting administrative access against determined adversaries require you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig1.JPG)
+![Diagram of the three stages of recommendations for separating and protecting administration in this roadmap](../media/Securing-Privileged-Access/PAW_LP_Fig1.JPG)
 
 Roadmap Objectives:
 
@@ -47,21 +47,21 @@ Traditional security approaches have focused on using the ingress and egress poi
 
 The natural replacement for the network security perimeter in a complex modern enterprise is the authentication and authorization controls in an organization's identity layer. Privileged administrative accounts are effectively in control of this new "security perimeter" so it's critical to protect privileged access:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig2.JPG)
+![Diagram showing an organization's identity layer](../media/Securing-Privileged-Access/PAW_LP_Fig2.JPG)
 
 An adversary that gains control of an administrative account can use those privileges to pursue their gain at the expense of the target organization as depicted below:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig3.JPG)
+![Diagram showing how an adversary that gains control of an administrative account can use those privileges to pursue their gain at the expense of the target organization](../media/Securing-Privileged-Access/PAW_LP_Fig3.JPG)
 
 For more information on the types of attacks that commonly lead to attackers in control of administrative accounts, please visit the [Pass The Hash web site](http://www.microsoft.com/pth) for informative white papers, videos and more.
 
 This figure depicts the separate "channel" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email.
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig4.JPG)
+![Diagram showing the separate "channel" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email](../media/Securing-Privileged-Access/PAW_LP_Fig4.JPG)
 
 Because the adversary can gain control of privileged access using a variety of methods, mitigating this risk requires a holistic and detailed technical approach as outlined in this roadmap. The roadmap will isolate and harden the elements in your environment that enable privileged access by building mitigations in each area of the defense column in this figure:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig5.JPG)
+![Table showing attack and defense columns](../media/Securing-Privileged-Access/PAW_LP_Fig5.JPG)
 
 ## Security privileged access roadmap
 The roadmap is designed to maximize the use of technologies that you may already be deployed, take advantage of key current and upcoming security technologies, and integrate any 3rd party security tools you may already have deployed.
@@ -82,7 +82,7 @@ Each stage of the roadmap is designed to raise the cost and difficulty for adver
 ### Security Privileged Access Roadmap: Stage 1
 Stage 1 of the roadmap is focused on quickly mitigating the most frequently used attack techniques of credential theft and abuse. Stage 1 is designed to be implemented in approximately 2-4 weeks and is depicted in this diagram:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig6.JPG)
+![Figure showing that stage 1 is designed to be implemented in approximately 2-4 weeks](../media/Securing-Privileged-Access/PAW_LP_Fig6.JPG)
 
 Stage 1 of the Security Privileged Access roadmap includes these components:
 
@@ -105,7 +105,7 @@ Additional guidance for operating an environment with LAPS and PAWs can be found
 ### Security Privileged Access Roadmap: Stage 2
 Stage 2 builds on the mitigations from Stage 1 and is designed to be implemented in approximately 1-3 months. The steps of this stage are depicted in this diagram:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig7.JPG)
+![Diagram showing the steps of stage 2](../media/Securing-Privileged-Access/PAW_LP_Fig7.JPG)
 
 **1. PAW Phases 2 and 3: all admins and additional hardening**
 
@@ -149,7 +149,7 @@ Prior to installing ATA, you should ensure you have a process in place to handle
 ### Security Privileged Access Roadmap: Stage 3
 Stage 3 of the roadmap builds on the mitigations from Stages 1 and 2 to strengthen and add mitigations across the spectrum. Stage 3 is depicted visually in this diagram:
 
-![](../media/Securing-Privileged-Access/PAW_LP_Fig8.JPG)
+![Diagram showing stage 3](../media/Securing-Privileged-Access/PAW_LP_Fig8.JPG)
 
 These capabilities will build on the mitigations from previous phases and move your defenses into a more proactive posture.
 

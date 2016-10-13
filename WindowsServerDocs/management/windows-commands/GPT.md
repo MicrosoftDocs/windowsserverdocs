@@ -39,6 +39,4 @@ If you are moving a GPT disk to a new computer and would like to prevent that co
 ```
 gpt attributes=0x8000000000000000
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

@@ -26,6 +26,4 @@ filesystems
 ```
 ## Remarks
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+

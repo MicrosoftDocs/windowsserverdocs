@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 The **dfsutil diag** command performs diagnostics on a DFS namespace.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 
@@ -33,10 +33,10 @@ dfsutil diag | clean <\\server\share> [Verbose] |unmapdomroot <\\domain\root>  <
 
 |Parameter|Description|
 |-------------|---------------|
-|[Dfsutil Diag UnMapDomRoot](assetId:///b90ff744-e051-453b-91bd-5dd4d45156fc)|Deletes obsolete references to a domain\-based root target.|
-|[Dfsutil Diag Clean](assetId:///ef3dcae6-839d-4be9-84c0-19f5a325b30b)|Removes reference to an obsolete root from host machine.|
-|[Dfsutil Diag Viewdfsdirs](assetId:///8cb83576-477d-48cd-8eb0-fd29473636e5)|List\/Remove all DFS reparse directories in a volume.|
-|[Dfsutil Diag Viewdfspath](assetId:///c46a8ca7-7ce6-4fdd-b6be-e8902763e146)|Resolves a DfsPath to a destination UNC path.|
+|[Dfsutil Diag UnMapDomRoot]|Deletes obsolete references to a domain\-based root target.|
+|[Dfsutil Diag Clean]|Removes reference to an obsolete root from host machine.|
+|[Dfsutil Diag Viewdfsdirs]|List\/Remove all DFS reparse directories in a volume.|
+|[Dfsutil Diag Viewdfspath]|Resolves a DfsPath to a destination UNC path.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples

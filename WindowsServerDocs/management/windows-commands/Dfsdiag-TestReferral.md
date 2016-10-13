@@ -31,7 +31,7 @@ Checks Distributed File System \(DFS\) referrals by performing the following tes
   
 -   When you specify a DFS folder \(link\), in addition to performing the same health checks as when you specify a namespace root, the command validates the site configuration for folder targets \(Dfsdiag \/testsites\) and validates the site association of the local host.  
   
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+  
   
 ## Syntax  
   

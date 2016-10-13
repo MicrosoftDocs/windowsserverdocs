@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Displays or sets the storage area network (SAN) policy for the operating system.
 > [!NOTE]
 > This command is only applicable to Windows 7 and Windows Server 2008 R2.
-For an example of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 ## Syntax
 ```
 san [policy={OnlineAll | OfflineAll | OfflineShared}] [noerr]

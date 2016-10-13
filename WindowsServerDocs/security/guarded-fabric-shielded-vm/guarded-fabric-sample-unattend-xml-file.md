@@ -17,7 +17,7 @@ As part of the process of configuring shielded VMs, you may need to create a vir
 
 For general guidelines for Unattend files for shielded VMs, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
 
- To see a table of other topics related to configuration of shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
  
 ## Downloading the New-ShieldingDataAnswerFile function
 
@@ -31,7 +31,7 @@ The following sections show how you can use the function parameters for an `unat
 
 - [Answer file without joining a domain](#answer-file-without-joining-a-domain)
 - [Answer file that includes joining a domain](#answer-file-that-includes-joining-a-domain)
-- [Answer file that uses static IP](#answer-file-that-uses-static-IP)
+- [Answer file that uses static IP](#answer-file-that-uses-static-ip)
 - [Answer file that includes a setup script](#answer-file-that-includes-a-setup-script)
 - [Answer file that configures BitLocker to back up the recovery password](#answer-file-that-configures-bitlocker-to-back-up-the-recovery-password)
 
@@ -178,3 +178,4 @@ Here are all the parameters:
 ## See also
 
 - [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

@@ -10,13 +10,11 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
-ms.date: 10/12/2016
+ms.date: 10/10/2016
 ---
 # What's new in Hyper-V on Windows Server 2016
 
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
-
-**This is preliminary content and subject to change.**  
   
 This article explains the new and changed functionality of Hyper-V on Windows Server 2016 and Microsoft Hyper-V Server 2016. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).  
   
@@ -52,7 +50,7 @@ You can also adjust the amount of memory assigned to a virtual machine while it'
   
 -   **Manage earlier versions** - With Hyper-V Manager in Windows Server 2016 and Windows 10, you can manage computers running Hyper-V on  Windows Server 2012, Windows 8,  Windows Server 2012 R2 and Windows 8.1.  
   
--   **updated management protocol** - Hyper-V Manager now communicates with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos or NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can do a live migration without enabling constrained delegation in Active Directory. The WS-MAN-based infrastructure also makes it easier to enable a host for remote management. WS-MAN connects over port 80, which is open by default.  
+-   **Updated management protocol** - Hyper-V Manager now communicates with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos or NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can do a live migration without enabling constrained delegation in Active Directory. The WS-MAN-based infrastructure also makes it easier to enable a host for remote management. WS-MAN connects over port 80, which is open by default.  
   
 ## <a name="BKMK_IS"></a>Integration services delivered through Windows Update \(updated\) 
 Updates to integration services for Windows guests are distributed through Windows Update. For service providers and private cloud hosters, this puts the control of applying updates into the hands of the tenants who own the virtual machines. Tenants can now update their Windows virtual machines with all updates, including the integration services, using a single method. For details about integration services for Linux guests, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
@@ -70,7 +68,7 @@ Set-VMFirmware vmname -SecureBootTemplate MicrosoftUEFICertificateAuthority
 For more information about Linux virtual machines on Hyper-V, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). For more information about the cmdlet, see [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx).
 
 ## More memory and processors for generation 2 virtual machines and Hyper-V hosts \(updated\)
-Starting with version 8, generation 2 virtual machines can use significantly more memory and virtual processors. Hosts also can be configured with significantly more memory and virtual processors than were previously supported. For details, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). For details about virtual machine versions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+Starting with version 8, generation 2 virtual machines can use significantly more memory and virtual processors. Hosts also can be configured with significantly more memory and virtual processors than were previously supported. These changes support new scenarios such as running e-commerce large in-memory databases for online transaction processing (OLTP) and data warehousing (DW). The Windows Server blog recently published the performance results of  a virtual machine with 5.5 terabytes of memory and 128 virtual processors running 4 TB in-memory database. Performance was greater than 95% of the performance of a physical server. For details, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). For details about virtual machine versions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For the full list of supported maximum configurations, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). 
 
 ## <a name="BKMK_nested"></a>Nested virtualization \(new\) 
 This feature lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. This can be especially useful for development and test environments. To use nested virtualization, you'll need:  
@@ -84,7 +82,7 @@ This feature lets you use a virtual machine as a Hyper-V host and create virtual
 For details and instructions, see [Nested Virtualization](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/nesting).  
   
 ## <a name="BKMK_networking"></a>Networking features \(new\) 
-new networking features include:  
+New networking features include:  
   
 -   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../networking/sdn/Software-Defined-Networking--SDN-.md#bkmk_rdma).  
   
@@ -92,13 +90,13 @@ new networking features include:
   
 -   **Quality of service (QoS) for software-defined networks**. Manages the default class of traffic through the virtual switch within the default class bandwidth.  
   
-For more about new networking features, see [What's new in Networking](../../networking/What-s-new-in-Networking.md).  
+For more about new networking features, see [What's new in Networking](../../networking/What-s-New-in-Networking.md).  
   
 ## <a name="BKMK_check"></a>Production checkpoints \(new\)
 Production checkpoints are "point-in-time" images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service (VSS) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints](https://technet.microsoft.com/library/dn872510.aspx).  
   
 > [!IMPORTANT]  
-> new virtual machines use production checkpoints as the default.  
+> New virtual machines use production checkpoints as the default.  
   
 ## <a name="BKMK_HyperVRollingUpgrades"></a>Rolling Hyper-V Cluster upgrade \(new\) 
 You can now add a node running Windows Server 2016 to a Hyper-V Cluster with nodes running  Windows Server 2012 R2. This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](https://technet.microsoft.com/library/mt589702.aspx).  
@@ -108,7 +106,7 @@ You can now add a node running Windows Server 2016 to a Hyper-V Cluster with nod
   
 For a Hyper-V cluster with a functional level of  Windows Server 2012 R2 with nodes running Windows Server 2012 R2 and Windows Server 2016, note the following:  
   
--   Manage the cluster, Hyper-V, and virtual machines from a node running Windows Server 2016w or Windows 10.  
+-   Manage the cluster, Hyper-V, and virtual machines from a node running Windows Server 2016 or Windows 10.  
   
 -   You can move virtual machines between all of the nodes in the Hyper-V cluster.  
   
@@ -140,7 +138,7 @@ Shielded virtual machines use several features to make it harder for Hyper-V adm
 > As of Technical Preview 5, shielded virtual machines are compatible with Hyper-V Replica. To replicate a shielded virtual machine, the host you want to replicate to must be authorized to run that shielded virtual machine.  
 
 ## <a name="BKMK_StartOrder"></a>Start order priority for clustered virtual machines \(new\)
-This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as new-ClusterGroupSet, Get-ClusterGroupSet, and Add-ClusterGroupSetDependency.
+This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as New-ClusterGroupSet, Get-ClusterGroupSet, and Add-ClusterGroupSetDependency.
 .  
 ## <a name="BKMK_QoS"></a>Storage quality of service (QoS) \(updated\)
 You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](../../storage/storage-qos/storage-qos-overview.md).  
@@ -154,14 +152,14 @@ Virtual machine configuration files use a new format that makes reading and writ
 ## <a name="BKMK_ConfgVersion"></a>Virtual machine configuration version \(updated\)
 The version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with Windows Server 2012 R2 and can run on both Windows Server 2012 R2 and Windows Server 2016 . Virtual machines with versions introduced in Windows Server 2016 won't run in Hyper-V on Windows Server 2012 R2.   
   
-If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 from  Windows Server 2012 R2, the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs Windows Server 2012 R2. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
+If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 from Windows Server 2012 R2, the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs Windows Server 2012 R2. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   
 For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). This article also lists the version in which some features were introduced.   
   
 > [!IMPORTANT]  
-> -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2 .  
+> -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2.  
 > -   You can't downgrade the configuration to a previous version.  
-> -   The Update-VMVersion cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2 .  
+> -   The Update-VMVersion cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2.  
 
 ## Virtualization-based security for generation 2 virtual machines \(new)
 Virtualization-based security powers features such as Device Guard and Credential Guard, offering increased protection of the operating system against exploits from malware. Virtualization based-security is available in generation 2 guest virtual machines starting with version 8. For information on virtual machine version, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](.\deploy\upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).

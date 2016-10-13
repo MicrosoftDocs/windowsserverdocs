@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Returns the media access control (MAC) address and list of network protocols associated with each address for all network cards in each computer, either locally or across a network. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Returns the media access control (MAC) address and list of network protocols associated with each address for all network cards in each computer, either locally or across a network. 
 ## Syntax
 ```
 getmac[.exe][/s <Computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | LIST | CSV}][/nh][/v]

@@ -52,7 +52,5 @@ To display the maximum number of MB that the volume can be reduced by, type:
 ```
 shrink querymax
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
+
 [Resize-Partition](http://technet.microsoft.com/library/hh848680.aspx)

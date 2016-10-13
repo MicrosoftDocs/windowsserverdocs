@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 The **dfsutil root** command displays information about the namespace root. Dfsutil Root commands support creating, removing, importing or exporting namespace roots.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 
@@ -39,8 +39,8 @@ dfsutil root <\\server\share> [Verbose] | AddDom | AddStd | Remove | Export | Im
 |[Dfsutil Root AddStd](Dfsutil-Root-AddStd.md)|Creates a new stand\-alone namespace.|
 |[Dfsutil Root Remove](Dfsutil-Root-Remove.md)|Removes the namespace.|
 |[Dfsutil Root Export](Dfsutil-Root-Export.md)|Exports the namespace configuration to a file.|
-|[Dfsutil Root Import](assetId:///9cb2ddd0-b237-4301-a310-b711acf06b22)|Imports the namespace from another namespace or a file.|
-|[Dfsutil Root ForceSync](assetId:///01b9e7a4-fcc1-475c-ab59-0da4d419c240)|Perform a Forced sync on the target of a namespace.|
+|Dfsutil Root Import|Imports the namespace from another namespace or a file.|
+|Dfsutil Root ForceSync|Perform a Forced sync on the target of a namespace.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples

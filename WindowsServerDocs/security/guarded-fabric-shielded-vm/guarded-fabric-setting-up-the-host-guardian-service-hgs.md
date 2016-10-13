@@ -29,9 +29,25 @@ Add the Host Guardian Service role by using Server Manager or by running the fol
 
 ### Install the Host Guardian Service
 
-Once the HGS server role has been added, the next step is to run the [Install-HgsServer](https://technet.microsoft.com/library/mt652169.aspx) cmdlet which by default will set up the Active Directory forest for HGS and configure other dependencies.
+After the role is added, the next step is to run the [Install-HgsServer](https://technet.microsoft.com/library/mt652169.aspx) cmdlet to install the HGS. HGS is a critical component in a guarded fabric and is responsible for attesting to a Hyper-V host's health as well as releasing keys needed to work with shielded VMs. The HGS forest is sensitive because its administrators have access to the keys that control shielded VMs. 
 
->**Important**&nbsp;&nbsp;By default, when you set up HGS, it creates its own forest. However, you can choose to add HGS to an existing forest. The forest used by HGS is sensitive because its administrators have access to the keys that control shielded VMs. For this reason, we strongly recommend that HGS either create its own forest during initial installation, or use an existing bastion forest—one that is isolated from traditional fabric or CORP-forest administrators. For information about using an existing forest and domain for HGS, see [Appendix B - Add HGS to an existing domain](guarded-fabric-add-hgs-to-an-existing-domain.md).
+When you install HGS, it creates its own forest by default. Another option is to add HGS to an existing bastion forest. The next sections cover these two options.
+
+#### Choose whether to install HGS in its own new forest or in an existing bastion forest
+
+The default installation will set up a new Active Directory forest for HGS and configure other dependencies. This option is recommended because the environment is self-contained and known to be secure when it is created. 
+
+There are no technical requirements that prevent installing HGS in an existing forest, but there are operational requirements and security-related best practices. Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). Such forests are suitable and usually exhibit the following characteristics:
+
+- They have few admins 
+- They are not general-purpose in nature 
+- They have a low number of logons
+
+General purpose forests such as CORP forests are not suitable for use by the HGS. Because the HGS needs to be isolated from fabric administrators, fabric forests are unsuitable.
+
+Depending on your deployment scenario, follow the steps to [install HGS in its own new forest](#install-hgs-in-its-own-new-forest) or [install HGS in an existing bastion forest](#install-hgs-in-an-existing-bastion-forest). 
+
+#### Install HGS in its own new forest
 
 The following steps describe the process for deploying the Host Guardian Service using its own newly created Active Directory forest. Ensure that the HGS machine is **not** joined to a domain before performing these steps.
 
@@ -44,6 +60,39 @@ The following steps describe the process for deploying the Host Guardian Service
     ```
 
 2.  After the computer restarts, log in as the domain administrator using the same password you previously used as the local administrator (regardless of the password you specified in the previous step).
+
+#### Install HGS in an existing bastion forest
+
+The following instructions describe how to add HGS to an existing forest, rather than using the default process of allowing HGS to create its own forest and domain. 
+
+##### Requirements for adding HGS to an existing forest
+
+Before you can add HGS to an existing forest, you will need to add these objects to the target domain:
+
+-   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
+
+-   Two Active Directory groups that you will use for Just Enough Administration (JEA). One group is for users who can perform HGS administration through JEA, and the other is for users who can only view HGS through JEA.
+
+-   For running HGS in a cluster, either prestaged cluster objects or, for the user who runs **Initialize-HgsServer**, permission to add computer objects to the domain (which is possible by default).
+
+##### Command parameters for adding HGS to an existing forest
+
+The following tables describe **Install-HgsServer** parameters to use when you add HGS to an existing forest.
+
+| **Required Parameter**  | **Description**    |
+|-------------------------|--------------------|
+| `-UseExistingDomain`      | Adds HGS to an existing domain.                                                                                              |
+| `-JeaAdministratorsGroup` | Identifies the Active Directory group of users who can perform HGS administration (through Just Enough Administration, JEA). |
+| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view HGS (through JEA).                                               |
+| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service.                        |
+
+| **Optional Parameter** | **Description**     |
+|------------------------|---------------------|
+| `-ClusterName`           | Optionally, identifies the name of an existing cluster for HGS to use, rather than allowing a cluster to be automatically created by **Initialize-HgsServer**. |
+
+##### Windows PowerShell example line for adding HGS to an existing forest
+
+    Install-HgsServer -UseExistingDomain '<DomainName>' -JeaAdministratorsGroup <AdministratorsGroupName> -JeaReviewersGroup <ReviewersGroupName> -ServiceAccount <gMSAforKPS> -ClusterName <ExistingClusterName> –Restart
 
 ### Specify the signing and encryption certificates that HGS will use
 
@@ -174,7 +223,7 @@ The following commands will complete the configuration of the first HGS node.
 
     -   For TPM-trusted attestation, use: `-TrustTpm`
 
-    For information about attestation modes, see [Attestation modes in the Guarded Fabric solution](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-and-shielded-vms#attestation-modes-in-the-guarded-fabric-solution).
+    For information about attestation modes, see [Attestation modes in the Guarded Fabric solution](Guarded-Fabric-and-Shielded-VMs.md#attestation-modes-in-the-guarded-fabric-solution).
 
     Your final command syntax will resemble the following example:
 
@@ -467,7 +516,7 @@ Complete the following steps on at least one host that you want to run as a guar
 
 2.  Configure the host’s Key Protection and Attestation URLs by executing the following command in an elevated Windows PowerShell console. For &lt;FQDN&gt;, use the FQDN of your HGS cluster (for example, hgs.relecloud.com, or run **Get-HgsServer** cmdlet on the HGS server to retrieve the URL).
 
-    Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
+        Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
 
     >**Notes**
     > - You can also use System Center 2016 - Virtual Machine Manager (VMM) to set the Attestation and Key Protection URLs. For details, see [Scenario 1 - Provision guarded hosts in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts). Whichever method you use, you can perform the next step by running **Get-HgsClientConfiguration** on the host, to see the current URL settings on that host.
@@ -480,6 +529,10 @@ Complete the following steps on at least one host that you want to run as a guar
         Get-HgsClientConfiguration
 
     The display shows whether attestation succeeded, that is, whether the host is now a guarded host.
+
+## Next steps
+
+For hosters and tenant administrators, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md) for more information about how to deploy guarded hosts and prepare and create shielded VMs.
 
 ## See also
 

@@ -5,12 +5,12 @@ ms.prod: windows-server-threshold
 ms.topic: article
 ms.assetid: cf257b3a-9365-42e2-a37c-327cac6028d4
 manager: dongill
-author: coreyp-at-msft
+author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
 # Guarded fabric and shielded VMs overview
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016
 
 ## Overview of the guarded fabric
 
@@ -161,11 +161,9 @@ The following figure shows the shielding data file and related configuration ele
 | fabric administrator | A public or private cloud administrator that can manage virtual machines. In the context of a guarded fabric, a fabric administrator does not have access to shielded VMs, or the policies that determine which hosts shielded VMs can run on. |
 | HGS administrator | A trusted administrator in the public or private cloud that has the authority to manage the policies and cryptographic material for guarded hosts, that is, hosts on which a shielded VM can run.|
 | provisioning data file or shielding data file (PDK file) | An encrypted file that a tenant or user creates to hold important VM configuration information and to protect that information from access by others. For example, a shielding data file can contain the password that will be assigned to the local Administrator account when the VM is created. |
-| Virtualization-based Security (VBS) | A Hyper-V based processing and storage environment on Windows Server 2016 Technical Preview that is protected from administrators. Virtual Secure Mode provides the system with the ability to store operating system keys that are not visible to an operating system administrator.|
-| virtual TPM | A virtualized version of a Trusted Platform Module (TPM). In Windows Server 2016 Technical Preview, with the Hyper-V role, you can provide a virtual TPM 2.0 device so that virtual machines can be encrypted, just as a physical TPM allows a physical machine to be encrypted.|
+| Virtualization-based Security (VBS) | A Hyper-V based processing and storage environment on Windows Server 2016 that is protected from administrators. Virtual Secure Mode provides the system with the ability to store operating system keys that are not visible to an operating system administrator.|
+| virtual TPM | A virtualized version of a Trusted Platform Module (TPM). In Windows Server 2016, with the Hyper-V role, you can provide a virtual TPM 2.0 device so that virtual machines can be encrypted, just as a physical TPM allows a physical machine to be encrypted.|
 
-## Next steps
+## See also
 
-* [Shielded VMs and Guarded Fabric Deployment Guide for Windows Server 2016 TP5](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-98d2b045)
-* [Shielded VMs and Guarded Fabric Operations Guide for Windows Server 2016](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-b05d8078)
-* [Shielded VMs and Guarded Fabric Troubleshooting Guide for Windows Server 2016](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-70c5b471)
+- [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

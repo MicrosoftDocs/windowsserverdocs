@@ -37,7 +37,7 @@ The following figure shows the flow of the certificate propagation service. The 
 
 **Certificate propagation service**
 
-![](../media/Certificate-Propagation-Service/WindowsSmartCardTechnicalReference_06.gif)
+![Diagram showing the flow of the Certificate propagation service](../media/Certificate-Propagation-Service/WindowsSmartCardTechnicalReference_06.gif)
 
 1.  A signed-in user inserts a smart card.
 

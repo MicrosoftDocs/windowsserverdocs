@@ -31,7 +31,6 @@ The following is a list of NFS command\-line tools.
 |[Nfsshare](Nfsshare.md)|Control Network File System \(NFS\) shares.|  
 |[Nfsstat](Nfsstat.md)|Display or reset counts of calls made to Server for NFS.|  
 |[Rpcinfo](Rpcinfo.md)|List programs on remote computers.|  
-|[Showmount](Showmount.md)|Display mounted directories.|  
-|[umount](assetId:///0726324c-c45a-444d-a753-99daf5e1c83a)|Remove Network File System \(NFS\)–mounted drives.|  
+|[Showmount](Showmount.md)|Display mounted directories.|
   
 

@@ -50,5 +50,4 @@ winsat mem <parameters>
 ## Remarks
 -   Membership in the local Administrators group, or equivalent, is the minimum required to use **winsat**. The command must be executed from an elevated command prompt window.
 -   To open an elevated command prompt window, click **Start**, click **Accessories**, right-click **Command Prompt**, and click **Run as administrator**.
-#### Additional references
-[winsat \[vista\]](assetId:///11b0e51f-fe58-4553-9e7c-a562e5385fbb)
+

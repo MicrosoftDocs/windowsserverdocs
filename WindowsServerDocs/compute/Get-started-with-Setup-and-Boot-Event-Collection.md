@@ -5,6 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-sbec
+ms.date: 10/10/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
@@ -13,11 +14,11 @@ ms.author: jaimeo
 ---
 # Get started with Setup and Boot Event Collection
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server
 
   
 ## Overview  
-Setup and Boot Event Collection is a new feature starting in Windows Server 2016 Technical Preview that allows you to designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.  
+Setup and Boot Event Collection is a new feature in Windows Server 2016 that allows you to designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.  
   
 Previously, these events have been impossible to monitor because the infrastructure needed to collect them doesn't exist until a computer is already set up. The kinds of setup and boot events you can monitor include:  
   
@@ -33,17 +34,17 @@ Previously, these events have been impossible to monitor because the infrastruct
   
 -   The points when the system becomes available for logon, establishes connection with a domain controller, completion of service starts, and availability of network shares  
   
-The collector computer must be running Windows Server 2016 Technical Preview (it can be in either Server with Desktop Experience or Server Core mode). The target computer must be running either Windows 10 or Windows Server 2016 Technical Preview. You can also run this service on a virtual machine which is hosted on a computer that is **not** running Windows Server 2016 Technical Preview. The following combinations of virtualized collector and target computers are known to work:  
+The collector computer must be running Windows Server 2016 (it can be in either Server with Desktop Experience or Server Core mode). The target computer must be running either Windows 10 or Windows Server 2016. You can also run this service on a virtual machine which is hosted on a computer that is **not** running Windows Server 2016. The following combinations of virtualized collector and target computers are known to work:  
   
 |Virtualization host|Collector virtual machine|Target virtual machine|  
 |-----------------------|-----------------------------|--------------------------|  
 |Windows 8.1|yes|yes|  
 |Windows 10|yes|yes|  
-|Windows Server 2016 Technical Preview|yes|yes|  
+|Windows Server 2016|yes|yes|  
 |Windows Server 2012 R2|yes|no|  
   
 ## Installing the collector service  
-Starting with the Windows Server 2016  Technical Preview, the event collector service is available as an optional feature. In this release, you can install it using DISM.exe with this command at an elevated Windows PowerShell prompt:  
+Starting with the Windows Server 2016, the event collector service is available as an optional feature. In this release, you can install it using DISM.exe with this command at an elevated Windows PowerShell prompt:  
   
 `dism /online /enable-feature /featurename:SetupAndBootEventCollection`  
   
@@ -78,7 +79,7 @@ You can enable event transport remotely (with Windows PowerShell) or locally.
   
 3.  On the collector computer, run either of these commands:  
   
-    -   In a Windows PowerShell prompt: `winrm set winrm/config/client '@{TrustedHosts="<target1>,<target2>,...";AllowUnencrypted="true"}'`, where \<target1>, etc. are the names or IP addresses of the target computers.  
+    -   In a Windows PowerShell prompt: `Set-Item -Force WSMan:\localhost\Client\TrustedHosts "<target1>,<target2>,..."`, followed by `Set-Item -Force WSMan:\localhost\Client\AllowUnencrypted true` where \<target1>, etc. are the names or IP addresses of the target computers.  
   
     -   Or in a command prompt: **winrm set winrm/config/client @{TrustedHosts="\<target1>,\<target2>,...";AllowUnencrypted="true"}**  
   
@@ -107,7 +108,7 @@ You can enable event transport remotely (with Windows PowerShell) or locally.
   
     **bcdedit /event yes**  
   
-    **bcdedit /eventsettings  net hostip:1.2.3.4 port:50000 key:a.b.c.d**  
+    **bcdedit /eventsettings net hostip:1.2.3.4 port:50000 key:a.b.c.d**  
   
     Here "1.2.3.4" is an example; replace this with the IP address of the collector computer. Also replace "50000" with the port number where the collector will run and "a.b.c.d" with the required encryption key for the communication. This same key is used on the collector computer. If you don't enter a key, the system generates a random key; you'll need this for the collector computer, so make a note of it.  
   
@@ -235,7 +236,7 @@ There are several details to keep in mind regarding the configuration file:
         </target>  
         <target>  
           <ipv4 value="192.168.1.2"/>  
-          <key value="d.e.f.g"/>  
+          <key value="d1.e2.f3.g4"/>  
           <computer value="computer2"/>  
         </target>  
       </common>  
@@ -263,7 +264,7 @@ You can perform a validity check on the configuration file with `$result = (Get-
   
 Though the Windows PowerShell command to apply a new configuration automatically updates the service without requiring you to restart it, you can always restart the service yourself with either of these commands:  
   
--   With Windows PowerShell: `Stop-Service BootEventCollector; Start-Service BootEventCollector`  
+-   With Windows PowerShell: `Restart-Service BootEventCollector`  
   
 -   In an ordinary command prompt: **sc stop BootEventCollector; sc start BootEventCollector**  
   
@@ -292,10 +293,10 @@ The minimal interface offered by Nano Server can sometimes make it hard to diagn
 Once a valid configuration file is saved on the collector computer and a target computer is configured, as soon as the target computer is restarted, the connection to the collector is made and events will be collected.  
   
 The log for the collector service itself (which is distinct from the setup and boot data collected by the service) can be found under Microsoft-Windows-BootEvent-Collector/Admin . For a graphical interface for the events, use Event Viewer. Create a new view; expand **Applications and Services Logs**, then expand **Microsoft** and then **Windows**. Find **BootEvent-Collector**, expand it, and find **Admin**.  
+
+-   With Windows PowerShell: `Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin`  
   
-From the command line, you can access the collected log with this command:  
-  
-**wevtutil qe Microsoft-Windows-BootEvent-Collector/Admin**  
+-   In an ordinary command prompt: **wevtutil qe Microsoft-Windows-BootEvent-Collector/Admin**  
   
 ## Troubleshooting  
   
@@ -337,7 +338,7 @@ If it returns that there is a connection from this target then the problem might
 \<collector ... minlog="verbose">  
 This will enable messages about every received packet.  
 3. Check whether any packets are received at all. Optionally, you might want to write the log in verbose mode directly to a file rather than through ETW. To do this, add this to the \<collector> element of the configuration file:  
-\<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txtl">  
+\<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
       
 4. Check the event logs for any messages about the received packets. Check whether any packets are received at all. If the packets are received but incorrect, check event messages for details.  
 5. From the target side, KDNET writes some diagnostic information into the registry. Look in   
@@ -375,7 +376,4 @@ Alternately, if you don't want to save the result in a variable, you can use `Ge
 |Target computer||Target is not connecting to the Collector||-   The target computer didn't get restarted after it was configured. Restart the target computer.<br />-   The target computer has incorrect BCD settings. Check the settings in the "Validate target computer settings" section. Correct as necessary, and then restart the target computer.<br />-   The KDNET/EVENT-NET driver was not able to connect to a network adapter or connected to the wrong network adapter. In Windows PowerShell, run `gwmi Win32_NetworkAdapter` and check the output for one with the ServiceName **kdnic**. If the wrong network adapter is selected, re-do the steps in "To specify a network adapter." If the network adapter doesn't appear at all, it could be that the driver doesn't support any of your network adapters.<br>**See also** "A suggested approach to troubleshooting the Collector" above, especially Steps 5 through 8.|  
 |Collector||I am no longer seeing events after migrating the VM my collector is hosted on.||Verify that the IP address of the collector computer has not changed. If it has, review "To enable sending of ETW events through the transport remotely."|  
 |Collector||The ETL files are not created.|`Get-SbecForwarding` shows that the target has connected, with no errors, but the ETL files are not created.|The target computer has probably not sent any data yet; ETL files are only created when data is received.|  
-|Collector||An event is not showing in the ETL file.|The target computer has sent an event but when the ETL file is read with Event Viewer of Message Analyzer, the event is not present.|-   The event could still be in the buffer. Events aren't written to the ETL file until a full 64 KB buffer is collected or a timeout of about 10-15 seconds with no new events has occurred. Either wait for the timeout to expire or flush the buffers with `Save-SbecInstance`.<br />-   The event manifest is not available on the collector computer or the computer where the Event Viewer or Message Analyzer runs.  In this case, the Collector might not be able to process the event (check the Collector log) or the viewer might not be able to show it.  It is a good practice to have all the manifests installed on the collector computer and install updates on the collector computer before installing them on the target computers.|  
-  
-
-
+|Collector||An event is not showing in the ETL file.|The target computer has sent an event but when the ETL file is read with Event Viewer of Message Analyzer, the event is not present.|-   The event could still be in the buffer. Events aren't written to the ETL file until a full 64 KB buffer is collected or a timeout of about 10-15 seconds with no new events has occurred. Either wait for the timeout to expire or flush the buffers with `Save-SbecInstance`.<br />-   The event manifest is not available on the collector computer or the computer where the Event Viewer or Message Analyzer runs.  In this case, the Collector might not be able to process the event (check the Collector log) or the viewer might not be able to show it.  It is a good practice to have all the manifests installed on the collector computer and install updates on the collector computer before installing them on the target computers.|

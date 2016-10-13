@@ -1,5 +1,7 @@
 ---
 title: Windows Server 2016 Supported Networking Scenarios
+description: This topic provides information about new supported Networking scenarios in Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -31,7 +33,9 @@ This section includes information about the supported networking scenarios for W
   
 -   [IPAM scenarios with DHCP and DNS](#bkmk_ipam)  
   
--   [NIC Teaming scenarios](#bkmk_nicteam)  
+-   [NIC Teaming scenarios](#bkmk_nicteam)
+
+- [Switch Embedded Teaming \(SET\) scenarios](#bkmk_set)
   
 ### <a name="bkmk_sdn"></a>Software Defined Networking (SDN) scenarios
  
@@ -79,7 +83,7 @@ For more information, see [Network Function Virtualization](sdn/technologies/net
   
 ### <a name="bkmk_netp"></a>Network Platform scenarios
 
-For the scenarios in this section, the Windows Server Networking team currently recommends using the network adapter [Mellanox Connect-X 3 Pro](http://www.mellanoxstore.com/categories/adapters/infiniband-and-vpi-adapter-cards/connectx-3-pro.html) with the most recent drivers.  
+For the scenarios in this section the Windows Server Networking team supports the use of any Windows Server 2016 certified driver. Please check with your network interface card \(NIC\) manufacturer to ensure you have the most recent driver updates.
   
 The network platform scenarios allow you to:  
   
@@ -159,20 +163,16 @@ The NIC Teaming scenarios allow you to:
   
 > [!NOTE]  
 > In Windows Server 2016, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
+
+For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md). 
+
+### <a name="bkmk_set"></a>Switch Embedded Teaming \(SET\) scenarios
+
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. 
+
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)
   
-The following NIC Teaming scenarios are not supported in Windows Server 2016.  
-  
--   Creating a NIC team with a VLAN on the NIC team interface.  
-  
--   You can rename a NIC Team, however doing so might cause the statistics panel in the user interface to freeze.  In this circumstance you cannot perform additional management actions, but the NIC team still functions correctly.  
-  
--   Unsupported configuration detection, including the detection of vNICs, kdNICs, tNICs, or bridges in a NIC team. Because unsupported configurations are not detected, they are not blocked by NIC Teaming and might cause unstable systems or complete system failures.  
-  
--   Using NIC Teaming in the Cisco N1K extension does not work.  (The Windows PowerShell NetSwitchTeam cmdlets do not function correctly, and the extension relies on these commands.)  
-  
--   Windows PowerShell error messages for NIC Teaming might be unintelligible. In addition, the `-WhatIf` and `-PassThrough` options for Windows PowerShell NIC Teaming commands do not function correctly.  
-  
-For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md).  
+ 
   
 ## <a name="bkmk_unsupp"></a>Unsupported Networking Scenarios  
 The following networking scenarios are not supported in Windows Server 2016.  

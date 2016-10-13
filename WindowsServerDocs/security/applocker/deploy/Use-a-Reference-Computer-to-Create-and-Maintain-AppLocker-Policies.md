@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 This topic for the IT professional describes the steps to create and maintain AppLocker policies by using a reference computer.
 
 ## Background and prerequisites
-An AppLocker reference computer is a baseline computer you can use to configure policies and can subsequently be used to maintain AppLocker policies. For the procedure to configure a reference computer, see [Configure the AppLocker Reference Computer](assetId:///615506e9-fc32-4003-a241-01794c3a9bd3).
+An AppLocker reference computer is a baseline computer you can use to configure policies and can subsequently be used to maintain AppLocker policies.
 
 An AppLocker reference computer that is used to create and maintain AppLocker policies should contain the corresponding applications for each organizational unit (OU) to mimic your production environment.
 

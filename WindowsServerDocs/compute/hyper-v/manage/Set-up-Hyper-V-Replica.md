@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 author: KBDAzure
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 10/10/2016
 ---
 # Set up Hyper-V Replica
 
@@ -43,8 +43,6 @@ Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your 
 Here's what you should verify before you begin:  
 
 -   **Figure out which VHDs need to be replicated**. In particular, VHDs that contain data that is rapidly changing and not used by the Replica server after failover, such as page file disks, should be excluded from replication to conserve network bandwidth. Make a note of which VHDs can be excluded.  
-
--   **Plan capacity**: Download the [Capacity Planner for Hyper-V Replica](http://www.microsoft.com/download/details.aspx?id=39057) .  
 
 -   **Decide how often you need to synchronize data**:  The data on the Replica server is synchronized updated according to the replication frequency you configure (30 seconds, 5 minutes, or 15 minutes). The frequency you choose should consider the following: Are the virtual machines running critical data with a low RPO? What are you bandwidth considerations?  Your highly-critical virtual machines will obviously need more frequent replication.  
 

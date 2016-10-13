@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  
   
 > [!NOTE]  
-> This command is only applicable to Windows 7 and Windows Server 2008 R2.  
+> This command is only applicable to Windows??7 and Windows??Server??2008??R2.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ select vdisk file="c:\test\test.vhd"
   
 -   [Compact vdisk](Compact-vdisk.md)  
   
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)  
+  
   
 -   [Detach vdisk](Detach-vdisk.md)  
   

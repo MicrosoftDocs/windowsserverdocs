@@ -33,7 +33,7 @@ Checks the configuration of a Distributed File System \(DFS\) namespace by perfo
   
     -   Namespace root resource dependency on physical disk resource.  
   
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+  
   
 ## Syntax  
   

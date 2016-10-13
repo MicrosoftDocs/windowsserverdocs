@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Stops the selected virtual hard disk \(VHD\) from appearing as a local hard disk drive on the host computer. When a VHD is detached, you can copy it to other locations.  
   
 > [!NOTE]  
-> This command is only applicable to Windows 7 and Windows Server 2008 R2.  
+> This command is only applicable to Windows??7 and Windows??Server??2008??R2.  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ detach vdisk
   
 -   [Compact vdisk](Compact-vdisk.md)  
   
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)  
+  
   
 -   [Detail vdisk](Detail-vdisk.md)  
   

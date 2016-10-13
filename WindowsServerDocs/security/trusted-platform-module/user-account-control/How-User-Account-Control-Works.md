@@ -28,7 +28,7 @@ In order to better understand how this process happens it is important to review
 ### Windows Server® 2012 Logon Process
 The following illustration demonstrates how the logon process for an administrator differs from the logon process for a standard user.
 
-![](../../media/How-User-Account-Control-Works/UACWindowsLogonProcess.gif)
+![Illustration demonstrating how the logon process for an administrator differs from the logon process for a standard user](../../media/How-User-Account-Control-Works/UACWindowsLogonProcess.gif)
 
 By default, standard users and administrators access resources and run applications in the security context of standard users. When a user logs on to a computer, the system creates an access token for that user. The access token contains information about the level of access that the user is granted, including specific security identifiers (SIDs) and Windows privileges.
 
@@ -52,7 +52,7 @@ With UAC enabled,  Windows Server 2012  prompts for consent or prompts for crede
 
 The consent prompt is presented when a user attempts to perform a task that requires a user's administrative access token. The following is a screen shot of the UAC consent prompt.
 
-![](../../media/How-User-Account-Control-Works/UACConsentPrompt.gif)
+![Screen shot of the UAC consent prompt](../../media/How-User-Account-Control-Works/UACConsentPrompt.gif)
 
 **The credential prompt**
 
@@ -60,7 +60,7 @@ The credential prompt is presented when a standard user attempts to perform a ta
 
 The following screen shot is an example of the UAC credential prompt.
 
-![](../../media/How-User-Account-Control-Works/UACCredentialPrompt.gif)
+![Screen shot showing an example of the UAC credential prompt](../../media/How-User-Account-Control-Works/UACCredentialPrompt.gif)
 
 **UAC elevation prompts**
 
@@ -80,7 +80,7 @@ The elevation prompt color-coding is as follows:
 
 Some Control Panel items, such as **Date and Time Properties**, contain a combination of administrator and standard user operations. Standard users can view the clock and change the time zone, but a full administrator access token is required to change the local system time. The following is a screen shot of the **Date and Time Properties** Control Panel item.
 
-![](../../media/How-User-Account-Control-Works/UACShieldIcon.gif)
+![Screen shot showing the **Date and Time Properties** Control Panel item](../../media/How-User-Account-Control-Works/UACShieldIcon.gif)
 
 The shield icon on the **Change date and time** button indicates that the process requires a full administrator access token and will display a UAC elevation prompt.
 
@@ -97,7 +97,7 @@ While malware could present an imitation of the secure desktop, this issue canno
 ## UAC Architecture
 The following diagram details the UAC architecture.
 
-![](../../media/How-User-Account-Control-Works/UACArchitecture.gif)
+![Diagram detailing the UAC architecture](../../media/How-User-Account-Control-Works/UACArchitecture.gif)
 
 To better understand each component, review the table below:
 
@@ -112,12 +112,12 @@ To better understand each component, review the table below:
 |Elevating an ActiveX install|If ActiveX is not installed, the system checks the UAC slider level. If ActiveX is installed, the **User Account Control: Switch to the secure desktop when prompting for elevation** Group Policy setting is checked.|
 |Check UAC slider level|UAC now has four levels of notification to choose from and a slider to use to select the notification level:<br /><br /><ul><li>High<br /><br />    If the slider is set to **Always notify**, the system checks whether the secure desktop is enabled.</li><li>Medium<br /><br />    If the slider is set to **Default-Notify me only when programs try to make changes to my computer**, the **User Account Control: Only elevate executable files that are signed and validated** policy setting is checked:<br /><br /><ul><li>If the policy setting is enabled, the public key infrastructure (PKI) certification path validation is enforced for a given executable file before it is permitted to run.</li><li>If the policy setting is not enabled (default), the PKI certification path validation is not enforced before a given executable file is permitted to run. The **User Account Control: Switch to the secure desktop when prompting for elevation** Group Policy setting is checked.</li></ul></li><li>Low<br /><br />    If the slider is set to **Notify me only when programs try to make changes to my computer (do not dim by desktop)**, the CreateProcess is called.</li><li>Never Notify<br /><br />    If the slider is set to **Never notify me when**, UAC prompt will never notify when a program is trying to install or trying to make any change on the computer. **Important:**     This setting is not recommended. This setting is the same as setting the **User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode** policy setting to **Elevate without prompting**.</li></ul>|
 |Secure desktop enabled|The **User Account Control: Switch to the secure desktop when prompting for elevation** policy setting is checked:<br /><br />-   If the secure desktop is enabled, all elevation requests go to the secure desktop regardless of prompt behavior policy settings for administrators and standard users.<br />-   If the secure desktop is not enabled, all elevation requests go to the interactive user's desktop, and the per-user settings for administrators and standard users are used.|
-|CreateProcess|CreateProcess calls AppCompat, Fusion, and Installer detection to assess if the application requires elevation. The executable file is then inspected to determine its requested execution level, which is stored in the application manifest for the executable file. CreateProcess fails if the requested execution level specified in the manifest does not match the access token and returns an error (ERROR_ELEVATION_REQUIRED) to ShellExecute. For more information, see [Requested execution levels](assetId:///995ed48f-81d0-41f1-94fd-c77fdea4f39a#BKMK_RequestedExecutionLevel) later in this section.|
+|CreateProcess|CreateProcess calls AppCompat, Fusion, and Installer detection to assess if the application requires elevation. The executable file is then inspected to determine its requested execution level, which is stored in the application manifest for the executable file. CreateProcess fails if the requested execution level specified in the manifest does not match the access token and returns an error (ERROR_ELEVATION_REQUIRED) to ShellExecute. |
 |AppCompat|The AppCompat database stores information in the application compatibility fix entries for an application.|
 |Fusion|The Fusion database stores information from application manifests that describe the applications. The manifest schema is updated to add a new requested execution level field.|
-|Installer detection|Installer detection detects setup executable files, which helps prevent installations from being run without the user's knowledge and consent. For more information, see [Installer detection technology](assetId:///995ed48f-81d0-41f1-94fd-c77fdea4f39a#BKMK_InstDet) later in this section.|
+|Installer detection|Installer detection detects setup executable files, which helps prevent installations from being run without the user's knowledge and consent.|
 |**Kernel**||
-|Virtualization|Virtualization technology ensures that non-compliant applications do not silently fail to run or fail in a way that the cause cannot be determined. UAC also provides file and registry virtualization and logging for applications that write to protected areas. For more information, see [Virtualization](assetId:///995ed48f-81d0-41f1-94fd-c77fdea4f39a#BKMK_Virtualization) later in this section.|
+|Virtualization|Virtualization technology ensures that non-compliant applications do not silently fail to run or fail in a way that the cause cannot be determined. UAC also provides file and registry virtualization and logging for applications that write to protected areas.|
 |File system and registry|The per-user file and registry virtualization redirects per-computer registry and file write requests to equivalent per-user locations. Read requests are redirected to the virtualized per-user location first and to the per-computer location second.|
 
 There is a change on  Windows Server 2012  UAC from previous Windows versions. The new slider will never turn UAC completely off. The new setting will:

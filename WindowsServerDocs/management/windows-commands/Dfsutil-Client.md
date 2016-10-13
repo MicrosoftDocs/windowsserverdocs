@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 The **dfsutil client** command is used to modify or view the client registry keys or display the site information.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 
@@ -32,9 +32,9 @@ dfsutil client | Registry | SiteInfo | Property | /?
 
 |Parameter|Description|
 |-------------|---------------|
-|[Dfsutil Client Registry](assetId:///099e5cc9-1be1-49be-8421-ba57f3bd3872)|Sets, resets, or displays registry keys.|
-|[Dfsutil Client SiteInfo](assetId:///97056bb0-f534-4cbe-94b9-8daf8cbb277f)Dfsutil Client SiteInfo|Displays the Siteinformation.|
-|[Dfsutil Client Property](assetId:///6f4e78ba-4f4f-4ffb-9985-4dde5009a2cd)|Displays or modifies local machine's cache information.|
+|Dfsutil Client Registry|Sets, resets, or displays registry keys.|
+|Dfsutil Client SiteInfo|Displays the Siteinformation.|
+|Dfsutil Client Property|Displays or modifies local machine's cache information.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples

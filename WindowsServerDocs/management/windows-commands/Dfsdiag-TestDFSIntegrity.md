@@ -27,7 +27,7 @@ Checks the integrity of the Distributed File System \(DFS\) namespace by perform
   
 -   Detects overlapping DFS folders \(links\), duplicate folders, and folders with overlapping folder targets.  
   
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+  
   
 ## Syntax  
   

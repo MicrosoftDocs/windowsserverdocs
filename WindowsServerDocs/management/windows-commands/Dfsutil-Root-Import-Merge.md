@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 The **dfsutil root import merge** command imports folders, folder targets and configuration information for a namespace from a file and merges existing folders and folder targets.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+
 
 ## Syntax
 
@@ -60,8 +60,6 @@ dfsutil root import Merge /?
 ## Additional references
 
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-
--   [Dfsutil Root Import](assetId:///9cb2ddd0-b237-4301-a310-b711acf06b22)
 
 -   [Dfsutil Root](Dfsutil-Root.md)
 
