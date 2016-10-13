@@ -1095,7 +1095,7 @@
 #### [Protecting cluster shared volumes and storage area networks with BitLocker](security/bitlocker/Protecting-cluster-shared-volumes-and-storage-area-networks-with-BitLocker.md)
 ### [Device Health Attestation](security/Device-Health-Attestation.md)
 ### [Guarded fabric and shielded VMs](security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
-#### [Guarded fabric and shielded VMs](security/guarded-fabric-shielded-vm/Guarded-Fabric-and-Shielded-VMs.md)
+#### [Guarded fabric and shielded VMs overview](security/guarded-fabric-shielded-vm/Guarded-Fabric-and-Shielded-VMs.md)
 #### [Deploying the Host Guardian Service for guarded hosts and shielded VMs](security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md)
 ##### [Prerequisites for deploying Host Guardian Service and guarded hosts](security/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites.md)
 ##### [Setting up the Host Guardian Service - HGS](security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
