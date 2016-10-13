@@ -140,8 +140,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
                 //Authority = authority,  
                 MetadataAddress = metadataAddress,  
                 RedirectUri = postLogoutRedirectUri,  
-                PostLogoutRedirectUri = postLogoutRedirectUri,  
-                ResourceID = resourceId  
+                PostLogoutRedirectUri = postLogoutRedirectUri 
         ```  
   
         ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_11.PNG)  
