@@ -1,5 +1,7 @@
 ---
 title: Remote Access
+description: This topic provides an overview of the Remote Access server role in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
