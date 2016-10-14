@@ -12,7 +12,7 @@ ms.service: active-directory
 ms.technology: identity-adfs
 ---
 
-# AD FS Requirements
+# AD FS Frequently Asked Questions (FAQ)
 
 >Applies To: Windows Server 2016
 
