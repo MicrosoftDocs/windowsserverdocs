@@ -2,8 +2,8 @@
 ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
 title: AD FS 2016 FAQ
 description:
-author: jfield
-ms.author:  jfield
+author: jenfieldmsft
+ms.author:  jenfieldmsft
 manager: samueld
 ms.date: 10/12/2016
 ms.topic: article
@@ -17,7 +17,7 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2016
 
 
--   [How can I upgrade\/migrate from previous versions of AD FS?](AD-FS-FAQ.md#BKMK_1)  
+-   [How can I upgrade/migrate from previous versions of AD FS?](AD-FS-FAQ.md#BKMK_1)  
 
 -   [What third party multi-factor authentication providers are available for AD FS?](AD-FS-FAQ.md#BKMK_2)  
 
@@ -35,7 +35,7 @@ ms.technology: identity-adfs
 
 -   [How long are AD FS tokens valid?](AD-FS-FAQ.md#BKMK_9)  
 
-## <a name="BKMK_1"></a>How can I upgrade\/migrate from previous versions of AD FS?  
+## <a name="BKMK_1"></a>How can I upgrade/migrate from previous versions of AD FS?  
 You can upgrade an AD FS 2012 R2 farm using the “mixed farm” process described [here](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016).  It works for WID or SQL farms, though the document shows only the WID scenario.
 
 If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows Server 2012), you must use the in-box scripts (located in C:\Windows\ADFS).
@@ -183,7 +183,7 @@ The default lifetimes of the various cookies and tokens are listed below (as wel
 
 - Refresh token: calculated based on the above to provide consistent behavior
 
-- access_token: 1 hour by default, based on the relying party 
+- access_token: 1 hour by default, based on the relying party
 
 - id_token: same as access token
 
@@ -196,4 +196,3 @@ The default lifetimes of the various cookies and tokens are listed below (as wel
 - access_token: 1 hour by default, based on the relying party
 
 - id_token: same as access token
-
