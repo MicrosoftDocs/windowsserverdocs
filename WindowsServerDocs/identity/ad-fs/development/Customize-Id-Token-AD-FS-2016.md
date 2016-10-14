@@ -1,6 +1,6 @@
 ---
 ms.assetid: 08cf3afe-e2d9-44b7-9e89-19fc82bb46df
-title: Custimizing Id_Token Claims with OpenId Connect in AD FS 2016
+title: Customizing Id_Token Claims with OpenId Connect in AD FS 2016
 description:
 author: jenfieldmsft
 ms.author: jenfieldmsft
@@ -12,7 +12,7 @@ ms.service: active-directory
 ms.technology: identity-adfs
 ---
 
-# Custimizing Id_Token Claims with OpenId Connect in AD FS 2016
+# Customizing Id_Token Claims with OpenId Connect in AD FS 2016
 
 >Applies To: Windows Server 2016
 
