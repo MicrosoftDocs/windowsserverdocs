@@ -1,5 +1,7 @@
 ---
 title: DirectAccess Unsupported Configurations
+description: This topic provides a list of unsupported DirectAccess configurations in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

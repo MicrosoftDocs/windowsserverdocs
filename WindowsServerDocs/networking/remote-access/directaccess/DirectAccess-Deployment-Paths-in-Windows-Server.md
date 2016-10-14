@@ -1,5 +1,7 @@
 ---
 title: DirectAccess Deployment Paths in Windows Server
+description: This topic provides a listing of the documentation for the two main DirectAccess deployment paths in Windows Server 2016: Basic and Advanced.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
