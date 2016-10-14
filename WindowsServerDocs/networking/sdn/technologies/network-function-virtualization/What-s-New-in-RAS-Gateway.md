@@ -1,5 +1,7 @@
 ---
 title: What's New in RAS Gateway
+description: You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
