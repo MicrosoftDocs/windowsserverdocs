@@ -1,5 +1,7 @@
 ---
 title: System Center Technologies for Software Defined Networking
+description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in System Center.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

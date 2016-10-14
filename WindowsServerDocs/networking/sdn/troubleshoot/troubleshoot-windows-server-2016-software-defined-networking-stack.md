@@ -1,5 +1,7 @@
 ---
 title: Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack
+description: This Windows Server 2016 guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
+manager: ravirao
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article
