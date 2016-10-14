@@ -1,5 +1,7 @@
 ---
 title: Identify and resolve Remote Access server operations problems
+description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
