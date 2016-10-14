@@ -1,5 +1,7 @@
 ---
 title: DirectAccess
+description: You can use this topic for a brief overview of DirectAccess in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -16,7 +18,7 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, as well as for links to additional DirectAccess documentation for  Windows Server 2016.  
+You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, and for links to additional DirectAccess documentation for Windows Server 2016.  
   
 > [!NOTE]  
 > In addition to this topic, the following DirectAccess documentation is available.  
