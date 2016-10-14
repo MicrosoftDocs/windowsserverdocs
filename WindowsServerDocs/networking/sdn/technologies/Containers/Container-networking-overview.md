@@ -1,5 +1,7 @@
 ---
 title: Container Networking Overview
+description: This topic is an overview of the networking stack for Windows Containers and includes links to additional guidance about creating, configuring, and managing container networks.
+manager: ravirao
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

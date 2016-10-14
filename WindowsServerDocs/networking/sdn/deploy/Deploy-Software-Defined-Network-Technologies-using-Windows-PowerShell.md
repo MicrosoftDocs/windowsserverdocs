@@ -1,5 +1,7 @@
 ---
 title: Deploy Software Defined Network Technologies using Windows PowerShell
+description: This topic provides links to information on how to deploy individual SDN technologies using Windows PowerShell.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

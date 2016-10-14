@@ -1,5 +1,7 @@
 ---
 title: Post-Deployment Steps for Network Controller
+description: This topic provides certificate configuration instructions for non-Kerberos deployments of Network Controller in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

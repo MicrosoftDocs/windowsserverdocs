@@ -1,5 +1,7 @@
 ---
 title: Step 3 Plan a Load-Balanced Cluster Deployment
+description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

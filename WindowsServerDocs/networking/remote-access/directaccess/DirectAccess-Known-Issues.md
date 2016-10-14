@@ -1,5 +1,7 @@
 ---
 title: DirectAccess Known Issues
+description: This topic provides a link to Microsoft Technical Support documents for DirectAccess in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
