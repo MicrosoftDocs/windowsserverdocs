@@ -71,7 +71,7 @@ The key files containing authentication logic are the following:
 ## Registering the public client in AD FS
 In the sample, the WebAPI is configured to listen at https://localhost:44326/. The application group **Web browser accessing a web application** can be used for configuring implicit grant flow application.
 
-1. Open the AD FS management console and clock on **Add Application Group**. In the **Add Application Group Wizard** enter the name of the application, description and select the **Web browser accessing a web application** template from the **Client-Server applications** section as shown below
+1. Open the AD FS management console and click on **Add Application Group**. In the **Add Application Group Wizard** enter the name of the application, description and select the **Web browser accessing a web application** template from the **Client-Server applications** section as shown below
     <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
 2. On the next page **Native application**, provide the application client identifier and redirect URI as shown below
