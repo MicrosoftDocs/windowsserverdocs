@@ -42,7 +42,6 @@ Some larger small businesses need more functionality and capacity to implement W
  - multiple domains
  - multiple domain controllers                                                                                                                                                                                                                                        
  - ability to specify a designated domain controller                                                                                                                                                                                                                   
- - support for up to 500 users and 500 devices 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 
 See also
