@@ -1,5 +1,7 @@
 ---
 title: DirectAccess Capacity Planning
+description: You can use this topic for a report on Windows Server 2012 DirectAccess server performance to assist you with capacity planning for DirectAccess in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

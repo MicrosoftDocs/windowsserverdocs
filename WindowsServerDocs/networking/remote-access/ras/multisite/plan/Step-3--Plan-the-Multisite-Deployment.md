@@ -1,5 +1,7 @@
 ---
 title: Step 3 Plan the Multisite Deployment
+description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

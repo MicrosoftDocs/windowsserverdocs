@@ -1,5 +1,7 @@
 ---
 title: Create a New NIC Team
+description: You can use this topic to create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) that is running  Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

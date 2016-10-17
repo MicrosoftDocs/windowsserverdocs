@@ -1,5 +1,7 @@
 ---
 title: What's New in DNS Server in Windows Server 2016
+description: This topic provides an overview of new features in DNS Server in Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

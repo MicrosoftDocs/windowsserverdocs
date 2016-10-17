@@ -1,5 +1,7 @@
 ---
 title: Create a New NIC Team in a VM
+description: You can use this topic to connect a virtual machine (VM) to Hyper-V Virtual Switches in a manner that is consistent with NIC Teaming requirements within VMs. You can also use this topic to create a new NIC team in a VM. For Windows Server 2016 deployments only.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
