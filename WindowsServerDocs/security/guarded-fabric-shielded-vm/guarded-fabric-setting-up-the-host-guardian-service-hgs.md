@@ -508,7 +508,7 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 >**Important**&nbsp;&nbsp;As before, we recommend that you use a “reference host” that represents each unique class of hardware configuration in your datacenter. You do not need to collect the baseline for each individual host in your environment.
 
-1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed:
+1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed. You should verify in a lab environment that the reference host can run the Host Guardian Hyper-V Support feature.
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
