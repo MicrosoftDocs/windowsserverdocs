@@ -1,7 +1,7 @@
 ---
 ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
 title: AD FS 2016 FAQ
-description:
+description: Frequently asked questions for AD FS 2016
 author: jenfieldmsft
 ms.author:  jenfieldmsft
 manager: samueld
