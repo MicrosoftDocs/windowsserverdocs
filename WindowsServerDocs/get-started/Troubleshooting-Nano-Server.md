@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Nano Server
-description: " "
+description: "Recovery Console, Emergency Management Services, kernel debugging"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

@@ -1,6 +1,6 @@
 ---
 title: Install Nano Server
-description: " "
+description: "Clean installation, upgrade, migration, and evaluation of Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

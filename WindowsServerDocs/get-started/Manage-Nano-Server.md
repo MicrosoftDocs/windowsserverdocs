@@ -1,6 +1,6 @@
 ---
 title: Manage Nano Server
-description: " "
+description: "updates, servicing packages, networking tracing, performance monitoring"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
@@ -141,7 +141,7 @@ Currently you can use the Windows Update provider for Windows Management Instrum
 In all cases, first establish a remote Windows PowerShell session to the Nano Server computer. These examples use *$sess* for the session; if you are using something else, replace that element as needed.  
 
 
-View all available updates  
+### View all available updates  
 ---  
 Obtain the full list of applicable updates with these commands:  
 ```  
@@ -169,7 +169,7 @@ At line:1 char:16
    CimCmdlets.InvokeCimMethodCommand  
 ```  
 
-Install all available updates  
+### Install all available updates  
 ---  
 You can detect, download, and install **all** available updates at one time by using these commands:  
 
@@ -184,7 +184,7 @@ Restart-Computer
 Windows Defender will prevent updates from installing. To work around this, uninstall Windows Defender, install the updates, and then reinstall Windows Defender. Alternately, you can download the updates on another computer, copy them to the Nano Server, and then apply them with DISM.exe.  
 
 
-Verify installation of updates  
+### Verify installation of updates  
 ---  
 Use these commands to get a list of the updates currently installed:  
 ```  
@@ -199,7 +199,7 @@ These commands list what is installed, but do not specifically quote "installed"
 Get-WindowsPackage--Online  
 ```  
 
-Using WSUS  
+### Using WSUS  
 ---  
 The commands listed above will query the Windows Update and Microsoft Update serviceon the Internet to find and download updates. If you use WSUS, you can set registry keys on the Nano Server to use your WSUS server instead.  
   
