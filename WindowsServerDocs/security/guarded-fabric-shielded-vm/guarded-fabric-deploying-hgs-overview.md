@@ -25,21 +25,87 @@ The following topics tell how to set up a guarded fabric.
 
 The following table breaks down the tasks to deploy a guarded fabric and create shielded VMs according to different administrator roles. Note that when the HGS admin configures HGS with authorized Hyper-V hosts, a fabric admin will collect and provide identifying information about the hosts at the same time.    
 
-|  Host Guardian Service (HGS) administrator tasks     |  Fabric administrator tasks    |   Tenant administrator tasks    |
-|-------|-------|-------|
-| [Verify HGS prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-the-host-guardian-service)| [Verify guarded host prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts) | |
-| [Configure the first HGS node](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-the-first-hgs-node)|  | |
-|&nbsp; | [Configure fabric DNS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-the-fabric-dns)|  |
-| [Configure secondary HGS nodes](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-secondary-hgs-nodes)| | |
-| [Configure HGS with authorized Hyper-V hosts](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-hgs-with-authorized-hyper-v-hosts) | [Collect identifying information from Hyper-V hosts](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#tpm-trusted-attestation-capturing-hardware-and-software-information-that-hgs-uses-in-attestation) |  |
-| [Verify HGS configuration](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#verify-hgs-is-configured-properly) |    |  |
-| &nbsp;| [Confirm hosts can attest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#confirm-hosts-can-attest-successfully)  | |
-| &nbsp;| [Configure VMM (optional)](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview) |   |
-| &nbsp;| [Create template disks (optional)](guarded-fabric-create-a-shielded-vm-template.md) |  |
-| &nbsp;| [Create a VM shielding helper disk for VMM (optional)](guarded-fabric-vm-shielding-helper-vhd.md) |  |
-| &nbsp;| [Set up Windows Azure Pack (optional)](guarded-fabric-shielded-vm-windows-azure-pack.md) | |
-| &nbsp;| &nbsp;| [Creating shielding data file(s)](guarded-fabric-tenant-creates-shielding-data.md)  |
-| &nbsp;| &nbsp;| [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md#steps-tenants-take-to-create-shielded-vms-with-windows-azure-pack)<br>[Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) |
+<table>
+<colgroup>
+<col width="38%" />
+<col width="38%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">![Host Guardian Service administrator tasks](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-administrator-tasks.png)</th>
+<th align="left">![Fabric administrator tasks](../media/Guarded-Fabric-Shielded-VM/guarded-host-fabric-administrator-tasks.png)</th>
+<th align="left">![Tenant administrator tasks](../media/Guarded-Fabric-Shielded-VM/guarded-host-tenant-administrator-tasks.png)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/1111.png" alt="Step 1" hspace="8" align="left" /> [Verify HGS prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-the-host-guardian-service) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 1" hspace="8" align="right" /></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/2222.png" alt="Step 2" hspace="8" align="left" /> [Verify host&nbsp;prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 2" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/3333.png" alt="Step 3" hspace="8" align="left" /> [Configure first HGS&nbsp;node](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-the-first-hgs-node)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png" alt="Step 3" hspace="8" align="right" /> </p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/4444.png" alt="Step 4" hspace="8" align="left" /> [Configure fabric DNS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-the-fabric-dns) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-fabric-dns.png" alt="Step 4" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/5555.png" alt="Step 5" hspace="8" align="left" /> [Configure secondary HGS&nbsp;nodes](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-secondary-hgs-nodes) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-secondary-hgs-nodes.png" alt="Step 5" hspace="8" align="right" /></p></td>
+<td align="left"><p>![Arrow](../media/Guarded-Fabric-Shielded-VM/guarded-host-bent-arrow-01.png)</p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/7777.png" alt="Step 7" hspace="8" align="left" /> [Configure HGS with host information](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-hgs-with-authorized-hyper-v-hosts) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png" alt="Step 7" hspace="8" align="right" /> </p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/6666.png" alt="Step 6" hspace="8" align="left" /> [Collect information from hosts (TPM)](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#tpm-trusted-attestation-capturing-hardware-and-software-information-that-hgs-uses-in-attestation) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png" alt="Step 6" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/8888.png" alt="Step 8" hspace="8" align="left" /> [Verify HGS configuration](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#verify-hgs-is-configured-properly) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify-hgs-configuration.png" alt="Step 8" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/9999.png" alt="Step 9" hspace="8" align="left" /> [Confirm hosts can attest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#confirm-hosts-can-attest-successfully) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png" alt="Step 9" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/101010.png" alt="Step 10" hspace="8" align="left" /> [Configure VMM (optional)](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png" alt="Step 10" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/11eleven.png" alt="Step 11" hspace="8" align="left" /> [Create template disks](guarded-fabric-create-a-shielded-vm-template.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png" alt="Step 11" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/121212.png" alt="Step 12" hspace="8" align="left" /> [Create a VM shielding helper disk for VMM (optional)](guarded-fabric-vm-shielding-helper-vhd.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-create-helper-disk.png" alt="Step 12" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/131313.png" alt="Step 13" hspace="8" align="left" /> [Set up Windows Azure Pack (optional)](guarded-fabric-shielded-vm-windows-azure-pack.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-windows-azure-pack.png" alt="Step 13" hspace="8" align="right" /></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/141414.png" alt="Step 14" hspace="8" align="left" /> [Create shielding data file](guarded-fabric-tenant-creates-shielding-data.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png" alt="Step 14" hspace="8" align="right" /></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/151515.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md#steps-tenants-take-to-create-shielded-vms-with-windows-azure-pack) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p>
+<p><img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-plain-spacer-15.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p></td>
+</tr></tbody>
+</table>
 
 ## See also
 
