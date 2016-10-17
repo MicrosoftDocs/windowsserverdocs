@@ -25,13 +25,15 @@ The steps in this section guide you through setting up your first HGS node. You 
 
 Add the Host Guardian Service role by using Server Manager or by running the following command in an elevated Windows PowerShell console:
 
-    Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
-
+```powershell
+Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
+```
+    
 ### Install the Host Guardian Service
 
 After the role is added, the next step is to run the [Install-HgsServer](https://technet.microsoft.com/library/mt652169.aspx) cmdlet to install the HGS. HGS is a critical component in a guarded fabric and is responsible for attesting to a Hyper-V host's health as well as releasing keys needed to work with shielded VMs. The HGS forest is sensitive because its administrators have access to the keys that control shielded VMs. 
 
-When you install HGS, it creates its own forest by default. Another option is to add HGS to an existing bastion forest. The next sections cover these two options.
+When you install HGS, it creates its own forest by default. Another option is to add HGS to an existing bastion forest.
 
 #### Choose whether to install HGS in its own new forest or in an existing bastion forest
 
@@ -45,7 +47,7 @@ There are no technical requirements that prevent installing HGS in an existing f
 
 General purpose forests such as CORP forests are not suitable for use by the HGS. Because the HGS needs to be isolated from fabric administrators, fabric forests are unsuitable.
 
-Depending on your deployment scenario, follow the steps to [install HGS in its own new forest](#install-hgs-in-its-own-new-forest) or [install HGS in an existing bastion forest](#install-hgs-in-an-existing-bastion-forest). 
+Depending on your deployment scenario, follow the steps to [install HGS in its own new forest](#install-hgs-in-its-own-new-forest) or [initialize HGS in an existing bastion forest](#initialize-hgs-in-an-existing-bastion-forest). 
 
 #### Install HGS in its own new forest
 
@@ -55,44 +57,11 @@ The following steps describe the process for deploying the Host Guardian Service
 
     ```powershell
     $adminPassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
-    
+
     Install-HgsServer -HgsDomainName 'relecloud.com' -SafeModeAdministratorPassword $adminPassword -Restart
     ```
 
 2.  After the computer restarts, log in as the domain administrator using the same password you previously used as the local administrator (regardless of the password you specified in the previous step).
-
-#### Install HGS in an existing bastion forest
-
-The following instructions describe how to add HGS to an existing forest, rather than using the default process of allowing HGS to create its own forest and domain. 
-
-##### Requirements for adding HGS to an existing forest
-
-Before you can add HGS to an existing forest, you will need to add these objects to the target domain:
-
--   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
-
--   Two Active Directory groups that you will use for Just Enough Administration (JEA). One group is for users who can perform HGS administration through JEA, and the other is for users who can only view HGS through JEA.
-
--   For running HGS in a cluster, either prestaged cluster objects or, for the user who runs **Initialize-HgsServer**, permission to add computer objects to the domain (which is possible by default).
-
-##### Command parameters for adding HGS to an existing forest
-
-The following tables describe **Install-HgsServer** parameters to use when you add HGS to an existing forest.
-
-| **Required Parameter**  | **Description**    |
-|-------------------------|--------------------|
-| `-UseExistingDomain`      | Adds HGS to an existing domain.                                                                                              |
-| `-JeaAdministratorsGroup` | Identifies the Active Directory group of users who can perform HGS administration (through Just Enough Administration, JEA). |
-| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view HGS (through JEA).                                               |
-| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service.                        |
-
-| **Optional Parameter** | **Description**     |
-|------------------------|---------------------|
-| `-ClusterName`           | Optionally, identifies the name of an existing cluster for HGS to use, rather than allowing a cluster to be automatically created by **Initialize-HgsServer**. |
-
-##### Windows PowerShell example line for adding HGS to an existing forest
-
-    Install-HgsServer -UseExistingDomain '<DomainName>' -JeaAdministratorsGroup <AdministratorsGroupName> -JeaReviewersGroup <ReviewersGroupName> -ServiceAccount <gMSAforKPS> -ClusterName <ExistingClusterName> –Restart
 
 ### Specify the signing and encryption certificates that HGS will use
 
@@ -110,7 +79,7 @@ HTTPS is not needed to secure communication between HGS and a Hyper-V host, but 
 
 | Option | Additional procedure |
 |--------|----------------------|
-| You want to enable HTTPS.  | [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https) |
+| You want to enable HTTPS  | [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https) |
 
 #### Use my own PKI certificates that are not backed by an HSM
 
@@ -132,7 +101,7 @@ If you are unable to obtain a PFX or are unable to obtain one with the private k
 
 5. Repeat the process for the encryption certificate.
     
-#### Use my own certificates with an HSM
+#### Use your own certificates with an HSM
 
 If you plan to use certificates that reside in a Hardware Security Module (HSM), use the following high-level steps, which will vary according to your HSM vendor:
 
@@ -155,21 +124,23 @@ If you plan to use certificates that reside in a Hardware Security Module (HSM),
 
 1.  Open an elevated Windows PowerShell console and run the following command to specify the password to use when exporting the self-signed certificate. For &lt;password&gt;, substitute a password.
 
-        $certificatePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
-
+    ```powershell
+    $certificatePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
+    ```
+        
 2.  Create and export the signing certificate by running the following commands. For signing (after `-DnsName`) and for `C:\signingCert`, you can leave the names as shown or substitute your preferred names.
 
     ```powershell
     $signingCert = New-SelfSignedCertificate -DnsName "signing.relecloud.com"
-    
+
     Export-PfxCertificate -Cert $signingCert -Password $certificatePassword -FilePath 'C:\signingCert.pfx'
     ```
 
 3.  Create and export the encryption certificate by running the following commands. For encryption (after `-DnsName`) and for `C:\encryptionCert`, you can leave the names as shown or substitute your preferred names.
 
-    ```
+    ```powershell
     $encryptionCert = New-SelfSignedCertificate -DnsName "encryption.relecloud.com"
-    
+
     Export-PfxCertificate -Cert $encryptionCert -Password $certificatePassword -FilePath 'C:\encryptionCert.pfx'
     ```
 
@@ -177,11 +148,15 @@ If you plan to use certificates that reside in a Hardware Security Module (HSM),
 
 If you choose to enable HTTPS on your HGS server, you must have or create an additional certificate. To create a new certificate, run the following command. For `<HgsServiceName>`, choose a name that you will use as the distributed network name of your HGS server or HGS cluster.
 
-    $HttpsCertificate = New-SelfSignedCertificate -DnsName "<HgsServiceName>.$env:userdnsdomain" -CertStoreLocation Cert:\LocalMachine\My
+```powershell
+$HttpsCertificate = New-SelfSignedCertificate -DnsName "<HgsServiceName>.$env:userdnsdomain" -CertStoreLocation Cert:\LocalMachine\My
+```
 
 After you have chosen or created a certificate to use for HTTPS, use a command like the following to export it.
 
-    Export-PfxCertificate -Cert $HttpsCertificate -Password $certificatePassword -FilePath 'c:\\HttpsCertificate.pfx'
+```powershell
+Export-PfxCertificate -Cert $HttpsCertificate -Password $certificatePassword -FilePath 'c:\\HttpsCertificate.pfx'
+```
 
 The options for specifying this certificate when initializing the HGS server are listed later in this topic.
 
@@ -195,7 +170,7 @@ The following commands will complete the configuration of the first HGS node.
 
     For &lt;HgsServiceName&gt;, substitute a name of your choosing for the HGS cluster. This name is the distributed network name of the cluster. This name should *not* be fully qualified (e.g. enter “hgs” if you want the DNN to be configured as “hgs.relecloud.com”).
 
-    The syntax of the [Initialize-HGSserver](https://technet.microsoft.com/library/mt652185.aspx) command will vary according to the type of certificate you chose in [Specify the signing and encryption certificates that HGS will use](#specify-the-signing-and-encryption-certificates-that-hgs-will-use) and the desired attestation mode. Specifically:
+    The syntax of the [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) command will vary according to the type of certificate you chose in [Specify the signing and encryption certificates that HGS will use](#specify-the-signing-and-encryption-certificates-that-hgs-will-use) and the desired attestation mode. Specifically:
 
     -   If you have PFX files with private keys intact, use the following parameter set:
 
@@ -208,8 +183,10 @@ The following commands will complete the configuration of the first HGS node.
 
         You also need to provide the certificate password you chose earlier to the *initialize* cmdlet as a secure string. Enter the following command if you have not already created a variable to hold it.
 
-        `$certificatePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force`
-
+        ```powershell
+        $certificatePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
+        ```
+    
     -   If your certificates are in your local certificate store, regardless of whether their private keys are intact or HSM-backed, use the following parameter set:
 
         ```
@@ -227,52 +204,91 @@ The following commands will complete the configuration of the first HGS node.
 
     Your final command syntax will resemble the following example:
 
-        Initialize-HGSServer -HgsServiceName '<HgsServiceName>' -SigningCertificatePath 'C:\signingCert.pfx' -SigningCertificatePassword $certificatePassword -EncryptionCertificatePath 'C:\encryptionCert.pfx' -EncryptionCertificatePassword $certificatePassword [-TrustActiveDirectory | -TrustTPM]
-
+    ```powershell
+    Initialize-HgsServer -HgsServiceName '<HgsServiceName>' -SigningCertificatePath 'C:\signingCert.pfx' -SigningCertificatePassword $certificatePassword -EncryptionCertificatePath 'C:\encryptionCert.pfx' -EncryptionCertificatePassword $certificatePassword [-TrustActiveDirectory | -TrustTPM]
+    ```
+    
     Although HTTPS is not needed to secure communication between HGS and a Hyper-V host, if you want to enable HTTPS for HGS, instead of using the previous command syntax, see the next section. 
 
-#### Initialize HGS server with HTTPS Certificate 
+#### Initialize HGS server with an HTTPS Certificate 
 
 If you want to enable HTTPS communication on the HGS server, you need to pass in the HTTPS certificate (the one you exported in [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https)) when initializing the HGS server. Modify the following example as appropriate, and then run it in place of the command in the previous section.
 
-    Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
+```powershell
+Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
+```
+    
+>**Note**&nbsp;&nbsp;If you are setting up multiple HGS servers in a high availability configuration, be sure to import the same HTTPS certificate on each machine. The variables **-Http -Https -HttpsCertificatePath 'C:\\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword** (as shown in the previous command) should be included every time you initialize an HGS server in your environment.
 
->**Note**&nbsp;&nbsp;If you are setting up multiple HGS servers in a High Availability configuration, be sure to import the same HTTPS certificate on each machine. The variables **-Http -Https -HttpsCertificatePath 'C:\\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword** (as shown in the previous command) should be included every time you initialize an HGS server in your environment.
+#### Initialize HGS in an existing bastion forest
+
+The following steps describe the process for adding HGS to an existing forest, rather than using the default process of allowing HGS to create its own forest and domain. 
+
+##### Requirements for adding HGS to an existing forest
+
+Before you can add HGS to an existing forest, you will need to add these objects to the target domain:
+
+-   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
+
+-   Two Active Directory groups that you will use for Just Enough Administration (JEA). One group is for users who can perform HGS administration through JEA, and the other is for users who can only view HGS through JEA.
+
+-   For setting up the cluster, either [prestaged cluster objects](http://go.microsoft.com/fwlink/?LinkId=746122) or, for the user who runs **Initialize-HgsServer**, permissions that would are required to prestage the cluster objects.
+
+##### Command parameters for adding HGS to an existing forest
+
+The following tables describe the unique **Initialize-HgsServer** parameters to use when you add HGS to an existing forest. For the rest of the parameters, see [initialize the HGS server with your chosen mode of attestation](#initialize-the-hgs-server-with-your-chosen-mode-of-attestation).
+
+| **Required Parameter**  | **Description**    |
+|-------------------------|--------------------|
+| `-UseExistingDomain`      | Adds HGS to an existing domain.                                                                                              |
+| `-JeaAdministratorsGroup` | Identifies the Active Directory group of users who can perform HGS administration (through Just Enough Administration, JEA). |
+| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view HGS (through JEA).                                               |
+| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service.                        |
+
+| **Optional Parameter** | **Description**     |
+|------------------------|---------------------|
+| `-ClusterName`           | Optionally, identifies the name of an existing cluster for HGS to use, rather than allowing a cluster to be automatically created by **Initialize-HgsServer**. |
+
+##### Windows PowerShell example line for adding HGS to an existing forest
+
+```powershell
+Initialize-HgsServer -UseExistingDomain '<DomainName>' -JeaAdministratorsGroup <AdministratorsGroupName> -JeaReviewersGroup <ReviewersGroupName> -ServiceAccount <gMSAforKPS> -ClusterName <ExistingClusterName> -HgsServiceName '<HgsServiceName>' -SigningCertificatePath 'C:\signingCert.pfx' -SigningCertificatePassword $certificatePassword -EncryptionCertificatePath 'C:\encryptionCert.pfx' -EncryptionCertificatePassword $certificatePassword [-TrustActiveDirectory | -TrustTPM]
+```
 
 ## Configure secondary HGS nodes
 
-In production environments, HGS should be set up in a high-availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
+In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
 The following steps will add an additional node to the HGS cluster that you previously set up. The computer should *not* be joined to any domain before you perform these steps.
 
 1.  To add the Host Guardian Service role to the computer, run the following command in an elevated Windows PowerShell console:
 
-        Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
+    ```powershell
+    Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
+    ```
+
+    >**Note**&nbsp;&nbsp;If you are adding HGS to an existing domain not created with **Install-HgsServer**, you may skip to step 5.
 
 2.  Configure at least one NIC on this machine to use the DNS server on your first HGS server for name resolution. This is necessary to enable the machine to resolve and join the HGS domain and cluster in the next step.
 
 3.  Install the Host Guardian Service by running the command below. Substitute the IP addresses and names as appropriate for your environment:
 
-    ```
+    ```powershell
     $adSafeModePassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
 
     $cred = Get-Credential 'relecloud\Administrator'
 
-    Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred
-
-    -SafeModeAdministratorPassword $adSafeModePassword -Restart
-
-    -Confirm:$false
+    Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred -SafeModeAdministratorPassword $adSafeModePassword -Restart -Confirm:$false
     ```
 
 4.  Wait for the server to restart, then sign in with the HGS domain administrator credentials.
 
 5.  Run the commands below to finish adding the new node to the HGS cluster. Substitute the IP addresses and names as appropriate for your environment:
 
-    ```
+    ```powershell
     $cred = Get-Credential 'relecloud\Administrator'
 
-    Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server> -HgsDomainCredential $cred -Confirm:$false
+    Initialize-HgsServer -HgsServerIPAddress <IP address of first HGS Server> -Confirm:$false
     ```
 
 6.  Allow up to 10 minutes for the encryption and signing certificates from the first HGS server to replicate to this node.
@@ -281,7 +297,9 @@ The following steps will add an additional node to the HGS cluster that you prev
 
 Next, we need to validate that things are working as expected. To do so, run the following command in an elevated PowerShell console:
 
-`Get-HGSTrace -RunDiagnostics`
+```powershell
+Get-HgsTrace -RunDiagnostics
+```
 
 Review the results paying careful attention to any test that failed. If no failures occurred, it will return:
 
@@ -309,7 +327,9 @@ For Admin-trusted attestation, use the following steps to set up necessary DNS f
 
     For `<DNSserverAddress2>`, substitute the IP address of an additional DNS server (if one exists in the fabric domain). You can type additional IP addresses, if available.
 
-        Add-DnsServerConditionalForwarderZone -Name "fabrikam.com" -ReplicationScope "Forest" -MasterServers <DNSserverAddress1>, <DNSserverAddress2>
+    ```powershell
+    Add-DnsServerConditionalForwarderZone -Name "fabrikam.com" -ReplicationScope "Forest" -MasterServers <DNSserverAddress1>, <DNSserverAddress2>
+    ```
 
     >**Note**&nbsp;&nbsp;To enable high availability and ensure resiliency against a DNS node failure, configure your forwarder to point to more than one DNS server in the fabric domain.
 
@@ -333,7 +353,9 @@ Substitute the names and addresses in the Windows PowerShell syntax below as nee
 
 >**Note**&nbsp;&nbsp;Run these commands on a fabric DNS server, not the HGS server that you just configured.
 
-    Add-DnsServerConditionalForwarderZone -Name 'relecloud.com' -ReplicationScope "Forest" -MasterServers <IP addresses of HGS server>
+```powershell
+Add-DnsServerConditionalForwarderZone -Name 'relecloud.com' -ReplicationScope "Forest" -MasterServers <IP addresses of HGS server>
+```
 
 ##  Configure HGS with authorized Hyper-V hosts
 
@@ -345,7 +367,7 @@ With HGS set up and name resolution in place, it’s time to configure HGS to re
 | **TPM-trusted attestation**: Capture TPM identifiers (also called platform identifiers), create a TPM baseline, and create a Code Integrity policy. | See [TPM-trusted attestation: capturing hardware and software information that HGS uses in attestation](#tpm-trusted-attestation-capturing-hardware) |
 
 <span id="admin-trusted-attestation-creating-a-security"/>
-### Admin-trusted attestation: Creating a security group and placing hosts in the group
+### Admin-trusted attestation: creating a security group and placing hosts in the group
 
 Admin-trusted attestation identifies legitimate hosts through a designated Active Directory security group. Use the following procedures to create the security group and place hosts in that group.
 
@@ -361,8 +383,10 @@ For hardware-based (TPM) attestation, these steps do not apply. Instead, see [TP
 
     For `<GuardedHostGroup>`, provide a friendly name for the guarded host group in HGS—this is useful if you need to differentiate one Attestation Host group from another in different domains. This name does not need to match the Active Directory security group name but it does not support spaces or common punctuation other than hyphens.
 
-        Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
-
+    ```powershell
+    Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
+    ```
+        
     To obtain the SID, use the following PowerShell command against the fabric AD and copy the SID as formatted in the output (don’t forget to wrap it in quotes).
 
     ![Get-AdGroup command with output](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
@@ -402,19 +426,23 @@ We recommend that you elect a “reference host” to represent each unique clas
 
 2.  On each guarded host, run the following command in an elevated Windows PowerShell console to obtain its EKpub. For `<HostName>`, substitute the unique host name with something suitable to identify this host—this can be its hostname or the name used by a fabric inventory service (if available). For convenience, name the output file using the host’s name.
 
-        (Get-PlatformIdentifier -Name '<HostName>').InnerXml | Out-file <Path><HostName>.xml -Encoding UTF8
-    
+    ```powershell
+    (Get-PlatformIdentifier -Name '<HostName>').InnerXml | Out-file <Path><HostName>.xml -Encoding UTF8
+    ```
+        
 3.  Copy the resulting XML file to an HGS server.
 
 4.  In an elevated Windows PowerShell console on the HGS server, run the command below.
 
-        Add-HgsAttestationTpmHost -Path <Path><Filename>.xml -Name <HostName> -Force
-
+    ```powershell
+    Add-HgsAttestationTpmHost -Path <Path><Filename>.xml -Name <HostName> -Force
+    ```
+        
     >**Note**&nbsp;&nbsp;The **-Force** flag is used here to bypass a validation of the EKcert of the host’s TPM. Hosts using TPMs without an EKcert or with an EKcert issued by an authority your HGS server does not trust will throw an error without the use of -Force. For the highest level of security, do not use the -Force flag, so that you will be alerted to potentially untrustworthy TPMs.
 
 5.  Repeat the preceding steps for each host that will become a guarded host, being sure to give each XML file a unique name.
 
-#### Create and apply a code integrity policy
+#### Create and apply a Code Integrity policy
 
 A Code Integrity policy helps ensure that only the executables you trust to run on a host are allowed to run. Malware and other executables outside the trusted executables are prevented from running.
 
@@ -427,7 +455,7 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
 
 1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **FilePublisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
-    ```
+    ```powershell
     New-CIPolicy -Level FilePublisher -Fallback Hash -FilePath 'C:\temp\HW1CodeIntegrity.xml' -UserPEs
 
     ConvertFrom-CIPolicy -XmlFilePath 'C:\temp\HW1CodeIntegrity.xml' -BinaryFilePath 'C:\temp\HW1CodeIntegrity.p7b'
@@ -448,7 +476,7 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
 
 4.  Change your CI policy to enforced mode by running the following commands against your updated CI policy XML file.
 
-    ```
+    ```powershell
     Set-RuleOption -FilePath 'C:\temp\HW1CodeIntegrity.xml' -Option 3 -Delete
 
     ConvertFrom-CIPolicy -XmlFilePath 'C:\temp\HW1CodeIntegrity.xml' -BinaryFilePath 'C:\temp\HW1CodeIntegrity_enforced.p7b'
@@ -456,7 +484,7 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
 
 5.  Apply the CI policy to all of your hosts (with identical hardware and software configuration) using the following commands:
 
-    ```
+    ```powershell
     Copy-Item -Path '<Path to HW1CodeIntegrity\_enforced.p7b>' -Destination 'C:\Windows\System32\CodeIntegrity\SIPolicy.p7b'
 
     Restart-Computer
@@ -470,8 +498,10 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
 
     For `<PolicyName>`, specify a name for the CI policy that describes the type of host it applies to. A best practice is to name it after the make/model of your machine and any special software configuration running on it.
 
-        Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
-
+    ```powershell
+    Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
+    ```
+        
 #### Capture the TPM baseline for each unique class of hardware
 
 A TPM baseline is required for each unique class of hardware in your datacenter fabric.
@@ -480,11 +510,15 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed:
 
-        Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
-
+    ```powershell
+    Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
+    ```
+        
 2. To capture the baseline policy, run the following command in an elevated Windows PowerShell console.
-
-        Get-HgsAttestationBaselinePolicy -Path 'HWConfig1.tcglog'
+        
+    ```powershell
+    Get-HgsAttestationBaselinePolicy -Path 'HWConfig1.tcglog'
+    ```
 
     >**Note**&nbsp;&nbsp;You will need to provide the **-SkipValidation** flag if the reference host does not have Secure Boot enabled, an IOMMU present, Virtualization Based Security enabled and running, or a code integrity policy applied. These validations are designed to make you aware of the minimum requirements of running a shielded VM on the host. Using the -SkipValidation flag does not change the output of the cmdlet; it merely silences the errors.
 
@@ -492,15 +526,19 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 3.  On the HGS server where you copied the TCGlog file, add the baseline policy as an authorized baseline for attestation purposes using the following command. Typically, you will name the policy after the class of hardware it represents (e.g. “Manufacturer Model Revision”).
 
-        Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
-
+    ```powershell
+    Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
+    ```
+        
 ## Verify HGS is configured properly
 
 Now that HGS has been configured, it is time to check whether everything is configured correctly by running the HGS diagnostics tool. This tool will check for common misconfigurations and best practices and, when possible, provide information on how to fix any issues detected.
 
 Run the HGS Diagnostics tool [Get-HgsTrace](https://technet.microsoft.com/library/mt718831.aspx), using the following command:
 
-    Get-HgsTrace -RunDiagnostics
+```powershell
+Get-HgsTrace -RunDiagnostics
+```
 
 In the output, check for any failures or warnings and address the concerns raised by the diagnostics tool. You can safely ignore failures if you are using a certificate with an HSM. These failures appear because HGS cannot check the HSM to verify the permissions of the certificate. 
 
@@ -512,21 +550,27 @@ Complete the following steps on at least one host that you want to run as a guar
 
 1.  Confirm that your host or hosts meet the [Prerequisites for Hyper-V hosts that will become guarded hosts](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts). If you have not already installed the prerequisite role and feature (Hyper-V role and Host Guardian Hyper-V Support feature), install them with the following command:
 
-        Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
-
+    ```powershell
+    Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
+    ```
+        
 2.  Configure the host’s Key Protection and Attestation URLs by executing the following command in an elevated Windows PowerShell console. For &lt;FQDN&gt;, use the FQDN of your HGS cluster (for example, hgs.relecloud.com, or run **Get-HgsServer** cmdlet on the HGS server to retrieve the URL).
 
-        Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
-
+    ```powershell
+    Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
+    ```
+        
     >**Notes**
     > - You can also use System Center 2016 - Virtual Machine Manager (VMM) to set the Attestation and Key Protection URLs. For details, see [Scenario 1 - Provision guarded hosts in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts). Whichever method you use, you can perform the next step by running **Get-HgsClientConfiguration** on the host, to see the current URL settings on that host.
     > - If you followed the steps in this topic to enable HTTPS on the HGS server, when specifying the host's Key Protection and Attestation URLs, remember to begin the URLs with `https://` rather than `http://`.
     > -  If you followed the steps in this topic to enable HTTPS on the HGS server, and you used a self-signed certificate, you will need to import the certificate into the Trusted Root Certificate Authorities store on every host. To do this, run the following command on each host machine:<br>
-    `Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root`
-
+        `Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root`
+    
 3.  To initiate an attestation attempt on the host and view the attestation status, run the following command:
 
-        Get-HgsClientConfiguration
+    ```powershell
+    Get-HgsClientConfiguration
+    ```
 
     The display shows whether attestation succeeded, that is, whether the host is now a guarded host.
 
