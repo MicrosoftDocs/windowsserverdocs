@@ -41,7 +41,7 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 <tbody>
 <tr class="odd">
 <td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/1111.png" alt="Step 1" hspace="8" align="left" /> [Verify HGS prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-the-host-guardian-service) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 1" hspace="8" align="right" /></p></td>
-<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/2222.png" alt="Step 2" hspace="8" align="left" /> [Verify host&nbsp;prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 2" /></p></td>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/2222.png" alt="Step 2" hspace="8" align="left" /> [Verify host&nbsp;prerequisites](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 2" hspace="8" align="right" /></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
