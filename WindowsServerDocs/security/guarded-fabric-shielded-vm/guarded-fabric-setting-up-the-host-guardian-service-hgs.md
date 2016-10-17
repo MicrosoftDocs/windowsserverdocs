@@ -278,11 +278,7 @@ The following steps will add an additional node to the HGS cluster that you prev
 
     $cred = Get-Credential 'relecloud\Administrator'
 
-    Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred
-
-    -SafeModeAdministratorPassword $adSafeModePassword -Restart
-
-    -Confirm:$false
+    Install-HgsServer -HgsDomainName 'relecloud.com' -HgsDomainCredential $cred -SafeModeAdministratorPassword $adSafeModePassword -Restart -Confirm:$false
     ```
 
 4.  Wait for the server to restart, then sign in with the HGS domain administrator credentials.
