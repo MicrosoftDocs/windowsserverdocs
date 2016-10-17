@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials
 
-**Windows Server 2016 Essentials** is a flexible, affordable, and easy-to-use server solution designed and priced for small businesses with up to 500 users and 500 devices.  Windows Server Essentials is an ideal first server, and it can also be used as the primary server in a multi-server environment for small businesses. For more information, see [What's New in Windows Server Essentials](what-s-new.md) and [download the Windows Server Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7). 
+**Windows Server 2016 Essentials** edition is a cloud-connected first server, ideal for small businesses with up to 25 users and 50 devices. Essentials is a good option for customers currently using the Foundation edition, which is not available with Windows Server 2016. For more information, see [What's New in Windows Server Essentials](what-s-new.md) and [download the Windows Server Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7). 
   
 ## In this library  
  For information about installing, configuring, managing, using, and troubleshooting Windows Server Essentials, see the following documentation:  
