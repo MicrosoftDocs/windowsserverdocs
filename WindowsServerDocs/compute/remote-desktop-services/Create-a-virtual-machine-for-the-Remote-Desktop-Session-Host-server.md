@@ -1,5 +1,6 @@
 ---
 title: Create a virtual machine for the Remote Desktop Session Host server
+description: Learn how to create a VM for the RDSH server.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

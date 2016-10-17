@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Cater to different kinds of users
+description: Describes the different kinds of users for RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

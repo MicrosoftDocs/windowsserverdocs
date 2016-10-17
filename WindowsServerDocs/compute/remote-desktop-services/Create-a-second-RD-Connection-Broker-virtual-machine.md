@@ -1,5 +1,6 @@
 ---
 title: Create a second RD Connection Broker virtual machine
+description: Learn how to create an additional RDCB VM.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

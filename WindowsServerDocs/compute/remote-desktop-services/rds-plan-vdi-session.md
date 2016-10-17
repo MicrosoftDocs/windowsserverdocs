@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - VDI or session-based deployment 
+description: Planning information to help you choose between VDI or session-based RD deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

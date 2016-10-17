@@ -1,5 +1,6 @@
 ---
 title: Deploy a two-node S2D SOFS for UPD storage in Azure
+description: Learn how to use Storage Spaces Direct with RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

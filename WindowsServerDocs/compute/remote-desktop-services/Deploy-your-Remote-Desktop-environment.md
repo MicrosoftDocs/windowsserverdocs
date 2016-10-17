@@ -2,6 +2,7 @@
 title: Deploy your Remote Desktop environment
 ms.custom: na
 ms.prod: windows-server-threshold
+description: Basic steps to deploy a Remote Desktop environment.
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services

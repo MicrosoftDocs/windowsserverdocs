@@ -1,5 +1,6 @@
 ---
 title: Prepare the RD Connection Broker VM for Remote Desktop
+description: Get your VM ready to host the RD Connection Broker
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

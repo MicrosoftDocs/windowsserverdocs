@@ -1,5 +1,6 @@
 ---
 title: Additional Remote Desktop Resources
+description: Provides links to where to get more information and help about RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

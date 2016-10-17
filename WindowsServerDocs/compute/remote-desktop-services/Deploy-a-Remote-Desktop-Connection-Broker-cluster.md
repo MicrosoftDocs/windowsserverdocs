@@ -1,5 +1,6 @@
 ---
 title: Deploy a Remote Desktop Connection Broker cluster
+description: Create a cluster for your RD Connection Brokers
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

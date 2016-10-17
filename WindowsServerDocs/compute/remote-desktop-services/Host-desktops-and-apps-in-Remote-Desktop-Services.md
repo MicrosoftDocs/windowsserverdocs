@@ -1,5 +1,6 @@
 ---
 title: Host desktops and apps in Remote Desktop Services on Azure
+description: Summary of the steps needed to create a desktop hosting deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

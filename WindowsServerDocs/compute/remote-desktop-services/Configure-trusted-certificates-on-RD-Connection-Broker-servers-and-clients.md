@@ -1,5 +1,6 @@
 ---
 title: Configure trusted certificates on RD Connection Broker servers and clients
+description: Learn how to use certificates on RD Connection Brokers and clients.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: Create an Azure internal load balancer for Remote Desktop deployment
+description: Learn how to create an Azure internal load balancer for RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

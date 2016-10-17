@@ -1,5 +1,6 @@
 ---
 title: Add the RDSH Server, create a collection, and publish the RemoteApp programs
+description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

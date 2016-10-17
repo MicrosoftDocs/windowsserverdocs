@@ -1,5 +1,6 @@
 ---
 title: Deploy a basic desktop hosting environment using Azure IaaS
+description: Use RDS with Azure IaaS to host apps and desktops in the cloud.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: Deploy a Remote Desktop Session Host farm to improve availability
+description: Add a second RD Session Host to yur RDS environment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
