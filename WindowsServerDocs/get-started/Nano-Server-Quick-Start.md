@@ -1,6 +1,6 @@
 ---
 title: Nano Server Quick Start
-description: " "
+description: "Steps to quickly deploy a basic Nano Server on physical or virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

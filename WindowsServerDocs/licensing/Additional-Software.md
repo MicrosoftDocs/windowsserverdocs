@@ -1,5 +1,6 @@
 ---
 title: Additional Software for Windows Server 2016 
+description: "list of additional software mentioned in license terms"
 ms.custom: na
 ms.prod: windows-server-threshold
 manager: DonGill

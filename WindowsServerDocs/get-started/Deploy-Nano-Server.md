@@ -1,6 +1,6 @@
 ---
 title: Deploy Nano Server
-description: " "
+description: "Explains creating and deploying custom images, packages, drivers, domains, roles, features"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

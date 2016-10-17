@@ -1,6 +1,6 @@
 ---
 title: IIS on Nano Server
-description: " "
+description: "Details for configuring IIS on Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
