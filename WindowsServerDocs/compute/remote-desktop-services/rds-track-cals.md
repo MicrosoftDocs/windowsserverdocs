@@ -1,5 +1,6 @@
 ---
 title: Track your Remote Desktop Services client access licenses (RDS CALs)
+description: Learn how to track CALs across your RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

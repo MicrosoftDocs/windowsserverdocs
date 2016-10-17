@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Choose how you pay
+description: Planning information about RDS licensing.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

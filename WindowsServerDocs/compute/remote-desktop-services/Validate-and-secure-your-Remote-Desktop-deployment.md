@@ -1,5 +1,6 @@
 ---
 title: Validate and secure your Remote Desktop deployment
+description: Learn how to verify that your RDS deployment is functioning.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

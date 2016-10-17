@@ -1,5 +1,6 @@
 ---
 title: Deploy RemoteApp programs
+description: Share apps through RemoteApps in Remote Desktop Services (RDS) 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

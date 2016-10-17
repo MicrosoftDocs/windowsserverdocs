@@ -1,5 +1,6 @@
 ---
 title: Add the RDSH server to the collection farm
+description: Learn how to add an RD Session Host to an RDS collection farm.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

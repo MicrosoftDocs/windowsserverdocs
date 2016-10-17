@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Personal or pooled desktops
+description: Planning information for personal vs pooled desktops in RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

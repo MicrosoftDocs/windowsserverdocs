@@ -21,7 +21,11 @@ This document contains a list of all of the documentation overviews for AD FS fo
   
 * [What's New in AD FS for Windows Server 2016](../ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)  
   
-* [AD FS Scenarios for Developers](../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)  
+* [AD FS Scenarios for Developers](../ad-fs/overview/AD-FS-Scenarios-for-Developers.md) 
+
+* [AD FS 2016 Requirements](../ad-fs/overview/AD-FS-2016-Requirements.md)
+
+* [AD FS FAQ](../ad-fs/overview/AD-FS-FAQ.md)
 
   
   

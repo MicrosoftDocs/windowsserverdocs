@@ -25,3 +25,5 @@ This document contains a list of all of the documentation walkthroughs for AD FS
 
 - [Single Page Application with AD FS](../ad-fs/development/Single-Page-Application-with-AD-FS.md)
 
+- [Customizing the Id_Token in OpenID Connect Scenarios](../ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
+

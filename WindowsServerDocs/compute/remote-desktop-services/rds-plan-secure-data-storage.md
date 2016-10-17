@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Secure data storage
+description: Planning information for securely storing data in RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

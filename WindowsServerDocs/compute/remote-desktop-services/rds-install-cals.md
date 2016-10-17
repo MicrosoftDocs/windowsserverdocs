@@ -1,5 +1,6 @@
 ---
 title: Install RDS client access licenses
+description: Learn how to install CALs for RD clients.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
