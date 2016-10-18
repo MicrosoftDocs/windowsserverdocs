@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin util and repairservice
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin util and repairservice** -- Commmand used to fix known issues with various versions of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

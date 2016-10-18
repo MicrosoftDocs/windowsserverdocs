@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin suspend
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin suspend** -- 
+Suspends the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

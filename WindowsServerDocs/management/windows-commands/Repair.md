@@ -1,6 +1,6 @@
 ---
 title: Repair
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Repairs the RAID\-5 volume with focus by replacing the failed disk region with the specified dynamic disk.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

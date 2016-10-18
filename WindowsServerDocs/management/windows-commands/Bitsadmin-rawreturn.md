@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin rawreturn
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin rawreturn** -- Returns data suitable for parsing."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

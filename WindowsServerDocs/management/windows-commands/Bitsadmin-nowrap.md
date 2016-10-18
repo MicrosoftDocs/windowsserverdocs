@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin nowrap
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin nowrap** -- Truncates any line of output text extending beyond the rightmost edge of the command window."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

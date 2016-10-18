@@ -1,6 +1,6 @@
 ---
 title: Add
-description: "Windows Commands"
+description: "Windows Commands topic for **add** -- Mirrors the simple volume with focus to the specified disk."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -22,7 +22,7 @@ ms.date: 10/12/2016
 Mirrors the simple volume with focus to the specified disk.
 > [!IMPORTANT]
 > This DiskPart command is not available in any edition of Windows Vista.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 add disk=<n> [align=<n>] [wait] [noerr]

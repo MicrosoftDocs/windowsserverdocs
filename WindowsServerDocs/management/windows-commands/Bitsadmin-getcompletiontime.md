@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getcompletiontime
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getcompletiontime** -- Retrieves the time that the job finished transferring data."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

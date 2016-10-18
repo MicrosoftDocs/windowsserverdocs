@@ -1,6 +1,6 @@
 ---
 title: Attributes volume
-description: "Windows Commands"
+description: "Windows Commands topic for **Attributes volume** -- Displays, sets, or clears the attributes of a volume."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Displays, sets, or clears the attributes of a volume.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

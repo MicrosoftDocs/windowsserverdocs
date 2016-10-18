@@ -1,6 +1,6 @@
 ---
 title: Create partition logical
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Creates a logical partition in an existing extended partition. You can only use this command on master boot record \(MBR\) disks.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

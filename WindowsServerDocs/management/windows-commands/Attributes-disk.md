@@ -1,6 +1,6 @@
 ---
 title: Attributes disk
-description: "Windows Commands"
+description: "Windows Commands topic for **Attributes disk** -- Displays, sets, or clears the attributes of a disk."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

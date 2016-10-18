@@ -1,6 +1,6 @@
 ---
 title: Bdehdcfg: target
-description: "Windows Commands"
+description: "Windows Commands topic for **Bdehdcfg: target** -- Prepares a partition for use as a system drive by BitLocker and Windows Recovery."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

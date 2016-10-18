@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin removeclientcertificate
+description: "Windows Commands topic for **Bitsadmin removeclientcertificate** -- Removes the client certificate from the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

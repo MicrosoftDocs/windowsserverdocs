@@ -1,6 +1,6 @@
 ---
 title: Bdehdcfg: size
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- Specifies the size of the system partition when a new system drive is being created."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

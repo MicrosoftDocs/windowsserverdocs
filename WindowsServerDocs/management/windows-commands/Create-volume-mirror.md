@@ -1,6 +1,6 @@
 ---
 title: Create volume mirror
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -24,7 +24,7 @@ Creates a volume mirror by using the two specified dynamic disks.
 > [!NOTE]  
 > This command is only available in Windows??7 and Windows Server??2008??R2.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

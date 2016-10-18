@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getaclflags
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getaclflags** -- Retrieves the access control list propagations flags."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

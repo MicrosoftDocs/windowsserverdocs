@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin getdescription
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getdescription** -- 
+Retrieves the description of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

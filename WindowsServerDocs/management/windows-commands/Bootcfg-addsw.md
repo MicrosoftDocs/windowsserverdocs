@@ -1,6 +1,6 @@
 ---
 title: Bootcfg addsw
-description: "Windows Commands"
+description: "Windows Commands topic for **Bootcfg addsw** -- Adds operating system load options for a specified operating system entry."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Adds operating system load options for a specified operating system entry.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 bootcfg /addsw [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/mm <MaximumRAM>] [/bv] [/so] [/ng] /id <OSEntryLineNum>

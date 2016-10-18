@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin getmaxdownloadtime
+description: "Windows Commands topic for **Bitsadmin getmaxdownloadtime** -- Retrieves the download timeout in seconds."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

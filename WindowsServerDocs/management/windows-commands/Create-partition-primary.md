@@ -1,6 +1,6 @@
 ---
 title: Create partition primary
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -23,7 +23,7 @@ Creates a primary partition on the basic disk with focus.
   
 > [!CAUTION]  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

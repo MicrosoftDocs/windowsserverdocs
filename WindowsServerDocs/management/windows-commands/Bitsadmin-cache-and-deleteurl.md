@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and deleteurl
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and deleteurl** -- Deletes all cache entries for the given URL."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

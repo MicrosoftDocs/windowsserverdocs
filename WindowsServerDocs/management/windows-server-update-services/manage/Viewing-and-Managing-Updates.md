@@ -1,6 +1,6 @@
 ---
 title: Viewing and Managing Updates
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na

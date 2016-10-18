@@ -1,6 +1,6 @@
 ---
 title: Automount
-description: "Windows Commands"
+description: "Windows Commands topic for **Automount** -- Enables or disables the automount feature."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Enables or disables the automount feature. When enabled (the default), Windows automatically mounts the file system for a new basic or dynamic volume when it is added to the system, and then assigns a drive letter to the volume.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 automount [ { enable | disable | scrub } ] [noerr]

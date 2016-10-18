@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin addfileset
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin addfileset** -- Adds one or more files to the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bootcfg delete
-description: "Windows Commands"
+description: "Windows Commands topic for **Bootcfg delete** -- Deletes an operating system entry in the [operating systems] section of the Boot.ini file."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Deletes an operating system entry in the [operating systems] section of the Boot.ini file.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 bootcfg /delete [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]

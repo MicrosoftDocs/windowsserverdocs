@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin list
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin list** -- Lists the transfer jobs owned by the current user."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

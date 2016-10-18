@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin util and getieproxy
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin util and getieproxy** -- Retrieves the proxy usage for the given service account."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

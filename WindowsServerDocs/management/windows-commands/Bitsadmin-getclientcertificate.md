@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getclientcertificate
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getclientcertificate** -- Retrieves the client certificate from the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

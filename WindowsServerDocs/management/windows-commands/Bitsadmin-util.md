@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin util
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin util** -- List of the **Util** commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

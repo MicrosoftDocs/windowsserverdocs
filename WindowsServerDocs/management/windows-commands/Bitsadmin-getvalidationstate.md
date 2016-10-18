@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin getvalidationstate
+description: "Windows Commands topic for **Bitsadmin getvalidationstate** -- Reports the content validation state of the given file within the job. "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

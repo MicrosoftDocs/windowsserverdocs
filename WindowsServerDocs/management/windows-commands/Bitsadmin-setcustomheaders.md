@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setcustomheaders
+description: "Windows Commands topic for **Bitsadmin setcustomheaders** -- Add a custom HTTP header to a GET request."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Remote Desktop Services (Terminal Services) Command Reference
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
