@@ -1,5 +1,6 @@
 ---
 title: Windows Server 2016 Technical Preview License Terms
+description: "license terms for Windows Server 2016"
 ms.custom: na
 ms.prod: windows-server-threshold
 manager: DonGill

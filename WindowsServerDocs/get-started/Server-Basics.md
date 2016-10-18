@@ -1,6 +1,6 @@
 ---
 title: Get Started
-description: " "
+description: "Basics for Server: system requirements, release notes, upgrade options"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

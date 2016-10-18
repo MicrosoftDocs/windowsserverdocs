@@ -1,6 +1,6 @@
 ---
 title: MPIO on Nano Server
-description: " "
+description: "Configuring MPIO on Nano"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

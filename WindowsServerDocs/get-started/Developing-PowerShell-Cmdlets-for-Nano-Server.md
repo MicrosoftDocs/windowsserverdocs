@@ -1,6 +1,6 @@
 ---
 title: Developing PowerShell Cmdlets for Nano Server
-description: " "
+description: "porting CIM, .NET cmdlets, C++ "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

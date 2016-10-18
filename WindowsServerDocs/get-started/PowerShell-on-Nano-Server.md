@@ -1,6 +1,6 @@
 ---
 title: PowerShell on Nano Server
-description: " "
+description: "Differences in the reduced set of PowerShell features on Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
