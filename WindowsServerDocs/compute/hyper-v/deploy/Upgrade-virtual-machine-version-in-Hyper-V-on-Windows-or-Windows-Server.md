@@ -1,6 +1,6 @@
 ---
 title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016
-description: " "
+description: "Gives instructions and considerations for upgrading the version of a virtual machine"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

@@ -1,6 +1,6 @@
 ---
 title: Deploy Hyper-V on Windows Server 2016
-description: " "
+description: "Gives links to articles on deploying Hyper-V"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
