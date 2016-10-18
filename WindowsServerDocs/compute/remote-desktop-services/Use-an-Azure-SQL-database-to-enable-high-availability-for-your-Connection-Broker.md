@@ -1,5 +1,6 @@
 ---
 title: Use an Azure SQL database to enable high availability for your Connection Broker
+description: Describes using Azure SQL with Remote Desktop Services.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

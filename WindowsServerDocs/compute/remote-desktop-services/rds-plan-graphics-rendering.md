@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Enable high-end graphics remoting
+description: Graphics planning information for RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Access from anywhere
+description: Planning information for an RD Gateway
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: RDS - Build and deploy
+description: Steps to build a Remote Desktop deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: RDS - Partners for hosting desktops and apps
+description: List of partners who can host desktops and apps using RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

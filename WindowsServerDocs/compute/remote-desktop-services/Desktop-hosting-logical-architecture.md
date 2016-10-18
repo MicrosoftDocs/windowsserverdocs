@@ -1,5 +1,6 @@
 ---
 title: Desktop hosting logical architecture
+description: A basic logical architecture diagram for desktop hosting with RDS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

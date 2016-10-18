@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Multi-Factor Authentication
+description: Planning information for using MFA with RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

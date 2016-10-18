@@ -1,5 +1,6 @@
 ---
 title: Windows Server Technical Preview Expiration
+description: "table of expiration dates for preview releases"
 ms.custom: na
 ms.prod: windows-server-threshold
 manager: DonGill

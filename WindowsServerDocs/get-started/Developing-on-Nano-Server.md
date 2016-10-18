@@ -1,6 +1,6 @@
 ---
 title: Developing for Nano Server
-description: " "
+description: "PowerShell remoting and CIM sessions"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

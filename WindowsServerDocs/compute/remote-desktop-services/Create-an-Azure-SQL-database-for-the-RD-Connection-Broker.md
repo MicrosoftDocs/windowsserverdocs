@@ -1,5 +1,6 @@
 ---
 title: Create an Azure SQL database for the RD Connection Broker
+description: Learn how to use Azure SQL with RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

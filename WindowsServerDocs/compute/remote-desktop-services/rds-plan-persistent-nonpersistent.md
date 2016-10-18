@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Persistent or non-persistent sessions
+description: Planning information for persistent sessions in RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

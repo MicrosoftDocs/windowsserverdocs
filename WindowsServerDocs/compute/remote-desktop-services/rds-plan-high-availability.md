@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - High availability
+description: Planning information about setting up a highly available RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: Install SQL native client on each RD Connection Broker server
+description: Learn how to install SQL on an RD Connection Broker
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: RDS - Run and tune
+description: Provides management information for Remote Desktop Services.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
