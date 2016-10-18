@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin takeownership
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin takeownership** -- Lets a user with administrative privileges take ownership of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

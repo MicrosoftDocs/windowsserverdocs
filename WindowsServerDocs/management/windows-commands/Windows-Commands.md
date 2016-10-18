@@ -1,6 +1,6 @@
 ---
 title: Windows Commands
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

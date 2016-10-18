@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin gettemporaryname
+description: "Windows Commands topic for **Bitsadmin gettemporaryname** -- Reports the temporary filename of the given file within the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

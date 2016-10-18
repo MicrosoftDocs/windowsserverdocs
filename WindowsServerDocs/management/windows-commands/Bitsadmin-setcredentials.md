@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setcredentials
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setcredentials** -- Adds credentials to a job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

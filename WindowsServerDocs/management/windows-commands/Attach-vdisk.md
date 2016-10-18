@@ -1,6 +1,6 @@
 ---
 title: Attach vdisk
-description: "Windows Commands"
+description: "Windows Commands topic for **Attach vdisk** -- Attaches (sometimes called mounts or surfaces) a virtual hard disk (VHD) so that it appears on the host computer as a local hard disk drive."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

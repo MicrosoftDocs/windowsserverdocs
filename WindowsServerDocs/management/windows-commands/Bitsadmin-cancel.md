@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin cancel
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cancel** -- 
+Removes the job from the transfer queue and deletes all temporary files associated with the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

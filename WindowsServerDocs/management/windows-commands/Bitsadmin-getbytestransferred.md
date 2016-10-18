@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getbytestransferred
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getbytestransferred** -- Retrieves the number of bytes transferred for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

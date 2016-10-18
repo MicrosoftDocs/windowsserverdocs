@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getproxyusage
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getproxyusage** -- Retrieves the proxy usage setting for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

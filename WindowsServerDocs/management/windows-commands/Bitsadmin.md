@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin** -- BITSAdmin is a command-line tool that you can use to create, download, or upload jobs and monitor their progress."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

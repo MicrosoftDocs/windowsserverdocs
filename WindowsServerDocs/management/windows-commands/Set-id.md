@@ -1,6 +1,6 @@
 ---
 title: Set id
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -24,7 +24,7 @@ The Diskpart Set ID command changes the partition type field for the partition w
 > [!IMPORTANT]  
 > This command is intended for use by original equipment manufacturers \(OEMs\) only. Changing partition type fields with this parameter might cause your computer to fail or be unable to boot. Unless you are an OEM or experienced with GPT disks, you should not change partition type fields on GPT disks by using this parameter. Instead, always use the [Create partition efi](Create-partition-efi.md) command to create EFI system partitions, the [Create partition msr](Create-partition-msr.md) command to create Microsoft Reserved partitions, and the [Create partition primary](Create-partition-primary.md) command without the ID parameter to create primary partitions on GPT disks.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

@@ -1,6 +1,6 @@
 ---
 title: Auditpol resourceSACL
-description: "Windows Commands"
+description: "Windows Commands topic for **uditpol resourceSACL** -- Configures global resource system access control lists (SACLs)."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

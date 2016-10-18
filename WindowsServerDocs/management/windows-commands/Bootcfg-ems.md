@@ -1,6 +1,7 @@
 ---
 title: Bootcfg ems
-description: "Windows Commands"
+description: "Windows Commands topic for **Bootcfg ems** -- 
+Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,7 +21,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer. By enabling Emergency Management Services, you add a "redirect=Port#" line to the [boot loader] section of the Boot.ini file and a /redirect option to the specified operating system entry line. The Emergency Management Services feature is enabled only on servers.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 bootcfg /ems {ON | OFF | EDIT} [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/port {COM1 | COM2 | COM3 | COM4 | BIOSSET}] [/baud {9600 | 19200 | 38400 | 57600 | 115200}] [/id <OSEntryLineNum>]

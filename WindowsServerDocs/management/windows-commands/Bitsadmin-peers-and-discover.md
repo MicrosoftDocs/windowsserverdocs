@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin peers and discover
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin peers and discover** -- Discovers peers again."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: GPT
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 On basic GUID partition table (GPT) disks, assigns the GPT attribute(s) to the partition with focus.  GPT partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 > [!CAUTION]
 > Changing the GPT attributes might cause your basic data volumes to fail to be assigned drive letters, or to prevent the file system from mounting. You should not change the GPT attributes unless you are an original equipment manufacturer (OEM) or an IT professional who is experienced with GPT disks.
 ## Syntax

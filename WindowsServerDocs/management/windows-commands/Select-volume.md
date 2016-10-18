@@ -1,6 +1,6 @@
 ---
 title: Select volume
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

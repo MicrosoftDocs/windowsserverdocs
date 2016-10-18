@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getowner
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getowner** -- Retrieves the owner of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

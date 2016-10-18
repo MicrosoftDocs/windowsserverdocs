@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getcreationtime
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getcreationtime** -- Retrieves the creation time for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

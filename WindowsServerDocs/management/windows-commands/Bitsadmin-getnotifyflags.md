@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getnotifyflags
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getnotifyflags** -- Retrieves the notify flags for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin complete
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin complete** -- Completes the job. The downloaded files are not available to you until you use this switch."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and delete
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and delete** -- Deletes a specific cache entry."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

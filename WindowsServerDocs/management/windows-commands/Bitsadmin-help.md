@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin help
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin help** -- Displays the command-line usage."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

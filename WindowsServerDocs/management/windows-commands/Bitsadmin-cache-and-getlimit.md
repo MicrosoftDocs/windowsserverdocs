@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and getlimit
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and getlimit** -- Retrieves the cache limit."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

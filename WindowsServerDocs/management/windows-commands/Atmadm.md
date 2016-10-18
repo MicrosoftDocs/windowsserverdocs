@@ -1,6 +1,6 @@
 ---
 title: Atmadm
-description: "Windows Commands"
+description: "Windows Commands topic for **Atmadm** -- Monitors connections and addresses that are registered by the ATM Call Manager on an asynchronous transfer mode (ATM) network."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

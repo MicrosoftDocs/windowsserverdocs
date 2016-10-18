@@ -1,6 +1,6 @@
 ---
 title: Dnscmd
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -411,7 +411,7 @@ Disables DNS dynamic update.
 **/writeauthorityns [0|1]**  
 Determines when the DNS server writes name server (NS) resource records in the Authority section of a response.  
 **0**  
-Writes name server (NS) resource records in the Authority section of referrals only. This setting complies with RFC 1034, â€œDomain namesâ€”concepts and facilities,â€? and with RFC 2181, â€œClarifications to the DNS Specification.â€? This is the default setting.  
+Writes name server (NS) resource records in the Authority section of referrals only. This setting complies with RFC 1034, â€œDomain namesâ€�?concepts and facilities,â€? and with RFC 2181, â€œClarifications to the DNS Specification.â€? This is the default setting.  
 **1**  
 Writes name server (NS) resource records in the Authority section of all successful authoritative responses.  
 **/xfrconnecttimeout [<seconds>]**  

@@ -1,6 +1,6 @@
 ---
 title: WSUS and the Catalog Site
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na

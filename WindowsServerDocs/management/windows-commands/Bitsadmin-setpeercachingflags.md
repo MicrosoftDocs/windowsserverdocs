@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setpeercachingflags
+description: "Windows Commands topic for **Bitsadmin setpeercachingflags** -- Sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

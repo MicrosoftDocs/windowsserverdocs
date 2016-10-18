@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin peers and help
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin peers and help** -- Displays the command-line usage for the **Peers** commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

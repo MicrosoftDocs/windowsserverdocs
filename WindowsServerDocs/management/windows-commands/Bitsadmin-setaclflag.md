@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setaclflag
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setaclflag** -- Sets the access control list propagations flags."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

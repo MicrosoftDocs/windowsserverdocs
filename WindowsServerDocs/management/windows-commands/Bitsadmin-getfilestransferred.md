@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getfilestransferred
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getfilestransferred** -- Retrieves the number of files transferred for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

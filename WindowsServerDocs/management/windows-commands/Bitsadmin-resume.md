@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin resume
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin resume** -- Activates a new or suspended job in the transfer queue."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

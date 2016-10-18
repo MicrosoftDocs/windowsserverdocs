@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin gettype
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin gettype** -- Retrieves the job type of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin cache
+description: "Windows Commands topic for **Bitsadmin cache** commands -- Contains a list of the Bitsadmin /Cache commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

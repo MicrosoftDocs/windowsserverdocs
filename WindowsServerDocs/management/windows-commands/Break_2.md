@@ -1,6 +1,6 @@
 ---
 title: Break_2
-description: "Windows Commands"
+description: "Windows Commands topic for **Break_2** -- Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
