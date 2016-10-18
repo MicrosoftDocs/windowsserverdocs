@@ -1,0 +1,53 @@
+---
+title: Recommendations for moving to Windows Server 2016
+description: "Recommendations for moving to Windows Server 2016."
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.date: 10/18/2016
+ms.technology: server-general
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
+author: jaimeo
+ms.author: jaimeo
+manager: dongill
+---
+# Recommendations for moving to Windows Server 2016
+
+>Applies To: Windows Server 2016
+
+
+|If you are running:|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows Server 2008|  
+|-------------------|----------|--------------|--------------|---------------------------------------|  
+|Windows Server role infrastructure|Choose either upgrade or migration depending on [specific role guidance](https://technet.microsoft.com/windowsserver/jj554790).|Windows Server role infrastructure|Choose either upgrade or migration depending on [specific role guidance](https://technet.microsoft.com/windowsserver/jj554790).|To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow [specific role guidance](https://technet.microsoft.com/windowsserver/jj554790).|To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow [specific role guidance](https://technet.microsoft.com/windowsserver/jj554790)|
+|Server management and application workloads|Application upgrades should include *migration* to Windows Server 2016. See the [compatibility list](Server-Application-Compatibility.md). Upgrades to Windows Server 2016 should use application-specific guidance.|Application upgrades should include *migration* to Windows Server 2016. See the [compatibility list](Server-Application-Compatibility.md). Upgrades to Windows Server 2016 should use application-specific guidance.|To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow migration guides as applicable. Or, remain on your current OS and run in a virtual machine running on a Windows Server 2016 host, or Microsoft Azure. Contact your EA reseller, TAM, or Microsoft for extended support options through [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx).|To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow migration guides as applicable. Or, remain on your current OS and run in a virtual machine running on a Windows Server 2016 host, or Microsoft Azure. Contact your EA reseller, TAM, or Microsoft for extended support options through [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx).|
+|ISV application workloads|Upgrades to Windows Server 2016 should use application-specific guidance. For more information on Windows Server compatibility with non-Microsoft applications, visit the [Windows Server Logo Certification portal](https://msdn.microsoft.com/enterprisecloudcertified).|Upgrades to Windows Server 2016 should use application-specific guidance. For more information on Windows Server compatibility with non-Microsoft applications, visit the [Windows Server Logo Certification portal](https://msdn.microsoft.com/enterprisecloudcertified).|To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow migration guides as applicable. Or, remain on your current OS and run in a virtual machine running on a Windows Server 2016 host, or Microsoft Azure. Contact your EA reseller, TAM, or Microsoft for extended support options through [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx).|To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow migration guides as applicable. Or, remain on your current OS and run in a virtual machine running on a Windows Server 2016 host, or Microsoft Azure. Contact your EA reseller, TAM, or Microsoft for extended support options through [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx).|
+|"In-house" or line-of-business application workloads|Consult with application developers on compatibility with Windows Server 2016 and upgrade guidance. Leverage Microsoft Azure to test application on Windows Server 2016 prior to switch. See complete options in the next section.|Consult with application developers on compatibility with Windows Server 2016 and upgrade guidance. Leverage Microsoft Azure to test application on Windows Server 2016 prior to switch. See complete options in the next section.|Consult with your application developers on compatibility with Windows Server 2016 and upgrade guidance. Leverage Microsoft Azure to test your application on Windows Server 2016 prior to switch. To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. See complete options in the next section.|Consult with your application developers on compatibility with Windows Server 2016 and upgrade guidance. Leverage Microsoft Azure to test your application on Windows Server 2016 prior to switch. To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. See complete options in the next section.|
+
+
+## Complete options for moving servers running custom or "in-house" applications on older versions of Windows Server to Windows Server 2016
+
+There are more options than ever before to help you and your customers take advantage of features in Windows Server 2016, with minimal impact to your current services and workloads.
+
+- Try out the latest operating system with your application by downloading the evaluation version of [Windows Server](https://www.microsoft.com/en-us/cloud-platform/windows-server) for testing on your premises. Once testing is complete and quality confirmed, you can perform a simple license conversion with a retail license key (requires restarting).
+
+- [Microsoft Azure](https://microsoft.azure.com) can also be used on a trial basis for testing to ensure your custom application will work on the latest server operating system. Once testing is complete and quality confirmed, [migrate to the latest Windows Server version](https://technet.microsoft.com/windowsserver/dn527667#upgrade) on your premises. 
+
+- Or alternatively, once testing is complete and quality confirmed, [Microsoft Azure](https://azure.microsoft.com) can be used as the permanent location for your custom application or service. This allows the old server to remain available until you are ready to switch over to the new server in Azure.
+
+    - If you already have Software Assurance for Windows Server, save money by deploying with the [Azure Hybrid Use Benefit](https://azure.microsoft.com/pricing/hybrid-use-benefit/). 
+
+- In most cases, [Microsoft Azure](https://microsoft.azure.com) can be used to host the same application on the older version of Windows Server that it is running on today. Migrate the application and workload to a virtual machine with the operating system of your choice by using [Azure Marketplace](https://azure.microsoft.com/marketplace/) images.
+
+    - If you already have Software Assurance for Windows Server, save money by deploying with the [Azure Hybrid Use Benefit](https://azure.microsoft.com/pricing/hybrid-use-benefit/). 
+
+- The [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx) program for Windows Server provides new version rights benefits. Along with a list of other benefits, servers with Software Assurance can be upgraded to the latest version of Window Server when the time is right, without having to purchase a new license. 
+
+## Additional resources
+
+- [Features removed or deprecated in Windows Server 2016](Features-Removed-or-Deprecated-in-Windows-Server-2016-Technical-Preview.md)
+- For the latest on Microsoft server applications that are supported on Windows Server 2016, see [Server Application Compatibility](Server-Application-Compatibility.md).
+- For more information on non-Microsoft applications, see the [Windows Server Logo Certification](https://msdn.microsoft.com/enterprisecloudcertified) portal. 
+- For more information on product lifecycle and support levels, see the [Support Lifecycle Policy FAQ](https://support.microsoft.com/help/17140/support-lifecycle-policy-faq).
