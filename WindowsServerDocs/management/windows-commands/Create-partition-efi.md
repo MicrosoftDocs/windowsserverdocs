@@ -1,6 +1,6 @@
 ---
 title: Create partition efi
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 On Itanium\-based computers, creates an Extensible Firmware Interface \(EFI\) system partition on a GUID Partition Table \(GPT\) disk.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

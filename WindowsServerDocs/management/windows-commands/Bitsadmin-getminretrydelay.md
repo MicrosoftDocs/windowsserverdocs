@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin getminretrydelay
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getminretrydelay** -- 
+Retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

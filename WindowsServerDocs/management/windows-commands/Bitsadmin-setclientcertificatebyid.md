@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setclientcertificatebyid
+description: "Windows Commands topic for **Bitsadmin setclientcertificatebyid** -- Specifies the identifier of the client certificate to use for client authentication in an HTTPS \(SSL\) request"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

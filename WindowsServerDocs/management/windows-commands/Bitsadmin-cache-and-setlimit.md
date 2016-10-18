@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and setlimit
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and setlimit** -- Sets the cache size limit."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

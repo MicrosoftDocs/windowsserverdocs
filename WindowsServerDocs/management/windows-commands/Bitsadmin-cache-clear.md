@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache clear
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache clear** -- Purges the local cache."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bcdedit
-description: "Windows Commands"
+description: "Windows Commands topic for **Bcdedit** -- Create new stores, modify existing stores, and add boot menu parameters."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

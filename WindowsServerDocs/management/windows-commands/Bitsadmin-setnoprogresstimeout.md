@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setnoprogresstimeout
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setnoprogresstimeout** -- Sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

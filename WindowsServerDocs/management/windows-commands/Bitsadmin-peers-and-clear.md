@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin peers and clear
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin peers and clear** -- Clears the peer list."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

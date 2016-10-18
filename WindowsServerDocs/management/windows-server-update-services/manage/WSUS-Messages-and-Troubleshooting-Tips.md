@@ -1,6 +1,6 @@
 ---
 title: WSUS Messages and Troubleshooting Tips
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - Troubleshoot using WSUS messages"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na

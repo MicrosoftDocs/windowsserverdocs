@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin getsecurityflags
+description: "Windows Commands topic for **Bitsadmin getsecurityflags** -- Reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

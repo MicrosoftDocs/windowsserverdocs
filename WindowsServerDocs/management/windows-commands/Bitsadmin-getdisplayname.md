@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getdisplayname
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getdisplayname** -- Retrieves the display name of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

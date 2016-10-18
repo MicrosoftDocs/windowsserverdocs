@@ -1,6 +1,6 @@
 ---
 title: Active
-description: "Windows Commands"
+description: "Windows Commands topic for **active** -- On basic disks, marks the partition with focus as active."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

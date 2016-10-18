@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin geterrorcount
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin geterrorcount** -- Retrieves a count of the number of times the specified job generated a transient error."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

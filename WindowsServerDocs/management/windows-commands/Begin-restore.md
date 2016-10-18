@@ -1,6 +1,6 @@
 ---
 title: Begin restore
-description: "Windows Commands"
+description: "Windows Commands topic for **Begin restore** -- Starts a restore session and issues a **PreRestore** event to involved writers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

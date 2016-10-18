@@ -1,6 +1,6 @@
 ---
 title: Autofmt
-description: "Windows Commands"
+description: "Windows Commands topic for **Autofmt** -- Formats a drive or partition when called from the Windows Recovery Console."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

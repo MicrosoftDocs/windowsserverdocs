@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin getfilestotal
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getfilestotal** -- 
+Retrieves the number of files in the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

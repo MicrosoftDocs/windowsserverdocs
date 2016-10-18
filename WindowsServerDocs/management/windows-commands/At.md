@@ -1,6 +1,6 @@
 ---
 title: At
-description: "Windows Commands"
+description: "Windows Commands topic for **At** -- Schedules commands and programs to run on a computer at a specified time and date."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

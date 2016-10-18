@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setdisplayname
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setdisplayname** -- Sets the display name of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

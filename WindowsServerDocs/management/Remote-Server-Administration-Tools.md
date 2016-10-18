@@ -1,6 +1,6 @@
 ---
 title: Remote Server Administration Tools
-description: "Remote Server Administration Tools"
+description: "Top level topic for Remote Server Administration Tools"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

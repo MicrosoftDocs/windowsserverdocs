@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getreplyprogress
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getreplyprogress** -- Retrieves the size and progress of the server reply."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

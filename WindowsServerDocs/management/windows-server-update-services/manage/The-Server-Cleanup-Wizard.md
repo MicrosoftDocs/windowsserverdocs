@@ -1,6 +1,6 @@
 ---
 title: The Server Cleanup Wizard
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - How to use the Server Cleanup Wizard to manage disk space"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na

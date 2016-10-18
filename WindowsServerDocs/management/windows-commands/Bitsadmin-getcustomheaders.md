@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin getcustomheaders
+description: "Windows Commands topic for **Bitsadmin getcustomheaders** -- Retrieves the custom HTTP headers from the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin peers and list
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin peers and list** -- 
+Lists all peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

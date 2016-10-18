@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin removecredentials
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin removecredentials** -- Removes credentials from a job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

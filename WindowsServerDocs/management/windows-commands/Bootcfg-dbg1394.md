@@ -1,6 +1,6 @@
 ---
 title: Bootcfg dbg1394
-description: "Windows Commands"
+description: "Windows Commands topic for **Bootcfg dbg1394** -- Configures 1394 port debugging for a specified operating system entry"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Configures 1394 port debugging for a specified operating system entry.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 bootcfg /dbg1394 {ON | OFF}[/s <Computer> [/u <Domain>\<User> /p <Password>]] [/ch <Channel>] /id <OSEntryLineNum>

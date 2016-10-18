@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setvalidationstate
+description: "Windows Commands topic for **Bitsadmin setvalidationstate** -- Sets the content validation state of the given file within the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

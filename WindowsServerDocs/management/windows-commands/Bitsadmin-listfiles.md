@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin listfiles
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin listfiles** -- Lists the files in the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

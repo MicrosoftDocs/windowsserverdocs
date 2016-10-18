@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getreplyfilename
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getreplyfilename** -- Gets the path of the file that contains the server reply."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

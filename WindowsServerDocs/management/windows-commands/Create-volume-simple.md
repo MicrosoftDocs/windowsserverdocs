@@ -1,6 +1,6 @@
 ---
 title: Create volume simple
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -24,7 +24,7 @@ Creates a simple volume on the specified dynamic disk.
 > [!IMPORTANT]  
 > For Windows??Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows??Vista Business editions.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   
