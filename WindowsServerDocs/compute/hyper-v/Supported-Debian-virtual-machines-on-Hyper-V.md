@@ -1,6 +1,6 @@
 ---
 title: Supported Debian virtual machines on Hyper-V
-description: " "
+description: "Lists the Linux integration services and features included in each version"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

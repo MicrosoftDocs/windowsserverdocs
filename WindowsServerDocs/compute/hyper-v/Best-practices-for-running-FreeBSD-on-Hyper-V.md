@@ -1,6 +1,6 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
-description: " "
+description: "Provides recommendations for running FreeBSD on virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -16,7 +16,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-This topic contains a list of recommendations for running FreeBSD virtual machine on Hyper-V.  
+This topic contains a list of recommendations for running FreeBSD virtual machines on Hyper-V.  
   
 ## Enable CARP in FreeBSD 10.2 on Hyper-V  
 The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the same IP address and Virtual Host ID (VHID) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure.  To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper-V Manager.  

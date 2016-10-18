@@ -1,6 +1,6 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows Server 2016
-description: " "
+description: "Lists the Windows operating systems supported for use as a guest in a virtual machine"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -46,7 +46,7 @@ The following table lists the Windows client operating systems supported in Wind
 |Windows Vista with Service Pack 2 (SP2)|2|Install the integration services after you set up the operating system in the virtual machine.|Business, Enterprise, and Ultimate, including N and KN editions.|  
   
 ## Guest operating system support on other versions of Windows  
-Use the topics in the  following table for information about guest operating systems supported for Hyper-V on other versions of Windows.  
+Use the topics in the following table for information about guest operating systems supported for Hyper-V on other versions of Windows.  
   
 |Host operating system|Topic|  
 |-------------------------|---------|  

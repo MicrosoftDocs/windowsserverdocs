@@ -1,6 +1,6 @@
 ---
 title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
-description: " "
+description: "Lists the versions of Linux integration services for supported CentOS and Red Hat Enterprise distributions"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

@@ -1,6 +1,6 @@
 ---
 title: Best Practices for running Linux on Hyper-V
-description: " "
+description: "Provides recommendations for running Linux on a virtual machine"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -16,7 +16,7 @@ ms.date: 10/03/2016
 
 >Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-This topic contains a list of recommendations for running Linux virtual machine on Hyper-V.  
+This topic contains a list of recommendations for running Linux virtual machines on Hyper-V.  
   
 ## Tuning Linux File Systems on Dynamic VHDX Files  
 Some Linux file systems may consume significant amounts of real disk space even when the file system is mostly empty. To reduce the amount of real disk space usage of dynamic VHDX files, consider the following recommendations:  
