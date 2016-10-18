@@ -144,7 +144,10 @@ Once the above changes have been made, hit F5.  This will bring up the sample pa
   
 ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_12.PNG)  
   
-You will be re-directed to the AD FS sign-in page.  Go ahead and sign in.  
+You will be re-directed to the AD FS sign-in page.  Go ahead and sign in. 
+
+>[!NOTE}
+>If you are developing on a machine that is not the ad fs server, you may receive an error after clicking on sign in.  To resolve this, import the ad fs certificate and place it in the Trusted root store for the local machine on which you are developing.   
   
 ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_13.PNG)  
   
