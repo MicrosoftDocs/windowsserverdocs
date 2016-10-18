@@ -2,6 +2,7 @@
 ## [Get Started](get-started/Server-Basics.md)
 ### [System Requirements  and Installation](get-started/System-Requirements--and-Installation.md)
 ### [Release Notes: Important Issues in Windows Server](get-started/Windows-Server-2016-GA-Release-Notes.md)
+### [Recommendations for moving to Windows Server 2016](get-started/Recommendations-moving-to-Server2016.md)
 ### [Upgrade and Conversion Options](get-started/Supported-Upgrade-Paths.md)
 ### [Server Role Upgrade and Migration](get-started/Server-Role-Upgradeability-Table.md)
 ### [Server Application Compatibility Table](get-started/Server-Application-Compatibility.md)
