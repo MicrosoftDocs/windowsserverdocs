@@ -20,13 +20,13 @@ This topic contains a list of recommendations for running FreeBSD virtual machin
 
 ## Enable CARP in FreeBSD 10.2 on Hyper-V
 
-The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the same IP address and Virtual Host ID (VHID) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure.To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper-V Manager.
+The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the same IP address and Virtual Host ID (VHID) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure. To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper-V Manager:
 
-* Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.
+1. Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.
 
-![Screenshot of virtual machine settings with network adapter selected](media/Hyper-V_Settings_NetworkAdapter.png)
+   ![Screenshot of virtual machine settings with network adapter selected](media/Hyper-V_Settings_NetworkAdapter.png)
 
-* Enable MAC address spoofing. To do this,
+2. Enable MAC address spoofing. To do this,
 
    1. Select the virtual machine and select **Actions** > **Settings**.
 

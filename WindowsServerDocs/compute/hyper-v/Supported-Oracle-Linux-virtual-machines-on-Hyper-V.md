@@ -65,7 +65,7 @@ The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS su
 |Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9, 10|
 |Runtime Memory Resize|2016||||||||
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
-|Hyper-V-specificvideo device|2016,2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
+|Hyper-V-specific video device|2016,2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
 |Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
