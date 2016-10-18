@@ -1,6 +1,6 @@
 ---
 title: Defrag
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 Membership in the local **Administrators** group, or equivalent, is the minimum required to run this command.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 defrag <volumes> | /C | /E <volumes>    [/H] [/M | [/U] [/V]]

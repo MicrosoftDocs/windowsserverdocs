@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getnotifyinterface
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getnotifyinterface** -- Determines if another program has registered a COM callback interface for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

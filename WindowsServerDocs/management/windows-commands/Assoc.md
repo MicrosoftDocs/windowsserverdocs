@@ -1,6 +1,6 @@
 ---
 title: Assoc
-description: "Windows Commands"
+description: "Windows Commands topic for **Assoc** -- Displays or modifies file name extension associations."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

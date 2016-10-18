@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and setexpirationtime
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and setexpirationtime** -- Sets the cache expiration time."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

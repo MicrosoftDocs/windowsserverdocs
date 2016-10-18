@@ -1,6 +1,6 @@
 ---
 title: Create partition msr
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -24,7 +24,7 @@ Creates a Microsoft Reserved \(MSR\) partition on a GUID partition table \(GPT\)
 > [!CAUTION]  
 > Be very careful when using this command. Because GPT disks require a specific partition layout, creating Microsoft Reserved partitions could cause the disk to become unreadable.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

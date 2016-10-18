@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin addfilewithranges
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin addfilewithranges** -- Adds a file to the specified job. BITS downloads the specified ranges from the remote file."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

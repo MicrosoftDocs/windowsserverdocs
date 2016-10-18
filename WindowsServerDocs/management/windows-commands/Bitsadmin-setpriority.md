@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin setpriority
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setpriority** -- 
+Sets the priority of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

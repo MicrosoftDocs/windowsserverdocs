@@ -1,6 +1,6 @@
 ---
 title: Setting up Update Synchronizations
-description: "Windows Server Update Services"
+description: "Windows Server Update Service (WSUS) topic - How to setup and  configure Update Synchronizations"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

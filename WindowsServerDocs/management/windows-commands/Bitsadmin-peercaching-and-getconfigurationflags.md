@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin peercaching and getconfigurationflags
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin peercaching and getconfigurationflags** -- Gets the configuration flags that determine if the computer serves content to peers and can download content from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

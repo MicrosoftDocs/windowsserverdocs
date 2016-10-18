@@ -1,6 +1,6 @@
 ---
 title: Bootcfg
-description: "Windows Commands"
+description: "Windows Commands topic for **Bootcfg** -- Configures, queries, or changes Boot.ini file settings."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

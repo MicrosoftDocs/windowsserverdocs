@@ -1,6 +1,6 @@
 ---
 title: Bdehdcfg
-description: "Windows Commands"
+description: "Windows Commands topic for **Bdehdcfg** -- Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Create partition extended
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

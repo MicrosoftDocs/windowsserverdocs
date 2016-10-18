@@ -1,6 +1,6 @@
 ---
 title: Add alias
-description: "Windows Commands"
+description: "Windows Commands topic for **add alias** -- Adds aliases to the alias environment."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

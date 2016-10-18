@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin getproxylist
-description: "Windows Commands"
+Retrieves the proxy list for the specified job.
+description: "Windows Commands topic for **Bitsadmin getproxylist** -- Retrieves the proxy list for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin info
-description: "Windows Commands"
+description: "Windows Commands topic for **Displays summary information about the specified job.** -- Bitsadmin info"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bcdboot
-description: "Windows Commands"
+description: "Windows Commands topic for **Bcdboot** -- Quickly set up a system partition, or repair the boot environment located on the system partition."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

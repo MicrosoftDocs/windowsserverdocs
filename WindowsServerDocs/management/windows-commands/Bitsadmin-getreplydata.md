@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getreplydata
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getreplydata** -- Retrieves the server's reply data in hexadecimal format."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin reset
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin reset** -- Cancels all jobs in the transfer queue that the current user owns."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

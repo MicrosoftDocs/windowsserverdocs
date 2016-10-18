@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin util and version
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin util and version** -- Displays the version of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

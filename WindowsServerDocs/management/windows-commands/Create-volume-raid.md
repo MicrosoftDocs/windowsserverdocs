@@ -1,6 +1,6 @@
 ---
 title: Create volume raid
-description: "Windows Commands"
+description: "Windows Commands topic for **** -- "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -24,7 +24,7 @@ Creates a RAID\-5 volume using three or more specified dynamic disks.
 > [!IMPORTANT]  
 > This DiskPart command is not available in any edition of Windows??Vista.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   

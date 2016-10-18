@@ -1,6 +1,6 @@
 ---
 title: Update Management with Windows Server Update Services
-description: "Windows Server Update Services"
+description: "Windows Server Update Service (WSUS) topic - An overview of Update Management with links to the related topics"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

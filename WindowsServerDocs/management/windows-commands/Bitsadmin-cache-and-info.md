@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and info
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and info** -- Dumps a specific cache entry."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

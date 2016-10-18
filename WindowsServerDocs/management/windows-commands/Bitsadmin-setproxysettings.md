@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setproxysettings
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setproxysettings** -- Sets the proxy settings for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

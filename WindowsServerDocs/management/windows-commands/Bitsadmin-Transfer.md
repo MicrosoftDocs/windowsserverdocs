@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin Transfer
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin Transfer** -- Transfers one or more files."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,6 +1,6 @@
 ---
 title: Step 1 - Install the WSUS Server Role
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - Describes how to install the server role using Server Manager"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.technology: manage-wsus

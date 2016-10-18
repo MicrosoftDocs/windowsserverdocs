@@ -1,6 +1,6 @@
 ---
 title: A-Z List
-description: "Windows Commands"
+description: "Topic containing a list of Windows Commands, A to Z"
 ms.custom: na
 description: "Windows Commands"
 ms.custom: na
