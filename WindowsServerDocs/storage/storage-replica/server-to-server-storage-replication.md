@@ -359,8 +359,8 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 - [Storage Replica Overview](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
-- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+- [Storage Replica: Known Issues](storage-replica-known-issues.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 
 ## See Also  
 - [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  

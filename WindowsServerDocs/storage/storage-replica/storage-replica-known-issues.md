@@ -164,5 +164,5 @@ This occurs due to a product limitation in Windows Server 2016. As a workaround,
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  

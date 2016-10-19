@@ -154,7 +154,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 
 > [!NOTE]
-> This document contains a list of [known issues](storage-replica--known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica--frequently-asked-questions.md) section.
+> This document contains a list of [known issues](storage-replica-known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica-frequently-asked-questions.md) section.
  
 ### Storage Replica terminology  
 This guide frequently uses the following terms:  
@@ -171,6 +171,6 @@ This guide frequently uses the following terms:
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+- [Storage Replica: Known Issues](storage-replica-known-issues.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

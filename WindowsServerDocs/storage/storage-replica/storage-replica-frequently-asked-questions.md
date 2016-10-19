@@ -180,7 +180,7 @@ For technical assistance with Storage Replica, you can post at [the Microsoft Te
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
+- [Storage Replica: Known Issues](storage-replica-known-issues.md)  
 
 ## See Also  
 - [Storage Overview](../storage.md)  
