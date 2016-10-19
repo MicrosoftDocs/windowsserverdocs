@@ -36,7 +36,7 @@ The following section describes how to configure the application group in AD FS 
   
 1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.  
   
-2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications**select the **Server application or Website** template.  Click **Next**.  
+2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications**select the **Server application** template.  Click **Next**.  
   
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_1.PNG)  
   
@@ -58,17 +58,21 @@ The following section describes how to configure the application group in AD FS 
   
 9. On the **ADFSSSO Properties** click **Add application**.  
   
-10. On the **Add a new application to Sample Application** select **Web API** and click **Next**.  
+10. On the **Add a new application to ADFSSSO Application** select **Web API** and click **Next**.  
   
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_4.PNG)  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_4.PNG) 
+
+12. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
   
-11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_15.PNG)  
+
+11. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
   
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
+    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_Confidential_7.PNG) 
   
-12. On the **Choose Access Control Policy** screen, select **Permit everyone** and click **Next**.  
+
   
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
+  
   
 13. On the **Configure Application Permissions** screen,  make sure **openid** is selected and click **Next**.  
   
@@ -99,64 +103,51 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
   
 3.  Open the web.config file.  Modify the following values so the look like the following:  
   
-    ```  
-    <add key="ida:ClientId" value="8219ab4a-df10-4fbd-b95a-8b53c1d8669e" />  
-    <add key="ida:ADFSDiscoveryDoc" value="https://adfs.contoso.com/adfs/.well-known/openid-configuration" />  
-    <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />      
-    <add key="ida:ResourceID" value="https://contoso.com/WebApp"  
-    <add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->  
-    <add key="ida:PostLogoutRedirectUri" value="https://localhost:44320/" />  
-    ```  
+
+ ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_16.PNG)  
   
-    ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_9.PNG)  
+ ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_9.PNG)  
   
 4.  Open the Startup.Auth.cs file and make the following changes:  
   
-    -   Comment out the following:  
+Comment out the following:  
+![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_17.PNG) 
+
+Tweak the OpenId Connect middleware initialization logic with the following changes
+![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_18.PNG)   
   
-        ```  
-        //public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);  
-        ```  
+![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_10.PNG)  
+
+
+
+Farther down, modify the OpenId Connect middleware options as in the following:  
   
-    -   Tweak the OpenId Connect middleware initialization logic with the following changes:  
+      app.UseOpenIdConnectAuthentication(  
+       new OpenIdConnectAuthenticationOptions  
+      {  
+       ClientId = clientId,  
+       //Authority = authority,  
+       MetadataAddress = metadataAddress,  
+       RedirectUri = postLogoutRedirectUri,  
+       PostLogoutRedirectUri = postLogoutRedirectUri 
   
-        ```  
-        private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];  
-        //private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];  
-        //private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];  
-        private static string metadataAddress = ConfigurationManager.AppSettings["ida:ADFSDiscoveryDoc"];  
-        private static string postLogoutRedirectUri = ConfigurationManager.AppSettings["ida:PostLogoutRedirectUri"];  
-        ```  
+ ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_11.PNG)  
   
-        ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_10.PNG)  
-  
-    -   Farther down, modify the OpenId Connect middleware options as in the following:  
-  
-        ```  
-        app.UseOpenIdConnectAuthentication(  
-            new OpenIdConnectAuthenticationOptions  
-            {  
-                ClientId = clientId,  
-                //Authority = authority,  
-                MetadataAddress = metadataAddress,  
-                RedirectUri = postLogoutRedirectUri,  
-                PostLogoutRedirectUri = postLogoutRedirectUri 
-        ```  
-  
-        ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_11.PNG)  
-  
-        By changing the above we are doing the following:  
-  
-        -   nstead of using the Authority for communicating data about the trusted issuer, we specify the discovery doc location directly via MetadataAddress  
-  
-        -   Azure AD does not enforce the presence of a redirect_uri in the request, but ADFS does. So, we need to add it here  
+By changing the above we are doing the following:  
+
+
+- Instead of using the Authority for communicating data about the trusted issuer, we specify the discovery doc location directly via MetadataAddress  
+- Azure AD does not enforce the presence of a redirect_uri in the request, but AD FS does. So, we need to add it here  
   
 ## Verify the app is working  
 Once the above changes have been made, hit F5.  This will bring up the sample page.  Click on sign in.  
   
 ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_12.PNG)  
   
-You will be re-directed to the AD FS sign-in page.  Go ahead and sign in.  
+You will be re-directed to the AD FS sign-in page.  Go ahead and sign in. 
+
+>[!NOTE]
+>If you are developing on a machine that is not the ad fs server, you may receive an error after clicking on sign in.  To resolve this, import the ad fs certificate and place it in the Trusted root store for the local machine on which you are developing.   
   
 ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_13.PNG)  
   
