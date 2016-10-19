@@ -29,7 +29,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4928|An Active Directory replica source naming context was established.|
 |4929|An Active Directory replica source naming context was removed.|
 |4930|An Active Directory replica source naming context was modified.|

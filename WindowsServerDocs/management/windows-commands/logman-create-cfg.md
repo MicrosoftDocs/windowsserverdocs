@@ -1,6 +1,6 @@
 ---
 title: logman create cfg
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman create cfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ logman create cfg <[-n] <name>> [options]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  
@@ -49,7 +48,7 @@ logman create cfg <[-n] <name>> [options]
 |-[-]max <value>|Maximum log file size in MB or maximum number of records for SQL logs.|  
 |-[-]cnf <[[hh:]mm:]ss>|When time is specified, create a new file when the specified time has elapsed. When time is not specified, create a new file when the maximum size is exceeded.|  
 |-y|Answer yes to all questions without prompting.|  
-|-[-]ni|Enable (-ni) or disable (--ni) network interface query.|  
+|-[-]ni|Enable (-ni) or disable (-ni) network interface query.|  
 |-reg <path [path [...]]>|Specifies registry value(s) to collect.|  
 |-mgt <query [query [...]]>|Specifies WMI object(s) to collect using SQL query language.|  
 |-ftc <path [path [...]]>|Specifies the full path to the file(s) to collect.|  

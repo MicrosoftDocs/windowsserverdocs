@@ -63,7 +63,7 @@ To start encryption for a volume, select **Turn on BitLocker** for the appropria
 Upon launch, the BitLocker Drive Encryption Wizard verifies the computer meets the BitLocker system requirements for encrypting an operating system volume. By default, the system requirements are:
 
 |Requirement|Description|
-|---------------|---------------|
+|--------|--------|
 |Hardware configuration|The computer must meet the minimum requirements for the supported Windows versions. For more information about Windows 8 requirements, see the [Windows 8 Web site](http://go.microsoft.com/fwlink/p/?LinkId=222457).|
 |Operating system|BitLocker is an optional feature which can be installed by Server Manager on  Windows Server 2012  and  Windows Server 2012 R2 .|
 |Hardware TPM|TPM version 1.2 or 2.0<br /><br />A TPM is not required for BitLocker; however, only a computer with a TPM can provide the additional security of pre-startup system integrity verification and multifactor authentication.|
@@ -153,10 +153,10 @@ This command returns the volumes on the target, current encryption status and vo
 
 **Enabling BitLocker without a TPM**
 
-For example, suppose that you want to enable BitLocker on a computer without a TPM chip. To properly enable BitLocker for the operating system volume, you will need to use a USB flash drive as a startup key to boot (in this example, the drive letter E). You would first create the startup key needed for BitLocker using the –protectors option and save it to the USB drive on E: and then begin the encryption process. You will need to reboot the computer when prompted to complete the encryption process.
+For example, suppose that you want to enable BitLocker on a computer without a TPM chip. To properly enable BitLocker for the operating system volume, you will need to use a USB flash drive as a startup key to boot (in this example, the drive letter E). You would first create the startup key needed for BitLocker using the ???protectors option and save it to the USB drive on E: and then begin the encryption process. You will need to reboot the computer when prompted to complete the encryption process.
 
 ```
-manage-bde –protectors -add C: -startupkey E:
+manage-bde ???protectors -add C: -startupkey E:
 manage-bde -on C:
 ```
 

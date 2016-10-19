@@ -1,6 +1,6 @@
 ---
 title: Mode
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,13 +15,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Mode
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays system status, changes system settings, or reconfigures ports or devices. If used without parameters, **mode** displays all the controllable attributes of the console and the available COM devices.  
-You can use **mode** to perform the following tasks—each task uses a different syntax:  
+You can use **mode** to perform the following tasks each task uses a different syntax:  
 -   [To configure a serial communications port](#BKMK_1)  
 -   [To display the status of all devices or of a single device](#BKMK_2)  
 -   [To redirect output from a parallel port to a serial communications port](#BKMK_3)  
@@ -35,7 +34,7 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 ```  
 ##### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |Com<M>[:]|Specifies the number of the async Prncnfg.vbshronous communications port.|  
 |baud=<B>|Specifies the transmission rate in bits per second. The following table lists valid abbreviations for *B* and their related rates.<br /><br />-   **11** = 110 baud<br />-   **15** = 150 baud<br />-   **30** = 300 baud<br />-   **60** = 600 baud<br />-   **12** = 1200 baud<br />-   **24** = 2400 baud<br />-   **48** = 4800 baud<br />-   **96** = 9600 baud<br />-   **19** = 19,200 baud|  
 |parity=<P>|Specifies how the system uses the parity bit to check for transmission errors. The following table lists valid values for *P*. The default value is **e**. Not all computers support the values **m** and **s**.<br /><br />-   **n** = none<br />-   **e** = even<br />-   **o** = odd<br />-   **m** = mark<br />-   **s** = space|  
@@ -56,7 +55,7 @@ mode [<Device>] [/status]
 ```  
 ##### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<Device>|Specifies the name of the device for which you want to display the status.|  
 |/status|Requests the status of any redirected parallel printers. You can abbreviate the **/status** command-line option as **/sta**.|  
 |/?|Displays help at the command prompt.|  
@@ -69,7 +68,7 @@ mode lpt<N>[:]=com<M>[:]
 ```  
 ##### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |lpt<N>[:]|Required. Specifies the parallel port. Valid values for *N* are in the range 1 through 3.|  
 |com<M>[:]|Required. Specifies the serial port. Valid values for *M* are in the range 1 through 4.|  
 |/?|Displays help at the command prompt.|  
@@ -95,7 +94,7 @@ mode <Device> codepage [/status]
 ```  
 ##### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<Device>|Required. Specifies the device for which you want to select a code page. CON is the only valid name for a device.|  
 |codepage select=|Required. Specifies which code page to use with the specified device. You can abbreviate **codepageselect** as **cpsel**.|  
 |<YYY>|Required. Specifies the number of the code page to select. The following list shows each code page that is supported and its country/region or language.<br /><br />437: United States<br /><br />850: Multilingual (Latin I)<br /><br />852: Slavic (Latin II)<br /><br />855: Cyrillic (Russian)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: Modern Greek|  
@@ -109,7 +108,7 @@ mode con[:] [cols=<C>] [lines=<N>]
 ```  
 ##### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |con[:]|Required. Indicates that the change applies to the Command Prompt window.|  
 |cols=<C>|Specifies the number of columns in the command prompt screen buffer.|  
 |lines=<N>|Specifies the number of lines in the command prompt screen buffer.|  
@@ -121,7 +120,7 @@ mode con[:] [rate=<R> delay=<D>]
 ```  
 ##### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |con[:]|Required. Refers to the keyboard.|  
 |rate=<R>|Specifies the rate at which a character is repeated on the screen when you hold down a key.|  
 |delay=<D>|Specifies the amount of time that will elapse after you press and hold down a key before the character output repeats.|  

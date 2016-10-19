@@ -40,7 +40,7 @@ Default: Success
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event Message Summary|Minimum  Requirement|
-|------------|-------------------------|------------------------|
+|------|-------------|------------|
 |4608|Windows is starting up.|Windows Vista, Windows Server 2008|
 |4609|Windows is shutting down.|Windows Vista, Windows Server 2008|
 |4616|The system time was changed.|Windows Vista, Windows Server 2008|

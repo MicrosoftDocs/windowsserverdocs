@@ -1,6 +1,6 @@
 ---
 title: Set option
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Set option
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |\[differential &#124; plex\]|Specifies to the provider the type of shadow copy to create.|  
 |\[transportable\]|Specifies that the shadow copy is not to be imported yet. The metadata .cab file can later be used to import the shadow copy to the same or a different computer.|  
 |\[rollbackrecover\]|Signals writers to use *autorecover* during the **PostSnapshot** event. This is useful if the shadow copy will be used for rollback \(for example, with data mining\).|  

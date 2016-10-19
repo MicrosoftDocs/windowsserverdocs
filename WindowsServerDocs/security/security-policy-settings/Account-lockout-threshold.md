@@ -53,7 +53,7 @@ The threshold that you select is a balance between operational efficiency and se
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the property page for the policy setting.  
   
 |Server type or Group Policy Object (GPO)|Default value|  
-|----------------------------------------------|-----------------|  
+|-----------------------|---------|  
 |Default domain policy|0 invalid sign-in attempts|  
 |Default domain controller policy|Not defined|  
 |Stand-alone server default settings|0 invalid sign-in attempts|  

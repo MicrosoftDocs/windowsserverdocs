@@ -25,14 +25,14 @@ Publisher conditions can be made only for files that are digitally signed; this 
 Publisher conditions are easier to maintain than file hash conditions and are generally more secure than path conditions. Rules that are specified to the version level might have to be updated when a new version of the file is released. The following table describes the advantages and disadvantages of the publisher condition.
 
 |Publisher condition advantages|Publisher condition disadvantages|
-|----------------------------------|-------------------------------------|
+|-----------------|-------------------|
 |-   Frequent updating is not required.<br />-   You can apply different values within a certificate.<br />-   A single rule can be used to allow an entire product suite.<br />-   You can use the asterisk (*) wildcard character within a publisher rule to specify that any value should be matched.|-   The file must be signed.<br />-   Although a single rule can be used to allow an entire product suite, all files in the suite must be signed uniformly.|
 
 Wildcard characters can be used as values in the publisher rule fields according to the following specifications:
 
 -   **Publisher**
 
-    The asterisk (*) character used by itself represents any publisher. When combined with any string value, the rule is limited to the publisher with a value in the signed certificate that matches the character string. In other words, the asterisk is not treated as a wildcard character if used with other characters in this field. For example, using the characters "M\*" limits the publisher name to only a publisher with the name "M\*." Using the characters "\*x\*" limits the publisher name only to the name “\*x\*�?. A question mark (?) is not a valid wildcard character in this field.
+    The asterisk (*) character used by itself represents any publisher. When combined with any string value, the rule is limited to the publisher with a value in the signed certificate that matches the character string. In other words, the asterisk is not treated as a wildcard character if used with other characters in this field. For example, using the characters "M\*" limits the publisher name to only a publisher with the name "M\*." Using the characters "\*x\*" limits the publisher name only to the name ???\*x\*???. A question mark (?) is not a valid wildcard character in this field.
 
 -   **Product name**
 
@@ -54,15 +54,15 @@ Wildcard characters can be used as values in the publisher rule fields according
 
 The following table describes how a publisher condition is applied.
 
-|Option|The publisher condition allows or denies…|
-|----------|---------------------------------------------|
+|Option|The publisher condition allows or denies???|
+|-----|-----------------------|
 |**All signed files**|All files that are signed by a publisher.|
 |**Publisher only**|All files that are signed by the named publisher.|
 |**Publisher and product name**|All files for the specified product that are signed by the named publisher.|
 |**Publisher, product name, and file name**|Any version of the named file for the named product that is signed by the publisher.|
-|**Publisher, product name, file name, and file version**<br /> **--Exactly--**|The specified version of the named file for the named product that is signed by the publisher.|
-|**Publisher, product name, file name, and file version**<br /> **--And Above--**|The specified version of the named file and any new releases for the product that are signed by the publisher.|
-|**Publisher, product name, file name, and file version**<br /> **--And below--**|The specified version of the named file and any older versions for the product that are signed by the publisher.|
+|**Publisher, product name, file name, and file version**<br /> **-Exactly-**|The specified version of the named file for the named product that is signed by the publisher.|
+|**Publisher, product name, file name, and file version**<br /> **-And Above-**|The specified version of the named file and any new releases for the product that are signed by the publisher.|
+|**Publisher, product name, file name, and file version**<br /> **-And below-**|The specified version of the named file and any older versions for the product that are signed by the publisher.|
 |**Custom**|You can edit the **Publisher**, **Product name**, **File name**, and **Version** fields to create a custom rule.|
 
 For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md).

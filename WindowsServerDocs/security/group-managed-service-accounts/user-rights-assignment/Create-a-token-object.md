@@ -23,7 +23,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference
 This policy setting determines which accounts a process can use to create a token, and which accounts it can then use to gain access to local resources when the process uses NtCreateToken() or other token-creation APIs.
 
-When a user logs on to the local computer or connects to a remote computer through a network, Windows builds the user’s access token. Then the system examines the token to determine the level of the user's privileges. When you revoke a privilege, the change is immediately recorded, but the change is not reflected in the user's access token until the next time the user logs on or connects.
+When a user logs on to the local computer or connects to a remote computer through a network, Windows builds the user???s access token. Then the system examines the token to determine the level of the user's privileges. When you revoke a privilege, the change is immediately recorded, but the change is not reflected in the user's access token until the next time the user logs on or connects.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -45,10 +45,10 @@ Constant: SeCreateTokenPrivilege
 ### Default values
 This user right is used internally by the operating system. By default, it is not assigned to any user groups.
 
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
 
 |Server type or GPO|Default value|
-|----------------------|-----------------|
+|-----------|---------|
 |Default Domain Policy|Not Defined|
 |Default Domain Controller Policy|Not Defined|
 |Stand-Alone Server Default Settings|Not Defined|

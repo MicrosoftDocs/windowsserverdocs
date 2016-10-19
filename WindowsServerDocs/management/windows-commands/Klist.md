@@ -1,6 +1,6 @@
 ---
 title: Klist
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Klist
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,9 +25,9 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
-|-lh|Denotes the high part of the user’s locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
-|-li|Denotes the low part of the user’s locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|-------|--------|  
+|-lh|Denotes the high part of the user s locally unique identifier (LUID), expressed in hexadecimal. If neither  lh or  li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|-li|Denotes the low part of the user s locally unique identifier (LUID), expressed in hexadecimal. If neither  lh or  li are present, the command defaults to the LUID of the user who is currently signed in.|  
 |tickets|Lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option.|  
 |tgt|Displays the initial Kerberos TGT.|  
 |purge|Allows you to delete all the tickets of the specified logon session.|  
@@ -78,10 +77,10 @@ The parameters display the following information:
     -   LogonID: If specified, displays the logon session only by the given value. If not specified, displays all the logon sessions on this computer.  
 -   **kcd_cache**  
     Allows you to display the Kerberos constrained delegation cache information.  
-    -   LogonID: If specified, displays the cache information for the logon session by the given value. If not specified, displays the cache information for the current user’s logon session.  
+    -   LogonID: If specified, displays the cache information for the logon session by the given value. If not specified, displays the cache information for the current user s logon session.  
 -   **get**  
     Allows you to request a ticket to the target that is specified by the SPN.  
-    -   LogonID: If specified, requests a ticket by using the logon session by the given value. If not specified, requests a ticket by using the current user’s logon session.  
+    -   LogonID: If specified, requests a ticket by using the logon session by the given value. If not specified, requests a ticket by using the current user s logon session.  
     -   kdcoptions: Requests a ticket with the given KDC options  
 -   **add_bind**  
     Allows you to specify a preferred domain controller for Kerberos authentication.  
@@ -99,7 +98,7 @@ The parameters display the following information:
     klist   
     ```  
     ```  
-    klist –li 0x3e7  
+    klist  li 0x3e7  
     ```  
 2.  When you diagnose errors and you want to know the specifics of each ticket-granting-ticket that is cached on the computer for a logon session, you can use Klist to display the TGT information.  
     ```  
@@ -110,7 +109,7 @@ The parameters display the following information:
     klist purge  
     ```  
     ```  
-    klist purge –li 0x3e7  
+    klist purge  li 0x3e7  
     ```  
 4.  When you want to diagnose a logon session for a user or a service, you can use the following command to find the LogonID that is used in other Klist commands.  
     ```  

@@ -1,6 +1,6 @@
 ---
 title: Repair
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Repair
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ repair disk=<n> [align=<n>] [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |disk\=<n>|Specifies the dynamic disk that will replace the failed disk region.|  
 |align\=<n>|Aligns all volume or partition extents to the closest alignment boundary. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  

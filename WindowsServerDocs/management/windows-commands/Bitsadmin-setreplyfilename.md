@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setreplyfilename
-description: "Windows Commands topic for **Bitsadmin setreplyfilename** -- Specify the path of the file that contains the server reply."
+description: "Windows Commands topic for **Bitsadmin setreplyfilename** - Specify the path of the file that contains the server reply."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setreplyfilename
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /SetReplyFileName <Job> <Path>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Path|Location to place the server reply|
 ## Remarks

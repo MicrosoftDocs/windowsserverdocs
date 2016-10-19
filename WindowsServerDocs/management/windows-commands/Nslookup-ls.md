@@ -3,7 +3,7 @@ title: Nslookup ls
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -17,7 +17,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup ls
 Lists information for a Domain Name System (DNS) domain.
 ## Syntax
@@ -26,7 +25,7 @@ ls [<Option>] <DNSDomain> [{[>] <FileName>|[>>] <FileName>}]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Option>|The following table lists valid options.<br /><br />-   -t: Lists all records of the specified type. For a description of <QueryType>, see  **setquerytype** in Additional references.<br />-   -a: Lists aliases of computers in the DNS domain. This parameter is a synonym for **-t CNAME**<br />-   -d: Lists all records for the DNS domain. This parameter is a synonym for **-t ANY**<br />-   -h: Lists CPU and operating system information for the DNS domain. This parameter is a synonym for **-t HINFO**<br />-   -s: Lists well-known services of computers in the DNS domain. This parameter is a synonym for **-t WKS**.|
 |<DNSDomain>|Specifies the DNS domain for which you want information.|
 |<FileName>|Specifies a file name in which to save the output. You can use the greater than (>) and double greater than (>>) characters to redirect the output in the usual manner.|

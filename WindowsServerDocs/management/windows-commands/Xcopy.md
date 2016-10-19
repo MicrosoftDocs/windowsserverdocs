@@ -1,6 +1,6 @@
 ---
 title: Xcopy
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Xcopy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Source>|Required. Specifies the location and names of the files you want to copy. This parameter must include either a drive or a path.|
 |[<Destination>]|Specifies the destination of the files you want to copy. This parameter can include a drive letter and colon, a directory name, a file name, or a combination of these.|
 |/w|Displays the following message and waits for your response before starting to copy files:<br /><br />**Press any key to begin copying file(s)**|
@@ -52,12 +51,12 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the *Destination* file system. The *Destination* file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
-|/exclude:FileName1[+[FileName2][+[FileName3](…\)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.<br /><br />When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. For example, specifying the string, \obj\ or .obj will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
+|/exclude:FileName1[+[FileName2][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.<br /><br />When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. For example, specifying the string, \obj\ or .obj will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
 |/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |/-y|Prompts to confirm that you want to overwrite an existing destination file.|
 |/z|Copies over a network in restartable mode.|
-|/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
-|/j|Copies files without buffering. Recommended for very large files. This parameter was added introduced in  Windows Server® 2008 R2 .|
+|/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista .|
+|/j|Copies files without buffering. Recommended for very large files. This parameter was added introduced in  Windows Server  2008 R2 .|
 |/?|Displays help at the command prompt.|
 ## Remarks
 -   Using **/v**
@@ -85,7 +84,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 -   Exit codes for **xcopy**
     To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional references](Xcopy.md#BKMK_addref). The following table lists each exit code and a description.
     |Exit code|Description|
-    |-------------|---------------|
+    |-------|--------|
     |0|Files were copied without error.|
     |1|No files were found to copy.|
     |2|The user pressed CTRL+C to terminate **xcopy**.|

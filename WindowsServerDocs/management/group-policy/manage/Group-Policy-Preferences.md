@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Group Policy Preferences
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -45,21 +44,21 @@ The Group Policy service decides which GPOs apply to computers (there are many w
 
 Group Policy processing repeats when the user logs on the computer. The Group Policy service decides the GPOs that apply to the user and then applies user policy settings.
 
-Itâ€™s important that you have a firm understanding of how to create, modify, and link Group Policy objects to containers in Active Directory. Group Policy Preferences use the same concepts as Group Policy. In fact, you manage Group Policy Preferences the same way that you manage Group Policy. This is a review of Group Policy; itâ€™s not complete. If you are unfamiliar with how to manage Group Policy or you need a thorough refresher, then you can read the Windows Group Policy Resource Kit: Windows Server 2008 and Windows Vista (Microsoft Press 2008).
+It s important that you have a firm understanding of how to create, modify, and link Group Policy objects to containers in Active Directory. Group Policy Preferences use the same concepts as Group Policy. In fact, you manage Group Policy Preferences the same way that you manage Group Policy. This is a review of Group Policy; it s not complete. If you are unfamiliar with how to manage Group Policy or you need a thorough refresher, then you can read the Windows Group Policy Resource Kit: Windows Server 2008 and Windows Vista (Microsoft Press 2008).
 
 ### Client-side Extensions
-A Group Policy client-side extensions is an isolated component that is responsible for processing specific policy settings delivered by the Group Policy infrastructure.  The format in which each Group Policy client-side extension saves data can be unique to each extension.  And, the Group Policy infrastructure is unaware of this format, nor does it care.  Group Policyâ€™s purpose is to deliver settings to the computer where each client-side extension applies their portion of the policy settings from multiple Group Policy objects.
+A Group Policy client-side extensions is an isolated component that is responsible for processing specific policy settings delivered by the Group Policy infrastructure.  The format in which each Group Policy client-side extension saves data can be unique to each extension.  And, the Group Policy infrastructure is unaware of this format, nor does it care.  Group Policy s purpose is to deliver settings to the computer where each client-side extension applies their portion of the policy settings from multiple Group Policy objects.
 
-To help understand the relationship between the Group Policy infrastructure and the Group Policy client-side extensions-- consider a postal carrier.  The postal carrier collects information from various sources and delivers that information to you.  The postal carrier has no idea what information they are delivering.  The information could be a letter, a DVD, or a CD with photos.  The postal carrier only knows they are to deliver the information to a specific address.
+To help understand the relationship between the Group Policy infrastructure and the Group Policy client-side extensions- consider a postal carrier.  The postal carrier collects information from various sources and delivers that information to you.  The postal carrier has no idea what information they are delivering.  The information could be a letter, a DVD, or a CD with photos.  The postal carrier only knows they are to deliver the information to a specific address.
 
-In this analogy, the Group Policy service is the postal carrier-- it delivers the information without out any knowledge about the information.  The information delivered by the postal carrier represents the different policy settings.  The Group Policy client-side extension represents the person receiving the information.  Addresses can have many recipients.  Each recipient receives their own mail in an expected format.  The Group Policy client side extension reads its respective policy setting information and performs actions based on information contains in the policy settings.
+In this analogy, the Group Policy service is the postal carrier- it delivers the information without out any knowledge about the information.  The information delivered by the postal carrier represents the different policy settings.  The Group Policy client-side extension represents the person receiving the information.  Addresses can have many recipients.  Each recipient receives their own mail in an expected format.  The Group Policy client side extension reads its respective policy setting information and performs actions based on information contains in the policy settings.
 
 ### Group Policy Processing
 Group Policy application is the process of deciding which Group Policy objects that Windows applies to a user or computer and then applying those settings.  Understanding Group Policy processing is key to planning and deploying Group Policy settings.  Misunderstanding Group Policy processing is the most common cause of unwanted and unexplainable policy settings.
 
-The key to understanding Group Policy processing is Scope.  **Scope** is simply a collection of all Group Policy objects that should apply to a user or computer based on their objectâ€™s location in Active Directory.  You create scope by **linking** Group Policy objects to specific locations within Active Directory.
+The key to understanding Group Policy processing is Scope.  **Scope** is simply a collection of all Group Policy objects that should apply to a user or computer based on their object s location in Active Directory.  You create scope by **linking** Group Policy objects to specific locations within Active Directory.
 
-The key to understanding Group Policy processing is Scope.  **Scope** is simply a collection of all Group Policy objects that should apply to a user or computer based on their objectâ€™s location in Active Directory.  You create scope by **linking** Group Policy objects to specific locations within Active Directory.
+The key to understanding Group Policy processing is Scope.  **Scope** is simply a collection of all Group Policy objects that should apply to a user or computer based on their object s location in Active Directory.  You create scope by **linking** Group Policy objects to specific locations within Active Directory.
 
 Group Policy provides options that can change the scope of Group Policy object.  Changing the scope of Group Policy objects affects which policy settings apply and those that do not.  You change the scope of Group Policy using **processing order**,  **filtering**, and **link options**.
 
@@ -90,13 +89,13 @@ Active Directory has rules that govern where you can link Group Policy objects. 
 
 -   Organizational Unit objects
 
-Linking Group Policy objects to these Active Directory objects is strategic in deploying Group Policy.  These are container objects.  Container objects, as the name implies, means they can include other objects within them-- they representing hierarchical grouping of objects in a directory.  Site objects can contain computer objects from multiple domains. Domain objects can contain multiple Organizational Units, computers and user objects.  Organizational Unit objects can contain other Organizational Unit objects, computers, and users. Let's look at the distinguished name again.
+Linking Group Policy objects to these Active Directory objects is strategic in deploying Group Policy.  These are container objects.  Container objects, as the name implies, means they can include other objects within them- they representing hierarchical grouping of objects in a directory.  Site objects can contain computer objects from multiple domains. Domain objects can contain multiple Organizational Units, computers and user objects.  Organizational Unit objects can contain other Organizational Unit objects, computers, and users. Let's look at the distinguished name again.
 
 ```
 CN=Jeff Low,OU=Managers,OU=Research,OU=RandD,DC=corp,DC=contoso,DC=com
 ```
 
-Close examination of the distinguished name reveals each container object that could potentially apply Group Policy settings to the user.  The CN=Jeff Low is the user object name. You cannot link Group Policy directly to a user object.  However, the remaining portion of the name shows the objectâ€™s location. Working left to right, you can discover each container object that is capable of apply Group Policy to the user.
+Close examination of the distinguished name reveals each container object that could potentially apply Group Policy settings to the user.  The CN=Jeff Low is the user object name. You cannot link Group Policy directly to a user object.  However, the remaining portion of the name shows the object s location. Working left to right, you can discover each container object that is capable of apply Group Policy to the user.
 
 ```
 OU=Managers,OU=Research,OU=RandD,DC=corp,DC=contoso,DC=com
@@ -126,7 +125,7 @@ WMI filtering is the final phase of determining the scope of Group Policy object
 
 Windows Management Instrumentation (WMI) is the Microsoft implementation of Web-Based Enterprise Management (WBEM). WMI uses the Common Information Model (CIM) industry standard to represent systems, applications, networks, devices, and other managed components.
 
-Group Policy provides more filters to control the scope of applicable Group Policy objects.  WMI enables you to create queries to interrogate specific features of the computer, operating system, and other managed components.  In the form of queries, you create criteria that behave like logical expressions-- where the result equates to true or false.  You associated, or link these criteria to a Group Policy object.  If the criteria evaluates to true, the Group Policy object remains applicable to the user and is kept in the filtered list.  If the criteria evaluates to false, the Group Policy service removes the Group Policy object from the filtered list.
+Group Policy provides more filters to control the scope of applicable Group Policy objects.  WMI enables you to create queries to interrogate specific features of the computer, operating system, and other managed components.  In the form of queries, you create criteria that behave like logical expressions- where the result equates to true or false.  You associated, or link these criteria to a Group Policy object.  If the criteria evaluates to true, the Group Policy object remains applicable to the user and is kept in the filtered list.  If the criteria evaluates to false, the Group Policy service removes the Group Policy object from the filtered list.
 
 Once WMI filtering completes, the Group Policy service has a list of filter Group Policy objects.  This final list represents all applicable Group Policy objects for the user or computer.  Internally, Security and WMI filtering occur in one cycle.
 
@@ -151,11 +150,11 @@ OU=Managers,OU=Research,OU=RandD,DC=corp,DC=contoso,DC=com
 
 Notice the order of Group Policy objects has changed from the first list. This reordering of Group Policy occurs during the Security and WMI filter processing.  The Group Policy service builds the first list of GPOs by finding the user or computer object and then collecting all linked GPOs as it walks up the directory tree.  The GPOs are listed backwards from the order they apply because as the Group Policy service adds the newly discovered link location to the bottom of the list.  This explains why the domain location is at the bottom of the list.
 
-However, when filtering the list for security and WMI filters, the Group Policy service starts at the top of the list, which is the OU closest in lineage to the user or computer object.  The service builds a new list (the filtered list) by placing the GPOs that pass through the filter into the filtered list.  The service inverts the order of the original list, making the domain location at the top of the list.  The location closest to the user is at the bottom of the list â€”the order Group Policy applies GPOs to users and computers.
+However, when filtering the list for security and WMI filters, the Group Policy service starts at the top of the list, which is the OU closest in lineage to the user or computer object.  The service builds a new list (the filtered list) by placing the GPOs that pass through the filter into the filtered list.  The service inverts the order of the original list, making the domain location at the top of the list.  The location closest to the user is at the bottom of the list  the order Group Policy applies GPOs to users and computers.
 
 **Conflict Resolution**
 
-Each Group Policy object contains the same number of potential policy settings. Therefore, it is possible to have the same policy setting defined in multiple Group Policy objects. Conflicts occurs when the same policy setting is configured in multiple Group Policy objects.  Like two cars competing for the same space on the roadâ€”one wins and the other loses.  Group Policy handles conflicts by using a method known as last-writer-wins. Last-writer-wins resolves conflicts by declaring the prevailing setting as the setting that Group Policy writes last.  Therefore, the Group Policy object containing the conflicting policy setting that applies last is the setting that wins over all other settings.
+Each Group Policy object contains the same number of potential policy settings. Therefore, it is possible to have the same policy setting defined in multiple Group Policy objects. Conflicts occurs when the same policy setting is configured in multiple Group Policy objects.  Like two cars competing for the same space on the road one wins and the other loses.  Group Policy handles conflicts by using a method known as last-writer-wins. Last-writer-wins resolves conflicts by declaring the prevailing setting as the setting that Group Policy writes last.  Therefore, the Group Policy object containing the conflicting policy setting that applies last is the setting that wins over all other settings.
 
 ![Pyramid representation of the Group Policy object containing the conflicting policy setting applied last that wins over all other settings](../../media/Group-Policy-Preferences/GP_PREF_FIG5.png)
 
@@ -180,10 +179,10 @@ Group Policy continues to use the last-writer-wins method for resolving policy s
 The locations that support Group Policy linking, Active Directory sites, domains, and organizational units, do so because each of these objects have a GPLink attribute.  The GPLink attribute is a single-valued attribute that accepts a value of a string data type.  While the Active Directory Schema enforces the single-valued nature of the GPLink attribute, Group Policy uses the attribute as a multivalued attribute.  The GPMC writes the value of the GPLink attribute using the following format.
 
 ```
-[distinguishedNameOfGroupPolicyContainer;linkOPtions][â€¦][â€¦]
+[distinguishedNameOfGroupPolicyContainer;linkOPtions][][]
 ```
 
-The distingushedNameOfGroupPolicyContainer token represents the distinguished name of the Group Policy Container.  A Group Policy object is a single logical object composed of two components of information.  The component of information stored on the file system is the Group Policy template.  The remaining component, the Group Policy Container is an object in Active Directory object that lives in the domain partition of Active Directory. As previously covered, the distinguished name of a directory object provides the objectâ€™s name and location in the directory.
+The distingushedNameOfGroupPolicyContainer token represents the distinguished name of the Group Policy Container.  A Group Policy object is a single logical object composed of two components of information.  The component of information stored on the file system is the Group Policy template.  The remaining component, the Group Policy Container is an object in Active Directory object that lives in the domain partition of Active Directory. As previously covered, the distinguished name of a directory object provides the object s name and location in the directory.
 
 The linkOptions token is an integer value that defines the link options associated with the Group Policy object. Currently, you can enable or disable linked of Group Policy objects.  Also, you can configure the link as enforced.  The linkOptions value is a bit value where combining values varies the configurations.
 
@@ -197,13 +196,13 @@ Disabling the link of a Group Policy objects prevents the Group Policy service f
 
 The Group Policy service reads this long string as a list of values from left to right. The first GPO link entry in the value is the first to apply at this location.  The next entry in the value applies afterwards.  The process continues until the last GPO in the value applies.
 
-Group Policy inherently assigns each GPO precedence based on the order it reads the listâ€”left to right.  Therefore, the first GPO in the value has the lowest precedence in the list of linked Group Policy objects.  The next GPO in the value has a higher precedence than the previous GPO because it applies its policy settings after the previous GPO; by winning any policy setting conflicts between the two GPOs. Each GPO that follows has a higher precedence than the Group Policy object before it in the link order.  The last GPO in the value has the highest precedence because it is the last Group Policy object the Group Policy service applies.
+Group Policy inherently assigns each GPO precedence based on the order it reads the list left to right.  Therefore, the first GPO in the value has the lowest precedence in the list of linked Group Policy objects.  The next GPO in the value has a higher precedence than the previous GPO because it applies its policy settings after the previous GPO; by winning any policy setting conflicts between the two GPOs. Each GPO that follows has a higher precedence than the Group Policy object before it in the link order.  The last GPO in the value has the highest precedence because it is the last Group Policy object the Group Policy service applies.
 
 The best way to understand this is to think of the long string as a list of GPOs. Take the first GPO (the left most GPO) in the value and place it the list.  Take the next links GPO listed and place on top of the list (causing all others to move down in the list by one).  Continue this process until the last GPO is on top of the list.  This final GPO linked entries list is in precedence order, which means the list is processed from the bottom to the top.
 
 ![Listing, in precedence order, showing how the GPO list is processed from the bottom to the top](../../media/Group-Policy-Preferences/GP_PREF_FIG6.png)
 
-When viewed in a list in precedence order, itâ€™s easy to discover that GPOs higher in the list have more precedence than GPOs lower in the list. As a result, GPOs lower in the list lose policy setting conflicts and GPOs higher in the list win policy setting conflicts.
+When viewed in a list in precedence order, it s easy to discover that GPOs higher in the list have more precedence than GPOs lower in the list. As a result, GPOs lower in the list lose policy setting conflicts and GPOs higher in the list win policy setting conflicts.
 
 **Link Options**
 
@@ -222,9 +221,9 @@ For example, policy settings linked to the domain apply to computers and users w
 Block policy inheritance does not prevent Group Policy settings from enforced linked Group Policy objects from applying to users and computers.  Group Policy settings from enforced links apply regardless of the block policy inheritance status on domain and organizational unit objects.
 
 ### Group Policy Preferences
-Group Policy Preferences extends Group Policy. Preferences are not Group Policy settings. Windows stores both settings in the registry; however; policy settings have an advantage over preferencesâ€”they typically override a preference.
+Group Policy Preferences extends Group Policy. Preferences are not Group Policy settings. Windows stores both settings in the registry; however; policy settings have an advantage over preferences they typically override a preference.
 
-You can configure Windows using the user interface. The user interface presents you with choices; you choose the options you like; and click OK or close the dialog box. Windows then saves your choices to the registry so it can recall those settings later. Settings configurable by the user are known as preferences (notice the lowercase â€œpâ€?). Mapping a shared folder or choosing a default home page is an example of preferences. When you set the home page using Internet Explorer, you can close the web browser and open it up again and it remembers your home page. Policy settings differ from preferences because policy settings are enforced on the user or computer. Policy prevents the user from changing their settings. Typically, users configure preferences.
+You can configure Windows using the user interface. The user interface presents you with choices; you choose the options you like; and click OK or close the dialog box. Windows then saves your choices to the registry so it can recall those settings later. Settings configurable by the user are known as preferences (notice the lowercase p). Mapping a shared folder or choosing a default home page is an example of preferences. When you set the home page using Internet Explorer, you can close the web browser and open it up again and it remembers your home page. Policy settings differ from preferences because policy settings are enforced on the user or computer. Policy prevents the user from changing their settings. Typically, users configure preferences.
 
 Group Policy Preferences enables you to deploy desired configurations to computers and users without limiting the user from choosing a different configuration.  It is important to remember that while the user can change the configuration, Group Policy Preferences are Group Policy client-side extensions. Group Policy Preferences refresh with Group Policy; therefore, Group Policy overwrites any preference settings altered by the user with the value configured in a Group Policy Preference.  Replacing a user configured preference setting with one configured using Group Policy Preferences is not the same as Group Policy. A true Group Policy setting enforces the setting and restricts the user from changing the setting.  Users can easily change preference values enabled by Group Policy Preferences until the next refresh of Group Policy (which returns the preference settings back to the value configured in the Group Policy Preference item).
 
@@ -264,7 +263,7 @@ Each preference extension can contain one or more preference items. By default, 
 
 If the **Stop processing items in this extension if an error occurs on this item** option is selected, a failing preference item prevents remaining preference items within the extension from processing. This change in behavior is limited to the hosting Group Policy object (GPO) and client-side extension. It does not extend to other GPOs.
 
-Itâ€™s important to understand that Group Policy Preference extensions process preference items from the top of the list and work their way to the bottom. The preference extension only stops processing preference items that follow the failing preference item (items appearing below the failing preference items as they appear in the list).
+It s important to understand that Group Policy Preference extensions process preference items from the top of the list and work their way to the bottom. The preference extension only stops processing preference items that follow the failing preference item (items appearing below the failing preference items as they appear in the list).
 
 ***Run in logged-on user's security context (user policy option)***
 
@@ -274,7 +273,7 @@ By default, Group Policy processes user preference items using the security cont
 
 If the **Run in logged-on user's security context** option is selected, it changes the security context under which the preference item is processed. The preference extension processes preference items in the security context of the logged-on user. This allows the preference extension to access resources as the user rather than the computer. This can be important when using drive maps or other preferences in which the computer may not have permissions to resources or when using environment variables. The value of many environment variables differ when evaluated in a security context other than the logged-on user.
 
-Group Policy Preference extensions that need to process in the userâ€™s security context, such as Drive Maps and Printers **automatically** switch to the userâ€™s context and do not need you to adjust this setting.
+Group Policy Preference extensions that need to process in the user s security context, such as Drive Maps and Printers **automatically** switch to the user s context and do not need you to adjust this setting.
 
 ***Remove this item when it is no longer applied***
 
@@ -284,7 +283,7 @@ Unlike policy settings, the Group Policy service does not remove preference sett
 
 If the **Remove this item when it is no longer applied** option is selected, it changes this behavior. After selecting this option, the preference extension decides if the preference item should not apply to targeted users or computers (out of scope). If the preference extension decides the preference item is out of scope, it removes the settings associated with the preference item.
 
-Selecting this setting changes the preference itemâ€™s action to **Replace**. During Group Policy application, the preference extension recreates (deletes and creates) the results of the preference item. When the preference item is out of scope for the user or computer, the results of the preference item are deleted, but not created. Preference items can become out of scope by using item-level targeting or by higher-level Group Policy filters such as WMI and security group filters.
+Selecting this setting changes the preference item s action to **Replace**. During Group Policy application, the preference extension recreates (deletes and creates) the results of the preference item. When the preference item is out of scope for the user or computer, the results of the preference item are deleted, but not created. Preference items can become out of scope by using item-level targeting or by higher-level Group Policy filters such as WMI and security group filters.
 
 The **Remove this item when it is no longer applied** option is not available when you set the preference item action to Delete.
 
@@ -299,7 +298,7 @@ If the **Apply once and do not reapply** option is selected, it changes this beh
 #### Item-level Targeting
 Group Policy provides filters to control which policy settings and preference items apply to users and computers. Preferences provide an added layers of filtering called targeting. Item-level targeting enables you to control if a preference item applies to a group of users or computers.
 
-Use item-level targeting to change the scope of individual preference items, so they apply only to selected users or computers. Within a single Group Policy object (GPO), you can include multiple preference itemsâ€”each customized for selected users or computers and each targeted to apply settings only to the relevant users or computers.
+Use item-level targeting to change the scope of individual preference items, so they apply only to selected users or computers. Within a single Group Policy object (GPO), you can include multiple preference items each customized for selected users or computers and each targeted to apply settings only to the relevant users or computers.
 
 Each targeting item results in a value of either true or false. You can apply multiple targeting items to a preference item and select the logical operation (AND or OR) by which to combine each targeting item with the preceding one. If the combined result of all targeting items for a preference item is false, then the settings in the preference item are not applied to the user or computer. Using targeting collections, you can also create parenthetical expressions.
 

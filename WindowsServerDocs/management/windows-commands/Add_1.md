@@ -1,6 +1,6 @@
 ---
 title: Add_1
-description: "Windows Commands topic for **add_1** -- Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment."
+description: "Windows Commands topic for **add_1** - Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Add_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -38,7 +37,7 @@ add alias <AliasName> <AliasValue>
 ## Add subcommands  
   
 |Subcommand|Description|  
-|--------------|---------------|  
+|-------|--------|  
 |volume|Adds a volume to the Shadow Copy Set, which is the set of volumes to be shadow copied. See [Add volume](Add-volume.md) for syntax and parameters.|  
 |alias|Adds the given name and value to the alias environment. See [Add alias](Add-alias.md) for syntax and parameters.|  
 |\/?|Displays help at the command line.|  

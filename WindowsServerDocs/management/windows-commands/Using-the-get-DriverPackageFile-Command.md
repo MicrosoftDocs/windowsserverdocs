@@ -1,6 +1,6 @@
 ---
 title: Using the get-DriverPackageFile Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-DriverPackageFile Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/InfFile:<Inf File path>|Specifies the full path and file name of the driver package .inf file.|
 |[/Architecture:{x86 &#124; ia64 &#124; x64}]|Specifies the architecture of the driver package.|
 |[/Show: {Drivers &#124; Files &#124; All}]|Indicates the package information to display. If **/Show** is not specified, the default is to return only the driver package metadata. **Drivers** displays the list of drivers in the package. **Files** displays the list of files in the package. **All** displays drivers and files.|

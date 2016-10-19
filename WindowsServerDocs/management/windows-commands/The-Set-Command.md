@@ -1,6 +1,6 @@
 ---
 title: The Set Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # The Set Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,12 +21,12 @@ ms.date: 10/12/2016
 Sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
 ## Subcommands
 |Subcommand|Description|
-|--------------|---------------|
-|[Subcommand: set-Device](Subcommand--set-Device.md)|Changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in Active Directory Domain Servers (AD DS). Prestaged clients are also called known computers.|
-|[Subcommand: set-Image](Subcommand--set-Image.md)|Changes the attributes of an existing image.|
-|[Subcommand: set-ImageGroup](Subcommand--set-ImageGroup.md)|Changes the attributes of an existing image group.|
-|[Subcommand: set-Server](Subcommand--set-Server.md)|Configures the settings for a Windows Deployment Services server.|
-|[Subcommand: set-TransportServer](Subcommand--set-TransportServer.md)|Configures the settings for a Transport Server.|
-|[Subcommand: set-DriverPackage](Subcommand--set-DriverPackage.md)|Renames and/or enable/disable a driver package on a server.|
-|[Subcommand: set-DriverGroup](Subcommand--set-DriverGroup.md)|Sets the properties of an existing driver group on a server.|
-|[Subcommand: set-DriverGroupFilter](Subcommand--set-DriverGroupFilter.md)|Adds or removes an existing driver group filter from a driver group.|
+|-------|--------|
+|[Subcommand: set-Device](Subcommand-set-Device.md)|Changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in Active Directory Domain Servers (AD DS). Prestaged clients are also called known computers.|
+|[Subcommand: set-Image](Subcommand-set-Image.md)|Changes the attributes of an existing image.|
+|[Subcommand: set-ImageGroup](Subcommand-set-ImageGroup.md)|Changes the attributes of an existing image group.|
+|[Subcommand: set-Server](Subcommand-set-Server.md)|Configures the settings for a Windows Deployment Services server.|
+|[Subcommand: set-TransportServer](Subcommand-set-TransportServer.md)|Configures the settings for a Transport Server.|
+|[Subcommand: set-DriverPackage](Subcommand-set-DriverPackage.md)|Renames and/or enable/disable a driver package on a server.|
+|[Subcommand: set-DriverGroup](Subcommand-set-DriverGroup.md)|Sets the properties of an existing driver group on a server.|
+|[Subcommand: set-DriverGroupFilter](Subcommand-set-DriverGroupFilter.md)|Adds or removes an existing driver group filter from a driver group.|

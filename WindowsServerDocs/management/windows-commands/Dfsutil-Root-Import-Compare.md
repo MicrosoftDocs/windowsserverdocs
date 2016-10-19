@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root Import Compare
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil root import compare <\\srcserver\share>|<filename> <\\destserver\share> 
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\srcserver\\share>|UNC path to the namespace on the first namespace server that you want to compare.|
 |<\\\\destserver\\share>|UNC path to the namespace on the second namespace server that you want to compare.|
 |<filename>|Name of the XML file that contains the namespace configuration that you want to compare.|

@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional introduces the concepts and describes the steps required to deploy AppLocker™ policies introduced in  Windows Server 2008 R2  and  Windows 7.
+This topic for the IT professional introduces the concepts and describes the steps required to deploy AppLocker??? policies introduced in  Windows Server 2008 R2  and  Windows 7.
 
 ## Purpose of this guide
 This guide provides steps based on your design and planning investigation for deploying application control policies by using AppLocker. It is intended for security architects, security administrators, and system administrators. Through a sequential and iterative deployment process, you can create application control policies, test and adjust the policies, and implement a method for maintaining those policies as the needs in your organization change.
@@ -74,7 +74,7 @@ This guide provides steps based on your design and planning investigation for de
 
 -   [Using Software Restriction Policies to Protect Against Unauthorized Software](http://go.microsoft.com/fwlink/?LinkID=155634) (http://go.microsoft.com/fwlink/?LinkID=155634)
 
-    This TechNet article is about SRP in Windows XP and Windows Server 2003 and is also applicable to Windows Vista® and Windows Server 2008. It provides an in-depth look at how software restriction policies can be used to fight viruses, regulate which ActiveX controls can be downloaded, run only digitally signed scripts, and enforce that only approved software is installed on system computers.
+    This TechNet article is about SRP in Windows XP and Windows Server 2003 and is also applicable to Windows Vista?? and Windows Server 2008. It provides an in-depth look at how software restriction policies can be used to fight viruses, regulate which ActiveX controls can be downloaded, run only digitally signed scripts, and enforce that only approved software is installed on system computers.
 
 -   [Software Restriction Policies](https://technet.microsoft.com/library/cc779607(v=ws.10).aspx)
 

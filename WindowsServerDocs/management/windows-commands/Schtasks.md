@@ -1,6 +1,6 @@
 ---
 title: Schtasks
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Schtasks
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -73,7 +72,7 @@ schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> 
 ###### /sc <ScheduleType>
 Specifies the schedule type. Valid values are MINUTE, HOURLY, DAILY, WEEKLY, MONTHLY, ONCE, ONSTART, ONLOGON, ONIDLE.
 |Schedule type|Description|
-|-----------------|---------------|
+|---------|--------|
 |MINUTE, HOURLY, DAILY, WEEKLY, MONTHLY|Specifies the time unit for the schedule.|
 |ONCE|The task runs once at a specified date and time.|
 |ONSTART|The task runs every time the system starts. You can specify a start date, or run the task the next time the system starts.|
@@ -95,7 +94,7 @@ The **/u** and **/p** parameters are valid only for scheduling a task on a remot
 ###### /ru {[<Domain>\\]<User> | System}
 Runs the task with permissions of the specified user account. By default, the task runs with the permissions of the current user of the local computer, or with the permission of the user specified by the **/u** parameter, if one is included. The **/ru** parameter is valid when scheduling tasks on local or remote computers.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |[<Domain>\\]<User>|Specifies an alternate user account.|
 |System or ""|Specifies the local System account, a highly privileged account used by the operating system and system services.|
 ###### /rp <Password>
@@ -104,7 +103,7 @@ Do not use the **/rp** parameter for tasks run with System account credentials (
 ###### /mo <Modifier>
 Specifies how often the task runs within its schedule type. This parameter is valid, but optional, for a MINUTE, HOURLY, DAILY, WEEKLY, and MONTHLY schedule. The default value is 1.
 |Schedule type|Modifier values|Description|
-|-----------------|-------------------|---------------|
+|---------|----------|--------|
 |MINUTE|1 - 1439|The task runs every <N> minutes.|
 |HOURLY|1 - 23|The task runs every <N> hours.|
 |DAILY|1 - 365|The task runs every <N> days.|
@@ -119,7 +118,7 @@ Specifies how often the task runs within its schedule type. This parameter is va
 ###### /d Day[,Day...] | *
 Specifies a day (or days) of the week or a day (or days) of a month. Valid only with a WEEKLY or MONTHLY schedule.
 |Schedule type|Modifier|Day values (/d)|Description|
-|-----------------|------------|----------------------|---------------|
+|---------|------|-----------|--------|
 |WEEKLY|1 - 52|MON - SUN[,MON - SUN...] &#124; *|Optional. MON is the default. The wildcard value (*) means every day.|
 |MONTHLY|FIRST, SECOND, THIRD, FOURTH, LAST|MON - SUN|Required for a specific week schedule.|
 |MONTHLY|None or {1 - 12}|1 - 31|Optional and valid only with no modifier (**/mo**) parameter (a specific date schedule) or when the **/mo** is 1 - 12 (an "every <N>months" schedule). The default is day 1 (the first day of the month).|
@@ -148,7 +147,7 @@ Specifies the date on which the task schedule starts. The default value is the c
 The format for *StartDate* varies with the locale selected for the local computer in **Regional and Language Options** in **Control Panel**. Only one format is valid for each locale.
 The valid date formats are listed in the following table. Use the format most similar to the format selected for **Short date** in **Regional and Language Options** in **Control Panel** on the local computer.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |<MM>/<DD>/<YYYY>|Use for month-first formats, such as **English (United States)** and **Spanish (Panama)**.|
 |<DD>/<MM>/<YYYY>|Use for day-first formats, such as **Bulgarian** and **Dutch (Netherlands)**.|
 |<YYYY>/<MM>/<DD>|Use for year-first formats, such as **Swedish** and **French (Canada)**.|
@@ -605,7 +604,7 @@ schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Passwo
 ```
 ##### Parameters
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |/tn <TaskName>|Identifies the task to be changed. Enter the task name.|
 |/s <Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
 |/u [<Domain>\\]<User>|Runs this command with the permissions of the specified user account. The default is the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only for changing a task on a remote computer (**/s**).|
@@ -700,7 +699,7 @@ schtasks /run /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 ```
 ##### Parameters
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |/tn <TaskName>|Required. Identifies the task.|
 |/s <Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
 |/u [<Domain>\\]<User>|Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer.<br /><br />The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**.|
@@ -755,7 +754,7 @@ schtasks /end /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 ```
 ##### Parameters
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |/tn <TaskName>|Required. Identifies the task that started the program.|
 |/s <Computer>|Specifies the name or IP address of a remote computer. The default is the local computer.|
 |/u [<Domain>\\]<User>|Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**.|
@@ -790,7 +789,7 @@ schtasks /delete /tn {<TaskName> | *} [/f] [/s <Computer> [/u [<Domain>\]<User> 
 ```
 ##### Parameters
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |/tn {<TaskName>&#124; *}|Required. Identifies the task being deleted.<br /><br />**<TaskName>** - Deletes the named task.<br /><br />**<\*>** - Deletes all scheduled tasks on the computer.|
 |/f|Suppresses the confirmation message. The task is deleted without warning.|
 |/s <Computer>|Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.|
@@ -826,7 +825,7 @@ schtasks [/query] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <Computer> [/u [<Dom
 ```
 ##### Parameters
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |[/query]|The operation name is optional. Typing **schtasks** without any parameters performs a query.|
 |/fo {TABLE&#124; LIST&#124; CSV}|Specifies the output format. **TABLE** is the default.|
 |/nh|Omits column headings from the table display. This parameter is valid with the **TABLE** and **CSV** output formats.|

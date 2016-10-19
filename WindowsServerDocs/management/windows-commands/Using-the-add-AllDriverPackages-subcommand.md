@@ -1,6 +1,6 @@
 ---
 title: Using the add-AllDriverPackages subcommand
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the add-AllDriverPackages subcommand
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/FolderPath:<Folder Path>|Specifies the full path to the folder that contains the .inf files for the driver packages.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
 |[/Architecture:{x86 &#124; ia64 &#124; x64}]|Specifies the architecture of the driver packages to add. Driver packages for other architectures are ignored.|

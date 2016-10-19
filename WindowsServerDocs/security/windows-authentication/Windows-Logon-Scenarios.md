@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 This reference topic for the IT professional summarizes common Windows logon and sign-in scenarios.
 
-The Windows operating systems require all users to log on to the computer with a valid account to access local and network resources. Windows-based computers secure resources by implementing the logon process, in which users are authenticated. After a user is authenticated, authorization and access control technologies implement the second phase of protecting resources—determining if the authenticated user is authorized to access a resource.
+The Windows operating systems require all users to log on to the computer with a valid account to access local and network resources. Windows-based computers secure resources by implementing the logon process, in which users are authenticated. After a user is authenticated, authorization and access control technologies implement the second phase of protecting resources???determining if the authenticated user is authorized to access a resource.
 
 The contents of this topic apply to versions of Windows designated in the **Applies to** list at the beginning of this topic.
 
@@ -48,7 +48,7 @@ The following diagram shows the interactive logon elements and logon process.
 **Windows Client Authentication Architecture**
 
 ### <a name="BKMK_LocaDomainLogon"></a>Local and domain logon
-Credentials that the user presents for a domain logon contain all the elements necessary for a local logon, such as account name and password or certificate, and Active Directory domain information. The process confirms the user’s identification to the security database on the user’s local computer or to an Active Directory domain. This mandatory logon process cannot be turned off for users in a domain.
+Credentials that the user presents for a domain logon contain all the elements necessary for a local logon, such as account name and password or certificate, and Active Directory domain information. The process confirms the user???s identification to the security database on the user???s local computer or to an Active Directory domain. This mandatory logon process cannot be turned off for users in a domain.
 
 Users can perform an interactive logon to a computer in either of two ways:
 
@@ -56,7 +56,7 @@ Users can perform an interactive logon to a computer in either of two ways:
 
     A local logon grants a user permission to access Windows resources on the local computer. A local logon requires that the user has a user account in the Security Accounts Manager (SAM) on the local computer. The SAM protects and manages user and group information in the form of security accounts stored in the local computer registry. The computer can have network access, but it is not required. Local user account and group membership information is used to manage access to local resources.
 
-    A network logon grants a user permission to access Windows resources on the local computer in addition to any resources on networked computers as defined by the credential’s access token. Both a local logon and a network logon require that the user has a user account in the Security Accounts Manager (SAM) on the local computer. Local user account and group membership information is used to manage access to local resources, and the access token for the user defines what resources can be accessed on networked computers.
+    A network logon grants a user permission to access Windows resources on the local computer in addition to any resources on networked computers as defined by the credential???s access token. Both a local logon and a network logon require that the user has a user account in the Security Accounts Manager (SAM) on the local computer. Local user account and group membership information is used to manage access to local resources, and the access token for the user defines what resources can be accessed on networked computers.
 
     A local logon and a network logon are not sufficient to grant the user and computer permission to access and to use domain resources.
 
@@ -74,7 +74,7 @@ In Windows, accessing another computer through remote logon relies on the Remote
 RDP manages the credentials that the user enters by using the Remote Desktop Client. Those credentials are intended for the target computer, and the user must have an account on that target computer. In addition, the target computer must be configured to accept a remote connection. The target computer credentials are sent to attempt to perform the authentication process. If authentication is successful, the user is connected to local and network resources that are accessible by using the supplied credentials.
 
 ## <a name="BKMK_NetworkLogon"></a>Network logon
-A network logon can only be used after user, service, or computer authentication has taken place. During network logon, the process does not use the credentials entry dialog boxes to collect data. Instead, previously established credentials or another method to collect credentials is used. This process confirms the user’s identity to any network service that the user is attempting to access. This process is typically invisible to the user unless alternate credentials have to be provided.
+A network logon can only be used after user, service, or computer authentication has taken place. During network logon, the process does not use the credentials entry dialog boxes to collect data. Instead, previously established credentials or another method to collect credentials is used. This process confirms the user???s identity to any network service that the user is attempting to access. This process is typically invisible to the user unless alternate credentials have to be provided.
 
 To provide this type of authentication, the security system includes these authentication mechanisms:
 
@@ -86,14 +86,14 @@ To provide this type of authentication, the security system includes these authe
 
 -   Digest
 
--   NTLM, for compatibility with Microsoft Windows NT 4.0−based systems
+-   NTLM, for compatibility with Microsoft Windows NT 4.0???based systems
 
 For information about the elements and processes, see the interactive logon diagram above.
 
 ## <a name="BKMK_SmartCardLogon"></a>Smart card logon
-Smart cards can be used to log on only to domain accounts, not local accounts. Smart card authentication requires the use of the Kerberos authentication protocol. Introduced in Windows 2000 Server, in Windows-based operating systems a public key extension to the Kerberos protocol’s initial authentication request is implemented. In contrast to shared secret key cryptography, public key cryptography is asymmetric, that is, two different keys are needed—one to encrypt, another to decrypt. Together, the keys that are required to perform both operations make up a private/public key pair.
+Smart cards can be used to log on only to domain accounts, not local accounts. Smart card authentication requires the use of the Kerberos authentication protocol. Introduced in Windows 2000 Server, in Windows-based operating systems a public key extension to the Kerberos protocol???s initial authentication request is implemented. In contrast to shared secret key cryptography, public key cryptography is asymmetric, that is, two different keys are needed???one to encrypt, another to decrypt. Together, the keys that are required to perform both operations make up a private/public key pair.
 
-To initiate a typical logon session, a user must prove his or her identity by providing information known only to the user and the underlying Kerberos protocol infrastructure. The secret information is a cryptographic shared key derived from the user’s password. A shared secret key is symmetric, which means that the same key is used for both encryption and decryption.
+To initiate a typical logon session, a user must prove his or her identity by providing information known only to the user and the underlying Kerberos protocol infrastructure. The secret information is a cryptographic shared key derived from the user???s password. A shared secret key is symmetric, which means that the same key is used for both encryption and decryption.
 
 The following diagram shows the elements and processes required for smart card logon.
 
@@ -101,7 +101,7 @@ The following diagram shows the elements and processes required for smart card l
 
 **Smart Card credential provider architecture**
 
-When a smart card is used instead of a password, a private/public key pair stored on the user’s smart card is substituted for the shared secret key, which is derived from the user’s password. The private key is stored only on the smart card. The public key can be made available to anyone with whom the owner wants to exchange confidential information.
+When a smart card is used instead of a password, a private/public key pair stored on the user???s smart card is substituted for the shared secret key, which is derived from the user???s password. The private key is stored only on the smart card. The public key can be made available to anyone with whom the owner wants to exchange confidential information.
 
 For more information about the smart card logon process in Windows, see [How smart card sign-in works in Windows](https://technet.microsoft.com/library/ff404285.aspx).
 

@@ -1,6 +1,6 @@
 ---
 title: Wdsutil
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wdsutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,7 +21,7 @@ ms.date: 10/12/2016
 WDSUTIL is a command-line utility used for managing your Windows Deployment Services server. To run these commands, click **Start**, right-click **Command Prompt**, and click **Run as administrator**.  
 ## Commands  
 |Command|Description|  
-|-----------|---------------|  
+|------|--------|  
 |[Using the Add Command](Using-the-Add-Command.md)|Adds objects or prestages computers.|  
 |[Using the Approve-AutoAddDevices Command](Using-the-Approve-AutoAddDevices-Command.md)|Approves computers that are pending administrator approval.|  
 |[Using the Convert-RiprepImage Command](Using-the-Convert-RiprepImage-Command.md)|Converts an existing Remote Installation Preparation (RIPrep) image to a Windows Image (.wim) file.|  

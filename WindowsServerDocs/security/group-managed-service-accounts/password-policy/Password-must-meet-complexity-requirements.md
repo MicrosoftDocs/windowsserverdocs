@@ -47,7 +47,7 @@ The rules that are included in the Windows Server password complexity requiremen
 
 Enabling the default Passfilt.dll may cause some additional Help Desk calls for locked-out accounts because users might not be used to having passwords that contain characters other than those found in the alphabet. However, this policy setting is liberal enough that all users should be able to abide by the requirements with a minor learning curve.
 
-Additional settings that can be included in a custom Passfilt.dll are the use of non–upper-row characters. Upper-row characters are those that are typed by holding down the SHIFT key and typing any of the digits from 1 through 10.
+Additional settings that can be included in a custom Passfilt.dll are the use of non???upper-row characters. Upper-row characters are those that are typed by holding down the SHIFT key and typing any of the digits from 1 through 10.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -70,10 +70,10 @@ Passwords that contain only alphanumeric characters are easy to compromise by us
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy**
 
 ### Default values
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
 
 |Server type or Group Policy Object (GPO)|Default value|
-|----------------------------------------------|-----------------|
+|-----------------------|---------|
 |Default domain policy|Enabled|
 |Default domain controller policy|Enabled|
 |Stand-alone server default settings|Disabled|
@@ -100,7 +100,7 @@ If the default password complexity configuration is retained, additional Help De
 
 If your organization has more stringent security requirements, you can create a custom version of the Passfilt.dll file that allows the use of arbitrarily complex password strength rules. For example, a custom password filter might require the use of non-upper-row symbols. (Upper-row symbols are those that require you to press and hold the SHIFT key and then press any of the digits between 1 and 0.) A custom password filter might also perform a dictionary check to verify that the proposed password does not contain common dictionary words or fragments.
 
-The use of ALT key character combinations can greatly enhance the complexity of a password. However, such stringent password requirements can result in additional Help Desk requests. Alternatively, your organization could consider a requirement for all administrator passwords to use ALT characters in the 0128–0159 range. (ALT characters outside of this range can represent standard alphanumeric characters that would not add additional complexity to the password.)
+The use of ALT key character combinations can greatly enhance the complexity of a password. However, such stringent password requirements can result in additional Help Desk requests. Alternatively, your organization could consider a requirement for all administrator passwords to use ALT characters in the 0128???0159 range. (ALT characters outside of this range can represent standard alphanumeric characters that would not add additional complexity to the password.)
 
 ## See Also
 [Password Policy](Password-Policy.md)

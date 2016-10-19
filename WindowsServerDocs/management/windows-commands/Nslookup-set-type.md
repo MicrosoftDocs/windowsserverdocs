@@ -1,6 +1,6 @@
 ---
 title: Nslookup set type
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup set type
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ set type=<ResourceRecordType>
 <ResourceRecordType>
 Specifies a DNS resource record type. The default resource record type is A. The following table lists the valid values for this command.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |A|Specifies a computer's IP address|
 |ANY|Specifies a computer's IP address.|
 |CNAME|Specifies a canonical name for an alias.|

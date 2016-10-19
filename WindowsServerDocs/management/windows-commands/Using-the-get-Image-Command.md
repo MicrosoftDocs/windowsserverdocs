@@ -1,6 +1,6 @@
 ---
 title: Using the get-Image Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-Image Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ WDSUTIL [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediaType:In
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 media:<Image name>|Specifies the name of the image.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediaType:{Boot &#124; Install}|Specifies the type of image.|
@@ -56,4 +55,4 @@ WDSUTIL /Verbose /Get-Imagmedia:"Windows Vista with Office" /Server:MyWDSServeme
 [Using the Export-Image Command](Using-the-Export-Image-Command.md)
 [Using the remove-Image Command](Using-the-remove-Image-Command.md)
 [Using the replace-Image Command](Using-the-replace-Image-Command.md)
-[Subcommand: set-Image](Subcommand--set-Image.md)
+[Subcommand: set-Image](Subcommand-set-Image.md)

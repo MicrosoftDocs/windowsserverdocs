@@ -36,7 +36,7 @@ An authentication policy silo controls which accounts can be restricted by the s
 **Active Directory schema for authentication policy silos**
 
 |Display Name|Description|
-|----------------|---------------|
+|--------|--------|
 |Authentication Policy Silo|An instance of this class defines authentication policies and related behaviors for assigned users, computers, and services.|
 |Authentication Policy Silos|A container of this class can contain authentication policy silo objects.|
 |Authentication Policy Silo Enforced|Specifies whether the authentication policy silo is enforced.<br /><br />When not enforced, the policy by default is in audit mode. Events that indicate potential successes and failures are generated, but protections are not applied to the system.|
@@ -57,7 +57,7 @@ Authentication policies control the following:
 
 -   The criteria that users and devices need to meet to authenticate to services running as part of the account.
 
-The Active Directory account type determines the caller’s role as one of the following:
+The Active Directory account type determines the caller???s role as one of the following:
 
 -   **User**
 
@@ -69,7 +69,7 @@ The Active Directory account type determines the caller’s role as one of the f
 
 -   **Service**
 
-    Standalone managed service accounts, group managed service accounts, or a custom account object that is derived from these two types of service accounts are used. Policies can set a device’s access control conditions, which are used to restrict managed service account credentials to specific devices with an Active Directory identity. Services should never be members of the Protected Users security group because all incoming authentication will fail.
+    Standalone managed service accounts, group managed service accounts, or a custom account object that is derived from these two types of service accounts are used. Policies can set a device???s access control conditions, which are used to restrict managed service account credentials to specific devices with an Active Directory identity. Services should never be members of the Protected Users security group because all incoming authentication will fail.
 
 -   **Computer**
 
@@ -83,7 +83,7 @@ The Active Directory account type determines the caller’s role as one of the f
 The policies for the Active Directory objects for users, computers, and services are defined by the schema in the following table.
 
 |Type|Display Name|Description|
-|--------|----------------|---------------|
+|----|--------|--------|
 |Policy|Authentication Policy|An instance of this class defines authentication policy behaviors for assigned principals.|
 |Policy|Authentication Policies|A container of this class can contain authentication policy objects.|
 |Policy|Authentication Policy Enforced|Specifies whether the authentication policy is enforced.<br /><br />When not enforced, the policy by default is in audit mode, and events that indicate potential successes and failures are generated, but protections are not applied to the system.|
@@ -123,7 +123,7 @@ The Protected Users security group triggers non-configurable protection on devic
 
 -   The Kerberos protocol will not use the weaker DES or RC4 encryption types in the preauthentication process. This means that the domain must be configured to support at least the AES encryption type.
 
--   The user’s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users security group.
+-   The user???s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users security group.
 
 -   The default Kerberos TGTs lifetime setting of four hours is configurable by using authentication policies and silos, which can be accessed through the Active Directory Administrative Center. This means that when four hours has passed, the user must authenticate again.
 
@@ -155,7 +155,7 @@ When an authentication policy is enforced and the authentication service is armo
 > [!NOTE]
 > The domain account must be either directly linked to the policy or indirectly linked through the silo membership.
 
-When an authentication policy is in audit mode and a ticket-granting service request is received by the domain controller for a domain account, the domain controller checks if authentication is allowed based on the request’s ticket Privilege Attribute Certificate (PAC) data, and it logs a warning message if it fails. The PAC contains various types of authorization data, including groups that the user is a member of, rights the user has, and what policies apply to the user. This information is used to generate the user’s access token. If it is an enforced authentication policy which allows authentication to a user, device, or service, the domain controller checks if authentication is allowed based on the request’s ticket PAC data. If it fails, the domain controller returns an error message and logs an event.
+When an authentication policy is in audit mode and a ticket-granting service request is received by the domain controller for a domain account, the domain controller checks if authentication is allowed based on the request???s ticket Privilege Attribute Certificate (PAC) data, and it logs a warning message if it fails. The PAC contains various types of authorization data, including groups that the user is a member of, rights the user has, and what policies apply to the user. This information is used to generate the user???s access token. If it is an enforced authentication policy which allows authentication to a user, device, or service, the domain controller checks if authentication is allowed based on the request???s ticket PAC data. If it fails, the domain controller returns an error message and logs an event.
 
 > [!NOTE]
 > The domain account must be either directly linked or linked through silo membership to an audited authentication policy which allows authentication to a user, device or service,
@@ -167,9 +167,9 @@ Authentication policies can be configured for each silo by using the Active Dire
 ### <a name="BKMK_HowRestrictingSignOn"></a>How restricting a user sign-in works
 Because these authentication policies are applied to an account, it also applies to accounts that are used by services. If you want to limit the usage of a password for a service to specific hosts, this setting is useful. For example, group managed service accounts are configured where the hosts are allowed to retrieve the password from Active Directory Domain Services. However, that password can be used from any host for initial authentication. By applying an access control condition, an additional layer of protection can be achieved by limiting the password to only the set of hosts that can retrieve the password.
 
-When services that run as system, network service, or other local service identity connect to network services, they use the host’s computer account. Computer accounts cannot be restricted. So even if the service is using a computer account that is not for a Windows host, it cannot be restricted.
+When services that run as system, network service, or other local service identity connect to network services, they use the host???s computer account. Computer accounts cannot be restricted. So even if the service is using a computer account that is not for a Windows host, it cannot be restricted.
 
-Restricting user sign-in to specific hosts requires the domain controller to validate the host’s identity. When using Kerberos authentication with Kerberos armoring (which is part of Dynamic Access Control), the Key Distribution Center is provided with the TGT of the host from which the user is authenticating. The content of this armored TGT is used to complete an access check to determine if the host is allowed.
+Restricting user sign-in to specific hosts requires the domain controller to validate the host???s identity. When using Kerberos authentication with Kerberos armoring (which is part of Dynamic Access Control), the Key Distribution Center is provided with the TGT of the host from which the user is authenticating. The content of this armored TGT is used to complete an access check to determine if the host is allowed.
 
 When a user signs in to Windows or enters their domain credentials in a credential prompt for an application, by default, Windows sends an unarmored AS-REQ to the domain controller. If the user is sending the request from a computer that does not support armoring, such as computers running Windows 7 or Windows Vista, the request fails.
 
@@ -183,7 +183,7 @@ The following list describes the process:
 
 -   Windows detects that the domain supports Kerberos armoring and sends an armored AS-REQ to retry the sign-in request.
 
--   The domain controller performs an access check by using the configured access control conditions and the client operating system’s identity information in the TGT that was used to armor the request.
+-   The domain controller performs an access check by using the configured access control conditions and the client operating system???s identity information in the TGT that was used to armor the request.
 
 -   If the access check fails, the domain controller rejects the request.
 
@@ -191,7 +191,7 @@ Even when operating systems support Kerberos armoring, access control requiremen
 
 1.  The domain controller in a domain running  Windows Server 2012 R2  queries for the user account and determines if it is configured with an authentication policy that restricts initial authentication that requires armored requests.
 
-2.  The domain controller performs an access check by using the configured access control conditions and the system’s identity information in the TGT that is used to armor the request. The access check succeeds.
+2.  The domain controller performs an access check by using the configured access control conditions and the system???s identity information in the TGT that is used to armor the request. The access check succeeds.
 
     > [!NOTE]
     > If legacy workgroup restrictions are configured, those also need to be met.
@@ -199,23 +199,23 @@ Even when operating systems support Kerberos armoring, access control requiremen
 3.  The domain controller replies with an armored reply (AS-REP), and the authentication continues.
 
 ### <a name="BKMK_HowRestrictingServiceTicket"></a>How restricting service ticket issuance works
-When an account is not allowed and a user who has a TGT attempts to connect to the service (such as by opening an application that requires authentication to a service that is identified by the service’s service principal name (SPN), the following sequence occurs:
+When an account is not allowed and a user who has a TGT attempts to connect to the service (such as by opening an application that requires authentication to a service that is identified by the service???s service principal name (SPN), the following sequence occurs:
 
 1.  In an attempt to connect to SPN1 from SPN, Windows sends a TGS-REQ to the domain controller that is requesting a service ticket to SPN1.
 
 2.  The domain controller in a domain running  Windows Server 2012 R2  looks up SPN1 to find the Active Directory Domain Services account for the service and determines that the account is configured with an authentication policy that restricts service ticket issuance.
 
-3.  The domain controller performs an access check by using the configured access control conditions and the user’s identity information in the TGT. The access check fails.
+3.  The domain controller performs an access check by using the configured access control conditions and the user???s identity information in the TGT. The access check fails.
 
 4.  The domain controller rejects the request.
 
-When an account is allowed because the account meets the access control conditions that are set by the authentication policy, and a user who has a TGT attempts to connect to the service (such as by opening an application that requires authentication to a service that is identified by the service’s SPN), the following sequence occurs:
+When an account is allowed because the account meets the access control conditions that are set by the authentication policy, and a user who has a TGT attempts to connect to the service (such as by opening an application that requires authentication to a service that is identified by the service???s SPN), the following sequence occurs:
 
 1.  In an attempt to connect to SPN1, Windows sends a TGS-REQ to the domain controller that is requesting a service ticket to SPN1.
 
 2.  The domain controller in a domain running  Windows Server 2012 R2  looks up SPN1 to find the Active Directory Domain Services account for the service and determines that the account is configured with an authentication policy that restricts service ticket issuance.
 
-3.  The domain controller performs an access check by using the configured access control conditions and the user’s identity information in the TGT. The access check succeeds.
+3.  The domain controller performs an access check by using the configured access control conditions and the user???s identity information in the TGT. The access check succeeds.
 
 4.  The domain controller replies to the request with a ticket-granting service reply (TGS-REP).
 
@@ -227,7 +227,7 @@ The events are recorded in the Applications and Services Logs at **Microsoft\Win
 For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](How-to-Configure-Protected-Accounts.md#BKMK_TroubleshootAuthnPolicies) and [Troubleshoot events related to Protected Users](How-to-Configure-Protected-Accounts.md#BKMK_TrubleshootingEvents).
 
 |Event ID and Log|Description|
-|--------------------|---------------|
+|----------|--------|
 |101<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: An NTLM sign-in failure occurs because the authentication policy is configured.<br /><br />An event is logged in the domain controller to indicate that NTLM authentication failed because access control restrictions are required, and those restrictions cannot be applied to NTLM.<br /><br />Displays the account, device, policy, and silo names.|
 |105<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the authentication from a particular device was not permitted.<br /><br />An event is logged in the domain controller to indicate that a Kerberos TGT was denied because the device did not meet the enforced access control restrictions.<br /><br />Displays the account, device, policy, silo names, and TGT lifetime.|
 |305<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A potential Kerberos restriction failure might occur because the authentication from a particular device was not permitted.<br /><br />In audit mode, an informational event is logged in the domain controller to determine if a Kerberos TGT will be denied because the device did not meet the access control restrictions.<br /><br />Displays the account, device, policy, silo names, and TGT lifetime.|

@@ -1,6 +1,6 @@
 ---
 title: Comp
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Comp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Data1>|Specifies the location and name of the first file or set of files that you want to compare. You can use wildcard characters (**\*** and **?**) to specify multiple files.|
 |<Data2>|Specifies the location and name of the second file or set of files that you want to compare. You can use wildcard characters (**\*** and **?**) to specify multiple files.|
 |/d|Displays differences in decimal format. (The default format is hexadecimal.)|

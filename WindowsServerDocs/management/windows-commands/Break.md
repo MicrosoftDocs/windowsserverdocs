@@ -1,6 +1,6 @@
 ---
 title: Break
-description: "Windows Commands topic for **Break** -- Breaks the mirrored volume with focus into two simple volumes."
+description: "Windows Commands topic for **Break** - Breaks the mirrored volume with focus into two simple volumes."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Break
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ break disk=<n> [nokeep] [noerr]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |disk=<n>|Specifies the disk that contains the mirrored volume. This disk is given focus and does not retain the drive letter or any mount points. If the specified disk is the current system or startup disk, the command fails.|
 |nokeep|Specifies that only one of the mirrored volumes is retained; the simple volume on disk N is deleted and converted to free space. Neither the volume nor the free space receives the focus.|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|

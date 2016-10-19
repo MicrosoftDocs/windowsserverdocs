@@ -43,10 +43,10 @@ Constant: SeIncreaseWorkingSetPrivilege
 ### Default values
 By default, standard users have this right.
 
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
 
 |Server type or GPO|Default value|
-|----------------------|-----------------|
+|-----------|---------|
 |Default Domain Policy|Not Defined|
 |Default Domain Controller Policy|Users|
 |Stand-Alone Server Default Settings|Users|
@@ -84,7 +84,7 @@ This section describes how an attacker might exploit a feature or its configurat
 Increasing the working set size for a process decreases the amount of physical memory that is available to the rest of the system.
 
 ### Countermeasure
-Increase user’s awareness about the impact of increasing the working set of a process and how to recognize that their system is adversely affected if they change this setting.
+Increase user???s awareness about the impact of increasing the working set of a process and how to recognize that their system is adversely affected if they change this setting.
 
 ### Potential impact
 None. Allowing standard users to increase the working set of a process is the default configuration.

@@ -47,10 +47,10 @@ This policy setting is supported on versions of Windows that are designated in t
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy**  
   
 ### Default values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
   
 |Server type or GPO|Default value|  
-|----------------------|-----------------|  
+|-----------|---------|  
 |Default domain policy|24 passwords remembered|  
 |Default domain controller policy|Not defined|  
 |Stand-alone server default settings|0 passwords remembered|  

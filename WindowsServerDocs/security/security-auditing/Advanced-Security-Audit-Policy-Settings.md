@@ -46,7 +46,7 @@ Audit policy settings under **Security Settings\Advanced Audit Policy Configurat
 
     -   [Audit Kerberos Service Ticket Operations](advanced-security-audit-policy-settings/Audit-Kerberos-Service-Ticket-Operations.md)
 
-    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/Audit-Other-Logon---Logoff-Events.md)
+    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/Audit-Other-Logon-Logoff-Events.md)
 
 -   **Account Management**
 
@@ -106,7 +106,7 @@ Audit policy settings under **Security Settings\Advanced Audit Policy Configurat
 
     -   [Audit Network Policy Server](advanced-security-audit-policy-settings/Audit-Network-Policy-Server.md)
 
-    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/Audit-Other-Logon---Logoff-Events.md)
+    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/Audit-Other-Logon-Logoff-Events.md)
 
     -   [Audit Special Logon](advanced-security-audit-policy-settings/Audit-Special-Logon.md)
 
@@ -195,8 +195,8 @@ Audit policy settings under **Security Settings\Advanced Audit Policy Configurat
 
     This category includes the following subcategories:
 
-    -   [File System &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/File-System--Global-Object-Access-Auditing-.md)
+    -   [File System &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/File-System-Global-Object-Access-Auditing.md)
 
-    -   [Registry &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/Registry--Global-Object-Access-Auditing-.md)
+    -   [Registry &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/Registry-Global-Object-Access-Auditing.md)
 
 

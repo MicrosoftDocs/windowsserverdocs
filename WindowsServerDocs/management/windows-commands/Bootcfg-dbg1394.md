@@ -1,6 +1,6 @@
 ---
 title: Bootcfg dbg1394
-description: "Windows Commands topic for **Bootcfg dbg1394** -- Configures 1394 port debugging for a specified operating system entry"
+description: "Windows Commands topic for **Bootcfg dbg1394** - Configures 1394 port debugging for a specified operating system entry"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bootcfg dbg1394
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ bootcfg /dbg1394 {ON | OFF}[/s <Computer> [/u <Domain>\<User> /p <Password>]] [/
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{ON &#124; OFF}|Specifies the value for 1394 port debugging.<br /><br />-   **ON** - Enables remote debugging support by adding the /dbg1394 option to the specified <OSEntryLineNum>.<br />-   **OFF** - Disables remote debugging support by removing the /dbg1394 option from the specified <OSEntryLineNum>.|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|

@@ -1,6 +1,6 @@
 ---
 title: Bootcfg ems
-description: "Windows Commands topic for **Bootcfg ems** -- 
+description: "Windows Commands topic for **Bootcfg ems** - 
 Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bootcfg ems
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ bootcfg /ems {ON | OFF | EDIT} [/s <Computer> [/u <Domain>\<User> /p <Password>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{ON &#124; OFF&#124; EDIT}|Specifies the value for Emergency Management Services redirection.<br /><br />**ON** - Enables remote output for the specified <OSEntryLineNum>. Adds a /redirect option to the specified <OSEntryLineNum> and a redirect=com<X> setting to the [boot loader] section. The value of com<X> is set by the **/port** parameter.<br /><br />**OFF** - Disables output to a remote computer. Removes the /redirect option from the specified <OSEntryLineNum> and the redirect=com<X> setting from the [boot loader] section.<br /><br />**EDIT** - Allows changes to port settings by changing the redirect=com<X> setting in the [boot loader] section. The value of com<X> is reset to the value specified by the **/port** parameter.|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|

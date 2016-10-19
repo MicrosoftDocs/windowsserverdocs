@@ -1,6 +1,6 @@
 ---
 title: Shrink
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Shrink
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ shrink querymax [noerr]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |desired=<n>|Specifies the desired amount of space in megabytes (MB) to reduce the size of the volume by.|
 |minimum=<n>|Specifies the minimum amount of space in MB to reduce the size of the volume by.|
 |querymax|Returns the maximum amount of space in MB by which the volume can be reduced. This value may change if applications are currently accessing the volume.|

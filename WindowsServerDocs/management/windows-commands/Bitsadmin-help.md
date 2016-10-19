@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin help
-description: "Windows Commands topic for **Bitsadmin help** -- Displays the command-line usage."
+description: "Windows Commands topic for **Bitsadmin help** - Displays the command-line usage."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin help
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012

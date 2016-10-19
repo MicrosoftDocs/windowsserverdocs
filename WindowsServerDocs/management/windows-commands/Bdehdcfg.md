@@ -1,6 +1,6 @@
 ---
 title: Bdehdcfg
-description: "Windows Commands topic for **Bdehdcfg** -- Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption."
+description: "Windows Commands topic for **Bdehdcfg** - Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bdehdcfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -33,17 +32,17 @@ Prepares a hard drive with the partitions necessary for BitLocker Drive Encrypti
 For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
-bdehdcfg [–driveinfo <DriveLetter>] [-target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}] [–newdriveletter] [–size <SizeinMB>] [-quiet]
+bdehdcfg [ driveinfo <DriveLetter>] [-target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}] [ newdriveletter] [ size <SizeinMB>] [-quiet]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
-|[Bdehdcfg: driveinfo](Bdehdcfg--driveinfo.md)|Displays the drive letter, the total size, the maximum free space, and the partition characteristics of the partitions on the drive specified. Only valid partitions are listed. Unallocated space is not listed if four primary or extended partitions already exist.|
-|[Bdehdcfg: target](Bdehdcfg--target.md)|Defines which portion of a drive to use as the system drive and makes the portion active.|
-|[Bdehdcfg: newdriveletter](Bdehdcfg--newdriveletter.md)|Assigns a new drive letter to the portion of a drive used as the system drive.|
-|[Bdehdcfg: size](Bdehdcfg--size.md)|Determines the size of the system partition when a new system drive is being created.|
-|[Bdehdcfg: quiet](Bdehdcfg--quiet.md)|Prevents the display of all actions and errors in the command-line interface and directs Bdehdcfg to use the "Yes" answer to any Yes/No prompts that may occur during subsequent drive preparation.|
-|[Bdehdcfg: restart](Bdehdcfg--restart.md)|Directs the computer to restart after the drive preparation has finished.|
+|-------|--------|
+|[Bdehdcfg: driveinfo](Bdehdcfg-driveinfo.md)|Displays the drive letter, the total size, the maximum free space, and the partition characteristics of the partitions on the drive specified. Only valid partitions are listed. Unallocated space is not listed if four primary or extended partitions already exist.|
+|[Bdehdcfg: target](Bdehdcfg-target.md)|Defines which portion of a drive to use as the system drive and makes the portion active.|
+|[Bdehdcfg: newdriveletter](Bdehdcfg-newdriveletter.md)|Assigns a new drive letter to the portion of a drive used as the system drive.|
+|[Bdehdcfg: size](Bdehdcfg-size.md)|Determines the size of the system partition when a new system drive is being created.|
+|[Bdehdcfg: quiet](Bdehdcfg-quiet.md)|Prevents the display of all actions and errors in the command-line interface and directs Bdehdcfg to use the "Yes" answer to any Yes/No prompts that may occur during subsequent drive preparation.|
+|[Bdehdcfg: restart](Bdehdcfg-restart.md)|Directs the computer to restart after the drive preparation has finished.|
 |/?|Displays Help at the command prompt.|
 ## <a name="BKMK_Examples"></a>Examples
 The following example depicts Bdehdcfg being used with the default drive to create a system partition of 500 MB. Because no drive letter is specified, the new system partition will not have a drive letter.
@@ -52,7 +51,7 @@ bdehdcfg -target default -size 500
 ```
 The following example depicts Bdehdcfg being used with the default drive to create a system partition (P:) of the default size of 300 MB out of unallocated space on the drive. The tool will not prompt the user for any further input nor will any errors be displayed. After the system drive has been created, the computer will automatically restart.
 ```
-bdehdcfg -target unallocated –newdriveletter P: -quiet -restart
+bdehdcfg -target unallocated  newdriveletter P: -quiet -restart
 ```
 ## Additional references
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

@@ -34,7 +34,7 @@ The following requirements must be met or addressed before you deploy your AppLo
 An AppLocker policy deployment plan is the result of investigating which applications are required and necessary in your organization, which applications are optional, and which applications are forbidden. To develop this plan, see [AppLocker Policies Design Guide](../design/AppLocker-Policies-Design-Guide.md). The following table is an example of the data you need to collect and the decisions you need to make to successfully deploy AppLocker policies on the supported operating systems (as listed in [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md)).
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
-|------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|------------|------------------|
+|---------|------------|------------|--------|-----------|-------------------------|---------|------|---------|
 |Bank Tellers|Teller-East and Teller-West|Yes|Teller software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers|Web help|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help Desk|
 ||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
@@ -45,14 +45,14 @@ An AppLocker policy deployment plan is the result of investigating which applica
 **Event processing policy**
 
 |Business group|AppLocker event collection location|Archival policy|Analyzed?|Security policy|
-|------------------|---------------------------------------|-------------------|-------------|-------------------|
+|---------|--------------------|----------|-------|----------|
 |Bank Tellers|Forwarded to: srvBT093|Standard|None|Standard|
 |Human Resources|Do not forward|60 months|Yes; summary reports monthly to managers|Standard|
 
 **Policy maintenance policy**
 
 |Business group|Rule update policy|Application decommission policy|Application version policy|Application deployment policy|
-|------------------|----------------------|-----------------------------------|------------------------------|---------------------------------|
+|---------|-----------|------------------|---------------|-----------------|
 |Bank Tellers|Planned: Monthly through business office triage<br /><br />Emergency: Request through Help Desk|Through business office triage; 30-day notice required|General policy: Keep past versions for 12 months<br /><br />List policies for each application|Coordinated through business office; 30-day notice required|
 |Human Resources|Planned: Through HR triage<br /><br />Emergency: Request through Help Desk|Through HR triage; 30-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR; 30-day notice required|
 

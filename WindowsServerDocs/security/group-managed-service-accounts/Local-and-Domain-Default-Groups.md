@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>Default groups are created when you install Windows client or server operating systems and Active Directory Domain Services (AD DS) domains. Domain member computers and stand-alone computers have default local groups that are created automatically in their local security accounts database. Domain controllers are an exception: they use the central Active Directory database to create default groups. All domain member computers can access the central Active Directory database.</para>
+    <para>Default groups are created when you install Windows client or server operating systems and Active??Directory Domain Services (AD??DS) domains. Domain member computers and stand-alone computers have default local groups that are created automatically in their local security accounts database. Domain controllers are an exception: they use the central Active??Directory database to create default groups. All domain member computers can access the central Active??Directory database.</para>
   </introduction>
   <section>
     <title>Default local groups</title>
@@ -285,7 +285,7 @@ ms.date: 10/12/2016
               <para>Replicator</para>
             </TD>
             <TD colspan="1">
-              <para>The Replicator group supports replication functions. The only member of the Replicator group should be a domain user account that is used <?Comment JHB: Kurt, I don’t quite get the syntax here? Are they logging on “to�? the services? Is that possible? Or are they logging the Replicator services “on�? to the DC? Can you clarify this? Thanks. 2009-04-17T09:14:00Z  Id='0?>to log on the <?CommentEnd Id='0'
+              <para>The Replicator group supports replication functions. The only member of the Replicator group should be a domain user account that is used <?Comment JHB: Kurt, I don???t quite get the syntax here? Are they logging on ???to??? the services? Is that possible? Or are they logging the Replicator services ???on??? to the DC? Can you clarify this? Thanks. 2009-04-17T09:14:00Z  Id='0?>to log on the <?CommentEnd Id='0'
     ?>Replicator services of a domain controller. Do not add user accounts of actual users to this group.</para>
             </TD>
             <TD colspan="1">
@@ -297,7 +297,7 @@ ms.date: 10/12/2016
               <para>Terminal Server Users</para>
             </TD>
             <TD colspan="1">
-              <para>This group contains any users who are currently logged on to the system with Terminal Server. Any program that a user can run with Windows NT 4.0 will run for a member of the Terminal Server User group. The default permissions that are assigned to this group enable its members to run most earlier programs. </para>
+              <para>This group contains any users who are currently logged on to the system with Terminal??Server. Any program that a user can run with Windows??NT??4.0 will run for a member of the Terminal Server User group. The default permissions that are assigned to this group enable its members to run most earlier programs. </para>
             </TD>
             <TD colspan="1">
               <para>No default user rights</para>
@@ -343,11 +343,11 @@ ms.date: 10/12/2016
   <section address="BKMK_DomainDefaultGroups">
     <title> Default domain groups</title>
     <content>
-      <para>Default groups, such as the Domain Admins group, are security groups that are created automatically when you create an Active Directory domain. You can use these predefined groups to help control access to shared resources and to delegate specific domain-wide administrative roles.</para>
-      <para>Many default groups are automatically assigned a set of user rights that authorize members of the group to perform specific actions in a domain, such as logging on to a local system or backing up files and folders. For example, a member of the Backup Operators group has the right to perform backup operations for all domain controllers in the domain.</para>
+      <para>Default groups, such as the Domain??Admins group, are security groups that are created automatically when you create an Active??Directory domain. You can use these predefined groups to help control access to shared resources and to delegate specific domain-wide administrative roles.</para>
+      <para>Many default groups are automatically assigned a set of user rights that authorize members of the group to perform specific actions in a domain, such as logging on to a local system or backing up files and folders. For example, a member of the Backup??Operators group has the right to perform backup operations for all domain controllers in the domain.</para>
       <para>When you add a user to a group, the user receives all the user rights that are assigned to the group and all the permissions that are assigned to the group on any shared resources. For more information about user rights and permissions, see Group types (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149131</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149131</linkUri></externalLink>).</para>
-      <para>You can manage groups by using the Active Directory Users and Computers snap-in. Default groups are located in the Builtin container and the Users container. The Builtin container contains groups that are defined with domain local scope. The Users container contains groups that are defined with global scope and groups that are defined with domain local scope. You can move groups that are located in these containers to other groups or organizational units (OUs) within the domain, but you cannot move them to other domains.</para>
-      <para>As a security best practice, we recommend that members of default groups with broad administrative access use the <ui>Run as</ui> command to perform administrative tasks. For more information, see Using Run as (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkID=149133</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=149133</linkUri></externalLink>). For information about security best practices, see Active Directory Best Practices (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149135</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149135</linkUri></externalLink>). For information about additional security measures that you can use to protect Active Directory, see Securing Active Directory (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149136</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149136</linkUri></externalLink>).</para>
+      <para>You can manage groups by using the Active??Directory Users and Computers snap-in. Default groups are located in the Builtin container and the Users container. The Builtin container contains groups that are defined with domain local scope. The Users container contains groups that are defined with global scope and groups that are defined with domain local scope. You can move groups that are located in these containers to other groups or organizational units (OUs) within the domain, but you cannot move them to other domains.</para>
+      <para>As a security best practice, we recommend that members of default groups with broad administrative access use the <ui>Run as</ui> command to perform administrative tasks. For more information, see Using Run as (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkID=149133</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=149133</linkUri></externalLink>). For information about security best practices, see Active??Directory Best Practices (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149135</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149135</linkUri></externalLink>). For information about additional security measures that you can use to protect Active??Directory, see Securing Active??Directory (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149136</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149136</linkUri></externalLink>).</para>
     </content>
     <sections>
       <section address="H2_53859399">
@@ -392,7 +392,7 @@ ms.date: 10/12/2016
                   <para>Administrators</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group have full control of all domain controllers in the domain. By default, the Domain Admins and Enterprise Admins groups are members of the Administrators group. The Administrator account is also a default member of the Administrators group. Because this group has full control in the domain, add users to this group with caution.</para>
+                  <para>Members of this group have full control of all domain controllers in the domain. By default, the Domain??Admins and Enterprise??Admins groups are members of the Administrators group. The Administrator account is also a default member of the Administrators group. Because this group has full control in the domain, add users to this group with caution.</para>
                 </TD>
                 <TD colspan="1">
                   <list class="bullet">
@@ -464,7 +464,7 @@ ms.date: 10/12/2016
                   <para>Backup Operators</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group can back up and restore all files on domain controllers in the domain, regardless of their own individual permissions on those files. Backup Operators can also log on to domain controllers and shut them down. This group has no default members. Because this group has significant power on domain controllers, add users to this group with caution.</para>
+                  <para>Members of this group can back up and restore all files on domain controllers in the domain, regardless of their own individual permissions on those files. Backup??Operators can also log on to domain controllers and shut them down. This group has no default members. Because this group has significant power on domain controllers, add users to this group with caution.</para>
                 </TD>
                 <TD colspan="1">
                   <list class="bullet">
@@ -488,7 +488,7 @@ ms.date: 10/12/2016
                   <para>Guests</para>
                 </TD>
                 <TD colspan="1">
-                  <para>By default, the Domain Guests group is a member of this group. The Guest account (which is disabled by default) is also a default member of this group.</para>
+                  <para>By default, the Domain??Guests group is a member of this group. The Guest account (which is disabled by default) is also a default member of this group.</para>
                 </TD>
                 <TD colspan="1">
                   <para>No default user rights</para>
@@ -499,7 +499,7 @@ ms.date: 10/12/2016
                   <para>Incoming Forest Trust Builders (appears only in the forest root domain)</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group can create one-way, incoming forest trusts to the forest root domain. For example, members of this group that reside in Forest A can create a one-way, incoming forest trust from Forest B. This one-way, incoming forest trust allows users in Forest A to access resources in Forest B. Members of this group are granted the permission Create Inbound Forest Trust on the forest root domain. This group has no default members. For more information about creating forest trusts, see Create a forest trust (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149137</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149137</linkUri></externalLink>).</para>
+                  <para>Members of this group can create one-way, incoming forest trusts to the forest root domain. For example, members of this group that reside in Forest??A can create a one-way, incoming forest trust from Forest??B. This one-way, incoming forest trust allows users in Forest??A to access resources in Forest??B. Members of this group are granted the permission Create Inbound Forest Trust on the forest root domain. This group has no default members. For more information about creating forest trusts, see Create a forest trust (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149137</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149137</linkUri></externalLink>).</para>
                 </TD>
                 <TD colspan="1">
                   <para>No default user rights</para>
@@ -540,10 +540,10 @@ ms.date: 10/12/2016
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>Pre-Windows 2000 Compatible Access</para>
+                  <para>Pre-Windows??2000 Compatible Access</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group have read access on all users and groups in the domain. This group is provided for backward compatibility for computers running Windows NT 4.0 and earlier. By default, the special identity Everyone is a member of this group. For more information about special identities, see Special identities (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149138</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149138</linkUri></externalLink>). Add users to this group only if they are running Windows NT 4.0 or earlier.</para>
+                  <para>Members of this group have read access on all users and groups in the domain. This group is provided for backward compatibility for computers running Windows??NT??4.0 and earlier. By default, the special identity Everyone is a member of this group. For more information about special identities, see Special identities (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149138</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149138</linkUri></externalLink>). Add users to this group only if they are running Windows??NT??4.0 or earlier.</para>
                 </TD>
                 <TD colspan="1">
                   <list class="bullet">
@@ -561,7 +561,7 @@ ms.date: 10/12/2016
                   <para>Print Operators</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group can manage, create, share, and delete printers that are connected to domain controllers in the domain. They can also manage Active Directory printer objects in the domain. Members of this group can log on locally to domain controllers in the domain and shut them down. This group has no default members. Because members of this group can load and unload device drivers on all domain controllers in the domain, add users to this group with caution.</para>
+                  <para>Members of this group can manage, create, share, and delete printers that are connected to domain controllers in the domain. They can also manage Active??Directory printer objects in the domain. Members of this group can log on locally to domain controllers in the domain and shut them down. This group has no default members. Because members of this group can load and unload device drivers on all domain controllers in the domain, add users to this group with caution.</para>
                 </TD>
                 <TD colspan="1">
                   <list class="bullet">
@@ -644,7 +644,7 @@ ms.date: 10/12/2016
       <section address="H2_53863367">
         <title>Groups in the Users container</title>
         <content>
-          <para>The following table describes the default groups that are located in the Users container, and it lists the assigned user rights for each group. For complete descriptions of the user rights that listed in the table, see User rights assignment (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkID=148787</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=148787</linkUri></externalLink>). For information about editing these rights, see Edit security settings on a Group Policy object (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149139</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149139</linkUri></externalLink>).</para>
+          <para>The following table describes the default groups that are located in the Users container, and it lists the assigned user rights for each group. For complete descriptions of the user rights that listed in the table, see User rights assignment (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkID=148787</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=148787</linkUri></externalLink>). For information about editing these rights, see Edit security settings on a Group??Policy object (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=149139</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=149139</linkUri></externalLink>).</para>
           <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
@@ -803,7 +803,7 @@ ms.date: 10/12/2016
                   <para>Domain Users</para>
                 </TD>
                 <TD colspan="1">
-                  <para>This group contains all domain users. By default, any user account that is created in the domain becomes a member of this group automatically. This group can be used to represent all users in the domain. For example, if you want all domain users to have access to a printer, you can assign permissions for the printer to this group. (Or you can add the Domain Users group to a local group—on the print server—that has permissions for the printer.)</para>
+                  <para>This group contains all domain users. By default, any user account that is created in the domain becomes a member of this group automatically. This group can be used to represent all users in the domain. For example, if you want all domain users to have access to a printer, you can assign permissions for the printer to this group. (Or you can add the Domain Users group to a local group???on the print server???that has permissions for the printer.)</para>
                 </TD>
                 <TD colspan="1">
                   <para>No default user rights</para>
@@ -886,7 +886,7 @@ ms.date: 10/12/2016
                   <para>Group Policy Creator Owners</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group can modify Group Policy in the domain. By default, the Administrator account is a member of this group. Because this group has significant power in the domain, add users to this group with caution.</para>
+                  <para>Members of this group can modify Group??Policy in the domain. By default, the Administrator account is a member of this group. Because this group has significant power in the domain, add users to this group with caution.</para>
                 </TD>
                 <TD colspan="1">
                   <para>No default user rights</para>
@@ -897,7 +897,7 @@ ms.date: 10/12/2016
                   <para>IIS_WPG (installed with IIS)</para>
                 </TD>
                 <TD colspan="1">
-                  <para>The IIS_WPG group is the Internet Information Services (IIS) 6.0 worker process group. IIS 6.0 contains worker processes that serve specific namespaces. For example, www.microsoft.com is a namespace that is served by one worker process, which can run under an identity that is added to the IIS_WPG group, such as MicrosoftAccount. This group has no default members.</para>
+                  <para>The IIS_WPG group is the Internet Information Services (IIS)??6.0 worker process group. IIS??6.0 contains worker processes that serve specific namespaces. For example, www.microsoft.com is a namespace that is served by one worker process, which can run under an identity that is added to the IIS_WPG group, such as MicrosoftAccount. This group has no default members.</para>
                 </TD>
                 <TD colspan="1">
                   <para>No default user rights</para>
@@ -919,7 +919,7 @@ ms.date: 10/12/2016
                   <para>Schema Admins (appears only in the forest root domain)</para>
                 </TD>
                 <TD colspan="1">
-                  <para>Members of this group can modify the Active Directory schema. By default, the Administrator account is a member of this group. Because this group has significant power in the forest, add users to this group with caution.</para>
+                  <para>Members of this group can modify the Active??Directory schema. By default, the Administrator account is a member of this group. Because this group has significant power in the forest, add users to this group with caution.</para>
                 </TD>
                 <TD colspan="1">
                   <para>No default user rights</para>

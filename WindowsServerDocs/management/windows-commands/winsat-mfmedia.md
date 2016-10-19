@@ -1,7 +1,7 @@
 ---
 title: winsat mfmedia
 description: "WIndows Commands"
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # winsat mfmedia
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ winsat mfmedia <parameters>
 ```
 ## Parameters
 |Parameters|Description|
-|--------------|---------------|
+|-------|--------|
 |-input <file name>|Required: Specify the file containing the video clip to be played or encoded. The file can be in any format that can be rendered by Media Foundation.|
 |-dumpgraph|Specify that the filter graph should be saved to a GraphEdit-compatible file before the assessment starts.|
 |-ns|Specify that the filter graph should run at the normal playback speed of the input file. By default, the filter graph runs as fast as possible, ignoring presentation times.|

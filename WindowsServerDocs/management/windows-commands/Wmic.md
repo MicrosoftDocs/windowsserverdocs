@@ -1,6 +1,6 @@
 ---
 title: Wmic
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wmic
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,14 +27,14 @@ command </parameter>
 ## Sub-commands
 The following sub-commands are available at all times:
 |Sub-command|Description|
-|----------------|---------------|
+|--------|--------|
 |class|Escapes from the default alias mode of WMIC to access classes in the WMI schema directly.|
 |path|Escapes from the default alias mode of WMIC to access instances in the WMI schema directly.|
 |context|Displays the current values of all global switches.|
 |[quit &#124; exit]|Exits the WMIC command shell.|
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\/parameter>|<Concise description, starts with a verb.>|
 |<\/param2>|<Another concise description, starts with a verb.>|
 ## Remarks

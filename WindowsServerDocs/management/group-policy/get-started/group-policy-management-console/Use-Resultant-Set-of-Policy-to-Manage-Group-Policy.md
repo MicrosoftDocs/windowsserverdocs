@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Use Resultant Set of Policy to Manage Group Policy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -69,7 +68,7 @@ Group Policy Resultant Set of Policy (RSoP) reports Group Policy settings that a
 6.  Click **Next**, and then click **Next**. Note that only computer-specific settings are displayed.
 
 ## How to simulate RSoP using Group Policy Modeling
-You can use a Group Policy management feature that allows you to simulate a policy deployment that would be applied to users and computers before actually applying the policies. This feature, known as Resultant Set of Policy (RSoP) â€“ Planning Mode, is integrated into GPMC as Group Policy Modeling.
+You can use a Group Policy management feature that allows you to simulate a policy deployment that would be applied to users and computers before actually applying the policies. This feature, known as Resultant Set of Policy (RSoP)   Planning Mode, is integrated into GPMC as Group Policy Modeling.
 
 #### To simulate Resultant Set of Policy using Group Policy Modeling
 
@@ -97,6 +96,6 @@ You can use a Group Policy management feature that allows you to simulate a poli
 
 -   If you open a previously saved console and want to save a Group Policy Modeling or Group Policy Results report in XML, rerun the report by using the **Rerun Query** option.
 
--   To view a saved report in a Web browser, you must use Internet ExplorerÂ® 6 or later.
+-   To view a saved report in a Web browser, you must use Internet Explorer 6 or later.
 
 

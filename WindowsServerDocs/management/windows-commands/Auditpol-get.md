@@ -1,6 +1,6 @@
 ---
 title: Auditpol get
-description: "Windows Commands topic for **Auditpol get** -- 
+description: "Windows Commands topic for **Auditpol get** - 
 Retrieves the system policy, per-user policy, auditing options, and audit security descriptor object."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol get
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,15 +25,15 @@ Retrieves the system policy, per-user policy, auditing options, and audit securi
 ```
 Auditpol /get 
 [/user[:<username>|<{sid}>]]
-[/category:*|<name>|<{guid}>[,:<name|<{guid}>…]]
-[/subcategory:*|<name>|<{guid}>[,:<name|<{guid}>…]]
+[/category:*|<name>|<{guid}>[,:<name|<{guid}> ]]
+[/subcategory:*|<name>|<{guid}>[,:<name|<{guid}> ]]
 [/option:<option name>]
 [/sd]
 [/r]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/user|Displays the security principal for whom the per-user audit policy is queried. Either the /category or /subcategory parameter must be specified. The user may be specified as a security identifier (SID) or name. If no user account is specified, then the system audit policy is queried.|
 |/category|One or more audit categories specified by globally unique identifier (GUID) or name. An asterisk (*) may be used to indicate that all audit categories should be queried.|
 |/subcategory|One or more audit subcategories specified by GUID or name.|
@@ -81,7 +80,7 @@ Auditpol /get /option:AuditBaseObjects
 ```
 > [!NOTE]
 > The available options are AuditBaseObjects, AuditBaseOperations, and FullPrivilegeAuditing.
-To retrieve the state—enabled, disabled, or 2—of the CrashOnAuditFail option, type:
+To retrieve the state enabled, disabled, or 2 of the CrashOnAuditFail option, type:
 ```
 Auditpol /get /option:CrashOnAuditFail /r
 ```

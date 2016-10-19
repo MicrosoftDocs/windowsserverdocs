@@ -1,6 +1,6 @@
 ---
 title: Regsvr32
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Regsvr32
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/u|Unregisters server.|
 |/s|Runs **Regsvr32** without displaying messages.|
 |/n|Runs **Regsvr32** without calling **DllRegisterServer**. (Requires the **/i** parameter.)|

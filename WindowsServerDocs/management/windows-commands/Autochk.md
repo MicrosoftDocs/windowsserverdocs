@@ -1,6 +1,6 @@
 ---
 title: Autochk
-description: "Windows Commands topic for **Autochk** -- Runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system."
+description: "Windows Commands topic for **Autochk** - Runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,12 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Autochk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Runs when the computer is started and prior to  Windows Server® 2008 R2  starting to verify the logical integrity of a file system.
+Runs when the computer is started and prior to  Windows Server  2008 R2  starting to verify the logical integrity of a file system.
 **Autochk.exe** is a version of **Chkdsk** that runs only on NTFS disks and only before  Windows Server 2008 R2  starts. **Autochk** cannot be run directly from the command-line. Instead, **Autochk** runs in the following situations:
 -   If you try to run **Chkdsk** on the boot volume
 -   If **Chkdsk** cannot gain exclusive use of the volume

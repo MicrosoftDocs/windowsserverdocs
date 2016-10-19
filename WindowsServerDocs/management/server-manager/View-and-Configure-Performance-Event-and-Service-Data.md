@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # View and Configure Performance, Event, and Service Data
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -47,7 +46,7 @@ If the Server Manager console is running on a client computer as part of Remote 
 The thumbnail displays a quick view of the status and manageability of roles, servers, and server groups. The thumbnail heading row changes color (and highlighted numbers are displayed in the left margin) when events, performance counters, Best Practices Analyzer results, services, or general manageability issues meet criteria that you configure in the **Detail View** dialog boxes opened by clicking thumbnail rows. The following table describes the data displayed in thumbnails.  
 
 |Thumbnail Row|Description|  
-|-----------------|---------------|  
+|---------|--------|  
 |Manageability|The manageability of a server includes several measures: whether the server is online or offline, whether it is accessible and reporting data to Server Manager, whether the user who is logged on to the local computer has adequate user rights to access or manage the remote server, whether the remote server is running all of the software that is required to manage it remotely, or whether the server is configured in a way that allows it to be queried and managed by using Server Manager. The only manageability data that Server Manager can collect from a server that is running Windows Server 2003 is whether the server is online or offline. For detailed information about manageability status errors and how to resolve them, see the [Server Manager Troubleshooting Guide](http://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx).|  
 |Events|You can configure the **Events** row of a thumbnail to display alerts when events are logged that match severity levels, sources, time periods, servers, or event IDs that you specify. View details about events, and change the alerts you want to see by clicking the **Events** row, and opening the **Events Detail View** dialog box for the role or server group.|  
 |Services|You can configure the **Services** row to display alerts when services are found in a role or server group that match startup types, service status, service names, and servers that you specify in the **Services Detail View** dialog box.<br /><br />After a server has been added to the Server Manager server pool, service alerts about the Shell Hardware Detection service can be displayed if there are no users logged on to the managed server. This occurs because the Shell Hardware Detection service runs only when users are logged on to the managed server, or connected to a Remote Desktop session on the managed server. To avoid seeing Shell Hardware Detection service alerts for this case, click **Services** in the thumbnails for server groups, including the **All Servers** group. In the **Services Detail View** dialog box, on the **Services** drop-down list, clear the check box for **Shell Hardware Detection**, and then click **OK**.|  

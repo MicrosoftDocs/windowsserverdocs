@@ -1,6 +1,6 @@
 ---
 title: Using the get-MulticastTransmission Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-MulticastTransmission Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -47,7 +46,7 @@ WDSUTIL [Options] /Get-MulticastTransmissiomedia:<Image name>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 media:<Image name>|Displays the multicast transmission that is associated with this image.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 mediaType:Install|Specifies the image type. Note that this option must be set to **Install**.|
@@ -57,13 +56,13 @@ mediaType:Install|Specifies the image type. Note that this option must be set to
 |[/Show:Clients]<br /><br />or<br /><br />[/Details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
 ## <a name="BKMK_examples"></a>Examples
 **Windows Server 2008**
-To view information about the transmission for an image named “Vista with Office,�? type one of the following:
+To view information about the transmission for an image named  Vista with Office, type one of the following:
 ```
 WDSUTIL /Get-MulticastTransmissiomedia:"Vista with OfficemediaType:Install
 WDSUTIL /Get-MulticastTransmission /Server:MyWDSServemedia:"Vista with OfficemediaType:InstalmediaGroup:ImageGroup1 /Filename:install.wim /Show:Clients
 ```
 **Windows Server 2008 R2**
-To view information about the transmission for an image named “Vista with Office,�? type one of the following:
+To view information about the transmission for an image named  Vista with Office, type one of the following:
 ```
 WDSUTIL /Get-MulticastTransmissiomedia:"Vista with Office"
  /ImageType:Install
@@ -79,4 +78,4 @@ WDSUTIL /Get-MulticastTransmission /Server:MyWDSServemedia:"X64 Boot ImagemediaT
 [Using the get-AllMulticastTransmissions Command](Using-the-get-AllMulticastTransmissions-Command.md)
 [Using the new-MulticastTransmission Command](Using-the-new-MulticastTransmission-Command.md)
 [Using the remove-MulticastTransmission Command](Using-the-remove-MulticastTransmission-Command.md)
-[Subcommand: start-MulticastTransmission](Subcommand--start-MulticastTransmission.md)
+[Subcommand: start-MulticastTransmission](Subcommand-start-MulticastTransmission.md)

@@ -25,7 +25,7 @@ If you have created multiple AppLocker policies and need to merge them to create
 The AppLocker policy is saved in XML format, and the exported policy can be edited with any text or XML editor. Rule collections are specified within the **RuleCollection Type** element. The XML schema includes five attributes for the different rule collections, as shown in the following table.
 
 |Rule collection|RuleCollection Type element|
-|-------------------|-------------------------------|
+|----------|----------------|
 |Executable rules|Exe|
 |Windows Installer rules|.msi file|
 |Script rules|Script|
@@ -35,7 +35,7 @@ The AppLocker policy is saved in XML format, and the exported policy can be edit
 Rule enforcement is specified with the **EnforcementMode** element. The three enforcement modes in the XML correspond to the three enforcement modes in the AppLocker snap-in, as shown in the following table.
 
 |XML enforcement mode|Enforcement mode in Group Policy|
-|------------------------|------------------------------------|
+|------------|------------------|
 |NotConfigured|Not configured (rules are enforced)|
 |AuditOnly|Audit only|
 |Enabled|Enforce rules|

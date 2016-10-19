@@ -1,6 +1,6 @@
 ---
 title: Ftype
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ftype
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,14 +26,14 @@ ftype [<FileType>[=[<OpenCommandString>]]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<FileType>|Specifies the file type to display or change.|
 |<OpenCommandString>|Specifies the open command string to use when opening files of the specified file type.|
 |/?|Displays help at the command prompt.|
 ## Remarks
 The following table describes how **ftype** substitutes variables within an open command string:
 |Variable|Replacement value|
-|------------|---------------------|
+|------|-----------|
 |%0 or %1|Gets substituted with the file name being launched through the association.|
 |%*|Gets all of the parameters.|
 |%2, %3, ...|Gets the first parameter (%2), the second parameter (%3), and so on.|

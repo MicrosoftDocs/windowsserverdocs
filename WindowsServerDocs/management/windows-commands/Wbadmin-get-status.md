@@ -1,6 +1,6 @@
 ---
 title: Wbadmin get status
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin get status
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ wbadmin get status
 ## Parameters
 This subcommand has no parameters.
 ## Remarks
--   This subcommand will not stop until the current backup or recovery operation is finished—the subcommand will continue to run even if you close the command window.
+-   This subcommand will not stop until the current backup or recovery operation is finished the subcommand will continue to run even if you close the command window.
 -   If you want to stop the current backup or recovery operation, use the **wbadmin stop job** subcommand.
 #### Additional references
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

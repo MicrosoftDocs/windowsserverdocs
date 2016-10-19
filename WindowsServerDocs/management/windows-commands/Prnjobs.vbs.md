@@ -1,6 +1,6 @@
 ---
 title: Prnjobs.vbs
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Prnjobs.vbs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ Cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-z|Pauses the print job specified with the **-j** parameter.|
 |-m|Resumes the print job specified with the **-j** parameter.|
 |-x|Cancels the print job specified with the **-j** parameter.|

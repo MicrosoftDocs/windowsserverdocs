@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional introduces the group Managed Service Account by describing practical applications, changes in Microsoft’s implementation, and hardware and software requirements.
+This topic for the IT professional introduces the group Managed Service Account by describing practical applications, changes in Microsoft???s implementation, and hardware and software requirements.
 
 
 ## <a name="BKMK_OVER"></a>Feature description
@@ -39,10 +39,10 @@ Failover clusters do not support gMSAs. However, services that run on top of the
 
 A 64\-bit architecture is required to run the Windows PowerShell commands which are used to administer group Managed Service Accounts.
 
-A managed service account is dependent upon Kerberos supported encryption types.When a client computer authenticates to a server using Kerberos the DC creates a Kerberos service ticket protected with encryption both the DC and server supports. The DC uses the account’s msDS\-SupportedEncryptionTypes attribute to determine what encryption the server supports and, if there is no attribute, it assumes the client computer does not support stronger encryption types. If the host is configured to not support RC4, then authentication will always fail. For this reason, AES should always be explicitly configured for MSAs.
+A managed service account is dependent upon Kerberos supported encryption types.When a client computer authenticates to a server using Kerberos the DC creates a Kerberos service ticket protected with encryption both the DC and server supports. The DC uses the account???s msDS\-SupportedEncryptionTypes attribute to determine what encryption the server supports and, if there is no attribute, it assumes the client computer does not support stronger encryption types. If the host is configured to not support RC4, then authentication will always fail. For this reason, AES should always be explicitly configured for MSAs.
 
 > [!NOTE]
-> Beginning with Windows Server 2008 R2, DES is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](http://technet.microsoft.com/library/dd560670(WS.10).aspx).
+> Beginning with Windows??Server??2008??R2, DES is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](http://technet.microsoft.com/library/dd560670(WS.10).aspx).
 
 Group Managed Service Accounts are not applicable to Windows operating systems prior to Widows Server 2008 R2.
 
@@ -53,7 +53,7 @@ There are no configuration steps necessary to implement MSA and group MSA using 
 The following table provides links to additional resources related to Managed Service Accounts and group Managed Service Accounts.
 
 |Content type|References|
-|----------------|--------------|
+|--------|-------|
 |**Product evaluation**|[What's New for Managed Service Accounts](What-s-New-for-Managed-Service-Accounts.md)<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step\-by\-Step Guide](http://technet.microsoft.com/library/dd548356(v=ws.10).aspx)|
 |**Planning**|Not yet available|
 |**Deployment**|Not yet available|

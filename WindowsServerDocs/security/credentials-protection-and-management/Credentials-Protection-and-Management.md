@@ -40,12 +40,12 @@ Members of the Protected Users group are limited further by the following method
 
 -   The Kerberos protocol will not use the weaker DES or RC4 encryption types in the preauthentication process. This means that the domain must be configured to support at least the AES cypher suite.
 
--   The user’s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
+-   The user???s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
 
 -   The default Kerberos Ticket Granting Tickets (TGTs) lifetime setting of four hours is configurable using Authentication Policies and Silos accessed through the Active Directory Administrative Center (ADAC). This means that when four hours has passed, the user must authenticate again.
 
 > [!WARNING]
-> Accounts for services and computers should not be members of the Protected Users group. This group provides no local protection because the password or certificate is always available on the host. Authentication will fail with the error “the user name or password is incorrect�? for any service or computer that is added to the Protected Users group.
+> Accounts for services and computers should not be members of the Protected Users group. This group provides no local protection because the password or certificate is always available on the host. Authentication will fail with the error ???the user name or password is incorrect??? for any service or computer that is added to the Protected Users group.
 
 For more information about this group, see [Protected Users Security Group](Protected-Users-Security-Group.md).
 

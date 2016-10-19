@@ -1,6 +1,6 @@
 ---
 title: Nslookup
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -52,7 +51,7 @@ Nslookup /view <FileName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Nslookup exit Command](Nslookup-exit-Command.md)|Exits **nslookup**.|
 |[Nslookup finger Command](Nslookup-finger-Command.md)|Connects with the finger server on the current computer.|
 |[Nslookup help](Nslookup-help.md)|Displays a short summary of **nslookup** subcommands.|
@@ -92,7 +91,7 @@ Nslookup /view <FileName>
     -   An unrecognized command is interpreted as a computer name.
 -   If the lookup request fails, **nslookup** prints an error message. The following table lists possible error messages.
     |**Error message**|**Description**|
-    |---------------------|-------------------|
+    |-----------|----------|
     |`Timed out`|The server did not respond to a request after a certain amount of time and a certain number of retries. You can set the time-out period with the **set timeout** subcommand. You can set the number of retries with the **set retry** subcommand.|
     |`No response from server`|No DNS name server is running on the server computer.|
     |`No records`|The DNS name server does not have resource records of the current query type for the computer, although the computer name is valid. The query type is specified with the **set querytype** command.|

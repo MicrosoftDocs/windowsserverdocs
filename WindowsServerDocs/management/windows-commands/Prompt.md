@@ -1,6 +1,6 @@
 ---
 title: Prompt
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Prompt
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,14 +26,14 @@ prompt [<Text>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Text>|Specifies the text and information that you want to include in the command prompt.|
 |/?|Displays help at the command prompt.|
 ## Remarks
 -   You can customize the command prompt to display any text you want, including such information as the name of the current directory, the time and date, and the Microsoft Windows version number.
 -   The following table lists the character combinations that you can include instead of, or in addition to, one or more character strings in the *Text* parameter. The list includes a brief description of the text or information that each character combination adds to your command prompt.
     |Character|Description|
-    |-------------|---------------|
+    |-------|--------|
     |$q|= (equal sign)|
     |$$|$ (dollar sign)|
     |$t|Current time|
@@ -54,7 +53,7 @@ prompt [<Text>]
     |$s|space|
 -   When command extensions are enabled (that is, the default) the **prompt** command supports the following formatting characters:
     |Character|Description|
-    |-------------|---------------|
+    |-------|--------|
     |$+|Zero or more plus sign (**+**) characters, depending on the depth of the **pushd** directory stack (one character for each level pushed).|
     |$m|The remote name associated with the current drive letter or the empty string if current drive is not a network drive.|
 -   If you include the **$p** character in the text parameter, your disk is read after you enter each command (to determine the current drive and path). This can take extra time, especially for floppy disk drives.
@@ -68,9 +67,9 @@ The prompt is changed as follows, where the date and time are current:
 Fri 06/01/2007  13:53:28.91
 >
 ```
-To set the command prompt to display as an arrow (`-->`), type:
+To set the command prompt to display as an arrow (`->`), type:
 ```
-prompt --$g
+prompt -$g
 ```
 To manually change the command prompt to the default setting (the current drive and path followed by the greater than sign), type:
 ```

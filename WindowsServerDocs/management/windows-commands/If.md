@@ -1,6 +1,6 @@
 ---
 title: If
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # If
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -35,7 +34,7 @@ if defined <Variable> <Command> [else <Expression>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |not|Specifies that the command should be carried out only if the condition is false.|
 |errorlevel <Number>|Specifies a true condition only if the previous program run by Cmd.exe returned an exit code equal to or greater than *Number*.|
 |<Command>|Specifies the command that should be carried out if the preceding condition is met.|
@@ -51,9 +50,9 @@ if defined <Variable> <Command> [else <Expression>]
 -   If the condition specified in an **if** clause is true, the command that follows the condition is carried out. If the condition is false, the command in the **if** clause is ignored and the command executes any command that is specified in the **else** clause.
 -   When a program stops, it returns an exit code. To use exit codes as conditions, use **errorlevel**.
 -   If you use **defined**, the following three variables are added to the environment: **%errorlevel%**, **%cmdcmdline%**, and **%cmdextversion%**.
-    -   **%errorlevel%** expands into a string representation of the current value of the ERRORLEVEL environment variable. This assumes that there is not an existing environment variable with the name ERRORLEVEL—if there is, you will get that ERRORLEVEL value instead.
-    -   **%cmdcmdline%** expands into the original command line that was passed to Cmd.exe prior to any processing by Cmd.exe. This assumes that there is not an existing environment variable with the name CMDCMDLINE—if there is, you will get the CMDCMDLINE value instead.
-    -   **%cmdextversion%** expands into the string representation of the current value of **cmdextversion**. This assumes that there is not an existing environment variable with the name CMDEXTVERSION—if there is, you will get the CMDEXTVERSION value instead.
+    -   **%errorlevel%** expands into a string representation of the current value of the ERRORLEVEL environment variable. This assumes that there is not an existing environment variable with the name ERRORLEVEL if there is, you will get that ERRORLEVEL value instead.
+    -   **%cmdcmdline%** expands into the original command line that was passed to Cmd.exe prior to any processing by Cmd.exe. This assumes that there is not an existing environment variable with the name CMDCMDLINE if there is, you will get the CMDCMDLINE value instead.
+    -   **%cmdextversion%** expands into the string representation of the current value of **cmdextversion**. This assumes that there is not an existing environment variable with the name CMDEXTVERSION if there is, you will get the CMDEXTVERSION value instead.
 -   You must use the **else** clause on the same line as the command after the **if**.
 ## <a name="BKMK_examples"></a>Examples
 To display the message "Cannot find data file" if the file Product.dat cannot be found, type:

@@ -1,6 +1,6 @@
 ---
 title: Rd
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Rd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ rmdir [<Drive>:]<Path> [/s [/q]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:]<Path>|Specifies the location and the name of the directory that you want to delete. *Path* is required.|
 |/s|Deletes a directory tree (the specified directory and all its subdirectories, including all files).|
 |/q|Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.)|

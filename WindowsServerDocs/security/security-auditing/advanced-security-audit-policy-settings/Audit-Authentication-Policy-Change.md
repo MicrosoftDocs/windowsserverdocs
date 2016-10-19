@@ -52,7 +52,7 @@ Default: Success
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4713|Kerberos policy was changed.|
 |4716|Trusted domain information was modified.|
 |4717|System security access was granted to an account.|

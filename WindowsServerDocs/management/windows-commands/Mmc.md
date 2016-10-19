@@ -1,6 +1,6 @@
 ---
 title: Mmc
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Mmc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ mmc <path>\<filename>.msc [/a] [/64] [/32]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<path>\\<filename>.msc|Starts **MMC** and opens a saved console. You need to specify the complete path and file name for the saved console file. If you do not specify a console file, **MMC** opens a new console.|
 |/a|Opens a saved console in author mode.  Used to make changes to saved consoles.|
 |/64|Opens the 64-bit version of **MMC** (MMC64). Use this option only if you are running a Microsoft 64-bit operating system and want to use a 64-bit snap-in.|

@@ -1,6 +1,6 @@
 ---
 title: Mklink
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Mklink
 Creates a symbolic link.
 
@@ -27,7 +26,7 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/d|Creates a directory symbolic link. By default, **mklink** creates a file symbolic link.|
 |/h|Creates a hard link instead of a symbolic link.|
 |/j|Creates a Directory Junction.|

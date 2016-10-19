@@ -1,6 +1,6 @@
 ---
 title: Expose
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Expose
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |ShadowID|Specifies the shadow ID of the shadow copy you want to expose.|  
 |<Drive:>|Exposes the specified shadow copy as a drive letter \(for example, P:\).|  
 |<Share>|Exposes the specified shadow copy at a share \(for example, \\\\*MachineName*\\\).|  

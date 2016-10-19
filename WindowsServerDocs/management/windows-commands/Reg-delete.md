@@ -1,6 +1,6 @@
 ---
 title: Reg delete
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Reg delete
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<KeyName>|Specifies the full path of the subkey or entry to be deleted. To specify a remote computer, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |/v <ValueName>|Deletes a specific entry under the subkey. If no entry is specified, then all entries and subkeys under the subkey will be deleted.|
 |/ve|Specifies that only entries that have no value will be deleted.|
@@ -37,7 +36,7 @@ Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 ## Remarks
 The following table lists the return values for the **reg delete** operation.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |0|Success|
 |1|Failure|
 ## <a name="BKMK_examples"></a>Examples

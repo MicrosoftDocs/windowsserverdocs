@@ -1,6 +1,6 @@
 ---
 title: Choice
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Choice
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -23,12 +22,12 @@ Prompts the user to select one item from a list of single-character choices in a
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <"Text">]
+choice [/c [<Choice1><Choice2>< >]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <"Text">]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
-|/c <Choice1><Choice2><…>|Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is "YN", which is displayed as `[Y,N]?`.|
+|-------|--------|
+|/c <Choice1><Choice2>< >|Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is "YN", which is displayed as `[Y,N]?`.|
 |/n|Hides the list of choices, although the choices are still enabled and the message text (if specified by **/m**) is still displayed.|
 |/cs|Specifies that the choices are case-sensitive. By default, the choices are not case-sensitive.|
 |/t <Timeout>|Specifies the number of seconds to pause before using the default choice specified by **/d**. Acceptable values are from **0** to **9999**. If **/t** is set to **0**, **choice** does not pause before returning the default choice.|

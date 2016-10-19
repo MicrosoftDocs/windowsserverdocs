@@ -1,6 +1,6 @@
 ---
 title: Tftp
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tftp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. If **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  
 |<Host>|Specifies the local or remote computer.|  
 |put|Transfers the file *Source* on the local computer to the file *Destination* on the remote computer. Because the TFTP protocol does not support user authentication, the user must be logged onto the remote computer, and the files must be writable on the remote computer.|  
@@ -40,7 +39,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 ## <a name="BKMK_Examples"></a>Examples  
 Copy the file **boot.img** from the remote computer **Host1**.  
 ```  
-tftp ???i Host1 get boot.img  
+tftp  i Host1 get boot.img  
 ```  
 ## Additional references  
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  

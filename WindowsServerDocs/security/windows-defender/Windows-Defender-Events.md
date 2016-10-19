@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 Windows Defender Events
 
 |EventID|Symbol|Description|
-|-----------|----------|---------------|
+|------|-----|--------|
 |2000|MALWAREPROTECTION_SIGNATURE_UPDATED|The antimalware definitions updated successfully.|
 |2001|MALWAREPROTECTION_SIGNATURE_UPDATE_FAILED|The antimalware definition update failed.|
 |2002|MALWAREPROTECTION_ENGINE_UPDATED|The antimalware engine updated successfully.|

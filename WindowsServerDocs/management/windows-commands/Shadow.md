@@ -1,6 +1,6 @@
 ---
 title: Shadow
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Shadow
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<SessionName>|Specifies the name of the session that you want to remotely control.|
 |<SessionID>|Specifies the ID of the session that you want to remotely control. Use **query user** to display the list of sessions and their session IDs.|
 |/server:<ServerName>|Specifies the RD Session Host server containing the session that you want to remotely control. By default, the current RD Session Host4 server is used.|
@@ -53,4 +52,4 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
     ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)

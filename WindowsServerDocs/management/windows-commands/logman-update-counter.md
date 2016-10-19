@@ -1,6 +1,6 @@
 ---
 title: logman update counter
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman update counter
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ logman update counter <[-n] <name>> [options]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  
@@ -49,7 +48,7 @@ logman update counter <[-n] <name>> [options]
 |-[-]cnf <[[hh:]mm:]ss>|When time is specified, create a new file when the specified time has elapsed. When time is not specified, create a new file when the maximum size is exceeded.|  
 |-y|Answer yes to all questions without prompting.|  
 |-cf <filename>|Specifies the file listing performance counters to collect. The file should contain one performance counter name per line.|  
-|-c <path [path […]]>|Specifies performance counter(s) to collect.|  
+|-c <path [path [ ]]>|Specifies performance counter(s) to collect.|  
 |-sc <value>|Specifies the maximum number of samples to collect with a performance counter data collector.|  
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  

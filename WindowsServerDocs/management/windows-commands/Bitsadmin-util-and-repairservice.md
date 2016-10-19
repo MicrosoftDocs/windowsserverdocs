@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin util and repairservice
-description: "Windows Commands topic for **Bitsadmin util and repairservice** -- Commmand used to fix known issues with various versions of BITS service."
+description: "Windows Commands topic for **Bitsadmin util and repairservice** - Commmand used to fix known issues with various versions of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin util and repairservice
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,8 +25,8 @@ bitsadmin /Util /RepairService [/Force]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
-|Force|Optional—deletes and recreates the service.|
+|-------|--------|
+|Force|Optional deletes and recreates the service.|
 ## Remarks
 This command resolves errors related to incorrect service configuration and dependencies on Windows services and the network directory. This command generates output that indicates if the issues that were resolved.
 > [!NOTE]

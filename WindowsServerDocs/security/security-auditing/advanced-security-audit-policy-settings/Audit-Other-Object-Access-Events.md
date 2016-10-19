@@ -47,7 +47,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4671|An application attempted to access a blocked ordinal through the TBS.|
 |4691|Indirect access to an object was requested.|
 |4698|A scheduled task was created.|

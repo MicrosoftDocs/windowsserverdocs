@@ -64,7 +64,7 @@ The test environment that is described in this guide includes three computers th
 > The supported Windows operating systems are designated in the **Applies To** list at the beginning of this topic.
 
 |Computer name|Operating system|Applications and services|
-|-----------------|--------------------|-----------------------------|
+|---------|----------|---------------|
 |CONTOSO-DC|Supported versions of the Windows client operating system **Note:** Supported versions of the Windows server operating system or Windows Server 2003 with Service Pack 2 (SP2) can also be used for the domain controller.|Active Directory Domain Services (AD DS) and Domain Name System (DNS)|
 |CONTOSO-SRV|Supported versions of Windows server|Group Policy Management Console (GPMC)|
 |CONTOSO-CLNT|Supported versions of Windows client **Note:** Supported versions of Windows server  can also be used as the client computer.||
@@ -106,7 +106,7 @@ Use the following table as a reference when you set up the appropriate computer 
 > Before you configure your computers with static IP addresses, we recommend that you first complete two important tasks that require Internet connectivity: Complete Windows product activation and use Windows Update to obtain and install any available critical security updates.
 
 |Computer name|Operating system requirement|IP settings|DNS settings|
-|-----------------|--------------------------------|---------------|----------------|
+|---------|----------------|--------|--------|
 |CONTOSO-DC|Any supported Windows server operating systems, or,  Windows Server 2008 , or Windows Server 2003 with Service Pack 2 (SP2)|IP address: 10.0.0.1<br /><br />Subnet mask: 255.255.255.0|Configured by DNS server role|
 |CONTOSO-SRV| Windows Server 2008 R2 |IP address: 10.0.0.2<br /><br />Subnet mask: 255.255.255.0|Preferred: 10.0.0.1|
 |CONTOSO-CLNT|Any of the supported Windows operating systems|IP address: 10.0.0.3<br /><br />Subnet mask: 255.255.255.0|Preferred: 10.0.0.1|
@@ -576,7 +576,7 @@ To configure, apply, and validate a global object access audit policy, you must:
 
 12. Type a user name or computer name in the format **contoso\user1**, **user1@contoso.com**, or **CONTOSO-CLNT**, and click **OK**.
 
-13. In the **Auditing Entry for Global Registry SACL** box, select the **Successful** or **Failed** activities for which you want to log audit entries—for example, **Create Subkey**, **Delete**, or **Read**.
+13. In the **Auditing Entry for Global Registry SACL** box, select the **Successful** or **Failed** activities for which you want to log audit entries???for example, **Create Subkey**, **Delete**, or **Read**.
 
 14. Click **OK** three times to complete the audit policy configuration.
 

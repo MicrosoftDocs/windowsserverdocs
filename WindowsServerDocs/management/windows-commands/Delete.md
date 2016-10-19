@@ -1,6 +1,6 @@
 ---
 title: Delete
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Delete
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ delete volume
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Delete disk](Delete-disk.md)|Deletes a missing dynamic disk from the list of disks.|
 |[Delete partition](Delete-partition.md)|Deletes a partition.|
 |[Delete volume](Delete-volume.md)|Deletes a volume.|

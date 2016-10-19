@@ -54,7 +54,7 @@ AppLocker policies can be defined locally on a computer or applied through Group
 In a test environment or with the enforcement setting set at **Audit only**, verify that the results of the policy are what you intended. For information about testing a policy, see [Test and Update an AppLocker Policy](../manage/Test-and-Update-an-AppLocker-Policy.md).
 
 ## Step 6: Implement the policy
-Depending on your deployment method, import the AppLocker policy to the GPO in your production environment, or if the policy is already deployed, change the enforcement setting to your production environment value—**Enforce rules** or **Audit only**.
+Depending on your deployment method, import the AppLocker policy to the GPO in your production environment, or if the policy is already deployed, change the enforcement setting to your production environment value???**Enforce rules** or **Audit only**.
 
 ## Step 7: Test the effect of the policy and adjust
 Validate the effect of the policy by analyzing the AppLocker logs for application usage, and then modify the policy as necessary. To do this, see [Monitor Application Usage with AppLocker](../manage/Monitor-Application-Usage-with-AppLocker.md).

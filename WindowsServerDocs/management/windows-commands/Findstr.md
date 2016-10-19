@@ -1,6 +1,6 @@
 ---
 title: Findstr
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Findstr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/b|Matches the text pattern if it is at the beginning of a line.|
 |/e|Matches the text pattern if it is at the end of a line.|
 |/l|Processes search strings literally.|
@@ -51,10 +50,10 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 |/?|Displays Help at the command prompt.|
 ## Remarks
 -   All **findstr** command-line options must precede *Strings* and *FileName* in the command string.
--   Regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax—it matches an occurrence of that character. For example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
+-   Regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax it matches an occurrence of that character. For example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
     The following table lists the metacharacters that **findstr** accepts.
     |Metacharacter|Value|
-    |-----------------|---------|
+    |---------|-----|
     |.|Wildcard: any character|
     |*|Repeat: zero or more occurrences of the previous character or class|
     |^|Line position: beginning of the line|

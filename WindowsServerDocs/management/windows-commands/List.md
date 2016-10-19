@@ -1,6 +1,6 @@
 ---
 title: List
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # List
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ list providers
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |writers|Lists writers. See [List writers](List-writers.md) for syntax and parameters.|  
 |shadows|Lists persistent and existing non\-persistent shadow copies. See [List shadows](List-shadows.md) for syntax and parameters.|  
 |providers|Lists currently registered shadow copy providers. See [List providers](List-providers.md) for syntax and parameters.|  

@@ -1,6 +1,6 @@
 ---
 title: Print Command Reference
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Print Command Reference
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 The following is a list of Print command-line tools.
 |Command|Description|
-|-----------|---------------|
+|------|--------|
 |[Lpq]Lpq.md)|Displays the status of a print queue on a computer running Line Printer Daemon (LPD).|
 |[Lpr](Lpr.md)|Sends a file to a computer or printer sharing device running the Line Printer Daemon (LPD) service in preparation for printing.|
 |[Net print](Net-print.md)|Displays information about a specified printer queue, displays information about a specified print job, or controls a specified print job.|

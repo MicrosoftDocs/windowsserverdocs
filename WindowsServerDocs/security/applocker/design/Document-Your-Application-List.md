@@ -32,7 +32,7 @@ Record the installation path of the applications. For example, Microsoft Office 
 The following table provides an example of how to list applications for each business group at the early stage of designing your application control policies. Eventually, as more planning information is added to the list, the information can be used to build AppLocker rules.
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|
-|------------------|-----------------------|------------------------|----------------|---------------------|
+|---------|------------|------------|--------|-----------|
 |Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|
 ||||Windows files|C:\Windows|
 |Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|

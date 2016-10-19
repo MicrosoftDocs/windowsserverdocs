@@ -1,6 +1,6 @@
 ---
 title: Using The get Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using The get Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,7 +21,7 @@ ms.date: 10/12/2016
 Retrieves properties or attributes about the specified object.
 ## Subcommands
 |Subcommand|Description|
-|--------------|---------------|
+|-------|--------|
 |[Using the get-AllDevices Command](Using-the-get-AllDevices-Command.md)|Displays information about all prestaged computers.|
 |[Using the get-AllImageGroups Command](Using-the-get-AllImageGroups-Command.md)|Displays information about all image groups.|
 |[Using the get-AllImages Command](Using-the-get-AllImages-Command.md)|Displays information about all images.|

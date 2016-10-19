@@ -1,6 +1,6 @@
 ---
 title: Using the Add Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the Add Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 ## Subcommands
 |Subcommand|Description|
-|--------------|---------------|
+|-------|--------|
 |[Using the add-Device command](Using-the-add-Device-command.md)|Prestages a computer in Active Directory.|
 |[Using the add-Image Command](Using-the-add-Image-Command.md)|Adds boot or installation images.|
 |[Using the add-ImageGroup Command](Using-the-add-ImageGroup-Command.md)|Adds an image group.|

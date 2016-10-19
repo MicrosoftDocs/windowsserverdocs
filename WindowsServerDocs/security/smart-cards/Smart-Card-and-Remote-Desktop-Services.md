@@ -24,7 +24,7 @@ The content in this topic applies to the versions of Windows that are designated
 
 Smart card support is required to enable many Remote Desktop Services scenarios. These include:
 
--   Using Fast User Switching or Remote Desktop Services. A user is not able to establish a redirected smart card–based remote desktop connection. That is, the connect attempt is not successful in Fast User Switching or from a Remote Desktop Services session.
+-   Using Fast User Switching or Remote Desktop Services. A user is not able to establish a redirected smart card???based remote desktop connection. That is, the connect attempt is not successful in Fast User Switching or from a Remote Desktop Services session.
 
 -   Enabling Encrypting File System (EFS) to locate the user's smart card reader from the Local Security Authority (LSA) process in Fast User Switching or in a Remote Desktop Services session. If EFS is not able to locate the smart card reader or certificate, EFS cannot decrypt user files.
 
@@ -62,30 +62,30 @@ Remote Desktop Services enable users to sign in with a smart card by entering a 
 > [!NOTE]
 > If an RDC client computer running those client versions designated in the **Applies to** list, is used and a server is running Windows Server 2003, only the single certificate in the smart card default container is supported. To support multiple certificates and domain hints features, use computers running the supported versions of the operating system that are designated in the **Applies To** list at the beginning of this topic.
 
-In addition, Group Policy settings that are specific to Remote Desktop Services need to be enabled for smart card–based sign-in.
+In addition, Group Policy settings that are specific to Remote Desktop Services need to be enabled for smart card???based sign-in.
 
 To enable smart card sign-in to a Remote Desktop Session Host (RD Session Host) server, the Key Distribution Center (KDC) certificate must be present on the RDC client computer. If the computer is not in the same domain or workgroup, the following command can be used to deploy the certificate:
 
-**certutil –dspublish NTAuthCA** "*DSCDPContainer*"
+**certutil ???dspublish NTAuthCA** "*DSCDPContainer*"
 
 The *DSCDPContainer* Common Name (CN) is usually the name of the certification authority.
 
 **Example**:
 
-**certutil –dspublish NTAuthCA***<CertFile>***"CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=engineering,DC=contoso,DC=com"**
+**certutil ???dspublish NTAuthCA***<CertFile>***"CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=engineering,DC=contoso,DC=com"**
 
 For information about this option for the command-line tool, see [-dsPublish](../../management/windows-commands/Certutil.md#BKMK_dsPublish).
 
 ### Remote Desktop Services and smart card sign-in across domains
 To enable remote access to resources in an enterprise, the root certificate for the domain must be provisioned on the smart card. From a computer that is joined to a domain, run the following command at the command line:
 
-**certutil –scroots update**
+**certutil ???scroots update**
 
 For information about this option for the command-line tool, see [-SCRoots](../../management/windows-commands/Certutil.md#BKMK_SCRoots).
 
 For Remote Desktop Services across domains, the KDC certificate of the RD Session Host server must also be present in the client computer's NTAUTH store. To add the store, run the following command at the command line:
 
-**certutil –addstore –enterprise NTAUTH***<CertFile>*
+**certutil ???addstore ???enterprise NTAUTH***<CertFile>*
 
 Where *<CertFile>* is the root certificate of the KDC certificate issuer.
 

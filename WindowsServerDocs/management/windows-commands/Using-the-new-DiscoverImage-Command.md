@@ -1,6 +1,6 @@
 ---
 title: Using the new-DiscoverImage Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the new-DiscoverImage Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -35,7 +34,7 @@ WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 media:<Image name>|Specifies the name of the source boot image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be returned. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture value ensures that WDSUTIL returns the correct image.|

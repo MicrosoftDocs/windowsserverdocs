@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 This topic provides a high\-level overview of BitLocker including a list of new and changed features, system requirements, practical applications, and deprecated features. It provides links to additional content that will help you to learn more about working with BitLocker.
 
-**Did you mean…**
+**Did you mean???**
 
 -   [AppLocker](http://go.microsoft.com/fwlink/p/?LinkId=243126)
 
@@ -52,7 +52,7 @@ There are two additional tools in the Remote Server Administration Tools, which 
 ## System requirements
 BitLocker has the following hardware requirements:
 
-For BitLocker to use the system integrity check provided by a Trusted Platform Module \(TPM\), the computer must have TPM 1.2 or TPM 2.0. If your computer does not have a TPM, enabling BitLocker requires that you save a startup key on a removable device, such as a USB flash drive.
+For BitLocker to use the system integrity check provided by a Trusted Platform Module \(TPM\), the computer must have TPM??1.2 or TPM??2.0. If your computer does not have a TPM, enabling BitLocker requires that you save a startup key on a removable device, such as a USB flash drive.
 
 A computer with a TPM must also have a Trusted Computing Group \(TCG\)\-compliant BIOS or UEFI firmware. The BIOS or UEFI firmware establishes a chain of trust for the pre\-operating system startup, and it must include support for TCG\-specified Static Root of Trust Measurement. A computer without a TPM does not require TCG\-compliant firmware.
 
@@ -69,15 +69,15 @@ When installed on a new computer, Windows will automatically create the partitio
 ## <a name="BKMK_LINKS"></a>In this library
 
 
--   [BitLocker Frequently Asked Questions FAQ](BitLocker-Frequently-Asked-Questions--FAQ-.md)
+-   [BitLocker Frequently Asked Questions FAQ](BitLocker-Frequently-Asked-Questions-FAQ.md)
 
 -   [BitLocker Basic Deployment](BitLocker-Basic-Deployment.md)
 
--   [BitLocker: How to deploy on Windows Server 2012](BitLocker--How-to-deploy-on-Windows-Server-2012.md)
+-   [BitLocker: How to deploy on Windows Server 2012](BitLocker-How-to-deploy-on-Windows-Server-2012.md)
 
--   [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](BitLocker--Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md)
+-   [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md)
 
--   [BitLocker: Use BitLocker Recovery Password Viewer](BitLocker--Use-BitLocker-Recovery-Password-Viewer.md)
+-   [BitLocker: Use BitLocker Recovery Password Viewer](BitLocker-Use-BitLocker-Recovery-Password-Viewer.md)
 
 
 -   [Protecting cluster shared volumes and storage area networks with BitLocker](Protecting-cluster-shared-volumes-and-storage-area-networks-with-BitLocker.md)

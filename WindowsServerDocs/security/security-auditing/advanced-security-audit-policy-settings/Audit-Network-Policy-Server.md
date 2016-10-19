@@ -29,7 +29,7 @@ Default: Success and failure
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008, Windows Vista with Service Pack 2 (SP2), or Windows Vista with Service Pack 1 (SP1).
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |6272|Network Policy Server granted access to a user.|
 |6273|Network Policy Server denied access to a user.|
 |6274|Network Policy Server discarded the request for a user.|

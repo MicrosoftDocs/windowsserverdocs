@@ -1,6 +1,6 @@
 ---
 title: Ksetup:addhosttorealmmap
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:addhosttorealmmap
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /addhosttorealmmap <HostName> <RealmName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<HostName>|The host name is the computer name, and it can be stated as the computer's fully qualified domain name.|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM.|
 ## Remarks

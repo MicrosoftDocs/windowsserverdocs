@@ -36,7 +36,7 @@ To use AppLocker, you need:
 The following table show the on which operating systems AppLocker features are supported.
 
 |Version|Can be configured|Can be enforced|Available rules|Notes|
-|-----------|---------------------|-------------------|-------------------|---------|
+|------|-----------|----------|----------|-----|
 | Windows Server 2012 R2 |Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL||
 |Windows 8.1|Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL|Only the Enterprise edition supports AppLocker|
 |Windows RT 8.1|No|No|NA||

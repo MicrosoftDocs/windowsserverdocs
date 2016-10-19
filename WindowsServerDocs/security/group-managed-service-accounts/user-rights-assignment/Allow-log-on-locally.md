@@ -66,10 +66,10 @@ By default, the members of the following groups have this right on domain contro
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
 
 |Server type or GPO|Default value|
-|----------------------|-----------------|
+|-----------|---------|
 |Default Domain Policy|Not Defined|
 |Default Domain Controller Policy|Account Operators<br /><br />Administrators<br /><br />Backup Operators<br /><br />Print Operators<br /><br />Server Operators|
 |Stand-Alone Server Default Settings|Administrators<br /><br />Backup Operators<br /><br />Users|

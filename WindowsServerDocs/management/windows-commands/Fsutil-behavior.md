@@ -1,6 +1,6 @@
 ---
 title: Fsutil behavior
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil behavior
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -47,21 +46,21 @@ fsutil behavior set {allowextchar {1|0} | bugcheckoncorrupt {1|0} | disable8dot3
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |query|Queries the file system behavior parameters.|  
 |set|Changes the file system behavior parameters.|  
 |allowextchar {1&#124;0}|Allows \(**1**\) or disallows \(**0**\) characters from the extended character set \(including diacritic characters\) to be used in 8.3 character\-length short file names on NTFS volumes.<br /><br />You must reboot your computer for this parameter to take effect.|  
-|Bugcheckoncorrupt {1&#124;0}|Allows \(**1**\) or disallows \(**0**\) generation of a bug check when there is corruption on an NTFS volume. This feature can be used to prevent NTFS from silently deleting data when used with the Self\-Healing NTFS feature.<br /><br />You must reboot your computer for this parameter to take effect.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
+|Bugcheckoncorrupt {1&#124;0}|Allows \(**1**\) or disallows \(**0**\) generation of a bug check when there is corruption on an NTFS volume. This feature can be used to prevent NTFS from silently deleting data when used with the Self\-Healing NTFS feature.<br /><br />You must reboot your computer for this parameter to take effect.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
 |disable8dot3 \[<VolumePath>\] {1&#124;0}|Disables \(**1**\) or enables \(**0**\) the creation of 8.3 character\-length file names on FAT\- and NTFS\-formatted volumes. Optionally, prefix with the *VolumePath* specified as a drive name followed by a colon or GUID.|  
 |disablecompression {1&#124;0}|Disables **\(1\)** or enables **\(0\)** NTFS compression.<br /><br />You must reboot your computer for this parameter to take effect.|  
 |disableencryption {1&#124;0}|Disables **\(1\)** or enables **\(0\)** the encryption of folders and files on NTFS volumes.<br /><br />You must reboot your computer for this parameter to take effect.|  
 |disablelastaccess {1&#124;0}|Disables \(**1**\) or enables \(**0**\) updates to the Last Access Time stamp on each directory when directories are listed on an NTFS volume.<br /><br />You must reboot your computer for this parameter to take effect.|  
 |encryppagingfile {1&#124;0}|Encrypts \(**1**\) or does not encrypt \(**0**\) the memory paging file in the Windows operating system.<br /><br />You must reboot your computer for this parameter to take effect.|  
-|mftzone <Value>|Sets the size of the MFT Zone, and is expressed as a multiple of 200MB units. Set *Value* to a number from **1** \(default is 200 MB\) to **4** \(maximum is 800 MB\).<br /><br />You must reboot your computer for this parameter to take effect.|  
+|mftzone <Value>|Sets the size of the MFT Zone, and is expressed as a multiple of 200MB units. Set *Value* to a number from **1** \(default is 200 MB\) to **4** \(maximum is 800 MB\).<br /><br />You must reboot your computer for this parameter to take effect.|  
 |memoryusage <Value>|Configures the internal cache levels of NTFS paged\-pool memory and NTFS nonpaged\-pool memory. Set to **1** or **2**. When set to **1** \(the default\), NTFS uses the default amount of paged\-pool memory. When set to **2**, NTFS increases the size of its lookaside lists and memory thresholds. \(A lookaside list is a pool of fixed\-size memory buffers that the kernel and device drivers create as private memory caches for file system operations, such as reading a file.\)<br /><br />You must reboot your computer for this parameter to take effect.|  
-|quotanotify <Frequency>|Configures how frequently NTFS quota violations are reported in the system log. Valid values for are in the range 0 – 4294967295. The default frequency is 3600 seconds \(one hour\).<br /><br />You must reboot your computer for this parameter to take effect.|  
+|quotanotify <Frequency>|Configures how frequently NTFS quota violations are reported in the system log. Valid values for are in the range 0   4294967295. The default frequency is 3600 seconds \(one hour\).<br /><br />You must reboot your computer for this parameter to take effect.|  
 |symlinkevaluation <SymbolicLinkType>|Controls the kind of symbolic links that can be created on a computer. Valid choices are:<br /><br />1.  Local to local symbolic links, L2L:{0&#124;1}<br />2.  Local to remote symbolic links, L2R:{0&#124;1}<br />3.  Remote to local symbolic links, R2R:{0&#124;1}<br />4.  Remote to remote symbolic links, R2L:{0&#124;1}|  
-|DisableDeleteNotify|Disables \(**1**\) or enables \(**0**\) delete notifications \(for all volumes. Delete notification \(also known as trim or unmap\) is a feature that notifies the underlying storage device of clusters that have been freed due to a file delete operation. In addition:<br /><br />-   Trim is enabled by default unless an administrator disables it. If your hard disk drive or SAN reports that it does not support trim, then your hard disk drive and SANs will not get trim notifications.<br />-   Enabling or disabling does not require a restart.<br />-   Trim is effective when the next unmap command is issued.<br />-   Existing inflight IO are not impacted by the registry change.<br />-   Does not require any service restart when you enable or disable trim.<br /><br />This parameter was introduced in  Windows Server 2008 R2  and  Windows 7 .|  
+|DisableDeleteNotify|Disables \(**1**\) or enables \(**0**\) delete notifications \(for all volumes. Delete notification \(also known as trim or unmap\) is a feature that notifies the underlying storage device of clusters that have been freed due to a file delete operation. In addition:<br /><br />-   Trim is enabled by default unless an administrator disables it. If your hard disk drive or SAN reports that it does not support trim, then your hard disk drive and SANs will not get trim notifications.<br />-   Enabling or disabling does not require a restart.<br />-   Trim is effective when the next unmap command is issued.<br />-   Existing inflight IO are not impacted by the registry change.<br />-   Does not require any service restart when you enable or disable trim.<br /><br />This parameter was introduced in  Windows Server 2008 R2  and  Windows 7 .|  
   
 ## Remarks  
   

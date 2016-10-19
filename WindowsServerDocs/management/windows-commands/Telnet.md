@@ -1,6 +1,6 @@
 ---
 title: Telnet
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Telnet
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,8 +25,8 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
-|/a|Attempt automatic logon. Same as /l option except uses the currently logged on user???s name.|
+|-------|--------|
+|/a|Attempt automatic logon. Same as /l option except uses the currently logged on user s name.|
 |/e <EscapeChar>|Escape character used to enter the Telnet client prompt.|
 |/f <FileName>|File name used for client side logging.|
 |/l <UserName>|Specifies the user name to log on with on the remote computer.|
