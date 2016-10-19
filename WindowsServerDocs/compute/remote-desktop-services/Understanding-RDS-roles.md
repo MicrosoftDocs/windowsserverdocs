@@ -37,7 +37,7 @@ The RD Gateway component uses Secure Sockets Layer (SSL) to provide an encrypted
   
 For tenants with small number of users, you can install the RD Gateway role on the same virtual machine running RD Gateway to reduce cost. To provide a highly available service and to scale-out to larger numbers of users, you can create additional RD Gateway virtual machines in the same availability set to create an RD Gateway farm. When implementing an RD Gateway farm, you must configure load balancing for the HTTPS and UDP traffic. With the RD Gateway virtual machines running on Windows Server 2016 and connecting clients using Windows 10, you do not need to configure IP affinity on the load balancer, while other configurations will require you to.  
   
-[//]: <> (Additional information:  
+Additional information:  
 [Deploying and Configuring RD Gateway](http://social.technet.microsoft.com/wiki/contents/articles/10974.deploying-and-configuring-rd-gateway-in-windows-server-2012.aspx  
 [What's New In Windows Server 2012 R2 RD Gateway?](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#loadbalancing )
 
