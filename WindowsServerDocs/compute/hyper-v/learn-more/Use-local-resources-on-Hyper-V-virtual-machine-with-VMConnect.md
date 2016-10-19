@@ -1,6 +1,6 @@
 ---
 title: Use local resources on Hyper-V virtual machine with VMConnect
-description: " "
+description: "Describes the requirements for using local resources with VMConnect"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
