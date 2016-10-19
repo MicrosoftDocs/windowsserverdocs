@@ -44,7 +44,8 @@ There are multiple ways to build a desktop hosting solution based on this archit
   
 The following topics are covered:  
 - [Desktop hosting logical architecture](Desktop-hosting-logical-architecture.md)  
-- [Understanding the desktop hosting environment](Understanding-the-desktop-hosting-environment.md)  
+- [Understand the RDS Roles](Understanding-RDS-roles.md)
+- [Understand the desktop hosting environment](Understanding-the-desktop-hosting-environment.md)  
 - [Azure services and considerations for desktop hosting](Azure-services-and-considerations-for-desktop-hosting.md)
   
  
