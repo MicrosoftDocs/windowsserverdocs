@@ -14,51 +14,9 @@ ms.date: 10/03/2016
 ---
 # Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 
-<<<<<<< HEAD
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
-
-This article describes features available in core components such as networking, storage, memory when using Linux and FreeBSD on a virtual machine. 
-  
-## <a name="BKMK_core"></a>Core  
-  
-|**Feature**|**Description**|  
-|-|-|  
-|Integrated shutdown|With this feature, an administrator can shut down virtual machines from the Hyper-V Manager. For more information, see [Operating system shutdown](https://technet.microsoft.com/library/dn798297(WS.11).aspx#BKMK_Shutdown).|  
-|Time synchronization|This feature ensures that the maintained time inside a virtual machine is kept synchronized with the maintained time on the host. For more information, see [Time synchronization](https://technet.microsoft.com/library/dn798297(WS.11).aspx#BKMK_time).|  
-|Multiprocessing support|With this feature, a virtual machine can use multiple processors on the host by configuring multiple virtual CPUs.|  
-|Heartbeat|With this feature, the host to can track the state of the virtual machine. For more information, see [Heartbeat](https://technet.microsoft.com/library/dn798297(WS.11).aspx#BKMK_heartbeat).|  
-|Integrated mouse support|With this feature, you can use a mouse on a virtual machine's desktop and also use the mouse seamlessly between the Windows Server desktop and the Hyper-V console for the virtual machine.|  
-|Hyper-V specific Storage device|This feature grants high-performance access to storage devices that are attached to a virtual machine.|  
-|Hyper-V specific Network device|This feature grants high-performance access to network adapters that are attached to a virtual machine.|  
-  
-## <a name="BKMK_Networking"></a>Networking  
-  
-|**Feature**|**Description**|  
-|-|-|  
-|Jumbo frames|With this feature, an administrator can increase the size of network frames beyond 1500 bytes, which leads to a significant increase in network performance.|  
-|VLAN tagging and trunking|This feature allows you to configure virtual LAN (VLAN) traffic for virtual machines.|  
-|Live Migration|With this feature, you can migrate a virtual machine from one host to another host. For more   information, see [Virtual Machine Live Migration Overview](https://technet.microsoft.com/library/hh831435.aspx).|  
-|Static IP Injection|With this feature, you can replicate the static IP address of a virtual machine after it has been failed over to its replica on a different host. Such IP replication ensures that network workloads continue to work seamlessly after a failover event.|  
-|vRSS (Virtual Receive Side Scaling)|Spreads the load from a virtual network adapter across multiple virtual processors in a virtual machine.  For more information, see [Virtual Receive-side Scaling in Windows Server 2012 R2](https://technet.microsoft.com/library/dn383582.aspx).|  
-|TCP Segmentation and Checksum Offloads|Transfers segmentation and checksum work from the guest CPU to the host virtual switch or network adapter during network data transfers.|  
-=======
 >Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-The following features are described in this section:
-
-* [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)
-
-* [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)
-
-* [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)
-
-* [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)
-
-* [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)
-
-* [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)
-
-* [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)
+This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine. 
 
 ## <a name="BKMK_core"></a>Core
 
@@ -83,7 +41,6 @@ The following features are described in this section:
 |Static IP Injection|With this feature, you can replicate the static IP address of a virtual machine after it has been failed over to its replica on a different host. Such IP replication ensures that network workloads continue to work seamlessly after a failover event.|
 |vRSS (Virtual Receive Side Scaling)|Spreads the load from a virtual network adapter across multiple virtual processors in a virtual machine.For more information, see [Virtual Receive-side Scaling in Windows Server 2012 R2](https://technet.microsoft.com/library/dn383582.aspx).|
 |TCP Segmentation and Checksum Offloads|Transfers segmentation and checksum work from the guest CPU to the host virtual switch or network adapter during network data transfers.|
->>>>>>> b7355c02a766a2875d5b20bb928f4edb2af84313
 |Large Receive Offload (LRO)|Increases inbound throughput of high-bandwidth connections by aggregating multiple packets into a larger buffer, decreasing CPU overhead.|
 
 ## <a name="BKMK_Storage"></a>Storage
