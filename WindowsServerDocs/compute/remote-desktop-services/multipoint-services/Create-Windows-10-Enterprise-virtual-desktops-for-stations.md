@@ -1,5 +1,6 @@
 ---
 title: Create Windows 10 Enterprise virtual desktops for stations
+description: Learn how to create Windows Server 2016 desktops for station
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
