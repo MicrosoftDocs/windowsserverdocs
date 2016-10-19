@@ -8,7 +8,7 @@ ms.technology: server-nano
 ms.date: 09/27/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
+ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ---
