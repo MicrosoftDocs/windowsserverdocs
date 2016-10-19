@@ -1,5 +1,6 @@
 ---
 title: Deploying MultiPoint Services
+description: Overview of the MultiPoint Services deployment process
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

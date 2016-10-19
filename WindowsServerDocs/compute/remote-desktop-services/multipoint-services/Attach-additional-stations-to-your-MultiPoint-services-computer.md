@@ -1,5 +1,6 @@
 ---
 title: Attach additional stations to your MultiPoint server
+description: Add more stations to your MultiPoint Services deployment
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
