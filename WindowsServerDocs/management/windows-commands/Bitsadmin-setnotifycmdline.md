@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setnotifycmdline
-description: "Windows Commands topic for **** -- Bitsadmin setnotifycmdlineSets the command-line command that will run when the job finishes transferring data or when a job enters a state."
+description: "Windows Commands topic for **** - Bitsadmin setnotifycmdlineSets the command-line command that will run when the job finishes transferring data or when a job enters a state."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setnotifycmdline
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |ProgramName|Name of the command to run when the job completes.|
 |ProgramParameters|Parameters that you want to pass to *ProgramName*.|

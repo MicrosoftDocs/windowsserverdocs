@@ -1,6 +1,6 @@
 ---
 title: Tasklist
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tasklist
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u [<Domain>\\]<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
@@ -40,7 +39,7 @@ tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 |/?|Displays help at the command prompt.|
 #### Filter names, operators, and values
 |Filter Name|Valid Operators|Valid Values|
-|---------------|-------------------|----------------|
+|--------|----------|--------|
 |STATUS|eq, ne|RUNNING &#124; NOT RESPONDING &#124; UNKNOWN|
 |IMAGENAME|eq, ne|Image name|
 |PID|eq, ne, gt, lt, ge, le|PID value|

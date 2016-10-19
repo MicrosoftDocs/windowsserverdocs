@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-The **Maximum lifetime for user ticket** policy setting determines the maximum amount of time (in hours) that a user’s ticket-granting ticket can be used. When a user’s ticket-granting ticket expires, a new one must be requested or the existing one must be renewed.  
+The **Maximum lifetime for user ticket** policy setting determines the maximum amount of time (in hours) that a user???s ticket-granting ticket can be used. When a user???s ticket-granting ticket expires, a new one must be requested or the existing one must be renewed.  
   
 The possible values for this Group Policy setting are:  
   
@@ -41,10 +41,10 @@ This policy setting is supported on versions of Windows that are designated in t
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\  
   
 #### Default Values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
   
 |Server Type or GPO|Default Value|  
-|----------------------|-----------------|  
+|-----------|---------|  
 |Default Domain Policy|10 hours|  
 |Default Domain Controller Policy|Not defined|  
 |Stand-Alone Server Default Settings|Not applicable|  

@@ -23,7 +23,7 @@ This topic describes the AppLocker enforcement settings for rule collections.
 Rule enforcement is applied only to a collection of rules, not to individual rules. AppLocker divides the rules into four collections: executable files, Windows Installer files, scripts, and DLL files. For more information about rule collections, see [Understanding AppLocker Rule Collections](../get-started/how-applocker-works/Understanding-AppLocker-Rule-Collections.md). By default, if enforcement is not configured and rules are present in a rule collection, those rules are enforced. The following table details the three AppLocker rule enforcement settings in Group Policy for each rule collection.
 
 |Enforcement setting|Description|
-|-----------------------|---------------|
+|------------|--------|
 |Not configured|By default, enforcement is not configured in a rule collection. If rules are present in the corresponding rule collection, they are enforced. If rule enforcement is configured in a higher-level linked Group Policy object (GPO), that enforcement value overrides the **Not configured**  value.|
 |Enforce rules|Rules are enforced for the rule collection, and all rule events are audited.|
 |Audit only|Rule events are audited only. Use this value when planning and testing AppLocker rules.|

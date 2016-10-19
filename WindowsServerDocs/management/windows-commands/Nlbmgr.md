@@ -1,6 +1,6 @@
 ---
 title: Nlbmgr
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nlbmgr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/help|Displays help at the command prompt.|
 |/noping|Prevents Network Load Balancing Manager from pinging the hosts prior to trying to contact them through Windows Management Instrumentation (WMI). Use this option if you have disabled Internet Control Message Protocol (ICMP) on all available network adapters. If Network Load Balancing Manager attempts to contact a host that is not available, you will experience a delay when using this option.|
 |/hostlist <filename>|Loads the hosts specified in filename into Network Load Balancing Manager.|

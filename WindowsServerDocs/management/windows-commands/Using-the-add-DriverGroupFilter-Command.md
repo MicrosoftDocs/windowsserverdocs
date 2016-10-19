@@ -1,6 +1,6 @@
 ---
 title: Using the add-DriverGroupFilter Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the add-DriverGroupFilter Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ WDSUTIL /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/DriverGroup:<Group Name>|Specifies the name of the driver group.|  
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|  
 |/FilterType:<FilterType>|Specifies the type of filter to add to the group. You can specify multiple filter types in a single command. Each filter type must be followed by **/Policy** and include at least one **/Value**. <FilterType> can be **BiosVendor**, **BiosVersion**, **ChassisType**, **Manufacturer**, **Uuid**, **OsVersion**, **OsEdition**, or **OsLanguage**. For information about obtaining the values for all other filter types, see [Driver Group Filters](http://go.microsoft.com/fwlink/?LinkID=155158) (http://go.microsoft.com/fwlink/?LinkID=155158).|  

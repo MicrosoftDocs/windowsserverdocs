@@ -1,6 +1,6 @@
 ---
 title: Fsutil reparsepoint
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil reparsepoint
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -33,7 +32,7 @@ fsutil reparsepoint [delete] <FileName>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |query|Retrieves the reparse point data that is associated with the file or directory identified by the specified handle.|  
 |delete|Deletes a reparse point from the file or directory that is identified by the specified handle, but does not delete the file or directory.|  
 |<FileName>|Specifies the full path to the file including the file name and extension, for example C:\\documents\\filename.txt.|  

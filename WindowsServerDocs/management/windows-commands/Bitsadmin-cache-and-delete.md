@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and delete
-description: "Windows Commands topic for **Bitsadmin cache and delete** -- Deletes a specific cache entry."
+description: "Windows Commands topic for **Bitsadmin cache and delete** - Deletes a specific cache entry."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin cache and delete
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /Cache /Delete RecordID
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |RecordID|The GUID associated with the cache entry.|
 ## <a name="BKMK_examples"></a>Examples
 The following example deletes the cache entry with the RecordID of {6511FB02-E195-40A2-B595-E8E2F8F47702}.

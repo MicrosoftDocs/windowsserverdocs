@@ -1,6 +1,6 @@
 ---
 title: Using the get-TransportServer Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-TransportServer Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Show:{Config}|Returns configuration information about the specified Transport Server.|
 ## <a name="BKMK_examples"></a>Examples
@@ -42,6 +41,6 @@ WDSUTIL /Get-TransportServer /Server:MyWDSServer /Show:Config
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 [Using the disable-TransportServer Command](Using-the-disable-TransportServer-Command.md)
 [Using the enable-TransportServer Command](Using-the-enable-TransportServer-Command.md)
-[Subcommand: set-TransportServer](Subcommand--set-TransportServer.md)
-[Subcommand: start-TransportServer](Subcommand--start-TransportServer.md)
-[Subcommand: stop-TransportServer](Subcommand--stop-TransportServer.md)
+[Subcommand: set-TransportServer](Subcommand-set-TransportServer.md)
+[Subcommand: start-TransportServer](Subcommand-start-TransportServer.md)
+[Subcommand: stop-TransportServer](Subcommand-stop-TransportServer.md)

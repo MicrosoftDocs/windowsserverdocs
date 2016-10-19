@@ -1,6 +1,6 @@
 ---
 title: Secedit:import
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Secedit:import
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ Secedit /import /db <database file name> /cfg <configuration file name> [/overwr
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |db|Required.<br /><br />Specifies the path and file name of a database that contains the stored configuration into which the import will be performed.<br /><br />If file name specifies a database that has not had a security template (as represented by the configuration file) associated with it, the `/cfg <configuration file name>` command-line option must also be specified.|
 |overwrite|Optional.<br /><br />Specifies whether the security template in the /cfg parameter should overwrite any template or composite template that is stored in the database instead of appending the results to the stored template.<br /><br />This command-line option is only valid when the `/cfg <configuration file name>` parameter is also used. If this is not specified, the template in the /cfg parameter is appended to the stored template.|
 |cfg|Required.<br /><br />Specifies the path and file name for the security template that will be imported into the database for analysis.<br /><br />This /cfg option is only valid when used with the `/db <database file name>` parameter. If this is not specified, the analysis is performed against any configuration already stored in the database.|

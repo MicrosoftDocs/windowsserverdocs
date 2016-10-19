@@ -1,6 +1,6 @@
 ---
 title: Ren
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ren
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ rename [<Drive>:][<Path>]<FileName1> <FileName2>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:][<Path>]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters (**\*** and **?**).|
 |<FileName2>|Specifies the new name for the file. You can use wildcard characters to specify new names for multiple files.|
 |/?|Displays help at the command prompt.|

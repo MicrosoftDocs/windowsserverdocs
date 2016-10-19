@@ -1,6 +1,6 @@
 ---
 title: Auditpol clear
-description: "Windows Commands topic for **Auditpol clear** -- Deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled."
+description: "Windows Commands topic for **Auditpol clear** - Deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol clear
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Auditpol /clear [/y]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/y|Suppresses the prompt to confirm if all audit policy settings should be cleared.|
 |/?|Displays help at the command prompt.|
 ## Remarks

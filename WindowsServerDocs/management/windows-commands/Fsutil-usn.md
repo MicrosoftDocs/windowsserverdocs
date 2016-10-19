@@ -1,6 +1,6 @@
 ---
 title: Fsutil usn
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil usn
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ fsutil usn [readdata] <FileName>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |createjournal|Creates a USN change journal.|  
 |m\=<MaxSize>|Specifies the maximum size, in bytes, that NTFS allocates for the change journal.|  
 |a\=<AllocationDelta>|Specifies the size, in bytes, of memory allocation that is added to the end and removed from the beginning of the change journal.|  

@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin list
-description: "Windows Commands topic for **Bitsadmin list** -- Lists the transfer jobs owned by the current user."
+description: "Windows Commands topic for **Bitsadmin list** - Lists the transfer jobs owned by the current user."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin list
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,9 +25,9 @@ bitsadmin /List [/allusers][/verbose]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
-|/Allusers|Optional—lists jobs for all users|
-|/Verbose|Optional—provides detail information for each job.|
+|-------|--------|
+|/Allusers|Optional lists jobs for all users|
+|/Verbose|Optional provides detail information for each job.|
 ## Remarks
 You must have administrator privileges to use the /allusers parameter
 ## <a name="BKMK_examples"></a>Examples

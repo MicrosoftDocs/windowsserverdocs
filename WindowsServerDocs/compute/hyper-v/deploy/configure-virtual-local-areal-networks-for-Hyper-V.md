@@ -1,6 +1,6 @@
 ---
 title: Configure virtual local area networks for Hyper-V
-description: " "
+description: "Gives instructions for configuring a virtual local area network (VLAN) for use by virtual machines on a Hyper-V host."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

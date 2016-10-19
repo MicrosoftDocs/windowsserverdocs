@@ -1,6 +1,6 @@
 ---
 title: Supported Linux and FreeBSD virtual machines for Hyper-V on Windows
-description: " "
+description: "Lists the Linux integration services and features included in each version"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

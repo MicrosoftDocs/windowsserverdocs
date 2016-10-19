@@ -82,7 +82,7 @@ Software Restriction Policies is an extension of the Local Group Policy Editor a
 The following table provides links to relevant resources in understanding and using SRP.
 
 |Content type|References|
-|----------------|--------------|
+|--------|-------|
 |**Product evaluation**|[Application Lockdown with Software Restriction Policies](http://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
 |**Planning**|[Software Restriction Policies Technical Overview](Software-Restriction-Policies-Technical-Overview.md) ( Windows Server 2012 )<br /><br />[Software Restriction Policies Technical Reference](http://technet.microsoft.com/library/cc728085(v=WS.10).aspx) (Windows Server 2003)|
 |**Deployment**|No resources available.|

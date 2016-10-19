@@ -1,6 +1,6 @@
 ---
 title: Bootcfg query
-description: "Windows Commands topic for **Bootcfg query** -- Queries and displays the [boot loader] and [operating systems] section entries from Boot.ini."
+description: "Windows Commands topic for **Bootcfg query** - Queries and displays the [boot loader] and [operating systems] section entries from Boot.ini."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bootcfg query
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ bootcfg /query [/s <Computer> [/u <Domain>\<User> /p <Password>]]
 ```
 ## Parameters
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User>or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
@@ -36,11 +35,11 @@ bootcfg /query [/s <Computer> [/u <Domain>\<User> /p <Password>]]
 -   The following is a sample of **bootcfg /query** output:
     ```
     Boot Loader Settings
-    --------------------
+    ----------
     timeout: 30
     default: multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
     Boot Entries
-    ------------
+    ------
     Boot entry ID:   1
     Friendly Name:   ""
     Path:            multi(0)disk(0)rdisk(0)partition(1)\WINDOWS

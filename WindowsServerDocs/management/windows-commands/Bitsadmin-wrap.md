@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin wrap
-description: "Windows Commands topic for **Bitsadmin wrap** -- Wraps any line of output text extending beyond the rightmost edge of the command window to the next line."
+description: "Windows Commands topic for **Bitsadmin wrap** - Wraps any line of output text extending beyond the rightmost edge of the command window to the next line."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin wrap
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /Wrap Job
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 ## Remarks
 Specify before other commands. By default, all commands, except the [Bitsadmin monitor](Bitsadmin-monitor.md) command, wrap the output.

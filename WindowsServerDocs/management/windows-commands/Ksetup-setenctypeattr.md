@@ -1,6 +1,6 @@
 ---
 title: Ksetup:setenctypeattr
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:setenctypeattr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 |
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<DomainName>|Name of the domain to which you want to establish a connection. Use the fully qualified domain name or a simple form of the name, such as corp.contoso.com or contoso.|
 |Encryption type|Must be one of the following supported encryption types:<br /><br />-   DES-CBC-CRC<br />-   DES-CBC-MD5<br />-   RC4-HMAC-MD5<br />-   AES128-CTS-HMAC-SHA1-96<br />-   AES256-CTS-HMAC-SHA1-96|
 ## Remarks

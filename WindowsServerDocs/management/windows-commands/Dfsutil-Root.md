@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ dfsutil root <\\server\share> [Verbose] | AddDom | AddStd | Remove | Export | Im
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\server\\share>|UNC path to the namespace.|
 |Verbose|Displays additional information while the command runs.|
 |[Dfsutil Root AddDom](Dfsutil-Root-AddDom.md)|Creates a new domain\-based namespace.|

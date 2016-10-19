@@ -1,6 +1,6 @@
 ---
 title: Edit
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Edit
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<Path>]<FileName> [<FileName2> [..
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |[<Drive>:][<Path>]<FileName> [<FileName2> [...]]|Specifies the location and name of one or more ASCII text files. If the file does not exist, MS-DOS Editor creates it. If the file exists, MS-DOS Editor opens it and displays its contents on the screen. *FileName* can contain wildcard characters (**\*** and **?**). Separate multiple file names with spaces.|  
 |/b|Forces monochrome mode, so that MS-DOS Editor displays in black and white.|  
 |/h|Displays the maximum number of lines possible for the current monitor.|  

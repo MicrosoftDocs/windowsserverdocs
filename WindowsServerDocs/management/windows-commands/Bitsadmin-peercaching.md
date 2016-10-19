@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin peercaching
-description: "Windows Commands topic for **Bitsadmin peercaching** -- Listing of the peercaching commands."
+description: "Windows Commands topic for **Bitsadmin peercaching** - Listing of the peercaching commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin peercaching
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Bitsadmin /PeerCaching /GetConfigurationFlags
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Bitsadmin peercaching and help](Bitsadmin-peercaching-and-help.md)|Displays the command-line usage for the /PeerCaching commands.|
 |[Bitsadmin peercaching and setconfigurationflags](Bitsadmin-peercaching-and-setconfigurationflags.md)|Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers.|
 |[Bitsadmin peercaching and getconfigurationflags](Bitsadmin-peercaching-and-getconfigurationflags.md)|Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.|

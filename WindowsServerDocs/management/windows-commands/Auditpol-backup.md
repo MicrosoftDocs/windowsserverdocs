@@ -1,6 +1,6 @@
 ---
 title: Auditpol backup
-description: "Windows Commands topic for **Auditpol backup** -- Backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file."
+description: "Windows Commands topic for **Auditpol backup** - Backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol backup
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Auditpol /backup /file:<filename>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/file|Specifies the name of the file to which the audit policy will be backed up.|
 |/?|Displays help at the command prompt.|
 ## Remarks

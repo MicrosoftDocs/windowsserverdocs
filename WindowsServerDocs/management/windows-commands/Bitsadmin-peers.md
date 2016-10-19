@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin peers
-description: "Windows Commands topic for **Bitsadmin peers** -- Listing of the **Peers** commands."
+description: "Windows Commands topic for **Bitsadmin peers** - Listing of the **Peers** commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin peers
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Bitsadmin /Peers /List
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Bitsadmin peers and help](Bitsadmin-peers-and-help.md)|Displays the command-line usage for the /Peers commands.|
 |[Bitsadmin peers and discover](Bitsadmin-peers-and-discover.md)|Discovers peers again.|
 |[Bitsadmin peers and clear](Bitsadmin-peers-and-clear.md)|Clears the peers list.|

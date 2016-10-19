@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Property
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ dfsutil property Sitecosting | RootScalability | ABE | Insite | TargetfailBack |
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Dfsutil Property Sitecosting|Displays or modifies site costing for a namespace.|
 |Dfsutil Property RootScalability|Displays or modifies the namsespace polling mode.|
 |Dfsutil Property ABE|Enable\/Disable\/View ABE property of a namespace.|

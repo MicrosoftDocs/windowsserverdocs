@@ -29,7 +29,7 @@ Security settings can control:
 
 -   The resources that users are permitted to access.
 
--   Whether to record a userâ€™s or groupâ€™s actions in the Event log.
+-   Whether to record a user????????s or group????????s actions in the Event log.
 
 -   Membership in a group.
 
@@ -88,12 +88,12 @@ As part of your security strategy, you can create GPOs with security settings po
 
 You can create an organizational unit (OU) structure that groups computers according to their roles. Using OUs is the best method for separating specific security requirements for the different computer roles in your network. This approach also allows you to apply customized security templates to each class of server or computer. After creating the security templates, you create a new GPO for each of the OUs, and then import the security template (.inf file) into the new GPO.
 
-Importing a security template to a GPO ensures that any accounts to which the GPO is applied automatically receive the templateâ€™s security settings when the Group Policy settings are refreshed. On a workstation or server, the security settings are refreshed at regular intervals (with a random offset of at most 30 minutes), and, on a domain controller, this process occurs every few minutes if changes have occurred in any of the GPO settings that apply. The settings are also refreshed every 16 hours, whether or not any changes have occurred.
+Importing a security template to a GPO ensures that any accounts to which the GPO is applied automatically receive the template????????s security settings when the Group Policy settings are refreshed. On a workstation or server, the security settings are refreshed at regular intervals (with a random offset of at most 30 minutes), and, on a domain controller, this process occurs every few minutes if changes have occurred in any of the GPO settings that apply. The settings are also refreshed every 16 hours, whether or not any changes have occurred.
 
 > [!NOTE]
 > These refresh settings vary between versions of the operating system and can be configured.
 
-By using Group Policyâˆ’based security configurations in conjunction with the delegation of administration, you can ensure that specific security settings, rights, and behavior are applied to all servers and computers within an OU. This approach makes it simple to update a number of servers with any additional changes required in the future.
+By using Group Policy???????based security configurations in conjunction with the delegation of administration, you can ensure that specific security settings, rights, and behavior are applied to all servers and computers within an OU. This approach makes it simple to update a number of servers with any additional changes required in the future.
 
 ### Dependencies on other operating system technologies
 For computers that are members of a  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 domain, Security Settings policies depend on the following technologies:
@@ -132,7 +132,7 @@ For computers that are members of a  Windows Server 2012 , Windows Server 2008 R
 
 -   **Resultant Set of Policy (RSoP)**
 
-    An enhanced Group Policy infrastructure that uses WMI in order to make it easier to plan and debug policy settings. RSoP provides public methods that expose what an extension to Group Policy would do in a what-if situation, and what the extension has done in an actual situation. This allows administrators to easily determine the combination of policy settings that apply to, or will apply to, a user or computer. In  Windows Server 2012 , this feature has tighter coupling with Group Policyâ€™s Infrastructure Status feature.
+    An enhanced Group Policy infrastructure that uses WMI in order to make it easier to plan and debug policy settings. RSoP provides public methods that expose what an extension to Group Policy would do in a what-if situation, and what the extension has done in an actual situation. This allows administrators to easily determine the combination of policy settings that apply to, or will apply to, a user or computer. In  Windows Server 2012 , this feature has tighter coupling with Group Policy????????s Infrastructure Status feature.
 
 -   **Service Control Manager (SCM)**
 
@@ -186,9 +186,9 @@ The Security Settings extension of the Local Group Policy Editor is part of the 
 
 ![Diagram showing the Security Settings extension of the Local Group Policy Editor](../media/Security-Policy-Settings-Technical-Overview/secpol_architecture.gif)
 
-The security settings configuration and analysis tools include a security configuration engine, which provides local computer (non-domain member) and Group Policyâˆ’based configuration and analysis of security settings policies. The security configuration engine also supports the creation of security policy files. The primary features of the security configuration engine are Scecli.dll and Scesrv.dll.
+The security settings configuration and analysis tools include a security configuration engine, which provides local computer (non-domain member) and Group Policy???????based configuration and analysis of security settings policies. The security configuration engine also supports the creation of security policy files. The primary features of the security configuration engine are Scecli.dll and Scesrv.dll.
 
-The following list describes these primary features of the security configuration engine and other Security Settingsâˆ’related features.
+The following list describes these primary features of the security configuration engine and other Security Settings???????related features.
 
 -   **Scesrv.dll**
 
@@ -284,7 +284,7 @@ When a computer starts and a user logs on, computer policy and user policy are a
 
 8.  User policy is applied. These are the settings under User Configuration from the gathered list. This is synchronous by default and in the following order: local, site, domain, organizational unit, child organizational unit, and so on. No user interface appears while user policies are processed.
 
-9. Logon scripts run. Group Policyâˆ’based logon scripts are hidden and asynchronous by default. The user object script runs last.
+9. Logon scripts run. Group Policy???????based logon scripts are hidden and asynchronous by default. The user object script runs last.
 
 10. The operating system user interface that is prescribed by Group Policy appears.
 
@@ -295,7 +295,7 @@ A Group Policy Object (GPO) is a virtual object that is identified by a Globally
 
     The Group Policy container is an Active Directory container that contains GPO properties, such as version information, GPO status, plus a list of other component settings.
 
--   **Group Policy templates in a domainâ€™s system volume folder (SYSVOL).**
+-   **Group Policy templates in a domain????????s system volume folder (SYSVOL).**
 
     The Group Policy template is a file system folder that includes policy data specified by .admx files, security settings, script files, and information about applications that are available for installation. The Group Policy template is located in the SYSVOL folder in the domain\Policies subfolder.
 
@@ -335,7 +335,7 @@ In the context of Group Policy processing, Security Settings policy is processed
 
 3.  The Security Settings extension downloads the policy from the appropriate location such as a specific domain controller.
 
-4.  The Security Settings extension merges all security settings policies according to precedence rules. The processing is according to the Group Policy processing order of local, site, domain, and organizational unit (OU), as described earlier in the â€œGroup Policy processing orderâ€? section. If multiple GPOs are in effect for a given computer and there are no conflicting policies, then the policies are cumulative and are merged.
+4.  The Security Settings extension merges all security settings policies according to precedence rules. The processing is according to the Group Policy processing order of local, site, domain, and organizational unit (OU), as described earlier in the ???????Group Policy processing order?????? section. If multiple GPOs are in effect for a given computer and there are no conflicting policies, then the policies are cumulative and are merged.
 
     This example uses the Active Directory structure shown in the following figure. A given computer is a member of OU2, to which the **GroupMembershipPolGPO** GPO is linked. This computer is also subject to the **UserRightsPolGPO** GPO, which is linked to OU1, higher in the hierarchy. In this case, no conflicting policies exist so the computer receives all of the policies contained in both the **UserRightsPolGPO** and the **GroupMembershipPolGPO** GPOs.
 
@@ -391,7 +391,7 @@ Security Settings might persist in the following cases:
 
 -   The settings are for a file system security object.
 
-All settings applied through local policy or through a Group Policy Object are stored in a local database on your computer. Whenever a security setting is modified, the computer saves the security setting value to the local database, which retains a history of all the settings that have been applied to the computer. If a policy first defines a security setting and then no longer defines that setting, then the setting takes on the previous value in the database. If a previous value does not exist in the database then the setting does not revert to anything and remains defined as is. This behavior is sometimes referred to as â€œtattooing.â€?
+All settings applied through local policy or through a Group Policy Object are stored in a local database on your computer. Whenever a security setting is modified, the computer saves the security setting value to the local database, which retains a history of all the settings that have been applied to the computer. If a policy first defines a security setting and then no longer defines that setting, then the setting takes on the previous value in the database. If a previous value does not exist in the database then the setting does not revert to anything and remains defined as is. This behavior is sometimes referred to as ???????tattooing.??????
 
 Registry and file security settings will maintain the values applied through Group Policy until that setting is set to other values.
 
@@ -431,7 +431,7 @@ To ensure that data is copied correctly, administrators can use Group Policy Man
 The following table lists relevant and supporting documentation for the Security Settings extensions.
 
 |Technology content|Resources|
-|----------------------|-------------|
+|-----------|-------|
 |Group Policy|[Group Policy Overview](../../management/group-policy/get-started/Group-Policy-Overview.md)|
 |Security Tools|[Security Tools](http://technet.microsoft.com/library/cc722416(WS.10).aspx)|
 |Security settings|[Security Policy Settings Reference](http://technet.microsoft.com/library/jj852210(v=ws.10).aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](http://technet.microsoft.com/library/hh125921(WS.10).aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 and Windows Vista](http://technet.microsoft.com/library/dd349791(WS.10).aspx)|

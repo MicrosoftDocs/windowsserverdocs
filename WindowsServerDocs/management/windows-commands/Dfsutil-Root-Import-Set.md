@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root Import Set
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil root import set <\\srcserver\share>|<filename> <\\destserver\share> [NoB
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\srcserver\\share>|UNC path to the namespace from which you want to import the configuration.|
 |<\\\\destserver\\share>|UNC path to the namespace to which you want to import the configuration.|
 |<filename>|Name of the xml file from which you want to import the namespace configuration.|

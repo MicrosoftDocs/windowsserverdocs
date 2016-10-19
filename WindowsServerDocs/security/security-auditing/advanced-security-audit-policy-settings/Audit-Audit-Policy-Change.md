@@ -49,7 +49,7 @@ Default: Success
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4715|The audit policy (SACL) on an object was changed.|
 |4719|System audit policy was changed.|
 |4817|Auditing settings on an object were changed. **Note:** This event is logged only on computers running the supported versions of the Windows operating system.|

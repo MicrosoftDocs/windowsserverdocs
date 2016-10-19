@@ -39,7 +39,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4709|IPsec Services was started.|
 |4710|IPsec Services was disabled.|
 |4711|May contain any one of the following:<br /><br />-   PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer.<br />-   PAStore Engine applied Active Directory storage IPsec policy on the computer.<br />-   PAStore Engine applied local registry storage IPsec policy on the computer.<br />-   PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer.<br />-   PAStore Engine failed to apply Active Directory storage IPsec policy on the computer.<br />-   PAStore Engine failed to apply local registry storage IPsec policy on the computer.<br />-   PAStore Engine failed to apply some rules of the active IPsec policy on the computer.<br />-   PAStore Engine failed to load directory storage IPsec policy on the computer.<br />-   PAStore Engine loaded directory storage IPsec policy on the computer.<br />-   PAStore Engine failed to load local storage IPsec policy on the computer.<br />-   PAStore Engine loaded local storage IPsec policy on the computer.<br />-   PAStore Engine polled for changes to the active IPsec policy and detected no changes.|

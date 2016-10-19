@@ -1,6 +1,6 @@
 ---
 title: Create volume stripe
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Create volume stripe
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,7 +21,7 @@ ms.date: 10/12/2016
 Creates a striped volume using two or more specified dynamic disks.  
   
 > [!IMPORTANT]  
-> For Windows??Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.  
+> For Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.  
   
   
   
@@ -35,7 +34,7 @@ create volume stripe [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |size\=<n>|The amount of disk space, in megabytes \(MB\), that the volume will occupy on each disk. If no size is given, the new volume takes up the remaining free space on the smallest disk and an equal amount of space on each subsequent disk.|  
 |disk\=<n>,<n>\[,<n>,...\]|The dynamic disks on which the striped volume is created. You need at least two dynamic disks to create a striped volume. An amount of space equal to **size\=<n>** is allocated on each disk.|  
 |align\=<n>|Aligns all volume extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  

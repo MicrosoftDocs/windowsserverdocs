@@ -1,6 +1,6 @@
 ---
 title: Auditpol restore
-description: "Windows Commands topic for **Auditpol restore** -- 
+description: "Windows Commands topic for **Auditpol restore** - 
 Restores system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file that is syntactically consistent with the comma-separated value (CSV) file format used by the /backup option."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol restore
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ Auditpol /restore /file:<filename>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/file|Specifies the file from which the audit policy should be restored. The file must have been created by using the /backup option or must be syntactically consistent with the CSV file format used by the /backup option.|
 |/?|Displays help at the command prompt.|
 ## Remarks

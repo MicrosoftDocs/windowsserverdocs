@@ -1,6 +1,6 @@
 ---
 title: Auditpol resourceSACL
-description: "Windows Commands topic for **uditpol resourceSACL** -- Configures global resource system access control lists (SACLs)."
+description: "Windows Commands topic for **uditpol resourceSACL** - Configures global resource system access control lists (SACLs)."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol resourceSACL
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -33,7 +32,7 @@ auditpol /resourceSACL
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/set|Adds a new entry to or updates an existing entry in the resource SACL for the resource type specified.|
 |/remove|Removes all entries for the given user in the global object access auditing list.|
 |/clear|Removes all entries from the global object access auditing list.|
@@ -41,7 +40,7 @@ auditpol /resourceSACL
 |/?|Displays help at the command prompt.|
 ## Arguments
 |Argument|Description|
-|------------|---------------|
+|------|--------|
 |/type|The resource for which object access auditing is being configured. The supported argument values are File (for directories and files) and Key (for registry keys). **Note:** The file and key values are case-sensitive.|
 |/success|Specifies success auditing.|
 |/failure|Specifies failure auditing.|

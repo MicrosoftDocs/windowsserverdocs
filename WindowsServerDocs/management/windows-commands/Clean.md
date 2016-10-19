@@ -1,6 +1,6 @@
 ---
 title: Clean
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Clean
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ clean [all]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |all|Specifies that each and every sector on the disk is set to zero, which completely deletes all data contained on the disk.|
 ## Remarks
 -   On master boot record (MBR) disks, only the MBR partitioning information and hidden sector information are overwritten.

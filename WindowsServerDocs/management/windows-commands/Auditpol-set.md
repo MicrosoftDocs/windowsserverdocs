@@ -1,6 +1,6 @@
 ---
 title: Auditpol set
-description: "Windows Commands topic for **Auditpol set** -- 
+description: "Windows Commands topic for **Auditpol set** - 
 Sets the per-user audit policy, system audit policy, or auditing options."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol set
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,15 +25,15 @@ Sets the per-user audit policy, system audit policy, or auditing options.
 ```
 Auditpol /set
 [/user[:<username>|<{sid}>][/include][/exclude]]
-[/category:<name>|<{guid}>[,:<name|<{guid}>…]]
+[/category:<name>|<{guid}>[,:<name|<{guid}> ]]
 [/success:<enable>|<disable>][/failure:<enable>|<disable>]
-[/subcategory:<name>|<{guid}>[,:<name|<{guid}>…]]
+[/subcategory:<name>|<{guid}>[,:<name|<{guid}> ]]
 [/success:<enable>|<disable>][/failure:<enable>|<disable>]
 [/option:<option name> /value: <enable>|<disable>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/user|The security principal for whom the per-user audit policy specified by the category or subcategory is set. Either the category or subcategory option must be specified, as a security identifier (SID) or name.|
 |/include|Specified with /user; indicates that the user's per-user policy will cause an audit to be generated even if it is not specified by the system audit policy. This setting is the default and is automatically applied if neither the /include nor /exclude parameters are explicitly specified.|
 |/exclude|Specified with /user; indicates that the user's per-user policy will cause an audit to be suppressed regardless of the system audit policy. This setting is ignored for users who are members of the local Administrators group.|

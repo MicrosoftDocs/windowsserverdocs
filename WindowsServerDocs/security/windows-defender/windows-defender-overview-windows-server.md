@@ -83,7 +83,7 @@ To ensure that protection from malware is maintained, we recommend that you enab
 The following table lists the services for Windows Defender and the dependent services.
 
 |Service Name|File Location|Description|
-|----------------|-----------------|---------------|
+|--------|---------|--------|
 |Windows Defender Service (Windefend)|C:\Program Files\Windows Defender\MsMpEng.exe|This is the main Windows Defender service that needs to be running at all times.|
 |Windows Defender Network Inspection Service (Wdnissvc)|C:\Program Files\Windows Defender\NisSrv.exe|This service is invoked when Windows Defender encounters a trigger to load it.|
 |Windows Error Reporting Service (Wersvc)|C:\WINDOWS\System32\svchost.exe -k WerSvcGroup|This service sends   error reports back to Microsoft.|

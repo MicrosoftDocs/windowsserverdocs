@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # WSUS and the Catalog Site
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -59,7 +58,7 @@ WSUS administrators might consider restricting access to the hotfixes they have 
 
     -   Select **Windows Authentication** and click **Enable** in the **Actions** pane on the right.
 
-2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/2--Configure-WSUS.md#BKMK_ConfigComputerGroups) of Step 3: Configure WSUS, in the WSUS deployment guide.
+2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/2-Configure-WSUS.md#BKMK_ConfigComputerGroups) of Step 3: Configure WSUS, in the WSUS deployment guide.
 
 3.  Download the files for the hotfix.
 

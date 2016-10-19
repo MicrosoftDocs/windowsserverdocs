@@ -25,7 +25,7 @@ The path condition identifies an application by its location in the file system 
 When creating a rule that uses a deny action, path conditions are less secure than publisher and file hash conditions for preventing access to a file because a user could easily copy the file to a different location than the location specified in the rule. Because path rules specify locations within the file system, you should ensure that there are no subdirectories that are writable by non-administrators. For example, if you create a path rule for C:\ with the allow action, any file under that location will be allowed to run, including within users' profiles. The following table describes the advantages and disadvantages of the path condition.
 
 |Path condition advantages|Path condition disadvantages|
-|-----------------------------|--------------------------------|
+|---------------|----------------|
 |-   You can easily control many directories or a single file.<br />-   You can use the asterisk (*) as a wildcard character within path rules.|-   It might be less secure if a rule that is configured to use a directory path contains subdirectories that are writable by non-administrators.<br />-   You must specify the full path to a file or folder when creating path rules so that the rule will be properly enforced.|
 
 AppLocker does not enforce rules that specify paths with short names. You should always specify the full path to a file or folder when creating path rules so that the rule will be properly enforced.
@@ -35,7 +35,7 @@ The asterisk (\*) wildcard character can be used within **Path** field. The aste
 AppLocker uses path variables for well-known directories in Windows. Path variables are not environment variables. The AppLocker engine can only interpret AppLocker path variables. The following table details these path variables.
 
 |Windows directory or drive|AppLocker path variable|Windows environment variable|
-|------------------------------|---------------------------|--------------------------------|
+|---------------|--------------|----------------|
 |Windows|%WINDIR%|%SystemRoot%|
 |System32|%SYSTEM32%|%SystemDirectory%|
 |Windows installation directory|%OSDRIVE%|%SystemDrive%|

@@ -7,7 +7,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Server Performance Advisor Pack Development Guide
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -18,21 +17,21 @@ It assumes you are familiar with Performance Logs and Alerts (PLA), performance 
 
 This guide applies to the following versions of Windows Server:
 
--   Windows Server 2012 R2
+-   Windows Server 2012 R2
 
--   Windows Server 2012
+-   Windows Server 2012
 
--   Windows Server 2008 R2
+-   Windows Server 2008 R2
 
--   Windows Server 2008
+-   Windows Server 2008
 
 This guide applies to the following versions of Windows:
 
--   Windows 8.1
+-   Windows 8.1
 
--   Windows 8
+-   Windows 8
 
--   Windows 7
+-   Windows 7
 
 For more info about using SPA, see [Server Performance Advisor User's Guide](server-performance-advisor-users-guide.md).
 
@@ -65,7 +64,7 @@ An advisor pack includes the following elements:
 
     -   SQL objects, such as stored procedures and user-defined functions
 
--   **ETW schema file** (Schema.man)—this is optional
+-   **ETW schema file** (Schema.man) this is optional
 
 ### Advisor pack workflow
 
@@ -124,7 +123,7 @@ main.sql
 
 func.sql
 
-…
+ 
 
 Schema.man
 
@@ -132,10 +131,10 @@ Every advisor pack must have a file called ProvisionMetadata.xml. It defines bas
 
 All report SQL scripts must be saved in a subfolder called **Scripts**. For maintenance purposes, we recommend that you save different database objects in different SQL Server files. There must be at least one stored procedure as a main entry point.
 
-**Note**  
+**Note**
 The schema.man file is not required unless your advisor pack collects ETW traces. This schema file is used to describe the schema of the ETW events and to decode ETW events.
 
- 
+ 
 
 ### Defining basic information
 
@@ -145,15 +144,15 @@ The following is an example header for the ProvisionMetadata.xml file:
 
 ``` syntax
 <advisorPack
-  xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/ap/2010"
-  name="Microsoft.ServerPerformanceAdvisor.CoreOS.V2"
-  displayName="Microsoft CoreOS Advisor Pack V2"
-  description="Microsoft CoreOS Advisor Pack"
-  author="Microsoft"
-  version="1.0"
-  frameworkVersion="3.0"
-  minOSVersion="6.0"
-  reportScript="ReportScript">
+xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/ap/2010"
+name="Microsoft.ServerPerformanceAdvisor.CoreOS.V2"
+displayName="Microsoft CoreOS Advisor Pack V2"
+description="Microsoft CoreOS Advisor Pack"
+author="Microsoft"
+version="1.0"
+frameworkVersion="3.0"
+minOSVersion="6.0"
+reportScript="ReportScript">
 </advisorPack>
 ```
 
@@ -197,25 +196,25 @@ A data collector set defines the performance data that the SPA framework should 
 
 ``` syntax
 <advisorPack>
-  <dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
-    <dataCollectorSet duration="10">
-      <registryKeys>
-        <registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\\</registryKey>
-      </registryKeys>
-      <managementPaths>
-        <path>Root\Cimv2:SELECT * FROM Win32_DiskDrive</path>
-      </managementPaths>
-      <performanceCounters interval="2">
-        <performanceCounter>\PhysicalDisk(*)\Avg. Disk sec/Transfer</performanceCounter>
-      </performanceCounters>
-      <files>
-        <path>%windir%\System32\inetsrv\config\applicationHost.config</path>
-      </files>
-      <providers>
-        <provider session="NT Kernel Logger" guid="{9E814AAD-3204-11D2-9A82-006008A86939}" keywordsAny="06010201" keywordsAll="00000000" level="00000000" />
-      </providers>
-    </dataCollectorSet>
-  </dataSourceDefinition>
+<dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
+ <dataCollectorSet duration="10">
+<registryKeys>
+ ?<registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\\</registryKey>
+</registryKeys>
+<managementPaths>
+ ?<path>Root\Cimv2:SELECT * FROM Win32_DiskDrive</path>
+</managementPaths>
+<performanceCounters interval="2">
+ ?<performanceCounter>\PhysicalDisk(*)\Avg. Disk sec/Transfer</performanceCounter>
+</performanceCounters>
+<files>
+ ?<path>%windir%\System32\inetsrv\config\applicationHost.config</path>
+</files>
+<providers>
+ ?<provider session="NT Kernel Logger" guid="{9E814AAD-3204-11D2-9A82-006008A86939}" keywordsAny="06010201" keywordsAll="00000000" level="00000000" />
+</providers>
+ </dataCollectorSet>
+</dataSourceDefinition>
 </advisorPack>
 ```
 
@@ -252,8 +251,8 @@ Windows Registry Editor Version 5.00
 "ActivePowerScheme"="db310065-829b-4671-9647-2261c00e86ef"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef]
-"Description"=�?�?
-“FriendlyName�?=�?Power Source Optimized�?
+"Description"=
+ FriendlyName = Power Source Optimized 
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef \0012ee47-9041-4b5d-9b77-535fba8b1442\6738e2c4-e8a5-4a42-b16a-e040e769756e
 "ACSettingIndex"=dword:000000b4
@@ -268,10 +267,10 @@ Example 1: Return only the active PowerSchemes and their values:
 
 Example 2: Returns all the key value pairs under this path:
 
-**Note**  
+**Note**
 PLA runs under user credentials. Some registry keys require administrative credentials. The enumeration stops when it fails to access any of the sub-keys.
 
- 
+ 
 
 ``` syntax
 <registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\\</registryKey>
@@ -299,12 +298,12 @@ All collected data will be imported into a temporary table called **\#RegistryKe
 <td><p>db310065-829b-4671-9647-2261c00e86ef</p></td>
 </tr>
 <tr class="even">
-<td><p>…\db310065-829b-4671-9647-2261c00e86ef\Description</p></td>
+<td><p> \db310065-829b-4671-9647-2261c00e86ef\Description</p></td>
 <td><p>2</p></td>
 <td><p></p></td>
 </tr>
 <tr class="odd">
-<td><p>…\db310065-829b-4671-9647-2261c00e86ef\FriendlyName</p></td>
+<td><p> \db310065-829b-4671-9647-2261c00e86ef\FriendlyName</p></td>
 <td><p>2</p></td>
 <td><p>Power Source Optimized</p></td>
 </tr>
@@ -321,7 +320,7 @@ All collected data will be imported into a temporary table called **\#RegistryKe
 </tbody>
 </table>
 
- 
+ 
 
 The schema for the **\#RegistryKeys** table is as follows:
 
@@ -357,7 +356,7 @@ The schema for the **\#RegistryKeys** table is as follows:
 </tbody>
 </table>
 
- 
+ 
 
 The **KeyTypeID** column can have one of the following types:
 
@@ -420,7 +419,7 @@ The **KeyTypeID** column can have one of the following types:
 </tbody>
 </table>
 
- 
+ 
 
 ### Collect WMI
 
@@ -454,7 +453,7 @@ The query in the above example returns one record:
 </tbody>
 </table>
 
- 
+ 
 
 Because WMI returns a table with different columns, when the collected data is imported into a database, SPA performs data normalization and is added to the following tables:
 
@@ -489,7 +488,7 @@ Because WMI returns a table with different columns, when the collected data is i
 </tbody>
 </table>
 
- 
+ 
 
 **\#WmiObjectsProperties table**
 
@@ -512,7 +511,7 @@ Because WMI returns a table with different columns, when the collected data is i
 </tbody>
 </table>
 
- 
+ 
 
 **\#WmiQueries table**
 
@@ -535,7 +534,7 @@ Because WMI returns a table with different columns, when the collected data is i
 </tbody>
 </table>
 
- 
+ 
 
 **\#WmiObjects table schema**
 
@@ -581,7 +580,7 @@ Because WMI returns a table with different columns, when the collected data is i
 </tbody>
 </table>
 
- 
+ 
 
 **\#WmiObjectProperties table schema**
 
@@ -617,7 +616,7 @@ Because WMI returns a table with different columns, when the collected data is i
 </tbody>
 </table>
 
- 
+ 
 
 **\#WmiQueries table schema**
 
@@ -648,11 +647,11 @@ Because WMI returns a table with different columns, when the collected data is i
 </tbody>
 </table>
 
- 
+ 
 
 ### Collect performance counters
 
-Here’s an example of how to collect a performance counter:
+Here s an example of how to collect a performance counter:
 
 ``` syntax
 <performanceCounters interval="1">
@@ -715,7 +714,7 @@ There could be two instances: **\_Total** and **0 C: D:**, and the output could 
 </tbody>
 </table>
 
- 
+ 
 
 To import the data to the database, the data will be normalized into a table called **\#PerformanceCounters**.
 
@@ -786,12 +785,12 @@ To import the data to the database, the data will be normalized into a table cal
 </tbody>
 </table>
 
- 
+ 
 
-**Note**  
+**Note**
 The localized names, such as **CategoryDisplayName** and **CounterDisplayName**, vary based on the display language used on the target server. Avoid using those fields if you want to create a language-neutral advisor pack.
 
- 
+ 
 
 **\#PerformanceCounters** table schema
 
@@ -847,7 +846,7 @@ The localized names, such as **CategoryDisplayName** and **CounterDisplayName**,
 </tbody>
 </table>
 
- 
+ 
 
 ### Collect files
 
@@ -855,7 +854,7 @@ The paths can be absolute or relative. The file name can include the wildcard ch
 
 If you want to also collect files from the subfolders of the specified folder, use two backslashes for the last folder delimiter, for example, c:\\temp\\\\\*.
 
-Here’s an example that queries the **applicationHost.config** file:
+Here s an example that queries the **applicationHost.config** file:
 
 ``` syntax
 <path>%windir%\System32\inetsrv\config\applicationHost.config</path>
@@ -888,12 +887,12 @@ The results can be found in a table called **\#Files**, for example:
 <td><p>C:\Windows</p>
 <p>\...\config</p></td>
 <td><p>applicationHost.config</p></td>
-<td><p>0x3C3F78…</p></td>
+<td><p>0x3C3F78 </p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 **\#Files table schema**
 
@@ -939,13 +938,13 @@ The results can be found in a table called **\#Files**, for example:
 </tbody>
 </table>
 
- 
+ 
 
 ### Defining rules
 
 After enough data is collected by using PLA from a target server, the advisor pack can use this data for validation, and show a quick summary to the system administrators.
 
-Rules give a quick overview about the server’s performance. They highlight issues and provide recommendations. You can list all the rules that you want to validate for an advisor pack. For example, if you want to develop a core operating system advisor pack, the possible rules could include:
+Rules give a quick overview about the server s performance. They highlight issues and provide recommendations. You can list all the rules that you want to validate for an advisor pack. For example, if you want to develop a core operating system advisor pack, the possible rules could include:
 
 -   Whether the CPU power mode is power saving
 
@@ -959,17 +958,17 @@ Rules contain the following elements:
 
 -   Rule definition (alerts and recommendations)
 
-Here’s an example of a simple rule:
+Here s an example of a simple rule:
 
 ``` syntax
 <advisorPack>
-  …
+   
   <reportDefinition>
     <thresholds>
-      <threshold …/>
+      <threshold  />
     </thresholds>
     <rules>
-      <rule …/>
+      <rule  />
       </rule>
     </rules>
   </reportDefinition>
@@ -978,13 +977,13 @@ Here’s an example of a simple rule:
 
 ### Threshold
 
-Threshold is a configurable factor that enables the system administrators to decide when a rule should show a good or a bad status. The following example shows a rule to detect free space on a system drive and a warning when free space is less than 10 GB.
+Threshold is a configurable factor that enables the system administrators to decide when a rule should show a good or a bad status. The following example shows a rule to detect free space on a system drive and a warning when free space is less than 10 GB.
 
 ``` syntax
-<threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size�? value="10" />
+<threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size  value="10" />
 ```
 
-However, in this case, the system administrator has a smaller hard drive. He thinks 5 GB of free space might still be a good condition, and he does not want to see a warning. He can update the default value from 10 to 5 through the SPA console without having to understand how to develop an advisor pack.
+However, in this case, the system administrator has a smaller hard drive. He thinks 5 GB of free space might still be a good condition, and he does not want to see a warning. He can update the default value from 10 to 5 through the SPA console without having to understand how to develop an advisor pack.
 
 Introducing a threshold helps system administrators quickly change the value without having to modify the advisor pack.
 
@@ -1004,16 +1003,16 @@ A rule has three parts:
 
 -   Associated threshold (optional information about dependencies)
 
-Here’s an example of a rule:
+Here s an example of a rule:
 
 ``` syntax
-<rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on system drive ">
-  <advice name="SuccessAdvice" level="Success" message="No issue found.">No Recommendation.</advice>
-  <advice name="WarningAdvice" level="Warning" message="Not enough free space on system drive.">
+<rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on system drive ">
+<advice name="SuccessAdvice" level="Success" message="No issue found.">No Recommendation.</advice>
+<advice name="WarningAdvice" level="Warning" message="Not enough free space on system drive.">
 Install OS on larger disk.</advice>
-  <dependencies>
-    <threshold ref="FreeDiskSize"/>
-  </dependencies>
+<dependencies>
+ <threshold ref="FreeDiskSize"/>
+</dependencies>
 </rule>
 ```
 
@@ -1052,7 +1051,7 @@ Continuing with the previous example, the user knows whether there is enough fre
 </tbody>
 </table>
 
- 
+ 
 
 If a user wants to see a list of all hard drives that are installed on the server and their disk size, we could call a list value, which has three columns and multiple rows, as shown here.
 
@@ -1083,7 +1082,7 @@ If a user wants to see a list of all hard drives that are installed on the serve
 </tbody>
 </table>
 
- 
+ 
 
 In an advisor pack, there could be many tables (single value groups and list value tables). We can use a section to organize and categorize these tables.
 
@@ -1095,27 +1094,27 @@ In summary, there are three types of UI elements:
 
 -   [List value tables](#bkmk-ui-lvt)
 
-Here’s an example that shows the UI elements:
+Here s an example that shows the UI elements:
 
 ``` syntax
 <advisorPack>
-  <dataSourceDefinition/>
-  <reportDefinition>
-    <dataTypes>
-      <dataType .../>
-    </dataTypes>
-    <thresholds/>
-    <rule/>
-    <sections>
-      <section .../>
-    </sections>
-    <singleValues>
-      <singleValue .../>
-    </singleValues>
-    <listValues>
-      <listValue .../>
-    </listValues>
-  </reportDefinition>
+<dataSourceDefinition/>
+<reportDefinition>
+ <dataTypes>
+<dataType .../>
+ </dataTypes>
+ <thresholds/>
+ <rule/>
+ <sections>
+<section .../>
+ </sections>
+ <singleValues>
+<singleValue .../>
+ </singleValues>
+ <listValues>
+<listValue .../>
+ </listValues>
+</reportDefinition>
 </advisorPack>
 ```
 
@@ -1140,7 +1139,7 @@ The following example has an attribute, **parent**, and it is pointing to the se
 The following single-value group has an attribute, **section**, and it can point to any section, based on your UI design.
 
 ``` syntax
-<singleValue name="CPUInformation" section="CPUFacts" caption="Physical CPU Information">…</singleValue>
+<singleValue name="CPUInformation" section="CPUFacts" caption="Physical CPU Information"> </singleValue>
 ```
 
 ### Data types
@@ -1156,7 +1155,7 @@ The following example defines two data types. One is **string** and the other is
 <dataType name="companyCode" sqlType="nvarchar(100)" />
 ```
 
-A data type name can be any valid string. Here’s a list of allowed SQL data types:
+A data type name can be any valid string. Here s a list of allowed SQL data types:
 
 -   bigint
 
@@ -1213,10 +1212,10 @@ For more info about these SQL data types, see [Data Types (Transact-SQL)](http:/
 A single value group groups multiple single values together to present in a table as shown here.
 
 ``` syntax
-<singleValue name="SystemOverview" section="SystemOverviewSection" caption="Facts">
-  <value name="OsName" type="string" caption="Operating system" description="WMI: Win32_OperatingSystem/Caption"/>
-  <value name="OsVersion" type="string" caption="OS version" description="WMI: Win32_OperatingSystem/Version"/>
-  <value name="OsLocation" type="string" caption="OS location" description="WMI: Win32_OperatingSystem/SystemDrive"/>
+<singleValue name="SystemOverview" section="SystemOverviewSection" caption="Facts">
+<value name="OsName" type="string" caption="Operating system" description="WMI: Win32_OperatingSystem/Caption"/>
+<value name="OsVersion" type="string" caption="OS version" description="WMI: Win32_OperatingSystem/Version"/>
+<value name="OsLocation" type="string" caption="OS location" description="WMI: Win32_OperatingSystem/SystemDrive"/>
 </singleValue>
 ```
 
@@ -1257,7 +1256,7 @@ You can define a data type for each single value. The allowed input for **type**
 </tbody>
 </table>
 
- 
+ 
 
 The **caption** attribute of **&lt;value/&gt;** is presented in the first column. Values in the value column are set in the future by the script report through \[dbo\].\[SetSingleValue\]. The **description** attribute of **&lt;value/&gt;** is shown in a tooltip. Usually the tooltip shows users the source of the data. For more info on tooltips, see [Tooltips](#bkmk-tooltips).
 
@@ -1266,12 +1265,12 @@ The **caption** attribute of **&lt;value/&gt;** is presented in the first column
 Defining a list value is as the same as defining a table.
 
 ``` syntax
-<listValue name="NetworkAdapterInformation" section="NetworkIOFacts" caption="Physical network adapter information">
-  <column name="NetworkAdapterId" type="string" caption="ID" description="WMI: Win32_NetworkAdapter/DeviceID"/>
-  <column name="NetworkAdapterName" type="string" caption="Name" description="WMI: Win32_NetworkAdapter/Name"/>
-  <column name="Type" type="string" caption="Type" description="WMI: Win32_NetworkAdapter/AdapterType"/>
-  <column name="Speed" type="decimal" caption="Speed (Mbps)" description="WMI: Win32_NetworkAdapter/Speed"/>
-  <column name="MACAddress" type="string" caption="MAC address" description="WMI: Win32_NetworkAdapter/MACAddress"/>
+<listValue name="NetworkAdapterInformation" section="NetworkIOFacts" caption="Physical network adapter information">
+<column name="NetworkAdapterId" type="string" caption="ID" description="WMI: Win32_NetworkAdapter/DeviceID"/>
+<column name="NetworkAdapterName" type="string" caption="Name" description="WMI: Win32_NetworkAdapter/Name"/>
+<column name="Type" type="string" caption="Type" description="WMI: Win32_NetworkAdapter/AdapterType"/>
+<column name="Speed" type="decimal" caption="Speed (Mbps)" description="WMI: Win32_NetworkAdapter/Speed"/>
+<column name="MACAddress" type="string" caption="MAC address" description="WMI: Win32_NetworkAdapter/MACAddress"/>
 </listValue>
 ```
 
@@ -1302,30 +1301,30 @@ The mock UI of the final report could look as follows:
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>…</p></td>
-<td><p>…</p></td>
-<td><p>…</p></td>
-<td><p>…</p></td>
-<td><p>…</p></td>
+<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
-<td><p>…</p></td>
-<td><p>…</p></td>
-<td><p>…</p></td>
-<td><p>…</p></td>
-<td><p>…</p></td>
+<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 The **caption** attribute of &lt;column/&gt; is shown as a column name, and the **description** attribute of &lt;column/&gt; is shown as a tooltip for the corresponding column header. Usually the tooltip shows the user the source of the data. For more info, see [Tooltips](#bkmk-tooltips).
 
 In some cases, a table may have a lot of columns and only a few rows, so swapping the columns and rows would make the table look much better. To swap the columns and rows, you can add the following style attribute:
 
 ``` syntax
-<listValue style="Transpose" …
+<listValue style="Transpose"  
 ```
 
 ### Defining charting elements
@@ -1345,7 +1344,7 @@ SPA uses a single value group to support static statistics and a list value tabl
 As mentioned previously, a static statistic is a single value. Logically, any single value could be defined as a static statistic. However, it is meaningless to view a single value that cannot be cast to a number type. To define a static statistic, you can simply add the attribute **trendable** to the corresponding single value key as shown below:
 
 ``` syntax
-<value name="FreeDiskSize" type="int" trendable="true" …
+<value name="FreeDiskSize" type="int" trendable="true"  
 ```
 
 ### Dynamic statistics
@@ -1355,9 +1354,9 @@ Dynamic statistic keys are not known at design time, so the number of possible v
 For example, if we need to show charts for the average CPU usage of different cores, we could define a table with columns for **CpuId** and **AverageCpuUsage**:
 
 ``` syntax
-<listValue name="CpuPerformance">
-  <column name="CpuId" type="string" caption="CPU ID" columnType="Key"/>
-  <column name="AverageCpuUsage" type="decimal" caption="Average" columnType="Value"/>
+<listValue name="CpuPerformance">
+<column name="CpuId" type="string" caption="CPU ID" columnType="Key"/>
+<column name="AverageCpuUsage" type="decimal" caption="Average" columnType="Value"/>
 </listValue>
 ```
 
@@ -1392,7 +1391,7 @@ Continuing with the previous example, if a server has two CPU cores, the result 
 </tbody>
 </table>
 
- 
+ 
 
 At the same time, two statistics keys are generated by the SPA framework. One is for CPU 0 and the other is for CPU 1.
 
@@ -1429,7 +1428,7 @@ As the following example indicates multiple **Value** columns with multiple **Ke
 </tbody>
 </table>
 
- 
+ 
 
 In this example, you have two **Key** columns and two **Value** columns. SPA generates two statistics keys for the Average column and another two keys for the Sum column. The statistics keys are:
 
@@ -1448,16 +1447,16 @@ SPA generates many statistics keys. Some of them might not be interesting to you
 For the previous example, the system administrators may only be interested in keys in which the InstanceName is \_Total or CPU1. The filter can be defined as follows:
 
 ``` syntax
-<listValue name="CpuPerformance">
-  <column name="CounterName" type="string" columnType="Key"/>
-  <column name="InstanceName" type="string" columnType="Key">
-    <trendableKeyValues>
-      <value>_Total</value>
-      <value>CPU1</value>
-    </trendableKeyValues>
-  </column>
-  <column name="Average" type="decimal" columnType="Value"/>
-  <column name="Sum" type="decimal" columnType="Value"/>
+<listValue name="CpuPerformance">
+<column name="CounterName" type="string" columnType="Key"/>
+<column name="InstanceName" type="string" columnType="Key">
+ <trendableKeyValues>
+<value>_Total</value>
+<value>CPU1</value>
+ </trendableKeyValues>
+</column>
+<column name="Average" type="decimal" columnType="Value"/>
+<column name="Sum" type="decimal" columnType="Value"/>
 </listValue>
 ```
 
@@ -1470,17 +1469,17 @@ After the provision metadata is defined, we can start to write the report script
 There are **name** and **reportScript** attributes in the provision metadata header, as shown here:
 
 ``` syntax
-<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript" …
+<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"  
 ```
 
 The main report script is named by combining the **name** and **reportScript** attributes. In the following example, it will be \[Microsoft.ServerPerformanceAdvisor.CoreOS.V2\].\[ReportScript\].
 
 ``` syntax
-CREATE PROCEDURE [Microsoft.ServerPerformanceAdvisor.CoreOS.V2].[ReportScript] AS SET NOCOUNT ON
+CREATE PROCEDURE [Microsoft.ServerPerformanceAdvisor.CoreOS.V2].[ReportScript] AS SET NOCOUNT ON
 
--- Set alert and notification
+- Set alert and notification
 
--- Prepare data for report view
+- Prepare data for report view
 ```
 
 The **name** attribute will be used as a database schema name, such as a namespace. This rule applies to all other database objects that belong to the current advisor pack, such as list value and stored procedures.
@@ -1548,13 +1547,13 @@ Initially, every rule status is N/A. You can use this API to set a rule status b
 Recall that we defined the following rule earlier:
 
 ``` syntax
-<rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on the system drive ">
-  <advice name="SuccessAdvice" level="Success" message="No issue found.">No recommendation.</advice>
-  <advice name="WarningAdvice" level="Warning" message="Not enough free space on system drive.">Install the operating system on a larger disk.</advice>
+<rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on the system drive ">
+<advice name="SuccessAdvice" level="Success" message="No issue found.">No recommendation.</advice>
+<advice name="WarningAdvice" level="Warning" message="Not enough free space on system drive.">Install the operating system on a larger disk.</advice>
 </rule>
 ```
 
-Assuming the free space is less than 2 GB, we need set the rule to the **Warning** level. The SQL script will be as follows:
+Assuming the free space is less than 2 GB, we need set the rule to the **Warning** level. The SQL script will be as follows:
 
 ``` syntax
 IF (@freeDiskSizeInGB < 2)
@@ -1575,24 +1574,24 @@ The \[dbo\].\[GetThreshold\] API gets the thresholds:
 
 -   @value float output
 
-**Note**  
+**Note**
 The thresholds are name-value pairs, and they can be referenced in any rules. The system administrators can use the SPA console to adjust the thresholds.
 
- 
+ 
 
 Continuing with the previous example, for a threshold, the definition will be as follows:
 
 ``` syntax
 <thresholds>
-  <threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size�? value="10" />
+  <threshold name="FreeDiskSize" caption="Free Disk Size (GB)" description="Free Disk Size  value="10" />
 </thresholds>
-<rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on system drive ">
-  <advice name="SuccessAdvice" level="Success" message="No issue found.">No recommendation.</advice>
-  <advice name="WarningAdvice" level="Warning" message="Not enough free space on the system drive.">
+<rule name="FreeDiskSize" caption="Free Disk Size on System Drive" description="This rule checks free disk size on system drive ">
+<advice name="SuccessAdvice" level="Success" message="No issue found.">No recommendation.</advice>
+<advice name="WarningAdvice" level="Warning" message="Not enough free space on the system drive.">
 Install the operating system on a larger disk.</advice>
-  <dependencies>
-    <threshold ref="FreeDiskSize"/>
-  </dependencies>
+<dependencies>
+ <threshold ref="FreeDiskSize"/>
+</dependencies>
 </rule>
 ```
 
@@ -1600,10 +1599,10 @@ The report script can be modified as shown here:
 
 ``` syntax
 DECLARE @freeDiskSize FLOAT
-exec dbo.GetThreshold N’FreeDiskSize’, @freeDiskSize output
+exec dbo.GetThreshold N FreeDiskSize , @freeDiskSize output
 
 IF (@freeDiskSizeInGB < @freeDiskSize)
-…
+ 
 ```
 
 ### Set or remove the single value
@@ -1619,19 +1618,19 @@ This value can execute multiple times for the same single value key. The last va
 The following example shows some defined single values:
 
 ``` syntax
-<singleValue section="SystemOverview" caption="Facts">
-  <value name="OsName" type="string" caption="Operating System" description="WMI: Win32_OperatingSystem/Caption"/>
-  <value name="OsVersion" type="string" caption="OS Version" description="WMI: Win32_OperatingSystem/Version"/>
-  <value name="OsLocation" type="string" caption="OS Location" description="WMI: Win32_OperatingSystem/SystemDrive"/>
+<singleValue section="SystemOverview" caption="Facts">
+<value name="OsName" type="string" caption="Operating System" description="WMI: Win32_OperatingSystem/Caption"/>
+<value name="OsVersion" type="string" caption="OS Version" description="WMI: Win32_OperatingSystem/Version"/>
+<value name="OsLocation" type="string" caption="OS Location" description="WMI: Win32_OperatingSystem/SystemDrive"/>
 </singleValue>
 ```
 
 You can then set the single value as shown here:
 
 ``` syntax
-exec dbo.SetSingleValue N’OsName’, ‘Windows 7’
-exec dbo.SetSingleValue N’OsVersion’, ‘6.1.7601’
-exec dbo.SetSingleValue N’OsLocation’, ‘c:\’
+exec dbo.SetSingleValue N OsName ,  Windows 7 
+exec dbo.SetSingleValue N OsVersion ,  6.1.7601 
+exec dbo.SetSingleValue N OsLocation ,  c:\ 
 ```
 
 In rare cases, you may want to remove the result that you previously set by using the \[dbo\].\[RemoveSingleValue\] API.
@@ -1641,7 +1640,7 @@ In rare cases, you may want to remove the result that you previously set by usin
 You can use the following script to remove the previously set value.
 
 ``` syntax
-exec dbo.RemoveSingleValue N’OsVersion’
+exec dbo.RemoveSingleValue N OsVersion 
 ```
 
 ### Get data collection information
@@ -1650,7 +1649,7 @@ The \[dbo\].\[GetDuration\] API gets the user designated duration in seconds for
 
 -   @duration int output
 
-Here’s an example report script:
+Here s an example report script:
 
 ``` syntax
 DECLARE @duration int
@@ -1661,7 +1660,7 @@ The \[dbo\].\[GetInternal\] API gets the interval of a performance counter. It c
 
 -   @interval int output
 
-Here’s an example report script:
+Here s an example report script:
 
 ``` syntax
 DECLARE @interval int
@@ -1675,12 +1674,12 @@ There is no API for updating list value tables. However, you can directly access
 The following example shows a list value table:
 
 ``` syntax
-<listValue name="NetworkAdapterInformation" section="NetworkIOFacts" caption="Physical Network Adapter Information">
-  <column name="NetworkAdapterId" type="string" caption="ID" description="WMI: Win32_NetworkAdapter/DeviceID"/>
-  <column name="NetworkAdapterName" type="string" caption="Name" description="WMI: Win32_NetworkAdapter/Name"/>
-  <column name="Type" type="string" caption="Type" description="WMI: Win32_NetworkAdapter/AdapterType"/>
-  <column name="Speed" type="decimal" caption="Speed (Mbps)" description="WMI: Win32_NetworkAdapter/Speed"/>
-  <column name="MACAddress" type="string" caption="MAC Address" description="WMI: Win32_NetworkAdapter/MACAddress"/>
+<listValue name="NetworkAdapterInformation" section="NetworkIOFacts" caption="Physical Network Adapter Information">
+<column name="NetworkAdapterId" type="string" caption="ID" description="WMI: Win32_NetworkAdapter/DeviceID"/>
+<column name="NetworkAdapterName" type="string" caption="Name" description="WMI: Win32_NetworkAdapter/Name"/>
+<column name="Type" type="string" caption="Type" description="WMI: Win32_NetworkAdapter/AdapterType"/>
+<column name="Speed" type="decimal" caption="Speed (Mbps)" description="WMI: Win32_NetworkAdapter/Speed"/>
+<column name="MACAddress" type="string" caption="MAC Address" description="WMI: Win32_NetworkAdapter/MACAddress"/>
 </listValue>
 ```
 
@@ -1695,7 +1694,7 @@ INSERT INTO #NetworkAdapterInformation (
   MACAddress
 )
 VALUES (
-  …
+   
 )
 ```
 
@@ -1707,7 +1706,7 @@ VALUES (
 If there is any further information that you want to communicate to the system administrators, you can write logs. If there is any log for a particular report, a yellow banner will be shown in the report header. The following example shows how you can write a log:
 
 ``` syntax
-exec dbo.WriteSystemLog N'Any information you want to show to the system administrators’, N’Warning’
+exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning 
 ```
 
 The first parameter is the message you want show in the log. The second parameter is the log level. The valid input for the second parameter could be **Informational**, **Warning**, or **Error**.
@@ -1720,7 +1719,7 @@ The SPA console can run in two modes, Debug or Release. Release mode is the defa
 
 1.  Install Microsoft SQL Server Management Studio (SSMS).
 
-2.  After SSMS is launched, connect to localhost\\SQLExpress. Be aware that you must use localhost, instead of “.�?. Otherwise, you might not be able to start the debugger in SQL Server.
+2.  After SSMS is launched, connect to localhost\\SQLExpress. Be aware that you must use localhost, instead of  . . Otherwise, you might not be able to start the debugger in SQL Server.
 
 3.  Run the following script to enable Debug mode:
 
@@ -1772,7 +1771,7 @@ The SPA console can run in two modes, Debug or Release. Release mode is the defa
     </tbody>
     </table>
 
-     
+     
 
 6.  You can run the following script as many times as you want to execute the report script for Id 12:
 
@@ -1780,10 +1779,10 @@ The SPA console can run in two modes, Debug or Release. Release mode is the defa
     exec dbo.DebugReportScript 12
     ```
 
-    **Note**  
+    **Note**
     You can also press F11 to step into the previous statement and debug.
 
-     
+     
 
 Running \[dbo\].\[DebugReportScript\] returns multiple result sets, including:
 
@@ -1865,13 +1864,13 @@ To enumerate all network adapters, you can use the following WMI query by using 
 Get-WmiObject -Namespace Root\Cimv2 -Query "SELECT PNPDeviceID FROM Win32_NetworkAdapter" | ForEach-Object { Write-Output $_.PNPDeviceID }
 ```
 
-It returns a list of network adapter objects. Each object has a property called **PNPDeviceID**, which maintains a relative registry key path. Here’s a sample output from the previous query:
+It returns a list of network adapter objects. Each object has a property called **PNPDeviceID**, which maintains a relative registry key path. Here s a sample output from the previous query:
 
 ``` syntax
 ROOT\*ISATAP\0001
 PCI\VEN_8086&DEV_4238&SUBSYS_11118086&REV_35\4&372A6B86&0&00E4
 ROOT\*IPHTTPS\0000
-…
+ 
 ```
 
 To find the **FriendlyName** value, open Registry Editor and navigate to registry setting by combining **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\** with each line in the previous sample. , for example: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\ ROOT\\\*IPHTTPS\\0000**.
@@ -1880,14 +1879,14 @@ To translate the previous steps into SPA provision metadata, add the script in t
 
 ``` syntax
 <advisorPack>
-  <dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
-    <dataCollectorSet >
-      <registryKeys>
-        <registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\$(NetworkAdapter.PNPDeviceID)\FriendlyName</registryKey>
-      </registryKeys>
-      <managementPaths>
-        <path name="NetworkAdapter">Root\Cimv2:SELECT PNPDeviceID FROM Win32_NetworkAdapter</path>
-      </managementPaths>
+<dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
+ <dataCollectorSet >
+<registryKeys>
+ ?<registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\$(NetworkAdapter.PNPDeviceID)\FriendlyName</registryKey>
+</registryKeys>
+<managementPaths>
+ ?<path name="NetworkAdapter">Root\Cimv2:SELECT PNPDeviceID FROM Win32_NetworkAdapter</path>
+</managementPaths>
 ```
 
 In this example, you first add a WMI query under managementPaths and define the key name **NetworkAdapter**. Then you add a registry key and refer to **NetworkAdapter** by using the syntax, **$(NetworkAdapter.PNPDeviceID)**.
@@ -1936,22 +1935,22 @@ The following table defines if a data collector in SPA supports dynamic data and
 </tbody>
 </table>
 
- 
+ 
 
 For a WMI data collector, each WMI object has many attached attributes. Any type of WMI object always has three attributes: \_\_NAMESPACE, \_\_CLASS, and \_\_RELPATH.
 
 To define a data collector that is referenced by other data collectors, assign the **name** attribute with a unique key in the ProvisionMetadata.xml. This key is used by dependent data collectors to generate dynamic data.
 
-Here’s an example for registry key:
+Here s an example for registry key:
 
 ``` syntax
-<registryKey  name="registry">HKEY_LOCAL_MACHINE…</registryKey>
+<registryKey  name="registry">HKEY_LOCAL_MACHINE </registryKey>
 ```
 
 And an example for WMI:
 
 ``` syntax
-<path name="wmi">Root\Cimv2:SELECT PNPDeviceID FROM Win32_NetworkAdapter</path>
+<path name="wmi">Root\Cimv2:SELECT PNPDeviceID FROM Win32_NetworkAdapter</path>
 ```
 
 To define a dependent data collector, the following syntax is used: $(*{name}*.*{attribute}*).
@@ -1961,16 +1960,16 @@ To define a dependent data collector, the following syntax is used: $(*{name}*.*
 When SPA collects data from a target server, it dynamically replaces the pattern $(\*.\*) with the actual collected data from its reference data collector (registry key / WMI), for example:
 
 ``` syntax
-<registryKey>HKEY_LOCAL_MACHINE\$(registry.key)\…</registryKey>
-<registryKey  name="registry">HKEY_LOCAL_MACHINE\$(wmi.RelativeRegistryPath)\…</registryKey>
-<path name="wmi">…</path>
+<registryKey>HKEY_LOCAL_MACHINE\$(registry.key)\ </registryKey>
+<registryKey  name="registry">HKEY_LOCAL_MACHINE\$(wmi.RelativeRegistryPath)\ </registryKey>
+<path name="wmi"> </path>
 <file>$(wmi.FileName)</file>
 ```
 
-**Note**  
+**Note**
 SPA supports an unlimited depth of reference, but be aware of performance overhead if you have too many levels. Make sure there is no circular reference or self-reference that is not supported.
 
- 
+ 
 
 ### Versioning limitations
 
@@ -2003,9 +2002,9 @@ Almost all **description** attributes will be shown as a tooltip in the SPA cons
 For a list value table, a row-based tooltip can be achieved by adding the following attribute:
 
 ``` syntax
-<listValue descriptionColumn="Description">
-  <column name="Name"/>
-  <column name="Description"/>
+<listValue descriptionColumn="Description">
+<column name="Name"/>
+<column name="Description"/>
 </listValue>
 ```
 
@@ -2047,11 +2046,11 @@ We recommend that the tooltip show the data source to the user. Here are the for
 <td><p>Configuration file</p></td>
 <td><p>ConfigFile: &lt;FilePath&gt;[; Xpath: &lt;Xpath&gt;]</p>
 <div class="alert">
-<strong>Note</strong>  
+<strong>Note</strong>
 <p>Xpath is optional and it is valid only when the file is an xml file.</p>
 </div>
 <div>
- 
+ 
 </div></td>
 <td><p>ConfigFile: %windir%\System32\inetsrv\config\applicationHost.config</p>
 <p>Xpath: configuration/system.webServer</p>
@@ -2065,7 +2064,7 @@ We recommend that the tooltip show the data source to the user. Here are the for
 </tbody>
 </table>
 
- 
+ 
 
 ### Table collation
 
@@ -2073,25 +2072,25 @@ When an advisor pack becomes more complicated, you can create your own variable 
 
 Collating string columns may be problematic because the table collation that you create might be different than the one that is created by the SPA framework. If you correlate two string columns in different tables, you may see a collation error. To avoid this issue, you should always define the string for a column collation as **SQL\_Latin1\_General\_CP1\_CI\_AS** when you define a table.
 
-Here’s how to define a variable table:
+Here s how to define a variable table:
 
 ``` syntax
-DECLARE @filesIO TABLE (
-    Name nvarchar(500) COLLATE SQL_Latin1_General_CP1_CI_AS,
-    AverageFileAccessVolume float,
-    AverageFileAccessCount float,
-    FilePath nvarchar(500) COLLATE SQL_Latin1_General_CP1_CI_AS
+DECLARE @filesIO TABLE (
+ Name nvarchar(500) COLLATE SQL_Latin1_General_CP1_CI_AS,
+ AverageFileAccessVolume float,
+ AverageFileAccessCount float,
+ FilePath nvarchar(500) COLLATE SQL_Latin1_General_CP1_CI_AS
 )
 ```
 
 ### Collect ETW
 
-Here’s how to define ETW in a ProvisionMetadata.xml file:
+Here s how to define ETW in a ProvisionMetadata.xml file:
 
 ``` syntax
 <dataSourceDefinition>
   <providers>
-    <provider session="NT Kernel Logger" guid="{9E814AAD-3204-11D2-9A82-006008A86939}"/>
+    <provider session="NT Kernel Logger" guid="{9E814AAD-3204-11D2-9A82-006008A86939}"/>
   </providers>
 </dataSourceDefinition>
 ```
@@ -2165,7 +2164,7 @@ The following provider attributes are available to use for collecting ETW:
 </tbody>
 </table>
 
- 
+ 
 
 There are two output tables as shown here.
 
@@ -2223,7 +2222,7 @@ There are two output tables as shown here.
 </tbody>
 </table>
 
- 
+ 
 
 **\#EventProperties table schema**
 
@@ -2259,7 +2258,7 @@ There are two output tables as shown here.
 </tbody>
 </table>
 
- 
+ 
 
 ### ETW schema
 
@@ -2328,9 +2327,9 @@ A side-by-side report is an SPA report that compares two single reports for the 
 
 **Trend chart**
 
-A trend chart is the SPA report that is used to investigate repetitive patterns of performance issues. Many repetitive performance issues are caused by scheduled server load changes from the server or from client computers, which can happen daily or weekly. SPA provides a 24-hour trend chart and a 7-day trend chart to identify these issues.
+A trend chart is the SPA report that is used to investigate repetitive patterns of performance issues. Many repetitive performance issues are caused by scheduled server load changes from the server or from client computers, which can happen daily or weekly. SPA provides a 24-hour trend chart and a 7-day trend chart to identify these issues.
 
-The user can choose one or more data series at a time, which is a numeric value inside the single report, such as **Average total CPU usage**. More specifically, a numeric value is a scalar value from a single server that is generated by a single AP at a given time instance. SPA groups those values into 24 groups, one for each hour of the day (seven for a 7-day report, one for each day of the week). SPA calculates average, minimum, maximum, and standard deviations for each group.
+The user can choose one or more data series at a time, which is a numeric value inside the single report, such as **Average total CPU usage**. More specifically, a numeric value is a scalar value from a single server that is generated by a single AP at a given time instance. SPA groups those values into 24 groups, one for each hour of the day (seven for a 7-day report, one for each day of the week). SPA calculates average, minimum, maximum, and standard deviations for each group.
 
 **Historical chart**
 

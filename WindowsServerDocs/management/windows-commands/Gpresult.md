@@ -1,6 +1,6 @@
 ---
 title: Gpresult
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Gpresult
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ gpresult [/s <COMPUTER> [/u <USERNAME> [/p [<PASSWORD>]]]] [/user [<TARGETDOMAIN
 > [!NOTE]
 > Except when you use **/?**, you must include an output option, either **/r**, **/v**, **/z**, **/x**, or **/h**.
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <COMPUTER>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
 |/u <USERNAME>|Uses the credentials of the specified user to run the command. The default user is the user who is logged on to the computer that issues the command.|
 |/p [<PASSWORD>]|Specifies the password of the user account that is provided in the **/u** parameter. If **/p** is omitted, **gpresult** prompts for the password. **/p** cannot be used with **/x** or **/h**.|

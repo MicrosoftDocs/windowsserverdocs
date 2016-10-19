@@ -18,9 +18,9 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This document describes new smart card−related features on the  Windows Server 2012 , Windows 8, and Windows RT operating systems.
+This document describes new smart card???related features on the  Windows Server 2012 , Windows 8, and Windows RT operating systems.
 
-Smart cards together with personal identification numbers (PINs) are an increasingly popular, reliable, and cost-effective form of two-factor authentication. With the right controls in place, a user must have the smart card and know the PIN to gain access to network resources. The two-factor requirement significantly reduces the likelihood of unauthorized access to an organization’s network. Smart cards provide particularly effective security control for:
+Smart cards together with personal identification numbers (PINs) are an increasingly popular, reliable, and cost-effective form of two-factor authentication. With the right controls in place, a user must have the smart card and know the PIN to gain access to network resources. The two-factor requirement significantly reduces the likelihood of unauthorized access to an organization???s network. Smart cards provide particularly effective security control for:
 
 -   Authentication for scenarios such as remote access
 
@@ -30,7 +30,7 @@ Smart cards together with personal identification numbers (PINs) are an increasi
 
 Their use in additional scenarios, such as secure access to high-value applications, is likely to grow as organizations deploy a new generation of secure applications.
 
-## What’s new in smart cards in Windows Server 2012, Windows 8, and Windows RT
+## What???s new in smart cards in Windows Server 2012, Windows 8, and Windows RT
 The following changes have been made to smart card support in  Windows Server 2012 , Windows 8, and Windows RT:
 
 -   [Virtual smart cards](#BKMK_VSC)
@@ -46,7 +46,7 @@ The following changes have been made to smart card support in  Windows Server 20
 -   [Smart card support in Windows 8 applications](#BKMK_Win8AppSupport)
 
 ### <a name="BKMK_VSC"></a>Virtual smart cards
-Virtual smart cards emulate the functionality of traditional smart cards, but they use the Trusted Platform Module (TPM) chip available on many organizations’ computers rather than requiring the use of a separate physical smart card and reader. Virtual smart cards involve technical, functional, security, and cost differences with conventional smart cards.
+Virtual smart cards emulate the functionality of traditional smart cards, but they use the Trusted Platform Module (TPM) chip available on many organizations??? computers rather than requiring the use of a separate physical smart card and reader. Virtual smart cards involve technical, functional, security, and cost differences with conventional smart cards.
 
 To the end user, the virtual smart card is a smart card that is always available on the computer. If a user needs to use more than one computer, a new virtual smart card must be issued to the user for each computer. Also, a computer that is shared among multiple users can host multiple virtual smart cards, one for each user.
 

@@ -1,6 +1,6 @@
 ---
 title: Typeperf
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Typeperf
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,13 +30,13 @@ typeperf -qx [object] [options]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
-|<counter [counter […]]>|Specifies performance counters to monitor.|  
+|-------|--------|  
+|<counter [counter [ ]]>|Specifies performance counters to monitor.|  
 > [!NOTE]  
 > **<counter>** is the full name of a performance counter in *\\\Computer\Object(Instance)\Counter* format, such as **\\\Server1\Processor(0)\\% User Time**.  
 ## Options  
 |Option|Description|  
-|----------|---------------|  
+|-----|--------|  
 |-?|Displays context-sensitive help.|  
 |-f <CSV&#124;TSV&#124;BIN&#124;SQL>|Specifies the output file format. The default is CSV.|  
 |-cf <filename>|Specifies a file containing a list of performance counters to monitor, with one counter per line.|  

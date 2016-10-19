@@ -1,6 +1,6 @@
 ---
 title: Query user
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Query user
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,14 +21,14 @@ ms.date: 10/12/2016
 Displays information about user sessions on a Remote Desktop Session Host (RD Session Host) server.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<UserName>|Specifies the logon name of the user that you want to query.|
 |<SessionName>|Specifies the name of the session that you want to query.|
 |<SessionID>|Specifies the ID of the session that you want to query.|
@@ -59,4 +58,4 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 [Query](Query.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)

@@ -53,7 +53,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4868|The certificate manager denied a pending certificate request.|
 |4869|Certificate Services received a resubmitted certificate request.|
 |4870|Certificate Services revoked a certificate.|

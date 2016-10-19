@@ -35,7 +35,7 @@ Windows PowerShell or the manage-bde command line interface is the preferred met
 > [!NOTE]
 > Mount points can be used to support remote mount points on SMB based network shares.  This type of share is not supported for BitLocker encryption.
 
-For thinly provisioned storage, such as a Dynamic Virtual Hard Disk (VHD), BitLocker runs in Used Disk Space Only encryption mode.  You cannot use the **manage-bde –WipeFreeSpace** command to transition the volume to full-volume encryption on these types of volumes. This occurs because Full Encryption requires an end marker for the volume and dynamically expanding VHDs do not have a static end of volume marker.
+For thinly provisioned storage, such as a Dynamic Virtual Hard Disk (VHD), BitLocker runs in Used Disk Space Only encryption mode.  You cannot use the **manage-bde ???WipeFreeSpace** command to transition the volume to full-volume encryption on these types of volumes. This occurs because Full Encryption requires an end marker for the volume and dynamically expanding VHDs do not have a static end of volume marker.
 
 #### Active Directory based Protector
 A new BitLocker protector is available for protecting clustered volumes held within the Active Directory Domain Services (AD DS) infrastructure.  The **ADAccountOrGroup** protector is a domain security identifier (SID) based protector that can be bound to a user account, machine account or group.  When an unlock request is made for a protected volume, the BitLocker service interrupts the request and uses the BitLocker protect/unprotect APIs to unlock or deny the request.  BitLocker will unlock protected volumes without user intervention by attempting protectors in the following order:
@@ -173,15 +173,15 @@ The following table contains information about both Physical Disk Resources (i.e
 ||||||
 |-|-|-|-|-|
 |**Action**|**On owner node of failover volume**|**On Metadata Server (MDS) of CSV**|**On (Data Server) DS of CSV**|**Maintenance Mode**|
-|**Manage-bde –on**|Blocked|Blocked|Blocked|Allowed|
-|**Manage-bde –off**|Blocked|Blocked|Blocked|Allowed|
+|**Manage-bde ???on**|Blocked|Blocked|Blocked|Allowed|
+|**Manage-bde ???off**|Blocked|Blocked|Blocked|Allowed|
 |**Manage-bde Pause/Resume**|Blocked|Blocked**|Blocked|Allowed|
-|**Manage-bde –lock**|Blocked|Blocked|Blocked|Allowed|
-|**manage-bde –wipe**|Blocked|Blocked|Blocked|Allowed|
+|**Manage-bde ???lock**|Blocked|Blocked|Blocked|Allowed|
+|**manage-bde ???wipe**|Blocked|Blocked|Blocked|Allowed|
 |**Unlock**|Automatic via cluster service|Automatic via cluster service|Automatic via cluster service|Allowed|
-|**manage-bde –protector –add**|Allowed|Allowed|Blocked|Allowed|
+|**manage-bde ???protector ???add**|Allowed|Allowed|Blocked|Allowed|
 |**manage-bde -protector -delete**|Allowed|Allowed|Blocked|Allowed|
-|**manage-bde –autounlock**|Allowed (not recommended)|Allowed (not recommended)|Blocked|Allowed (not recommended)|
+|**manage-bde ???autounlock**|Allowed (not recommended)|Allowed (not recommended)|Blocked|Allowed (not recommended)|
 |**Manage-bde -upgrade**|Allowed|Allowed|Blocked|Allowed|
 |**Shrink**|Allowed|Allowed|Blocked|Allowed|
 |**Extend**|Allowed|Allowed|Blocked|Allowed|

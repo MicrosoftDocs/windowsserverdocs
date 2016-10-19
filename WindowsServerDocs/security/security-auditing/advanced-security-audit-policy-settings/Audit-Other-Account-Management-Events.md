@@ -38,7 +38,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event Message Summary|
-|------------|-------------------------|
+|------|-------------|
 |4782|The password hash for an account was accessed.|
 |4793|The Password Policy Checking API was called.|
 

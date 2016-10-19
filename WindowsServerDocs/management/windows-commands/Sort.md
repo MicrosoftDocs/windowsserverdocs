@@ -1,6 +1,6 @@
 ---
 title: Sort
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Sort
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/r|Reverses the sort order (that is, sorts from Z to A and from 9 to 0).|
 |/+<N>|Specifies the character position number where **sort** will begin each comparison. *N* can be any valid integer.|
 |/m <Kilobytes>|Specifies the amount of main memory to use for the sort in kilobytes (KB).|

@@ -1,6 +1,6 @@
 ---
 title: At
-description: "Windows Commands topic for **At** -- Schedules commands and programs to run on a computer at a specified time and date."
+description: "Windows Commands topic for **At** - Schedules commands and programs to run on a computer at a specified time and date."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # At
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012

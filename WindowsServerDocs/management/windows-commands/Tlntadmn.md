@@ -1,6 +1,6 @@
 ---
 title: Tlntadmn
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tlntadmn
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,11 +21,11 @@ ms.date: 10/12/2016
 Administers a local or remote computer that is running the Telnet Server Service.   
 ## Syntax  
 ```  
-tlntadmn [<ComputerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause | continue}] [-s {<SessionID> | all}] [-k {<SessionID> | all}] [-m {<SessionID> | all} ???<Message>????] [config [dom = <Domain>] [ctrlakeymap = {yes | no}] [timeout = <hh>:<mm>:<ss>] [timeoutactive = {yes | no}] [maxfail = <Attempts>] [maxconn = <Connections>] [port = <Number>] [sec {+ | -}NTLM {+ | -}passwd] [mode = {console | stream}]] [-?]  
+tlntadmn [<ComputerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause | continue}] [-s {<SessionID> | all}] [-k {<SessionID> | all}] [-m {<SessionID> | all}  <Message>] [config [dom = <Domain>] [ctrlakeymap = {yes | no}] [timeout = <hh>:<mm>:<ss>] [timeoutactive = {yes | no}] [maxfail = <Attempts>] [maxconn = <Connections>] [port = <Number>] [sec {+ | -}NTLM {+ | -}passwd] [mode = {console | stream}]] [-?]  
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<ComputerName>|Specifies the name of the server to connect to. The default is the local computer.|  
 |-u <UserName> -p <Password>|Specifies administrative credentials for a remote server that you want to administer. This parameter is required if you want to administer a remote server to which you are not logged on with administrative credentials.|  
 |start|Starts the Telnet Server Service.|  
@@ -35,7 +34,7 @@ tlntadmn [<ComputerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |continue|Resumes the Telnet Server Service.|  
 |-s {<SessionID> &#124; all}|Displays active Telnet sessions.|  
 |-k {<SessionID> &#124; all}|Ends Telnet sessions. Type the Session ID to end a specific session, or type all to end all the sessions.|  
-|-m {<SessionID> &#124; all} ???<Message>????|Sends a message to one or more sessions. Type the session ID to send a message to a specific session, or type all to send a message to all sessions. Type the message that you want to send between quotation marks.|  
+|-m {<SessionID> &#124; all}  <Message>|Sends a message to one or more sessions. Type the session ID to send a message to a specific session, or type all to send a message to all sessions. Type the message that you want to send between quotation marks.|  
 |config dom = <Domain>|Configures the default domain for the server.|  
 |config ctrlakeymap = {yes &#124; no}|Specifies if you want the Telnet server to interpret CTRL+A as ALT. Type **yes** to map the shortcut key, or type **no** to prevent the mapping.|  
 |config timeout = <hh>:<mm>:<ss>|Sets the time-out period in hours, minutes, and seconds.|  

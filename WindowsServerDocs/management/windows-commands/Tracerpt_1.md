@@ -1,6 +1,6 @@
 ---
 title: Tracerpt_1
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tracerpt_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 ```  
 ## Options  
 |Option flag|Description|  
-|---------------|---------------|  
+|--------|--------|  
 |-?|Displays context sensitive help.|  
 |-config <filename>|Load a settings file containing command options.|  
 |-y|Answer yes to all questions without prompting.|  
@@ -48,8 +47,8 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 |-report [filename]|Generate a text output report file. Filename if not specified is workload.xml.|  
 |-lr|Specify "less restrictive." This uses best efforts for events that do not match the events schema.|  
 |-export [filename]|Generate an Event Schema export file. Filename if not specified is schema.man.|  
-|[-l] <value [value […]]>|Specify the Event Trace log file to process.|  
-|-rt <session_name [session_name […]]>|Specify Real-time Event Trace Session data sources.|  
+|[-l] <value [value [ ]]>|Specify the Event Trace log file to process.|  
+|-rt <session_name [session_name [ ]]>|Specify Real-time Event Trace Session data sources.|  
 ## <a name="BKMK_EXAMPLES"></a>Examples  
 -   This example creates a report based on the two event logs **logfile1.etl** and **logfile2.etl** and creates the dump file **logdump.xml** in XML format.  
     ```  

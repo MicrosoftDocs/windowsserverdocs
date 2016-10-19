@@ -43,7 +43,7 @@ The following list includes the SRP functions beginning with Windows Server 2003
 AppLocker and SRP use the security level IDs to stipulate the access requirements to files listed in policies. The following table shows those security levels supported in SRP and AppLocker.
 
 |Security level ID|SRP|AppLocker|
-|---------------------|-------|-------------|
+|-----------|----|-------|
 |SAFER_LEVELID_FULLYTRUSTED|Supported|Supported|
 |SAFER_LEVELID_NORMALUSER|Supported|Not supported|
 |SAFER_LEVELID_CONSTRAINED|Supported|Not supported|

@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Working with Control Panel Settings Preference Items Using the GPMC
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,11 +28,11 @@ You can create and configure Data Source preference items for any domain-based G
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Data Sources**  
+**  Data Sources**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -71,8 +70,8 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |||  
 |-|-|  
 |**User Data Source** or **System Data Source**|Select the visibility of the data source name. User data sources are available to users receiving the preference item. System data sources are available to all the users of the computer (including the Local System).|  
-|**Data Source Name**|Type the name used to identify the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select. You can import a local data source name into the Data Source preference item. Click Browse **(Ã¢â‚¬Â¦)** to display a list of the data sources names on the current computer. **Important:** Attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
-|**Driver**|Type the name of the ODBC driver used to connect to the data provider. Click Browse **(Ã¢â‚¬Â¦)** to choose from a list of ODBC drivers.|  
+|**Data Source Name**|Type the name used to identify the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select. You can import a local data source name into the Data Source preference item. Click Browse **()** to display a list of the data sources names on the current computer. **Important:** Attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
+|**Driver**|Type the name of the ODBC driver used to connect to the data provider. Click Browse **()** to choose from a list of ODBC drivers.|  
 |**Description**|Provide text used to describe the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select.|  
 |**User Name**|Type the user name used to connect to the indicated data provider.|  
 |**Password**|Type the password used to connect to the indicated data provider. Type the same password in the **Confirm Password** box. **Security Note:** This password is protected by 256-bit Advanced Encryption Standard (AES) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
@@ -93,11 +92,11 @@ You can create and configure Device preference items for any domain-based Group 
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Devices**  
+**  Devices**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -135,8 +134,8 @@ Device preference items allow you to enable or disable classes of or types of ha
   
 |||  
 |-|-|  
-|**Device class**|This setting contains the name of the enabled or disabled device class. **DVD/CD-ROM drives** is an example of a device class. Click Browse **(Ã¢â‚¬Â¦)** to choose from a list of the device classes available on your computer.|  
-|**Device type**|This setting contains the name of the enabled or disabled device type. **MS CD/DVD-ROM ATA Device** is an example of a device type. To select a Device type, click Browse **(Ã¢â‚¬Â¦)** next to the **Device class** box. Expand a device class to show the list of device types available on your computer.|  
+|**Device class**|This setting contains the name of the enabled or disabled device class. **DVD/CD-ROM drives** is an example of a device class. Click Browse **()** to choose from a list of the device classes available on your computer.|  
+|**Device type**|This setting contains the name of the enabled or disabled device type. **MS CD/DVD-ROM ATA Device** is an example of a device type. To select a Device type, click Browse **()** next to the **Device class** box. Expand a device class to show the list of device types available on your computer.|  
   
 #### Additional considerations  
   
@@ -159,11 +158,11 @@ You can create and configure File Type, Open With, and Folder Options preference
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Folder Options**  
+**  Folder Options**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -217,7 +216,7 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |||  
 |-|-|  
 |**File name extension**|Type the extension of the file to associate with the specified application. Press F3 to display a list of variables from which you can select. **Note:** You do not need to insert the period before the file name extension.|  
-|**Associated Program**|Type the path and name of the application you want to associate with the file name extension. Alternatively, you can click Browse **(Ã¢â‚¬Â¦)** and select the application. Press F3 to display a list of variables from which you can select.|  
+|**Associated Program**|Type the path and name of the application you want to associate with the file name extension. Alternatively, you can click Browse **()** and select the application. Press F3 to display a list of variables from which you can select.|  
 |**Set as default**|Select this check box to make the associated application the default application Windows uses to open the file name extension.|  
   
 ##### Additional considerations  
@@ -267,7 +266,7 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 #### Configure class settings  
 Select **Configure class settings** to configure advanced class settings.  
   
--   To associate a file icon with the file name extension, type the full path in the **Icon file path**. Alternatively, you can Browse **(Ã¢â‚¬Â¦)** to the file location. Browsing to the file location automatically populates the **Icon Index** box.  
+-   To associate a file icon with the file name extension, type the full path in the **Icon file path**. Alternatively, you can Browse **()** to the file location. Browsing to the file location automatically populates the **Icon Index** box.  
   
 -   To associate applications for opening, editing, and other actions upon this specific file type, click **New**. Type the name of the command Windows displays on the shortcut menu and the program Windows launches along with any required specifications. Click **OK**.  
   
@@ -292,11 +291,11 @@ You can create and configure Internet Explorer preference items for any domain-b
   
 **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Internet Settings**  
+**  Internet Settings**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -307,11 +306,11 @@ You can create and configure Local User and Local Group preference items for any
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Local Users and Groups**  
+**  Local Users and Groups**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -356,9 +355,9 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |**Do not configure for the current user**|Use this setting if you do not want the currently logged-on user added to or removed from the local group. **Note:** This setting is available only when editing the preference item under **User Configuration**.|  
 |**Delete all member users**|Use this setting to remove all the user accounts that are members of the local group. The preference extension performs this work prior to processing the members list defined in the preference item.|  
 |**Delete all member groups**|Use this setting to remove all the group accounts that are members of the local group. The preference extension performs this work prior to processing the members list defined in the preference item.|  
-|**Add**|Click **Add** to enter a new member item to the members list.<br /><br /><ul><li>Type the name of the user or group you want to include in the member item, or click Browse **(Ã¢â‚¬Â¦)** to select a user or group.</li><li>Choose from the **Action** list the desired action for the member item:<br /><br /><ul><li>**Add to this group**: Adds the named member to the local group.</li><li>**Remove from this group**: Removes the named member from the local group.</li></ul></li></ul>|  
+|**Add**|Click **Add** to enter a new member item to the members list.<br /><br /><ul><li>Type the name of the user or group you want to include in the member item, or click Browse **()** to select a user or group.</li><li>Choose from the **Action** list the desired action for the member item:<br /><br /><ul><li>**Add to this group**: Adds the named member to the local group.</li><li>**Remove from this group**: Removes the named member from the local group.</li></ul></li></ul>|  
 |**Remove**|Click **Remove** to delete the currently selected member item from the member list.|  
-|**Change**|Click **Change** to modify the currently selected member item.<br /><br /><ul><li>Type the name of the user or group you want to include in the member item, or click Browse **(Ã¢â‚¬Â¦)** to select a user or group.</li><li>Choose from the **Action** list the desired action for the member item:<br /><br /><ul><li>**Add to this group**: Adds the named member to the local group.</li><li>**Remove from this group**: Removes the named member from the local group.</li></ul></li></ul>|  
+|**Change**|Click **Change** to modify the currently selected member item.<br /><br /><ul><li>Type the name of the user or group you want to include in the member item, or click Browse **()** to select a user or group.</li><li>Choose from the **Action** list the desired action for the member item:<br /><br /><ul><li>**Add to this group**: Adds the named member to the local group.</li><li>**Remove from this group**: Removes the named member from the local group.</li></ul></li></ul>|  
   
 ##### Additional considerations  
   
@@ -429,11 +428,11 @@ You can create and configure VPN connection and dial-up networking connection pr
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Network Options**  
+**  Network Options**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -472,12 +471,12 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |-|-|  
 |**User connection**|Use this setting to make the newly created or updated connection visible only to the applied user.|  
 |**All users connection**|Use this setting to make the newly created or updated connection visible to all users on the computer.|  
-|**Connection Name**|Text used to name the connection. Press F3 to display a list of variables from which you can select. You can import a dial-up networking connection into the Dial-Up Connection preference item. Click Browse **(Ã¢â‚¬Â¦)** to display a list of dial-up connections for the current computer.|  
+|**Connection Name**|Text used to name the connection. Press F3 to display a list of variables from which you can select. You can import a dial-up networking connection into the Dial-Up Connection preference item. Click Browse **()** to display a list of dial-up connections for the current computer.|  
 |**Phone Number**|Text used to indicate the phone number the connection uses. Press F3 to display a list of variables from which you can select.|  
   
 ##### Additional considerations  
   
--   Dial-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the  Windows ServerÃ‚Â® 2008 R2  or  Windows Server 2008  operating systems.  
+-   Dial-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the  Windows Server 2008 R2  or  Windows Server 2008  operating systems.  
   
 -   You can use item-level targeting to change the scope of preference items.  
   
@@ -518,7 +517,7 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |-|-|  
 |**User connection**|Use this setting to make the newly created or updated connection visible only to the applied user.|  
 |**All users connection**|Use this setting to make the newly created or updated connection visible to all users on the computer.|  
-|**Connection Name**|Text used to name the connection. Press F3 to display a list of variables from which you can select. You can import a virtual private network connection into a virtual private network preference item. Click Browse **(Ã¢â‚¬Â¦)** to display a list of virtual private network connections from the current computer.|  
+|**Connection Name**|Text used to name the connection. Press F3 to display a list of variables from which you can select. You can import a virtual private network connection into a virtual private network preference item. Click Browse **()** to display a list of virtual private network connections from the current computer.|  
 |**IP Address** or **DNS name**|Type the IP address of the remote computer. Or, select the **Use DNS name** box and type the fully qualified domain name of the remote computer. **Note:** IPv6 addresses are not supported.|  
 |**Dial another connection first**|Type the name of the dial-up network connection that this connection established prior to connecting to the virtual private network.|  
 |**Show icon in notification area when connected**|Displays an animated icon in the notification area when connected.|  
@@ -534,7 +533,7 @@ Use the **Network** tab to choose the type of VPN connection for the preference 
   
 ##### Additional considerations  
   
--   Dial-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the  Windows ServerÃ‚Â® 2008 R2  or  Windows Server 2008  operating systems.  
+-   Dial-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the  Windows Server 2008 R2  or  Windows Server 2008  operating systems.  
   
 -   You can use item-level targeting to change the scope of preference items.  
   
@@ -545,11 +544,11 @@ You can create and configure Power Plan, Power Options, and Power Scheme prefere
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Power Options**  
+**  Power Options**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -599,11 +598,11 @@ Group Policy includes the Printers preference extension. This extension allows y
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Printers**  
+**  Printers**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -642,7 +641,7 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |-|-|  
 |**Connection Name**|Type the name of the targeted local printer. The preference extension creates a new local printer with this name if the local printer does not exist. If the printer exists, the preference extension uses the local printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select.|  
 |**Port**|Choose a local port from the supplied list or type the name of the local port.|  
-|**Printer path**|Type or click Browse **(Ã¢â‚¬Â¦)** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver. The actual printer should be physically connected to the workstation.|  
+|**Printer path**|Type or click Browse **()** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver. The actual printer should be physically connected to the workstation.|  
 |**Set this printer as the default printer**|Select this check box to make the local printer the default Windows printer for the current user.|  
 |**Location**|Type text to describe where the printer is located. This information appears in the printer's **Location** box. Press F3 to display a list of variables from which you can select.|  
 |**Comment**|Type text that provides additional comments about the printer. This information appears in the printer's **Comments** box. Press F3 to display a list of variables from which you can select.|  
@@ -685,7 +684,7 @@ This type of preference item provides a choice of four actions: **Create**, **Re
   
 |||  
 |-|-|  
-|**Share path**|Type or click Browse **(Ã¢â‚¬Â¦)** to choose a fully qualified UNC path of a shared printer.|  
+|**Share path**|Type or click Browse **()** to choose a fully qualified UNC path of a shared printer.|  
 |**Set this printer as the default printer**|Select this check box to make the shared printer connection the default Windows printer for the current user.|  
 |**Only if a local printer is not present**|Select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **Important:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP/IP printers, and virtual printers installed through software.|  
 |**Delete all shared printer connections**|Select this check box if you want to delete all shared printer connections for the current user. This setting is available only when the preference item's action is set to **Delete**|  
@@ -738,7 +737,7 @@ This type of preference item provides a choice of four actions: **Create**, **Re
 |-|-|  
 |**IP Address** or **DNS name**|Type the IP address of the remote printer. Or select the **Use DNS name** check box and type the fully qualified domain name of the remote printer. **Important:** The Printers preference extension uses the TCP/IP address or the DNS Name to determine if a TCP/IP printer exists when a Local Name is not provided. **Note:** IPv6 addresses are not supported.|  
 |**Local Name**|Type the local name of the targeted TCP/IP printer connection. The preference extension creates a new TCP/IP printer connection with this name if one does not exist. If a TCP/IP printer connection with this name exists, the preference extension uses the TCP/IP printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select. **Important:** The Printers preference extension uses Local Name to determine if a TCP/IP printer exists when a Local Name is provided. Otherwise, the preference extension uses the TCP/IP address or the DNS Name to determine if the TCP/IP connection exits.|  
-|**Printer path**|Type a fully qualified UNC path or click Browse **(Ã¢â‚¬Â¦)** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver.|  
+|**Printer path**|Type a fully qualified UNC path or click Browse **()** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver.|  
 |**Set this printer as the default printer**|Select this check box to make the local printer the default Windows printer for the current user.|  
 |**Only if a local printer is not present**|Select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **Important:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP/IP printers, and virtual printers installed through software.|  
 |**Delete all IP printer connections**|Select this check box if you want to delete all TCP/IP printer connections for the current user. This setting is available only when the preference item's action is set to **Delete**|  
@@ -759,11 +758,11 @@ You can create and configure Regional Options preference items in any domain-bas
   
 **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Regional Options**  
+**  Regional Options**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -812,11 +811,11 @@ For computers and users, this extension allows you to:
   
 **Computer Configuration** or **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Scheduled Tasks**  
+**  Scheduled Tasks**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -1047,11 +1046,11 @@ You can create and configure Service preference items in any domain-based Group 
   
 **Computer Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Services**  
+**  Services**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   
@@ -1092,13 +1091,13 @@ The Services preference extension allows you to configure existing services on c
 |||  
 |-|-|  
 |**Startup**|Choose the startup type for the service<br /><br />-   **No change**: Use this setting when you do not want to change the startup type.<br />-   **Automatic**: Use this setting to configure the service to automatically start during the boot and logon process.<br />-   **Disabled**: Use this setting to disable the service. Disabling the service prevents the service from starting.<br />-   **Automatic (Delayed Start)**: Use this setting to configure the service to automatically start during the boot and logon process. The startup of the service is briefly delayed during the logon process to increase logon performance.|  
-|**Service name**|Type the unique name for the service, or click Browse **(Ã¢â‚¬Â¦)** to select a service from a list of installed services on the current computer. **Important:** A service's unique name does not always match its display name. For example, the unique name of the *Server* service is *LanmanServer*.|  
+|**Service name**|Type the unique name for the service, or click Browse **()** to select a service from a list of installed services on the current computer. **Important:** A service's unique name does not always match its display name. For example, the unique name of the *Server* service is *LanmanServer*.|  
 |**Wait timeout if service is locked**|Type a timeout value in seconds the preference extension waits to write configuration data, if the service is locked or transitioning from a stop, started, or restarted state,|  
 |**Log on as: No change**|Use this setting to keep the service's logon credentials as previously configured.|  
 |**Log on as: Local System account**|Use this setting to change the service's logon credentials to the Local System account.|  
 |**Allow service to interact with desktop**|Select this check box to allow the service to interact with the desktop. This setting is unavailable until you click the **Local System account** option.|  
 |**Log on as: This account**|Use this setting to change the service's logon credentials to a specific local or domain user. **This account** and **Password** settings become available once you click this option.|  
-|**This account**|Type or click browse **(Ã¢â‚¬Â¦)** for the user name you are using for the service's logon credentials.|  
+|**This account**|Type or click browse **()** for the user name you are using for the service's logon credentials.|  
 |**Password**|Type the password used to authenticate the user. Type the same password in the **Confirm Password** box. **Security Note:** This password is protected by 256-bit Advanced Encryption Standard (AES) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
   
 #### Recovery actions  
@@ -1117,7 +1116,7 @@ Configure how the computer responds if the service fails after one, two, or more
 |-|-|  
 |**Restart fail count after**|Type the number of days that must pass before the service fail count is reset. This setting is available when at least one of the recovery actions is set to any setting other than **No Change**.|  
 |**Start service after**|Type the number of minutes that must pass before the failing service is restarted. This setting is available only when at least one of the recovery actions is set to **Restart the Service**.|  
-|**Program**|Type the full path for the program you want launched in response to the recovery action **Run a Program**. Or, you can Browse **(Ã¢â‚¬Â¦)** for the application. Use the **Command line parameters** box to provide additional command line arguments for the program. This setting is available only when at least one of the recovery actions is set to **Run a Program**.|  
+|**Program**|Type the full path for the program you want launched in response to the recovery action **Run a Program**. Or, you can Browse **()** for the application. Use the **Command line parameters** box to provide additional command line arguments for the program. This setting is available only when at least one of the recovery actions is set to **Run a Program**.|  
 |**Restart Computer Options**|Click **Restart Computer Options** to set that wait time before restarting a service. Also, you can provide a message to broadcast to network computers to alert users of the pending computer restart.|  
   
 ##### Additional considerations  
@@ -1147,11 +1146,11 @@ You can create and configure Start Menu preference items for any domain-based Gr
   
 **User Configuration**  
   
-**Ã¢â€?â€? Preferences**  
+**  Preferences**  
   
-**Ã¢â€?â€? Control Panel Settings**  
+**  Control Panel Settings**  
   
-**Ã¢â€?â€? Start Menu**  
+**  Start Menu**  
   
 For information about how to use this extension to create and configure a preference item, see the following topics:  
   

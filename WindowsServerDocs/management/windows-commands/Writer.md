@@ -1,6 +1,6 @@
 ---
 title: Writer
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Writer
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ writer exclude [<Writer> | <Component>]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |verify|Verifies that the specified writer or component is included in the backup or restore procedure. The backup or restore procedure will fail if the writer or component is not included.|  
 |exclude|Excludes the specified writer or component from the backup or restore procedure.|  
 |\[<Writer> &#124; <Component>\]|Specifies the writer or component to verify or exclude. Writers are specified by writer GUID or by the writer name, for example "System Writer."|  
@@ -43,7 +42,7 @@ To verify a writer by specifying its GUID \(for this example, 4dc3bdd4\-ab48\-4d
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}  
 ```  
   
-To exclude a writer with the name “System Writer,�? type:  
+To exclude a writer with the name  System Writer, type:  
   
 ```  
 writer exclude "System Writer"  

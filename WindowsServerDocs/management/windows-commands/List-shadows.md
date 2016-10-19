@@ -1,6 +1,6 @@
 ---
 title: List shadows
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # List shadows
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ list shadows {all | set <SetID> | id <ShadowID>}
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |all|Lists all shadow copies.|  
 |set <SetID>|Lists shadow copies that belong to the specified Shadow Copy Set ID.|  
 |id <ShadowID>|Lists any shadow copy with the specified shadow copy ID.|  

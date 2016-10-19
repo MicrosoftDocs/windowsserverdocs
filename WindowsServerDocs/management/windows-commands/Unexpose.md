@@ -1,6 +1,6 @@
 ---
 title: Unexpose
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Unexpose
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ unexpose {<ShadowID> | <Drive:> | <Share> | <MountPoint>}
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<ShadowID>|Unexposes the shadow copy specified by the given Shadow ID.|  
 |<Drive:>|Unexposes the shadow copy associated with the specified drive letter \(for example, drive P\).|  
 |<Share>|Unexposes the shadow copy associated with the specified share \(for example, \\\\*MachineName*\\\).|  

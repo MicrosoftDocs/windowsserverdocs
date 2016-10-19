@@ -1,6 +1,6 @@
 ---
 title: Sc query
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Sc query
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<ServerName>|Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\\myserver). To run SC.exe locally, omit this parameter.|
 |<ServiceName>|Specifies the service name returned by the **getkeyname** operation. This **query** parameter is not used in conjunction with other **query** parameters (other than *ServerName*).|
 |type= {driver &#124; service &#124; all}|Specifies what to enumerate. The default value for the first type is **service**.<br /><br />-   **Value: description**<br />-   **driver:** specifies that only drivers are enumerated.<br />-   **service:** specifies that only services are enumerated.<br />-   **all:** specifies that both drivers and services are enumerated.|

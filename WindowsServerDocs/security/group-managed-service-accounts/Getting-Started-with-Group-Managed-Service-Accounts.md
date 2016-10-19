@@ -51,7 +51,7 @@ When a client computer connects to a service which is hosted on a server farm us
 Services have the following principals from which to choose, and each has certain limitations.
 
 |Principals|Scope|Services supported|Password management|
-|--------------|---------|----------------------|-----------------------|
+|-------|-----|-----------|------------|
 |Computer Account of Windows system|Domain|Limited to one domain joined server|Computer manages|
 |Computer Account without Windows system|Domain|Any domain joined server|None|
 |Virtual Account|Local|Limited to one server|Computer manages|
@@ -79,19 +79,19 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 **Operating system requirements**
 
 |Element|Requirement|Operating system|
-|-----------|---------------|--------------------|
+|------|--------|----------|
 |Client Application host|RFC compliant Kerberos client|At least Windows XP|
-|User account’s domain DCs|RFC compliant KDC|At least Windows Server 2003|
+|User account???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
 |Shared service member hosts|| Windows Server 2012 |
-|Member host’s domain DCs|RFC compliant KDC|At least Windows Server 2003|
-|gMSA account’s domain DCs| Windows Server 2012  DCs available for host to retrieve the password|Domain with  Windows Server 2012  which can have some systems earlier than  Windows Server 2012 |
+|Member host???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
+|gMSA account???s domain DCs| Windows Server 2012  DCs available for host to retrieve the password|Domain with  Windows Server 2012  which can have some systems earlier than  Windows Server 2012 |
 |Backend service host|RFC compliant Kerberos application server|At least Windows Server 2003|
-|Backend service account’s domain DCs|RFC compliant KDC|At least Windows Server 2003|
+|Backend service account???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
 |Windows PowerShell for Active Directory|Windows PowerShell for Active Directory installed locally on a computer supporting a 64-bit architecture or on your remote management computer (for example, using the Remote Server Administration Toolkit)| Windows Server 2012 |
 
 **Active Directory Domain Service requirements**
 
--   The Active Directory schema in the gMSA domain’s forest needs to be updated to  Windows Server 2012  to create a gMSA.
+-   The Active Directory schema in the gMSA domain???s forest needs to be updated to  Windows Server 2012  to create a gMSA.
 
     You can update the schema by installing a domain controller that runs  Windows Server 2012  or by running the version of adprep.exe from a computer running  Windows Server 2012 . The object-version attribute value for the object CN=Schema,CN=Configuration,DC=Contoso,DC=Com must be 52.
 
@@ -150,7 +150,7 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
     **New-ADServiceAccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>] -SamAccountName <string> -ServicePrincipalNames <string[]>**
 
     |Parameter|String|Example|
-    |-------------|----------|-----------|
+    |-------|-----|------|
     |Name|Name of the account|ITFarm1|
     |DNSHostName|DNS host name of service|ITFarm1.contoso.com|
     |KerberosEncryptionType|Any encryption types supported by the host servers|RC4, AES128, AES256|
@@ -182,7 +182,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
     **New-ADServiceAccount [-Name] <string> -RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>]**
 
     |Parameter|String|Example|
-    |-------------|----------|-----------|
+    |-------|-----|------|
     |Name|Name the account|ITFarm1|
     |ManagedPasswordIntervalInDays|Password change interval in days (default is 30 days if not provided)|75|
     |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|ITFarmHosts|
@@ -215,7 +215,7 @@ To configure the services in  Windows Server 2012 , see the following feature do
 Other services could support gMSA. See the appropriate product documentation for details on how to configure those services.
 
 ## <a name="BKMK_AddMemberHosts"></a>Adding member hosts to an existing server farm
-If using security groups for managing member hosts, add the computer account for the new member host to the security group (that the gMSA’s member hosts are a member of) using one of the following methods.
+If using security groups for managing member hosts, add the computer account for the new member host to the security group (that the gMSA???s member hosts are a member of) using one of the following methods.
 
 Membership in **Domain Admins**, or the ability to add members to the security group object, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
 
@@ -248,7 +248,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
     **Set-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
-|-------------|----------|-----------|
+|-------|-----|------|
 |Name|Name the account|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|Host1, Host2, Host3|
 
@@ -277,7 +277,7 @@ For detailed information how to set these properties, see [Set-ADServiceAccount]
 Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
 
 ### Step 1: Remove member host from gMSA
-If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA’s member hosts are a member of using either of the following methods.
+If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA???s member hosts are a member of using either of the following methods.
 
 -   Method 1: Active Directory Users and Computers
 
@@ -308,7 +308,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
     **Set-ADServiceAccount [-Name] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
-|-------------|----------|-----------|
+|-------|-----|------|
 |Name|Name the account|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|Host1,  Host3|
 

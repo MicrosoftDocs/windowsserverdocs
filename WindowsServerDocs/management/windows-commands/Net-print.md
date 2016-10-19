@@ -1,6 +1,6 @@
 ---
 title: Net print
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Net print
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ Net print {\\<ComputerName>\<ShareName> |
 ```
 ## Parameters
 |Parameters|Description|
-|--------------|---------------|
+|-------|--------|
 |\\\\<ComputerName>\\<ShareName>|Specifies (by name) the computer and print queue about which you want to display information.|
 |\\\\<ComputerName>|Specifies (by name) the computer that hosts the print job you want to control. If you do not specify a computer, the local computer is assumed. Requires the <JobNumber> parameter.|
 |<JobNumber>|Specifies the number of the print job you want to control. This number is assigned by the computer that hosts the print queue where the print job is sent. After a computer assigns a number to a print job, that number is not assigned to any other print jobs in any queue hosted by that computer. Required when using the \\\\<ComputerName> parameter.|
@@ -41,7 +40,7 @@ Net print {\\<ComputerName>\<ShareName> |
     ```
     Printers at \\PRODUCTION
     Name              Job #      Size      Status
-    ---------------------------------------------------------
+    -----------------------------
     LASER Queue       3 jobs               *Printer Active*
        USER1          84        93844      Printing
        USER2          85        12555      Waiting

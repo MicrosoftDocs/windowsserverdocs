@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
 >Applies To: Windows Server 2016
@@ -42,7 +41,7 @@ You can find the Best Practices Analyzer tile on role and server group pages of 
 BPA works by measuring a role's compliance with best practice rules in eight different categories of effectiveness, trustworthiness, and reliability. Results of measurements can be any of the three severity levels described in the following table.
 
 |Severity level|Description|
-|------------------|---------------|
+|---------|--------|
 |Error|Error results are returned when a role does not satisfy the conditions of a best practice rule, and functionality problems can be expected.|
 |Information|Information results are returned when a role satisfies the conditions of a best practice rule.|
 |Warning|Warning results are returned if the results of noncompliance can cause problems if changes are not made. The application might be compliant as operating currently, but may not satisfy the conditions of a rule if changes are not made to its configuration or policy settings. For example, a scan of Remote Desktop Services might show a warning result if a license server is unavailable to the role, because even if no remote connections are active at the time of the scan, not having the license server prevents new remote connections from obtaining valid client access licenses.|
@@ -51,7 +50,7 @@ BPA works by measuring a role's compliance with best practice rules in eight dif
 The following table describes the best practice rules categories against which roles are measured during a Best Practices Analyzer scan.
 
 |Category Name|Description|
-|-----------------|---------------|
+|---------|--------|
 |Security|Security rules are applied to measure a role's relative risk for exposure to threats such as unauthorized or malicious users, or loss or theft of confidential or proprietary data.|
 |Performance|Performance rules are applied to measure a role's ability to process requests and perform its prescribed duties in the enterprise within expected periods of time given the role's workload.|
 |Configuration|Configuration rules are applied to identify role settings that might require modification for the role to perform optimally. Configuration rules can help prevent conflicts in settings that can result in error messages or prevent the role from performing its prescribed duties in an enterprise.|

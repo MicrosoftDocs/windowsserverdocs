@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Managing WSUS Client Computers and WSUS Computer Groups
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,7 +35,7 @@ There are two methods to control when WSUS client computers install updates:
 
 -   WSUS Group Policies: Group Policies control when the Windows Update Agent scans and installs updates
 
-    For more information, see: [Step 5: Configure Group Policy Settings for Automatic Updates](../deploy/4--Configure-Group-Policy-Settings-for-Automatic-Updates.md), in the WSUS Deployment Guide.
+    For more information, see: [Step 5: Configure Group Policy Settings for Automatic Updates](../deploy/4-Configure-Group-Policy-Settings-for-Automatic-Updates.md), in the WSUS Deployment Guide.
 
 ## Managing Computer Groups
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.

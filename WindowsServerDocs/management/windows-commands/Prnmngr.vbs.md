@@ -1,6 +1,6 @@
 ---
 title: Prnmngr.vbs
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Prnmngr.vbs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ Cscript Prnmngr {-a | -d | -x | -g | -t | -l | -?}[c] [-s <ServerName>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-a|Adds a local printer connection.|
 |-d|Deletes a printer connection.|
 |-x|Deletes all printers from the server specified with the **-s** parameter. If you do not specify a server, Windows deletes all printers on the local computer.|

@@ -1,6 +1,6 @@
 ---
 title: Bootcfg
-description: "Windows Commands topic for **Bootcfg** -- Configures, queries, or changes Boot.ini file settings."
+description: "Windows Commands topic for **Bootcfg** - Configures, queries, or changes Boot.ini file settings."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bootcfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Bootcfg <parameter> [arguments...]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |[Bootcfg addsw](Bootcfg-addsw.md)|Adds operating system load options for a specified operating system entry.|  
 |[Bootcfg copy](Bootcfg-copy.md)|Makes a copy of an existing boot entry, to which you can add command-line options.|  
 |[Bootcfg dbg1394](Bootcfg-dbg1394.md)|Configures 1394 port debugging for a specified operating system entry.|  

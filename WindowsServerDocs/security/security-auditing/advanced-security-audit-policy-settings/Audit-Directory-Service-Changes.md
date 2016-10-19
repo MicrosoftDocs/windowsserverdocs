@@ -46,7 +46,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |5136|A directory service object was modified.|
 |5137|A directory service object was created.|
 |5138|A directory service object was undeleted.|

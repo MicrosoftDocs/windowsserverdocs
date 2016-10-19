@@ -36,7 +36,7 @@ After you determine how to structure your Group Policy Objects (GPOs) so that yo
 The following table includes the sample data that was collected when you determined your enforcement settings and the GPO structure for your AppLocker policies.
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|
-|------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|------------|
+|---------|------------|------------|--------|-----------|-------------------------|---------|------|
 |Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||
 |Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|

@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # View Task Details and Notifications
 
 >Applies To: Windows Server 2016

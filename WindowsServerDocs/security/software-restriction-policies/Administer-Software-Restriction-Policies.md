@@ -80,7 +80,7 @@ For information about how to accomplish specific tasks using SRP, see the follow
 
 4.  In **Select Group Policy Object**, click **Browse**.
 
-5.  In **Browse for a Group Policy Object**, select a Group Policy Object (GPO) in the appropriate domain, site, or organizational unit--or create a new one, and then click **Finish**.
+5.  In **Browse for a Group Policy Object**, select a Group Policy Object (GPO) in the appropriate domain, site, or organizational unit-or create a new one, and then click **Finish**.
 
 6.  Click **Close**, and then click **OK**.
 

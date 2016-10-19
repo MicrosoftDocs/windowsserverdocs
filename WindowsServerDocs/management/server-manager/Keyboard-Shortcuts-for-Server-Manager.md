@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Keyboard Shortcuts for Server Manager
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 **Welcome Tile**
 
 |Control Group|Access Key|
-|-----------------|--------------|
+|---------|-------|
 |Welcome tile - Quick Start tab|**Alt+Q**|
 |Welcome tile - What's New tab|**Alt+W**|
 |Welcome tile - Learn More tab|**Alt+L**|
@@ -38,13 +37,13 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 **Role and Group Thumbnails**
 
 |Control Group|Access Key|
-|-----------------|--------------|
+|---------|-------|
 |Roles and Server Groups tile|**Alt+R**|
 
 **Console Header Controls**
 
 |Control Group|Access Key|
-|-----------------|--------------|
+|---------|-------|
 |Back button in the address bar|**Alt+Left arrow** or **Backspace**|
 |Forward button in the address bar|**Alt+right arrow**|
 |Refresh|**F5**|
@@ -60,7 +59,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 **Tiles on Role, Group or Local Server Pages**
 
 |Control Group|Access Key|
-|-----------------|--------------|
+|---------|-------|
 |Local Server page Properties tile|**Alt+P**|
 |Role, group, or local server page page Events tile|**Alt+E**|
 |Role, group, or local server page Services tile|**Alt+R**|
@@ -72,7 +71,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 **Navigating within Local Server Properties tile**
 
 |Control Group|Access Key|
-|-----------------|--------------|
+|---------|-------|
 |Computer name|**Alt+C**|
 |Last installed updates|**Alt+L**|
 |Domain or Workgroup|**Alt+D**|
@@ -91,7 +90,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 **Navigating within Events, Services, BPA, Performance, and Roles and Features tiles**
 
 |Control Group|Access Key|
-|-----------------|--------------|
+|---------|-------|
 |Tasks menu|**Alt+T**|
 |Filter control|**Alt+F**|
 |Query control|**Alt+Q**|

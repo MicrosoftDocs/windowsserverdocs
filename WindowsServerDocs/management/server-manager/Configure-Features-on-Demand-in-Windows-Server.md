@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Configure Features on Demand in Windows Server
 
 >Applies To: Windows Server 2016

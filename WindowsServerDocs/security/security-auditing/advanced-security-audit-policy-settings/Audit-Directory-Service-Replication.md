@@ -27,7 +27,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4932|Synchronization of a replica of an Active Directory naming context has begun.|
 |4933|Synchronization of a replica of an Active Directory naming context has ended.|
 

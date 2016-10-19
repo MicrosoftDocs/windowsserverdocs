@@ -42,7 +42,7 @@ Default: Success and failure
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4612|Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.|
 |4615|Invalid use of LPC port.|
 |4618|A monitored security event pattern has occurred.|

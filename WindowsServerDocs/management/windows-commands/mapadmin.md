@@ -1,6 +1,6 @@
 ---
 title: mapadmin
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # mapadmin
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -59,7 +58,7 @@ Specifies general settings for User Name Mapping. The following options are avai
 **-i {yes | no}** - Turns simple mapping on (**yes**) or off (**no**). By default, simple mapping is on.
 **add** - Creates a new mapping for a user or group. The following options are available with this command argument:
 |Option|Definition|
-|----------|--------------|
+|-----|-------|
 |-wu <name>|Specifies the name of the Windows user for which a new mapping is being created.|
 |-uu <name>|Specifies the name of the UNIX user for which a new mapping is being created.|
 |-wg <group>|Specifies the name of the Windows group for which a new mapping is being created.|
@@ -67,21 +66,21 @@ Specifies general settings for User Name Mapping. The following options are avai
 |-setprimary|Specifies that the new mapping is the primary mapping.|
 **setprimary** - Specifies which mapping is the primary mapping for a UNIX user or group with multiple mappings. The following options are available with this command argument:
 |Option|Definition|
-|----------|--------------|
+|-----|-------|
 |-wu <name>|Specifies the Windows user of the primary mapping. If more than one mapping for the user exists, use the **-uu** option to specify the primary mapping.|
 |-uu <name>|Specifies the UNIX user of the primary mapping.|
 |-wg <group>|Specifies the Windows group of the primary mapping. If more than one mapping for the group exists, use the **-ug** option to specify the primary mapping.|
 |-ug <group>|Specifies the UNIX group of the primary mapping.|
 **delete** - Removes the mapping for a user or group. The following options are available for this command argument:
 |Option|Definition|
-|----------|--------------|
+|-----|-------|
 |-wu <user>|The Windows user for which the mapping will be deleted, specified as <*WindowsDomain>\\<User Name>*. You must specify either the **-wu** or the **-uu** option, or both. If you specify both options, the particular mapping identified by the two options will be deleted. If you specify only the **-wu** option, all mappings for the specified user will be deleted.|
 |-wg <group>|The Windows group for which the mapping will be deleted, specified as <WindowsDomain>\\<groupname>. You must specify either the **-wg** or the **-ug** option, or both. If you specify both options, the particular mapping identified by the two options will be deleted. If you specify only the **-wg** option, all mappings for the specified group will be deleted.|
 |-uu <user>|The UNIX user for whom the mapping will be deleted, specified as <User Name>. You must specify either the **-wu** or the **-uu** option, or both. If you specify both options, the particular mapping identified by the two options will be deleted. If you specify only the **-uu** option, all mappings for the specified user will be deleted.|
 |-ug <group>|The UNIX group for which the mapping will be deleted, specified as <groupname>. You must specify either the **-wg** or the **-ug** option, or both. If you specify both options, the particular mapping identified by the two options will be deleted. If you specify only the **-ug** option, all mappings for the specified group will be deleted.|
 **list** - Displays information about user and group mappings. The following options are available with this command argument:
 |Option|Definition|
-|----------|--------------|
+|-----|-------|
 |-all|Lists both simple and advanced mappings for users and groups.|
 |-simple|Lists all simple mapped users and groups.|
 |-advanced|Lists all advanced mapped users and groups. Maps are listed in the order in which they are evaluated. Primary maps, marked with an asterisk (*), are listed first, followed by secondary maps, which are marked with a carat (^).|
@@ -93,13 +92,13 @@ Specifies general settings for User Name Mapping. The following options are avai
 **restore** - Replaces configuration and mapping data with data from the file (specified by <filename>) that was created using the **backup** command argument.
 **adddomainmap** - Adds a simple map between a Windows domain and an NIS domain or password and group files. The following options are available for this command argument:
 |Option|Definition|
-|----------|--------------|
+|-----|-------|
 |-d <WindowsDomain>|Specifies the Windows domain to be mapped.|
 |-y <NISdomain>|Specifies the NIS domain to be mapped.<br /><br />**-n** <nisServer> Specifies the NIS server for the NIS domain specified with the **-y** option.|
 |-f <path>|Specifies the fully qualified path of directory containing the password and group files to be mapped. The files must be located on the computer being managed, and you cannot use **mapadmin** to manage a remote computer to set up maps based on password and group files.|
 **removedomainmap** - Removes a simple map between a Windows domain and an NIS domain. The following options and argument are available for this command argument:
 |Option|Definition|
-|----------|--------------|
+|-----|-------|
 |-d <WindowsDomain>|Specifies the Windows domain of the map to be removed.|
 |-y <NISdomain>|Specifies the NIS domain of the map to be removed.|
 |-all|Specifies that all simple maps between Windows and NIS domains are to be removed. This will also remove any simple map between a Windows domain and password and group files.|

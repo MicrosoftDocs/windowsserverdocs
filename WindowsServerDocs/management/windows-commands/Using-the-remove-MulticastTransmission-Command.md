@@ -1,6 +1,6 @@
 ---
 title: Using the remove-MulticastTransmission Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the remove-MulticastTransmission Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -44,7 +43,7 @@ WDSUTIL [Options] /Remove-MulticastTransmissiomedia:<Image name>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 media:<Image name>|Specifies the name of the image.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 mediaType:{Install&#124;Boot}|Specifies the image type. Note that this option must be set to **Install** for Windows Server 2008.|
@@ -73,4 +72,4 @@ WDSUTIL /Remove-MulticastTransmission /Server:MyWDSServer
 [Using the get-AllMulticastTransmissions Command](Using-the-get-AllMulticastTransmissions-Command.md)
 [Using the get-MulticastTransmission Command](Using-the-get-MulticastTransmission-Command.md)
 [Using the new-MulticastTransmission Command](Using-the-new-MulticastTransmission-Command.md)
-[Subcommand: start-MulticastTransmission](Subcommand--start-MulticastTransmission.md)
+[Subcommand: start-MulticastTransmission](Subcommand-start-MulticastTransmission.md)

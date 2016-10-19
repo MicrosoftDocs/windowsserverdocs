@@ -1,6 +1,6 @@
 ---
 title: Defrag
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Defrag
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ defrag <volume> /T [/H] [/U] [/V]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<volume>|Specifies the drive letter or mount point path of the volume to be defragmented or analyzed.|
 |C|Perform the operation on all volumes.|
 |A|Perform analysis on the specified volumes.|

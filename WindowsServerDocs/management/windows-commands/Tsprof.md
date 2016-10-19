@@ -1,6 +1,6 @@
 ---
 title: Tsprof
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tsprof
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -24,7 +23,7 @@ The Remote Desktop Services user configuration information is displayed in the R
 **Tsprof** can also set the profile path for a user.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 tsprof /update {/domain:<DomainName> | /local} /profile:<Path> <UserName>
@@ -33,7 +32,7 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/update|Updates profile path information for <*UserName*> in domain <*DomainName*> to <*ProfilePath*>.|
 |/domain:<DomainName>|Specifies the name of the domain in which the operation is applied.|
 |/local|Applies the operation only to local user accounts.|
@@ -45,7 +44,7 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 |/q|Displays the current profile path of the user for whom you want to query the server profile path.|
 |/?|Displays help at the command prompt.|
 ## Remarks
--   The **tsprof** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server® 2008  or RD Session Host role service on a computer running Windows Server 2008 R2.
+-   The **tsprof** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server  2008  or RD Session Host role service on a computer running Windows Server 2008 R2.
 ## <a name="BKMK_examples"></a>Examples
 -   To copy user configuration information from LocalUser1 to LocalUser2, type:
     ```
@@ -57,4 +56,4 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
     ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)

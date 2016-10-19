@@ -35,7 +35,7 @@ Default: Success
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4964|Special groups have been assigned to a new logon.|
 
 ## Related resource

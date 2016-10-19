@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin getproxybypasslist
-description: "Windows Commands topic for **Bitsadmin getproxybypasslist** -- Retrieves the proxy bypass list for the specified job."
+description: "Windows Commands topic for **Bitsadmin getproxybypasslist** - Retrieves the proxy bypass list for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin getproxybypasslist
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /GetProxyBypassList <Job>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 ## Remarks
 -   The bypass list contains the host names or IP addresses, or both, that are not to be routed through a proxy. The list can contain "<local>" to refer to all servers on the same LAN. The list can be semicolon or space-delimited.

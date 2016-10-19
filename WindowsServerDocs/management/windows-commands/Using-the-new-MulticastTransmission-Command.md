@@ -1,6 +1,6 @@
 ---
 title: Using the new-MulticastTransmission Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the new-MulticastTransmission Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -49,7 +48,7 @@ WDSUTIL [Options] /New-MulticastTransmissiomedia:<Image name>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 media:<Image name>|Specifies the name of the image to be transmitted using multicasting.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/FriendlyName:<Friendly name>|Specifies the friendly name of the transmission.|
@@ -81,4 +80,4 @@ WDSUTIL /New-MulticastTransmission /FriendlyName:"WDS SchedCast Transmission" /S
 [Using the get-AllMulticastTransmissions Command](Using-the-get-AllMulticastTransmissions-Command.md)
 [Using the get-MulticastTransmission Command](Using-the-get-MulticastTransmission-Command.md)
 [Using the remove-MulticastTransmission Command](Using-the-remove-MulticastTransmission-Command.md)
-[Subcommand: start-MulticastTransmission](Subcommand--start-MulticastTransmission.md)
+[Subcommand: start-MulticastTransmission](Subcommand-start-MulticastTransmission.md)

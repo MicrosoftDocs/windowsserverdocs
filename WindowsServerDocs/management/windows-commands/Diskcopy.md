@@ -1,6 +1,6 @@
 ---
 title: Diskcopy
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Diskcopy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Drive1>|Specifies the drive that contains the source disk.|
 |<Drive2>|Specifies the drive that contains the destination disk.|
 |/v|Verifies that the information is copied correctly. This option slows down the copying process.|
@@ -63,7 +62,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 -   Understanding **diskcopy** exit codes
     The following table explains each exit code.
     |Exit code|Description|
-    |-------------|---------------|
+    |-------|--------|
     |0|Copy operation was successful|
     |1|Nonfatal Read/Write error occurred|
     |3|Fatal hard error occurred|

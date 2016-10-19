@@ -1,6 +1,6 @@
 ---
 title: Convert
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Convert
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ convert [<Volume>] /fs:ntfs [/v] [/cvtarea:<FileName>] [/nosecurity] [/x]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Volume>|Specifies the drive letter (followed by a colon), mount point, or volume name to convert to NTFS.|
 |/fs:ntfs|Required. Converts the volume to NTFS.|
 |/v|Runs **convert** in verbose mode, which displays all messages during the conversion process.|

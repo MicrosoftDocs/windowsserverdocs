@@ -1,6 +1,6 @@
 ---
 title: Rpcinfo
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Rpcinfo
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ rpcinfo [/p [<Node>]] [/b <Program Version>] [/t <Node Program> [<Version>]] [/u
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/p [<Node>]|Lists all programs registered with the port mapper on the specified host. If you do not specify a node (computer) name, the program queries the port mapper on the local host.|
 |/b <Program Version>|Requests a response from all network nodes that have the specified program and version registered with the port mapper. You must specify both a program name or number and a version number.|
 |/t <Node Program> [<Version>]|Uses the TCP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. If you do not specify a version, the program calls all versions.|

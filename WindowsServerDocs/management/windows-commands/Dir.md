@@ -1,6 +1,6 @@
 ---
 title: Dir
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dir
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:][<Path>]|Specifies the drive and directory for which you want to see a listing.|
 |[<FileName>]|Specifies a particular file or group of files for which you want to see a listing.|
 |/p|Displays one screen of the listing at a time. To see the next screen, press any key on the keyboard.|
@@ -64,7 +63,7 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
     11/30/2004  01:16 PM 0 t97.txt
     ```
     You might expect that typing **dir t97\*** would return the file t97.txt. However, typing **dir t97\*** returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map T97B4~1.TXT. Similarly, typing **del t97\*** would delete both files.
-    **Question mark (?):** Use the question mark as a substitute for a single character in a name. For example, typing **dir read???.txt** lists any files in the current directory with the .txt extension that begin with "read" and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
+    **Question mark (?):** Use the question mark as a substitute for a single character in a name. For example, typing **dir read .txt** lists any files in the current directory with the .txt extension that begin with "read" and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
 -   Specifying file display attributes
     If you use **/a** with more than one value in *Attributes*, **dir** displays the names of only those files with all the specified attributes. For example, if you use **/a** with **r** and **-h** as attributes (by using either **/a:r-h** or **/ar-h**), **dir** will only display the names of the read-only files that are not hidden.
 -   Specifying file name sorting

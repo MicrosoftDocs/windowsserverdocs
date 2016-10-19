@@ -1,6 +1,6 @@
 ---
 title: Create partition primary
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Create partition primary
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ create partition primary [size=<n>] [offset=<n>] [id={ <byte> | <guid> }] [align
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |size\=<n>|Specifies the size of the partition in megabytes \(MB\). If no size is given, the partition continues until there is no more unallocated space in the current region.|  
 |offset\=<n>|The offset in kilobytes \(KB\), at which the partition is created. If no offset is given, the partition will start at the beginning of the largest disk extent that is large enough to hold it.|  
 |align\=<n>|Aligns all partition extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. <n> is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  

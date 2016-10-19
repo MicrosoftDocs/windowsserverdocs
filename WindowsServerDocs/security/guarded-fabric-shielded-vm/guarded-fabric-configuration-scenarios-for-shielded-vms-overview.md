@@ -7,7 +7,7 @@ ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
----
+--
 
 # Configuration scenarios for shielded VMs in a guarded fabric
 
@@ -15,7 +15,7 @@ ms.technology: security-guarded-fabric
 
 The following topics describe configuration scenarios for shielded VMs in a guarded fabric that has already been configured. For information about configuring the guarded fabric, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md).
 
-<!-- The "swim lanes" diagram will be nice, when it's available -- link to it. -->
+<!- The "swim lanes" diagram will be nice, when it's available - link to it. ->
 
 <table>
 <colgroup>

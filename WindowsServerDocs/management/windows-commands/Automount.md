@@ -1,6 +1,6 @@
 ---
 title: Automount
-description: "Windows Commands topic for **Automount** -- Enables or disables the automount feature."
+description: "Windows Commands topic for **Automount** - Enables or disables the automount feature."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Automount
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ automount [ { enable | disable | scrub } ] [noerr]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |enable|Enables Windows to automatically mount new basic and dynamic volumes that are added to the system and to assign them drive letters.|
 |disable|Prevents Windows from automatically mounting any new basic and dynamic volumes that are added to the system. **Note:** Disabling automount can cause failover clusters to fail the storage portion of the **Validate a Configuration Wizard**.|
 |scrub|Removes volume mount point directories and registry settings for volumes that are no longer in the system. This prevents volumes that were previously in the system from being automatically mounted and given their former volume mount point(s) when they are added back to the system.|

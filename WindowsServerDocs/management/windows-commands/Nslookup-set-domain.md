@@ -1,6 +1,6 @@
 ---
 title: Nslookup set domain
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup set domain
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ set domain=<DomainName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<DomainName>|Specifies a new name for the default DNS domain name. The default domain name is the host name.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 ## Remarks

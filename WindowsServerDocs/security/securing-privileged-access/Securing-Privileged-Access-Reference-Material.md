@@ -298,7 +298,7 @@ The following standards must be met for meeting lifecycle requirements.
 -   Review all privileged account memberships monthly to ensure that no unauthorized permissions have been granted. This can be replaced by an automated tool that alerts changes.
 
 |Account Privilege Level|Approving Authority|Membership Review Frequency|
-|---------------------------|-----------------------|-------------------------------|
+|--------------|------------|----------------|
 |Tier 0 Administrator|Change approval board|Monthly or automated|
 |Tier 1 Administrator|Tier 0 administrators or security|Monthly or automated|
 |Tier 2 Administrator|Tier 0 administrators or security|Monthly or automated|
@@ -663,7 +663,7 @@ In a remote administration scenario, credentials are always exposed on the sourc
 This table includes guidance for the most common administrative tools and connection methods:
 
 |Connection<br />method|Logon type|Reusable credentials on destination|Comments|
-|---------------------|--------------|---------------------------------------|------------|
+|-----------|-------|--------------------|------|
 |Log on at console|Interactive|v|Includes hardware remote access / lights-out cards and network KVMs.|
 |RUNAS|Interactive|v||
 |RUNAS /NETWORK|NewCredentials|v|Clones current LSA session for local access, but uses new credentials when connecting to network resources.|
@@ -685,7 +685,7 @@ This table includes guidance for the most common administrative tools and connec
 For web authentication, use the reference from the table below:
 
 |Connection<br />method|Logon type|Reusable credentials on destination|Comments|
-|---------------------|--------------|---------------------------------------|------------|
+|-----------|-------|--------------------|------|
 |IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<br /><br />Interactive<br />(prior to IIS 6.0)|v||
 |IIS "Integrated Windows Authentication"|Network|-|NTLM and Kerberos Providers.|
 
@@ -714,7 +714,7 @@ For management applications that are not in this table, you can determine the lo
 In Windows-based computers, all authentications are processed as one of several logon types, regardless of which authentication protocol or authenticator is used. This table includes most common logon types and their attributes relative to credential theft:
 
 |Logon type|#|Authenticators accepted|Reusable credentials in LSA session|Examples|
-|--------------|------|---------------------------|---------------------------------------|------------|
+|-------|---|--------------|--------------------|------|
 |Interactive (a.k.a., Logon locally)|2|Password, Smartcard,<br />other|Yes|Console logon;<br />RUNAS;<br />Hardware remote control solutions (such as Network KVM or Remote Access / Lights-Out Card in server)<br />IIS Basic Auth (before IIS 6.0)|
 |Network|3|Password,<br />NT Hash,<br />Kerberos ticket|No (except if delegation is enabled, then Kerberos tickets present)|NET USE;<br />RPC calls;<br />Remote registry;<br />IIS integrated Windows auth;<br />SQL Windows auth;|
 |Batch|4|Password (usually stored as LSA secret)|Yes|Scheduled tasks|

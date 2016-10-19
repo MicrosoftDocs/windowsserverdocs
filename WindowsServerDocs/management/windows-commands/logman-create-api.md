@@ -1,6 +1,6 @@
 ---
 title: logman create api
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman create api
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ logman create api <[-n] <name>> [options]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  
@@ -52,8 +51,8 @@ logman create api <[-n] <name>> [options]
 |-mods <path [path [...]]>|Specifies the list of modules to log API calls from.|  
 |-inapis <module!api [module!api [...]]>|Specifies the list of API calls to include in logging.|  
 |-exapis <module!api [module!api [...]]>|Specifies the list of API calls to exclude from logging.|  
-|-[-]ano|Log (-ano) API names only, or do not log only (--ano) API names.|  
-|-[-]recursive|Log (-recursive) or do not log (--recursive) APIs recursively beyond the first layer.|  
+|-[-]ano|Log (-ano) API names only, or do not log only (-ano) API names.|  
+|-[-]recursive|Log (-recursive) or do not log (-recursive) APIs recursively beyond the first layer.|  
 |-exe <value>|Specifies the full path to an executable for API Tracing.|  
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  

@@ -1,6 +1,6 @@
 ---
 title: Copy
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Copy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/d|Allows the encrypted files being copied to be saved as decrypted files at the destination.|  
 |/v|Verifies that new files are written correctly.|  
 |/n|Uses a short file name, if available, when copying a file with a name longer than eight characters, or with a file name extension longer than three characters.|  
@@ -49,7 +48,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 -   Using **/b**  
     **/b** directs the command interpreter to read the number of bytes specified by the file size in the directory. **/b** is the default value for **copy**, unless **copy** combines files.  
     When **/b** precedes or follows a list of files on the command line, it applies to all listed files until **copy** encounters **/a**. In this case, **/a** applies to the file preceding **/a**.  
-    The effect of **/b** depends on its position in the command–line string. When **/b** follows *Source*, **copy** copies the entire file, including any end-of-file character (CTRL+Z).  
+    The effect of **/b** depends on its position in the command line string. When **/b** follows *Source*, **copy** copies the entire file, including any end-of-file character (CTRL+Z).  
     When **/b** follows *Destination*, **copy** does not add an end-of-file character (CTRL+Z).  
 -   Using **/v**  
     If a write operation cannot be verified an error message appears. Although recording errors rarely occur with **copy**, you can use **/v** to verify that critical data has been correctly recorded. The **/v** command-line option also slows down the **copy** command, because each sector recorded on the disk must be checked.  

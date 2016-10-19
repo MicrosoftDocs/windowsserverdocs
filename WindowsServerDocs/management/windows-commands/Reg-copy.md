@@ -1,6 +1,6 @@
 ---
 title: Reg copy
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Reg copy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ reg copy <KeyName1> <KeyName2> [/s] [/f]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<KeyName1>|Specifies the full path of the subkey to copy. To specify a remote computer, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |<KeyName2>|Specifies the full path of the subkey destination. To specify a remote computer, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |/s|Copies all subkeys and entries under the specified subkey.|
@@ -37,7 +36,7 @@ reg copy <KeyName1> <KeyName2> [/s] [/f]
 -   Reg does not ask for confirmation when copying a subkey.
 -   The following table lists the return values for the **reg copy** operation.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |0|Success|
 |1|Failure|
 ## <a name="BKMK_examples"></a>Examples

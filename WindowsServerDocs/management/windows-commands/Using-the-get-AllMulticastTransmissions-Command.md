@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllMulticastTransmissions Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-AllMulticastTransmissions Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ WDSUTIL /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 ```
 ## Parameters
 |Parameter|Explanation|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |[/Show]|**Windows Server 2008**<br /><br />/Show:Clients - Displays information about client computers that are connected to the multicast transmissions.<br /><br />**Windows Server 2008 R2**<br /><br />Show: {Boot &#124; Install &#124; All} - The type of image to return.                                **Boot** returns only boot image transmissions.                                  **Install** returns only install image                                 transmissions. **All** returns both image                                 types.|
 |||
@@ -49,4 +48,4 @@ To view information about all transmissions except deactivated transmissions, ty
 [Using the get-MulticastTransmission Command](Using-the-get-MulticastTransmission-Command.md)
 [Using the new-MulticastTransmission Command](Using-the-new-MulticastTransmission-Command.md)
 [Using the remove-MulticastTransmission Command](Using-the-remove-MulticastTransmission-Command.md)
-[Subcommand: start-MulticastTransmission](Subcommand--start-MulticastTransmission.md)
+[Subcommand: start-MulticastTransmission](Subcommand-start-MulticastTransmission.md)

@@ -34,7 +34,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, unless noted below.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |5140|A network share object was accessed. **Note:** This event is logged on computers running  Windows Server 2008 R2 , Windows Server 2008,  Windows 7 , or Windows Vista.|
 |5142|A network share object was added.|
 |5143|A network share object was modified.|

@@ -1,6 +1,6 @@
 ---
 title: Cscript
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Cscript
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,11 +21,11 @@ ms.date: 10/12/2016
 Starts a script so that it runs in a command-line environment.
 ## Syntax
 ```
-Cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:CScript|/H:WScript}] [/I] [/Job:<Identifier>] [{/Logo|/NoLogo}] [/S] [/T:<Seconds>] [/X] [/U] [/?] [<ScriptArguments …>]
+Cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:CScript|/H:WScript}] [/I] [/Job:<Identifier>] [{/Logo|/NoLogo}] [/S] [/T:<Seconds>] [/X] [/U] [/?] [<ScriptArguments  >]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Scriptname.extension|Specifies the path and file name of the script file with optional file name extension.|
 |/B|Specifies batch mode, which does not display alerts, scripting errors, or input prompts.|
 |/D|Starts the debugger.|

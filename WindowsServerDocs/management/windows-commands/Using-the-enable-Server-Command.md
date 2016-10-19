@@ -1,6 +1,6 @@
 ---
 title: Using the enable-Server Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the enable-Server Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL [Options] /Enable-Server [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 ## <a name="BKMK_examples"></a>Examples
 To enable the services on the server, run one of the following:
@@ -39,7 +38,7 @@ WDSUTIL /Verbose /Enable-Server /Server:MyWDSServer
 [Using the disable-Server Command](Using-the-disable-Server-Command.md)
 [Using the get-Server Command](Using-the-get-Server-Command.md)
 [Using the Initialize-Server Command](Using-the-Initialize-Server-Command.md)
-[Subcommand: set-Server](Subcommand--set-Server.md)
-[Subcommand: start-Server](Subcommand--start-Server.md)
-[Subcommand: stop-Server](Subcommand--stop-Server.md)
+[Subcommand: set-Server](Subcommand-set-Server.md)
+[Subcommand: start-Server](Subcommand-start-Server.md)
+[Subcommand: stop-Server](Subcommand-stop-Server.md)
 [The uninitialize-Server Option](The-uninitialize-Server-Option.md)

@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root AddStd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil root addstd <\\server\share> [<Comment>] | /?
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\server\\share>|UNC path to the namespace on the namespace server.|
 |<Comment>|Specifies an administrator comment for the namespace.|
 |\/?|Displays help at the command prompt.|

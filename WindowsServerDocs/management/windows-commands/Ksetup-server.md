@@ -1,6 +1,6 @@
 ---
 title: Ksetup:server
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:server
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /server <ServerName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<ServerName>|The full computer name on which the configuration will be effective, such as IPops897.corp.contoso.com.<br /><br />If an incomplete fully qualified domain computer name is specified, the command will fail.|
 ## Remarks
 There is no way to remove the targeted server name; you can only change it back to the local computer name, which is the default.
