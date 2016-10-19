@@ -289,5 +289,5 @@ In this scenario, a web app uses the original access token from a user to reques
 Steps 1 and 2 work just like steps 3 and 4 in the previous flow.  
 In Step 3, the key requirement is that the client_id parameter, the client ID of the Web app 2, must match the RP ID of Web API A.  In other words, the audience of the access token being exchanged for the new token must match the client ID of the entity requesting the new token.  
 
-### Related content  
+## Related content  
 See [AD FS Development](../AD-FS-Development.md) for the complete list of walk-through articles, which provide step-by-step instructions on using the related flows. 
