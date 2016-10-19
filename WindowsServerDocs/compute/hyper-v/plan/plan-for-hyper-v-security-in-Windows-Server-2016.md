@@ -1,6 +1,6 @@
 ---
 title: Plan for Hyper-V security in Windows Server 2016
-description: " "
+description: "Provides a lists of security considerations for Hyper-v hosts and virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
 ms.suite: na
