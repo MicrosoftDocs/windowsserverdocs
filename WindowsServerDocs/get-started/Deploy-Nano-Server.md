@@ -19,8 +19,10 @@ ms.author: jaimeo
 This topic covers information you need to deploy Nano Server images that are more customized to your needs compared to the simple examples in the Nano Server Quick Start topic. You'll find information about making a custom Nano Server image with exactly the features you want, installing Nano Server images from VHD or WIM, editing files, working with domains, dealing with packages by several methods, and working with server roles.
 
 ## Nano Server Image Builder
-[comment]: # (##Using the Nano Server Image Creation wizard - info goes here)
-The Nano Server Image Builder is a tool that helps you create a custom Nano Server image and bootable USB media with the aid of a graphical interface. Based on the inputs you provide, it generates reusable PowerShell scripts that allow you easily automate consistent installations of Nano Server running either Windows Server 2016 Datacenter or Standard editions. 
+
+The Nano Server Image Builder is a tool that helps you create a custom Nano Server image and bootable USB media with the aid of a graphical interface. Based on the inputs you provide, it generates reusable PowerShell scripts that allow you easily automate consistent installations of Nano Server running either Windows Server 2016 Datacenter or Standard editions.
+
+Obtain the tool from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=54065). 
 
 The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit).
 
@@ -181,7 +183,7 @@ Edit a file residing on the remote Nano Server by starting a remote session with
   
 ### Installing roles and features from a package repository  
 You can find and install Windows Packages from the online package repository by using the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. To install this provider, use these cmdlets:  
-  `Save-Module -Path “$env:ProgramFiles\WindowsPowerShell\Modules”  -Name NanoServerPackage -MinimumVersion 1.0.0.0`
+  `Save-Module -Path "$env:ProgramFiles\WindowsPowerShell\Modules"  -Name NanoServerPackage -MinimumVersion 1.0.0.0`
 
 `Import-PackageProvider NanoServerPackage`  
    
@@ -421,7 +423,7 @@ The package publisher should do the following:
 
 Next, the package consumer should follow these steps:
 
-1. Run the [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet to import the publisher’s certificate from Step 4 above to Nano Server with the certStoreLocation at “Cert:\LocalMachine\TrustedPeople”. For example: `Import-Certificate -filepath ".\xyz.cer" -certStoreLocation "Cert:\LocalMachine\TrustedPeople"`
+1. Run the [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet to import the publisher’s certificate from Step 4 above to Nano Server with the certStoreLocation at "Cert:\LocalMachine\TrustedPeople". For example: `Import-Certificate -filepath ".\xyz.cer" -certStoreLocation "Cert:\LocalMachine\TrustedPeople"`
 2. Install the app on Nano Server by running the [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet to install a WSA package on Nano Server. For example: `Add-AppxPackage wsaSample.appx`
 
 #### Additional resources for creating apps
