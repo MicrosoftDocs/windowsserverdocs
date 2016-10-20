@@ -1,6 +1,6 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
-description: " "
+description: "Provides recommendations for running FreeBSD on virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -10,23 +10,23 @@ ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 author: shirgall
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 10/17/2016
 ---
 # Best practices for running FreeBSD on Hyper-V
 
 >Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-This topic contains a list of recommendations for running FreeBSD virtual machine on Hyper-V.
+This topic contains a list of recommendations for running FreeBSD as a guest operating system on a Hyper-V virtual machine.
 
 ## Enable CARP in FreeBSD 10.2 on Hyper-V
 
-The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the same IP address and Virtual Host ID (VHID) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure. To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper-V Manager:
+The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the same IP address and Virtual Host ID (VHID) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure.To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper-V Manager.
 
-1. Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.
+* Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.
 
-   ![Screenshot of virtual machine settings with network adapter selected](media/Hyper-V_Settings_NetworkAdapter.png)
+![Screenshot of virtual machine settings with network adapter selected](media/Hyper-V_Settings_NetworkAdapter.png)
 
-2. Enable MAC address spoofing. To do this,
+* Enable MAC address spoofing. To do this,
 
    1. Select the virtual machine and select **Actions** > **Settings**.
 

@@ -1,6 +1,6 @@
 ---
 title: For
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # For
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{%%&#124;%}<Variable>|Required. Represents a replaceable parameter. Use a single percent sign (**%**)to carry out the **for** command at the command prompt. Use double percent signs (**%%**) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%A**, **%B**, or **%C**.|
 |(<Set>)|Required. Specifies one or more files, directories, or text strings, or a range of values on which to run the command. The parentheses are required.|
 |<Command>|Required. Specifies the command that you want to carry out on each file, directory, or text string, or on the range of values included in *Set*.|
@@ -48,7 +47,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
     (*.doc) 
     (*.doc *.txt *.me)
     (jan*.doc jan*.rpt feb*.doc feb*.rpt)
-    (ar??1991.* ap??1991.*)
+    (ar 1991.* ap 1991.*)
     ```
     When you use the **for** command, the first value in *Set* replaces **%***Variable* or **%%***Variable*, and then the specified command processes this value. This continues until all of the files (or groups of files) that correspond to the *Set* value are processed.
 -   Using the **in** and **do** keywords
@@ -91,16 +90,16 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         ```
         The following table lists the parsing keywords that you can use for *ParsingKeywords*.
         |Keyword|Description|
-        |-----------|---------------|
+        |------|--------|
         |eol=<c>|Specifies an end of line character (just one character).|
         |skip=<N>|Specifies the number of lines to skip at the beginning of the file.|
         |delims=<xxx>|Specifies a delimiter set. This replaces the default delimiter set of space and tab.|
-        |tokens=<X,Y,M–N>|Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *M*–*N* specifies a range, from the *M*th through the *N*th tokens. If the last character in the **tokens=** string is an asterisk (**\***), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed.|
+        |tokens=<X,Y,M N>|Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *M* *N* specifies a range, from the *M*th through the *N*th tokens. If the last character in the **tokens=** string is an asterisk (**\***), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed.|
         |usebackq|Specifies to execute a back-quoted stringas a command, and a single-quoted string as a literal string command. Also, allows file names in *Set* to be enclosed in quotation marks.|
     -   Variable substitution
         The following table lists optional syntax (for any variable **I**).
         |Variable with modifier|Description|
-        |--------------------------|---------------|
+        |-------------|--------|
         |%~I|Expands **%I** which removes any surrounding quotation marks (" ").|
         |%~fI|Expands **%I** to a fully qualified path name.|
         |%~dI|Expands **%I** to a drive letter only.|
@@ -114,7 +113,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         |%~$PATH:I|Searches the directories listed in the PATH environment variable and expands **%I** to the fully qualified name of the first directory found. If the environment variable name is not defined or the file is not found by the search, this modifier expands to the empty string.|
         The following table lists modifier combinations that you can use to get compound results.
         |Variable with combined modifiers|Description|
-        |------------------------------------|---------------|
+        |------------------|--------|
         |%~dpI|Expands **%I** to a drive letter and path only.|
         |%~nxI|Expands **%I** to a file name and extension only.|
         |%~fsI|Expands **%I** to a full path name with short names only.|
@@ -123,7 +122,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         In the above examples, you can replace **%I** and PATH with other valid values. A valid **for** variable name terminates the **%~** syntax.
         By using uppercase variable names such as **%I**, you can make your code more readable and avoid confusion with the modifiers, which are not case sensitive.
 -   Parsing a string
-    You can use the **for /f** parsing logic on an immediate string by wrapping *Set* in single quotes--for example, ('*Set*'). *Set* is treated as a single line of input from a file, and then it is parsed.
+    You can use the **for /f** parsing logic on an immediate string by wrapping *Set* in single quotes-for example, ('*Set*'). *Set* is treated as a single line of input from a file, and then it is parsed.
 -   Parsing output
     You can use the **for /f** command to parse the output of a command by making a back-quoted string from the *Set* between the parentheses. It is treated as a command line, which is passed to a child Cmd.exe. The output is captured into memory and parsed as if it is a file.
 ## <a name="BKMK_examples"></a>Examples

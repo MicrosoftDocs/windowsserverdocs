@@ -1,6 +1,6 @@
 ---
 title: Tree
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tree
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ tree [<Drive>:][<Path>] [/f] [/a]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<Drive>:|Specifies the drive that contains the disk for which you want to display the directory structure.|  
 |<Path>|Specifies the directory for which you want to display the directory structure.|  
 |/f|Displays the names of the files in each directory.|  

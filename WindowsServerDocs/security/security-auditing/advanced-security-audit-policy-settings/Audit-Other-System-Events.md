@@ -38,7 +38,7 @@ Default: Success and failure
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |5024|The Windows Firewall Service has started successfully.|
 |5025|The Windows Firewall Service has been stopped.|
 |5027|The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy.|

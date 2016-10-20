@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin reset
-description: "Windows Commands topic for **Bitsadmin reset** -- Cancels all jobs in the transfer queue that the current user owns."
+description: "Windows Commands topic for **Bitsadmin reset** - Cancels all jobs in the transfer queue that the current user owns."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin reset
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,8 +25,8 @@ bitsadmin /Reset [/AllUsers]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
-|AllUsers|Optional— cancels all jobs in the queue.|
+|-------|--------|
+|AllUsers|Optional  cancels all jobs in the queue.|
 ## Remarks
 You must have administrator privileges to use the **AllUsers** parameter.
 > [!NOTE]

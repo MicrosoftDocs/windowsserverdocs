@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Server
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ dfsutil server <Server> | /?
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Server>|Server on which the roots are hosted.|
 |Dfsutil Server Registry|Sets, resets, or displays registry keys of server.|
 |\/?|<Another concise description, starts with verb.>|

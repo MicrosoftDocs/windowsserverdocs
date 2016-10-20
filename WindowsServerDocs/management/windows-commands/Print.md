@@ -1,6 +1,6 @@
 ---
 title: Print
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Print
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Print [/d:<PrinterName>] [<Drive>:][<Path>]<FileName>[ ...]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/d:<PrinterName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name (\\\\*ServerName*\\*PrinterName*). If you do not specify a printer, the print job is sent to LPT1 by default.|
 |<Drive>:|Specifies the logical or physical drive where the file you want to print is located. This parameter is not required if the file you want to print is located on the current drive.|
 |<Path>|Specifies the location of the file you want to print. This parameter is not required if the file you want to print is located in the current directory.|

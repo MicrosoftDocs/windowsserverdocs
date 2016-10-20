@@ -201,7 +201,7 @@ Organizations may use only one profile or both. There are no interoperability co
 This table summarizes the relative advantages and disadvantages of each hardware profile from the perspective of operational ease-of-use and productivity and security.  Both hardware approaches provide strong security for administrative accounts against credential theft and reuse.
 
 |**Scenario**|**Advantages**|**Disadvantages**|
-|----------------|------------------|---------------------|
+|--------|---------|-----------|
 |Dedicated hardware|-   Strong signal for sensitivity of tasks<br />-   Strongest security separation|-   Additional desk space<br />-   Additional weight (for remote work)<br />-   Hardware Cost|
 |Simultaneous use|-   Lower hardware cost<br />-   Single device experience|-   Sharing single keyboard/mouse creates risk of inadvertent errors/risks|
 
@@ -262,7 +262,7 @@ In all scenarios, additional hardening in later phases and different hardware pr
 See the [Tier model page](http://aka.ms/tiermodel) for more information on the Tier designations.
 
 |**Scenarios**|**Use PAW?**|**Scope and Security Considerations**|
-|-----------------|----------------|-----------------------------------------|
+|---------|--------|---------------------|
 |Active Directory Admins - Tier 0|Yes|A PAW built with Phase 1 guidance is sufficient for this role.<br /><br />-   An administrative forest can be added to provide the strongest protection for this scenario. For more information on the ESAE administrative forest, see [ESAE Administrative Forest Design Approach](http://aka.ms/esae)<br />-   A PAW can be used to managed multiple domains or multiple forests.<br />-   If Domain Controllers are hosted on an Infrastructure as a Service (IaaS) or on-premises virtualization solution, you should prioritize implementing PAWs for the administrators of those solutions|
 |Admin of Azure IaaS and PaaS services - Tier 0 or Tier 1 (see Scope and Design Considerations)|Yes|A PAW built using the guidance provided in Phase 2 is sufficient for this role.<br /><br />-   PAWs should be used for at least the Global administrator and Subscription Billing administrator. You should also use PAWs for delegated administrators of critical or sensitive servers.<br />-   PAWs should be used for managing the operating system and applications that provide Directory Synchronization and Identify Federation for cloud services such as [Azure AD Connect](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) and Active Directory Federation Services (ADFS).<br />-   The outbound network restrictions must allow connectivity only to authorized cloud services using the guidance in Phase 2. No open internet access should be allowed from PAWs.<br />-   EMET should be configured for all browsers used on the workstation **Note:**     A subscription is considered to be Tier 0 for a Forest if Domain Controllers or other Tier 0 hosts are in the subscription. A subscription is Tier 1 if no Tier 0 servers are hosted in Azure|
 |Admin Office 365 Tenant <br />- Tier 1|Yes|A PAW built using the guidance provided in Phase 2 is sufficient for this role.<br /><br />-   PAWs should be used for at least the Subscription Billing administrator, Global administrator, Exchange administrator, SharePoint administrator, and User management administrator roles. You should also strongly consider the use of PAWs for delegated administrators of highly critical or sensitive data.<br />-   EMET should be configured for all browsers used on the workstation<br />-   The outbound network restrictions must allow connectivity only to Microsoft services using the guidance in Phase 2. No open internet access should be allowed from PAWs.|
@@ -482,7 +482,7 @@ Phase 1 includes the following steps:
         6.  Link the PAW Configuration - Computer GPO as follows:
 
             |Policy|Link Location|
-            |----------|-----------------|
+            |-----|---------|
             |PAW Configuration|Admin\Tier 0\Devices|
 
 6.  **Create "PAW Configuration - User" group policy object (GPO) and link to the Tier 0 Users OU ("Users" under Tier 0\Admin)**.  In this section, you will create a new "PAW Configuration - User" GPO which provide specific protections for these PAWs.
@@ -891,15 +891,15 @@ Once you confirm that all steps were done, perform the steps below to complete P
 
         PAW Configuration - Computer
 
-        --> Link Location: Admin\Tier 0\Devices (Existing)
+        -> Link Location: Admin\Tier 0\Devices (Existing)
 
         PAW Configuration - User
 
-        --> Link Location: Admin\Tier 0\Accounts
+        -> Link Location: Admin\Tier 0\Accounts
 
         RestrictedAdmin Required - Computer
 
-        -->Admin\Tier1\Devices or --> Admin\Tier2\Devices (Both are optional)
+        ->Admin\Tier1\Devices or -> Admin\Tier2\Devices (Both are optional)
 
         > [!NOTE]
         > This is not necessary for Tier 0 systems as these systems are already in full control of all assets in the environment.
@@ -1155,7 +1155,7 @@ Per the clean source principle, all tools used to manage or monitor the PAWs mus
 This table outlines different approaches that may be used to manage and monitor the PAWs:
 
 |Approach|Considerations|
-|------------|------------------|
+|------|---------|
 |Default in PAW<br /><br />-   Windows Server Update Services<br />-   Windows Defender|-   No additional cost<br />-   Performs basic required security functions<br />-   Instructions included in this guidance|
 |Manage with [Intune](https://technet.microsoft.com/en-us/library/jj676587.aspx)|<ul><li>Provides cloud based visibility and control<br /><br /><ul><li>Software Deployment</li><li>o   Manage software updates</li><li>Windows Firewall policy management</li><li>Anti-malware protection</li><li>Remote assistance</li><li>Software license management.</li></ul></li><li>No server infrastructure required</li><li>Requires following "Enable Connectivity to Cloud Services" steps in Phase 2</li><li>If the PAW computer is not joined to a domain, this requires applying the SCM baselines to the local images using the tools provided in the security baseline download.</li></ul>|
 |New System Center instance(s) for managing PAWs|-   Provides visibility and control of configuration, software deployment, and security updates<br />-   Requires separate server infrastructure, securing it to level of PAWs, and staffing skills for those highly privileged personnel|

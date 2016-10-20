@@ -8,7 +8,6 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
-
 # Shielded VMs - Create a new shielded VM on-premises and move it to a guarded fabric
 
 >Applies To: Windows Server 2016
@@ -33,13 +32,13 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 2.  Before you can run a shielded VM on this machine, you will need to ensure Virtualization Based Security is enabled and running. Run the following command in an elevated Windows PowerShell window to install the Host Guardian Hyper-V Support feature. This will configure all of the necessary settings on your machine to be able to run shielded VMs.
 
-    `Install-WindowsFeature HostGuardian`
+        Install-WindowsFeature HostGuardian
 
 3.  You will need to acquire the guardian metadata for the guarded fabric where your VM will run. This metadata is used to authorize that fabric to run your shielded VM. How you obtain this information will be different for each hosting service provider or enterprise. The hoster (or you, if you have access to the guarded fabric network) can acquire this information by running the following Windows PowerShell command:
 
-    `Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml`
+        Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
 
-    In the example above, “hgs” is the distributed network name of the HGS cluster and “relecloud.com” is the name of the HGS domain.
+    In the example above, "hgs" is the distributed network name of the HGS cluster and "relecloud.com" is the name of the HGS domain.
 
 4.  To import the guardian key, which you will need in a later procedure, run the following command.
 
@@ -49,7 +48,7 @@ To understand how this topic fits in the overall process of deploying shielded V
 
     Include **-AllowUntrustedRoot** only if the HGS server was set up with self-signed certificates. (These certificates are part of the Key Protection Service in HGS.)
 
-    `Import-HgsGuardian -Path '<Path><Filename>' -Name '<GuardianName>' -AllowUntrustedRoot`
+        Import-HgsGuardian -Path '<Path><Filename>' -Name '<GuardianName>' -AllowUntrustedRoot
 
 ## Create a new shielded virtual machine on the host
 
@@ -57,9 +56,9 @@ In this procedure, you will create a virtual machine on the Hyper-V host, and pr
 
 As part of the procedure, you will create a Key Protector that contains two important elements:
 
--   **Owner**: In the Key Protector, you—or more likely, the group you work in, that shares security elements such as certificates—are identified as “owner” of the VM. Your identity as owner is represented by a certificate that, if you run the commands as shown, is generated as a self-signed certificate. Optionally, you can instead use a certificate backed by PKI infrastructure, and omit the **-AllowUntrustedRoot** parameter in the commands.
+-   **Owner**: In the Key Protector, you - or more likely, the group you work in, that shares security elements such as certificates - are identified as "owner" of the VM. Your identity as owner is represented by a certificate that, if you run the commands as shown, is generated as a self-signed certificate. Optionally, you can instead use a certificate backed by PKI infrastructure, and omit the **-AllowUntrustedRoot** parameter in the commands.
 
--   **Guardians**: Also in the Key Protector, your hosting provider or enterprise datacenter (which runs HGS and guarded hosts) is identified as a “guardian.” The guardian is represented by the guardian key that you imported in the previous procedure, [Import the guardian configuration on the tenant Hyper-V server](#import-the-guardian-configuration-on-the-tenant-hyper-v-server).
+-   **Guardians**: Also in the Key Protector, your hosting provider or enterprise datacenter (which runs HGS and guarded hosts) is identified as a "guardian." The guardian is represented by the guardian key that you imported in the previous procedure, [Import the guardian configuration on the tenant Hyper-V server](#import-the-guardian-configuration-on-the-tenant-hyper-v-server).
 
 For an illustration showing the Key Protector, which is an element in a shielding data file, see [What is shielding data and why is it necessary?](Guarded-Fabric-and-Shielded-VMs.md#what-is-shielding-data-and-why-is-it-necessary).
 
@@ -71,9 +70,9 @@ For an illustration showing the Key Protector, which is an element in a shieldin
     
     For &lt;nnGB&gt;, specify a size for the VHDX, for example: **60GB**
 
-    `New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>`
+        New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
 
-2.  Install a supported operating system (Windows Server 2012 or higher, Windows 8 client or higher) on the VM and enable the remote desktop connection and corresponding firewall rule. Record the VM’s IP address and/or DNS name; you will need it to remotely connect to it.
+2.  Install a supported operating system (Windows Server 2012 or higher, Windows 8 client or higher) on the VM and enable the remote desktop connection and corresponding firewall rule. Record the VM's IP address and/or DNS name; you will need it to remotely connect to it.
 
 3.  Use RDP to remotely connect to the VM and verify that RDP and the firewall are configured correctly. As part of the shielding process, console access to the virtual machine through Hyper-V will be disabled, so it is important to ensure you are able to remotely manage the system over the network.
 
@@ -83,29 +82,29 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 
     Include **-AllowUntrustedRoot** to allow for self-signed certificates.
 
-    `$Guardian = Get-HgsGuardian -Name '<GuardianName>'`
+        $Guardian = Get-HgsGuardian -Name '<GuardianName>'
 
-    `$Owner = New-HgsGuardian –Name 'Owner' -GenerateCertificates`
+        $Owner = New-HgsGuardian -Name 'Owner' -GenerateCertificates
 
-    `$KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot`
+        $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
 
     If you wish for more than one datacenter to be able to run your shielded VM (for example, a disaster recovery site and a public cloud provider), you can provide a list of guardians to the **-Guardian** parameter. For more information, see [New-HgsKeyProtector](https://technet.microsoft.com/library/dn914498.aspx).
 
 5.  To enable the vTPM using the Key Protector, run the following command. For &lt;ShieldedVMname&gt;, use the same VM name used in previous steps.
 
-    `$VMName="<ShieldedVMname>"`
+        $VMName="<ShieldedVMname>"
 
-    `Stop-VM -Name $VMName -Force`
+        Stop-VM -Name $VMName -Force
 
-    `Set-VMKeyProtector –VMName $VMName –KeyProtector $KP.RawData`
+        Set-VMKeyProtector -VMName $VMName -KeyProtector $KP.RawData
 
-    `Set-VMSecurityPolicy -VMName $VMName -Shielded $true`
+        Set-VMSecurityPolicy -VMName $VMName -Shielded $true
 
-    `Enable-VMTPM -VMName $VMName`
+        Enable-VMTPM -VMName $VMName
 
 6.  To start the VM to verify that the key protector is working with local owner certificates, run the following command.
 
-    `Start-VM -Name $VMName`
+        Start-VM -Name $VMName
 
 7.  Verify that the VM has started in the Hyper-V console.
 
@@ -119,7 +118,7 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 
 11.  **For the hosting provider or enterprise datacenter**:
 
-    Import the shielded VM using the Hyper-V Manager or Windows PowerShell. You must import the VM configuration file from the VM owner in order to start the VM. This is because the key protector and the VM’s virtual TPM are stored in the configuration file. If the VM is configured to run on the guarded fabric, it should be able to start successfully.
+    Import the shielded VM using the Hyper-V Manager or Windows PowerShell. You must import the VM configuration file from the VM owner in order to start the VM. This is because the key protector and the VM's virtual TPM are stored in the configuration file. If the VM is configured to run on the guarded fabric, it should be able to start successfully.
 
 ## See also
 

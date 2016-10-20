@@ -50,7 +50,7 @@ The three key areas to determine for AppLocker policy management are:
 The following table contains the added sample data that was collected when determining how to maintain and manage AppLocker policies.
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
-|------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|------------|------------------|
+|---------|------------|------------|--------|-----------|-------------------------|---------|------|---------|
 |Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|Web help|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help desk|
 |Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|Web help|
@@ -67,7 +67,7 @@ One discovery method for application usage is to set the AppLocker enforcement m
 The following table is an example of what to consider and record.
 
 |Business group|AppLocker event collection location|Archival policy|Analyzed?|Security policy|
-|------------------|---------------------------------------|-------------------|-------------|-------------------|
+|---------|--------------------|----------|-------|----------|
 |Bank Tellers|Forwarded to: AppLocker Event Repository on srvBT093|Standard|None|Standard|
 |Human Resources|DO NOT FORWARD. srvHR004|60 months|Yes, summary reports monthly to managers|Standard|
 
@@ -78,7 +78,7 @@ When applications are identified and policies are created for application contro
 The following table is an example of what to consider and record.
 
 |Business group|Rule update policy|Application decommission policy|Application version policy|Application deployment policy|
-|------------------|----------------------|-----------------------------------|------------------------------|---------------------------------|
+|---------|-----------|------------------|---------------|-----------------|
 |Bank Tellers|Planned: Monthly through business office triage<br /><br />Emergency: Request through help desk|Through business office triage<br /><br />30-day notice required|General policy: Keep past versions for 12 months<br /><br />List policies for each application|Coordinated through business office<br /><br />30-day notice required|
 |Human Resources|Planned: Monthly through HR triage<br /><br />Emergency: Request through help desk|Through HR triage<br /><br />30-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR<br /><br />30-day notice required|
 

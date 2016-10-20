@@ -1,6 +1,6 @@
 ---
 title: Using the copy-Image Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the copy-Image Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ WDSUTIL [Options] /Copy-Imagmedia:<Image name> [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 media:<Image name>|Specifies the name of the image to be copied.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediaType:Install|Specifies the type of image to be copied. This option must be set to **install**.|
@@ -58,4 +57,4 @@ WDSUTIL /Verbose /Progress /Copy-Imagmedia:"Windows Vista with Office" /Server:M
 [Using the get-Image Command](Using-the-get-Image-Command.md)
 [Using the remove-Image Command](Using-the-remove-Image-Command.md)
 [Using the replace-Image Command](Using-the-replace-Image-Command.md)
-[Subcommand: set-Image](Subcommand--set-Image.md)
+[Subcommand: set-Image](Subcommand-set-Image.md)

@@ -1,6 +1,6 @@
 ---
 title: Cmd
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Cmd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/c|Carries out the command specified by *String* and then stops.|
 |/k|Carries out the command specified by *String* and continues.|
 |/s|Modifies the treatment of *String* after **/c** or**/k**.|
@@ -45,7 +44,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |/?|Displays help at the command prompt.|
 The following table lists valid hexadecimal digits that you can use as the values for <B> and <F>:
 |Value|Color|
-|---------|---------|
+|-----|-----|
 |0|Black|
 |1|Blue|
 |2|Green|
@@ -87,7 +86,7 @@ The following table lists valid hexadecimal digits that you can use as the value
     Command extensions are enabled by default in Windows XP. You can disable them for a particular process by using **/e:off**. You can enable or disable extensions for all **cmd** command-line options on a computer or user session by setting the following **REG_DWORD** values:
     **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\EnableExtensions\REG_DWORD**
     **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions\REG_DWORD**
-    Set the **REG_DWORD** value to either **0×1** (enabled) or **0×0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+    Set the **REG_DWORD** value to either **0 1** (enabled) or **0 0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
     > [!CAUTION]
     > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
     When you enable command extensions, the following commands are affected:
@@ -117,10 +116,10 @@ The following table lists valid hexadecimal digits that you can use as the value
     **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
     **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
     **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
-    To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0×9** is TAB and **0×08** is BACKSPACE). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+    To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0 9** is TAB and **0 08** is BACKSPACE). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
-If you enable file and directory name completion by using **/f:on**, use CTRL+D for directory name completion and CTRL+F for file name completion. To disable a particular completion character in the registry, use the value for white space [**0×20**] because it is not a valid control character.
+If you enable file and directory name completion by using **/f:on**, use CTRL+D for directory name completion and CTRL+F for file name completion. To disable a particular completion character in the registry, use the value for white space [**0 20**] because it is not a valid control character.
 When you press CTRL+D or CTRL+F, **cmd** processes file and directory name completion. These key combination functions append a wildcard character to *String* (if one is not present), build a list of paths that match, and then display the first matching path. If none of the paths match, the file and directory name completion function beeps and does not change the display. To move through the list of matching paths, press CTRL+D or CTRL+F repeatedly. To move through the list backwards, press the SHIFT key and CTRL+D or CTRL+F simultaneously. To discard the saved list of matching paths and generate a new list, edit *String* and press CTRL+D or CTRL+F. If you switch between CTRL+D and CTRL+F, the saved list of matching paths is discarded and a new list is generated. The only difference between the key combinations CTRL+D and CTRL+F is that CTRL+D only matches directory names and CTRL+F matches both file and directory names. If you use file and directory name completion on any of the built-in directory commands that is, **CD**, **MD**, or **RD**), directory completion is assumed.
 File and directory name completion correctly processes file names that contain white space or special characters if you place quotation marks around the matching path.
 The following special characters require quotation marks: & < > [ ] { } ^ = ; ! ' + , ` ~ [white space].

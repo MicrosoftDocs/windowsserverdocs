@@ -1,6 +1,6 @@
 ---
 title: Wbadmin delete systemstatebackup
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin delete systemstatebackup
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,7 +35,7 @@ wbadmin delete systemstatebackup
 > One and only one of these parameters must be specified: **-keepVersions**, **-version**, or **-deleteOldest**.
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-keepVersions|Specifies the number of the latest system state backups to keep. The value must be a positive integer. The parameter value **-keepVersions:0** deletes all the system state backups.|
 |-version|Specifies the version identifier of the backup in MM/DD/YYYY-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.<br /><br />Versions that are exclusively system state backups can be deleted using this command. Use **wbadmin get items** to view the version type.|
 |-deleteOldest|Deletes the oldest system state backup.|

@@ -43,10 +43,10 @@ Constant: SeTcbPrivilege
 **\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**  
   
 ### Default values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
   
 |Server type or GPO|Default value|  
-|----------------------|-----------------|  
+|-----------|---------|  
 |Default domain policy|Not defined|  
 |Default domain controller policy|Not defined|  
 |Stand-alone server default settings|Not defined|  
@@ -82,7 +82,7 @@ This section describes how an attacker might exploit a feature or its configurat
 The **Act as part of the operating system** user right is extremely powerful. Users with this user right can take complete control of the computer and erase evidence of their activities.  
   
 ### Countermeasure  
-Restrict the **Act as part of the operating system** user right to as few accounts as possible—it should not even be assigned to the Administrators group under typical circumstances. When a service requires this user right, configure the service to log on with the Local System account, which inherently inlcudes this privilege. Do not create a separate account and assign this user right to it.  
+Restrict the **Act as part of the operating system** user right to as few accounts as possible???it should not even be assigned to the Administrators group under typical circumstances. When a service requires this user right, configure the service to log on with the Local System account, which inherently inlcudes this privilege. Do not create a separate account and assign this user right to it.  
   
 ### Potential impact  
 There should be little or no impact because the **Act as part of the operating system** user right is rarely needed by any accounts other than the Local System account.  

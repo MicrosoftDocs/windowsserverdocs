@@ -1,6 +1,6 @@
 ---
 title: Winnt32
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Winnt32
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ winnt32 [/checkupgradeonly] [/cmd: <CommandLine>] [/cmdcons] [/copydir:{i386|ia6
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/checkupgradeonly|Checks your computer for upgrade compatibility with products in Windows Server 2003.<br /><br />If you use this option with **/unattend**, no user input is required.  Otherwise, the results are displayed on the screen, and you can save them under the file name you specify. The default file name is **upgrade.txt** in the systemroot folder.|
 |/cmd|Instructs setup to carry out a specific command before the final phase of setup. This occurs after your computer has restarted and after setup has collected the necessary configuration information, but before setup is complete.|
 |<CommandLine>|Specifies the commandline to be carried out before the final phase of setup.|

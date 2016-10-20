@@ -12,7 +12,6 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Using Folder Redirection in Group Policy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -72,7 +71,7 @@ You can use the GPMC to redirect the following folders:
 ## Selecting a Folder Redirection target
 The **Target** tab of the folder's **Properties** box enables you to select the location of the redirected folder on a network or in the local user profile. You can choose between the following settings:
 
--   **Basicâ€�?Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
+-   **Basic Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
 
     -   **Create a folder for each user under the root path**. This option creates a folder in the form **\\\server\share\User Account Name\Folder Name**. Each user has a unique path for their redirected folder.
 
@@ -80,7 +79,7 @@ The **Target** tab of the folder's **Properties** box enables you to select the 
 
 -   **Redirect to the local user profile location**. This option moves the location of the folder to the local user profile under the **Users** folder.
 
--   **Advancedâ€�?Specify locations for various user groups**. This setting enables you to specify redirection behavior for the folder based on the security group memberships for the GPO.
+-   **Advanced Specify locations for various user groups**. This setting enables you to specify redirection behavior for the folder based on the security group memberships for the GPO.
 
 -   **Not configured**. This is the default setting. This setting specifies that policy-based folder redirection was removed for that GPO and the folders are redirected to the local user profile location or stay where they are based on the redirection options selected if any existing redirection policies were set. No changes are being made to the current location of this folder.
 
@@ -94,7 +93,7 @@ In the **Settings** tab in the **Properties** box for a folder, you can enable t
 -   **Policy Removal**. The following table summarizes the behavior of redirected folders and their contents when the GPO no longer applies, based on your selections for policy removal. The following policy removal options are available in the **Settings** tab, under **Policy Removal**.
 
 |Policy Removal option|Selected setting|Result|
-|-------------------------|--------------------|----------|
+|-------------|----------|-----|
 |**Redirect the folder back to the user profile location when policy is removed**|**Enabled**|-   The folder returns to its user profile location.<br />-   The contents are copied, not moved, back to the user profile location.<br />-   The contents are not deleted from the redirected location.<br />-   The user continues to have access to the contents, but only on the local computer.|
 |**Redirect the folder back to the user profile location when policy is removed**|**Disabled**|-   The folder returns to its user profile location.<br />-   The contents are not copied or moved to the user profile location. **Note:** If the contents of a folder are not copied to the user profile location, the user cannot see them.|
 |**Leave the folder in the new location when policy is removed**|Either **Enabled** or **Disabled**|-   The folder remains at its redirected location.<br />-   The contents remain at the redirected location.<br />-   The user continues to have access to the contents at the redirected folder.|
@@ -110,7 +109,7 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
 3.  In the **Target** tab, under **Settings**, choose one of the following settings, follow the steps for that setting, and then click **OK**:
 
-    **Basicâ€�?Redirect everyone's folder to the same location**
+    **Basic Redirect everyone's folder to the same location**
 
     1.  Under **Target folder location**, select a location.
 
@@ -124,7 +123,7 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
     -   Specify policy removal settings (**Leave the folder in the new location when policy is removed** is selected by default).
 
-    **Advancedâ€�?Specify locations for various user groups**
+    **Advanced Specify locations for various user groups**
 
     1.  Under **Security Group Membership**, click **Add**.
 
@@ -152,9 +151,9 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
     -   You can also use the GPMC to configure the following Folder Redirection policy settings:
 
-        -   **Use localized subfolder names when redirecting Start and My Documents**â€�?This policy is located in the following paths: **Computer Configuration\Policies\Administrative Templates\System\Folder Redirection**, or **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
+        -   **Use localized subfolder names when redirecting Start and My Documents** This policy is located in the following paths: **Computer Configuration\Policies\Administrative Templates\System\Folder Redirection**, or **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
 
-        -   **Do not automatically make redirected folders available offline**â€�?This policy is located in the following path: **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
+        -   **Do not automatically make redirected folders available offline** This policy is located in the following path: **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
 
     -   For more information about User Profiles and Folder Redirection, see [http://go.microsoft.com/fwlink/?LinkId=66003](http://go.microsoft.com/fwlink/?LinkId=66003).
 

@@ -68,7 +68,7 @@ Group managed service accounts can only be configured and administered on comput
 
 A 64-bit architecture is required to run the Windows PowerShell commands that are used to administer group managed service accounts.
 
-A managed service account is dependent on encryption types supported by Kerberos. When a client computer authenticates to a server by using Kerberos protocol, the domain controller creates a Kerberos service ticket that is protected with encryption that the domain controller and the server support. The domain controller uses the account’s **msDS-SupportedEncryptionTypes** attribute to determine what encryption the server supports, and if there is no attribute, it assumes that the client computer does not support stronger encryption types. The Advanced Encryption Standard (AES) should always be explicitly configured for managed service accounts. If computers that host the managed service account are configured to not support RC4, authentication will always fail.
+A managed service account is dependent on encryption types supported by Kerberos. When a client computer authenticates to a server by using Kerberos protocol, the domain controller creates a Kerberos service ticket that is protected with encryption that the domain controller and the server support. The domain controller uses the account???s **msDS-SupportedEncryptionTypes** attribute to determine what encryption the server supports, and if there is no attribute, it assumes that the client computer does not support stronger encryption types. The Advanced Encryption Standard (AES) should always be explicitly configured for managed service accounts. If computers that host the managed service account are configured to not support RC4, authentication will always fail.
 
 > [!NOTE]
 > Introduced in Windows Server 2008 R2, the Data Encryption Standard (DES) is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](http://technet.microsoft.com/library/dd560670(WS.10).aspx).
@@ -95,7 +95,7 @@ Virtual accounts apply to the Windows operating systems that are designated in t
 The following table provides links to additional resources that are related to standalone managed service accounts, group managed service accounts, and virtual accounts.
 
 |Content type|References|
-|----------------|--------------|
+|--------|-------|
 |**Product evaluation**|[What's New for Managed Service Accounts](../group-managed-service-accounts/What-s-New-for-Managed-Service-Accounts.md)<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356(v=ws.10).aspx)<br /><br />[Getting Started with Group Managed Service Accounts](../group-managed-service-accounts/Getting-Started-with-Group-Managed-Service-Accounts.md)|
 |**Deployment**|[Windows Server 2012: Group Managed Service Accounts - Ask Premier Field Engineering (PFE) Platforms - Site Home - TechNet Blogs](http://blogs.technet.com/b/askpfeplat/archive/20../windows-server-2012-group-managed-service-accounts.aspx)|
 |**Operations**|[Managed Service Accounts in Active Directory](http://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|

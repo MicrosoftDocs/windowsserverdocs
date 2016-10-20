@@ -1,6 +1,6 @@
 ---
 title: Fsutil objectid
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil objectid
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -38,7 +37,7 @@ fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <Fil
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |create|Creates an object identifier if the specified file does not already have one. If the file already has an object identifier, this subcommand is equivalent to the **query** subcommand.|  
 |delete|Deletes an object identifier.|  
 |query|Queries an object identifier.|  
@@ -68,7 +67,7 @@ To query an object identifier, type:
   
 To set an object identifier, type:  
   
-`fsutil objectid set 40dff02fc9b4d4118f120090273fa9fc f86ad6865fe8d21183910008c709d19e 40dff02fc9b4d4118f120090273fa9fc 00000000000000000000000000000000 c:\temp\sample.txt`  
+`fsutil objectid set 40dff02fc9b4d4118f120090273fa9fc f86ad6865fe8d21183910008c709d19e 40dff02fc9b4d4118f120090273fa9fc 00000000000000000000000000000000 c:\temp\sample.txt`  
   
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  

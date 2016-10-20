@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root Import Merge
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil root import merge <filename> <\\destserver\share> [NoBackup] [Verbose] /
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\destserver\\share>|UNC path to the namespace to which you want to import the configuration.|
 |<filename>|Name of the xml file from which you want to import the namespace configuration.|
 |NoBackup|Does not create backup file to restore overwritten folders and folder targets.|

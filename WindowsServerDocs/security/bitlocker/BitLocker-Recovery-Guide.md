@@ -18,11 +18,11 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Organizations can use BitLocker recovery information saved in Active Directory Domain Services \(ADÂ DS\) to access BitLocker\-protected data. Creating a recovery model for BitLocker while you are planning your BitLocker deployment is recommended.
+Organizations can use BitLocker recovery information saved in Active Directory Domain Services \(AD????DS\) to access BitLocker\-protected data. Creating a recovery model for BitLocker while you are planning your BitLocker deployment is recommended.
 
-This article assumes that you understand how to set up ADÂ DS to back up BitLocker recovery information automatically, and what types of recovery information are saved to ADÂ DS.
+This article assumes that you understand how to set up AD????DS to back up BitLocker recovery information automatically, and what types of recovery information are saved to AD????DS.
 
-This article does not detail how to configure ADÂ DS to store the BitLocker recovery information.
+This article does not detail how to configure AD????DS to store the BitLocker recovery information.
 
 This article contains the following topics:
 
@@ -129,7 +129,7 @@ For planned scenarios, such as a known hardware or firmware upgrades, you can av
 Recovery has been described within the context of unplanned or undesired behavior, but you can also cause recovery as an intended production scenario, in order to manage access control. For example, when you redeploy desktop or laptop computers to other departments or employees in your enterprise, you can force BitLocker into recovery before the computer is given to a new user.
 
 ## <a name="BKMK_TestingRecovery"></a>Testing recovery
-Before you create a thorough BitLocker recovery process, we recommend that you test how the recovery process works for both end users \(people who call your helpdesk for the recovery password\) and administrators \(people who help the end user get the recovery password\). The â€“forcerecovery command of manage\-bde is an easy way for you to step through the recovery process before your users encounter a recovery situation.
+Before you create a thorough BitLocker recovery process, we recommend that you test how the recovery process works for both end users \(people who call your helpdesk for the recovery password\) and administrators \(people who help the end user get the recovery password\). The ????????forcerecovery command of manage\-bde is an easy way for you to step through the recovery process before your users encounter a recovery situation.
 
 #### To force a recovery for the local computer
 
@@ -181,7 +181,7 @@ If the user does not have a recovery password in a printout or on a USB flash dr
 
 -   **Choose how BitLocker\-protected removable drives can be recovered**
 
-In each of these policies select **Save BitLocker recovery information to Active Directory Domain Services** and then choose which BitLocker recovery information to store in Active Directory Domain Services \(ADÂ DS\). Select the  **Do not enable BitLocker until recovery information is stored in AD DS** check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information for the drive to ADÂ DS succeeds.
+In each of these policies select **Save BitLocker recovery information to Active Directory Domain Services** and then choose which BitLocker recovery information to store in Active Directory Domain Services \(AD????DS\). Select the  **Do not enable BitLocker until recovery information is stored in AD DS** check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information for the drive to AD????DS succeeds.
 
 > [!NOTE]
 > If the PCs are part of a workgroup, users should be advised to save their BitLocker recovery password with their Microsoft Account online. Having an online copy of your BitLocker recovery password is recommended to help ensure that you do not lose access to your data in the event that recovery is required.
@@ -194,27 +194,27 @@ You can use the following list as a template for creating your own recovery proc
 
 -   [Verify the user's identity](#BKMK_VerifyIdentity)
 
--   [Locate the recovery password in ADÂ DS](#BKMK_LocatePassword)
+-   [Locate the recovery password in AD????DS](#BKMK_LocatePassword)
 
 -   [Gather information to determine why recovery occurred](#BKMK_GatherInfo)
 
 -   [Give the user the recovery password](#BKMK_GivePassword)
 
 #### <a name="BKMK_RecordComputerName"></a>Record the name of the user's computer
-You can use the name of the user's computer to locate the recovery password in ADÂ DS. If the user does not know the name of the computer, ask the user to read the first word of the **Drive Label** in the **BitLocker Drive Encryption Password Entry** user interface. This is the computer name when BitLocker was enabled and is probably the current name of the computer.
+You can use the name of the user's computer to locate the recovery password in AD????DS. If the user does not know the name of the computer, ask the user to read the first word of the **Drive Label** in the **BitLocker Drive Encryption Password Entry** user interface. This is the computer name when BitLocker was enabled and is probably the current name of the computer.
 
 #### <a name="BKMK_VerifyIdentity"></a>Verify the user's identity
 You should verify that the person that is asking for the recovery password is truly the authorized user of that computer. You may also wish to verify that the computer with the name the user provided belongs to the user.
 
-#### <a name="BKMK_LocatePassword"></a>Locate the recovery password in ADÂ DS
-Locate the Computer object with the matching name in ADÂ DS. Because Computer object names are listed in the ADÂ DS global catalog, you should be able to locate the object even if you have a multi\-domain forest.
+#### <a name="BKMK_LocatePassword"></a>Locate the recovery password in AD????DS
+Locate the Computer object with the matching name in AD????DS. Because Computer object names are listed in the AD????DS global catalog, you should be able to locate the object even if you have a multi\-domain forest.
 
 ##### Multiple recovery passwords
-If multiple recovery passwords are stored under a computer object in ADÂ DS, the name of the BitLocker recovery information object includes the date that the password was created.
+If multiple recovery passwords are stored under a computer object in AD????DS, the name of the BitLocker recovery information object includes the date that the password was created.
 
 If at any time you are unsure what password to provide, or if you think you might be providing the incorrect password, ask the user to read the eight character password ID that is displayed in the recovery console.
 
-Since the password ID is a unique value that is associated with each recovery password stored in ADÂ DS, running a query using this ID will find the correct password to unlock the encrypted volume.
+Since the password ID is a unique value that is associated with each recovery password stored in AD????DS, running a query using this ID will find the correct password to unlock the encrypted volume.
 
 #### <a name="BKMK_GatherInfo"></a>Gather information to determine why recovery occurred
 Before you give the user the recovery password, you should gather any information that will help determine why the recovery was needed, in order to analyze the root cause during the post\-recovery analysis. For more information about post\-recovery analysis, see [Post\-recovery analysis](#BKMK_PlanningPostRecovery).
@@ -303,7 +303,7 @@ If you have lost the USB flash drive that contains the startup key, then you mus
 This error might occur if you updated the firmware. As a best practice you should suspend BitLocker before making changes the firmware and then resume protection after the update has completed. This prevents the computer from going into recovery mode.  However if changes were made when BitLocker protection was on you can simply log on to the computer using the recovery password and the platform validation profile will be updated so that recovery will not occur the next time.
 
 ## Windows RE and BitLocker
-Windows Recovery Environment \(RE\) can be used to recover access to a drive protected by BitLocker or by Device Encryption. If a PC is unable to boot after two failures, Startup Repair will automatically start. When Startup Repair is launched automatically due to boot failures, it will only execute operating system and driver file repairs, provided that the boot logs or any available crash dump point to a specific corrupted file. In Windows 8.1 on systems that include firmware to support specific TPM measurements for PCR\[7\] the TPM can validate that Windows RE is a trusted operating environment and will unlock any BitLocker\-protected drives if Windows RE has not been modified. If the Windows RE environment has been modified, for example the TPM has been disabled, the drives will stay locked until the BitLocker recovery key is provided. If Startup Repair is not able to be run automatically from the PC and instead Windows RE is manually started from a repair disk, the BitLocker recovery key must be provided to unlock the BitLockerâ€“protected drives.
+Windows Recovery Environment \(RE\) can be used to recover access to a drive protected by BitLocker or by Device Encryption. If a PC is unable to boot after two failures, Startup Repair will automatically start. When Startup Repair is launched automatically due to boot failures, it will only execute operating system and driver file repairs, provided that the boot logs or any available crash dump point to a specific corrupted file. In Windows 8.1 on systems that include firmware to support specific TPM measurements for PCR\[7\] the TPM can validate that Windows RE is a trusted operating environment and will unlock any BitLocker\-protected drives if Windows RE has not been modified. If the Windows RE environment has been modified, for example the TPM has been disabled, the drives will stay locked until the BitLocker recovery key is provided. If Startup Repair is not able to be run automatically from the PC and instead Windows RE is manually started from a repair disk, the BitLocker recovery key must be provided to unlock the BitLocker????????protected drives.
 
 ## <a name="BKMK_UsingAddRecovery"></a>Using additional recovery information
 Besides the 48\-digit BitLocker recovery password, other types of recovery information are stored in Active Directory. This section describes how this additional information can be used.
@@ -330,25 +330,25 @@ You can reset the recovery password in two ways:
 1.  Remove the previous recovery password
 
     ```
-    Manage-bde â€“protectors â€“delete C: â€“type RecoveryPassword
+    Manage-bde ????????protectors ????????delete C: ????????type RecoveryPassword
     ```
 
 2.  Add the new recovery password
 
     ```
-    Manage-bde â€“protectors â€“add C: -RecoveryPassword
+    Manage-bde ????????protectors ????????add C: -RecoveryPassword
     ```
 
 3.  Get the ID of the new recovery password. From the screen copy the ID of the recovery password.
 
     ```
-    Manage-bde â€“protectors â€“get C: -Type RecoveryPassword
+    Manage-bde ????????protectors ????????get C: -Type RecoveryPassword
     ```
 
 4.  Backup the new recovery password to AD DS
 
     ```
-    Manage-bde â€“protectors â€“adbackup C: -id {EXAMPLE6-5507-4924-AA9E-AFB2EB003692}
+    Manage-bde ????????protectors ????????adbackup C: -id {EXAMPLE6-5507-4924-AA9E-AFB2EB003692}
     ```
 
     > [!WARNING]
@@ -378,9 +378,9 @@ strDriveLetter = "c:"
 ' Use "." to connect to the local computer
 strComputerName = "."
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Connect to the BitLocker WMI provider class
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 strConnectionStr = "winmgmts:" _
                  & "{impersonationLevel=impersonate,authenticationLevel=pktPrivacy}!\\" _
@@ -414,12 +414,12 @@ Next
 
 ' objVolume is now our found BitLocker-capable disk volume
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Perform BitLocker WMI provider functionality
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 ' Add a new recovery password, keeping the ID around so it doesn't get deleted later
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 nRC = objVolume.ProtectKeyWithNumericalPassword("Recovery Password Refreshed By Script", , sNewKeyProtectorID)
 
@@ -429,7 +429,7 @@ WScript.Quit -1
 End If
 
 ' Removes the other, "stale", recovery passwords 
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 nKeyProtectorTypeIn = 3 ' type associated with "Numerical Password" protector
 
@@ -469,11 +469,11 @@ WScript.Echo "A new recovery password has been added. Old passwords have been re
 ## <a name="BKMK_AppendixC"></a>Retrieving the BitLocker key package
 You can use two methods to retrieve the key package, as described in [Using Additional Recovery Information](#BKMK_UsingAddRecovery):
 
--   **Export a previously\-saved key package from ADÂ DS.** You must have Read access to BitLocker recovery passwords that are stored in ADÂ DS.
+-   **Export a previously\-saved key package from AD????DS.** You must have Read access to BitLocker recovery passwords that are stored in AD????DS.
 
 -   **Export a new key package from an unlocked, BitLocker\-protected volume.** You must have local administrator access to the working volume, before any damage has occurred.
 
-The following sample script exports all previously\-saved key packages from ADÂ DS.
+The following sample script exports all previously\-saved key packages from AD????DS.
 
 #### To run the sample key package retrieval script
 
@@ -483,12 +483,12 @@ The following sample script exports all previously\-saved key packages from ADÂ
 
     **cscript GetBitLockerKeyPackageADDS.vbs \-?**
 
-You can use the following sample script to create a VBScript file to retrieve the BitLocker key package from ADÂ DS.
+You can use the following sample script to create a VBScript file to retrieve the BitLocker key package from AD????DS.
 
 ```
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Usage
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 Sub ShowUsage
    Wscript.Echo "USAGE: GetBitLockerKeyPackageAD [Path To Saved Key Package] [Optional Computer Name]"
@@ -498,9 +498,9 @@ Sub ShowUsage
    WScript.Quit
 End Sub
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Parse Arguments
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 Set args = WScript.Arguments
 
@@ -527,9 +527,9 @@ Select Case args.Count
 
 End Select
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Get path to Active Directory computer object associated with the computer name
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 Function GetStrPathToComputer(strComputerName) 
 
@@ -578,9 +578,9 @@ Function GetStrPathToComputer(strComputerName)
 
 End Function
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Securely access the Active Directory computer object using Kerberos
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 Set objDSO = GetObject("LDAP:")
 strPathToComputer = GetStrPathToComputer(strComputerName)
@@ -591,9 +591,9 @@ Const ADS_SECURE_AUTHENTICATION = 1
 Const ADS_USE_SEALING = 64 '0x40
 Const ADS_USE_SIGNING = 128 '0x80
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Get all BitLocker recovery information from the Active Directory computer object
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 ' Get all the recovery information child objects of the computer object
 
@@ -637,9 +637,9 @@ WScript.Quit -1
 
 Next
 
-'----------------------------------------------------------------------------------------
+'--------------------------------------------
 ' Utility functions to save binary data 
-'----------------------------------------------------------------------------------------
+'--------------------------------------------
 
 Function SaveBinaryDataText(FileName, ByteArray)
   'Create FileSystemObject object
@@ -665,11 +665,11 @@ WScript.Quit
 
 The following sample script exports a new key package from an unlocked, encrypted volume.
 
-To run this script, start by saving the code into a VBS file (for example, GetBitLockerKeyPackage.vbs). Then, open an administrator command prompt and use â€œcscriptâ€? to run the saved file (for example, type "cscript GetBitLockerKeyPackage.vbs  -?").
+To run this script, start by saving the code into a VBS file (for example, GetBitLockerKeyPackage.vbs). Then, open an administrator command prompt and use ???????cscript?????? to run the saved file (for example, type "cscript GetBitLockerKeyPackage.vbs  -?").
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Usage
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 Sub ShowUsage
    Wscript.Echo "USAGE: GetBitLockerKeyPackage [VolumeLetter/DriveLetter:] [Path To Saved Key Package]"
@@ -678,9 +678,9 @@ Sub ShowUsage
    WScript.Quit
 End Sub
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Parse Arguments
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 Set args = WScript.Arguments
 
@@ -697,9 +697,9 @@ Select Case args.Count
 
 End Select
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Other Inputs
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 ' Target computer name
 ' Use "." to connect to the local computer
@@ -711,9 +711,9 @@ strDefaultKeyProtectorID = ""
 
 ' strDefaultKeyProtectorID = "{001298E0-870E-4BA0-A2FF-FC74758D5720}"  ' sample
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Connect to the BitLocker WMI provider class
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 strConnectionStr = "winmgmts:" _
                  & "{impersonationLevel=impersonate,authenticationLevel=pktPrivacy}!\\" _
@@ -747,12 +747,12 @@ Next
 
 ' objVolume is now our found BitLocker-capable disk volume
 
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 ' Perform BitLocker WMI provider functionality
-' --------------------------------------------------------------------------------
+' ----------------------------------------
 
 ' Collect all possible valid key protector ID's that can be used to get the package
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 nNumericalKeyProtectorType = 3 ' type associated with "Numerical Password" protector
 
@@ -771,7 +771,7 @@ WScript.Quit -1
 End If
 
 ' Get first key protector of the type "Numerical Password" or "External Key", if any
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 if strDefaultKeyProtectorID = "" Then
 
@@ -795,7 +795,7 @@ End If
 End If
 
 ' Get some information about the chosen key protector ID
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 ' is the type valid?
 
@@ -828,7 +828,7 @@ Select Case nDefaultKeyProtectorType
 End Select
 
 ' Save the backup key package using the chosen key protector ID
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 nRC = objVolume.GetKeyPackage(strDefaultKeyProtectorID, oKeyPackage)
 If nRC <> 0 Then
@@ -853,7 +853,7 @@ Next
 SaveBinaryDataText strFilePath, bKeyPackage
 
 ' Display helpful information
-' ----------------------------------------------------------------------------------
+' -----------------------------------------
 
 WScript.Echo "The backup key package has been saved to " & strFilePath & "."
 
@@ -875,9 +875,9 @@ WScript.Echo "The saved key file is named " & strDefaultKeyProtectorID & ".BEK"
 WScript.Echo "For help re-saving this external key file, type ""manage-bde -protectors -get -?"""
 End If
 
-'----------------------------------------------------------------------------------------
+'--------------------------------------------
 ' Utility functions to save binary data 
-'----------------------------------------------------------------------------------------
+'--------------------------------------------
 
 Function SaveBinaryDataText(FileName, ByteArray)
   'Create FileSystemObject object

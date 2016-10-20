@@ -1,6 +1,6 @@
 ---
 title: Openfiles
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Openfiles
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ openfiles /disconnect [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]]
 ```
 ##### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
 |/u [<Domain>\\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
 |/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
@@ -70,7 +69,7 @@ openfiles /query [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]] [/fo
 ```
 ##### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
 |/u [<Domain>\\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
 |/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
@@ -105,7 +104,7 @@ openfiles /local [on | off]
 ```
 ##### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[on &#124; off]|Enables or disables the system Maintain Objects List global flag, which tracks local file handles.|
 |/?|Displays help at the command prompt.|
 ##### Remarks

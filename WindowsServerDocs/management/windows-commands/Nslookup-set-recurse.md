@@ -1,6 +1,6 @@
 ---
 title: Nslookup set recurse
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup set recurse
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ set [no]recurse
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |**norecurse**|Stops the Domain Name System (DNS) name server from querying other servers if it does not have the information.|
 |**recurse**|Tells the Domain Name System (DNS) name server to query other servers if it does not have the information. The default syntax is **recurse**.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|

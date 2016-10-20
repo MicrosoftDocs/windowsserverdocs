@@ -1,6 +1,6 @@
 ---
 title: Windows Server Backup Command Reference
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Windows Server Backup Command Reference
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -23,7 +22,7 @@ The following subcommands for **wbadmin** provide backup and recovery functional
 To configure a backup schedule, you must be a member of the **Administrators** group. To perform all other tasks with this command, you must be a member of the **Backup Operators** or the **Administrators** group, or you must have been delegated the appropriate permissions.
 You must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt, click **Start**, right-click **Command Prompt**, and then click **Run as administrator**.)
 |Subcommand|Description|
-|--------------|---------------|
+|-------|--------|
 |[Wbadmin enable backup](Wbadmin-enable-backup.md)|Configures and enables a daily backup schedule.|
 |[Wbadmin disable backup](Wbadmin-disable-backup.md)|Disables your daily backups.|
 |[Wbadmin start backup](Wbadmin-start-backup.md)|Runs a one-time backup. If used with no parameters, uses the settings from the daily backup schedule.|

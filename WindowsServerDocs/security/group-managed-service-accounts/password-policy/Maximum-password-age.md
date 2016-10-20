@@ -41,10 +41,10 @@ Set **Maximum password age** to 60 days, depending on your environment. This way
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy**
 
 ### Default values
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
 
 |Server type or Group Policy Object (GPO)|Default value|
-|----------------------------------------------|-----------------|
+|-----------------------|---------|
 |Default domain policy|42 days|
 |Default domain controller policy|Not defined|
 |Stand-alone server default settings|42 days|

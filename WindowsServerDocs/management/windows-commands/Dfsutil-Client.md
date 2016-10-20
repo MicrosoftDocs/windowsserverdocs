@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Client
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil client | Registry | SiteInfo | Property | /?
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Dfsutil Client Registry|Sets, resets, or displays registry keys.|
 |Dfsutil Client SiteInfo|Displays the Siteinformation.|
 |Dfsutil Client Property|Displays or modifies local machine's cache information.|

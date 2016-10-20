@@ -1,6 +1,6 @@
 ---
 title: Ksetup:listrealmflags
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:listrealmflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ None
 ## Remarks
 The realm flags specify additional features of a non-Windows-based Kerberos realm. Computers that are running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  can use a non-Windows-based Kerberos server to administer authentication instead of using a domain that is running a Windows Server operating system. These systems participate in a Kerberos realm instead of a Windows domain. This entry establishes the features of the realm. The following table describes each.
 |Value|Realm flag|Description|
-|---------|--------------|---------------|
+|-----|-------|--------|
 |0xF|All|All realm flags are set.|
 |0x00|None|No realm flags are set, and no additional features are enabled.|
 |0x01|SendAddress|The IP address will be included within the ticket-granting tickets.|

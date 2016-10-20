@@ -57,10 +57,10 @@ Constant: SeRelabelPrivilege
 ### Default values  
 By default this setting is Not defined on domain controllers and on stand-alone servers.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
   
 |Server type or GPO|Default value|  
-|----------------------|-----------------|  
+|-----------|---------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
 |Stand-Alone Server Default Settings|Not defined|  

@@ -39,7 +39,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |5031|The Windows Firewall Service blocked an application from accepting incoming connections on the network.|
 |5140|A network share object was accessed. **Note:** This event is logged only on computers running the supported versions of the Windows operating system as designated in the **Applies To** list.|
 |5150|The Windows Filtering Platform blocked a packet.|

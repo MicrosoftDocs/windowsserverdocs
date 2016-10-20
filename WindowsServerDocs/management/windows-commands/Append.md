@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Append
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ append ;
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:]<Path>|Specifies a drive and directory to append.|
 |/x:on|Applies appended directories to file searches and launching applications.|
 |/x:off|Applies appended directories only to requests to open files.<br /><br />**/x:off** is the default setting.|

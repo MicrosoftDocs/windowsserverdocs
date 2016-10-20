@@ -1,6 +1,6 @@
 ---
 title: A team bound to a virtual switch should only have one exposed team interface
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

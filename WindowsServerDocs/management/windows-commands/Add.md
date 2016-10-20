@@ -1,6 +1,6 @@
 ---
 title: Add
-description: "Windows Commands topic for **add** -- Mirrors the simple volume with focus to the specified disk."
+description: "Windows Commands topic for **add** - Mirrors the simple volume with focus to the specified disk."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Add
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ add disk=<n> [align=<n>] [wait] [noerr]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |disk=<n>|Specifies a disk, other than the one containing the existing simple volume, to contain the mirror. You can mirror only simple volumes. The specified disk must have unallocated space at least as large as the size of the simple volume you want to mirror.|
 |align=<n>|Typically used with hardware RAID Logical Unit Number (LUN) arrays to improve performance. Aligns all volume or partition extents to the closest alignment boundary. *n* is the number of kilobytes (KB) from the beginning of the disk to the closest alignment boundary.|
 |wait|Waits for the volume to finish synchronizing with the added disk before returning.  Without this parameter, DiskPart returns after the mirrored volume is created and does not wait for the synchronization to complete.|

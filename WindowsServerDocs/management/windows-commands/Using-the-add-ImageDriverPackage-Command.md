@@ -1,6 +1,6 @@
 ---
 title: Using the add-ImageDriverPackage Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the add-ImageDriverPackage Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ WDSUTIL /Add-ImageDriverPackage [/Server:<Server name>media:<Image namemediaType
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
 media:<Image name>|Specifies the name of the image to add the driver to.|
 mediaType:Boot|Specifies the type of image to add the driver to. Driver packages can only be added to boot images.|

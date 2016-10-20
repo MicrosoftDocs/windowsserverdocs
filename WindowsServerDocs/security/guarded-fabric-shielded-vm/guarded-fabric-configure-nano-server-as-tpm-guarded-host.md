@@ -8,7 +8,6 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
-
 # Appendix A - Configure Nano server as TPM attested guarded host
 
 >Applies To: Windows Server 2016
@@ -23,7 +22,7 @@ You can run shielded VMs on a Nano server configured as a guarded host. However,
 
 - Nano Server can only run shielded VMs in a guarded fabric; it cannot be used to run shielded VMs without the use of HGS to unlock the virtual TPM devices. This means that you cannot use Nano Server to [Create a new shielded VM on-premises and move it to a guarded fabric](guarded-fabric-create-vm-move-to-guarded-fabric.md), because Nano Server does not support the use of local key material to start up shielded VMs.
 
-- If you are using VMM to manage a guarded host running Nano server, you will not be able to use the “Apply latest CI Policy” feature to deploy updated code integrity (CI) policies to Nano server. Instead, you will have to manually copy your CI policy (SIPolicy.p7b) to C:\Windows\System32\CodeIntegrity\SIPolicy.p7b and restart the host to apply it. Enforcement of the CI policy remains the same as with the Core and Desktop Experience editions of Windows Server 2016.
+- If you are using VMM to manage a guarded host running Nano server, you will not be able to use the "Apply latest CI Policy" feature to deploy updated code integrity (CI) policies to Nano server. Instead, you will have to manually copy your CI policy (SIPolicy.p7b) to C:\Windows\System32\CodeIntegrity\SIPolicy.p7b and restart the host to apply it. Enforcement of the CI policy remains the same as with the Core and Desktop Experience editions of Windows Server 2016.
 
 ## Creating a Nano server image
 
@@ -39,7 +38,7 @@ The following steps are from [Nano Server Quick Start](https://technet.microsoft
 
     `$mediapath = <location of the mounted ISO image, e.g. E:\>`
 
-    `New-NanoServerImage -MediaPath $mediapath -TargetPath <nanoVHD path> -ComputerName "<nanoserver name>" -OEMDrivers -Compute -DeploymentType Host -Edition Datacenter -Packages Microsoft-NanoServer-SecureStartup-Package, Microsoft-NanoServer-ShieldedVM-Package -EnableRemoteManagementPort –DomainName <Domain Name>`
+    `New-NanoServerImage -MediaPath $mediapath -TargetPath <nanoVHD path> -ComputerName "<nanoserver name>" -OEMDrivers -Compute -DeploymentType Host -Edition Datacenter -Packages Microsoft-NanoServer-SecureStartup-Package, Microsoft-NanoServer-ShieldedVM-Package -EnableRemoteManagementPort -DomainName <Domain Name>`
 
     The command will complete in a few minutes.
 
@@ -78,7 +77,7 @@ Restart the computer to boot into Nano server. Now the Nano server is ready, and
 
 ## Getting Nano server IP
 
-There isn’t much you need to configure on the Nano server. Everything you do will be done through the remote Windows PowerShell session. You will need to get the Nano server IP address or use the server name for management. In places where this topic uses the IP address as the example, you can replace it with the server name.
+There isn't much you need to configure on the Nano server. Everything you do will be done through the remote Windows PowerShell session. You will need to get the Nano server IP address or use the server name for management. In places where this topic uses the IP address as the example, you can replace it with the server name.
 
 -   Log on to the Recovery Console, using the administrator account and password you supplied to build the Nano image.
 

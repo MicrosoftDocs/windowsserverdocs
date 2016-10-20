@@ -22,7 +22,7 @@ This topic explains the AppLocker rule collection for packaged app installers an
 
 Commonly known as Windows apps, packaged apps can be installed through the Microsoft AppStore or can be side loaded using the Windows PowerShell cmdlets if you have an Enterprise license. Packaged apps can be installed by a standard user unlike some desktop applications that sometimes require administrative privileges for installation. In this topic, desktop applications refer to Win32 apps that run on the classic user desktop.
 
-Typically, an app consists of multiple components – the installer used to install the app and one or more Exes, Dlls or Scripts. With desktop applications, not all those components always share common attributes such as the publisher name, product name and product version. Therefore, AppLocker has to control each of these components separately through different rule collections – Exe, Dll, Script and Windows Installers. In contrast, all the components of a packaged app share the same attributes: Publisher name, Package name and Package version. It is therefore possible to control an entire app with a single rule.
+Typically, an app consists of multiple components ??? the installer used to install the app and one or more Exes, Dlls or Scripts. With desktop applications, not all those components always share common attributes such as the publisher name, product name and product version. Therefore, AppLocker has to control each of these components separately through different rule collections ??? Exe, Dll, Script and Windows Installers. In contrast, all the components of a packaged app share the same attributes: Publisher name, Package name and Package version. It is therefore possible to control an entire app with a single rule.
 
 AppLocker enforces rules for packaged apps separately from desktop applications. A single AppLocker rule for a packaged app can control both the installation and the running of an app. Because all packaged apps are signed, AppLocker supports only publisher rules for packaged apps. A publisher rule for a packaged app is based on the following attributes of the app:
 
@@ -45,7 +45,7 @@ In summary, including AppLocker rules for packaged apps in your policy design pr
 ## See also
 
 |Resource|Windows Server 2008 R2 and Windows 7|Windows Server 2012 and Windows 8|
-|------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+|------|--------------------|------------------------------------------------------------|
 |Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step\-by\-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|
 |Procedures|[AppLocker Operations Guide](http://technet.microsoft.com/library/ee791916(WS.10).aspx)|[Administer AppLocker](../applocker/manage/Administer-AppLocker.md)<br /><br />[Manage Packaged Apps with AppLocker](../applocker/manage/Manage-Packaged-Apps-with-AppLocker.md)|
 |Scripting|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|

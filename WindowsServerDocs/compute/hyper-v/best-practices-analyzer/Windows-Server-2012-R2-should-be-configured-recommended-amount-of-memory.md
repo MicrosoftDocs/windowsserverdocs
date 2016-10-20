@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2012 R2 should be configured with the recommended amount of memory
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

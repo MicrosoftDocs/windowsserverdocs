@@ -1,6 +1,6 @@
 ---
 title: Cipher
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Cipher
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,7 +35,7 @@ cipher /rekey [PathName [...]]
 ```
 ## Parameters
 |Parameters|Description|
-|--------------|---------------|
+|-------|--------|
 |/b|Aborts if an error is encountered. By default, **cipher** continues to run even if errors are encountered.|
 |/c|Displays information on the encrypted file.|
 |/d|Decrypts the specified files or directories.|

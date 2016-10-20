@@ -1,6 +1,6 @@
 ---
 title: Subst
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Subst
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ subst <Drive1>: /d
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
 |[<Drive2>:]<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
 |/d|Deletes a substituted (virtual) drive.|

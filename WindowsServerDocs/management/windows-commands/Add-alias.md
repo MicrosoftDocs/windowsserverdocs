@@ -1,6 +1,6 @@
 ---
 title: Add alias
-description: "Windows Commands topic for **add alias** -- Adds aliases to the alias environment."
+description: "Windows Commands topic for **add alias** - Adds aliases to the alias environment."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Add alias
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ add alias <AliasName> <AliasValue>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<AliasName>|Specifies the name of the alias.|  
 |<AliasValue>|Specifies the value of the alias.|  
 |\/?|Displays help at the command prompt.|  

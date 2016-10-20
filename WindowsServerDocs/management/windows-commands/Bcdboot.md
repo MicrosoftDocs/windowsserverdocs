@@ -1,6 +1,6 @@
 ---
 title: Bcdboot
-description: "Windows Commands topic for **Bcdboot** -- Quickly set up a system partition, or repair the boot environment located on the system partition."
+description: "Windows Commands topic for **Bcdboot** - Quickly set up a system partition, or repair the boot environment located on the system partition."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bcdboot
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ bcdboot <source> [/l] [/s]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |source|Specifies the location of the Windows directory to use as the source for copying boot environment files.|
 |/l|Specifies the locale. The default locale is US English.|
 |/s|Specifies the volume letter of the system partition. The default is the system partition identified by the firmware.|

@@ -1,5 +1,6 @@
 ---
 title: Limit Web Access
+description: Learn how to limit user access to the Internet in MultiPoint Services
 ms.custom: na
 ms.date: 07/08/2016
 ms.prod: windows-server-threshold

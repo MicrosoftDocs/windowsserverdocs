@@ -1,6 +1,6 @@
 ---
 title: Diskperf
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Diskperf
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ diskperf [-Y[D|V] | -N[D|V]] [\\computername]
 ```
 ## Options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |-?|Displays context sensitive help.|
 |-Y|Start all disk performance counters when the computer restarts.|
 |-YD|Enable disk performance counters for physical drives when the computer restarts.|

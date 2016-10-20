@@ -68,7 +68,7 @@ There are a number of additional differences between the security audit policy s
 
 There are nine basic audit policy settings under **Security Settings\Local Policies\Audit Policy** and 53 settings under **Advanced Audit Policy Configuration**. The settings available in **Security Settings\Advanced Audit Policy Configuration** address similar issues as the nine basic settings in **Local Policies\Audit Policy**, but they allow administrators to be more selective in the number and types of events to audit. For example, the basic audit policy provides a single setting for account logon, and the advanced audit policy provides four. Enabling the single basic account logon setting would be the equivalent of setting all four advanced account logon settings. In comparison, setting a single advanced audit policy setting does not generate audit events for activities that you are not interested in tracking.
 
-In addition, if you enable success auditing for the basic **Audit account logon events** setting, only success events will be logged for all account logon–related behaviors. In comparison, depending on the needs of your organization, you can configure success auditing for one advanced account logon setting, failure auditing for a second advanced account logon setting, success and failure auditing for a third advanced account logon setting, or no auditing.
+In addition, if you enable success auditing for the basic **Audit account logon events** setting, only success events will be logged for all account logon???related behaviors. In comparison, depending on the needs of your organization, you can configure success auditing for one advanced account logon setting, failure auditing for a second advanced account logon setting, success and failure auditing for a third advanced account logon setting, or no auditing.
 
 The nine basic settings under **Security Settings\Local Policies\Audit Policy** were introduced in Windows 2000. Therefore, they are available in all versions of Windows released since then. The advanced audit policy settings were introduced in Windows Vista and Windows Server 2008. The advanced settings can only be used on computers running at least  Windows 7 , Windows Vista,  Windows Server 2008 R2 , or Windows Server 2008.
 
@@ -108,7 +108,7 @@ For example, you might use a domain GPO to assign an organization-wide group of 
 The rules that govern how Group Policy settings are applied propagate to the subcategory level of audit policy settings. This means that audit policy settings configured in different GPOs will be merged if no policy settings configured at a lower level exist. The following table illustrates this behavior.
 
 |Auditing subcategory|Setting configured in an OU GPO (higher priority)|Setting configured in a domain GPO (lower priority)|Resulting policy for the target computer|
-|------------------------|-------------------------------------------------------|---------------------------------------------------------|--------------------------------------------|
+|------------|----------------------------|-----------------------------|----------------------|
 |Detailed File Share Auditing|Success|Failure|Success|
 |Process Creation Auditing|Disabled|Success|Disabled|
 |Logon Auditing|Success|Failure|Failure|
@@ -145,7 +145,7 @@ A failure audit event is triggered when a defined action, such as a user logon, 
 The appearance of failure audit events in the event log does not necessarily mean that something is wrong with your system. For example, if you configure Audit Logon events, a failure event may simply mean that a user mistyped his or her password.
 
 ## <a name="BKMK_6"></a>How can I set an audit policy that affects all objects on a computer?
-System administrators and auditors increasingly want to verify that an auditing policy is applied to all objects on a system. This has been difficult to accomplish because the system access control lists (SACLs) that govern auditing are applied on a per-object basis. Thus, to verify that an audit policy has been applied to all objects, you would have to check every object to be sure that no changes have been made—even temporarily to a single SACL.
+System administrators and auditors increasingly want to verify that an auditing policy is applied to all objects on a system. This has been difficult to accomplish because the system access control lists (SACLs) that govern auditing are applied on a per-object basis. Thus, to verify that an audit policy has been applied to all objects, you would have to check every object to be sure that no changes have been made???even temporarily to a single SACL.
 
 Introduced in  Windows Server 2008 R2  and  Windows 7 , security auditing allows administrators to define global object access auditing policies for the entire file system or for the registry on a computer. The specified SACL is then automatically applied to every object of that type. This can be useful for verifying that all critical files, folders, and registry settings on a computer are protected, and for identifying when an issue with a system resource occurs. If a file or folder SACL and a global object access auditing policy (or a single registry setting SACL and a global object access auditing policy) are configured on a computer, the effective SACL is derived from combining the file or folder SACL and the global object access auditing policy. This means that an audit event is generated if an activity matches either the file or folder SACL or the global object access auditing policy.
 
@@ -197,7 +197,7 @@ Finding the right balance between auditing enough network and computer activity 
 ## <a name="BKMK_17"></a>What are the best tools to model and manage audit policies?
 The integration of advanced audit policy settings with domain Group Policy, introduced in  Windows 7  and  Windows Server 2008 R2 , is designed to simplify the management and implementation of security audit policies in an organization's network. As such, tools used to plan and deploy Group Policy Objects for a domain can also be used to plan and deploy security audit policies.
 
-On an individual computer, the Auditpol command-line tool can be used to complete a number of important audit policy–related management tasks.
+On an individual computer, the Auditpol command-line tool can be used to complete a number of important audit policy???related management tasks.
 
 In addition, there are a number of computer management products, such as the Audit Collection Services in the Microsoft System Center Operations Manager products, which can be used to collect and filter event data.
 

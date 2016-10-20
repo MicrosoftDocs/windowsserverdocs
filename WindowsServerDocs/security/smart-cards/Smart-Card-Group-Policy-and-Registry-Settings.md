@@ -79,7 +79,7 @@ The registry keys are in the following locations:
 The following table lists the default values for these GPO settings. Variations are documented under the policy descriptions in this topic.
 
 |Server Type or GPO|Default Value|
-|----------------------|-----------------|
+|-----------|---------|
 |Default Domain Policy|Not configured|
 |Default Domain Controller Policy|Not configured|
 |Stand-Alone Server Default Settings|Not configured|
@@ -106,7 +106,7 @@ When this policy setting is enabled, certificates with the following attributes 
 When this policy setting is disabled or not configured, only certificates that contain the smart card logon object identifier can be used to sign in with a smart card.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|AllowCertificatesWithNoEKU|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -117,7 +117,7 @@ When this policy setting is disabled or not configured, only certificates that c
 This policy setting allows you to control whether elliptic curve cryptography (ECC) certificates on a smart card can be used to sign in to a domain. When this setting is enabled, ECC certificates on a smart card can be used to sign in to a domain. When this setting is disabled or not configured, ECC certificates on a smart card cannot be used to sign in to a domain.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|EnumerateECCCerts|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic excluding Windows Server 2008 and Windows Vista.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -130,7 +130,7 @@ This policy setting lets you determine whether the integrated unblock feature is
 When this setting is enabled, the integrated unblock feature is available. When this setting is disabled or not configured, the feature is not available.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|AllowIntegratedUnblock|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -141,7 +141,7 @@ When this setting is enabled, the integrated unblock feature is available. When 
 This policy setting lets you allow signature key-based certificates to be enumerated and available for sign in. When this setting is enabled, any certificates available on the smart card with a signature-only key are listed on the sign-in screen. When this setting is disabled or not configured, certificates available on the smart card with a signature-only key are not listed on the sign-in screen.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|AllowSignatureOnlyKeys|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -156,7 +156,7 @@ Prior to Windows Vista, certificates were required to contain a valid time and t
 When this setting is enabled, certificates are listed on the sign-in screen whether they have an invalid time or their time validity has expired. When this setting is disabled or not configured, certificates that are expired or not yet valid are not listed on the sign-in screen.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|AllowTimeInvalidCertificates|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -167,7 +167,7 @@ When this setting is enabled, certificates are listed on the sign-in screen whet
 This policy setting lets you determine whether an optional field is displayed during sign-in and provides a subsequent elevation process that allows users to enter their user name or user name and domain, which associates a certificate with the user. If this setting is enabled, an optional field is displayed that allows users to enter their user name or user name and domain. If this setting is disabled or not configured, the field is not displayed.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|X509HintsNeeded|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -186,7 +186,7 @@ This policy setting allows you to manage the cleanup behavior of root certificat
 When this policy setting is disabled or not configured, root certificates are automatically removed when the user signs out of Windows.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|RootCertificateCleanupOption|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -194,10 +194,10 @@ When this policy setting is disabled or not configured, root certificates are au
 |Notes and resources||
 
 ### <a name="BKMK_DisplayStringWhenSmartCardIsBlocked"></a>Display string when smart card is blocked
-When this policy setting is enabled, you can create and manage the displayed message that the user sees when a smart card is blocked. When this setting is disabled or not configured (and the integrated unblock feature is also enabled), the system’s default message is displayed to the user when the smart card is blocked.
+When this policy setting is enabled, you can create and manage the displayed message that the user sees when a smart card is blocked. When this setting is disabled or not configured (and the integrated unblock feature is also enabled), the system???s default message is displayed to the user when the smart card is blocked.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|IntegratedUnblockPromptString|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -205,14 +205,14 @@ When this policy setting is enabled, you can create and manage the displayed mes
 |Notes and resources||
 
 ### <a name="BKMK_FilterDuplicateLogonCertificates"></a>Filter duplicate logon certificates
-This policy setting lets you use a filtering process to configure which valid sign-in certificates are displayed. During the certificate renewal period, a user’s smart card can have multiple valid sign-in certificates issued from the same certificate template, which can cause confusion about which certificate to select. This behavior can occur when a certificate is renewed and the old certificate has not expired yet.
+This policy setting lets you use a filtering process to configure which valid sign-in certificates are displayed. During the certificate renewal period, a user???s smart card can have multiple valid sign-in certificates issued from the same certificate template, which can cause confusion about which certificate to select. This behavior can occur when a certificate is renewed and the old certificate has not expired yet.
 
 Two certificates are determined to be the same if they are issued from the same template with the same major version and they are for the same user (this is determined by their UPN). When this policy setting is enabled, filtering occurs so that the user will only see the most current valid certificates from which to select. If this setting is disabled or not configured, all the certificates are displayed to the user.
 
 This policy setting is applied to the computer after the [Allow time invalid certificates](Smart-Card-Group-Policy-and-Registry-Settings.md#BKMK_AllowTimeInvalidCertificates) policy setting is applied.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|FilterDuplicateCerts|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -225,7 +225,7 @@ This policy setting allows you to manage how Windows reads all certificates from
 When this policy setting is enabled, Windows attempts to read all certificates from the smart card regardless of the CSP feature set. When disabled or not configured, Windows attempts to read only the default certificate from smart cards that do not support retrieval of all certificates in a single call. Certificates other than the default are not available for sign in.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|ForceReadingAllCertificates|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -236,7 +236,7 @@ When this policy setting is enabled, Windows attempts to read all certificates f
 This policy setting allows you to control whether a confirmation message is displayed to the user when a smart card device driver is installed. When this policy setting is enabled, a confirmation message is displayed when a smart card device driver is installed. When this setting is disabled or not configured, a smart card device driver installation message is not displayed.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|ScPnPNotification|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic excluding Windows Server 2008 and Windows Vista.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -244,10 +244,10 @@ This policy setting allows you to control whether a confirmation message is disp
 |Notes and resources|This policy setting applies only to smart card drivers that have passed the Windows Hardware Quality Labs (WHQL) testing process.|
 
 ### <a name="BKMK_PreventPlaintextPINsFromBeingReturnedByCredentialManager"></a>Prevent plaintext PINs from being returned by Credential Manager
-This policy setting prevents Credential Manager from returning plaintext PINs. Credential Manager is controlled by the user on the local computer, and it stores credentials from supported browsers and Windows applications. Credentials are saved in special encrypted folders on the computer under the user’s profile. When this policy setting is enabled, Credential Manager does not return a plaintext PIN. When this setting is disabled or not configured, plaintext PINs can be returned by Credential Manager.
+This policy setting prevents Credential Manager from returning plaintext PINs. Credential Manager is controlled by the user on the local computer, and it stores credentials from supported browsers and Windows applications. Credentials are saved in special encrypted folders on the computer under the user???s profile. When this policy setting is enabled, Credential Manager does not return a plaintext PIN. When this setting is disabled or not configured, plaintext PINs can be returned by Credential Manager.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|DisallowPlaintextPin|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic excluding Windows Vista. This policy was introduced in Windows Vista SP1.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -260,7 +260,7 @@ When this policy setting is enabled, it causes the display of the subject name t
 To help users distinguish one certificate from another, the user principal name (UPN) and the common name are displayed by default. For example, when this setting is enabled, if the certificate subject is CN=User1, OU=Users, DN=example, DN=com and the UPN is user1@example.com, "User1" is displayed with "user1@example.com." If the UPN is not present, the entire subject name is displayed. This setting controls the appearance of that subject name, and it might need to be adjusted for your organization.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|ReverseSubject|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
@@ -273,7 +273,7 @@ This policy setting allows you to manage the certificate propagation that occurs
 If you enable or do not configure this policy setting, certificate propagation occurs when the user inserts the smart card. When this setting is disabled, certificate propagation does not occur and the certificates will not be made available to applications such as Outlook.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|CertPropEnabled|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Enabled and not configured are equivalent|
@@ -284,7 +284,7 @@ If you enable or do not configure this policy setting, certificate propagation o
 This policy setting allows you to manage the root certificate propagation that occurs when a smart card is inserted. The certificate propagation service applies when a signed-in user inserts a smart card in a reader that is attached to the computer. This action causes the certificate to be read from the smart card. The certificates are then added to the user's Personal store. When this policy setting is enabled or not configured, root certificate propagation occurs when the user inserts the smart card.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|EnableRootCertificate Propagation|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Enabled and not configured are equivalent|
@@ -297,7 +297,7 @@ This policy setting allows you to control whether Smart Card Plug and Play is en
 When the Smart Card Plug and Play policy setting is enabled or not configured, and the system attempts to install a smart card device driver the first time a smart card is inserted in a smart card reader. If this policy setting is disabled a device driver is not installed when a smart card is inserted in a smart card reader.
 
 |Item|Description|
-|--------|---------------|
+|----|--------|
 |Registry key|EnableScPnP|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic excluding Windows Server 2008 and Windows Vista.|
 |Default values|No changes per operating system versions<br /><br />Enabled and not configured are equivalent|
@@ -314,7 +314,7 @@ The registry keys for the smart card KSP are located in HKEY_LOCAL_MACHINE\SYSTE
 ### Registry keys for the base CSP and smart card KSP
 
 |Registry Key|Description|
-|----------------|---------------|
+|--------|--------|
 |**AllowPrivateExchangeKeyImport**|A non-zero value allows RSA exchange (for example, encryption) private keys to be imported for use in key archival scenarios.<br /><br />Default value: 00000000|
 |**AllowPrivateSignatureKeyImport**|A non-zero value allows RSA signature private keys to be imported for use in key archival scenarios.<br /><br />Default value: 00000000|
 |**DefaultPrivateKeyLenBits**|Defines the default length for private keys, if desired.<br /><br />Default value: 00000400<br /><br />Default key generation parameter: 1024-bit keys|
@@ -324,7 +324,7 @@ The registry keys for the smart card KSP are located in HKEY_LOCAL_MACHINE\SYSTE
 ### Additional registry keys for the smart card KSP
 
 |Registry Key|Description|
-|----------------|---------------|
+|--------|--------|
 |**AllowPrivateECDHEKeyImport**|This value allows Ephemeral Elliptic Curve Diffie-Hellman (ECDHE) private keys to be imported for use in key archival scenarios.<br /><br />Default value: 00000000|
 |**AllowPrivateECDSAKeyImport**|This value allows Elliptic Curve Digital Signature Algorithm (ECDSA) private keys to be imported for use in key archival scenarios.<br /><br />Default value: 00000000|
 
@@ -334,7 +334,7 @@ The following table lists the keys and the corresponding values to turn off cert
 ### CRL checking registry keys
 
 |Registry Key|Details|
-|----------------|-----------|
+|--------|------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CCS\Services\Kdc\UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors|Type = DWORD<br /><br />Value = 1|
 |HKEY_LOCAL_MACHINE\SYSTEM\CCS\Control\LSA\Kerberos\Parameters\UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors|Type = DWORD<br /><br />Value = 1|
 
@@ -350,9 +350,9 @@ The following smart card-related Group Policy settings are located in Computer C
 ### Local security policy settings
 
 |Group Policy Setting|Registry Key|Default|Description|
-|------------------------|----------------|-----------|---------------|
-|[Interactive logon: Require smart card](../group-managed-service-accounts/security-options/Interactive-logon--Require-smart-card.md)|scforceoption|Disabled|This security policy setting requires users to sign in to a computer by using a smart card.<br /><br />**Enabled** Users can only sign in to the computer by using a smart card.<br /><br />**Disabled** Users can sign in to the computer by using any method.|
-|[Interactive logon: Smart card removal behavior](../group-managed-service-accounts/security-options/Interactive-logon--Smart-card-removal-behavior.md)|scremoveoption|This policy setting is not defined, which means that the system treats it as **No Action**.|This setting determines what happens when the smart card for a signed-in user is removed from the smart card reader. The options are:<br /><br />-   **No Action**<br />-   **Lock Workstation** The workstation is locked when the smart card is removed, allowing users to leave the area, take their smart card with them, and still maintain a protected session.<br />-   **Force Logoff** The user is automatically signed out when the smart card is removed.<br />-   **Disconnect if a Remote Desktop Services session** Removal of the smart card disconnects the session without signing out the user. This allows the user to reinsert the smart card and resume the session later, or at another computer that is equipped with a smart card reader, without having to sign in again. If the session is local, this policy setting functions identically to the **Lock Workstation** option. **Note:**     Remote Desktop Services was called Terminal Services in previous versions of Windows Server.|
+|------------|--------|------|--------|
+|[Interactive logon: Require smart card](../group-managed-service-accounts/security-options/Interactive-logon-Require-smart-card.md)|scforceoption|Disabled|This security policy setting requires users to sign in to a computer by using a smart card.<br /><br />**Enabled** Users can only sign in to the computer by using a smart card.<br /><br />**Disabled** Users can sign in to the computer by using any method.|
+|[Interactive logon: Smart card removal behavior](../group-managed-service-accounts/security-options/Interactive-logon-Smart-card-removal-behavior.md)|scremoveoption|This policy setting is not defined, which means that the system treats it as **No Action**.|This setting determines what happens when the smart card for a signed-in user is removed from the smart card reader. The options are:<br /><br />-   **No Action**<br />-   **Lock Workstation** The workstation is locked when the smart card is removed, allowing users to leave the area, take their smart card with them, and still maintain a protected session.<br />-   **Force Logoff** The user is automatically signed out when the smart card is removed.<br />-   **Disconnect if a Remote Desktop Services session** Removal of the smart card disconnects the session without signing out the user. This allows the user to reinsert the smart card and resume the session later, or at another computer that is equipped with a smart card reader, without having to sign in again. If the session is local, this policy setting functions identically to the **Lock Workstation** option. **Note:**     Remote Desktop Services was called Terminal Services in previous versions of Windows Server.|
 
 From the Local Security Policy Editor (secpol.msc), you can edit and apply system policies to manage credential delegation for local or domain computers.
 
@@ -366,7 +366,7 @@ Registry keys are located in HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Lsa
 ### Credential delegation policy settings
 
 |Group Policy Setting|Registry Key|Default|Description|
-|------------------------|----------------|-----------|---------------|
+|------------|--------|------|--------|
 |**Allow Delegating Fresh Credentials**|AllowFreshCredentials|Not Configured|This policy setting applies:<br /><br />-   When server authentication was achieved through a trusted X509 certificate or Kerberos protocol.<br />-   To applications that use the CredSSP component (for example, Remote Desktop Services).<br /><br />**Enabled** You can specify the servers where the user's fresh credentials can be delegated.<br /><br />**Not Configured** After proper mutual authentication, delegation of fresh credentials is permitted to Remote Desktop Services running on any computer.<br /><br />**Disabled** Delegation of fresh credentials to any computer is not permitted. **Note:** This policy setting can be set to one or more service principal names (SPNs). The SPN represents the target server where the user credentials can be delegated. A single wildcard character is permitted when specifying the SPN, for example:<ul><li>Use *TERMSRV/\** for Remote Desktop Session Host (RD Session Host) running on any computer.</li><li>Use *TERMSRV/host.humanresources.fabrikam.com* for RD Session Host running on the host.humanresources.fabrikam.com computer.</li><li>Use *TERMSRV/\*.humanresources.fabrikam.com* for RD Session Host running on all computers in .humanresources.fabrikam.com</li></ul>|
 |**Allow Delegating Fresh Credentials with NTLM-only Server Authentication**|AllowFreshCredentialsWhenNTLMOnly|Not Configured|This policy setting applies:<br /><br />-   When server authentication was achieved by using NTLM.<br />-   To applications that use the CredSSP component (for example, Remote Desktop).<br /><br />**Enabled** You can specify the servers where the user's fresh credentials can be delegated.<br /><br />**Not Configured** After proper mutual authentication, delegation of fresh credentials is permitted to RD Session Host running on any computer (TERMSRV/\*).<br /><br />**Disabled** Delegation of fresh credentials is not permitted to any computer. **Note:** This policy setting can be set to one or more SPNs. The SPN represents the target server where the user credentials can be delegated. A single wildcard character (\*) is permitted when specifying the SPN.See the **Allow Delegating Fresh Credentials** policy setting description for examples.|
 |**Deny Delegating Fresh Credentials**|DenyFreshCredentials|Not Configured|This policy setting applies to applications that use the CredSSP component (for example, Remote Desktop).<br /><br />**Enabled** You can specify the servers where the user's fresh credentials cannot be delegated.<br /><br />**Disabled** or **Not Configured** A server is not specified. **Note:** This policy setting can be set to one or more SPNs. The SPN represents the target server where the user credentials cannot be delegated. A single wildcard character (\*) is permitted when specifying the SPN.See the **Allow Delegating Fresh Credentials** policy setting description for examples.|
@@ -374,7 +374,7 @@ Registry keys are located in HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Lsa
 If you are using Remote Desktop Services with smart card logon, you cannot delegate default and saved credentials. The registry keys in the following table, which are located at HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Lsa\Credssp\PolicyDefaults, and the corresponding Group Policy settings are ignored.
 
 |Registry key|Corresponding Group Policy setting|
-|----------------|--------------------------------------|
+|--------|-------------------|
 |AllowDefaultCredentials|Allow Delegating Default Credentials|
 |AllowDefaultCredentialsWhenNTLMOnly|Allow Delegating Default Credentials with NTLM-only Server Authentication|
 |AllowSavedCredentials|Allow Delegating Saved Credentials|

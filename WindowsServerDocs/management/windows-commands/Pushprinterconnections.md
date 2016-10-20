@@ -1,6 +1,6 @@
 ---
 title: Pushprinterconnections
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Pushprinterconnections
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ pushprinterconnections <-log> <-?>
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<-log>|Writes a per user debug log file to %temp, or writes a per machine debug log to %windir%\temp.|  
 |<-?>|Displays Help at the command prompt.|  
 ## Remarks  

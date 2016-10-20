@@ -1,6 +1,6 @@
 ---
 title: Fsutil quota
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil quota
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -37,7 +36,7 @@ fsutil quota [violations]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |disable|Disables quota tracking and enforcement on the specified volume.|  
 |enforce|Enforces quota usage on the specified volume.|  
 |modify|Modifies an existing disk quota or creates a new quota.|  

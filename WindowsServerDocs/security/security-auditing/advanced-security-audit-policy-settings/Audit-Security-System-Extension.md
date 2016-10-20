@@ -38,7 +38,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4610|An authentication package has been loaded by the Local Security Authority.|
 |4611|A trusted logon process has been registered with the Local Security Authority.|
 |4614|A notification package has been loaded by the Security Account Manager.|

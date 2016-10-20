@@ -1,6 +1,6 @@
 ---
 title: Add volume
-description: "Windows Commands topic for **add volume** -- Adds volumes to the Shadow Copy Set, which is the set of volumes to be shadow copied."
+description: "Windows Commands topic for **add volume** - Adds volumes to the Shadow Copy Set, which is the set of volumes to be shadow copied."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ manager: dongill
 ms.date: 10/12/2016
 
 ---
-
 # Add volume
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -33,7 +32,7 @@ add volume <Volume> [provider <ProviderID>]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<Volume>|Specifies a volume to add to the Shadow Copy Set. At least one volume is required for shadow copy creation.|  
 |\[provider <ProviderID>\]|Specifies the Provider ID of a registered provider to use to create the shadow copy. If **provider** is not specified, the default provider is used.|  
   

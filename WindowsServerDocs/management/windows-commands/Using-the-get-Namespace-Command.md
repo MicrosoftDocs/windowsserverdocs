@@ -1,6 +1,6 @@
 ---
 title: Using the get-Namespace Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-Namespace Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ WDSUTIL /Get-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/Det
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/Namespace:<Namespace name>|Specifies the name of the namespace. Note that this is not the friendly name, and it must be unique.<br /><br />-   Deployment Server: The syntax for namespace name is /Namspace:WDS:<ImageGroup>/<ImageName>/<Index>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   Transport Server: This value should match the name given to the namespace when it was created on the server.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |[/Show:Clients] or [/Details:Clients]|Displays information about client computers that are connected to the specified namespace.|
@@ -48,4 +47,4 @@ To view information about a namespace and the clients that are connected, type o
 [Using the get-AllNamespaces Command](Using-the-get-AllNamespaces-Command.md)
 [Using the new-Namespace Command](Using-the-new-Namespace-Command.md)
 [Using the remove-Namespace Command](Using-the-remove-Namespace-Command.md)
-[Subcommand: start-Namespace](Subcommand--start-Namespace.md)
+[Subcommand: start-Namespace](Subcommand-start-Namespace.md)

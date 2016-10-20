@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllImages Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-AllImages Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Get-AllImages [/Server:<Server name>] /Show:{Boot | Install | LegacyRis
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Show: {Boot &#124; Install &#124; LegacyRis &#124; All}|-   **Boot** returns only boot images.<br />-   **Install** returns install images as well as information about the image groups that contain them.<br />-   **LegacyRis** returns only Remote Installation Services (RIS) images.<br />-   **All** returns boot image information, install image information (including information about the image groups), and RIS image information.|
 |[/Detailed]|Indicates that all image metadata from each image should be returned. If this option is not used, the default behavior is to return only the image name, description, and file name.|
@@ -43,4 +42,4 @@ WDSUTIL /Verbose /Get-AllImages /Server:MyWDSServer /Show:All /Detailed
 [Using the Export-Image Command](Using-the-Export-Image-Command.md)
 [Using the remove-Image Command](Using-the-remove-Image-Command.md)
 [Using the replace-Image Command](Using-the-replace-Image-Command.md)
-[Subcommand: set-Image](Subcommand--set-Image.md)
+[Subcommand: set-Image](Subcommand-set-Image.md)

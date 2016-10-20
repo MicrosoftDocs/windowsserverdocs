@@ -1,6 +1,6 @@
 ---
 title: Ksetup:addkdc
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:addkdc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /addkdc <RealmName> [<KDCName>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run. It is to this realm that you are attempting to add the other KDC.|
 |<KDCName>|The KDC name is stated as a case insensitive fully qualified domain name, such as mitkdc.microsoft.com. If the KDC name is omitted, DNS will locate KDCs.|
 ## Remarks
@@ -38,7 +37,7 @@ Configure a non-Windows KDC server and the realm that the workstation should use
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to “p@sswrd1%�?. Then restart the computer.
+Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to  p@sswrd1%. Then restart the computer.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```

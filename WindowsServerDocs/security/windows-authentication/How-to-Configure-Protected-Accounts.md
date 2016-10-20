@@ -81,7 +81,7 @@ Protected accounts have the following deployment requirements:
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket-granting tickets (TGT) expiration or delegation issues.  
   
 #### New logs for Protected Users  
-Two new operational administrative logs are available to help troubleshoot events that are related to Protected Users: Protected User – Client Log and Protected User Failures – Domain Controller Log. These new logs are located in Event Viewer and are disabled by default. To enable a log, click **Applications and Services Logs**, click **Microsoft**, click **Windows**, click **Authentication**, and then click the name of the log and click **Action** (or right-click the log) and click **Enable Log**.  
+Two new operational administrative logs are available to help troubleshoot events that are related to Protected Users: Protected User ??? Client Log and Protected User Failures ??? Domain Controller Log. These new logs are located in Event Viewer and are disabled by default. To enable a log, click **Applications and Services Logs**, click **Microsoft**, click **Windows**, click **Authentication**, and then click the name of the log and click **Action** (or right-click the log) and click **Enable Log**.  
   
 For more information about events in these logs, see [Authentication Policies and Authentication Policy Silos](http://technet.microsoft.com/library/dn486813.aspx).  
   
@@ -144,9 +144,9 @@ The Kerberos authentication protocol consists of three types of exchanges, also 
   
 -   The Client/Server (AP) Exchange (KRB_AP_*)  
   
-The AS exchange is where the client uses the account’s password or private key to create a pre-authenticator to request a ticket-granting ticket (TGT). This happens at user sign-on or the first time a service ticket is needed.  
+The AS exchange is where the client uses the account???s password or private key to create a pre-authenticator to request a ticket-granting ticket (TGT). This happens at user sign-on or the first time a service ticket is needed.  
   
-The TGS exchange is where the account’s TGT is used to create an authenticator to request a service ticket. This happens when an authenticated connection is needed.  
+The TGS exchange is where the account???s TGT is used to create an authenticator to request a service ticket. This happens when an authenticated connection is needed.  
   
 The AP exchange occurs as typically as data inside the application protocol and is not impacted by authentication policies.  
   
@@ -170,7 +170,7 @@ You can restrict service ticket requests through a ticket-granting service (TGS)
 ### <a name="BKMK_ReqForAuthnPolicies"></a>Requirements for using authentication policies  
   
 |Policy|Requirements|  
-|----------|----------------|  
+|-----|--------|  
 |Provide custom TGT lifetimes| Windows Server 2012 R2  domain functional level account domains|  
 |Restrict user sign-on|-    Windows Server 2012 R2  domain functional level account domains with Dynamic Access Control support<br />-   Windows 8, Windows 8.1,  Windows Server 2012  or  Windows Server 2012 R2  devices with Dynamic Access Control support|  
 |Restrict service ticket issuance that is based on user account and security groups| Windows Server 2012 R2  domain functional level resource domains|  
@@ -180,7 +180,7 @@ You can restrict service ticket requests through a ticket-granting service (TGS)
 A high-value account with administrative privilege should be a member of the **Protected Users** group. By default, no accounts are members of the **Protected Users** group. Before you add accounts to the group, configure domain controller support and create an audit policy to ensure that there are no blocking issues.  
   
 #### Configure domain controller support  
-The user’s account domain must be at  Windows Server 2012 R2  domain functional level (DFL). Ensure all the domain controllers are  Windows Server 2012 R2 , and then use Active Directory Domains and Trusts to [raise the DFL](http://technet.microsoft.com/library/cc753104.aspx) to  Windows Server 2012 R2 .  
+The user???s account domain must be at  Windows Server 2012 R2  domain functional level (DFL). Ensure all the domain controllers are  Windows Server 2012 R2 , and then use Active Directory Domains and Trusts to [raise the DFL](http://technet.microsoft.com/library/cc753104.aspx) to  Windows Server 2012 R2 .  
   
 **To configure support for Dynamic Access Control**  
   
@@ -295,7 +295,7 @@ The user’s account domain must be at  Windows Server 2012 R2  domain functiona
 ##### Troubleshoot missing computer claims  
 If the claim has been provisioned, but is not available, it might only be configured for **Computer** classes.  
   
-Let’s say you wanted to restrict authentication based on the organizational unit (OU) of the computer, which was already configured, but only for **Computer** classes.  
+Let???s say you wanted to restrict authentication based on the organizational unit (OU) of the computer, which was already configured, but only for **Computer** classes.  
   
 ![Screenshot showing how to to restrict authentication based on the organizational unit (OU) of the computer](../media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
   
@@ -331,8 +331,8 @@ The accounts section in the Authentication Policy shows the accounts that have d
   
 ![Screenshot of the accounts section in Authentication Policy showing the accounts that have directly applied the policy](../media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AccountsAssigned.gif)  
   
-#### Use the Authentication Policy Failures – Domain Controller administrative log  
-A new **Authentication Policy Failures – Domain Controller** administrative log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Authentication** has been created to make it easier to discover failures due to Authentication Policies. The log is disabled by default. To enable it, right-click the log name and click **Enable Log**. The new events are very similar in content to the existing Kerberos TGT and service ticket auditing events. For more information about these events, see [Authentication Policies and Authentication Policy Silos](http://technet.microsoft.com/library/dn486813.aspx).  
+#### Use the Authentication Policy Failures ??? Domain Controller administrative log  
+A new **Authentication Policy Failures ??? Domain Controller** administrative log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Authentication** has been created to make it easier to discover failures due to Authentication Policies. The log is disabled by default. To enable it, right-click the log name and click **Enable Log**. The new events are very similar in content to the existing Kerberos TGT and service ticket auditing events. For more information about these events, see [Authentication Policies and Authentication Policy Silos](http://technet.microsoft.com/library/dn486813.aspx).  
   
 ### <a name="BKMK_ManageAuthnPoliciesUsingPSH"></a>Manage authentication policies by using Windows PowerShell  
 This command creates an authentication policy named **TestAuthenticationPolicy**. The **UserAllowedToAuthenticateFrom** parameter specifies the devices from which users can authenticate by an SDDL string in the file named someFile.txt.  
@@ -381,11 +381,11 @@ Additionally, accounts in an authentication policy silo have a silo claim, which
   
 A new security descriptor can be configured to control issuing service ticket based on:  
   
--   User, user’s security groups, and/or user’s claims  
+-   User, user???s security groups, and/or user???s claims  
   
--   Device, device’s security group, and/or device’s claims  
+-   Device, device???s security group, and/or device???s claims  
   
-Getting this information to the resource’s DCs requires Dynamic Access Control:  
+Getting this information to the resource???s DCs requires Dynamic Access Control:  
   
 -   User claims:  
   
@@ -428,16 +428,16 @@ You can create an authentication policy silo by using Active Directory Administr
 This command creates an authentication policy silo object and enforces it.  
   
 ```  
-PS C:\>New-ADAuthenticationPolicySilo -Name newSilo –Enforce  
+PS C:\>New-ADAuthenticationPolicySilo -Name newSilo ???Enforce  
 ```  
   
 This command gets all the authentication policy silos that match the filter that is specified by the **Filter** parameter. The output is then passed to the **Format-Table** cmdlet to display the name of the policy and the value for **Enforce** on each policy.  
   
 ```  
-PS C:\>Get-ADAuthenticationPolicySilo -Filter 'Name -like "*silo*"' | Format-Table Name, Enforce –AutoSize  
+PS C:\>Get-ADAuthenticationPolicySilo -Filter 'Name -like "*silo*"' | Format-Table Name, Enforce ???AutoSize  
   
 Name  Enforce  
-----  -------  
+--  ----  
 silo     True  
 silos   False  
   
@@ -458,13 +458,13 @@ PS C:\>Grant-ADAuthenticationPolicySiloAccess -Identity Silo -Account User01
 This command revokes access to the authentication policy silo named *Silo* for the user account named *User01*. Because the **Confirm** parameter is set to **$False**, no confirmation message appears.  
   
 ```  
-PS C:\>Revoke-ADAuthenticationPolicySiloAccess –Identity Silo –Account User01 –Confirm:$False  
+PS C:\>Revoke-ADAuthenticationPolicySiloAccess ???Identity Silo ???Account User01 ???Confirm:$False  
 ```  
   
 This example first uses the **Get-ADComputer** cmdlet to get all computer accounts that match the filter that the **Filter** parameter specifies. The output of this command is passed to **Set-ADAccountAuthenticatinPolicySilo** to assign the authentication policy silo named *Silo* and the authentication policy named *AuthenticationPolicy02* to them.  
   
 ```  
-PS C:\>Get-ADComputer –Filter 'Name –like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo –AuthenticationPolicySilo Silo –AuthenticationPolicy AuthenticationPolicy02  
+PS C:\>Get-ADComputer ???Filter 'Name ???like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo ???AuthenticationPolicySilo Silo ???AuthenticationPolicy AuthenticationPolicy02  
 ```  
   
 

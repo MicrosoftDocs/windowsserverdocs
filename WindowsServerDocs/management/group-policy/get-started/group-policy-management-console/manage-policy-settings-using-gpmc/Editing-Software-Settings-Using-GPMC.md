@@ -12,7 +12,6 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Editing Software Settings Using GPMC
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -160,7 +159,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   Before you can perform this procedure, you must first assign or publish the upgrade package.
 
-    -   Depending on the GPO, the list of packages under **Package to upgrade** might have zero or more entries. If this is an upgrade under **Computer Configuration** in the Group Policy console tree, the **Required upgrade for existing packages** check box is selected and unavailable because packages can only be assigned to computersâ€�?they cannot be published.
+    -   Depending on the GPO, the list of packages under **Package to upgrade** might have zero or more entries. If this is an upgrade under **Computer Configuration** in the Group Policy console tree, the **Required upgrade for existing packages** check box is selected and unavailable because packages can only be assigned to computers they cannot be published.
 
 #### To remove a managed application
 
@@ -210,7 +209,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   **Ignore language when deploying this package**: Select this check box if you are installing an application whose language differs from the language of the operating system.
 
-    -   **Remove existing installs of this product for users, if the product was not installed by Group Policyâ€“based Software Installation**: This option might be useful, for example, if company policy does not allow users to install applications from their own compact discs.
+    -   **Remove existing installs of this product for users, if the product was not installed by Group Policy based Software Installation**: This option might be useful, for example, if company policy does not allow users to install applications from their own compact discs.
 
     -   **Make this 32-bit X86 application available to Win64 machines**: Specifies whether the 32-bit application should be assigned or published to 64-bit computers.
 
@@ -221,7 +220,7 @@ To add software installation packages to user settings, you can either publish o
     -   The **Advanced Deployment Options** dialog box, which appears when you click **Advanced**, provides advanced diagnostic information that can be useful for troubleshooting. The following table lists and describes this information.
 
     |Field|Data|
-    |---------|--------|
+    |-----|----|
     |Product code|A globally unique identifier (GUID) representing the product|
     |Deployment count|The number of times the package has been deployed in this Group Policy object|
     |Script name|The full network path, including GUIDs, to the application assignment script (.aas file)|

@@ -36,7 +36,7 @@ Debugging and tracing smart card issues requires a variety of tools and approach
 
 
 ### List certificates available on the smart card
-To list certificates that are available on the smart card, type `certutil –scinfo`.
+To list certificates that are available on the smart card, type `certutil ???scinfo`.
 
 > [!NOTE]
 > Entering a PIN is not required for this operation. You can press ESC if you are prompted for a PIN.
@@ -44,9 +44,9 @@ To list certificates that are available on the smart card, type `certutil –sci
 ### Delete certificates on the smart card
 Each certificate is enclosed in a container. When you delete a certificate on the smart card, you are deleting the container for the certificate.
 
-To find the container value, type `certutil –scinfo`.
+To find the container value, type `certutil ???scinfo`.
 
-To delete a container, type `certutil –delkey –csp "Microsoft Base Smart Card Crypto Provider" "`*<ContainerValue>***"**.
+To delete a container, type `certutil ???delkey ???csp "Microsoft Base Smart Card Crypto Provider" "`*<ContainerValue>***"**.
 
 ## <a name="BKMK_WPP_TracingDebuggingAndTracing"></a>Debugging and tracing using WPP
 Windows software trace preprocessor (WPP) simplifies tracing the operation of the trace provider, and it provides a mechanism for the trace provider to log real-time binary messages. Logged messages can subsequently be converted to a human-readable trace of the operation of the trace provider. For more information about WPP, see [Diagnostics with WPP - The NDIS blog](http://blogs.msdn.com/b/ndis/archive/2011/04/06/diagnostics-with-wpp.aspx).
@@ -54,16 +54,16 @@ Windows software trace preprocessor (WPP) simplifies tracing the operation of th
 ### Enable the trace
 Using WPP, use one of the following commands to enable tracing:
 
--   **tracelog.exe –kd –rt –start** *<FriendlyName>* **-guid #***<GUID>* **-f .\\***<LogFileName>***.etl –flags** *<flags>* **-ft 1**
+-   **tracelog.exe ???kd ???rt ???start** *<FriendlyName>* **-guid #***<GUID>* **-f .\\***<LogFileName>***.etl ???flags** *<flags>* **-ft 1**
 
--   **logman start** *<FriendlyName>* **-ets –p {***<GUID>***} -***<Flags>* **-ft 1 –rt –o .\\***<LogFileName>***.etl –mode 0x00080000**
+-   **logman start** *<FriendlyName>* **-ets ???p {***<GUID>***} -***<Flags>* **-ft 1 ???rt ???o .\\***<LogFileName>***.etl ???mode 0x00080000**
 
 You can use the parameters in the following table.
 
 ###
 
 |Friendly name|GUID|Flags|
-|-----------------|--------|---------|
+|---------|----|-----|
 |scardsvr|13038e47-ffec-425d-bc69-5707708075fe|0xffff|
 |winscard|3fce7c5f-fb3b-4bce-a9d8-55cc0ce1cf01|0xffff|
 |basecsp|133a980d-035d-4e2d-b250-94577ad8fced|0x7|
@@ -78,20 +78,20 @@ You can use the parameters in the following table.
 
 To enable tracing for the SCardSvr service:
 
--   tracelog.exe –kd –rt –start scardsvr –guid #13038e47-ffec-425d-bc69-5707708075fe –f .\scardsvr.etl –flags 0xffff –ft 1
+-   tracelog.exe ???kd ???rt ???start scardsvr ???guid #13038e47-ffec-425d-bc69-5707708075fe ???f .\scardsvr.etl ???flags 0xffff ???ft 1
 
--   logman start scardsvr –ets –p {13038e47-ffec-425d-bc69-5707708075fe} 0xffff –ft 1 –rt –o .\scardsvr.etl –mode 0x00080000
+-   logman start scardsvr ???ets ???p {13038e47-ffec-425d-bc69-5707708075fe} 0xffff ???ft 1 ???rt ???o .\scardsvr.etl ???mode 0x00080000
 
 To enable tracing for scfilter.sys:
 
-tracelog.exe –kd –rt –start scfilter –guid #eed7f3c9-62ba-400e-a001-658869df9a91 –f .\scfilter.etl –flags 0xffff –ft 1
+tracelog.exe ???kd ???rt ???start scfilter ???guid #eed7f3c9-62ba-400e-a001-658869df9a91 ???f .\scfilter.etl ???flags 0xffff ???ft 1
 
 ### Stop the trace
 Using WPP, use one of the following commands to stop the tracing:
 
--   **tracelog.exe –stop** *<FriendlyName>*
+-   **tracelog.exe ???stop** *<FriendlyName>*
 
--   **logman –stop** *<FriendlyName>* **-ets**
+-   **logman ???stop** *<FriendlyName>* **-ets**
 
 **Examples**
 
@@ -150,7 +150,7 @@ You can also configure tracing by editing the Kerberos registry values shown in 
 ###
 
 |Element|Registry Key Setting|
-|-----------|------------------------|
+|------|------------|
 |NTLM|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0<br /><br />-   Value name: NtLmInfoLevel<br />-   Value type: DWORD<br />-   Value data: c0015003|
 |Kerberos|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos<br /><br />-   Value name: LogToFile<br />-   Value type: DWORD<br />-   Value data: 00000001<br /><br />HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters<br /><br />-   Value name: KerbDebugLevel<br />-   Value type: DWORD<br />-   Value data: c0000043<br /><br />HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters<br /><br />-   Value name: LogToFile<br />-   Value type: DWORD<br />-   Value data: 00000001|
 |KDC|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Kdc<br /><br />-   Value name: KdcDebugLevel<br />-   Value type: DWORD<br />-   Value data: c0000803|

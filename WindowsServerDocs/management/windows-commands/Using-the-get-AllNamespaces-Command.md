@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllNamespaces Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-AllNamespaces Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ WDSUTIL /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/D
 ```
 ## Parameters
 |Parameter|Windows Server 2008|Windows Server 2008 R2|
-|-------------|-----------------------|--------------------------|
+|-------|------------|-------------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.||
 |[/ContentProvider:<name>]|Displays the namespaces for the specified content provider only.||
 |[/Show:Clients]|Only supported for Windows Server 2008. Displays information about client computers that are connected to the namespace.||
@@ -55,4 +54,4 @@ To view all namespaces except those that are deactivated, type:
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 [Using the new-Namespace Command](Using-the-new-Namespace-Command.md)
 [Using the remove-Namespace Command](Using-the-remove-Namespace-Command.md)
-[Subcommand: start-Namespace](Subcommand--start-Namespace.md)
+[Subcommand: start-Namespace](Subcommand-start-Namespace.md)

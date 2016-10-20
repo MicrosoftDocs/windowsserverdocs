@@ -12,14 +12,13 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 
-
 # Working with Group Policy Preference Items Using the GPMC
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic describes Group Policy Preferences and explains some common configuration procedures. It also contains links to topics about working with Preferences using the GPMC for Windows settings and Control Panel settings as well as item-level targeting.
 
-Group Policy Preferences, introduced in  Windows ServerÂ® 2008 , provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a Group Policy Object. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.
+Group Policy Preferences, introduced in  Windows Server 2008 , provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a Group Policy Object. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.
 
 For procedural information about using Preferences for Windows settings, Control Panel settings, and item-level targeting, see:
 
@@ -37,7 +36,7 @@ The GPMC lets you configure preferences when you edit any domain-based GPO. The 
 Unlike policy settings, preference items do not exist until a Group Policy administrator creates them, and each preference item contains multiple properties. You can create and modify multiple preference items within each GPO, and you can filter each preference item to apply only to specific computers or users.
 
 |Preference Extension|Effect of Preference Item|Scope of Preference Item|
-|------------------------|-----------------------------|----------------------------|
+|------------|---------------|--------------|
 |**Applications**|Configures settings for a specific version of an application.|Users to whom the preference item applies|
 |**Data Sources**|Configures an ODBC system or other user data source.|Computers or users to whom the preference item applies|
 |**Devices**|Enables or disables a class or type of hardware device.|Computers or users to whom the preference item applies|
@@ -229,7 +228,7 @@ Preference extensions implement the process variables that are listed here.
 |**%LogonUserSid%**|The SID of the current user.|
 |**%MacAddress%**|The first detected MAC address on the computer.|
 |**%NetPlacesDir%**|The current user's My Network Places directory.|
-|**%OsVersion%**|The operating system:  Windows ServerÂ® 2008 R2 ,  Windows 7Â® ,  Windows ServerÂ® 2008 , Windows VistaÂ®, Windows Server 2003, Windows XP, or Unknown.|
+|**%OsVersion%**|The operating system:  Windows Server 2008 R2 ,  Windows 7 ,  Windows Server 2008 , Windows Vista, Windows Server 2003, Windows XP, or Unknown.|
 |**%ProgramFilesDir%**|The Windows Program Files directory.|
 |**%ProgramsDir%**|The current user's Programs directory.|
 |**%RecentDocumentsDir%**|The current user's Recent Documents directory.|

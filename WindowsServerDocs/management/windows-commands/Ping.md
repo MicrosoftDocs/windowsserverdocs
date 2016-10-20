@@ -1,6 +1,6 @@
 ---
 title: Ping
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ping
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ Ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] 
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/t|Specifies that ping continue sending Echo Request messages to the destination until interrupted. To interrupt and display statistics, press CTRL+BREAK. To interrupt and quit **ping**, press CTRL+C.|
 |/a|Specifies that reverse name resolution is performed on the destination IP address. If this is successful, ping displays the corresponding host name.|
 |/n <Count>|Specifies the number of Echo Request messages sent. The default is 4.|

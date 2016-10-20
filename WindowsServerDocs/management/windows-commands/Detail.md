@@ -1,6 +1,6 @@
 ---
 title: Detail
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Detail
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -33,7 +32,7 @@ detail vdisk
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |[Detail disk](Detail-disk.md)|Displays the properties of the selected disk and the volumes on that disk.|  
 |[Detail partition](Detail-partition.md)|Displays the properties of the selected partition.|  
 |[Detail volume](Detail-volume.md)|Displays the disks on which the current volume resides.|  

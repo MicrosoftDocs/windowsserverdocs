@@ -74,7 +74,7 @@ Although versions of Windows earlier than Windows Vista include support for smar
 The following table lists the certificate support in older Windows operating system versions.
 
 |Operating system|Certificate support|
-|--------------------|-----------------------|
+|----------|------------|
 |Windows Server 2008 R2 and Windows 7|Support for smart card sign-in with ECC-based certificates. ECC smart card sign-in is enabled through Group Policy.<br /><br />-   ECDH_P256<br />     ECDH<br />    Curve P-256 from FIPS 186-2<br />-   ECDSA_P256<br />    ECDSA<br />    Curve P-256 from FIPS 186-2<br />-   ECDH_P384<br />    ECDH<br />    Curve P-384 from FIPS 186-2<br />-   ECDH_P521<br />    ECDH<br />    Curve P-521 from FIPS 186-2<br />-   ECDSA_P256<br />    ECDH<br />    Curve P-256 from FIPS 186-2<br />-   ECDSA_P384<br />    ECDSA<br />    Curve P-384 from FIPS 186-2<br />-   ECDSA_P521<br />    ECDSA<br />    Curve P-384 from FIPS 186-2|
 |Windows Server 2008 and Windows Vista|-   Valid certificates are enumerated and displayed from all smart cards and presented to the user.<br />-   Keys are no longer restricted to the default container, and certificates in different containers can be chosen.<br />-   Elliptic curve cryptography (ECC)-based certificates are not supported for smart card sign-in|
 
@@ -134,7 +134,7 @@ Following are the steps that are performed during a smart card sign-in:
 
 12. The KDC validates the user's certificate (time, path, and revocation status) to ensure that the certificate is from a trusted source. The KDC uses CryptoAPI to build a certification path from the user's certificate to a root certification authority (CA) certificate that resides in the root store on the domain controller. The KDC then uses CryptoAPI to verify the digital signature on the signed authenticator that was included in the preauthentication data fields. The domain controller verifies the signature and uses the public key from the user's certificate to prove that the request originated from the owner of the private key that corresponds to the public key. The KDC also verifies that the issuer is trusted and appears in the NTAUTH certificate store.
 
-13. The KDC service retrieves user account information from AD DS. The KDC constructs a TGT, which is based on the user account information that it retrieves from AD DS. The TGT’s authorization data fields include the user's security identifier (SID), the SIDs for universal and global domain groups to which the user belongs, and (in a multidomain environment) the SIDs for any universal groups of which the user is a member.
+13. The KDC service retrieves user account information from AD DS. The KDC constructs a TGT, which is based on the user account information that it retrieves from AD DS. The TGT???s authorization data fields include the user's security identifier (SID), the SIDs for universal and global domain groups to which the user belongs, and (in a multidomain environment) the SIDs for any universal groups of which the user is a member.
 
 14. The domain controller returns the TGT to the client as part of the KRB_AS_REP response.
 
@@ -190,7 +190,7 @@ The smart card certificate has specific format requirements when it is used with
 ###
 
 |Component|Requirements for Windows 8.1, Windows 8, Windows 7, and Windows Vista|Requirements for Windows XP|
-|-------------|-------------------------------------------------------------------------|-------------------------------|
+|-------|-------------------------------------|----------------|
 |CRL distribution point location|Not required|The location must be specified, online, and available, for example:<br /><br />[1]CRL Distribution Point<br />Distribution Point Name:<br />Full Name:<br />URL=http://server1.contoso.com/CertEnroll/caname.crl|
 |Key usage|Digital signature|Digital signature|
 |Basic constraints|Not required|[Subject Type=End Entity, Path Length Constraint=None] Optional|
@@ -316,7 +316,7 @@ If the client computer is not joined to the domain or if it is joined to a diffe
 
 To deploy root certificates on a smart card for the currently joined domain, you can use the following command:
 
-**certutil –scroots update**
+**certutil ???scroots update**
 
 For more information about this option for the command-line tool, see [-SCRoots](../../management/windows-commands/Certutil.md#BKMK_SCRoots).
 

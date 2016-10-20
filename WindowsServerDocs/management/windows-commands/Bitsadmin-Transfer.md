@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin Transfer
-description: "Windows Commands topic for **Bitsadmin Transfer** -- Transfers one or more files."
+description: "Windows Commands topic for **Bitsadmin Transfer** - Transfers one or more files."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin Transfer
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,10 +25,10 @@ bitsadmin /Transfer Name [Type] [/Priority Job_Priority] [/ACLFlags Flags] <Remo
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Name|The name of the job.|
-|Type|Optional—specify the type of job. Use **/Download** for a download job or **/Upload** for an upload job.|
-|Priority|Optional— set the job_priority to one of the following values:<br /><br />-   FOREGROUND<br />-   HIGH<br />-   NORMAL<br />-   LOW|
+|Type|Optional specify the type of job. Use **/Download** for a download job or **/Upload** for an upload job.|
+|Priority|Optional  set the job_priority to one of the following values:<br /><br />-   FOREGROUND<br />-   HIGH<br />-   NORMAL<br />-   LOW|
 |ACLFlags|Specify one or more of the following flags:<br /><br />-   O: Copy owner information with file.<br />-   G: Copy group information with file.<br />-   D: Copy DACL information with file.<br />-   S: Copy SACL information with file.|
 |RemoteFileName|The name of the file when transferred to the server|
 |LocalFileName|The name of the file that resides locally.|

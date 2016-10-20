@@ -1,6 +1,6 @@
 ---
 title: Bootcfg debug
-description: "Windows Commands topic for **Bootcfg debug** -- 
+description: "Windows Commands topic for **Bootcfg debug** - 
 Adds or changes the debug settings for a specified operating system entry."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bootcfg debug
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ bootcfg /debug {ON | OFF | EDIT}[/s <Computer> [/u <Domain>\<User> /p <Password>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{ON &#124; OFF&#124; EDIT}|Specifies the value for debugging.<br /><br />**ON** - Enables remote debugging support by adding the /debug option to the specified <OSEntryLineNum>.<br /><br />**OFF** - Disables remote debugging support by removing the /debug option from the specified <OSEntryLineNum>.<br /><br />**EDIT** - Allows changes to port and baud rate settings by changing the values associated with the /debug option for the specified <OSEntryLineNum>.|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|

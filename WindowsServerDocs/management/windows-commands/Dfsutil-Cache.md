@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Cache
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ dfsutil cache </parameter> </param2>
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Dfsutil Cache Domain]|Views or flushes the DFS domain cache.|
 |[Dfsutil Cache Referral]|Views or flushes the DFS referral cache.|
 |[Dfsutil Cache Provider]|Views or flushes the DFS provider cache.|

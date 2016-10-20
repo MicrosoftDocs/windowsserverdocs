@@ -1,6 +1,6 @@
 ---
 title: Using the replace-Image Command
-description: "Windows Commands topic for **** -- "
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the replace-Image Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -46,13 +45,13 @@ WDSUTIL [Options] /Replace-Imagmedia:<Image name> [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 media:<Image name>|Specifies the name of the image to be replaced.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediaType:{Boot &#124; Install}|Specifies the type of image to be replaced.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be replaced. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture ensures that the correct image is replaced.|
 |[/Filename:<File name>]|If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-|/ReplacementImage|Specifies the settings for the replacement image. You set these settings using the following options:<br /><br />-  mediaFile: <file path> - Specifies the name and location (full path) of the new .wim file.<br />-   [/SourceImage: <image name>] - Specifies the image to be used if the .wim file contains multiple images. This option applies only to install images.<br />-   [/Name:<Image name>] – Sets the display name of the image.<br />-   [/Description:<Image description>] - Sets the description of the image.|
+|/ReplacementImage|Specifies the settings for the replacement image. You set these settings using the following options:<br /><br />-  mediaFile: <file path> - Specifies the name and location (full path) of the new .wim file.<br />-   [/SourceImage: <image name>] - Specifies the image to be used if the .wim file contains multiple images. This option applies only to install images.<br />-   [/Name:<Image name>]   Sets the display name of the image.<br />-   [/Description:<Image description>] - Sets the description of the image.|
 ## <a name="BKMK_examples"></a>Examples
 To replace a boot image, type one of the following:
 ```
@@ -73,4 +72,4 @@ WDSUTIL /Verbose /Progress /Replace-Imagmedia:"Windows Vista Pro" /Server:MyWDSS
 [Using the Export-Image Command](Using-the-Export-Image-Command.md)
 [Using the get-Image Command](Using-the-get-Image-Command.md)
 [Using the replace-Image Command](Using-the-replace-Image-Command.md)
-[Subcommand: set-Image](Subcommand--set-Image.md)
+[Subcommand: set-Image](Subcommand-set-Image.md)

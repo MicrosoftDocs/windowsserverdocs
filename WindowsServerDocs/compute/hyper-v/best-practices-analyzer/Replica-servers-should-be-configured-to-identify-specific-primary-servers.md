@@ -1,6 +1,6 @@
 ---
 title: Replica servers should be configured to identify specific primary servers authorized to send replication traffic
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

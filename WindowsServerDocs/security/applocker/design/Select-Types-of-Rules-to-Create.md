@@ -60,7 +60,7 @@ In the Woodgrove Bank example, the line-of-business application for the Bank Tel
 A rule condition is criteria upon which an AppLocker rule is based and can only be one of the rule conditions in the following table.
 
 |Rule condition|Usage scenario|Resources|
-|------------------|------------------|-------------|
+|---------|---------|-------|
 |Publisher|To use a publisher condition, the files must be digitally signed by the software publisher, or you must do so by using an internal certificate. Rules that are specified to the version level might have to be updated when a new version of the file is released.|For more information about this rule condition, see [Understanding the Publisher Rule Condition in AppLocker](../get-started/how-applocker-works/Understanding-the-Publisher-Rule-Condition-in-AppLocker.md).|
 |Path|Any file can be assigned this rule condition; however, because path rules specify locations within the file system, any subdirectory will also be affected by the rule (unless explicitly exempted).|For more information about this rule condition, see [Understanding the Path Rule Condition in AppLocker](../get-started/how-applocker-works/Understanding-the-Path-Rule-Condition-in-AppLocker.md).|
 |File hash|Any file can be assigned this rule condition; however, the rule must be updated each time a new version of the file is released because the hash value is based in part upon the version.|For more information about this rule condition, see [Understanding the File Hash Rule Condition in AppLocker](../get-started/how-applocker-works/Understanding-the-File-Hash-Rule-Condition-in-AppLocker.md).|

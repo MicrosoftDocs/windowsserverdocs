@@ -39,7 +39,7 @@ Default: Success for client computers; success and failure for servers
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4624|An account was successfully logged on.|
 |4625|An account failed to log on.|
 |4648|A logon was attempted using explicit credentials.|

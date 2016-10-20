@@ -1,6 +1,6 @@
 ---
 title: Generation 1 virtual machine security settings for Hyper-V
-description: " "
+description: "Describes the security settings available in Hyper-V Manager for generation 1 virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

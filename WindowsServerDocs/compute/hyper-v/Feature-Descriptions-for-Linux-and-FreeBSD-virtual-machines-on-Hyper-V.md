@@ -1,6 +1,6 @@
 ---
 title: Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
-description: " "
+description: "Describes features that affect core components such as networking, storage, memory when using Linux and FreeBSD on a virtual machine"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
@@ -16,21 +16,7 @@ ms.date: 10/03/2016
 
 >Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-The following features are described in this section:
-
-* [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)
-
-* [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)
-
-* [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)
-
-* [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)
-
-* [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)
-
-* [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)
-
-* [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)
+This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine. 
 
 ## <a name="BKMK_core"></a>Core
 

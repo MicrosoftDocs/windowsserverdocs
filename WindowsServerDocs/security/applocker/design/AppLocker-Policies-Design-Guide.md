@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional introduces the design and planning steps required to deploy application control policies by using AppLocker which was introduced in  Windows Server® 2008 R2  and  Windows 7® .
+This topic for the IT professional introduces the design and planning steps required to deploy application control policies by using AppLocker which was introduced in  Windows Server?? 2008 R2  and  Windows 7?? .
 
 ## Purpose of this guide
 This guide provides important designing and planning information for deploying application control policies by using AppLocker. It is intended for security architects, security administrators, and system administrators. Through a sequential and iterative process, you can create an AppLocker policy deployment plan for your organization that will address your specific application control requirements by department, organizational unit, or business group.

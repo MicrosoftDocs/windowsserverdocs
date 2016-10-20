@@ -26,7 +26,7 @@ AppLocker is supported on systems running Windows 7 and above. Software Restrict
 The following table compares the features and functions of Software Restriction Policies (SRP) and AppLocker.
 
 |Application control function|SRP|AppLocker|
-|--------------------------------|-------|-------------|
+|----------------|----|-------|
 |Scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|AppLocker policies apply only to Windows Server 2008 R2,  Windows Server 2012 , Windows 7, and Windows 8.|
 |Policy creation|SRP policies are maintained through Group Policy and only the administrator of the GPO can update the SRP policy. The administrator on the local computer can modify the SRP policies defined in the local GPO.|AppLocker policies are maintained through Group Policy and only the administrator of the GPO can update the policy. The administrator on the local computer can modify the AppLocker policies defined in the local GPO.<br /><br />AppLocker permits customization of error messages to direct users to a Web page for help.|
 |Policy maintenance|SRP policies must be updated by using the Local Security Policy snap-in (if the policies are created locally) or the Group Policy Management Console (GPMC).|AppLocker policies can be updated by using the Local Security Policy snap-in (if the policies are created locally), or the GPMC, or the Windows PowerShell AppLocker cmdlets.|
