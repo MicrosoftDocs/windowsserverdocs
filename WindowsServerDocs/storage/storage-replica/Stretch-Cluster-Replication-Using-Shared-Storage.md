@@ -122,6 +122,9 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         2.  Provision the storage using your vendor documentation.  
 
+> [!IMPORTANT]  
+> If creating a two-node stretch cluster, you must run the following command in order to add all storage: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`. This is by-design behavior in Windows Server 2016.
+
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements.  
 
     For example, to validate two of the proposed stretch cluster nodes that each have a **D:** and **E:** volume and run the test for 30 minutes:  
