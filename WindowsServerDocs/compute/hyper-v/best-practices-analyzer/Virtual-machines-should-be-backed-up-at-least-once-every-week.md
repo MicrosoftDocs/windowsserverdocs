@@ -1,6 +1,6 @@
 ---
 title: Virtual machines should be backed up at least once every week
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
