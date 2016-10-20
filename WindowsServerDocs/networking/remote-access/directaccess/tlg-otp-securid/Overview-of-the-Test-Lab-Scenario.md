@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Overview of the Test Lab Scenario
 

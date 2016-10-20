@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 
@@ -70,7 +70,7 @@ A multisite deployment provides the following:
 The following table lists the roles and features used in this scenario.  
   
 |Role/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services (RRAS), which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   

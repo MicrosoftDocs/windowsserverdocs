@@ -105,7 +105,7 @@ For more information about deploying S2S gateways, see the following topics:
   
 -   [RAS Gateway](RAS-Gateway.md)  
   
--   [Border Gateway Protocol &#40;BGP&#41;](../bgp/Border-Gateway-Protocol--BGP-.md)  
+-   [Border Gateway Protocol &#40;BGP&#41;](../bgp/Border-Gateway-Protocol-BGP.md)  
   
 -   [New! Windows Server 2012 R2 RAS Multitenant Gateway Deployment Guide](http://blogs.technet.com/b/wsnetdoc/archive/2014/03/26/new-windows-server-2012-r2-RAS-multitenant-gateway-deployment-guide.aspx)  
   

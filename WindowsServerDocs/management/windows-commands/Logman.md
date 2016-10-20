@@ -28,7 +28,7 @@ logman [create | query | start | stop | delete| update | import | export | /?] [
 |-----|--------|
 |[logman create](logman-create.md)|Create a counter, trace, configuration data collector, or API.|
 |[logman query](logman-query.md)|Query data collector properties.|
-|[logman start &#124; stop](logman-start--stop.md)|Start or stop data collection.|
+|[logman start &#124; stop](logman-start-stop.md)|Start or stop data collection.|
 |[logman delete](logman-delete.md)|Delete an existing data collector.|
 |[logman update](logman-update.md)|Update the properties of an existing data collector.|
-|[logman import &#124; export](logman-import--export.md)|Import a data collector set from an XML file or export a data collector set to an XML file.|
+|[logman import &#124; export](logman-import-export.md)|Import a data collector set from an XML file or export a data collector set to an XML file.|
