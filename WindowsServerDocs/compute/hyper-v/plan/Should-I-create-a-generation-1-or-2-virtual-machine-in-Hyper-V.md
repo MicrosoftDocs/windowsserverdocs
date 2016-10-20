@@ -82,7 +82,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
 
 
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
-he following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
+The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
 
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
