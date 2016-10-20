@@ -37,7 +37,7 @@ Because Nano Server is optimized as a lightweight operating system for running â
 - Nano Server is "headless;" there is no local logon capability or graphical user interface.
 - Only 64-bit applications, tools, and agents are supported.
 - Nano Server cannot serve as an Active Directory domain controller.
-- Online domain join (of a Nano Server to a domain) is not supported.
+- Group Policy is not supported. However, you can use [Desired State Configuration](https://msdn.microsoft.com/powershell/dsc/nanoDsc) to apply settings at scale.
 - Nano Server cannot be configured to use a proxy server to access the internet.
 - System Center Configuration Manager and System Center Data Protection Manager are not supported.
 - The version of Windows PowerShell provided with Nano Server has important differences. For details, see [PowerShell on Nano Server](PowerShell-on-Nano-Server.md).
