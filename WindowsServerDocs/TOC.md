@@ -929,7 +929,7 @@
 ######## [Step 1: Configure the Remote Access Infrastructure](networking/remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-Remote-Access-Infrastructure.md)
 ######## [Step 2: Configure the Remote Access Server](networking/remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-Remote-Access-Server.md)
 ######## [Step 3: Verify the Deployment](networking/remote-access/directaccess/single-server-advanced/Step-3-Verify-the-Deployment.md)
-### [Software Defined Networking (SDN)](networking/sdn/Software-Defined-Networking--SDN-.md)
+### [Software Defined Networking (SDN)](networking/sdn/software-defined-networking.md)
 #### [Software Defined Networking Technologies](networking/sdn/technologies/Software-Defined-Networking-Technologies.md)
 ##### [Hyper-V Network Virtualization](networking/sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 ###### [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)

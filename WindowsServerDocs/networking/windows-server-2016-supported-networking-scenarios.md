@@ -44,7 +44,7 @@ You can use the following documentation to deploy SDN scenarios with Windows Ser
   
 -   [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
   
-For more information, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
+For more information, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).  
   
 #### <a name="bkmk_netc"></a>Network Controller scenarios
 
