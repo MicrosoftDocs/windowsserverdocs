@@ -1,6 +1,6 @@
 ---
 title: A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

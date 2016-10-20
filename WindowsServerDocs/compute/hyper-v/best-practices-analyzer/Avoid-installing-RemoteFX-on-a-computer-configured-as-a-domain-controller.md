@@ -1,6 +1,6 @@
 ---
 title: Avoid installing RemoteFX on a computer that is configured as an Active Directory domain controller
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

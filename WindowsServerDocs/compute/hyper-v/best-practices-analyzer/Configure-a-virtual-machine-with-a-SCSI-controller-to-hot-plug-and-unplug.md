@@ -1,6 +1,6 @@
 ---
 title: Configure a virtual machine with a SCSI controller to be able to hot plug and hot unplug storage
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

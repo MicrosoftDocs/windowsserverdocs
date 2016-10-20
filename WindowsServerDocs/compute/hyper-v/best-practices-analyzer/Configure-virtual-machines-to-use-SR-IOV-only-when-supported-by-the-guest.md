@@ -1,6 +1,6 @@
 ---
 title: Configure virtual machines to use SR-IOV only when supported by the guest operating system
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
