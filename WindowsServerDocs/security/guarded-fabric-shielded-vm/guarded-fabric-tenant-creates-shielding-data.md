@@ -7,8 +7,7 @@ ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
---
-
+---
 # Shielded VMs - Tenant creates shielding data to define a shielded VM
 
 >Applies To: Windows Server 2016

@@ -7,8 +7,7 @@ ms.assetid: 310b63d9-5ac7-4961-98ef-103af45d706a
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
---
-
+---
 # Deploying the Host Guardian Service for guarded hosts and shielded VMs
 
 >Applies To: Windows Server 2016
