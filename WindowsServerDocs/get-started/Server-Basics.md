@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
 ms.technology: get-started
-ms.date: 10/10/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 8a7b18d8-b1ab-42a5-85d9-366715aa851b
 author: jaimeo
@@ -30,6 +30,9 @@ Find out the minimum hardware requirements to install and run Windows Server 201
 
 ## [Release Notes: Important Issues in Windows Server](Windows-Server-2016-GA-Release-Notes.md)
 Issues that could cause serious problems if you don't avoid or work around them.
+
+## [Recommendations for moving to Windows Server 2016](Recommendations-moving-to-Server2016.md)
+Comprehensive table of available approaches for getting to Windows Server 2016 in various scenarios.
 
 ## [Features Removed or Deprecated in  Windows Server 2016](Features-Removed-or-Deprecated-in--Windows-Server-2016-Technical-Preview.md)
 Features that have already been removed from Windows Server 2016 or designated for potential future removal.

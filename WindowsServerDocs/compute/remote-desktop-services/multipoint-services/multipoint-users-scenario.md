@@ -1,5 +1,5 @@
 ---
-title: Example scenarios: MultiPoint Services user accounts
+title: MultiPoint Services user accounts 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
@@ -13,6 +13,7 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---
+
 # Example scenarios: MultiPoint Services user accounts
 What do you need to do to implement the user account scenario that you chose for your MultiPoint Services environment? The following tables describe each task to perform to configure user accounts and prepare stations for shared or individual user accounts on a stand-alone MultiPoint computer or on networked servers in a workgroup or an Active Directory domain. Choose the scenario that applies to your environment. Then follow the links in the table to complete each required configuration task.  
   
