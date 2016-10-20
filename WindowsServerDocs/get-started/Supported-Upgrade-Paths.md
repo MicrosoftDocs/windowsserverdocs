@@ -36,6 +36,12 @@ and Migration](http://technet.microsoft.com/windowsserver/dn458795).
 > [!IMPORTANT]  
 > Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.  
 
+> [!IMPORTANT]  
+> Currently, **you can only perform conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (**not the Server Core option**).
+
+> [!IMPORTANT]  
+> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
+
 ## Upgrading previous retail versions of Windows Server to Windows Server 2016
 
 The table below briefly summarizes which **already licensed** (that is, not evaluation) Windows operating systems can be upgraded to which editions of Windows Server 2016.
@@ -65,8 +71,6 @@ If you see more than one edition in the right column, upgrading to **either** ed
 |Windows Storage Server 2012 R2 Standard|Windows Storage Server 2016 Standard|
 |Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 Workgroup|
 
-> [!IMPORTANT]  
-> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
 
 ## Per-server-role considerations for upgrading
 
