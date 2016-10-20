@@ -61,6 +61,7 @@
 ### [Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
 #### [Get started](compute/remote-desktop-services/rds-get-started.md)
 ##### [What's new in RDS?](compute/remote-desktop-services/rds-whats-new.md)
+##### [Supported configurations for RDS](compute/remote-desktop-services/rds-supported-config.md)
 ##### [Planning poster for Remote Desktop Services](compute/remote-desktop-services/rds-poster.md)
 ##### [Host Windows Desktop and Applications using Remote Desktop Services in Azure](compute/remote-desktop-services/rds-hosting-partners.md)
 #### [Plan and design](compute/remote-desktop-services/rds-plan-and-design.md)
