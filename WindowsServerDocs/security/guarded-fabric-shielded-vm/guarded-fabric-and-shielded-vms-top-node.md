@@ -7,8 +7,7 @@ ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
---
-
+---
 # Guarded fabric and shielded VMs
 
 >Applies To: Windows Server 2016

@@ -1,5 +1,6 @@
 ---
 title: Install MultiPoint Services
+description: Learn how to install and configure MultiPoint Services in Windows Server 2016
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

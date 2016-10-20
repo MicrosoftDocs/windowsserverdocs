@@ -7,8 +7,7 @@ ms.assetid: 40d2a967-a6ee-4b46-aead-e3a0b275e212
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
---
-
+---
 # Appendix A - Configure Nano server as TPM attested guarded host
 
 >Applies To: Windows Server 2016

@@ -1,5 +1,6 @@
 ---
 title: Glossary
+description: Defines words, terms, and concepts in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

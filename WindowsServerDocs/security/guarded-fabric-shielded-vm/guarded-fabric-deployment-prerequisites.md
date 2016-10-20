@@ -7,8 +7,7 @@ ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
---
-
+---
 # Prerequisites for deploying Host Guardian Service and guarded hosts 
 
 >Applies To: Windows Server 2016
