@@ -1,6 +1,6 @@
 ---
 title: Reserve one or more external virtual networks for exclusive use by virtual machines
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
