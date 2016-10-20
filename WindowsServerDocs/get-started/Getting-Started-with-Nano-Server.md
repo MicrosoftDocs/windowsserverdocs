@@ -32,18 +32,19 @@ Nano Server is ideal for a number of scenarios:
   
 ## Important differences in Nano Server
 
-Because Nano Server is optimized as a lightweight operating system for running “cloud-native” applications based on containers and micro-services or as an agile and cost-effective datacenter with a dramatically smaller footprint, there are important differences in Nano Server versus Server Core or Server with Desktop Experience installations:
+Because Nano Server is optimized as a lightweight operating system for running “cloud-native” applications based on containers and micro-services or as an agile and cost-effective datacenter host with a dramatically smaller footprint, there are important differences in Nano Server versus Server Core or Server with Desktop Experience installations:
 
 - Nano Server is "headless;" there is no local logon capability or graphical user interface.
 - Only 64-bit applications, tools, and agents are supported.
 - Nano Server cannot serve as an Active Directory domain controller.
 - Online domain join (of a Nano Server to a domain) is not supported.
-- System Center Configuration Manager is not supported.
+- Nano Server cannot be configured to use a proxy server to access the internet.
+- System Center Configuration Manager and System Center Data Protection Manager are not supported.
 - The version of Windows PowerShell provided with Nano Server has important differences. For details, see [PowerShell on Nano Server](PowerShell-on-Nano-Server.md).
-- Nano Server is supported on the Current Branch for Business (CBB) model. See the following subsection for more information.
+- Nano Server is supported only on the Current Branch for Business (CBB) model--there is no Long-Term Servicing Branch (LTSB) release for Nano Server at this time. See the following subsection for more information.
 
 ### Current Branch for Business
-Nano Server is serviced by a more active model, called Current Branch for Business (CBB), in order to support customers who are moving at a “cloud cadence," using rapid development cycles. In this model, feature updates are expected two to three times per year. This model requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) for Nano Servers deployed and operated in production. To maintain support, administrators must stay no more than two CBB releases behind. Only CBB releases for Nano Server will be supported at a time. However, these releases do not auto-update existing deployments; administrators perform manual installation of a new CBB release at their convenience. For some additional information, see [Windows Server 2016 new Current Branch for Business servicing option](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+Nano Server is serviced with a more active model, called Current Branch for Business (CBB), in order to support customers who are moving at a “cloud cadence," using rapid development cycles. In this model, feature update releases of Nano Server are expected two to three times per year. This model requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) for Nano Servers deployed and operated in production. To maintain support, administrators must stay no more than two CBB releases behind. However, these releases do not auto-update existing deployments; administrators perform manual installation of a new CBB release at their convenience. For some additional information, see [Windows Server 2016 new Current Branch for Business servicing option](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
 The Server Core and Server with Desktop Experience installation options are still serviced on the [Long-Term Servicing Branch (LTSB) model](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy), comprising 5 years of mainstream support and 5 years of extended support.
 
