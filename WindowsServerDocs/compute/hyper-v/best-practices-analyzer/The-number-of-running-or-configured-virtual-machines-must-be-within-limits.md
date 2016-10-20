@@ -1,6 +1,6 @@
 ---
 title: The number of running or configured virtual machines must be within supported limits
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

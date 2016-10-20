@@ -1,6 +1,6 @@
 ---
 title: Configure the server with a sufficient amount of dynamic MAC addresses
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

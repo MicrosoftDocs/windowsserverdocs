@@ -65,7 +65,7 @@ The table below shows the supported RD Virtualization Hosts operating systems an
 | RDVH OS Version        | Guest OS Version           |
 | ------------- |-------------|
 | Windows Server 2016      | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
-| Windows Server 2012 R2   | Windows 7 SP1, Windows 8, Windows 8.1 |
+| Windows Server 2012 R2   | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
 | Windows Server 2012      | Windows 7 SP1, Windows 8, Windows 8.1 |
 
 > [!NOTE]  

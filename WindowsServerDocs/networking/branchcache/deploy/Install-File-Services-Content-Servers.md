@@ -33,7 +33,7 @@ See the following topics to deploy content servers.
   
 -   [Enable Hash Publication for File Servers](../../branchcache/deploy/Enable-Hash-Publication-for-File-Servers.md)  
   
--   [Enable BranchCache on a File Share &#40;Optional&#41;](../../branchcache/deploy/Enable-BranchCache-on-a-File-Share--Optional-.md)  
+-   [Enable BranchCache on a File Share &#40;Optional&#41;](../../branchcache/deploy/enable-bc-on-file-share.md)  
   
 
 

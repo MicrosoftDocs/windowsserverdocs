@@ -1,6 +1,6 @@
 ---
 title: Display adapters should be enabled in virtual machines to provide video capabilities
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

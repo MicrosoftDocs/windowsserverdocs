@@ -1,6 +1,6 @@
 ---
 title: Windows 8 should be configured with at least the minimum amount of memory
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
