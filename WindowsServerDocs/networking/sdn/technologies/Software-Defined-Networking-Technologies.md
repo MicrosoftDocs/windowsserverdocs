@@ -31,7 +31,7 @@ The topics in this section provide overview and technical information about the 
   
 There are many technologies that work together to create Microsoft's Software Defined Networking (SDN) solutions, including the following:  
   
--   **[Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol--BGP-.md)**  
+-   **[Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol-BGP.md)**  
   
     When configured on a  Windows Server 2016 Remote Access Service (RAS) Gateway, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants' VM networks and their remote sites. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
   

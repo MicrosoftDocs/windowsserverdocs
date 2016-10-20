@@ -9,14 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
-ms.author: coreyp
-author: coreyp-at-msft
----
+ms.author: jamesmci
+author: jamesmci
+--
 #Step 1 Plan the Basic DirectAccess Infrastructure
 The first step for a basic DirectAccess deployment on a single server is to perform planning for the infrastructure required for the deployment. This topic describes the infrastructure planning steps:  
   
 |Task|Description|  
-|--------|---------------|  
+|----|--------|  
 |Plan network topology and settings|Decide where to place the DirectAccess server \(at the edge, or behind a Network Address Translation \(NAT\) device or firewall\), and plan IP addressing and routing.|  
 |Plan firewall requirements|Plan for allowing DirectAccess through edge firewalls.|  
 |Plan certificate requirements|DirectAccess can use Kerberos or certificates for client authentication. In this basic DirectAccess deployment a Kerberos Proxy is automatically configured and authentication is accomplished using Active Directory credentials.|  
@@ -32,9 +32,9 @@ The planning tasks do not need to be done in a specific order.
   
 1.  Identify the network adapter topology you want to use. DirectAccess can be set up with either of the following:  
   
-    -   With two network adapters—Either at the edge with one network adapter connected to the Internet and the other to the internal network, or behind a NAT, firewall, or router device, with one network adapter connected to a perimeter network and the other to the internal network.  
+    -   With two network adapters???Either at the edge with one network adapter connected to the Internet and the other to the internal network, or behind a NAT, firewall, or router device, with one network adapter connected to a perimeter network and the other to the internal network.  
   
-    -   Behind a NAT device with one network adapter—The DirectAccess server is installed behind a NAT device, and the single network adapter is connected to the internal network.  
+    -   Behind a NAT device with one network adapter???The DirectAccess server is installed behind a NAT device, and the single network adapter is connected to the internal network.  
   
 2.  Identity your IP addressing requirements:  
   
@@ -44,10 +44,10 @@ The planning tasks do not need to be done in a specific order.
   
     -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
   
-3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the ‘Internal network adapter’ column.  
+3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the ???Internal network adapter??? column.  
   
     ||External network adapter|Internal network adapter<sup>1</sup>|Routing requirements|  
-    |-|----------------------------|----------------------------------------|------------------------|  
+    |-|--------------|--------------------|------------|  
     |IPv4 intranet and IPv4 Internet|Configure the following:<br /><br />-   One static public IPv4 address with the appropriate subnet mask.<br />-   A default gateway IPv4 address of your Internet firewall or local Internet service provider \(ISP\) router.|Configure the following:<br /><br />-   An IPv4 intranet address with the appropriate subnet mask.<br />-   A connection\-specific DNS suffix of your intranet namespace. A DNS server must also be configured on the internal interface.<br />-   Do not configure a default gateway on any intranet interfaces.|To configure the DirectAccess server to reach all subnets on the internal IPv4 network do the following:<br /><br />1.  List the IPv4 address spaces for all the locations on your intranet.<br />2.  Use the **route add \-p** or **netsh interface ipv4 add route** commands to add the IPv4 address spaces as static routes in the IPv4 routing table of the DirectAccess server.|  
     |IPv6 Internet and IPv6 intranet|Configure the following:<br /><br />-   Use the autoconfigured address configuration provided by your ISP.<br />-   Use the **route print** command to ensure that a default IPv6 route pointing to the ISP router exists in the IPv6 routing table.<br />-   Determine whether the ISP and intranet routers are using default router preferences described in RFC 4191, and using a higher default preference than your local intranet routers. If both of these are true, no other configuration for the default route is required. The higher preference for the ISP router ensures that the active default IPv6 route of the DirectAccess server points to the IPv6 Internet.<br /><br />Because the DirectAccess server is an IPv6 router, if you have a native IPv6 infrastructure, the Internet interface can also reach the domain controllers on the intranet. In this case, add packet filters to the domain controller in the perimeter network that prevent connectivity to the IPv6 address of the Internet\-facing interface of the DirectAccess server.|Configure the following:<br /><br />-   If you are not using default preference levels, configure your intranet interfaces with the **netsh interface ipv6 set InterfaceIndex ignoredefaultroutes\=enabled** command. This command ensures that additional default routes pointing to intranet routers will not be added to the IPv6 routing table. You can obtain the InterfaceIndex of your intranet interfaces from the display of the netsh interface show interface command.|If you have an IPv6 intranet, to configure the DirectAccess server to reach all of the IPv6 locations, do the following:<br /><br />1.  List the IPv6 address spaces for all the locations on your intranet.<br />2.  Use the **netsh interface ipv6 add route** command to add the IPv6 address spaces as static routes in the IPv6 routing table of the DirectAccess server.|  
     |IPv4 Internet and IPv6 intranet|The DirectAccess server forwards default IPv6 route traffic using the Microsoft 6to4 Adapter interface to a 6to4 relay on the IPv4 Internet. You can configure a DirectAccess server for the IPv4 address of the Microsoft 6to4 relay on the IPv4 Internet \(used when native IPv6 is not deployed in the corporate network\) with the following command : netsh interface ipv6 6to4 set relay name\=192.88.99.1 state\=enabled command.|||  
@@ -61,9 +61,9 @@ The planning tasks do not need to be done in a specific order.
 ### <a name="ConfigFirewalls"></a>Plan firewall requirements  
 If the DirectAccess server is behind an edge firewall, the following exceptions will be required for DirectAccess traffic when the DirectAccess server is on the IPv4 Internet:  
   
--   6to4 traffic—IP Protocol 41 inbound and outbound.  
+-   6to4 traffic???IP Protocol 41 inbound and outbound.  
   
--   IP\-HTTPS—Transmission Control Protocol \(TCP\) destination port 443, and TCP source port 443 outbound.  
+-   IP\-HTTPS???Transmission Control Protocol \(TCP\) destination port 443, and TCP source port 443 outbound.  
   
 -   If you are deploying DirectAccess with a single network adapter, and installing the network location server on the DirectAccess server, TCP port 62000 should also be exempted.  
   
@@ -78,7 +78,7 @@ The following exceptions will be required for DirectAccess traffic when the Dire
   
 When using additional firewalls, apply the following internal network firewall exceptions for DirectAccess traffic:  
   
--   ISATAP—Protocol 41 inbound and outbound  
+-   ISATAP???Protocol 41 inbound and outbound  
   
 -   TCP\/UDP for all IPv4\/IPv6 traffic  
   
@@ -92,10 +92,10 @@ Certificate requirements for IPsec include a computer certificate used by Direct
 The certification requirements for each of these are summarized in the following table:  
   
 |IPsec authentication|IP\-HTTPS server|Network location server|  
-|------------------------|--------------------|---------------------------|  
-|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don’t use the Kerberos proxy for authentication|Public CA—It is recommended to use a public CA to issue the IP\-HTTPS certificate, this ensures that the CRL distribution point is available externally.|Internal CA—You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point is highly available from the internal network.|  
-||Internal CA—You can use an internal CA to issue the IP\-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Self\-signed certificate—You can use a self\-signed certificate for the network location server website; however, you cannot use a self\-signed certificate in multisite deployments.|  
-||Self\-signed certificate—You can use a self\-signed certificate for the IP\-HTTPS server; however, you must make sure that the CRL distribution point is available externally. A self\-signed certificate cannot be used in a multisite deployment.||  
+|------------|----------|--------------|  
+|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don???t use the Kerberos proxy for authentication|Public CA???It is recommended to use a public CA to issue the IP\-HTTPS certificate, this ensures that the CRL distribution point is available externally.|Internal CA???You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point is highly available from the internal network.|  
+||Internal CA???You can use an internal CA to issue the IP\-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Self\-signed certificate???You can use a self\-signed certificate for the network location server website; however, you cannot use a self\-signed certificate in multisite deployments.|  
+||Self\-signed certificate???You can use a self\-signed certificate for the IP\-HTTPS server; however, you must make sure that the CRL distribution point is available externally. A self\-signed certificate cannot be used in a multisite deployment.||  
   
 #### <a name="bkmk_website_cert_IPHTTPS"></a>Plan certificates for IP\-HTTPS and network location server  
 If you want to provision a certificate for these purposes, refer to [Deploy a Single DirectAccess Server with Advanced Settings](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). If no certificates are available, the Getting Started wizard automatically creates self\-signed certificates for these purposes.
@@ -126,9 +126,9 @@ In a DirectAccess deployment, DNS is required for the following:
   
         **Connectivity verifiers**. DirectAccess creates a default web probe that is used by DirectAccess client computers use to verify connectivity to the internal network. To ensure the probe works as expected the following names must be registered manually in DNS:  
   
-        1.  directaccess\-webprobehost—should resolve to the internal IPv4 address of the DirectAccess server, or to the IPv6 address in an IPv6\-only environment.  
+        1.  directaccess\-webprobehost???should resolve to the internal IPv4 address of the DirectAccess server, or to the IPv6 address in an IPv6\-only environment.  
   
-        2.  directaccess\-corpconnectivityhost—should resolve to localhost \(loopback\) address. A and AAAA record should be created, A record with value 127.0.0.1 and AAAA record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the cmdlet get\-netnattransitionconfiguration.  
+        2.  directaccess\-corpconnectivityhost???should resolve to localhost \(loopback\) address. A and AAAA record should be created, A record with value 127.0.0.1 and AAAA record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the cmdlet get\-netnattransitionconfiguration.  
   
         You can create additional connectivity verifiers using other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
   
@@ -245,5 +245,5 @@ If a DirectAccess server, client, or application server GPO has been deleted by 
   
 ### <a name="BKMK_Links"></a>Next step  
   
--   [Step 2: Plan the DirectAccess Deployment](Step-2--Plan-the-DirectAccess-Deployment.md)  
+-   [Step 2: Plan the DirectAccess Deployment](Step-2-Plan-the-DirectAccess-Deployment.md)  
   

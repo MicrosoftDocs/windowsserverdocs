@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Plan a Remote Access Cluster Deployment
 
@@ -22,15 +22,15 @@ author: coreyp-at-msft
   
 -   [Plan an Advanced DirectAccess Deployment](../../../directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md). This step includes planning for the infrastructure required to deploy a single server. It includes planning for network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy Objects (GPOs).  
   
--   [Step 2 Plan Cluster Servers](Step-2--Plan-Cluster-Servers.md) .  
+-   [Step 2 Plan Cluster Servers](Step-2-Plan-Cluster-Servers.md) .  
   
--   [Step 3 Plan a Load-Balanced Cluster Deployment](Step-3--Plan-a-Load-Balanced-Cluster-Deployment.md).  
+-   [Step 3 Plan a Load-Balanced Cluster Deployment](Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md).  
   
 -   Step 4: Record your planning decisions for Remote Access advanced deployment. This record can be used as a job aid for everyone involved in completing the deployment steps.  
   
 After you have completed these planning steps, see [Configure a Remote Access cluster](../configure/Configure-a-Remote-Access-Cluster.md). 
 
-For instructions on configuring a cluster deployment as a proof of concept in a lab environment, see [Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB](../../../directaccess/tlg-cluster-nlb/Test-Lab-Guide--Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB.md).  
+For instructions on configuring a cluster deployment as a proof of concept in a lab environment, see [Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB](../../../directaccess/tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB.md).  
   
 
 

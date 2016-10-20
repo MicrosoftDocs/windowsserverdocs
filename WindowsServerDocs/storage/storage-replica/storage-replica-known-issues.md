@@ -159,6 +159,17 @@ If using the Cluster powershell cmdlet:
 
 This occurs due to a product limitation in Windows Server 2016. As a workaround, use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster. This behavior may change in a later release. 
 
+## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
+When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
+
+    "No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests." 
+
+This does not occur if you have at least three nodes in the cluster. This issue occurs because of a by-design code change in Windows Server 2016 for asymmetric storage clustering behaviors. 
+
+To add the storage, you can run the following command on the node in the second site:
+
+`Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  

@@ -113,7 +113,7 @@ This Network Controller feature allows you to deploy, configure, and manage Hype
   
 Network Controller is capable of dual-tunnel configuration of site-to-site VPN gateways and the automatic placement of tunnel end-points on separate gateways. In addition, Network Controller can load balance site-to-site and point-to-site VPN connections between gateway VMs, as well as logging configuration and state changes by using logging services.  
   
-For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../../remote-access/bgp/Border-Gateway-Protocol--BGP-.md).  
+For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../../remote-access/bgp/Border-Gateway-Protocol-BGP.md).  
   
 For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).  
   

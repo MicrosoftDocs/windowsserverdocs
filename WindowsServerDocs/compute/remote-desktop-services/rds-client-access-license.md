@@ -71,4 +71,4 @@ The following table shows the CALs that are compatible on RD Session Hosts and R
 | 2012         | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | No   |
 | 2016         | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | Yes  |
 
-The RD license server can host licenses from any version of Remote Desktop Services.
+The 2016 RD license server can host licenses from any version of Remote Desktop Services.
