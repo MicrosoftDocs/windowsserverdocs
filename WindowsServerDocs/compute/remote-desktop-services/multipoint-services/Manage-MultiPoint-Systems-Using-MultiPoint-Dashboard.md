@@ -1,5 +1,6 @@
 ---
 title: Manage MultiPoint Systems Using MultiPoint Dashboard
+description: Provides an overview of using the MultiPoint Dashboard
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

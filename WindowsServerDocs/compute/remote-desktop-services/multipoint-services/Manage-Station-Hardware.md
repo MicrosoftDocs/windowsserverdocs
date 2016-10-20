@@ -1,5 +1,6 @@
 ---
 title: Manage Station Hardware
+description: Provides an overview of how to manage hardware for MultiPoint stations
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
