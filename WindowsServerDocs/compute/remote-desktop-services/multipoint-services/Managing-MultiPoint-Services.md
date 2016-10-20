@@ -1,5 +1,6 @@
 ---
 title: Managing MultiPoint Services
+description: Overview of articles about managing MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
