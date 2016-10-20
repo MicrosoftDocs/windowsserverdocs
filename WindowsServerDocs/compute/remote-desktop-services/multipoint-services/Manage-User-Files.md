@@ -1,5 +1,6 @@
 ---
 title: Manage User Files
+description: Provides guidance for managing user files in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
