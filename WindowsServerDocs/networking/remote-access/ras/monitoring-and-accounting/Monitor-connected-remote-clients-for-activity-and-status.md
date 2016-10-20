@@ -11,8 +11,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Monitor connected remote clients for activity and status
 
@@ -46,7 +46,7 @@ PS> Get-RemoteAccessConnectionStatistics
 The user statistics can be filtered, based on criteria selections, by using the fields in the following table.  
   
 |Field Name|Value|  
-|--------------|---------|  
+|-------|-----|  
 |Username|The user name or alias of the remote user. Wildcard characters can be used to select a group of users, such as contoso\\* or \*\administrator.|  
 |Hostname|The computer account name of the remote user. An IPv4 or IPv6 address also can be specified.|  
 |Type|DirectAccess or VPN. If DirectAccess is selected, all remote users who are connected by using DirectAccess are listed. If VPN is selected, all remote users who are connected by using VPN are listed.|  

@@ -1,5 +1,6 @@
 ---
 title: Launch or Close Applications on a Station
+description: Learn how to work with applications in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
