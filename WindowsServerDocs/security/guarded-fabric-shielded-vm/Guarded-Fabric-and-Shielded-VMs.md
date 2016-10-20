@@ -74,9 +74,9 @@ HGS, together with the methods for creating shielded VMs, help provide the follo
 
 | **Type of assurance for VMs**                         | **Shielded VM assurances, from Key Protection Service and from creation methods for shielded VMs** |
 |----------------------------|--------------------------------------------------|
-| **BitLocker encrypted disks (OS disks and data disks)**   | Shielded VMs use BitLocker to protect their disks. The BitLocker keys needed to boot the VM and decrypt the disks are protected by the shielded VM???s virtual TPM using industry-proven technologies such as secure measured boot. While shielded VMs only automatically encrypt and protect the operating system disk, you can [encrypt data drives](https://technet.microsoft.com/itpro/windows/keep-secure/bitlocker-overview) attached to the shielded VM as well. |
-| **Deployment of new shielded VMs from ???trusted??? template disks/images** | When deploying new shielded VMs, tenants are able to specify which template disks they trust. Shielded template disks have signatures that are computed at a point in time when their content is deemed trustworthy. The disk signatures are then stored in a signature catalog, which tenants securely provide to the fabric when creating shielded VMs. During provisioning of shielded VMs, the signature of the disk is computed again and compared to the trusted signatures in the catalog. If the signatures match, the shielded VM is deployed. If the signatures do not match, the shielded template disk is deemed untrustworthy and deployment fails. |
-| **Protection of passwords and other secrets when a shielded VM is created** | When creating VMs, it is necessary to ensure that VM secrets, such as the trusted disk signatures, RDP certificates, and the password of the VM???s local Administrator account, are not divulged to the fabric. These secrets are stored in an encrypted file called a shielding data file (a .PDK file), which is protected by tenant keys and uploaded to the fabric by the tenant. When a shielded VM is created, the tenant selects the shielding data to use which securely provides these secrets only to the trusted components within the guarded fabric. |
+| **BitLocker encrypted disks (OS disks and data disks)**   | Shielded VMs use BitLocker to protect their disks. The BitLocker keys needed to boot the VM and decrypt the disks are protected by the shielded VM's virtual TPM using industry-proven technologies such as secure measured boot. While shielded VMs only automatically encrypt and protect the operating system disk, you can [encrypt data drives](https://technet.microsoft.com/itpro/windows/keep-secure/bitlocker-overview) attached to the shielded VM as well. |
+| **Deployment of new shielded VMs from "trusted" template disks/images** | When deploying new shielded VMs, tenants are able to specify which template disks they trust. Shielded template disks have signatures that are computed at a point in time when their content is deemed trustworthy. The disk signatures are then stored in a signature catalog, which tenants securely provide to the fabric when creating shielded VMs. During provisioning of shielded VMs, the signature of the disk is computed again and compared to the trusted signatures in the catalog. If the signatures match, the shielded VM is deployed. If the signatures do not match, the shielded template disk is deemed untrustworthy and deployment fails. |
+| **Protection of passwords and other secrets when a shielded VM is created** | When creating VMs, it is necessary to ensure that VM secrets, such as the trusted disk signatures, RDP certificates, and the password of the VM's local Administrator account, are not divulged to the fabric. These secrets are stored in an encrypted file called a shielding data file (a .PDK file), which is protected by tenant keys and uploaded to the fabric by the tenant. When a shielded VM is created, the tenant selects the shielding data to use which securely provides these secrets only to the trusted components within the guarded fabric. |
 | **Tenant control of where the VM can be started** | Shielding data also contains a list of the guarded fabrics on which a particular shielded VM is permitted to run. This is useful, for example, in cases where a shielded VM typically resides in an on-premises private cloud but may need to be migrated to another (public or private) cloud for disaster recovery purposes. The target cloud or fabric must support shielded VMs and the shielded VM must permit that fabric to run it. |
 
 ## What is shielding data and why is it necessary?
@@ -87,7 +87,7 @@ Among others, a shielding data files contain secrets such as:
 
 - Administrator credentials
 - An answer file (unattend.xml)
-- A security policy that determines whether VM???s created using this shielding data are configured as shielded or encryption supported
+- A security policy that determines whether VMs created using this shielding data are configured as shielded or encryption supported
     - Remember, VMs configured as shielded are protected from fabric admins whereas encryption supported VMs are not
 - An RDP certificate to secure remote desktop communication with the VM
 - A volume signature catalog that contains a list of trusted, signed template-disk signatures that a new VM is allowed to be created from
@@ -121,9 +121,9 @@ The following figure shows the shielding data file and related configuration ele
 
     With admin-trusted attestation, the health of the host is determined exclusively by its membership in a trusted security group.
 
-    With TPM-trusted attestation, the host???s boot measurements and code integrity policy determine its health.
+    With TPM-trusted attestation, the host's boot measurements and code integrity policy determine its health.
 
-    Attestation happens when the host starts and every 8 hours thereafter. If for some reason a host doesn???t have an attestation certificate when a VM tries to start, this also triggers attestation.
+    Attestation happens when the host starts and every 8 hours thereafter. If for some reason a host doesn't have an attestation certificate when a VM tries to start, this also triggers attestation.
 
 3. Attestation succeeds (or fails).
 
@@ -131,7 +131,7 @@ The following figure shows the shielding data file and related configuration ele
 
 4. Attestation certificate sent to host.
 
-    Assuming attestation was successful, a health certificate is sent to the host and the host is considered ???guarded??? (authorized to run shielded VMs). The host uses the health certificate to authorize the Key Protection Service to securely release the keys needed to work with shielded VMs
+    Assuming attestation was successful, a health certificate is sent to the host and the host is considered "guarded" (authorized to run shielded VMs). The host uses the health certificate to authorize the Key Protection Service to securely release the keys needed to work with shielded VMs
 
 5. Host requests VM key.
 
@@ -146,7 +146,7 @@ The following figure shows the shielding data file and related configuration ele
 
 7. Key is returned to host.
 
-    If the health certificate is valid, KPS attempts to decrypt the secret and securely return the keys needed to power on the VM. Note that the keys are encrypted to the guarded host???s VBS.
+    If the health certificate is valid, KPS attempts to decrypt the secret and securely return the keys needed to power on the VM. Note that the keys are encrypted to the guarded host's VBS.
 
 8. Host powers on VM01.
 
@@ -155,7 +155,7 @@ The following figure shows the shielding data file and related configuration ele
 | Term              | Definiotion           |
 |----------|------------|
 | Host Guardian Service (HGS) | A Windows Server role that is installed on a secured cluster of bare-metal servers that is able to measure the health of a Hyper-V host and release keys to healthy Hyper-V hosts when powering-on or live migrating shielded VMs. These two capabilities are fundamental to a shielded VM solution and are referred to as the **Attestation service** and **Key Protection Service** respectively. |
-| guarded host | A Hyper-V host on which shielded VMs can run. A host can only be considered _guarded_ when it has been deemed healthy by HGS??? Attestation service. Shielded VMs cannot be powered-on or live migrated to a Hyper-V host that has not yet attested or that failed attestation. |
+| guarded host | A Hyper-V host on which shielded VMs can run. A host can only be considered _guarded_ when it has been deemed healthy by HGS' Attestation service. Shielded VMs cannot be powered-on or live migrated to a Hyper-V host that has not yet attested or that failed attestation. |
 | guarded fabric    | This is the collective term used to describe a fabric of Hyper-V hosts and their Host Guardian Service that has the ability to manage and run shielded VMs. |
 | shielded virtual machine (VM) | A virtual machine that can only run on guarded hosts and is protected from inspection, tampering and theft from malicious fabric admins and host malware. |
 | fabric administrator | A public or private cloud administrator that can manage virtual machines. In the context of a guarded fabric, a fabric administrator does not have access to shielded VMs, or the policies that determine which hosts shielded VMs can run on. |
