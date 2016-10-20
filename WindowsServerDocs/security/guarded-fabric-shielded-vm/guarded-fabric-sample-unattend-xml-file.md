@@ -71,7 +71,7 @@ Currently, the function supports only one DNS server. Here is what your DNS sett
 
 ![Configuring DNS Server with static IP pool](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-dns-settings.png)
 
-Here is what your summary for creating the static IP address pool would look like. In short, you must have only one network route, one gateway, and one DNS server???and you must specify your IP address.
+Here is what your summary for creating the static IP address pool would look like. In short, you must have only one network route, one gateway, and one DNS server - and you must specify your IP address.
 
 ![Summary of static IP pool creation](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-summary.png)
 
