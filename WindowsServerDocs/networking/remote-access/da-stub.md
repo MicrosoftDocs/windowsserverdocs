@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: a3673bb8-43dc-44e2-9e10-caf09bae2aa9
 ms.author: jamesmci
 author: jamesmci
---
+---
 
 # DirectAccess
 
