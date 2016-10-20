@@ -75,7 +75,7 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
 
 > [!IMPORTANT]  
-> Currently, **you can only perform license conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (**not the Server Core option**).
+> **You can only perform license conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (**not the Server Core option**).
 
 ### Clean installation
 
