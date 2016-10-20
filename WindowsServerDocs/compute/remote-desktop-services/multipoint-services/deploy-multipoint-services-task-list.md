@@ -1,5 +1,5 @@
 ---
-title: Task Lists: Deploying MultiPoint Services
+title: Tasks for deploying MultiPoint Services
 description: Lists all the tasks involved in deploying MultiPoint Services, along with links to instructions
 ms.custom: na
 ms.date: 07/22/2016
