@@ -7,8 +7,7 @@ ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
---
-
+---
 # Setting up the Host Guardian Service (HGS)
 
 >Applies To: Windows Server 2016
