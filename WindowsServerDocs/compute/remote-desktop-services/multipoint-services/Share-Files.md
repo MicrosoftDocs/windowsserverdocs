@@ -1,5 +1,6 @@
 ---
 title: Share Files
+description: Learn how to share files in MultiPoint Services by using shared folders and the network
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
