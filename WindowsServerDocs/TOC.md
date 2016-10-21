@@ -728,7 +728,7 @@
 ########## [Create the BranchCache Hash Publication Group Policy Object](networking/branchcache/deploy/Create-the-BranchCache-Hash-Publication-Group-Policy-Object.md)
 ########## [Configure the BranchCache Hash Publication Group Policy Object](networking/branchcache/deploy/Configure-the-BranchCache-Hash-Publication-Group-Policy-Object.md)
 ######## [Enable BranchCache on a File Share (Optional)](networking/branchcache/deploy/enable-bc-on-file-share.md)
-###### [Deploy Hosted Cache Servers (Optional)](networking/branchcache/deploy/Deploy-Hosted-Cache-Servers--Optional-.md)
+###### [Deploy Hosted Cache Servers (Optional)](networking/branchcache/deploy/deploy-hosted-cache-servers.md)
 ###### [Prehashing and Preloading Content on Hosted Cache Servers (Optional)](networking/branchcache/deploy/Prehashing-and-Preloading-Content-on-Hosted-Cache-Servers--Optional-.md)
 ###### [Configure BranchCache Client Computers](networking/branchcache/deploy/Configure-BranchCache-Client-Computers.md)
 ####### [Use Group Policy to Configure Domain Member Client Computers](networking/branchcache/deploy/Use-Group-Policy-to-Configure-Domain-Member-Client-Computers.md)
