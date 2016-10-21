@@ -373,7 +373,7 @@ From w32tm log files you will want to validate two pieces of information.  The f
 
 The main point is that you see messages prefixed with ClockDispln Discipline which is proof w32time is interacting with your system clock.
  
-Next you need to find the last report in the log before the disputed time which reports the source computer which is currently being used as the reference clock.  This could be an IP address, computer name, or the VMIC provider, which indicates that it’s syncing with the Host for Hyper-V.  The following example provides an IPv6 address of 10.197.216.105.
+Next you need to find the last report in the log before the disputed time which reports the source computer which is currently being used as the reference clock.  This could be an IP address, computer name, or the VMIC provider, which indicates that it’s syncing with the Host for Hyper-V.  The following example provides an IPv4 address of 10.197.216.105.
 
 	151802 20:18:54.6531515s - Response from peer 10.197.216.105,0x8 (ntp.m|0x8|0.0.0.0:123->10.197.216.105:123), ofs: +00.0012218s
 
