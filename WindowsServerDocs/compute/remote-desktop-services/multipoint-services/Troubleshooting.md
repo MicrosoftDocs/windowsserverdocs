@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+description: Navigational topic for troubleshooting
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

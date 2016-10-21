@@ -1,5 +1,6 @@
 ---
 title: Work with USB Devices
+description: Learn how USB devices work with MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

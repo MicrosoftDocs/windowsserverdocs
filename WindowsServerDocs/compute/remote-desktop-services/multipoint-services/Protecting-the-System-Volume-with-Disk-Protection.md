@@ -1,5 +1,6 @@
 ---
 title: Protecting the System Volume with Disk Protection
+description: Provides information about disk protection for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

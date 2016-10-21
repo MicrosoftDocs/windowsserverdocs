@@ -1,5 +1,6 @@
 ---
 title: Remap Selected MultiPoint Systems
+description: Learn how to remap some but not all systems in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

@@ -1,5 +1,6 @@
 ---
 title: View Options for Session Thumbnails in MultiPoint Dashboard
+description: Learn how to customize your view options for MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

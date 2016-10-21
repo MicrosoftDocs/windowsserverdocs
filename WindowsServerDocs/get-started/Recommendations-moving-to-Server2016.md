@@ -47,7 +47,6 @@ There are more options than ever before to help you and your customers take adva
 ## Additional resources
 
 - [Features removed or deprecated in Windows Server 2016](Features-Removed-or-Deprecated-in--Windows-Server-2016-Technical-Preview.md)
-- For the latest on Microsoft server applications that are supported on Windows Server 2016, see [Server Application Compatibility](Server-Application-Compatibility.md).
-- For more information on non-Microsoft applications, see the [Windows Server Logo Certification](https://msdn.microsoft.com/enterprisecloudcertified) portal. 
+- For general server upgrade and migration options, visit [Upgrade and conversion options for Windows Server 2016](Supported-Upgrade-Paths.md).
 - For more information on product lifecycle and support levels, see the [Support Lifecycle Policy FAQ](https://support.microsoft.com/help/17140/support-lifecycle-policy-faq).
 

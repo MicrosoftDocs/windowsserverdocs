@@ -1,5 +1,6 @@
 ---
 title: User Account Considerations
+description: PRovides user account, user name, and password considerations for MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services
