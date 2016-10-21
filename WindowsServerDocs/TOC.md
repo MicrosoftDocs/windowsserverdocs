@@ -715,7 +715,7 @@
 ###### [Install and Configure Content Servers](networking/branchcache/deploy/Install-and-Configure-Content-Servers.md)
 ####### [Install Content Servers that Use the BranchCache Feature](networking/branchcache/deploy/Install-Content-Servers-that-Use-the-BranchCache-Feature.md)
 ######## [Install the BranchCache Feature](networking/branchcache/deploy/Install-the-BranchCache-Feature.md)
-######## [Configure Windows Server Update Services (WSUS) Content Servers](networking/branchcache/deploy/Configure-Windows-Server-Update-Services--WSUS--Content-Servers.md)
+######## [Configure Windows Server Update Services (WSUS) Content Servers](networking/branchcache/deploy/configure-wsus-content-servers.md)
 ####### [Install File Services Content Servers](networking/branchcache/deploy/Install-File-Services-Content-Servers.md)
 ######## [Configure the File Services server role](networking/branchcache/deploy/Configure-the-File-Services-server-role.md)
 ######### [Install a New File Server as a Content Server](networking/branchcache/deploy/Install-a-New-File-Server-as-a-Content-Server.md)

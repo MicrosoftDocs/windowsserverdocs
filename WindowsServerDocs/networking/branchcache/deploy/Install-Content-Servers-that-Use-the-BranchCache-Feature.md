@@ -22,9 +22,9 @@ To deploy content servers that are Secure Hypertext Transfer Protocol (HTTPS)  W
   
 See the following topics to deploy content servers.  
   
--   [Install the BranchCache Feature](../../branchcache/deploy/Install-the-BranchCache-Feature.md)  
+-   [Install the BranchCache Feature](Install-the-BranchCache-Feature.md)  
   
--   [Configure Windows Server Update Services &#40;WSUS&#41; Content Servers](../../branchcache/deploy/Configure-Windows-Server-Update-Services--WSUS--Content-Servers.md)  
+-   [Configure Windows Server Update Services &#40;WSUS&#41; Content Servers](configure-wsus-content-servers.md)  
   
 
 
