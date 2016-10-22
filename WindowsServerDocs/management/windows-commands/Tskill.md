@@ -1,6 +1,6 @@
 ---
 title: Tskill
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tskill
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,14 +21,14 @@ ms.date: 10/12/2016
 Ends a process running in a session on a Remote Desktop Session Host (RD Session Host) server.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /a] [/v]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<ProcessID>|Specifies the ID of the process that you want to end.|
 |<ProcessName>|Specifies the name of the process that you want to end. This parameter can include wildcard characters.|
 |/server:<ServerName>|Specifies the terminal server that contains the process that you want to end. If **/server** is not specified, the current RD Session Host server is used.|
@@ -52,4 +51,4 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
     ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)

@@ -23,7 +23,7 @@ This topic provides an overview of the Remote Access server role in Windows Serv
 > [!NOTE]  
 > In addition to this topic, the following RAS documentation is available.  
 >   
-> -   [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol--BGP-.md)  
+> -   [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)  
 > -   [DirectAccess](directaccess/DirectAccess.md)  
 > -   [RAS Gateway](ras-gateway/RAS-Gateway.md)  
 > -   [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md) 
@@ -51,7 +51,7 @@ When you install the **DirectAccess and (VPN)** role service, you are deploying 
     > [!IMPORTANT]  
     > The RAS Gateway with multitenant capabilities is also available in  Windows Server 2012 R2 .  
   
-For more information, see [RAS Gateway](../remote-access/ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol--BGP-.md).  
+For more information, see [RAS Gateway](../remote-access/ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol-BGP.md).  
   
 ## <a name="bkmk_rras"></a>Routing  
 You can use Remote Access to route network traffic between subnets on your Local Area Network. Routing provides support for Network Address Translation (NAT) routers, LAN routers running BGP, Routing Information Protocol (RIP), and multicast-capable routers using Internet Group Management Protocol (IGMP). As a full-featured router, you can deploy RAS on either a server computer or as a virtual machine (VM) on a computer that is running Hyper-V.  

@@ -1,6 +1,6 @@
 ---
 title: Diskpart Scripts and Examples
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Diskpart Scripts and Examples
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -23,7 +22,7 @@ Use Diskpart `/s` to run scripts that automate disk\-related tasks, such as crea
   
 -   To create a Diskpart script, create a text file that contains the Diskpart commands that you want to run, with one command per line, and no empty lines. You can start a line with `REM` to make the line a comment.  
   
-    For example, here’s a script that wipes a disk and then creates a 300 MB partition for the Windows Recovery Environment:  
+    For example, here s a script that wipes a disk and then creates a 300 MB partition for the Windows Recovery Environment:  
   
     ```  
     select disk 0  

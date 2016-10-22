@@ -1,6 +1,6 @@
 ---
 title: Ksetup:removerealm
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:removerealm
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,13 +25,13 @@ ksetup /removerealm <RealmName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run.|
 ## Remarks
 The realm name is stored in two places in the registry: **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** and **\CurrentControlSet\Control\Lsa\Kerberos**.
 You cannot remove the default realm name from the domain controller because this will reset its DNS information, and removing it might make the domain controller unusable.
 ## <a name="BKMK_Examples"></a>Examples
-Mistakenly set the realm name by misspelling “.COM�? on the local computer to CORP.CONTOSO.CON
+Mistakenly set the realm name by misspelling  .COM on the local computer to CORP.CONTOSO.CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```

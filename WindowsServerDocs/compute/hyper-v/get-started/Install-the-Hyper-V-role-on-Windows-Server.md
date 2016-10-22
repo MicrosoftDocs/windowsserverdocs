@@ -1,6 +1,6 @@
 ---
 title: Install the Hyper-V role on Windows Server 2016
-description: " "
+description: "Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

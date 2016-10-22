@@ -1,5 +1,6 @@
 ---
 title: Remap All Stations
+description: Learn how to remap stations in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

@@ -1,6 +1,6 @@
 ---
 title: Netcfg
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Netcfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/v|Run in verbose (detailed) mode|  
 |/e|Use servicing environment variables during install and uninstall|  
 |/winpe|Installs TCP/IP, NetBIOS and Microsoft Client for Windows preinstallation envrionment|  

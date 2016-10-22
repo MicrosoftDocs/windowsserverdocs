@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin getcustomheaders
+description: "Windows Commands topic for **Bitsadmin getcustomheaders** - Retrieves the custom HTTP headers from the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016 
 ---
-
 # Bitsadmin getcustomheaders
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +29,7 @@ bitsadmin /GetCustomHeaders <Job>
 ## Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 
 ## <a name="BKMK_examples"></a>Examples

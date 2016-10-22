@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setpeercachingflags
+description: "Windows Commands topic for **Bitsadmin setpeercachingflags** - Sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setpeercachingflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +29,7 @@ bitsadmin /SetPeerCachingFlags <Job> <value>
 ## Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Value|The value is an unsigned integer with the following interpretation for the bits in the binary representation.<br /><br />1 \- The job can download content from peers.<br /><br />2 \- The files of the job can be cached and served to peers.|
 

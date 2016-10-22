@@ -1,6 +1,7 @@
 ---
 title: Auditpol list
-description: "Windows Commands"
+description: "Windows Commands topic for **Auditpol list** - 
+Lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +15,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol list
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 auditpol /list
@@ -29,7 +29,7 @@ auditpol /list
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/user|Retrieves all users for whom the per-user audit policy has been defined. If used with the /v parameter, the security identifier (SID) of the user is also displayed.|
 |/category|Displays the names of categories understood by the system. If used with the /v parameter, the category globally unique identifier (GUID) is also displayed.|
 |/subcategory|Displays the names of subcategories and their associated GUID.|

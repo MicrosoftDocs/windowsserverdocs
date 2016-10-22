@@ -1,6 +1,6 @@
 ---
 title: Servermanagercmd
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Servermanagercmd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ servermanagercmd -version
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-query [[[<Drive>:]<Path>]<*query.xml*>]|Displays a list of all roles, role services, and features installed and available for installation on the server. You can also use the short form of this parameter, **-q**. If you want the query results saved to an XML file, specify an XML file to replace *query.xml*.|
 |-inputPath  <[[<Drive>:]<Path>]*answer.xml*>|Installs or removes the roles, role services, and features specified in an XML answer file represented by *answer.xml*. You can also use the short form of this parameter, **-p.**|
 |-install <*Id*>|Installs the role, role service, or feature specified by *Id*. The identifiers are case-insensitive. Multiple roles, role services, and features must be separated by spaces. The following optional parameters are used with the **-install** parameter.<br /><br />-   **-setting** <*SettingName*>=<*SettingValue*>   Specifies required settings for the installation.<br />-   **-allSubFeatures** Specifies the installation of all subordinate services and features along with the parent role, role service, or feature named in the *Id* value. **Note:**     Some role containers do not have a command line identifier to allow installation of all role services. This is the case when role services cannot be installed in the same instance of the Server Manager command. For example, the Federation Service role service of Active Directory Federation Services and the Federation Service Proxy role service cannot be installed by using the same Server Manager command instance.<br />-   **-resultPath** <*result.xml>   Saves installation results to an XML file represented by *result.xml*. You can also use the short form of this parameter, **-r**. **Note:**     You cannot run **servermanagercmd** with both the **-resultPath** parameter and the **-whatIf** parameter specified.<br />-   **-restart** Restarts the computer automatically when installation is complete (if restarting is required by the roles or features installed).<br />-   **-whatIf** Displays any operations specified for the **-install** parameter. You can also use the short form of the **-whatIf** parameter, **-w**. You cannot run **servermanagercmd** with both the **-resultPath** parameter and the **-whatIf** parameter specified.<br />-   **-logPath** <[[<Drive>:]<Path>]*log.txt*>   Specifies a name and location for the log file, other than the default, **%windir%\temp\servermanager.log**.|
@@ -55,7 +54,7 @@ The following example shows how to use **servermanagercmd** to install the Web S
 ```
 servermanagercmd -install Web-Server -resultPath installResult.xml
 ```
-The following example shows how to use the **–whatIf** parameter with **servermanagercmd** to display detailed information about the roles, role services, and features that would be installed or removed, based upon instructions that are specified in an XML answer file represented by *install.xml*.
+The following example shows how to use the ** whatIf** parameter with **servermanagercmd** to display detailed information about the roles, role services, and features that would be installed or removed, based upon instructions that are specified in an XML answer file represented by *install.xml*.
 ```
 servermanagercmd -inputPath install.xml -whatIf
 ```

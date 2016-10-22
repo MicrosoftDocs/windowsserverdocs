@@ -1,6 +1,6 @@
 ---
 title: Hyper-V Technology Overview
-description: " "
+description: "Describes what Hyper-V is, how to get it, key features and common uses"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt

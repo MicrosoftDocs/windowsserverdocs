@@ -1,6 +1,6 @@
 ---
 title: Gpfixup
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Gpfixup
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ Gpfixup [/v]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/v|Displays detailed status messages.<br /><br />If this parameter is not used, only error messages or a summary status message of **SUCCESS** or **FAILURE** appears.|
 |/olddns:<OLDDNSNAME>|Specifies the old DNS name of the renamed domain as *<OLDDNSNAME>* when the domain rename operation changes the DNS name of a domain. You can use this parameter only if you also use the **/newdns** parameter to specify a new domain DNS name.|
 |/newdns:<NEWDNSNAME>|Specifies the new DNS name of the renamed domain as *<NEWDNSNAME>* when the domain rename operation changes the DNS name of a domain. You can use this parameter only if you also use the **/olddns** parameter to specify the old domain DNS name.|

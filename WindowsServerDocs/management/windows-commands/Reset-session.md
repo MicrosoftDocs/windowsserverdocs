@@ -1,6 +1,6 @@
 ---
 title: Reset session
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Reset session
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -23,14 +22,14 @@ ms.date: 10/12/2016
 Enables you to reset (delete) a session on a Remote Desktop Session Host (RD Session Host) server.  
 For examples of how to use this command, see [Examples](#BKMK_examples).  
 > [!NOTE]  
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
 ## Syntax  
 ```  
 reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]  
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<SessionName>|Specifies the name of the session that you want to reset. To determine the name of the session, use the **query session** command.|  
 |<SessionID>|Specifies the ID of the session to reset.|  
 |/server:<ServerName>|Specifies the terminal server containing the session that you want to reset. Otherwise, the current RD Session Host server is used.|  
@@ -52,4 +51,4 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
     ```  
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)  
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)  

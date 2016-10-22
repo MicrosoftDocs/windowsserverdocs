@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin peercaching and setconfigurationflags
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin peercaching and setconfigurationflags** - 
+Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin peercaching and setconfigurationflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +26,7 @@ bitsadmin /PeerCaching /SetConfigurationFlags <Job> <Value>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Value|The value is an unsigned integer with the following interpretation for the bits in the binary representation:<br /><br />-   Allow the job's data to be downloaded from a peer: Set the least significant bit<br />-   Allow the job's data to be served to peers: Set the 2nd bit from the right.|
 ## <a name="BKMK_examples"></a>Examples

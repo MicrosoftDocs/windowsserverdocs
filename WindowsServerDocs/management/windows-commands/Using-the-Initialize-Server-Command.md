@@ -1,6 +1,6 @@
 ---
 title: Using the Initialize-Server Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the Initialize-Server Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Initialize-Server [/Server:<Server name>] /RemInst:<Full path> [/Author
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/RemInst:"<Full path>"|Specifies the full path and name of the RemoteInstall folder. If the specified folder does not already exist, this option will create it when the command is run. You should always enter a local path, even in the case of a remote computer. For example: **D:\RemoteInstall**.|
 |[/Authorize]|Authorizes the server in Dynamic Host Control Protocol (DHCP). This option is necessary only if DHCP rogue detection is enabled, meaning that the Windows Deployment Services PXE server must be authorized in DHCP before client computers can be serviced. Note that DHCP rogue detection is disabled by default.|
@@ -44,7 +43,7 @@ WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:"C:\R
 [Using the disable-Server Command](Using-the-disable-Server-Command.md)
 [Using the enable-Server Command](Using-the-enable-Server-Command.md)
 [Using the get-Server Command](Using-the-get-Server-Command.md)
-[Subcommand: set-Server](Subcommand--set-Server.md)
-[Subcommand: start-Server](Subcommand--start-Server.md)
-[Subcommand: stop-Server](Subcommand--stop-Server.md)
+[Subcommand: set-Server](Subcommand-set-Server.md)
+[Subcommand: start-Server](Subcommand-start-Server.md)
+[Subcommand: stop-Server](Subcommand-stop-Server.md)
 [The uninitialize-Server Option](The-uninitialize-Server-Option.md)

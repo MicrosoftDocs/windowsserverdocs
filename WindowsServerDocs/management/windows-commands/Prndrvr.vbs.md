@@ -1,6 +1,6 @@
 ---
 title: Prndrvr.vbs
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Prndrvr.vbs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Adds, deletes, and lists printer drivers.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 Cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}] 
@@ -29,7 +28,7 @@ Cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-a|Installs a driver.|
 |-d|Deletes a driver.|
 |-l|Lists all printer drivers installed on the server specified by the **-s** parameter. If you do not specify a server, Windows lists the printer drivers installed on the local computer.|

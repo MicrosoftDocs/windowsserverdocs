@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ command </parameter> </param2>
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Dfsutil Root](Dfsutil-Root.md)|Displays,creates,removes,imports,exports namespace roots.|
 |[Dfsutil Link](Dfsutil-Link.md)|Displays, creates, removes, or moves folders \(links\).|
 |[Dfsutil Target](Dfsutil-Target.md)|Displays,create,remove folder target or namespace server.|
@@ -57,7 +56,7 @@ This /is /the /example /of /calling /command /with /parameters
 <Here is where you put a detailed description of another example.>
 
 ```
-This /is /a:â€?differentâ€? /example
+This /is /a:different /example
 ```
 
 ## Additional references

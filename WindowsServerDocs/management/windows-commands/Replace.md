@@ -1,6 +1,6 @@
 ---
 title: Replace
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Replace
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive1>:][<Path1>]<FileName>|Specifies the location and name of the source file or set of files. *FileName* is required, and can include wildcard characters (**\*** and **?**).|
 |[<Drive2>:][<Path2>]|Specifies the location of the destination file. You cannot specify a file name for files you replace. If you do not specify a drive or path, **replace** uses the current drive and directory as the destination.|
 |/a|Adds new files to the destination directory instead of replacing existing files. You cannot use this command-line option with the **/s** or **/u** command-line option.|
@@ -50,7 +49,7 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 -   You cannot use **replace** to update hidden files or system files.
 -   The following table shows each exit code and a brief description of its meaning:
     |Exit code|Description|
-    |-------------|---------------|
+    |-------|--------|
     |0|The **replace** command successfully replaced or added the files.|
     |1|The **replace** command encountered an incorrect version of MS-DOS.|
     |2|The **replace** command could not find the source files.|

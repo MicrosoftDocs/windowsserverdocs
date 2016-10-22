@@ -1,6 +1,6 @@
 ---
 title: Merge vdisk
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Merge vdisk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ merge vdisk depth=<n>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |depth=<n>|Indicates the number of parent VHD files to merge together. For example, **depth=1** indicates that the differencing VHD will be merged with one level of the differencing chain.|
 ## Remarks
 -   A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.

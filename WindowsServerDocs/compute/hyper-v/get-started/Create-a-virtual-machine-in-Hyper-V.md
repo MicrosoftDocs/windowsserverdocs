@@ -1,6 +1,6 @@
 ---
 title: Create a virtual machine in Hyper-V
-description: " "
+description: "Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

@@ -1,6 +1,6 @@
 ---
 title: Expand
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Expand
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ expand <source>.cab /f:<files> <destination>
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/r|Renames expanded files.|  
 |source|Specifies the files to expand. *Source* can consist of a drive letter and colon, a directory name, a file name, or a combination of these. You can use wildcards (**\*** or **?**).|  
 |destination|Specifies where files are to be expanded.<br /><br />If *source* consists of multiple files and you do not specify **/r**, *destination* must be a directory.<br /><br />*Destination* can consist of a drive letter and colon, a directory name, a file name, or a combination of these.<br /><br />Destination file &#124; path specification.|  

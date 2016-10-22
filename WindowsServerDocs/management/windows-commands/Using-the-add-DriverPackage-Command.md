@@ -1,6 +1,6 @@
 ---
 title: Using the add-DriverPackage Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the add-DriverPackage Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |InfFile:<Inf File path>|Specifies the full path of the .inf file to add.|  
 |/Server:<Server name>|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|  
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the driver package.|  
@@ -45,7 +44,7 @@ WDSUTIL /verbose /Add-DriverPackage /InfFile:"C:\Temp\Display.inf"
 ```  
   
 ```  
-WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:"C:\Temp\Display.inf" /Architecture:x86 /DriverGroup:x86Drivers /Name:"Display Driver�?  
+WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:"C:\Temp\Display.inf" /Architecture:x86 /DriverGroup:x86Drivers /Name:"Display Driver  
 ```  
   
 #### Additional references  

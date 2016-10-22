@@ -1,6 +1,6 @@
 ---
 title: Using the remove-DriverGroup Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the remove-DriverGroup Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group to remove.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
 ## <a name="BKMK_examples"></a>Examples

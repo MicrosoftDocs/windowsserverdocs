@@ -1,6 +1,6 @@
 ---
 title: Reg export
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Reg export
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Reg export KeyName FileName [/y]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<KeyName>|Specifies the full path of the subkey. The export operation works only with the local computer. The KeyName must include a valid root key. Valid root keys are: HKLM, HKCU, HKCR, HKU, and HKCC.|
 |<FileName>|Specifies the name and path of the file to be created during the operation. The file must have a .reg extension.|
 |/y|Overwrites any existing file with the name *FileName* without prompting for confirmation.|
@@ -35,7 +34,7 @@ Reg export KeyName FileName [/y]
 ## Remarks
 The following table lists the return values for the **reg export** operation.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |0|Success|
 |1|Failure|
 ## <a name="BKMK_examples"></a>Examples

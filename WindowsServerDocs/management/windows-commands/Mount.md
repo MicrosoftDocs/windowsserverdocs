@@ -1,6 +1,6 @@
 ---
 title: Mount
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Mount
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ The **mount** command-line utility mounts the file system identified by *ShareNa
 The **mount** utility is available only if Client for NFS is installed.
 The following options and arguments can be used with the **mount** utility.
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |-o rsize=<buffersize>|Sets the size in kilobytes of the read buffer. Acceptable values are 1, 2, 4, 8, 16, and 32; the default is 32 KB.|
 |-o wsize=<buffersize>|Sets the size in kilobytes of the write buffer. Acceptable values are 1, 2, 4, 8, 16, and 32; the default is 32 KB.|
 |-o timeout=<seconds>|Sets the time-out value in seconds for a remote procedure call (RPC). Acceptable values are 0.8, 0.9, and any integer in the range 1-60; the default is 0.8.|

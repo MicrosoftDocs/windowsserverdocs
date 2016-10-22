@@ -1,6 +1,6 @@
 ---
 title: Wbadmin start recovery
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin start recovery
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -40,9 +39,9 @@ wbadmin start recovery
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-version|Specifies the version identifier of the backup to recover in MM/DD/YYYY-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.|
-|-items|Specifies a comma-delimited list of volumes, applications, files, or folders to recover.<br /><br />-   If **-itemtype** is **Volume**, you can specify only a single volume—by providing the volume drive letter, volume mount point, or GUID-based volume name.<br />-   If **-itemtype** is **App**, you can specify only a single application. To be recovered, the application must have registered with Windows Server Backup. You can also use the value **ADIFM** to recover an installation of Active Directory. See Remarks in for more information.<br />-   If **-itemtype** is **File**, you can specify files or folders, but they should be part of the same volume and they should be under the same parent folder.|
+|-items|Specifies a comma-delimited list of volumes, applications, files, or folders to recover.<br /><br />-   If **-itemtype** is **Volume**, you can specify only a single volume by providing the volume drive letter, volume mount point, or GUID-based volume name.<br />-   If **-itemtype** is **App**, you can specify only a single application. To be recovered, the application must have registered with Windows Server Backup. You can also use the value **ADIFM** to recover an installation of Active Directory. See Remarks in for more information.<br />-   If **-itemtype** is **File**, you can specify files or folders, but they should be part of the same volume and they should be under the same parent folder.|
 |-itemtype|Specifies type of items to recover. Must be **Volume**, **App**, or **File**.|
 |-backupTarget|Specifies the storage location that contains the backup that you want to recover. This parameter is useful when the location is different from where backups of this computer are usually stored.|
 |-machine|Specifies the name of the computer that you want to recover the backup for. This parameter is useful when multiple computers have been backed up to the same location. It should be used when the **-backupTarget** parameter is specified.|

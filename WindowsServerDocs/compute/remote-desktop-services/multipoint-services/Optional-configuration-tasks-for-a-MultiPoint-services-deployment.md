@@ -1,5 +1,6 @@
 ---
 title: Optional configuration tasks for a MultiPoint Services deployment
+description: Navigational topic for MultiPoint Services configuration information
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

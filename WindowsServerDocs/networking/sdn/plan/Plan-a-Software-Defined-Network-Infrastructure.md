@@ -121,7 +121,7 @@ BGP peering is typically configured in a managed switch or router as part of the
   
 You or your network administrator must configure the BGP router peer to accept connections from the ASN and IP address or subnet address of the Transit logical network that your HNV gateway and SLB/MUXes are using.  
   
-For more information, see [Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol--BGP-.md).  
+For more information, see [Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol-BGP.md).  
   
 ## Default gateways  
 Machines that are configured to connect to multiple networks, such as the physical hosts and gateway virtual machines must only have one default gateway configured.  The default gateway will typically be configured on the adapter used to reach all the way to the Internet.  

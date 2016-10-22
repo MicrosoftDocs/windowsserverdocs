@@ -1,6 +1,6 @@
 ---
 title: Fsutil volume
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil volume
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,17 +27,17 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ```  
 fsutil volume [diskfree] <VolumePath>  
 fsutil volume [dismount] <VolumePath>  
-fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …  
+fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>]      
 ```  
   
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |diskfree|Queries the hard disk drive to determine the amount of free space on it.|  
 |dismount|Dismounts a volume.|  
 |<VolumePath>|Specifies the drive letter \(followed by a colon\).|  
-|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
+|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
 |<cluster>|Specifies the logical cluster number \(LCN\).|  
   
 ## <a name="BKMK_examples"></a>Examples  

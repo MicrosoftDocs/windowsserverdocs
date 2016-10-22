@@ -1,6 +1,6 @@
 ---
 title: Ktpass
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ktpass
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Configures the server principal name for the host or service in Active Directory Domain Services (AD DS) and generates a .keytab file that contains the shared secret key of the service. The .keytab file is based on the Massachusetts Institute of Technology (MIT) implementation of the Kerberos authentication protocol. The Ktpass command-line tool allows non-Windows services that support Kerberos authentication to use the interoperability features provided by the Kerberos Key Distribution Center (KDC) service. This topic applies to the operating system versions designated in the **Applies To** list at the beginning of the topic.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
 ## Syntax  
 ```  
 ktpass  
@@ -41,7 +40,7 @@ ktpass
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/out <FileName>|Specifies the name of the Kerberos version 5 .keytab file to generate. **Note:** This is the .keytab file that you transfer to a computer that is not running the Windows operating system, and then replace or merge with your existing .keytab file, /Etc/Krb5.keytab.|  
 |/princ <PrincipalName>|Specifies the principal name in the form host/computer.contoso.com@CONTOSO.COM. **Warning:** This parameter is case sensitive. See [Remarks](#BKMK_remarks) for more information.|  
 |/mapuser <UserAccount>|Maps the name of the Kerberos principal, which is specified by the **princ** parameter, to the specified domain account.|  

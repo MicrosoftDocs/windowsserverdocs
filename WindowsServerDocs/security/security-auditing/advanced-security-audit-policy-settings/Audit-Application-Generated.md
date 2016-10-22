@@ -35,7 +35,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4665|An attempt was made to create an application client context.|
 |4666|An application attempted an operation:|
 |4667|An application client context was deleted.|

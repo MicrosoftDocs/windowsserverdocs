@@ -53,7 +53,7 @@ You can use AppLocker as part of your overall security strategy for the followin
 The three AppLocker enforcement modes are described in the following table. The enforcement mode settings that are defined here can be overwritten by a setting that is derived from a linked Group Policy Object (GPO) with a higher precedence.
 
 |Enforcement mode|Description|
-|--------------------|---------------|
+|----------|--------|
 |**Not configured**|This is the default setting, which means that the rules defined here will be enforced unless a linked GPO with a higher precedence has a different value for this setting.|
 |**Enforce rules**|Rules are enforced.|
 |**Audit only**|Rules are audited but not enforced. When a user runs an application that is affected by an AppLocker rule, the application is allowed to run, and the information about the application is added to the AppLocker event log. The Audit-only enforcement mode helps you determine which applications will be affected by the policy before the policy is enforced. When the AppLocker policy for a rule collection is set to **Audit only**, rules for that rule collection are not enforced.|
@@ -66,7 +66,7 @@ For information about GPOs and Group Policy inheritance, see the [Group Policy P
 The AppLocker user interface is accessed through the Microsoft Management Console (MMC), and it is organized into rule collections, which are Executable files, Scripts, Windows Installer files, Packaged apps, Packaged app installers and DLL files. These collections give the administrator an easy way to differentiate the rules for different types of applications. The following table lists the file formats that are included in each rule collection.
 
 |Rule collection|Associated file formats|
-|-------------------|---------------------------|
+|----------|--------------|
 |Executable files|.exe<br /><br />.com|
 |Scripts|.ps1<br /><br />.bat<br /><br />.cmd<br /><br />.vbs<br /><br />.js|
 |Windows Installer files|.msi<br /><br />.msp<br /><br />.mst|
@@ -113,8 +113,8 @@ The **File version** and **Package version** control whether a user can run a sp
 
 The following table describes how a Publisher condition is applied.
 
-|Option|The publisher condition allows or denies…|
-|----------|---------------------------------------------|
+|Option|The publisher condition allows or denies???|
+|-----|-----------------------|
 |**All signed files**|All files that are signed by a publisher.|
 |**Publisher only**|All files that are signed by the named publisher.|
 |**Publisher and product name**|All files for the specified product that are signed by the named publisher.|
@@ -132,7 +132,7 @@ AppLocker uses custom path variables for well-known paths, such as **Program Fil
 The following table details these path variables.
 
 |Windows directory or disk|AppLocker path variable|Windows environment variable|
-|-----------------------------|---------------------------|--------------------------------|
+|---------------|--------------|----------------|
 |Windows|%WINDIR%|%SystemRoot%|
 |System32|%SYSTEM32%|%SystemDirectory%|
 |Windows installation directory|%OSDRIVE%|%SystemDrive%|
@@ -259,7 +259,7 @@ You can create rules by using two AppLocker wizards:
 The following table lists and describes resources for you to manage security policies using AppLocker.
 
 |Resource|Windows Server 2008 R2 and Windows 7| Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1 and Windows 8|
-|------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------|--------------------|---------------------------------------------------------------------------------------------------------------------------|
 |Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step-by-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step-by-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|
 |Procedures|[AppLocker Operations Guide](http://technet.microsoft.com/library/ee791916(WS.10).aspx)|[Administer AppLocker](../manage/Administer-AppLocker.md)<br /><br />[Manage Packaged Apps with AppLocker](../manage/Manage-Packaged-Apps-with-AppLocker.md)|
 |Scripting|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|

@@ -1,6 +1,6 @@
 ---
 title: PVLAN configuration on a virtual switch must be consistent
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

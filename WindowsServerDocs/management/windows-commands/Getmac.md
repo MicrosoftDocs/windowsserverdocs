@@ -1,6 +1,6 @@
 ---
 title: Getmac
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Getmac
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ getmac[.exe][/s <Computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | LIS
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by User or Domain\User. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|

@@ -1,6 +1,6 @@
 ---
 title: DiskRAID
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # DiskRAID
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -83,9 +82,9 @@ Specifies that any failures that occur while performing this operation will be i
 Sets the specified list of controller ports as active for the currently selected LUN (other controller ports are made inactive), or adds the specified controller ports to the list of existing active controller ports for the currently selected LUN, or associates the specified iSCSI target for the currently selected LUN.
 ##### Syntax
 ```
-associate controllers [add] <n>[,<n> [,…]]
-associate ports [add] <n-m>[,<n-m>[,…]]
-associate targets [add] <n>[,<n> [,…]]
+associate controllers [add] <n>[,<n> [, ]]
+associate ports [add] <n-m>[,<n-m>[, ]]
+associate targets [add] <n>[,<n> [, ]]
 ```
 ##### Parameters
 **controllers**
@@ -102,7 +101,7 @@ For VDS 1.1 providers, adds the specified controller ports to the existing list 
 ```
 For use with the **controllers** or **targets** parameter. Specifies the numbers of the controllers or iSCSI targets to set to active or associate.
 ```
-<n-m>[,<n-m>[,…]]
+<n-m>[,<n-m>[, ]]
 ```
 For use with the **ports** parameter. Specifies the controller ports to set active using a controller number (*n*) and port number (*m*) pair.
 ##### Example
@@ -133,7 +132,7 @@ Applies the current flags to the selected LUN.
 <flag>
 Flags are identified by three-letter acronyms.
 |Flag|Description|
-|--------|---------------|
+|----|--------|
 |FCR|Fast Crash Recovery Required|
 |FTL|Fault Tolerant|
 |MSR|Mostly Reads|
@@ -307,8 +306,8 @@ Sets specified list of controller ports as inactive for the currently selected L
 ##### Syntax
 ```
 dissociate controllers <n> [,<n> [,...]]
-dissociate ports <n-m>[,<n-m>[,…]]
-dissociate targets <n> [,<n> [,…]]
+dissociate ports <n-m>[,<n-m>[, ]]
+dissociate targets <n> [,<n> [, ]]
 ```
 ##### Parameter
 **controllers**
@@ -318,11 +317,11 @@ For use with VDS 1.1 providers only. Removes controller ports from the list of c
 **targets**
 For use with VDS 1.1 providers only. Removes targets from the list of iSCSI targets that are associated with the currently selected LUN.
 ```
-<n> [,<n> [,…]]
+<n> [,<n> [, ]]
 ```
 For use with the **controllers** or **targets** parameter. Specifies the numbers of the controllers or iSCSI targets to set as inactive or dissociate.
 ```
-<n-m>[,<n-m>[,…]]
+<n-m>[,<n-m>[, ]]
 ```
 For use with the **ports** parameter. Specifies the controller ports to set as inactive by using a controller number (*n*) and port number (*m*) pair.
 ##### Example
@@ -404,8 +403,8 @@ invalidatecache controller
 Sets the load balance policy on the currently selected LUN.
 ##### Syntax
 ```
-lbpolicy set lun type=<type> [paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,…]]]
-lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,…]]
+lbpolicy set lun type=<type> [paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[, ]]]
+lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[, ]]
 ```
 ##### Parameters
 **type**
@@ -418,7 +417,7 @@ Specifies the load balance policy. If the type is not specified, then the **path
 **LEASTBLOCKS**: Uses the path with the least blocks.
 **VENDORSPECIFIC**: Uses a vendor-specific policy.
 **paths**
-Specifies whether a path is **primary** or has a particular <weight>. Any paths not specified are implicitly set as backup. Any paths listed must be one of the currently selected LUN’s paths.
+Specifies whether a path is **primary** or has a particular <weight>. Any paths not specified are implicitly set as backup. Any paths listed must be one of the currently selected LUN s paths.
 #### <a name="BKMK_19"></a>list
 Displays a list of objects of the specified type.
 ##### Syntax
@@ -454,7 +453,7 @@ Lists summary information about all iSCSI target portal groups in the currently 
 Logs the specified iSCSI initiator adapter into the currently selected iSCSI target.
 ##### Syntax
 ```
-login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none | oneway | mutual}] [iportal=<iportal>] [tportal=<tportal>] [<flag> [<flag> […]]]
+login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none | oneway | mutual}] [iportal=<iportal>] [tportal=<tportal>] [<flag> [<flag> [ ]]]
 ```
 ##### Parameters
 **type**
@@ -659,7 +658,7 @@ Changes the status of the paths to the currently selected host bus adapter (HBA)
 Makes the currently selected LUNs accessible from the specified hosts.
 ##### Syntax
 ```
-unmask LUN {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [;…]] | [add] initiator=<initiator>[;<initiator>[;…]]} [uninstall]
+unmask LUN {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [; ]] | [add] initiator=<initiator>[;<initiator>[; ]]} [uninstall]
 ```
 ##### Parameters
 **all**
@@ -673,7 +672,7 @@ Specifies that the LUN should not be accessible to any host.
 **add**
 Specifies that the hosts specified must be added to the existing list of hosts that this LUN is accessible from. If this parameter is not specified, the list of hosts supplied replaces the existing list of hosts that this LUN is accessible from.
 **WWN=**
-Specifies a list of hexadecimal numbers representing world-wide names from which the LUN or hosts should be made accessible. To mask/unmask to a specific set of hosts in a Fibre Channel subsystem, you can type a semicolon-separated list of WWN’s for the ports on the host machines of interest.
+Specifies a list of hexadecimal numbers representing world-wide names from which the LUN or hosts should be made accessible. To mask/unmask to a specific set of hosts in a Fibre Channel subsystem, you can type a semicolon-separated list of WWN s for the ports on the host machines of interest.
 **initiator=**
 Specifies a list of iSCSI initiators to which the currently selected LUN should be made accessible. To mask/unmask to a specific set of hosts in an iSCSI subsystem, you can type a semicolon-separated list of iSCSI initiator names for the initiators on the host computers of interest.
 **uninstall**
@@ -686,7 +685,7 @@ diskraid /s <script.txt>
 By default, DiskRAID stops processing commands and returns an error code if there is a problem in the script. To continue running the script and ignore errors, include the NOERR parameter on the command. This permits such useful practices as using a single script to delete all the LUNs in a subsystem regardless of the total number of LUNs. Not all commands support the NOERR parameter. Errors are always returned on command-syntax errors, regardless of whether you included the NOERR parameter,
 #### DiskRAID error codes
 |Error Code|Error Description|
-|--------------|---------------------|
+|-------|-----------|
 |0|No error occurred. The entire script ran without failure.|
 |1|A fatal exception occurred.|
 |2|The arguments specified on a DiskRAID command line were incorrect.|
@@ -701,7 +700,7 @@ diskraid
 Press ENTER. The following is displayed:
 ```
 Microsoft Diskraid version 5.2.xxxx
-Copyright (©) 2003 Microsoft Corporation
+Copyright ( ) 2003 Microsoft Corporation
 On computer: COMPUTER_NAME
 ```
 To select subsystem 0, type the following at the DiskRAID prompt:
@@ -713,7 +712,7 @@ Press ENTER. Output similar to the following is displayed:
 Subsystem 0 is now the selected subsystem.
 DISKRAID> list drives
   Drive ###  Status      Health          Size      Free    Bus  Slot  Flags
-  ---------  ----------  ------------  --------  --------  ---  ----  -----
+  -----  -----  ------  ----  ----  --  --  ---
   Drive 0    Online      Healthy         107 GB    107 GB    0     1
   Drive 1    Offline     Healthy          29 GB     29 GB    1     0
   Drive 2    Online      Healthy         107 GB    107 GB    0     2

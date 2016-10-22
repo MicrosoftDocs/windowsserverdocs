@@ -1,6 +1,6 @@
 ---
 title: Recover
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Recover
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ recover [<Drive>:][<Path>]<FileName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:][<Path>]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
 |/?|Displays help at the command prompt.|
 ## Remarks

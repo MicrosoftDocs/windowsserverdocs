@@ -1,6 +1,6 @@
 ---
 title: Fsutil fsinfo
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil fsinfo
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,7 +35,7 @@ fsutil fsinfo [volumeinfo] <RootPath>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |drives|Lists all drives in the computer.|  
 |drivetype|Queries a drive and lists its type, for example CD\-ROM drive.|  
 |ntfsinfo|Lists NTFS specific volume information for the specified volume, such as the number of sectors, total clusters, free clusters, and the start and end of the MFT Zone.|  

@@ -1,6 +1,6 @@
 ---
 title: Icacls
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Icacls
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<FileName>|Specifies the file for which to display DACLs.|  
 |<Directory>|Specifies the directory for which to display DACLs.|  
 |/t|Performs the operation on all specified files in the current directory and its subdirectories.|  

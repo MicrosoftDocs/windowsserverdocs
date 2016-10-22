@@ -1,5 +1,6 @@
 ---
 title: Manage Virtual Desktops
+description: Learn how to manage virtual desktops (VDI) in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

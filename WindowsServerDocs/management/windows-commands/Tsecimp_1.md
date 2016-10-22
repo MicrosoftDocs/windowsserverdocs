@@ -1,6 +1,6 @@
 ---
 title: Tsecimp_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tsecimp_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ tsecimp /d
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/f <Filename>|Required. Specifies the name of the XML file that contains the assignment information that you want to import.|  
 |/v|Validates the structure of the XML file without importing the information into the Tsec.ini file.|  
 |/u|Checks whether each user is a member of the domain specified in the XML file. The computer on which you use this parameter must be connected to the network. This parameter might significantly slow performance if you are processing a large amount of user assignment information.|  

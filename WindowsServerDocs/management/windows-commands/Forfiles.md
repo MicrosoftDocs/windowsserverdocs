@@ -1,6 +1,6 @@
 ---
 title: Forfiles
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Forfiles
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,19 +26,19 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/p <Path>|Specifies the path from which to start the search. By default, searching starts in the current working directory.|
 |/m <SearchMask>|Searches files according to the specified search mask. The default search mask is **\*.\***.|
 |/s|Instructs the **forfiles** command to search into subdirectories recursively.|
 |/c "<Command>"|Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is **"cmd /c echo @file"**.|
-|/d [{+&#124;-}][{<Date>&#124;<Days>}]|Selects files with a last modified date within the specified time frame.<br /><br />-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.<br />-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.<br />-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.|
+|/d [{+&#124;-}][{<Date>&#124;<Days>}]|Selects files with a last modified date within the specified time frame.<br /><br />-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.<br />-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.<br />-   Valid values for *Days* include any number in the range 0 32,768. If no sign is specified, **+** is used by default.|
 |/?|Displays help at the command prompt.|
 ## Remarks
 -   **Forfiles** is most commonly used in batch files.
 -   **Forfiles /s** is similar to **dir /s.**
 -   You can use the following variables in the command string as specified by the **/c** command-line option.
     |Variable|Description|
-    |------------|---------------|
+    |------|--------|
     |@FILE|File name.|
     |@FNAME|File name without extension.|
     |@EXT|File name extension.|

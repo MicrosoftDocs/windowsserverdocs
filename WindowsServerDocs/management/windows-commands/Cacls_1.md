@@ -1,6 +1,6 @@
 ---
 title: Cacls_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Cacls_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<filename>|Required. Displays ACLs of specified files.|  
 |/t|Changes ACLs of specified files in the current directory and all subdirectories.|  
 |/m|Changes ACLs of volumes mounted to a directory.|  
@@ -43,7 +42,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 -   This command has been deprecated. Please use [Icacls](Icacls.md) instead.  
 -   Use the following table to interpret the results:  
     |Output|Access control entry (ACE) applies to|  
-    |----------|-------------------------------------------|  
+    |-----|----------------------|  
     |OI|Object inherit. This folder and files.|  
     |CI|Container inherit. This folder and subfolders.|  
     |IO|Inherit only. The ACE does not apply to the current file/directory.|  

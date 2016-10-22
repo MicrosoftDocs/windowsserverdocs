@@ -1,6 +1,6 @@
 ---
 title: Logoff
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Logoff
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,14 +21,14 @@ ms.date: 10/12/2016
 Logs off a user from a session on a Remote Desktop Session Host (RD Session Host) server and deletes the session from the server.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<SessionName>|Specifies the name of the session.|
 |<SessionID>|Specifies the numeric ID which identifies the session to the server.|
 |/server:<ServerName>|Specifies the RD Session Host server that contains the session whose user you want to log off. If unspecified, the server on which you are currently active is used.|
@@ -56,4 +55,4 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
     ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)

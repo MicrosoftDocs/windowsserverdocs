@@ -1,6 +1,6 @@
 ---
 title: Format
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Format
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Formats the partition or volume with focus for use with Windows.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   
@@ -32,7 +31,7 @@ format [{fs=<ntfs|fat|fat32>] [revision=<x.xx>] | recommended}] [label=<label>] 
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |fs\=<ntfs&#124;fat&#124;fat32&#124;UDF>|Specifies the type of file system. If no file system is specified, the default file system is used. To view the default file system, run the **filesystems** command in DiskPart.|  
 |revision\=<x.xx>|Specifies the file system revision \(if applicable\).|  
 |recommended|If a recommended file system exists, DiskPart will use that file system and revision instead of the default file system and revision. To view the recommended file system \(if one exists\), run the **filesystems** command in DiskPart.|  

@@ -1,6 +1,6 @@
 ---
 title: Wbadmin start systemstaterecovery
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin start systemstaterecovery
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -50,7 +49,7 @@ wbadmin start systemstaterecovery
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-version|Specifies the version identifier for the backup to recover in MM/DD/YYYY-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.|
 |-showsummary|Reports the summary of the last system state recovery (after the restart required to complete the operation). This parameter cannot be accompanied by any other parameters.|
 |-backupTarget|Specifies the storage location that contains the backup or backups you want to recover. This parameter is useful when the storage location is different from where the backups of this computer are usually stored.|

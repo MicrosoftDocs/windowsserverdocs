@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin setpriority
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setpriority** - 
+Sets the priority of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setpriority
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +26,7 @@ bitsadmin /SetPriority <Job> <Priority>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Priority|One of the following values:<br /><br />-   FOREGROUND<br />-   HIGH<br />-   NORMAL<br />-   LOW|
 ## <a name="BKMK_examples"></a>Examples

@@ -1,6 +1,6 @@
 ---
 title: Driverquery
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Driverquery
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ driverquery [/s <System> [/u [<Domain>\]<Username> [/p <Password>]]] [/fo {table
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <System>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
 |/u [<Domain>\\]<Username>|Runs the command with the credentials of the user account as specified by *User* or *Domain*\\*User*. By default, **/s** uses the credentials of the user who is currently logged on to the computer that is issuing the command. **/u** cannot be used unless **/s** is specified.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter. **/p** cannot be used unless **/u** is specified.|

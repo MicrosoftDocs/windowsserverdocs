@@ -134,10 +134,46 @@ If using the Disk Management MMC snapin, you receive this error:
 
 This occurs even if you correctly enable volume resizing using `Set-SRGroup -Name rg01 -AllowVolumeResize $true`.  This issue is caused by a code defect in the RTM version fo Windows Server 2016. A cumulative update packge will be issued to resolve this problem. For more information, email srfeed@microsoft.com. 
 
+## Attempting to move a PDR resource between sites on an asynchronous stretch cluster fails
+When attempting to move a physical disk resource-attached role - such as a file server for general use - in order to move the associated storage in an asynchronous stretch cluster, you receive an error.
+
+If using the Failover Cluster Manager snap-in:
+
+    Error
+    The operation has failed.
+    The action 'Move' did not complete.
+    Error Code: 0x80071398
+    The operation failed because either the specified cluster node is not the owner of the group, or the node is not a possible owner of the group
+    
+If using the Cluster powershell cmdlet:
+
+    PS C:\> Move-ClusterGroup -Name sr-fs-006 -Node sr-srv07
+    Move-ClusterGroup : An error occurred while moving the clustered role 'sr-fs-006'.
+    The operation failed because either the specified cluster node is not the owner of the group, or the node is not a
+    possible owner of the group
+    At line:1 char:1
+    + Move-ClusterGroup -Name sr-fs-006 -Node sr-srv07
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Move-ClusterGroup], ClusterCmdletException
+    + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
+
+This occurs due to a product limitation in Windows Server 2016. As a workaround, use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster. This behavior may change in a later release. 
+
+## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
+When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
+
+    "No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests." 
+
+This does not occur if you have at least three nodes in the cluster. This issue occurs because of a by-design code change in Windows Server 2016 for asymmetric storage clustering behaviors. 
+
+To add the storage, you can run the following command on the node in the second site:
+
+`Get-ClusterAvailableDisk -All | Add-ClusterDisk`
+
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  

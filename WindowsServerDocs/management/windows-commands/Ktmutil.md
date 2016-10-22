@@ -1,6 +1,6 @@
 ---
 title: Ktmutil
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ktmutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,8 +28,8 @@ ktmutil list transactions [{TmGuid}]
 ktmutil resolve complete {TmGuid} {RmGuid} {EnGuid}  
 ktmutil resolve commit {TxGuid}  
 ktmutil resolve rollback {TxGuid}  
-ktmutil force commit {??Guid}  
-ktmutil force rollback {??Guid}  
+ktmutil force commit { Guid}  
+ktmutil force rollback { Guid}  
 ktmutil forget  
 ```  
 ## Parameters  

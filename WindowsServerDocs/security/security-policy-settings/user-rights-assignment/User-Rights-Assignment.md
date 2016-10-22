@@ -29,7 +29,7 @@ For information about setting security policies, see [How to Configure Security 
 The following table links to each security policy setting and provides the constant name for each. Setting descriptions contain reference information, best practices for configuring the policy setting, default values, differences between operating system versions, and considerations for policy management and security.  
   
 |Group Policy Setting|Constant Name|  
-|------------------------|-----------------|  
+|------------|---------|  
 |[Access Credential Manager as a trusted caller](Access-Credential-Manager-as-a-trusted-caller.md)|SeTrustedCredManAccessPrivilege|  
 |[Access this computer from the network](Access-this-computer-from-the-network.md)|SeNetworkLogonRight|  
 |[Act as part of the operating system](Act-as-part-of-the-operating-system.md)|SeTcbPrivilege|  

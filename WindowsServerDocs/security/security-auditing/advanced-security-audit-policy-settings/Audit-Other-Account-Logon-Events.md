@@ -48,7 +48,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of Windows as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4649|A replay attack was detected.|
 |4778|A session was reconnected to a Window Station.|
 |4779|A session was disconnected from a Window Station.|

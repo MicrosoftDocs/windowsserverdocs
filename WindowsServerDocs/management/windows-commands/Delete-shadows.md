@@ -1,6 +1,6 @@
 ---
 title: Delete shadows
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Delete shadows
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <Shad
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |all|Deletes all shadow copies.|  
 |volume <Volume>|Deletes all shadow copies of the given volume.|  
 |oldest <Volume>|Deletes the oldest shadow copy of the given volume.|  

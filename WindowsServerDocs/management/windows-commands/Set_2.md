@@ -1,6 +1,6 @@
 ---
 title: Set_2
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Set_2
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ set metadata <MetaData.cab>
 ## Set sub\-commands  
   
 |Sub\-command|Description|  
-|----------------|---------------|  
+|--------|--------|  
 |context|Sets the context for shadow copy creation. See [Set context](Set-context.md) for syntax and parameters.|  
 |option|Sets options for shadow copy creation. See [Set option](Set-option.md) for syntax and parameters.|  
 |verbose|Turns the verbose output mode on or off. See [Set verbose](Set-verbose.md) for syntax and parameters.|  

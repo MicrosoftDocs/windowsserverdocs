@@ -1,6 +1,6 @@
 ---
 title: Dfsrmig
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsrmig
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /Creat
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/SetGlobalState <state>|Sets the desired global migration state for the domain to the state that corresponds to the value specified by *state*.<br /><br />To proceed through the migration or the rollback processes, use this command to cycle through the valid states. This option enables you to initiate and control the migration process by setting the global migration state in AD DS on the PDC emulator. If the PDC emulator is not available, this command fails.<br /><br /> You can only set the global migration state to a stable state. The valid values for *state*, therefore, are **0** for the Start state, **1** for the Prepared state, **2** for the Redirected state, and **3** for the Eliminated state.<br /><br />Migration to the Eliminated state is irreversible and rollback from that state is not possible, so use a value of **3** for *state* only when you are fully committd to using DFS Replication for SYSVOL replication.|
 |/GetGlobalState|Retrieves the current global migration state for the domain from the local copy of the AD DS database, when run on the PDC emulator.<br /><br />Use this option to confirm that you set the correct global migration state. Only stable migration states can be global migration states, so the results that the **dfsrmig** command reports with the **/GetGlobalState** option correspond to the states you can set with the **/SetGlobalState** option.<br /><br />You should run the **dfsrmig** command with the **/GetGlobalState** option only on the PDC emulator. Active Directory replication replicates the global state to the other domain controllers in the domain, but replication latencies can cause inconsistencies if you run the **dfsrmig** command with the **/GetGlobalState** option on a domain controller other than the PDC emulator. To check the local migration status of a domain controller other than the PDC emulator, use the **/GetMigrationState** option instead.|
 |/GetMigrationState|Retrieves the current local migration state for all domain controllers in the domain, and determines whether those local states match the current global migration state.<br /><br />Use this option to determine if all domain controllers have reached the global migration state. The output of the **dsfrmig** command when you use the **/GetMigrationState** option indicates whether or not migration to the current global state is complete, and it lists the local migration state for any domain controllers that have not reached the current global migration state. Local migration state for domain controllers can include transition states for domain controllers that have not reached the current global migration state.|
@@ -57,7 +56,7 @@ dfsrmig /GetGlobalState
 ```
 This example shows typical output from the **dfsrmig /GetGlobalState** command.
 ```
-Current DFSR global state: ‘Prepared’
+Current DFSR global state:  Prepared 
 Succeeded.
 ```
 To display the information about whether the local migration states on all of the domain controllers match the global migration state and the local migration states for any domain controllers where the local state does not match the global state, type:
@@ -66,17 +65,17 @@ dfsrmig /GetMigrationState
 ```
 This example shows typical output from the **dfsrmig /GetMigrationState** command when the local migration states on all of the domain controllers match the global migration state.
 ```
-All Domain Controllers have migrated successfully to Global state (‘Prepared’).
+All Domain Controllers have migrated successfully to Global state ( Prepared ).
 Migration has reached a consistent state on all Domain Controllers.
 Succeeded.
 ```
 This example shows typical output from the **dfsrmig /GetMigrationState** command when the local migration states on some domain controllers do not match the global migration state.
 ```
-The following Domain Controllers are not in sync with Global state (‘Prepared’):
-Domain Controller (Local Migration State) – DC Type
+The following Domain Controllers are not in sync with Global state ( Prepared ):
+Domain Controller (Local Migration State)   DC Type
 =========
-CONTOSO-DC2 (‘Start’) – ReadOnly DC
-CONTOSO-DC3 (‘Preparing’) – Writable DC
+CONTOSO-DC2 ( Start )   ReadOnly DC
+CONTOSO-DC3 ( Preparing )   Writable DC
 Migration has not yet reached a consistent state on all domain controllers
 State information might be stale due to AD latency.
 ```
@@ -103,4 +102,4 @@ dfsrmig /DeleteRoDfsrMember
 ## Additional references
 [Command-Line Syntax Key](http://go.microsoft.com/fwlink/?LinkId=122056)
 
-[SYSVOL Migration Series: Part 2–Dfsrmig.exe: The SYSVOL Migration Tool](http://go.microsoft.com/fwlink/?LinkID=121757)
+[SYSVOL Migration Series: Part 2 Dfsrmig.exe: The SYSVOL Migration Tool](http://go.microsoft.com/fwlink/?LinkID=121757)

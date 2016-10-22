@@ -1,6 +1,6 @@
 ---
 title: Waitfor
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Waitfor
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ waitfor [/t <Timeout>] <SignalName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. This parameter applies to all files and folders specified in the command.|
 |/u [<Domain>\\]<User>|Runs the script using the credentials of the specified user account. By default, **waitfor** uses the current user's credentials.|
 |/p [<Password>]|Specifies the password of the user account that is specified in the **/u** parameter.|

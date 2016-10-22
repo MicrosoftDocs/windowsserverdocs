@@ -24,7 +24,7 @@ AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advanc
 
 The AppLocker Technical Reference contains the following subjects:
 
--   [What Is AppLocker?](What-Is-AppLocker-.md)
+-   [What Is AppLocker?](What-Is-AppLocker.md)
 
     This topic describes what AppLocker is and how its features differ from Software Restriction Policies.
 

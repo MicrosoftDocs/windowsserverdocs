@@ -1,6 +1,6 @@
 ---
 title: Assign
-description: "Windows Commands"
+description: "Windows Commands topic for **Assign** - Assigns a drive letter or mount point to the volume with focus."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,20 +15,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Assign
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Assigns a drive letter or mount point to the volume with focus.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 assign [{letter=<d> | mount=<path>}] [noerr]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |letter=<d>|The drive letter you want to assign to the volume.|
 |mount=<path>|The mount point path you want to assign to the volume.<br /><br />For instructions regarding how to use this command, see [Assign a mount point folder path to a drive](http://go.microsoft.com/fwlink/?LinkId=207059) (http://go.microsoft.com/fwlink/?LinkId=207059).|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|

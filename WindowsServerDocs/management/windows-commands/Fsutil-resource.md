@@ -1,6 +1,6 @@
 ---
 title: Fsutil resource
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil resource
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -48,10 +47,10 @@ fsutil resource [stop] <RmRootPathname>
 ### Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |create|Creates a secondary Transactional Resource Manager.|  
 |<RmRootPathname>|Specifies the full path to a Transactional Resource Manager root directory.|  
-|info|Displays the specified Transactional Resource Manager’s information.|  
+|info|Displays the specified Transactional Resource Manager s information.|  
 |setautoreset|Specifies whether a default Transactional Resource Manager will clean the transactional metadata on the next mount.<br /><br />-   Set the **setautoreset** parameter to **true** to specify that the Transaction Resource Manager will clean the transactional metadata on the next mount, by default.<br />-   Set the **setautoreset** parameter to **false** to specify that the Transaction Resource Manager will not clean the transactional metadata on the next mount, by default.|  
 |<DefaultRmRootPathname>|Specifies the drive name followed by a colon.|  
 |setavailable|Specifies that a Transactional Resource Manager will prefer availability over consistency.|  

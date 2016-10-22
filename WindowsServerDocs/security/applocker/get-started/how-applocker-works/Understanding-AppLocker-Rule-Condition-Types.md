@@ -48,7 +48,7 @@ Selecting the appropriate condition for each rule depends on the overall applica
     -   Create a rule by using a path condition.
 
         > [!NOTE]
-        > To determine how many applications on a reference computer are digitally signed, you can use the **Get-AppLockerFileInformation** Windows PowerShell cmdlet for a directory of files. For example, `Get-AppLockerFileInformation –Directory C:\Windows\ -FileType EXE -recurse` displays the properties for all .exe and .com files within the Windows directory.
+        > To determine how many applications on a reference computer are digitally signed, you can use the **Get-AppLockerFileInformation** Windows PowerShell cmdlet for a directory of files. For example, `Get-AppLockerFileInformation ???Directory C:\Windows\ -FileType EXE -recurse` displays the properties for all .exe and .com files within the Windows directory.
 
 2.  What rule condition type does your organization prefer?
 

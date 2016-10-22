@@ -1,6 +1,6 @@
 ---
 title: Call
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Call
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:][<Path>]<FileName>|Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension.|
 |<BatchParameters>|Specifies any command-line information required by the batch program.|
 |:<Label>|Specifies the label that you want a batch program control to jump to.|
@@ -40,7 +39,7 @@ The batch script argument references (**%0**, **%1**, ...) are listed in the fol
 **%\*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
 You can use the following optional syntaxes as substitutions for batch parameters (**%n**):
 |Batch Parameter|Description|
-|-------------------|---------------|
+|----------|--------|
 |%~1|Expands **%1** and removes surrounding quotation marks (" ").|
 |%~f1|Expands **%1** to a fully qualified path.|
 |%~d1|Expands **%1** to a drive letter only.|
@@ -54,7 +53,7 @@ You can use the following optional syntaxes as substitutions for batch parameter
 |%~$PATH:1|Searches the directories listed in the PATH environment variable, and expands **%1** to the fully qualified name of the first directory found. If the environment variable name is not defined or the file is not found by the search, then this modifier expands to the empty string.|
 The following table shows how you can combine modifiers with the batch parameters for compound results:
 |Batch Parameter with Modifier|Description|
-|---------------------------------|---------------|
+|-----------------|--------|
 |%~dp1|Expands **%1** to a drive letter and path only.|
 |%~nx1|Expands **%1** to a file name and extension only.|
 |%~dp$PATH:1|Searches the directories listed in the PATH environment variable for **%1**, and then expands to the drive letter and path of the first directory found.|

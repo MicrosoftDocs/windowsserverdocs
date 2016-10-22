@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Configure Remote Management in Server Manager
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ You can use Server Manager to manage remote servers that are running older relea
 To manage servers that are running Windows Server releases older than Windows Server 2016, install the following software and updates to make the older releases of Windows Server manageable by using Server Manager in Windows Server 2016.
 
 |Operating System|Required Software|Manageability|
-|--------------------|---------------------|-----------------|
+|----------|-----------|---------|
 | Windows Server 2012 R2  or  Windows Server 2012 |-   [.NET Framework 4.6](http://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=395058). The Windows Management Framework 5.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2012 R2 ,  Windows Server 2012 , and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) is no longer necessary on servers that are running  Windows Server 2012 R2  or  Windows Server 2012 .||
 | Windows Server 2008 R2 |-   [.NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881). The Windows Management Framework 4.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 R2 .||
 | Windows Server 2008 |-   [.NET Framework 4](http://www.microsoft.com/download/en/details.aspx?id=17718)<br />-   [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  have a manageability status of **Not accessible - Verify earlier versions run Windows Management Framework 3.0**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 .||

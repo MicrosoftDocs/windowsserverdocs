@@ -1,6 +1,6 @@
 ---
 title: Using the get-Device Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-Device Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,9 +25,9 @@ WDSUTIL /Get-Device {/Device:<Device name> | /ID:<MAC or UUID>} [/Domain:<Domain
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/Device:<Device name>|Specifies the name of the computer (SAMAccountName).|
-|/ID:<MAC or UUID>|Specifies either the MAC address or the UUID (GUID) of the computer, as shown in the following examples. Note that a valid GUID must be in one of two formats —binary string or GUID string<br /><br />-   **Binary string**: /ID:ACEFA3E81F20694E953EB2DAA1E8B1B6<br />-   **MAC address**: 00B056882FDC (no dashes) or 00-B0-56-88-2F-DC (with dashes)<br />-   **GUID string**: /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6|
+|/ID:<MAC or UUID>|Specifies either the MAC address or the UUID (GUID) of the computer, as shown in the following examples. Note that a valid GUID must be in one of two formats  binary string or GUID string<br /><br />-   **Binary string**: /ID:ACEFA3E81F20694E953EB2DAA1E8B1B6<br />-   **MAC address**: 00B056882FDC (no dashes) or 00-B0-56-88-2F-DC (with dashes)<br />-   **GUID string**: /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6|
 |[/Domain:<Domain>]|Specifies the domain to be searched for the prestaged computer. The default value for this parameter is the local domain.|
 |[/Forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should search the entire forest or the local domain. The default value is **No**, meaning that only the local domain will be searched.|
 ## <a name="BKMK_examples"></a>Examples
@@ -46,6 +45,6 @@ WDSUTIL /Verbose /Get-Device /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6 /Forest:Yes
 ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Subcommand: set-Device](Subcommand--set-Device.md)
+[Subcommand: set-Device](Subcommand-set-Device.md)
 [Using the add-Device command](Using-the-add-Device-command.md)
 [Using the get-AllDevices Command](Using-the-get-AllDevices-Command.md)

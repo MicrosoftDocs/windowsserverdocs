@@ -1,5 +1,6 @@
 ---
 title: System administration in MultiPoint Services
+description: Navigational topic for administration information for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

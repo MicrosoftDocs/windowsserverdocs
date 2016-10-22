@@ -7,12 +7,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Server Performance Advisor User's Guide
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This user’s guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how you can use SPA to help them identify performance bottlenecks in their systems for various server roles.
+This user s guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how you can use SPA to help them identify performance bottlenecks in their systems for various server roles.
 
 SPA can help you with the following things:
 
@@ -22,36 +21,36 @@ SPA can help you with the following things:
 
 -   Provides recommendations based on the data that it collects from the server and by applying rules which capture best practices.
 
-**Note**  
+**Note**
 The SPA Console does not make any changes to the servers.
 
- 
+ 
 
 This guide can be used to run analysis on the following versions of Windows Server:
 
--   Windows Server 2012 R2
+-   Windows Server 2012 R2
 
--   Windows Server 2012
+-   Windows Server 2012
 
--   Windows Server 2008 R2
+-   Windows Server 2008 R2
 
--   Windows Server 2008
+-   Windows Server 2008
 
 However, you can run the SPA console on any of the following:
 
--   Windows 8.1
+-   Windows 8.1
 
--   Windows 8
+-   Windows 8
 
--   Windows 7
+-   Windows 7
 
--   Windows Server 2012 R2
+-   Windows Server 2012 R2
 
--   Windows Server 2012
+-   Windows Server 2012
 
--   Windows Server 2008 R2
+-   Windows Server 2008 R2
 
--   Windows Server 2008
+-   Windows Server 2008
 
 For more info about developing SPA Advisor Packs, see [Server Performance Advisor Pack Development Guide](server-performance-advisor-pack-development-guide.md).
 
@@ -62,17 +61,17 @@ This section explains the history of SPA, describes its target audience and scen
 
 ### History of SPA
 
-The original version of Microsoft Server Performance Advisor (SPA) was released in 2005-2006. It primarily targeted Windows Server 2003, including the core operating system and server roles such as Internet Information Services (IIS) and Active Directory. The goal of the tool is to help you assess your server performance and troubleshoot server performance issues.
+The original version of Microsoft Server Performance Advisor (SPA) was released in 2005-2006. It primarily targeted Windows Server 2003, including the core operating system and server roles such as Internet Information Services (IIS) and Active Directory. The goal of the tool is to help you assess your server performance and troubleshoot server performance issues.
 
 SPA provides data reports and recommendations to system administrators about common configuration and performance issues. SPA gathers performance-related data from various sources on servers, for example, performance counters, registry keys, WMI queries, configuration files, and Event Tracing for Windows (ETW). Based on the server performance data that it collects, SPA can provide an in-depth look at the current server performance situation and issue recommendations about what can be improved.
 
 There have been more than one million downloads of the original SPA tool, and it helped many system administrators manage the performance of their servers. It has been a very successful performance troubleshooting tool.
 
-Since the release of the original SPA, there are several major changes in the server performance world. Most notably, the release of Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008, with new versions of corresponding server roles such as Internet Information Services (IIS) 8.5. Newer versions of Server Performance Advisor extend the capability of the original SPA to the recent server operating systems and server roles.
+Since the release of the original SPA, there are several major changes in the server performance world. Most notably, the release of Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008, with new versions of corresponding server roles such as Internet Information Services (IIS) 8.5. Newer versions of Server Performance Advisor extend the capability of the original SPA to the recent server operating systems and server roles.
 
 Although SPA 3.1 shares the same design goals and performance analysis paradigm as the original tool, it has been rewritten with the latest technology. It also has the following key improvements:
 
--   Can perform analysis against servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.
+-   Can perform analysis against servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.
 
 -   Supports remote analysis capability, which allows SPA 3.1 to collect and analyze data from a central console, with no need to install code on the servers to be analyzed.
 
@@ -102,11 +101,11 @@ The SPA tool is primarily designed for system administrators who manage fewer th
 
 SPA offers recommendations to help you solve performance problems; however, it is based on assumptions that may not be applicable to your specific server environment. The recommendations that are offered through SPA should be considered suggestions. We expect that SPA users have a good understanding of their system configuration, use cases, and the impact of system tuning on the overall system behavior. System administrators should decide if the SPA recommendations should be applied to their environment.
 
-### <a href="" id="what-s-new-in-spa-3-1-"></a>What’s new in SPA 3.1?
+### <a href="" id="what-s-new-in-spa-3-1-"></a>What s new in SPA 3.1?
 
 The following features and enhancements were added in SPA 3.1:
 
--   Active Directory Advisor Pack helps analyze the general performance of the server’s Active Directory Domain Services server role.
+-   Active Directory Advisor Pack helps analyze the general performance of the server s Active Directory Domain Services server role.
 
 -   Support for developers to add lost ETW event notifications alert in the advisor packs and making the alert visible when a report has been generated and events were lost due to high frequency logging on a slow or heavily contended disk
 
@@ -122,12 +121,12 @@ The following are the target scenarios for SPA:
 
     You can use SPA as a performance troubleshooting tool. It provides the ability to collect high-level performance data, it performs a thorough post processing on the data to give you a better understanding of their overall system behavior, and it flags any anomalies. When a performance issue is suspected by a customer, you can use SPA to collect and analyze performance data from the server.
 
-    SPA generates a report that you can view. SPA reports provide a notification list that highlights potential issues, and a data section that includes various performance index, configurations, and settings for the server. You can use this report to identify the specific performance issue and use the recommendations to find solutions for the issue. Reports can be compared with other reports that were generated at a different time or by a different server. Using this side-by-side comparison, you can determine differences between baseline “normal�? versus “abnormal�? behavior.
+    SPA generates a report that you can view. SPA reports provide a notification list that highlights potential issues, and a data section that includes various performance index, configurations, and settings for the server. You can use this report to identify the specific performance issue and use the recommendations to find solutions for the issue. Reports can be compared with other reports that were generated at a different time or by a different server. Using this side-by-side comparison, you can determine differences between baseline  normal  versus  abnormal  behavior.
 
-    **Note**  
-    SPA is not designed to be a debugging or metering tool. Furthermore, from the perspective of the servers, it can be considered a read-only tool, and it does not modify the servers’ configurations.
+    **Note**
+    SPA is not designed to be a debugging or metering tool. Furthermore, from the perspective of the servers, it can be considered a read-only tool, and it does not modify the servers  configurations.
 
-     
+     
 
 -   **Performance index monitoring**
 
@@ -143,21 +142,21 @@ The SPA console user interfaces and interactions are built as part of the SPACon
 
 The SPA console can run on the following operating systems:
 
--   Windows 8.1
+-   Windows 8.1
 
--   Windows 8
+-   Windows 8
 
--   Windows 7
+-   Windows 7
 
--   Windows Server 2012 R2
+-   Windows Server 2012 R2
 
--   Windows Server 2012
+-   Windows Server 2012
 
--   Windows Server 2008 R2
+-   Windows Server 2008 R2
 
--   Windows Server 2008
+-   Windows Server 2008
 
-In a typical business application, there are three tiers: the presentation layer, the business logic layer, and the storage layer. SPA is designed as a two tier product—the console and the database. The console serves as a presentation layer with certain process-related logic included, and the database serves as the storage layer and the business logic layer. The console captures user input, and it controls the steps for data collection, data processing, and report generation. SPA does not depend on Windows system services.
+In a typical business application, there are three tiers: the presentation layer, the business logic layer, and the storage layer. SPA is designed as a two tier product the console and the database. The console serves as a presentation layer with certain process-related logic included, and the database serves as the storage layer and the business logic layer. The console captures user input, and it controls the steps for data collection, data processing, and report generation. SPA does not depend on Windows system services.
 
 The following diagram shows the high-level architecture of the SPA system. The process is:
 
@@ -180,22 +179,22 @@ The following diagram shows the high-level architecture of the SPA system. The p
 
 ### Requirements
 
-The SPA console can be installed on Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008. Running SPA on earlier versions of the Windows Server operating system is not supported. SPA runs on x86 or x64, but it does not support the IA64 or ARM architectures.
+The SPA console can be installed on Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008. Running SPA on earlier versions of the Windows Server operating system is not supported. SPA runs on x86 or x64, but it does not support the IA64 or ARM architectures.
 
-SPA is built on Windows Presentation Foundation (WPF) 2.0, which is part of the Microsoft .NET Framework 4, so .NET Framework 4 is required.
+SPA is built on Windows Presentation Foundation (WPF) 2.0, which is part of the Microsoft .NET Framework 4, so .NET Framework 4 is required.
 
-You also need to install SQL Server 2008 R2 Express on the same computer where SPA is installed. SQL Server 2008 R2 Express is a free database engine that is released by Microsoft. You can download Microsoft SQL Server 2008 R2 Express from the Microsoft Download Center. While we suggest SQL Server 2008 R2 Express, newer versions of SQL Server may also be compatible with SPA.
+You also need to install SQL Server 2008 R2 Express on the same computer where SPA is installed. SQL Server 2008 R2 Express is a free database engine that is released by Microsoft. You can download Microsoft SQL Server 2008 R2 Express from the Microsoft Download Center. While we suggest SQL Server 2008 R2 Express, newer versions of SQL Server may also be compatible with SPA.
 
-**Note**  
-SPA does not include SQL Server or the .NET Framework as part of the SPA installation package. After installing Microsoft SQL Server 2008 R2 and .NET Framework 4.0, we recommend that you run Windows Update before installing SPA.
+**Note**
+SPA does not include SQL Server or the .NET Framework as part of the SPA installation package. After installing Microsoft SQL Server 2008 R2 and .NET Framework 4.0, we recommend that you run Windows Update before installing SPA.
 
- 
+ 
 
 Because users can create and manage databases with SPA, the user account that is used to run SPA should have the same administrator privileges as SQL Server.
 
 ### <a href="" id="bkmk-setupspa"></a>Setting up SPA
 
-SPA is packaged as a .cab file that includes all the binaries for the SPA framework, the Windows PowerShell® cmdlets that are used in advanced scenarios, and the following advisor packs: Core OS, Hyper-V, Active Directory, and IIS. After you extract the .cab file to a folder, no additional installation is required. However, to run SPA, you need to enable data collection from the target servers as follows:
+SPA is packaged as a .cab file that includes all the binaries for the SPA framework, the Windows PowerShell  cmdlets that are used in advanced scenarios, and the following advisor packs: Core OS, Hyper-V, Active Directory, and IIS. After you extract the .cab file to a folder, no additional installation is required. However, to run SPA, you need to enable data collection from the target servers as follows:
 
 -   To run PLA data collection, the user account that you use to run the SPA console must be part of the Administrators security group on the target server. If the target server and the console are in the same domain, the domain user account must be part of the Administrators security group on the target server. If the target server and the console are not in the same domain, create an administrative user account on the target server with the same user name and password as the user account that you use to run the SPA console.
 
@@ -203,10 +202,10 @@ SPA is packaged as a .cab file that includes all the binaries for the SPA framew
 
 -   Make sure that the user account you use to run the SPA console has read and write permissions to the shared folder. PLA will use this account to write logs to the folder, and the SPA console will use the same account to read logs and import them into database.
 
-    **Note**  
+    **Note**
     ETW implements a circular buffer to store the trace and moves them to the shared folder when possible. If the server is busy or the write operation is slow, ETW drops the traces when the buffer is full. It is important that the shared folder is located on a server with fast I/O access. We recommend that each target server has a shared folder to minimize data loss caused by slow file I/O.
 
-     
+     
 
 -   For PLA to access target servers, set the Windows Firewall to allow remote Performance Logs and Alerts access on target servers. PLA uses TCP port 139.
 
@@ -220,14 +219,14 @@ SPA is packaged as a .cab file that includes all the binaries for the SPA framew
 
 -   If the target server is not joined to a domain, enable the following registry setting: **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\system\\LocalAccountTokenFilterPolicy**.
 
-**Note**  
+**Note**
 By default, SPA writes diagnostic logs to the folder where SpaConsole.exe is located. If SPA is installed under the Program Files folder, SPA will only be able to write the log when SpaConsole.exe is ran as an administrator.
 
 If you want to run data analysis against the console computer, you need to run SPA as an administrator. PLA goes through a different code path when running against a local computer, which requires administrator privileges.
 
 If you want to run the IIS SPA Advisor Pack against your servers, you need to enable WMI query and ETW trace for the IIS server. You can do this by enabling **Tracing** under the **Health and Diagnostics** role service and **IIS Management Scripts and Tools** under **Management Tools** of the **Web Server (IIS)** server role.
 
- 
+ 
 
 ### Creating your first project
 
@@ -247,51 +246,51 @@ After everything is set up, you can create your first SPA project. As described 
 
 3.  Click **Next**. The **Create project database** page asks you to provide the name of the Microsoft SQL Server instance where you want to create your database. For example, if it is on the same computer as the console, you can use **localhost\\&lt;your SQL server name&gt;**.
 
-    **Note**  
-    The default instance name for a SQL Server 2008 R2 Express installation will be SQLExpress. For an instance of SQL Server 2008 R2 Express that is installed on the local computer, the database would typically default to **localhost\\SQLExpress**. However, it may have been changed during SQL Server installation, so you need to make sure that you use the right SQL Server instance name.
+    **Note**
+    The default instance name for a SQL Server 2008 R2 Express installation will be SQLExpress. For an instance of SQL Server 2008 R2 Express that is installed on the local computer, the database would typically default to **localhost\\SQLExpress**. However, it may have been changed during SQL Server installation, so you need to make sure that you use the right SQL Server instance name.
 
-     
+     
 
 4.  Provide the database name. Only letters, digits, and underscores (\_) are allowed as valid characters for a database name. A reasonable suggestion for the SPA database name would be **SPA**. If you enter an invalid name, a red error icon appears. The associated tooltip gives the reason for the validation failure.
 
-    **Note**  
+    **Note**
     It is important to remember the database name and the server instance name, because these are the only identifiers for your project. You need to provide this information if you want to switch to this database.
 
-     
+     
 
 5.  After you provide the server instance name and database name, the First Time Use Wizard generates the location for the database file.
 
 6.  On the **Create project database** page, click **Next**. The First Time Use Wizard will try to create a database and generate all SPA-related database schema, functions, and stored procedures in the database. This step could take several seconds depending on the hardware and network speed.
 
-    **Note**  
+    **Note**
     If this step fails, an error message appears. Some of the common issues are: Console cannot connect to the SQL Server instance, insufficient privileges to create database, or the database name already exists.
 
-     
+     
 
 7.  When the previous step succeeds, you will see the **Provision advisor pack** page. It lists all the advisor packs that are available on your computer. SPA automatically scans the folder named **APs** under the SPA root directory. It lists the full name, version, and author for each advisor pack.
 
-    **Note**  
+    **Note**
     For more info about how the full name and version are used in SPA, see [Managing advisor packs](#bkmk-manageadvisorpacks)
 
-     
+     
 
 8.  Choose which advisor packs you want to provision in the project database, and then click **Next**. Or you can click **Skip** to move to the next step without provisioning any advisor packs.
 
-    **Note**  
+    **Note**
     You can provision advisor packs any time you are using the tool. For more information, see [Managing advisor packs](#bkmk-manageadvisorpacks).
 
-     
+     
 
 9.  On the **Add servers** page, for each server to be added to the target server list, there are two mandatory fields to fill: **Name of the server** and **File Share Location**.
 
-    **Note**  
+    **Note**
     There is also a **Remark** field, which is primarily used to classify or find the server. In instances where you have many servers, you can import a comma separated value (.csv) file which contains the server name, result folder, and optional remark field. The **Remark** field is used to describe the server and the term can be used to filter servers for data collection. If you are initializing the servers through the .csv file, a parsing error within the file will not load the servers.
 
-     
+     
 
 10. Several configurations need to be set to enable PLA data collection, as described in [Setting up SPA](#bkmk-setupspa). The **Add server** page provides a test configuration capability to help you troubleshoot configuration issues. Select the check box associated with the computer, and then click **Test Connectivity**. SPA tries to generate a data collector set on target servers, and it tries import the results back to the database. If everything is correct, the **Status** shows **Pass**. If it fails, a tooltip appears that describes the reason for the failure.
 
-11. Each of the servers is automatically added to the database—even if it does not pass the configuration test. To remove servers from the list, select the server name and click **Remove**.
+11. Each of the servers is automatically added to the database even if it does not pass the configuration test. To remove servers from the list, select the server name and click **Remove**.
 
 12. When everything completes, click **Finish** to close the First Time Use Wizard. If you close the First Time Use Wizard before finishing it, all the previous steps persist and none of them roll back automatically. You need to make future changes manually.
 
@@ -306,14 +305,14 @@ Every time the SPA console launches, the last project that was used by the curre
 
 -   **Analysis Result** By default, it shows the result of the latest performance analysis run against the server. If there has not been any performance analysis run against the server, it shows **No report**. If there is a warning raised by the report, it shows **Warning** and the time stamp when the latest report was generated. If no issue was found during the latest analysis on the server, it shows **OK** and the time stamp.
 
-    **Note**  
+    **Note**
     If you recently changed a system setting, we recommend that you run the analysis again to evaluate the overall impact of the change and get an updated report of the system state. SPA does not track configuration changes to the system under test.
 
-     
+     
 
 -   **Current Status** Shows the status of performance analysis tasks currently running on the server. You can cancel a running task by clicking the **Cancel** icon, which is designated by a red X.
 
--   **Remark** Describes the current target server. For example, you can describe your server by using the server role (for example, “SQL Server�?) or a location (for example, “Kent�?). SPA uses the **Server name** and **Remark** to help search and find the proper server. You can type in the search text box. If the **Server name** or **Remark** columns contains the exact string that you entered in the search box, the server will be displayed in the server list.
+-   **Remark** Describes the current target server. For example, you can describe your server by using the server role (for example,  SQL Server ) or a location (for example,  Kent ). SPA uses the **Server name** and **Remark** to help search and find the proper server. You can type in the search text box. If the **Server name** or **Remark** columns contains the exact string that you entered in the search box, the server will be displayed in the server list.
 
 The following controls are also available on the console:
 
@@ -323,12 +322,12 @@ The following controls are also available on the console:
 
 Before you start the performance analysis, select the data collection duration. Although collecting more data helps provide a more accurate image of the server performance situation, it also generates a larger number of logs, and it could have more potential impact on the server. Choose the proper data collection duration based on your specific need. Each advisor pack defines a minimum valid duration. The data collection duration that you choose must be longer than the minimum duration of the selected advisor packs.
 
-To run performance analysis on target servers, select the servers that you want to run performance analysis against, and click **Run analysis…** A dialog box appears and asks you to select the advisor packs to be run on the servers. The selected advisor packs run simultaneously. The reports that are generated are based on the performance data that is collected during the same time period.
+To run performance analysis on target servers, select the servers that you want to run performance analysis against, and click **Run analysis ** A dialog box appears and asks you to select the advisor packs to be run on the servers. The selected advisor packs run simultaneously. The reports that are generated are based on the performance data that is collected during the same time period.
 
-**Note**  
+**Note**
 If you select a server that has a recurring performance analysis running, the **Remove Recurrence** button allows you to cancel the recurring data collection. SPA does not allow multiple data collection sessions at the same time on the same computer.
 
- 
+ 
 
 ## <a href="" id="bkmk-viewingreports"></a>Viewing reports
 
@@ -395,7 +394,7 @@ Data sections contain the performance data that the advisor pack generates based
 
 The Core OS SPA Advisor Pack and the IIS SPA Advisor Pack contain a **System overview** section. This section includes the top-level information about the resource usage and configuration. Other top-level sections represent areas of performance data. SPA presents report data in the following ways:
 
--   **Single value** A key/value pair. The key is a string, which represents the meaning of the value. The value can be a string, a numeric value, or a Boolean value. This is often used to show static information, like configuration—for example, the CPU architecture, the total memory size, and the BIOS version, which do not change over time.
+-   **Single value** A key/value pair. The key is a string, which represents the meaning of the value. The value can be a string, a numeric value, or a Boolean value. This is often used to show static information, like configuration for example, the CPU architecture, the total memory size, and the BIOS version, which do not change over time.
 
 -   **List value** This is sometimes a key/value pair, but the list value can contain multiple fields. For example, the attribute of the CPU can be shown in a table with multiple columns and multiple rows. Each row represents one CPU, and each column represents an attribute of the CPU.
 
@@ -419,7 +418,7 @@ If you dismiss the **Find** dialog box, you can reactivate it by typing Control 
 
 In the notification section, if any of the results from the two reports that are compared is a warning, it will be listed in the **Warning** area. Otherwise, the results will be listed in the **Other Notifications** area. Because the key for a side-by-side report is to identify differences between reports, no detailed information about a rule is displayed. Users can click the rule name to bring up the rule detail form for more information about the rule.
 
-In the data sections, the data is presented in a side-by-side manner with data from report 1 on the left and data from report 2 on the right. SPA shows single values in the same table, but instead of labeling the columns **Value**, they are named **Report 1** and **Report 2** respectively. The side-by-side report shows all other forms of data in side-by-side tables.
+In the data sections, the data is presented in a side-by-side manner with data from report 1 on the left and data from report 2 on the right. SPA shows single values in the same table, but instead of labeling the columns **Value**, they are named **Report 1** and **Report 2** respectively. The side-by-side report shows all other forms of data in side-by-side tables.
 
 The side-by-side report viewer also provides tooltips about the data source.
 
@@ -435,7 +434,7 @@ The historical chart shows a series of values for a numeric data point through t
 
 There are a couple of ways to use a historical chart:
 
-1.  To help find abnormalities at a certain time for a data point—for example, at 2:00 AM each day, the **Average request latency** of IIS jumps from around 200 ms to 500 ms.
+1.  To help find abnormalities at a certain time for a data point for example, at 2:00 AM each day, the **Average request latency** of IIS jumps from around 200 ms to 500 ms.
 
 2.  To help correlate multiple data points. For example, showing **Average request latency** and **Average request count** together for the last 15 days. The report might show that the request latency and request count increase at the same time spot, which could indicate that the request latency increase is caused by an increase in request count.
 
@@ -474,10 +473,10 @@ The data series that you select in trend and historical charts are stored as a u
 
 Reports can be removed to minimize the number of reports that need to be managed by SPA. Depending on the frequency of reports and the number of servers, we recommend deleting unnecessary reports. While SPA does not have a limit on reports that it can manage, the underlying database may have a size limitation.
 
-**Note**  
+**Note**
 Deleted reports cannot be undeleted.
 
- 
+ 
 
 ### Exporting and importing reports
 
@@ -500,10 +499,10 @@ New advisor packs can be released by Microsoft or by non-Microsoft developers. A
 
 2.  In the main window, click **Configuration**, and then click **Configure Advisor Packs**. The **Configure Advisor Packs** dialog box opens.
 
-    **Note**  
+    **Note**
     This dialog box is similar to the **Provision advisor pack** page in the First Time Use Wizard. It shows a list of advisor packs that are available to manage. Each advisor pack in the list has properties such as name, installed version, version, and author. Name is the full name of the advisor pack, and installed version is the version of this advisor pack that has already been provisioned in the project. If the advisor pack is not provisioned in the current database, the installed version text box will display **Not Installed**. The version field indicates the version of this advisor pack, which is filed under the advisor packs folder.
 
-     
+     
 
 3.  Select the advisor pack from the list. If the advisor pack has not been provisioned or if there is a newer version in the advisor packs folder than the one in the database, the **Provision** button will be enabled. Click the **Provision** button.
 
@@ -525,10 +524,10 @@ You can modify threshold values by clicking the rule name in a single or side-by
 
 1.  In the **Configuration** menu, click **Configure Advisor Packs**, click the name of the advisor pack to be modified, and then click **Configure**.
 
-    **Note**  
+    **Note**
     You are presented with a list of all rules that are included in the advisor pack. The check box on the left of the advisor pack name indicates if the rule is enabled. If a rule is disabled, it will be hidden from all reports.
 
-     
+     
 
 2.  Click the specific rule that you want to modify. The **Rule details** form for the selected rule opens.
 
@@ -587,10 +586,10 @@ SPA provides basic capabilities for managing target servers. You can choose to a
 
 3.  Enter other server information in the **Remark** column for each server.
 
-    **Note**  
+    **Note**
     This field uses a free text format, so you can use it as a description field. Or use this field to tag the servers so they can be found easily in the main window, or to group servers, for example, by location or server role.
 
-     
+     
 
 4.  If you want to use SPA with a large number of servers, SPA supports a Comma Separated Value (.csv) format for import. The file must contain at least two fields: **Server** and **File Share Location**. The third field, **Remark** is optional, but it is recommended to organize your servers. You can also export the server list to a .csv file to determine the appropriate format or back up your server configuration.
 
@@ -639,7 +638,7 @@ The following table describes the SPA Windows PowerShell cmdlets:
 <td><p>Start-SpaAnalysis</p></td>
 <td><ul>
 <li><p><strong>-ServerName</strong> Name of the target server</p></li>
-<li><p><strong>-AdvisorPackName</strong> Full name of the advisor pack to be queued on server. When more than one pack is scheduled to run at the same time, the value of the parameter should be formatted as “AP1name�?, “AP2name.�?</p></li>
+<li><p><strong>-AdvisorPackName</strong> Full name of the advisor pack to be queued on server. When more than one pack is scheduled to run at the same time, the value of the parameter should be formatted as  AP1name ,  AP2name. </p></li>
 <li><p><strong>-Duration</strong> Duration for the data collection</p></li>
 <li><p><strong>-Credential</strong> User credentials for the account that will run data collection on the target server</p></li>
 <li><p><strong>-SqlInstanceName</strong> Name of the SQL Server instance</p></li>
@@ -675,7 +674,7 @@ The following table describes the SPA Windows PowerShell cmdlets:
 </tbody>
 </table>
 
- 
+ 
 
 Windows PowerShell provides the capability to pass credentials through encrypted files to enable automation scenarios. For more info about using encrypted files to pass credentials to a cmdlet, see [Create Windows PowerShell Scripts that Accept Credentials](http://technet.microsoft.com/magazine/ff714574.aspx).
 
@@ -688,15 +687,15 @@ User credentials can be encrypted and cached through Windows PowerShell. These c
 ``` syntax
 $fileName = 'D:\temp\operator.txt'
 $userName = 'domainname\operator'
- 
+ 
 # save credential to file
 $(Get-Credential).Password | ConvertFrom-SecureString | Set-Content $fileName
- 
+ 
 # load credential from file
 $credential = New-Object System.Management.Automation.PsCredential $userName, $(Get-Content $fileName | ConvertTo-SecureString)
- 
+ 
 # run command
-.\Start-SpaAnalysis –ServerName: Server1 –Credential: $credential –AdvisorPackName:Microsoft.ServerPerformanceAdvisor.CoreOS.V1 10 –Duration:10 –SqlInstanceName: .\SQLExpress –SqlDatabaseName:SPA8294
+.\Start-SpaAnalysis  ServerName: Server1  Credential: $credential  AdvisorPackName:Microsoft.ServerPerformanceAdvisor.CoreOS.V1 10  Duration:10  SqlInstanceName: .\SQLExpress  SqlDatabaseName:SPA8294
 ```
 
 Before you can run this file, you must run **set-executionpolicy RemoteSigned**
@@ -737,10 +736,10 @@ After the projects are created, you can click **File**, and then click **Open Pr
 
 When you choose to create a new project database or open a different project database, the current project is closed. All the open reports are closed when the current project is closed.
 
-**Note**  
-SQL Server 2008 R2 Express has a 10 GB database limit. By using multiple projects, you can use one or more SQL Server databases and stay under the 10 GB SQL Server 2008 R2 Express limit.
+**Note**
+SQL Server 2008 R2 Express has a 10 GB database limit. By using multiple projects, you can use one or more SQL Server databases and stay under the 10 GB SQL Server 2008 R2 Express limit.
 
- 
+ 
 
 ### Logging and debugging
 
@@ -798,11 +797,11 @@ SPA stores failure information in the log.txt file under the SPA folder. Detaile
 
 ### Database size limitations for SQL Server Express
 
-SQL Server Express has a size limit of 10 GB for a user database. This size database has the capacity to store 20,000-30,000 reports. To reduce the possibility of reaching this database limit, we recommend deleting reports regularly and/or using another version of SQL Server that does not have the 10 GB user database limitation.
+SQL Server Express has a size limit of 10 GB for a user database. This size database has the capacity to store 20,000-30,000 reports. To reduce the possibility of reaching this database limit, we recommend deleting reports regularly and/or using another version of SQL Server that does not have the 10 GB user database limitation.
 
 ### SQL Server Express log size and disk capacity
 
-If you are using SQL Server Express, the user database is limited to 10 GB, but the corresponding log file can exceed 70 GB. For these reasons, we recommend 100 GB or more of free disk space for SQL Server Express. This disk space should be sufficient to store approximately 20,000 to 30,000 reports. This log file is named SPADB\_log.ldf, and it is found at **%Program Files%\\Microsoft SQL Server\\MSSQL10.SQLEXPRESS\\MSSQL\\DATA**.
+If you are using SQL Server Express, the user database is limited to 10 GB, but the corresponding log file can exceed 70 GB. For these reasons, we recommend 100 GB or more of free disk space for SQL Server Express. This disk space should be sufficient to store approximately 20,000 to 30,000 reports. This log file is named SPADB\_log.ldf, and it is found at **%Program Files%\\Microsoft SQL Server\\MSSQL10.SQLEXPRESS\\MSSQL\\DATA**.
 
 ### Failure to connect to target server
 
@@ -810,7 +809,7 @@ When you run performance analysis on target servers, the user account that runs 
 
 ### Failure to create PLA Data Collection Set on the target server
 
-If you get a “Cannot create PLA Data Collection Set on target server�? message, make sure to do the following:
+If you get a  Cannot create PLA Data Collection Set on target server  message, make sure to do the following:
 
 -   Make sure the **Performance Logs & Alerts** service is running
 
@@ -834,7 +833,7 @@ When you run the SPAConsole.exe and you use a recurring data collection (for exa
 
 ### Lost ETW events
 
-To create minimum performance impact on target servers, PLA is designed to run with low priority while it is collecting performance information. If the target server is busy, PLA will drop some of the data collection tasks to yield to high-priority tasks that are running on target servers. You should consider setting up the shared folder where the events get written on a disk that doesn’t conflict with the workload’s I/O or a faster drive, such as an SSD. When events are dropped, they are reported in the report view since lost events can impact the reliability of the generated performance metrics.
+To create minimum performance impact on target servers, PLA is designed to run with low priority while it is collecting performance information. If the target server is busy, PLA will drop some of the data collection tasks to yield to high-priority tasks that are running on target servers. You should consider setting up the shared folder where the events get written on a disk that doesn t conflict with the workload s I/O or a faster drive, such as an SSD. When events are dropped, they are reported in the report view since lost events can impact the reliability of the generated performance metrics.
 
 Certain permission issues could also cause registry or WMI queries to be skipped. However, this is much less likely to happen than ETW event loss. As a result, the data collector set results sometimes do not contain all the values that are requested. You need to make sure that the situation is handled by the T-SQL scripts for all advisor packs. If the data does not exist in the data collection result, it will be marked as no data in the reports.
 

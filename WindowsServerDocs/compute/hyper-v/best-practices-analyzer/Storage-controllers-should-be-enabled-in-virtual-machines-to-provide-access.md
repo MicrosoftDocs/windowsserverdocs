@@ -1,6 +1,6 @@
 ---
 title: Storage controllers should be enabled in virtual machines to provide access to attached storage
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

@@ -1,6 +1,6 @@
 ---
 title: Mountvol
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Mountvol
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -33,7 +32,7 @@ mountvol <Drive>: /s
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[<Drive>:]<Path>|Specifies the existing NTFS directory where the mount point will reside.|
 |<VolumeName>|Specifies the volume name that is the target of the mount point. The volume name uses the following syntax, where *GUID* is a globally unique identifier:<br /><br />\\\\?\Volume\\{GUID}\\<br /><br />The brackets { } are required.|
 |/d|Removes the volume mount point from the specified folder.|
@@ -47,7 +46,7 @@ mountvol <Drive>: /s
 ## Remarks
 -   **Mountvol** allows you to link volumes without requiring a drive letter.
 -   Volumes that are dismounted by using **/p** are listed in the volumes list as "NOT MOUNTED UNTIL A VOLUME MOUNT POINT IS CREATED." If the volume has more than one mount point, use **/d** to remove the additional mount points before using **/p**. You can make the basic volume mountable again by assigning a volume mount point.
--   If you need to expand your volume space without reformatting or replacing a hard drive, you can add a mount path to another volume. The benefit of using one volume with several mount paths is that you can access all local volumes by using a single drive letter (such as `C:`). You do not need to remember which volume corresponds to which drive letter—although you can still mount local volumes and assign them drive letters.
+-   If you need to expand your volume space without reformatting or replacing a hard drive, you can add a mount path to another volume. The benefit of using one volume with several mount paths is that you can access all local volumes by using a single drive letter (such as `C:`). You do not need to remember which volume corresponds to which drive letter although you can still mount local volumes and assign them drive letters.
 ## <a name="BKMK_examples"></a>Examples
 To create a mount point, type:
 ```

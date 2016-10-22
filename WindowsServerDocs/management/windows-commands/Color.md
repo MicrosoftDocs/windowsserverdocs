@@ -1,6 +1,6 @@
 ---
 title: Color
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Color
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,14 +26,14 @@ color [[<B>]<F>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<B>|Specifies the background color.|
 |<F>|Specifies the foreground color.|
 |/?|Displays help at the command prompt.|
 ## Remarks
 -   The following table lists valid hexadecimal digits that you can use as the values for *B* and *F*.
     |Value|Color|
-    |---------|---------|
+    |-----|-----|
     |0|Black|
     |1|Blue|
     |2|Green|

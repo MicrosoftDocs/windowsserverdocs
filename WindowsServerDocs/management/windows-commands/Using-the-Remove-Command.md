@@ -1,6 +1,6 @@
 ---
 title: Using the Remove Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the Remove Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 ## Subcommands
 |Subommand|Description|
-|-------------|---------------|
+|-------|--------|
 |[Using the remove-Image Command](Using-the-remove-Image-Command.md)|Removes a boot or install image from the server.|
 |[Using the remove-ImageGroup Command](Using-the-remove-ImageGroup-Command.md)|Removes an image group from the server.|
 |[Using the remove-MulticastTransmission Command](Using-the-remove-MulticastTransmission-Command.md)|Disables multicast transmission of an image.|

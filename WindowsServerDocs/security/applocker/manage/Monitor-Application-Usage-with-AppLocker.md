@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how to monitor application usage when AppLocker policies are applied in Windows Server® 2012 and Windows® 8.
+This topic describes how to monitor application usage when AppLocker policies are applied in Windows Server?? 2012 and Windows?? 8.
 
 Once you set rules and deploy the AppLocker policies, it is good practice to determine if the policy implementation is what you expected.
 
@@ -65,14 +65,14 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 3.  Run the following command to review how many times a file would have been blocked from running if rules were enforced:
 
-    `Get-AppLockerFileInformation –EventLog –Logname "Microsoft-Windows-AppLocker\EXE and DLL" –EventType Audited –Statistics`
+    `Get-AppLockerFileInformation ???EventLog ???Logname "Microsoft-Windows-AppLocker\EXE and DLL" ???EventType Audited ???Statistics`
 
     > [!NOTE]
     > For an event subscription, specify the path to the forwarded event log for the Logname parameter.
 
 4.  Run the following command to review how many times a file has been allowed to run or prevented from running:
 
-    `Get-AppLockerFileInformation –EventLog –Logname "Microsoft-Windows-AppLocker\EXE and DLL" –EventType Allowed –Statistics`
+    `Get-AppLockerFileInformation ???EventLog ???Logname "Microsoft-Windows-AppLocker\EXE and DLL" ???EventType Allowed ???Statistics`
 
 ### <a name="BKMK_AppLkr_View_Log"></a>View the AppLocker Log in Event Viewer
 When AppLocker policy enforcement is set to **Enforce rules**, rules are enforced for the rule collection and all events are audited. When AppLocker policy enforcement is set to **Audit only**, rules are only evaluated but all events generated from that evaluation are written to the AppLocker log.

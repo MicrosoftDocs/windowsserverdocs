@@ -1,6 +1,6 @@
 ---
 title: Wevtutil
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wevtutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |{el &#124; enum-logs}|Displays the names of all logs.|  
 |{gl &#124; get-log} <Logname> [/f:<Format>]|Displays configuration information for the specified log, which includes whether the log is enabled or not, the current maximum size limit of the log, and the path to the file where the log is stored.|  
 |{sl &#124; set-log} <Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<Size>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]|Modifies the configuration of the specified log.|  
@@ -49,7 +48,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |{cl &#124; clear-log} <Logname> [/bu:<Backup>]|Clears events from the specified event log. The **/bu** option can be used to back up the cleared events.|  
 ## Options  
 |Option|Description|  
-|----------|---------------|  
+|-----|--------|  
 |/f:<Format>|Specifies that the output should be either XML or text format. If <Format> is XML, the output is displayed in XML format. If <Format> is Text, the output is displayed without XML tags. The default is Text.|  
 |/e:<Enabled>|Enables or disables a log. <Enabled> can be true or false.|  
 |/i:<Isolation>|Sets the log isolation mode. <Isolation> can be system, application or custom. The isolation mode of a log determines whether a log shares a session with other logs in the same isolation class. If you specify system isolation, the target log will share at least write permissions with the System log. If you specify application isolation, the target log will share at least write permissions with the Application log. If you specify custom isolation, you must also provide a security descriptor by using the **/ca** option.|  

@@ -1,6 +1,6 @@
 ---
 title: Auditpol remove
-description: "Windows Commands"
+description: "Windows Commands topic for **Auditpol remove** - Removes the per-user audit policy for a specified account or all accounts."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol remove
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Removes the per-user audit policy for a specified account or all accounts.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 Auditpol /remove [/user[:<username>|<{SID}>]]
@@ -28,7 +27,7 @@ Auditpol /remove [/user[:<username>|<{SID}>]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/user|Specifies the security identifier (SID) or user name for the user for whom the per-user audit policy is to be deleted.|
 |/allusers|Removes the per-user audit policy for all users.|
 |/?|Displays help at the command prompt.|

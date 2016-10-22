@@ -29,7 +29,7 @@ You can also create rules that use the deny action. When applying rules, AppLock
 Although you can use AppLocker to create a rule to allow all files to run and then use rules to deny specific files, this configuration is not recommended. The deny action is generally less secure than the allow action because a malicious user could modify the file to invalidate the rule. Deny actions can also be circumvented. For example, if you configure a deny action for a file or folder path, the user can still run the file from any other path. The following table details security concerns for different rule conditions with deny actions.
 
 |Rule condition|Security concern with deny action|
-|------------------|-------------------------------------|
+|---------|-------------------|
 |Publisher|A user could modify the properties of a file (for example, re-signing the file with a different certificate).|
 |File hash|A user could modify the hash for a file.|
 |Path|A user could move the denied file to a different location and run it from there.|

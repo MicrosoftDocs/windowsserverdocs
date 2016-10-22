@@ -1,6 +1,6 @@
 ---
 title: Doskey
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Doskey
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/reinstall|Installs a new copy of Doskey.exe and clears the command history buffer.|  
 |/listsize=<Size>|Specifies the maximum number of commands in the history buffer.|  
 |/macros|Displays a list of all **doskey** macros. You can use the redirection symbol (**>**) with **/macros** to redirect the list to a file. You can abbreviate **/macros** to **/m**.|  
@@ -45,7 +44,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
 -   Recalling a command  
     To recall a command, you can use any of the following keys after you start Doskey.exe. If you use Doskey.exe within a program, that program's key assignments take precedence.  
     |Key|Description|  
-    |-------|---------------|  
+    |----|--------|  
     |UP ARROW|Recalls the command that you used before the one that is displayed.|  
     |DOWN ARROW|Recalls the command that you used after the one that is displayed.|  
     |PAGE UP|Recalls the first command that you used in the current session.|  
@@ -54,7 +53,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
     With Doskey.exe, you can edit the current command line. If you use Doskey.exe within a program, that program's key assignments take precedence and some Doskey.exe editing keys might not work.  
     The following table lists **doskey** editing keys and their functions.  
     |Key or key combination|Description|  
-    |--------------------------|---------------|  
+    |-------------|--------|  
     |LEFT ARROW|Moves the insertion point back one character.|  
     |RIGHT ARROW|Moves the insertion point forward one character.|  
     |CTRL+LEFT ARROW|Moves the insertion point back one word.|  
@@ -63,7 +62,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
     |END|Moves the insertion point to the end of the line.|  
     |ESC|Clears the command from the display.|  
     |F1|Copies one character from a column in the template to the same column in the Command Prompt window. (The template is a memory buffer that holds the last command you typed.)|  
-    |F2|Searches forward in the template for the next key that you type after you press F2. Doskey.exe inserts the text from the template—up to, but not including, the character you specify.|  
+    |F2|Searches forward in the template for the next key that you type after you press F2. Doskey.exe inserts the text from the template up to, but not including, the character you specify.|  
     |F3|Copies the remainder of the template to the command line. Doskey.exe begins copying characters from the position in the template that corresponds to the position indicated by the insertion point on the command line.|  
     |F4|Deletes all characters from the current insertion point position up to, but not including, the next occurrence of the character that you type after you press F4.|  
     |F5|Copies the template into the current command line.|  
@@ -85,7 +84,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
 -   Creating a macro  
     You can use Doskey.exe to create macros that carry out one or more commands. The following table lists special characters that you can use to control command operations when you define a macro.  
     |Character|Description|  
-    |-------------|---------------|  
+    |-------|--------|  
     |$G or $g|Redirects output. Use either of these special characters to send output to a device or a file instead of to the screen. This character is equivalent to the redirection symbol for output (**>**).|  
     |$G$G or $g$g|Appends output to the end of a file. Use either of these double characters to append output to an existing file instead of replacing the data in the file. These double characters are equivalent to the append redirection symbol for output (**>>**).|  
     |$L or $l|Redirects input. Use either of these special characters to read input from a device or a file instead of from the keyboard. This character is equivalent to the redirection symbol for input (**<**).|  

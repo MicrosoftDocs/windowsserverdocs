@@ -25,13 +25,13 @@ This topic lists documentation resources for smart cards that include product ev
 Smart cards are a tamper\-resistant and portable way to provide security solutions for tasks such as client authentication, logging on to domains, code signing, and securing e\-mail.
 
 ## <a name="BKMK_APP"></a>Practical applications
-Smart cards and their associated personal identification numbers \(PINs\) are an increasingly popular, reliable, and cost\-effective form of two\-factor authentication. With the right controls in place, the user must have the smart card and know the PIN to gain access to network resources. The two\-factor requirement significantly reduces the likelihood of unauthorized access to an organization’s network. Smart cards provide particularly effective security control in two scenarios: to secure administrator accounts and to secure remote access.
+Smart cards and their associated personal identification numbers \(PINs\) are an increasingly popular, reliable, and cost\-effective form of two\-factor authentication. With the right controls in place, the user must have the smart card and know the PIN to gain access to network resources. The two\-factor requirement significantly reduces the likelihood of unauthorized access to an organization???s network. Smart cards provide particularly effective security control in two scenarios: to secure administrator accounts and to secure remote access.
 
 ## <a name="BKMK_LINKS"></a>See also
 The following table provides links to relevant resources in understanding and using smart cards.
 
 |Content type|References|
-|----------------|--------------|
+|--------|-------|
 |**Product evaluation**|[What's New in Smart Cards](What-s-New-in-Smart-Cards.md) &#124; [Understanding and Evaluating Virtual Smart Cards](http://go.microsoft.com/fwlink/?LinkId=243114)|
 |**Scenario documentation**|[Strong Authentication with One\-Time Passwords in Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/gg637807(v=WS.10.aspx|
 |**Troubleshooting**|[Smart Card Troubleshooting Guide](http://go.microsoft.com/fwlink/?LinkId=243116)|

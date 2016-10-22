@@ -1,6 +1,6 @@
 ---
 title: Msinfo32
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Msinfo32
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <ComputerName>] [/show
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Path>|Specifies the file to be opened in the format *C:\Folder1\File1.XXX*, where *C* is the drive letter, *Folder1* is the folder, *File1* is the file name, and *XXX* is the file name extension.<br /><br />This file can be an **.nfo**, **.xml**, **.txt**, or **.cab** file.|
 |<ComputerName>|Specifies the name of the target or local computer. This can be a UNC name, an IP address, or a full computer name.|
 |<CategoryID>|Specifies the ID of the category item. You can obtain the category ID by using **/showcategories**.|

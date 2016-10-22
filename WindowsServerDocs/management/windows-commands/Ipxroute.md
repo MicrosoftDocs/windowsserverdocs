@@ -1,6 +1,6 @@
 ---
 title: Ipxroute
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ipxroute
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ ipxroute config
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |servers[ /type=X]|Displays the Service Access Point (SAP) table for the specified server type.  **X** must be an integer. For example, **/type=4** displays all file servers. If you do not specify **/type**, **ipxroute servers** displays all types of servers, listing them by server name.|  
 |ripout Network|Discovers if *Network* is reachable by consulting the IPX stack's route table and sending out a rip request if necessary.  *Network* is the IPX network segment number.|  
 |resolve{ GUID&#124; name} { GUID&#124; AdapterName}|Resolves the name of the GUID to its friendly name, or the friendly name to its GUID.|  

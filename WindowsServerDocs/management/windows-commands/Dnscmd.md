@@ -1,6 +1,6 @@
 ---
 title: Dnscmd
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dnscmd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,11 +25,11 @@ dnscmd <ServerName> <command> [<command parameters>]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<ServerName>|The IP address or host name of a remote or local DNS server.|  
 ## Commands  
 |Command|Description|  
-|-----------|---------------|  
+|------|--------|  
 |[dnscmd /ageallrecords](#BKMK_1)|Sets the current time on all time stamps in a zone or node.|  
 |[dnscmd /clearcache](#BKMK_2)|Clears the DNS server cache.|  
 |[dnscmd /config](#BKMK_3)|Resets the DNS server or zone configuration.|  
@@ -68,7 +67,7 @@ dnscmd <ServerName> <command> [<command parameters>]
 |[dnscmd /zoneresetsecondaries](#BKMK_34)|Resets secondary information for a zone.|  
 |[dnscmd /zoneresettype](#BKMK_29)|Changes the zone type.|  
 |[dnscmd /zoneresume](#BKMK_35)|Resumes a zone.|  
-|[dnscmd /zoneupdatefromds](#BKMK_36)|Updates an Active Directoryâ€“integrated zone with data from Active Directory Domain Services (AD DS).|  
+|[dnscmd /zoneupdatefromds](#BKMK_36)|Updates an Active Directory integrated zone with data from Active Directory Domain Services (AD DS).|  
 |[dnscmd /zonewriteback](#BKMK_37)|Saves zone data to a file.|  
 ### <a name="BKMK_1"></a>dnscmd /ageallrecords  
 Sets the current time on a time stamp on resource records at a specified zone or node on a DNS server.  
@@ -93,7 +92,7 @@ Runs the command without asking for confirmation.
 #### Remarks  
 -   The **ageallrecords** command is for backward compatibility between the current version of DNS and previous releases of DNS in which aging and scavenging were not supported. It adds a time stamp with the current time to resource records that do not have a time stamp, and it sets the current time on resource records that do have a time stamp.  
 -   Record scavenging does not occur unless the records are time stamped. Name server (NS) resource records, start of authority (SOA) resource records, and Windows Internet Name Service (WINS) resource records are not included in the scavenging process, and they are not time stamped even when the **ageallrecords** command runs.  
--   This command fails unless scavenging is enabled for the DNS server and the zone. For information about how to enable scavenging for the zone, see the **aging** parameter under â€œZone-Level Syntaxâ€? in the [config](#BKMK_3) command.  
+-   This command fails unless scavenging is enabled for the DNS server and the zone. For information about how to enable scavenging for the zone, see the **aging** parameter under Zone-Level Syntax in the [config](#BKMK_3) command.  
 -   The addition of a time stamp to DNS resource records makes them incompatible with DNS servers that run on operating systems other than Windows 2000, Windows XP, or Windows Server 2003. A time stamp that you add by using the **ageallrecords** command cannot be reversed.  
 -   If none of the optional parameters are specified, the command returns all resource records at the specified node. If a value is specified for at least one of the optional parameters, **dnscmd** enumerates only the resource records that correspond to the value or values that are specified in the optional parameter or parameters.  
 #### Example  
@@ -208,7 +207,7 @@ Automatically creates name server (NS) resource records for zones that the DNS s
 **1**  
 Does not automatically create name server (NS) resource records for zones that the DNS server hosts.  
 **/dspollinginterval 0-30**  
-Specifies how often the DNS server polls AD DS for changes in Active Directoryâ€“integrated zones.  
+Specifies how often the DNS server polls AD DS for changes in Active Directory integrated zones.  
 **/dstombstoneinterval [1-30]**  
 The amount of time in seconds to retain deleted records in AD DS.  
 **/ednscachetimeout [<seconds>]**  
@@ -319,7 +318,7 @@ Logs full packets.
 **0x80000000**  
 Logs write-through transactions.  
 **/maxcachesize**  
-Specifies the maximum size, in kilobytes (KB), of the DNS serverâ€™s memory cache.  
+Specifies the maximum size, in kilobytes (KB), of the DNS server s memory cache.  
 **/maxcachettl [<seconds>]**  
 Determines how many seconds (0x0-0xFFFFFFFF) a record is saved in the cache. If the **0x0** setting is used, the DNS server does not cache records. The default setting is **0x15180** (86,400 seconds or 1 day).  
 **/maxnegativecachettl [<seconds>]**  
@@ -411,7 +410,7 @@ Disables DNS dynamic update.
 **/writeauthorityns [0|1]**  
 Determines when the DNS server writes name server (NS) resource records in the Authority section of a response.  
 **0**  
-Writes name server (NS) resource records in the Authority section of referrals only. This setting complies with RFC 1034, â€œDomain namesâ€”concepts and facilities,â€? and with RFC 2181, â€œClarifications to the DNS Specification.â€? This is the default setting.  
+Writes name server (NS) resource records in the Authority section of referrals only. This setting complies with RFC 1034, Domain names concepts and facilities, and with RFC 2181, Clarifications to the DNS Specification. This is the default setting.  
 **1**  
 Writes name server (NS) resource records in the Authority section of all successful authoritative responses.  
 **/xfrconnecttimeout [<seconds>]**  
@@ -577,7 +576,7 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
 **/primary | /secondary | /forwarder | /stub | /cache | /auto-created**  
 Filters the types of zones to display:  
 **/primary**  
-Lists all zones that are either standard primary zones or Active Directoryâ€“integrated zones.  
+Lists all zones that are either standard primary zones or Active Directory integrated zones.  
 **/secondary**  
 Lists all standard secondary zones.  
 **/forwarder**  
@@ -595,7 +594,7 @@ Lists forward lookup zones.
 **/reverse**  
 Lists reverse lookup zones.  
 **/ds**  
-Lists Active Directoryâ€“integrated zones.  
+Lists Active Directory integrated zones.  
 **/file**  
 Lists zones that are backed by files.  
 **/domaindirectorypartition**  
@@ -642,7 +641,7 @@ See [Example 4: Display the IsSlave setting from a DNS server](https://technet.m
 Tests whether an IP address identifies a functioning DNS server or whether the DNS server can act as a forwarder, a root hint server, or a master server for a specific zone.  
 #### Syntax  
 ```  
-dnscmd [<ServerName>] /ipvalidate <Context> [<ZoneName>] [[<IPAddress>]â€¦]  
+dnscmd [<ServerName>] /ipvalidate <Context> [<ZoneName>] [[<IPAddress>]]  
 ```  
 #### Parameters  
 **<ServerName>**  
@@ -747,7 +746,7 @@ Allows the DNS server to perform its own iterative queries if the forwarder fail
 -   By default, a DNS server performs iterative queries when it cannot resolve a query.  
 -   Setting IP addresses by using the **resetforwarders** command causes the DNS server to perform recursive queries to the DNS servers at the specified IP addresses. If the forwarders do not resolve the query, the DNS server can then perform its own iterative queries.  
 -   If the **/slave** parameter is used, the DNS server does not perform its own iterative queries. This means that the DNS server forwards unresolved queries only to the DNS servers in the list, and it does not attempt iterative queries if the forwarders do not resolve them. It is more efficient to set one IP address as a forwarder for a DNS server. You can use the **resetforwarders** command for internal servers in a network to forward their unresolved queries to one DNS server that has an external connection.  
--   Listing a forwarderâ€™s IP address twice causes the DNS server to attempt to forward to that server twice.  
+-   Listing a forwarder s IP address twice causes the DNS server to attempt to forward to that server twice.  
 #### Sample usage  
 <pre>dnscmd dnssvr1.contoso.com /resetforwarders 10.0.0.1 /timeout 7 /slave  
 dnscmd dnssvr1.contoso.com /resetforwarders /noslave</pre>  
@@ -781,8 +780,8 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
     -   Scavenging is enabled for both the server and the zone.  
     -   The zone is started.  
     -   The resource records have a time stamp.  
--   For information about how to enable scavenging for the server, see the **scavenginginterval** parameter under â€œServer-level syntaxâ€? in the [config](#BKMK_3) section.  
--   For information about how to enable scavenging for the zone, see the **aging** parameter under â€œZone-level syntaxâ€? in the [config](#BKMK_3) section.  
+-   For information about how to enable scavenging for the server, see the **scavenginginterval** parameter under Server-level syntax in the [config](#BKMK_3) section.  
+-   For information about how to enable scavenging for the zone, see the **aging** parameter under Zone-level syntax in the [config](#BKMK_3) section.  
 -   For information about how to start a zone that is paused, see the [zoneresume](#BKMK_35) section.  
 -   For information about how to check resource records for a time stamp, see the [ageallrecords](#BKMK_1) section.  
 -   If the scavenge fails, no warning message appears.  
@@ -859,7 +858,7 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
 **<ZoneName>**  
 Specifies the name of the zone to be updated.  
 #### Remarks  
--   The **writebackfiles** command updates all dirty zones or a specified zone. A zone is â€œdirtyâ€? when there are changes in memory that have not yet been written to persistent storage. This is a server-level operation that checks all zones. You can specify one zone in this operation or you can use the [zonewriteback](#BKMK_37) operation.  
+-   The **writebackfiles** command updates all dirty zones or a specified zone. A zone is dirty when there are changes in memory that have not yet been written to persistent storage. This is a server-level operation that checks all zones. You can specify one zone in this operation or you can use the [zonewriteback](#BKMK_37) operation.  
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /writebackfiles`  
 ### <a name="BKMK_22"></a>dnscmd /zoneadd  
@@ -876,7 +875,7 @@ Specifies the name of the zone.
 **<ZoneType>**  
 Specifies the type of zone to create. Each zone type has different required parameters:  
 **/dsprimary**  
-Creates an Active Directoryâ€“integrated zone.  
+Creates an Active Directory integrated zone.  
 **/primary /file <FileName>**  
 Creates a standard primary zone, and specifies the name of the file that will store the zone information.  
 **/secondary <MasterIPAddress> [<MasterIPAddress>...]**  
@@ -884,11 +883,11 @@ Creates a standard secondary zone.
 **/stub <MasterIPAddress> [<MasterIPAddress>...] /file <FileName>**  
 Creates a file-backed stub zone.  
 **/dsstub <MasterIPAddress> [<MasterIPAddress>...]**  
-Creates an Active Directoryâ€“integrated stub zone.  
+Creates an Active Directory integrated stub zone.  
 **/forwarder <MasterIPAddress> [<MasterIPAddress>]... /file <FileName>**  
 Specifies that the created zone forwards unresolved queries to another DNS server.  
 **/dsforwarder**  
-Specifies that the created Active Directoryâ€“integrated zone forwards unresolved queries to another DNS server.  
+Specifies that the created Active Directory integrated zone forwards unresolved queries to another DNS server.  
 **/dp <FQDN> {/domain | /enterprise | /legacy}**  
 Specifies the directory partition on which to store the zone.  
 **<FQDN>**  
@@ -924,7 +923,7 @@ Moves the zone to the built-in domain directory partition.
 **/forest**  
 Moves the zone to the built-in forest directory partition.  
 **/legacy**  
-Moves the zone to the directory partition that is created for preâ€“Active Directory domain controllers. These directory partitions are not necessary for native mode.  
+Moves the zone to the directory partition that is created for pre Active Directory domain controllers. These directory partitions are not necessary for native mode.  
 ### <a name="BKMK_24"></a>dnscmd /zonedelete  
 Deletes a specified zone.  
 #### Syntax  
@@ -954,7 +953,7 @@ Specifies the name of the zone.
 **<ZoneExportFile>**  
 Specifies the name of the file to create.  
 #### Remarks  
--   The **zoneexport** operation creates a file of resource records for an Active Directoryâ€“integrated zone for troubleshooting purposes. By default, the file that this command creates is placed in the DNS directory, which is by default the %systemroot%/System32/Dns directory.  
+-   The **zoneexport** operation creates a file of resource records for an Active Directory integrated zone for troubleshooting purposes. By default, the file that this command creates is placed in the DNS directory, which is by default the %systemroot%/System32/Dns directory.  
 #### Example  
 See [Example 10: Export zone resource records list to a file](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx).  
 ### <a name="BKMK_26"></a>dnscmd /zoneinfo  
@@ -1014,7 +1013,7 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
 **<ZoneName>**  
 Specifies the name of the zone to be refreshed.  
 #### Remarks  
--   The **zonerefresh** command forces a check of the version number in the master serverâ€™s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.  
+-   The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.  
 -   The forced check occurs by default every 15 minutes. To change the default, use the **dnscmd config refreshinterval** command.  
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /zonerefresh test.contoso.com`  
@@ -1030,7 +1029,7 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
 **<ZoneName>**  
 Specifies the name of the zone to be reloaded.  
 #### Remarks  
--   If the zone is Active Directoryâ€“integrated, it reloads from AD DS.  
+-   If the zone is Active Directory integrated, it reloads from AD DS.  
 -   If the zone is a standard file-backed zone, it reloads from a file.  
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /zonereload test.contoso.com`  
@@ -1046,7 +1045,7 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
 **<ZoneName>**  
 Specifies the name of the zone to be reloaded.  
 **/local**  
-Sets a local master list. This parameter is used for Active Directoryâ€“integrated zones.  
+Sets a local master list. This parameter is used for Active Directory integrated zones.  
 **<IPAddress>**  
 The IP addresses of the master servers of the secondary zone.  
 #### Remarks  
@@ -1125,7 +1124,7 @@ Identifies the zone on which the type will be changed.
 **<ZoneType>**  
 Specifies the type of zone to create. Each type has different required parameters:  
 **/dsprimary**  
-Creates an Active Directoryâ€“integrated zone.  
+Creates an Active Directory integrated zone.  
 **/primary /file <FileName>**  
 Creates a standard primary zone.  
 **/secondary <MasterIPAddress> [,<MasterIPAddress>...]**  
@@ -1133,11 +1132,11 @@ Creates a standard secondary zone.
 **/stub <MasterIPAddress>[,<MasterIPAddress>...] /file <FileName>**  
 Creates a file-backed stub zone.  
 **/dsstub <MasterIPAddress>[,<MasterIPAddress>...]**  
-Creates an Active Directoryâ€“integrated stub zone.  
+Creates an Active Directory integrated stub zone.  
 **/forwarder <MasterIPAddress[,<MasterIPAddress>]... /file<FileName>**  
 Specifies that the created zone forwards unresolved queries to another DNS server.  
 **/dsforwarder**  
-Specifies that the created Active Directoryâ€“integrated zone forwards unresolved queries to another DNS server.  
+Specifies that the created Active Directory integrated zone forwards unresolved queries to another DNS server.  
 **/overwrite_mem | /overwrite_ds**  
 Specifies how to overwrite existing data:  
 **/overwrite_mem**  
@@ -1165,7 +1164,7 @@ Specifies the name of the zone to resume.
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /zoneresume test.contoso.com`  
 ### <a name="BKMK_36"></a>dnscmd /zoneupdatefromds  
-Updates the specified Active Directoryâ€“integrated zone from AD DS.  
+Updates the specified Active Directory integrated zone from AD DS.  
 #### Syntax  
 ```  
 dnscmd <ServerName> /zoneupdatefromds <ZoneName>   
@@ -1176,7 +1175,7 @@ Specifies the DNS server to manage, represented by IP address, FQDN, or host nam
 **<ZoneName>**  
 Specifies the name of the zone to update.  
 #### Remarks  
--   Active Directoryâ€“integrated zones perform this update by default every five minutes. To change this parameter, use the **dnscmd config dspollinginterval** command.  
+-   Active Directory integrated zones perform this update by default every five minutes. To change this parameter, use the **dnscmd config dspollinginterval** command.  
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /zoneupdatefromds`  
 ### <a name="BKMK_37"></a>dnscmd /zonewriteback  

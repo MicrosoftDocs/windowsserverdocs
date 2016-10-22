@@ -1,6 +1,6 @@
 ---
 title: Wecutil
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wecutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -24,27 +23,27 @@ Enables you to create and manage subscriptions to events that are forwarded from
 ```
 wecutil  [{es | enum-subscription}] 
 [{gs | get-subscription} <Subid> [/f:<Format>] [/uni:<Unicode>]] 
-[{gr | get-subscriptionruntimestatus} <Subid> [<Eventsource> …]] 
+[{gr | get-subscriptionruntimestatus} <Subid> [<Eventsource>  ]] 
 [{ss | set-subscription} [<Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>] [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]] [/c:<Configfile> [/cun:<Username> /cup:<Password>]]] 
 [{cs | create-subscription} <Configfile> [/cun:<Username> /cup:<Password>]] 
 [{ds | delete-subscription} <Subid>] 
-[{rs | retry-subscription} <Subid> [<Eventsource>…]] 
+[{rs | retry-subscription} <Subid> [<Eventsource> ]] 
 [{qc | quick-config} [/q:[<Quiet>]]].
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{es &#124; enum-subscription}|Displays the names of all remote event subscriptions that exist.|
 |{gs &#124; get-subscription} <Subid> [/f:<Format>] [/uni:<Unicode>]|Displays remote subscription configuration information. <Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription.|
-|{gr &#124; get-subscriptionruntimestatus} <Subid> [<Eventsource> …]|Displays the runtime status of a subscription. <Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription. <Eventsource> is a string that identifies a computer that serves as a source of events. <Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
+|{gr &#124; get-subscriptionruntimestatus} <Subid> [<Eventsource>  ]|Displays the runtime status of a subscription. <Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription. <Eventsource> is a string that identifies a computer that serves as a source of events. <Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
 |{ss &#124; set-subscription} <Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>]  [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]<br /><br />or<br /><br />{ss &#124; set-subscription /c:<Configfile> [/cun:<Comusername> /cup:<Compassword>]|Changes the subscription configuration. You can specify the subscription ID and the appropriate options to change subscription parameters, or you can specify an XML configuration file to change subscription parameters.|
 |{cs &#124; create-subscription} <Configfile> [/cun:<Username> /cup:<Password>]|Creates a remote subscription. <Configfile> specifies the path to the XML file that contains the subscription configuration. The path can be absolute or relative to the current directory.|
 |{ds &#124; delete-subscription} <Subid>|Deletes a subscription and unsubscribes from all event sources that deliver events into the event log for the subscription. Any events already received and logged are not deleted. <Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription.|
-|{rs &#124; retry-subscription} <Subid> [<Eventsource>…]|Retries to establish a connection and send a remote subscription request to an inactive subscription. Attempts to reactivate all event sources or specified event sources. Disabled sources are not retried. <Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription. <Eventsource> is a string that identifies a computer that serves as a source of events. <Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
+|{rs &#124; retry-subscription} <Subid> [<Eventsource> ]|Retries to establish a connection and send a remote subscription request to an inactive subscription. Attempts to reactivate all event sources or specified event sources. Disabled sources are not retried. <Subid> is a string that uniquely identifies a subscription. <Subid> is the same as the string that was specified in the <SubscriptionId> tag of the XML configuration file, which was used to create the subscription. <Eventsource> is a string that identifies a computer that serves as a source of events. <Eventsource> should be a fully qualified domain name, a NetBIOS name, or an IP address.|
 |{qc &#124; quick-config} [/q:[<Quiet>]]|Configures the Windows Event Collector service to ensure a subscription can be created and sustained through reboots. This includes the following steps:<br /><br />1.  Enable the ForwardedEvents channel if it is disabled.<br />2.  Set the Windows Event Collector service to delay start.<br />3.  Start the Windows Event Collector service if it is not running.|
 ## Options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |/f:<Format>|Specifies the format of the information that is displayed. <Format> can be XML or Terse. If <Format> is XML, the output is displayed in XML format. If <Format> is Terse, the output is displayed in name-value pairs. The default is Terse.|
 |/c:<Configfile>|Specifies the path to the XML file that contains a subscription configuration. The path can be absolute or relative to the current directory. This option can only be used with the **/cun** and **/cup** options and is mutually exclusive with all other options.|
 |/e:[<Subenabled>]|Enables or disables a subscription. <Subenabled> can be true or false. The default value of this option is true.|
@@ -79,12 +78,12 @@ wecutil  [{es | enum-subscription}]
 |/q:[<Quiet>]|Specifies whether the configuration procedure will prompt for confirmation. <Quiet> can be true or false. If <Quiet> is true, the configuration procedure will not prompt for confirmation. The default value of this option is false.|
 ## Remarks
 > [!IMPORTANT]
-> If you receive the message, “The RPC server is unavailable�? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
+> If you receive the message,  The RPC server is unavailable  when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 -   The following example shows the contents of a configuration file:
     ```
     <Subscription xmlns="http://schemas.microsoft.com/2006/03/windows/events/subscription">
     <Uri>http://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
-    <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
+    <!- Use Normal (default), Custom, MinLatency, MinBandwidth ->
     <ConfigurationMode>Normal</ConfigurationMode>
     <Description>Forward Sample Subscription</Description>
     <SubscriptionId>SampleSubscription</SubscriptionId>

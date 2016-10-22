@@ -1,6 +1,6 @@
 ---
 title: Reg add
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Reg add
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<KeyName*>*|Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name (in the format \\\\<ComputerName>\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |/v <ValueName>|Specifies the name of the registry entry to be added under the specified subkey.|
 |/ve|Specifies that the registry entry that is added to the registry has a null value.|
@@ -40,7 +39,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 -   Subtrees cannot be added with this operation. This version of **reg** does not ask for confirmation when adding a subkey.
 -   The following table lists the return values for the **reg add** operation.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |0|Success|
 |1|Failure|
 -   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%**" inside the /d parameter

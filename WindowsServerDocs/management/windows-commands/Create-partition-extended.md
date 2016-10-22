@@ -1,6 +1,6 @@
 ---
 title: Create partition extended
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Create partition extended
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   
@@ -32,7 +31,7 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |size\=<n>|Specifies the size of the partition in megabytes \(MB\). If no size is given, the partition continues until there is no more free space in the extended partition.|  
 |offset\=<n>|Specifies the offset in kilobytes \(KB\), at which the partition is created. If no offset is given, the partition will start at the beginning of the free space on the disk that is large enough to hold the new partition.|  
 |align\=<n>|Aligns all partition extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. <n> is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  

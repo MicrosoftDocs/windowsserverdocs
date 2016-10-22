@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setcustomheaders
+description: "Windows Commands topic for **Bitsadmin setcustomheaders** - Add a custom HTTP header to a GET request."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016 
 ---
-
 # Bitsadmin setcustomheaders
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +29,7 @@ bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
 ## Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Header1 Header2 . . .|The custom headers for the job|
 

@@ -58,18 +58,18 @@ On the Nano server (through a remote PSSession) :
 
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
-The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 5 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 5 seconds to show progress:  
+The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:  
 
 ```  
-Get-SRGroup   
+Get-SRGroup
 
-while($true) {  
+do{
+    $r=(Get-SRGroup -Name "Replication 2").replicas
+    [System.Console]::Write("Number of remaining bytes {0}`r", $r.NumOfBytesRemaining)
+    Start-Sleep 10
+}until($r.ReplicationStatus -eq 'ContinuouslyReplicating')
+Write-Output "Replica Status: "$r.replicationstatus
 
- $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
- [System.Console]::Write("Number of bytes remaining: {0}`r", $v.numofbytesremaining)  
-
- Start-Sleep -s 5  
-}  
 ```  
 
 ## <a name="FAQ3"></a>Can I specify specific network interfaces to be used for replication?  
@@ -180,7 +180,7 @@ For technical assistance with Storage Replica, you can post at [the Microsoft Te
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
+- [Storage Replica: Known Issues](storage-replica-known-issues.md)  
 
 ## See Also  
 - [Storage Overview](../storage.md)  

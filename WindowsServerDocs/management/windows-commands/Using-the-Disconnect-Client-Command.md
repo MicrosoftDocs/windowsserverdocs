@@ -1,6 +1,6 @@
 ---
 title: Using the Disconnect-Client Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the Disconnect-Client Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Disconnect-Client /ClientId:<Client ID> [/Server:<Server name>] [/Force
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/ClientId:<Client ID>|Specifies the ID of the client to be disconnected. To view the ID of a client, type **WDSUTIL /get-multicasttransmission /show:clients**.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |[/Force]|Stops the installation completely and does not use a fallback method. Note that Wdsmcast.exe does not support any fallback mechanism. If you do not use this option, the default behavior is as follows:<br /><br />-   If you are using the Windows Deployment Services client, the client continues the installation by using unicasting.<br />-   If you are not using the Windows Deployment Services client, the installation fails. **Important:** You should use this option with caution because the installation will fail and the computer could be left in an unusable state.|

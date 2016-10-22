@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin cache and deleteurl
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin cache and deleteurl** - Deletes all cache entries for the given URL."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin cache and deleteurl
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /DeleteURL url
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |url|The Uniform Resource Locator that identifies a remote file.|
 ## <a name="BKMK_examples"></a>Examples
 The following example deletes all cache entries for http://www.microsoft.com/en/us/default.aspx

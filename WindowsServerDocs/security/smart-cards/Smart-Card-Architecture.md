@@ -38,7 +38,7 @@ The following table lists the components that are included in the interactive si
 ###
 
 |Component|Description|
-|-------------|---------------|
+|-------|--------|
 |Winlogon|Provides an interactive sign-in infrastructure.|
 |Logon UI|Provides interactive UI rendering.|
 |Credential providers (password and smart card)|Describes credential information and serializing credentials.|
@@ -94,7 +94,7 @@ Figure 2 illustrates the relationship between the CryptoAPI, CSPs, the Smart Car
 **Figure 2** Base CSP and smart card minidriver architecture
 
 ### Caching with Base CSP and smart card KSP
-Smart card architecture uses caching mechanisms to assist in streamlining operations and to improve a user’s access to a PIN.
+Smart card architecture uses caching mechanisms to assist in streamlining operations and to improve a user???s access to a PIN.
 
 -   [Data caching](#BKMK_DataCaching)
 
@@ -122,7 +122,7 @@ Three types of objects or data are cached by the CSP: pins (for more information
 The global data cache is hosted in the Smart Cards for Windows service. Windows includes two public smart card API calls, **SCardWriteCache** and **SCardReadCache**. These API calls make global data caching functionality available to applications. Every smart card that conforms to the smart card minidriver specification has a 16-byte card identifier. This value is used to uniquely identify cached data that pertains to a given smart card. The standard Windows GUID type is used. These APIs allow an application to add data to and read data from the global cache.
 
 #### <a name="BKMK_PinCache"></a>PIN caching
-The PIN cache protects the user from entering a PIN every time the smart card is unauthenticated. After a smart card is authenticated, it will not differentiate among host-side applications—any application can access private data on the smart card.
+The PIN cache protects the user from entering a PIN every time the smart card is unauthenticated. After a smart card is authenticated, it will not differentiate among host-side applications???any application can access private data on the smart card.
 
 To mitigate this, the smart card enters an exclusive state when an application authenticates to the smart card. However, this means that other applications cannot communicate with the smart card and will be blocked. Therefore, such exclusive connections are minimized. The issue is that a protocol (such as the Kerberos protocol) requires multiple signing operations. Therefore, the protocol requires exclusive access to the smart card over an extended period, or it require multiple authentication operations. This is where the PIN cache is used to minimize exclusive use of the smart card without forcing the user to enter a PIN multiple times.
 
@@ -180,7 +180,7 @@ Similarly, in response to a **NCryptOpenKey** call in CNG, the smart card KSP tr
 ###
 
 |Type|Name|Format|
-|--------|--------|----------|
+|----|----|-----|
 |I|Reader Name and Container Name|\\\\.\\<Reader Name>\\<Container Name>|
 |II|Reader Name and Container Name (NULL)|\\\\.\\<Reader Name>|
 |III|Container Name Only|<Container Name>|
@@ -204,7 +204,7 @@ The following table shows the restrictions for the container creation operation.
 ###
 
 |Specification|Restriction|
-|-----------------|---------------|
+|---------|--------|
 |No silent context|Key container creation must always be able to show UI, such as the PIN prompt.|
 |No overwriting existing containers|If the specified container already exists on the chosen smart card, choose another smart card or cancel the operation.|
 
@@ -214,7 +214,7 @@ The following table shows the context flags used as restrictions for the contain
 ###
 
 |Flag|Description|
-|--------|---------------|
+|----|--------|
 |CRYPT_SILENT|No UI can be displayed during this operation.|
 |CRYPT_MACHINE_KEYSET|No cached data should be used during this operation.|
 |CRYPT_VERIFYCONTEXT|Only public data can be accessed on the smart card.|
@@ -331,7 +331,7 @@ The following properties are supported in versions of Windows designated in the 
 ###
 
 |Property|Description|
-|------------|---------------|
+|------|--------|
 |PP_USER_CERTSTORE|-   Used to return an HCERTSTORE that contains all user certificates on the smart card<br />-   Read-only (used only by **CryptGetProvParam**)<br />-   Caller responsible for closing the certificate store<br />-   Certificate encoded using PKCS_7_ASN_ENCODING or X509_ASN_ENCODING<br />-   CSP should set KEY_PROV_INFO on certificates<br />-   Certificate store should be assumed to be an in-memory store<br />-   Certificates should have a valid CRYPT_KEY_PROV_INFO as a property|
 |PP_ROOT_CERTSTORE|-   Read and Write (used by **CryptGetProvParam** and **CryptSetProvParam**)<br />-   Used to write a collection of root certificates to the smart card or return HCERTSTORE, which contains root certificates from the smart card<br />-   Used primarily for joining a domain by using a smart card<br />-   Caller responsible for closing the certificate store|
 |PP_SMARTCARD_READER|-   Read-only (used only by **CryptGetProvParam**)<br />-   Returns the smart card reader name as an ANSI string that is used to construct a fully qualified container name (that is, a smart card reader plus a container)|

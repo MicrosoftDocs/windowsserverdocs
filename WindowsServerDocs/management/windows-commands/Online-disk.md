@@ -1,6 +1,6 @@
 ---
 title: Online disk
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Online disk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,7 +21,7 @@ ms.date: 10/12/2016
 Brings disks that are currently offline to an online state.  
   
 > [!IMPORTANT]  
-> This command is not available in any edition of Windows??Vista.  
+> This command is not available in any edition of Windows Vista.  
   
 > [!IMPORTANT]  
 > This command will fail if it is used on a read\-only disk.  
@@ -38,12 +37,12 @@ online disk [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
 ## Remarks  
   
--   When used without parameters in Windows??Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.  
+-   When used without parameters in Windows Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.  
   
 -   For basic disks, this command will attempt to bring online the selected disk and all volumes on that disk.  
   

@@ -1,6 +1,6 @@
 ---
 title: Pause
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Pause
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ pause
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/?|Displays help at the command prompt.|
 ## Remarks
 -   When you run the **pause** command, the following message appears:
@@ -53,6 +52,6 @@ echo Put a new disk into drive A
 pause 
 goto begin
 ```
-In this example, all the files on the disk in drive A are copied to the current directory. After the message prompts you to put a new disk in drive A, the **pause** command suspends processing so that you can change disks and then press any key to resume processing. This batch program runs in an endless loop—the **goto begin** command sends the command interpreter to the Begin label of the batch file. To stop this batch program, press CTRL+C and then press Y.
+In this example, all the files on the disk in drive A are copied to the current directory. After the message prompts you to put a new disk in drive A, the **pause** command suspends processing so that you can change disks and then press any key to resume processing. This batch program runs in an endless loop the **goto begin** command sends the command interpreter to the Begin label of the batch file. To stop this batch program, press CTRL+C and then press Y.
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

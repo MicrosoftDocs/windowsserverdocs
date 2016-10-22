@@ -47,7 +47,7 @@ For information about what to look for in the AppLocker Event logs for  Windows 
 The following table contains information about the events that you can use to determine which applications are affected by AppLocker rules.
 
 |Event ID|Level|Event message|Description|
-|------------|---------|-----------------|---------------|
+|------|-----|---------|--------|
 |8000|Error|Application Identity Policy conversion failed. Status *<%1>*|Indicates that the policy was not applied correctly to the computer. The status message is provided for troubleshooting purposes.|
 |8001|Information|The AppLocker policy was applied successfully to this computer.|Indicates that the AppLocker policy was successfully applied to the computer.|
 |8002|Information|*<File name>* was allowed to run.|Specifies that the .exe or .dll file is allowed by an AppLocker rule.|

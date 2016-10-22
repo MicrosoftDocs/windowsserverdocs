@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root AddDom
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil root adddom <\\server\share> [<Version>] [<Comment>] | /?
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\server\\share>|UNC path to the namespace.|
 |<Comment>|Specifies an administrator comment for the namespace.|
 |<Version>|Version of the namespace, possible values are V1 or V2. V1 \- Creates a Windows 2000 Server mode namespace. V2 \- Creates a Windows Server 2008 mode namespace.|

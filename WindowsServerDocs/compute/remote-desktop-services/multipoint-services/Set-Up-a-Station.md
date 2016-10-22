@@ -1,5 +1,6 @@
 ---
 title: Set Up a Station
+description: Learn how to set up a a station in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

@@ -1,6 +1,6 @@
 ---
 title: Using the add-Image Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the add-Image Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -41,7 +40,7 @@ WDSUTIL /Add-ImagmediaFile:<wim file path>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 mediaFile:<.wim file path>|Specifies the full path and file name of the Windows Image (.wim) file that contains the images to be added.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If a server name is not specified, the local server will be used.|
 mediaType:{Boot&#124;Install}|Specifies the type of images to be added.|
@@ -73,4 +72,4 @@ WDSUTIL /Verbose /Progress /Add-ImagmediaFile:\\MyServer\Share \Install.wim /Ser
 [Using the get-Image Command](Using-the-get-Image-Command.md)
 [Using the remove-Image Command](Using-the-remove-Image-Command.md)
 [Using the replace-Image Command](Using-the-replace-Image-Command.md)
-[Subcommand: set-Image](Subcommand--set-Image.md)
+[Subcommand: set-Image](Subcommand-set-Image.md)

@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,12 +21,12 @@ This troubleshooting topic explains the interaction between the required synchro
 This topic applies to computers that are running Windows 8.1, Windows 8, Windows 7, Windows Vista, or Windows XP.
 
 ## Group Policy settings and CSEs
-Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. For this discussion, it’s important to understand that Group Policy preference extensions represent a set of client-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
+Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. For this discussion, it s important to understand that Group Policy preference extensions represent a set of client-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
 
 ## <a name="bkmk_SyncAsync"></a>Asynchronous and synchronous processing
 Asynchronous processing refers to processes that do not depend on the outcome of other processes. Therefore, they can occur on different threads simultaneously.
 
-Synchronous processing refers to processes that depend on each other’s outcome. Therefore, synchronous processes must wait for the previous process to finish before the next process can start.
+Synchronous processing refers to processes that depend on each other s outcome. Therefore, synchronous processes must wait for the previous process to finish before the next process can start.
 
 Asynchronous processing affects Group Policy in the following ways:
 
@@ -35,7 +34,7 @@ Asynchronous processing affects Group Policy in the following ways:
 
 -   **At sign-in** A user does not have to wait for Group Policy to finish processing before signing in.
 
-For CSEs such as Folder Redirection, Software Installation, and Drive Maps preference extension, the outcome of Group Policy processing might adversely affect the user’s experience, for example, a program being uninstalled while the user is working with it. To keep this from happening, the CSE is designed to require synchronous processing to apply the new settings. During asynchronous processing, the CSE signals the system to indicate that a synchronous application of Group Policy is required. A synchronous application of Group Policy occurs at the next startup (if it is signaled during the computer Group Policy refresh) or at the user’s next sign-in (if it is signaled during the user Group Policy refresh).
+For CSEs such as Folder Redirection, Software Installation, and Drive Maps preference extension, the outcome of Group Policy processing might adversely affect the user s experience, for example, a program being uninstalled while the user is working with it. To keep this from happening, the CSE is designed to require synchronous processing to apply the new settings. During asynchronous processing, the CSE signals the system to indicate that a synchronous application of Group Policy is required. A synchronous application of Group Policy occurs at the next startup (if it is signaled during the computer Group Policy refresh) or at the user s next sign-in (if it is signaled during the user Group Policy refresh).
 
 ## Foreground and background processing
 Group Policy foreground processing applies when the computer starts or shuts down and when the user signs in or signs out. During foreground processing, policy settings can be applied asynchronously or synchronously.
@@ -43,7 +42,7 @@ Group Policy foreground processing applies when the computer starts or shuts dow
 Group Policy background processing applies during periodic refreshes after the computer has started or a user has signed in. All requested Group Policy refreshes that are performed by using **GPUpdate.exe** also run as background processing. During background processing, policy settings are only applied asynchronously.
 
 ## <a name="BKMK_REQ"></a>CSE processing requirements
-When Group Policy processes on a Windows-based computer, client-side extensions interpret the stored policy settings and make the appropriate changes to the environment. When troubleshooting a given client-side extension’s application of Group Policy, the administrator can view the configuration parameters that affect that extension’s operation. These parameters are in the form of registry values.
+When Group Policy processes on a Windows-based computer, client-side extensions interpret the stored policy settings and make the appropriate changes to the environment. When troubleshooting a given client-side extension s application of Group Policy, the administrator can view the configuration parameters that affect that extension s operation. These parameters are in the form of registry values.
 
 > [!IMPORTANT]
 > This section provides an overview about the information that is stored in the registry. This is for informational purposes, and it is not recommended that you adjust the CSE processing properties by using the registry. Serious problems might occur if you modify the registry incorrectly. If you do make any changes to the registry, it is recommended that you back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [article 322756](http://support.microsoft.com/kb/322756) in the Microsoft Knowledge Base.
@@ -61,7 +60,7 @@ Each CSE determines if it requires synchronous processing to apply changes to th
 The following table provides information about the synchronous processing requirements and the default background processing behavior of CSEs in Group Policy.
 
 |CSE name|Requires synchronous processing|Called during background processing|
-|------------|-----------------------------------|---------------------------------------|
+|------|------------------|--------------------|
 |Disk Quota|No|Yes|
 |EFS Recovery|No|Yes|
 |Folder Redirection|Yes|Yes|
@@ -98,7 +97,7 @@ The following table provides information about the synchronous processing requir
 Although the requirement to run a client-side extension in synchronous mode is not configurable, other default behavior for each CSE can be configured through policy settings. To configure the properties that are associated with a CSE, apply the Administrative Templates computer configuration policy settings that are created for this purpose. The following table provides the names of the policy settings and the CSE properties that can be modified. If the CSE property includes an X, it can be modified for the specific CSE.
 
 |Policy Setting Name|Allows processing across a slow network connection|Do not apply during periodic background processing|Process even if the Group Policy Objects have not changed|Allows background processing priority|
-|-----------------------|------------------------------------------------------|------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------|
+|------------|---------------------------|---------------------------|-------------------------------|---------------------|
 |Configure disk quota policy processing|X|X|X||
 |Configure EFS recovery policy processing|X|X|X||
 |Configure Folder Redirection policy processing|X||X||

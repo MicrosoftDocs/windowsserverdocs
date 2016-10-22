@@ -1,6 +1,6 @@
 ---
 title: Winrs
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Winrs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ winrs [/<parameter>[:<value>]] <command>
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/r[emote]:<endpoint>|Specifies the target endpoint using a NetBIOS name or the standard connection:<br /><br />-   <url>: [<transport>://]<target>[:<port>]<br /><br />If not specified, **/r:localhost** is used.|  
 |/un[encrypted]|Specifies that the messages to the remote shell will not be encrypted. This is useful for troubleshooting or when the network traffic is already encrypted using **ipsec**, or when physical security is enforced.<br /><br />By default, the messages are encrypted using Kerberos or NTLM keys.<br /><br />This command-line option is ignored when HTTPS transport is selected.|  
 |/u[sername]:<username>|Specifies username on command line.<br /><br />If not specified, the tool will use Negotiate authentication or prompt for the name.<br /><br />If **/u[sername]** is specified, **/p[assword]** must also be specified.|  

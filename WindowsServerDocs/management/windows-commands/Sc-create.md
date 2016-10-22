@@ -1,6 +1,6 @@
 ---
 title: Sc create
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Sc create
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys 
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<ServerName>|Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\\myserver). To run SC.exe locally, omit this parameter.|
 |<ServiceName>|Specifies the service name returned by the **getkeyname** operation.|
 |type= {own &#124; share &#124; kernel &#124; filesys &#124; rec &#124; interact type= {own &#124; share}}|Specifies the service type. The default setting is **type= own**.<br /><br />**own** - Specifies that the service runs in its own process. It does not share an executable file with other services. This is the default setting.<br /><br />**share** - Specifies that the service runs as a shared process. It shares an executable file with other services.<br /><br />**kernel** - Specifies a driver.<br /><br />**filesys** - Specifies a file system driver.<br /><br />**rec** - Specifies a file system recognized driver (identifies file systems used on the computer).<br /><br />**interact** - Specifies that the service can interact with the desktop, receiving input from users. Interactive services must be run under the LocalSystem account. This type must be used in conjunction with **type= own** or **type= shared**. Using **type= interact** by itself will generate an "invalid parameter" error.|

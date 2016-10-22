@@ -1,6 +1,6 @@
 ---
 title: Using the new-Namespace Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the new-Namespace Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ WDSUTIL [Options] /New-Namespace [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |/FriendlyName:<Friendly name>|Specifies the friendly name of the namespace.|
 |[/Description:<Description>]|Sets the description of the namespace.|
@@ -56,4 +55,4 @@ WDSUTIL /New-Namespace /Server:MyWDSServer /FriendlyName:"Custom Scheduled Names
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 [Using the get-AllNamespaces Command](Using-the-get-AllNamespaces-Command.md)
 [Using the remove-Namespace Command](Using-the-remove-Namespace-Command.md)
-[Subcommand: start-Namespace](Subcommand--start-Namespace.md)
+[Subcommand: start-Namespace](Subcommand-start-Namespace.md)

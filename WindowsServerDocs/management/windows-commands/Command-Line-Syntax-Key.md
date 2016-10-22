@@ -1,6 +1,6 @@
 ---
 title: Command-Line Syntax Key
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,17 +14,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Command-Line Syntax Key
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 The following table describes the notation used to indicate command-line syntax.
 |Notation|Description|
-|------------|---------------|
+|------|--------|
 |Text without brackets or braces|Items you must type as shown|
 |<Text inside angle brackets>|Placeholder for which you must supply a value|
 |[Text inside square brackets]|Optional items|
 |{Text inside braces}|Set of required items; choose one|
 |Vertical bar (&#124;)|Separator for mutually exclusive items; choose one|
-|Ellipsis (…)|Items that can be repeated|
+|Ellipsis ( )|Items that can be repeated|

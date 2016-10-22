@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how to update your existing AppLocker policies for Packaged apps using the Remote Server Administration Toolkit (RSAT) in Windows Server® 2012 and Windows® 8.
+This topic describes how to update your existing AppLocker policies for Packaged apps using the Remote Server Administration Toolkit (RSAT) in Windows Server?? 2012 and Windows?? 8.
 
 You can create Packaged app rules for the computers running  Windows Server 2012  or Windows 8 in your domain by updating your existing AppLocker rule set. All you need is a computer running Windows 8. Download and install the Remote Server Administration Toolkit (RSAT) from the Microsoft Download Center.
 

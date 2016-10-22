@@ -1,6 +1,6 @@
 ---
 title: A-Z List
-description: "Windows Commands"
+description: "Topic containing a list of Windows Commands, A to Z"
 ms.custom: na
 description: "Windows Commands"
 ms.custom: na
@@ -16,7 +16,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # A-Z List
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012

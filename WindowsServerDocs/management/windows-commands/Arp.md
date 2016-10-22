@@ -1,6 +1,6 @@
 ---
 title: Arp
-description: "Windows Commands"
+description: "Windows Commands topic for **Arp** - Displays and modifies entries in the Address Resolution Protocol (ARP) cache used to store IP addresses and their resolved physical addresses.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Arp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ arp [/a [<InetAddr>] [/n <IfaceAddr>]] [/g [<InetAddr>] [-n <IfaceAddr>]] [/d <I
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/a [<InetAddr>] [/n <IfaceAddr>]|Displays current ARP cache tables for all interfaces. The /n parameter is case-sensitive.<br /><br />To display the ARP cache entry for a specific IP address, use **arp /a** with the *InetAddr* parameter, where *InetAddr* is an IP address. If *InetAddr* is not specified, the first applicable interface is used.<br /><br />To display the ARP cache table for a specific interface, use the **/n***IfaceAddr* parameter in conjunction with the **/a** parameter where *IfaceAddr* is the IP address assigned to the interface.|
 |/g [<InetAddr>] [/n <IfaceAddr>]|Identical to **/a**.|
 |[/d <InetAddr> [<IfaceAddr>]|Deletes an entry with a specific IP address, where *InetAddr* is the IP address.<br /><br />To delete an entry in a table for a specific interface, use the *IfaceAddr* parameter where *IfaceAddr* is the IP address assigned to the interface.<br /><br />To delete all entries, use the asterisk (\*) wildcard character in place of *InetAddr*.|

@@ -25,7 +25,7 @@ A security identifier (SID) is used to uniquely identify a security principal or
 
 Each account or group, or process running in the security context of the account, has a unique SID that is issued by an authority, such as a Windows domain controller. It is stored in a security database. The system generates the SID that identifies a particular account or group at the time the account or group is created. When a SID has been used as the unique identifier for a user or group, it can never be used again to identify another user or group.
 
-Each time a user signs in, the system creates an access token for that user. The access token contains the userâ€™s SID, user rights, and the SIDs for any groups the user belongs to. This token provides the security context for whatever actions the user performs on that computer.
+Each time a user signs in, the system creates an access token for that user. The access token contains the user????????s SID, user rights, and the SIDs for any groups the user belongs to. This token provides the security context for whatever actions the user performs on that computer.
 
 In addition to the uniquely created, domain-specific SIDs that are assigned to specific users and groups, there are well-known SIDs that identify generic groups and generic users. For example, the Everyone and World SIDs identify a group that includes all users. Well-known SIDs have values that remain constant across all operating systems.
 
@@ -45,7 +45,7 @@ The content in this topic applies to computers that are running the supported ve
 
 -   [Well-known SIDs](#w2k3tr_sids_how_mzbl)
 
--   [Changes in security identifierâ€™s functionality](#BKMK_ChangesSIDs)
+-   [Changes in security identifier????????s functionality](#BKMK_ChangesSIDs)
 
 ## <a name="w2k3tr_sids_how"></a>How security identifiers work
 Users refer to accounts by using the account name, but the operating system internally refers to accounts and processes that run in the security context of the account by using their security identifiers (SIDs). For domain accounts, the SID of a security principal is created by concatenating the SID of the domain with a relative identifier (RID) for the account. SIDs are unique within their scope (domain or local), and they are never reused.
@@ -54,7 +54,7 @@ The operating system generates a SID that identifies a particular account or gro
 
 For every local account and group, the SID is unique for the computer where it was created. No two accounts or groups on the computer ever share the same SID. Likewise, for every domain account and group, the SID is unique within an enterprise. This means that the SID for an account or group that is created in one domain will never match the SID for an account or group created in any other domain in the enterprise.
 
-SIDs always remain unique. Security authorities never issue the same SID twice, and they never reuse SIDs for deleted accounts. For example, if a user with a user account in a Windows domain leaves her job, an administrator deletes her Active Directory account, including the SID that identifies the account. If she later returns to a different job at the same company, an administrator creates a new account, and the Windows Server operating system generates a new SID. The new SID does not match the old one; so none of the userâ€™s access from her old account is transferred to the new account. Her two accounts represent two completely different security principals.
+SIDs always remain unique. Security authorities never issue the same SID twice, and they never reuse SIDs for deleted accounts. For example, if a user with a user account in a Windows domain leaves her job, an administrator deletes her Active Directory account, including the SID that identifies the account. If she later returns to a different job at the same company, an administrator creates a new account, and the Windows Server operating system generates a new SID. The new SID does not match the old one; so none of the user????????s access from her old account is transferred to the new account. Her two accounts represent two completely different security principals.
 
 ## <a name="w2k3tr_sids_how_lpsh"></a>Security identifier architecture
 A security identifier is a data structure in binary format that contains a variable number of values. The first values in the structure contain information about the SID structure. The remaining values are arranged in a hierarchy (similar to a telephone number), and they identify the SID-issuing authority (for example, the Windows Server 2012 operating system), the SID-issuing domain, and a particular security principal or group. The following image illustrates the structure of a SID.
@@ -68,7 +68,7 @@ The individual values of a SID are described in the following table.
 **SID components**
 
 |Component|Description|
-|-------------|---------------|
+|-------|--------|
 |Revision|Indicates the version of the SID structure that is used in a particular SID. **Note:** The structure used in all SIDs that were created by a Windows Server 2003 operating system and earlier versions is revision level 1.|
 |Identifier authority|Identifies the highest level of authority that can issue SIDs for a particular type of security principal. For example, the identifier authority value in the SID for the Everyone group is 1 (World Authority). The identifier authority value in the SID for a specific Windows Server account or group is 5 (NT Authority).|
 |Subauthorities|Holds the most important information in a SID, which is contained in a series of one or more subauthority values. All values up to, but not including, the last value in the series collectively identify a domain in an enterprise. This part of the series is called the domain identifier. The last value in the series, which is called the relative identifier (RID), identifies a particular account or group relative to a domain.|
@@ -84,7 +84,7 @@ In this notation, the components of a SID are represented as shown in the follow
 **SID components in string format**
 
 |Component|Definition|
-|-------------|--------------|
+|-------|-------|
 |S|Indicates that the string is a SID|
 |R|Indicates the revision level|
 |X|Indicates the identifier authority value|
@@ -146,11 +146,11 @@ When a new domain user or group account is created, Active Directory stores the 
 
 Active Directory uses GUIDs internally to identify objects. For example, the GUID is one of an object's properties that is published in the global catalog. Searching the global catalog for a User object GUID produces results if the user has an account somewhere in the enterprise. In fact, searching for any object by **ObjectGUID** might be the most reliable way of finding the object you want to locate. The values of other object properties can change, but the **ObjectGUID** property never changes. When an object is assigned a GUID, it keeps that value for life.
 
-If a user moves from one domain to another, the user gets a new SID. The SID for a group object does not change because groups stay in the domain where they were created. However, if people move, their accounts can move with them. If an employee moves from North America to Europe, but stays in the same company, an administrator for the enterprise can move the employeeâ€™s User object from, for example, Contoso\NoAm to Contoso\Europe. If the administrator does this, the User object for the account needs a new SID. The domain identifier portion of a SID that is issued in NoAm is unique to NoAm; so the SID for the userâ€™s account in Europe has a different domain identifier. The relative identifier portion of a SID is unique relative to the domain; so if the domain changes, the relative identifier also changes.
+If a user moves from one domain to another, the user gets a new SID. The SID for a group object does not change because groups stay in the domain where they were created. However, if people move, their accounts can move with them. If an employee moves from North America to Europe, but stays in the same company, an administrator for the enterprise can move the employee????????s User object from, for example, Contoso\NoAm to Contoso\Europe. If the administrator does this, the User object for the account needs a new SID. The domain identifier portion of a SID that is issued in NoAm is unique to NoAm; so the SID for the user????????s account in Europe has a different domain identifier. The relative identifier portion of a SID is unique relative to the domain; so if the domain changes, the relative identifier also changes.
 
 When a User object moves from one domain to another, a new SID must be generated for the user account and stored in the **ObjectSID** property. Before the new value is written to the property, the previous value is copied to another property of a User object, **SIDHistory**. This property can hold multiple values. Each time a User object moves to another domain, a new SID is generated and stored in the **ObjectSID** property, and another value is added to the list of old SIDs in **SIDHistory**. When a user signs in and is successfully authenticated, the domain authentication service queries Active Directory for all the SIDs that are associated with the user, including the user's current SID, the user's old SIDs, and the SIDs for the user's groups. All these SIDs are returned to the authentication client, and they are included in the user's access token. When the user tries to gain access to a resource, any one of the SIDs in the access token (including one of the SIDs in **SIDHistory**), can allow or deny the user access.
 
-If you allow or deny usersâ€™ access to a resource based on their jobs, you should allow or deny access to a group, not to an individual. That way, when users change jobs or move to other departments, you can easily adjust their access by removing them from certain groups and adding them to others.
+If you allow or deny users???????? access to a resource based on their jobs, you should allow or deny access to a group, not to an individual. That way, when users change jobs or move to other departments, you can easily adjust their access by removing them from certain groups and adding them to others.
 
 However, if you allow or deny an individual user access to resources, you probably want that user's access to remain the same no matter how many times the user's account domain changes. The **SIDHistory** property makes this possible. When a user changes domains, there is no need to change the access control list (ACL) on any resource. If an ACL has the user's old SID, but not the new one, the old SID is still in the user's access token. It is listed among the SIDs for the user's groups, and the user is granted or denied access based on the old SID.
 
@@ -164,13 +164,13 @@ The following table lists the universal well-known SIDs.
 **Universal well-known SIDs**
 
 |Value|Universal Well-Known SID|Identifies|
-|---------|-----------------------------|--------------|
-|S-1â€“0â€“0|Null SID|A group with no members. This is often used when a SID value is not known.|
-|(S-1â€“1â€“0)|World|A group that includes all users.|
-|S-1â€“2â€“0|Local|Users who log on to terminals that are locally (physically) connected to the system.|
+|-----|---------------|-------|
+|S-1????????0????????0|Null SID|A group with no members. This is often used when a SID value is not known.|
+|(S-1????????1????????0)|World|A group that includes all users.|
+|S-1????????2????????0|Local|Users who log on to terminals that are locally (physically) connected to the system.|
 |S-1-2-1|Console Logon|A group that includes users who are logged on to the physical console. Introduced in Windows Server 2008 R2.|
-|S-1â€“3â€“0|Creator Owner ID|A security identifier to be replaced by the security identifier of the user who created a new object. This SID is used in inheritable ACEs.|
-|S-1â€“3â€“1|Creator Group ID|A security identifier to be replaced by the primary-group SID of the user who created a new object. Use this SID in inheritable ACEs.|
+|S-1????????3????????0|Creator Owner ID|A security identifier to be replaced by the security identifier of the user who created a new object. This SID is used in inheritable ACEs.|
+|S-1????????3????????1|Creator Group ID|A security identifier to be replaced by the primary-group SID of the user who created a new object. Use this SID in inheritable ACEs.|
 |S-1-3-2|Creator Owner Server||
 |S-1-3-3|Creator Group Server||
 |S-1-3-4|Owner Rights|A group that represents the current owner of the object. When an ACE that carries this SID is applied to an object, the system ignores the implicit READ_CONTROL and WRITE_DAC permissions for the object owner.|
@@ -184,39 +184,39 @@ The following table lists the predefined identifier authority constants. The fir
 **Predefined identifier authority constants**
 
 |Identifier Authority|Value|SID String Prefix|
-|------------------------|---------|---------------------|
-|SECURITY_NULL_SID_AUTHORITY|0|S-1â€“0|
-|SECURITY_WORLD_SID_AUTHORITY|1|S-1â€“1|
-|SECURITY_LOCAL_SID_AUTHORITY|2|S-1â€“2|
-|SECURITY_CREATOR_SID_AUTHORITY|3|S-1â€“3|
+|------------|-----|-----------|
+|SECURITY_NULL_SID_AUTHORITY|0|S-1????????0|
+|SECURITY_WORLD_SID_AUTHORITY|1|S-1????????1|
+|SECURITY_LOCAL_SID_AUTHORITY|2|S-1????????2|
+|SECURITY_CREATOR_SID_AUTHORITY|3|S-1????????3|
 
 The following RID values are used with universal well-known SIDs. The Identifier authority column shows the prefix of the identifier authority with which you can combine the RID to create a universal well-known SID.
 
 **RID values used with universal well-known SIDs**
 
 |Relative Identifier Authority|Value|Identifier Authority|
-|---------------------------------|---------|------------------------|
-|SECURITY_NULL_RID|0|S-1â€“0|
-|SECURITY_WORLD_RID|0|S-1â€“1|
-|SECURITY_LOCAL_RID|0|S-1â€“2|
-|SECURITY_CREATOR_OWNER_RID|0|S-1â€“3|
-|SECURITY_CREATOR_GROUP_RID|1|S-1â€“3|
+|-----------------|-----|------------|
+|SECURITY_NULL_RID|0|S-1????????0|
+|SECURITY_WORLD_RID|0|S-1????????1|
+|SECURITY_LOCAL_RID|0|S-1????????2|
+|SECURITY_CREATOR_OWNER_RID|0|S-1????????3|
+|SECURITY_CREATOR_GROUP_RID|1|S-1????????3|
 
-The SECURITY_NT_AUTHORITY (S-1â€“5) predefined identifier authority produces SIDs that are not universal and are meaningful only in installations of the Windows operating systems that are designated in the **Applies To** list at the beginning of this topic. The following table lists the well-known SIDs.
+The SECURITY_NT_AUTHORITY (S-1????????5) predefined identifier authority produces SIDs that are not universal and are meaningful only in installations of the Windows operating systems that are designated in the **Applies To** list at the beginning of this topic. The following table lists the well-known SIDs.
 
 **Well-known security identifiers**
 
 |SID|Display Name|Description|
-|-------|----------------|---------------|
+|----|--------|--------|
 |S-1-5-1|Dialup|A group that includes all users who are logged on to the system by means of a dial-up connection.|
-|S-1-5-113|Local account|You can use this SID when restricting network logon to local accounts instead of â€œadministratorâ€? or equivalent. This SID can be effective in blocking network logon for local users and groups by account type regardless of what they are actually named. Introduced in Windows Server 2012 R2.|
-|S-1-5-114|Local account and member of Administrators group|You can use this SID when restricting network logon to local accounts instead of â€œadministratorâ€? or equivalent. This SID can be effective in blocking network logon for local users and groups by account type regardless of what they are actually named. Introduced in Windows Server 2012 R2.|
+|S-1-5-113|Local account|You can use this SID when restricting network logon to local accounts instead of ???????administrator?????? or equivalent. This SID can be effective in blocking network logon for local users and groups by account type regardless of what they are actually named. Introduced in Windows Server 2012 R2.|
+|S-1-5-114|Local account and member of Administrators group|You can use this SID when restricting network logon to local accounts instead of ???????administrator?????? or equivalent. This SID can be effective in blocking network logon for local users and groups by account type regardless of what they are actually named. Introduced in Windows Server 2012 R2.|
 |S-1-5-2|Network|A group that includes all users who are logged on by means of a network connection. Access tokens for interactive users do not contain the Network SID.|
 |S-1-5-3|Batch|A group that includes all users who have logged on by means of a batch queue facility, such as task scheduler jobs.|
 |S-1-5-4|Interactive|A group that includes all users who log on interactively. A user can start an interactive logon session by logging on directly at the keyboard, by opening a Remote Desktop Services connection from a remote computer, or by using a remote shell such as Telnet. In each case, the user's access token contains the Interactive SID. If the user signs in by using a Remote Desktop Services connection, the user's access token also contains the Remote Interactive Logon SID.|
 |S-1-5-5-*X*-*Y*|Logon Session|The *X* and *Y* values for these SIDs uniquely identify a particular logon session.|
 |S-1-5-6|Service|A group that includes all security principals that have signed in as a service.|
-|S-1-5-7|Anonymous Logon|A user who has connected to the computer without supplying a user name and password.<br /><br />The Anonymous Logon identity is different from the identity that is used by Internet Information Services (IIS) for anonymous web access. IIS uses an actual accountâ€”by default, IUSR_*ComputerName*, for anonymous access to resources on a website. Strictly speaking, such access is not anonymous because the security principal is known even though unidentified people are using the account. IUSR_*ComputerName* (or whatever you name the account) has a password, and IIS logs on the account when the service starts. As a result, the IIS â€œanonymousâ€? user is a member of Authenticated Users but Anonymous Logon is not.|
+|S-1-5-7|Anonymous Logon|A user who has connected to the computer without supplying a user name and password.<br /><br />The Anonymous Logon identity is different from the identity that is used by Internet Information Services (IIS) for anonymous web access. IIS uses an actual account????????by default, IUSR_*ComputerName*, for anonymous access to resources on a website. Strictly speaking, such access is not anonymous because the security principal is known even though unidentified people are using the account. IUSR_*ComputerName* (or whatever you name the account) has a password, and IIS logs on the account when the service starts. As a result, the IIS ???????anonymous?????? user is a member of Authenticated Users but Anonymous Logon is not.|
 |S-1-5-8|Proxy|Does not currently apply: this SID is not used.|
 |S-1-5-9|Enterprise Domain Controllers|A group that includes all domain controllers in a forest of domains.|
 |S-1-5-10|Self|A placeholder in an ACE for a user, group, or computer object in Active Directory. When you grant permissions to Self, you grant them to the security principal that is represented by the object. During an access check, the operating system replaces the SID for Self with the SID for the security principal that is represented by the object.|
@@ -227,14 +227,14 @@ The SECURITY_NT_AUTHORITY (S-1â€“5) predefined identifier authority produce
 |S-1-5-15|This Organization|A group that includes all users from the same organization. Only included with Active Directory accounts and only added by a domain controller.|
 |S-1-5-17|IIS_USRS|An account that is used by the default Internet Information Services (IIS) user.|
 |S-1-5-18|System (or LocalSystem)|An identity that is used locally by the operating system and by services that are configured to sign in as LocalSystem.<br /><br />System is a hidden member of Administrators. That is, any process running as System has the SID for the built-in Administrators group in its access token.<br /><br />When a process that is running locally as System accesses network resources, it does so by using the computer's domain identity. Its access token on the remote computer includes the SID for the local computer's domain account plus SIDs for security groups that the computer is a member of, such as Domain Computers and Authenticated Users.|
-|S-1-5-19|NT Authority (LocalService)|An identity that is used by services that are local to the computer, have no need for extensive local access, and do not need authenticated network access. Services that run as LocalService access local resources as ordinary users, and they access network resources as anonymous users. As a result, a service that runs as LocalService has significantly less authority than a service that runs as LocalSystemâ€”locally and on the network.|
+|S-1-5-19|NT Authority (LocalService)|An identity that is used by services that are local to the computer, have no need for extensive local access, and do not need authenticated network access. Services that run as LocalService access local resources as ordinary users, and they access network resources as anonymous users. As a result, a service that runs as LocalService has significantly less authority than a service that runs as LocalSystem????????locally and on the network.|
 |S-1-5-20|Network Service|An identity that is used by services that have no need for extensive local access but do need authenticated network access. Services running as NetworkService access local resources as ordinary users and access network resources by using the computer's identity. As a result, a service that runs as NetworkService has the same network access as a service that runs as LocalSystem, but it has significantly reduced local access.|
 |S-1-5-*domain*-500|Administrator|A user account for the system administrator. Every computer has a local Administrator account and every domain has a domain Administrator account.<br /><br />The Administrator account is the first account created during operating system installation. The account cannot be deleted, disabled, or locked out, but it can be renamed.<br /><br />By default, the Administrator account is a member of the Administrators group, and it cannot be removed from that group.|
 |S-1-5-*domain*-501|Guest|A user account for people who do not have individual accounts. Every computer has a local Guest account, and every domain has a domain Guest account.<br /><br />By default, Guest is a member of the Everyone and the Guests groups. The domain Guest account is also a member of the Domain Guests and Domain Users groups.<br /><br />Unlike Anonymous Logon, Guest is a real account, and it can be used to log on interactively. By default, the account is enabled in Windows client operating systems that are designated in the **Applies To** list, and disabled in Windows Server operating systems that are designated in the **Applies To** list. The Guest account does not require a password, but it can have one.|
 |S-1-5-*domain*-502|krbtgt|A user account that is used by the Key Distribution Center (KDC) service. The account exists only on domain controllers.|
-|S-1-5-*domain*-512|Domain Admins|A global group with members that are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined the domain, including domain controllers.<br /><br />Domain Admins is the default owner of any object that is created in the domainâ€™s Active Directory by any member of the group. If members of the group create other objects, such as files, the default owner is the Administrators group.|
+|S-1-5-*domain*-512|Domain Admins|A global group with members that are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined the domain, including domain controllers.<br /><br />Domain Admins is the default owner of any object that is created in the domain????????s Active Directory by any member of the group. If members of the group create other objects, such as files, the default owner is the Administrators group.|
 |S-1-5-*domain*-513|Domain Users|A global group that includes all users in a domain. When you create a new User object in Active Directory, the user is automatically added to this group.|
-|S-1-5-*domain*-514|Domain Guests|A global group, which by default, has only one member: the domainâ€™s built-in Guest account.|
+|S-1-5-*domain*-514|Domain Guests|A global group, which by default, has only one member: the domain????????s built-in Guest account.|
 |S-1-5-*domain*-515|Domain Computers|A global group that includes all computers that have joined the domain, excluding domain controllers.|
 |S-1-5-*domain*-516|Domain Controllers|A global group that includes all domain controllers in the domain. New domain controllers are added to this group automatically.|
 |S-1-5-*domain*-517|Cert Publishers|A global group that includes all computers that host an enterprise certification authority.<br /><br />Cert Publishers are authorized to publish certificates for User objects in Active Directory.|
@@ -271,7 +271,7 @@ The following RIDs are relative to each domain.
 **RIDs relative to each domain**
 
 |RID|Identifies|
-|-------|--------------|
+|----|-------|
 |DOMAIN_USER_RID_ADMIN|The administrative user account in a domain.|
 |DOMAIN_USER_RID_GUEST|The guest-user account in a domain. Users who do not have an account can automatically sign in to this account.|
 |DOMAIN_GROUP_RID_USERS|A group that contains all user accounts in a domain. All users are automatically added to this group.|
@@ -288,7 +288,7 @@ The following table provides examples of domain-relative RIDs that are used to f
 **Examples of RIDs for local groups**
 
 |RID|Identifies|
-|-------|--------------|
+|----|-------|
 |DOMAIN_ALIAS_RID_ADMINS|Administrators of the domain.|
 |DOMAIN_ALIAS_RID_USERS|All users in the domain.|
 |DOMAIN_ALIAS_RID_GUESTS|Guests of the domain.|
@@ -297,11 +297,11 @@ The following table provides examples of domain-relative RIDs that are used to f
 |DOMAIN_ALIAS_RID_REPLICATOR|A local group that is responsible for copying security databases from the primary domain controller to the backup domain controllers. These accounts are used only by the system.|
 |DOMAIN_ALIAS_RID_RAS_SERVERS|A local group that represents remote access and servers running Internet Authentication Service (IAS). This group permits access to various attributes of User objects.|
 
-## <a name="BKMK_ChangesSIDs"></a>Changes in security identifierâ€™s functionality
+## <a name="BKMK_ChangesSIDs"></a>Changes in security identifier????????s functionality
 The following table describes changes in SID implementation in the Windows operating systems that are designated in the [Applies To](#BKMK_top) list.
 
 |Change|Operating system version|Description and resources|
-|----------|----------------------------|-----------------------------|
+|-----|--------------|---------------|
 ||||
 |Most of the operating system files are owned by the TrustedInstaller security identifier (SID)|Windows Server 2008, Windows Vista|The purpose of this change is to prevent a process that is running as an administrator or under the LocalSystem account from automatically replacing the operating system files.<br /><br />For more information, see [What's New for Access Control in Windows Server 2008](http://technet.microsoft.com/library/cc731677(v=ws.10).aspx).|
 |Restricted SID checks are implemented|Windows Server 2008, Windows Vista|When restricting SIDs are present, Windows performs two access checks. The first is the normal access check, and the second is the same access check against the restricting SIDs in the token. Both access checks must pass to allow the process to access the object.<br /><br />For more information, see [What's New for Access Control in Windows Server 2008](http://technet.microsoft.com/library/cc731677(v=ws.10).aspx).|

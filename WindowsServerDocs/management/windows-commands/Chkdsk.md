@@ -1,6 +1,6 @@
 ---
 title: Chkdsk
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Chkdsk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<Volume>|Specifies the drive letter \(followed by a colon\), mount point, or volume name.|  
 |\[<Path>\]<FileName>|Use with file allocation table \(FAT\) and FAT32 only. Specifies the location and name of a file or set of files that you want **chkdsk** to check for fragmentation. You can use the **?** and **\*** wildcard characters to specify multiple files.|  
 |\/f|Fixes errors on the disk. The disk must be locked. If **chkdsk** cannot lock the drive, a message appears that asks you if you want to check the drive the next time you restart the computer.|  
@@ -74,7 +73,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 -   Understanding exit codes  
     The following table lists the exit codes that **chkdsk** reports after it has finished.  
     |Exit code|Description|  
-    |-------------|---------------|  
+    |-------|--------|  
     |0|No errors were found.|  
     |1|Errors were found and fixed.|  
     |2|Performed disk cleanup \(such as garbage collection\) or did not perform cleanup because **\/f** was not specified.|  

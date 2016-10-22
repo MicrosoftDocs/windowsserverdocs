@@ -1,6 +1,6 @@
 ---
 title: Reg compare
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Reg compare
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ reg compare <KeyName1> <KeyName2> [{/v ValueName | /ve}] [{/oa | /od | /os | on}
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<KeyName1>|Specifies the full path of the first subkey to be compared. To specify a remote computer, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |<KeyName2>|Specifies the full path of the second subkey to be compared. To specify a remote computer, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. Specifying only the computer name in *KeyName2* causes the operation to use the path to the subkey specified in *KeyName1*. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |/v <ValueName>|Specifies the value name to compare under the subkey.|
@@ -42,13 +41,13 @@ reg compare <KeyName1> <KeyName2> [{/v ValueName | /ve}] [{/oa | /od | /os | on}
 ## Remarks
 The following table lists the return values for **reg compare**.
 |Value|Description|
-|---------|---------------|
+|-----|--------|
 |0|The comparison is successful and the result is identical.|
 |1|The comparison failed.|
 |2|The comparison was successful and differences were found.|
 The following table lists the symbols displayed in the results.
 |Symbol|Description|
-|----------|---------------|
+|-----|--------|
 |=|*KeyName1* data is equal to *KeyName2* data.|
 |<|*KeyName1* data is less than *KeyName2* data.|
 |>|*KeyName1* data is greater than *KeyName2* data.|

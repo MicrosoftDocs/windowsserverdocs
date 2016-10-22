@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsutil Root Export
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ dfsutil root export <\\server\share> <filename> [Verbose] [DownLevel]
 ### Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<\\\\server\\share>|UNC path to the namespace on the namespace server.|
 |<filename>|Name of the file that will store the namespace configuration in XML file format.|
 |Downlevel|Saves the export file as a text file that is compatible with the version of Dfsutil that is included with the Windows Server 2003 Support Tools.|

@@ -1,6 +1,6 @@
 ---
 title: Ksetup:setrealm
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:setrealm
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /setrealm <DNSDomainName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<DNSDomainName>|The DNS domain name can be in the form of a fully qualified domain name or simple domain name.|
 ## Remarks
 The DNS domain name parameter should be entered in uppercase letters. Otherwise, the **ksetup** command will ask for verification to continue.

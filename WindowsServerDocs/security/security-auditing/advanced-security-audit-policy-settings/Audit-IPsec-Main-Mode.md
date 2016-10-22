@@ -33,7 +33,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4646|Security ID: %1|
 |4650|An IPsec Main Mode security association was established. Extended Mode was not enabled. Certificate authentication was not used.|
 |4651|An IPsec Main Mode security association was established. Extended Mode was not enabled. A certificate was used for authentication.|

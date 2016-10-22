@@ -1,6 +1,6 @@
 ---
 title: Nslookup set class
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup set class
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ set class=<Class>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Class>|The default class is IN. The following table lists the valid values for this command.<br /><br />-   IN - Specifies the Internet class<br />-   CHAOS - Specifies the Chaos class<br />-   HESIOD - Specifies the MIT Athena Hesiod class<br />-   ANY - Specifies any of the previously listed wildcards|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 ## Additional references

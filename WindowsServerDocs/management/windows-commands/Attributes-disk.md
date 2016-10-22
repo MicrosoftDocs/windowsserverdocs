@@ -1,6 +1,6 @@
 ---
 title: Attributes disk
-description: "Windows Commands"
+description: "Windows Commands topic for **Attributes disk** - Displays, sets, or clears the attributes of a disk."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Attributes disk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,7 +21,7 @@ ms.date: 10/12/2016
 Displays, sets, or clears the attributes of a disk.  
   
 > [!IMPORTANT]  
-> This parameter is not available in any edition of Windows??Vista.  
+> This parameter is not available in any edition of Windows Vista.  
   
 ## Syntax  
   
@@ -33,7 +32,7 @@ attributes disk [{set | clear}] [readonly] [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |set|Sets the specified attribute of the disk with focus.|  
 |clear|Clears the specified attribute of the disk with focus.|  
 |readonly|Specifies that the disk is read\-only.|  

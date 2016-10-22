@@ -29,7 +29,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4692|Backup of data protection master key was attempted.|
 |4693|Recovery of data protection master key was attempted.|
 |4694|Protection of auditable protected data was attempted.|

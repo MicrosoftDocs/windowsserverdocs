@@ -1,6 +1,6 @@
 ---
 title: Plan for Hyper-V on Windows Server 2016
-description: " "
+description: "Gives links to articles on planning considerations for Hyper-V"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

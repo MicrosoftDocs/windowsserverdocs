@@ -1,6 +1,6 @@
 ---
 title: Rpcping
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Rpcping
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -35,7 +34,7 @@ rpcping [/t <protseq>] [/s <server_addr>] [/e <endpoint>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/t <protseq>|Specifies the protocol sequence to use. Can be one of the standard RPC protocol sequences, for example: ncacn_ip_tcp, ncacn_np, or ncacn_http.<br /><br />If not specified, default is ncacn_ip_tcp.|
 |/s <server_addr>|Specifies the server address. If not specified, the local machine will be pinged.|
 |/e <endpoint>|Specifies the endpoint to ping. If none is specified, the endpoint mapper on the target machine will be pinged.<br /><br />This option is mutually exclusive with the interface (**/f**) option.|
@@ -74,7 +73,7 @@ rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P "usernam
 ```
 <Here is where you put a detailed description of another example.>
 ```
-This /is /a:???different??? /example
+This /is /a: different  /example
 ```
 ## Additional references
 -   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

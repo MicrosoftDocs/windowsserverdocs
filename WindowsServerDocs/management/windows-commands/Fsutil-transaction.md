@@ -1,6 +1,6 @@
 ---
 title: Fsutil transaction
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil transaction
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -37,7 +36,7 @@ fsutil transaction [rollback] <GUID>
 ### Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |commit|Marks the end of a successful implicit or explicit specified transaction.|  
 |<GUID>|Specifies the GUID value that represents a transaction.|  
 |fileinfo|Displays transaction information for the specified file.|  
@@ -48,7 +47,7 @@ fsutil transaction [rollback] <GUID>
   
 ### Remarks  
   
--   Transactional NTFS was introduced in  Windows Server 2008 .  
+-   Transactional NTFS was introduced in  Windows Server 2008 .  
   
 ### <a name="BKMK_examples"></a>Examples  
 To display transaction information for file c:\\test.txt, type:  

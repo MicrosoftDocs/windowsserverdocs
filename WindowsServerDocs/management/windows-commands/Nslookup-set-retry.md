@@ -1,6 +1,6 @@
 ---
 title: Nslookup set retry
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup set retry
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ set retry=<Number>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Number>|Specifies the new value for the number of retries. The default number of retries is 4.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 ## Remarks

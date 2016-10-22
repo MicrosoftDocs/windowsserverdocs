@@ -1,5 +1,6 @@
 ---
 title: Storing Files with MultiPoint Services
+description: Learn about file storage in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

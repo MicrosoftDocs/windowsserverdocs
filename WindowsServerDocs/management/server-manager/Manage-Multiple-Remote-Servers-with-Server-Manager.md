@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Manage Multiple, Remote Servers with Server Manager
 
 >Applies To: Windows Server 2016
@@ -68,7 +67,7 @@ Server Manager runs in the Minimal Server Graphical Interface; that is, when the
 The Server Manager console is included with [Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=304145) for Windows 8.1 and [Remote Server Administration Tools](http://go.microsoft.com/fwlink/p/?LinkID=238560) for Windows 8. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can use Server Manager to manage only Windows-based servers.
 
 |Server Manager Source Operating System|Targeted at  Windows Server 2012 R2 |Targeted at  Windows Server 2012 |Targeted at  Windows Server 2008 R2  or  Windows Server 2008 |Targeted at Windows Server 2003|
-|-------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+|-------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|
 |Windows 8 or  Windows Server 2012 |Not supported|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|
 |Windows 8.1 or  Windows Server 2012 R2 |Full support|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|
 
@@ -144,7 +143,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 > Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012  or Windows 8 cannot be used to manage servers that are running  Windows Server 2012 R2 .
 
 |Task Description|Administrators (including the built-in Administrator account)|Standard Server Users|
-|--------------------|--------------------------------------------------------------------|-------------------------|
+|----------|----------------------------------|-------------|
 |Add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |Create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
 |Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](http://go.microsoft.com/fwlink/p/?LinkId=239558).|Yes|No|

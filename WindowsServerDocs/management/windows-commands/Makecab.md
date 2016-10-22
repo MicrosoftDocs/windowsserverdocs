@@ -1,6 +1,6 @@
 ---
 title: Makecab
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Makecab
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<source>|File to compress.|
 |<destination>|File name to give compressed file. If omitted, the last character of the source file name is replaced with an underscore (_) and used as the destination.|
 |/f <directives_file>|A file with **makecab** directives (may be repeated).|

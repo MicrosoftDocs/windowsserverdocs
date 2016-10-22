@@ -1,6 +1,6 @@
 ---
 title: Command-Line Reference_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Command-Line Reference_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,13 +35,13 @@ The information that is contained in this overview applies to:
 
 -   Windows Server 2012
 
--   Windows Server 2008 R2
+-   Windows Server 2008 R2
 
--   Windows Server 2008
+-   Windows Server 2008
 
--   Windows Server 2003 R2
+-   Windows Server 2003 R2
 
--   Windows Server 2003
+-   Windows Server 2003
 
 -   Windows 8
 
@@ -50,7 +49,7 @@ The information that is contained in this overview applies to:
 
 -   Windows Vista
 
--   Windows XP
+-   Windows XP
 
 ## <a name="BKMK_OVER"></a>Feature description
 ### <a name="BKMK_OVR"></a>Command shell overview
@@ -92,7 +91,7 @@ You can change the properties for the Command Prompt window.
 > 
 > HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Command Processor\\CompletionChar\\REG\_DWORD
 > 
-> To set the **REG\_DWORD** value, use the hexadecimal value of a control character for a particular function \(for example, **0×9** is Tab and **0×08** is Backspace\). User\-specified settings take precedence over computer settings, and command\-line options take precedence over registry settings.
+> To set the **REG\_DWORD** value, use the hexadecimal value of a control character for a particular function \(for example, **0 9** is Tab and **0 08** is Backspace\). User\-specified settings take precedence over computer settings, and command\-line options take precedence over registry settings.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.

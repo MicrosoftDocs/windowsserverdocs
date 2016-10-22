@@ -1,6 +1,6 @@
 ---
 title: Fsutil dirty
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil dirty
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ fsutil dirty {query | set} <VolumePath>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |query|Queries the specified volume's dirty bit.|  
 |set|Sets the specified volume's dirty bit.|  
 |<VolumePath>|Specifies the drive name followed by a colon or GUID in the following format: **Volume{***GUID***}**.|  

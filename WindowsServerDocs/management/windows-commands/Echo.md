@@ -1,6 +1,6 @@
 ---
 title: Echo
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Echo
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ echo [on | off]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[on &#124; off]|Turns on or off the command echoing feature. Command echoing is on by default.|
 |<Message>|Specifies the text to display on the screen.|
 |/?|Displays help at the command prompt.|

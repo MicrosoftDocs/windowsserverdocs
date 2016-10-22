@@ -1,6 +1,6 @@
 ---
 title: Sc config
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Sc config
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys 
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<ServerName>|Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\\myserver). To run SC.exe locally, omit this parameter.|
 |<ServiceName>|Specifies the service name returned by the **getkeyname** operation.|
 |type= {own &#124; share &#124; kernel &#124; filesys &#124; rec &#124; adapt &#124; interact type= {own &#124; share}}|Specifies the service type.<br /><br />**own** - Specifies a service that runs in its own process. It does not share an executable file with other services. This is the default value.<br /><br />**share** - Specifies a service that runs as a shared process. It shares an executable file with other services.<br /><br />**kernel** - Specifies a driver.<br /><br />**filesys** - Specifies a file system driver.<br /><br />**rec** - Specifies a file system-recognized driver that identifies file systems used on the computer.<br /><br />**adapt** - Specifies an adapter driver that identifies hardware devices such as keyboards, mice, and disk drives.<br /><br />**interact** - Specifies a service that can interact with the desktop, receiving input from users. Interactive services must be run under the LocalSystem account. This type must be used in conjunction with **type= own** or **type= shared** (fo example, **type= interact****type= own**). Using **type= interact** by itself will generate an error.|

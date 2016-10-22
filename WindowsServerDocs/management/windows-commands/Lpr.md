@@ -1,6 +1,6 @@
 ---
 title: Lpr
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,20 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Lpr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Sends a file to a computer or printer sharing device running the Line Printer Daemon (LPD) service in preparation for printing.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
 ## Syntax  
 ```  
 Lpr [-S <ServerName>] -P <PrinterName> [-C <BannerContent>] [-J <JobName>] [-o | "-o l"] [-x] [-d] <filename>  
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |-S <ServerName>|Specifies (by name or IP address) the computer or printer sharing device that hosts the LPD print queue with a status that you want to display. Required.|  
 |-P <PrinterName>|Specifies (by name) the printer for the print queue with a status that you want to display. Required.|  
 |-C <BannerContent>|Specifies the content to print on the banner page of the print job. If you do not include this parameter, the name of the computer from which the print job was sent appears on the banner page.|  

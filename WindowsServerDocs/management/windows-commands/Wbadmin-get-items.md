@@ -1,6 +1,6 @@
 ---
 title: Wbadmin get items
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin get items
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ wbadmin get items
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-version|Specifies the version of the backup in MM/DD/YYYY-HH:MM format. If you do not know the version information, type **wbadmin get versions**.|
 |-backupTarget|Specifies the storage location that contains the backups for which you want the details. Use for listing backups stored at that target location. Backup target locations can be a locally attached disk drive or a remote shared folder. If **wbadmin get items**is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
 |-machine|Specifies the name of the computer that you want the backup details for. Useful when multiple computers have been backed up to the same location. Should be used when **-backupTarget** is specified.|

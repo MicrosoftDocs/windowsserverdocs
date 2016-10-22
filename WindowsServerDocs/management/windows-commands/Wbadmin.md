@@ -1,6 +1,6 @@
 ---
 title: Wbadmin
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -24,7 +23,7 @@ To configure a regularly scheduled backup, you must be a member of the **Adminis
 You must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt, right-click **Command Prompt**, and then click **Run as administrator**.)  
 ## Subcommands  
 |Subcommand|Description|  
-|--------------|---------------|  
+|-------|--------|  
 |[Wbadmin enable backup](Wbadmin-enable-backup.md)|Configures and enables a regularly scheduled backup.|  
 |[Wbadmin disable backup](Wbadmin-disable-backup.md)|Disables your daily backups.|  
 |[Wbadmin start backup](Wbadmin-start-backup.md)|Runs a one-time backup. If used with no parameters, uses the settings from the daily backup schedule.|  

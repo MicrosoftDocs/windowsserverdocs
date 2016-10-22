@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setnotifyflags
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setnotifyflags** - Sets the event notification flags for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setnotifyflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |NotifyFlags|See Remarks|
 ## Remarks

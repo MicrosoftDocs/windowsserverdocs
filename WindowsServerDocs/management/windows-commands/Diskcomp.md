@@ -1,6 +1,6 @@
 ---
 title: Diskcomp
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Diskcomp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Drive1>|Specifies the drive containing one of the floppy disks.|
 |<Drive2>|Specifies the drive containing the other floppy disk.|
 |/?|Displays help at the command prompt.|
@@ -78,7 +77,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 -   Understanding **diskcomp** exit codes
     The following table explains each exit code.
     |Exit code|Description|
-    |-------------|---------------|
+    |-------|--------|
     |0|Disks are the same|
     |1|Differences were found|
     |3|Hard error occurred|

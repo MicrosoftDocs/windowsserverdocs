@@ -1,6 +1,6 @@
 ---
 title: Using the add-Device command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the add-Device command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,9 +27,9 @@ WDSUTIL /Add-Device /Device:<Device name> /ID:<UUID | MAC Address> [/ReferralSer
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/Device:<computer name>|Specifies the name of the computer to be added.|
-|/ID:<UUID &#124; MAC Address>|Specifies either the GUID/UUID or the MAC address of the computer. A GUID/UUID must be in one of two formats—binary string or GUID string. For example:<br /><br />Binary string: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br /><br />GUID string: **/ID:E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br /><br />A MAC address must be in the following format: **00B056882FDC** (no dashes) or **00-B0-56-88-2F-DC** (with dashes)|
+|/ID:<UUID &#124; MAC Address>|Specifies either the GUID/UUID or the MAC address of the computer. A GUID/UUID must be in one of two formats binary string or GUID string. For example:<br /><br />Binary string: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br /><br />GUID string: **/ID:E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br /><br />A MAC address must be in the following format: **00B056882FDC** (no dashes) or **00-B0-56-88-2F-DC** (with dashes)|
 |[/ReferralServer:<Server name>]|Specifies the name of the server to be contacted to download the network boot program and the boot image by using Trivial File Transfer Protocol (TFTP).|
 |[/BootProgram:<Relative path>]|Specifies the relative path from the RemoteInstall folder to the network boot program that this computer should receive. For example: "boot\x86\pxeboot.com"|
 |[/WdsClientUnattend:<Relative path>]|Specifies the relative path from the RemoteInstall folder to the unattended installation file that automates the installation screens of the Windows Deployment Services client.|
@@ -54,5 +53,5 @@ WDSUTIL /Add-Device /Device:Computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 [Using the get-AllDevices Command](Using-the-get-AllDevices-Command.md)
 [Using the get-Device Command](Using-the-get-Device-Command.md)
-[Subcommand: set-Device](Subcommand--set-Device.md)
+[Subcommand: set-Device](Subcommand-set-Device.md)
 [New-WdsClient](http://technet.microsoft.com/library/dn283430.aspx)

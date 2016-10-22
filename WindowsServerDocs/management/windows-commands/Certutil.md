@@ -1,6 +1,6 @@
 ---
 title: Certutil
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Certutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ The major sections in this document are:
 ## <a name="BKMK_Verbs"></a>Verbs
 The following table describes the verbs that can be used with the certutil command.
 |Verbs|Description|
-|---------|---------------|
+|-----|--------|
 |[-dump](Certutil.md#BKMK_dump)|Dump configuration information or files|
 |[-asn](Certutil.md#BKMK_asn)|Parse ASN.1 file|
 |[-decodehex](Certutil.md#BKMK_decodehex)-decodehex|Decode hexadecimal-encoded file|
@@ -130,13 +129,13 @@ Return to [Menu](Certutil.md#BKMK_menu)
     -   `notepad certutilhelp.txt`
 The following table describes the notation used to indicate command-line syntax.
 |Notation|Description|
-|------------|---------------|
+|------|--------|
 |Text without brackets or braces|Items you must type as shown|
 |<Text inside angle brackets>|Placeholder for which you must supply a value|
 |[Text inside square brackets]|Optional items|
 |{Text inside braces}|Set of required items; choose one|
 |Vertical bar (&#124;)|Separator for mutually exclusive items; choose one|
-|Ellipsis (…)|Items that can be repeated|
+|Ellipsis ( )|Items that can be repeated|
 Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_dump"></a>-dump
 CertUtil [Options] [-dump]
@@ -177,8 +176,8 @@ Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_setattributes"></a>-setattributes
 CertUtil [Options] -setattributes RequestId AttributeString
 Set attributes for pending request
-RequestId -- numeric Request Id of pending request
-AttributeString -- Request Attribute name and value pairs
+RequestId - numeric Request Id of pending request
+AttributeString - Request Attribute name and value pairs
 -   Names and values are colon separated.
 -   Multiple name, value pairs are newline separated.
 -   Example: "CertificateTemplate:User\nEMail:User@Domain.com"
@@ -188,9 +187,9 @@ Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_setextension"></a>-setextension
 CertUtil [Options] -setextension RequestId ExtensionName Flags {Long | Date | String | @InFile}
 Set extension for pending request
-RequestId -- numeric Request Id of a pending request
-ExtensionName -- ObjectId string of the extension
-Flags -- 0 is recommended.  1 makes the extension critical, 2 disables it, 3 does both.
+RequestId - numeric Request Id of a pending request
+ExtensionName - ObjectId string of the extension
+Flags - 0 is recommended.  1 makes the extension critical, 2 disables it, 3 does both.
 If the last parameter is numeric, it is taken as a Long.
 If it can be parsed as a date, it is taken as a Date.
 If it starts with '@', the rest of the token is the filename containing binary data or an ascii-text hex dump.
@@ -226,7 +225,7 @@ Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_ping"></a>-ping
 CertUtil [Options] -ping [MaxSecondsToWait | CAMachineList]
 Ping Active Directory Certificate Services Request interface
-CAMachineList -- Comma-separated CA machine name list
+CAMachineList - Comma-separated CA machine name list
 1.  For a single machine, use a terminating comma
 2.  Displays the site cost for each CA machine
 [-config Machine\CAName]
@@ -234,9 +233,9 @@ Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_CAInfo"></a>-CAInfo
 CertUtil [Options] -CAInfo [InfoName [Index | ErrorCode]]
 Display CA Information
-InfoName -- indicates the CA property to display (see below). Use "*" for all properties.
-Index -- optional zero-based property index
-ErrorCode -- numeric error code
+InfoName - indicates the CA property to display (see below). Use "*" for all properties.
+Index - optional zero-based property index
+ErrorCode - numeric error code
 [-f] [-split] [-config Machine\CAName]
 InfoName argument syntax:
 -   file: File version
@@ -312,9 +311,9 @@ Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_CRL"></a>-CRL
 CertUtil [Options] -CRL [dd:hh | republish] [delta]
 Publish new CRLs [or delta CRLs only]
-dd:hh -- new CRL validity period in days and hours
-republish -- republish most recent CRLs
-delta -- delta CRLs only (default is base and delta CRLs)
+dd:hh - new CRL validity period in days and hours
+republish - republish most recent CRLs
+delta - delta CRLs only (default is base and delta CRLs)
 [-split] [-config Machine\CAName]
 Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_shutdown"></a>-shutdown
@@ -504,7 +503,7 @@ CertUtil [Options] -repairstore CertificateStoreName CertIdList [PropertyInfFile
 Repair key association or update certificate properties or key security descriptor
 CertificateStoreName: Certificate store name.  See [-store](Certutil.md#BKMK_Store).
 CertIdList: comma separated list of Certificate or CRL match tokens. See [-store](Certutil.md#BKMK_Store) CertId description.
-PropertyInfFile -- INF file containing external properties:
+PropertyInfFile - INF file containing external properties:
 ```
 [Properties]
      19 = Empty ; Add archived property, OR:
@@ -634,7 +633,7 @@ AuthenticationType: Specify one of the following client authentication methods w
 4.  Anonymous: Use anonymous SSL credentials
 delete: deletes the specified URL associated with the CA
 Priority: defaults to '1' if not specified when adding a URL
-Modifiers -- Comma separated list of one or more of the following:
+Modifiers - Comma separated list of one or more of the following:
 1.  AllowRenewalsOnly: Only renewal requests can be submitted to this CA via this URL
 2.  AllowKeyBasedRenewal: Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly Mode
 [-config Machine\CAName] [-dc DCName]
@@ -816,7 +815,7 @@ Add an Enrollment Server application and application pool if necessary, for the 
 -   UserName: Use named account for SSL credentials
 -   ClientCertificate: Use X.509 Certificate SSL credentials
 -   AllowRenewalsOnly: Only renewal requests can be submitted to this CA via this URL
--   AllowKeyBasedRenewal -- Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly mode.
+-   AllowKeyBasedRenewal - Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly mode.
 [-config Machine\CAName]
 Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_deleteEnrollmentServer"></a>-deleteEnrollmentServer
@@ -851,14 +850,14 @@ CertUtil [Options] -oid ObjectId [DisplayName | delete [LanguageId [Type]]]
 CertUtil [Options] -oid GroupId
 CertUtil [Options] -oid AlgId | AlgorithmName [GroupId]
 Display ObjectId or set display name
--   ObjectId -- ObjectId to display or to add display name
--   GroupId -- decimal GroupId number for ObjectIds to enumerate
--   AlgId -- hexadecimal AlgId for ObjectId to look up
--   AlgorithmName -- Algorithm Name for ObjectId to look up
--   DisplayName -- Display Name to store in DS
--   delete -- delete display name
--   LanguageId -- Language Id (defaults to current: 1033)
--   Type -- DS object type to create: 1 for Template (default), 2 for Issuance Policy, 3 for Application Policy
+-   ObjectId - ObjectId to display or to add display name
+-   GroupId - decimal GroupId number for ObjectIds to enumerate
+-   AlgId - hexadecimal AlgId for ObjectId to look up
+-   AlgorithmName - Algorithm Name for ObjectId to look up
+-   DisplayName - Display Name to store in DS
+-   delete - delete display name
+-   LanguageId - Language Id (defaults to current: 1033)
+-   Type - DS object type to create: 1 for Template (default), 2 for Issuance Policy, 3 for Application Policy
 -   Use -f to create DS object.
 [-f]
 Return to [Menu](Certutil.md#BKMK_menu)
@@ -881,7 +880,7 @@ ProgId: Use policy or exit module's ProgId (registry subkey name)
 RegistryValueName: registry value name (use "Name*" to prefix match)
 Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 Return to [Menu](Certutil.md#BKMK_menu)
@@ -900,7 +899,7 @@ ProgId: Use policy or exit module's ProgId (registry subkey name)
 RegistryValueName: registry value name (use "Name*" to prefix match)
 Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 Return to [Menu](Certutil.md#BKMK_menu)
@@ -919,14 +918,14 @@ ProgId: Use policy or exit module's ProgId (registry subkey name)
 RegistryValueName: registry value name (use "Name*" to prefix match)
 Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_ImportKMS"></a>-ImportKMS
 CertUtil [Options] -ImportKMS UserKeyAndCertFile [CertId]
 Import user keys and certificates into server database for key archival
-UserKeyAndCertFile -- Data file containing user private keys and certificates to be archived.  This can be any of the following:
+UserKeyAndCertFile - Data file containing user private keys and certificates to be archived.  This can be any of the following:
 -   Exchange Key Management Server (KMS) export file
 -   PFX file
 CertId: KMS export file decryption certificate match token.  See [-store](Certutil.md#BKMK_Store).
@@ -990,7 +989,7 @@ Return to [Menu](Certutil.md#BKMK_menu)
 ## <a name="BKMK_Options"></a>Options
 This section defines the options that you can specify with the command.
 |Options|Description|
-|-----------|---------------|
+|------|--------|
 |-nullsign|Use hash of data as signature|
 |-f|Force overwrite|
 |-enterprise|Use local machine Enterprise registry certificate store|

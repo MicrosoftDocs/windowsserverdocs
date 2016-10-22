@@ -1,6 +1,6 @@
 ---
 title: Certreq_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Certreq_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ The major sections in this article are as follows:
 ## <a name="BKMK_Verbs"></a>Verbs  
 There following table describes the verbs that can be used with the certreq command  
 |Switch|Description|  
-|----------|---------------|  
+|-----|--------|  
 |-Submit|Submits a request to a CA. For more information, see [Certreq -submit](Certreq_1.md#BKMK_Submit).|  
 |-retrieve *RequestID*|Retrieves a response to a previous request from a CA. For more information, see [Certreq -retrieve](Certreq_1.md#BKMK_Retrieve).|  
 |-New|Creates a new request from an .inf file. For more information, see [Certreq -new](Certreq_1.md#BKMK_New).|  
@@ -52,24 +51,24 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
     -   `notepad certreqhelp.txt`  
 The following table describes the notation used to indicate command-line syntax.  
 |Notation|Description|  
-|------------|---------------|  
+|------|--------|  
 |Text without brackets or braces|Items you must type as shown|  
 |<Text inside angle brackets>|Placeholder for which you must supply a value|  
 |[Text inside square brackets]|Optional items|  
 |{Text inside braces}|Set of required items; choose one|  
 |Vertical bar (&#124;)|Separator for mutually exclusive items; choose one|  
-|Ellipsis (…)|Items that can be repeated|  
+|Ellipsis ( )|Items that can be repeated|  
 Return to [Contents](Certreq_1.md#BKMK_Contents)  
 ## <a name="BKMK_Submit"></a>Certreq -submit  
 This is the default certreq.exe parameter, if no option is specified explicitly at the command-line prompt, certreq.exe attempts to submit a certificate request to a CA.  
 ```  
 CertReq [-Submit] [Options] [RequestFileIn [CertFileOut [CertChainFileOut [FullResponseFileOut]]]]  
 ```  
-You must specify a certificate request file when using the –submit option. If this parameter is omitted, a common File Open window is displayed where you can select the appropriate certificate request file.  
+You must specify a certificate request file when using the  submit option. If this parameter is omitted, a common File Open window is displayed where you can select the appropriate certificate request file.  
 You can use these examples as a starting point to build your certificate submit request:  
 To submit a simple certificate request use the example below:  
 ```  
-certreq –submit certRequest.req certnew.cer certnew.pfx  
+certreq  submit certRequest.req certnew.cer certnew.pfx  
 ```  
 To request a certificate by specifying the SAN attribute, see the detailed steps in Microsoft Knowledge Base article 931351 [How to add a Subject Alternative Name to a secure LDAP certificate](http://support.microsoft.com/kb/931351) in the "How to use the Certreq.exe utility to create and submit a certificate request that includes a SAN" section.  
 Return to [Contents](Certreq_1.md#BKMK_Contents)  
@@ -77,7 +76,7 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
 ```  
 certreq -retrieve [Options] RequestId [CertFileOut [CertChainFileOut [FullResponseFileOut]]]  
 ```  
--   If you don’t specify the CAComputerName or CAName in -config CAComputerName\CANamea dialog box appears and displays a list of all CAs that are available.  
+-   If you don t specify the CAComputerName or CAName in -config CAComputerName\CANamea dialog box appears and displays a list of all CAs that are available.  
 -   If you use -config - instead of -config CAComputerName\CAName, the operation is processed using the default CA.  
 -   You can use certreq -retrieve *RequestID* to retrieve the certificate after the CA has actually issued it. The *RequestID*PKC can be a decimal or hex with 0x prefix and it can be a certificate serial number with no 0x prefix. You can also use it to retrieve any certificate that has ever been issued by the CA, including revoked or expired certificates, without regard to whether the certificate's request was ever in the pending state.  
 -   If you submit a request to the CA, the policy module of the CA might leave the request in a pending state and return the *RequestID* to the Certreq caller for display. Eventually, the CA's administrator will issue the certificate or deny the request.  
@@ -104,33 +103,33 @@ The following are some of the possible sections that may be added to the INF fil
 **[NewRequest]**  
 This section is mandatory for an INF file that acts as a template for a new certificate request. This section requires at least one key with a value.  
 |Key|Definition|Value|Example|  
-|-------|--------------|---------|-----------|  
+|----|-------|-----|------|  
 |Subject|Several applications rely on the subject information in a certificate. Thus, it is recommended that a value for this key be specified. If the subject is not set here, it is recommended that a subject name be included as part of the subject alternative name certificate extension.|Relative Distinguished Name string values|Subject = "CN=computer1.contoso.com" Subject="CN=John Smith,CN=Users,DC=Contoso,DC=com"|  
 |Exportable|If this attribute is set to TRUE, the private key can be exported with the certificate. To ensure a high level of security, private keys should not be exportable; however, in some cases, it might be required to make the private key exportable if several computers or users must share the same private key.|true, false|ExportableEncrypted = TRUE. CNG keys can distinguish between this and plaintext exportable. CAPI1 keys cannot.|  
 |ExportableEncrypted|Specifies whether the private key should be set to be exportable.|true, false|Exportable = true **Tip:** Not all public key sizes and algorithms will work with all hash algorithms. Tamehe specified CSP must also support the specified hash algorithm. To see the list of supported hash algorithms, you can run the command `certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo`|  
 |HashAlgorithm|Hash Algorithm to be used for this request.|Sha256, sha384, sha512, sha1, md5, md4, md2|HashAlgorithm = sha1. To see the list of supported hash algorithms use: certutil -oid 1 &#124; findstr pwszCNGAIgid &#124; findstr /v CryptOIDInfo|  
 |KeyAlgorithm|The algorithm that will be used by the service provider to generate a public and private key pair.|RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521|KeyAlgorithm = RSA|  
-|KeyContainer|It is not recommended to set this parameter for new requests where new key material is generated. The key container is automatically generated and maintained by the system. For requests where the existing key material should be used, this value can be set to the key-container name of the existing key. Use the certutil –key command to display the list of available key containers for the machine context. Use the certutil –key –user command for the current user’s context.|Random string value **Tip:** You should use double quotes around any INF key value that has blanks or special characters to avoid potential INF parsing issues.|KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}|  
+|KeyContainer|It is not recommended to set this parameter for new requests where new key material is generated. The key container is automatically generated and maintained by the system. For requests where the existing key material should be used, this value can be set to the key-container name of the existing key. Use the certutil  key command to display the list of available key containers for the machine context. Use the certutil  key  user command for the current user s context.|Random string value **Tip:** You should use double quotes around any INF key value that has blanks or special characters to avoid potential INF parsing issues.|KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}|  
 |KeyLength|Defines the length of the public and private key. The key length has an impact on the security level of the certificate. Greater key length usually provides a higher security level; however, some applications may have limitations regarding the key length.|Any valid key length that is supported by the cryptographic service provider.|KeyLength = 2048|  
 |KeySpec|Determines if the key can be used for signatures, for Exchange (encryption), or for both.|AT_NONE, AT_SIGNATURE, AT_KEYEXCHANGE|KeySpec = AT_KEYEXCHANGE|  
-|KeyUsage|Defines what the certificate key should be used for.|CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128) **Tip:** The values shown are hexadecimal (decimal) values for each bit definition. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, KeyUsage = 0xa0.<br /><br />CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)<br /><br />CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)<br /><br />CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)<br /><br />CERT_KEY_AGREEMENT_KEY_USAGE -- 8<br /><br />CERT_KEY_CERT_SIGN_KEY_USAGE -- 4<br /><br />CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2<br /><br />CERT_CRL_SIGN_KEY_USAGE -- 2<br /><br />CERT_ENCIPHER_ONLY_KEY_USAGE -- 1<br /><br />CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)|KeyUsage = "CERT_DIGITAL_SIGNATURE_KEY_USAGE &#124; CERT_KEY_ENCIPHERMENT_KEY_USAGE" **Tip:** Multiple values use a pipe (&#124;) symbol separator. Ensure that you use double-quotes when using multiple values to avoid INF parsing issues.||KeyUsageProperty|Retrieves a value that identifies the specific purpose for which a private key can be used.|NCRYPT_ALLOW_DECRYPT_FLAG -- 1<br /><br />NCRYPT_ALLOW_SIGNING_FLAG -- 2<br /><br />NCRYPT_ALLOW_KEY_AGREEMENT_FLAG -- 4<br /><br />NCRYPT_ALLOW_ALL_USAGES -- ffffff (16777215)|KeyUsageProperty = "NCRYPT_ALLOW_DECRYPT_FLAG &#124; NCRYPT_ALLOW_SIGNING_FLAG"|  
-|MachineKeySet|This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine’s security context and not the administrator’s security context. Otherwise, the machine could not access its private key since it would be in the administrator’s security context.|true, false|MachineKeySet = true **Tip:** The default is false.|  
+|KeyUsage|Defines what the certificate key should be used for.|CERT_DIGITAL_SIGNATURE_KEY_USAGE - 80 (128) **Tip:** The values shown are hexadecimal (decimal) values for each bit definition. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, KeyUsage = 0xa0.<br /><br />CERT_NON_REPUDIATION_KEY_USAGE - 40 (64)<br /><br />CERT_KEY_ENCIPHERMENT_KEY_USAGE - 20 (32)<br /><br />CERT_DATA_ENCIPHERMENT_KEY_USAGE - 10 (16)<br /><br />CERT_KEY_AGREEMENT_KEY_USAGE - 8<br /><br />CERT_KEY_CERT_SIGN_KEY_USAGE - 4<br /><br />CERT_OFFLINE_CRL_SIGN_KEY_USAGE - 2<br /><br />CERT_CRL_SIGN_KEY_USAGE - 2<br /><br />CERT_ENCIPHER_ONLY_KEY_USAGE - 1<br /><br />CERT_DECIPHER_ONLY_KEY_USAGE - 8000 (32768)|KeyUsage = "CERT_DIGITAL_SIGNATURE_KEY_USAGE &#124; CERT_KEY_ENCIPHERMENT_KEY_USAGE" **Tip:** Multiple values use a pipe (&#124;) symbol separator. Ensure that you use double-quotes when using multiple values to avoid INF parsing issues.||KeyUsageProperty|Retrieves a value that identifies the specific purpose for which a private key can be used.|NCRYPT_ALLOW_DECRYPT_FLAG - 1<br /><br />NCRYPT_ALLOW_SIGNING_FLAG - 2<br /><br />NCRYPT_ALLOW_KEY_AGREEMENT_FLAG - 4<br /><br />NCRYPT_ALLOW_ALL_USAGES - ffffff (16777215)|KeyUsageProperty = "NCRYPT_ALLOW_DECRYPT_FLAG &#124; NCRYPT_ALLOW_SIGNING_FLAG"|  
+|MachineKeySet|This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine s security context and not the administrator s security context. Otherwise, the machine could not access its private key since it would be in the administrator s security context.|true, false|MachineKeySet = true **Tip:** The default is false.|  
 |NotBefore|Specifies a date or date and time before which the request cannot be issued. NotBefore can be used with ValidityPeriod and ValidityPeriodUnits.|date or date and time|NotBefore = "7/24/2012 10:31 AM" **Tip:** NotBefore and NotAfter are for RequestType=cert only.Date parsing attempts to be locale-sensitive.Using month names will disambiguate and should work in every locale.|  
 |NotAfter|Specifies a date or date and time after which the request cannot be issued. NotAfter cannot be used with ValidityPeriod or ValidityPeriodUnits.|date or date and time|NotAfter = "9/23/2014 10:31 AM" **Tip:** NotBefore and NotAfter are for RequestType=cert only.Date parsing attempts to be locale-sensitive.Using month names will disambiguate and should work in every locale.|  
-|PrivateKeyArchive|The PrivateKeyArchive setting works only if the corresponding RequestType is set to "CMC" because only the Certificate Management Messages over CMS (CMC) request format allows for securely transferring the requester’s private key to the CA for key archival.|true, false|PrivateKeyArchive = True|  
+|PrivateKeyArchive|The PrivateKeyArchive setting works only if the corresponding RequestType is set to "CMC" because only the Certificate Management Messages over CMS (CMC) request format allows for securely transferring the requester s private key to the CA for key archival.|true, false|PrivateKeyArchive = True|  
 |EncryptionAlgorithm|The encryption algorithm to use.|Possible options vary, depending on the operating system version and the set of installed cryptographic providers.To see the list of available algorithms, run the command`certutil -oid 2 &#124; findstr pwszCNGAlgid`The specified CSP used must also support the specified symmetric encryption algorithm and length.|EncryptionAlgorithm = 3des|  
 |EncryptionLength|Length of encryption algorithm to use.|Any length allowed by the specified EncryptionAlgorithm.|EncryptionLength = 128|  
-|ProviderName|The provider name is the display name of the CSP..|If you do not know the provider name of the CSP you are using, run certutil –csplist from a command line. The command will display the names of all CSPs that are available on the local system|ProviderName = "Microsoft RSA SChannel Cryptographic Provider"|  
-|ProviderType|The provider type is used to select specific providers based on specific algorithm capability such as "RSA Full".|If you do not know the provider type of the CSP you are using, run certutil –csplist from a command-line prompt. The command will display the provider type of all CSPs that are available on the local system.|ProviderType = 1|  
+|ProviderName|The provider name is the display name of the CSP..|If you do not know the provider name of the CSP you are using, run certutil  csplist from a command line. The command will display the names of all CSPs that are available on the local system|ProviderName = "Microsoft RSA SChannel Cryptographic Provider"|  
+|ProviderType|The provider type is used to select specific providers based on specific algorithm capability such as "RSA Full".|If you do not know the provider type of the CSP you are using, run certutil  csplist from a command-line prompt. The command will display the provider type of all CSPs that are available on the local system.|ProviderType = 1|  
 |RenewalCert|If you need to renew a certificate that exists on the system where the certificate request is generated, you must specify its certificate hash as the value for this key.|The certificate hash of any certificate that is available at the computer where the certificate request is created. If you do not know the certificate hash, use the Certificates MMC Snap-In and look at the certificate that should be renewed. Open the certificate properties and see the "Thumbprint" attribute of the certificate. Certificate renewal requires either a PKCS#7 or a CMC request format.|RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D|  
 |RequesterName **Note:** This makes the request to enroll on behalf of another user request.The request must also be signed with an Enrollment Agent certificate, or the CA will reject the request. Use the -cert option to specify the enrollment agent certificate.|The requester name can be specified for certificate requests if the RequestType is set to PKCS#7 or CMC. If the RequestType is set to PKCS#10, this key will be ignored. The Requestername can only be set as part of the request. You cannot manipulate the Requestername in a pending request.|Domain\User|Requestername = "Contoso\BSmith"|  
-|RequestType|Determines the standard that is used to generate and send the certificate request.|PKCS10 -- 1<br /><br />PKCS7 -- 2<br /><br />CMC -- 3<br /><br />Cert -- 4 **Tip:** This option indicates a self-signed or self-issued certificate. It does not generate a request, but rather a new certificate and then installs the certificate.Self-signed is the default.Specify a signing cert by using the –cert option to create a self-issued certificate that is not self-signed.|RequestType = CMC|  
+|RequestType|Determines the standard that is used to generate and send the certificate request.|PKCS10 - 1<br /><br />PKCS7 - 2<br /><br />CMC - 3<br /><br />Cert - 4 **Tip:** This option indicates a self-signed or self-issued certificate. It does not generate a request, but rather a new certificate and then installs the certificate.Self-signed is the default.Specify a signing cert by using the  cert option to create a self-issued certificate that is not self-signed.|RequestType = CMC|  
 |SecurityDescriptor **Tip:** This is relevant only for machine context non-smart card keys.|Contain the security information associated with securable objects. For most securable objects, you can specify an object's security descriptor in the function call that creates the object.|Strings based on [security descriptor definition language](http://msdn.microsoft.com/library/aa379567(v=vs.85).aspx).|SecurityDescriptor = "D:P(A;;GA;;;SY)(A;;GA;;;BA)"|  
 |AlternateSignatureAlgorithm|Specifies and retrieves a Boolean value that indicates whether the signature algorithm object identifier (OID) for a PKCS#10 request or certificate signature is discrete or combined.|true, false|AlternateSignatureAlgorithm = false **Tip:** For an RSA signature, false indicates a Pkcs1 v1.5. True indicates a v2.1 signature.|  
 |Silent|By default, this option allows the CSP access to the interactive user desktop and request information such as a smart card PIN from the user. If this key is set to TRUE, the CSP must not interact with the desktop and will be blocked from displaying any user interface to the user.|true, false|Silent = true|  
 |SMIME|If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. The number of object identifiers depends on the on the operating system version installed and CSP capability, which refer to symmetric encryption algorithms that may be used by Secure Multipurpose Internet Mail Extensions (S/MIME) applications such as Outlook.|true, false|SMIME = true|  
 |UseExistingKeySet|This parameter is used to specify that an existing key pair should be used in building a certificate request. If this key is set to TRUE, you must also specify a value for the RenewalCert key or the KeyContainer name. You must not set the Exportable key because you cannot change the properties of an existing key. In this case, no key material is generated when the certificate request is built.|true, false|UseExistingKeySet = true|  
-|KeyProtection|Specifies a value that indicates how a private key is protected before use.|XCN_NCRYPT_UI_NO_PROTCTION_FLAG -- 0<br /><br />XCN_NCRYPT_UI_PROTECT_KEY_FLAG -- 1<br /><br />XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG -- 2|KeyProtection = NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG|  
+|KeyProtection|Specifies a value that indicates how a private key is protected before use.|XCN_NCRYPT_UI_NO_PROTCTION_FLAG - 0<br /><br />XCN_NCRYPT_UI_PROTECT_KEY_FLAG - 1<br /><br />XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG - 2|KeyProtection = NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG|  
 |SuppressDefaults|Specifies a Boolean value that indicates whether the default extensions and attributes are included in the request. The defaults are represented by their object identifiers (OIDs).|true, false|SuppressDefaults = true|  
 |FriendlyName|A friendly name for the new certificate.|Text|FriendlyName = "Server1"|  
 |ValidityPeriodUnits **Note:** This is used only when the request type=cert.|Specifies a number of units that is to be used with ValidityPeriod.|Numeric|ValidityPeriodUnits = 3|  
@@ -139,7 +138,7 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
 **[Extensions]**  
 This section is optional.  
 |Extension OID|Definition|Value|Example|  
-|-----------------|--------------|---------|-----------|  
+|---------|-------|-----|------|  
 |2.5.29.17|||2.5.29.17 = "{text}"|  
 |_continue\_|||_continue\_ = "UPN=User@Domain.com&"|  
 |_continue\_|||_continue\_ = "EMail=User@Domain.com&"|  
@@ -158,21 +157,21 @@ This section is optional.
 |_continue\_|||_continue\_ = "1.3.6.1.5.5.7.3.1"|  
 |2.5.29.19|||"{text}ca=0pathlength=3"|  
 |Critical|||Critical=2.5.29.19|  
-|KeySpec|||AT_NONE -- 0<br /><br />AT_SIGNATURE -- 2<br /><br />AT_KEYEXCHANGE -- 1|  
-|RequestType|||PKCS10 -- 1<br /><br />PKCS7 -- 2<br /><br />CMC -- 3<br /><br />Cert -- 4|  
-|KeyUsage|||CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128)<br /><br />CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)<br /><br />CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)<br /><br />CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)<br /><br />CERT_KEY_AGREEMENT_KEY_USAGE -- 8<br /><br />CERT_KEY_CERT_SIGN_KEY_USAGE -- 4<br /><br />CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2<br /><br />CERT_CRL_SIGN_KEY_USAGE -- 2<br /><br />CERT_ENCIPHER_ONLY_KEY_USAGE -- 1<br /><br />CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)|  
-|KeyUsageProperty|||NCRYPT_ALLOW_DECRYPT_FLAG -- 1<br /><br />NCRYPT_ALLOW_SIGNING_FLAG -- 2<br /><br />NCRYPT_ALLOW_KEY_AGREEMENT_FLAG -- 4<br /><br />NCRYPT_ALLOW_ALL_USAGES -- ffffff (16777215)|  
-|KeyProtection|||NCRYPT_UI_NO_PROTECTION_FLAG -- 0<br /><br />NCRYPT_UI_PROTECT_KEY_FLAG -- 1<br /><br />NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG -- 2|  
-|SubjectNameFlags|template||CT_FLAG_SUBJECT_REQUIRE_COMMON_NAME -- 40000000 (1073741824)<br /><br />CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (2147483648)<br /><br />CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN -- 10000000 (268435456)<br /><br />CT_FLAG_SUBJECT_REQUIRE_EMAIL -- 20000000 (536870912)<br /><br />CT_FLAG_OLD_CERT_SUPPLIES_SUBJECT_AND_ALT_NAME -- 8<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_DIRECTORY_GUID -- 1000000 (16777216)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_DOMAIN_DNS -- 400000 (4194304)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_EMAIL -- 4000000 (67108864)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_SPN -- 800000 (8388608)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)|  
-|X500NameFlags|||CERT_NAME_STR_NONE -- 0<br /><br />CERT_OID_NAME_STR -- 2<br /><br />CERT_X500_NAME_STR -- 3<br /><br />CERT_NAME_STR_SEMICOLON_FLAG -- 40000000 (1073741824)<br /><br />CERT_NAME_STR_NO_PLUS_FLAG -- 20000000 (536870912)<br /><br />CERT_NAME_STR_NO_QUOTING_FLAG -- 10000000 (268435456)<br /><br />CERT_NAME_STR_CRLF_FLAG -- 8000000 (134217728)<br /><br />CERT_NAME_STR_COMMA_FLAG -- 4000000 (67108864)<br /><br />CERT_NAME_STR_REVERSE_FLAG -- 2000000 (33554432)<br /><br />CERT_NAME_STR_FORWARD_FLAG -- 1000000 (16777216)<br /><br />CERT_NAME_STR_DISABLE_IE4_UTF8_FLAG -- 10000 (65536)<br /><br />CERT_NAME_STR_ENABLE_T61_UNICODE_FLAG -- 20000 (131072)<br /><br />CERT_NAME_STR_ENABLE_UTF8_UNICODE_FLAG -- 40000 (262144)<br /><br />CERT_NAME_STR_FORCE_UTF8_DIR_STR_FLAG -- 80000 (524288)<br /><br />CERT_NAME_STR_DISABLE_UTF8_DIR_STR_FLAG -- 100000 (1048576)<br /><br />CERT_NAME_STR_ENABLE_PUNYCODE_FLAG -- 200000 (2097152)|  
+|KeySpec|||AT_NONE - 0<br /><br />AT_SIGNATURE - 2<br /><br />AT_KEYEXCHANGE - 1|  
+|RequestType|||PKCS10 - 1<br /><br />PKCS7 - 2<br /><br />CMC - 3<br /><br />Cert - 4|  
+|KeyUsage|||CERT_DIGITAL_SIGNATURE_KEY_USAGE - 80 (128)<br /><br />CERT_NON_REPUDIATION_KEY_USAGE - 40 (64)<br /><br />CERT_KEY_ENCIPHERMENT_KEY_USAGE - 20 (32)<br /><br />CERT_DATA_ENCIPHERMENT_KEY_USAGE - 10 (16)<br /><br />CERT_KEY_AGREEMENT_KEY_USAGE - 8<br /><br />CERT_KEY_CERT_SIGN_KEY_USAGE - 4<br /><br />CERT_OFFLINE_CRL_SIGN_KEY_USAGE - 2<br /><br />CERT_CRL_SIGN_KEY_USAGE - 2<br /><br />CERT_ENCIPHER_ONLY_KEY_USAGE - 1<br /><br />CERT_DECIPHER_ONLY_KEY_USAGE - 8000 (32768)|  
+|KeyUsageProperty|||NCRYPT_ALLOW_DECRYPT_FLAG - 1<br /><br />NCRYPT_ALLOW_SIGNING_FLAG - 2<br /><br />NCRYPT_ALLOW_KEY_AGREEMENT_FLAG - 4<br /><br />NCRYPT_ALLOW_ALL_USAGES - ffffff (16777215)|  
+|KeyProtection|||NCRYPT_UI_NO_PROTECTION_FLAG - 0<br /><br />NCRYPT_UI_PROTECT_KEY_FLAG - 1<br /><br />NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG - 2|  
+|SubjectNameFlags|template||CT_FLAG_SUBJECT_REQUIRE_COMMON_NAME - 40000000 (1073741824)<br /><br />CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH - 80000000 (2147483648)<br /><br />CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN - 10000000 (268435456)<br /><br />CT_FLAG_SUBJECT_REQUIRE_EMAIL - 20000000 (536870912)<br /><br />CT_FLAG_OLD_CERT_SUPPLIES_SUBJECT_AND_ALT_NAME - 8<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_DIRECTORY_GUID - 1000000 (16777216)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_DNS - 8000000 (134217728)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_DOMAIN_DNS - 400000 (4194304)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_EMAIL - 4000000 (67108864)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_SPN - 800000 (8388608)<br /><br />CT_FLAG_SUBJECT_ALT_REQUIRE_UPN - 2000000 (33554432)|  
+|X500NameFlags|||CERT_NAME_STR_NONE - 0<br /><br />CERT_OID_NAME_STR - 2<br /><br />CERT_X500_NAME_STR - 3<br /><br />CERT_NAME_STR_SEMICOLON_FLAG - 40000000 (1073741824)<br /><br />CERT_NAME_STR_NO_PLUS_FLAG - 20000000 (536870912)<br /><br />CERT_NAME_STR_NO_QUOTING_FLAG - 10000000 (268435456)<br /><br />CERT_NAME_STR_CRLF_FLAG - 8000000 (134217728)<br /><br />CERT_NAME_STR_COMMA_FLAG - 4000000 (67108864)<br /><br />CERT_NAME_STR_REVERSE_FLAG - 2000000 (33554432)<br /><br />CERT_NAME_STR_FORWARD_FLAG - 1000000 (16777216)<br /><br />CERT_NAME_STR_DISABLE_IE4_UTF8_FLAG - 10000 (65536)<br /><br />CERT_NAME_STR_ENABLE_T61_UNICODE_FLAG - 20000 (131072)<br /><br />CERT_NAME_STR_ENABLE_UTF8_UNICODE_FLAG - 40000 (262144)<br /><br />CERT_NAME_STR_FORCE_UTF8_DIR_STR_FLAG - 80000 (524288)<br /><br />CERT_NAME_STR_DISABLE_UTF8_DIR_STR_FLAG - 100000 (1048576)<br /><br />CERT_NAME_STR_ENABLE_PUNYCODE_FLAG - 200000 (2097152)|  
 Return to [Contents](Certreq_1.md#BKMK_Contents)  
 > [!NOTE]  
-> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal “template�? means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.  
+> SubjectNameFlags allows the INF file to specify which Subject and SubjectAltName extension fields should be auto-populated by certreq based on the current user or current machine properties: DNS name, UPN, and so on. Using the literal  template  means the template name flags are used instead. This allows a single INF file to be used in multiple contexts to generate requests with context-specific subject information.  
 >   
 > X500NameFlags specifies the flags to be passed directly to CertStrToName API when the Subject INF keys value is converted to an ASN.1 encoded Distinguished Name.  
 To request a certificate based using certreq -new use the steps from the example below:  
 > [!WARNING]  
-> The content for this topic is based on the default settings for Windows Server 2008 AD CS; for example, setting the key length to 2048, selecting Microsoft Software Key Storage Provider as the CSP, and using Secure Hash Algorithm 1 (SHA1). Evaluate these selections against the requirements of your company’s security policy.  
+> The content for this topic is based on the default settings for Windows Server 2008 AD CS; for example, setting the key length to 2048, selecting Microsoft Software Key Storage Provider as the CSP, and using Secure Hash Algorithm 1 (SHA1). Evaluate these selections against the requirements of your company s security policy.  
 To create a Policy File (.inf) copy and save the example below in Notepad and save as RequestConfig.inf:  
 ```  
 [NewRequest]   
@@ -183,14 +182,14 @@ KeySpec = 1
 KeyUsage = 0xf0   
 MachineKeySet = TRUE   
 [RequestAttributes]  
-CertificateTemplate=�?WebServer�?  
+CertificateTemplate= WebServer   
 [Extensions]   
 OID = 1.3.6.1.5.5.7.3.1   
 OID = 1.3.6.1.5.5.7.3.2  
 ```  
 On the computer for which you are requesting a certificate type the command below:  
 ```  
-CertReq –New RequestConfig.inf CertRequest.req  
+CertReq  New RequestConfig.inf CertRequest.req  
 ```  
 The following example demonstrates implementing the [Strings] section syntax for OIDs and other difficult to interpret data. The new {text} syntax example for EKU extension, which uses a comma separated list of OIDs:  
 ```  
@@ -212,13 +211,13 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
 ```  
 CertReq -accept [Options] [CertChainFileIn | FullResponseFileIn | CertFileIn]  
 ```  
-The –accept parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there is a matching request).  
+The  accept parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there is a matching request).  
 You can use this example for manually accepting a certificate:  
 ```  
 certreq -accept certnew.cer  
 ```  
 > [!WARNING]  
-> The -accept verb, the -user and –machine options indicate whether the cert being installed should be installed in user or machine context. If there’s an outstanding request in either context that matches the public key being installed, then these options are not needed. If there is no outstanding request, then one of these must be specified.  
+> The -accept verb, the -user and  machine options indicate whether the cert being installed should be installed in user or machine context. If there s an outstanding request in either context that matches the public key being installed, then these options are not needed. If there is no outstanding request, then one of these must be specified.  
 Return to [Contents](Certreq_1.md#BKMK_Contents)  
 ## <a name="BKMK_policy"></a>Certreq -policy  
 ```  
@@ -251,25 +250,25 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
 ## <a name="BKMK_enroll"></a>Certreq -enroll  
 To enroll to a certificate  
 ```  
-certreq –enroll [Options] TemplateName  
+certreq  enroll [Options] TemplateName  
 ```  
 To renew an existing certificate  
 ```  
-certreq –enroll –cert CertId [Options] Renew [ReuseKeys]  
+certreq  enroll  cert CertId [Options] Renew [ReuseKeys]  
 ```  
 You can only renew certificates that are time valid. Expired certificates cannot be renewed and must be replaced with a new certificate.  
 Here an example of renewing a certificate using its serial number:  
 ```  
-certreq –enroll -machine –cert "61 2d 3c fe 00 00 00 00 00 05" Renew  
+certreq  enroll -machine  cert "61 2d 3c fe 00 00 00 00 00 05" Renew  
 ```  
 Here an example of enrolling to a certificate template called WebServer by using asterisk (*) to select the policy server via U/I:  
 ```  
-certreq -enroll –machine –policyserver * "WebServer"  
+certreq -enroll  machine  policyserver * "WebServer"  
 ```  
 Return to [Contents](Certreq_1.md#BKMK_Contents)  
 ## <a name="BKMK_Options"></a>Options  
 |Options|Description|  
-|-----------|---------------|  
+|------|--------|  
 |-any|Force ICertRequest::Submit to determine encoding type.|  
 |-attrib <AttributeString>|Specifies the Name and Value string pairs, separated by a colon.<br /><br />Separate Name and Value string pairs with \n (for example, Name1:Value1\nName2:Value2).|  
 |-binary|Formats output files as binary instead of base64-encoded.|  
@@ -288,12 +287,12 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
 |-RenewOnBehalfOf|Submit a renewal on behalf of the subject identified in the signing certificate. This sets CR_IN_ROBO when calling [ICertRequest::Submit](http://technet.microsoft.com/subscriptions/aa385040.aspx)|  
 |-f|Force existing files to be overwritten. This also bypasses caching templates and policy.|  
 |-q|Use silent mode; suppress all interactive prompts.|  
-|-Unicode|Writes Unicode output when standard output is redirected or piped to another command, which helps when invoked from Windows PowerShell® scripts).|  
+|-Unicode|Writes Unicode output when standard output is redirected or piped to another command, which helps when invoked from Windows PowerShell  scripts).|  
 |-UnicodeText|Sends Unicode output when writing base64 text encoded data blobs to files.|  
 Return to [Contents](Certreq_1.md#BKMK_Contents)  
 ## <a name="BKMK_Formats"></a>Formats  
 |Formats|Description|  
-|-----------|---------------|  
+|------|--------|  
 |RequestFileIn|Base64-encoded or binary input file name: PKCS #10 certificate request, CMS certificate request, PKCS #7 certificate renewal request, X.509 certificate to be cross-certified, or KeyGen tag format certificate request.|  
 |RequestFileOut|Base64-encoded output file name|  
 |CertFileOut|Base64-encoded X-509 file name.|  

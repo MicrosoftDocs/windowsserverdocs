@@ -1,6 +1,6 @@
 ---
 title: Pubprn.vbs
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Pubprn.vbs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Publishes a printer to the Active Directory Domain Services.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 Cscript Pubprn.vbs {<ServerName> | <UNCPrinterPath>} 
@@ -28,7 +27,7 @@ Cscript Pubprn.vbs {<ServerName> | <UNCPrinterPath>}
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<ServerName>|Specifies the name of the Windows server that hosts the printer that you want to publish. If you do not specify a computer, the local computer is used.|
 |<UNCPrinterPath>|The Universal Naming Convention (UNC) path to the shared printer that you want to publish.|
 |"LDAP://CN=<Container>,DC=<Container>"|Specifies the path to the container in Active Directory Domain Services where you want to publish the printer.|

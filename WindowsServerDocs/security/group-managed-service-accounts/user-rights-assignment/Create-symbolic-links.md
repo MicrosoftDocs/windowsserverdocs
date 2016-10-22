@@ -47,10 +47,10 @@ Constant: SeCreateSymbolicLinkPrivilege
 ### Default values
 By default, members of the Administrators group have this right.
 
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
 
 |Server type or GPO|Default value|
-|----------------------|-----------------|
+|-----------|---------|
 |Default Domain Policy|Not Defined|
 |Default Domain Controller Policy|Not Defined|
 |Stand-Alone Server Default Settings|Not Defined|

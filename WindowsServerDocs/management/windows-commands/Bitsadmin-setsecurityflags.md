@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin setsecurityflags
+description: "Windows Commands topic for **Bitsadmin setsecurityflags** - Sets flags for HTTP that determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setsecurityflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +29,7 @@ bitsadmin /SetSecurityFlags <Job> <Value>
 ## Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Value|See Remarks|
 
@@ -37,7 +37,7 @@ bitsadmin /SetSecurityFlags <Job> <Value>
 The **Value** parameter can contain one or more of the following notification flags.
 
 |Action|Binary representation|
-|----------|-------------------------|
+|-----|-------------|
 |Enable CRL Check|Set the least significant bit|
 |Ignore invalid common name in server certificate|Set the 2nd bit from the right|
 |Ignore invalid date in server certificate|Set the 3rd bit from the right|

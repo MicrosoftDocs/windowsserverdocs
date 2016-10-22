@@ -1,5 +1,6 @@
 ---
 title: Bitsadmin cache
+description: "Windows Commands topic for **Bitsadmin cache** commands - Contains a list of the Bitsadmin /Cache commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016 
 ---
-
 #Bitsadmin cache
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,7 +36,7 @@ Bitsadmin /Cache /SetExpirationTime
 ## Parameters
 
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Bitsadmin cache and help](Bitsadmin-cache-and-help.md)|Displays the command\-line usage for the \/Cache commands.|
 |[Bitsadmin cache clear](Bitsadmin-cache-clear.md)|Purges the local cache.|
 |[Bitsadmin cache and delete](Bitsadmin-cache-and-delete.md)|Deletes a cache entry.|

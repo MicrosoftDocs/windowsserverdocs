@@ -1,6 +1,6 @@
 ---
 title: Irftp
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Irftp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ irftp [<Drive>:\] [[<Path>] <FileName>] [/h][/s]
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |Drive:\|Specifies the drive that contains the files that you want to send over an infrared link.|  
 |[Path]FileName|Specifies the location and name of the file or set of files that you want to send over an infrared link. If you specify a set of files, you must specify the full path for each file.|  
 |/h|Specifies hidden mode. When hidden mode is used, the files are sent without displaying the Wireless Link dialog box.|  

@@ -45,7 +45,7 @@ Security groups can provide an efficient way to assign access to resources on yo
 
 -   Assign user rights to security groups in Active Directory.
 
-    User rights are assigned to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when Active Directory is installed to help administrators define a person’s administrative role in the domain.
+    User rights are assigned to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when Active Directory is installed to help administrators define a person???s administrative role in the domain.
 
     For example, a user who is added to the Backup Operators group in Active Directory has the ability to back up and restore files and directories that are located on each domain controller in the domain. This is possible because, by default, the user rights **Backup files and directories** and **Restore files and directories** are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
 
@@ -76,7 +76,7 @@ The following table lists the three group scopes and more information about each
 **Group scopes**
 
 |Scope|Possible Members|Scope Conversion|Can Grant Permissions|Possible Member of|
-|---------|--------------------|--------------------|-------------------------|----------------------|
+|-----|----------|----------|-------------|-----------|
 |Universal|Accounts from any domain in the same forest<br /><br />Global groups from any domain in the same forest<br /><br />Other Universal groups from any domain in the same forest|Can be converted to Domain Local scope<br /><br />Can be converted to Global scope if the group does not contain any other Universal groups|On any domain in the same forest or trusting forests|Other Universal groups in the same forest<br /><br />Domain Local groups in the same forest or trusting forests<br /><br />Local groups on computers in the same forest or trusting forests|
 |Global|Accounts from the same domain<br /><br />Other Global groups from the same domain|Can be converted to Universal scope if the group is not a member of any other global group|On any domain in the same forest, or trusting domains or forests|Universal groups from any domain in the same forest<br /><br />Other Global groups from the same domain<br /><br />Domain Local groups from any domain in the same forest, or from any trusting domain|
 |Domain Local|Accounts from any domain or any trusted domain<br /><br />Global groups from any domain or any trusted domain<br /><br />Universal groups from any domain in the same forest<br /><br />Other Domain Local groups from the same domain<br /><br />Accounts, Global groups, and Universal groups from other forests and from external domains|Can be converted to Universal scope if the group does not contain any other Domain Local groups|Within the same domain|Other Domain Local groups from the same domain<br /><br />Local groups on computers in the same domain, excluding built-in groups that have well-known SIDs|
@@ -103,7 +103,7 @@ The security descriptor is present on the **AdminSDHolder** object. This means t
 The following tables provide descriptions of the default groups that are located in the **Builtin** and **Users** containers in each operating system.
 
 |Default Security Group| Windows Server 2012 R2 | Windows Server 2012 | Windows Server 2008 R2 | Windows Server 2008 |
-|--------------------------|-----------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+|-------------|---------------------------------|------------------------------|---------------------------------|---------------------------------|
 |[Access Control Assistance Operators](#BKMK_ACAsstOps)|Yes|Yes|||
 |[Account Operators](#BKMK_AccountOperators)|Yes|Yes|Yes|Yes|
 |[Administrators](#BKMK_Admins)|Yes|Yes|Yes|Yes|
@@ -133,7 +133,7 @@ The following tables provide descriptions of the default groups that are located
 |[Network Configuration Operators](#BKMK_NetworkCfgOperators)|Yes|Yes|Yes|Yes|
 |[Performance Log Users](#BKMK_PerfLogUsers)|Yes|Yes|Yes|Yes|
 |[Performance Monitor Users](#BKMK_PerfMonitorUsers)|Yes|Yes|Yes|Yes|
-|[Pre–Windows 2000 Compatible Access](#BKMK_Pre-WS2KcompatAccess)|Yes|Yes|Yes|Yes|
+|[Pre???Windows 2000 Compatible Access](#BKMK_Pre-WS2KcompatAccess)|Yes|Yes|Yes|Yes|
 |[Print Operators](#BKMK_PrintOperators)|Yes|Yes|Yes|Yes|
 |[Protected Users](#BKMK_ProtectedUsers)|Yes||||
 |[RAS and IAS Servers](#BKMK_RASandIAS)|Yes|Yes|Yes|Yes|
@@ -159,7 +159,7 @@ The Access Control Assistance Operators group applies to versions of the Windows
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-579|
 |Type|BuiltIn Local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -183,7 +183,7 @@ The Account Operators group applies to versions of the Windows Server operating 
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-548|
 |Type|BuiltIn Local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -211,7 +211,7 @@ This security group includes the following changes since Windows Server 2008:
 -   [Remove computer from docking station](../group-managed-service-accounts/user-rights-assignment/Remove-computer-from-docking-station.md) was removed in  Windows Server 2012 R2 .
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-544|
 |Type|BuiltIn Local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -230,7 +230,7 @@ The Allowed RODC Password Replication group applies to versions of the Windows S
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-571|
 |Type|Domain local|
 |Default container|CN=Users DC=<domain>, DC=|
@@ -249,7 +249,7 @@ The Backup Operators group applies to versions of the Windows Server operating s
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-551|
 |Type|Builtin local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -268,7 +268,7 @@ The Certificate Service DCOM Access group applies to versions of the Windows Ser
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-<domain>-574|
 |Type|Domain Local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -287,7 +287,7 @@ The Cert Publishers group applies to versions of the Windows Server operating sy
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-517|
 |Type|Domain Local|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -301,12 +301,12 @@ This security group has not changed since Windows Server 2008.
 ### <a name="BKMK_CloneableDomainControllers"></a>Cloneable Domain Controllers
 Members of the Cloneable Domain Controllers group that are domain controllers may be cloned. In  Windows Server 2012 R2  and  Windows Server 2012 , you can deploy domain controllers by copying an existing virtual domain controller. In a virtual environment, you no longer have to repeatedly deploy a server image that is prepared by using sysprep.exe, promote the server to a domain controller, and then complete additional configuration requirements for deploying each domain controller (including adding the virtual domain controller to this security group).
 
-For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../identity/ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md).
+For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../identity/ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).
 
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-522|
 |Type|Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -325,7 +325,7 @@ The Cryptographic Operators group applies to versions of the Windows Server oper
 This security group was introduced in Windows Vista Service Pack 1, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-569|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -346,7 +346,7 @@ This security group includes the following changes since Windows Server 2008:
 -   Windows Server 2012 changed the default members to include [Cert Publishers](Active-Directory-Security-Groups.md#BKMK_CertPublishers).
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-572|
 |Type|Domain local|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -365,7 +365,7 @@ The Distributed COM Users group applies to versions of the Windows Server operat
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-562|
 |Type|Builtin Local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -386,7 +386,7 @@ For information, see [DNS Record Ownership and the DnsUpdateProxy Group](http://
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-1103|
 |Type|Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -405,7 +405,7 @@ For information about other means to secure the DNS server service, see [Securin
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-1102|
 |Type|Domain local|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -426,7 +426,7 @@ The Domain Admins group applies to versions of the Windows Server operating syst
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-512|
 |Type|Domain Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -445,7 +445,7 @@ The Domain Computers group applies to versions of the Windows Server operating s
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-515|
 |Type|Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -464,7 +464,7 @@ The Domain Controllers group applies to versions of the Windows Server operating
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-516|
 |Type|Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -476,14 +476,14 @@ This security group has not changed since Windows Server 2008.
 |Default User Rights|None|
 
 ### <a name="BKMK_DomainGuests"></a>Domain Guests
-The Domain Guests group includes the domain’s built-in Guest account. When members of this group sign in as local guests on a domain-joined computer, a domain profile is created on the local computer.
+The Domain Guests group includes the domain???s built-in Guest account. When members of this group sign in as local guests on a domain-joined computer, a domain profile is created on the local computer.
 
 The Domain Guests group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-514|
 |Type|Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -504,7 +504,7 @@ The Domain Users group applies to versions of the Windows Server operating syste
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-513|
 |Type|Domain Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -525,7 +525,7 @@ The Enterprise Admins group applies to versions of the Windows Server operating 
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<root domain>-519|
 |Type|Universal (if Domain is in Native-Mode) else Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -548,7 +548,7 @@ The Enterprise Read-Only Domain Controllers group applies to versions of the Win
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-498|
 |Type|Universal|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -567,7 +567,7 @@ The Event Log Readers group applies to versions of the Windows Server operating 
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-573|
 |Type|Builtin local|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -588,7 +588,7 @@ The Group Policy Creators Owners group applies to versions of the Windows Server
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-520|
 |Type|Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -600,7 +600,7 @@ This security group has not changed since Windows Server 2008.
 |Default User Rights|See [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_Guests"></a>Guests
-Members of the Guests group have the same access as members of the Users group by default, except that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to sign in with limited privileges to a computer’s built-in Guest account.
+Members of the Guests group have the same access as members of the Users group by default, except that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to sign in with limited privileges to a computer???s built-in Guest account.
 
 When a member of the Guests group signs out, the entire profile is deleted. This includes everything that is stored in the **%userprofile%** directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the Group Policy setting **Do not logon users with temporary profiles** when it is enabled. This setting is located under the following path:
 
@@ -616,7 +616,7 @@ The Guests group applies to versions of the Windows Server operating system list
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-546|
 |Type|Builtin Local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -636,7 +636,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-578|
 |Type|Builtin local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -655,7 +655,7 @@ For more information, see [Understanding Built-In User and Group Accounts in IIS
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-568|
 |Type|BuiltIn Local|
 |Default container|CN=BuiltIn, DC=<domain>, DC=|
@@ -684,7 +684,7 @@ The Incoming Forest Trust Builders group applies to versions of the Windows Serv
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-557|
 |Type|BuiltIn local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -725,7 +725,7 @@ The Network Configuration Operators group applies to versions of the Windows Ser
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-556|
 |Type|BuiltIn local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -761,7 +761,7 @@ The Performance Log Users group applies to versions of the Windows Server operat
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-559|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -796,7 +796,7 @@ The Performance Monitor Users group applies to versions of the Windows Server op
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-558|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -807,22 +807,22 @@ This security group has not changed since Windows Server 2008.
 |Safe to delegate management of this group to non-Service admins?|Yes|
 |Default User Rights|None|
 
-### <a name="BKMK_Pre-WS2KcompatAccess"></a>Pre–Windows 2000 Compatible Access
-Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers running Windows NT 4.0 and earlier. By default, the special identity group, Everyone, is a member of this group. Add users to this group only if they are running Windows NT 4.0 or earlier.
+### <a name="BKMK_Pre-WS2KcompatAccess"></a>Pre???Windows 2000 Compatible Access
+Members of the Pre???Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers running Windows NT 4.0 and earlier. By default, the special identity group, Everyone, is a member of this group. Add users to this group only if they are running Windows NT 4.0 or earlier.
 
 > [!WARNING]
 > This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
 
-The Pre–Windows 2000 Compatible Access group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
+The Pre???Windows 2000 Compatible Access group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-554|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
-|Default members|If you choose the Pre–Windows 2000 Compatible Permissions mode, Everyone and Anonymous are members, and if you choose the Windows 2000-only permissions mode, Authenticated Users are members.|
+|Default members|If you choose the Pre???Windows 2000 Compatible Permissions mode, Everyone and Anonymous are members, and if you choose the Windows 2000-only permissions mode, Authenticated Users are members.|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?|Cannot be moved|
@@ -839,7 +839,7 @@ The Print Operators group applies to versions of the Windows Server operating sy
 This security group has not changed since Windows Server 2008. However, in Windows Server 2008 R2, functionality was added to manage print administration. For more information, see [Assigning Delegated Print Administrator and Printer Permission Settings in Windows Server 2008 R2](http://technet.microsoft.com/library/ee524015(WS.10).aspx).
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-550|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -857,13 +857,13 @@ This security group is designed as part of a strategy to effectively protect and
 
 This domain-related, global group triggers non-configurable protection on devices and host computers running  Windows Server 2012 R2  and Windows 8.1, and on domain controllers in domains with a primary domain controller running  Windows Server 2012 R2 . This greatly reduces the memory footprint of credentials when users sign in to computers on the network from a non-compromised computer.
 
-Depending on the account’s domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
+Depending on the account???s domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
 
 -   Members of the Protected Users group cannot authenticate by using the following Security Support Providers (SSPs): NTLM, Digest Authentication, or CredSSP. Passwords are not cached on a device running Windows 8.1,  so the device fails to authenticate to a domain when the account is a member of the Protected User group.
 
 -   The Kerberos protocol will not use the weaker DES or RC4 encryption types in the preauthentication process. This means that the domain must be configured to support at least the AES cipher suite.
 
--   The user’s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
+-   The user???s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
 
 -   The default Kerberos ticket-granting tickets (TGTs) lifetime setting of four hours is configurable by using Authentication Policies and Silos, which can be accessed through the Active Directory Administrative Center. This means that when four hours has passed, the user must authenticate again.
 
@@ -874,7 +874,7 @@ This group was introduced in  Windows Server 2012 R2 . For more information abou
 The following table specifies the properties of the Protected Users group.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-known SID/RID|S-1-5-21-<domain>-525|
 |Type|Domain Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -893,7 +893,7 @@ The RAS and IAS Servers group applies to versions of the Windows Server operatin
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-553|
 |Type|Domain local|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -912,7 +912,7 @@ For information about Remote Desktop Services, see [Remote Desktop Services Desi
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-553|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -929,7 +929,7 @@ Servers that are members in the RDS Management Servers group can be used to perf
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-577|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -948,7 +948,7 @@ For information about RemoteApp programs, see [Overview of RemoteApp](http://tec
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-575|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -967,7 +967,7 @@ The Remote Desktop Users group applies to versions of the Windows Server operati
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-555|
 |Type|Builtin Local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -998,7 +998,7 @@ For information about deploying a Read-only domain controller, see [Read-Only Do
 This security group was introduced in Windows Server 2008, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-521|
 |Type||
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -1019,7 +1019,7 @@ For more information, see [WS-Management Protocol (Windows)](http://msdn.microso
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-580|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -1041,7 +1041,7 @@ Computers that are members of the Replicator group support file replication in a
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-552|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -1066,7 +1066,7 @@ The Schema Admins group applies to versions of the Windows Server operating syst
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<root domain>-518|
 |Type|Universal (if Domain is in Native-Mode) else Global|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -1087,7 +1087,7 @@ The Server Operators group applies to versions of the Windows Server operating s
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-549|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -1111,7 +1111,7 @@ The Terminal Server License Servers group applies to versions of the Windows Ser
 This security group only applies to Windows Server 2003 and Windows Server 2008 because Terminal Services was replaced by Remote Desktop Services in Windows Server 2008 R2.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-561|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -1136,7 +1136,7 @@ This security group includes the following changes since Windows Server 2008:
 -   In Windows Server 2012, the default **Member Of** list changed from Domain Users to none.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-545|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -1158,7 +1158,7 @@ The Windows Authorization Access group applies to versions of the Windows Server
 This security group has not changed since Windows Server 2008.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-32-560|
 |Type|Builtin local|
 |Default container|CN=Builtin, DC=<domain>, DC=|
@@ -1194,7 +1194,7 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-21-<domain>-1000|
 |Type|Domain local|
 |Default container|CN=Users, DC=<domain>, DC=|

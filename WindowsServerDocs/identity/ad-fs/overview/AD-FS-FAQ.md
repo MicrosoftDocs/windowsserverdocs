@@ -35,6 +35,8 @@ ms.technology: identity-adfs
 
 -   [How long are AD FS tokens valid?](AD-FS-FAQ.md#BKMK_9)  
 
+-   [Why does AD FS installation require a reboot of the server?](AD-FS-FAQ.md#BKMK_10)  
+
 ## <a name="BKMK_1"></a>How can I upgrade/migrate from previous versions of AD FS?  
 You can upgrade an AD FS 2012 R2 farm using the “mixed farm” process described [here](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016).  It works for WID or SQL farms, though the document shows only the WID scenario.
 
@@ -196,3 +198,7 @@ The default lifetimes of the various cookies and tokens are listed below (as wel
 - access_token: 1 hour by default, based on the relying party
 
 - id_token: same as access token
+
+## <a name="BKMK_10"></a>Why does AD FS installation require a reboot of the server?
+
+HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for client certificate authentication.  Because many AD FS scenarios make use of client certificate authentication, and a significant number of clients do not support retrying requests using HTTP/1.1, AD FS farm configuration re-configures the local server's HTTP settings to HTTP/1.1.  This requires a reboot of the server.  

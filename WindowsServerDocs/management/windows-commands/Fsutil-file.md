@@ -1,6 +1,6 @@
 ---
 title: Fsutil file
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil file
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -40,7 +39,7 @@ fsutil file [setzerodata] offset=<Offset> length=<Length> <FileName>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |createnew|Creates a file of the specified name and size, with content that consists of zeroes.|  
 |<FileName>|Specifies the full path to the file including the file name and extension, for example C:\\documents\\filename.txt.|  
 |<Length>|Specifies the file's valid data length.|  
@@ -50,8 +49,8 @@ fsutil file [setzerodata] offset=<Offset> length=<Length> <FileName>
 |queryallocranges|Queries the allocated ranges for a file on an NTFS volume. Useful for determining whether a file has sparse regions.|  
 |offset\=<Offset>|Specifies the start of the range that should be set to zeroes.|  
 |length\=<Length>|Specifies the length of the range \(in bytes\).|  
-|queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
-|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
+|queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
+|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
 |<Fileid>|Specifies the ID of the file on an NTFS volume.|  
 |<Volume>|Specifies the volume as drive name followed by a colon.|  
 |setshortname|Sets the short name \(8.3 character\-length file name\) for a file on an NTFS volume.|  

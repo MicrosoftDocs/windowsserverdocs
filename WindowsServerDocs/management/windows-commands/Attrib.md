@@ -1,6 +1,6 @@
 ---
 title: Attrib
-description: "Windows Commands"
+description: "Windows Commands topic for **Attrib** - Displays, sets, or removes attributes assigned to files or directories."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Attrib
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ attrib [{+|-}r] [{+|-}a] [{+|-}s] [{+|-}h] [{+|-}i] [<Drive>:][<Path>][<FileName
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{+&#124;-}r|Sets (**+**) or clears (**-**) the Read-only file attribute.|
 |{+&#124;-}a|Sets (**+**) or clears (**-**) the Archive file attribute.|
 |{+&#124;-}s|Sets (**+**) or clears (**-**) the System file attribute.|

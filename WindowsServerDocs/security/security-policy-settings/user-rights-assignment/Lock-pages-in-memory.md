@@ -47,10 +47,10 @@ Best practices are dependent on the platform architecture and the applications r
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
   
 |Server type or GPO|Default value|  
-|----------------------|-----------------|  
+|-----------|---------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
 |Stand-Alone Server Default Settings|Not defined|  

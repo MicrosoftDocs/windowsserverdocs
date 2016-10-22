@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin setaclflag
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin setaclflag** - Sets the access control list propagations flags."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin setaclflag
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /SetAclFlags <Job> <Flags>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |Flags|Specify one or more of the following flag values:<br /><br />-   O: Copy owner information with file.<br />-   G: Copy group information with file.<br />-   D: Copy DACL information with file.<br />-   S :Copy SACL information with file.|
 ## Remarks

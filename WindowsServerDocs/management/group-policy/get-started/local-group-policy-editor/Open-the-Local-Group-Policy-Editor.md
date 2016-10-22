@@ -1,6 +1,6 @@
 ---
 title: Open the Local Group Policy Editor
-description: "Group Policy"
+description: Open the Local Group Policy Editor
 ms.prod: windows-server-threshold
 ms.technology: manage-group-policy
 ms.tgt_pltfrm: na
@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 
 # Open the Local Group Policy Editor
 
@@ -39,5 +38,3 @@ You can open the Local Group Policy Editor by using the command line or by using
 
 > [!NOTE]
 > If you want to save a Local Group Policy Editor console and choose which GPO opens in it from the command line, select the **Allow focus of the Group Policy Snap-in to be changed when launching from the command line** check box in the **Select Group Policy Object** dialog box.
-
-

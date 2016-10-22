@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Configure Firewall Port Requirements for Group Policy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -37,7 +36,7 @@ You can use the RSoP feature of the GPMC to create detailed reports about the po
 To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that allow inbound network traffic on the ports listed in the following table. This allows remote WMI and event log traffic to flow between the computer running the GPMC and the remotely targeted computer.
 
 |Server port|Type of network traffic|
-|---------------|---------------------------|
+|--------|--------------|
 |TCP SMB 445, all services and programs|Remote Event Log Management (NP-in)|
 |TCP RPC dynamic ports, EventLog (Windows Event Log service)|Remote Event Log Management (RPC)|
 |TCP port 135, RPCSS (Remote Procedure Call service)|Remote Event Log Management (RPC-EPMAP)|
@@ -48,7 +47,7 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called, **Group Po
 
 ### <a name="BKMK_remoteProc1"></a>To create a GPO from the Group Policy Reporting Firewall Ports Starter GPO and link to the domain
 
-1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it hereâ€¦**
+1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it here**
 
 2.  In the **New GPO** dialog box, type the name of the new Group Policy Object in the **Name** box.
 
@@ -70,12 +69,12 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called, **Group Po
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-You can use the **New-GPO** cmdlet with the **â€“StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
+You can use the **New-GPO** cmdlet with the ** StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
 
 For example, to create a new GPO, called *Configure firewall rules for remote reporting*, based on the **Group Policy Reporting Firewall Ports** Starter GPO, and link the GPO to the Contoso.com domain, type the following:
 
 ```
-New-GPO â€“Name "Configure firewall rules for remote reporting" â€“StarterGpoName "Group Policy Reporting Firewall Ports" | New-GPLink â€“target "dc=Contoso,dc=com" â€“LinkEnabled yes
+New-GPO  Name "Configure firewall rules for remote reporting"  StarterGpoName "Group Policy Reporting Firewall Ports" | New-GPLink  target "dc=Contoso,dc=com"  LinkEnabled yes
 ```
 
 For more information about the **New-GPO** cmdlet and the **New-GPLink** cmdlet, see:
@@ -88,7 +87,7 @@ For more information about the **New-GPO** cmdlet and the **New-GPLink** cmdlet,
 To schedule a remote Group Policy refresh for domain-joined computers you must have firewall rules that enable inbound network traffic on the ports listed in the following table.
 
 |Server port|Type of network traffic|
-|---------------|---------------------------|
+|--------|--------------|
 |TCP RPC dynamic ports, Schedule (Task Scheduler service)|Remote Scheduled Tasks Management (RPC)|
 |TCP port 135, RPCSS (Remote Procedure Call service)|Remote Scheduled Tasks Management (RPC-EPMAP)|
 |TCP all ports, Winmgmt (Windows Management Instrumentation service)|Windows Management Instrumentation (WMI-in)|
@@ -98,7 +97,7 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called **Group Pol
 
 ### <a name="BKMK_remoteProc2"></a>To create a GPO from the Group Policy Remote Update Firewall Ports Starter GPO and link to the domain
 
-1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it hereâ€¦**
+1.  In the GPMC console tree, right-click the domain for which you want to configure all computers to enable a remote Group Policy refresh, and then click **Create a GPO in this domain, and Link it here**
 
 2.  In the **New GPO** dialog box, type the name of the new Group Policy Object in the **Name** box.
 
@@ -120,12 +119,12 @@ In  Windows Server 2012 , Group Policy adds a new Starter GPO called **Group Pol
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-You can use the **New-GPO** cmdlet with the **â€“StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
+You can use the **New-GPO** cmdlet with the ** StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
 
 For example, to create a new GPO, called *Configure firewall rules for remote gpupdate*, which is based on the **Group Policy Remote Update Firewall Ports** Starter GPO, and link the GPO to the Contoso.com domain, type the following:
 
 ```
-New-GPO â€“Name "Configure firewall rules for remote gpupdate" â€“StarterGpoName "Group Policy Remote Update Firewall Ports" | New-GPLink â€“target "dc=Contoso,dc=com" â€“LinkEnabled yes
+New-GPO  Name "Configure firewall rules for remote gpupdate"  StarterGpoName "Group Policy Remote Update Firewall Ports" | New-GPLink  target "dc=Contoso,dc=com"  LinkEnabled yes
 ```
 
 For more information about the **New-GPO** cmdlet and the **New-GPLink** cmdlet, see:

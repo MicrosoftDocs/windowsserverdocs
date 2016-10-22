@@ -1,6 +1,6 @@
 ---
 title: Wbadmin start sysrecovery
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin start sysrecovery
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -38,7 +37,7 @@ wbadmin start sysrecovery
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-version|Specifies the version identifier for the backup to recover in MM/DD/YYYY-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.|
 |-backupTarget|Specifies the storage location that contains the backup or backups that you want to recover. This parameter is useful when the storage location is different from where backups of this computer are usually stored.|
 |-machine|Specifies the name of the computer that you want to recover. This parameter is useful when multiple computers have been backed up to the same location. Should be used when the **-backupTarget** parameter is specified.|

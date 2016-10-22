@@ -1,5 +1,6 @@
 ---
 title: Application Considerations
+description: Compatiblity information for apps on MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

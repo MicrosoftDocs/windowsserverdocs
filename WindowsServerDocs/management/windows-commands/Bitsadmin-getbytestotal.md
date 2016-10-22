@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin getbytestotal
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getbytestotal** - 
+Retrieves the size of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,19 +15,18 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin getbytestotal
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Retrieves the size of the specified job
+Retrieves the size of the specified job.
 ## Syntax
 ```
 bitsadmin /GetBytesTotal <Job>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the size of the job named *myDownloadJob*.

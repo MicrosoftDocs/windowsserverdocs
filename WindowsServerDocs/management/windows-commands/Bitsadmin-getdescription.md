@@ -1,6 +1,7 @@
 ---
 title: Bitsadmin getdescription
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin getdescription** - 
+Retrieves the description of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin getdescription
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +26,7 @@ bitsadmin /GetDescription <Job>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the description for the job named *myDownloadJob*.

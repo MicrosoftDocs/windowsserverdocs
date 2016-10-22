@@ -38,7 +38,7 @@ Default: Not configured
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4744|A security-disabled local group was created.|
 |4745|A security-disabled local group was changed.|
 |4746|A member was added to a security-disabled local group.|

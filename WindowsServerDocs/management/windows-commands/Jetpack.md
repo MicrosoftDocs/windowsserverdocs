@@ -1,6 +1,6 @@
 ---
 title: Jetpack
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Jetpack
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ JETPACK.EXE <database name> <temp database name>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<database name>|Specifies the original database file.|
 |<temp database name>|Specifies the temporary database file.|
 |/?|Displays Help at the command prompt.|

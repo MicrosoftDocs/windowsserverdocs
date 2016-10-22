@@ -1,6 +1,6 @@
 ---
 title: Assoc
-description: "Windows Commands"
+description: "Windows Commands topic for **Assoc** - Displays or modifies file name extension associations."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Assoc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ assoc [<.ext>[=[<FileType>]]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<.ext>|Specifies the file name extension.|
 |<FileType>|Specifies the file type to associate with the specified file name extension.|
 |/?|Displays help at the command prompt.|

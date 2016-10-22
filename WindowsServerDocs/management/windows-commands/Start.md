@@ -1,6 +1,6 @@
 ---
 title: Start
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Start
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |"<Title>"|Specifies the title to display in the Command Prompt window title bar.|  
 |/d <Path>|Specifies the startup directory.|  
 |/i|Passes the Cmd.exe startup environment to the new Command Prompt window. If **/i** is not specified, the current environment is used.|  

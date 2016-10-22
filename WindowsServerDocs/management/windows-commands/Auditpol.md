@@ -1,6 +1,6 @@
 ---
 title: Auditpol
-description: "Windows Commands"
+description: "Windows Commands topic for **Auditpol** - Displays information about and performs functions to manipulate audit policies."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Auditpol
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Auditpol command [<sub-command><options>]
 ```  
 ## Parameters  
 |Sub-command|Description|  
-|----------------|---------------|  
+|--------|--------|  
 |/get|Displays the current audit policy.<br /><br />See [Auditpol get](Auditpol-get.md) for syntax and options.|  
 |/set|Sets the audit policy.<br /><br />See [Auditpol set](Auditpol-set.md) for syntax and options.|  
 |/list|Displays selectable policy elements.<br /><br />See [Auditpol list](Auditpol-list.md) for syntax and options.|  

@@ -1,6 +1,6 @@
 ---
 title: Unlodctr_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Unlodctr_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ Unlodctr <DriverName>
 ```  
 ### Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<DriverName>|Removes the Performance counter name settings and Explain text for driver or service <DriverName> from the Windows Server 2003 registry.|  
 |/?|Displays Help at the command prompt.|  
 ## Remarks  

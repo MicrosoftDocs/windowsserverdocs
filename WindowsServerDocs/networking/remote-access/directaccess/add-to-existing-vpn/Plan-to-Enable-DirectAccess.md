@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 458a3bcf-50b6-47b2-b53c-1b8204c5189e
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Plan to Enable DirectAccess
 
@@ -20,11 +20,11 @@ author: coreyp-at-msft
 
 The planning phase includes the following steps:  
   
--   [Step 1: Plan DirectAccess infrastructure](Step-1--Plan-DirectAccess-Infrastructure.md)  
+-   [Step 1: Plan DirectAccess infrastructure](Step-1-Plan-DirectAccess-Infrastructure.md)  
   
     In this phase, you describe the planning that is required to set up the network infrastructure before you begin the Remote Access deployment. It includes planning for the network and server topology, certificates, Domain Name System (DNS), Active Directory and Group Policy Object (GPO) configuration, and the DirectAccess network location server.  
   
--   [Step 2: Plan DirectAccess deployment](Step-2--Plan-the-DirectAccess-Deployment_4.md)  
+-   [Step 2: Plan DirectAccess deployment](Step-2-Plan-the-DirectAccess-Deployment_4.md)  
   
     In this phase, you describe the planning steps that are required to prepare for the Remote Access deployment. It includes planning for Remote Access client computers, server and client authentication requirements, and infrastructure servers.  
   

@@ -1,5 +1,6 @@
 ---
 title: View User Connection Status
+description: Learn how to view user status in MultiPoint Services
 ms.custom: na
 ms.date: 07/08/2016
 ms.prod: windows-server-threshold

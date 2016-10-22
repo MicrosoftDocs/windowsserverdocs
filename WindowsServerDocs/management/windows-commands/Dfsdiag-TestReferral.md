@@ -1,6 +1,6 @@
 ---
 title: Dfsdiag TestReferral
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsdiag TestReferral
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -42,7 +41,7 @@ DFSDiag /TestReferral /DFSPath:<DFS path for getting referrals> [/Full]
 ### Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |\/DFSPath:<Path for getting referrals>|This DFS path can be one of the following:<br /><br />-   \(blank\): Tests trusted domains.<br />-   \\\\Domain: Domain controller referrals.<br />-   \\\\Domain\\SYSVOL: SYSVOL referrals.<br />-   \\\\Domain\\NETLOGON: NETLOGON referrals.<br />-   \\\\<Domain or server>\\<Namespace Root>: Namespace root referrals.<br />-   \\\\<Domain or server>\\<Namespace root>\\<DFS folder>: DFS folder \(link\) referrals.|  
 |\/Full|Applied only to Domain and Root  referrals. Verifies the consistency of site association information between the registry and Active Directory Domain Services \(AD DS\).|  
   

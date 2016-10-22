@@ -63,7 +63,7 @@ Primarily, default local accounts do the following:
 
 -   Let the domain represent, identify, and authenticate the identity of the user that is assigned to the account by using unique credentials (user name and password). It is a best practice to assign each user to a single account to ensure maximum security. Multiple users are not allowed to share one account. A user account lets a user sign in to computers, networks, and domains with a unique identifier that can be authenticated by the computer, network, or domain.
 
--   Authorize (grant or deny) access to resources. After a user’s credentials have been authenticated, the user is authorized to access the network and domain resources based on the user’s explicitly assigned rights on the resource.
+-   Authorize (grant or deny) access to resources. After a user???s credentials have been authenticated, the user is authorized to access the network and domain resources based on the user???s explicitly assigned rights on the resource.
 
 -   Audit the actions that are carried out on a user account.
 
@@ -106,7 +106,7 @@ When Active Directory is installed on the first domain controller in the domain,
 **Administrator account attributes**
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-500|
 |Type|User|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -148,7 +148,7 @@ For details about the Guest account attributes, see the following table.
 **Guest account attributes**
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-501|
 |Type|User|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -161,7 +161,7 @@ For details about the Guest account attributes, see the following table.
 ## <a name="SEC_HelpAssistant"></a>HelpAssistant account (installed with a Remote Assistance session)
 The HelpAssistant account is a default local account that is enabled when a Remote Assistance session is run. This account is automatically disabled when no Remote Assistance requests are pending.
 
-HelpAssistant is the primary account that is used to establish a Remote Assistance session. The Remote Assistance session is used to connect to another computer running the Windows operating system, and it is initiated by invitation. For solicited remote assistance, a user sends an invitation from their computer, through e-mail or as a file, to a person who can provide assistance. After the user’s invitation for a Remote Assistance session is accepted, the default HelpAssistant account is automatically created to give the person who provides assistance limited access to the computer. The HelpAssistant account is managed by the Remote Desktop Help Session Manager service.
+HelpAssistant is the primary account that is used to establish a Remote Assistance session. The Remote Assistance session is used to connect to another computer running the Windows operating system, and it is initiated by invitation. For solicited remote assistance, a user sends an invitation from their computer, through e-mail or as a file, to a person who can provide assistance. After the user???s invitation for a Remote Assistance session is accepted, the default HelpAssistant account is automatically created to give the person who provides assistance limited access to the computer. The HelpAssistant account is managed by the Remote Desktop Help Session Manager service.
 
 **Security considerations**
 
@@ -178,7 +178,7 @@ For details about the HelpAssistant account attributes, see the following table.
 **HelpAssistant account attributes**
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-13 (Terminal Server User), <br />S-1-5-<domain>-14 (Remote Interactive Logon)|
 |Type|User|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -221,7 +221,7 @@ For all account types (users, computers, and services)
 
 Need technical input for Note
 > [!NOTE]
-> Group Managed Service Accounts and Managed Service Accounts…
+> Group Managed Service Accounts and Managed Service Accounts???
 
 Because it is impossible to predict the specific errors that will occur for any given user in a production operating environment, you must assume all computers and users will be affected.
 
@@ -238,7 +238,7 @@ After the credentials are cached on the RODC, the RODC can accept that user's si
 For details about the KRBTGT account attributes, see the following table.
 
 |Attribute|Value|
-|-------------|---------|
+|-------|-----|
 |Well-Known SID/RID|S-1-5-<domain>-502|
 |Type|User|
 |Default container|CN=Users, DC=<domain>, DC=|
@@ -254,13 +254,13 @@ Each default local account in Active Directory has a number of account settings 
 **Settings for default local accounts in Active Directory**
 
 |Account settings|Description|
-|--------------------|---------------|
+|----------|--------|
 |User must change password at next logon|Forces a password change the next time that the user logs signs in to the network. Use this option when you want to ensure that the user is the only person to know his or her password.|
 |User cannot change password|Prevents the user from changing the password. Use this option when you want to maintain control over a user account, such as for a Guest or temporary account.|
 |Password never expires|Prevents a user password from expiring. It is a best practice to enable this option with service accounts and to use strong passwords.|
-|Store passwords using reversible encryption|Provides support for applications that use protocols requiring knowledge of the plaintext form of the user’s password for authentication purposes.<br /><br />This option is required when using Challenge Handshake Authentication Protocol (CHAP) in Internet Authentication Services (IAS), and when using digest authentication in Internet Information Services (IIS).|
+|Store passwords using reversible encryption|Provides support for applications that use protocols requiring knowledge of the plaintext form of the user???s password for authentication purposes.<br /><br />This option is required when using Challenge Handshake Authentication Protocol (CHAP) in Internet Authentication Services (IAS), and when using digest authentication in Internet Information Services (IIS).|
 |Account is disabled|Prevents the user from signing in with the selected account. As an administrator, you can use disabled accounts as templates for common user accounts.|
-|Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<br /><br />When this attribute is applied on the account, the effect is as follows:<br /><br />-   The attribute only restricts initial authentication for interactive logon and Remote Desktop logon. When interactive or Remote Desktop logon requires a subsequent network logon, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smartcard authentication process<br />-   Each time the attribute is enabled on an account, the account’s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value does not change after that unless a new password is set or the attribute is disabled and re-enabled.<br />-   Accounts with this attribute cannot be used to start services or run scheduled tasks.|
+|Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<br /><br />When this attribute is applied on the account, the effect is as follows:<br /><br />-   The attribute only restricts initial authentication for interactive logon and Remote Desktop logon. When interactive or Remote Desktop logon requires a subsequent network logon, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smartcard authentication process<br />-   Each time the attribute is enabled on an account, the account???s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value does not change after that unless a new password is set or the attribute is disabled and re-enabled.<br />-   Accounts with this attribute cannot be used to start services or run scheduled tasks.|
 |Account is trusted for delegation|Lets a service running under this account perform operations on behalf of other user accounts on the network. A service running under a user account (also known as a service account) that is trusted for delegation can impersonate a client to gain access to resources, either on the computer where the service is running or on other computers. For example, in a forest that is set to the Windows Server 2003 functional level, this setting is found on the **Delegation** tab. It is available only for accounts that have been assigned service principal names (SPNs), which are set by using the setspn command from Windows Support Tools. This setting is security-sensitive and should be assigned cautiously.|
 |Account is sensitive and cannot be delegated|Gives control over a user account, such as for a Guest account or a temporary account. This option can be used if this account cannot be assigned for delegation by another account.|
 |Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES). **Note:** DES is not enabled by default in  Windows Server 2008 R2 ,  Windows Server 2012 ,  Windows Server 2012 R2 ,  Windows 7 , Windows 8, and Windows 8.1. For these operating systems, you must configure your computers to use the DES-CBC-MD5 or DES-CBC-CRC cipher suites. If your environment requires DES, then this setting might affect compatibility with client computers or services and applications in your environment. For more information, see [Hunting down DES in order to securely deploy Kerberos](http://blogs.technet.com/b/askds/archive/20../hunting-down-des-in-order-to-securely-deploy-kerberos.aspx).|
@@ -413,7 +413,7 @@ The following procedure describes how to block Internet access by creating a Gro
         |-|-|
         |**Windows Update Setting**|**Configuration**|
         |Allow Automatic Updates immediate installation|Enabled|
-        |Configure Automatic Updates|Enabled<br /> 4- Auto download and schedule the installation<br /> 0 – Every day 03:00|
+        |Configure Automatic Updates|Enabled<br /> 4- Auto download and schedule the installation<br /> 0 ??? Every day 03:00|
         |Enable Windows Update Power Management to automatically wake up the system to install scheduled updates|Enabled|
         |Specify intranet Microsoft Update service location|Enabled<br /> http://<WSUSServername><br /> http://<WSUSServername><br /> Where <WSUSServername> is the DNS name or IP address of the Windows Server Update Services (WSUS) in the environment.|
         |Automatic Updates detection frequency|6 hours|

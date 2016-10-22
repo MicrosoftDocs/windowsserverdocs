@@ -1,6 +1,6 @@
 ---
 title: List_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # List_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,11 +29,11 @@ list { disk | partition | volume | vdisk }
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |disk|Displays a list of disks and information about them, such as their size, amount of available free space, whether the disk is a basic or dynamic disk, and whether the disk uses the master boot record \(MBR\) or GUID partition table \(GPT\) partition style.|  
 |partition|Displays the partitions listed in the partition table of the current disk.|  
 |volume|Displays a list of basic and dynamic volumes on all disks.|  
-|vdisk|Displays a list of the VHDs that are attached and\/or selected. This command lists detached VHDs if they are currently selected; however, the disk type is set to Unknown until the VHD is attached. The VHD marked with an asterisk \(\*\) has focus. **Note:** This command is only available for Windows 7 and Windows??Server??2008??R2.|  
+|vdisk|Displays a list of the VHDs that are attached and\/or selected. This command lists detached VHDs if they are currently selected; however, the disk type is set to Unknown until the VHD is attached. The VHD marked with an asterisk \(\*\) has focus. **Note:** This command is only available for Windows 7 and Windows Server 2008 R2.|  
   
 ## Remarks  
   

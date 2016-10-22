@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllDevices Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the get-AllDevices Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL [Options] /Get-AllDevices [/Forest:{Yes | No}] [/ReferralServer:<Server 
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[/Forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
 |[/ReferralServer:<Server name>]|Returns only those computers that are prestaged for the specified server.|
 ## <a name="BKMK_examples"></a>Examples
@@ -37,6 +36,6 @@ WDSUTIL /Verbose /Get-AllDevices /Forest:Yes /ReferralServer:MyWDSServer
 ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Subcommand: set-Device](Subcommand--set-Device.md)
+[Subcommand: set-Device](Subcommand-set-Device.md)
 [Using the add-Device command](Using-the-add-Device-command.md)
 [Using the get-Device Command](Using-the-get-Device-Command.md)

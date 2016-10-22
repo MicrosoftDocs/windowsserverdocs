@@ -97,7 +97,7 @@ At line:1 char:1
   
   
 ## Installing Nano Server  
-Quick-start and detailed steps for installing Nano Server on virtual or physical machines are provided in [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md), which is the parent topic for this one.  
+Quick-start and detailed steps for installing Nano Server on virtual or physical machines are provided in [Install Nano Server](Getting-Started-with-Nano-Server.md), which is the parent topic for this one.  
   
 > [!NOTE]  
 > For development work on Nano Server, you might find it useful to install Nano Server by using  the -Development parameter of New-NanoServerImage. This will enable installation of unsigned drivers, copy debugger binaries, open a port for debugging, enable test signing and enable installation of AppX packages without a developer license. For example:  

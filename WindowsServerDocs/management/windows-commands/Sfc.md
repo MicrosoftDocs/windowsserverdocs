@@ -1,6 +1,6 @@
 ---
 title: Sfc
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Sfc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/scannow|Scans the integrity of all protected system files and repairs files with problems when possible.|
 |/verifyonly|Scans integrity of all protected system files. No repair operation is performed.|
 |/scanfile|Scans integrity of the specified file and repairs the file if problems are detected, when possible.|
@@ -39,9 +38,9 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 ## Remarks
 -   You must be logged on as a member of the Administrators group to run **sfc.exe**.
 -   If **sfc** discovers that a protected file has been overwritten, it retrieves the correct version of the file from the **systemroot\system32\dllcache** folder, and then replaces the incorrect file.
--   There are functional differences between **sfc** on Windows Server® 2003,  Windows Server® 2008 , and  Windows Server® 2008 R2 :
+-   There are functional differences between **sfc** on Windows Server  2003,  Windows Server  2008 , and  Windows Server  2008 R2 :
 -   For more information about **sfc** on Windows Server 2003, see [article 310747](http://go.microsoft.com/fwlink/?LinkId=227069) in the Microsoft Knowledge Base.
--   For more information about **sfc** on  Windows Server® 2008 , and  Windows Server® 2008 R2 , see [System File Checker](http://go.microsoft.com/fwlink/?LinkId=227071).
+-   For more information about **sfc** on  Windows Server  2008 , and  Windows Server  2008 R2 , see [System File Checker](http://go.microsoft.com/fwlink/?LinkId=227071).
 ## <a name="BKMK_examples"></a>Examples
 To verify the **kernel32.dll file**, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: Set_1
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Set_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -30,7 +29,7 @@ set /a <Variable>=<Expression>
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |<Variable>|Specifies the environment variable to set or modify.|  
 |<String>|Specifies the string to associate with the specified environment variable.|  
 |/p|Sets the value of *Variable* to a line of input entered by the user.|  
@@ -53,7 +52,7 @@ set /a <Variable>=<Expression>
 -   Using **/a**  
     The following table lists the operators supported for **/a** in descending order of precedence.  
     |Operator|Operation performed|  
-    |------------|-----------------------|  
+    |------|------------|  
     |( )|Grouping|  
     |! ~ -|Unary|  
     |* / %|Arithmetic|  
@@ -66,7 +65,7 @@ set /a <Variable>=<Expression>
     |,|Expression separator|  
     If you use logical (**&&** or **||**) or modulus (**%**) operators, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they are processed. If you specify an environment variable name that is not defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.  
     If you run **set /a** from the command line outside of a command script, it displays the final value of the expression.  
-    Numeric values are decimal numbers unless prefixed by 0× for hexadecimal numbers or 0 for octal numbers. Therefore, 0×12 is the same as 18, which is the same as 022.  
+    Numeric values are decimal numbers unless prefixed by 0  for hexadecimal numbers or 0 for octal numbers. Therefore, 0 12 is the same as 18, which is the same as 022.  
 -   Supporting delayed environment variable expansion  
     Delayed environment variable expansion support is disabled by default, but you can enable or disable it by using **cmd /v**.  
 -   Working with command extensions  

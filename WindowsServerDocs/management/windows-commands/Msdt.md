@@ -1,6 +1,6 @@
 ---
 title: Msdt
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Msdt
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -25,6 +24,6 @@ Invokes a troubleshooting pack at the command line or as part of an automated sc
 ## Syntax
 
 ```
-msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <parameter> [options]>>
+msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options]   <parameter> [options]>>
 ```
 

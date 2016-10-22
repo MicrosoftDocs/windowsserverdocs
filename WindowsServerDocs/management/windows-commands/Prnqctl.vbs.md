@@ -1,6 +1,6 @@
 ---
 title: Prnqctl.vbs
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Prnqctl.vbs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Prints a test page, pauses or resumes a printer, and clears a printer queue.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
 ## Syntax  
 ```  
 Cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
@@ -28,7 +27,7 @@ Cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |-z|Pauses printing on the printer specified with the **-p** parameter.|  
 |-m|Resumes printing on the printer specified with the **-p** parameter.|  
 |-e|Prints a test page on the printer specified with the **-p** parameter.|  

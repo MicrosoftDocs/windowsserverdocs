@@ -1,6 +1,6 @@
 ---
 title: Whoami
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Whoami
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ whoami /all [/fo <Format>] [/nh]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/upn|Displays the user name in user principal name (UPN) format.|
 |/fqdn|Displays the user name in fully qualified domain name (FQDN) format.|
 |/logonid|Displays the logon ID of the current user.|

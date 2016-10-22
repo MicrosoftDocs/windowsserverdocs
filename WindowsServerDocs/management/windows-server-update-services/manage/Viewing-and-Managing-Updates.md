@@ -1,6 +1,6 @@
 ---
 title: Viewing and Managing Updates
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +13,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Viewing and Managing Updates
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -154,7 +153,7 @@ A product is a specific edition of an operating system or application, for examp
 Update classifications represent the type of update. For any given product or product family, updates could be available among multiple update classifications (for example, Windows 7 family Critical Updates and Security Updates). The following table lists update classifications.
 
 | Update Classifications  | Description   |
-|----|----|
+|--|--|
 |Critical Updates|Broadly released fixes for specific problems addressing critical, non-security related bugs.|
 |Definition Updates|Updates to virus or other definition files.|
 |Drivers|Software components designed to support new hardware.|

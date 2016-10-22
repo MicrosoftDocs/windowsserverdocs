@@ -1,6 +1,6 @@
 ---
 title: Nfsshare
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nfsshare
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ Without arguments, the **nfsshare** command-line utility lists all Network File 
 ## Options
 The **nfsshare** command accepts the following options and arguments:
 |Term|Definition|
-|--------|--------------|
+|----|-------|
 |-o anon={yes &#124; no}|Specifies whether anonymous (unmapped) users can access the shared directory. The default is **no**.|
 |-o rw[=<Host>[:<Host>]...]|Provides read-write access to the shared directory by the hosts or client groups specified by *Host*. Separate host and group names with a colon (**:**). If *Host* is not specified, all hosts and client groups (except those specified with the **ro** option) have read-write access. If neither the **ro** nor the **rw** option is set, all clients have read-write access to the shared directory.|
 |-o ro[=<Host>[:<Host>]...]|Provides read-only access to the shared directory by the hosts or client groups specified by *Host*. Separate host and group names with a colon (**:**). If *Host* is not specified, all clients (except those specified with the **rw** option) have read-only access. If the **ro** option is set for one or more clients, but the **rw** option is not set, only the clients specified with the **ro** option have access to the shared directory.|

@@ -9,7 +9,7 @@ ms.date: 09/29/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
+ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
@@ -20,7 +20,7 @@ manager: dongill
 
 When you install Windows Server 2016 using the Setup wizard, you can choose between **Windows Server 2016** and **Windows Server (Server with Desktop Experience)**. The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you do not make a choice in the Setup wizard, **Windows Server 2016** is installed; this is the **Server Core** installation option.
 
-The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additionial user interface elements, see Getting Started with a Desktop Experience Installation. For an even more lightweight option, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md).
+The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additionial user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). For an even more lightweight option, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
 With the Server Core option, the standard user interface (the "Server Graphical Shell") is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.
 
@@ -73,6 +73,9 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 
 ### Evaluation
 You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
+
+> [!IMPORTANT]  
+> **You can only perform license conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (**not the Server Core option**).
 
 ### Clean installation
 

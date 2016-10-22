@@ -1,6 +1,6 @@
 ---
 title: Dfsdiag TestSites
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsdiag TestSites
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ DFSDiag /TestSites </Machine:<server name>| /DFSPath:<namespace root or DFS fold
 ### Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |\/Machine:<server name>|The name of the server on which to verify the site association.|  
 |\/DFSPath:<namespace root or DFS folder>|The namespace root or Distributed File System \(DFS\) folder \(link\) with targets for which to verify the site association.|  
 |\/Recurse|Enumerates and verifies the site associations for all folder targets under the specified namespace root.|  

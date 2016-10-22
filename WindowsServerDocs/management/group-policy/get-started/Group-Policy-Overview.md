@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Group Policy Overview
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,12 +26,12 @@ Group Policy is an infrastructure that allows you to specify managed configurati
 You can configure the Group Policy feature by using Windows PowerShell cmdlets. For more information about using Server Manager cmdlets to install the Group Policy Management Console, see [Install or Uninstall Roles, Role Services, or Features](../../Server-Manager/Install-or-Uninstall-Roles-Role-Services-or-Features.md) and [Server Manager deployment cmdlet module](http://go.microsoft.com/fwlink/?LinkId=242610).  
   
 ## <a name="BKMK_APP"></a>Practical applications  
-By using Group Policy, you can significantly reduce your organization’s total cost of ownership. Various factors, such as the large number of policy settings available, the interaction between multiple policies, and inheritance options, can make Group Policy design complex. By carefully planning, designing, testing, and deploying a solution based on your organization’s business requirements, you can provide the standardized functionality, security, and management control that your organization needs.  
+By using Group Policy, you can significantly reduce your organization s total cost of ownership. Various factors, such as the large number of policy settings available, the interaction between multiple policies, and inheritance options, can make Group Policy design complex. By carefully planning, designing, testing, and deploying a solution based on your organization s business requirements, you can provide the standardized functionality, security, and management control that your organization needs.  
   
 ## <a name="BKMK_LINKS"></a>See also  
   
 |Content type|References 
-|----------------|--------------  
+|--------|-------  
 |**Tools and settings**|-   [Group Policy Settings Reference for Windows and Windows Server](http://go.microsoft.com/fwlink/?LinkId=261775)<br />-   [Group Policy Cmdlets](http://technet.microsoft.com/library/hh967461.aspx)
 |**Community resources**|-   [Group Policy Team Blog](http://blogs.technet.com/b/grouppolicy/)<br />-   [Group Policy forum](http://social.technet.microsoft.com/Forums/winserverGP/threads?sort=repliesdesc)  
 

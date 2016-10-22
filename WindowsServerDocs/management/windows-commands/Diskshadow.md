@@ -1,6 +1,6 @@
 ---
 title: Diskshadow
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Diskshadow
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -43,7 +42,7 @@ diskshadow -s script.txt
 You can run the following commands in the DiskShadow command interpreter or through a script file:  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |[Set_2](Set_2.md)|Sets the context, options, verbose mode, and metadata file for creating shadow copies.|  
 |[Simulate restore](Simulate-restore.md)|Tests writer involvement in restore sessions on the computer without issuing **PreRestore** or **PostRestore** events to writers.|  
 |[Load metadata](Load-metadata.md)|Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.|  

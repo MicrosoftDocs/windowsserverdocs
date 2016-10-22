@@ -1,6 +1,6 @@
 ---
 title: Flattemp
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Flattemp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,20 +21,20 @@ ms.date: 10/12/2016
 Enables or disables flat temporary folders.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 flattemp {/query | /enable | /disable}
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/query|Queries the current setting.|
-|/enable|Enables flat temporary folders. Users will share the temporary folder unless the temporary folder resides in the user’s home folder.|
-|/disable|Disables flat temporary folders. Each user’s temporary folder will reside in a separate folder (determined by the user’s Session ID).|
+|/enable|Enables flat temporary folders. Users will share the temporary folder unless the temporary folder resides in the user s home folder.|
+|/disable|Disables flat temporary folders. Each user s temporary folder will reside in a separate folder (determined by the user s Session ID).|
 |/?|Displays help at the command prompt.|
 ## Remarks
--   The **flattemp** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server® 2008  or the RD Session Host role service on a computer running Windows Server 2008 R2.
+-   The **flattemp** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server  2008  or the RD Session Host role service on a computer running Windows Server 2008 R2.
 -   You must have administrative credentials to run **flattemp**.
 -   After each user has a unique temporary folder, use **flattemp /enable** to enable flat temporary folders.
 -   The default method for creating temporary folders for multiple users (usually pointed to by the TEMP and TMP environment variables) is to create subfolders in the **\Temp** folder, by using the logonID as the subfolder name. For example, if the TEMP environment variable points to C:\Temp, the temporary folder assigned to the user logonID 4 is C:\Temp\4. Using **flattemp**, you can point directly to the \Temp folder and prevent subfolders from forming. This is useful when you want the user temporary folders to be contained in home folders, whether on an RD Session Host server local drive or on a shared network drive. You should use the **flattemp /enable** command only when each user has a separate temporary folder.
@@ -56,4 +55,4 @@ flattemp {/query | /enable | /disable}
     ```
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)

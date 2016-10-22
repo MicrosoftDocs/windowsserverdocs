@@ -1,6 +1,6 @@
 ---
 title: Break_2
-description: "Windows Commands"
+description: "Windows Commands topic for **Break_2** - Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Break_2
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -35,7 +34,7 @@ break [writable] <SetID>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |\[writable\]|Enables read\/write access on the volume.|  
 |<SetID>|Specifies the ID of the shadow copy set.|  
   

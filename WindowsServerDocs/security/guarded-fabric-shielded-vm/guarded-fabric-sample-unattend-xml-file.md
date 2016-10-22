@@ -8,7 +8,6 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ---
-
 # Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function
 
 >Applies To: Windows Server 2016
@@ -72,7 +71,7 @@ Currently, the function supports only one DNS server. Here is what your DNS sett
 
 ![Configuring DNS Server with static IP pool](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-dns-settings.png)
 
-Here is what your summary for creating the static IP address pool would look like. In short, you must have only one network route, one gateway, and one DNS server—and you must specify your IP address.
+Here is what your summary for creating the static IP address pool would look like. In short, you must have only one network route, one gateway, and one DNS server - and you must specify your IP address.
 
 ![Summary of static IP pool creation](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-summary.png)
 
@@ -140,7 +139,7 @@ To prevent data loss, save this password immediately. This password helps ensure
 
 VolumeType        Mount CapacityGB VolumeStatus    Encryption KeyProtector              AutoUnlockEnabled
                   Point                            Percentage
-----------        ----- ---------- ------------    ---------- ------------              -----------------
+-----        --- ----- ------    ----- ------              ---------
 OperatingSystem   C:    24.55      FullyEncrypted  100        {Tpm, RecoveryPassword}
 ```
 You can also check Event Viewer to see if the key has been successfully backed up. It should look like this:
@@ -160,7 +159,7 @@ Get-Help New-ShieldingDataAnswerFile
 Here are all the parameters:
 
 | **Parameter** | **Required or optional** | **Description** |
-| --- | --- | --- |
+| -- | -- | -- |
 | -AdminPassword &lt;SecureString&gt; | Required | Specifies the administrator&#39;s password. |
 | -BackupBitLockerKeyProtector | Optional | If the VM is domain joined, specifies whether to back up the KeyProtector recovery password. |
 | -DomainJoin &lt;String&gt; | Optional | Specifies the name of the domain that the VM will join. |

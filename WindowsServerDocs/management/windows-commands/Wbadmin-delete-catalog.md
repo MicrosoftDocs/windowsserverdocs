@@ -1,6 +1,6 @@
 ---
 title: Wbadmin delete catalog
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Wbadmin delete catalog
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,7 +27,7 @@ wbadmin delete catalog
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-quiet|Runs the subcommand with no prompts to the user.|
 ## Remarks
 If you delete the backup catalog for a computer, you will not be able to access the backups created of that computer using the Windows Server Backup snap-in. In this case, if you can access another backup location, use **wbadmin restore catalog** to restore the backup catalog from that location. You should create a new backup once your backup catalog is deleted.

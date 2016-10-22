@@ -1,6 +1,6 @@
 ---
 title: Set up hosts for live migration without Failover Clustering
-description: " "
+description: "Gives instructions for setting up live migration in a non-clustered environment"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt

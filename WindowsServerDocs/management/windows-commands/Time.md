@@ -1,6 +1,6 @@
 ---
 title: Time
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Time
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<HH>[:<MM>[:<SS>[.<NN>]]] [am&#124;pm]|Sets the system time to the new time specified, where *HH* is in hours (required), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. If **am** or **pm** is not specified, **time** uses the 24-hour format by default.|
 |/t|Displays the current time without prompting you for a new time.|
 |/?|Displays help at the command prompt.|

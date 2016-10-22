@@ -1,6 +1,6 @@
 ---
 title: Bitsadmin addfilewithranges
-description: "Windows Commands"
+description: "Windows Commands topic for **Bitsadmin addfilewithranges** - Adds a file to the specified job. BITS downloads the specified ranges from the remote file."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Bitsadmin addfilewithranges
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ bitsadmin /AddFileWithRanges <Job> <RemoteURL> <LocalName> <RangeList>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Job|The job's display name or GUID|
 |RemoteURL|*RemoteURL* is the URL of the file on the server.|
 |LocalName|*LocalName* is the name of the file on the local computer. *LocalName* must contain an absolute path to the file.|

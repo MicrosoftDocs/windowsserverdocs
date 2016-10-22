@@ -1,5 +1,6 @@
 ---
 title: Take Control of a User Session
+description: Learn how to access and take control of another user's station in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

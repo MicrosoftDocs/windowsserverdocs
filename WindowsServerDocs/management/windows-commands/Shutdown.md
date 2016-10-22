@@ -1,6 +1,6 @@
 ---
 title: Shutdown
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Shutdown
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -28,13 +27,13 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/i|Displays the **Remote Shutdown Dialog** box. The **/i** option must be the first parameter following the command. If **/i** is specified, all other options are ignored.|  
 |/l|Logs off the current user immediately, with no time-out period. You cannot use **/l** with **/m** or **/t**.|  
 |/s|Shuts down the computer.|  
 |/r|Restarts the computer after shutdown.|  
 |/a|Aborts a system shutdown. Effective only during the timeout period. To use **/a**, you must also use the **/m** option.|  
-|/p|Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer does not support power-off functionality, it will shut down when you use **/p**, but the power to the computer will remain on.|  
+|/p|Turns off the local computer only (not a remote computer) with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer does not support power-off functionality, it will shut down when you use **/p**, but the power to the computer will remain on.|  
 |/h|Puts the local computer into hibernation, if hibernation is enabled. You can use **/h** only with **/f**.|  
 |/e|Enables you to document the reason for the unexpected shutdown on the target computer.|  
 |/f|Forces running applications to close without warning users. **Caution:** Using the **/f** option might result in loss of unsaved data.|  

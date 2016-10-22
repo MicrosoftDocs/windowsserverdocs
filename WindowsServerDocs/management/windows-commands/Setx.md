@@ -1,6 +1,6 @@
 ---
 title: Setx
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Setx
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -29,7 +28,7 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <Computer>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default value is the name of the local computer.|
 |/u [<Domain>\\]<User name>|Runs the script with the credentials of the specified user account. The default value is the system permissions.|
 |/p [<Password>]|Specifies the password of the user account that is specified in the **/u** parameter.|
@@ -41,7 +40,7 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 |/r <X>,<Y> "<String>"|Specifies relative coordinates and offset from **String** as search parameters.|
 |/m|Specifies to set the variable in the system environment. The default setting is the local environment.|
 |/x|Displays file coordinates, ignoring the **/a**, **/r**, and **/d** command-line options.|
-|/d <Delimiters>|Specifies delimiters such as "**,**" or "**\\**" to be used in addition to the four built-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built-in delimiters.|
+|/d <Delimiters>|Specifies delimiters such as "**,**" or "**\\**" to be used in addition to the four built-in delimiters   SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built-in delimiters.|
 |/?|Displays help at the command prompt.|
 ## Remarks
 -   The **Setx** command is similar to the UNIX utility SETENV.
@@ -110,7 +109,7 @@ To set the IPGATEWAY environment variable in the local environment to the value 
 ```
 setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway 
 ```
-To display the contents of a file named Ipconfig.out — along with the contents' corresponding coordinates — on a computer named Computer1, type:
+To display the contents of a file named Ipconfig.out   along with the contents' corresponding coordinates   on a computer named Computer1, type:
 ```
 setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x 
 ```

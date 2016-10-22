@@ -43,7 +43,7 @@ Default: Success
 If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
-|------------|-----------------|
+|------|---------|
 |4720|A user account was created.|
 |4722|A user account was enabled.|
 |4723|An attempt was made to change an account's password.|

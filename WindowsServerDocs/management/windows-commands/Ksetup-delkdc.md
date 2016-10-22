@@ -1,6 +1,6 @@
 ---
 title: Ksetup:delkdc
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:delkdc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /delkdc <RealmName> <KDCName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run. It is to this realm from which you are attempting to delete the other KDC.|
 |<KDCName>|The KDC name is stated as a case-insensitive, fully qualified domain name, such as mitkdc.contoso.com.|
 ## Remarks

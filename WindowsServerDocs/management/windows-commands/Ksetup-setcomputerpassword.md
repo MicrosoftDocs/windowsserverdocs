@@ -1,6 +1,6 @@
 ---
 title: Ksetup:setcomputerpassword
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:setcomputerpassword
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ ksetup /setcomputerpassword <Password>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Password>|Uses the supplied password to set the computer account on the local computer.<br /><br />The password can only be set by using an account with administrative privileges. The password can be from 1 to 156 alphanumeric or special characters.|
 ## Remarks
 This command affects the computer account only.

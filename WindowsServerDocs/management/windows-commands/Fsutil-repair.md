@@ -1,6 +1,6 @@
 ---
 title: Fsutil repair
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil repair
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -36,7 +35,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |initiate|Initiates NTFS self\-healing.|  
 |<VolumePath>|Specifies the volume as the drive name followed by a colon.|  
 |<FileReference>|Specifies the NTFS volume\-specific file ID \(file reference number\). The file reference includes the segment number of the file.|  
@@ -48,7 +47,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
   
 ## Remarks  
   
--   Self\-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401).  
+-   Self\-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401).  
   
 ## <a name="BKMK_examples"></a>Examples  
 To enable self\-healing repair on drive C, type:  

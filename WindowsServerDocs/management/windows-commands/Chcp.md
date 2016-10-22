@@ -1,6 +1,6 @@
 ---
 title: Chcp
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Chcp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,12 +26,12 @@ chcp [<NNN>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<NNN>|Specifies the code page.|
 |/?|Displays help at the command prompt.|
 The following table lists each supported code page and its country/region or language:
 |Code page|Country/region or language|
-|-------------|-------------------------------|
+|-------|----------------|
 |437|United States|
 |850|Multilingual (Latin I)|
 |852|Slavic (Latin II)|

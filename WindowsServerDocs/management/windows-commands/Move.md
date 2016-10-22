@@ -1,6 +1,6 @@
 ---
 title: Move
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Move
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ move [{/y | /-y}] [<Source>] [<Target>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |/-y|Causes prompting to confirm that you want to overwrite an existing destination file.|
 |<Source>|Specifies the path and name of the file or files to move. If you want to move or rename a directory, *Source* should be the current directory path and name.|

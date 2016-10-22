@@ -1,6 +1,6 @@
 ---
 title: Nfsadmin
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nfsadmin
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -102,7 +101,7 @@ Specifies that events will not be audited.
 Sets the file specified by *file* as the audit file. The default is %sfudir%\\log\\nfssvr.log  
   
 **fsize\=**\=*size*  
-Sets *size* as the maximum size in megabytes of the audit file. The default maximum size is 7 MB.  
+Sets *size* as the maximum size in megabytes of the audit file. The default maximum size is 7 MB.  
   
 **audit\=**\[**\+**|**\-**\]**mount** \[**\+**|**\-**\]**read** \[**\+**|**\-**\]**write** \[**\+**|**\-**\]**create** \[**\+**|**\-**\]**delete** \[**\+**|**\-**\]**locking** \[**\+**|**\-**\]**all**  
 Specifies the events to be logged. To start logging an event, type a plus sign \(**\+**\) before the event name; to stop logging an event, type a minus sign \(**\-**\) before the event name. If the sign is omitted, the plus sign is assumed. Do not use **all** with any other event name.  
@@ -135,7 +134,7 @@ Specifies whether client connections will be required to be reauthenticated afte
 Specifies the number of seconds that elapse before a client is forced to be reauthenticated if **config renewauth** is set to **yes**. The default value is 600 seconds.  
   
 **dircache\=***size*  
-Specifies the size in kilobytes of the directory cache. The number specified as *size* must be a multiple of 4 between 4 and 128. The default directory\-cache size is 128 KB.  
+Specifies the size in kilobytes of the directory cache. The number specified as *size* must be a multiple of 4 between 4 and 128. The default directory\-cache size is 128 KB.  
   
 **translationfile**\=\[file\]  
 Specifies a file containing mapping information for replacing characters in the names of files when moving them from Windows\-based to UNIX\-based file systems. If *file* is not specified, then file name character translation is disabled. If the value of **translationfile** is changed, you must restart the server for the change to take effect.  
@@ -150,7 +149,7 @@ You also need to disable Windows kernel case\-insensitivity in order for Server 
   
 HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel  
   
-DWORD “obcaseinsensitive�?  
+DWORD  obcaseinsensitive   
   
 > [!IMPORTANT]  
 > This section applies only to Windows Server 2008 R2, Windows Server 2008, and Windows Server 2003. This section does not apply to Windows Server 2012 R2 or Windows Server 2012.  

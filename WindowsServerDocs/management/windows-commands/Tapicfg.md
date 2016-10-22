@@ -1,6 +1,6 @@
 ---
 title: Tapicfg
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Tapicfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -34,7 +33,7 @@ tapicfg install /directory:<PartitionName> [/server:<DCName>] [/forcedefault]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |install /directory:<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition to be created. This name must be a fully qualified domain name.|
 |/server: <DCName>|Specifies the DNS name of the domain controller on which the TAPI application directory partition is created. If the domain controller name is not specified, the name of the local computer is used.|
 |/forcedefault|Specifies that this directory is the default TAPI application directory partition for the domain. There can be multiple TAPI application directory partitions in a domain.<br /><br />If this directory is the first TAPI application directory partition created on the domain, it is automatically set as the default, regardless of whether you use the **/forcedefault** option.|
@@ -47,7 +46,7 @@ tapicfg remove /directory:<PartitionName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |remove /directory:<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition to be removed. Note that this name must be a fully qualified domain name.|
 |/?|Displays Help at the command prompt.|
 ## <a name="BKMK_publishscp"></a>tapicfg publishscp
@@ -58,7 +57,7 @@ tapicfg publishscp /directory:<PartitionName> [/domain:<DomainName>] [/forcedefa
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |publishscp /directory:<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition that the service connection point will publish.|
 |/domain:<DomainName>|Specifies the DNS name of the domain in which the service connection point is created. If the domain name is not specified, the name of the local domain is used.|
 |/forcedefault|Specifies that this directory is the default TAPI application directory partition for the domain. There can be multiple TAPI application directory partitions in a domain.|
@@ -71,7 +70,7 @@ tapicfg removescp /directory:<PartitionName> [/domain:<DomainName>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |removescp /directory:<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition for which a service connection point is removed.|
 |/domain: <DomainName>|Specifies the DNS name of the domain from which the service connection point is removed. If the domain name is not specified, the name of the local domain is used.|
 |/?|Displays Help at the command prompt.|
@@ -83,7 +82,7 @@ tapicfg show [/defaultonly][ /domain:<DomainName>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/defaultonly|Displays the names and locations of only the default TAPI application directory partition in the domain.|
 |/domain: <DomainName>|Specifies the DNS name of the domain for which the TAPI application directory partitions are displayed. If the domain name is not specified, the name of the local domain is used.|
 |/?|Displays Help at the command prompt.|
@@ -95,7 +94,7 @@ tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |makedefault /directory:<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition set as the default partition for the domain. Note that this name must be a fully qualified domain name. Specifies the DNS name of the domain for which the TAPI application directory partition is set as the default. If the domain name is not specified, the name of the local domain is used.|
 |/?|Displays Help at the command prompt.|
 ### Remarks

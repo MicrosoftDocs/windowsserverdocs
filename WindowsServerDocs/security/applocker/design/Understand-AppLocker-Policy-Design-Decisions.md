@@ -42,7 +42,7 @@ The following questions are not in priority or sequential order. They should be 
 You might need to control a limited number of applications because they access sensitive data, or you might have to exclude all applications except those that are sanctioned for business purposes. There might be certain business groups that require strict control, and others that promote independent application usage.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Control all applications|AppLocker policies control applications by creating an allowed list of applications by file type. Exceptions are also possible. AppLocker policies can only be applied to applications installed on computers running one of the supported versions of Windows. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). If versions of Windows operating systems earlier than  Windows Server 2008 R2  or  Windows 7  are also deployed, you can use Software Restriction Policies (SRP) with AppLocker.|
 |Control specific applications|When you create AppLocker rules, a list of allowed applications is created. All applications on that list will be allowed to run (except those on the exception list). Applications that are not on the list will be prevented from running. AppLocker policies can only be applied to applications installed on computers running any of the supported versions of Windows. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md).|
 |Control only classic apps, only Windows Store apps, or both|AppLocker policies control applications by creating an allowed list of applications by file type. Because Windows Store apps are categorized under the Publisher condition, desktop apps and Windows Store apps can be controlled together. AppLocker policies for Windows Store apps can be applied only to applications that are installed on computers that support the Windows Store, but desktop applications can be controlled with AppLocker on all supported versions of Windows. The rules you currently have configured for classic desktop applications can remain, and you can create new ones for Windows Store apps.<br /><br />For a comparison of desktop applications and Windows Store apps, see [Comparing classic desktop applications and Windows Store apps for AppLocker policy design decisions](#BKMK_CompareClassicMetro) in this topic.|
@@ -80,7 +80,7 @@ For more information, see [Packaged Apps and Packaged App Installer Rules in App
 Most organizations have evolved application control policies and methods over time. With heightened security concerns and an emphasis on tighter IT control over desktop use, your organization might decide to consolidate application control practices or design a comprehensive application control scheme. AppLocker includes improvements over SRP in the architecture and management of application control policies.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Security polices (locally set or through Group Policy)|Using AppLocker requires increased effort in planning to create correct policies, but this results in a simpler distribution method.|
 |Specific SRP polices|Using AppLocker does not require rewriting SRP rules for computers running versions of Windows operating systems earlier than  Windows Server 2008 R2  or  Windows 7 . However, you must evaluate existing SRP rules if you use AppLocker with SRP in the supported versions of Windows.  For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md).|
 |Non-Microsoft application control software|Using AppLocker requires a complete application control policy evaluation and implementation.|
@@ -92,15 +92,15 @@ Most organizations have evolved application control policies and methods over ti
 If your organization supports multiple Windows operating systems, application control policy planning becomes more complex. Your initial design decisions should consider the security and management priorities of applications that are installed on each version of the operating system.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Your organization's computers are running a combination of the following operating systems:<br /><br />-   Windows 8<br />-    Windows 7 <br />-   Windows Vista<br />-   Windows XP<br />-    Windows Server 2012 <br />-    Windows Server 2008 R2 <br />-   Windows Server 2008<br />-   Windows Server 2003|AppLocker rules are only applied to computers running the supported versions of Windows, but SRP rules can be applied to all versions of Windows beginning with Windows XP and Windows Server 2003. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). **Note:** If you are using the Basic User security level as assigned in SRP, those privileges are not supported on computers running that support AppLocker.<br /><br />AppLocker policies as applied through a GPO take precedence over SRP policies in the same or linked GPO. SRP policies can be created and maintained the same way.|
 |Your organization's computers are running only the following operating systems:<br /><br />-    Windows Server 2012 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2008 R2 <br />-   Windows 8.1<br />-   Windows 8<br />-    Windows 7 |Use AppLocker to create your application control policies.|
 
 ### Are there specific groups in your organization that need customized application control policies?
-Most business groups or departments have specific security requirements that pertain to data access and the applications used to access that data. You should consider the scope of the project for each group and the group’s priorities before you deploy application control policies for the entire organization.
+Most business groups or departments have specific security requirements that pertain to data access and the applications used to access that data. You should consider the scope of the project for each group and the group???s priorities before you deploy application control policies for the entire organization.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Yes|For each group, you need to create a list that includes their application control requirements. Although this may increase the planning time, it will most likely result in a more effective deployment.<br /><br />If your GPO structure is not currently configured so that you can apply different policies to specific groups, you can alternatively apply AppLocker rules in a GPO to specific user groups.|
 |No|AppLocker policies can be applied globally to applications that are installed on computers running the supported versions of Windows as listed in [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). Depending on the number of applications you need to control, managing all the rules and exceptions might be challenging.|
 
@@ -108,7 +108,7 @@ Most business groups or departments have specific security requirements that per
 The time and resources that are available to you to perform the research and analysis can affect the detail of your plan and processes for continuing policy management and maintenance.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Yes|Invest the time to analyze your organization's application control requirements, and plan a complete deployment that uses rules that are as simply constructed as possible.|
 |No|Consider a focused and phased deployment for specific groups by using a small number of rules. As you apply controls to applications in a specific group, learn from that deployment to plan your next deployment.|
 
@@ -116,7 +116,7 @@ The time and resources that are available to you to perform the research and ana
 Preventing your users from accessing known, deployed, or personal applications will initially cause an increase in end-user support. It will be necessary to address the various support issues in your organization so security policies are followed and business workflow is not hampered.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Yes|Involve the support department early in the planning phase because your users may inadvertently be blocked from using their applications, or they may seek exceptions to use specific applications.|
 |No|Invest time in developing online support processes and documentation before deployment.|
 
@@ -124,7 +124,7 @@ Preventing your users from accessing known, deployed, or personal applications w
 Any successful application control policy implementation is based on your knowledge and understanding of application usage within the organization or business group. In addition, the application control design is dependent on the security requirements for data and the applications that access that data.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Yes|You should determine the application control priorities for a business group and then attempt to design the simplest scheme for their application control policies.|
 |No|You will have to perform an audit and requirements gathering project to discover the application usage. AppLocker provides the means to deploy policies in **Audit only** mode, and tools to view the event logs.|
 
@@ -132,7 +132,7 @@ Any successful application control policy implementation is based on your knowle
 Implementing a successful application control policy is based on your knowledge and understanding of application usage within the organization or business group. In addition, the application control design is dependent on the security requirements for data and the applications that access that data. Understanding the upgrade and deployment policy will help shape the construction of the application control policies.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Ad hoc|You need to gather requirements from each group. Some groups might want unrestricted access or installation, while other groups might want strict controls.|
 |Strict written policy or guidelines to follow|You need to develop AppLocker rules that reflect those policies, and then test and maintain the rules.|
 |No process in place|You need to determine if you have the resources to develop an application control policy, and for which groups.|
@@ -141,7 +141,7 @@ Implementing a successful application control policy is based on your knowledge 
 Although SRP and AppLocker have the same goal, AppLocker is a major revision of SRP.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Yes|You cannot use AppLocker to manage SRP settings, but you can use SRP to manage application control policies on computers running on any of the supported operating systems listed in [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). In addition, if AppLocker and SRP settings are configured in the same GPO, only the AppLocker settings will be enforced on computers running those supported operating systems. **Note:** If you are using the Basic User security level as assigned in SRP, those permissions are not supported on computers running the supported operating systems.|
 |No|Policies that are configured for AppLocker can only be applied to computers running the supported operating systems, but SRP is also available on those operating systems.|
 
@@ -149,7 +149,7 @@ Although SRP and AppLocker have the same goal, AppLocker is a major revision of 
 Some organizations will benefit from application control policies as shown by an increase in productivity or conformance, while others will be hindered in performing their duties. Prioritize these aspects for each group to allow you to evaluate the effectiveness of AppLocker.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Productivity: The organization assures that tools work and required applications can be installed.|To meet innovation and productivity goals, some groups require the ability to install and run a variety of software from different sources, including software that they developed. Therefore, if innovation and productivity is a high priority, managing application control policies through an allowed list might be time consuming and an impediment to progress.|
 |Management: The organization is aware of and controls the applications it supports.|In some business groups, application usage can be managed from a central point of control. AppLocker policies can be built into a GPO for that purpose. This shifts the burden of application access to the IT department, but it also has the benefit of controlling the number of applications that can be run and controlling the versions of those applications.|
 |Security: The organization must protect data in part by ensuring that only approved applications are used.|AppLocker can help protect data by allowing a defined set of users access to applications that access the data. If security is the top priority, the application control policies will be the most restrictive.|
@@ -158,7 +158,7 @@ Some organizations will benefit from application control policies as shown by an
 AppLocker is very effective for organizations that have application restriction requirements if they have environments with a simple topography and  application control policy goals that are straightforward. For example, AppLocker can benefit an environment where non-employees have access to computers that are connected to the organizational network, such as a school or library. Large organizations also benefit from AppLocker policy deployment when the goal is to achieve a detailed level of control on the desktop computers with a relatively small number of applications to manage, or when the applications are manageable with a small number of rules.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Users run without administrative rights.<br /><br />Applications are installed by using an installation deployment technology.|AppLocker can help reduce the total cost of ownership for business groups that typically use a finite set of applications, such as human resources and finance departments. At the same time, these departments access highly sensitive information, much of which contains confidential and proprietary information. By using AppLocker to create rules for specific applications that are allowed to run, you can help limit unauthorized applications from accessing this information. **Note:** AppLocker can also be effective in helping create standardized desktops in organizations where users run as administrators. However, it is important to note that users with administrativecredentials can add new rules to the local AppLocker policy.|
 |Users must be able to install applications as needed.<br /><br />Users currently have administrator access, and it would be difficult to change this.|Enforcing AppLocker rules is not suited for business groups that must be able to install applications as needed and without approval from the IT department. If one or more OUs in your organization has this requirement, you can choose not to enforce application rules in those OUs by using AppLocker or to implement the **Audit only** enforcement setting through AppLocker.|
 
@@ -166,7 +166,7 @@ AppLocker is very effective for organizations that have application restriction 
 Designing application control policies based on an organizational structure that is already built into Active Directory Domain Services (AD DS) is easier than converting the existing structure to an organizational structure. Because the effectiveness of application control policies is dependent on the ability to update policies, consider what organizational work needs to be accomplished before deployment begins.
 
 |Possible answers|Design considerations|
-|--------------------|-------------------------|
+|----------|-------------|
 |Yes|AppLocker rules can be developed and implemented through Group Policy, based on your AD DS structure.|
 |No|The IT department must create a scheme to identify how application control policies can be applied to the correct user or computer.|
 

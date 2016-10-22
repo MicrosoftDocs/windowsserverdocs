@@ -1,6 +1,6 @@
 ---
 title: Lodctr
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Lodctr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<filename>|Registers the Performance counter name settings and Explain text provided in initialization file FileName.|
 |/s:<filename>|Saves Performance counter registry settings and Explain text to file <filename>.|
 |/r|Restores counter registry settings and Explain text from current registry settings and cached performance files related to the registry.<br /><br />This option is available only in the Windows Server 2003 operating system.|

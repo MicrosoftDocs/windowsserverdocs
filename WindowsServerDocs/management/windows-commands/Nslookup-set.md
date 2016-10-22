@@ -1,6 +1,6 @@
 ---
 title: Nslookup set
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Nslookup set
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ set <KeyWord>[=<Value>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<KeyWord>|Identifies subcommands that are derived from the **set** subcommand. For example, the subcommand **set d2** has a keyword of [**no**]**d2**. For the list of subcommands that are derived from the **set** subcommand, see Additional references.|
 |<Value>|Specifies the nslookup configuration setting value for each subcommand.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|

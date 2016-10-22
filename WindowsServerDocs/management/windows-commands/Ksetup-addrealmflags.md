@@ -1,6 +1,6 @@
 ---
 title: Ksetup:addrealmflags
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Ksetup:addrealmflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,12 +25,12 @@ ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |Realm name|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM.|
 ## Remarks
 The realm flags specify additional features of a Kerberos realm that is not based on the Windows Server operating system. Computers that are running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  can use a Kerberos server to administer authentication instead of using a domain that is running a Windows Server operating system, and these systems participate in a Kerberos realm. This entry establishes the features of the realm. The following table describes each.
 |Value|Realm flag|Description|
-|---------|--------------|---------------|
+|-----|-------|--------|
 |0xF|All|All realm flags are set.|
 |0x00|None|No realm flags are set, and no additional features are enabled.|
 |0x01|SendAddress|The IP address will be included within the ticket-granting tickets.|

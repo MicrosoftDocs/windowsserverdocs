@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Server Manager
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -49,7 +48,7 @@ Server Manager runs in the Minimal Server Graphical Interface; that is, when the
 To manage servers that are running Windows Server releases older than Windows Server 2016, install the following software and updates to make the older releases of Windows Server manageable by using Server Manager in Windows Server 2016.
 
 |Operating System|Required Software|
-|--------------------|---------------------|
+|----------|-----------|
 | Windows Server 2012 R2  or  Windows Server 2012 |-   [.NET Framework 4.6](http://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=395058). The Windows Management Framework 5.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2012 R2  and  Windows Server 2012 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2012 R2  or  Windows Server 2012  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) is no longer necessary on servers that are running  Windows Server 2012 R2  or  Windows Server 2012 .|
 | Windows Server 2008 R2 |-   [.NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881). The Windows Management Framework 4.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008 R2  have a manageability status of **Not accessible**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 R2 .|
 | Windows Server 2008 |-   [.NET Framework 4](http://www.microsoft.com/download/en/details.aspx?id=17718)<br />-   [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008 have a manageability status of **Not accessible -  Verify earlier versions run Windows Management Framework 3.0**.<br />-   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) lets Server Manager collect performance data from  Windows Server 2008 .|
@@ -58,7 +57,7 @@ To manage servers that are running Windows Server releases older than Windows Se
 The Server Manager console is included with [Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=404281) for Windows 10. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
 
 |Server Manager Source Operating System|Targeted at Windows Server 2016|Targeted at  Windows Server 2012 R2 |Targeted at  Windows Server 2012 |Targeted at  Windows Server 2008 R2  or  Windows Server 2008 |Targeted at Windows Server 2003|
-|-------------------------------------------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+|-------------------------------|--------------------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|
 |Windows 10 or Windows Server 2016|Full support|Full support|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Not supported|
 |Windows 8.1 or  Windows Server 2012 R2 |Not supported|Full support|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|
 |Windows 8 or  Windows Server 2012 |Not supported|Not supported|Full support|After [Software and configuration requirements](#BKMK_softconfig) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|
@@ -133,7 +132,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 > Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012  or Windows 8 cannot be used to manage servers that are running  Windows Server 2012 R2 .
 
 |Task Description|Administrators (including the built-in Administrator account)|Standard Server Users|
-|--------------------|--------------------------------------------------------------------|-------------------------|
+|----------|----------------------------------|-------------|
 |Add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |Create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
 |Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](http://go.microsoft.com/fwlink/p/?LinkId=239558).|Yes|No|

@@ -1,6 +1,6 @@
 ---
 title: logman update trace
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,20 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman update trace
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Update the properties of an existing event trace data collector.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
 ## Syntax  
 ```  
 logman update trace <[-n] <name>> [options]  
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  

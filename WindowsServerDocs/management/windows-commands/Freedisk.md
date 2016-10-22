@@ -1,6 +1,6 @@
 ---
 title: Freedisk
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,27 +14,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Freedisk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Checks to see if the specified amount of disk space is available before continuing with an installation process.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 freedisk [/s <Computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [<Value>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. This parameter applies to all files and folders specified in the command.|
 |/u [<Domain>\\]<User>|Runs the script with the permissions of the specified user account. The default is system permissions.|
 |/p [<Password>]|Specifies the password of the user account that is specified in **/u**.|
 |/d <Drive>|Specifies the drive for which you want to find out the availability of free space. You must specify <Drive>for a remote computer.|
 |<Value>|Checks for a specific amount of free disk space. You can specify <Value>in bytes, KB, MB, GB, TB, PB, EB, ZB or YB.|
 ## Remarks
--   Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user’s password.
+-   Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user s password.
 -   For unattended installations, you can use **freedisk** in installation batch files to check for the prerequisite amount free space before continuing with the installation.
 -   When you use **freedisk** in a batch file, it returns a **0** if there is enough space and a **1** if there is not enough space.
 ## <a name="BKMK_examples"></a>Examples

@@ -1,6 +1,6 @@
 ---
 title: Cmstp
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Cmstp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,11 +26,11 @@ ServiceProfileFileName .exe /q:a /c:"cmstp.exe ServiceProfileFileName .inf [/nf]
 ```
 Syntax 2:
 ```
-cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u] ???[Drive:][Path]ServiceProfileFileName.inf"
+cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][Path]ServiceProfileFileName.inf"
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |< ServiceProfileFileName >.exe|Specifies, by name, the installation package that contains the profile that you want to install.<br /><br />Required for Syntax 1 but not valid for Syntax 2.|
 |/q:a|Specifies that the profile should be installed without prompting the user. The verification message that the installation has succeeded will still appear.<br /><br />Required for Syntax 1 but not valid for Syntax 2.|
 |[Drive:][Path] <ServiceProfileFileName>.inf|Required. Specifies, by name, the configuration file that determines how the profile should be installed.<br /><br />The [Drive:][Path] parameter is not valid for Syntax 1.|

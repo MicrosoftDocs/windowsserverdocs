@@ -1,6 +1,6 @@
 ---
 title: Plan Your WSUS Deployment
-description: "Windows Server Update Service"
+description: ""Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.technology: manage-wsus
@@ -12,7 +12,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Plan Your WSUS Deployment
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -20,7 +19,7 @@ ms.date: 10/12/2016
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
 |Task|Description|
-|--------|---------------|
+|----|--------|
 |[1.1. Review considerations and system requirements](Plan-Your-WSUS-Deployment.md#BKMK_1.1)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
 |[1.2. Choose a WSUS deployment scenario](Plan-Your-WSUS-Deployment.md#BKMK_1.2)|Decide which WSUS deployment scenario will be used.|
 |[1.3. Choose a WSUS storage strategy](Plan-Your-WSUS-Deployment.md#BKMK_1.3.)|Decide which WSUS storage strategy best fits your deployment.|
@@ -462,6 +461,6 @@ After the new updates are downloaded, Automatic Updates polls the WSUS server fo
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Deploy Step 1: Install the WSUS Server Role](../deploy/1--Install-the-WSUS-Server-Role.md)
+-   [Deploy Step 1: Install the WSUS Server Role](../deploy/1-Install-the-WSUS-Server-Role.md)
 
 -   [Windows Server Update Services](../get-started/Windows-Server-Update-Services-WSUS.md)

@@ -1,6 +1,6 @@
 ---
 title: Use live migration without Failover Clustering to move a virtual machine
-description: " "
+description: "Gives prerequisites and instructions for doing a live migration in a standalone environment."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

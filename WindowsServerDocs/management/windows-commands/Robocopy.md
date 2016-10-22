@@ -1,6 +1,6 @@
 ---
 title: Robocopy
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Robocopy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,14 +25,14 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Source>|Specifies the path to the source directory.|
 |<Destination>|Specifies the path to the destination directory.|
 |<File>|Specifies the file or files to be copied. You can use wildcard characters (**\*** or **?**), if you want. If the **File** parameter is not specified, **\*.\*** is used as the default value.|
 |<Options>|Specifies options to be used with the **robocopy**command.|
 #### Copy options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
 |/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [Remarks](Robocopy.md#BKMK_remarks).|
 |/lev:<N>|Copies only the top *N* levels of the source directory tree.|
@@ -74,7 +73,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 > -   **/SEC**
 #### File selection options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |/a|Copies only files for which the **Archive** attribute is set.|
 |/m|Copies only files for which the **Archive** attribute is set, and resets the **Archive** attribute.|
 |/ia:[RASHCNETO]|Includes only files for which any of the specified attributes are set.|
@@ -101,14 +100,14 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/xjf|Excludes junction points for files.|
 #### Retry options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |/r:<N>|Specifies the number of retries on failed copies. The default value of *N* is 1,000,000 (one million retries).|
 |/w:<N>|Specifies the wait time between retries, in seconds. The default value of *N* is 30  (wait time 30 seconds).|
 |/reg|Saves the values specified in the **/r** and **/w** options as default settings in the registry.|
 |/tbd|Specifies that the system will wait for share names to be defined (retry error 67).|
 #### Logging options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |/l|Specifies that files are to be listed only (and not copied, deleted, or time stamped).|
 |/x|Reports all extra files, not just those that are selected.|
 |/v|Produces verbose output, and shows all skipped files.|
@@ -131,7 +130,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/njs|Specifies that there is no job summary.|
 #### Job options
 |Option|Description|
-|----------|---------------|
+|-----|--------|
 |/job:<JobName>|Specifies that parameters are to be derived from the named job file.|
 |/save:<JobName>|Specifies that parameters are to be saved to the named job file.|
 |/quit|Quits after processing command line (to view parameters).|

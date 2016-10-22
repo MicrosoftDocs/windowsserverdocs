@@ -1,6 +1,6 @@
 ---
 title: List writers
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # List writers
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ list writers [metadata | detailed | status]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |metadata|Lists the identity and status of writers, and displays metadata such as component details and excluded files. This is the default parameter.|  
 |detailed|Lists the same information as **metadata**, but **detailed** includes the full file list for all components.|  
 |status|Lists only the identity and status of registered writers.|  

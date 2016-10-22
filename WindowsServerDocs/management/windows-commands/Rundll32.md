@@ -1,6 +1,6 @@
 ---
 title: Rundll32
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Rundll32
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,7 +26,7 @@ Rundll32 <DLLname>
 ```
 ## Commands
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Rundll32 printui.dll,PrintUIEntry](Rundll32-printui.dll,PrintUIEntry.md)|Displays the printer user interface|
 ## Remarks
 Rundll32 can only call functions from a DLL that are explicitly written to be called by Rundll32. For more information about Rundll32 requirements see [article 164787](http://go.microsoft.com/fwlink/?LinkID=165773) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkID=165773).

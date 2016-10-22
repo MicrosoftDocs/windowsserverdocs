@@ -1,6 +1,6 @@
 ---
 title: Format_
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Format_
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -31,7 +30,7 @@ format <Volume> [/q]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<Volume>|Specifies the mount point, volume name, or drive letter (followed by a colon) of the drive that you want to format. If you do not specify any of the following command-line options, **format** uses the volume type to determine the default format for the disk.|
 |/fs:{FAT&#124;FAT32&#124;NTFS&#124;UDF}|Specifies the type of the file system: FAT, FAT32, NTFS, or UDF. Floppy disks can use only the FAT file system.|
 |/v:<Label>|Specifies the volume label. If you omit the **/v** command-line option or use it without specifying a volume label, **format** prompts you for the volume label after the formatting is complete. Use the syntax **/v:** to prevent the prompt for a volume label. If you use a single **format** command to format more than one disk, all of the disks will be given the same volume label.|
@@ -77,7 +76,7 @@ To format the hard disk, press Y; if you do not want to format the disk, press N
 -   **Format** exit codes
     The following table lists each exit code and a brief description of its meaning.
     |Exit code|Description|
-    |-------------|---------------|
+    |-------|--------|
     |0|The format operation was successful.|
     |1|Incorrect parameters were supplied.|
     |4|A fatal error occurred (which is any error other than 0, 1, or 5).|

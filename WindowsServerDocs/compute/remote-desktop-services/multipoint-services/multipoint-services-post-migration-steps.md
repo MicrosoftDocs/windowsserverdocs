@@ -1,5 +1,6 @@
 ---
 title: MultiPoint Services - post-migration tasks
+description: Learn how to validate and close out your migration to MultiPoint Services
 ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server-threshold

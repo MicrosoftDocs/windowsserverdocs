@@ -1,6 +1,6 @@
 ---
 title: Using the remove-Namespace Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the remove-Namespace Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ WDSUTIL /Remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/Namespace:<Namespace name>|Specifies the name of the namespace. This is not the friendly name, and it must be unique.<br /><br />-   **Deployment Server role service**: The syntax for namespace name is /Namespace:WDS:<ImageGroup>/<ImageName>/<Index>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value must match the name given to the namespace when it was created on the server.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |[/Force]|Removes the namespace immediately and terminates all clients. Note that unless you specify **/Force**, existing clients can complete the transfer, but new clients are not able to join.|
@@ -43,4 +42,4 @@ WDSUTIL /Remove-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /Force
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 [Using the get-AllNamespaces Command](Using-the-get-AllNamespaces-Command.md)
 [Using the new-Namespace Command](Using-the-new-Namespace-Command.md)
-[Subcommand: start-Namespace](Subcommand--start-Namespace.md)
+[Subcommand: start-Namespace](Subcommand-start-Namespace.md)

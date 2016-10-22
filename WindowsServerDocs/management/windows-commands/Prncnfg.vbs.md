@@ -1,6 +1,6 @@
 ---
 title: Prncnfg.vbs
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,20 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Prncnfg.vbs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Configures or displays configuration information about a printer.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 Cscript Prncnfg {-g | -t | -x | -?} [-S <ServerName>] [-P <PrinterName>] [-z <NewPrinterName>] [-u <UserName>] [-w <Password>] [-r <PortName>] [-l <Location>] [-h <ShareName>] [-m <Comment>] [-f <SeparatorFileName>] [-y <Datatype>] [-st <StartTime>] [-ut <UntilTime>] [-i <DefaultPriority>] [-o <Priority>] [<+|->shared] [<+|->direct] [<+|->hidden] [<+|->published] [<+|->rawonly] [<+|->queued] [<+|->enablebidi] [<+|->keepprintedjobs] [<+|->workoffline] [<+|->enabledevq] [<+|->docompletefirst]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-g|Displays configuration information about a printer.|
 |-t|Configures a printer.|
 |-x|Renames a printer.|

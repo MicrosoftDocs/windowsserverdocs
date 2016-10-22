@@ -1,6 +1,6 @@
 ---
 title: Defrag
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Defrag
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 Membership in the local **Administrators** group, or equivalent, is the minimum required to run this command.
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 defrag <volumes> | /C | /E <volumes>    [/H] [/M | [/U] [/V]]
@@ -31,7 +30,7 @@ defrag <volume> /T [/H] [/U] [/V]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |<volume>|Specifies the drive letter or mount point path of the volume to be defragmented or analyzed.|
 |C|Perform the operation on all volumes.|
 |A|Perform analysis on the specified volumes.|

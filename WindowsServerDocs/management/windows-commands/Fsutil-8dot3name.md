@@ -1,6 +1,6 @@
 ---
 title: Fsutil 8dot3name
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Fsutil 8dot3name
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -43,7 +42,7 @@ fsutil 8dot3name [strip] [/t] [/s] [/f] [/l [<log file.] ] [/v] <DirectoryPath>
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |query \[<VolumePath>\]|Queries the file system for the state of the 8dot3 short name creation behavior.<br /><br />If a *VolumePath* is not specified as a parameter, the default 8dot3name creation behavior setting for all volumes is displayed.|  
 |scan <DirectoryPath>|Scans the files that are located in the specified *DirectoryPath* for registry keys that might be impacted if 8dot3 short names were stripped from the file names.|  
 |set { <DefaultValue> &#124; <VolumePath>}|Changes the file system behavior for 8dot3 name creation in the following instances:<br /><br /><ul><li>When *DefaultValue* is specified, the registry key, **HKLM\\System\\CurrentControlSet\\Control\\FileSystem\\NtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreation**, will be set to the *DefaultValue*.<br /><br />    The *DefaultValue* can have the following values:<br /><br /><ul><li>**0**: Enables 8dot3 name creation for all volumes on the system.</li><li>**1**: Disables 8dot3 name creation for all volumes on the system.</li><li>**2**: Sets 8dot3 name creation on a per volume basis.</li><li>**3**: Disables 8dot3 name creation for all volumes except the system volume.</li></ul></li><li>When a *VolumePath* is specified, the specified volumes on disk flag 8dot3name properties will be set to enable 8dot3 name creation for a specified volume \(**0**\) or set to disable 8dot3 name creation on the specified volume \(**1**\).<br /><br />    You must set the default file system behavior for 8dot3 name creation to the value **2** before you can enable or disable 8dot3 name creation for a specified volume.</li></ul>|  

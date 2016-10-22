@@ -1,6 +1,6 @@
 ---
 title: Pathping
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Pathping
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ pathping [/n] [/h] [/g <HostList>] [/p <Period>] [/q <NumQueries> [/w <Timeout>]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/n|Prevents **pathping** from attempting to resolve the IP addresses of intermediate routers to their names. This might expedite the display of **pathping** results.|
 |/h <MaximumHops>|Specifies the maximum number of hops in the path to search for the target (destination). The default is 30 hops.|
 |/g <HostList>|Specifies that the Echo Request messages use the Loose Source Route option in the IP header with the set of intermediate destinations specified in *HostList*. With loose source routing, successive intermediate destinations can be separated by one or multiple routers. The maximum number of addresses or names in the host list is 9. The *HostList* is a series of IP addresses (in dotted decimal notation) separated by spaces.|

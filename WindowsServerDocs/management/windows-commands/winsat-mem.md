@@ -1,6 +1,6 @@
 ---
 title: winsat mem
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # winsat mem
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,10 +26,10 @@ winsat mem <parameters>
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |-up|Force memory testing with only one thread. The default is to run one thread per physical CPU or core.|
-|-rn|Specify that the assessment’s threads should run at normal priority. The default is to run at priority 15.|
-|-nc|Specify that the assessment should allocate memory and flag it as un-cached. This means that the processor’s caches will be bypassed for copy operations. The default is to run in cached space.|
+|-rn|Specify that the assessment s threads should run at normal priority. The default is to run at priority 15.|
+|-nc|Specify that the assessment should allocate memory and flag it as un-cached. This means that the processor s caches will be bypassed for copy operations. The default is to run in cached space.|
 |-do <n>|Specify the distance, in bytes, between the end of the source buffer and the beginning of the destination buffer. The default is 64 bytes. The maximum allowable destination offset is 16MB. Specifying an invalid destination offset will result in an error. **Note:** Zero is a valid value for **<n>**, but negative numbers are not.|
 |-mint <n>|Specify the minimum run time in seconds for the assessment. The default is 2.0. The minimum value is 1.0. The maximum value is 30.0. **Note:** Specifying a **-mint** value greater than the **-maxt** value when the two parameters are used in combination will result in an error.|
 |-maxt <n>|Specify the maximum run time in seconds for the assessment. The default is 5.0. The minimum value is 1.0. The maximum value is 30.0. If used in combination with the **-mint** parameter, the assessment will begin to do periodic statistical checks of its results after the period of time specified in **-mint**. If the statistical checks pass, then the assessment will finish before the period of time specified in **-maxt** has elapsed. If the assessment runs for the period of time specified in **-maxt** without satisfying the statistical checks, then the assessment will finish at that time and return the results it has collected.|

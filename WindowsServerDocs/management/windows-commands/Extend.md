@@ -1,6 +1,6 @@
 ---
 title: Extend
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Extend
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Extends the volume or partition with focus and its file system into free \(unallocated\) space on a disk.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   
@@ -33,7 +32,7 @@ extend filesystem [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |size\=<n>|Specifies the amount of space in megabytes \(MB\) to add to the current volume or partition. If no size is given, all of the contiguous free space that is available on the disk is used.|  
 |disk\=<n>|Specifies the disk on which the volume or partition is extended. If no disk is specified, the volume or partition is extended on the current disk.|  
 |filesystem|Extends the file system of the volume with focus. For use only on disks where the file system was not extended with the volume.|  

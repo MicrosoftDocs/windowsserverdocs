@@ -46,7 +46,7 @@ For information about auditing Dynamic Access Control, see [Using Advanced Secur
 ## Related resources
 
 |Content type|Resources|
-|----------------|-------------|
+|--------|-------|
 |**Product evaluation**|[Advanced Security Auditing FAQ](../security-auditing/Advanced-Security-Auditing-FAQ.md)<br /><br />[Advanced Security Auditing Walkthrough](../security-auditing/Advanced-Security-Auditing-Walkthrough.md)<br /><br/>[What's New in Security Auditing for Windows Server 2012](http://technet.microsoft.com/library/hh849638.aspx)|
 |**Planning and Deployment**|[Planning and Deploying Advanced Security Audit Policies](../security-auditing/Planning-and-Deploying-Advanced-Security-Audit-Policies.md)|
 |**Operations**|[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../security-auditing/Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)|

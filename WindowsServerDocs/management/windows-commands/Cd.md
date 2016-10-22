@@ -1,6 +1,6 @@
 ---
 title: Cd
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Cd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -32,7 +31,7 @@ chdir [..]
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/d|Changes the current drive as well as the current directory for a drive.|  
 |<Drive>:|Specifies the drive to display or change (if different from the current drive).|  
 |<Path>|Specifies the path to the directory that you want to display or change.|  

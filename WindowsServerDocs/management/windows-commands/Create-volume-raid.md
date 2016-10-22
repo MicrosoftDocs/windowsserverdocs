@@ -1,6 +1,6 @@
 ---
 title: Create volume raid
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Create volume raid
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,9 +21,9 @@ ms.date: 10/12/2016
 Creates a RAID\-5 volume using three or more specified dynamic disks.  
   
 > [!IMPORTANT]  
-> This DiskPart command is not available in any edition of Windows??Vista.  
+> This DiskPart command is not available in any edition of Windows Vista.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+  
   
 ## Syntax  
   
@@ -35,7 +34,7 @@ create volume raid [size=<n>] disk=<n>,<n>,<n>[,<n>,...] [align=<n>] [noerr]
 ## Parameters  
   
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |size\=<n>|The amount of disk space, in megabytes \(MB\), that the volume will occupy on each disk. If no size is given, the largest possible RAID\-5 volume will be created. The disk with the smallest available contiguous free space determines the size for the RAID\-5 volume and the same amount of space is allocated from each disk. The actual amount of usable disk space in the RAID\-5 volume is less than the combined amount of disk space because some of the disk space is required for parity.|  
 |disk\=<n>,<n>,<n>\[,<n>,...\]|The dynamic disks on which to create the RAID\-5 volume. You need at least three dynamic disks in order to create a RAID\-5 volume. An amount of space equal to **size\=<n>** is allocated on each disk.|  
 |align\=<n>|Aligns all volume extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  

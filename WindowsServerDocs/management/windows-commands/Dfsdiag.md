@@ -1,6 +1,6 @@
 ---
 title: Dfsdiag
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Dfsdiag
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |[Dfsdiag TestDCs](Dfsdiag-TestDCs.md)|Checks domain controller configuration.|
 |[Dfsdiag TestSites](Dfsdiag-TestSites.md)|Checks site associations.|
 |[Dfsdiag TestDFSConfig](Dfsdiag-TestDFSConfig.md)|Checks DFS Namespace configuration.|

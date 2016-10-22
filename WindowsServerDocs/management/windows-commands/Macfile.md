@@ -1,6 +1,6 @@
 ---
 title: Macfile
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Macfile
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -42,7 +41,7 @@ macfile directory[/server:\\<ComputerName>] /path:<Directory> [/owner:<OwnerName
     Sets permissions on the directory for the owner, primary group, and world (everyone). An 11-digit number is used to set permissions. The number 1 grants permission and 0 revokes permission (for example, 11111011000). If omitted, permissions remain unchanged.
     The position of the digit determines which permission is set, as described in the following table.
     |Position|Sets Permission for|
-    |------------|-----------------------|
+    |------|------------|
     |First|OwnerSeeFiles|
     |Second|OwnerSeeFolders|
     |Third|OwnerMakeChanges|
@@ -71,7 +70,7 @@ macfile forkize[/server:\\<ComputerName>] [/creator:<CreatorName>] [/type:<TypeN
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/server:\\\\<ComputerName>|Specifies the server on which to join files. If omitted, the operation is performed on the local computer.|
 |/creator:<CreatorName>|Specifies the creator of the file. The Macintosh Finder uses the **/creator** command-line option to determine the application that created the file.|
 |/type:<TypeName>|Specifies the type of file. The Macintosh Finder uses the **/type** command-line option to determine the file type within the application that created the file.|
@@ -97,7 +96,7 @@ macfile server [/server:\\<ComputerName>] [/maxsessions:{Number | unlimited}] [/
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/server:\\\\<ComputerName>|Specifies the server on which to change parameters. If omitted, the operation is performed on the local computer.|
 |/maxsessions:{Number &#124; unlimited}|Specifies the maximum number of users who can simultaneously use File and Print Servers for Macintosh. If omitted, the **maxsessions** setting for the server remains unchanged.|
 |/loginmessage:<Message>|Changes the message Macintosh users see when logging on to the File Server for Macintosh server. The maximum number of characters for the logon message is 199. If omitted, the **loginmessage** message for the server remains unchanged. To remove an existing logon message, include the **/loginmessage** parameter, but leave the *Message* variable blank.|
@@ -117,7 +116,7 @@ macfile volume /remove[/server:\\<ComputerName>] /name:<VolumeName>
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |{/add &#124; /set}|Required when you are adding or changing a Macintosh-accessible volume. Adds or changes the specified volume.|
 |/server:\\\\<ComputerName>|Specifies the server on which to add, change, or remove a volume. If omitted, the operation is performed on the local computer.|
 |/name:<VolumeName>|Required. Specifies the volume name to be added, changed, or removed.|

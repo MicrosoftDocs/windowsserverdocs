@@ -1,6 +1,6 @@
 ---
 title: Remote Server Administration Tools
-description: "Remote Server Administration Tools"
+description: "Top level topic for Remote Server Administration Tools"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Remote Server Administration Tools
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012

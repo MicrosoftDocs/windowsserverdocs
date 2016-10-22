@@ -1,6 +1,6 @@
 ---
 title: Shift
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Shift
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -27,11 +26,11 @@ shift [/n <N>]
 ```
 ## Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/n <N>|Specifies to start shifting at the *N*th argument, where *N* is any value from 0 to 8. Requires command extensions, which are enabled by default.|
 |/?|Displays help at the command prompt.|
 ## Remarks
--   The **shift** command changes the values of the batch parameters **%0** through **%9** by copying each parameter into the previous one—the value of **%1** is copied to **%0**, the value of **%2** is copied to **%1**, and so on. This is useful for writing a batch file that performs the same operation on any number of parameters.
+-   The **shift** command changes the values of the batch parameters **%0** through **%9** by copying each parameter into the previous one the value of **%1** is copied to **%0**, the value of **%2** is copied to **%1**, and so on. This is useful for writing a batch file that performs the same operation on any number of parameters.
 -   If command extensions are enabled, the **shift** command supports the **/n** command-line option. The **/n** option specifies to start shifting at the Nth argument, where **N** is any value from 0 to 8. For example, **SHIFT /2** would shift **%3** to **%2**, **%4** to **%3**, and so on, and leave **%0** and **%1** unaffected. Command extensions are enabled by default.
 -   You can use the **shift** command to create a batch file that can accept more than 10 batch parameters. If you specify more than 10 parameters on the command line, those that appear after the tenth (**%9**) will be shifted one at a time into **%9**.
 -   The **shift** command has no effect on the **%\*** batch parameter.

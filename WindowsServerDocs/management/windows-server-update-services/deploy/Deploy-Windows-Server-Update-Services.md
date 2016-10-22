@@ -1,6 +1,6 @@
 ---
 title: Deploy Windows Server Update Services
-description: "Windows Server Update Service"
+description: "Windows Server Update Service (WSUS) topic - An overview of the deployment process with links to the four steps to accomplish it"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.technology: manage-wsus
@@ -11,7 +11,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Deploy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -24,10 +23,10 @@ This guide provides conceptual information for planning and deploying Windows Se
 
 -   [Plan for Your WSUS Deployment](../plan/Plan-Your-WSUS-Deployment.md)  
 
--   [Step 1: Install the WSUS Server Role](1--Install-the-WSUS-Server-Role.md)  
+-   [Step 1: Install the WSUS Server Role](1-Install-the-WSUS-Server-Role.md)  
 
--   [Step 2: Configure WSUS](2--Configure-WSUS.md)  
+-   [Step 2: Configure WSUS](2-Configure-WSUS.md)  
 
--   [Step 3: Approve and Deploy Updates in WSUS](3--Approve-and-Deploy-Updates-in-WSUS.md)  
+-   [Step 3: Approve and Deploy Updates in WSUS](3-Approve-and-Deploy-Updates-in-WSUS.md)  
 
--   [Step 4: Configure Group Policy Settings for Automatic Updates](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md)  
+-   [Step 4: Configure Group Policy Settings for Automatic Updates](4-Configure-Group-Policy-Settings-for-Automatic-Updates.md)  

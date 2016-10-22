@@ -1,6 +1,6 @@
 ---
 title: Using the Disable Command
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Using the Disable Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -22,6 +21,6 @@ ms.date: 10/12/2016
 Disables all services for Windows Deployment Services.
 ## Subcommands
 |Subcommand|Description|
-|--------------|---------------|
+|-------|--------|
 |[Using the disable-Server Command](Using-the-disable-Server-Command.md)|Disables all Windows Deployment Services services on a specified server (Deployment Server).|
 |[Using the disable-TransportServer Command](Using-the-disable-TransportServer-Command.md)|Disables all Windows Deployment Services services on a specified Transport Server.|

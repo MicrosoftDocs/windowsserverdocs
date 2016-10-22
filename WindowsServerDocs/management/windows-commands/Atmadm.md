@@ -1,6 +1,6 @@
 ---
 title: Atmadm
-description: "Windows Commands"
+description: "Windows Commands topic for **Atmadm** - Monitors connections and addresses that are registered by the ATM Call Manager on an asynchronous transfer mode (ATM) network."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Atmadm
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
@@ -26,7 +25,7 @@ atmadm [/c][/a][/s]
 ```
 ### Parameters
 |Parameter|Description|
-|-------------|---------------|
+|-------|--------|
 |/c|Displays call information for all current connections to the ATM network adapter installed on this computer.|
 |/a|Displays the registered ATM network service access point (NSAP) address for each adapter installed in this computer.|
 |/s|Displays statistics for monitoring the status of active ATM connections.|
@@ -65,7 +64,7 @@ atmadm [/c][/a][/s]
     ```
     The following table contains descriptions of each element in the **atmadm /c** sample output.
     |Type of Data|Screen Display|Description|
-    |----------------|------------------|---------------|
+    |--------|---------|--------|
     |Connection Information|In/Out|Direction of the call.  **In** is to the ATM network adapter from another device.  **Out** is from the ATM network adapter to another device.|
     ||PMP|Point-to-multipoint call.|
     ||P-P|Point-to-point call.|
@@ -97,7 +96,7 @@ atmadm [/c][/a][/s]
     ```
     The following table contains descriptions of each element in the **atmadm /s** sample output.
     |Call Manager Statistic|Description|
-    |--------------------------|---------------|
+    |-------------|--------|
     |Current Active calls|Calls currently active on the ATM adapter installed on this computer.|
     |Total successful Incoming calls|Calls successfully received from other devices on this ATM network.|
     |Total successful Outgoing calls|Calls successfully completed to other ATM devices on this network from this computer.|

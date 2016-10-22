@@ -25,7 +25,7 @@ Each application that requires the administrator access token must prompt the ad
 
 In order to better understand how this process happens it is important to review the details of the  Windows Server 2012  logon process.
 
-### Windows Server® 2012 Logon Process
+### Windows Server?? 2012 Logon Process
 The following illustration demonstrates how the logon process for an administrator differs from the logon process for a standard user.
 
 ![Illustration demonstrating how the logon process for an administrator differs from the logon process for a standard user](../../media/How-User-Account-Control-Works/UACWindowsLogonProcess.gif)
@@ -102,7 +102,7 @@ The following diagram details the UAC architecture.
 To better understand each component, review the table below:
 
 |Component|Description|
-|-------------|---------------|
+|-------|--------|
 |**User**||
 |User performs operation requiring privilege|If the operation changes the file system or registry, Virtualization is called. All other operations call ShellExecute.|
 |ShellExecute|ShellExecute calls CreateProcess. ShellExecute looks for the ERROR_ELEVATION_REQUIRED error from CreateProcess. If it receives the error, ShellExecute calls the Application Information service to attempt to perform the requested task with the elevated prompt.|

@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 This topic for the IT professional describes NTLM, any changes in functionality, and provides links to technical resources to Windows Authentication and NTLM for  Windows Server 2012  and previous versions.
 
-**Did you mean…**
+**Did you mean???**
 
 -   [LMcompatibilitylevel](http://technet.microsoft.com/magazine/2006.08.securitywatch.aspx)
 
@@ -49,7 +49,7 @@ NTLM cannot be configured from Server Manager. You can use Security Policy setti
 The following table lists relevant resources for NTLM and other Windows authentication technologies.
 
 |Content type|References|
-|----------------|--------------|
+|--------|-------|
 |**Product evaluation**|[Introducing the Restriction of NTLM Authentication](https://technet.microsoft.com/library/dd560653.aspx)<br /><br />[Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199.aspx)|
 |**Planning**|[IT Infrastructure Threat Modeling Guide](http://technet.microsoft.com/library/dd941826.aspx)<br /><br />[Threats and Countermeasures: Security Settings in Windows Server 2003 and Windows XP](http://technet.microsoft.com/library/dd162275.aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 and Windows Vista](https://technet.microsoft.com/library/dd349791.aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](https://technet.microsoft.com/library/hh125921.aspx)|
 |**Deployment**|[Extended Protection for Authentication](http://support.microsoft.com/kb/968389)<br /><br />[Auditing and restricting NTLM usage guide](http://technet.microsoft.com/library/jj865674(v=ws.10).aspx)<br /><br />[Ask the Directory Services Team : NTLM Blocking and You: Application Analysis and Auditing Methodologies in Windows 7](http://blogs.technet.com/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)<br /><br />[Windows Authentication Blog](http://blogs.technet.com/authentication/)<br /><br />[Configuring MaxConcurrentAPI for NTLM pass\-through authentication](http://social.technet.microsoft.com/wiki/contents/articles/9759.configuring-maxconcurrentapi-for-ntlm-pass-through-authentication.aspx)|
