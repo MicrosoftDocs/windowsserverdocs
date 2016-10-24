@@ -42,16 +42,20 @@ HGS ships with 2 JEA roles preconfigured:
 - **HGS Reviewers** which only allows users the right to audit existing policies. They cannot make any changes to the HGS configuration.
 
 To use JEA, you first need to create a new standard user and make them a member of either the HGS admins or HGS reviewers group.
-If you used `Install-HgsServer` to set up a new forest for HGS, these groups will be named "hgsAdministrators" and "hgsReviewers", respectively.
+If you used `Install-HgsServer` to set up a new forest for HGS, these groups will be named "*servicename*Administrators" and "*servicename*Reviewers", respectively, where *servicename* is the network name of the HGS cluster.
 If you joined HGS to an existing domain, you should refer to the group names you specified in `Initialize-HgsServer`.
 
 **Create standard users for the HGS administrator and reviewer roles**
 ```powershell
+$hgsServiceName = (Get-ClusterResource HgsClusterResource | Get-ClusterParameter DnsName).Value
+$adminGroup = $hgsServiceName + "Administrators"
+$reviewerGroup = $hgsServiceName + "Reviewers"
+
 New-ADUser -Name 'hgsadmin01' -AccountPassword (Read-Host -AsSecureString -Prompt 'HGS Admin Password') -ChangePasswordAtLogon $false -Enabled $true
-Add-ADGroupMember -Identity 'hgsAdministrators' -Members 'hgsadmin01'
+Add-ADGroupMember -Identity $adminGroup -Members 'hgsadmin01'
 
 New-ADUser -Name 'hgsreviewer01' -AccountPassword (Read-Host -AsSecureString -Prompt 'HGS Reviewer Password') -ChangePasswordAtLogon $false -Enabled $true
-Add-ADGroupMember -Identity 'hgsReviewers' -Members 'hgsreviewer01'
+Add-ADGroupMember -Identity $reviewerGroup -Members 'hgsreviewer01'
 ```
 
 **Audit policies with the reviewer role**
