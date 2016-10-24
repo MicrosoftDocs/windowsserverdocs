@@ -78,11 +78,11 @@ BranchCache is a wide area network \(WAN\) bandwidth optimization technology. To
 
 Learn how to deploy a Windows Server network with the Core Network Guide, as well as add features to your network deployment with Core Network Companion Guides.
 
-### [Domain Name System &#40;DNS&#41;](dns/Domain-Name-System--DNS-.md)
+### [Domain Name System &#40;DNS&#41;](dns/dns-top.md)
 
 Domain Name System \(DNS\) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.
 
-### [Dynamic Host Configuration Protocol &#40;DHCP&#41;](technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md)
+### [Dynamic Host Configuration Protocol &#40;DHCP&#41;](technologies/dhcp/dhcp-top.md)
 
 Dynamic Host Configuration Protocol \(DHCP\) is a client/server protocol that automatically provides an Internet Protocol \(IP\) host with its IP address and other related configuration information, such as the subnet mask and default gateway.
 
@@ -94,7 +94,7 @@ Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networ
 
 The Hyper\-V Virtual Switch is a software-based layer 2 Ethernet network switch that is available in Hyper\-V Manager when you install the Hyper\-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper\-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
 
-### [IP Address Management &#40;IPAM&#41;](technologies/ipam/IP-Address-Management--IPAM-.md)
+### [IP Address Management &#40;IPAM&#41;](technologies/ipam/ipam-top.md)
 
 IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System \(DNS\) servers on your network and enables you to manage them from a central interface.
 
