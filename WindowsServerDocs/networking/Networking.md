@@ -78,7 +78,7 @@ BranchCache is a wide area network \(WAN\) bandwidth optimization technology. To
 
 Learn how to deploy a Windows Server network with the Core Network Guide, as well as add features to your network deployment with Core Network Companion Guides.
 
-### [Domain Name System &#40;DNS&#41;](dns/Domain-Name-System--DNS-.md)
+### [Domain Name System &#40;DNS&#41;](dns/dns-top.md)
 
 Domain Name System \(DNS\) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.
 
