@@ -749,7 +749,7 @@
 ##### [Use DNS Policy for Applying Filters on DNS Queries](networking/dns/deploy/apply-filters-on-dns-queries.md)
 ##### [Use DNS Policy for Application Load Balancing](networking/dns/deploy/app-lb.md)
 ##### [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](networking/dns/deploy/app-lb-geo.md)
-### [Dynamic Host Configuration Protocol (DHCP)](networking/technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md)
+### [Dynamic Host Configuration Protocol (DHCP)](networking/technologies/dhcp/dhcp-top.md)
 #### [What's New in DHCP](networking/technologies/dhcp/What-s-New-in-DHCP.md)
 ### [Hyper-V Virtual Switch](networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 #### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)

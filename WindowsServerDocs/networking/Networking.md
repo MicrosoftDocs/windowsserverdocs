@@ -82,7 +82,7 @@ Learn how to deploy a Windows Server network with the Core Network Guide, as wel
 
 Domain Name System \(DNS\) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.
 
-### [Dynamic Host Configuration Protocol &#40;DHCP&#41;](technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md)
+### [Dynamic Host Configuration Protocol &#40;DHCP&#41;](technologies/dhcp/dhcp-top.md)
 
 Dynamic Host Configuration Protocol \(DHCP\) is a client/server protocol that automatically provides an Internet Protocol \(IP\) host with its IP address and other related configuration information, such as the subnet mask and default gateway.
 
