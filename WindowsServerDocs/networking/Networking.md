@@ -94,7 +94,7 @@ Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networ
 
 The Hyper\-V Virtual Switch is a software-based layer 2 Ethernet network switch that is available in Hyper\-V Manager when you install the Hyper\-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper\-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
 
-### [IP Address Management &#40;IPAM&#41;](technologies/ipam/IP-Address-Management--IPAM-.md)
+### [IP Address Management &#40;IPAM&#41;](technologies/ipam/ipam-top.md)
 
 IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System \(DNS\) servers on your network and enables you to manage them from a central interface.
 
