@@ -736,7 +736,7 @@
 ######## [Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic](networking/branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ####### [Verify Client Computer Settings](networking/branchcache/deploy/Verify-Client-Computer-Settings.md)
 ### [DirectAccess](networking/remote-access/da-stub.md)
-### [Domain Name System (DNS)](networking/dns/Domain-Name-System--DNS-.md)
+### [Domain Name System (DNS)](networking/dns/dns-top.md)
 #### [What's New in DNS Client in Windows Server 2016](networking/dns/What-s-New-in-DNS-Client.md)
 #### [What's New in DNS Server in Windows Server 2016](networking/dns/What-s-New-in-DNS-Server.md)
 #### [DNS Policy Scenario Guide](networking/dns/deploy/DNS-Policy-Scenario-Guide.md)
