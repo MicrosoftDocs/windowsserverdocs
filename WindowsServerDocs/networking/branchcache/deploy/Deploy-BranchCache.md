@@ -24,7 +24,7 @@ The following sections provide information about deploying BranchCache in distri
   
 -   [Deploy Hosted Cache Servers &#40;Optional&#41;](deploy-hosted-cache-servers.md)  
   
--   [Prehashing and Preloading Content on Hosted Cache Servers &#40;Optional&#41;](Prehashing-and-Preloading-Content-on-Hosted-Cache-Servers--Optional-.md)  
+-   [Prehashing and Preloading Content on Hosted Cache Servers &#40;Optional&#41;](prehashing-and-preloading.md)  
   
 -   [Configure BranchCache Client Computers](Configure-BranchCache-Client-Computers.md)  
   
