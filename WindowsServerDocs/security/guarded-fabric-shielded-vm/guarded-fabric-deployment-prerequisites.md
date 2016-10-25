@@ -42,9 +42,9 @@ Shielded VMs that ran on a guarded host with an earlier operating system version
 
     >**Important**&nbsp;&nbsp;By default, when you set up HGS, it creates its own forest. However, you can choose to add HGS to an existing forest. The forest used by HGS is sensitive because its administrators have access to the keys that control shielded VMs. For this reason, we strongly recommend that HGS either create its own forest during initial installation, or use an existing bastion forest - one that is isolated from traditional fabric or CORP-forest administrators. For more information, see [Choose whether to install HGS in its own new forest or in an existing bastion forest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#choose-whether-to-install-hgs-in-its-own-new-forest-or-in-an-existing-bastion-forest).
 
-<!- When a link is available, add the following sentence after the sentence (a couple paragraphs up) that ends in "you can change to the other mode later": 
+<!-- When a link is available, add the following sentence after the sentence (a couple paragraphs up) that ends in "you can change to the other mode later": 
     For information about changing modes, see the Guarded Fabric Operations Guide.
-->
+-->
 
 ## Prerequisites for Hyper-V hosts that will become guarded hosts
 
@@ -73,7 +73,7 @@ Hyper-V hosts that will become guarded hosts must meet the following prerequisit
 
 If you choose one of the following scenarios, management servers (physical or virtual) in your infrastructure must meet the corresponding requirements:
 
-<!- Watch the link to the evaluation VHD and make sure it's up-to-date.  ->
+<!-- Watch the link to the evaluation VHD and make sure it's up-to-date.  -->
 
 -   [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
 
