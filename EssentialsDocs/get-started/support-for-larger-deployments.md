@@ -18,6 +18,10 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials
 
+> [!IMPORTANT]  
+> The features described in this topic only work on Windows Server 2016 with the Essentials Experience role enabled, and not with the Windows Server 2016 Essentials SKU.
+
+
 Windows Server Essentials now supports larger deployments with:
 
 - multiple domains

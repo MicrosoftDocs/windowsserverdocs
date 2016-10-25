@@ -87,7 +87,7 @@ To install the Server Core installation option from the media, insert the media 
 If you already have a Server Core installation of the appropriate Windows Server product, you can upgrade it to a Server Core installation of the appropriate edition of Windows Server 2016, as indicated below.
 
 > [!NOTE]  
-> If you are upgrading from Server Core installations of Windows Server 2012 or Windows Server 2012 R2, you must use the **/compact ingnorewarning flag**. Otherwise, the upgrade will stop because the upgrade attempts to open an Internet Explorer warning, but Internet Explorer is not available in Server Core installations.
+> If you are upgrading from Server Core installations of Windows Server 2012 or Windows Server 2012 R2, you must use the **/compat ingnorewarning flag**. Otherwise, the upgrade will stop because the upgrade attempts to open an Internet Explorer warning, but Internet Explorer is not available in Server Core installations.
 
 > [!IMPORTANT]  
 > In this release, upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade. Otherwise, migration is the recommended option.  
