@@ -290,7 +290,7 @@ Using the list, you can trace the results through the domain and understand the 
 You can use Group Policy to accomplish stricter accuracy by, for instance, assigning clients to use specific NTP servers or to control how down-level OS’s are configured when virtualized.  
 Below is a list of possible scenarios and relevant Group Policy settings:
 
-**Virtualized Domains** - In order control Virtualized Domain Controllers in Windows 2012R2 so that they synchronize time with their domain, rather than with the Hyper-V host, you can disable this registry entry.   For the PDC, you don’t want to disable the entry as the Hyper-V host will deliver the most stable time source.  The registry entry requires that you restart the w32time service after it is changed.
+**Virtualized Domains** - In order to control Virtualized Domain Controllers in Windows 2012R2 so that they synchronize time with their domain, rather than with the Hyper-V host, you can disable this registry entry.   For the PDC, you don’t want to disable the entry as the Hyper-V host will deliver the most stable time source.  The registry entry requires that you restart the w32time service after it is changed.
 
 	[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider]
 	"Enabled"=dword:00000000
