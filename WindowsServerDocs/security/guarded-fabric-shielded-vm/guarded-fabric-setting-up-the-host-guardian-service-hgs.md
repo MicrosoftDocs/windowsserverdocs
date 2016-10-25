@@ -304,7 +304,7 @@ Review the results paying careful attention to any test that failed. If no failu
 
     "Overall Result: Pass"
 
-<!- If/when a better link is available for the troubleshooting guide, replace the link in the following sentence. ->
+<!-- If/when a better link is available for the troubleshooting guide, replace the link in the following sentence. -->
 
 If failures did occur, please review the remediation steps provided or see the [Troubleshooting Guide](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-70c5b471).
 
@@ -413,7 +413,7 @@ We recommend that you elect a "reference host" to represent each unique class of
 
 >**Important**&nbsp;&nbsp;Before beginning these steps, be sure to review [Prerequisites for Hyper-V hosts that will become guarded hosts](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts).
 
-<!- This comment creates a break between the Important above and the Nano Server note below. ->
+<!-- This comment creates a break between the Important above and the Nano Server note below. -->
 
 >**Nano Server Only**&nbsp;&nbsp;If you are using Nano Server to host your shielded VMs, there are special steps you must take to acquire the attestation artifacts listed in this section. For more information, see [Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md).
 

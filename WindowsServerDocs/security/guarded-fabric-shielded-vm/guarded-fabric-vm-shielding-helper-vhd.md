@@ -12,7 +12,7 @@ ms.technology: security-guarded-fabric
 
 >Applies To: Windows Server 2016
 
-<!- This comment creates a break between the Applies To above and the Important note below. ->
+<!-- This comment creates a break between the Applies To above and the Important note below. -->
 
 >**Important**&nbsp;&nbsp;You cannot convert existing non-shielded VMs to Shielded VMs. There is no workaround at this time. If you need to deploy Shielded VMs, create new ones directly from shielded templates. For more information, see [Deploy shielded VMs](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview). 
 
