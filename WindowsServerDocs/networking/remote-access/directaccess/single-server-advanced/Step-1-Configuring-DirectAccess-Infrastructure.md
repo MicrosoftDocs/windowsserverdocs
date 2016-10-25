@@ -1,5 +1,7 @@
 ---
 title: Step 1 Configuring DirectAccess Infrastructure
+description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

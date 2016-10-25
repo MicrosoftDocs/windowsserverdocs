@@ -1,5 +1,7 @@
 ---
 title: STEP 4 Install and Configure RSA and EDGE1
+description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
