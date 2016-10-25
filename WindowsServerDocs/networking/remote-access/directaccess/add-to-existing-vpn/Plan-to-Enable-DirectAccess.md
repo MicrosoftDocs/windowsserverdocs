@@ -1,5 +1,7 @@
 ---
 title: Plan to Enable DirectAccess
+description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,11 +22,11 @@ author: jamesmci
 
 The planning phase includes the following steps:  
   
--   [Step 1: Plan DirectAccess infrastructure](Step-1-Plan-DirectAccess-Infrastructure.md)  
+-   [Step 1: Plan DirectAccess infrastructure](step-1-plan-da-inf-davpn.md)  
   
     In this phase, you describe the planning that is required to set up the network infrastructure before you begin the Remote Access deployment. It includes planning for the network and server topology, certificates, Domain Name System (DNS), Active Directory and Group Policy Object (GPO) configuration, and the DirectAccess network location server.  
   
--   [Step 2: Plan DirectAccess deployment](Step-2-Plan-the-DirectAccess-Deployment_4.md)  
+-   [Step 2: Plan DirectAccess deployment](step-2-plan-da-davpn.md)  
   
     In this phase, you describe the planning steps that are required to prepare for the Remote Access deployment. It includes planning for Remote Access client computers, server and client authentication requirements, and infrastructure servers.  
   
