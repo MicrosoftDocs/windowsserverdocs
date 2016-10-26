@@ -1,3 +1,3 @@
 ---
-redirection_url: /windows-server-docs/networking/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn
+redirect_url: /windows-server-docs/networking/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn
 ---
