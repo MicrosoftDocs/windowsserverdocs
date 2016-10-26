@@ -134,7 +134,7 @@ Following are the steps that are performed during a smart card sign-in:
 
 12. The KDC validates the user's certificate (time, path, and revocation status) to ensure that the certificate is from a trusted source. The KDC uses CryptoAPI to build a certification path from the user's certificate to a root certification authority (CA) certificate that resides in the root store on the domain controller. The KDC then uses CryptoAPI to verify the digital signature on the signed authenticator that was included in the preauthentication data fields. The domain controller verifies the signature and uses the public key from the user's certificate to prove that the request originated from the owner of the private key that corresponds to the public key. The KDC also verifies that the issuer is trusted and appears in the NTAUTH certificate store.
 
-13. The KDC service retrieves user account information from AD DS. The KDC constructs a TGT, which is based on the user account information that it retrieves from AD DS. The TGT???s authorization data fields include the user's security identifier (SID), the SIDs for universal and global domain groups to which the user belongs, and (in a multidomain environment) the SIDs for any universal groups of which the user is a member.
+13. The KDC service retrieves user account information from AD DS. The KDC constructs a TGT, which is based on the user account information that it retrieves from AD DS. The TGT's authorization data fields include the user's security identifier (SID), the SIDs for universal and global domain groups to which the user belongs, and (in a multidomain environment) the SIDs for any universal groups of which the user is a member.
 
 14. The domain controller returns the TGT to the client as part of the KRB_AS_REP response.
 
@@ -205,7 +205,11 @@ The smart card certificate has specific format requirements when it is used with
 ### Client certificate mappings
 Certificate mapping is based on the UPN that is contained in the subjectAltName (SAN) field of the certificate. Client certificates that do not contain information in the SAN field are also supported.
 
-SSL/TLS can map certificates that do not have SAN, and the mapping is done by using the AltSecID attributes on client accounts. The X509 AltSecID, which is used by SSL/TLS client authentication is of the form "X509: <I>"*<Issuer Name>*"<S>"*<Subject Name>*. The *<Issuer Name>* and *<Subject Name>* are taken from the client certificate, with '\r' and '\n' replaced with ','.
+SSL/TLS can map certificates that do not have SAN, and the mapping is done by using the AltSecID attributes on client accounts. The X509 AltSecID, which is used by SSL/TLS client authentication is of the form
+
+    "X509: <I>"<Issuer Name>"<S>"<Subject Name> 
+    
+The `<Issuer Name>` and `<Subject Name>` are taken from the client certificate, with '\r' and '\n' replaced with ','.
 
 **Certificate revocation list distribution points**
 
@@ -316,7 +320,7 @@ If the client computer is not joined to the domain or if it is joined to a diffe
 
 To deploy root certificates on a smart card for the currently joined domain, you can use the following command:
 
-**certutil ???scroots update**
+    certutil -scroots update
 
 For more information about this option for the command-line tool, see [-SCRoots](../../management/windows-commands/Certutil.md#BKMK_SCRoots).
 
