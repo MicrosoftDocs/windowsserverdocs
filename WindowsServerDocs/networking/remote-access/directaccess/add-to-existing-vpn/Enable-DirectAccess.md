@@ -22,7 +22,7 @@ author: jamesmci
   
 -   [Step 1: Configure the DirectAccess infrastructure](step-1-configure-da-inf-davpn.md). This step includes configuring network and server settings, DNS settings and Active Directory settings.  
   
--   [Step 2: Configure the DirectAccess server](step-2-configure-server-davpn.md). This step includes configuring DirectAccess client computers, server settings.  
+-   [Step 2: Configure the DirectAccess-VPN Server](step-2-configure-server-davpn.md). This step includes configuring DirectAccess client computers, server settings.  
   
 -   [Step 3: Verify the deployment](step-3-verify-davpn.md). This step includes steps for verifying the deployment.  
   

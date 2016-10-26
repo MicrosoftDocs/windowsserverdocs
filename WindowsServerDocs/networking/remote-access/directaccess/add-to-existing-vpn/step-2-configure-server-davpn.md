@@ -10,7 +10,7 @@ ms.technology:
   - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
 ms.author: jamesmci
 author: jamesmci
 ---
