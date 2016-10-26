@@ -1,5 +1,7 @@
 ---
-title: Configuration Requirements_1
+title: Configuration Requirements
+description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,7 +14,7 @@ ms.assetid: a09ec1a9-38e1-4c6c-8213-cf5b6ae44043
 ms.author: jamesmci
 author: jamesmci
 ---
-# Configuration Requirements_1
+# Configuration Requirements
 
 >Applies To: Windows Server&reg; 2016
 

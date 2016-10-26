@@ -1,6 +1,6 @@
 ---
 title: Configure the Failover TCP/IP settings that you want the Replica virtual machine to use in the event of a failover
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

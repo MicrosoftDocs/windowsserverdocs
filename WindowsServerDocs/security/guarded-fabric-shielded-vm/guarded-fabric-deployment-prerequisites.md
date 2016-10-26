@@ -40,11 +40,11 @@ Shielded VMs that ran on a guarded host with an earlier operating system version
     
     As noted, a guarded fabric cannot contain a mix of admin- and TPM-trusted attestation. However, you can change from one attestation mode to the other. In other words, even though you must choose one mode for your initial deployment, you can change to the other mode later. 
 
-    >**Important**&nbsp;&nbsp;By default, when you set up HGS, it creates its own forest. However, you can choose to add HGS to an existing forest. The forest used by HGS is sensitive because its administrators have access to the keys that control shielded VMs. For this reason, we strongly recommend that HGS either create its own forest during initial installation, or use an existing bastion forest???one that is isolated from traditional fabric or CORP-forest administrators. For more information, see [Choose whether to install HGS in its own new forest or in an existing bastion forest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#choose-whether-to-install-hgs-in-its-own-new-forest-or-in-an-existing-bastion-forest).
+    >**Important**&nbsp;&nbsp;By default, when you set up HGS, it creates its own forest. However, you can choose to add HGS to an existing forest. The forest used by HGS is sensitive because its administrators have access to the keys that control shielded VMs. For this reason, we strongly recommend that HGS either create its own forest during initial installation, or use an existing bastion forest - one that is isolated from traditional fabric or CORP-forest administrators. For more information, see [Choose whether to install HGS in its own new forest or in an existing bastion forest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#choose-whether-to-install-hgs-in-its-own-new-forest-or-in-an-existing-bastion-forest).
 
-<!- When a link is available, add the following sentence after the sentence (a couple paragraphs up) that ends in "you can change to the other mode later": 
+<!-- When a link is available, add the following sentence after the sentence (a couple paragraphs up) that ends in "you can change to the other mode later": 
     For information about changing modes, see the Guarded Fabric Operations Guide.
-->
+-->
 
 ## Prerequisites for Hyper-V hosts that will become guarded hosts
 
@@ -58,22 +58,22 @@ Hyper-V hosts that will become guarded hosts must meet the following prerequisit
         - IOMMU and Second Level Address Translation (SLAT)
         - TPM 2.0
         - UEFI 2.3.1 or later
-        - Configured to boot using UEFI (not BIOS or ???legacy??? mode)
+        - Configured to boot using UEFI (not BIOS or "legacy" mode)
         - Secure boot enabled
         
-        For TPM-trusted attestation, we recommend that you elect a ???reference host??? to represent each unique class of hardware configuration within your datacenter. You will use the reference host to capture the necessary information for TPM-trusted attestation. Procedures for this type of host begin at [TPM-trusted attestation: capturing hardware and software information that HGS uses in attestation](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#tpm-trusted-attestation-capturing-hardware-and-software-information-that-hgs-uses-in-attestation).
+        For TPM-trusted attestation, we recommend that you elect a "reference host" to represent each unique class of hardware configuration within your datacenter. You will use the reference host to capture the necessary information for TPM-trusted attestation. Procedures for this type of host begin at [TPM-trusted attestation: capturing hardware and software information that HGS uses in attestation](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#tpm-trusted-attestation-capturing-hardware-and-software-information-that-hgs-uses-in-attestation).
 
 -   **Operating system**: Windows Server 2016 Datacenter edition
 
--   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is necessary to let the Hyper-V host communicate with HGS to attest to its health and request keys for shielded VMs. This feature is only available on Datacenter editions of Windows Server 2016. Verify in a lab that the Host Guardian Hyper-V Support feature can run on the reference host. 
+-   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is necessary to let the Hyper-V host communicate with HGS to attest to its health and request keys for shielded VMs. This feature is only available on Datacenter editions of Windows Server 2016. If you are using the Nano Server installation option of Windows Server 2016, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md). 
 
->**Important**&nbsp;&nbsp;If you are using the Nano Server installation option of Windows Server 2016, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md).
+>**Warning**&nbsp;&nbsp;The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. We strongly recommend testing this configuration in your lab before enabling this feature. Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error).
 
 ## Prerequisites for management and access tools for hosts
 
 If you choose one of the following scenarios, management servers (physical or virtual) in your infrastructure must meet the corresponding requirements:
 
-<!- Watch the link to the evaluation VHD and make sure it's up-to-date.  ->
+<!-- Watch the link to the evaluation VHD and make sure it's up-to-date.  -->
 
 -   [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
 
@@ -81,7 +81,7 @@ If you choose one of the following scenarios, management servers (physical or vi
 
     -   **VMM software**: System Center 2016 - Virtual Machine Manager (VMM)
 
-    To simplify the setup and configuration, you can deploy a VMM management server as a virtual machine by downloading the evaluation VHD for VMM from [System Center 2016 Virtual Machine Manager ??? Evaluation VHD](https://www.microsoft.com/download/details.aspx?id=53886). Documentation is also available at that site.
+    To simplify the setup and configuration, you can deploy a VMM management server as a virtual machine by downloading the evaluation VHD for VMM from [System Center 2016 Virtual Machine Manager - Evaluation VHD](https://www.microsoft.com/download/details.aspx?id=53886). Documentation is also available at that site.
 
 -   [Scenario 2 - Deploy a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
 
@@ -92,7 +92,7 @@ If you choose one of the following scenarios, management servers (physical or vi
         System Center 2016 - Service Provider Foundation<br>
         Windows Azure Pack Update Rollup 10+<br>
 
-    To simplify the setup and configuration, you can deploy a VMM management server as a virtual machine by downloading the evaluation VHD for VMM from [System Center 2016 Virtual Machine Manager ??? Evaluation VHD](https://www.microsoft.com/download/details.aspx?id=53886). Documentation is also available at that site.
+    To simplify the setup and configuration, you can deploy a VMM management server as a virtual machine by downloading the evaluation VHD for VMM from [System Center 2016 Virtual Machine Manager - Evaluation VHD](https://www.microsoft.com/download/details.aspx?id=53886). Documentation is also available at that site.
 
 The configuration elements to create in VMM for managment of guarded hosts include the following:
 

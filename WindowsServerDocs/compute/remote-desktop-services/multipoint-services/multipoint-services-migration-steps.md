@@ -1,5 +1,6 @@
 ---
 title: Steps for migrating MultiPoint Services
+description: Walks you through the steps to migrate to MultiPoint Services in Windows Server 2016
 ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server-threshold

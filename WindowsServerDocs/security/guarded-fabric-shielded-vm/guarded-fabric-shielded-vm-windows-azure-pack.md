@@ -41,7 +41,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 When the preceding steps are complete, tenants can take the following steps:
 
-<!- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. ->
+<!-- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. -->
 
 1. **Tenants**: subscribe to one or more plans offered in Windows Azure Pack.
 
@@ -65,19 +65,19 @@ When the preceding steps are complete, tenants can take the following steps:
 
 System Center 2016 - Service Provider Foundation (SPF) allows Windows Azure Pack to communicate with your VMM servers that manage the hosting fabric. Before installing Windows Azure Pack, you must set up System Center 2016 - SPF. For information about installing SPF, see [Deploying Service Provider Foundation - SPF](https://technet.microsoft.com/system-center-docs/spf/deploy/deploying-service-provider-foundation).
 
-<!- I have a question out to Erik Kjerland about whether the blog post in the following sentence is still helpful. If it's not, delete the sentence. ->
+<!-- I have a question out to Erik Kjerland about whether the blog post in the following sentence is still helpful. If it's not, delete the sentence. -->
 
 If you have issues with integrating Windows Azure Pack and Service Provider Foundation, see [Troubleshooting Windows Azure Pack, SPF and VMM](https://blogs.technet.microsoft.com/privatecloud/2013/11/08/troubleshooting-windows-azure-pack-spf-vmm/).
 
 ## Install Windows Azure Pack
 
-The following steps to install and configure Windows Azure Pack (WAP) should be performed on the machine where you wish to host the web portal for your tenants. This machine will need to be able to reach the SPF server you installed in the previous section, and be reachable by your tenants (for example, be connected to the Internet if you???re a hosting service provider, or a corporate network in an enterprise environment).
+The following steps to install and configure Windows Azure Pack (WAP) should be performed on the machine where you wish to host the web portal for your tenants. This machine will need to be able to reach the SPF server you installed in the previous section, and be reachable by your tenants (for example, be connected to the Internet if you're a hosting service provider, or a corporate network in an enterprise environment).
 
 1.  Plan for your installation of WAP by reviewing its [system requirements](https://technet.microsoft.com/library/dn296442.aspx) and installing the [prerequisite software](https://technet.microsoft.com/en-us/library/dn469335.aspx).
 
 2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine you are installing WAP onto is not connected to the Internet, you should also download this on an internet-connected machine and follow the [offline installation instructions](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
 
-3.  Open the Web Platform Installer and find ???Windows Azure Pack: Portal and API Express??? under the Products tab. Click **Add** then **Install** at the bottom of the window.
+3.  Open the Web Platform Installer and find **Windows Azure Pack: Portal and API Express** under the Products tab. Click **Add** then **Install** at the bottom of the window.
 
 4.  Proceed through the installation process. After installation completes, the configuration site??(*https://&lt;wapserver&gt;:30101/*)??opens in your web browser. On this website, provide information about your SQL server and finish configuring WAP.
 
@@ -93,7 +93,7 @@ Before you use Windows Azure Pack, you should already have it installed and conf
 
 2.  In the left pane, click **VM Clouds**.
 
-3.  Connect Windows Azure Pack to the SAP to the Service Provider Foundation instance you already configured by clicking ???Register System Center Service Provider Foundation.??? You will need to specify the URL for Service Provider Foundation, as well as a username and password.
+3.  Connect Windows Azure Pack to the SAP to the Service Provider Foundation instance you already configured by clicking **Register System Center Service Provider Foundation**. You will need to specify the URL for Service Provider Foundation, as well as a username and password.
 
     ![Register System Center Service Provider Foundation](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-01-register-spf.png)
 
@@ -119,15 +119,15 @@ In order to allow tenants to create VMs in WAP, you must first create a hosting 
 
 7.  On the next page, under **plan services**, click **Virtual Machine Clouds**. This opens the page where you can configure quotas for this plan.
 
-8.  Under **basic**, select the VMM Management Server and Virtual Machine Cloud you wish to offer to your tenants. Clouds that can offer shielded VMs will be displayed with ???(shielding supported)??? next to their name.
+8.  Under **basic**, select the VMM Management Server and Virtual Machine Cloud you wish to offer to your tenants. Clouds that can offer shielded VMs will be displayed with **(shielding supported)** next to their name.
 
 9.  Select the quotas you want to apply in this Plan. (For example, limits on CPU core and RAM usage). Make sure to leave the **Allow Virtual Machines To Be Shielded** checkbox selected.
 
     ![Settings for virtual machine clouds in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
     
-10.  Scroll down to the section titled ???**templates**???, and then select one or more templates to offer to your tenants. You can offer both shielded and unshielded templates to tenants, but a shielded template must be offered to give tenants end-to-end assurances about the integrity of the VM and their secrets.
+10.  Scroll down to the section titled **templates**, and then select one or more templates to offer to your tenants. You can offer both shielded and unshielded templates to tenants, but a shielded template must be offered to give tenants end-to-end assurances about the integrity of the VM and their secrets.
 
-11.  In the ???**networks**??? section, add one or more networks for your tenants.
+11.  In the **networks** section, add one or more networks for your tenants.
 
 12.  After setting any other settings or quotas for the Plan, click **Save** at the bottom.
 

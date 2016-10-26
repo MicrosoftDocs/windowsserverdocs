@@ -37,9 +37,6 @@ FaultDomainAwareness  : StorageScaleUnit
 ResiliencySettingName : Mirror  
 ```  
 
-> [!NOTE]  
-> Do not change the **FaultDomainAwarenessDefault** and **FaultDomainAwareness** values in a Storage Spaces Direct deployment.  
-
 The FaultDomainAwareness property on the virtual disk controls data placement in all scenarios, including initial data allocation when creating the virtual disk,  when repairing a virtual disk from a disk, enclosure or node failure, when rebalancing virtual disks in a storage pool. All of these operations will take into account the "StorageScaleUnit" fault domain and ensure that copies of data are placed on different nodes.  
 
 Let us examine some basics about virtual disks. A virtual disk consists of extents, each of which are 1GB in size. A 100GB virtual disk will therefore consist of 100 1GB extents. If the virtual disk is mirrored (using ResiliencySettingName) there will be multiple copies of each  extent. The number of copies of the extent (using NumberOfDataCopes) can be two or three. All in all, a 100GB mirrored virtual disk with three data copes will consume 300 extents. The placement of extents is governed by the fault domain, which in Storage Spaces Direct is nodes (StorageScaleUnit), so the three copies of an extent (A) will be placed on three different storage nodes e.g. node 1, 2 and 3 in the diagram below. Another extent (B) of the same virtual disk might have its three copies placed on different nodes, e.g. 1, 3, and 4 and so on. This means that a virtual disk might have its extents distributed all storage nodes and the copies of each extent is placed on different nodes. Figure 1 below illustrates a four node deployment with a mirrored virtual disk with 3 copies and an example layout of extents:  

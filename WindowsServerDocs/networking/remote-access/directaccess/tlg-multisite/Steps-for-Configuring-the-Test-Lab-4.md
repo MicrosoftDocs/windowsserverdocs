@@ -1,5 +1,7 @@
 ---
 title: Steps for Configuring the Test Lab
+description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

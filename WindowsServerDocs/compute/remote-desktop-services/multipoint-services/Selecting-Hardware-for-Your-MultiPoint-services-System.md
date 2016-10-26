@@ -1,5 +1,6 @@
 ---
 title: Selecting Hardware for Your MultiPoint Services System
+description: Hardware considerations for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

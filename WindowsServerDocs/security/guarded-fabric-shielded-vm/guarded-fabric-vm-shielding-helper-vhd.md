@@ -12,7 +12,7 @@ ms.technology: security-guarded-fabric
 
 >Applies To: Windows Server 2016
 
-<!- This comment creates a break between the Applies To above and the Important note below. ->
+<!-- This comment creates a break between the Applies To above and the Important note below. -->
 
 >**Important**&nbsp;&nbsp;You cannot convert existing non-shielded VMs to Shielded VMs. There is no workaround at this time. If you need to deploy Shielded VMs, create new ones directly from shielded templates. For more information, see [Deploy shielded VMs](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview). 
 
@@ -22,7 +22,7 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 ## Prepare Helper VHD
 
-1.  On a machine with Hyper-V and the Remote Server Administration Tools feature ???Shielded VM Tools??? installed, create a new generation 2 VM with a blank VHDX and install Windows Server 2016 on it using the Windows Server ISO installation media. This VM should not be shielded and cannot use the Nano server installation option (it must be Server Core or Server with Desktop Experience).
+1.  On a machine with Hyper-V and the Remote Server Administration Tools feature **Shielded VM Tools** installed, create a new generation 2 VM with a blank VHDX and install Windows Server 2016 on it using the Windows Server ISO installation media. This VM should not be shielded and cannot use the Nano server installation option (it must be Server Core or Server with Desktop Experience).
 
     >**Important**&nbsp;&nbsp;The VM Shielding Helper VHD **must not** be related to the template disks you created in [Hosting service provider creates a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md). If you re-use a template disk, there will be a disk signature collision during the shielding process because both disks will have the same GPT disk identifier. You can avoid this by creating a new (blank) VHD and installing Windows Server 2016 onto it using your ISO installation media.
 

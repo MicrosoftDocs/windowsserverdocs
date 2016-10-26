@@ -1,6 +1,6 @@
 ---
 title: A Replica server must be configured to accept replication requests
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
