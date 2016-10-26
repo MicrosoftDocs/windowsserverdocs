@@ -866,7 +866,7 @@
 ####### [Step 2: Plan the DirectAccess Deployment](networking/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md)
 ###### [Enable DirectAccess](networking/remote-access/directaccess/add-to-existing-vpn/Enable-DirectAccess.md)
 ####### [Step 1: Configure the DirectAccess Infrastructure](networking/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md)
-####### [Step 2: Configure the DirectAccess Server](networking/remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md)
+####### [Step 2: Configure the DirectAccess-VPN Server](networking/remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md)
 ####### [Step 3: Verify the Deployment](networking/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md)
 #### [RAS Gateway](networking/remote-access/ras-gateway/RAS-Gateway.md)
 ##### [GRE Tunneling in Windows Server 2016](networking/remote-access/ras-gateway/gre-tunneling-windows-server.md)
