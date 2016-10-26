@@ -49,7 +49,7 @@ The table below shows the supported RD Virtualization Hosts operating systems an
 | RDVH OS Version        | Guest OS Version           |
 | ------------- |-------------|
 | Windows Server 2016      | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
-| Windows Server 2012 R2   | Windows 7 SP1, Windows 8, Windows 8.1 |
+| Windows Server 2012 R2   | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
 | Windows Server 2012      | Windows 7 SP1, Windows 8, Windows 8.1 |
 
 > [!NOTE]  
@@ -57,5 +57,26 @@ The table below shows the supported RD Virtualization Hosts operating systems an
 > - You can have separate homogeneous collections with different guest OS versions on the same host. 
 > - VM templates must be created on a Windows Server 2016 Hyper-V host to used as guest OS on a Windows Server 2016 Hyper-V host.
   
+## VDI deployment - supported security configurations
+Windows 10 and Windows Server 2016 have new layers of protection built into the operating system to further safeguard against security breaches, help block malicious attacks and enhance the security of virtual machines, applications, and data.
 
+The following table outlines which of these new features are supported in a VDI deployment using RDS.
+
+|  VDI collection  type               |  Managed  pooled |  Managed  personal |  Unmanaged  pooled                                     |  Unmanaged  personal                                    |
+|-------------------------------------|------------------|--------------------|--------------------------------------------------------|--------------------------------------------------------|
+| [Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)                    | Yes              | Yes                | Yes                                                    | Yes                                                    |
+| [Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                        | Yes              | Yes                | Yes                                                    | Yes                                                    |
+| [Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | No               | No                 | No                                                     | No                                                     |
+| [Shielded & Encryption Supported VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
+
+### Remote Credential Guard:
+Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker.
+
+### Shielded VMs and Encryption Supported VMs: 
+
+- Shielded VMs are not supported in Remote Desktop Services VDI 
+
+For leveraging Encryption Supported VMs:
+- Use an unmanaged collection and a provisioning technology outside of the Remote Desktop Services collection creation process to provision the virtual machines. 
+- User Profile Disks are not supported as they rely on differential disks 
 
