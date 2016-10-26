@@ -167,16 +167,16 @@ You will now create a normal failover cluster. After configuration, validation, 
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements.  
 
     For example, to validate two of the proposed stretch cluster nodes that each have a **D:** and **E:** volume and run the test for 30 minutes:
-    1. Move all available storage to **SR-SRV01**.  
-     2. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-     3. Add the online storage to that empty role named **New Role**.  
-     4. Move all available storage to **SR-SRV03**.  
-     5. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-     6. Move the empty **New Role (2)** to **SR-SRV03**.   
-     7. Add the online storage to that empty role named **New Role (2)**.  
-     8. Now you have mounted all your storage with drive letters, and can evaluate the cluster with `Test-SRTopology`.       
+    1. Move all available storage to **SR-SRV01**.
+    2. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
+    3. Add the online storage to that empty role named **New Role**.
+    4. Move all available storage to **SR-SRV03**.
+    5. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
+    6. Move the empty **New Role (2)** to **SR-SRV03**.
+    7. Add the online storage to that empty role named **New Role (2)**.
+    8. Now you have mounted all your storage with drive letters, and can evaluate the cluster with `Test-SRTopology`.
 
-        For example:      
+        For example:
 
             MD c:\temp  
 
