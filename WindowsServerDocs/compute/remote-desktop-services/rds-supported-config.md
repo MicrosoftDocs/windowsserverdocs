@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 10/20/2016  
+ms.date: 10/26/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
