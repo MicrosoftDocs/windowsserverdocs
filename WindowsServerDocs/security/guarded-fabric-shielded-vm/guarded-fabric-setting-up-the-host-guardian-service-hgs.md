@@ -503,11 +503,11 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
         
 #### Capture the TPM baseline for each unique class of hardware
 
-A TPM baseline is required for each unique class of hardware in your datacenter fabric.
+A TPM baseline is required for each unique class of hardware in your datacenter fabric. As before, we recommend that you use a "reference host" that represents each unique class of hardware configuration in your datacenter. You do not need to collect the baseline for each individual host in your environment.
 
->**Important**&nbsp;&nbsp;As before, we recommend that you use a "reference host" that represents each unique class of hardware configuration in your datacenter. You do not need to collect the baseline for each individual host in your environment.
+1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed.
 
-1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed. You should verify in a lab environment that the reference host can run the Host Guardian Hyper-V Support feature.
+    >**Warning**&nbsp;&nbsp;The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. We strongly recommend testing this configuration in your lab before enabling this feature. Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error).
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
