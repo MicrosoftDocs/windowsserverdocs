@@ -18,7 +18,7 @@ manager: dongill
 
 > Applies To: Windows Server 2016
 
-When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server - for example, you may have an existing Windows Server 2012 R2 RDS deployment but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for vGPU or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
+When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server - for example, you may have an existing Windows Server 2012 R2 RDS deployment but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL\OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
 
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server 2016.
 
@@ -36,6 +36,20 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 - For the RD Connection Broker - Windows Server 2016 removed the restriction for the number of Connection Brokers you can have in a deployment. (Windows Server 2012 R2 was limited to 2 Connection Brokers.)
 
+- If you are creating a highly available environment, all of your Connection Brokers need to be at the same OS level.
+
+## Support for GPU Acceleration with Hyper-V
+The following table details the support for GPU acceleration on virtual machines.
+
+|VM guest OS  |Windows Server 2012 R2  Hyper-V RemoteFX vGPU  (Gen 1 VM) |  Windows Server 2016  Hyper-V RemoteFX vGPU (Gen 2 VM) |  Windows Server 2016  Hyper-V Discrete Device Assignment (Gen 2 VM) |
+|-----------------------------|------------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------|
+| Windows 7 SP1               | Yes                                                        | No                                                     | No                                                                  |
+| Windows 8.1                 | Yes                                                        | No                                                     | No                                                                  |
+| Windows 10 1511 Update      | Yes                                                        | Yes                                                    | Yes                                                                 |
+| Windows Server 2012 R2      | Yes                                                        | No                                                     | Yes (requires KB 3133690)                                           |
+| Windows Server 2016         | Yes                                                        | Yes                                                    | Yes                                                                 |
+| Windows Server 2012 R2 RDSH | No                                                         | No                                                     | Yes (requires KB 3133690)                                           |
+| Windows Server 2016 RDSH    | No                                                         | No                                                     | Yes                                                                 |
 ## VDI deployment – supported guest OSs 
 Windows Server 2016 RD Virtualization Host servers support the following guest OSs:
 
@@ -56,27 +70,5 @@ The table below shows the supported RD Virtualization Hosts operating systems an
 > - Windows Server 2016 Remote Desktop Services does not support heterogeneous collections. All VMs in a collection must be same OS version. 
 > - You can have separate homogeneous collections with different guest OS versions on the same host. 
 > - VM templates must be created on a Windows Server 2016 Hyper-V host to used as guest OS on a Windows Server 2016 Hyper-V host.
-  
-## VDI deployment - supported security configurations
-Windows 10 and Windows Server 2016 have new layers of protection built into the operating system to further safeguard against security breaches, help block malicious attacks and enhance the security of virtual machines, applications, and data.
 
-The following table outlines which of these new features are supported in a VDI deployment using RDS.
-
-|  VDI collection  type               |  Managed  pooled |  Managed  personal |  Unmanaged  pooled                                     |  Unmanaged  personal                                    |
-|-------------------------------------|------------------|--------------------|--------------------------------------------------------|--------------------------------------------------------|
-| [Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)                    | Yes              | Yes                | Yes                                                    | Yes                                                    |
-| [Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                        | Yes              | Yes                | Yes                                                    | Yes                                                    |
-| [Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | No               | No                 | No                                                     | No                                                     |
-| [Shielded & Encryption Supported VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
-
-### Remote Credential Guard:
-Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker.
-
-### Shielded VMs and Encryption Supported VMs: 
-
-- Shielded VMs are not supported in Remote Desktop Services VDI 
-
-For leveraging Encryption Supported VMs:
-- Use an unmanaged collection and a provisioning technology outside of the Remote Desktop Services collection creation process to provision the virtual machines. 
-- User Profile Disks are not supported as they rely on differential disks 
-
+For more information about creating VDI deployment of Remote Desktop Services, check out [Supported configurations for Remote Desktop Services for Windows 10 VDI](rds-vdi-supported-config.md).
