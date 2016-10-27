@@ -18,6 +18,7 @@
 ##### [Developing PowerShell Cmdlets for Nano Server](get-started/Developing-PowerShell-Cmdlets-for-Nano-Server.md)
 #### [Troubleshooting Nano Server](get-started/Troubleshooting-Nano-Server.md)
 ### [Install Server Core](get-started/Getting-Started-with-Server-Core.md)
+#### [Configure Server Core with Sconfig.cmd](get-started/Sconfig-on-WS2016.md)
 ### [Install Server with Desktop Experience](get-started/Getting-Started-with-Server-with-Desktop-Experience.md)
 ## [Customer Experience Guides for Windows Server 2016](get-started/customer-experience-guides.md)
 ## [What's New in Windows Server 2016](get-started/What-s-New-in-Windows-Server-2016.md)
