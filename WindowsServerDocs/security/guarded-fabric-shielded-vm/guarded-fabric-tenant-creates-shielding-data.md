@@ -107,7 +107,7 @@ There are two ways to acquire the VSC of a template disk:
 
         Save-VolumeSignatureCatalog -TemplateDiskPath templateDisk.vhdx -VolumeSignatureCatalogPath templateDisk.vsc
 
-## Designate trusted fabrics
+## Select trusted fabrics
 
 The last component in the shielding data file relates to the owner and guardians of a VM. Guardians are used to designate both the owner of a shielded VM and the guarded fabrics on which it is authorized to run.
 
@@ -119,7 +119,7 @@ You or your hosting service provider can obtain the guardian metadata from HGS b
 
         Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
 
--  Obtain the guardian metadata from VMM using the VMM PowerShell cmdlets:
+-  Obtain the guardian metadata from VMM using the VMM Windows PowerShell cmdlets:
 
         $relecloudmetadata = Get-SCGuardianConfiguration
 
