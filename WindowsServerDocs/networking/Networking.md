@@ -26,7 +26,6 @@ When you manage networks as a software defined resource, you can describe an app
 
 Windows Server 2016 adds the following new networking technologies:
 
-
 - Software Defined Networking: Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Network Controller allows you to use Network Function Virtualization to easily deploy virtual machines \(VMs\) for Software Load Balancing \(SLB\) to optimize network traffic loads for your tenants, and RAS Gateways to provide tenants with the connectivity options they need between Internet, on-prem, and cloud resources. You can also use Network Controller to manage Datacenter Firewall on VMs and Hyper-V hosts.
 
 - Network Platform: Using new features for existing Network Platform technologies, you can use DNS Policy to customize your DNS server responses to queries, use a converged NIC that handles combined Remote Direct Memory Access \(RDMA\) and Ethernet traffic, use Switch Embedded Teaming \(SET\) to create Hyper-V Virtual Switches connected to RDMA NICs, and use IP Address Management \(IPAM\) to manage DNS zones and servers as well as DHCP and IP addresses.
@@ -101,6 +100,10 @@ IP Address Management \(IPAM\) is an integrated suite of tools to enable end-to-
 ### [Network Load Balancing](technologies/Network-Load-Balancing.md)
 
 Network Load Balancing \(NLB\) distributes traffic across several servers using the TCP/IP networking protocol. For non-SDN deployments, NLB ensures that stateless applications, such as Web servers running Internet Information Services \(IIS\), are scalable by adding more servers as the load increases.
+
+### [Network Offload and Optimization Technologies](technologies/network-offload.md)
+
+Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
