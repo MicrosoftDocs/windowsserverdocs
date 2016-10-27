@@ -110,6 +110,7 @@
 ###### [Configure the current RD Web and Gateway virtual machine for load balancing](compute/remote-desktop-services/Configure-the-current-RD-Web-and-Gateway-virtual-machine-for-load-balancing.md)
 ##### [Deploy RemoteApp programs](compute/remote-desktop-services/Deploy-RemoteApp-programs.md)
 ###### [Add the RDSH Server, create a collection, and publish the RemoteApp programs](compute/remote-desktop-services/Add-the-RDSH-Server-create-a-collection-and-publish-the-RemoteApp-programs.md)
+##### [Deploy a two-node Storage Spaces Direct file system for UPD storage](compute/remote-desktop-services/rds-storage-spaces-direct-deployment.md)
 ##### [Deploy and manage a personal session desktops environment](compute/remote-desktop-services/rds-personal-session-desktops.md)
 ##### [License your Remote Desktop deployment](compute/remote-desktop-services/rds-client-access-license.md)
 ###### [Activate the license server](compute/remote-desktop-services/rds-activate-license-server.md)
