@@ -80,40 +80,48 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
 9. Create an [Azure storage account to be your cloud witness](https://blogs.msdn.microsoft.com/clustering/2014/11/13/introducing-cloud-witness/). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
 10. Set up the S2D file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
    1. Install Failover Clustering Feature and File Server Feature on the two file server cluster node VMs:
+
       ```powershell
       $nodes = ("my-fsn1", "my-fsn2")
       icm $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
       icm $nodes {Install-WindowsFeature FS-FileServer} 
       ```
    2. Validate cluster node VMs and create 2-node SOFS cluster:
+
       ```powershell
       Test-Cluster -node $nodes
       New-Cluster -Name MY-CL1 -Node $nodes –NoStorage –StaticAddress [new address within your addr space]
       ``` 
    3. Configure the cloud witness. Use your cloud witness storage account name and access key.
+
       ```powershell
       Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
       ```
    4. Enable Storage Spaces Direct.
+
       ```powershell
       Enable-ClusterS2D -CacheMode Disabled -AutoConfig:0 -SkipEligibilityChecks 
       ```
    5. Create a storage pool.
+
       ```powershell
       New-StoragePool -StorageSubSystemFriendlyName *Cluster* -FriendlyName S2D -ProvisioningTypeDefault Fixed -ResiliencySettingNameDefault Mirror -PhysicalDisk (Get-PhysicalDisk | ? CanPool -eq $true) 
       ```
    6. Create a virtual disk volume.
+
       ```powershell
       New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
       ```
       To view information about the cluster shared volume on the SOFS cluster, run the following cmdlet:
+
       ```powershell
       Get-ClusterSharedVolume
       ```
    7. Create a new SMB file share on the SOFS cluster.
+
       ```powershell
       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
       ```
 
-You now have a share at \\my-sofs1\UpdStorage, which you can use for UPD storage when you [enable UPD](http://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) for your users. 
+You now have a share at &#92;\my-sofs1\UpdStorage, which you can use for UPD storage when you [enable UPD](http://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) for your users. 
