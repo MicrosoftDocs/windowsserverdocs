@@ -26,7 +26,7 @@ For older FreeBSD releases (before 10.0), Microsoft provides ports that contain 
 
 > [!TIP]
 > - Download [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016) from the Evaluation Center.
-> - Download[Microsoft Hyper-V Server 2016](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-technical-preview) from the Evaluation Center.
+> - Download[Microsoft Hyper-V Server 2016](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-2016) from the Evaluation Center.
 
 The goal of this content is to provide information that helps facilitate your Linux or FreeBSD deployment on Hyper-V. Specific details include:
 
