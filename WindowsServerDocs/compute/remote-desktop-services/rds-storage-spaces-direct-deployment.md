@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 09/20/2016
+ms.date: 10/27/2016
 manager: scottman
 ---
 # Deploy a two-node S2D SOFS for UPD storage in Azure
@@ -100,14 +100,10 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    4. Enable Storage Spaces Direct.
 
       ```powershell
-      Enable-ClusterS2D -CacheMode Disabled -AutoConfig:0 -SkipEligibilityChecks 
+      Enable-ClusterS2D -CacheMode Disabled 
       ```
-   5. Create a storage pool.
-
-      ```powershell
-      New-StoragePool -StorageSubSystemFriendlyName *Cluster* -FriendlyName S2D -ProvisioningTypeDefault Fixed -ResiliencySettingNameDefault Mirror -PhysicalDisk (Get-PhysicalDisk | ? CanPool -eq $true) 
       ```
-   6. Create a virtual disk volume.
+   5. Create a virtual disk volume.
 
       ```powershell
       New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
@@ -117,7 +113,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       ```powershell
       Get-ClusterSharedVolume
       ```
-   7. Create a new SMB file share on the SOFS cluster.
+   6. Create a new SMB file share on the SOFS cluster.
 
       ```powershell
       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
