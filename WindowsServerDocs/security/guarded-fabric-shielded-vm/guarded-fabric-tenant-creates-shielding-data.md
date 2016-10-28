@@ -12,7 +12,7 @@ ms.technology: security-guarded-fabric
 
 >Applies To: Windows Server 2016
 
-This topic provided information about what is included in a shielding data file, how to create a shielding data file, and how to create a shielded VM in VMM. To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+This topic provides information about what is included in a shielding data file, how to create a shielding data file, and how to create a shielded VM in VMM. To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 For a diagram of the contents of a shielding data file, see [What is shielding data and why is it necessary?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
@@ -28,7 +28,7 @@ Since tenants are only able to connect to their shielded VMs using Remote Deskto
 
 One way to verify you are connecting to the intended server is to install and configure a certificate for Remote Desktop Services to present when you initiate a connection. The client machine connecting to the server will check whether it trusts the certificate and show a warning if it does not. Generally, to ensure the connecting client trusts the certificate, RDP certificates are issued from the tenant's PKI. More information about [Using certificates in Remote Desktop Services](https://technet.microsoft.com/library/dn781533.aspx) can be found on TechNet.
 
-<!- The previous link comes from Windows 2012 R2 content, but as of Sept 2016, there isn't a more recent link that covers the same information. ->
+<!-- The previous link comes from Windows 2012 R2 content, but as of Sept 2016, there isn't a more recent link that covers the same information. -->
 
 >**Note**&nbsp;&nbsp;When selecting an RDP certificate to include in your shielding data file, be sure to use a wildcard certificate. One shielding data file may be used to create an unlimited number of VMs. Since each VM will share the same certificate, a wildcard certificate ensures the certificate will be valid regardless of the VM's hostname.
 
@@ -97,17 +97,17 @@ There are two ways to acquire the VSC of a template disk:
 
 -  The hoster (or tenant, if the tenant has access to VMM) uses the VMM PowerShell cmdlets to save the VSC and gives it to the tenant. This can be performed on any machine with the VMM console installed and configured to manage the hosting fabric?' VMM environment. The PowerShell cmdlets to save the VSC are:
 
-    `$disk = Get-SCVirtualHardDisk -Name "templateDisk.vhdx"`
+        $disk = Get-SCVirtualHardDisk -Name "templateDisk.vhdx"
     
-    `$vsc = Get-SCVolumeSignatureCatalog -VirtualHardDisk $disk`
+        $vsc = Get-SCVolumeSignatureCatalog -VirtualHardDisk $disk
     
-    `$vsc.WriteToFile(".\templateDisk.vsc")`
+        $vsc.WriteToFile(".\templateDisk.vsc")
 
 -  The tenant has access to the template disk file. This may be the case if the tenant creates their own template disk which is uploaded to a hosting service provider or if the tenant can download the hoster's template disk. In this case, without VMM in the picture, the tenant would run the following cmdlet (installed with the Shielded VM Tools feature, part of Remote Server Administration Tools):
 
-    `Save-VolumeSignatureCatalog -TemplateDiskPath templateDisk.vhdx -VolumeSignatureCatalogPath templateDisk.vsc`
+        Save-VolumeSignatureCatalog -TemplateDiskPath templateDisk.vhdx -VolumeSignatureCatalogPath templateDisk.vsc
 
-## Designate trusted fabrics
+## Select trusted fabrics
 
 The last component in the shielding data file relates to the owner and guardians of a VM. Guardians are used to designate both the owner of a shielded VM and the guarded fabrics on which it is authorized to run.
 
@@ -117,13 +117,13 @@ You or your hosting service provider can obtain the guardian metadata from HGS b
 
 -  Obtain the guardian metadata directly from HGS by running the following Windows PowerShell command, or browsing to the website and saving the XML file that is displayed:
 
-    `Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml`
+        Invoke-WebRequest 'http://hgs.relecloud.com/KeyProtection/service/metadata/2014-07/metadata.xml' -OutFile .\RelecloudGuardian.xml
 
--  Obtain the guardian metadata from VMM using the VMM PowerShell cmdlets:
+-  Obtain the guardian metadata from VMM using the VMM Windows PowerShell cmdlets:
 
-    `$relecloudmetadata = Get-SCGuardianConfiguration`
+        $relecloudmetadata = Get-SCGuardianConfiguration
 
-    `$relecloudmetadata.InnerXml | Out-File .\RelecloudGuardian.xml -Encoding UTF8`
+        $relecloudmetadata.InnerXml | Out-File .\RelecloudGuardian.xml -Encoding UTF8
 
 Obtain the guardian metadata files for each guarded fabric you wish to authorize your shielded VMs to run on before continuing.
 
@@ -133,7 +133,7 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
 1.  Install **Remote Server Administration Tools &gt; Feature Administration Tools &gt; Shielded VM Tools** on your machine using Server Manager or the following Windows PowerShell command:
 
-    `Install-WindowsFeature RSAT-Shielded-VM-Tools`
+        Install-WindowsFeature RSAT-Shielded-VM-Tools
 
 2.  Open the Shielding Data File Wizard from the Administrator Tools section on your Start menu or by running the following executable **C:\\Windows\\System32\\ShieldingDataFileWizard.exe**.
 

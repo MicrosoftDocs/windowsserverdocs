@@ -1,12 +1,12 @@
 ---
 title: Stretch Cluster Replication Using Shared Storage
 ms.prod: windows-server-threshold
-manager: dongill
-ms.author: JGerend
+manager: eldenc
+ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
-author: kumudd
-ms.date: 08/18/2016
+author: nedpyle
+ms.date: 10/26/2016
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
@@ -79,10 +79,10 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         On **SR-SRV04** or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles for a stretch cluster on the four nodes and restart them:  
 
-        ```  
+        ```PowerShell  
         $Servers = 'SR-SRV01','SR-SRV02','SR-SRV03','SR-SRV04'  
 
-        $Servers | foreach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,Failover-Clustering,FS-File-Server -IncludeManagementTools -restart }  
+        $Servers | foreach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,Failover-Clustering,FS-FileServer -IncludeManagementTools -restart }  
 
         ```  
 
@@ -122,40 +122,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         2.  Provision the storage using your vendor documentation.  
 
-9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
-
-    This is by-design behavior in Windows Server 2016.
-
-10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements.  
-
-    For example, to validate two of the proposed stretch cluster nodes that each have a **D:** and **E:** volume and run the test for 30 minutes:  
-
-    1. Move all available storage to **SR-SRV01**.  
-     2. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-     3. Add the online storage to that empty role named **New Role**.  
-     4. Move all available storage to **SR-SRV03**.  
-     5. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-     6. Move the empty **New Role (2)** to **SR-SRV03**.   
-     7. Add the online storage to that empty role named **New Role (2)**.  
-     8. Now you have mounted all your storage with drive letters, and can evaluate the cluster with `Test-SRTopology`.       
-
-        For example:      
-
-            MD c:\temp  
-
-            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
-
-      > [!IMPORTANT]
-      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:   
-        `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
-
-11. Examine the **TestSrTopologyReport-< date >.html** report to ensure you meet the Storage Replica requirements and note the initial sync time prediction and log recommendations.  
-
-      ![Screen showing the replication report](./media/Stretch-Cluster-Replication-Using-Shared-Storage/SRTestSRTopologyReport.png)
-
-11.    Return the disks to Available Storage and remove the temporary empty roles.
-
-## Configure a Hyper-V Failover Cluster  or a File Server for a General Use Cluster
+## Configure a Hyper-V Failover Cluster or a File Server for a General Use Cluster
 
 After you setup your server nodes, the next step is to create one of the following types of clusters:  
 *  [Hyper-V failover cluster](#BKMK_HyperV)  
@@ -192,6 +159,38 @@ You will now create a normal failover cluster. After configuration, validation, 
 6.  Add one disk in the Redmond site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
 7.  Using the [Deploy a Hyper-V Cluster](http://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+
+9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+
+    This is by-design behavior in Windows Server 2016.
+
+10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements.  
+
+    For example, to validate two of the proposed stretch cluster nodes that each have a **D:** and **E:** volume and run the test for 30 minutes:
+    1. Move all available storage to **SR-SRV01**.
+    2. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
+    3. Add the online storage to that empty role named **New Role**.
+    4. Move all available storage to **SR-SRV03**.
+    5. Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.
+    6. Move the empty **New Role (2)** to **SR-SRV03**.
+    7. Add the online storage to that empty role named **New Role (2)**.
+    8. Now you have mounted all your storage with drive letters, and can evaluate the cluster with `Test-SRTopology`.
+
+        For example:
+
+            MD c:\temp  
+
+            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
+
+      > [!IMPORTANT]
+      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:   
+        `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`  
+
+11. Examine the **TestSrTopologyReport-< date >.html** report to ensure you meet the Storage Replica requirements and note the initial sync time prediction and log recommendations.  
+
+      ![Screen showing the replication report](./media/Stretch-Cluster-Replication-Using-Shared-Storage/SRTestSRTopologyReport.png)
+
+11.    Return the disks to Available Storage and remove the temporary empty roles.
 
 8.  Once satisfied, remove the test virtual machine. Add any real test virtual machines needed for further evaluation to a proposed source node.  
 
@@ -256,6 +255,10 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 4.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](http://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
 
+9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+
+    This is by-design behavior in Windows Server 2016.
+
 5.  Using the [Deploy a Hyper-V Cluster](http://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
 6.  Once satisfied, remove the test VM. Add any real test virtual machines needed for further evaluation to a proposed source node.  
@@ -310,7 +313,11 @@ You will now create a normal failover cluster. After configuration, validation, 
     >[!NOTE]
     > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
     >[!NOTE]
-    >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).   |  
+    >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx). 
+
+9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+
+    This is by-design behavior in Windows Server 2016.
 
 1.  Ensure that you have optimally configured cluster networking.  
     >[!NOTE]
@@ -375,7 +382,12 @@ You will now create a normal failover cluster. After configuration, validation, 
 
    For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).   
 
- 4. Ensure that you have optimally configured cluster networking.  
+9.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
+
+    This is by-design behavior in Windows Server 2016.
+
+4. Ensure that you have optimally configured cluster networking.  
+
 5.  Configure a File Server role. For example:   
 
         Get-ClusterResource  

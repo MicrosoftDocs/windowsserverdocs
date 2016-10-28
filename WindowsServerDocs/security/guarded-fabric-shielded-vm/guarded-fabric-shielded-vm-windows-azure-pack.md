@@ -41,7 +41,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 When the preceding steps are complete, tenants can take the following steps:
 
-<!- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. ->
+<!-- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. -->
 
 1. **Tenants**: subscribe to one or more plans offered in Windows Azure Pack.
 
@@ -65,7 +65,7 @@ When the preceding steps are complete, tenants can take the following steps:
 
 System Center 2016 - Service Provider Foundation (SPF) allows Windows Azure Pack to communicate with your VMM servers that manage the hosting fabric. Before installing Windows Azure Pack, you must set up System Center 2016 - SPF. For information about installing SPF, see [Deploying Service Provider Foundation - SPF](https://technet.microsoft.com/system-center-docs/spf/deploy/deploying-service-provider-foundation).
 
-<!- I have a question out to Erik Kjerland about whether the blog post in the following sentence is still helpful. If it's not, delete the sentence. ->
+<!-- I have a question out to Erik Kjerland about whether the blog post in the following sentence is still helpful. If it's not, delete the sentence. -->
 
 If you have issues with integrating Windows Azure Pack and Service Provider Foundation, see [Troubleshooting Windows Azure Pack, SPF and VMM](https://blogs.technet.microsoft.com/privatecloud/2013/11/08/troubleshooting-windows-azure-pack-spf-vmm/).
 

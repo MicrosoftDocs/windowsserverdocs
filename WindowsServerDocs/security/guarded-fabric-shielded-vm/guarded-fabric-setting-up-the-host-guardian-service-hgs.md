@@ -304,7 +304,7 @@ Review the results paying careful attention to any test that failed. If no failu
 
     "Overall Result: Pass"
 
-<!- If/when a better link is available for the troubleshooting guide, replace the link in the following sentence. ->
+<!-- If/when a better link is available for the troubleshooting guide, replace the link in the following sentence. -->
 
 If failures did occur, please review the remediation steps provided or see the [Troubleshooting Guide](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-70c5b471).
 
@@ -413,7 +413,7 @@ We recommend that you elect a "reference host" to represent each unique class of
 
 >**Important**&nbsp;&nbsp;Before beginning these steps, be sure to review [Prerequisites for Hyper-V hosts that will become guarded hosts](guarded-fabric-deployment-prerequisites.md#prerequisites-for-hyper-v-hosts-that-will-become-guarded-hosts).
 
-<!- This comment creates a break between the Important above and the Nano Server note below. ->
+<!-- This comment creates a break between the Important above and the Nano Server note below. -->
 
 >**Nano Server Only**&nbsp;&nbsp;If you are using Nano Server to host your shielded VMs, there are special steps you must take to acquire the attestation artifacts listed in this section. For more information, see [Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md).
 
@@ -503,11 +503,11 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
         
 #### Capture the TPM baseline for each unique class of hardware
 
-A TPM baseline is required for each unique class of hardware in your datacenter fabric.
+A TPM baseline is required for each unique class of hardware in your datacenter fabric. As before, we recommend that you use a "reference host" that represents each unique class of hardware configuration in your datacenter. You do not need to collect the baseline for each individual host in your environment.
 
->**Important**&nbsp;&nbsp;As before, we recommend that you use a "reference host" that represents each unique class of hardware configuration in your datacenter. You do not need to collect the baseline for each individual host in your environment.
+1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed.
 
-1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed. You should verify in a lab environment that the reference host can run the Host Guardian Hyper-V Support feature.
+    >**Warning**&nbsp;&nbsp;The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. We strongly recommend testing this configuration in your lab before enabling this feature. Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error).
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
