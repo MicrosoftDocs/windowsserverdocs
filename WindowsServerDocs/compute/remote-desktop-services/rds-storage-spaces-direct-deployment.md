@@ -102,7 +102,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       ```powershell
       Enable-ClusterS2D -CacheMode Disabled 
       ```
-      ```
+      
    5. Create a virtual disk volume.
 
       ```powershell
