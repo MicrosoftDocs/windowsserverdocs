@@ -1,6 +1,6 @@
 ---
-title: Supported configurations for Remote Desktop Services for Windows 10 VDI
-description: Provides information about supported configurations for RDS in Windows Server 2016.
+title: Supported Windows 10 security configurations for Remote Desktop Services VDI
+description: Provides information about supported configurations for Windows 10 VDI with RDS in Windows Server 2016.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.assetid: 8f164f5d-a498-4f91-a12f-3e01d554f810
 author: lizap
 manager: dongill
 ---
-# Supported configurations for Remote Desktop Services for Windows 10 VDI
+# Supported Windows 10 security configurations for Remote Desktop Services VDI
 
 > Applies To: Windows Server 2016
 
@@ -33,7 +33,8 @@ The following table outlines which of these new features are supported in a VDI 
 | [Shielded & Encryption Supported VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
 
 ## Remote Credential Guard:
-Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker.
+
+Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker and Remote Desktop Gateway.
 
 ## Shielded VMs and Encryption Supported VMs: 
 
