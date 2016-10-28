@@ -71,4 +71,4 @@ The table below shows the supported RD Virtualization Hosts operating systems an
 > - You can have separate homogeneous collections with different guest OS versions on the same host. 
 > - VM templates must be created on a Windows Server 2016 Hyper-V host to used as guest OS on a Windows Server 2016 Hyper-V host.
 
-For more information about creating VDI deployment of Remote Desktop Services, check out [Supported configurations for Remote Desktop Services for Windows 10 VDI](rds-vdi-supported-config.md).
+For more information about creating VDI deployment of Remote Desktop Services, check out [Supported Windows 10 security configurations for Remote Desktop Services VDI](rds-vdi-supported-config.md).
