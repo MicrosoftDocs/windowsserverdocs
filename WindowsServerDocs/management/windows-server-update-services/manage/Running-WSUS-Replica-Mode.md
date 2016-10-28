@@ -35,11 +35,5 @@ If your WSUS server is running in replica mode, you will be able to perform only
 
 -   Running all standard WSUS reports available on replica mode servers
 
-## See also:
-
--   [Windows Server Update Services](../get-started/Windows-Server-Update-Services-WSUS.md)
-
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
-
 
 

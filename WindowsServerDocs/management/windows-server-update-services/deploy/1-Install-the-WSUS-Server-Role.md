@@ -59,10 +59,3 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 > [!IMPORTANT]
 > At this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 2: Configure WSUS](2-Configure-WSUS.md).
 
-## <a name="BKMK_Links"></a>See also
-
--   [Step 2: Configure WSUS](2-Configure-WSUS.md)
-
--   [Plan Your WSUS Deployment](../plan/Plan-Your-WSUS-Deployment.md)
-
--   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

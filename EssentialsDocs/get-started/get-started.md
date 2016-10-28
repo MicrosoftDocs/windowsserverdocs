@@ -2,7 +2,7 @@
 title: "Get started with Windows Server 2016 Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
-ms.date: 10/03/2016
+ms.date: 10/28/2016
 ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
@@ -41,8 +41,7 @@ manager: dongill
 -   [Windows Server Essentials Health Report](http://www.microsoft.com/download/details.aspx?id=35565)  
   
 -   [Windows Server Essentials Management Pack](http://www.microsoft.com/download/details.aspx?id=35560)  
-  
--   [Windows Server Essentials Media Pack](http://www.microsoft.com/download/details.aspx?id=40837)  
+ 
   
 -   **Updates:** see [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)  
   

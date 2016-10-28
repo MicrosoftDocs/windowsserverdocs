@@ -26,7 +26,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 2. Install and configure System Center 2016 - Service Provider Foundation (SPF). This software enables Windows Azure Pack to communicate with your VMM servers:
 
-    [Set up System Center 2016 - Service Provider Foundation](#set-up-system-center-2016--service-provider-foundation) (in this topic)
+    [Set up System Center 2016 - Service Provider Foundation](#set-up-system-center-2016---service-provider-foundation) (in this topic)
 
 3. Install Windows Azure Pack and configure it to communicate with SPF:
 
