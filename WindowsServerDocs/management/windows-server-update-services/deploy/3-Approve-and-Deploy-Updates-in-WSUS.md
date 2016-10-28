@@ -83,9 +83,3 @@ Automatic Approvals enables you to specify how to automatically approve installa
 5.  You can save or print this report by clicking the applicable icon on the toolbar.
 
 6.  After you test the updates, you can approve the updates for installation on the applicable computer groups in your organization.
-
-## <a name="BKMK_Links"></a>See also
-
--   [Step 2: Configure WSUS](2-Configure-WSUS.md)
-
--   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

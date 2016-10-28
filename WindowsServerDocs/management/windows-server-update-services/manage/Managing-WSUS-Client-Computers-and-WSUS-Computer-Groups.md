@@ -51,8 +51,4 @@ You can assign computers to computer groups by using one of two methods, server-
 > [!NOTE]
 > If a WSUS server is running in replica mode, computer groups cannot be created on that server. All the computer groups needed for clients of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md) and for more information about server-side and client-side targeting, see section [1.5. Plan WSUS computer groups](../plan/plan-your-WSUS-Deployment.md#BKMK_1.5) of Step 1: Prepare for Your WSUS Deployment in the WSUS deployment guide.
 
-## See also
 
--   [Viewing and Managing Updates](Viewing-and-Managing-Updates.md)
-
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)

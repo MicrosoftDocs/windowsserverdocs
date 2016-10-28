@@ -444,10 +444,4 @@ WSUS has the ability to publish custom update packages to update Microsoft and n
 
 3.  **Certificate Updates/Revocation**. If you wanted to update or revoke a certificate (i.e. after discovering that it expired), WSUS offered no functionality to enable this. Accomplishing this turned into a manual task that was very hard to either do by hand or automate successfully.
 
-## <a name="BKMK_Links"></a>See also
 
--   [Step 3: Approve and Deploy Updates in WSUS](3-Approve-and-Deploy-Updates-in-WSUS.md)
-
--   [Step 1: Install the WSUS Server Role](1-Install-the-WSUS-Server-Role.md)
-
--   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

@@ -652,7 +652,7 @@
 #### [Keyboard Shortcuts for Server Manager](management/server-manager/Keyboard-Shortcuts-for-Server-Manager.md)
 ### [Windows Server Update Services (WSUS)](management/windows-server-update-services/get-started/Windows-Server-Update-Services-WSUS.md)
 #### [Deploy Windows Server Update Services](management/windows-server-update-services/deploy/Deploy-Windows-Server-Update-Services.md)
-##### [Step 1: Prepare for Your WSUS Deployment](management/windows-server-update-services/plan/Plan-Your-WSUS-Deployment.md)
+##### [Plan your WSUS deployment](management/windows-server-update-services/plan/Plan-Your-WSUS-Deployment.md)
 ##### [Step 1: Install the WSUS Server Role](management/windows-server-update-services/deploy/1-Install-the-WSUS-Server-Role.md)
 ##### [Step 2: Configure WSUS](management/windows-server-update-services/deploy/2-Configure-WSUS.md)
 ##### [Step 3: Approve and Deploy Updates in WSUS](management/windows-server-update-services/deploy/3-Approve-and-Deploy-Updates-in-WSUS.md)

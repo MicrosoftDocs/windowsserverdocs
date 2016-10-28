@@ -43,11 +43,6 @@ It is important to mention that if you choose to remove unneeded content with th
 
 If updates are approved using an auto-approval rule, they might still be in the "Approved" state, and will not be removed by The Server Cleanup Wizard. To remove auto-approved updates that are in an "approved" state , the WSUS Admin must - at minimum - manually set the approval status of superseded updates to "Not Approved" so they will be eligible for declination by the Server Cleanup Wizard. The Server Cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as "Declined."
 
-## See also
-
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
-
--   [Windows Server Update Services](../get-started/Windows-Server-Update-Services-WSUS.md)
 
 
 

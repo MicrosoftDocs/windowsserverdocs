@@ -21,7 +21,7 @@ In a WSUS implementation, at least one WSUS server in the network must connect t
 
 This guide provides conceptual information for planning and deploying Windows Server Update Service.  
 
--   [Plan for Your WSUS Deployment](../plan/Plan-Your-WSUS-Deployment.md)  
+-   [Plan your WSUS deployment](../plan/Plan-Your-WSUS-Deployment.md)  
 
 -   [Step 1: Install the WSUS Server Role](1-Install-the-WSUS-Server-Role.md)  
 

@@ -207,11 +207,4 @@ WSUS does not automatically decline superseded updates, and it is recommended th
 
 -   If an update no longer supersedes a previously released update because of new changes. It is possible that through changes at each release, an update no longer supersedes an update it previously superseded in an earlier version. In this scenario, you will still see a message about the superseded update, even though the update that supersedes it has been replaced by an update that does not.
 
-## See also:
-
--   [The Server Cleanup Wizard](The-Server-Cleanup-Wizard.md)
-
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
-
-
 

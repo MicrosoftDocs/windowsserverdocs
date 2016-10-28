@@ -164,8 +164,4 @@ Update classifications represent the type of update. For any given product or pr
 |Update rollups|A cumulative set of hotfixes, security updates, critical updates, and other updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a specific component, such as Internet Information Services (IIS).|
 |Updates|Broadly released fixes for specific problems addressing non-critical, non-security related bugs.|
 
-## See also
 
--   [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md)
-
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)

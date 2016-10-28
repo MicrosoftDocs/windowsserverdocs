@@ -12,7 +12,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Plan Your WSUS Deployment
+# Plan your WSUS deployment
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -459,8 +459,3 @@ If the computer must be restarted, and any user is logged on, a similar countdow
 
 After the new updates are downloaded, Automatic Updates polls the WSUS server for the list of approved packages to confirm that the packages it downloaded are still valid and approved. This means that, if a WSUS administrator removes updates from the list of approved updates while Automatic Updates is downloading updates, only the updates that are still approved are actually installed.
 
-## <a name="BKMK_Links"></a>See also
-
--   [Deploy Step 1: Install the WSUS Server Role](../deploy/1-Install-the-WSUS-Server-Role.md)
-
--   [Windows Server Update Services](../get-started/Windows-Server-Update-Services-WSUS.md)
