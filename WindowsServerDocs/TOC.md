@@ -1292,7 +1292,7 @@
 ###### [Shutdown: Clear virtual memory pagefile](security/group-managed-service-accounts/security-options/Shutdown-Clear-virtual-memory-pagefile.md)
 ###### [System cryptography: Force strong key protection for user keys stored on the computer - Explain text](security/group-managed-service-accounts/security-options/System-cryptography-Force-strong-key-protection-for-user-keys-stored-on-the-computer-Explain-text.md)
 ###### [System cryptography: Force strong key protection for user keys stored on the computer](security/group-managed-service-accounts/security-options/System-cryptography-Force-strong-key-protection-for-user-keys-stored-on-the-computer.md)
-###### [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](security/bitlocker/System-cryptography-Use-FIPS-compliant-algorithms-for-encryption,-hashing,-and-signing.md)
+###### [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](security/bitlocker/System-cryptography-Use-FIPS-compliant-algorithms-for-encryption-hashing-and-signing.md)
 ###### [System objects: Require case insensitivity for non-Windows subsystems](security/group-managed-service-accounts/security-options/System-objects-Require-case-insensitivity-for-non-Windows-subsystems.md)
 ###### [System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)](security/group-managed-service-accounts/security-options/System-objects-Strengthen-default-permissions-of-internal-system-objects-e.g.-Symbolic-Links.md)
 ###### [System settings: Optional subsystems](security/group-managed-service-accounts/security-options/System-settings-Optional-subsystems.md)
