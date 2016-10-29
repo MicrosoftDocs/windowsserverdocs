@@ -27,7 +27,7 @@ For additional SDN documentation, see the following:
   
  -   [Software Defined Networking Technologies](../../sdn/technologies/Software-Defined-Networking-Technologies.md)  
  -   [Plan Software Defined Networking](../../sdn/plan/Plan-Software-Defined-Networking.md)  
- -  [Manage Tenant Workloads and Virtual Networks](../../sdn/manage/Manage-Tenant-Workloads-and-Virtual-Networks.md)  
+ -  [Manage Software Defined Networking](../../sdn/manage/manage-sdn.md)  
 -   [Troubleshoot Software Defined Networking](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)  
   
   
