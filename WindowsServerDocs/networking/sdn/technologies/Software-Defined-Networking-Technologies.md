@@ -23,12 +23,11 @@ The topics in this section provide overview and technical information about the 
 > [!NOTE]  
 > For additional Software Defined Networking documentation, you can use the following library sections.  
 >   
-> -   [Plan Software Defined Networking](../../sdn/plan/Plan-Software-Defined-Networking.md)  
-> -   [Deploy Software Defined Networking](../../sdn/deploy/Deploy-Software-Defined-Networking.md)  
-> -   [Manage Tenant Workloads and Virtual Networks](../../sdn/manage/Manage-Tenant-Workloads-and-Virtual-Networks.md)  
-> -   [Troubleshoot Software Defined Networking](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)  
-  
-  
+> - [Plan Software Defined Networking](../../sdn/plan/Plan-Software-Defined-Networking.md)
+> - [Deploy Software Defined Networking](../../sdn/deploy/Deploy-Software-Defined-Networking.md)
+> - [Manage Software Defined Networking](../../sdn/manage/manage-sdn.md)
+> - [Troubleshoot Software Defined Networking](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+
 There are many technologies that work together to create Microsoft's Software Defined Networking (SDN) solutions, including the following:  
   
 -   **[Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol-BGP.md)**  

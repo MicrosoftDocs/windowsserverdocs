@@ -961,7 +961,7 @@
 ###### [Deploy a Software Defined Network infrastructure using scripts](networking/sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 ##### [Deploy Software Defined Network Technologies using Windows PowerShell](networking/sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md)
 ###### [Deploy Network Controller using Windows PowerShell](networking/sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md)
-#### [Manage Tenant Workloads and Virtual Networks](networking/sdn/manage/Manage-Tenant-Workloads-and-Virtual-Networks.md)
+#### [Manage Software Defined Networking](networking/sdn/manage/manage-sdn.md)
 ##### [Manage Tenant Virtual Networks](networking/sdn/manage/Manage-Tenant-Virtual-Networks.md)
 ###### [Understanding Usage of Virtual Networks and VLANs](networking/sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md)
 ###### [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](networking/sdn/manage/use-acls-for-traffic-flow.md)
