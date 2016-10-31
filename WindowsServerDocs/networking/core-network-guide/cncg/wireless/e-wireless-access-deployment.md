@@ -89,7 +89,7 @@ This procedure enumerates items commonly configured on a wireless AP. The item n
 
 Follow these steps to create one or more wireless users security groups, and then add users to the appropriate wireless users security group:
 
-- [Create a Wireless Users Security Group](#bkmk_creategroup)
+- [Create a Wireless Users Security Group](#bkmk_groups)
 
 - [Add Users to the Wireless Security Group](#bkmk_addusers)
 
