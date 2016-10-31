@@ -113,7 +113,7 @@ When this policy setting is disabled or not configured, only certificates that c
 |Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: None|
 |Notes and resources||
 
-### <a name="BKMK_AllowECCCertificatesToBeUsedForLogonAndAuthentication "></a>Allow ECC certificates to be used for logon and authentication
+### <a name="BKMK_AllowECCCertificatesToBeUsedForLogonAndAuthentication"></a>Allow ECC certificates to be used for logon and authentication
 This policy setting allows you to control whether elliptic curve cryptography (ECC) certificates on a smart card can be used to sign in to a domain. When this setting is enabled, ECC certificates on a smart card can be used to sign in to a domain. When this setting is disabled or not configured, ECC certificates on a smart card cannot be used to sign in to a domain.
 
 |Item|Description|

@@ -53,7 +53,7 @@ The following table lists the actual and effective default policy values for the
 |Client computer effective default settings|Not applicable|
 
 ### Operating system version differences
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).
+There are no differences in the way this policy setting works between supported versions of Windows.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.

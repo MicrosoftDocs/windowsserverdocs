@@ -297,8 +297,8 @@ The following table provides examples of domain-relative RIDs that are used to f
 |DOMAIN_ALIAS_RID_REPLICATOR|A local group that is responsible for copying security databases from the primary domain controller to the backup domain controllers. These accounts are used only by the system.|
 |DOMAIN_ALIAS_RID_RAS_SERVERS|A local group that represents remote access and servers running Internet Authentication Service (IAS). This group permits access to various attributes of User objects.|
 
-## <a name="BKMK_ChangesSIDs"></a>Changes in security identifier????????s functionality
-The following table describes changes in SID implementation in the Windows operating systems that are designated in the [Applies To](#BKMK_top) list.
+## <a name="BKMK_ChangesSIDs"></a>Changes in security identifiers functionality
+The following table describes changes in SID implementation in the Windows operating systems that are designated in the "Applies To:" list at the beginning of this topic.
 
 |Change|Operating system version|Description and resources|
 |-----|--------------|---------------|

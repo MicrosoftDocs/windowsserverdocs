@@ -62,7 +62,7 @@ The following table lists the actual and effective default policy values for the
 |Effective GPO default settings on client computers|0 invalid sign-in attempts|  
   
 ### Operating system version differences  
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).  
+There are no differences in the way this policy setting works between supported versions of Windows.  
   
 ### Policy management  
 This section describes features and tools that are available to help you manage this policy setting.  
