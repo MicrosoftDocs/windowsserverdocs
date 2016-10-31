@@ -18,31 +18,18 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
-This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016, and contains the following sections.  
-  
--   [NIC Teaming Overview](#bkmk_over)  
-  
--   [NIC Teaming Availability](#bkmk_avail)  
-  
--   [Supported and Unsupported NICs for NIC Teaming](#bkmk_nics)  
-  
--   [NIC Teaming Compatibility](#bkmk_compat)  
-  
--   [NIC Teaming and Virtual Machine Queues (VMQs)](#bkmk_vmq)  
-  
--   [NIC Teaming and Hyper-V Network Virtualization (HNV)](#bkmk_hnv)  
-  
--   [NIC Teaming and Live Migration](#bkmk_live)  
-  
+This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
+
 > [!NOTE]  
 > In addition to this topic, the following NIC Teaming content is available.  
 >   
-> -   [NIC Teaming in Virtual Machines &#40;VMs&#41;](../../technologies/nic-teaming/../../technologies/nic-teaming/NIC-Teaming-in-Virtual-Machines--VMs-.md)  
-> -   [NIC Teaming and Virtual Local Area Networks &#40;VLANs&#41;](../../technologies/nic-teaming/NIC-Teaming-and-Virtual-Local-Area-Networks--VLANs-.md)  
-> -   [NIC Teaming MAC Address Use and Management](../../technologies/nic-teaming/NIC-Teaming-MAC-Address-Use-and-Management.md)  
-> -   [Troubleshooting NIC Teaming](../../technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)  
-> -   [Create a New NIC Team on a Host Computer or VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)  
-> -   [NIC Teaming (NetLBFO) Cmdlets in Windows PowerShell](https://technet.microsoft.com/en-us/library/jj130849(v=wps.630).aspx)  
+> - [NIC Teaming in Virtual Machines &#40;VMs&#41;](nict-vms.md)
+> - [NIC Teaming and Virtual Local Area Networks &#40;VLANs&#41;](nict-and-vlans.md)
+> - [NIC Teaming MAC Address Use and Management](NIC-Teaming-MAC-Address-Use-and-Management.md)
+> - [Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md) 
+> - [Create a New NIC Team on a Host Computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)
+> - [NIC Teaming (NetLBFO) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj130849.aspx)
+> - TechNet Gallery Download: [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0)
   
 ## <a name="bkmk_over"></a>NIC Teaming Overview  
 NIC Teaming allows you to group between one and thirty-two physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
