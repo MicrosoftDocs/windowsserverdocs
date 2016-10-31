@@ -71,8 +71,3 @@ This is only logged if there are changes in the adapter queue depth.
 MaxCount is the limit on outstanding IOs to an adapter. If NewHighWaterMark equals MaxCount, it means that the adapter is the bottleneck as we’ve hit the adapter outstanding I/O limit. If you don’t see any of these events logged, it can mean one of 2 things: the system cannot generate I/Os fast enough or system has ran out of memory resource.
 
 ![adapter queue](../media/performance-tuning/perftune-guide-storport-etw-adapterqueue.png)
-
-## Related topics
-
-
-[Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md)

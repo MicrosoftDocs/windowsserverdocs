@@ -159,9 +159,3 @@ As workload needs increase, you can expand the storage deployment by adding more
 
 
 Storage Spaces provides multiple configuration options when creating a storage space which can be tuned according to your workload needs. For most workloads, it is recommended that users utilize the intelligent defaults. For more advanced guidance, see [Storage Spaces - Designing for Performance](http://social.technet.microsoft.com/wiki/contents/articles/15200.storage-spaces-designing-for-performance.aspx).
-
-## Related topics
-
-
-[Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md)
-

@@ -225,8 +225,3 @@ Receive Side Coalescing (RSC) performance
     -   TCP RSC coalesced packets/sec
 
     -   TCP RSC exceptions/sec
-
-## Related topics
-
-
-[Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md)

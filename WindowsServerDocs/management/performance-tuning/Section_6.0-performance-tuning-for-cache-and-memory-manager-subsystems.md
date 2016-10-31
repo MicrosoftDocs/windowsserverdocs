@@ -19,11 +19,6 @@ As depicted by the solid arrows in the preceding figure, a 256 KB region of data
 
 **In this section:**
 
--   [Cache and Memory Manager Potential Performance Issues](cache-and-memory-manager-potential-performance-issues.md)
+-   [Cache and Memory Manager Potential Performance Issues](./Section_6.1-cache-and-memory-manager-potential-performance-issues.md)
 
--   [Cache and Memory Manager Improvements in Windows Server 2012](cache-and-memory-manager-improvements-in-windows-server-2012.md)
-
-## Related topics
-
-
-[Performance Tuning for Subsystems](performance-tuning-for-subsystems.md)
+-   [Cache and Memory Manager Improvements in Windows Server 2012](./Section_6.2-cache-and-memory-manager-improvements-in-windows-server-2016.md)
