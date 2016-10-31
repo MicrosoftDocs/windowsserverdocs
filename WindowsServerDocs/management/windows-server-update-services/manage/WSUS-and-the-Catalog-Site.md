@@ -69,11 +69,4 @@ WSUS administrators might consider restricting access to the hotfixes they have 
 ## Importing updates in different languages
 The Microsoft Update Catalog Web site includes updates that support multiple languages. It is very important to match the languages supported by the WSUS server with the languages supported by these updates. If the WSUS server does not support all the languages included in the update, the update will not be deployed to client computers. Likewise, if an update supporting multiple languages has been downloaded to the WSUS server but not yet deployed to client computers, and an administrator deselects one of the languages included the update, the update will not be deployed to the clients.
 
-## See Also
-
--   [Updates Operations](Updates-Operations.md)
-
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
-
-
 
