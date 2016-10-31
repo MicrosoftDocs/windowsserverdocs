@@ -23,7 +23,7 @@ When you build a MultiPoint Services system, you should select a computer that m
   
 -   Whether your scenario has large processing or memory demands.  
   
--   The number of users who could be using the system at the same time. If you plan to have many users on your system at the same time, or users who use system\-intensive programs, you should plan for more computing power for your system.  
+-   The number of users who could be using the system at the same time. If you plan to have many users on your system at the same time, or users who use system-intensive programs, you should plan for more computing power for your system.  
   
 -   The type of stations. How many USB ports or video ports do you need?  
   
@@ -43,10 +43,10 @@ A MultiPoint Services system typically includes the following components:
   
 Use the following information to make hardware decisions:  
   
--   [Selecting a CPU](#a-namebkmkcpuaselecting-a-cpu)  
--   [Selecting hardware components](#a-namebkmkhardwareaselecting-hardware-components)  
+-   [Selecting a CPU](#selecting-a-cpu)  
+-   [Selecting hardware components](#selecting-hardware-components)  
   
-## <a name="BKMK_CPU"></a>Selecting a CPU  
+## Selecting a CPU  
 A MultiPoint Services system is a multiple\-user environment, with all users connected to a single host computer. This increases the CPU usage because all users share the same computer. Some tasks, such as multimedia programs \(for example, media players or video\-editing software\), have larger processing demands. Therefore, make sure to select a CPU that can handle the processing requirements for the number of users and types of user scenarios that it will need to support.  
   
 MultiPoint Services requires an x64\-based CPU, and must meet the system requirements for the computer as described in [Hardware Requirements and Performance Recommendations](Hardware-Requirements-and-Performance-Recommendations.md).  
@@ -62,7 +62,7 @@ With this information, select a CPU that meets the processing requirements for y
 > [!NOTE] 
 > If you are running video intensive applications the recommendation is at least one core per station. 
   
-## <a name="BKMK_Hardware"></a>Selecting hardware components  
+## Selecting hardware components  
 When you are building a MultiPoint Services system, consider the following hardware components that you may need:  
   
 -   Video hardware  
@@ -89,13 +89,13 @@ When you have selected the hardware components for your MultiPoint Services syst
   
 The following topics provide detailed information to help you select components for your MultiPoint Services system:  
   
-[Selecting video hardware](#a-namebkmkselectingvideohardwareaselecting-video-hardware)  
+[Selecting video hardware](#selecting-video-hardware)  
 [Selecting direct\-video\-connected or USB zero client station devices](#BKMK_Selectingdirect-video-connectedorUSBzeroclientstationdevices)   
-[Selecting other station peripheral devices](#a-namebkmkselectingperipheraldevicesaselecting-other-station-peripheral-devices)  
+[Selecting other station peripheral devices](#selecting-other-station-peripheral-devices)  
 [Selecting RDP\-over\-LAN\-connected station hardware](#BKMK_SelectingRDP-over-LAN-connectedstationhardware)  
-[Selecting audio devices](#a-namebkmkselectingaudiodevicesaselecting-audio-devices)  
+[Selecting audio devices](#selecting-audio-devices)  
   
-## <a name="BKMK_Selectingvideohardware"></a>Selecting video hardware  
+## Selecting video hardware  
 The video hardware that you select should support the number of monitors that you will require for the number of users you intend to have working at MultiPoint Services stations. In addition, different types of video hardware can provide a higher\-performance solution for graphics\-intensive programs, such as multimedia content.  
   
 Select the video hardware that can support the maximum number of monitors for the type of performance that your MultiPoint Services system requires. Make sure that you validate the performance of the video hardware that you choose to ensure that it meets your performance requirements.  
@@ -124,16 +124,16 @@ USB zero clients contain an external video controller to connect a monitor to th
 Select a USB zero client if you want to enable support for additional monitors without opening the computer, or if you want to support more stations than available video outputs. For example, if you previously had four monitors plugged\-in to internal video cards, and you want to add two more monitors, you can plug\-in two external video controllers to the computer and have room for two more monitors. In this manner, you can combine a USB zero client with the video controller and not use additional PCI or PCIe slots on the motherboard.  
   
 ## <a name="BKMK_Selectingdirect-video-connectedorUSBzeroclientstationdevices"></a>Selecting direct\-video\-connected or USB zero client station devices  
-A MultiPoint Services station consists of a station hub or USB zero client with a keyboard and mouse plugged\-in, and a monitor that is plugged\-in to the host computer or in to a USB zero client. Other peripheral devices can be plugged\-in to the station hub or USB zero client, but they are not required to create MultiPoint station. These other peripheral devices are described in [Selecting other station peripheral devices](#Selecting-peripheral-devices).  
+A MultiPoint Services station consists of a station hub or USB zero client with a keyboard and mouse plugged\-in, and a monitor that is plugged\-in to the host computer or in to a USB zero client. Other peripheral devices can be plugged\-in to the station hub or USB zero client, but they are not required to create MultiPoint station. These other peripheral devices are described in [Selecting other station peripheral devices](#selecting-other-station-peripheral-devices).  
   
 The devices that you select to create a MultiPoint Services station should meet minimum requirements to work with MultiPoint Services. Details about the requirements for the following MultiPoint Services station devices are provided in this topic:  
   
--   [Selecting USB hubs](#a-namebkmkselectingusbhubsaselecting-usb-hubs)  
--   [Selecting USB zero clients](#a-namebkmkselectingusbzeroclientsaselecting-usb-zero-clients)  
--   [Selecting keyboards and mouse devices](#a-namebkmkselectingkeyboardsandmousedevicesaselecting-keyboards-and-mouse-devices)  
--   [Selecting monitors](#a-namebkmkselectingmonitorsaselecting-monitors)  
+-   [Selecting USB hubs](#selecting-usb-hubs)  
+-   [Selecting USB zero clients](#selecting-usb-zero-clients)  
+-   [Selecting keyboards and mouse devices](#selecting-keyboards-and-mouse-devices)  
+-   [Selecting monitors](#selecting-monitors)  
   
-### <a name="BKMK_SelectingUSBhubs"></a>Selecting USB hubs  
+### Selecting USB hubs  
 The USB hubs that are used in a MultiPoint Services system can be a generic USB hub. Such hubs typically have four or more USB ports, and they allow multiple USB devices to be connected to a single USB port on the computer. Some other devices, such as keyboards and video monitors, may also incorporate a USB hub into their design.  
   
 An additional consideration is the use of an *externally powered* hub, instead of a *bus\-powered* hub. With a bus\-powered hub, the amount of current that is provided by the host computer must be sufficient to provide power to all the peripheral devices that are plugged\-in to the hub, without degrading system performance. An externally powered hub allows you to connect more peripheral devices and provide sufficient power to all of them. The use of externally powered hubs can help prevent performance issues, port failures, and other intermittent issues.  
@@ -147,18 +147,18 @@ When selecting a USB hub for your MultiPoint Services system, consider its use. 
 |Downstream Hub|Can be externally powered or bus powered depending on the devices that are plugged\-in to the hub|  
 |Active USB Extender Cable|Active USB cables that include a USB hub are typically bus powered; therefore, they are not recommended for connecting station hubs to the computer.|  
   
-### <a name="BKMK_SelectingUSBzeroclients"></a>Selecting USB zero clients  
+### Selecting USB zero clients  
 A USB zero client is a USB hub that contains a video output. Therefore, it allows a monitor to be connected to the computer through a USB connection. For more information about using USB zero clients for video, see [Selecting video hardware](#Selecting-video-hardware) in this document. A USB zero client can also enable the connection of a variety of USB and non\-USB devices to the hub. USB zero clients are produced by specific hardware manufacturers, and they require installing a device\-specific driver.  
   
-### <a name="BKMK_Selectingkeyboardsandmousedevices"></a>Selecting keyboards and mouse devices  
+### Selecting keyboards and mouse devices  
 The keyboard and mouse devices that you plug\-in to the station will typically be USB devices. Some USB zero clients provide PS\/2 ports, in which case, the keyboard and mouse should use PS\/2 to connect to the station hub. You can also use a PS\/2 keyboard and mouse if you are setting up a PS\/2 direct\-video\-connected station.  
   
 A keyboard with an internal hub can be used as a station hub. However, all other station devices must connect to the internal hub by using ports on the keyboard. If such a keyboard is connected to the computer through another hub, that hub will be treated as an intermediate hub.  
   
 If you are using split\-screen stations, you may want to consider using a mini keyboard that does not have a number pad so that the two keyboards can fit in front of the monitor.  
   
-### <a name="BKMK_Selectingmonitors"></a>Selecting monitors  
-There should be one monitor provided for each MultiPoint Services station, unless a split\-screen is planned. \(For more information, see [Split\-screen stations](#Split--screen-Stations).\) Monitors are plugged\-in to the video card on the computer, the USB zero client or the LAN\-based client. Any type of monitor that is supported by the video card, USB zero client, or LAN\-based client can be used, including CRT monitors.  
+### Selecting monitors  
+There should be one monitor provided for each MultiPoint Services station, unless a split\-screen is planned. Monitors are plugged into the video card on the computer, the USB zero client or the LAN\-based client. Any type of monitor that is supported by the video card, USB zero client, or LAN\-based client can be used, including CRT monitors.  
   
 Some special monitors include an internal LAN\-based client or USB zero client. Such monitors will typically include audio input\/output jacks and internal USB hubs for connecting keyboards and mice. They connect to the server through a USB or a LAN connection.  
   
@@ -167,7 +167,7 @@ The minimum supported resolution for a station’s display area is 512 x 768 pix
   
 If a display monitor is going to be shared by two stations as split\-screen stations, the minimum requirement for the display is 1024 x 768, so that the resulting individual station screen areas are at least 512 x 768. For the best split\-screen user experience, a wide screen with a minimum of resolution of 1600 x 900 is recommended.  
   
-## <a name="BKMK_Selectingperipheraldevices"></a>Selecting other station peripheral devices  
+## Selecting other station peripheral devices  
 MultiPoint Services supports peripheral devices that are connected to a station hub, a USB zero client, or directly to the computer. Devices plugged into a station hub will be associated with that specific station. Other devices are available to every station when plugged directly into the computer. LAN clients can also support peripheral devices.  
   
 > [!IMPORTANT]  
@@ -192,7 +192,7 @@ Any LAN client that can connect to Remote Desktop Services, by using Remote Desk
   
 If you want the LAN client to only be used as a MultiPoint station, you may want to “lock down” your LAN client. For example, configure your thin client so that it can only connect to a MultiPoint Services session, or configure your desktop computers so that access to desktop icons and Start Menu items such as a web browser is removed to prevent direct Internet access. You can make these configurations using your LAN client configuration tools or group or local policies.  
   
-## <a name="BKMK_Selectingaudiodevices"></a>Selecting audio devices  
+## Selecting audio devices  
 It is important to make sure that when you select audio devices, they can be plugged into the station hub, USB zero client or LAN client. Some USB hubs, USB zero clients, and LAN clients have an analog audio jack that can be used with traditional analog audio devices \(such as headphones or earbuds\). Station hubs that do not have analog jacks can use USB audio devices.  
   
 If you have configured a PS\/2 direct\-video\-connected station by using PS\/2 ports on the computer’s motherboard for the keyboard and mouse, you must use the analog audio on the computer’s motherboard in order for the audio device to be available to this station when the MultiPoint Services system is running in station mode.  
