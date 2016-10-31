@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/12/2016
+ms.date: 10/31/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -46,8 +46,8 @@ To avoid this, upgrade the client computer to Windows 10 Anniversary Update (or 
 
 ## Shielded virtual machines
 [comment]: # (ID: 369; Submitter: nirb; state: signed off)  
-- Shielded virtual machines should be deployed only in non-production environments until an update is available.
-- You cannot convert existing non-shielded virtual machines to Shielded virtual machines. There is no workaround at this time. If you need to deploy Shielded virtual machines, create new ones directly from shielded templates.
+- Ensure that you have installed all available updates before you deploy Shielded virtual machines in production.
+
 
 ## Start menu
 [comment]: # (ID: 372; Submitter: samli; state: signed off)
