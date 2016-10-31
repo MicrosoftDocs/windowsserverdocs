@@ -3,7 +3,7 @@ title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers
 ---
 
-# Performance Tuning For SMB File Servers 
+# Performance Tuning For SMB File Servers
 
 ## <a href="" id="smb"></a>SMB configuration considerations
 
@@ -188,13 +188,3 @@ The following settings can optimize a computer for file server performance in ma
 ### SMB client performance monitor counters
 
 For more info about SMB client counters, see [Windows Server 2012 File Server Tip: New per-share SMB client performance counters provide great insight](http://blogs.technet.com/b/josebda/archive/2012/11/19/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight.aspx).
-
-## Related topics
-
-
-[Performance Tuning for Server Roles](performance-tuning-for-server-roles.md)
-
-[Using the File Server Capacity Tool (FSCT)](using-the-file-server-capacity-tool--fsct-.md)
-
-[Using the SPECsfs2008 File Server](using-the-specsfs2008-file-server.md)
-

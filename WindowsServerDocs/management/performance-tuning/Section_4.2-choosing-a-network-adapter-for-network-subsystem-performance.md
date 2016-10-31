@@ -116,7 +116,7 @@ BaseProcessor: [Group:Number]   : 0:0
 MaxProcessor: [Group:Number]    : 0:15
 MaxProcessors                   : 8
 
-IndirectionTable: [Group:Number] : 
+IndirectionTable: [Group:Number] :
 0:0    0:4    0:0    0:4    0:0    0:4    0:0    0:4
 …
 (# indirection table entries are a power of 2 and based on # of processors)
@@ -210,7 +210,7 @@ The Get cmdlet shows whether RSC is enabled in the interface and if TCP enables 
 In the previous scenario, IPv4 RSC is supported and operational in the interface. To understand diagnostic failures, one can see the coalesced bytes or exceptions caused. This gives an indication of the coalescing issues.
 
 ``` syntax
-PS C:\Users\Administrator> $x = Get-NetAdapterStatistics “myAdapter” 
+PS C:\Users\Administrator> $x = Get-NetAdapterStatistics “myAdapter”
 PS C:\Users\Administrator> $x.rscstatistics
 
 CoalescedBytes       : 0
@@ -336,9 +336,3 @@ The following table lists the high-performance network adapter features that can
 
 **Caution**  
 The recommendations in the table above are intended to serve as guidance only for choosing the most suitable technology for specific server roles under a predetermined traffic pattern. The user’s experience can be different, depending on workload characteristics and the hardware that is used.
-
- 
-
-## Related topics
-
-[Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md)

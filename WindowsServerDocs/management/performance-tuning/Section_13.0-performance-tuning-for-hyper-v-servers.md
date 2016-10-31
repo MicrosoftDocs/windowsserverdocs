@@ -123,7 +123,7 @@ The following sections suggest best practices that yield increased performance o
 
 ### Hardware selection
 
-The hardware considerations for servers running Hyper-V generally resemble those of non-virtualized servers, but servers running Hyper-V can exhibit increased CPU usage, consume more memory, and need larger I/O bandwidth because of server consolidation. For more info, see [Performance Tuning for Server Hardware](performance-tuning-for-server-hardware.md).
+The hardware considerations for servers running Hyper-V generally resemble those of non-virtualized servers, but servers running Hyper-V can exhibit increased CPU usage, consume more memory, and need larger I/O bandwidth because of server consolidation.
 
 -   **Processors**
 
@@ -143,11 +143,10 @@ The hardware considerations for servers running Hyper-V generally resemble those
 
     To reduce the CPU usage of network I/Os from virtual machines, Hyper-V can use hardware offloads such as Large Send Offload (LSOv1, LSOv2), TCP checksum offload (TCPv4, TCPv6), virtual machine queue (VMQ) and SR-IOV.
 
-    For more info about hardware considerations, see [Performance Tuning for Server Hardware](performance-tuning-for-server-hardware.md).
 
 -   **Storage**
 
-    The storage hardware should have sufficient I/O bandwidth and capacity to meet the current and future needs of the virtual machines that the physical server hosts. Consider these requirements when you select storage controllers and disks and choose the RAID configuration. Placing virtual machines with highly disk-intensive workloads on different physical disks will likely improve overall performance. For example, if four virtual machines share a single disk and actively use it, each virtual machine can yield only 25 percent of the bandwidth of that disk. For details about storage hardware considerations and discussion on sizing and RAID selection, see [Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md).
+    The storage hardware should have sufficient I/O bandwidth and capacity to meet the current and future needs of the virtual machines that the physical server hosts. Consider these requirements when you select storage controllers and disks and choose the RAID configuration. Placing virtual machines with highly disk-intensive workloads on different physical disks will likely improve overall performance. For example, if four virtual machines share a single disk and actively use it, each virtual machine can yield only 25 percent of the bandwidth of that disk.
 
 ### Server Core installation option
 
@@ -595,8 +594,6 @@ For these reasons, we recommend that you use VHDX files attached to a SCSI contr
 
 Hyper-V supports Hyper-V-specific and emulated network adapters in the virtual machines, but the Hyper-V-specific devices offer significantly better performance and reduced CPU overhead. Each of these adapters is connected to a virtual network switch, which can be connected to a physical network adapter if external network connectivity is needed.
 
-For info on how to tune the network adapter in the root partition, including interrupt moderation, see [Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md). The TCP tunings in that section should be applied, if required, to the child partitions.
-
 ### Hyper-V specific network adapter
 
 Hyper-V features a Hyper-V-specific network adapter that is designed specifically for virtual machines to achieve significantly reduced CPU overhead on network I/O when it is compared to the emulated network adapter that mimics existing hardware. The Hyper-V-specific network adapter communicates between the child and root partitions over VMBus by using shared memory for more efficient data transfer.
@@ -639,7 +636,7 @@ There are limited hardware queues available, so you can use the Hyper-V WMI API 
 
 When a host has multiple network adapters, each for a different virtual switch instance, and it is using dVMQ, do not configure dVMQ to use overlapping processor sets. Ensure that each network adapter that is configured for dVMQ has its own set of cores. Otherwise performance results may be impaired and unpredictable.
 
-There are two separate dVMQ configuration recommendations, based on the type of NIC teaming in Windows Server 2012 R2 with Hyper-V. For more info on NIC teaming, see [Performance Tuning for Subsystems](performance-tuning-for-subsystems.md#bkmk-networksubsystem). If the team is configured by using switch dependent-mode or address hashing, each network adapter in the team should have identical values for \*RssBaseProcNumber and \*MaxRssProcessors. This mode is referred to as Min mode in the following table.
+There are two separate dVMQ configuration recommendations, based on the type of NIC teaming in Windows Server 2012 R2 with Hyper-V. If the team is configured by using switch dependent-mode or address hashing, each network adapter in the team should have identical values for \*RssBaseProcNumber and \*MaxRssProcessors. This mode is referred to as Min mode in the following table.
 
 <table>
 <colgroup>
@@ -832,7 +829,7 @@ Providing a dedicated network for live migration traffic helps minimize the time
 
 ![example hyper-v live migration configuration](../media/performance-tuning/perftune-guide-live-migration.png)
 
-Additionally, increasing the number of send and receive buffers on each network adapter that is involved in the migration can improve migration performance. For more info, see [Performance Tuning for Subsystems](performance-tuning-for-subsystems.md#bkmk-networksubsystem).
+Additionally, increasing the number of send and receive buffers on each network adapter that is involved in the migration can improve migration performance.
 
 Windows Server 2012 R2 introduced an option to speed up Live Migration by compressing memory before transferring over the network or use Remote Direct Memory Access (RDMA), if your hardware supports it.
 
@@ -952,8 +949,3 @@ If latencies are consistently greater than 50ms, you should do the following:
 -   Consider using Storage QoS, which was introduced in Windows Server 2012 R2
 
 -   Use VHDX
-
-## Related topics
-
-
-[Performance Tuning for Server Roles](performance-tuning-for-server-roles.md)

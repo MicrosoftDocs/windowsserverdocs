@@ -1,9 +1,9 @@
 ---
-title: Performance Tuning Guide Table of Contents 
+title: Performance Tuning Guide Table of Contents
 description: Performance Tuning Guide Table of Contents
 ---
 
-# Table of Contents 
+# Table of Contents
 
 **Hardware and Power Considerations**
 
@@ -13,7 +13,7 @@ description: Performance Tuning Guide Table of Contents
 
 -   [Processor Power Management Tuning for Windows Server](./Section_3.1-PPMTuning.md)
 
-## Subsystem Performance 
+## Subsystem Performance
 
 **Performance Tuning for Network Subsystems**
 
@@ -48,13 +48,7 @@ description: Performance Tuning Guide Table of Contents
 
 -    [Cache and Memory Manager Improvements in Windows Server 2016](./Section_6.2-cache-and-memory-manager-improvements-in-windows-server-2016.md)
 
-## Boot Performance 
-
-**Performance Tuning for Boot**
-
--    [Boot](./Section_7-Boot.md)
-
-## Role and Workload Performance 
+## Role and Workload Performance
 
 **Performance Tuning for Web Servers**
 
@@ -107,7 +101,3 @@ description: Performance Tuning Guide Table of Contents
 
 **References**
 -    [References and Links](./Section_1.2-References.md)
-
-
-
-

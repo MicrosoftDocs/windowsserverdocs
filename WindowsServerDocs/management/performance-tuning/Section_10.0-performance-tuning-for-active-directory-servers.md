@@ -65,8 +65,6 @@ Read the following sections to optimize hardware for responsiveness of domain co
 
 Active Directory caches as much of the database as memory allows. Fetching pages from memory are orders of magnitude faster than going to physical media, whether the media is spindle or SSD based. Add more memory to minimize disk I/O.
 
--   For more info about storage subsystem tuning, see [Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md).
-
 -   Active Directory Best Practices recommend putting enough RAM to load the entire DIT into memory, plus accommodate the operating system and other installed applications, such as anti-virus, backup software, monitoring, and so on.
 
     -   For limitations of the legacy platforms, see [Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2003 or Windows 2000 Server](http://support.microsoft.com/kb/308356).
@@ -259,8 +257,3 @@ For more info, see the following:
 
 
 For info on troubleshooting, see [Monitoring Your Branch Office Environment](http://technet.microsoft.com/library/dd736504.aspx).
-
-## Related topics
-
-
-[Performance Tuning for Server Roles](performance-tuning-for-server-roles.md)

@@ -50,8 +50,3 @@ NIC teaming in Windows Server 2012 R2 supports the following traffic load dist
 NIC teaming is compatible with all networking capabilities included in Windows Server 2012 R2 with five exceptions: SR-IOV, RDMA, Native host Quality of Service, TCP Chimney, and 802.1X Authentication.
 
 NIC teaming configuration details and Windows PowerShell commands can be found in the [Windows Server 2012 R2 NIC Teaming (LBFO) Deployment and Management](http://www.microsoft.com/download/details.aspx?id=40319) guide.
-
-## Related topics
-
-
-[Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md)

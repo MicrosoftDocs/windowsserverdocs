@@ -94,7 +94,7 @@ For example, a file server running concurrent optimization jobs on 3 volumes of 
 By default, deduplication optimization will use up to 50% of a server’s memory. In this example, having 8 to 16 GB of memory available on the file server would allow the deduplication to optimally allocate the expected amount of RAM during optimization. Allowing optimization to use more memory would speed optimization throughput. The amount of RAM given to a job can be adjusted by using the Windows PowerShell cmdlet.
 
 ``` syntax
-Start-Dedupjob <volume> -Type Optmization  -Memory <50 to 80> 
+Start-Dedupjob <volume> -Type Optmization  -Memory <50 to 80>
 ```
 
 Machines where very large amount of data change between optimization job is expected may require even up to 3 GB of RAM per 1 TB of diskspace.
@@ -127,9 +127,3 @@ Custom Garbage Collection schedules can be set by using Server Manager or by usi
 ``` syntax
 New-DedupSchedule
 ```
-
-## Related topics
-
-
-[Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md)
-
