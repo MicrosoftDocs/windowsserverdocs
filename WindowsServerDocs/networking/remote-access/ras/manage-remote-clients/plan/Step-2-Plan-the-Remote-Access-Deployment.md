@@ -26,7 +26,7 @@ After you plan for the infrastructure that you intend to use to set up your sing
 |Task|Description|  
 |----|--------|  
 |[Plan a client deployment strategy](#bkmk_21client)|Decide which managed computers will be configured as DirectAccess clients.|  
-|[Plan a Remote Access server deployment strategy](#bkmk_22servers)|Plan how to deploy the Remote Access server.|  
+|[Plan a Remote Access server deployment strategy](#bkmk_22server)|Plan how to deploy the Remote Access server.|  
 |[Plan the infrastructure servers' configurations](#bkmk_23Infservers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
   
 ## <a name="bkmk_21client"></a>Plan a client deployment strategy  
@@ -38,7 +38,7 @@ There are three decisions to make when you are planning your client deployment:
   
 2.  What security groups will contain the DirectAccess client computers?  
   
-    DirectAccess settings are contained in the DirectAccess client Group Policy Object (GPO). The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify security groups that are contained in any supported domain. For more information, see [Plan Active Directory requirements](#BKMK_ActiveDirectory).  
+    DirectAccess settings are contained in the DirectAccess client Group Policy Object (GPO). The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify security groups that are contained in any supported domain.
   
     Before you configure Remote Access, you need to create the security groups. You can add computers to the security group after you complete the Remote Access deployment. However, if you add client computers that reside in a different domain than the security group, the client GPO will not be applied to those clients. For example, if you created SG1 in domain A for DirectAccess clients, and you later add clients from domain B to this group, the client GPO will not be applied to clients in domain B.  
   
@@ -74,9 +74,7 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
     -   **Two adapters**: With two network adapters, Remote Access can be configured with one network adapter connected directly to the Internet and the other connected to the internal network. Or alternatively, the server is installed behind an edge device, such as a firewall or a router. In this configuration one network adapter is connected to the perimeter network, and the other is connected to the internal network.  
   
     -   **Single network adapter**: In this configuration the Remote Access server is installed behind an edge device, such as a firewall or a router. The network adapter is connected to the internal network.  
-  
-    For more information, see [Plan network topology and server settings](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_1_Network_svr_top_settings).  
-  
+
 -   **Network adapters**  
   
     The Remote Access Server Setup Wizard automatically detects the network adapters that are configured on the Remote Access server. You must make sure that the correct adapters are selected.  
@@ -106,14 +104,14 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
   
     Before you configure Remote Access, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (for example, they are unmanaged or they run an operating system for which DirectAccess is not supported). The Remote Access Server Setup Wizard allows you to configure how IP addresses are assigned (by using DHCP or from a static address pool) and how VPN clients are authenticated (by using Active Directory or a RADIUS server).  
   
-## <a name="bkmk_2_3_Inf_servers"></a>Plan the infrastructure servers' configurations  
+## <a name="bkmk_23Infservers"></a>Plan the infrastructure servers' configurations  
 Remote Access requires three types of infrastructure servers:  
   
--   **Network location server**: For more information, see [Plan the network location server configuration](#BKMK_Location).  
+-   **Network location server**  
   
--   **DNS servers**: For more information, see [Plan DNS requirements](#BKMK_DNS).  
+-   **DNS servers** 
   
--   **Management servers**: For more information, see [Plan management servers' configurations](#BKMK_Management).  
+-   **Management servers** 
   
 ## <a name="BKMK_Links"></a>See also  
   

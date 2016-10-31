@@ -93,7 +93,7 @@ Follow these steps to create one or more wireless users security groups, and the
 
 - [Add Users to the Wireless Security Group](#bkmk_addusers)
 
-### <a name="bkmk_creategroup"></a>Create a Wireless Users Security Group
+### <a name="bkmk_groups"></a>Create a Wireless Users Security Group
 
 You can use this procedure to create a wireless security group in the Active Directory Users and Computers Microsoft Management Console \(MMC\) snap\-in.  
 
