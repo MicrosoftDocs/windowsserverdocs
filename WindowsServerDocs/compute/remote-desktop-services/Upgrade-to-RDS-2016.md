@@ -52,27 +52,6 @@ The deployment will not be available during RD Connection Broker servers upgrade
    > [!NOTE] 
    > Windows Server 2012 and 2012 R2 RD Gateway servers will work with Windows Server 2016 deployments.
 
-## VDI deployment – supported guest OSs 
-Windows Server 2016 RD Virtualization Host servers support the following guest OSs:
-
-- Windows 10 Enterprise
-- Windows 8.1 Enterprise 
-- Windows 8 Enterprise 
-- Windows 7 SP1 Enterprise 
-
-The table below shows the supported RD Virtualization Hosts operating systems and guest operating system combinations:
-
-| RDVH OS Version        | Guest OS Version           |
-| ------------- |-------------|
-| Windows Server 2016      | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
-| Windows Server 2012 R2   | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
-| Windows Server 2012      | Windows 7 SP1, Windows 8, Windows 8.1 |
-
-> [!NOTE]  
-> - Windows Server 2016 Remote Desktop Services does not support heterogeneous collections. All VMs in a collection must be same OS version. 
-> - You can have separate homogeneous collections with different guest OS versions on the same host. 
-> - VM templates must be created on a Windows Server 2016 Hyper-V host to used as guest OS on a Windows Server 2016 Hyper-V host.
-
 ## VDI deployment – supported guest OS upgrade
 Administrators will have the following options to upgrade of VM collections:
 
