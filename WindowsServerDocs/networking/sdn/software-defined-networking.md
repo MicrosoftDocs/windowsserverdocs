@@ -22,13 +22,13 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > [!NOTE]  
 > In addition to this topic, the following SDN content is available.  
 >   
-> -   [Software Defined Networking Technologies](../sdn/technologies/Software-Defined-Networking-Technologies.md)  
-> -   [Plan Software Defined Networking](../sdn/plan/Plan-Software-Defined-Networking.md)  
-> -   [Deploy Software Defined Networking](../sdn/deploy/Deploy-Software-Defined-Networking.md)  
-> -   [Manage Tenant Workloads and Virtual Networks](../sdn/manage/Manage-Tenant-Workloads-and-Virtual-Networks.md)  
-> -   [Troubleshoot Software Defined Networking](../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
-> -   [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
-> -   [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)  
+> - [Software Defined Networking Technologies](technologies/Software-Defined-Networking-Technologies.md)  
+> - [Plan Software Defined Networking](plan/Plan-Software-Defined-Networking.md)  
+> - [Deploy Software Defined Networking](deploy/Deploy-Software-Defined-Networking.md)  
+> - [Manage Software Defined Networking](manage/manage-sdn.md)  
+> - [Troubleshoot Software Defined Networking](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> - [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
+> - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)  
   
 This topic contains the following sections.  
   
