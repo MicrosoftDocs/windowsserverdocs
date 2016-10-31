@@ -552,8 +552,3 @@ The first partition on a volume that is utilizing hard disks usually uses the ou
 
 
 With the cost of solid-state devices dropping, it is important to consider including multiple tiers of devices into a storage deployment to achieve better balance between performance, cost, and energy consumption. Traditional storage arrays offer the ability to aggregate and tier heterogeneous storage, but Storage Spaces provides a more robust implementation.
-
-## Related topics
-
-
-[Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md)

@@ -16,16 +16,10 @@ The layered driver model in Windows sacrifices some performance for maintainabil
 
 **In this section:**
 
--   [Choosing Storage for Storage Subsystem Performance](choosing-storage-for-storage-subsystem-performance.md)
+-   [Choosing Storage for Storage Subsystem Performance](./Section_5.1-choosing-storage-for-storage-subsystem-performance.md)
 
--   [Using Storage Spaces for Storage Subsystem Performance](using-storage-spaces-for-storage-subsystem-performance.md)
+-   [Using Storage Spaces for Storage Subsystem Performance](./Section_5.2-using-storage-spaces-for-storage-subsystem-performance.md)
 
--   [Using Storage-related Parameters and Performance Counters](using-storage-related-parameters-and-performance-counters.md)
+-   [Using Storage-related Parameters and Performance Counters](./Section_5.3-using-storage-related-parameters-and-performance-counters.md)
 
--   [Using Storage Drivers for Storage Subsystem Performance](using-storage-drivers-for-storage-subsystem-performance.md)
-
-
-## Related topics
-
-
-[Performance Tuning for Subsystems](performance-tuning-for-subsystems.md)
+-   [Using Storage Drivers for Storage Subsystem Performance](./Section_5.4-using-storage-drivers-for-storage-subsystem-performance.md)

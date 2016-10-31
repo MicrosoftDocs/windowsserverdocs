@@ -220,8 +220,3 @@ Use the following queue length targets when few workload details are available:
 -   For a heavily loaded system that is not saturated, the average queue length should be less than 2.5 per physical disk, with infrequent spikes up to 20. If the workload is write heavy, the average queue length above a mirrored array or virtual disk should be less than 1.5 per physical disk, and the average queue length above a RAID 5 array or parity virtual disk should be less than 1.0 per physical disk.
 
 -   For workloads of sequential requests, larger queue lengths can be tolerated because services times, and therefore response times, are much shorter than those for a random workload.
-
-## Related topics
-
-
-[Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md)

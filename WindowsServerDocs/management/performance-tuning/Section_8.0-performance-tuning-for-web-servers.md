@@ -25,7 +25,7 @@ This topic describes performance tuning methods and recommendations for Windows 
 
 It is important to select the proper hardware to satisfy the expected web load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
 
-[Performance Tuning for Server Hardware](performance-tuning-for-server-hardware.md) provides recommendations for hardware to avoid the following performance constraints:
+[Performance Tuning for Server Hardware](./Section_2.0-ServerHardwarePerf.md) provides recommendations for hardware to avoid the following performance constraints:
 
 -   Slow CPUs offer limited processing power for CPU intensive workloads such as ASP, ASP.NET, and SSL scenarios.
 
@@ -775,7 +775,7 @@ The use of SSL imposes additional CPU cost. The most expensive component of SSL 
 
 ### Internet Server Application Programming Interface (ISAPI)
 
-No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use. For more info, see [Performance Tuning for Server Roles](performance-tuning-for-server-roles.md#bkmk-iisother).
+No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use.
 
 ### Managed code tuning guidelines
 
@@ -816,9 +816,4 @@ Some applications, such as incremental backup utilities, rely on this update inf
 ## <a href="" id="netsub"></a>Networking subsystem performance settings for IIS
 
 
-For networking subsystem performance settings, see [Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md).
-
-## Related topics
-
-
-[Performance Tuning for Server Roles](performance-tuning-for-server-roles.md)
+For networking subsystem performance settings, see [Performance Tuning for Network Subsystems](./Section-4.0_performance-tuning-for-network-subsystems.md).

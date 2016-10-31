@@ -5,10 +5,7 @@ description: Performance Tuning for File Servers
 
 # Performance Tuning for File Servers
 
-
-Applies To: Windows Server 2008 R2, Windows Server 2008, Windows Server 2012, Windows Server 2012 R2
-
-You should select the proper hardware to satisfy the expected file server load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning. For hardware recommendations, see [Performance Tuning for Server Hardware](performance-tuning-for-server-hardware.md). The following subsystem performance tuning topics also apply to file servers: [Performance Tuning for Network Subsystems](performance-tuning-for-network-subsystems.md) and [Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md).
+You should select the proper hardware to satisfy the expected file server load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
 
 **In this topic:**
 
@@ -281,6 +278,3 @@ Starting in Windows 8, you can configure many of these file server settings by 
 ``` syntax
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
-
-
-

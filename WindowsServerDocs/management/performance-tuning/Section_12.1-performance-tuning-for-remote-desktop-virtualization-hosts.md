@@ -38,9 +38,6 @@ Enable-DedupVolume <volume> -UsageType HyperV
 **Note**  
 Data Deduplication optimization of open files is supported only for VDI scenarios with Hyper-V using remote storage over SMB 3.0.
 
- 
-
-For more info on Data Deduplication, see [Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md).
 
 ### Memory
 
@@ -267,8 +264,3 @@ This list is not meant to be a complete list, because any changes will affect th
 SuperFetch in Windows 8 is enabled by default. It is VDI-aware and should not be disabled. SuperFetch can further reduce memory consumption through memory page sharing, which is beneficial for VDI. Pooled virtual desktops running Windows 7, SuperFetch should be disabled, but for personal virtual desktops running Windows 7, it should be left on.
 
  
-
-## Related topics
-
-
-[Performance Tuning for Server Roles](performance-tuning-for-server-roles.md)

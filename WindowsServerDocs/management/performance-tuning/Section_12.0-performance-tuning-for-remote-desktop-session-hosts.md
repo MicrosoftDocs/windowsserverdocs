@@ -19,13 +19,13 @@ This topic discusses how to select Remote Desktop Session Host (RD Session Host)
 ## <a href="" id="hw"></a>Selecting the proper hardware for performance
 
 
-For an RD Session Host server deployment, the choice of hardware is governed by the application set and how users use them. The key factors that affect the number of users and their experience are CPU, memory, disk, and graphics. For info about server hardware guidelines, see [Performance Tuning for Server Hardware](performance-tuning-for-server-hardware.md). Those guidelines apply to Remote Desktop Services. This section contains additional guidelines that are specific to RD Session Host servers and is mostly related to the multi-user environment of RD Session Host servers.
+For an RD Session Host server deployment, the choice of hardware is governed by the application set and how users use them. The key factors that affect the number of users and their experience are CPU, memory, disk, and graphics. This section contains additional guidelines that are specific to RD Session Host servers and is mostly related to the multi-user environment of RD Session Host servers.
 
 ### CPU configuration
 
 CPU configuration is conceptually determined by multiplying the required CPU to support a session by the number of sessions that the system is expected to support, while maintaining a buffer zone to handle temporary spikes. Multiple logical processors can help reduce abnormal CPU congestion situations, which are usually caused by a few overactive threads that are contained by a similar number of logical processors.
 
-Therefore, the more logical processors on a system, the lower the cushion margin that must be built in to the CPU usage estimate, which results in a larger percentage of active load per CPU. One important factor to remember is that doubling the number of CPUs does not double CPU capacity. For more considerations, see [Performance Tuning for Server Hardware](performance-tuning-for-server-hardware.md).
+Therefore, the more logical processors on a system, the lower the cushion margin that must be built in to the CPU usage estimate, which results in a larger percentage of active load per CPU. One important factor to remember is that doubling the number of CPUs does not double CPU capacity.
 
 ### Memory configuration
 
@@ -48,8 +48,6 @@ The disk activity that is generated on a typical RD Session Host server affects 
 -   User profiles and user data
 
 Ideally, these areas should be backed up by distinct storage devices. Using striped RAID configurations or other types of high-performance storage further improves performance. We highly recommend that you use storage adapters with battery-backed write caching. Controllers with disk write caching offer improved support for synchronous write operations. Because all users have a separate hive, synchronous write operations are significantly more common on an RD Session Host server. Registry hives are periodically saved to disk by using synchronous write operations. To enable these optimizations, from the Disk Management console, open the **Properties** dialog box for the destination disk and, on the **Policies** tab, select the **Enable write caching on the disk** and **Turn off Windows write-cache buffer flushing** on the device check boxes.
-
-For more specific storage tunings, see [Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md).
 
 ### Network configuration
 
@@ -107,7 +105,7 @@ For memory consumption, you should consider the following:
 
 ### Page file
 
-Insufficient page file size can cause memory allocation failures in apps or system components. You can use the memory-to-committed bytes performance counter to monitor how much committed virtual memory is on the system. For more info on page file sizing, see [Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md).
+Insufficient page file size can cause memory allocation failures in apps or system components. You can use the memory-to-committed bytes performance counter to monitor how much committed virtual memory is on the system.
 
 ### Antivirus
 
@@ -192,8 +190,3 @@ By using the **Experience** tab within Remote Desktop Connection, you can choose
 ### Desktop Size
 
 Desktop size for remote sessions can be controlled by using the Display tab in Remote Desktop Connection or by using the RDP configuration file (desktopwidth:i:1152 and desktopheight:i:864). The larger the desktop size, the greater the memory and bandwidth consumption that is associated with that session. The current maximum desktop size is 4096 x 2048.
-
-## Related topics
-
-
-[Performance Tuning for Server Roles](performance-tuning-for-server-roles.md)
