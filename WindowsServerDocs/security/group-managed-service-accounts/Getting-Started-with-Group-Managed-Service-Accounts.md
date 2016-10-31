@@ -39,7 +39,7 @@ This guide provides step-by-step instructions and background information for ena
 > [!NOTE]
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).
 
-## Prerequisites
+## <a name="BKMK_Prereqs"></a>Prerequisites
 See the section in this topic on [Requirements for group Managed Service Accounts](#BKMK_gMSA_Req).
 
 ## <a name="BKMK_Intro"></a>Introduction
