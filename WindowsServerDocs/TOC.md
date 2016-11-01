@@ -747,7 +747,7 @@
 #### [What's New in DNS Server in Windows Server 2016](networking/dns/What-s-New-in-DNS-Server.md)
 #### [DNS Policy Scenario Guide](networking/dns/deploy/DNS-Policy-Scenario-Guide.md)
 ##### [DNS Policies Overview](networking/dns/deploy/DNS-Policies-Overview.md)
-##### [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](networking/dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)
+##### [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](networking/dns/deploy/primary-geo-location.md)
 ##### [Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](networking/dns/deploy/primary-secondary-geo-location.md)
 ##### [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](networking/dns/deploy/Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)
 ##### [DNS Responses Based on Time of Day with an Azure Cloud App Server](networking/dns/deploy/dns-tod-azure-cloud-app-server.md)

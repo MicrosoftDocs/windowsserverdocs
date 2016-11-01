@@ -69,7 +69,7 @@ You need to configure the Host Guardian Service with two certificates for encryp
 | Option | Procedure |
 |----|------|
 | You have your own PKI certificate and a PFX file. | [Use my own PKI certificates that are not backed by an HSM](#use-my-own-pki-certificates-that-are-not-backed-by-an-hsm) |
-| You have a certificate backed by a Hardware Security Module (HSM). | [Use my own certificates with an HSM](#use-my-own-certificates-with-an-hsm) |
+| You have a certificate backed by a Hardware Security Module (HSM). | [Use my own certificates with an HSM](#use-your-own-certificates-with-an-hsm) |
 | You are using a self-signed certificate (only recommended for test or POC environments). | [Create and use self-signed certificates](#create-and-use-self-signed-certificates) |
 
 >**Note**&nbsp;&nbsp;Regardless of how you create the certificates, they must support RSA 2048 bit keys and their key-usage policy (EKU) must permit digital signing and encryption.
@@ -292,7 +292,7 @@ The following steps will add an additional node to the HGS cluster that you prev
 
 6.  Allow up to 10 minutes for the encryption and signing certificates from the first HGS server to replicate to this node.
 
-7.  If you used HSM-backed certificates, you will need to install the driver for your HSM on this machine and grant the machine access to the private keys of the encryption and signing certificates per your HSM manufacturer's instructions. For both PKI-issued and HSM-backed certificates, you must manually grant the HGS service access to the private keys of the certificate per the instructions in [Use my own certificates with an HSM](#use-my-own-certificates-with-an-hsm).
+7.  If you used HSM-backed certificates, you will need to install the driver for your HSM on this machine and grant the machine access to the private keys of the encryption and signing certificates per your HSM manufacturer's instructions. For both PKI-issued and HSM-backed certificates, you must manually grant the HGS service access to the private keys of the certificate per the instructions in [Use my own certificates with an HSM](#use-your-own-certificates-with-an-hsm).
 
 Next, we need to validate that things are working as expected. To do so, run the following command in an elevated PowerShell console:
 
