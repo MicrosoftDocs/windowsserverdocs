@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 151a836e-d2c6-46b0-9943-b3793bd511de
+author: phstee
+ms.author: NedPyle; Danlo; DKruse
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning For SMB File Servers

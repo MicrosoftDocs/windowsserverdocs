@@ -1,6 +1,16 @@
 ---
 title: Using Storage Drivers for Storage Subsystem Performance
 description: Using Storage Drivers for Storage Subsystem Performance
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: e60fa2e8-0050-4150-8774-267ad6d128cd
+author: phstee
+ms.author: Vshankar;Danlo; KaranMe
+ms.date: 10/31/2016
 ---
 
 # Using Storage Drivers for Storage Subsystem Performance

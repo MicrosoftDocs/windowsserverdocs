@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for Storage Subsystems
 description: Performance Tuning for Storage Subsystems
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 61588cc7-388a-4f83-971a-38e4cc7de59a
+author: phstee
+ms.author: Vshankar;Danlo; KaranMe
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning for Storage Subsystems
