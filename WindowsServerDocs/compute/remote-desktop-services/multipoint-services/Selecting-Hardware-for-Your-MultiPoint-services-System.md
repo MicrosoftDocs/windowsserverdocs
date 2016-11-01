@@ -89,7 +89,7 @@ When you have selected the hardware components for your MultiPoint Services syst
   
 The following topics provide detailed information to help you select components for your MultiPoint Services system:  
   
-[Selecting video hardware](#selecting-video-hardware)  
+[Selecting video hardware](#Selecting-video-hardware)  
 [Selecting direct\-video\-connected or USB zero client station devices](#BKMK_Selectingdirect-video-connectedorUSBzeroclientstationdevices)   
 [Selecting other station peripheral devices](#selecting-other-station-peripheral-devices)  
 [Selecting RDP\-over\-LAN\-connected station hardware](#BKMK_SelectingRDP-over-LAN-connectedstationhardware)  
