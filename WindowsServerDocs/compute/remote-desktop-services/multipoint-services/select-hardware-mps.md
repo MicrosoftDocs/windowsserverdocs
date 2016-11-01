@@ -148,7 +148,7 @@ When selecting a USB hub for your MultiPoint Services system, consider its use. 
 |Active USB Extender Cable|Active USB cables that include a USB hub are typically bus powered; therefore, they are not recommended for connecting station hubs to the computer.|  
   
 ### Selecting USB zero clients  
-A USB zero client is a USB hub that contains a video output. Therefore, it allows a monitor to be connected to the computer through a USB connection. For more information about using USB zero clients for video, see [Selecting video hardware](#Selecting-video-hardware) in this document. A USB zero client can also enable the connection of a variety of USB and non\-USB devices to the hub. USB zero clients are produced by specific hardware manufacturers, and they require installing a device\-specific driver.  
+A USB zero client is a USB hub that contains a video output. Therefore, it allows a monitor to be connected to the computer through a USB connection. For more information about using USB zero clients for video, see [Selecting video hardware](#selecting-video-hardware) in this document. A USB zero client can also enable the connection of a variety of USB and non\-USB devices to the hub. USB zero clients are produced by specific hardware manufacturers, and they require installing a device\-specific driver.  
   
 ### Selecting keyboards and mouse devices  
 The keyboard and mouse devices that you plug\-in to the station will typically be USB devices. Some USB zero clients provide PS\/2 ports, in which case, the keyboard and mouse should use PS\/2 to connect to the station hub. You can also use a PS\/2 keyboard and mouse if you are setting up a PS\/2 direct\-video\-connected station.  
