@@ -1,4 +1,4 @@
-# Metadata and version identifiers for article contents
+# Metadata and version identifiers
 
 This article discusses metadata and versioning for the articles in windowsserverdocs-pr repository. 
 
@@ -43,6 +43,8 @@ Metadata that appears at the top of a published article happens when the source 
 
 - Missing the triple hyphens at the first and last lines of the block, or the wrong number of hyphens.
 - Metadata doesn't follow the required syntax: \<name\>:\<single space\>\<value>
+
+Check your file for these and any other obvious errors, then submit a PR to publish the updated file. If you're stuck, email the PR reviewers alias: wssc-pra@microsoft.com
 
 ## See also
 Metadata used in this repo is based on metadata used in Content Services & International \(CSI\). More info, including optional metadata, is available at [http://aka.ms/skyeye/meta](http://aka.ms/skyeye/meta).
