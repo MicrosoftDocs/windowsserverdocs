@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning Guide Table of Contents
 description: Performance Tuning Guide Table of Contents
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 0489cd0b-b936-49fc-bf29-7075a17dec3e
+author: phstee
+ms.author: phstee
+ms.date: 10/31/2016
 ---
 
 # Table of Contents
@@ -97,7 +107,7 @@ description: Performance Tuning Guide Table of Contents
 **Performance Tuning for Storage Features**
 -    [Storage Spaces Direct Performance Tuning](./Section_15-StorageSpacesDirect.md)
 
--    [Storage Replication Performance Tuning](./Section_16-StorageReplication.md)
+-    [Storage Replication Performance Tuning](./Section_15.1-StorageReplication.md)
 
 **References**
 -    [References and Links](./Section_1.2-References.md)

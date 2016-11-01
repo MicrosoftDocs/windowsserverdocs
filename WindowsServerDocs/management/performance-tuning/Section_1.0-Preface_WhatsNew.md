@@ -4,16 +4,15 @@ description: Performance Tuning Guidelines for Windows Server 2016
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
-ms.technology:
+ms.technology: performance-tuning-guide
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid:
-author:
-ms.author:
-ms.date: 
+ms.assetid: 467384e2-3644-498e-a2ff-46692c0c0dc1
+author: phstee
+ms.author: phstee
+ms.date: 10/31/2016
 ---
 
----
 
 # Performance Tuning Guidelines for Windows Server 2016
 

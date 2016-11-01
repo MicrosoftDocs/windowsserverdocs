@@ -1,6 +1,16 @@
 ---
 title: Using Storage-related Parameters and Performance Counters
 description: Using Storage-related Parameters and Performance Counters
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 0bf254d6-80da-4ad9-868c-9c3dc6fc8334
+author: phstee
+ms.author: Vshankar;Danlo; KaranMe
+ms.date: 10/31/2016
 ---
 
 # Using Storage-related Parameters and Performance Counters

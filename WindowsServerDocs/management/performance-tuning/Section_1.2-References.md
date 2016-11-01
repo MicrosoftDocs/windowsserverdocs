@@ -1,6 +1,16 @@
 ---
 title: Additional Resources for Performance Tuning Guidelines
 description: Additional Resources for Performance Tuning Guidelines
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 12c3db18-2597-40a5-8ee2-f64f63350c86
+author: phstee
+ms.author: phstee
+ms.date: 10/31/2016
 ---
 
 # Additional Resources for Performance Tuning Guidelines

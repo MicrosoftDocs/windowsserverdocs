@@ -1,6 +1,16 @@
 ---
 title: Using Storage Spaces for Storage Subsystem Performance
 description: Using Storage Spaces for Storage Subsystem Performance
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: b05ff696-3069-4305-ab8e-b37998398971
+author: phstee
+ms.author: Vshankar;Danlo; KaranMe
+ms.date: 10/31/2016
 ---
 
 # Using Storage Spaces for Storage Subsystem Performance

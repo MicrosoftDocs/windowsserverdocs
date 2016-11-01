@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for Cache and Memory Manager Subsystems
 description: Performance Tuning for Cache and Memory Manager Subsystems
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: ce90816c-8e75-44b5-bbdb-a600ab23cebc
+author: phstee
+ms.author: Pavel; ATales
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning for Cache and Memory Manager Subsystems

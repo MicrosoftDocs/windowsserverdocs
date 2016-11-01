@@ -1,6 +1,16 @@
 ---
 title: Using NIC Teaming for Network Subsystem Performance
 description: Using NIC Teaming for Network Subsystem Performance
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 3fb8c836-5494-4717-a543-82e9d729f667
+author: phstee
+ms.author: donst
+ms.date: 10/31/2016
 ---
 
 # Using NIC Teaming for Network Subsystem Performance
