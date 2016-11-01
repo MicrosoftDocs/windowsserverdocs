@@ -1,6 +1,16 @@
 ---
 title: Choosing a Network Adapter for Network Subsystem Performance
 description: Choosing a Network Adapter for Network Subsystem Performance
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 82b36094-0ea0-46de-a4bf-34768cafd677
+author: phstee
+ms.author: donst
+ms.date: 10/31/2016
 ---
 
 # Choosing a Network Adapter for Network Subsystem Performance

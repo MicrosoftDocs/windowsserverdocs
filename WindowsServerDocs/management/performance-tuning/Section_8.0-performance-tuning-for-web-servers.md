@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for Web Servers
 description: Performance Tuning for Web Servers
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 5b66ad76-102f-4103-bc09-b48c4556d486
+author: phstee
+ms.author: DavSo; Ericam; YaShi
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning for Web Servers

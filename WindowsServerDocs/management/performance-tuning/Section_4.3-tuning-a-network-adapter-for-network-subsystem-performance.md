@@ -1,6 +1,16 @@
 ---
 title: Tuning a Network Adapter for Network Subsystem Performance
 description: Tuning a Network Adapter for Network Subsystem Performance
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: a93a4b28-0c77-4131-b4c7-ce2a773e66b2
+author: phstee
+ms.author: donst;dahavey
+ms.date: 10/31/2016
 ---
 
 # Tuning a Network Adapter for Network Subsystem Performance

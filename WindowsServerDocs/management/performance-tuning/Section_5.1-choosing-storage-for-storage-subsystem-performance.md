@@ -1,6 +1,16 @@
 ---
 title: Choosing Storage for Storage Subsystem Performance
 description: Choosing Storage for Storage Subsystem Performance
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: d40ea494-575a-4f65-8f93-082c5a2b69f2
+author: phstee
+ms.author: Vshankar;Danlo; KaranMe
+ms.date: 10/31/2016
 ---
 
 # Choosing Storage for Storage Subsystem Performance

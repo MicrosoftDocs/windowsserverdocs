@@ -1,6 +1,16 @@
 ---
 title: Cache and Memory Manager Potential Performance Issues
 description: Cache and Memory Manager Potential Performance Issues
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: e70d019e-75f9-428e-8830-227db13e7bf8
+author: phstee
+ms.author: Pavel; ATales
+ms.date: 10/31/2016
 ---
 
 # Cache and Memory Manager Potential Performance Issues

@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for NFS File Servers
 description: Performance Tuning for NFS File Servers
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 5a855e5a-c27c-4833-a7ab-2fc256eb1b58
+author: phstee
+ms.author: RoopeshB
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning for NFS File Servers
@@ -154,4 +164,3 @@ The following REG\_DWORD registry settings can affect the performance of NFS fil
     ```
 
     The default value of the MaxConcurrentConnectionsPerIp parameter is 16. You can increase this value up to a maximum of 8192 to increase the number of connections per IP address.
-

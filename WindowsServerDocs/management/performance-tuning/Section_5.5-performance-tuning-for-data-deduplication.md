@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for Data Deduplication
 description: Performance Tuning for Data Deduplication
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: ae015370-07a0-4a62-9f8d-327e1f75cfe4
+author: phstee
+ms.author: wgries
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning for Data Deduplication

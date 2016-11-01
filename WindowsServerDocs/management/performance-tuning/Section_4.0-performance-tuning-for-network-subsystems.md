@@ -1,6 +1,16 @@
 ---
 title: Performance Tuning for Network Subsystems
 description: Performance Tuning for Network Subsystems
+ms.prod: windows-server-threshold
+ms.service: na
+manager: dongill
+ms.technology: performance-tuning-guide
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: aeda3f18-f2c0-4c81-becb-8b4b18c0d7cd
+author: phstee
+ms.author: donst
+ms.date: 10/31/2016
 ---
 
 # Performance Tuning for Network Subsystems
