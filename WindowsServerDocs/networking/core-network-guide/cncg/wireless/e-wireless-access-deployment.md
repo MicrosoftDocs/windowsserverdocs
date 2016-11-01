@@ -21,7 +21,7 @@ Follow these steps to deploy wireless access:
 
 - [Deploy and Configure Wireless APs](#bkmk_aps)
 
-- [Create Security Groups for Wireless Users](#bkmk_groups)
+- [Create a Wireless Users Security Group](#bkmk_groups)
 
 - [Configure Wireless Network \(IEEE 802.11\) Policies](#bkmk_policies)
 
