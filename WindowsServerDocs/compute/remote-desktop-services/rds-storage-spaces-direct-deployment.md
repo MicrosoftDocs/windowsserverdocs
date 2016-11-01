@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 10/27/2016
+ms.date: 11/01/2016
 manager: scottman
 ---
 # Deploy a two-node S2D SOFS for UPD storage in Azure
@@ -28,10 +28,10 @@ These instructions are for a 2-node deployment. The following table shows the VM
 
 | Users | Total (GB) | VM | # Disks | Disk type | Disk size (GB) | Configuration   |
 |-------|------------|----|---------|-----------|----------------|-----------------|
-| 10    | 50         | DS1 | 1       | P10       | 128            | 2x(DS1 + 1 P10)  |
-| 25    | 125        | DS1 | 1       | P10       | 128            | 2x(DS1 + 1 P10)  |
+| 10    | 50         | DS1 | 2       | P10       | 128            | 2x(DS1 + 2 P10)  |
+| 25    | 125        | DS1 | 2       | P10       | 128            | 2x(DS1 + 2 P10)  |
 | 50    | 250        | DS1 | 2       | P10       | 128            | 2x(DS1 + 2 P10)  |
-| 100   | 500        | DS1 | 1       | P20       | 512            | 2x(DS1 + 1 P20)  |
+| 100   | 500        | DS1 | 2       | P20       | 512            | 2x(DS1 + 2 P20)  |
 | 250   | 1250       | DS1 | 2       | P30       | 1024           | 2x(DS1 + 2 P30)  |
 | 500   | 2500       | DS2 | 3       | P30       | 1024           | 2x(DS2 + 2 P30)  |
 | 1000  | 5000       | DS3 | 5       | P30       | 1024           | 2x(DS3 + 5 P30)  |
@@ -100,7 +100,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    4. Enable Storage Spaces Direct.
 
       ```powershell
-      Enable-ClusterS2D -CacheMode Disabled 
+      Enable-ClusterS2D 
       ```
       
    5. Create a virtual disk volume.

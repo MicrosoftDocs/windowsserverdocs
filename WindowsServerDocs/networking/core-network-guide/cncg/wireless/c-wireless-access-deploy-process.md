@@ -16,13 +16,13 @@ ms.author: jamesmci
 
 The process that you use to deploy wireless access occurs in these stages:
 
-##Stage 1 – AP Deployment
+## Stage 1 – AP Deployment
 
 Plan, deploy, and configure your APs for wireless client connectivity and for use with NPS. Depending on your preference and network dependencies, you can either pre\-configure settings on your wireless APs prior to installing them on your network, or you can configure them remotely after installation.
 
-##Stage 2 – AD DS Group Configuration
+## Stage 2 – AD DS Group Configuration
 
-In Ad DS, you must create one or more wireless users security groups.
+In AD DS, you must create one or more wireless users security groups.
 
 Next, identify the users who are allowed wireless access to the network.
 
@@ -31,7 +31,7 @@ Finally, add the users to the appropriate wireless users security groups that yo
 >[!NOTE]
 >By default, the **Network Access Permission** setting in user account dial-in properties is configured with the setting **Control access through NPS Network Policy**. Unless you have specific reasons to change this setting, it is recommended that you keep the default. This allows you to control network access through the network policies that you configure in NPS.
 
-##Stage 3 – Group Policy Configuration
+## Stage 3 – Group Policy Configuration
 
 Configure the Wireless Network \(IEEE 802.11\) Policies extension of Group Policy by using the Group Policy Management Editor Microsoft Management Console \(MMC\).
 
@@ -45,13 +45,13 @@ To configure domain\-member computers using the settings in the wireless network
 
 You can also force Group Policy to refresh while logged on to a computer by running the command **gpupdate** at the command prompt.
 
-##Stage 4 – NPS server configuration
+## Stage 4 – NPS server configuration
 
 Use a configuration wizard in NPS to add wireless access points as RADIUS clients, and to create the network policies that NPS uses when processing connection requests.
 
 When using the wizard to create the network policies, specify PEAP as the EAP type, and the wireless users security group that was created in the second stage.
 
-##Stage 5 – Deploy wireless clients
+## Stage 5 – Deploy wireless clients
 
 Use client computers to connect to the network.
 

@@ -453,7 +453,7 @@ You can use the procedure in this section to change the name of a computer. Rena
 >
 > `Restart-Computer`
 
-###### To rename computers running  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012
+###### To rename computers running Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
 1.  In Server Manager, click **Local Server**. The computer **Properties** are displayed in the details pane.
 
@@ -476,7 +476,7 @@ You can use the procedures in this topic to configure the Internet Protocol vers
 >
 > `Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 127.0.0.1`
 
-###### To configure a static IP address on  computers running  Windows Server 2016, Windows Server 2012 R2 , and  Windows Server 2012
+###### To configure a static IP address on computers running Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
 1.  In the task bar, right-click the Network icon, and then click **Open Network and Sharing Center**.
 
@@ -725,7 +725,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 > [!NOTE]
 > For information on how to join computers that are running other Microsoft operating systems to the domain, see [Appendix C - Joining computers to the domain](#BKMK_C).
 
-###### To log on to the domain using computers running  Windows Server 2016
+###### To log on to the domain using computers running Windows Server 2016
 
 1.  Log off the computer, or restart the computer.
 
