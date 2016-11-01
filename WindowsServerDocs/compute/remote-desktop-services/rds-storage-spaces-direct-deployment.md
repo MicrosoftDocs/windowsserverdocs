@@ -100,7 +100,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    4. Enable Storage Spaces Direct.
 
       ```powershell
-      Enable-ClusterS2D -CacheMode Disabled 
+      Enable-ClusterS2D 
       ```
       
    5. Create a virtual disk volume.
