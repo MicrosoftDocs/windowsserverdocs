@@ -55,11 +55,14 @@ Even though the system can run at its peak load, we typically optimize for lower
 
 ### Metrics
 
-All of the tested benchmarks use throughput as the performance metric. Response Time is considered as an SLA requirement for these workloads (except for SAP, where it is a primary metric). For example, a benchmark run is considered “valid” if the mean or maximum response time is less than certain value. Therefore, the PPM tuning analysis also uses throughput as its performance metric. At the highest load level (100% CPU utilization), our goal is that the throughput should not decrease more than a few percent due to power management optimizations. But the primary consideration is to maximize the power efficiency (as defined below) at medium and low load levels.
+All of the tested benchmarks use throughput as the performance metric. Response Time is considered as an SLA requirement for these workloads (except for SAP, where it is a primary metric). For example, a benchmark run is considered “valid” if the mean or maximum response time is less than certain value. Therefore, the PPM tuning analysis also uses throughput as its performance metric.  At the highest load level (100% CPU utilization), our goal is that the throughput should not decrease more than a few percent due to power management optimizations. But the primary consideration is to maximize the power efficiency (as defined below) at medium and low load levels.
 
 ![power efficiency formula](../media/performance-tuning/serverperf-ppm-formula.jpg)
 
 Running the CPU cores at lower frequencies reduces energy consumption. However, lower frequencies typically decrease throughput and increase response time. For the **Balanced** power plan, there is an intentional tradeoff of responsiveness and power efficiency. The SAP workload tests, as well as the response time SLAs on the other workloads, make sure that the response time increase doesn’t exceed certain threshold (5% as an example) for these specific workloads.
+
+**Note**
+If the workload uses response time as the performance metric, the system should either switch to the **High Performance** power plan or change **Balanced** power plan as suggested in [Recommended Balanced Power Plan Parameters for Quick Response Time](RecommenededPPMParameters.md).
 
 ### Tuning results
 
