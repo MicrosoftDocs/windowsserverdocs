@@ -69,7 +69,7 @@ You need to configure the Host Guardian Service with two certificates for encryp
 | Option | Procedure |
 |----|------|
 | You have your own PKI certificate and a PFX file. | [Use my own PKI certificates that are not backed by an HSM](#use-my-own-pki-certificates-that-are-not-backed-by-an-hsm) |
-| You have a certificate backed by a Hardware Security Module (HSM). | [Use my own certificates with an HSM](#use-my-own-certificates-with-an-hsm) |
+| You have a certificate backed by a Hardware Security Module (HSM). | [Use my own certificates with an HSM](#use-your-own-certificates-with-an-hsm) |
 | You are using a self-signed certificate (only recommended for test or POC environments). | [Create and use self-signed certificates](#create-and-use-self-signed-certificates) |
 
 >**Note**&nbsp;&nbsp;Regardless of how you create the certificates, they must support RSA 2048 bit keys and their key-usage policy (EKU) must permit digital signing and encryption.
