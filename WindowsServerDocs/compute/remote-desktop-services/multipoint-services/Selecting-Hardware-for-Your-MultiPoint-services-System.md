@@ -95,7 +95,7 @@ The following topics provide detailed information to help you select components 
 [Selecting RDP\-over\-LAN\-connected station hardware](#BKMK_SelectingRDP-over-LAN-connectedstationhardware)  
 [Selecting audio devices](#selecting-audio-devices)  
   
-## Selecting video hardware  
+## Selecting video hardware
 The video hardware that you select should support the number of monitors that you will require for the number of users you intend to have working at MultiPoint Services stations. In addition, different types of video hardware can provide a higher\-performance solution for graphics\-intensive programs, such as multimedia content.  
   
 Select the video hardware that can support the maximum number of monitors for the type of performance that your MultiPoint Services system requires. Make sure that you validate the performance of the video hardware that you choose to ensure that it meets your performance requirements.  
