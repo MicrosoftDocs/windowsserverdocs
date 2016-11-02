@@ -25,7 +25,7 @@ manager: dongill
     <a href="what-s-new-in-windows-server-2016-technical-preview-5">What's New in Windows Server 2016?</a></font>
   </td>
 </table>
-[![Storage Spaces Direct Overview Video](media/font-page-video.png)](https://www.youtube.com/embed/VG7PaTuX2eE)
+[![Storage Spaces Direct Overview Video](media/font-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
 <table>
 </tr>
   <tr style="text-align:center;">
