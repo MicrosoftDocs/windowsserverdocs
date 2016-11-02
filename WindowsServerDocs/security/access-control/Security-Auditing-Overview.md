@@ -34,25 +34,25 @@ You can use Windows security and system logs to create a security events trackin
 
 -   Changes to system files.
 
-In Windows Server 2008 R2 and Windows 7, the number of security audit policy settings was increased from nine to 53, and all auditing capabilities were integrated with Group Policy. This allows administrators to configure, deploy, and manage a wide range of settings in the Group Policy Management Console (GPMC) or the Local Security Policy snap-in for a domain, site, or organizational unit (OU). This makes it easier for IT professionals to track when precisely defined, significant activities take place on the network. For more information, see [Advanced Security Audit Policy Settings](../security-auditing/Advanced-Security-Audit-Policy-Settings.md).
+In Windows Server 2008 R2 and Windows 7, the number of security audit policy settings was increased from nine to 53, and all auditing capabilities were integrated with Group Policy. This allows administrators to configure, deploy, and manage a wide range of settings in the Group Policy Management Console (GPMC) or the Local Security Policy snap-in for a domain, site, or organizational unit (OU). This makes it easier for IT professionals to track when precisely defined, significant activities take place on the network. For more information, see [Advanced Security Audit Policy Settings](../security-auditing/advanced-security-audit-policy-settings.md).
 
 ## Managing security auditing
 To use security auditing, you need to configure the system access control list (SACL) for an object, and apply the appropriate security audit policy to the user or computer. For more information, see [Managing Security Auditing](http://technet.microsoft.com/library/cc771475.aspx).
 
-For information about managing Advanced Security Auditing, see [Advanced Security Auditing Walkthrough](../security-auditing/Advanced-Security-Auditing-Walkthrough.md).
+For information about managing Advanced Security Auditing, see [Advanced Security Auditing Walkthrough](../security-auditing/advanced-security-auditing-walkthrough.md).
 
-For information about auditing Dynamic Access Control, see [Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../security-auditing/Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md).
+For information about auditing Dynamic Access Control, see [Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../security-auditing/using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md).
 
 ## Related resources
 
 |Content type|Resources|
 |--------|-------|
-|**Product evaluation**|[Advanced Security Auditing FAQ](../security-auditing/Advanced-Security-Auditing-FAQ.md)<br /><br />[Advanced Security Auditing Walkthrough](../security-auditing/Advanced-Security-Auditing-Walkthrough.md)<br /><br/>[What's New in Security Auditing for Windows Server 2012](http://technet.microsoft.com/library/hh849638.aspx)|
-|**Planning and Deployment**|[Planning and Deploying Advanced Security Audit Policies](../security-auditing/Planning-and-Deploying-Advanced-Security-Audit-Policies.md)|
-|**Operations**|[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../security-auditing/Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)|
+|**Product evaluation**|[Advanced Security Auditing FAQ](../security-auditing/advanced-security-auditing-faq.md)<br /><br />[Advanced Security Auditing Walkthrough](../security-auditing/advanced-security-auditing-walkthrough.md)<br /><br/>[What's New in Security Auditing for Windows Server 2012](http://technet.microsoft.com/library/hh849638.aspx)|
+|**Planning and Deployment**|[Planning and Deploying Advanced Security Audit Policies](../security-auditing/planning-and-deploying-advanced-security-audit-policies.md)|
+|**Operations**|[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../security-auditing/using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md)|
 |**Troubleshooting**|Not yet available|
-|**Tools and settings**|[Advanced Security Audit Policy Settings](../security-auditing/Advanced-Security-Audit-Policy-Settings.md)|
+|**Tools and settings**|[Advanced Security Audit Policy Settings](../security-auditing/advanced-security-audit-policy-settings.md)|
 |**Community resources**|[Advanced Security Auditing in Windows 7 and Windows Server 2008 R2](http://social.technet.microsoft.com/wiki/contents/articles/advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)|
-|**Related technologies**|[Active Directory Domain Services Overview](../group-managed-service-accounts/Active-Directory-Domain-Services-Overview.md)|
+|**Related technologies**|[Active Directory Domain Services Overview](../group-managed-service-accounts/active-directory-domain-services-overview.md)|
 
 

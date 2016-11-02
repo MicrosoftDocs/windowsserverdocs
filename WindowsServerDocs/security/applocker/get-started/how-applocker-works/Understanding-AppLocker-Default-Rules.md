@@ -1,5 +1,5 @@
 ---
-title: Understanding AppLocker Default Rules
+title: Understanding applocker Default Rules
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,16 +14,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Understanding AppLocker Default Rules
+# Understanding applocker Default Rules
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic for IT professional describes the set of rules that can be used to ensure that required Windows system files are allowed to run when the policy is applied.
 
-AppLocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection.
+applocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an applocker rule collection.
 
 > [!IMPORTANT]
-> You can use the default rules as a template when creating your own rules. However, these rules are only meant to function as a starter policy when you are first testing AppLocker rules so that the system files in the Windows folders will be allowed to run.
+> You can use the default rules as a template when creating your own rules. However, these rules are only meant to function as a starter policy when you are first testing applocker rules so that the system files in the Windows folders will be allowed to run.
 
 If you require additional application security, you might need to modify the rules created from the built-in default rule collection. For example, the default rule to allow all users to run .exe files in the Windows folder is based on a path condition that allows all files within the Windows folder to run. The Windows folder contains a Temp subfolder to which the Users group is given the following permissions:
 
@@ -35,19 +35,19 @@ If you require additional application security, you might need to modify the rul
 
 These permissions settings are applied to this folder for application compatibility. However, because any user can create files in this location, allowing applications to be run from this location might conflict with your organization's security policy.
 
-For information about each default rule in AppLocker, see:
+For information about each default rule in applocker, see:
 
--   [Executable Rules in AppLocker](Executable-Rules-in-AppLocker.md)
+-   [Executable Rules in applocker](executable-rules-in-applocker.md)
 
--   [Windows Installer Rules in AppLocker](Windows-Installer-Rules-in-AppLocker.md)
+-   [Windows Installer Rules in applocker](windows-installer-rules-in-applocker.md)
 
--   [Script Rules in AppLocker](Script-Rules-in-AppLocker.md)
+-   [Script Rules in applocker](script-rules-in-applocker.md)
 
--   [DLL Rules in AppLocker](DLL-Rules-in-AppLocker.md)
+-   [DLL Rules in applocker](dll-rules-in-applocker.md)
 
--   [Packaged Apps and Packaged App Installer Rules in AppLocker](../../../access-control/Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md)
+-   [Packaged Apps and Packaged App Installer Rules in applocker](../../../access-control/packaged-apps-and-packaged-app-installer-rules-in-applocker.md)
 
 ## See Also
-[How AppLocker Works](../How-AppLocker-Works.md)
+[How applocker Works](../how-applocker-works.md)
 
 

@@ -24,55 +24,55 @@ User rights govern the methods by which a user can log on to a system. User righ
 
 Each user right has a constant name and a Group Policy name associated with it. The constant names are used when referring to the user right in log events. You can configure the user rights assignment settings in the following location within the Group Policy Management Console (GPMC) under **Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**, or on the local computer by using the Local Group Policy Editor (gpedit.msc).
 
-For information about setting security policies, see [How to Configure Security Policy Settings](../group-managed-service-accounts/How-to-Configure-Security-Policy-Settings.md).
+For information about setting security policies, see [How to Configure Security Policy Settings](../group-managed-service-accounts/how-to-configure-security-policy-settings.md).
 
 The following table links to each security policy setting and provides the constant name for each. Setting descriptions contain reference information, best practices for configuring the policy setting, default values, differences between operating system versions, and considerations for policy management and security.
 
 |Group Policy Setting|Constant Name|
 |------------|---------|
-|[Access Credential Manager as a trusted caller](../group-managed-service-accounts/user-rights-assignment/Access-Credential-Manager-as-a-trusted-caller.md)|SeTrustedCredManAccessPrivilege|
-|[Access this computer from the network](Access-this-computer-from-the-network.md)|SeNetworkLogonRight|
-|[Act as part of the operating system](../group-managed-service-accounts/user-rights-assignment/Act-as-part-of-the-operating-system.md)|SeTcbPrivilege|
-|[Add workstations to domain](Add-workstations-to-domain.md)|SeMachineAccountPrivilege|
-|[Adjust memory quotas for a process](../group-managed-service-accounts/user-rights-assignment/Adjust-memory-quotas-for-a-process.md)|SeIncreaseQuotaPrivilege|
-|[Allow log on locally](../group-managed-service-accounts/user-rights-assignment/Allow-log-on-locally.md)|SeInteractiveLogonRight|
-|[Allow log on through Remote Desktop Services](../group-managed-service-accounts/user-rights-assignment/Allow-log-on-through-Remote-Desktop-Services.md)|SeRemoteInteractiveLogonRight|
-|[Back up files and directories](../group-managed-service-accounts/user-rights-assignment/Back-up-files-and-directories.md)|SeBackupPrivilege|
-|[Bypass traverse checking](Bypass-traverse-checking.md)|SeChangeNotifyPrivilege|
-|[Change the system time](../group-managed-service-accounts/user-rights-assignment/Change-the-system-time.md)|SeSystemtimePrivilege|
-|[Change the time zone](../group-managed-service-accounts/user-rights-assignment/Change-the-time-zone.md)|SeTimeZonePrivilege|
-|[Create a pagefile](../group-managed-service-accounts/user-rights-assignment/Create-a-pagefile.md)|SeCreatePagefilePrivilege|
-|[Create a token object](../group-managed-service-accounts/user-rights-assignment/Create-a-token-object.md)|SeCreateTokenPrivilege|
-|[Create global objects](../group-managed-service-accounts/user-rights-assignment/Create-global-objects.md)|SeCreateGlobalPrivilege|
-|[Create permanent shared objects](../group-managed-service-accounts/user-rights-assignment/Create-permanent-shared-objects.md)|SeCreatePermanentPrivilege|
-|[Create symbolic links](../group-managed-service-accounts/user-rights-assignment/Create-symbolic-links.md)|SeCreateSymbolicLinkPrivilege|
-|[Debug programs](../group-managed-service-accounts/user-rights-assignment/Debug-programs.md)|SeDebugPrivilege|
-|[Deny access to this computer from the network](../group-managed-service-accounts/user-rights-assignment/Deny-access-to-this-computer-from-the-network.md)|SeDenyNetworkLogonRight|
-|[Deny log on as a batch job](../group-managed-service-accounts/user-rights-assignment/Deny-log-on-as-a-batch-job.md)|SeDenyBatchLogonRight|
-|[Deny log on as a service](../group-managed-service-accounts/user-rights-assignment/Deny-log-on-as-a-service.md)|SeDenyServiceLogonRight|
-|[Deny log on locally](../group-managed-service-accounts/user-rights-assignment/Deny-log-on-locally.md)|SeDenyInteractiveLogonRight|
-|[Deny log on through Remote Desktop Services](../group-managed-service-accounts/user-rights-assignment/Deny-log-on-through-Remote-Desktop-Services.md)|SeDenyRemoteInteractiveLogonRight|
-|[Enable computer and user accounts to be trusted for delegation](../group-managed-service-accounts/user-rights-assignment/Enable-computer-and-user-accounts-to-be-trusted-for-delegation.md)|SeEnableDelegationPrivilege|
-|[Force shutdown from a remote system](../group-managed-service-accounts/user-rights-assignment/Force-shutdown-from-a-remote-system.md)|SeRemoteShutdownPrivilege|
-|[Generate security audits](../group-managed-service-accounts/user-rights-assignment/Generate-security-audits.md)|SeAuditPrivilege|
-|[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/Impersonate-a-client-after-authentication.md)|SeImpersonatePrivilege|
-|[Increase a process working set](../group-managed-service-accounts/user-rights-assignment/Increase-a-process-working-set.md)|SeIncreaseWorkingSetPrivilege|
-|[Increase scheduling priority](../group-managed-service-accounts/user-rights-assignment/Increase-scheduling-priority.md)|SeIncreaseBasePriorityPrivilege|
-|[Load and unload device drivers](../group-managed-service-accounts/user-rights-assignment/Load-and-unload-device-drivers.md)|SeLoadDriverPrivilege|
-|[Lock pages in memory](../group-managed-service-accounts/user-rights-assignment/Lock-pages-in-memory.md)|SeLockMemoryPrivilege|
-|[Log on as a batch job](../group-managed-service-accounts/user-rights-assignment/Log-on-as-a-batch-job.md)|SeBatchLogonRight|
-|[Log on as a service](../group-managed-service-accounts/user-rights-assignment/Log-on-as-a-service.md)|SeServiceLogonRight|
-|[Manage auditing and security log](../group-managed-service-accounts/user-rights-assignment/Manage-auditing-and-security-log.md)|SeSecurityPrivilege|
-|[Modify an object label](../group-managed-service-accounts/user-rights-assignment/Modify-an-object-label.md)|SeRelabelPrivilege|
-|[Modify firmware environment values](../group-managed-service-accounts/user-rights-assignment/Modify-firmware-environment-values.md)|SeSystemEnvironmentPrivilege|
-|[Perform volume maintenance tasks](../group-managed-service-accounts/user-rights-assignment/Perform-volume-maintenance-tasks.md)|SeManageVolumePrivilege|
-|[Profile single process](../group-managed-service-accounts/user-rights-assignment/Profile-single-process.md)|SeProfileSingleProcessPrivilege|
-|[Profile system performance](../group-managed-service-accounts/user-rights-assignment/Profile-system-performance.md)|SeSystemProfilePrivilege|
-|[Remove computer from docking station](../group-managed-service-accounts/user-rights-assignment/Remove-computer-from-docking-station.md)|SeUndockPrivilege|
-|[Replace a process level token](../group-managed-service-accounts/user-rights-assignment/Replace-a-process-level-token.md)|SeAssignPrimaryTokenPrivilege|
-|[Restore files and directories](../group-managed-service-accounts/user-rights-assignment/Restore-files-and-directories.md)|SeRestorePrivilege|
-|[Shut down the system](../group-managed-service-accounts/user-rights-assignment/Shut-down-the-system.md)|SeShutdownPrivilege|
-|[Synchronize directory service data](../group-managed-service-accounts/user-rights-assignment/Synchronize-directory-service-data.md)|SeSyncAgentPrivilege|
-|[Take ownership of files or other objects](../group-managed-service-accounts/user-rights-assignment/Take-ownership-of-files-or-other-objects.md)|SeTakeOwnershipPrivilege|
+|[Access Credential Manager as a trusted caller](../group-managed-service-accounts/user-rights-assignment/access-credential-manager-as-a-trusted-caller.md)|SeTrustedCredManAccessPrivilege|
+|[Access this computer from the network](access-this-computer-from-the-network.md)|SeNetworkLogonRight|
+|[Act as part of the operating system](../group-managed-service-accounts/user-rights-assignment/act-as-part-of-the-operating-system.md)|SeTcbPrivilege|
+|[Add workstations to domain](add-workstations-to-domain.md)|SeMachineAccountPrivilege|
+|[Adjust memory quotas for a process](../group-managed-service-accounts/user-rights-assignment/adjust-memory-quotas-for-a-process.md)|SeIncreaseQuotaPrivilege|
+|[Allow log on locally](../group-managed-service-accounts/user-rights-assignment/allow-log-on-locally.md)|SeInteractiveLogonRight|
+|[Allow log on through Remote Desktop Services](../group-managed-service-accounts/user-rights-assignment/allow-log-on-through-remote-desktop-services.md)|SeRemoteInteractiveLogonRight|
+|[Back up files and directories](../group-managed-service-accounts/user-rights-assignment/back-up-files-and-directories.md)|SeBackupPrivilege|
+|[Bypass traverse checking](bypass-traverse-checking.md)|SeChangeNotifyPrivilege|
+|[Change the system time](../group-managed-service-accounts/user-rights-assignment/change-the-system-time.md)|SeSystemtimePrivilege|
+|[Change the time zone](../group-managed-service-accounts/user-rights-assignment/change-the-time-zone.md)|SeTimeZonePrivilege|
+|[Create a pagefile](../group-managed-service-accounts/user-rights-assignment/create-a-pagefile.md)|SeCreatePagefilePrivilege|
+|[Create a token object](../group-managed-service-accounts/user-rights-assignment/create-a-token-object.md)|SeCreateTokenPrivilege|
+|[Create global objects](../group-managed-service-accounts/user-rights-assignment/create-global-objects.md)|SeCreateGlobalPrivilege|
+|[Create permanent shared objects](../group-managed-service-accounts/user-rights-assignment/create-permanent-shared-objects.md)|SeCreatePermanentPrivilege|
+|[Create symbolic links](../group-managed-service-accounts/user-rights-assignment/create-symbolic-links.md)|SeCreateSymbolicLinkPrivilege|
+|[Debug programs](../group-managed-service-accounts/user-rights-assignment/debug-programs.md)|SeDebugPrivilege|
+|[Deny access to this computer from the network](../group-managed-service-accounts/user-rights-assignment/deny-access-to-this-computer-from-the-network.md)|SeDenyNetworkLogonRight|
+|[Deny log on as a batch job](../group-managed-service-accounts/user-rights-assignment/deny-log-on-as-a-batch-job.md)|SeDenyBatchLogonRight|
+|[Deny log on as a service](../group-managed-service-accounts/user-rights-assignment/deny-log-on-as-a-service.md)|SeDenyServiceLogonRight|
+|[Deny log on locally](../group-managed-service-accounts/user-rights-assignment/deny-log-on-locally.md)|SeDenyInteractiveLogonRight|
+|[Deny log on through Remote Desktop Services](../group-managed-service-accounts/user-rights-assignment/deny-log-on-through-remote-desktop-services.md)|SeDenyRemoteInteractiveLogonRight|
+|[Enable computer and user accounts to be trusted for delegation](../group-managed-service-accounts/user-rights-assignment/enable-computer-and-user-accounts-to-be-trusted-for-delegation.md)|SeEnableDelegationPrivilege|
+|[Force shutdown from a remote system](../group-managed-service-accounts/user-rights-assignment/force-shutdown-from-a-remote-system.md)|SeRemoteShutdownPrivilege|
+|[Generate security audits](../group-managed-service-accounts/user-rights-assignment/generate-security-audits.md)|SeAuditPrivilege|
+|[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/impersonate-a-client-after-authentication.md)|SeImpersonatePrivilege|
+|[Increase a process working set](../group-managed-service-accounts/user-rights-assignment/increase-a-process-working-set.md)|SeIncreaseWorkingSetPrivilege|
+|[Increase scheduling priority](../group-managed-service-accounts/user-rights-assignment/increase-scheduling-priority.md)|SeIncreaseBasePriorityPrivilege|
+|[Load and unload device drivers](../group-managed-service-accounts/user-rights-assignment/load-and-unload-device-drivers.md)|SeLoadDriverPrivilege|
+|[Lock pages in memory](../group-managed-service-accounts/user-rights-assignment/lock-pages-in-memory.md)|SeLockMemoryPrivilege|
+|[Log on as a batch job](../group-managed-service-accounts/user-rights-assignment/log-on-as-a-batch-job.md)|SeBatchLogonRight|
+|[Log on as a service](../group-managed-service-accounts/user-rights-assignment/log-on-as-a-service.md)|SeServiceLogonRight|
+|[Manage auditing and security log](../group-managed-service-accounts/user-rights-assignment/manage-auditing-and-security-log.md)|SeSecurityPrivilege|
+|[Modify an object label](../group-managed-service-accounts/user-rights-assignment/modify-an-object-label.md)|SeRelabelPrivilege|
+|[Modify firmware environment values](../group-managed-service-accounts/user-rights-assignment/modify-firmware-environment-values.md)|SeSystemEnvironmentPrivilege|
+|[Perform volume maintenance tasks](../group-managed-service-accounts/user-rights-assignment/perform-volume-maintenance-tasks.md)|SeManageVolumePrivilege|
+|[Profile single process](../group-managed-service-accounts/user-rights-assignment/profile-single-process.md)|SeProfileSingleProcessPrivilege|
+|[Profile system performance](../group-managed-service-accounts/user-rights-assignment/profile-system-performance.md)|SeSystemProfilePrivilege|
+|[Remove computer from docking station](../group-managed-service-accounts/user-rights-assignment/remove-computer-from-docking-station.md)|SeUndockPrivilege|
+|[Replace a process level token](../group-managed-service-accounts/user-rights-assignment/replace-a-process-level-token.md)|SeAssignPrimaryTokenPrivilege|
+|[Restore files and directories](../group-managed-service-accounts/user-rights-assignment/restore-files-and-directories.md)|SeRestorePrivilege|
+|[Shut down the system](../group-managed-service-accounts/user-rights-assignment/shut-down-the-system.md)|SeShutdownPrivilege|
+|[Synchronize directory service data](../group-managed-service-accounts/user-rights-assignment/synchronize-directory-service-data.md)|SeSyncAgentPrivilege|
+|[Take ownership of files or other objects](../group-managed-service-accounts/user-rights-assignment/take-ownership-of-files-or-other-objects.md)|SeTakeOwnershipPrivilege|
 
 

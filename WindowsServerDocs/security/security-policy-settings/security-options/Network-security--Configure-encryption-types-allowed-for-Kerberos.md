@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Network-security-Configure-encryption-types-allowed-for-Kerberos.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/network-security-configure-encryption-types-allowed-for-kerberos.md
 ---

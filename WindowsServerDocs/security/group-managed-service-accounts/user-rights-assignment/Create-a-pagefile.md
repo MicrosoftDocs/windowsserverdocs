@@ -90,6 +90,6 @@ Restrict the **Create a pagefile** user right to members of the Administrators g
 None. Restricting this right to members of the Administrators group is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

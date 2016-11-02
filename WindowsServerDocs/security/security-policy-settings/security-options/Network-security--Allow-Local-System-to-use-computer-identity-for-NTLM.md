@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Network-security-Allow-Local-System-to-use-computer-identity-for-NTLM.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/network-security-allow-local-system-to-use-computer-identity-for-ntlm.md
 ---

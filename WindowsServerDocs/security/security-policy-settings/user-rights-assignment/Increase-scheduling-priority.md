@@ -94,6 +94,6 @@ Verify that only Administrators have the **Increase scheduling priority** user r
 None. Restricting the **Increase scheduling priority** user right to members of the Administrators group is the default configuration.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

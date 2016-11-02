@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Interactive-logon-Machine-account-lockout-threshold.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/interactive-logon-machine-account-lockout-threshold.md
 ---

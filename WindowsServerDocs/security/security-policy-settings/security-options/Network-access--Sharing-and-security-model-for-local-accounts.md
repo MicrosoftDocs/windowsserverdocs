@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Network-access-Sharing-and-security-model-for-local-accounts.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/network-access-sharing-and-security-model-for-local-accounts.md
 ---

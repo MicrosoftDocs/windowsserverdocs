@@ -1,5 +1,5 @@
 ---
-title: Windows Installer Rules in AppLocker
+title: Windows Installer Rules in applocker
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Windows Installer Rules in AppLocker
+# Windows Installer Rules in applocker
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic describes the file formats and available default rules for the Windows Installer rule collection.
 
-AppLocker defines Windows Installer rules to include only the following file formats:
+applocker defines Windows Installer rules to include only the following file formats:
 
 -   .msi
 
@@ -37,6 +37,6 @@ The purpose of this collection is to allow you to control the installation of fi
 |Allow all users to run Windows Installer files that are located in the Windows Installer folder|(Default Rule) All Windows Installer files in %systemdrive%\Windows\Installer|Everyone|Path:  %windir%\Installer\\*|
 
 ## See Also
-[Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+[Understanding applocker Default Rules](understanding-applocker-default-rules.md)
 
 

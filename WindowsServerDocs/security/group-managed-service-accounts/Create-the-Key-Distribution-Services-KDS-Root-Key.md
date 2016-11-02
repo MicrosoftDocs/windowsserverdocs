@@ -57,6 +57,6 @@ For test environments with only one DC, you can create a KDS root key and set th
     **Add-KdsRootKey ???EffectiveTime ((get-date).addhours(-10))**
 
 ## See Also
-[Getting Started with Group Managed Service Accounts](Getting-Started-with-Group-Managed-Service-Accounts.md)
+[Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)
 
 

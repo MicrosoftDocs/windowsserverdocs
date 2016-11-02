@@ -1,5 +1,5 @@
 ---
-redirect_url: /windows-server-docs/security/windows-authentication/Winlogon-Automatic-Restart-Sign-On-ARSO.md
+redirect_url: /windows-server-docs/security/windows-authentication/winlogon-automatic-restart-sign-on-arso.md
 ---
 
 

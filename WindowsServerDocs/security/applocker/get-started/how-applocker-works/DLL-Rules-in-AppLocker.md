@@ -1,5 +1,5 @@
 ---
-title: DLL Rules in AppLocker
+title: DLL Rules in applocker
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# DLL Rules in AppLocker
+# DLL Rules in applocker
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic describes the file formats and available default rules for the DLL rule collection.
 
-AppLocker defines DLL rules to include only the following file formats:
+applocker defines DLL rules to include only the following file formats:
 
 -   .dll
 
@@ -38,9 +38,9 @@ The following table lists the default rules that are available for the DLL rule 
 > If you use DLL rules, a DLL allow rule has to be created for each DLL that is used by all of the allowed applications.
 
 > [!CAUTION]
-> When DLL rules are used, AppLocker must check each DLL that an application loads. Therefore, users may experience a reduction in performance if DLL rules are used.
+> When DLL rules are used, applocker must check each DLL that an application loads. Therefore, users may experience a reduction in performance if DLL rules are used.
 
 ## See Also
-[Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+[Understanding applocker Default Rules](understanding-applocker-default-rules.md)
 
 

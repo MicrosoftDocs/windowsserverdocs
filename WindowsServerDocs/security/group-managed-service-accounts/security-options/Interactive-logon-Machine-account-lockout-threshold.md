@@ -77,6 +77,6 @@ If not set, the computer or device could be compromised by an attacker using bru
 If set too low, productivity might be hindered because users who become locked out will be unable to access the computer or device without providing the 48-digit BitLocker recovery password.
 
 ## See Also
-[Security Options](Security-Options.md)
+[Security Options](security-options.md)
 
 

@@ -21,35 +21,35 @@ ms.date: 10/12/2016
 This topic provides information how to set application control polices using Software Restriction Policies (SRP) to help protect your computer against e-mail virus beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction
-Software Restriction Policies (SRP) is Group Policy-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand-alone computers. For a starting point for SRP, see the [Software Restriction Policies](Software-Restriction-Policies.md).
+Software Restriction Policies (SRP) is Group Policy-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand-alone computers. For a starting point for SRP, see the [Software Restriction Policies](software-restriction-policies.md).
 
-Beginning with  Windows Server?? 2008 R2  and  Windows 7?? , Windows AppLocker can be used instead of or in concert with SRP for a portion of your application control strategy. 
+Beginning with  Windows Server?? 2008 R2  and  Windows 7?? , Windows applocker can be used instead of or in concert with SRP for a portion of your application control strategy. 
 
 #### Configure SRP to help protect against an e-mail virus
 
 1.  Review the best practices for software restriction policies to understand how SRP works.
 
-    -   [Best practices](Software-Restriction-Policies-Technical-Overview.md#BKMK_Best_Practices)
+    -   [Best practices](software-restriction-policies-technical-overview.md#BKMK_Best_Practices)
 
     -   [How Software Restriction Policies Work](http://technet.microsoft.com/library/cc786941(v=WS.10).aspx)
 
 2.  Open Software Restriction Policies.
 
-    -   [For your local computer](Software-Restriction-Policies.md#BKMK_1)
+    -   [For your local computer](software-restriction-policies.md#BKMK_1)
 
-    -   [For a domain, site, or organizational unit, and you are on a member server or on a workstation that is joined to a domain](Software-Restriction-Policies.md#BKMK_2)
+    -   [For a domain, site, or organizational unit, and you are on a member server or on a workstation that is joined to a domain](software-restriction-policies.md#BKMK_2)
 
 3.  If you have not previously defined software restriction policies, create new software restriction policies.
 
-    -   [To create new software restriction policies](Software-Restriction-Policies.md#BKMK_Create_SRP)
+    -   [To create new software restriction policies](software-restriction-policies.md#BKMK_Create_SRP)
 
 4.  Create a path rule for the folder that your e-mail program uses to run e-mail attachments, and then set the security level to **Disallowed**.
 
-    -   [Working with path rules](Work-with-Software-Restriction-Policies-Rules.md#BKMK_Path_Rules)
+    -   [Working with path rules](work-with-software-restriction-policies-rules.md#BKMK_Path_Rules)
 
 5.  Specify the file types to which the rule applies.
 
-    -   [To add or delete a designated file type](Software-Restriction-Policies.md#BKMK_Add_Del)
+    -   [To add or delete a designated file type](software-restriction-policies.md#BKMK_Add_Del)
 
 6.  Modify policy settings so that they apply to the users and groups that you want:
 
@@ -57,7 +57,7 @@ Beginning with  Windows Server?? 2008 R2  and  Windows 7?? , Windows AppLocker c
 
     -   Exclude local administrators from the software restriction policies of a specific policy setting in Group Policy and still have the rest of Group Policy apply to the administrators.
 
-        -   [To prevent software restriction policies from applying to local administrators](Software-Restriction-Policies.md#BKMK_Prevent_Admin)
+        -   [To prevent software restriction policies from applying to local administrators](software-restriction-policies.md#BKMK_Prevent_Admin)
 
 7.  Test the policy.
 

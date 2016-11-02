@@ -101,6 +101,6 @@ The **Enable computer and user accounts to be trusted for delegation** user righ
 None. Not defined is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

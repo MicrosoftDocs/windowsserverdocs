@@ -47,9 +47,9 @@ For  Windows Server 2012 , the Windows PowerShell cmdlets default to managing th
 
 ## See also
 
--   [Group Managed Service Accounts Overview](Group-Managed-Service-Accounts-Overview.md)
+-   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
 
--   [Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)
+-   [Active Directory Domain Services Overview](active-directory-domain-services-overview.md)
 
 -   [Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
 

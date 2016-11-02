@@ -40,7 +40,7 @@ There are no changes in functionality to the tools and snap-ins used to administ
 
 There were no policy settings added in  Windows Server 2012 R2  and Windows 8.1.
 
-The following table lists the Security Settings new for  Windows Server 2012  and Windows 8. For detailed descriptions of these and other settings, see [Security Policy Settings Reference](../group-managed-service-accounts/Security-Policy-Settings-Reference.md).
+The following table lists the Security Settings new for  Windows Server 2012  and Windows 8. For detailed descriptions of these and other settings, see [Security Policy Settings Reference](../group-managed-service-accounts/security-policy-settings-reference.md).
 
 |Security policy|Location|Description|
 |----------|------|--------|
@@ -48,11 +48,11 @@ The following table lists the Security Settings new for  Windows Server 2012  an
 |Interactive logon: Machine account threshold.|Windows Settings/Security Settings/Local Policies/Security Options|The computer lockout policy is enforced only on those computers that have BitLocker enabled for protecting operating system volumes. Please ensure that appropriate recovery password backup policies are enabled.|
 |Interactive logon: Machine inactivity limit.|Windows Settings/Security Settings/Local Policies/Security Options|Windows notices inactivity of a logon session, and if the amount of inactive time exceeds the inactivity limit, then the screen saver will run, locking the session.|
 |Microsoft network server: Attempt S4U2Self to obtain claim information|Windows Settings/Security Settings/Local Policies/Security Options|This security setting is to support clients running a version of Windows prior to Windows 8 that are trying to access a file share that requires user claims. This setting determines whether the local file server will attempt to use Kerberos Service-For-User-To-Self (S4U2Self) functionality to obtain a network client principal???s claims from the client???s account domain|
-|Packaged app Rules|Windows Settings/Security Settings/Application Control Policies/AppLocker|AppLocker rules that apply to files that share the same attributes: publisher name, package name, and package version.|
+|Packaged app Rules|Windows Settings/Security Settings/Application Control Policies/applocker|applocker rules that apply to files that share the same attributes: publisher name, package name, and package version.|
 
 
 ## <a name="BKMK_LINKS"></a>See also
-For information about methods to administer security policies and policy settings, see [Administer Security Policy Settings](Administer-Security-Policy-Settings.md).
+For information about methods to administer security policies and policy settings, see [Administer Security Policy Settings](administer-security-policy-settings.md).
 
 
 

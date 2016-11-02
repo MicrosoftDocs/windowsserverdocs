@@ -1,5 +1,5 @@
 ---
-title: AppLocker Settings
+title: applocker Settings
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# AppLocker Settings
+# applocker Settings
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional lists the settings used by AppLocker.
+This topic for the IT professional lists the settings used by applocker.
 
-The following table describes the settings and values used by AppLocker.
+The following table describes the settings and values used by applocker.
 
 |Setting|Value|
 |------|-----|
@@ -33,6 +33,6 @@ The following table describes the settings and values used by AppLocker.
 |Performance counters|Not applicable|
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[applocker Technical Reference](applocker-technical-reference.md)
 
 

@@ -90,6 +90,6 @@ Configure the **Maximum lifetime for user ticket** setting with a value between 
 Reducing this setting from the default value reduces the likelihood that the ticket-granting ticket will be used to access resources that the user does not have rights to. However, it requires more frequent requests to the KDC for ticket-granting tickets on behalf of users. Most KDCs can support a value of four hours without too much additional burden.
 
 ## See Also
-[Kerberos Policy](../../kerberos/Kerberos-Policy.md)
+[Kerberos Policy](../../kerberos/kerberos-policy.md)
 
 

@@ -18,22 +18,22 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This planning topic describes the AppLocker policy maintenance information to record for your design document.
+This planning topic describes the applocker policy maintenance information to record for your design document.
 
 ## Record your findings
-To complete this AppLocker planning document, you should first complete the following steps:
+To complete this applocker planning document, you should first complete the following steps:
 
-1.  [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+1.  [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 
-2.  [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+2.  [Create List of Applications Deployed to Each Business Group](create-list-of-applications-deployed-to-each-business-group.md)
 
-3.  [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+3.  [Select Types of Rules to Create](select-types-of-rules-to-create.md)
 
-4.  [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+4.  [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md)
 
-5.  [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+5.  [Plan for applocker Policy Management](plan-for-applocker-policy-management.md)
 
-The three key areas to determine for AppLocker policy management are:
+The three key areas to determine for applocker policy management are:
 
 1.  Support policy
 
@@ -47,28 +47,28 @@ The three key areas to determine for AppLocker policy management are:
 
     Detail how rules will be added to the policy, in which Group Policy Object (GPO) the rules should be defined, and how to modify rules when applications are retired, updated, or added.
 
-The following table contains the added sample data that was collected when determining how to maintain and manage AppLocker policies.
+The following table contains the added sample data that was collected when determining how to maintain and manage applocker policies.
 
-|Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
+|Business group|Organizational unit|Implement applocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
 |---------|------------|------------|--------|-----------|-------------------------|---------|------|---------|
-|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|Web help|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-applockerTellerRules|Web help|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help desk|
-|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|Web help|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-applockerHRRules|Web help|
 ||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
 ||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition|Deny||Web help|
 ||||Windows files|C:\Windows|Use the default rule for the Windows path|Allow||Help desk|
 
-The following two tables illustrate examples of documenting considerations to maintain and manage AppLocker policies.
+The following two tables illustrate examples of documenting considerations to maintain and manage applocker policies.
 
 **Event processing policy**
 
-One discovery method for application usage is to set the AppLocker enforcement mode to **Audit only**. This will write events to the AppLocker logs, which can be managed and analyzed like other Windows logs. After applications have been identified, you can begin to develop policies regarding the processing and access to AppLocker events.
+One discovery method for application usage is to set the applocker enforcement mode to **Audit only**. This will write events to the applocker logs, which can be managed and analyzed like other Windows logs. After applications have been identified, you can begin to develop policies regarding the processing and access to applocker events.
 
 The following table is an example of what to consider and record.
 
-|Business group|AppLocker event collection location|Archival policy|Analyzed?|Security policy|
+|Business group|applocker event collection location|Archival policy|Analyzed?|Security policy|
 |---------|--------------------|----------|-------|----------|
-|Bank Tellers|Forwarded to: AppLocker Event Repository on srvBT093|Standard|None|Standard|
+|Bank Tellers|Forwarded to: applocker Event Repository on srvBT093|Standard|None|Standard|
 |Human Resources|DO NOT FORWARD. srvHR004|60 months|Yes, summary reports monthly to managers|Standard|
 
 **Policy maintenance policy**
@@ -85,6 +85,6 @@ The following table is an example of what to consider and record.
 ## Next steps
 After you have determined your application control management strategy for each of the business group's applications, the following task remains:
 
--   [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md)
+-   [Create Your applocker Planning Document](create-your-applocker-planning-document.md)
 
 

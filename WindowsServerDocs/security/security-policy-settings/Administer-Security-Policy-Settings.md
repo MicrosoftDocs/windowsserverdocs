@@ -37,7 +37,7 @@ Security settings can control:
 
 For information about each setting, including descriptions, default settings, and management and security considerations, see the [Security Policy Settings Reference](http://www.microsoft.com/downloads/details.aspx?FamilyID=18C90C80-8B0A-4906-A4F5-FF24CC2030FB&amp;displaylang=e&displaylang=en) in the Microsoft Download Center.
 
-For information about how the security settings snap-ins work, see the [Security Policy Settings Technical Overview](../group-managed-service-accounts/Security-Policy-Settings-Technical-Overview.md).
+For information about how the security settings snap-ins work, see the [Security Policy Settings Technical Overview](../group-managed-service-accounts/security-policy-settings-technical-overview.md).
 
 To manage security configurations for multiple computers, you can use one of the following options:
 

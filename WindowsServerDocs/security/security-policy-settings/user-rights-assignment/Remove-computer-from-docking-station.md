@@ -100,6 +100,6 @@ Ensure that only the local Administrators group and the user account to which th
 By default, only members of the local Administrators group are granted this right. Other user accounts must be explicitly granted this user right as necessary. If your organization's users are not members of the local Administrators groups on their portable computers, they cannot remove their portable computers from their docking stations if they do not first shut  down the computer. Therefore, you may want to assign the **Remove computer from docking station** privilege to the local Users group for portable computers.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

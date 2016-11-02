@@ -56,15 +56,15 @@ The following procedures describe the most common tasks performed by using the B
 By completing the procedures in this scenario, you have viewed and copied the recovery passwords for a computer and used a password ID to locate a recovery password.
 
 ## More information
-[BitLocker Overview](BitLocker-Overview.md)
+[BitLocker Overview](bitlocker-overview.md)
 
-[Encrypted Hard Drive](Encrypted-Hard-Drive.md)
+[Encrypted Hard Drive](encrypted-hard-drive.md)
 
-[BitLocker Frequently Asked Questions &#40;FAQ&#41;](BitLocker-Frequently-Asked-Questions-FAQ.md)
+[BitLocker Frequently Asked Questions &#40;FAQ&#41;](bitlocker-frequently-asked-questions-faq.md)
 
 
-[BitLocker: How to deploy on Windows Server 2012](BitLocker-How-to-deploy-on-Windows-Server-2012.md)
+[BitLocker: How to deploy on Windows Server 2012](bitlocker-how-to-deploy-on-windows-server-2012.md)
 
-[BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md)
+[BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md)
 
 

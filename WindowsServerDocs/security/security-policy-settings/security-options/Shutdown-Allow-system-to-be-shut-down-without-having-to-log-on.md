@@ -68,7 +68,7 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.  
   
 ### Group Policy  
-For information about the User Rights Assignment policy, **Shut down the system**, see the [user-rights-assignment/Shut down the system](Shut-down-the-system.md) reference topic.  
+For information about the User Rights Assignment policy, **Shut down the system**, see the [user-rights-assignment/Shut down the system](shut-down-the-system.md) reference topic.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  

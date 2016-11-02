@@ -22,23 +22,23 @@ This topic for the IT professional answers frequently asked questions concerning
 
 BitLocker Drive Encryption is a data protection feature available in all editions of Windows Server and certain editions of the Windows operating systems. BitLocker encrypts the hard drives on your computer to provide enhanced protection against data theft or exposure on computers and removable drives that are lost or stolen, and more secure data deletion when BitLocker\-protected computers are decommissioned as it is much more difficult to recover deleted data from an encrypted drive than from a non\-encrypted drive.
 
--   [Overview and requirements](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_Overview)
+-   [Overview and requirements](bitlocker-frequently-asked-questions-faq.md#BKMK_Overview)
 
--   [Upgrading](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_Upgrading)
+-   [Upgrading](bitlocker-frequently-asked-questions-faq.md#BKMK_Upgrading)
 
--   [Deployment and administration](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_Deploy)
+-   [Deployment and administration](bitlocker-frequently-asked-questions-faq.md#BKMK_Deploy)
 
--   [Key management](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_KeyManagement)
+-   [Key management](bitlocker-frequently-asked-questions-faq.md#BKMK_KeyManagement)
 
--   [BitLocker To Go](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_BTGsect)
+-   [BitLocker To Go](bitlocker-frequently-asked-questions-faq.md#BKMK_BTGsect)
 
--   [Active Directory Domain Services \(AD??DS\)](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_ADDS)
+-   [Active Directory Domain Services \(AD??DS\)](bitlocker-frequently-asked-questions-faq.md#BKMK_ADDS)
 
--   [Security](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_Security)
+-   [Security](bitlocker-frequently-asked-questions-faq.md#BKMK_Security)
 
--   [BitLocker Network Unlock](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_BNUsect)
+-   [BitLocker Network Unlock](bitlocker-frequently-asked-questions-faq.md#BKMK_BNUsect)
 
--   [Other questions](BitLocker-Frequently-Asked-Questions-FAQ.md#BKMK_Other)
+-   [Other questions](bitlocker-frequently-asked-questions-faq.md#BKMK_Other)
 
 ## <a name="BKMK_Overview"></a>Overview and requirements
 
@@ -378,13 +378,13 @@ BitLocker is not supported on bootable VHDs, but BitLocker is supported on data 
 
 ## More information
 
--   [BitLocker: How to deploy on Windows Server 2012](BitLocker-How-to-deploy-on-Windows-Server-2012.md)
+-   [BitLocker: How to deploy on Windows Server 2012](bitlocker-how-to-deploy-on-windows-server-2012.md)
 
--   [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md)
+-   [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md)
 
--   [BitLocker: Use BitLocker Recovery Password Viewer](BitLocker-Use-BitLocker-Recovery-Password-Viewer.md)
+-   [BitLocker: Use BitLocker Recovery Password Viewer](bitlocker-use-bitlocker-recovery-password-viewer.md)
 
--   [Encrypted Hard Drive](Encrypted-Hard-Drive.md)
+-   [Encrypted Hard Drive](encrypted-hard-drive.md)
 
 -   [BitLocker Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/6f49f904-e04d-4b90-afbc-84bc45d4d30d)
 

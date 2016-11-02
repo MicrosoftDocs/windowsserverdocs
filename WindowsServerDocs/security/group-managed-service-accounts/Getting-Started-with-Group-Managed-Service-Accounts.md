@@ -103,7 +103,7 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 
 -   If the first master root key for Active Directory is not deployed in the domain or has not been created, then create it. The result of its creation can be verified in the KdsSvc Operational log, Event ID 4004.
 
-For instructions how to create the key, see [Create the Key Distribution Services KDS Root Key](Create-the-Key-Distribution-Services-KDS-Root-Key.md). Microsoft Key Distribution Service (kdssvc.dll) the root key for AD.
+For instructions how to create the key, see [Create the Key Distribution Services KDS Root Key](create-the-key-distribution-services-kds-root-key.md). Microsoft Key Distribution Service (kdssvc.dll) the root key for AD.
 
 **Lifecycle**
 
@@ -353,7 +353,7 @@ For more information about the Uninstall-ADServiceAccount cmdlet, at the Active 
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Group Managed Service Accounts Overview](Group-Managed-Service-Accounts-Overview.md)
+-   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
 
 
 

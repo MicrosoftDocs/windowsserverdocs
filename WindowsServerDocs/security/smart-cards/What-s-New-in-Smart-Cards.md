@@ -83,7 +83,7 @@ Windows 8 supports a number of new types of desktop applications. Developers who
 
 ## See also
 
--   [Smart Card Overview](Smart-Card-Overview.md)
+-   [Smart Card Overview](smart-card-overview.md)
 
 -   [What's New in Smart Cards in Windows Server 2008 R2](http://technet.microsoft.com/library/dd367851(v=ws.10).aspx)
 

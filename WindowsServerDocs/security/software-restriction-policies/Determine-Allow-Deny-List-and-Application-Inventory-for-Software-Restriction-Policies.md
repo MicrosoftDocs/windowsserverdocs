@@ -21,15 +21,15 @@ ms.date: 10/12/2016
 This topic for the IT professional gives guidance how to create an allow and deny list for applications to be managed by Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction
-Software Restriction Policies (SRP) is Group Policy-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand-alone computers. For a starting point for SRP, see the [Software Restriction Policies](Software-Restriction-Policies.md).
+Software Restriction Policies (SRP) is Group Policy-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand-alone computers. For a starting point for SRP, see the [Software Restriction Policies](software-restriction-policies.md).
 
-Beginning with  Windows Server?? 2008 R2  and  Windows 7?? , Windows AppLocker can be used instead of or in concert with SRP for a portion of your application control strategy.
+Beginning with  Windows Server?? 2008 R2  and  Windows 7?? , Windows applocker can be used instead of or in concert with SRP for a portion of your application control strategy.
 
 For information about how to accomplish specific tasks using SRP, see the following:
 
--   [Work with Software Restriction Policies Rules](Work-with-Software-Restriction-Policies-Rules.md)
+-   [Work with Software Restriction Policies Rules](work-with-software-restriction-policies-rules.md)
 
--   [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](Use-Software-Restriction-Policies-to-Help-Protect-Your-Computer-Against-an-Email-Virus.md)
+-   [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 
 ### What default rule to choose: Allow or Deny
 Software restriction policies can be deployed in one of two modes that are the basis of your default rule: Allow List or Deny List. You can create a policy that identifies every application that is allowed to run in your environment; the default rule within your policy is Restricted and will block all applications that you do not explicitly allow to run. Or you can create a policy that identifies every application that cannot run; the default rule is Unrestricted and restricts only the applications that you have explicitly listed.

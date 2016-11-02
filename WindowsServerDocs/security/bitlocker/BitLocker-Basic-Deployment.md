@@ -28,13 +28,13 @@ For computers running other operating systems designated in the **Applies To** l
 
 The following sections provide information that will help you put together your basic deployment plan for implementing BitLocker in your organization:
 
--   [Using BitLocker to encrypt volumes](BitLocker-Basic-Deployment.md#BKMK_dep1)
+-   [Using BitLocker to encrypt volumes](bitlocker-basic-deployment.md#BKMK_dep1)
 
--   [Down-level compatibility](BitLocker-Basic-Deployment.md#BKMK_dep2)
+-   [Down-level compatibility](bitlocker-basic-deployment.md#BKMK_dep2)
 
--   [Using manage-bde to encrypt volumes with BitLocker](BitLocker-Basic-Deployment.md#BKMK_dep3)
+-   [Using manage-bde to encrypt volumes with BitLocker](bitlocker-basic-deployment.md#BKMK_dep3)
 
--   [Using PowerShell to encrypt volumes with BitLocker](BitLocker-Basic-Deployment.md#BKMK_dep4)
+-   [Using PowerShell to encrypt volumes with BitLocker](bitlocker-basic-deployment.md#BKMK_dep4)
 
 ## <a name="BKMK_dep1"></a>Using BitLocker to encrypt volumes
 BitLocker provides full volume encryption (FVE) for operating system volumes, as well as fixed and removable data volumes. To support fully encrypted operating system volumes, BitLocker uses an unencrypted system volume for the files required to boot, decrypt, and load the operating system. This volume is automatically created during a new installation of both client and server operating systems.

@@ -1,5 +1,5 @@
 ---
-title: Configure Exceptions for an AppLocker Rule
+title: Configure Exceptions for an applocker Rule
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Configure Exceptions for an AppLocker Rule
+# Configure Exceptions for an applocker Rule
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to specify which applications can or cannot run as exceptions to an AppLocker rule in  Windows Server 2012  and Windows 8.
+This topic describes the steps to specify which applications can or cannot run as exceptions to an applocker rule in  Windows Server 2012  and Windows 8.
 
-Rule exceptions allow you to specify files or folders to exclude from the rule. For more information about exceptions, see [Understanding AppLocker Rule Exceptions](../../get-started/how-applocker-works/Understanding-AppLocker-Rule-Exceptions.md).
+Rule exceptions allow you to specify files or folders to exclude from the rule. For more information about exceptions, see [Understanding applocker Rule Exceptions](../../get-started/how-applocker-works/understanding-applocker-rule-exceptions.md).
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](../Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an applocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an applocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer applocker, see [Using the MMC snap-ins to administer applocker](../administer-applocker.md#BKMK_Using_Snapins).
 
-### <a name="BKMK_CfgExceptionsAppLockerRuleGPO"></a>To configure exceptions for a rule
+### <a name="BKMK_CfgExceptionsapplockerRuleGPO"></a>To configure exceptions for a rule
 
-1.  In the console tree of the snap-in, double-click **Application Control Policies**, and then double-click **AppLocker**.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, and then double-click **applocker**.
 
 2.  Expand the rule collection, right-click the rule that you want to configure exceptions for, and then click **Properties**.
 

@@ -106,6 +106,6 @@ Do not give any group this right. If necessary, implement it for a constrained p
 None. Not defined is the default configuration.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

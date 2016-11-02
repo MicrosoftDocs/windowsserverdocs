@@ -22,7 +22,7 @@ This topic provides a high\-level overview of BitLocker including a list of new 
 
 **Did you mean???**
 
--   [AppLocker](http://go.microsoft.com/fwlink/p/?LinkId=243126)
+-   [applocker](http://go.microsoft.com/fwlink/p/?LinkId=243126)
 
 -   [EFS](http://go.microsoft.com/fwlink/p/?LinkId=243130)
 
@@ -69,22 +69,22 @@ When installed on a new computer, Windows will automatically create the partitio
 ## <a name="BKMK_LINKS"></a>In this library
 
 
--   [BitLocker Frequently Asked Questions FAQ](BitLocker-Frequently-Asked-Questions-FAQ.md)
+-   [BitLocker Frequently Asked Questions FAQ](bitlocker-frequently-asked-questions-faq.md)
 
--   [BitLocker Basic Deployment](BitLocker-Basic-Deployment.md)
+-   [BitLocker Basic Deployment](bitlocker-basic-deployment.md)
 
--   [BitLocker: How to deploy on Windows Server 2012](BitLocker-How-to-deploy-on-Windows-Server-2012.md)
+-   [BitLocker: How to deploy on Windows Server 2012](bitlocker-how-to-deploy-on-windows-server-2012.md)
 
--   [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md)
+-   [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md)
 
--   [BitLocker: Use BitLocker Recovery Password Viewer](BitLocker-Use-BitLocker-Recovery-Password-Viewer.md)
+-   [BitLocker: Use BitLocker Recovery Password Viewer](bitlocker-use-bitlocker-recovery-password-viewer.md)
 
 
--   [Protecting cluster shared volumes and storage area networks with BitLocker](Protecting-cluster-shared-volumes-and-storage-area-networks-with-BitLocker.md)
+-   [Protecting cluster shared volumes and storage area networks with BitLocker](protecting-cluster-shared-volumes-and-storage-area-networks-with-bitlocker.md)
 
 ## See also
 
--   [Encrypted Hard Drive](Encrypted-Hard-Drive.md)
+-   [Encrypted Hard Drive](encrypted-hard-drive.md)
 
 -   [BitLocker Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/jj649829.aspx)
 

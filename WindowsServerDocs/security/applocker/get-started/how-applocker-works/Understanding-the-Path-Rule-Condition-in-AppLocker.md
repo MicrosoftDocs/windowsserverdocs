@@ -1,5 +1,5 @@
 ---
-title: Understanding the Path Rule Condition in AppLocker
+title: Understanding the Path Rule Condition in applocker
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Understanding the Path Rule Condition in AppLocker
+# Understanding the Path Rule Condition in applocker
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic explains the AppLocker path rule condition, the advantages and disadvantages, and how it is applied.
+This topic explains the applocker path rule condition, the advantages and disadvantages, and how it is applied.
 
 The path condition identifies an application by its location in the file system of the computer or on the network.
 
@@ -28,13 +28,13 @@ When creating a rule that uses a deny action, path conditions are less secure th
 |---------------|----------------|
 |-   You can easily control many directories or a single file.<br />-   You can use the asterisk (*) as a wildcard character within path rules.|-   It might be less secure if a rule that is configured to use a directory path contains subdirectories that are writable by non-administrators.<br />-   You must specify the full path to a file or folder when creating path rules so that the rule will be properly enforced.|
 
-AppLocker does not enforce rules that specify paths with short names. You should always specify the full path to a file or folder when creating path rules so that the rule will be properly enforced.
+applocker does not enforce rules that specify paths with short names. You should always specify the full path to a file or folder when creating path rules so that the rule will be properly enforced.
 
 The asterisk (\*) wildcard character can be used within **Path** field. The asterisk (*) character used by itself represents any path. When combined with any string value, the rule is limited to the path of the file and all the files under that path. For example, %ProgramFiles%\Internet Explorer\\\* indicates that all files and subfolders within the Internet Explorer folder will be affected by the rule.
 
-AppLocker uses path variables for well-known directories in Windows. Path variables are not environment variables. The AppLocker engine can only interpret AppLocker path variables. The following table details these path variables.
+applocker uses path variables for well-known directories in Windows. Path variables are not environment variables. The applocker engine can only interpret applocker path variables. The following table details these path variables.
 
-|Windows directory or drive|AppLocker path variable|Windows environment variable|
+|Windows directory or drive|applocker path variable|Windows environment variable|
 |---------------|--------------|----------------|
 |Windows|%WINDIR%|%SystemRoot%|
 |System32|%SYSTEM32%|%SystemDirectory%|
@@ -43,9 +43,9 @@ AppLocker uses path variables for well-known directories in Windows. Path variab
 |Removable media (for example, CD or DVD)|%REMOVABLE%||
 |Removable storage device (for example, USB flash drive)|%HOT%||
 
-For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md).
+For an overview of the three types of applocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding applocker Rule Condition Types](understanding-applocker-rule-condition-types.md).
 
 ## See Also
-[How AppLocker Works](../How-AppLocker-Works.md)
+[How applocker Works](../how-applocker-works.md)
 
 

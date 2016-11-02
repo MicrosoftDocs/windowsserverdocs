@@ -28,7 +28,7 @@ Local security information is stored in the registry under **HKEY_LOCAL_MACHINE\
 
 The following diagram shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.
 
-![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/Credentials-Processes-in-Windows-Authentication/AuthN_LSA_Architecture_Client.gif)
+![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/credentials-processes-in-windows-authentication/AuthN_LSA_Architecture_Client.gif)
 
 The following table describes each component that manages credentials in the authentication process at the point of logon.
 
@@ -74,7 +74,7 @@ The instances of Winlogon for an interactive logon run in Session 0. Session 0 h
 
 The following diagram shows the credential process for Windows Server 2003, Microsoft Windows 2000 Server, Windows XP, and Microsoft Windows 2000 Professional.
 
-![Diagram showing the credential process for Windows Server 2003, Microsoft Windows 2000 Server, Windows XP, and Microsoft Windows 2000 Professional](../media/Credentials-Processes-in-Windows-Authentication/AuthN_GINA_Architecture.gif)
+![Diagram showing the credential process for Windows Server 2003, Microsoft Windows 2000 Server, Windows XP, and Microsoft Windows 2000 Professional](../media/credentials-processes-in-windows-authentication/AuthN_GINA_Architecture.gif)
 
 **Credential provider architecture**
 
@@ -130,7 +130,7 @@ The credential provider enumerates logon tiles in the following instances:
 
 The following diagram shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.
 
-![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic](../media/Credentials-Processes-in-Windows-Authentication/AuthN_CredMan_CredProv.gif)
+![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic](../media/credentials-processes-in-windows-authentication/AuthN_CredMan_CredProv.gif)
 
 ## <a name="BKMK_CredentialInputForApplicationAndServiceLogon"></a>Credential input for application and service logon
 Windows authentication is designed to manage credentials for applications or services that do not require user interaction. Applications in user mode are limited in terms of what system resources they have access to, while services can have unrestricted access to the system memory and external devices.
@@ -159,7 +159,7 @@ Applications can run in user mode where the application can run as any principal
 
 SSPI is available through the Secur32.dll module, which is an API used for obtaining integrated security services for authentication, message integrity, and message privacy. It provides an abstraction layer between application-level protocols and security protocols. Because different applications require different ways of identifying or authenticating users and different ways of encrypting data as it travels across a network, SSPI provides a way to access dynamic-link libraries (DLLs) that contain different authentication and cryptographic functions. These DLLs are called Security Support Providers (SSPs).
 
-Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/Group-Managed-Service-Accounts-Overview.md).
+Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
 
 **Services and kernel mode**
 
@@ -227,7 +227,7 @@ In some circumstances, the LSA secrets, which are secret pieces of data that are
 
 Introduced in Windows 8.1, the client operating system provides additional protection for the LSA to prevent reading memory and code injection by non-protected processes. This protection increases security for the credentials that the LSA stores and manages.
 
-For more information about these additional protections, see [Configuring Additional LSA Protection](../credentials-protection-and-management/Configuring-Additional-LSA-Protection.md).
+For more information about these additional protections, see [Configuring Additional LSA Protection](../credentials-protection-and-management/configuring-additional-lsa-protection.md).
 
 ## <a name="BKMK_CachedCredentialsAndValidation"></a>Cached credentials and validation
 Validation mechanisms rely on the presentation of credentials at the time of logon. However, when the computer is disconnected from a domain controller, and the user is presenting domain credentials, Windows uses the process of cached credentials in the validation mechanism.
@@ -250,7 +250,7 @@ When a user signs in on a Windows 8.1 device, LSA saves the user credentials in 
 
 On restart, the user is automatically signed in via the Autologon mechanism, and then the computer is additionally locked to protect the user???s session. The locking is initiated through Winlogon whereas the credential management is done by LSA. By automatically signing in and locking the user's session on the console, the user???s lock screen applications is restarted and available.
 
-For more information about ARSO, see [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](Winlogon-Automatic-Restart-Sign-On-ARSO.md).
+For more information about ARSO, see [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](winlogon-automatic-restart-sign-on-arso.md).
 
 ### Stored user names and passwords in Windows Vista and Windows XP
 In  Windows Server 2008 , Windows Server 2003, Windows Vista, and Windows XP, **Stored User Names and Passwords** in Control Panel simplifies the management and use of multiple sets of logon credentials, including X.509 certificates used with smart cards and Windows Live credentials (now called Microsoft account). The credentials???part of the user???s profile???are stored until needed. This action can increase security on a per-resource basis by ensuring that if one password is compromised, it does not compromise all security.

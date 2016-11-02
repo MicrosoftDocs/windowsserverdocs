@@ -102,6 +102,6 @@ The following links provide additional information about topics that relate to s
 -   [Best Practice Guide for Securing Windows Server Active Directory Installations](http://go.microsoft.com/fwlink/?LinkId=130890)
 
 ## See Also
-[Kerberos Policy](../../kerberos/Kerberos-Policy.md)
+[Kerberos Policy](../../kerberos/kerberos-policy.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: What Is AppLocker?
+title: What Is applocker?
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,15 +14,15 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# What Is AppLocker?
+# What Is applocker?
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional describes what AppLocker is and how its features differ from Software Restriction Policies.
+This topic for the IT professional describes what applocker is and how its features differ from Software Restriction Policies.
 
-AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. AppLocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications.
+applocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. applocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications.
 
-Using AppLocker, you can:
+Using applocker, you can:
 
 -   Control the following types of applications: executable files (.exe and .com), scripts (.js, .ps1, .vbs, .cmd, and .bat), Windows Installer files (.mst, .msi and .msp), and DLL files (.dll and .ocx), and packaged apps and packaged app installers (appx).
 
@@ -36,18 +36,18 @@ Using AppLocker, you can:
 
 -   Import and export rules. The import and export affects the entire policy. For example, if you export a policy, all of the rules from all of the rule collections are exported, including the enforcement settings for the rule collections. If you import a policy, all criteria in the existing policy are overwritten.
 
--   Streamline creating and managing AppLocker rules by using Windows PowerShell cmdlets.
+-   Streamline creating and managing applocker rules by using Windows PowerShell cmdlets.
 
-AppLocker helps reduce administrative overhead and helps reduce the organization's cost of managing computing resources by decreasing the number of help desk calls that result from users running unapproved applications.
+applocker helps reduce administrative overhead and helps reduce the organization's cost of managing computing resources by decreasing the number of help desk calls that result from users running unapproved applications.
 
-For information about the application control scenarios that AppLocker addresses, see [AppLocker Policy Use Scenarios](AppLocker-Policy-Use-Scenarios.md).
+For information about the application control scenarios that applocker addresses, see [applocker Policy Use Scenarios](applocker-policy-use-scenarios.md).
 
-## What features are different between Software Restriction Policies and AppLocker?
+## What features are different between Software Restriction Policies and applocker?
 **Feature differences**
 
-The following table compares AppLocker to Software Restriction Policies.
+The following table compares applocker to Software Restriction Policies.
 
-|Feature|Software Restriction Policies|AppLocker|
+|Feature|Software Restriction Policies|applocker|
 |------|-----------------|-------|
 |Rule scope|All users|Specific user or group|
 |Rule conditions provided|File hash, path, certificate, registry path, and Internet zone|File hash, path, and publisher|
@@ -62,20 +62,20 @@ The following table compares AppLocker to Software Restriction Policies.
 
 **Application control function differences**
 
-The following table compares the application control functions of Software Restriction Policies (SRP) and AppLocker.
+The following table compares the application control functions of Software Restriction Policies (SRP) and applocker.
 
-|Application control function|SRP|AppLocker|
+|Application control function|SRP|applocker|
 |----------------|----|-------|
-|Operating system scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|AppLocker policies apply only to those supported operating system versions and editions listed in [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md). But these systems can also use SRP. **Note:** Use different GPOs for SRP and AppLocker rules.|
-|User support|SRP allows users to install applications as an administrator.|AppLocker policies are maintained through Group Policy, and only the administrator of the computer can update an AppLocker policy.<br /><br />AppLocker permits customization of error messages to direct users to a Web page for help.|
-|Policy maintenance|SRP policies are updated by using the Local Security Policy snap-in or the Group Policy Management Console (GPMC).|AppLocker policies are updated by using the Local Security Policy snap-in or the GPMC.<br /><br />AppLocker supports a small set of PowerShell cmdlets to aid in administration and maintenance.|
-|Policy management infrastructure|To manage SRP policies, SRP uses Group Policy within a domain and the Local Security Policy snap-in for a local computer.|To manage AppLocker policies, AppLocker uses Group Policy within a domain and the Local Security Policy snap-in for a local computer.|
-|Block malicious scripts|Rules for blocking malicious scripts prevents all scripts associated with the Windows Script Host from running, except those that are digitally signed by your organization.|AppLocker rules can control the following file formats: .ps1, .bat, .cmd, .vbs, and .js. In addition, you can set exceptions to allow specific files to run.|
+|Operating system scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|applocker policies apply only to those supported operating system versions and editions listed in [Requirements to Use applocker](requirements-to-use-applocker.md). But these systems can also use SRP. **Note:** Use different GPOs for SRP and applocker rules.|
+|User support|SRP allows users to install applications as an administrator.|applocker policies are maintained through Group Policy, and only the administrator of the computer can update an applocker policy.<br /><br />applocker permits customization of error messages to direct users to a Web page for help.|
+|Policy maintenance|SRP policies are updated by using the Local Security Policy snap-in or the Group Policy Management Console (GPMC).|applocker policies are updated by using the Local Security Policy snap-in or the GPMC.<br /><br />applocker supports a small set of PowerShell cmdlets to aid in administration and maintenance.|
+|Policy management infrastructure|To manage SRP policies, SRP uses Group Policy within a domain and the Local Security Policy snap-in for a local computer.|To manage applocker policies, applocker uses Group Policy within a domain and the Local Security Policy snap-in for a local computer.|
+|Block malicious scripts|Rules for blocking malicious scripts prevents all scripts associated with the Windows Script Host from running, except those that are digitally signed by your organization.|applocker rules can control the following file formats: .ps1, .bat, .cmd, .vbs, and .js. In addition, you can set exceptions to allow specific files to run.|
 |Manage software installation|SRP can prevent all Windows Installer packages from installing. It allows .msi files that are digitally signed by your organization to be installed.|The Windows Installer rule collection is a set of rules created for Windows Installer file types (.mst, .msi and .msp) to allow you to control the installation of files on client computers and servers.|
-|Manage all software on the computer|All software is managed in one rule set. By default, the policy for managing all software on a computer disallows all software on the user's computer, except software that is installed in the Windows folder, Program Files folder, or subfolders.|Unlike SRP, each AppLocker rule collection functions as an allowed list of files. Only the files that are listed within the rule collection will be allowed to run. This configuration makes it easier for administrators to determine what will occur when an AppLocker rule is applied.|
-|Different policies for different users|Rules are applied uniformly to all users on a particular computer.|On a computer that is shared by multiple users, an administrator can specify the groups of users who can access the installed software. Using AppLocker, an administrator can specify the user to whom a specific rule should apply.|
+|Manage all software on the computer|All software is managed in one rule set. By default, the policy for managing all software on a computer disallows all software on the user's computer, except software that is installed in the Windows folder, Program Files folder, or subfolders.|Unlike SRP, each applocker rule collection functions as an allowed list of files. Only the files that are listed within the rule collection will be allowed to run. This configuration makes it easier for administrators to determine what will occur when an applocker rule is applied.|
+|Different policies for different users|Rules are applied uniformly to all users on a particular computer.|On a computer that is shared by multiple users, an administrator can specify the groups of users who can access the installed software. Using applocker, an administrator can specify the user to whom a specific rule should apply.|
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[applocker Technical Reference](applocker-technical-reference.md)
 
 

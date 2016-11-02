@@ -73,6 +73,6 @@ Set the time for elapsed user-input inactivity time by using the security policy
 This security policy setting can limit unauthorized access to unsecured computers; however, that requirement must be balanced with the productivity requirements of the intended computer user.  
   
 ## See Also  
-[Security Options](Security-Options.md)  
+[Security Options](security-options.md)  
   
 

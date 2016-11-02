@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Network-access-Sharing-and-security-model-for-local-accounts.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/network-access-sharing-and-security-model-for-local-accounts.md
 ---

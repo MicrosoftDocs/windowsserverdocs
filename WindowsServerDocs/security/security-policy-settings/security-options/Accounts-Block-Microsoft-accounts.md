@@ -85,6 +85,6 @@ Require only domain accounts in your enterprise by limiting the use of Microsoft
 Establishing greater control over accounts in your organization can give you more secure management capabilities, including procedures around password resets.  
   
 ## See Also  
-[Security Options](Security-Options.md)  
+[Security Options](security-options.md)  
   
 
