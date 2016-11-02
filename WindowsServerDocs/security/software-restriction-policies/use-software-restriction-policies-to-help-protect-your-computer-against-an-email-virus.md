@@ -41,7 +41,7 @@ Beginning with  Windows Server&reg; 2008 R2  and  Windows 7&reg; , Windows AppLo
 
 3.  If you have not previously defined software restriction policies, create new software restriction policies.
 
-    -   [To create new software restriction policies](software-restriction-policies.md#BKMK_Create_SRP)
+    -   [To create new software restriction policies](administer-software-restriction-policies.md#BKMK_Create_SRP)
 
 4.  Create a path rule for the folder that your e-mail program uses to run e-mail attachments, and then set the security level to **Disallowed**.
 
