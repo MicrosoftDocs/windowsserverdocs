@@ -26,7 +26,7 @@ manager: dongill
   </td>
 </table>
 [![Storage Spaces Direct Overview Video](media/font-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
-<table>
+<table border="0" width="100%">
 </tr>
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
