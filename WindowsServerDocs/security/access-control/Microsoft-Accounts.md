@@ -138,7 +138,7 @@ Because Microsoft accounts are Internet-based, Windows does not have a mechanism
 Only the owner of the Microsoft account can change the password. Passwords can be changed in the [Microsoft account sign-in portal](https://login.live.com).
 
 #### <a name="BKMK_RestrictAppInstallationAndUsage"></a>Restrict app installation and usage
-Within your organization, you can set application control policies to regulate app installation and usage for Microsoft accounts. For more information, see [Packaged Apps and Packaged App Installer Rules in applocker](packaged-apps-and-packaged-app-installer-rules-in-applocker.md).
+Within your organization, you can set application control policies to regulate app installation and usage for Microsoft accounts. For more information, see [Packaged Apps and Packaged App Installer Rules in AppLocker](packaged-apps-and-packaged-app-installer-rules-in-applocker.md).
 
 
 

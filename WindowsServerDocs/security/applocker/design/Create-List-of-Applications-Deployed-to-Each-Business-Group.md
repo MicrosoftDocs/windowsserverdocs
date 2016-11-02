@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the process of gathering application usage requirements from each business group in order to implement application control policies by using applocker.
+This topic describes the process of gathering application usage requirements from each business group in order to implement application control policies by using AppLocker.
 
 ## Determining application usage
 For each business group, determine the following:
@@ -31,32 +31,32 @@ For each business group, determine the following:
 
 -   The type of requirement the business groups set for each application, such as business critical, business productivity, optional, or personal. It might also be helpful during this effort to identify which applications are supported or unsupported by your IT department, or supported by others outside your control.
 
--   A list of files or applications that require administrative credentials to install or run. If the file requires administrative credentials to install or run, users who cannot provide administrative credentials will be prevented from running the file even if the file is explicitly allowed by an applocker policy. Even with applocker policies enforced, only members of the Administrators group can install or run files that require administrative credentials.
+-   A list of files or applications that require administrative credentials to install or run. If the file requires administrative credentials to install or run, users who cannot provide administrative credentials will be prevented from running the file even if the file is explicitly allowed by an AppLocker policy. Even with AppLocker policies enforced, only members of the Administrators group can install or run files that require administrative credentials.
 
 ### How to perform the application usage assessment
-Although you might already have a method in place to understand application usage for each business group, you will need to use this information to help create your applocker rule collection. applocker includes the Automatically Generate Rules wizard and the **Audit only** enforcement configuration to assist you with planning and creating your rule collection.
+Although you might already have a method in place to understand application usage for each business group, you will need to use this information to help create your AppLocker rule collection. AppLocker includes the Automatically Generate Rules wizard and the **Audit only** enforcement configuration to assist you with planning and creating your rule collection.
 
 **Application inventory methods**
 
-Using the Automatically Generate Rules wizard quickly creates rules for the applications you specify. The wizard is designed specifically to build a rule collection. You can use the Local Security Policy snap-in to view and edit the rules. This method is very useful when creating rules from a reference computer, and when creating and evaluating applocker policies in a testing environment. However, it does require that the files be accessible on the reference computer or through a network drive. This might mean additional work in setting up the reference computer and determining a maintenance policy for that computer.
+Using the Automatically Generate Rules wizard quickly creates rules for the applications you specify. The wizard is designed specifically to build a rule collection. You can use the Local Security Policy snap-in to view and edit the rules. This method is very useful when creating rules from a reference computer, and when creating and evaluating AppLocker policies in a testing environment. However, it does require that the files be accessible on the reference computer or through a network drive. This might mean additional work in setting up the reference computer and determining a maintenance policy for that computer.
 
-Using the **Audit only** enforcement method permits you to view the logs because it collects information about every process on the computers receiving the Group Policy Object (GPO). Therefore, you can see what the enforcement will be on the computers in a business group. applocker includes Windows PowerShell cmdlets that you can use to analyze the events from the event log and cmdlets to create rules. However, when you use Group Policy to deploy to several computers, a means to collect events in a central location is very important for manageability. Because applocker logs information about files that users or other processes start on a computer, you could miss creating some rules initially. Therefore, you should continue your evaluation until you can verify that all required applications that are allowed to run are accessed successfully.
+Using the **Audit only** enforcement method permits you to view the logs because it collects information about every process on the computers receiving the Group Policy Object (GPO). Therefore, you can see what the enforcement will be on the computers in a business group. AppLocker includes Windows PowerShell cmdlets that you can use to analyze the events from the event log and cmdlets to create rules. However, when you use Group Policy to deploy to several computers, a means to collect events in a central location is very important for manageability. Because AppLocker logs information about files that users or other processes start on a computer, you could miss creating some rules initially. Therefore, you should continue your evaluation until you can verify that all required applications that are allowed to run are accessed successfully.
 
 > [!TIP]
-> If you run Application Verifier against a custom application with any applocker policies enabled, it might prevent the application from running. You should either disable Application Verifier or applocker.
+> If you run Application Verifier against a custom application with any AppLocker policies enabled, it might prevent the application from running. You should either disable Application Verifier or AppLocker.
 > 
-> You can create an inventory of Windows 8 apps on a computer by using two methods: the **Get-AppxPackage** Windows PowerShell cmdlet or the applocker UI.
+> You can create an inventory of Windows 8 apps on a computer by using two methods: the **Get-AppxPackage** Windows PowerShell cmdlet or the AppLocker UI.
 
-The following topics in the [applocker Step-by-Step Guide](http://go.microsoft.com/fwlink/?LinkId=160261) describe how to perform each method:
+The following topics in the [AppLocker Step-by-Step Guide](http://go.microsoft.com/fwlink/?LinkId=160261) describe how to perform each method:
 
 -   [Automatically Generating Executable Rules from a Reference Computer](http://go.microsoft.com/fwlink/?LinkId=160264)
 
 -   [Using Auditing to Track Which Applications Are Used](http://go.microsoft.com/fwlink/?LinkId=160281)
 
 ### Prerequisites to completing the inventory
-Identify the business group and each organizational unit (OU) within that group to which you will apply application control policies. In addition, you should have identified whether or not applocker is the most appropriate solution for these policies. For information about these steps, see the following topics:
+Identify the business group and each organizational unit (OU) within that group to which you will apply application control policies. In addition, you should have identified whether or not AppLocker is the most appropriate solution for these policies. For information about these steps, see the following topics:
 
--   [Understand applocker Policy Design Decisions](understand-applocker-policy-design-decisions.md)
+-   [Understand AppLocker Policy Design Decisions](understand-applocker-policy-design-decisions.md)
 
 -   [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 

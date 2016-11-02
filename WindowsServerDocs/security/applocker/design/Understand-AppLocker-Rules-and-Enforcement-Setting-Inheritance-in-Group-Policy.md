@@ -1,5 +1,5 @@
 ---
-title: Understand applocker Rules and Enforcement Setting Inheritance in Group Policy
+title: Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,20 +14,20 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Understand applocker Rules and Enforcement Setting Inheritance in Group Policy
+# Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional describes how application control policies configured in applocker are applied through Group Policy.
+This topic for the IT professional describes how application control policies configured in AppLocker are applied through Group Policy.
 
-Rule enforcement is applied only to collections of rules, not individual rules. applocker divides the rules into the following collections: executable files, Windows Installer files, scripts, Packaged apps and Packaged app installers, and DLL files. The options for rule enforcement are **Not configured**, **Enforce rules**, or **Audit only**. Together, all applocker rule collections compose the application control policy, or applocker policy.
+Rule enforcement is applied only to collections of rules, not individual rules. AppLocker divides the rules into the following collections: executable files, Windows Installer files, scripts, Packaged apps and Packaged app installers, and DLL files. The options for rule enforcement are **Not configured**, **Enforce rules**, or **Audit only**. Together, all AppLocker rule collections compose the application control policy, or AppLocker policy.
 
-Group Policy merges applocker policy in two ways:
+Group Policy merges AppLocker policy in two ways:
 
--   **Rules.** Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object (GPO). For example, if the current GPO has 12 rules and a linked GPO has 50 rules, 62 rules are applied to all computers that receive the applocker policy.
+-   **Rules.** Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object (GPO). For example, if the current GPO has 12 rules and a linked GPO has 50 rules, 62 rules are applied to all computers that receive the AppLocker policy.
 
     > [!IMPORTANT]
-    > When determining whether a file is permitted to run, applocker processes rules in the following order:
+    > When determining whether a file is permitted to run, AppLocker processes rules in the following order:
     > 
     > 1.  **Explicit deny.** An administrator created a rule to deny a file.
     > 2.  **Explicit allow.** An administrator created a rule to allow a file.
@@ -37,19 +37,19 @@ Group Policy merges applocker policy in two ways:
 
 Because a computer's effective policy includes rules from each linked GPO, duplicate rules or conflicting rules could be enforced on a user's computer. Therefore, you should carefully plan your deployment to ensure that only rules that are necessary are present in a GPO.
 
-The following figure demonstrates how applocker rule enforcement is applied through linked GPOs.
+The following figure demonstrates how AppLocker rule enforcement is applied through linked GPOs.
 
-![Figure that demonstrates how applocker rule enforcement is applied through linked GPOs](../../media/understand-applocker-rules-and-enforcement-setting-inheritance-in-group-policy/applocker_Plan_Inheritance.gif)
+![Figure that demonstrates how AppLocker rule enforcement is applied through linked GPOs](../../media/understand-applocker-rules-and-enforcement-setting-inheritance-in-group-policy/AppLocker_Plan_Inheritance.gif)
 
 In the preceding illustration, note that all GPOs linked to Contoso are applied in order as configured. The rules that are not configured are also applied. For example, the result of the Contoso and Human Resources GPOs is 33 rules enforced, as shown in the client HR-Term1. The Human Resources GPO contains 10 non-configured rules. When the rule collection is configured for **Audit only**, no rules are enforced.
 
-When constructing the Group Policy architecture for applying applocker policies, it is important to remember:
+When constructing the Group Policy architecture for applying AppLocker policies, it is important to remember:
 
 -   Rule collections that are not configured will be enforced.
 
 -   Group Policy does not overwrite or replace rules that are already present in a linked GPO.
 
--   applocker processes the explicit deny rule configuration before the allow rule configuration.
+-   AppLocker processes the explicit deny rule configuration before the allow rule configuration.
 
 -   For rule enforcement, the last write to the GPO is applied.
 

@@ -20,10 +20,10 @@ ms.date: 10/12/2016
 
 This topic shows how to configure the Application Identity service to start automatically or manually in  Windows Server 2012  and Windows 8.
 
-The Application Identity service determines and verifies the identity of an application. Stopping this service will prevent applocker policies from being enforced.
+The Application Identity service determines and verifies the identity of an application. Stopping this service will prevent AppLocker policies from being enforced.
 
 > [!IMPORTANT]
-> When using Group Policy, you must configure it to start automatically in at least one Group Policy Object (GPO) that applies applocker rules. This is because applocker uses this service to verify the attributes of a file.
+> When using Group Policy, you must configure it to start automatically in at least one Group Policy Object (GPO) that applies AppLocker rules. This is because AppLocker uses this service to verify the attributes of a file.
 
 #### To start the Application Identity service automatically using Group Policy
 

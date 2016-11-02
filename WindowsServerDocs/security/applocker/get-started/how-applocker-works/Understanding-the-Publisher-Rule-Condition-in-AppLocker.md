@@ -1,5 +1,5 @@
 ---
-title: Understanding the Publisher Rule Condition in applocker
+title: Understanding the Publisher Rule Condition in AppLocker
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Understanding the Publisher Rule Condition in applocker
+# Understanding the Publisher Rule Condition in AppLocker
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic explains the applocker publisher rule condition, what controls are available, and how it is applied.
+This topic explains the AppLocker publisher rule condition, what controls are available, and how it is applied.
 
 Publisher conditions can be made only for files that are digitally signed; this condition identifies an application based on its digital signature and extended attributes. The digital signature contains information about the company that created the application (the publisher). The extended attributes, which are obtained from the binary resource, contain the name of the product that the application is part of and the version number of the application. The publisher may be a software development company, such as Microsoft, or the Information Technology department of your organization.
 
@@ -65,9 +65,9 @@ The following table describes how a publisher condition is applied.
 |**Publisher, product name, file name, and file version**<br /> **-And below-**|The specified version of the named file and any older versions for the product that are signed by the publisher.|
 |**Custom**|You can edit the **Publisher**, **Product name**, **File name**, and **Version** fields to create a custom rule.|
 
-For an overview of the three types of applocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding applocker Rule Condition Types](understanding-applocker-rule-condition-types.md).
+For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](understanding-applocker-rule-condition-types.md).
 
 ## See Also
-[How applocker Works](../how-applocker-works.md)
+[How AppLocker Works](../how-applocker-works.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Plan for applocker Policy Management
+title: Plan for AppLocker Policy Management
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,17 +14,17 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Plan for applocker Policy Management
+# Plan for AppLocker Policy Management
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for describes the decisions you need to make to establish the processes for managing and maintaining applocker policies.
+This topic for describes the decisions you need to make to establish the processes for managing and maintaining AppLocker policies.
 
 ## Policy management
-Before you begin the deployment process, consider how the applocker rules will be managed. Developing a process for managing applocker rules helps assure that applocker continues to effectively control how applications are allowed to run in your organization.
+Before you begin the deployment process, consider how the AppLocker rules will be managed. Developing a process for managing AppLocker rules helps assure that AppLocker continues to effectively control how applications are allowed to run in your organization.
 
 ### Application and user support policy
-Developing a process for managing applocker rules helps assure that applocker continues to effectively control how applications are allowed to run in your organization. Considerations include:
+Developing a process for managing AppLocker rules helps assure that AppLocker continues to effectively control how applications are allowed to run in your organization. Considerations include:
 
 -   What type of end-user support is provided for blocked applications?
 
@@ -36,7 +36,7 @@ Developing a process for managing applocker rules helps assure that applocker co
 
 **Help desk support**
 
-If your organization has an established help desk support department in place, consider the following when deploying applocker policies:
+If your organization has an established help desk support department in place, consider the following when deploying AppLocker policies:
 
 -   What documentation does your support department require for new policy deployments?
 
@@ -44,11 +44,11 @@ If your organization has an established help desk support department in place, c
 
 -   Who are the contacts in the support department?
 
--   How will the support department resolve application control issues between the end user and those who maintain the applocker rules?
+-   How will the support department resolve application control issues between the end user and those who maintain the AppLocker rules?
 
 **End-user support**
 
-Because applocker is preventing unapproved applications from running, it is important that your organization carefully plan how to provide end-user support. Considerations include:
+Because AppLocker is preventing unapproved applications from running, it is important that your organization carefully plan how to provide end-user support. Considerations include:
 
 -   Do you want to use an intranet site as a first line of support for users who have tried to run a blocked application?
 
@@ -56,7 +56,7 @@ Because applocker is preventing unapproved applications from running, it is impo
 
 **Using an intranet site**
 
-applocker can be configured to display the default message but with a custom URL. You can use this URL to redirect users to a support site that contains information about why the user received the error and which applications are allowed. If you do not display a custom URL for the message when an application is blocked, the default URL is used.
+AppLocker can be configured to display the default message but with a custom URL. You can use this URL to redirect users to a support site that contains information about why the user received the error and which applications are allowed. If you do not display a custom URL for the message when an application is blocked, the default URL is used.
 
 The following image shows an example of the error message for a blocked application. You can use the **Set a support web link** policy setting to customize the **More information** link.
 
@@ -64,9 +64,9 @@ The following image shows an example of the error message for a blocked applicat
 
 For steps to display a custom URL for the message, see [Display a Custom URL Message When Users Try to Run a Blocked Application](http://go.microsoft.com/fwlink/?LinkId=160265) (http://go.microsoft.com/fwlink/?LinkId=160265).
 
-**applocker event management**
+**AppLocker event management**
 
-Each time that a process requests permission to run, applocker creates an event in the applocker event log. The event details which file tried to run, the attributes of that file, the user that initiated the request, and the rule GUID that was used to make the applocker execution decision. The applocker event log is located in the following path: **Applications and Services Logs\Microsoft\Windows\applocker**. The applocker log includes three logs:
+Each time that a process requests permission to run, AppLocker creates an event in the AppLocker event log. The event details which file tried to run, the attributes of that file, the user that initiated the request, and the rule GUID that was used to make the AppLocker execution decision. The AppLocker event log is located in the following path: **Applications and Services Logs\Microsoft\Windows\AppLocker**. The AppLocker log includes three logs:
 
 1.  **EXE and DLL**. Contains events for all files affected by the executable and DLL rule collections (.exe, .com, .dll, and .ocx).
 
@@ -74,15 +74,15 @@ Each time that a process requests permission to run, applocker creates an event 
 
 3.  **Packaged app-Deployment** or **Packaged app-Execution**, contains events for all Windows 8 apps affected by the Packaged app and Packed app installer rule collection (.appx).
 
-Collecting these events in a central location can help you maintain your applocker  policy and troubleshoot rule configuration problems. Event collection technologies such as those available in Windows  allow administrators to subscribe to specific event channels and have the events from source computers aggregated into a forwarded event log on a Windows Server operating system collector. For more information about setting up an event subscription, see [Configure Computers to Collect and Forward Events](http://go.microsoft.com/fwlink/?LinkId=145012) (http://go.microsoft.com/fwlink/?LinkId=145012).
+Collecting these events in a central location can help you maintain your AppLocker  policy and troubleshoot rule configuration problems. Event collection technologies such as those available in Windows  allow administrators to subscribe to specific event channels and have the events from source computers aggregated into a forwarded event log on a Windows Server operating system collector. For more information about setting up an event subscription, see [Configure Computers to Collect and Forward Events](http://go.microsoft.com/fwlink/?LinkId=145012) (http://go.microsoft.com/fwlink/?LinkId=145012).
 
 ### Policy maintenance
 As new applications are deployed or existing applications are updated by the software publisher, you will need to make revisions to your rule collections to ensure that the policy is current.
 
-You can edit an applocker policy by adding, changing, or removing rules. However, you cannot specify a version for the policy by importing additional rules. To ensure version control when modifying an applocker policy, use Group Policy management software that allows you to create versions of Group Policy Objects (GPOs). An example of this type of software is the Advanced Group Policy Management feature from the Microsoft Desktop Optimization Pack. For more information about Advanced Group Policy Management, see [Advanced Group Policy Management Overview](http://go.microsoft.com/fwlink/?LinkId=145013) (http://go.microsoft.com/fwlink/?LinkId=145013).
+You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot specify a version for the policy by importing additional rules. To ensure version control when modifying an AppLocker policy, use Group Policy management software that allows you to create versions of Group Policy Objects (GPOs). An example of this type of software is the Advanced Group Policy Management feature from the Microsoft Desktop Optimization Pack. For more information about Advanced Group Policy Management, see [Advanced Group Policy Management Overview](http://go.microsoft.com/fwlink/?LinkId=145013) (http://go.microsoft.com/fwlink/?LinkId=145013).
 
 > [!CAUTION]
-> You should not edit an applocker rule collection while it is being enforced in Group Policy. Because applocker controls what files are allowed to run, making changes to a live policy can create unexpected behavior.
+> You should not edit an AppLocker rule collection while it is being enforced in Group Policy. Because AppLocker controls what files are allowed to run, making changes to a live policy can create unexpected behavior.
 
 **New version of a supported application**
 
@@ -96,11 +96,11 @@ For files with path conditions, you should verify that the installation path has
 
 **Recently deployed application**
 
-To support a new application, you must add one or more rules to the existing applocker policy.
+To support a new application, you must add one or more rules to the existing AppLocker policy.
 
 **Application is no longer supported**
 
-If your organization has determined that it will no longer support an application that has applocker rules associated with it, the easiest way to prevent users from running the application is to delete these rules.
+If your organization has determined that it will no longer support an application that has AppLocker rules associated with it, the easiest way to prevent users from running the application is to delete these rules.
 
 **Application is blocked but should be allowed**
 
@@ -112,12 +112,12 @@ A file could be blocked for three reasons:
 
 -   A deny rule, which cannot be overridden, is explicitly blocking the file.
 
-Before editing the rule collection, first determine what rule is preventing the file from running. You can troubleshoot the problem by using the **Test-applockerPolicy** Windows PowerShell cmdlet. For more information about troubleshooting an applockerpolicy, see [Testing and Updating an applocker Policy](http://go.microsoft.com/fwlink/?LinkId=160269) (http://go.microsoft.com/fwlink/?LinkId=160269).
+Before editing the rule collection, first determine what rule is preventing the file from running. You can troubleshoot the problem by using the **Test-applockerPolicy** Windows PowerShell cmdlet. For more information about troubleshooting an AppLockerpolicy, see [Testing and Updating an AppLocker Policy](http://go.microsoft.com/fwlink/?LinkId=160269) (http://go.microsoft.com/fwlink/?LinkId=160269).
 
 ## Next steps
-After deciding how your organization will manage your applocker policy, record your findings.
+After deciding how your organization will manage your AppLocker policy, record your findings.
 
--   **End-user support policy.** Document the process that you will use for handling calls from users who have attempted to run a blocked application, and ensure that support personnel have clear escalation steps so that the administrator can update the applocker policy, if necessary.
+-   **End-user support policy.** Document the process that you will use for handling calls from users who have attempted to run a blocked application, and ensure that support personnel have clear escalation steps so that the administrator can update the AppLocker policy, if necessary.
 
 -   **Event processing.** Document whether events will be collected in a central location called a store, how that store will be archived, and whether the events will be processed for analysis.
 

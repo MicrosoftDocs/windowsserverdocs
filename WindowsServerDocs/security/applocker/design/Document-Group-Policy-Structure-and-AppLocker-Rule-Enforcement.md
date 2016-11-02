@@ -1,5 +1,5 @@
 ---
-title: Document Group Policy Structure and applocker Rule Enforcement
+title: Document Group Policy Structure and AppLocker Rule Enforcement
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Document Group Policy Structure and applocker Rule Enforcement
+# Document Group Policy Structure and AppLocker Rule Enforcement
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This planning topic describes what you need to investigate, determine, and record in your application control policies plan when you use applocker.
+This planning topic describes what you need to investigate, determine, and record in your application control policies plan when you use AppLocker.
 
 ## Record your findings
-To complete this applocker planning document, you should first complete the following steps:
+To complete this AppLocker planning document, you should first complete the following steps:
 
 1.  [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 
@@ -31,11 +31,11 @@ To complete this applocker planning document, you should first complete the foll
 
 4.  [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md)
 
-After you determine how to structure your Group Policy Objects (GPOs) so that you can apply applocker policies, you should record your findings. You can use the following table to determine how many GPOs to create (or edit) and which objects they are linked to. If you decided to create custom rules to allow system files to run, note the high-level rule configuration in the **Use default rule or define new rule condition** column.
+After you determine how to structure your Group Policy Objects (GPOs) so that you can apply AppLocker policies, you should record your findings. You can use the following table to determine how many GPOs to create (or edit) and which objects they are linked to. If you decided to create custom rules to allow system files to run, note the high-level rule configuration in the **Use default rule or define new rule condition** column.
 
-The following table includes the sample data that was collected when you determined your enforcement settings and the GPO structure for your applocker policies.
+The following table includes the sample data that was collected when you determined your enforcement settings and the GPO structure for your AppLocker policies.
 
-|Business group|Organizational unit|Implement applocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|
+|Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|
 |---------|------------|------------|--------|-----------|-------------------------|---------|------|
 |Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-applockerTellerRules|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||
@@ -45,13 +45,13 @@ The following table includes the sample data that was collected when you determi
 ||||Windows files|C:\Windows|Use a default rule for the Windows path|Allow||
 
 > [!NOTE]
-> Excluding  Windows Server 2008 R2  and  Windows 7 , applocker can manage Windows Store apps. For information about how to add rules for these apps to your existing GPO, see [Add Rules for Packaged Apps to Existing applocker Rule-set](../manage/policies/add-rules-for-packaged-apps-to-existing-applocker-rule-set.md).
+> Excluding  Windows Server 2008 R2  and  Windows 7 , AppLocker can manage Windows Store apps. For information about how to add rules for these apps to your existing GPO, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set](../manage/policies/add-rules-for-packaged-apps-to-existing-applocker-rule-set.md).
 
 ## Next steps
 After you have determined the Group Policy structure and rule enforcement strategy for each business group's applications, the following tasks remain:
 
--   [Plan for applocker Policy Management](plan-for-applocker-policy-management.md)
+-   [Plan for AppLocker Policy Management](plan-for-applocker-policy-management.md)
 
--   [Create Your applocker Planning Document](create-your-applocker-planning-document.md)
+-   [Create Your AppLocker Planning Document](create-your-applocker-planning-document.md)
 
 

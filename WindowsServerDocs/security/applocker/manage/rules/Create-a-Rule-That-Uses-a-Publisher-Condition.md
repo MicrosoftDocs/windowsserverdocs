@@ -18,19 +18,19 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic shows how to create an applocker rule with a publisher condition in  Windows Server 2012  and Windows 8.
+This topic shows how to create an AppLocker rule with a publisher condition in  Windows Server 2012  and Windows 8.
 
 You can use publisher conditions only for files that are digitally signed; the publisher condition identifies an application based on its digital signature and extended attributes. The digital signature contains information about the company that created the application (the publisher). The extended attributes, which are obtained from the binary resource, contain the name of the product that the file is part of and the version number of the application. The publisher may be a software development company, such as Microsoft, or the information technology department of your organization.
 
 Packaged app rules are by definition rules that use publisher conditions. For information about creating a packaged app rule, see [Create a Rule for Packaged Apps](create-a-rule-for-packaged-apps.md).
 
-For information about the publisher condition, see [Understanding the Publisher Rule Condition in applocker](../../get-started/how-applocker-works/understanding-the-publisher-rule-condition-in-applocker.md).
+For information about the publisher condition, see [Understanding the Publisher Rule Condition in AppLocker](../../get-started/how-applocker-works/understanding-the-publisher-rule-condition-in-applocker.md).
 
-You can perform this task by using the Group Policy Management Console for an applocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an applocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer applocker, see [Using the MMC snap-ins to administer applocker](../administer-applocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](../administer-applocker.md#BKMK_Using_Snapins).
 
 ### <a name="BKMK_CreatePubRuleGPO"></a>To create a new rule with a publisher condition
 
-1.  In the console tree of the snap-in, double-click **Application Control Policies**, double-click **applocker**, and then click the rule collection that you want to create the rule for.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, double-click **AppLocker**, and then click the rule collection that you want to create the rule for.
 
 2.  On the **Action** menu, click **Create New Rule**.
 

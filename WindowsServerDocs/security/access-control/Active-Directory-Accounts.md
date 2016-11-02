@@ -338,7 +338,7 @@ Administrators need to manage job responsibilities that require sensitive admini
 
 -   **Better**. Do not grant administrators membership in the local Administrator group on the computer in order to restrict the administrator from bypassing these protections.
 
--   **Ideal**. Restrict workstations from having any network connectivity, except for the domain controllers and servers that the administrator accounts are used to manage. Alternately, use applocker application control policies to restrict all applications from running, except for the operating system and approved administrative tools and applications. For more information about applocker, see [applocker Overview](http://technet.microsoft.com/library/hh831440.aspx).
+-   **Ideal**. Restrict workstations from having any network connectivity, except for the domain controllers and servers that the administrator accounts are used to manage. Alternately, use AppLocker application control policies to restrict all applications from running, except for the operating system and approved administrative tools and applications. For more information about AppLocker, see [AppLocker Overview](http://technet.microsoft.com/library/hh831440.aspx).
 
 The following procedure describes how to block Internet access by creating a Group Policy Object (GPO) that configures an invalid proxy address on administrative workstations. These instructions apply only to computers running Internet Explorer and other Windows components that use these proxy settings.
 

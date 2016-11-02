@@ -1,5 +1,5 @@
 ---
-title: Understanding applocker Rule Behavior
+title: Understanding AppLocker Rule Behavior
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Understanding applocker Rule Behavior
+# Understanding AppLocker Rule Behavior
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how applocker rules are enforced by using the allow and deny options in applocker.
+This topic describes how AppLocker rules are enforced by using the allow and deny options in AppLocker.
 
-If no applocker rules for a specific rule collection exist, all files with that file format are allowed to run. However, when an applocker rule for a specific rule collection is created, only the files explicitly allowed in a rule are permitted to run. For example, if you create an executable rule that allows .exe files in *%SystemDrive%\FilePath* to run, only executable files located in that path are allowed to run.
+If no AppLocker rules for a specific rule collection exist, all files with that file format are allowed to run. However, when an AppLocker rule for a specific rule collection is created, only the files explicitly allowed in a rule are permitted to run. For example, if you create an executable rule that allows .exe files in *%SystemDrive%\FilePath* to run, only executable files located in that path are allowed to run.
 
 A rule can be configured to use either an allow or deny action:
 
@@ -32,6 +32,6 @@ A rule can be configured to use either an allow or deny action:
 > You can use a combination of allow actions and deny actions. However, we recommend using allow actions with exceptions because deny actions override allow actions in all cases. Deny actions can also be circumvented. For example, if you configure a deny action for a file or folder path, the user can still run the file from any other path.
 
 ## See Also
-[How applocker Works](../how-applocker-works.md)
+[How AppLocker Works](../how-applocker-works.md)
 
 

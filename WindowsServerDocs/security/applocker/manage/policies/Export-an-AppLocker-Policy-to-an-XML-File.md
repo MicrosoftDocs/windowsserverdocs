@@ -1,5 +1,5 @@
 ---
-title: Export an applocker Policy to an XML File
+title: Export an AppLocker Policy to an XML File
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Export an applocker Policy to an XML File
+# Export an AppLocker Policy to an XML File
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to export an applocker policy to an XML file for review or testing in  Windows Server 2012  and Windows 8.
+This topic describes the steps to export an AppLocker policy to an XML file for review or testing in  Windows Server 2012  and Windows 8.
 
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 
-### To export an applocker policy to an XML file
+### To export an AppLocker policy to an XML file
 
 1.  On the **Start** screen, type**secpol.msc**.
 
-2.  In the console tree, expand **Application Control Policies**, right-click **applocker**, and then click **Export Policy**.
+2.  In the console tree, expand **Application Control Policies**, right-click **AppLocker**, and then click **Export Policy**.
 
 3.  Browse to the location where you want to save the XML file.
 

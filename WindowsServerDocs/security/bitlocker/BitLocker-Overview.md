@@ -20,14 +20,6 @@ ms.date: 10/12/2016
 
 This topic provides a high\-level overview of BitLocker including a list of new and changed features, system requirements, practical applications, and deprecated features. It provides links to additional content that will help you to learn more about working with BitLocker.
 
-**Did you mean???**
-
--   [applocker](http://go.microsoft.com/fwlink/p/?LinkId=243126)
-
--   [EFS](http://go.microsoft.com/fwlink/p/?LinkId=243130)
-
--   [BitLocker Drive Encryption Provider](http://go.microsoft.com/fwlink/p/?LinkId=243131)
-
 ## <a name="BKMK_OVER"></a>Feature description
 BitLocker Drive Encryption is a data protection feature of the operating system that was first made available in Windows Vista. Subsequent operating system releases have continued to improve the security offered by BitLocker to allow the operating system to provide BitLocker protection to more drives and devices. Having BitLocker integrated with the operating system addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers. Manage\-bde is the command\-line tool that can also be used to perform tasks on the computer related to BitLocker. When installing the BitLocker optional component on a server you will also need to install the Enhanced Storage feature, which is used to support hardware encrypted drives. On servers, an additional BitLocker feature that can be installed is BitLocker Network Unlock. Computers running Windows RT, Windows RT 8.1, or Windows 8.1 can be protected by using Device Encryption, which is a customized version of BitLocker.
 

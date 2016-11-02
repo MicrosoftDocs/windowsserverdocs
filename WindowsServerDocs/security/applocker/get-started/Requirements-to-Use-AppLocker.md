@@ -1,5 +1,5 @@
 ---
-title: Requirements to Use applocker
+title: Requirements to Use AppLocker
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,31 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Requirements to Use applocker
+# Requirements to Use AppLocker
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional lists software requirements to use applocker on the supported Windows operating systems.
+This topic for the IT professional lists software requirements to use AppLocker on the supported Windows operating systems.
 
 ## General requirements
-To use applocker, you need:
+To use AppLocker, you need:
 
 -   A computer running a supported operating system to create the rules. The computer can be a domain controller.
 
--   For Group Policy deployment, at least one computer with the Group Policy Management Console (GPMC) or Remote Server Administration Tools (RSAT) installed to host the applocker rules.
+-   For Group Policy deployment, at least one computer with the Group Policy Management Console (GPMC) or Remote Server Administration Tools (RSAT) installed to host the AppLocker rules.
 
--   Computers running a supported operating system to enforce the applocker rules that you create.
+-   Computers running a supported operating system to enforce the AppLocker rules that you create.
 
 > [!NOTE]
-> You can use Software Restriction Policies with applocker, but with some limitations. For more information, see [Use applocker and Software Restriction Policies in the Same Domain](../manage/use-applocker-and-software-restriction-policies-in-the-same-domain.md).
+> You can use Software Restriction Policies with AppLocker, but with some limitations. For more information, see [Use AppLocker and Software Restriction Policies in the Same Domain](../manage/use-applocker-and-software-restriction-policies-in-the-same-domain.md).
 
 ## Operating system requirements
-The following table show the on which operating systems applocker features are supported.
+The following table show the on which operating systems AppLocker features are supported.
 
 |Version|Can be configured|Can be enforced|Available rules|Notes|
 |------|-----------|----------|----------|-----|
 | Windows Server 2012 R2 |Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL||
-|Windows 8.1|Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL|Only the Enterprise edition supports applocker|
+|Windows 8.1|Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL|Only the Enterprise edition supports AppLocker|
 |Windows RT 8.1|No|No|NA||
 |Windows Server 2012 Standard|Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL||
 |Windows Server 2012 Datacenter|Yes|Yes|Packaged apps<br />Executable<br />Windows Installer<br />Script<br />DLL||
@@ -51,21 +51,21 @@ The following table show the on which operating systems applocker features are s
 | Windows Server 2008 R2 for Itanium-Based Systems |Yes|Yes|Executable<br />Windows Installer<br />Script<br />DLL|Packaged app rules will not be enforced.|
 |Windows 7 Ultimate|Yes|Yes|Executable<br />Windows Installer<br />Script<br />DLL|Packaged app rules will not be enforced.|
 |Windows 7 Enterprise|Yes|Yes|Executable<br />Windows Installer<br />Script<br />DLL|Packaged app rules will not be enforced.|
-|Windows 7 Professional|Yes|No|Executable<br />Windows Installer<br />Script<br />DLL|No applocker rules are enforced.|
+|Windows 7 Professional|Yes|No|Executable<br />Windows Installer<br />Script<br />DLL|No AppLocker rules are enforced.|
 
-applocker is not supported on versions of the Windows operating system not listed above. Software Restriction Policies can be used with those versions. However, the SRP Basic User feature is not supported on the above operating systems.
+AppLocker is not supported on versions of the Windows operating system not listed above. Software Restriction Policies can be used with those versions. However, the SRP Basic User feature is not supported on the above operating systems.
 
 ## See also
-[Administer applocker](../manage/administer-applocker.md)
+[Administer AppLocker](../manage/administer-applocker.md)
 
-[Monitor Application Usage with applocker](../manage/monitor-application-usage-with-applocker.md)
+[Monitor Application Usage with AppLocker](../manage/monitor-application-usage-with-applocker.md)
 
-[Optimize applocker Performance](../manage/optimize-applocker-performance.md)
+[Optimize AppLocker Performance](../manage/optimize-applocker-performance.md)
 
-[Use applocker and Software Restriction Policies in the Same Domain](../manage/use-applocker-and-software-restriction-policies-in-the-same-domain.md)
+[Use AppLocker and Software Restriction Policies in the Same Domain](../manage/use-applocker-and-software-restriction-policies-in-the-same-domain.md)
 
-[Manage Packaged Apps with applocker](../manage/manage-packaged-apps-with-applocker.md)
+[Manage Packaged Apps with AppLocker](../manage/manage-packaged-apps-with-applocker.md)
 
-[applocker Policies Design Guide](../design/applocker-policies-design-guide.md)
+[AppLocker Policies Design Guide](../design/applocker-policies-design-guide.md)
 
 
