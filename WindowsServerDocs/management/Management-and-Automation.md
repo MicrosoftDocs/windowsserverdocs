@@ -19,11 +19,11 @@ ms.date: 10/17/2016
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 <img src="../get-started/8-management.png" style='float:left; padding:.5em;' alt="Icon showing a gear"> Management and automation features and tools help IT pros run and manage Windows Server.  
-
+<br><br><br><br><br><br>
 
 ## [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
 
-With Microsoft Server Performance Advisor (SPA), you can collect metrics to diagnose performance issues on Windows servers unobtrusively without adding software agents or reconfiguring production servers. SPA generates comprehensive performance reports and historical charts with recommendations. 
+With Microsoft Server Performance Advisor (SPA), you can collect metrics to diagnose performance issues on Windows servers unobtrusively without adding software agents or reconfiguring production servers. SPA generates comprehensive performance reports and historical charts with recommendations.
 
 ## [Server Manager](http://technet.microsoft.com/library/mt126175.aspx)
 
@@ -38,9 +38,9 @@ The content in this section describes how to use Server Manager in Windows Serve
 
 The content in this section describes how to configure and manage WSUS. In this section you will find information about installing the WSUS Server Role, configuring WSUS servers, as well as managing updates, and managing WSUS client computers and WSUS computer groups.
 
-## [Windows Commands](windows-commands/windows-commands.md) 
+## [Windows Commands](windows-commands/windows-commands.md)
 
-The Windows command-line tools are used to perform administrative tasks in Windows. You can use the command reference to familiarize yourself with the command-line tools, to learn about the command shell, and to automate command-line tasks by using batch files or scripting tools. 
+The Windows command-line tools are used to perform administrative tasks in Windows. You can use the command reference to familiarize yourself with the command-line tools, to learn about the command shell, and to automate command-line tasks by using batch files or scripting tools.
 
 ## See Also  
 - [Manage connections from Windows operating system components to Microsoft services](https://technet.microsoft.com/itpro/windows/manage/manage-connections-from-windows-operating-system-components-to-microsoft-services)
