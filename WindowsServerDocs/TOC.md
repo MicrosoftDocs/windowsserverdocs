@@ -1296,7 +1296,7 @@
 ###### [System cryptography: Force strong key protection for user keys stored on the computer](security/group-managed-service-accounts/security-options/system-cryptography-force-strong-key-protection-for-user-keys-stored-on-the-computer.md)
 ###### [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](security/bitlocker/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing.md)
 ###### [System objects: Require case insensitivity for non-Windows subsystems](security/group-managed-service-accounts/security-options/system-objects-require-case-insensitivity-for-non-windows-subsystems.md)
-###### [System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)](security/group-managed-service-accounts/security-options/system-objects-strengthen-default-permissions-of-internal-system-objects-e.md)
+###### [System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)](security/group-managed-service-accounts/security-options/system-objects-strengthen-default-permissions-of-internal-system-objects.md)
 ###### [System settings: Optional subsystems](security/group-managed-service-accounts/security-options/system-settings-optional-subsystems.md)
 ###### [System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies](security/group-managed-service-accounts/security-options/system-settings-use-certificate-rules-on-windows-executables-for-software-restriction-policies.md)
 ###### [User Account Control: Admin Approval Mode for the Built-in Administrator account](security/group-managed-service-accounts/security-options/user-account-control-admin-approval-mode-for-the-built-in-administrator-account.md)
