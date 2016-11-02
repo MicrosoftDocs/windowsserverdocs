@@ -17,15 +17,12 @@ manager: dongill
 
 # Windows Server 2016
 
-<table border="0" width="100%">
-<tr style="text-align:center;">
-  <td colspan="4" bgcolor="F3FBFF" style="padding:0; border:0;">
-    <img src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/2whats-new.png" alt="alt text" title="What's new in Windows Server 2016?" />
-    <font size="4">
-    <a href="what-s-new-in-windows-server-2016-technical-preview-5">What's New in Windows Server 2016?</a></font>
-  </td>
-</table>
-[![Storage Spaces Direct Overview Video](media/font-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
+<img src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/2whats-new.png" alt="alt text" title="What's newer  in Windows Server 2016?" />
+    <font size="5">
+    &nbsp;<a href="what-s-new-in-windows-server-2016">Read what's new in Windows Server 2016</a></font>
+<br/><br/>
+[![Storage Spaces Direct Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
+
 <table border="0" width="100%">
 </tr>
   <tr style="text-align:center;">
