@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 10/31/2016
+ms.date: 11/02/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
@@ -13,14 +13,14 @@ author: jaimeo
 ms.author: jaimeo
 ---
 # Updating Nano Server
-This topic includes information about updating Nano Server using a variety of methods. When updating Nano Server, it's important to keep in mind that, compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to the experience with Windows 10. Specifically, these periodic releases are known as Current Branch for Business (CBB) releases. This approach supports customers who are moving at a cloud cadence of rapid development lifecycles and wish to innovate more quickly. More information about CBB is available on the [Windows Server Blog](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+Nano Server offers a variety of methods for staying up to date. Compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to that of Windows 10. These periodic releases are known as **Current Branch for Business (CBB)** releases. This approach supports customers who nt to innovate more quickly and move at a cloud cadence of rapid development lifecycles. More information about CBB is available on the [Windows Server Blog](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
-Similar to Windows 10, Nano Server is serviced between CBB releases through a series of cumulative updates. For example, the first cumulative update for Nano Server was released on September 26, 2016 with [KB3192366](https://support.microsoft.com/en-us/kb/3192366). With this and subsequent cumulative updates, we provide various options for installing these updates on Nano Server. In this article, we'll use the KB3192366 update as an example to illustrate how to obtain and apply cumulative updates to Nano Server. For more information on the cumulative update model, see the [Microsoft Update blog](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
+**Between these CBB releases**, Nano Server stays current with a series of *cumulative updates*. For example, the first cumulative update for Nano Server was released on September 26, 2016 with [KB3192366](https://support.microsoft.com/en-us/kb/3192366). With this and subsequent cumulative updates, we provide various options for installing these updates on Nano Server. In this article, we'll use the KB3192366 update as an example to illustrate how to obtain and apply cumulative updates to Nano Server. For more information on the cumulative update model, see the [Microsoft Update blog](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
 
 > [!NOTE]
-> If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. So you need to be sure to install the latest cumulative update after installing any optional packages.
+> If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. So you should install the latest cumulative update after installing any optional packages.
 
-In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you need to install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176939](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you'll need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
+In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you should first install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176939](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
 - [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
 - [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
 
@@ -38,7 +38,7 @@ After downloading the .msu files from the Microsoft Update Catalog, save them to
 Now you can use the extracted .cab files to apply the updates to a Nano Server image in a few different ways, depending on your needs. The following options are presented in no particular order of preference - use the option that makes the most sense for your environment.
 
 > [!NOTE]
-> When using the DISM tools to service Nano Server, you need to use a version of DISM that is equal to or newer than the version of Nano Server you're servicing. You can achieve this by running DISM from a matching version of Windows, installing a matching version of the [Windows Asssessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit), or running DISM on Nano Server itself.
+> When using the DISM tools to service Nano Server, you must use a version of DISM that is the same as or newer than the version of Nano Server you're servicing. You can achieve this by running DISM from a matching version of Windows, installing a matching version of the [Windows Asssessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit), or running DISM on Nano Server itself.
 
 ## Option 1: Integrate a cumulative update into a new image
 If you are building a new Nano Server image, you can integrate the latest cumulative update directly into the image so that it's fully patched on first boot.
@@ -76,22 +76,26 @@ Enter-PSSession $s
 ```
 - Using PowerShell
 ```powershell
-# Apply the servicing stack update first and then restart
+
+1. Apply the servicing stack update first and then restart
 Add-WindowsPackage -Online -PackagePath C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
 Restart-Computer; exit
-# After restarting, apply the cumulative update and then restart
+
+2. After restarting, apply the cumulative update and then restart
 Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Credential (Get-Credential)
 Add-WindowsPackage -Online -PackagePath C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab
 Restart-Computer; exit
 ```
 - Using dism.exe
 ```powershell
-# Apply the servicing stack update first and then restart
+
+3. Apply the servicing stack update first and then restart
 dism.exe /Online /Add-Package /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
-# After the operation completes successfully and you are prompted to restart,
-# it's safe to press Ctrl+C to cancel the pipeline and return to the prompt
+
+After the operation completes successfully and you are prompted to restart, it's safe to press Ctrl+C to cancel the pipeline and return to the prompt
 Restart-Computer; exit
-# After restarting, apply the cumulative update and then restart
+
+4. After restarting, apply the cumulative update and then restart
 Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Credential (Get-Credential)
 dism.exe /Online /Add-Package /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab
 Restart-Computer; exit
@@ -120,7 +124,7 @@ $result = $ci | Invoke-CimMethod -MethodName ScanForUpdates -Arguments @{SearchC
 $result.Updates
 ```
 ## Additional Options
-Other methods for updating Nano Server may overlap or complement the options above. Such options include using Windows Server Update Services (WSUS), System Center Virtual Machine Manager (VMM), Task Scheduler, or a 3rd party solution.
+Other methods for updating Nano Server might overlap or complement the options above. Such options include using Windows Server Update Services (WSUS), System Center Virtual Machine Manager (VMM), Task Scheduler, or a non-Microsoft solution.
 - [Configuring Windows Update for WSUS](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx)
 - [Managing Fabric Updates in VMM](https://technet.microsoft.com/en-us/library/gg675084(v=sc.12).aspx)
 - [Registering a Scheduled Task](https://technet.microsoft.com/en-us/library/jj649811.aspx)
