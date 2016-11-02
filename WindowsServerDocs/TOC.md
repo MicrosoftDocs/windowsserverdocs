@@ -1361,7 +1361,6 @@
 #### [Administer Software Restriction Policies](security/software-restriction-policies/administer-software-restriction-policies.md)
 ##### [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](security/software-restriction-policies/determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md)
 ##### [Work with Software Restriction Policies Rules](security/software-restriction-policies/work-with-software-restriction-policies-rules.md)
-##### [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](security/software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 #### [Troubleshoot Software Restriction Policies](security/software-restriction-policies/troubleshoot-software-restriction-policies.md)
 ### [Windows Authentication](security/windows-authentication/windows-authentication-overview.md)
 #### [Windows Authentication Technical Overview](security/windows-authentication/windows-authentication-technical-overview.md)
