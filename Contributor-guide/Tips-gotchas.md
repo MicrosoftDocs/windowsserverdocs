@@ -20,6 +20,8 @@ Some basic branch tips:
 
         git checkout upstream/upstream-branch-name -b your-local-branch-name
 
+For markdown help, start with this [article](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) in Github. For tables, see this [one](https://help.github.com/articles/organizing-information-with-tables/).
+
 ## Gotcha's
 
 ### Deleting files
