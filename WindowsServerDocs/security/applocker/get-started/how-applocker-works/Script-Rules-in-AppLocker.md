@@ -41,6 +41,6 @@ The following table lists the default rules that are available for the script ru
 |Allow all users to run scripts in the Program Files folder|(Default Rule) All scripts located in the Program Files folder|Everyone|Path: %programfiles%\\*|
 
 ## See Also
-[Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+[Understanding AppLocker Default Rules](understanding-applocker-default-rules.md)
 
 

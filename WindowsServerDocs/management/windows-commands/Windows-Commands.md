@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 Use this topic to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
 
-To read introductory information about the command shell and command-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_OVER). To see a listing of new and deprecated command-line tools see [New and deprecated functionality](Command-Line-Reference_1.md#BKMK_NEW).
+To read introductory information about the command shell and command-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_OVER).
 
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 

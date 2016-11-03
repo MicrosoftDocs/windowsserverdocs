@@ -53,7 +53,7 @@ The following table lists the actual and effective default policy values for the
 |Client computer effective default settings|Not applicable|  
   
 #### Operating system version differences  
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).  
+There are no differences in the way this policy setting works between supported versions of Windows.  
   
 ## Security considerations  
 More than a few unsuccessful password submissions during an attempt to log on to a computer might represent an attacker's attempts to determine an account password by trial and error. The Windows and Windows Server operating systems can track logon attempts, and you can configure the operating system to disable the account for a preset period of time after a specified number of failed attempts. Account lockout policy settings control the threshold for this response and what action to take after the threshold is reached.  
@@ -68,6 +68,6 @@ Configure the **Account lockout duration** policy setting to an appropriate valu
 Configuring the **Account lockout duration** policy setting to 0 so that accounts cannot be automatically unlocked can increase the number of requests that your organization's Help Desk receives to unlock accounts that were locked by mistake.  
   
 ## See Also  
-[Account Lockout Policy](Account-Lockout-Policy.md)  
+[Account Lockout Policy](account-lockout-policy.md)  
   
 

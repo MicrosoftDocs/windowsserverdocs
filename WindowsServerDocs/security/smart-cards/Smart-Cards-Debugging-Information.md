@@ -35,7 +35,7 @@ Debugging and tracing smart card issues requires a variety of tools and approach
 -   [CryptoAPI 2.0 Diagnostics](#BKMK_CrytoAPI20Diagnostics)
 
 
-### List certificates available on the smart card
+### <a name="BKMK_Certutil"></a>List certificates available on the smart card
 To list certificates that are available on the smart card, type `certutil ???scinfo`.
 
 > [!NOTE]

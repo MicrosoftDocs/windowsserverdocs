@@ -113,6 +113,6 @@ The following procedure describes how to configure a security policy setting for
 > -   When you change a security setting through a GPO and click **OK**, that setting will take effect the next time you refresh the settings.
 
 ## See also
-[Security Policy Settings Reference](Security-Policy-Settings-Reference.md)
+[Security Policy Settings Reference](security-policy-settings-reference.md)
 
 

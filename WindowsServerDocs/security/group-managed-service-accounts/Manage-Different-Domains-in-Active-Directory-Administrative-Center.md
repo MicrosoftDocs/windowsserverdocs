@@ -66,7 +66,7 @@ ms.date: 10/12/2016
 
 5.  When you are successfully connected to the foreign domain, browse through the columns in the **Add Navigation Nodes** window, select the container or containers to add to your Active??Directory Administrative Center navigation pane, and then click **OK**.
 
- For more information about customizing the Active??Directory Administrative Center navigation pane, see [Customize the Active Directory Administrative Center Navigation Pane](Customize-the-Active-Directory-Administrative-Center-Navigation-Pane.md).
+ For more information about customizing the Active??Directory Administrative Center navigation pane, see [Customize the Active Directory Administrative Center Navigation Pane](customize-the-active-directory-administrative-center-navigation-pane.md).
 
  You can also open Active??Directory Administrative Center by using a set of logon credentials that is different from your current set of logon credentials. The command in the following procedure can be useful if you are logged on to the computer that is running Active??Directory Administrative Center with normal user credentials, but you want to use Active??Directory Administrative Center on this computer to manage your local domain as an administrator. \(This command can also be useful if you want to use Active??Directory Administrative Center to remotely manage a foreign domain that is different from your local domain with a set of credentials that is different from your current set of logon credentials. However, the foreign domain must have an established trust with the local domain.\)
 

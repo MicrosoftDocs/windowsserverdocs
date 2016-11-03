@@ -35,7 +35,7 @@ The content in this topic applies to computers that are running the supported ve
 
 ### In this topic
 
--   [How security identifiers work](Security-Identifiers-Technical-Overview.md#w2k3tr_sids_how)
+-   [How security identifiers work](security-identifiers-technical-overview.md#w2k3tr_sids_how)
 
 -   [Security identifier architecture](#w2k3tr_sids_how_lpsh)
 
@@ -61,7 +61,7 @@ A security identifier is a data structure in binary format that contains a varia
 
 **SID structure**
 
-![Diagram showing SID structure](../media/Security-Identifiers-Technical-Overview/SID_structure.gif)
+![Diagram showing SID structure](../media/security-identifiers-technical-overview/SID_structure.gif)
 
 The individual values of a SID are described in the following table.
 
@@ -297,8 +297,8 @@ The following table provides examples of domain-relative RIDs that are used to f
 |DOMAIN_ALIAS_RID_REPLICATOR|A local group that is responsible for copying security databases from the primary domain controller to the backup domain controllers. These accounts are used only by the system.|
 |DOMAIN_ALIAS_RID_RAS_SERVERS|A local group that represents remote access and servers running Internet Authentication Service (IAS). This group permits access to various attributes of User objects.|
 
-## <a name="BKMK_ChangesSIDs"></a>Changes in security identifier????????s functionality
-The following table describes changes in SID implementation in the Windows operating systems that are designated in the [Applies To](#BKMK_top) list.
+## <a name="BKMK_ChangesSIDs"></a>Changes in security identifiers functionality
+The following table describes changes in SID implementation in the Windows operating systems that are designated in the "Applies To:" list at the beginning of this topic.
 
 |Change|Operating system version|Description and resources|
 |-----|--------------|---------------|
@@ -307,6 +307,6 @@ The following table describes changes in SID implementation in the Windows opera
 |Restricted SID checks are implemented|Windows Server 2008, Windows Vista|When restricting SIDs are present, Windows performs two access checks. The first is the normal access check, and the second is the same access check against the restricting SIDs in the token. Both access checks must pass to allow the process to access the object.<br /><br />For more information, see [What's New for Access Control in Windows Server 2008](http://technet.microsoft.com/library/cc731677(v=ws.10).aspx).|
 
 ## See also
-[Access Control Overview](Access-Control-Overview.md)
+[Access Control Overview](access-control-overview.md)
 
 

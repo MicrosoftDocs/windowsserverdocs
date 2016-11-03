@@ -98,6 +98,6 @@ We recommend that you not assign the **Deny log on as a service** user right to 
 If you assign the **Deny log on as a service** user right to specific accounts, services may not start and a denial-of-service condition could result.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

@@ -65,7 +65,7 @@ To use RDS to successfully log on to a remote computer, the user or group must b
 
 To exclude users or groups, you can assign the **Deny log on through Remote Desktop Services** user right to those users or groups. However, be careful when you use this method because you could create conflicts for legitimate users or groups that have been allowed access through the **Allow log on through Remote Desktop Services** user right.
 
-For more information, see [Deny log on through Remote Desktop Services](Deny-log-on-through-Remote-Desktop-Services.md).
+For more information, see [Deny log on through Remote Desktop Services](deny-log-on-through-remote-desktop-services.md).
 
 A restart of the computer is not required for this policy setting to be effective.
 
@@ -99,6 +99,6 @@ Alternatively, you can assign the **Deny log on through Remote Desktop Services*
 Removal of the **Allow log on through Remote Desktop Services** user right from other groups (or membership changes in these default groups) could limit the abilities of users who perform specific administrative roles in your environment. You should confirm that delegated activities are not adversely affected.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

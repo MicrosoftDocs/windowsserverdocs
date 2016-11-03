@@ -113,7 +113,7 @@ When this policy setting is disabled or not configured, only certificates that c
 |Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: None|
 |Notes and resources||
 
-### <a name="BKMK_AllowECCCertificatesToBeUsedForLogonAndAuthentication "></a>Allow ECC certificates to be used for logon and authentication
+### <a name="BKMK_AllowECCCertificatesToBeUsedForLogonAndAuthentication"></a>Allow ECC certificates to be used for logon and authentication
 This policy setting allows you to control whether elliptic curve cryptography (ECC) certificates on a smart card can be used to sign in to a domain. When this setting is enabled, ECC certificates on a smart card can be used to sign in to a domain. When this setting is disabled or not configured, ECC certificates on a smart card cannot be used to sign in to a domain.
 
 |Item|Description|
@@ -135,7 +135,7 @@ When this setting is enabled, the integrated unblock feature is available. When 
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
 |Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: None|
-|Notes and resources|To use the integrated unblock feature, the smart card must support it. Check with the hardware manufacturer to verify that the smart card supports this feature.<br /><br />You can create a custom message that is displayed when the smart card is blocked by configuring the policy setting [Display string when smart card is blocked](Smart-Card-Group-Policy-and-Registry-Settings.md#BKMK_DisplayStringWhenSmartCardIsBlocked).|
+|Notes and resources|To use the integrated unblock feature, the smart card must support it. Check with the hardware manufacturer to verify that the smart card supports this feature.<br /><br />You can create a custom message that is displayed when the smart card is blocked by configuring the policy setting [Display string when smart card is blocked](smart-card-group-policy-and-registry-settings.md#BKMK_DisplayStringWhenSmartCardIsBlocked).|
 
 ### <a name="BKMK_AllowSignatureKeysValidForLogon"></a>Allow signature keys valid for Logon
 This policy setting lets you allow signature key-based certificates to be enumerated and available for sign in. When this setting is enabled, any certificates available on the smart card with a signature-only key are listed on the sign-in screen. When this setting is disabled or not configured, certificates available on the smart card with a signature-only key are not listed on the sign-in screen.
@@ -201,7 +201,7 @@ When this policy setting is enabled, you can create and manage the displayed mes
 |Registry key|IntegratedUnblockPromptString|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Disabled and not configured are equivalent|
-|Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: This policy setting is only effective when the [Allow Integrated Unblock screen to be displayed at the time of logon](Smart-Card-Group-Policy-and-Registry-Settings.md#BKMK_AllowIntegratedUnblockScreenToBeDisplayedAtTheTimeOfLogon) policy is enabled.|
+|Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: This policy setting is only effective when the [Allow Integrated Unblock screen to be displayed at the time of logon](smart-card-group-policy-and-registry-settings.md#BKMK_AllowIntegratedUnblockScreenToBeDisplayedAtTheTimeOfLogon) policy is enabled.|
 |Notes and resources||
 
 ### <a name="BKMK_FilterDuplicateLogonCertificates"></a>Filter duplicate logon certificates
@@ -209,7 +209,7 @@ This policy setting lets you use a filtering process to configure which valid si
 
 Two certificates are determined to be the same if they are issued from the same template with the same major version and they are for the same user (this is determined by their UPN). When this policy setting is enabled, filtering occurs so that the user will only see the most current valid certificates from which to select. If this setting is disabled or not configured, all the certificates are displayed to the user.
 
-This policy setting is applied to the computer after the [Allow time invalid certificates](Smart-Card-Group-Policy-and-Registry-Settings.md#BKMK_AllowTimeInvalidCertificates) policy setting is applied.
+This policy setting is applied to the computer after the [Allow time invalid certificates](smart-card-group-policy-and-registry-settings.md#BKMK_AllowTimeInvalidCertificates) policy setting is applied.
 
 |Item|Description|
 |----|--------|
@@ -277,7 +277,7 @@ If you enable or do not configure this policy setting, certificate propagation o
 |Registry key|CertPropEnabled|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Enabled and not configured are equivalent|
-|Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: This policy setting must be enabled to allow the [Turn on root certificate propagation from smart card](Smart-Card-Group-Policy-and-Registry-Settings.md#BKMK_TurnOnRootCertificatePropagationFromSmartCard) setting to work when it is enabled.|
+|Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: This policy setting must be enabled to allow the [Turn on root certificate propagation from smart card](smart-card-group-policy-and-registry-settings.md#BKMK_TurnOnRootCertificatePropagationFromSmartCard) setting to work when it is enabled.|
 |Notes and resources||
 
 ### <a name="BKMK_TurnOnRootCertificatePropagationFromSmartCard"></a>Turn on root certificate propagation from smart card
@@ -288,7 +288,7 @@ This policy setting allows you to manage the root certificate propagation that o
 |Registry key|EnableRootCertificate Propagation|
 |Applicable operating system versions|This policy applies to those versions designated in the **Applies To** list at the beginning of this topic.|
 |Default values|No changes per operating system versions<br /><br />Enabled and not configured are equivalent|
-|Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: For this policy setting to work, the [Turn on certificate propagation from smart card](Smart-Card-Group-Policy-and-Registry-Settings.md#BKMK_TurnOnCertificatePropagationFromSmartCard) policy setting must also be enabled.|
+|Policy management|Restart requirement: None<br /><br />Sign off requirement: None<br /><br />Policy conflicts: For this policy setting to work, the [Turn on certificate propagation from smart card](smart-card-group-policy-and-registry-settings.md#BKMK_TurnOnCertificatePropagationFromSmartCard) policy setting must also be enabled.|
 |Notes and resources||
 
 ### <a name="BKMK_TurnOnSmartCardPlugAndPlayService"></a>Turn on Smart Card Plug and Play service
@@ -351,8 +351,8 @@ The following smart card-related Group Policy settings are located in Computer C
 
 |Group Policy Setting|Registry Key|Default|Description|
 |------------|--------|------|--------|
-|[Interactive logon: Require smart card](../group-managed-service-accounts/security-options/Interactive-logon-Require-smart-card.md)|scforceoption|Disabled|This security policy setting requires users to sign in to a computer by using a smart card.<br /><br />**Enabled** Users can only sign in to the computer by using a smart card.<br /><br />**Disabled** Users can sign in to the computer by using any method.|
-|[Interactive logon: Smart card removal behavior](../group-managed-service-accounts/security-options/Interactive-logon-Smart-card-removal-behavior.md)|scremoveoption|This policy setting is not defined, which means that the system treats it as **No Action**.|This setting determines what happens when the smart card for a signed-in user is removed from the smart card reader. The options are:<br /><br />-   **No Action**<br />-   **Lock Workstation** The workstation is locked when the smart card is removed, allowing users to leave the area, take their smart card with them, and still maintain a protected session.<br />-   **Force Logoff** The user is automatically signed out when the smart card is removed.<br />-   **Disconnect if a Remote Desktop Services session** Removal of the smart card disconnects the session without signing out the user. This allows the user to reinsert the smart card and resume the session later, or at another computer that is equipped with a smart card reader, without having to sign in again. If the session is local, this policy setting functions identically to the **Lock Workstation** option. **Note:**     Remote Desktop Services was called Terminal Services in previous versions of Windows Server.|
+|[Interactive logon: Require smart card](../group-managed-service-accounts/security-options/interactive-logon-require-smart-card.md)|scforceoption|Disabled|This security policy setting requires users to sign in to a computer by using a smart card.<br /><br />**Enabled** Users can only sign in to the computer by using a smart card.<br /><br />**Disabled** Users can sign in to the computer by using any method.|
+|[Interactive logon: Smart card removal behavior](../group-managed-service-accounts/security-options/interactive-logon-smart-card-removal-behavior.md)|scremoveoption|This policy setting is not defined, which means that the system treats it as **No Action**.|This setting determines what happens when the smart card for a signed-in user is removed from the smart card reader. The options are:<br /><br />-   **No Action**<br />-   **Lock Workstation** The workstation is locked when the smart card is removed, allowing users to leave the area, take their smart card with them, and still maintain a protected session.<br />-   **Force Logoff** The user is automatically signed out when the smart card is removed.<br />-   **Disconnect if a Remote Desktop Services session** Removal of the smart card disconnects the session without signing out the user. This allows the user to reinsert the smart card and resume the session later, or at another computer that is equipped with a smart card reader, without having to sign in again. If the session is local, this policy setting functions identically to the **Lock Workstation** option. **Note:**     Remote Desktop Services was called Terminal Services in previous versions of Windows Server.|
 
 From the Local Security Policy Editor (secpol.msc), you can edit and apply system policies to manage credential delegation for local or domain computers.
 

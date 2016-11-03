@@ -22,7 +22,7 @@ This topic for the IT professional describes how to monitor changes to the centr
 
 This security audit policy and the event that it records are generated when the central access policy that is associated with a file or folder is changed. This security audit policy is useful when an administrator wants to monitor potential changes on some, but not all, files and folders on a file server.
 
-For information about monitoring potential central access policy changes for an entire file server, see [Monitor the Central Access Policies that Apply on a File Server](Monitor-the-Central-Access-Policies-that-Apply-on-a-File-Server.md).
+For information about monitoring potential central access policy changes for an entire file server, see [Monitor the Central Access Policies that Apply on a File Server](monitor-the-central-access-policies-that-apply-on-a-file-server.md).
 
 > [!NOTE]
 > The contents of this topic apply to the list of supported Windows operating systems designated in the **Applies To** list at the beginning of this topic.
@@ -90,6 +90,6 @@ After you configure settings to monitor changes to the central access policies t
 7.  Look for event 4913, which is generated when the central access policy that is associated with a file or folder is changed. This event includes the security identifiers (SIDs) of the old and new central access policies.
 
 ### Related resource
-[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)
+[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md)
 
 

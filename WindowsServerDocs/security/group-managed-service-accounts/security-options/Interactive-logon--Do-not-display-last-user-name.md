@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Interactive-logon-Do-not-display-last-user-name.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/interactive-logon-do-not-display-last-user-name.md
 ---

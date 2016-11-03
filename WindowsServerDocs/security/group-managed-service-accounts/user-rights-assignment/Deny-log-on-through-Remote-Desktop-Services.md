@@ -97,6 +97,6 @@ Assign the **Deny log on through Remote Desktop Services** user right to the bui
 If you assign the **Deny log on through Remote Desktop Services** user right to other groups, you could limit the abilities of users who are assigned to specific administrative roles in your environment. Accounts that have this user right cannot connect to the computer through Remote Desktop Services or Remote Assistance. You should confirm that delegated tasks are not negatively affected.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

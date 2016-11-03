@@ -35,80 +35,80 @@ AppLocker helps administrators control how users can access and use files, such 
 -   Simplify creating and managing AppLocker rules by using AppLocker PowerShell cmdlets.
 
 > [!NOTE]
-> For more information about enhanced capabilities of AppLocker to control Windows apps, see [Packaged Apps and Packaged App Installer Rules in AppLocker](../../access-control/Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md).
+> For more information about enhanced capabilities of AppLocker to control Windows apps, see [Packaged Apps and Packaged App Installer Rules in AppLocker](../../access-control/packaged-apps-and-packaged-app-installer-rules-in-applocker.md).
 
 The following topics are included to administer AppLocker:
 
--   [Maintain AppLocker Policies](Maintain-AppLocker-Policies.md)
+-   [Maintain AppLocker Policies](maintain-applocker-policies.md)
 
--   [Edit an AppLocker Policy](Edit-an-AppLocker-Policy.md)
+-   [Edit an AppLocker Policy](edit-an-applocker-policy.md)
 
--   [Test and Update an AppLocker Policy](Test-and-Update-an-AppLocker-Policy.md)
+-   [Test and Update an AppLocker Policy](test-and-update-an-applocker-policy.md)
 
--   [Deploy AppLocker Policies by Using the Enforce Rules Setting](Deploy-AppLocker-Policies-by-Using-the-Enforce-Rules-Setting.md)
+-   [Deploy AppLocker Policies by Using the Enforce Rules Setting](deploy-applocker-policies-by-using-the-enforce-rules-setting.md)
 
--   [Use the AppLocker Windows PowerShell Cmdlets](Use-the-AppLocker-Windows-PowerShell-Cmdlets.md)
+-   [Use the AppLocker Windows PowerShell Cmdlets](use-the-applocker-windows-powershell-cmdlets.md)
 
--   [Optimize AppLocker Performance](Optimize-AppLocker-Performance.md)
+-   [Optimize AppLocker Performance](optimize-applocker-performance.md)
 
--   [Monitor Application Usage with AppLocker](Monitor-Application-Usage-with-AppLocker.md)
+-   [Monitor Application Usage with AppLocker](monitor-application-usage-with-applocker.md)
 
--   [Use AppLocker and Software Restriction Policies in the Same Domain](Use-AppLocker-and-Software-Restriction-Policies-in-the-Same-Domain.md)
+-   [Use AppLocker and Software Restriction Policies in the Same Domain](use-applocker-and-software-restriction-policies-in-the-same-domain.md)
 
--   [Manage Packaged Apps with AppLocker](Manage-Packaged-Apps-with-AppLocker.md)
+-   [Manage Packaged Apps with AppLocker](manage-packaged-apps-with-applocker.md)
 
 -   **How to work with policies**
 
-    -   [Configure an AppLocker Policy for Audit Only](policies/Configure-an-AppLocker-Policy-for-Audit-Only.md)
+    -   [Configure an AppLocker Policy for Audit Only](policies/configure-an-applocker-policy-for-audit-only.md)
 
-    -   [Configure an AppLocker Policy for Enforce Rules](policies/Configure-an-AppLocker-Policy-for-Enforce-Rules.md)
+    -   [Configure an AppLocker Policy for Enforce Rules](policies/configure-an-applocker-policy-for-enforce-rules.md)
 
-    -   [Display a Custom URL Message When Users Try to Run a Blocked Application](policies/Display-a-Custom-URL-Message-When-Users-Try-to-Run-a-Blocked-Application.md)
+    -   [Display a Custom URL Message When Users Try to Run a Blocked Application](policies/display-a-custom-url-message-when-users-try-to-run-a-blocked-application.md)
 
-    -   [Export an AppLocker Policy from a GPO](policies/Export-an-AppLocker-Policy-from-a-GPO.md)
+    -   [Export an AppLocker Policy from a GPO](policies/export-an-applocker-policy-from-a-gpo.md)
 
-    -   [Export an AppLocker Policy to an XML File](policies/Export-an-AppLocker-Policy-to-an-XML-File.md)
+    -   [Export an AppLocker Policy to an XML File](policies/export-an-applocker-policy-to-an-xml-file.md)
 
-    -   [Import an AppLocker Policy from Another Computer](policies/Import-an-AppLocker-Policy-from-Another-Computer.md)
+    -   [Import an AppLocker Policy from Another Computer](policies/import-an-applocker-policy-from-another-computer.md)
 
-    -   [Import an AppLocker Policy into a GPO](policies/Import-an-AppLocker-Policy-into-a-GPO.md)
+    -   [Import an AppLocker Policy into a GPO](policies/import-an-applocker-policy-into-a-gpo.md)
 
-    -   [Merge AppLocker Policies by Using Set-ApplockerPolicy](policies/Merge-AppLocker-Policies-by-Using-Set-ApplockerPolicy.md)
+    -   [Merge AppLocker Policies by Using Set-applockerPolicy](policies/merge-applocker-policies-by-using-set-applockerpolicy.md)
 
-    -   [Merge AppLocker Policies Manually](policies/Merge-AppLocker-Policies-Manually.md)
+    -   [Merge AppLocker Policies Manually](policies/merge-applocker-policies-manually.md)
 
-    -   [Refresh an AppLocker Policy](policies/Refresh-an-AppLocker-Policy.md)
+    -   [Refresh an AppLocker Policy](policies/refresh-an-applocker-policy.md)
 
-    -   [Test an AppLocker Policy by Using Test-AppLockerPolicy](policies/Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md)
+    -   [Test an AppLocker Policy by Using Test-applockerPolicy](policies/test-an-applocker-policy-by-using-test-applockerpolicy.md)
 
 -   **How to work with rules**
 
-    -   [Create a Rule That Uses a File Hash Condition](rules/Create-a-Rule-That-Uses-a-File-Hash-Condition.md)
+    -   [Create a Rule That Uses a File Hash Condition](rules/create-a-rule-that-uses-a-file-hash-condition.md)
 
-    -   [Create a Rule That Uses a Path Condition](rules/Create-a-Rule-That-Uses-a-Path-Condition.md)
+    -   [Create a Rule That Uses a Path Condition](rules/create-a-rule-that-uses-a-path-condition.md)
 
-    -   [Create a Rule That Uses a Publisher Condition](rules/Create-a-Rule-That-Uses-a-Publisher-Condition.md)
+    -   [Create a Rule That Uses a Publisher Condition](rules/create-a-rule-that-uses-a-publisher-condition.md)
 
-    -   [Create AppLocker Default Rules](rules/Create-AppLocker-Default-Rules.md)
+    -   [Create AppLocker Default Rules](rules/create-applocker-default-rules.md)
 
-    -   [Configure Exceptions for an AppLocker Rule](rules/Configure-Exceptions-for-an-AppLocker-Rule.md)
+    -   [Configure Exceptions for an AppLocker Rule](rules/configure-exceptions-for-an-applocker-rule.md)
 
-    -   [Create a Rule for Packaged Apps](rules/Create-a-Rule-for-Packaged-Apps.md)
+    -   [Create a Rule for Packaged Apps](rules/create-a-rule-for-packaged-apps.md)
 
-    -   [Delete an AppLocker Rule](rules/Delete-an-AppLocker-Rule.md)
+    -   [Delete an AppLocker Rule](rules/delete-an-applocker-rule.md)
 
-    -   [Edit AppLocker Rules](rules/Edit-AppLocker-Rules.md)
+    -   [Edit AppLocker Rules](rules/edit-applocker-rules.md)
 
-    -   [Enable the DLL Rule Collection](rules/Enable-the-DLL-Rule-Collection.md)
+    -   [Enable the DLL Rule Collection](rules/enable-the-dll-rule-collection.md)
 
-    -   [Enforce AppLocker Rules](rules/Enforce-AppLocker-Rules.md)
+    -   [Enforce AppLocker Rules](rules/enforce-applocker-rules.md)
 
-    -   [Run the Automatically Generate Rules Wizard](rules/Run-the-Automatically-Generate-Rules-Wizard.md)
+    -   [Run the Automatically Generate Rules Wizard](rules/run-the-automatically-generate-rules-wizard.md)
 
 ## <a name="BKMK_Using_Snapins"></a>Using the MMC snap-ins to administer AppLocker
 You can administer AppLocker policies by using the Group Policy Management Console to create or edit a Group Policy Object (GPO), or to create or edit an AppLocker policy on a local computer by using the Local Group Policy Editor snap-in or the Local Security Policy snap-in.
 
-### Administer Applocker using Group Policy
+### Administer AppLocker using Group Policy
 You must have Edit Setting permission to edit a GPO. By default, members of the **Domain Admins** group, the **Enterprise Admins** group, and the **Group Policy Creator Owners** group have this permission. Also, the Group Policy Management feature must be installed on the computer.
 
 1.  On the **Start** screen, type**gpmc.msc** or open the Group Policy Management Console (GPMC).
@@ -126,6 +126,6 @@ You must have Edit Setting permission to edit a GPO. By default, members of the 
 3.  In the console tree of the snap-in, double-click **Application Control Policies**, double-click **AppLocker**, and then click the rule collection that you want to create the rule for.
 
 ## Using Windows PowerShell to administer AppLocker
-For how-to information about administering AppLocker with Windows PowerShell, see [Use the AppLocker Windows PowerShell Cmdlets](Use-the-AppLocker-Windows-PowerShell-Cmdlets.md). For reference information and examples how to administer AppLocker with Windows PowerShell, see the [AppLocker PowerShell Command Reference](http://technet.microsoft.com/library/ee424349(WS.10).aspx).
+For how-to information about administering AppLocker with Windows PowerShell, see [Use the AppLocker Windows PowerShell Cmdlets](use-the-applocker-windows-powershell-cmdlets.md). For reference information and examples how to administer AppLocker with Windows PowerShell, see the [AppLocker PowerShell Command Reference](http://technet.microsoft.com/library/ee424349(WS.10).aspx).
 
 

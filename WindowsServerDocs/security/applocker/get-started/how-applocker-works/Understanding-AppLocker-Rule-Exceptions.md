@@ -25,6 +25,6 @@ You can apply AppLocker rules to individual users or a group of users. If you ap
 For example, the rule "Allow Everyone to run Windows except Registry Editor" allows everyone in the organization to run Windows but does not allow anyone to run Registry Editor. The effect of this rule would prevent users such as help desk personnel from running a program that is necessary for their support tasks. To resolve this problem, create a second rule that applies to the Helpdesk user group: "Allow Helpdesk to run Registry Editor." If you create a deny rule that does not allow any users to run Registry Editor, the deny rule will override the second rule that allows the Helpdesk user group to run Registry Editor.
 
 ## See Also
-[How AppLocker Works](../How-AppLocker-Works.md)
+[How AppLocker Works](../how-applocker-works.md)
 
 

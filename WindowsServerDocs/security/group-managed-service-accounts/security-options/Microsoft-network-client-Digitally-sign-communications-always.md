@@ -35,11 +35,11 @@ Using SMB packet signing can impose up to a 15 percent performance degradation o
 
 There are three other policy settings that relate to packet-signing requirements for Server Message Block (SMB) communications:
 
--   [Microsoft network server: Digitally sign communications &#40;always&#41;](Microsoft-network-server-Digitally-sign-communications-always.md)
+-   [Microsoft network server: Digitally sign communications &#40;always&#41;](microsoft-network-server-digitally-sign-communications-always.md)
 
--   [Microsoft network client: Digitally sign communications &#40;if server agrees&#41;](Microsoft-network-client-Digitally-sign-communications-if-server-agrees.md)
+-   [Microsoft network client: Digitally sign communications &#40;if server agrees&#41;](microsoft-network-client-digitally-sign-communications-if-server-agrees.md)
 
--   [Microsoft network server: Digitally sign communications &#40;if client agrees&#41;](Microsoft-network-server-Digitally-sign-communications-if-client-agrees.md)
+-   [Microsoft network server: Digitally sign communications &#40;if client agrees&#41;](microsoft-network-server-digitally-sign-communications-if-client-agrees.md)
 
 ### Possible values
 

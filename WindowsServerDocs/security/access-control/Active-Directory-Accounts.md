@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 
 Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization. This reference topic for the IT professional describes the Windows Server default local accounts that are stored locally on the domain controller and are used in Active Directory.
 
-This reference topic does not describe default local user accounts for a member or standalone server or for a Windows client. For more information, see [Local Accounts](Local-Accounts.md).
+This reference topic does not describe default local user accounts for a member or standalone server or for a Windows client. For more information, see [Local Accounts](local-accounts.md).
 
 ## About this topic
 This topic describes the following:
@@ -69,9 +69,9 @@ Primarily, default local accounts do the following:
 
 In Active Directory, default local accounts are used by administrators to manage domain and member servers directly and from dedicated administrative workstations. Active Directory accounts provide access to network resources. Active Directory User accounts and Computer accounts can represent a physical entity, such as a computer or person, or act as dedicated service accounts for some applications.
 
-Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](Active-Directory-Security-Groups.md).
+Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](active-directory-security-groups.md).
 
-On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals Technical Overview](Security-Principals-Technical-Overview.md).
+On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals Technical Overview](security-principals-technical-overview.md).
 
 A security principal is represented by a unique security identifier (SID).The SIDs that are related to each of the default local accounts in Active Directory are described in the sections below.
 
@@ -133,7 +133,7 @@ Because the Guest account can provide anonymous access, it is a security risk. I
 
 When the Guest account is required, an Administrator on the domain controller is required to enable the Guest account. The Guest account can be enabled without requiring a password, or it can be enabled with a strong password. The Administrator also grants restricted rights and permissions for the Guest account. To help prevent unauthorized access:
 
--   Do not grant the Guest account the [Shut down the system](../group-managed-service-accounts/user-rights-assignment/Shut-down-the-system.md) user right. When a computer is shutting down or starting up, it is possible that a Guest user or anyone with local access, such as a malicious user, could gain unauthorized access to the computer.
+-   Do not grant the Guest account the [Shut down the system](../group-managed-service-accounts/user-rights-assignment/shut-down-the-system.md) user right. When a computer is shutting down or starting up, it is possible that a Guest user or anyone with local access, such as a malicious user, could gain unauthorized access to the computer.
 
 -   Do not provide the Guest account with the ability to view the event logs. After the Guest account is enabled, it is a best practice to monitor this account frequently to ensure that other users cannot use services and other resources, such as resources that were unintentionally left available by a previous user.
 
@@ -354,7 +354,7 @@ The following procedure describes how to block Internet access by creating a Gro
     > [!NOTE]
     > You might have to delegate permissions to join the domain by using [KB 932455](https://support.microsoft.com/en-us/kb/932455) if the account that joins the workstations to the domain does not already have permissions to join computers to the domain.
 
-    ![Create computer accounts for the new workstations](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample1.gif)
+    ![Create computer accounts for the new workstations](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample1.gif)
 
 3.  Close Active Directory Users and Computers.
 
@@ -362,13 +362,13 @@ The following procedure describes how to block Internet access by creating a Gro
 
 5.  Right-click the new OU, and > **Create a GPO in this domain, and Link it here**.
 
-    ![Right-click the new OU, and > **Create a GPO in this domain, and Link it here**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample2.png)
+    ![Right-click the new OU, and > **Create a GPO in this domain, and Link it here**](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample2.png)
 
 6.  Name the GPO, and > **OK**.
 
 7.  Expand the GPO, right-click the new GPO, and > **Edit**.
 
-    ![Expand the GPO, right-click the new GPO, and > **Edit**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample3.png)
+    ![Expand the GPO, right-click the new GPO, and > **Edit**](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample3.png)
 
 8.  Configure which members of accounts can log on locally to these administrative workstations as follows:
 
@@ -385,7 +385,7 @@ The following procedure describes how to block Internet access by creating a Gro
 
     5.  Click **Add User or Group**, type **Administrators**, and > **OK**.
 
-        ![Click **Add User or Group**, type **Administrators**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample4.png)
+        ![Click **Add User or Group**, type **Administrators**, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample4.png)
 
 9. Configure the proxy configuration:
 
@@ -393,7 +393,7 @@ The following procedure describes how to block Internet access by creating a Gro
 
     2.  Double-click **Proxy Settings**, select the **Enable proxy settings** check box, type **127.0.0.1** (the network Loopback IP address) as the proxy address, and > **OK**.
 
-        ![Double-click **Proxy Settings**, select the **Enable proxy settings** check box, type **127.0.0.1** (the network Loopback IP address) as the proxy address, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample5.png)
+        ![Double-click **Proxy Settings**, select the **Enable proxy settings** check box, type **127.0.0.1** (the network Loopback IP address) as the proxy address, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample5.png)
 
 10. Configure the loopback processing mode to enable the user Group Policy proxy setting to apply to all users on the computer as follows:
 
@@ -427,11 +427,11 @@ The following procedure describes how to block Internet access by creating a Gro
 
     1.  Right-click **Windows Firewall with Advanced Security LDAP://path**, and > **Properties**.
 
-        ![Right-click **Windows Firewall with Advanced Security LDAP://path**, and > **Properties**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample6.png)
+        ![Right-click **Windows Firewall with Advanced Security LDAP://path**, and > **Properties**](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample6.png)
 
     2.  On each profile, ensure that the firewall is enabled and that inbound connections are set to **Block all connections**.
 
-        ![On each profile, ensure that the firewall is enabled and that inbound connections are set to **Block all connections**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc1-Sample7.png)
+        ![On each profile, ensure that the firewall is enabled and that inbound connections are set to **Block all connections**](../media/active-directory-accounts/ADLocalAccounts-Proc1-Sample7.png)
 
     3.  Click **OK** to complete the configuration.
 
@@ -464,11 +464,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 3.  Right-click **Group Policy Objects**, and > **New**.
 
-    ![Right-click **Group Policy Objects**, and > **New**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample1.png)
+    ![Right-click **Group Policy Objects**, and > **New**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample1.png)
 
 4.  In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and > **OK**.
 
-    ![In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample2.png)
+    ![In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample2.png)
 
 5.  Right-click **New GPO**, and > **Edit**.
 
@@ -482,7 +482,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     3.  Click **Add User or Group**, click **Browse**, type **Domain Admins**, and > **OK**.
 
-        ![Click **Add User or Group**, click **Browse**, type **Domain Admins**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample3.png)
+        ![Click **Add User or Group**, click **Browse**, type **Domain Admins**, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample3.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -500,7 +500,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     3.  Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**.
 
-        ![Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample4.png)
+        ![Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample4.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -511,7 +511,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     6.  Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**.
 
-        ![Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample5.png)
+        ![Click **Add User or Group** > **Browse**, type **Domain Admins**, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample5.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -522,11 +522,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     1.  Right-click the workstation OU, and then > **Link an Existing GPO**.
 
-        ![Right-click the workstation OU, and then > **Link an Existing GPO**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample6.png)
+        ![Right-click the workstation OU, and then > **Link an Existing GPO**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample6.png)
 
     2.  Select the GPO that you just created, and > **OK**.
 
-        ![Select the GPO that you just created, and > **OK**](../media/Active-Directory-Accounts/ADLocalAccounts-Proc2-Sample7.png)
+        ![Select the GPO that you just created, and > **OK**](../media/active-directory-accounts/ADLocalAccounts-Proc2-Sample7.png)
 
 10. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
 
@@ -546,7 +546,7 @@ It is a best practice to configure the user objects for all sensitive accounts i
 
 As with any configuration change, test this enabled setting fully to ensure that it performs correctly before you implement it.
 
-![Screen shot showing how to select **Account is sensitive and cannot be delegated** check box under **Account options** to prevent accounts from being delegated](../media/Active-Directory-Accounts/ADLocalAccounts-Proc3-Sample1.png)
+![Screen shot showing how to select **Account is sensitive and cannot be delegated** check box under **Account options** to prevent accounts from being delegated](../media/active-directory-accounts/ADLocalAccounts-Proc3-Sample1.png)
 
 ## <a name="Sec_Secure_Manage_DCs"></a>Secure and manage domain controllers
 It is a best practice to strictly enforce restrictions on the domain controllers in your environment. This ensures that the domain controllers:
@@ -564,6 +564,6 @@ Because domain controllers store credential password hashes of all accounts in t
 In addition, installed applications and management agents on domain controllers might provide a path for escalating rights that malicious users can use to compromise the management service or administrators of that service. The management tools and services, which your organization uses to manage domain controllers and their administrators, are equally important to the security of the domain controllers and the domain administrator accounts. Ensure that these services and administrators are fully secured with equal effort.
 
 ## See also
-[Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
+[Security Principals Technical Overview](security-principals-technical-overview.md)
 
 

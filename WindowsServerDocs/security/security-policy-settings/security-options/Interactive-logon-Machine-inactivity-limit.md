@@ -21,9 +21,9 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, management, and security considerations for this policy setting.  
   
 ## Reference  
-Beginning with  Windows Server 2012  and Windows 8, Windows detects user-input inactivity of a sign-in (logon) session by using the security policy setting **Interactive logon: Machine inactivity limit**. If the amount of inactive time exceeds the inactivity limit set by this policy, then the user???s session locks by invoking the screen saver. This policy setting allows you to control the locking time by using Group Policy.  
+Beginning with Windows Server 2012 and Windows 8, Windows detects user-input inactivity of a sign-in (logon) session by using the security policy setting **Interactive logon: Machine inactivity limit**. If the amount of inactive time exceeds the inactivity limit set by this policy, then the user???s session locks by invoking the screen saver. This policy setting allows you to control the locking time by using Group Policy.  
   
-In versions earlier than  Windows Server 2012  and Windows 8, the desktop-locking mechanism was set on individual computers in Personalization in Control Panel.  
+In versions earlier than Windows Server 2012 and Windows 8, the desktop-locking mechanism was set on individual computers in Personalization in Control Panel.  
   
 ### Possible values  
 The automatic lock of the computer is set in elapsed seconds of inactivity, which can range from zero (0) to 599,940 seconds (166.65 hours).  
@@ -49,7 +49,7 @@ The following table lists the actual and effective default values for this polic
 |Client Computer Effective Default Settings|Disabled|  
   
 ### Operating system version differences  
-This policy setting was introduced in  Windows Server 2012  and Windows 8.  
+This policy setting was introduced in Windows Server 2012 and Windows 8.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  
@@ -58,13 +58,13 @@ This section describes features and tools that are available to help you manage 
 Restart is required for changes to this policy to become effective when they are saved locally or distributed through Group Policy.  
   
 ### Group Policy  
-Because this policy setting was introduced in  Windows Server 2012  and Windows 8, it can only be set locally on those computers that contain this policy setting, but it can be set and distributed through Group Policy to any computer running the Windows operating system that supports Group Policy.  
+Because this policy setting was introduced in Windows Server 2012 and Windows 8, it can only be set locally on those computers that contain this policy setting, but it can be set and distributed through Group Policy to any computer running the Windows operating system that supports Group Policy.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-This policy setting helps you prevent unauthorized access to computers or devices under your control when the currently signed-in user leaves without deliberately locking the desktop. In versions earlier than  Windows Server 2012  and Windows 8, the desktop-locking mechanism was set on individual computers in Personalization in Control Panel.  
+This policy setting helps you prevent unauthorized access to computers or devices under your control when the currently signed-in user leaves without deliberately locking the desktop. In versions earlier than Windows Server 2012 and Windows 8, the desktop-locking mechanism was set on individual computers in Personalization in Control Panel.  
   
 ### Countermeasure  
 Set the time for elapsed user-input inactivity time by using the security policy setting **Interactive logon: Machine inactivity limit** based on the computer???s usage and location requirements.  
@@ -73,6 +73,6 @@ Set the time for elapsed user-input inactivity time by using the security policy
 This security policy setting can limit unauthorized access to unsecured computers; however, that requirement must be balanced with the productivity requirements of the intended computer user.  
   
 ## See Also  
-[Security Options](Security-Options.md)  
+[Security Options](security-options.md)  
   
 

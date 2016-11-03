@@ -40,9 +40,9 @@ SSPI is the implementation of the Generic Security Service API (GSSAPI). SSPI pr
 
 ## See also
 
--   [Security Support Provider Interface Architecture](Security-Support-Provider-Interface-Architecture.md)
+-   [Security Support Provider Interface Architecture](security-support-provider-interface-architecture.md)
 
--   [Credentials Processes in Windows Authentication](Credentials-Processes-in-Windows-Authentication.md)
+-   [Credentials Processes in Windows Authentication](credentials-processes-in-windows-authentication.md)
 
 -   [Windows Authentication Technical Overview](https://technet.microsoft.com/library/dn169029.aspx)
 

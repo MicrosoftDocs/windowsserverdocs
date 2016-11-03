@@ -60,7 +60,7 @@ AppLocker can be configured to display the default message but with a custom URL
 
 The following image shows an example of the error message for a blocked application. You can use the **Set a support web link** policy setting to customize the **More information** link.
 
-![Example of an error message for a blocked application](../../media/Plan-for-AppLocker-Policy-Management/BlockedAppMsg.gif)
+![Example of an error message for a blocked application](../../media/plan-for-applocker-policy-management/BlockedAppMsg.gif)
 
 For steps to display a custom URL for the message, see [Display a Custom URL Message When Users Try to Run a Blocked Application](http://go.microsoft.com/fwlink/?LinkId=160265) (http://go.microsoft.com/fwlink/?LinkId=160265).
 
@@ -112,7 +112,7 @@ A file could be blocked for three reasons:
 
 -   A deny rule, which cannot be overridden, is explicitly blocking the file.
 
-Before editing the rule collection, first determine what rule is preventing the file from running. You can troubleshoot the problem by using the **Test-AppLockerPolicy** Windows PowerShell cmdlet. For more information about troubleshooting an AppLockerpolicy, see [Testing and Updating an AppLocker Policy](http://go.microsoft.com/fwlink/?LinkId=160269) (http://go.microsoft.com/fwlink/?LinkId=160269).
+Before editing the rule collection, first determine what rule is preventing the file from running. You can troubleshoot the problem by using the **Test-applockerPolicy** Windows PowerShell cmdlet. For more information about troubleshooting an AppLockerpolicy, see [Testing and Updating an AppLocker Policy](http://go.microsoft.com/fwlink/?LinkId=160269) (http://go.microsoft.com/fwlink/?LinkId=160269).
 
 ## Next steps
 After deciding how your organization will manage your AppLocker policy, record your findings.
@@ -123,6 +123,6 @@ After deciding how your organization will manage your AppLocker policy, record y
 
 -   **Policy maintenance.** Detail how rules will be added to the policy and in which GPO the rules are defined.
 
-For information and steps how to document your processes, see [Document Your Application Control Management Processes](Document-Your-Application-Control-Management-Processes.md).
+For information and steps how to document your processes, see [Document Your Application Control Management Processes](document-your-application-control-management-processes.md).
 
 

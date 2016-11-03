@@ -35,29 +35,29 @@ You can evaluate how the AppLocker policy is currently implemented for documenta
 
     By using the **Audit only** enforcement setting, you can ensure that the AppLocker rules are properly configured for your organization. When AppLocker policy enforcement is set to **Audit only**, rules are only evaluated but all events generated from that evaluation are written to the AppLocker log.
 
-    For the procedure to do this, see [Configure an AppLocker Policy for Audit Only](policies/Configure-an-AppLocker-Policy-for-Audit-Only.md).
+    For the procedure to do this, see [Configure an AppLocker Policy for Audit Only](policies/configure-an-applocker-policy-for-audit-only.md).
 
--   **Review AppLocker events with Get-AppLockerFileInformation**
+-   **Review AppLocker events with Get-applockerFileInformation**
 
-    For both event subscriptions and local events, you can use the **Get-AppLockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked (if you are using the audit-only enforcement mode) and how many times the event has occurred for each file.
+    For both event subscriptions and local events, you can use the **Get-applockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked (if you are using the audit-only enforcement mode) and how many times the event has occurred for each file.
 
-    For the procedure to do this, see [Review AppLocker Events with Get-AppLockerFileInformation](#BKMK_AppLkr_Review_Events).
+    For the procedure to do this, see [Review AppLocker Events with Get-applockerFileInformation](#BKMK_AppLkr_Review_Events).
 
--   **Review AppLocker events with Test-AppLockerPolicy**
+-   **Review AppLocker events with Test-applockerPolicy**
 
-    You  can use the **Test-AppLockerPolicy** Windows PowerShell cmdlet to determine determine whether any of the rules in your rule collections will be blocked on your reference computer or the computer on which you maintain policies.
+    You  can use the **Test-applockerPolicy** Windows PowerShell cmdlet to determine determine whether any of the rules in your rule collections will be blocked on your reference computer or the computer on which you maintain policies.
 
-    For the procedure to do this, see [Test an AppLocker Policy by Using Test-AppLockerPolicy](policies/Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md).
+    For the procedure to do this, see [Test an AppLocker Policy by Using Test-applockerPolicy](policies/test-an-applocker-policy-by-using-test-applockerpolicy.md).
 
-### <a name="BKMK_AppLkr_Review_Events"></a>Review AppLocker events with Get-AppLockerFileInformation
-For both event subscriptions and local events, you can use the **Get-AppLockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked (if the **Audit only** enforcement setting is applied) and how many times the event has occurred for each file.
+### <a name="BKMK_AppLkr_Review_Events"></a>Review AppLocker events with Get-applockerFileInformation
+For both event subscriptions and local events, you can use the **Get-applockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked (if the **Audit only** enforcement setting is applied) and how many times the event has occurred for each file.
 
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 
 > [!NOTE]
 > If the AppLocker logs are not on the local computer, you will need permission to view the logs. If the output is saved to a file, you will need permission to read that file.
 
-##### To review AppLocker events with Get-AppLockerFileInformation
+##### To review AppLocker events with Get-applockerFileInformation
 
 1.  Open a Command Prompt window.
 
@@ -65,14 +65,14 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 3.  Run the following command to review how many times a file would have been blocked from running if rules were enforced:
 
-    `Get-AppLockerFileInformation ???EventLog ???Logname "Microsoft-Windows-AppLocker\EXE and DLL" ???EventType Audited ???Statistics`
+    `Get-applockerFileInformation ???EventLog ???Logname "Microsoft-Windows-applocker\EXE and DLL" ???EventType Audited ???Statistics`
 
     > [!NOTE]
     > For an event subscription, specify the path to the forwarded event log for the Logname parameter.
 
 4.  Run the following command to review how many times a file has been allowed to run or prevented from running:
 
-    `Get-AppLockerFileInformation ???EventLog ???Logname "Microsoft-Windows-AppLocker\EXE and DLL" ???EventType Allowed ???Statistics`
+    `Get-applockerFileInformation ???EventLog ???Logname "Microsoft-Windows-applocker\EXE and DLL" ???EventType Allowed ???Statistics`
 
 ### <a name="BKMK_AppLkr_View_Log"></a>View the AppLocker Log in Event Viewer
 When AppLocker policy enforcement is set to **Enforce rules**, rules are enforced for the rule collection and all events are audited. When AppLocker policy enforcement is set to **Audit only**, rules are only evaluated but all events generated from that evaluation are written to the AppLocker log.

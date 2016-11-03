@@ -52,7 +52,7 @@ The following table lists the actual and effective default policy values for the
 |Effective GPO default settings on client computers|1 day|
 
 ### Operating system version differences
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).
+There are no differences in the way this policy setting works between supported versions of Windows.
 
 ## Policy management
 This section describes features, tools, and guidance to help you manage this policy.
@@ -75,6 +75,6 @@ Configure the **Minimum password age** policy setting to a value of at least 2 d
 If an administrator sets a password for a user but wants that user to change the password when the user first logs on, the administrator must select the **User must change password at next logon** check box, or the user cannot change the password until the next day.
 
 ## See Also
-[Password Policy](Password-Policy.md)
+[Password Policy](password-policy.md)
 
 

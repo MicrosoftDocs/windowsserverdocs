@@ -82,7 +82,7 @@ The following table lists the actual and effective default policy values for the
 |Effective GPO default settings on client computers|Disabled|
 
 ### Operating system version differences
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).
+There are no differences in the way this policy setting works between supported versions of Windows.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
@@ -103,6 +103,6 @@ If your organization has more stringent security requirements, you can create a 
 The use of ALT key character combinations can greatly enhance the complexity of a password. However, such stringent password requirements can result in additional Help Desk requests. Alternatively, your organization could consider a requirement for all administrator passwords to use ALT characters in the 0128???0159 range. (ALT characters outside of this range can represent standard alphanumeric characters that would not add additional complexity to the password.)
 
 ## See Also
-[Password Policy](Password-Policy.md)
+[Password Policy](password-policy.md)
 
 

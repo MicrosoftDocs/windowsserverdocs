@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic shows how to configure the Application Identity service to start automatically or manually in  Windows Server 2012  and Windows 8.
+This topic shows how to configure the Application Identity service to start automatically or manually in Windows Server 2012 and Windows 8.
 
 The Application Identity service determines and verifies the identity of an application. Stopping this service will prevent AppLocker policies from being enforced.
 

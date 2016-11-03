@@ -22,11 +22,11 @@ This overview topic describes the process to follow when you are planning to dep
 
 You should review the following topics to learn how to structure AppLocker rules for the targeted business groups in your organization:
 
--   [Understand AppLocker Enforcement Settings](Understand-AppLocker-Enforcement-Settings.md)
+-   [Understand AppLocker Enforcement Settings](understand-applocker-enforcement-settings.md)
 
     This topic describes the AppLocker enforcement settings for rule collections.
 
--   [Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy](Understand-AppLocker-Rules-and-Enforcement-Setting-Inheritance-in-Group-Policy.md)
+-   [Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy](understand-applocker-rules-and-enforcement-setting-inheritance-in-group-policy.md)
 
     This topic describes what you need to investigate, determine, and record in your application control policies plan.
 
@@ -43,6 +43,6 @@ When you are determining how many Group Policy Objects (GPOs) to create when you
 > [!NOTE]
 > There is no default limit on the number of AppLocker rules that you can create. However, in  Windows Server 2008 R2 , GPOs have a 2 MB size limit for performance. In subsequent versions, that limit is raised to 100 MB.
 
-After you have determined your Group Policy structure and rule enforcement, record your findings as explained in [Document Group Policy Structure and AppLocker Rule Enforcement](Document-Group-Policy-Structure-and-AppLocker-Rule-Enforcement.md).
+After you have determined your Group Policy structure and rule enforcement, record your findings as explained in [Document Group Policy Structure and AppLocker Rule Enforcement](document-group-policy-structure-and-applocker-rule-enforcement.md).
 
 

@@ -24,7 +24,7 @@ When you begin the design and planning process, you should consider the ramifica
 
 You should consider using AppLocker as part of your organization's application control policies if all the following are true:
 
--   You have deployed or plan to deploy the supported versions of Windows in your organization. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md).
+-   You have deployed or plan to deploy the supported versions of Windows in your organization. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md).
 
 -   You need improved control over the access to your organization's applications and the data your users access.
 
@@ -43,8 +43,8 @@ You might need to control a limited number of applications because they access s
 
 |Possible answers|Design considerations|
 |----------|-------------|
-|Control all applications|AppLocker policies control applications by creating an allowed list of applications by file type. Exceptions are also possible. AppLocker policies can only be applied to applications installed on computers running one of the supported versions of Windows. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). If versions of Windows operating systems earlier than  Windows Server 2008 R2  or  Windows 7  are also deployed, you can use Software Restriction Policies (SRP) with AppLocker.|
-|Control specific applications|When you create AppLocker rules, a list of allowed applications is created. All applications on that list will be allowed to run (except those on the exception list). Applications that are not on the list will be prevented from running. AppLocker policies can only be applied to applications installed on computers running any of the supported versions of Windows. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md).|
+|Control all applications|AppLocker policies control applications by creating an allowed list of applications by file type. Exceptions are also possible. AppLocker policies can only be applied to applications installed on computers running one of the supported versions of Windows. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md). If versions of Windows operating systems earlier than  Windows Server 2008 R2  or  Windows 7  are also deployed, you can use Software Restriction Policies (SRP) with AppLocker.|
+|Control specific applications|When you create AppLocker rules, a list of allowed applications is created. All applications on that list will be allowed to run (except those on the exception list). Applications that are not on the list will be prevented from running. AppLocker policies can only be applied to applications installed on computers running any of the supported versions of Windows. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md).|
 |Control only classic apps, only Windows Store apps, or both|AppLocker policies control applications by creating an allowed list of applications by file type. Because Windows Store apps are categorized under the Publisher condition, desktop apps and Windows Store apps can be controlled together. AppLocker policies for Windows Store apps can be applied only to applications that are installed on computers that support the Windows Store, but desktop applications can be controlled with AppLocker on all supported versions of Windows. The rules you currently have configured for classic desktop applications can remain, and you can create new ones for Windows Store apps.<br /><br />For a comparison of desktop applications and Windows Store apps, see [Comparing classic desktop applications and Windows Store apps for AppLocker policy design decisions](#BKMK_CompareClassicMetro) in this topic.|
 |Control applications by business group and user|Similar to SRP, AppLocker policies can be applied through a Group Policy Object (GPO) to computer objects within an organizational unit (OU). Individual AppLocker rules can be applied to individual users or to groups of users. SRP policies can be used without modification for Windows operating systems earlier than  Windows Server 2008 R2  and  Windows 7 , but there are special considerations when they are used in the same GPO as AppLocker policies.|
 |Control applications by computer, not user|AppLocker is a computer-based policy implementation. If your domain or site organizational structure is not based on a logical user structure, such as an OU, you might want to set up that structure before you begin your AppLocker planning. Otherwise, you will have to identify users, their computers, and their application access requirements.|
@@ -61,7 +61,7 @@ You might need to control a limited number of applications because they access s
 >     > You should configure the appropriate security settings of these host processes if you must allow them to run. For example, configure the security settings in Microsoft Office to ensure that only signed and trusted macros are loaded.
 > -   AppLocker rules allow or prevent an application from launching. AppLocker does not control the behavior of applications after they are launched. Applications could contain flags that are passed to functions that signal AppLocker to circumvent the rules and allow another .exe or .dll file to be loaded. In practice, an application that is allowed by AppLocker could use these flags to bypass AppLocker rules and launch child processes. You must follow a process that best suits your needs to thoroughly vet each application before allowing them to run using AppLocker rules.
 > 
->     For more information, see [Security Considerations for AppLocker](../get-started/Security-Considerations-for-AppLocker.md).
+>     For more information, see [Security Considerations for AppLocker](../get-started/security-considerations-for-applocker.md).
 
 ### <a name="BKMK_CompareClassicMetro"></a>Comparing classic desktop applications and Windows Store apps for AppLocker policy design decisions
 AppLocker policies for Windows Store apps can only be applied to applications that are installed on computers running Windows operating systems that support Windows Store apps. However, desktop applications can be controlled in Windows Server 2008 R2 and Windows 7, in addition to those computers that support Windows Store apps. The rules for desktop applications and Windows Store apps can be enforced together. The differences you should consider for Windows Store apps are:
@@ -74,7 +74,7 @@ AppLocker policies for Windows Store apps can only be applied to applications th
 
 AppLocker controls Windows Store apps and desktop applications by using different rule collections. You have the choice to control the Windows Store app, the desktop applications, or both.
 
-For more information, see [Packaged Apps and Packaged App Installer Rules in AppLocker](../../access-control/Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md).
+For more information, see [Packaged Apps and Packaged App Installer Rules in AppLocker](../../access-control/packaged-apps-and-packaged-app-installer-rules-in-applocker.md).
 
 ### How do you currently control application usage in your organization?
 Most organizations have evolved application control policies and methods over time. With heightened security concerns and an emphasis on tighter IT control over desktop use, your organization might decide to consolidate application control practices or design a comprehensive application control scheme. AppLocker includes improvements over SRP in the architecture and management of application control policies.
@@ -82,7 +82,7 @@ Most organizations have evolved application control policies and methods over ti
 |Possible answers|Design considerations|
 |----------|-------------|
 |Security polices (locally set or through Group Policy)|Using AppLocker requires increased effort in planning to create correct policies, but this results in a simpler distribution method.|
-|Specific SRP polices|Using AppLocker does not require rewriting SRP rules for computers running versions of Windows operating systems earlier than  Windows Server 2008 R2  or  Windows 7 . However, you must evaluate existing SRP rules if you use AppLocker with SRP in the supported versions of Windows.  For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md).|
+|Specific SRP polices|Using AppLocker does not require rewriting SRP rules for computers running versions of Windows operating systems earlier than  Windows Server 2008 R2  or  Windows 7 . However, you must evaluate existing SRP rules if you use AppLocker with SRP in the supported versions of Windows.  For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md).|
 |Non-Microsoft application control software|Using AppLocker requires a complete application control policy evaluation and implementation.|
 |Managed usage by group or OU|Using AppLocker requires a complete application control policy evaluation and implementation.|
 |Authorization Manager or other role-based access technologies|Using AppLocker requires a complete application control policy evaluation and implementation.|
@@ -93,7 +93,7 @@ If your organization supports multiple Windows operating systems, application co
 
 |Possible answers|Design considerations|
 |----------|-------------|
-|Your organization's computers are running a combination of the following operating systems:<br /><br />-   Windows 8<br />-    Windows 7 <br />-   Windows Vista<br />-   Windows XP<br />-    Windows Server 2012 <br />-    Windows Server 2008 R2 <br />-   Windows Server 2008<br />-   Windows Server 2003|AppLocker rules are only applied to computers running the supported versions of Windows, but SRP rules can be applied to all versions of Windows beginning with Windows XP and Windows Server 2003. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). **Note:** If you are using the Basic User security level as assigned in SRP, those privileges are not supported on computers running that support AppLocker.<br /><br />AppLocker policies as applied through a GPO take precedence over SRP policies in the same or linked GPO. SRP policies can be created and maintained the same way.|
+|Your organization's computers are running a combination of the following operating systems:<br /><br />-   Windows 8<br />-    Windows 7 <br />-   Windows Vista<br />-   Windows XP<br />-    Windows Server 2012 <br />-    Windows Server 2008 R2 <br />-   Windows Server 2008<br />-   Windows Server 2003|AppLocker rules are only applied to computers running the supported versions of Windows, but SRP rules can be applied to all versions of Windows beginning with Windows XP and Windows Server 2003. For specific operating system version requirements, see [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md). **Note:** If you are using the Basic User security level as assigned in SRP, those privileges are not supported on computers running that support AppLocker.<br /><br />AppLocker policies as applied through a GPO take precedence over SRP policies in the same or linked GPO. SRP policies can be created and maintained the same way.|
 |Your organization's computers are running only the following operating systems:<br /><br />-    Windows Server 2012 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2008 R2 <br />-   Windows 8.1<br />-   Windows 8<br />-    Windows 7 |Use AppLocker to create your application control policies.|
 
 ### Are there specific groups in your organization that need customized application control policies?
@@ -102,7 +102,7 @@ Most business groups or departments have specific security requirements that per
 |Possible answers|Design considerations|
 |----------|-------------|
 |Yes|For each group, you need to create a list that includes their application control requirements. Although this may increase the planning time, it will most likely result in a more effective deployment.<br /><br />If your GPO structure is not currently configured so that you can apply different policies to specific groups, you can alternatively apply AppLocker rules in a GPO to specific user groups.|
-|No|AppLocker policies can be applied globally to applications that are installed on computers running the supported versions of Windows as listed in [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). Depending on the number of applications you need to control, managing all the rules and exceptions might be challenging.|
+|No|AppLocker policies can be applied globally to applications that are installed on computers running the supported versions of Windows as listed in [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md). Depending on the number of applications you need to control, managing all the rules and exceptions might be challenging.|
 
 ### Does your IT department have resources to analyze application usage, and to design and manage the policies?
 The time and resources that are available to you to perform the research and analysis can affect the detail of your plan and processes for continuing policy management and maintenance.
@@ -142,7 +142,7 @@ Although SRP and AppLocker have the same goal, AppLocker is a major revision of 
 
 |Possible answers|Design considerations|
 |----------|-------------|
-|Yes|You cannot use AppLocker to manage SRP settings, but you can use SRP to manage application control policies on computers running on any of the supported operating systems listed in [Requirements to Use AppLocker](../get-started/Requirements-to-Use-AppLocker.md). In addition, if AppLocker and SRP settings are configured in the same GPO, only the AppLocker settings will be enforced on computers running those supported operating systems. **Note:** If you are using the Basic User security level as assigned in SRP, those permissions are not supported on computers running the supported operating systems.|
+|Yes|You cannot use AppLocker to manage SRP settings, but you can use SRP to manage application control policies on computers running on any of the supported operating systems listed in [Requirements to Use AppLocker](../get-started/requirements-to-use-applocker.md). In addition, if AppLocker and SRP settings are configured in the same GPO, only the AppLocker settings will be enforced on computers running those supported operating systems. **Note:** If you are using the Basic User security level as assigned in SRP, those permissions are not supported on computers running the supported operating systems.|
 |No|Policies that are configured for AppLocker can only be applied to computers running the supported operating systems, but SRP is also available on those operating systems.|
 
 ### What are your organization's priorities when implementing application control policies?
@@ -173,8 +173,8 @@ Designing application control policies based on an organizational structure that
 ## Record your findings
 The next step in the process is to record and analyze your answers to the preceding questions. If AppLocker is the right solution for your goals, tyou can set your application control policy objectives and plan your AppLocker rules. This process culminates in creating your planning document.
 
--   For information about setting your policy goals, see [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md).
+-   For information about setting your policy goals, see [Determine Your Application Control Objectives](determine-your-application-control-objectives.md).
 
--   For information about creating your planning document, see [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md).
+-   For information about creating your planning document, see [Create Your AppLocker Planning Document](create-your-applocker-planning-document.md).
 
 

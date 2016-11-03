@@ -59,7 +59,7 @@ The following table lists the actual and effective default policy values for the
 |Effective GPO default settings on client computers|24 passwords remembered|
 
 ### Operating system version differences
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).
+There are no differences in the way this policy setting works between supported versions of Windows.
 
 ## Policy management
 This section describes features, tools, and guidance to help you manage this policy.
@@ -87,6 +87,6 @@ For this policy setting to be effective, you should also configure effective val
 The major impact of configuring the **Enforce password history** setting to 24 is that users must create a new password every time they are required to change their old one. If users are required to change their passwords to new unique values, there is an increased risk of users who write their passwords somewhere so that they do not forget them. Another risk is that users may create passwords that change incrementally (for example, password01, password02, and so on) to facilitate memorization, but this makes them easier for an attacker to guess. Also, an excessively low value for the **Maximum password age**  policy setting is likely to increase administrative overhead because users who forget their passwords might ask the Help Desk to reset them frequently.
 
 ## See Also
-[Password Policy](Password-Policy.md)
+[Password Policy](password-policy.md)
 
 

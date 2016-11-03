@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The BitLocker Recovery Password Viewer tool is an optional tool included with the Remote Server Administration Tools (RSAT) for  Windows Server 2012  that are available to install when you install the BitLocker feature. This tool lets you locate and view BitLocker recovery passwords that are stored in Active Directory Domain Services (AD DS). You can use this tool to help recover data that is stored on a drive that has been encrypted by using BitLocker. The BitLocker Active Directory Recovery Password Viewer tool is an extension for the Active Directory Users and Computers Microsoft Management Console (MMC) snap-in. Using this tool, you can examine a computer object's **Properties** dialog box to view the corresponding BitLocker recovery passwords. Additionally, you can right-click a domain container and then search for a BitLocker recovery password across all the domains in the Active Directory forest. You can also search for a password by password identifier (ID).
+The BitLocker Recovery Password Viewer tool is an optional tool included with the Remote Server Administration Tools (RSAT) for Windows Server 2012 that are available to install when you install the BitLocker feature. This tool lets you locate and view BitLocker recovery passwords that are stored in Active Directory Domain Services (AD DS). You can use this tool to help recover data that is stored on a drive that has been encrypted by using BitLocker. The BitLocker Active Directory Recovery Password Viewer tool is an extension for the Active Directory Users and Computers Microsoft Management Console (MMC) snap-in. Using this tool, you can examine a computer object's **Properties** dialog box to view the corresponding BitLocker recovery passwords. Additionally, you can right-click a domain container and then search for a BitLocker recovery password across all the domains in the Active Directory forest. You can also search for a password by password identifier (ID).
 
 ## Before you start
 To complete the procedures in this scenario:
@@ -56,15 +56,15 @@ The following procedures describe the most common tasks performed by using the B
 By completing the procedures in this scenario, you have viewed and copied the recovery passwords for a computer and used a password ID to locate a recovery password.
 
 ## More information
-[BitLocker Overview](BitLocker-Overview.md)
+[BitLocker Overview](bitlocker-overview.md)
 
-[Encrypted Hard Drive](Encrypted-Hard-Drive.md)
+[Encrypted Hard Drive](encrypted-hard-drive.md)
 
-[BitLocker Frequently Asked Questions &#40;FAQ&#41;](BitLocker-Frequently-Asked-Questions-FAQ.md)
+[BitLocker Frequently Asked Questions &#40;FAQ&#41;](bitlocker-frequently-asked-questions-faq.md)
 
 
-[BitLocker: How to deploy on Windows Server 2012](BitLocker-How-to-deploy-on-Windows-Server-2012.md)
+[BitLocker: How to deploy on Windows Server 2012](bitlocker-how-to-deploy-on-windows-server-2012.md)
 
-[BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md)
+[BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md)
 
 

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Devices-Restrict-CD-ROM-access-to-locally-logged-on-user-only.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/devices-restrict-cd-rom-access-to-locally-logged-on-user-only.md
 ---

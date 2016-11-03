@@ -44,7 +44,7 @@ BitLocker requires administrator privileges on the server to install. You can in
 7.  Select the check box next to **BitLocker Drive Encryption** within the **Features** pane of the **Add Roles and Features Wizard**. The wizard will show the additional management features available for BitLocker. If you do not want to install these features, deselect the **Include management tools option** and select **Add Features**. Once optional features selection is complete, select **Next** to proceed in the wizard.
 
     > [!NOTE]
-    > The **Enhanced Storage** feature is a required feature for enabling BitLocker. This feature enables support for Encrypted Hard Drives on capable systems. For more information on Encrypted Hard Drive support, please see [Encrypted Hard Drive](Encrypted-Hard-Drive.md).
+    > The **Enhanced Storage** feature is a required feature for enabling BitLocker. This feature enables support for Encrypted Hard Drives on capable systems. For more information on Encrypted Hard Drive support, please see [Encrypted Hard Drive](encrypted-hard-drive.md).
 
 8.  Select **Install** on the **Confirmation** pane of the **Add Roles and Features Wizard** to begin BitLocker feature installation. The BitLocker feature requires a restart to complete. Selecting the **Restart the destination server automatically if required** option in the **Confirmation** pane will force a restart of the computer after installation is complete.
 

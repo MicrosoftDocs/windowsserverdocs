@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/User-Account-Control-Admin-Approval-Mode-for-the-Built-in-Administrator-account.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/user-account-control-admin-approval-mode-for-the-built-in-administrator-account.md
 ---

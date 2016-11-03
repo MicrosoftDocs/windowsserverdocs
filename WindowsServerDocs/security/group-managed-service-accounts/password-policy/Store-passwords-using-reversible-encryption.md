@@ -57,7 +57,7 @@ The following table lists the actual and effective default policy values for the
 |Effective GPO default settings on client computers|Disabled|
 
 ### Operating system version differences
-There are no differences in the way this policy setting works between [supported versions of Windows](#BKMK_top).
+There are no differences in the way this policy setting works between supported versions of Windows.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
@@ -72,6 +72,6 @@ Disable the **Store password using reversible encryption**  policy setting.
 If your organization uses CHAP through remote access or IAS, or Digest Authentication in IIS, you must configure this policy setting to Enabled. This presents a security risk when you apply the setting through Group Policy on a user-by-user basis because it requires the appropriate user account object to be opened in Active Directory Users and Computers.
 
 ## See Also
-[Password Policy](Password-Policy.md)
+[Password Policy](password-policy.md)
 
 

@@ -97,6 +97,6 @@ Assign the **Deny log on locally** user right to the local Guest account. If you
 If you assign the **Deny log on locally** user right to additional accounts, you could limit the abilities of users who are assigned to specific roles in your environment. However, this user right should explicitly be assigned to the ASPNET account on computers that are configured with the Web Server role. You should confirm that delegated activities are not adversely affected.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

@@ -40,7 +40,7 @@ Using AppLocker, you can:
 
 AppLocker helps reduce administrative overhead and helps reduce the organization's cost of managing computing resources by decreasing the number of help desk calls that result from users running unapproved applications.
 
-For information about the application control scenarios that AppLocker addresses, see [AppLocker Policy Use Scenarios](AppLocker-Policy-Use-Scenarios.md).
+For information about the application control scenarios that AppLocker addresses, see [AppLocker Policy Use Scenarios](applocker-policy-use-scenarios.md).
 
 ## What features are different between Software Restriction Policies and AppLocker?
 **Feature differences**
@@ -66,7 +66,7 @@ The following table compares the application control functions of Software Restr
 
 |Application control function|SRP|AppLocker|
 |----------------|----|-------|
-|Operating system scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|AppLocker policies apply only to those supported operating system versions and editions listed in [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md). But these systems can also use SRP. **Note:** Use different GPOs for SRP and AppLocker rules.|
+|Operating system scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|AppLocker policies apply only to those supported operating system versions and editions listed in [Requirements to Use AppLocker](requirements-to-use-applocker.md). But these systems can also use SRP. **Note:** Use different GPOs for SRP and AppLocker rules.|
 |User support|SRP allows users to install applications as an administrator.|AppLocker policies are maintained through Group Policy, and only the administrator of the computer can update an AppLocker policy.<br /><br />AppLocker permits customization of error messages to direct users to a Web page for help.|
 |Policy maintenance|SRP policies are updated by using the Local Security Policy snap-in or the Group Policy Management Console (GPMC).|AppLocker policies are updated by using the Local Security Policy snap-in or the GPMC.<br /><br />AppLocker supports a small set of PowerShell cmdlets to aid in administration and maintenance.|
 |Policy management infrastructure|To manage SRP policies, SRP uses Group Policy within a domain and the Local Security Policy snap-in for a local computer.|To manage AppLocker policies, AppLocker uses Group Policy within a domain and the Local Security Policy snap-in for a local computer.|
@@ -76,6 +76,6 @@ The following table compares the application control functions of Software Restr
 |Different policies for different users|Rules are applied uniformly to all users on a particular computer.|On a computer that is shared by multiple users, an administrator can specify the groups of users who can access the installed software. Using AppLocker, an administrator can specify the user to whom a specific rule should apply.|
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[AppLocker Technical Reference](applocker-technical-reference.md)
 
 

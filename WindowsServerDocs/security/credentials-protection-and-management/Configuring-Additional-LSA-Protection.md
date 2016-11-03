@@ -181,7 +181,7 @@ To discover if LSA was started in protected mode when Windows started, search fo
 -   12: LSASS.exe was started as a protected process with level: 4
 
 ## Additional resources
-[Credentials Protection and Management](Credentials-Protection-and-Management.md)
+[Credentials Protection and Management](credentials-protection-and-management.md)
 
 [File signing service for LSA](http://go.microsoft.com/fwlink/?LinkId=392590)
 

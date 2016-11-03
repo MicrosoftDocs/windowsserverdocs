@@ -28,7 +28,7 @@ Capabilities introduced in  Windows Server 2012 R2 , allow you to create authent
 
 With these capabilities, you can limit high-value account usage to high-value hosts. For example, you could create a new Forest Administrators silo that contains enterprise, schema, and domain administrators. Then you could configure the silo with an authentication policy so that password and smartcard-based authentication from systems other than domain controllers and domain administrator consoles would fail.
 
-For information about configuring authentication policy silos and authentication policies, see [How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md).
+For information about configuring authentication policy silos and authentication policies, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ### About authentication policy silos
 An authentication policy silo controls which accounts can be restricted by the silo and defines the authentication policies to apply to the members. You can create the silo based on the requirements of your organization. The silos are Active Directory objects for users, computers, and services as defined by the schema in the following table.
@@ -44,7 +44,7 @@ An authentication policy silo controls which accounts can be restricted by the s
 |Authentication Policy Silo Members|Specifies which principals are assigned to the AuthNPolicySilo.|
 |Authentication Policy Silo Members Backlink|This attribute is the back link for msDS-AuthNPolicySiloMembers.|
 
-Authentication policy silos can be configured by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md).
+Authentication policy silos can be configured by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ### About authentication policies
 An authentication policy defines the Kerberos protocol ticket-granting ticket (TGT) lifetime properties and authentication access control conditions for an account type. The policy is built on and controls the AD DS container known as the authentication policy silo.
@@ -65,7 +65,7 @@ The Active Directory account type determines the caller???s role as one of the f
 
     Policies can be configured to set the TGT lifetime of a user account to a shorter value or restrict the devices to which a user account can sign in. Rich expressions can be configured in the authentication policy to control the criteria that the users and their devices need to meet to authenticate to the service.
 
-    For more information see [Protected Users Security Group](Protected-Users-Security-Group.md).
+    For more information see [Protected Users Security Group](protected-users-security-group.md).
 
 -   **Service**
 
@@ -104,7 +104,7 @@ The policies for the Active Directory objects for users, computers, and services
 |Service|ms-DS-Service-Allowed-To-Authenticate-From|This attribute is used to determine the set of devices to which a service account has permission to sign in.|
 |Service|Service TGT Lifetime|Specifies the maximum age of a Kerberos TGT that is issued to a service (expressed in seconds).|
 
-Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md).
+Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ## How it works
 This section describes how authentication policy silos and authentication policies work in conjunction with the Protected Users security group and implementation of the Kerberos protocol in Windows.
@@ -127,7 +127,7 @@ The Protected Users security group triggers non-configurable protection on devic
 
 -   The default Kerberos TGTs lifetime setting of four hours is configurable by using authentication policies and silos, which can be accessed through the Active Directory Administrative Center. This means that when four hours has passed, the user must authenticate again.
 
-For more information about this security group, see [How the Protected Users group works](Protected-Users-Security-Group.md#BKMK_HowItWorks).
+For more information about this security group, see [How the Protected Users group works](protected-users-security-group.md#BKMK_HowItWorks).
 
 **Silos and authentication policies**
 
@@ -162,7 +162,7 @@ When an authentication policy is in audit mode and a ticket-granting service req
 
 You can use a single authentication policy for all members of a silo, or you can use separate policies for users, computers, and managed service accounts.
 
-Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md).
+Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ### <a name="BKMK_HowRestrictingSignOn"></a>How restricting a user sign-in works
 Because these authentication policies are applied to an account, it also applies to accounts that are used by services. If you want to limit the usage of a password for a service to specific hosts, this setting is useful. For example, group managed service accounts are configured where the hosts are allowed to retrieve the password from Active Directory Domain Services. However, that password can be used from any host for initial authentication. By applying an access control condition, an additional layer of protection can be achieved by limiting the password to only the set of hosts that can retrieve the password.
@@ -224,7 +224,7 @@ The following table describes the events that are associated with Protected User
 
 The events are recorded in the Applications and Services Logs at **Microsoft\Windows\Authentication**.
 
-For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](How-to-Configure-Protected-Accounts.md#BKMK_TroubleshootAuthnPolicies) and [Troubleshoot events related to Protected Users](How-to-Configure-Protected-Accounts.md#BKMK_TrubleshootingEvents).
+For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](how-to-configure-protected-accounts.md#BKMK_TroubleshootAuthnPolicies) and [Troubleshoot events related to Protected Users](how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents).
 
 |Event ID and Log|Description|
 |----------|--------|
@@ -235,10 +235,10 @@ For troubleshooting steps that use these events, see [Troubleshoot Authenticatio
 |306<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure might occur because the user or device was not allowed to authenticate to the server.<br /><br />In audit mode, an informational event is logged on the domain controller to indicate that a Kerberos service ticket will be denied because the user, device, or both do not meet the access control restrictions.<br /><br />Displays the device, policy, and silo names.|
 
 ## See also
-[How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md)
+[How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
 
-[Credentials Protection and Management](Credentials-Protection-and-Management.md)
+[Credentials Protection and Management](credentials-protection-and-management.md)
 
-[Protected Users Security Group](Protected-Users-Security-Group.md)
+[Protected Users Security Group](protected-users-security-group.md)
 
 

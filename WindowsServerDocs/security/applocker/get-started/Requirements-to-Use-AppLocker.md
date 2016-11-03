@@ -30,7 +30,7 @@ To use AppLocker, you need:
 -   Computers running a supported operating system to enforce the AppLocker rules that you create.
 
 > [!NOTE]
-> You can use Software Restriction Policies with AppLocker, but with some limitations. For more information, see [Use AppLocker and Software Restriction Policies in the Same Domain](../manage/Use-AppLocker-and-Software-Restriction-Policies-in-the-Same-Domain.md).
+> You can use Software Restriction Policies with AppLocker, but with some limitations. For more information, see [Use AppLocker and Software Restriction Policies in the Same Domain](../manage/use-applocker-and-software-restriction-policies-in-the-same-domain.md).
 
 ## Operating system requirements
 The following table show the on which operating systems AppLocker features are supported.
@@ -56,16 +56,16 @@ The following table show the on which operating systems AppLocker features are s
 AppLocker is not supported on versions of the Windows operating system not listed above. Software Restriction Policies can be used with those versions. However, the SRP Basic User feature is not supported on the above operating systems.
 
 ## See also
-[Administer AppLocker](../manage/Administer-AppLocker.md)
+[Administer AppLocker](../manage/administer-applocker.md)
 
-[Monitor Application Usage with AppLocker](../manage/Monitor-Application-Usage-with-AppLocker.md)
+[Monitor Application Usage with AppLocker](../manage/monitor-application-usage-with-applocker.md)
 
-[Optimize AppLocker Performance](../manage/Optimize-AppLocker-Performance.md)
+[Optimize AppLocker Performance](../manage/optimize-applocker-performance.md)
 
-[Use AppLocker and Software Restriction Policies in the Same Domain](../manage/Use-AppLocker-and-Software-Restriction-Policies-in-the-Same-Domain.md)
+[Use AppLocker and Software Restriction Policies in the Same Domain](../manage/use-applocker-and-software-restriction-policies-in-the-same-domain.md)
 
-[Manage Packaged Apps with AppLocker](../manage/Manage-Packaged-Apps-with-AppLocker.md)
+[Manage Packaged Apps with AppLocker](../manage/manage-packaged-apps-with-applocker.md)
 
-[AppLocker Policies Design Guide](../design/AppLocker-Policies-Design-Guide.md)
+[AppLocker Policies Design Guide](../design/applocker-policies-design-guide.md)
 
 

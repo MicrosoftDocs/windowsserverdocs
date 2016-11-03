@@ -36,9 +36,11 @@ Here's how to create a local branch, save your changes, and then push them to yo
 
         git push origin <working branch>
 
-6. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. After you've done this, go to the next step.
+6. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. For basic formatting help, see this [article](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) in Github.
 
-7. Check status, then add and commit your changes:
+7. Add required metadata and version info, according to [Metadata and product versioning](metadata-and-subject-versioning.md).
+
+8. Check status, then add and commit your changes:
 
         git status
 
@@ -55,11 +57,11 @@ Here's how to create a local branch, save your changes, and then push them to yo
 >[!IMPORTANT]
 >The command ```git add .``` adds ALL pending changes reported by ```git status```. This means that if ```git status``` shows untracked updates that you don't want to add, use ```git add <file path>``` instead.  
 
-7. Update your local working branch with changes from upstream:
+9. Update your local working branch with changes from upstream:
 
         git pull upstream master
 
-8. Push the changes to your fork on GitHub:
+10. Push the changes to your fork on GitHub:
 
         git push origin <working branch>
 

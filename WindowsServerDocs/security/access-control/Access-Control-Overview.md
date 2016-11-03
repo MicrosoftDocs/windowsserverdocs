@@ -36,21 +36,21 @@ Object owners generally grant permissions to security groups rather than to indi
 
 This content set contains:
 
--   [Dynamic Access Control Overview](Dynamic-Access-Control-Overview.md)
+-   [Dynamic Access Control Overview](dynamic-access-control-overview.md)
 
--   [Security Identifiers Technical Overview](Security-Identifiers-Technical-Overview.md)
+-   [Security Identifiers Technical Overview](security-identifiers-technical-overview.md)
 
--   [Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
+-   [Security Principals Technical Overview](security-principals-technical-overview.md)
 
-    -   [Local Accounts](Local-Accounts.md)
+    -   [Local Accounts](local-accounts.md)
 
-    -   [Active Directory Accounts](Active-Directory-Accounts.md)
+    -   [Active Directory Accounts](active-directory-accounts.md)
 
-    -   [Microsoft Accounts](Microsoft-Accounts.md)
+    -   [Microsoft Accounts](microsoft-accounts.md)
 
-    -   [Service Accounts](Service-Accounts.md)
+    -   [Service Accounts](service-accounts.md)
 
-    -   [Active Directory Security Groups](Active-Directory-Security-Groups.md)
+    -   [Active Directory Security Groups](active-directory-security-groups.md)
 
 ## <a name="BKMK_APP"></a>Practical applications
 Administrators who use the supported version of Windows can refine the application and management of access control to objects and subjects to provide the following security:
@@ -113,7 +113,7 @@ For more information about user rights, see [User Rights Assignment](http://tech
 ## Object auditing
 With administrator's rights, you can audit users' successful or failed access to objects. You can select which object access to audit by using the access control user interface, but first you must enable the audit policy by selecting **Audit object access** under **Local Policies** in  **Local Security Settings**. You can then view these security-related events in the Security log in Event Viewer.
 
-For more information about auditing, see [Security Auditing Overview](Security-Auditing-Overview.md).
+For more information about auditing, see [Security Auditing Overview](security-auditing-overview.md).
 
 ## See also
 

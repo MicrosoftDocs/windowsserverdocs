@@ -23,7 +23,7 @@ This topic for the IT professional describes the Advanced Security Audit policy 
 Only objects with configured system access control lists (SACLs) generate these events, and only if the attempted handle operation matches the SACL.
 
 > [!IMPORTANT]
-> Handle Manipulation events are generated only for object types where the corresponding File System or Registry Object Access subcategory is enabled. For more information, see [Audit File System](Audit-File-System.md) or [Audit Registry](Audit-Registry.md).
+> Handle Manipulation events are generated only for object types where the corresponding File System or Registry Object Access subcategory is enabled. For more information, see [Audit File System](audit-file-system.md) or [Audit Registry](audit-registry.md).
 
 Event volume: High, depending on how SACLs are configured
 
@@ -38,6 +38,6 @@ If this policy setting is configured, the following events appear on computers r
 |4690|An attempt was made to duplicate a handle to an object.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

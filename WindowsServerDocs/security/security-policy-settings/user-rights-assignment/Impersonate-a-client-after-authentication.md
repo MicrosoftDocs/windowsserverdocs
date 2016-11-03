@@ -106,6 +106,6 @@ On member servers, ensure that only the Administrators and Service groups (Local
 In most cases, this configuration has no impact. If you have installed optional components such as ASP.NET or IIS, you may need to assign the **Impersonate a client after authentication** user right to additional accounts that are required by those components, such as IUSR_*<ComputerName>*, IIS_WPG, ASP.NET, or IWAM_*<ComputerName>*.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

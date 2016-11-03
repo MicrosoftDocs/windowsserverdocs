@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server 2016 
 
-<img src="../get-started/2-compute.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Compute in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, compute features deliver the flexibility you need to power the workloads for your customers.
+<img src="../get-started/media/2-compute.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Compute in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, compute features deliver the flexibility you need to power the workloads for your customers.
 
 Compute in Windows Server 2016 includes updates to Hyper-V that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies when used with Hyper-V. For details, see [What's new in Hyper-V on Windows Server 2016](./hyper-v/what-s-new-in-hyper-v-on-windows.md).   
 

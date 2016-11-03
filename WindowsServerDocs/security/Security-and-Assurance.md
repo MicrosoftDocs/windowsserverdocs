@@ -15,9 +15,8 @@ ms.author: coreyp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-<img src="../get-started/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
-
-## Overview of Security in Windows Server 2016  
+<img src="../get-started/media/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
+<br><br><br><br><br><br>
 
 ### [Windows Server 2016 Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
 This blog post from the Windows Server security team highlights many of the improvements in Windows Servers 2016 that increase security for hosting and hybrid cloud environments.
@@ -43,7 +42,7 @@ A walkthrough of Shielded VM technology and benefits
 This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.                                   
 
 ### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
-This video walkthrough shows how the Host Guardian Service, a new role available in Windows Server 2016, enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators. 
+This video walkthrough shows how the Host Guardian Service, a new role available in Windows Server 2016, enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
 
 ### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/events/ignite/2015/brk3457)
 
@@ -69,7 +68,7 @@ A road-map for how you can secure your privileged access. This road-map is built
 This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.                                                                    
 
 ### [Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management](http://channel9.msdn.com/events/ignite/2015/brk3873)
-This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA). 
+This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
 
 ### [Just Enough Administration Article](http://aka.ms/JEA)
 This document shares the vision and technical details of Just Enough Administration, a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks.
@@ -79,7 +78,7 @@ Just Enough Administration demo walk through
 ## Credential Protection
 
 ### [Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)
-Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets. 
+Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets.
 
 ### [Protect Remote Desktop credentials with Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)
 Remote Credential Guard helps you protect your credentials over a Remote Desktop connection by redirecting the Kerberos requests back to the device that's requesting the connection. It also provides single sign on experiences for Remote Desktop sessions.                                                                                                        |
@@ -91,12 +90,12 @@ This 5-minute video demos Credential Guard and Remote Credential Guard
 Device Guard is a combination of enterprise-related hardware and software security features that, when configured together, will lock a device down so that it can only run trusted applications that you define in your code integrity.
 
 ### [Device Guard demo video](https://www.youtube.com/watch?v=F-pTkesjkhI)
-This 7-minute video presents Device Guard and its usage on Windows Server 2016 
+This 7-minute video presents Device Guard and its usage on Windows Server 2016
 
 ### [Control Flow Guard](https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065(v=vs.85).aspx)
 Control Flow Guard provides built-in protection against some classes of memory corruption attacks.
 
-### [Windows Defender](https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server) 
+### [Windows Defender](https://technet.microsoft.com/en-us/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
 Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server 2016.
 
 ##Detecting and Responding to Threats

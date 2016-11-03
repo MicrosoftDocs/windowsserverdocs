@@ -28,13 +28,13 @@ For computers running other operating systems designated in the **Applies To** l
 
 The following sections provide information that will help you put together your basic deployment plan for implementing BitLocker in your organization:
 
--   [Using BitLocker to encrypt volumes](BitLocker-Basic-Deployment.md#BKMK_dep1)
+-   [Using BitLocker to encrypt volumes](bitlocker-basic-deployment.md#BKMK_dep1)
 
--   [Down-level compatibility](BitLocker-Basic-Deployment.md#BKMK_dep2)
+-   [Down-level compatibility](bitlocker-basic-deployment.md#BKMK_dep2)
 
--   [Using manage-bde to encrypt volumes with BitLocker](BitLocker-Basic-Deployment.md#BKMK_dep3)
+-   [Using manage-bde to encrypt volumes with BitLocker](bitlocker-basic-deployment.md#BKMK_dep3)
 
--   [Using PowerShell to encrypt volumes with BitLocker](BitLocker-Basic-Deployment.md#BKMK_dep4)
+-   [Using PowerShell to encrypt volumes with BitLocker](bitlocker-basic-deployment.md#BKMK_dep4)
 
 ## <a name="BKMK_dep1"></a>Using BitLocker to encrypt volumes
 BitLocker provides full volume encryption (FVE) for operating system volumes, as well as fixed and removable data volumes. To support fully encrypted operating system volumes, BitLocker uses an unencrypted system volume for the files required to boot, decrypt, and load the operating system. This volume is automatically created during a new installation of both client and server operating systems.
@@ -65,7 +65,7 @@ Upon launch, the BitLocker Drive Encryption Wizard verifies the computer meets t
 |Requirement|Description|
 |--------|--------|
 |Hardware configuration|The computer must meet the minimum requirements for the supported Windows versions. For more information about Windows 8 requirements, see the [Windows 8 Web site](http://go.microsoft.com/fwlink/p/?LinkId=222457).|
-|Operating system|BitLocker is an optional feature which can be installed by Server Manager on  Windows Server 2012  and  Windows Server 2012 R2 .|
+|Operating system|BitLocker is an optional feature which can be installed by Server Manager on Windows Server 2012 and  Windows Server 2012 R2 .|
 |Hardware TPM|TPM version 1.2 or 2.0<br /><br />A TPM is not required for BitLocker; however, only a computer with a TPM can provide the additional security of pre-startup system integrity verification and multifactor authentication.|
 |BIOS configuration|-   A Trusted Computing Group (TCG)-compliant BIOS or UEFI firmware.<br />-   The boot order must be set to start first from the hard disk, and not the USB or CD drives.<br />-   The firmware must be able to read from a USB flash drive during startup.|
 |File system|For computers that boot natively with UEFI firmware, at least one FAT32 partition for the system drive and one NTFS partition for the operating system drive.<br /><br />For computers with legacy BIOS firmware, at least two NTFS disk partitions, one for the system drive and one for the operating system drive.<br /><br />For either firmware, the system drive partition must be at least 350 megabytes (MB) and set as the active partition.|

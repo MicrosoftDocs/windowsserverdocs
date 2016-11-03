@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Shutdown-Clear-virtual-memory-pagefile.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/shutdown-clear-virtual-memory-pagefile.md
 ---

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Network-security-Do-not-store-LAN-Manager-hash-value-on-next-password-change.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/network-security-do-not-store-lan-manager-hash-value-on-next-password-change.md
 ---

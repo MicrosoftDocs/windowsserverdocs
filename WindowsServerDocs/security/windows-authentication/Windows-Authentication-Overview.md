@@ -33,30 +33,30 @@ The Windows operating system implements a default set of authentication protocol
 
 For more information about Windows Authentication including
 
--   [Windows Authentication Concepts](Windows-Authentication-Concepts.md)
+-   [Windows Authentication Concepts](windows-authentication-concepts.md)
 
--   [Windows Logon Scenarios](Windows-Logon-Scenarios.md)
+-   [Windows Logon Scenarios](windows-logon-scenarios.md)
 
--   [Windows Authentication Architecture](windows-authentication-Architecture.md)
+-   [Windows Authentication Architecture](windows-authentication-architecture.md)
 
--   [Security Support Provider Interface Architecture](Security-Support-Provider-Interface-Architecture.md)
+-   [Security Support Provider Interface Architecture](security-support-provider-interface-architecture.md)
 
--   [Credentials Processes in Windows Authentication](Credentials-Processes-in-Windows-Authentication.md)
+-   [Credentials Processes in Windows Authentication](credentials-processes-in-windows-authentication.md)
 
--   [Group Policy Settings Used in Windows Authentication](Group-Policy-Settings-Used-in-Windows-Authentication.md)
+-   [Group Policy Settings Used in Windows Authentication](group-policy-settings-used-in-windows-authentication.md)
 
-see the [Windows Authentication Technical Overview](windows-Authentication-Technical-Overview.md).
+see the [Windows Authentication Technical Overview](windows-authentication-technical-overview.md).
 
 ## Practical applications
 Windows Authentication is used to verify that the information comes from a trusted source, whether from a person or computer object, such as another computer. Windows provides many different methods to achieve this goal as described below.
 
 |To???|Feature|Description|
 |----|------|--------|
-|Authenticate within an Active Directory domain|Kerberos|The Microsoft Windows??Server operating systems implement the Kerberos version 5 authentication protocol and extensions for public key authentication. The Kerberos authentication client is implemented as a security support provider \(SSP\) and can be accessed through the Security Support Provider Interface \(SSPI\). Initial user authentication is integrated with the Winlogon single sign\-on architecture. The Kerberos Key Distribution Center \(KDC\) is integrated with other Windows Server??security services running on the domain controller. The KDC uses the domain???s Active Directory directory service database as its security account database. Active Directory is required for default Kerberos implementations.<br /><br />For additional resources, see [Kerberos Authentication Overview](../kerberos/Kerberos-Authentication-Overview.md).|
-|Secure authentication on the web|TLS\/SSL as implemented in the Schannel Security Support Provider|The Transport Layer Security \(TLS\) protocol versions??1.0,??1.1, and??1.2, Secure Sockets Layer \(SSL\) protocol, versions??2.0 and??3.0, Datagram Transport Layer Security protocol version 1.0, and the Private Communications Transport \(PCT\) protocol, version??1.0, are based on public key cryptography. The Secure Channel \(Schannel\) provider authentication protocol suite provides these protocols. All Schannel protocols use a client and server model.<br /><br />For additional resources, see [TLS - SSL &#40;Schannel SSP&#41; Overview](../tls/TLS-SSL-Schannel-SSP-Overview.md).|
+|Authenticate within an Active Directory domain|Kerberos|The Microsoft Windows??Server operating systems implement the Kerberos version 5 authentication protocol and extensions for public key authentication. The Kerberos authentication client is implemented as a security support provider \(SSP\) and can be accessed through the Security Support Provider Interface \(SSPI\). Initial user authentication is integrated with the Winlogon single sign\-on architecture. The Kerberos Key Distribution Center \(KDC\) is integrated with other Windows Server??security services running on the domain controller. The KDC uses the domain???s Active Directory directory service database as its security account database. Active Directory is required for default Kerberos implementations.<br /><br />For additional resources, see [Kerberos Authentication Overview](../kerberos/kerberos-authentication-overview.md).|
+|Secure authentication on the web|TLS\/SSL as implemented in the Schannel Security Support Provider|The Transport Layer Security \(TLS\) protocol versions??1.0,??1.1, and??1.2, Secure Sockets Layer \(SSL\) protocol, versions??2.0 and??3.0, Datagram Transport Layer Security protocol version 1.0, and the Private Communications Transport \(PCT\) protocol, version??1.0, are based on public key cryptography. The Secure Channel \(Schannel\) provider authentication protocol suite provides these protocols. All Schannel protocols use a client and server model.<br /><br />For additional resources, see [TLS - SSL &#40;Schannel SSP&#41; Overview](../tls/tls-ssl-schannel-ssp-overview.md).|
 |Authenticate to a web service or application|Integrated Windows Authentication<br /><br />Digest Authentication|For additional resources, see [Integrated Windows Authentication](http://technet.microsoft.com/library/cc758557(v=WS.10.aspx and [Digest Authentication](http://technet.microsoft.com/library/cc738318(v=ws.10).aspx), and [Advanced Digest Authentication](http://technet.microsoft.com/library/cc783131(v=ws.10).aspx).|
-|Authenticate to legacy applications|NTLM|NTLM is a challenge\-response style authentication protocol.In addition to authentication, the NTLM protocol optionally provides for session security???specifically message integrity and confidentiality through signing and sealing functions in NTLM.<br /><br />For additional resources, see [NTLM Overview](../kerberos/NTLM-Overview.md).|
-|Leverage multifactor authentication|Smart card support<br /><br />Biometric support|Smart cards are a tamper\-resistant and portable way to provide security solutions for tasks such as client authentication, logging on to domains, code signing, and securing e\-mail.<br /><br />Biometrics relies on measuring an unchanging physical characteristic of a person to uniquely identify that person. Fingerprints are one of the most frequently used biometric characteristics, with millions of fingerprint biometric devices that are embedded in personal computers and peripherals.<br /><br />For additional resources, see [Smart Card Overview](../smart-cards/Smart-Card-Overview.md)|
+|Authenticate to legacy applications|NTLM|NTLM is a challenge\-response style authentication protocol.In addition to authentication, the NTLM protocol optionally provides for session security???specifically message integrity and confidentiality through signing and sealing functions in NTLM.<br /><br />For additional resources, see [NTLM Overview](../kerberos/ntlm-overview.md).|
+|Leverage multifactor authentication|Smart card support<br /><br />Biometric support|Smart cards are a tamper\-resistant and portable way to provide security solutions for tasks such as client authentication, logging on to domains, code signing, and securing e\-mail.<br /><br />Biometrics relies on measuring an unchanging physical characteristic of a person to uniquely identify that person. Fingerprints are one of the most frequently used biometric characteristics, with millions of fingerprint biometric devices that are embedded in personal computers and peripherals.<br /><br />For additional resources, see [Smart Card Overview](../smart-cards/smart-card-overview.md)|
 |Provide local management, storage and reuse of credentials|Credentials management<br /><br />Local Security Authority<br /><br />Passwords|Credential  management in Windows ensures that credentials are stored securely. Credentials are collected on the Secure Desktop \(for local or domain access\), through apps or through websites so that the correct credentials are presented every time a resource is accessed.<br /><br />
 |Extend modern authentication protection to legacy systems|Extended Protection for Authentication|This feature enhances the protection and handling of credentials when authenticating network connections by using Integrated Windows Authentication \(IWA\).|
 
@@ -70,13 +70,13 @@ Many authentication features can be configured using Group Policy, which can be 
 
 |Authentication technologies|Resources|
 |----------------|-------|
-|Windows authentication|[Windows Authentication Technical Overview](../windows-authentication/Windows-Authentication-Technical-Overview.md)<br />Includes topics addressing differences between versions, general authentication concepts, logon scenarios, architectures for supported versions, and applicable settings.|
-|Kerberos|[Kerberos Authentication Overview](../kerberos/Kerberos-Authentication-Overview.md)<br /><br />[Kerberos Constrained Delegation Overview](../kerberos/Kerberos-Constrained-Delegation-Overview.md)<br /><br />[Kerberos Authentication Technical Reference](http://technet.microsoft.com/library/cc739058(v=ws.10).aspx)\(2003\)<br /><br />[Kerberos Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/4209.kerberos-survival-guide.aspx) \(TechNet Wiki\)|
-|TLS\/SSL and DTLS \(Schannel security support provider\)|[TLS - SSL &#40;Schannel SSP&#41; Overview](../tls/TLS-SSL-Schannel-SSP-Overview.md)<br /><br />[Schannel Security Support Provider Technical Reference](../tls/Schannel-Security-Support-Provider-Technical-Reference.md)|
+|Windows authentication|[Windows Authentication Technical Overview](../windows-authentication/windows-authentication-technical-overview.md)<br />Includes topics addressing differences between versions, general authentication concepts, logon scenarios, architectures for supported versions, and applicable settings.|
+|Kerberos|[Kerberos Authentication Overview](../kerberos/kerberos-authentication-overview.md)<br /><br />[Kerberos Constrained Delegation Overview](../kerberos/kerberos-constrained-delegation-overview.md)<br /><br />[Kerberos Authentication Technical Reference](http://technet.microsoft.com/library/cc739058(v=ws.10).aspx)\(2003\)<br /><br />[Kerberos Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/4209.kerberos-survival-guide.aspx) \(TechNet Wiki\)|
+|TLS\/SSL and DTLS \(Schannel security support provider\)|[TLS - SSL &#40;Schannel SSP&#41; Overview](../tls/tls-ssl-schannel-ssp-overview.md)<br /><br />[Schannel Security Support Provider Technical Reference](../tls/schannel-security-support-provider-technical-reference.md)|
 |Digest authentication|[Digest Authentication Technical Reference](http://technet.microsoft.com/library/cc782794(v=ws.10).aspx)\(2003\)|
-|NTLM|[NTLM Overview](../kerberos/NTLM-Overview.md)<br />Contains links to current and past resources|
+|NTLM|[NTLM Overview](../kerberos/ntlm-overview.md)<br />Contains links to current and past resources|
 |PKU2U|[Introducing PKU2U in Windows](http://technet.microsoft.com/library/dd560634(v=ws.10).aspx)|
-|Smart Card|[Smart Card Overview](../smart-cards/Smart-Card-Overview.md)<br /><br />
-|Credentials|[Credentials Protection and Management](../credentials-protection-and-management/Credentials-Protection-and-Management.md)<br />Contains links to current and past resources<br /><br />[Passwords Overview](../kerberos/Passwords-Overview.md)<br />Contains links to current and past resources|
+|Smart Card|[Smart Card Overview](../smart-cards/smart-card-overview.md)<br /><br />
+|Credentials|[Credentials Protection and Management](../credentials-protection-and-management/credentials-protection-and-management.md)<br />Contains links to current and past resources<br /><br />[Passwords Overview](../kerberos/passwords-overview.md)<br />Contains links to current and past resources|
 
 

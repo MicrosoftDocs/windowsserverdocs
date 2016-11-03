@@ -61,7 +61,7 @@ The combination of all the following registry keys apply to the previous setting
 3.  Software\Microsoft\Windows NT\CurrentVersion
 
 ### Operating system version differences
-This security setting is not available on Windows operating systems prior to Windows Server 2008. The security setting that appears on computers running Windows XP is **Network access: Remotely accessible registry paths**, and the setting in Windows Server 2003 is  **Network access: Remotely accessible registry paths and subpaths**. For more information, see [Network access: Remotely accessible registry paths and subpaths](Network-access-Remotely-accessible-registry-paths-and-subpaths.md).
+This security setting is not available on Windows operating systems prior to Windows Server 2008. The security setting that appears on computers running Windows XP is **Network access: Remotely accessible registry paths**, and the setting in Windows Server 2003 is  **Network access: Remotely accessible registry paths and subpaths**. For more information, see [Network access: Remotely accessible registry paths and subpaths](network-access-remotely-accessible-registry-paths-and-subpaths.md).
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.
