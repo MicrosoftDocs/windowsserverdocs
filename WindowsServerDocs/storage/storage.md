@@ -12,7 +12,7 @@ ms.date: 10/4/2016
 # Storage in Windows Server 2016
 >Applies To: Windows Server 2016
 
-<img src="../get-started/7-storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
+<img src="../get-started/media/7-storage.png" style='float:left; padding:.5em;' alt="Icon representing a drive"> Storage in Windows Server 2016 provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. 
 
 To find out about what's new in storage, see [What's new in storage](whats-new-in-storage.md) and [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
