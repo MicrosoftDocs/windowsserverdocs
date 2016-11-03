@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 08/01/2016
+ms.date: 11/03/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d04ba634-19bf-4f74-a834-138b738bc86c
@@ -19,7 +19,9 @@ manager: dongill
 >Applies To: Windows Server 2016
 
 This article provides steps to deploy an Azure SQL Database instance for Remote Desktop. Alternatively, you could deploy a SQL server AlwaysOn Availability Group in multiple virtual machines or use a database in an existing SQL server deployment. For more details, see [Create a SQL AlwaysOn Availability Group in Microsoft Azure End-to-End](https://blogs.msdn.microsoft.com/sqlalwayson/2013/01/23/test-lab-create-an-alwayson-availability-group-in-windows-azure-end-to-end/).   
-  
+
+> [!NOTE] You can only use Azure SQL for a *Windows Server 2016* Connection Broker. This feature is not available for previous releases of Windows Server.
+
 1. [Create an Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance.   
 2. Copy the connection string for the database you created. You'll need this in the next step.    
     1. In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.   
