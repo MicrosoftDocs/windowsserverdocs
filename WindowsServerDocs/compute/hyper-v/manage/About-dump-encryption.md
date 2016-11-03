@@ -26,7 +26,7 @@ To turn on dump encryption using the registry, configure the following registry 
 
 
 ## Configuration using script
-To simplify configuration, a sample script is available to enable dump encryption based on a public key from a certificate.
+To simplify configuration, a [sample script](https://github.com/Microsoft/Virtualization-Documentation/tree/live/hyperv-tools/DumpEncryption) is available to enable dump encryption based on a public key from a certificate.
 
 1. In a trusted environment: Create a certificate with a 2048 Bit RSA key and export the public certificate
 2. On target hosts: Import the public certificate to the local certificate store
