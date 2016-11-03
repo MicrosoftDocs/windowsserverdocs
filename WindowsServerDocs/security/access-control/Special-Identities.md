@@ -30,7 +30,7 @@ Servers that are running the supported Windows Server operating systems designat
 
 Although the special identity groups can be assigned rights and permissions to resources, the memberships cannot be modified or viewed. Group scopes do not apply to special identity groups. Users are automatically assigned to these special identity groups whenever they sign in or access a particular resource.
 
-For information about security groups and group scope, see [Active Directory Security Groups](Active-Directory-Security-Groups.md).
+For information about security groups and group scope, see [Active Directory Security Groups](active-directory-security-groups.md).
 
 The special identity groups are described in the following tables.
 
@@ -100,7 +100,7 @@ Any user who accesses the system through a sign-in process has the Authenticated
 |Well-Known SID/RID|S-1-5-11|
 |Object Class|Foreign Security Principal|
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default User Rights|[Access this computer from the network](Access-this-computer-from-the-network.md):  SeNetworkLogonRight<br /><br />[Add workstations to domain](Add-workstations-to-domain.md):  SeMachineAccountPrivilege<br /><br />[Bypass traverse checking](Bypass-traverse-checking.md):  SeChangeNotifyPrivilege|
+|Default User Rights|[Access this computer from the network](access-this-computer-from-the-network.md):  SeNetworkLogonRight<br /><br />[Add workstations to domain](add-workstations-to-domain.md):  SeMachineAccountPrivilege<br /><br />[Bypass traverse checking](bypass-traverse-checking.md):  SeChangeNotifyPrivilege|
 
 ## <a name="BKMK_Batch"></a>Batch
 Any user or process that accesses the system as a batch job (or through the batch queue) has the Batch identity. This identity allows batch jobs to run scheduled tasks, such as a nightly cleanup job that deletes temporary files. Membership is controlled by the operating system.
@@ -161,7 +161,7 @@ This group includes all domain controllers in an Active Directory forest. Domain
 |Well-Known SID/RID|S-1-5-9|
 |Object Class|Foreign Security Principal|
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default User Rights Assignment|[Access this computer from the network](Access-this-computer-from-the-network.md):  SeNetworkLogonRight<br /><br />[Allow log on locally](../group-managed-service-accounts/user-rights-assignment/Allow-log-on-locally.md):  SeInteractiveLogonRight|
+|Default User Rights Assignment|[Access this computer from the network](access-this-computer-from-the-network.md):  SeNetworkLogonRight<br /><br />[Allow log on locally](../group-managed-service-accounts/user-rights-assignment/allow-log-on-locally.md):  SeInteractiveLogonRight|
 
 ## <a name="BKMK_Everyone"></a>Everyone
 All interactive, network, dial-up, and authenticated users are members of the Everyone group. This special identity group gives wide access to system resources. Whenever a user logs on to the network, the user is automatically added to the Everyone group.
@@ -175,7 +175,7 @@ Membership is controlled by the operating system.
 |Well-Known SID/RID|S-1-1-0|
 |Object Class|Foreign Security Principal|
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default User Rights|[Access this computer from the network](Access-this-computer-from-the-network.md):  SeNetworkLogonRight<br /><br />[Act as part of the operating system](../group-managed-service-accounts/user-rights-assignment/Act-as-part-of-the-operating-system.md):  SeTcbPrivilege<br /><br />[Bypass traverse checking](Bypass-traverse-checking.md):  SeChangeNotifyPrivilege|
+|Default User Rights|[Access this computer from the network](access-this-computer-from-the-network.md):  SeNetworkLogonRight<br /><br />[Act as part of the operating system](../group-managed-service-accounts/user-rights-assignment/act-as-part-of-the-operating-system.md):  SeTcbPrivilege<br /><br />[Bypass traverse checking](bypass-traverse-checking.md):  SeChangeNotifyPrivilege|
 
 ## <a name="BKMK_Interactive"></a>Interactive
 Any user who is logged on to the local system has the Interactive identity. This identity allows only local users to access a resource. Whenever a user accesses a given resource on the computer to which they are currently logged on, the user is automatically added to the Interactive group. Membership is controlled by the operating system.
@@ -195,7 +195,7 @@ The Local Service account is similar to an Authenticated User account. The Local
 |Well-Known SID/RID|S-1-5-19|
 |Object Class|Foreign Security Principal|
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default user rights|[Adjust memory quotas for a process](../group-managed-service-accounts/user-rights-assignment/Adjust-memory-quotas-for-a-process.md):  SeIncreaseQuotaPrivilege<br /><br />[Bypass traverse checking](Bypass-traverse-checking.md):  SeChangeNotifyPrivilege<br /><br />[Change the system time](../group-managed-service-accounts/user-rights-assignment/Change-the-system-time.md):  SeSystemtimePrivilege<br /><br />[Change the time zone](../group-managed-service-accounts/user-rights-assignment/Change-the-time-zone.md):  SeTimeZonePrivilege<br /><br />[Create global objects](../group-managed-service-accounts/user-rights-assignment/Create-global-objects.md):  SeCreateGlobalPrivilege<br /><br />[Generate security audits](../group-managed-service-accounts/user-rights-assignment/Generate-security-audits.md):  SeAuditPrivilege<br /><br />[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/Impersonate-a-client-after-authentication.md):  SeImpersonatePrivilege<br /><br />[Replace a process level token](../group-managed-service-accounts/user-rights-assignment/Replace-a-process-level-token.md):  SeAssignPrimaryTokenPrivilege|
+|Default user rights|[Adjust memory quotas for a process](../group-managed-service-accounts/user-rights-assignment/adjust-memory-quotas-for-a-process.md):  SeIncreaseQuotaPrivilege<br /><br />[Bypass traverse checking](bypass-traverse-checking.md):  SeChangeNotifyPrivilege<br /><br />[Change the system time](../group-managed-service-accounts/user-rights-assignment/change-the-system-time.md):  SeSystemtimePrivilege<br /><br />[Change the time zone](../group-managed-service-accounts/user-rights-assignment/change-the-time-zone.md):  SeTimeZonePrivilege<br /><br />[Create global objects](../group-managed-service-accounts/user-rights-assignment/create-global-objects.md):  SeCreateGlobalPrivilege<br /><br />[Generate security audits](../group-managed-service-accounts/user-rights-assignment/generate-security-audits.md):  SeAuditPrivilege<br /><br />[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/impersonate-a-client-after-authentication.md):  SeImpersonatePrivilege<br /><br />[Replace a process level token](../group-managed-service-accounts/user-rights-assignment/replace-a-process-level-token.md):  SeAssignPrimaryTokenPrivilege|
 
 ## <a name="BKMK_LocalSystem"></a>LocalSystem
 This is a service account that is used by the operating system. The LocalSystem account is a powerful account that has full access to the system and acts as the computer on the network. If a service logs on to the LocalSystem account on a domain controller, that service has access to the entire domain. Some services are configured by default to log on to the LocalSystem account. Do not change the default service setting. The name of the account is LocalSystem. This account does not have a password.
@@ -225,7 +225,7 @@ The Network Service account is similar to an Authenticated User account. The Net
 |Well-Known SID/RID|S-1-5-20|
 |Object Class|Foreign Security Principal|
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default User Rights|[Adjust memory quotas for a process](../group-managed-service-accounts/user-rights-assignment/Adjust-memory-quotas-for-a-process.md):   SeIncreaseQuotaPrivilege<br /><br />[Bypass traverse checking](Bypass-traverse-checking.md):  SeChangeNotifyPrivilege<br /><br />[Create global objects](../group-managed-service-accounts/user-rights-assignment/Create-global-objects.md):  SeCreateGlobalPrivilege<br /><br />[Generate security audits](../group-managed-service-accounts/user-rights-assignment/Generate-security-audits.md):  SeAuditPrivilege<br /><br />[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/Impersonate-a-client-after-authentication.md):  SeImpersonatePrivilege<br /><br />[Restore files and directories](../group-managed-service-accounts/user-rights-assignment/Restore-files-and-directories.md):  SeAssignPrimaryTokenPrivilege<br /><br />[Replace a process level token](../group-managed-service-accounts/user-rights-assignment/Replace-a-process-level-token.md):  SeAssignPrimaryTokenPrivilege|
+|Default User Rights|[Adjust memory quotas for a process](../group-managed-service-accounts/user-rights-assignment/adjust-memory-quotas-for-a-process.md):   SeIncreaseQuotaPrivilege<br /><br />[Bypass traverse checking](bypass-traverse-checking.md):  SeChangeNotifyPrivilege<br /><br />[Create global objects](../group-managed-service-accounts/user-rights-assignment/create-global-objects.md):  SeCreateGlobalPrivilege<br /><br />[Generate security audits](../group-managed-service-accounts/user-rights-assignment/generate-security-audits.md):  SeAuditPrivilege<br /><br />[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/impersonate-a-client-after-authentication.md):  SeImpersonatePrivilege<br /><br />[Restore files and directories](../group-managed-service-accounts/user-rights-assignment/restore-files-and-directories.md):  SeAssignPrimaryTokenPrivilege<br /><br />[Replace a process level token](../group-managed-service-accounts/user-rights-assignment/replace-a-process-level-token.md):  SeAssignPrimaryTokenPrivilege|
 
 ## <a name="BKMK_NTLMAuth"></a>NTLM Authentication
 
@@ -293,7 +293,7 @@ Any service that accesses the system has the Service identity. This identity gro
 |Well-Known SID/RID|S-1-5-6|
 |Object Class|Foreign Security Principal|
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default User Rights|[Create global objects](../group-managed-service-accounts/user-rights-assignment/Create-global-objects.md):  SeCreateGlobalPrivilege<br /><br />[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/Impersonate-a-client-after-authentication.md):  SeImpersonatePrivilege|
+|Default User Rights|[Create global objects](../group-managed-service-accounts/user-rights-assignment/create-global-objects.md):  SeCreateGlobalPrivilege<br /><br />[Impersonate a client after authentication](../group-managed-service-accounts/user-rights-assignment/impersonate-a-client-after-authentication.md):  SeImpersonatePrivilege|
 
 ## <a name="BKMK_TerminalServerUser"></a>Terminal Server User
 Any user accessing the system through Terminal Services has the Terminal Server User identity. This identity allows users to access Terminal Server applications and to perform other necessary tasks with Terminal Server services. Membership is controlled by the operating system.
@@ -321,11 +321,11 @@ Any user accessing the system through Terminal Services has the Terminal Server 
 |Well-Known SID/RID||
 |Object Class||
 |Default Location in Active Directory|cn=WellKnown Security Principals, cn=Configuration, dc=<forestRootDomain>|
-|Default User Rights|[Bypass traverse checking](Bypass-traverse-checking.md):  SeChangeNotifyPrivilege<br /><br />[Increase a process working set](../group-managed-service-accounts/user-rights-assignment/Increase-a-process-working-set.md):  SeIncreaseWorkingSetPrivilege|
+|Default User Rights|[Bypass traverse checking](bypass-traverse-checking.md):  SeChangeNotifyPrivilege<br /><br />[Increase a process working set](../group-managed-service-accounts/user-rights-assignment/increase-a-process-working-set.md):  SeIncreaseWorkingSetPrivilege|
 
 ## See also
-[Active Directory Security Groups](Active-Directory-Security-Groups.md)
+[Active Directory Security Groups](active-directory-security-groups.md)
 
-[Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
+[Security Principals Technical Overview](security-principals-technical-overview.md)
 
 

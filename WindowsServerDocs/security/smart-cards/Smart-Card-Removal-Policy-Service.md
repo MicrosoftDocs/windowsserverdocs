@@ -20,11 +20,11 @@ ms.date: 10/12/2016
 
 This topic for the IT professional describes the role of the removal policy service (ScPolicySvc) in smart card implementation.
 
-The smart card removal policy service is applicable when a user has signed in with a smart card and subsequently removes that smart card from the reader. The action that is performed when the smart card is removed is controlled by Group Policy settings. For more information, see [Smart Card Group Policy and Registry Settings](Smart-Card-Group-Policy-and-Registry-Settings.md).
+The smart card removal policy service is applicable when a user has signed in with a smart card and subsequently removes that smart card from the reader. The action that is performed when the smart card is removed is controlled by Group Policy settings. For more information, see [Smart Card Group Policy and Registry Settings](smart-card-group-policy-and-registry-settings.md).
 
 **Smart card removal policy service**
 
-![Flow chart showing the Smart card removal policy service](../media/Smart-Card-Removal-Policy-Service/WindowsSmartCardTechnicalReference_07.gif)
+![Flow chart showing the Smart card removal policy service](../media/smart-card-removal-policy-service/WindowsSmartCardTechnicalReference_07.gif)
 
 The numbers in the previous figure represent the following actions:
 

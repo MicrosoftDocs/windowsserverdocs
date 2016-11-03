@@ -32,6 +32,6 @@ If this policy setting is configured, the following events appear on computers r
 |4933|Synchronization of a replica of an Active Directory naming context has ended.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

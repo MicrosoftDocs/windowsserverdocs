@@ -18,11 +18,11 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to specify which applications can or cannot run as exceptions to an AppLocker rule in  Windows Server 2012  and Windows 8.
+This topic describes the steps to specify which applications can or cannot run as exceptions to an AppLocker rule in Windows Server 2012 and Windows 8.
 
-Rule exceptions allow you to specify files or folders to exclude from the rule. For more information about exceptions, see [Understanding AppLocker Rule Exceptions](../../get-started/how-applocker-works/Understanding-AppLocker-Rule-Exceptions.md).
+Rule exceptions allow you to specify files or folders to exclude from the rule. For more information about exceptions, see [Understanding AppLocker Rule Exceptions](../../get-started/how-applocker-works/understanding-applocker-rule-exceptions.md).
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](../Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](../administer-applocker.md#BKMK_Using_Snapins).
 
 ### <a name="BKMK_CfgExceptionsAppLockerRuleGPO"></a>To configure exceptions for a rule
 

@@ -39,9 +39,9 @@ With software restriction policies, you can protect your computing environment f
 
     For procedures, see [Working with path rules](#BKMK_Path_Rules).
 
-For information about other tasks to manage Software Restriction Policies, see [Administer Software Restriction Policies](Administer-Software-Restriction-Policies.md).
+For information about other tasks to manage Software Restriction Policies, see [Administer Software Restriction Policies](administer-software-restriction-policies.md).
 
-To learn how to work with rules using AppLocker, see [Administer AppLocker](../applocker/manage/Administer-AppLocker.md).
+To learn how to work with rules using AppLocker, see [Administer AppLocker](../AppLocker/manage/administer-applocker.md).
 
 ## <a name="BKMK_Cert_Rules"></a>Working with certificate rules
 Software restriction policies can also identify software by its signing certificate. You can create a certificate rule that identifies software and then allows or does not allow the software to run, depending on the security level. For example, you can use certificate rules to automatically trust software from a trusted source in a domain without prompting the user. You can also use certificate rules to run files in disallowed areas of your operating system. Certificate rules are not enabled by default.

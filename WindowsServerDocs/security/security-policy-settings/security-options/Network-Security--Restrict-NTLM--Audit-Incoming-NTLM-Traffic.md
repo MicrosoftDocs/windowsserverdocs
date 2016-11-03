@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Network-Security-Restrict-NTLM-Audit-Incoming-NTLM-Traffic.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/network-security-restrict-ntlm-audit-incoming-ntlm-traffic.md
 ---

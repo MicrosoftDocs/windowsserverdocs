@@ -23,13 +23,13 @@ This planning topic describes what you need to investigate, determine, and recor
 ## Record your findings
 To complete this AppLocker planning document, you should first complete the following steps:
 
-1.  [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+1.  [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 
-2.  [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+2.  [Create List of Applications Deployed to Each Business Group](create-list-of-applications-deployed-to-each-business-group.md)
 
-3.  [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+3.  [Select Types of Rules to Create](select-types-of-rules-to-create.md)
 
-4.  [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+4.  [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md)
 
 After you determine how to structure your Group Policy Objects (GPOs) so that you can apply AppLocker policies, you should record your findings. You can use the following table to determine how many GPOs to create (or edit) and which objects they are linked to. If you decided to create custom rules to allow system files to run, note the high-level rule configuration in the **Use default rule or define new rule condition** column.
 
@@ -37,21 +37,21 @@ The following table includes the sample data that was collected when you determi
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|
 |---------|------------|------------|--------|-----------|-------------------------|---------|------|
-|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-applockerTellerRules|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||
-|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-applockerHRRules|
 ||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||
 ||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition|Deny||
 ||||Windows files|C:\Windows|Use a default rule for the Windows path|Allow||
 
 > [!NOTE]
-> Excluding  Windows Server 2008 R2  and  Windows 7 , AppLocker can manage Windows Store apps. For information about how to add rules for these apps to your existing GPO, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set](../manage/policies/Add-Rules-for-Packaged-Apps-to-Existing-AppLocker-Rule-set.md).
+> Excluding  Windows Server 2008 R2  and  Windows 7 , AppLocker can manage Windows Store apps. For information about how to add rules for these apps to your existing GPO, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set](../manage/policies/add-rules-for-packaged-apps-to-existing-applocker-rule-set.md).
 
 ## Next steps
 After you have determined the Group Policy structure and rule enforcement strategy for each business group's applications, the following tasks remain:
 
--   [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+-   [Plan for AppLocker Policy Management](plan-for-applocker-policy-management.md)
 
--   [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md)
+-   [Create Your AppLocker Planning Document](create-your-applocker-planning-document.md)
 
 

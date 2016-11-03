@@ -58,57 +58,57 @@ There are three different types of conditions that can be applied to rules:
 
 -   A file hash condition on a rule controls whether a user or group can run files with matching encrypted hashes.
 
--   [Understanding AppLocker Rule Collections](how-applocker-works/Understanding-AppLocker-Rule-Collections.md)
+-   [Understanding AppLocker Rule Collections](how-applocker-works/understanding-applocker-rule-collections.md)
 
     An AppLocker rule collection is a set of rules that apply to one of the following types: executable files, Windows Installer files, scripts, DLLs, and Packaged apps.
 
--   [Understanding AppLocker Rule Condition Types](how-applocker-works/Understanding-AppLocker-Rule-Condition-Types.md)
+-   [Understanding AppLocker Rule Condition Types](how-applocker-works/understanding-applocker-rule-condition-types.md)
 
     Rule conditions are criteria that the AppLocker rule is based on. Primary conditions are required to create an AppLocker rule. The three primary rule conditions are publisher, path, and file hash.
 
-    -   [Understanding the Publisher Rule Condition in AppLocker](how-applocker-works/Understanding-the-Publisher-Rule-Condition-in-AppLocker.md)
+    -   [Understanding the Publisher Rule Condition in AppLocker](how-applocker-works/understanding-the-publisher-rule-condition-in-applocker.md)
 
-    -   [Understanding the Path Rule Condition in AppLocker](how-applocker-works/Understanding-the-Path-Rule-Condition-in-AppLocker.md)
+    -   [Understanding the Path Rule Condition in AppLocker](how-applocker-works/understanding-the-path-rule-condition-in-applocker.md)
 
-    -   [Understanding the File Hash Rule Condition in AppLocker](how-applocker-works/Understanding-the-File-Hash-Rule-Condition-in-AppLocker.md)
+    -   [Understanding the File Hash Rule Condition in AppLocker](how-applocker-works/understanding-the-file-hash-rule-condition-in-applocker.md)
 
--   [Understanding AppLocker Default Rules](how-applocker-works/Understanding-AppLocker-Default-Rules.md)
+-   [Understanding AppLocker Default Rules](how-applocker-works/understanding-applocker-default-rules.md)
 
     AppLocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection.
 
-    -   [Executable Rules in AppLocker](how-applocker-works/Executable-Rules-in-AppLocker.md)
+    -   [Executable Rules in AppLocker](how-applocker-works/executable-rules-in-applocker.md)
 
-    -   [Windows Installer Rules in AppLocker](how-applocker-works/Windows-Installer-Rules-in-AppLocker.md)
+    -   [Windows Installer Rules in AppLocker](how-applocker-works/windows-installer-rules-in-applocker.md)
 
-    -   [Script Rules in AppLocker](how-applocker-works/Script-Rules-in-AppLocker.md)
+    -   [Script Rules in AppLocker](how-applocker-works/script-rules-in-applocker.md)
 
-    -   [DLL Rules in AppLocker](how-applocker-works/DLL-Rules-in-AppLocker.md)
+    -   [DLL Rules in AppLocker](how-applocker-works/dll-rules-in-applocker.md)
 
-    -   [Packaged Apps and Packaged App Installer Rules in AppLocker](../../access-control/Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md)
+    -   [Packaged Apps and Packaged App Installer Rules in AppLocker](../../access-control/packaged-apps-and-packaged-app-installer-rules-in-applocker.md)
 
--   [Understanding AppLocker Rule Exceptions](how-applocker-works/Understanding-AppLocker-Rule-Exceptions.md)
+-   [Understanding AppLocker Rule Exceptions](how-applocker-works/understanding-applocker-rule-exceptions.md)
 
     You can apply AppLocker rules to individual users or a group of users. If you apply a rule to a group of users, all users in that group are affected by that rule. If you need to allow only a subset of a user group to use an application, you can create a special rule for that subset.
 
--   [Understanding AppLocker Rule Behavior](how-applocker-works/Understanding-AppLocker-Rule-Behavior.md) and [Understanding AppLocker Allow and Deny Actions on Rules](how-applocker-works/Understanding-AppLocker-Allow-and-Deny-Actions-on-Rules.md)
+-   [Understanding AppLocker Rule Behavior](how-applocker-works/understanding-applocker-rule-behavior.md) and [Understanding AppLocker Allow and Deny Actions on Rules](how-applocker-works/understanding-applocker-allow-and-deny-actions-on-rules.md)
 
     Each AppLocker rule collection functions as an allowed list of files.
 
 ### Understanding AppLocker policies
 An AppLocker policy is a set of rule collections and their corresponding configured enforcement settings that have been applied to one or more computers.
 
--   [Understand AppLocker Enforcement Settings](../design/Understand-AppLocker-Enforcement-Settings.md)
+-   [Understand AppLocker Enforcement Settings](../design/understand-applocker-enforcement-settings.md)
 
     Rule enforcement is applied only to collections of rules, not individual rules. AppLocker divides the rules into four collections: executable files, Windows Installer files, scripts, and DLL files. The options for rule enforcement are **Not configured**, **Enforce rules**, or **Audit only**. Together, all AppLocker rule collections compose the application control policy, or AppLocker policy. By default, if enforcement is not configured and rules are present in a rule collection, those rules are enforced.
 
 ### Understanding AppLocker and Group Policy
 Group Policy can be used to create, modify, and distribute AppLocker policies in separate objects or in combination with other policies.
 
--   [Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy](../design/Understand-AppLocker-Rules-and-Enforcement-Setting-Inheritance-in-Group-Policy.md)
+-   [Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy](../design/understand-applocker-rules-and-enforcement-setting-inheritance-in-group-policy.md)
 
     When Group Policy is used to distribute AppLocker policies, rule collections that are not configured will be enforced. Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object (GPO) and applies the AppLocker rules in addition to existing rules. AppLocker processes the explicit deny rule configuration before the allow rule configuration, and for rule enforcement, the last write to the GPO is applied.
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[AppLocker Technical Reference](applocker-technical-reference.md)
 
 

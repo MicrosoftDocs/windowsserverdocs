@@ -119,6 +119,6 @@ Alternatively, you can assign groups such as Account Operators, Server Operators
 If you remove these default groups, you could limit the abilities of users who are assigned to specific administrative roles in your environment. If you have installed optional components such as ASP.NET or IIS, you may need to assign the **Allow log on locally** user right to additional accounts that are required by those components. IIS requires that this user right be assigned to the IUSR_*<ComputerName>* account. You should confirm that delegated activities are not adversely affected by any changes that you make to the **Allow log on locally** user rights assignments.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

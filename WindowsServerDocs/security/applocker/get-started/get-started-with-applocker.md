@@ -24,17 +24,17 @@ AppLocker documentation covers the following IT adminitrative tasks:
 
 **Plan** 
 
-- [AppLocker Policies Design Guide](../design/AppLocker-Policies-Design-Guide.md)
+- [AppLocker Policies Design Guide](../design/applocker-policies-design-guide.md)
 
-- [AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+- [AppLocker Technical Reference](applocker-technical-reference.md)
 
 **Deploy** 
 
-- [AppLocker Policies Deployment Guide](../deploy/AppLocker-Policies-Deployment-Guide.md)
+- [AppLocker Policies Deployment Guide](../deploy/applocker-policies-deployment-guide.md)
 
 **Manage** 
 
-- [Administer AppLocker](../manage/Administer-AppLocker.md)
+- [Administer AppLocker](../manage/administer-applocker.md)
 
 
 
@@ -107,7 +107,7 @@ The following table lists the differences by operating system version for each o
 
 ##System requirements
 
-AppLocker policies can only be configured on and applied to computers that are running on the supported versions and editions of the Windows operating system. Group Policy is required to distribute Group Policy Objects that contain AppLocker policies. For more information, see [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md).
+AppLocker policies can only be configured on and applied to computers that are running on the supported versions and editions of the Windows operating system. Group Policy is required to distribute Group Policy Objects that contain AppLocker policies. For more information, see [Requirements to Use AppLocker](requirements-to-use-applocker.md).
 
 AppLocker rules can be created on domain controllers.
 
@@ -136,5 +136,5 @@ The countermeasure is to create a sound design for your application control poli
 
 A flawed application control policy implementation can disable necessary applications or allow malicious or unintended software to run. Therefore, it is important that organizations dedicate sufficient resources to manage and troubleshoot the implementation of such policies.
 
-For additional information about specific security issues, see [Security Considerations for AppLocker](Security-Considerations-for-AppLocker.md).
+For additional information about specific security issues, see [Security Considerations for AppLocker](security-considerations-for-applocker.md).
 

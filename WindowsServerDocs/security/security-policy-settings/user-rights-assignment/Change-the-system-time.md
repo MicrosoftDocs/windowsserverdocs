@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-This policy setting determines which users can adjust the time on the computer's internal clock. This right allows the computer user to change the date and time associated with records in the event logs, database transactions, and the file system. This right is also required by the process that performs time synchronization. This setting does not impact the user???s ability to change the time zone or other display characteristics of the system time. For information about assigning the right to change the time zone, see [Change the time zone](Change-the-time-zone.md).  
+This policy setting determines which users can adjust the time on the computer's internal clock. This right allows the computer user to change the date and time associated with records in the event logs, database transactions, and the file system. This right is also required by the process that performs time synchronization. This setting does not impact the user???s ability to change the time zone or other display characteristics of the system time. For information about assigning the right to change the time zone, see [Change the time zone](change-the-time-zone.md).  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
@@ -112,6 +112,6 @@ Restrict the **Change the system time** user right to users with a legitimate ne
 There should be no impact because time synchronization for most organizations should be fully automated for all computers that belong to the domain. Computers that do not belong to the domain should be configured to synchronize with an external source, such as a web service.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

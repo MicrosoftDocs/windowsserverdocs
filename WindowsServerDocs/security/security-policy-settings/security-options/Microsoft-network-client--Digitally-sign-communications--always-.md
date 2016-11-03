@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Microsoft-network-client-Digitally-sign-communications-always.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/microsoft-network-client-digitally-sign-communications-always.md
 ---

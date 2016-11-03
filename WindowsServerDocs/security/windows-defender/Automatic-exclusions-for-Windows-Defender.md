@@ -338,7 +338,7 @@ This section lists the folder exclusions that are delivered automatically when y
 
 ## See Also
 [Windows Defender Overview for Windows Server](windows-defender-overview-windows-server.md)
-[Windows Defender Events](Windows-Defender-Events.md)
+[Windows Defender Events](windows-defender-events.md)
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
 
 

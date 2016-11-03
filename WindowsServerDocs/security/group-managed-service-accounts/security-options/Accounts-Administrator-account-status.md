@@ -35,7 +35,7 @@ If you disable this policy setting, and one of the following conditions exists o
 
     1.  Disabled
 
-    2.  Listed in the [Deny log on locally](../user-rights-assignment/Deny-log-on-locally.md) User Rights Assignment
+    2.  Listed in the [Deny log on locally](../user-rights-assignment/deny-log-on-locally.md) User Rights Assignment
 
 If the current Administrator password does not meet the password requirements, you will not be able to enable the Administrator account again after it has been disabled. In this case, another member of the Administrators group must set the password on the Administrator account by using the Local Users and Groups tool.
 

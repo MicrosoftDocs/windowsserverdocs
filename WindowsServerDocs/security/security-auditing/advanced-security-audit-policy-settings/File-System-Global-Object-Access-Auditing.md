@@ -24,11 +24,11 @@ If you select the **Configure security** check box on the policy???s property pa
 
 If both a file or folder SACL and a global SACL are configured on a computer, the effective SACL is derived by combining the file or folder SACL and the global SACL. This means that an audit event is generated if an activity matches either the file or folder SACL or the global SACL.
 
-This policy setting must be used in combination with the **File System** security policy setting under Object Access. For more information, see [Audit File System](Audit-File-System.md).
+This policy setting must be used in combination with the **File System** security policy setting under Object Access. For more information, see [Audit File System](audit-file-system.md).
 
 This policy setting is available on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic.
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

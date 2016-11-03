@@ -18,7 +18,7 @@ One of the most important goals of providing a hosted environment is to guarante
 
 ## Learn more about guarded fabrics and shielded VMs
 
-- [Guarded fabric and shielded VMs overview](Guarded-Fabric-and-Shielded-VMs.md)
+- [Guarded fabric and shielded VMs overview](guarded-fabric-and-shielded-vms.md)
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
     - [Prerequisites for deploying Host Guardian Service and guarded hosts](guarded-fabric-deployment-prerequisites.md)

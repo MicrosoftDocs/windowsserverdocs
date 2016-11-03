@@ -36,6 +36,6 @@ If this policy setting is configured, the following events appear on computers r
 |4695|Unprotection of auditable protected data was attempted.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

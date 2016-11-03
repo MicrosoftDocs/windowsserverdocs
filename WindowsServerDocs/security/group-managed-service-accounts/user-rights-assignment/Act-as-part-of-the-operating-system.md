@@ -88,6 +88,6 @@ Restrict the **Act as part of the operating system** user right to as few accoun
 There should be little or no impact because the **Act as part of the operating system** user right is rarely needed by any accounts other than the Local System account.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

@@ -65,9 +65,9 @@ The following table describes how a publisher condition is applied.
 |**Publisher, product name, file name, and file version**<br /> **-And below-**|The specified version of the named file and any older versions for the product that are signed by the publisher.|
 |**Custom**|You can edit the **Publisher**, **Product name**, **File name**, and **Version** fields to create a custom rule.|
 
-For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md).
+For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](understanding-applocker-rule-condition-types.md).
 
 ## See Also
-[How AppLocker Works](../How-AppLocker-Works.md)
+[How AppLocker Works](../how-applocker-works.md)
 
 

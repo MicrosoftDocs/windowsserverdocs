@@ -43,9 +43,9 @@ AppLocker uses path variables for well-known directories in Windows. Path variab
 |Removable media (for example, CD or DVD)|%REMOVABLE%||
 |Removable storage device (for example, USB flash drive)|%HOT%||
 
-For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md).
+For an overview of the three types of AppLocker rule conditions and explanations of the advantages and disadvantages of each, see [Understanding AppLocker Rule Condition Types](understanding-applocker-rule-condition-types.md).
 
 ## See Also
-[How AppLocker Works](../How-AppLocker-Works.md)
+[How AppLocker Works](../how-applocker-works.md)
 
 

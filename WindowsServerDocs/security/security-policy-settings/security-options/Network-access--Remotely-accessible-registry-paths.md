@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Network-access-Remotely-accessible-registry-paths.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/network-access-remotely-accessible-registry-paths.md
 ---

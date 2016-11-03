@@ -32,7 +32,7 @@ The following table provides links to relevant resources in understanding and us
 
 |Content type|References|
 |--------|-------|
-|**Product evaluation**|[What's New in Smart Cards](What-s-New-in-Smart-Cards.md) &#124; [Understanding and Evaluating Virtual Smart Cards](http://go.microsoft.com/fwlink/?LinkId=243114)|
+|**Product evaluation**|[What's New in Smart Cards](what-s-new-in-smart-cards.md) &#124; [Understanding and Evaluating Virtual Smart Cards](http://go.microsoft.com/fwlink/?LinkId=243114)|
 |**Scenario documentation**|[Strong Authentication with One\-Time Passwords in Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/gg637807(v=WS.10.aspx|
 |**Troubleshooting**|[Smart Card Troubleshooting Guide](http://go.microsoft.com/fwlink/?LinkId=243116)|
 |**Community resources**|[Windows Security Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/windows-security-survival-guide.aspx)|

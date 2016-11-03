@@ -17,7 +17,7 @@ manager: dongill
 # What's New in Windows Server 2016
 >Applies To: Windows Server 2016
 
-<img src="whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.  
+<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.  
    
 
 ## [Compute](../compute/Compute.md)  

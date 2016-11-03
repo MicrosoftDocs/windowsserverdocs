@@ -24,19 +24,19 @@ To successfully deploy AppLocker policies, you need to identify your application
 
 The following diagram shows the main points in the design, planning, and deployment process for AppLocker.
 
-![Diagram showing the main points in the design, planning, and deployment process for AppLocker](../../media/Understand-the-AppLocker-Policy-Deployment-Process/AppLocker_PlanDeploy_QuickReference.gif)
+![Diagram showing the main points in the design, planning, and deployment process for AppLocker](../../media/understand-the-applocker-policy-deployment-process/AppLocker_PlanDeploy_QuickReference.gif)
 
 ## Resources to support the deployment process
 The following documentation contains information about designing, planning, deploying, and maintaining AppLocker policies:
 
--   For information about the AppLocker policy design and planning requirements and process, see [AppLocker Policies Design Guide](../design/AppLocker-Policies-Design-Guide.md).
+-   For information about the AppLocker policy design and planning requirements and process, see [AppLocker Policies Design Guide](../design/applocker-policies-design-guide.md).
 
--   For information about the AppLocker policy deployment requirements and process, see [AppLocker Policies Deployment Guide](AppLocker-Policies-Deployment-Guide.md).
+-   For information about the AppLocker policy deployment requirements and process, see [AppLocker Policies Deployment Guide](applocker-policies-deployment-guide.md).
 
 -   For information about AppLocker policy maintenance and monitoring for Windows Server 2008 R2 and Windows 7, see [AppLocker Operations Guide](http://go.microsoft.com/fwlink/?LinkId=160259).
 
-    For information about AppLocker policy maintenance and monitoring in versions of Windows later than Windows Server 2008 R2 and Windows 7, see [Administer AppLocker](../manage/Administer-AppLocker.md).
+    For information about AppLocker policy maintenance and monitoring in versions of Windows later than Windows Server 2008 R2 and Windows 7, see [Administer AppLocker](../manage/administer-applocker.md).
 
--   For information about AppLocker policy architecture, components, and processing, see [AppLocker Technical Reference](../get-started/AppLocker-Technical-Reference.md).
+-   For information about AppLocker policy architecture, components, and processing, see [AppLocker Technical Reference](../get-started/applocker-technical-reference.md).
 
 

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/System-settings-Use-Certificate-Rules-on-Windows-Executables-for-Software-Restriction-Policies.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/system-settings-use-certificate-rules-on-windows-executables-for-software-restriction-policies.md
 ---

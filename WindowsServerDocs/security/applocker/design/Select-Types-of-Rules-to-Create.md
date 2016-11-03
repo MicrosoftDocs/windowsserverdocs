@@ -24,17 +24,17 @@ When determining what types of rules to create for each of your groups, you shou
 
 The following topics provide additional information about AppLocker rules that can help you decide what rules to use for your applications:
 
--   [Understanding AppLocker Rule Behavior](../get-started/how-applocker-works/Understanding-AppLocker-Rule-Behavior.md)
+-   [Understanding AppLocker Rule Behavior](../get-started/how-applocker-works/understanding-applocker-rule-behavior.md)
 
--   [Understanding AppLocker Rule Exceptions](../get-started/how-applocker-works/Understanding-AppLocker-Rule-Exceptions.md)
+-   [Understanding AppLocker Rule Exceptions](../get-started/how-applocker-works/understanding-applocker-rule-exceptions.md)
 
--   [Understanding AppLocker Rule Collections](../get-started/how-applocker-works/Understanding-AppLocker-Rule-Collections.md)
+-   [Understanding AppLocker Rule Collections](../get-started/how-applocker-works/understanding-applocker-rule-collections.md)
 
--   [Understanding AppLocker Allow and Deny Actions on Rules](../get-started/how-applocker-works/Understanding-AppLocker-Allow-and-Deny-Actions-on-Rules.md)
+-   [Understanding AppLocker Allow and Deny Actions on Rules](../get-started/how-applocker-works/understanding-applocker-allow-and-deny-actions-on-rules.md)
 
--   [Understanding AppLocker Rule Condition Types](../get-started/how-applocker-works/Understanding-AppLocker-Rule-Condition-Types.md)Understanding AppLocker Rule Condition Types
+-   [Understanding AppLocker Rule Condition Types](../get-started/how-applocker-works/understanding-applocker-rule-condition-types.md)Understanding AppLocker Rule Condition Types
 
--   [Understanding AppLocker Default Rules](../get-started/how-applocker-works/Understanding-AppLocker-Default-Rules.md)
+-   [Understanding AppLocker Default Rules](../get-started/how-applocker-works/understanding-applocker-default-rules.md)
 
 ### Select the rule collection
 The rules you create will be in one of the following rule collections:
@@ -61,9 +61,9 @@ A rule condition is criteria upon which an AppLocker rule is based and can only 
 
 |Rule condition|Usage scenario|Resources|
 |---------|---------|-------|
-|Publisher|To use a publisher condition, the files must be digitally signed by the software publisher, or you must do so by using an internal certificate. Rules that are specified to the version level might have to be updated when a new version of the file is released.|For more information about this rule condition, see [Understanding the Publisher Rule Condition in AppLocker](../get-started/how-applocker-works/Understanding-the-Publisher-Rule-Condition-in-AppLocker.md).|
-|Path|Any file can be assigned this rule condition; however, because path rules specify locations within the file system, any subdirectory will also be affected by the rule (unless explicitly exempted).|For more information about this rule condition, see [Understanding the Path Rule Condition in AppLocker](../get-started/how-applocker-works/Understanding-the-Path-Rule-Condition-in-AppLocker.md).|
-|File hash|Any file can be assigned this rule condition; however, the rule must be updated each time a new version of the file is released because the hash value is based in part upon the version.|For more information about this rule condition, see [Understanding the File Hash Rule Condition in AppLocker](../get-started/how-applocker-works/Understanding-the-File-Hash-Rule-Condition-in-AppLocker.md).|
+|Publisher|To use a publisher condition, the files must be digitally signed by the software publisher, or you must do so by using an internal certificate. Rules that are specified to the version level might have to be updated when a new version of the file is released.|For more information about this rule condition, see [Understanding the Publisher Rule Condition in AppLocker](../get-started/how-applocker-works/understanding-the-publisher-rule-condition-in-applocker.md).|
+|Path|Any file can be assigned this rule condition; however, because path rules specify locations within the file system, any subdirectory will also be affected by the rule (unless explicitly exempted).|For more information about this rule condition, see [Understanding the Path Rule Condition in AppLocker](../get-started/how-applocker-works/understanding-the-path-rule-condition-in-applocker.md).|
+|File hash|Any file can be assigned this rule condition; however, the rule must be updated each time a new version of the file is released because the hash value is based in part upon the version.|For more information about this rule condition, see [Understanding the File Hash Rule Condition in AppLocker](../get-started/how-applocker-works/understanding-the-file-hash-rule-condition-in-applocker.md).|
 
 In the Woodgrove Bank example, the line-of-business application for the Bank Tellers business group is signed and is located at C:\Program Files\Woodgrove\Teller.exe. Therefore, the rule can be defined with a publisher condition. If the rule is defined to a specific version and above (for example, Teller.exe version 8.0 and above), then this will allow any updates to this application to occur without interruption of access to the users if the application's name and signed attributes stay the same.
 
@@ -81,8 +81,8 @@ You can also create a rule for the system files based on the path condition. In 
 These permissions settings are applied to this folder for application compatibility. However, because any user can create files in this location, allowing applications to be run from this location might conflict with your organization's security policy.
 
 ## Next steps
-After you have selected the types of rules to create, record your findings as explained in [Document Your AppLocker Rules](Document-Your-AppLocker-Rules.md).
+After you have selected the types of rules to create, record your findings as explained in [Document Your AppLocker Rules](document-your-applocker-rules.md).
 
-After recording your findings for the AppLocker rules to create, you will need to consider how to enforce the rules. For information about how to do this, see [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md).
+After recording your findings for the AppLocker rules to create, you will need to consider how to enforce the rules. For information about how to do this, see [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md).
 
 

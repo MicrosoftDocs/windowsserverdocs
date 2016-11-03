@@ -40,6 +40,6 @@ If you use DLL rules, a DLL allow rule has to be created for each DLL that is us
 For information about how to enable the DLL rule collection, see [Enable the DLL Rule Collection](http://go.microsoft.com/fwlink/?LinkId=163405).
 
 ## See Also
-[How AppLocker Works](../How-AppLocker-Works.md)
+[How AppLocker Works](../how-applocker-works.md)
 
 

@@ -85,6 +85,6 @@ Countermeasures are not required because system time is not affected by this set
 None.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

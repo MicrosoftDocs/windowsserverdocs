@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Network-security-Restrict-NTLM-Add-remote-server-exceptions-for-NTLM-authentication.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/network-security-restrict-ntlm-add-remote-server-exceptions-for-ntlm-authentication.md
 ---

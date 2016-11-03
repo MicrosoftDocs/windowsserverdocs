@@ -62,6 +62,6 @@ If this policy setting is configured, the following events appear on computers r
 |5377|Credential Manager credentials were restored from a backup.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

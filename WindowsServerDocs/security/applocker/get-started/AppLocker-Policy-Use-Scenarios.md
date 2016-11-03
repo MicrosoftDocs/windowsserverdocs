@@ -73,6 +73,6 @@ The following are examples of scenarios in which AppLocker can be used:
 To explore specific use scenarios, see [AppLocker Step-by-Step Scenarios](http://technet.microsoft.com/library/ee791835(v=ws.10).aspx).
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[AppLocker Technical Reference](applocker-technical-reference.md)
 
 

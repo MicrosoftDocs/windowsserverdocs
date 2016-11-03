@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Accounts-Rename-guest-account.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/accounts-rename-guest-account.md
 ---

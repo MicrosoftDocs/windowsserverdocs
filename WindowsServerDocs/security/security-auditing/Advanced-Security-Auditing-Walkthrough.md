@@ -70,11 +70,11 @@ The test environment that is described in this guide includes three computers th
 |CONTOSO-CLNT|Supported versions of Windows client **Note:** Supported versions of Windows server  can also be used as the client computer.||
 
 > [!NOTE]
-> For more information about operating system compatibility and requirements, see [Which Editions of Windows Support Advanced Audit Policy Configuration](Which-Editions-of-Windows-Support-Advanced-Audit-Policy-Configuration.md).
+> For more information about operating system compatibility and requirements, see [Which Editions of Windows Support Advanced Audit Policy Configuration](which-editions-of-windows-support-advanced-audit-policy-configuration.md).
 
 The computers form a private intranet and are connected through a common hub or Layer 2 switch. This configuration can be emulated in a virtual machine environment, if desired. This walkthrough uses private addresses throughout the test lab configuration. The private network ID 10.0.0.0/24 is used for the intranet. The domain controller for the domain named contoso.com is named CONTOSO-DC. The following figure shows the configuration of the test environment.
 
-![Figure showing the configuration of the test environment](../media/Advanced-Security-Auditing-Walkthrough/audit_sxs_network_diagram.gif)
+![Figure showing the configuration of the test environment](../media/advanced-security-auditing-walkthrough/audit_sxs_network_diagram.gif)
 
 ## Steps for deploying advanced audit policies in a test environment
 Complete the following steps to deploy advanced audit policy settings in a test environment.

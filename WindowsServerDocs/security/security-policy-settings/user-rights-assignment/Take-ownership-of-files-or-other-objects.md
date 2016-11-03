@@ -110,6 +110,6 @@ Ensure that only the local Administrators group has the **Take ownership of file
 None. Restricting the **Take ownership of files or other objects** user right to the local Administrators group is the default configuration.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

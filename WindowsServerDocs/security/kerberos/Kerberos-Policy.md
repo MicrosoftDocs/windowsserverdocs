@@ -24,27 +24,27 @@ The Kerberos version??5 authentication protocol provides the default mechanism f
 
 These policy settings are located in *GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Kerberos Policy** and can be set on a domain controller.
 
-For information about setting security policies, see [How to Configure Security Policy Settings](../group-managed-service-accounts/How-to-Configure-Security-Policy-Settings.md).
+For information about setting security policies, see [How to Configure Security Policy Settings](../group-managed-service-accounts/how-to-configure-security-policy-settings.md).
 
 The following topics provide a discussion of implementation and best practices considerations, policy location, default values for the server type or GPO, relevant differences in operating system versions, security considerations \(including the possible settings vulnerabilities of each setting\), countermeasures you can take, and the potential impact for each setting.
 
--   [Enforce user logon restrictions](../group-managed-service-accounts/kerberos-policy/Enforce-user-logon-restrictions.md)
+-   [Enforce user logon restrictions](../group-managed-service-accounts/kerberos-policy/enforce-user-logon-restrictions.md)
 
     This policy setting determines whether the Kerberos??V5 Key Distribution Center \(KDC\) validates every request for a session ticket against the user rights policy of the user account.
 
--   [Maximum lifetime for service ticket](../group-managed-service-accounts/kerberos-policy/Maximum-lifetime-for-service-ticket.md)
+-   [Maximum lifetime for service ticket](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-service-ticket.md)
 
     This policy setting determines the maximum number of minutes that a granted session ticket can be used to access a particular service.
 
--   [Maximum lifetime for user ticket](../group-managed-service-accounts/kerberos-policy/Maximum-lifetime-for-user-ticket.md)
+-   [Maximum lifetime for user ticket](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-user-ticket.md)
 
     This policy setting determines the maximum amount of time \(in hours\) that a user???s ticket\-granting ticket can be used.
 
--   [Maximum lifetime for user ticket renewal](../group-managed-service-accounts/kerberos-policy/Maximum-lifetime-for-user-ticket-renewal.md)
+-   [Maximum lifetime for user ticket renewal](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-user-ticket-renewal.md)
 
     This policy setting determines the period of time \(in days\) during which a user???s ticket\-granting ticket can be renewed.
 
--   [Maximum tolerance for computer clock synchronization](../group-managed-service-accounts/kerberos-policy/Maximum-tolerance-for-computer-clock-synchronization.md)
+-   [Maximum tolerance for computer clock synchronization](../group-managed-service-accounts/kerberos-policy/maximum-tolerance-for-computer-clock-synchronization.md)
 
     This policy setting determines the maximum time difference \(in minutes\) that the Kerberos??V5 protocol tolerates between the time on the client clock and the time on the domain controller that provides Kerberos authentication.
 

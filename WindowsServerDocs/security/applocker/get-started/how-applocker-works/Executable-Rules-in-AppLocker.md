@@ -29,6 +29,6 @@ AppLocker defines executable rules as any files with the .exe and .com extension
 |Allow all users to run executable files in the Program Files folder|(Default Rule) All files located in the Program Files folder|Everyone|Path: %programfiles%\\*|
 
 ## See Also
-[Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+[Understanding AppLocker Default Rules](understanding-applocker-default-rules.md)
 
 
