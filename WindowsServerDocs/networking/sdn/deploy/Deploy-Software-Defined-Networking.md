@@ -1,5 +1,7 @@
 ---
 title: Deploy Software Defined Networking
+description: This topic provides links to topics on how to deploy a Microsoft Software Defined Network (SDN) infrastructure in Windows Server 2016. 
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -20,8 +22,6 @@ The topics in this section provide information about the different methods you c
   
 -   [Deploy a Software Defined Network Infrastructure](../../sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)  
 -   [Deploy Software Defined Network Technologies using Windows PowerShell](../../sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-PowerShell.md)  
-  
-  
   
 For additional SDN documentation, see the following:  
   

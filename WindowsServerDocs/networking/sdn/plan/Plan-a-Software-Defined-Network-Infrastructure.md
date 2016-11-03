@@ -1,5 +1,7 @@
 ---
 title: Plan a Software Defined Network Infrastructure
+description: This topic provides information on how to plan your Software Defined Network (SDN) infrastructure deployment.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,15 +11,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
-ms.author: vhorne
+ms.author: jamesmci
 author: vhorne
-ms.author: victorh
 ---
 # Plan a Software Defined Network Infrastructure
 
 >Applies To: Windows Server 2016
 
-Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment.  After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
+Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment. After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
   
 In addition to this topic, the following SDN planning content is available.  
 
