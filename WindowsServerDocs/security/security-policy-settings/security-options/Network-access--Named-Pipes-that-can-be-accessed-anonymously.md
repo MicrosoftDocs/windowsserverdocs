@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/security-policy-settings/security-options/Network-access-Named-Pipes-that-can-be-accessed-anonymously.md
+redirect_url: /windows-server-docs/security/security-policy-settings/security-options/network-access-named-pipes-that-can-be-accessed-anonymously.md
 ---

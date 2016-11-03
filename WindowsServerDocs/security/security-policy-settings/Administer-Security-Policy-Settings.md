@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional discusses different methods to administer security policy settings on the local computer or throughout a small- or medium-sized IT organization by using  Windows Server 2012  and Windows 8.
+This topic for the IT professional discusses different methods to administer security policy settings on the local computer or throughout a small- or medium-sized IT organization by using Windows Server 2012 and Windows 8.
 
 ## Introduction
 Security policy settings should be used as part of your overall security implementation to help secure domain controllers, servers, client computers, and other resources in your organization.
@@ -37,7 +37,7 @@ Security settings can control:
 
 For information about each setting, including descriptions, default settings, and management and security considerations, see the [Security Policy Settings Reference](http://www.microsoft.com/downloads/details.aspx?FamilyID=18C90C80-8B0A-4906-A4F5-FF24CC2030FB&amp;displaylang=e&displaylang=en) in the Microsoft Download Center.
 
-For information about how the security settings snap-ins work, see the [Security Policy Settings Technical Overview](../group-managed-service-accounts/Security-Policy-Settings-Technical-Overview.md).
+For information about how the security settings snap-ins work, see the [Security Policy Settings Technical Overview](../group-managed-service-accounts/security-policy-settings-technical-overview.md).
 
 To manage security configurations for multiple computers, you can use one of the following options:
 

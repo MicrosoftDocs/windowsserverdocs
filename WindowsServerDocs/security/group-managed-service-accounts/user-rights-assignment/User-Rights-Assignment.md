@@ -24,55 +24,55 @@ User rights govern the methods by which a user can log on to a system. User righ
 
 Each user right has a constant name and a Group Policy name associated with it. The constant names are used when referring to the user right in log events. You can configure the user rights assignment settings in the following location within the Group Policy Management Console (GPMC) under **Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**, or on the local computer by using the Local Group Policy Editor (gpedit.msc).
 
-For information about setting security policies, see [How to Configure Security Policy Settings](../How-to-Configure-Security-Policy-Settings.md).
+For information about setting security policies, see [How to Configure Security Policy Settings](../how-to-configure-security-policy-settings.md).
 
 The following table links to each security policy setting and provides the constant name for each. Setting descriptions contain reference information, best practices for configuring the policy setting, default values, differences between operating system versions, and considerations for policy management and security.
 
 |Group Policy Setting|Constant Name|
 |------------|---------|
-|[Access Credential Manager as a trusted caller](Access-Credential-Manager-as-a-trusted-caller.md)|SeTrustedCredManAccessPrivilege|
-|[Access this computer from the network](Access-this-computer-from-the-network.md)|SeNetworkLogonRight|
-|[Act as part of the operating system](Act-as-part-of-the-operating-system.md)|SeTcbPrivilege|
-|[Add workstations to domain](Add-workstations-to-domain.md)|SeMachineAccountPrivilege|
-|[Adjust memory quotas for a process](Adjust-memory-quotas-for-a-process.md)|SeIncreaseQuotaPrivilege|
-|[Allow log on locally](Allow-log-on-locally.md)|SeInteractiveLogonRight|
-|[Allow log on through Remote Desktop Services](Allow-log-on-through-Remote-Desktop-Services.md)|SeRemoteInteractiveLogonRight|
-|[Back up files and directories](Back-up-files-and-directories.md)|SeBackupPrivilege|
-|[Bypass traverse checking](Bypass-traverse-checking.md)|SeChangeNotifyPrivilege|
-|[Change the system time](Change-the-system-time.md)|SeSystemtimePrivilege|
-|[Change the time zone](Change-the-time-zone.md)|SeTimeZonePrivilege|
-|[Create a pagefile](Create-a-pagefile.md)|SeCreatePagefilePrivilege|
-|[Create a token object](Create-a-token-object.md)|SeCreateTokenPrivilege|
-|[Create global objects](Create-global-objects.md)|SeCreateGlobalPrivilege|
-|[Create permanent shared objects](Create-permanent-shared-objects.md)|SeCreatePermanentPrivilege|
-|[Create symbolic links](Create-symbolic-links.md)|SeCreateSymbolicLinkPrivilege|
-|[Debug programs](Debug-programs.md)|SeDebugPrivilege|
-|[Deny access to this computer from the network](Deny-access-to-this-computer-from-the-network.md)|SeDenyNetworkLogonRight|
-|[Deny log on as a batch job](Deny-log-on-as-a-batch-job.md)|SeDenyBatchLogonRight|
-|[Deny log on as a service](Deny-log-on-as-a-service.md)|SeDenyServiceLogonRight|
-|[Deny log on locally](Deny-log-on-locally.md)|SeDenyInteractiveLogonRight|
-|[Deny log on through Remote Desktop Services](Deny-log-on-through-Remote-Desktop-Services.md)|SeDenyRemoteInteractiveLogonRight|
-|[Enable computer and user accounts to be trusted for delegation](Enable-computer-and-user-accounts-to-be-trusted-for-delegation.md)|SeEnableDelegationPrivilege|
-|[Force shutdown from a remote system](Force-shutdown-from-a-remote-system.md)|SeRemoteShutdownPrivilege|
-|[Generate security audits](Generate-security-audits.md)|SeAuditPrivilege|
-|[Impersonate a client after authentication](Impersonate-a-client-after-authentication.md)|SeImpersonatePrivilege|
-|[Increase a process working set](Increase-a-process-working-set.md)|SeIncreaseWorkingSetPrivilege|
-|[Increase scheduling priority](Increase-scheduling-priority.md)|SeIncreaseBasePriorityPrivilege|
-|[Load and unload device drivers](Load-and-unload-device-drivers.md)|SeLoadDriverPrivilege|
-|[Lock pages in memory](Lock-pages-in-memory.md)|SeLockMemoryPrivilege|
-|[Log on as a batch job](Log-on-as-a-batch-job.md)|SeBatchLogonRight|
-|[Log on as a service](Log-on-as-a-service.md)|SeServiceLogonRight|
-|[Manage auditing and security log](Manage-auditing-and-security-log.md)|SeSecurityPrivilege|
-|[Modify an object label](Modify-an-object-label.md)|SeRelabelPrivilege|
-|[Modify firmware environment values](Modify-firmware-environment-values.md)|SeSystemEnvironmentPrivilege|
-|[Perform volume maintenance tasks](Perform-volume-maintenance-tasks.md)|SeManageVolumePrivilege|
-|[Profile single process](Profile-single-process.md)|SeProfileSingleProcessPrivilege|
-|[Profile system performance](Profile-system-performance.md)|SeSystemProfilePrivilege|
-|[Remove computer from docking station](Remove-computer-from-docking-station.md)|SeUndockPrivilege|
-|[Replace a process level token](Replace-a-process-level-token.md)|SeAssignPrimaryTokenPrivilege|
-|[Restore files and directories](Restore-files-and-directories.md)|SeRestorePrivilege|
-|[Shut down the system](Shut-down-the-system.md)|SeShutdownPrivilege|
-|[Synchronize directory service data](Synchronize-directory-service-data.md)|SeSyncAgentPrivilege|
-|[Take ownership of files or other objects](Take-ownership-of-files-or-other-objects.md)|SeTakeOwnershipPrivilege|
+|[Access Credential Manager as a trusted caller](access-credential-manager-as-a-trusted-caller.md)|SeTrustedCredManAccessPrivilege|
+|[Access this computer from the network](access-this-computer-from-the-network.md)|SeNetworkLogonRight|
+|[Act as part of the operating system](act-as-part-of-the-operating-system.md)|SeTcbPrivilege|
+|[Add workstations to domain](add-workstations-to-domain.md)|SeMachineAccountPrivilege|
+|[Adjust memory quotas for a process](adjust-memory-quotas-for-a-process.md)|SeIncreaseQuotaPrivilege|
+|[Allow log on locally](allow-log-on-locally.md)|SeInteractiveLogonRight|
+|[Allow log on through Remote Desktop Services](allow-log-on-through-remote-desktop-services.md)|SeRemoteInteractiveLogonRight|
+|[Back up files and directories](back-up-files-and-directories.md)|SeBackupPrivilege|
+|[Bypass traverse checking](bypass-traverse-checking.md)|SeChangeNotifyPrivilege|
+|[Change the system time](change-the-system-time.md)|SeSystemtimePrivilege|
+|[Change the time zone](change-the-time-zone.md)|SeTimeZonePrivilege|
+|[Create a pagefile](create-a-pagefile.md)|SeCreatePagefilePrivilege|
+|[Create a token object](create-a-token-object.md)|SeCreateTokenPrivilege|
+|[Create global objects](create-global-objects.md)|SeCreateGlobalPrivilege|
+|[Create permanent shared objects](create-permanent-shared-objects.md)|SeCreatePermanentPrivilege|
+|[Create symbolic links](create-symbolic-links.md)|SeCreateSymbolicLinkPrivilege|
+|[Debug programs](debug-programs.md)|SeDebugPrivilege|
+|[Deny access to this computer from the network](deny-access-to-this-computer-from-the-network.md)|SeDenyNetworkLogonRight|
+|[Deny log on as a batch job](deny-log-on-as-a-batch-job.md)|SeDenyBatchLogonRight|
+|[Deny log on as a service](deny-log-on-as-a-service.md)|SeDenyServiceLogonRight|
+|[Deny log on locally](deny-log-on-locally.md)|SeDenyInteractiveLogonRight|
+|[Deny log on through Remote Desktop Services](deny-log-on-through-remote-desktop-services.md)|SeDenyRemoteInteractiveLogonRight|
+|[Enable computer and user accounts to be trusted for delegation](enable-computer-and-user-accounts-to-be-trusted-for-delegation.md)|SeEnableDelegationPrivilege|
+|[Force shutdown from a remote system](force-shutdown-from-a-remote-system.md)|SeRemoteShutdownPrivilege|
+|[Generate security audits](generate-security-audits.md)|SeAuditPrivilege|
+|[Impersonate a client after authentication](impersonate-a-client-after-authentication.md)|SeImpersonatePrivilege|
+|[Increase a process working set](increase-a-process-working-set.md)|SeIncreaseWorkingSetPrivilege|
+|[Increase scheduling priority](increase-scheduling-priority.md)|SeIncreaseBasePriorityPrivilege|
+|[Load and unload device drivers](load-and-unload-device-drivers.md)|SeLoadDriverPrivilege|
+|[Lock pages in memory](lock-pages-in-memory.md)|SeLockMemoryPrivilege|
+|[Log on as a batch job](log-on-as-a-batch-job.md)|SeBatchLogonRight|
+|[Log on as a service](log-on-as-a-service.md)|SeServiceLogonRight|
+|[Manage auditing and security log](manage-auditing-and-security-log.md)|SeSecurityPrivilege|
+|[Modify an object label](modify-an-object-label.md)|SeRelabelPrivilege|
+|[Modify firmware environment values](modify-firmware-environment-values.md)|SeSystemEnvironmentPrivilege|
+|[Perform volume maintenance tasks](perform-volume-maintenance-tasks.md)|SeManageVolumePrivilege|
+|[Profile single process](profile-single-process.md)|SeProfileSingleProcessPrivilege|
+|[Profile system performance](profile-system-performance.md)|SeSystemProfilePrivilege|
+|[Remove computer from docking station](remove-computer-from-docking-station.md)|SeUndockPrivilege|
+|[Replace a process level token](replace-a-process-level-token.md)|SeAssignPrimaryTokenPrivilege|
+|[Restore files and directories](restore-files-and-directories.md)|SeRestorePrivilege|
+|[Shut down the system](shut-down-the-system.md)|SeShutdownPrivilege|
+|[Synchronize directory service data](synchronize-directory-service-data.md)|SeSyncAgentPrivilege|
+|[Take ownership of files or other objects](take-ownership-of-files-or-other-objects.md)|SeTakeOwnershipPrivilege|
 
 

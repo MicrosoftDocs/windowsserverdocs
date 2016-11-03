@@ -94,6 +94,6 @@ Do not assign the **Lock pages in memory** user right to any accounts.
 None. Not defined is the default configuration.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

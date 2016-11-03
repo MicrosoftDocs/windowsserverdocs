@@ -92,6 +92,6 @@ Configure the **Maximum lifetime for service ticket** setting to 600 minutes.
 None. This is the default configuration.  
   
 ## See Also  
-[Kerberos Policy](../kerberos/Kerberos-Policy.md)  
+[Kerberos Policy](../kerberos/kerberos-policy.md)  
   
 

@@ -31,7 +31,7 @@ Smart card support is required to enable many Remote Desktop Services scenarios.
 ## Remote Desktop Services redirection
 In a Remote Desktop scenario, a user is using a remote server for running services, and the smart card is local to the computer that the user is using. In a smart card sign-in scenario, the smart card service on the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in.
 
-![Diagram showing the how the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in ](../media/Smart-Card-and-Remote-Desktop-Services/WindowsSmartCardTechnicalReference_14.PNG)
+![Diagram showing the how the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in ](../media/smart-card-and-remote-desktop-services/WindowsSmartCardTechnicalReference_14.PNG)
 
 Notes about the redirection model:
 
@@ -95,7 +95,7 @@ Where *<CertFile>* is the root certificate of the KDC certificate issuer.
 
 Sign-in to Remote Desktop Services across a domain works only if the UPN in the certificate uses the following form: *<ClientName>@<DomainDNSName>*
 
-The UPN in the certificate must include a domain that can be resolved. Otherwise, the Kerberos protocol cannot determine which domain to contact. You can resolve this issue by enabling GPO X509 domain hints. For more information about this setting, see [Smart Card Group Policy and Registry Settings](Smart-Card-Group-Policy-and-Registry-Settings.md).
+The UPN in the certificate must include a domain that can be resolved. Otherwise, the Kerberos protocol cannot determine which domain to contact. You can resolve this issue by enabling GPO X509 domain hints. For more information about this setting, see [Smart Card Group Policy and Registry Settings](smart-card-group-policy-and-registry-settings.md).
 
 
 

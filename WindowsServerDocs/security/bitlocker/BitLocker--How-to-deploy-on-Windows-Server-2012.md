@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/bitlocker/BitLocker-How-to-deploy-on-Windows-Server-2012.md
+redirect_url: /windows-server-docs/security/bitlocker/bitlocker-how-to-deploy-on-windows-server-2012.md
 ---

@@ -53,6 +53,6 @@ AppLocker and SRP use the security level IDs to stipulate the access requirement
 In addition, URL zone ID is not supported in AppLocker.
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[AppLocker Technical Reference](applocker-technical-reference.md)
 
 

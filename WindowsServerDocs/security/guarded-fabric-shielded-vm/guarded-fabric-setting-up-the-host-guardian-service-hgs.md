@@ -199,7 +199,7 @@ The following commands will complete the configuration of the first HGS node.
 
     -   For TPM-trusted attestation, use: `-TrustTpm`
 
-    For information about attestation modes, see [Attestation modes in the Guarded Fabric solution](Guarded-Fabric-and-Shielded-VMs.md#attestation-modes-in-the-guarded-fabric-solution).
+    For information about attestation modes, see [Attestation modes in the Guarded Fabric solution](guarded-fabric-and-shielded-vms.md#attestation-modes-in-the-guarded-fabric-solution).
 
     Your final command syntax will resemble the following example:
 

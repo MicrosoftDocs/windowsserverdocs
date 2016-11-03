@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/bitlocker/BitLocker-Frequently-Asked-Questions-FAQ.md
+redirect_url: /windows-server-docs/security/bitlocker/bitlocker-frequently-asked-questions-faq.md
 ---

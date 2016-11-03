@@ -18,12 +18,12 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to import an AppLocker policy into a Group Policy Object (GPO) in  Windows Server 2012  and Windows 8.
+This topic describes the steps to import an AppLocker policy into a Group Policy Object (GPO) in Windows Server 2012 and Windows 8.
 
 AppLocker policies can be created as local security policies and modified like any other local security policy, or they can be created as part of a GPO and managed by using Group Policy. You can create AppLocker policies on any supported computer. For information about which Windows editions are supported, see [Requirements to Use AppLocker](http://technet.microsoft.com/library/ee424382(WS.10).aspx).
 
 > [!IMPORTANT]
-> Follow your organization's standard procedures for updating GPOs. For information about specific steps to follow for AppLocker policies, see [Maintain AppLocker Policies](../Maintain-AppLocker-Policies.md).
+> Follow your organization's standard procedures for updating GPOs. For information about specific steps to follow for AppLocker policies, see [Maintain AppLocker Policies](../maintain-applocker-policies.md).
 
 To complete this procedure, you must have Edit Setting permission to edit a GPO. By default, members of the **Domain Admins** group, the **Enterprise Admins** group, and the **Group Policy Creator Owners** group have this permission.
 

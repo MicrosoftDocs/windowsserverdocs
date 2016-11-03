@@ -22,7 +22,7 @@ This topic for the IT professional and smart card developer links to information
 
 This section of the Smart Card Technical Reference contains information about the following:
 
--   [Smart Cards Debugging Information](Smart-Cards-Debugging-Information.md)
+-   [Smart Cards Debugging Information](smart-cards-debugging-information.md)
     Learn about tools and services in supported versions of Windows to help identify certificate issues.
 
 -   [Smart Card Group Policy and Registry Settings](https://technet.microsoft.com/library/ff404287(v=ws.10).aspx)

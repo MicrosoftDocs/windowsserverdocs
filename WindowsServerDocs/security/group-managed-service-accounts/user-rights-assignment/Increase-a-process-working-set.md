@@ -90,6 +90,6 @@ Increase user???s awareness about the impact of increasing the working set of a 
 None. Allowing standard users to increase the working set of a process is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

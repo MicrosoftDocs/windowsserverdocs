@@ -30,7 +30,7 @@ For smart cards, Windows supports a provider architecture that meets the secure 
 
 -   [Smart card subsystem architecture](#BKMK_SubsystemArchitecture)
 
-For more information, see [Windows Authentication Architecture](../windows-authentication/Windows-Authentication-Architecture.md). This topic in the Windows Authentication Technical Overview explains the basic architectural scheme for Windows authentication for past and current versions of Windows.
+For more information, see [Windows Authentication Architecture](../windows-authentication/windows-authentication-architecture.md). This topic in the Windows Authentication Technical Overview explains the basic architectural scheme for Windows authentication for past and current versions of Windows.
 
 ## <a name="BKMK_CredProviderArch"></a>Credential provider architecture
 The following table lists the components that are included in the interactive sign-in architecture of the Windows Server and Windows operating systems.
@@ -49,7 +49,7 @@ Interactive sign-in in Windows begins when the user presses CTRL+ALT+DEL. The CT
 
 After receiving the SAS, the UI then generates the sign-in tile from the information received from the registered credential providers. The following graphic shows the architecture for credential providers in the Windows operating system.
 
-![Chart showing the architecture for credential providers in the Windows operating system](../media/Smart-Card-Architecture/WindowsSmartCardTechnicalReference_01.gif)
+![Chart showing the architecture for credential providers in the Windows operating system](../media/smart-card-architecture/WindowsSmartCardTechnicalReference_01.gif)
 
 **Figure 1** Credential provider architecture
 
@@ -89,7 +89,7 @@ Vendors provide smart cards and smart card readers, and in many cases the vendor
 ### Base CSP and smart card minidriver architecture
 Figure 2 illustrates the relationship between the CryptoAPI, CSPs, the Smart Card Base Cryptographic Service Provider (Base CSP), and smart card minidrivers.
 
-![Figure showing the relationship between the CryptoAPI, CSPs, the Smart Card Base Cryptographic Service Provider (Base CSP), and smart card minidrivers](../media/Smart-Card-Architecture/WindowsSmartCardTechnicalReference_03.gif)
+![Figure showing the relationship between the CryptoAPI, CSPs, the Smart Card Base Cryptographic Service Provider (Base CSP), and smart card minidrivers](../media/smart-card-architecture/WindowsSmartCardTechnicalReference_03.gif)
 
 **Figure 2** Base CSP and smart card minidriver architecture
 
@@ -240,7 +240,7 @@ Applications can call the Base CSP with CRYPT_DEFAULT_CONTAINER_OPTIONAL, set th
 #### <a name="BKMK_SmartCardSelectionBehavior"></a>Smart card selection behavior
 In some of the following scenarios, the user can be prompted to insert a smart card. If the user context is silent, this operation fails and no UI is displayed. Otherwise, in response to the UI, the user can insert a smart card or click **Cancel**. If the user cancels the operation, the operation fails. The flow chart in Figure 3 shows the selection steps performed by the Windows operating system.
 
-![Flowchart showing the selection steps performed by the Windows operating system](../media/Smart-Card-Architecture/WindowsSmartCardTechnicalReference_04.PNG)
+![Flowchart showing the selection steps performed by the Windows operating system](../media/smart-card-architecture/WindowsSmartCardTechnicalReference_04.PNG)
 
 **Figure 3** Smart card selection behavior
 
@@ -318,7 +318,7 @@ For other operations, the caller may be able to acquire a "verify" context again
 ### Base CSP and KSP-based architecture in Windows
 Figure 4 shows the Cryptography architecture that is used by the Windows operating system.
 
-![Chart showing the Cryptography architecture that is used by the Windows operating system](../media/Smart-Card-Architecture/WindowsSmartCardTechnicalReference_05.gif)
+![Chart showing the Cryptography architecture that is used by the Windows operating system](../media/smart-card-architecture/WindowsSmartCardTechnicalReference_05.gif)
 
 **Figure 4** Cryptography architecture
 

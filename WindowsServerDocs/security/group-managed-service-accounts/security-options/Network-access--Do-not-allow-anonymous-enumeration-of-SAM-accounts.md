@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Network-access-Do-not-allow-anonymous-enumeration-of-SAM-accounts-and-shares.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/network-access-do-not-allow-anonymous-enumeration-of-sam-accounts-and-shares.md
 ---

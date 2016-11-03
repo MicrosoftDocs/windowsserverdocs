@@ -56,9 +56,9 @@ When the TLS client makes the request to the server, the TLS server reads its su
 ### <a name="BKMK_TrustedIssuers"></a>Management of trusted issuers for client authentication
 When authentication of the client computer is required using SSL or TLS, the server can be configured to send a list of trusted certificate issuers. This list contains the set of certificate issuers which the server will trust and is a hint to the client computer as to which client certificate to select if there are multiple certificates present. In addition, the certificate chain the client computer sends to the server must be validated against the configured trusted issuers list.
 
-Prior to  Windows Server 2012  and Windows 8, applications or processes that used the Schannel SSP (including  HTTP.sys and IIS) could provide a list of the trusted issuers that they supported for Client Authentication through a Certificate Trust List (CTL).
+Prior to Windows Server 2012 and Windows 8, applications or processes that used the Schannel SSP (including  HTTP.sys and IIS) could provide a list of the trusted issuers that they supported for Client Authentication through a Certificate Trust List (CTL).
 
-In  Windows Server 2012  and Windows 8, changes were made to the underlying authentication process so that:
+In Windows Server 2012 and Windows 8, changes were made to the underlying authentication process so that:
 
 -   CTL-based trusted issuer list management is no longer supported.
 
@@ -70,7 +70,7 @@ In  Windows Server 2012  and Windows 8, changes were made to the underlying auth
 
 Beginning with  Windows Server 2012 , the use of the CTL has been replaced with a certificate store-based implementation. This allows for more familiar manageability through the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as certutil.exe.
 
-Although the maximum size of the trusted certification authorities list that the Schannel SSP supports (16 KB) remains the same as in  Windows Server 2008 R2 , in  Windows Server 2012  there is a new dedicated certificate store for client authentication issuers so that unrelated certificates are not included in the message.
+Although the maximum size of the trusted certification authorities list that the Schannel SSP supports (16 KB) remains the same as in  Windows Server 2008 R2 , in Windows Server 2012 there is a new dedicated certificate store for client authentication issuers so that unrelated certificates are not included in the message.
 
 **How it works?**
 
@@ -86,7 +86,7 @@ If the  **Trusted Root Certifictation Authorities** store that was used contains
 
 **How to configure Schannel to use the certificate store for Trusted Issuers**
 
-The Schannel SSP architecture in  Windows Server 2012  will by default use the stores as described above to manage the Trusted Issuers list. You can still use the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as Certutil to manage certificates.
+The Schannel SSP architecture in Windows Server 2012 will by default use the stores as described above to manage the Trusted Issuers list. You can still use the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as Certutil to manage certificates.
 
 For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](http://technet.microsoft.com/library/hh848365(v=wps.620).aspx).
 
@@ -123,7 +123,7 @@ This additional functionality:
 
 **How it works**
 
-The Schannel SSP maintains an in-memory cache of client connection states permitted for clients. This allows client computers to reconnect quickly to the SSL server without subject to a full SSL handshake on subsequent visits.  This efficient use of certificate management permits more sites to be hosted on a single  Windows Server 2012  compared to previous operating system versions.
+The Schannel SSP maintains an in-memory cache of client connection states permitted for clients. This allows client computers to reconnect quickly to the SSL server without subject to a full SSL handshake on subsequent visits.  This efficient use of certificate management permits more sites to be hosted on a single Windows Server 2012 compared to previous operating system versions.
 
 Certificate selection by the end user has been enhanced by allowing you to construct a list of probable certificate issuer names that provide the end user with hints on which one to choose. This list is configurable using Group Policy.
 
@@ -136,10 +136,10 @@ Datagrams are common in streaming media ??? such as gaming or secured video conf
 
 **How it works**
 
-Applications that use DTLS over UDP can use the SSPI model in  Windows Server 2012  and Windows 8. Certain cipher suites are available for configuration, similar to how you can configure TLS. Schannel continues to use the CNG cryptographic provider which takes advantage of FIPS 140 certification, which was introduced in Windows Vista.
+Applications that use DTLS over UDP can use the SSPI model in Windows Server 2012 and Windows 8. Certain cipher suites are available for configuration, similar to how you can configure TLS. Schannel continues to use the CNG cryptographic provider which takes advantage of FIPS 140 certification, which was introduced in Windows Vista.
 
 ### <a name="BKMK_Deprecated"></a>Deprecated functionality
-In the Schannel SSP for  Windows Server 2012  and Windows 8, there are no deprecated features or functionality.
+In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecated features or functionality.
 
 ## See also
 -   [Private Cloud Security Model - Wrapper Functionality](http://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)

@@ -18,9 +18,9 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The Encrypted Hard Drive feature in Windows 8 and  Windows Server 2012  uses the rapid encryption that is provided by BitLocker Drive Encryption to enhance data security and management. By offloading the cryptographic operations to hardware, Encrypted Hard Drives increase BitLocker performance and reduce CPU usage and power consumption. Because Encrypted Hard Drives encrypt data quickly, enterprise clients can expand BitLocker deployment with minimal impact on productivity.
+The Encrypted Hard Drive feature in Windows 8 and Windows Server 2012 uses the rapid encryption that is provided by BitLocker Drive Encryption to enhance data security and management. By offloading the cryptographic operations to hardware, Encrypted Hard Drives increase BitLocker performance and reduce CPU usage and power consumption. Because Encrypted Hard Drives encrypt data quickly, enterprise clients can expand BitLocker deployment with minimal impact on productivity.
 
-Encrypted Hard Drives are a new class of hard drives that are self\-encrypting at a hardware level and allow for full disk hardware encryption. Windows 8 and  Windows Server 2012  support installing to these devices without additional modification.
+Encrypted Hard Drives are a new class of hard drives that are self\-encrypting at a hardware level and allow for full disk hardware encryption. Windows 8 and Windows Server 2012 support installing to these devices without additional modification.
 
 Some of the benefits of Encrypted Hard Drives include:
 
@@ -32,7 +32,7 @@ Some of the benefits of Encrypted Hard Drives include:
 
 -   **Lower cost of ownership**: There is no need for new infrastructure to manage encryption keys, since BitLocker leverages your Active Directory Domain Services infrastructure to store recovery information. Your computer operates more efficiently because processor cycles do not need to be used for the encryption process.
 
-Windows 8 and  Windows Server 2012  support Encrypted Hard Drives natively in the operating system through the following mechanisms:
+Windows 8 and Windows Server 2012 support Encrypted Hard Drives natively in the operating system through the following mechanisms:
 
 -   **Identification**: The operating system can identify that the drive is an Encrypted Hard Drive device type
 
@@ -40,7 +40,7 @@ Windows 8 and  Windows Server 2012  support Encrypted Hard Drives natively in th
 
 -   **Configuration**: The operating system can create and map volumes to ranges\/bands as appropriate
 
--   **API**: Windows 8 and  Windows Server 2012  provides API support for applications to manage Encrypted Hard Drives independently of BitLocker Drive Encryption \(BDE\)
+-   **API**: Windows 8 and Windows Server 2012 provides API support for applications to manage Encrypted Hard Drives independently of BitLocker Drive Encryption \(BDE\)
 
 -   **BitLocker support**: Integration with the BitLocker Control Panel provides a seamless BitLocker end user experience.
 
@@ -72,7 +72,7 @@ For Encrypted Hard Drives used as **startup drives**:
 > All Encrypted Hard Drives must be attached to non\-RAID controllers to function properly in Windows 8 or  Windows Server 2012 .
 
 ## Technical overview
-Rapid encryption in BitLocker directly addresses the security needs of enterprises while offering significantly improved performance. In earlier versions of Windows, BitLocker required a two\-step process to complete read\/write requests, but in  Windows Server 2012 , Encrypted Hard Drives offload the cryptographic operations to the drive controller for much greater efficiency. When  Windows Server 2012  initializes an Encrypted Hard Drive, it activates the security mode. This activation lets the drive controller generate a media key for every volume that the host computer creates. This media key, which is never exposed outside the disk, is used to rapidly encrypt or decrypt every byte of data that is sent or received from the disk.
+Rapid encryption in BitLocker directly addresses the security needs of enterprises while offering significantly improved performance. In earlier versions of Windows, BitLocker required a two\-step process to complete read\/write requests, but in  Windows Server 2012 , Encrypted Hard Drives offload the cryptographic operations to the drive controller for much greater efficiency. When Windows Server 2012 initializes an Encrypted Hard Drive, it activates the security mode. This activation lets the drive controller generate a media key for every volume that the host computer creates. This media key, which is never exposed outside the disk, is used to rapidly encrypt or decrypt every byte of data that is sent or received from the disk.
 
 ## Configuring Encrypted Hard Drives as Startup drives
 Configuration of Encrypted Hard Drives as startup drives is done using the same methods as standard hard drives. These methods include:

@@ -33,6 +33,6 @@ The following table describes the settings and values used by AppLocker.
 |Performance counters|Not applicable|
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[AppLocker Technical Reference](applocker-technical-reference.md)
 
 

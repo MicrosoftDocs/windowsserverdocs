@@ -56,12 +56,12 @@ The following topics in the [AppLocker Step-by-Step Guide](http://go.microsoft.c
 ### Prerequisites to completing the inventory
 Identify the business group and each organizational unit (OU) within that group to which you will apply application control policies. In addition, you should have identified whether or not AppLocker is the most appropriate solution for these policies. For information about these steps, see the following topics:
 
--   [Understand AppLocker Policy Design Decisions](Understand-AppLocker-Policy-Design-Decisions.md)
+-   [Understand AppLocker Policy Design Decisions](understand-applocker-policy-design-decisions.md)
 
--   [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+-   [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 
 ## Next steps
-Identify and develop the list of applications. Record the name of the application, whether it is signed or not as indicated by the publisher's name, and whether or not it is a mission critical, business productivity, optional, or personal application. Record the installation path of the applications. For information about how to do this, see [Document Your Application List](Document-Your-Application-List.md).
+Identify and develop the list of applications. Record the name of the application, whether it is signed or not as indicated by the publisher's name, and whether or not it is a mission critical, business productivity, optional, or personal application. Record the installation path of the applications. For information about how to do this, see [Document Your Application List](document-your-application-list.md).
 
 After you have created the list of applications, the next step is to identify the rule collections, which will become the policies. This information can be added to the table under columns labeled:
 
@@ -73,8 +73,8 @@ After you have created the list of applications, the next step is to identify th
 
 To do this, see the following topics:
 
--   [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+-   [Select Types of Rules to Create](select-types-of-rules-to-create.md)
 
--   [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+-   [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md)
 
 

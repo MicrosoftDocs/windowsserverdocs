@@ -55,6 +55,6 @@ If this policy setting is configured, the following events appear on computers r
 |4762|A member was removed from a security-disabled universal group.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

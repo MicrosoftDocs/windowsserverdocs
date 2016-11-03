@@ -69,7 +69,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-Task Scheduler automatically grants this right when a user schedules a task. To override this behavior use the [Deny log on as a batch job](Deny-log-on-as-a-batch-job.md) User Rights Assignment setting.
+Task Scheduler automatically grants this right when a user schedules a task. To override this behavior use the [Deny log on as a batch job](deny-log-on-as-a-batch-job.md) User Rights Assignment setting.
 
 Group Policy settings are applied in the following order, which will overwrite settings on the local computer at the next Group Policy update:
 
@@ -96,6 +96,6 @@ For IIS servers, you should configure this policy locally instead of through dom
 If you configure the **Log on as a batch job** setting by using domain-based Group Policy settings, the computer cannot assign the user right to accounts that are used for scheduled jobs in the Task Scheduler. If you install optional components such as ASP.NET or IIS, you may need to assign this user right to additional accounts that are required by those components. For example, IIS requires assignment of this user right to the IIS_WPG group and the IUSR_*<ComputerName>*, ASPNET, and IWAM_*<ComputerName>* accounts. If this user right is not assigned to this group and these accounts, IIS cannot run some COM objects that are necessary for proper functionality.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

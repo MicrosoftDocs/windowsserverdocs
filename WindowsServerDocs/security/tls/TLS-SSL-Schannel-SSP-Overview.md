@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional introduces the TLS\/SSL implementation in Windows using the Schannel Security Service Provider \(SSP\) by describing practical applications, changes in Microsoft???s implementation, and software requirements, plus additional resources for  Windows Server 2012  and Windows 8.
+This topic for the IT professional introduces the TLS\/SSL implementation in Windows using the Schannel Security Service Provider \(SSP\) by describing practical applications, changes in Microsoft???s implementation, and software requirements, plus additional resources for Windows Server 2012 and Windows 8.
 
 **Did you mean???**
 
@@ -62,7 +62,7 @@ The following table notes the changes to the Schannel SSP to allow for the Datag
 |Manageability improvements to configure a list of certificates hints for eventual selection by the client computer||X|
 
 ## <a name="BKMK_DEP"></a>Deprecated functionality
-In the Schannel SSP for  Windows Server 2012  and Windows 8, there are no deprecated features or functionality. The Private Communications Transport \(PCT\) protocol is disabled by default, as it was in the past version.
+In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecated features or functionality. The Private Communications Transport \(PCT\) protocol is disabled by default, as it was in the past version.
 
 ## <a name="BKMK_SOFT"></a>Software requirements
 The TLS\/SSL protocol use a client\/server model and are based on certificate authentication, which requires a Public Key Infrastructure.

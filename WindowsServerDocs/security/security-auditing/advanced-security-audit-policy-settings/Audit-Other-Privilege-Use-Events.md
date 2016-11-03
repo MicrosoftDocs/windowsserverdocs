@@ -21,6 +21,6 @@ ms.date: 10/12/2016
 This security policy setting is not used.
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 
