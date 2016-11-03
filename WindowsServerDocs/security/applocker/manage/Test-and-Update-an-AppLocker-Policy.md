@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic discusses the steps required to test an AppLocker policy prior to deployment in  Windows Server 2012  and Windows 8.
+This topic discusses the steps required to test an AppLocker policy prior to deployment in Windows Server 2012 and Windows 8.
 
 You should test each set of rules to ensure that the rules perform as intended. If you use Group Policy to manage AppLocker policies, complete the following steps for each Group Policy Object (GPO) where you have created AppLocker rules. Because AppLocker rules are inherited from linked GPOs, you should deploy all of the rules for simultaneous testing in all of your test GPOs.
 

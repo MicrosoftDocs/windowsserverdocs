@@ -67,7 +67,7 @@ Specifically, administrators can use software restriction policies for the follo
 -   Prevent executable files from running on the local computer, organizational unit (OU), site, or domain. This would be appropriate in cases when you are not using software restriction policies to address potential issues with malicious users.
 
 ## <a name="BKMK_Diffs_Changes"></a>Differences and changes in functionality
-There are no changes in functionality in SRP for  Windows Server 2012  and Windows 8.
+There are no changes in functionality in SRP for Windows Server 2012 and Windows 8.
 
 **Supported versions**
 

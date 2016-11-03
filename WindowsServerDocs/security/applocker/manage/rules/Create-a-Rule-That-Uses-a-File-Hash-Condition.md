@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic shows how to create an AppLocker rule with a file hash condition in  Windows Server 2012  and Windows 8.
+This topic shows how to create an AppLocker rule with a file hash condition in Windows Server 2012 and Windows 8.
 
 File hash rules use a system-computed cryptographic hash of the identified file.
 

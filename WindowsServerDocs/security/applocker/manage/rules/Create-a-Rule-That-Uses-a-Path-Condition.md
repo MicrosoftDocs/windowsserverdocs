@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic shows how to create an AppLocker rule with a path condition in  Windows Server 2012  and Windows 8.
+This topic shows how to create an AppLocker rule with a path condition in Windows Server 2012 and Windows 8.
 
 The path condition identifies an application by its location in the file system of the computer or on the network.
 

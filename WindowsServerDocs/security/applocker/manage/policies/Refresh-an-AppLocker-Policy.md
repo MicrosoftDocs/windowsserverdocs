@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to force an update for an AppLocker policy in  Windows Server 2012  and Windows 8.
+This topic describes the steps to force an update for an AppLocker policy in Windows Server 2012 and Windows 8.
 
 If you update the rule collection on a local computer by using the Local Security Policy snap-in, the policy will take effect immediately. If Group Policy is used to distribute the AppLocker policy and you want to immediately implement the policy, you must manually refresh the policy. The Group Policy refresh might take several minutes, depending upon the number of policies within the Group Policy Object (GPO) and the number of target computers.
 

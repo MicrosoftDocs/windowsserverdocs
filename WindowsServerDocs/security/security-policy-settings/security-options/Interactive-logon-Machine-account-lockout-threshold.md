@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, management, and security considerations for this policy setting.  
   
 ## Reference  
-Beginning with  Windows Server 2012  and Windows 8, the **Interactive logon: Machine account threshold** security policy setting enforces the lockout policy on those computers that have BitLocker enabled to protect operating system volumes.  
+Beginning with Windows Server 2012 and Windows 8, the **Interactive logon: Machine account threshold** security policy setting enforces the lockout policy on those computers that have BitLocker enabled to protect operating system volumes.  
   
 The security setting allows you to set a threshold for the number of failed logon attempts that causes the computer or device to be locked by using BitLocker. This means, if the specified maximum number of failed logon attempts is exceeded, the device will invalidate the Trusted Platform Module (TPM) protector and any other protector except the 48-digit recovery password, and then reboot. During Device Lockout mode, the computer or device only boots into the touch-enabled Windows Recovery Environment (WinRE) until an authorized user enters the recovery password to restore full access.  
   
@@ -49,7 +49,7 @@ The following table lists the actual and effective default values for this polic
 |Client Computer Effective Default Settings|Disabled|  
   
 ### Operating system version differences  
-This policy setting was introduced in  Windows Server 2012  and Windows 8.  
+This policy setting was introduced in Windows Server 2012 and Windows 8.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  
@@ -58,7 +58,7 @@ This section describes features and tools that are available to help you manage 
 A restart is required for changes to this policy to become effective when they are saved locally or distributed through Group Policy.  
   
 ### Group Policy  
-Because this policy setting was introduced in  Windows Server 2012  and Windows 8, it can only be set locally on those computers that contain this policy setting, but it can be set and distributed through Group Policy to any computer running the Windows operating system that supports Group Policy and is BitLocker-enabled.  
+Because this policy setting was introduced in Windows Server 2012 and Windows 8, it can only be set locally on those computers that contain this policy setting, but it can be set and distributed through Group Policy to any computer running the Windows operating system that supports Group Policy and is BitLocker-enabled.  
   
 When setting this policy, consider the **Account lockout threshold** policy setting, which determines the number of failed logon attempts that will cause a user account to be locked out. For more information, see [Best practices](#BKMK_BestPractices).  
   

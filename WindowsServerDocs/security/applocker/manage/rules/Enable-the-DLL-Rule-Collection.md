@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to enable the DLL rule collection feature for AppLocker in  Windows Server 2012  and Windows 8.
+This topic describes the steps to enable the DLL rule collection feature for AppLocker in Windows Server 2012 and Windows 8.
 
 The DLL rule collection includes the .dll and .ocx file formats.
 

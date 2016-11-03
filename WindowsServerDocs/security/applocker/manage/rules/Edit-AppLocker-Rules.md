@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to edit a publisher rule, path rule, and file hash rule in AppLocker in  Windows Server 2012  and Windows 8.
+This topic describes the steps to edit a publisher rule, path rule, and file hash rule in AppLocker in Windows Server 2012 and Windows 8.
 
 For more information about these rule types, see [Understanding AppLocker Rule Condition Types](../../get-started/how-applocker-works/understanding-applocker-rule-condition-types.md).
 

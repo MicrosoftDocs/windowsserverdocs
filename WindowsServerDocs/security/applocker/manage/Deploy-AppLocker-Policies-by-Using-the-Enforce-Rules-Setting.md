@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to deploy AppLocker policies by using the enforcement setting method in  Windows Server 2012  and Windows 8.
+This topic describes the steps to deploy AppLocker policies by using the enforcement setting method in Windows Server 2012 and Windows 8.
 
 ## Background and prerequisites
 These procedures assume that you have already deployed AppLocker policies with the enforcement set to **Audit only**, and you have been collecting data through the AppLocker event logs and other channels to determine what effect these policies have on your environment and the policy's adherence to your application control design.

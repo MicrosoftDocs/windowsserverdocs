@@ -172,7 +172,7 @@ You can restrict service ticket requests through a ticket-granting service (TGS)
 |Policy|Requirements|  
 |-----|--------|  
 |Provide custom TGT lifetimes| Windows Server 2012 R2  domain functional level account domains|  
-|Restrict user sign-on|-    Windows Server 2012 R2  domain functional level account domains with Dynamic Access Control support<br />-   Windows 8, Windows 8.1,  Windows Server 2012  or  Windows Server 2012 R2  devices with Dynamic Access Control support|  
+|Restrict user sign-on|-    Windows Server 2012 R2  domain functional level account domains with Dynamic Access Control support<br />-   Windows 8, Windows 8.1, Windows Server 2012 or  Windows Server 2012 R2  devices with Dynamic Access Control support|  
 |Restrict service ticket issuance that is based on user account and security groups| Windows Server 2012 R2  domain functional level resource domains|  
 |Restrict service ticket issuance based on user claims or device account, security groups, or claims| Windows Server 2012 R2  domain functional level resource domains with Dynamic Access Control support|  
   

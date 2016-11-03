@@ -61,7 +61,7 @@ The following table lists the actual and effective default values for this polic
 |Client Computer Effective Default Settings|Disabled|  
   
 ### Operating system version differences  
-This policy setting was introduced in  Windows Server 2012  and Windows 8.  
+This policy setting was introduced in Windows Server 2012 and Windows 8.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  
@@ -70,13 +70,13 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.  
   
 ### Group Policy  
-Because this policy setting was introduced to control sign-in options for  Windows Server 2012  and Windows 8, it has no affect on earlier Windows operating systems.  
+Because this policy setting was introduced to control sign-in options for Windows Server 2012 and Windows 8, it has no affect on earlier Windows operating systems.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of the countermeasure implementation.  
   
 ### Vulnerability  
-Although Microsoft accounts are password-protected, they also have the potential of greater exposure outside of the enterprise. Additionally, if the owner of a Microsoft account is not easily distinguishable, auditing and forensics become more difficult on computers running  Windows Server 2012  and Windows 8.  
+Although Microsoft accounts are password-protected, they also have the potential of greater exposure outside of the enterprise. Additionally, if the owner of a Microsoft account is not easily distinguishable, auditing and forensics become more difficult on computers running Windows Server 2012 and Windows 8.  
   
 ### Countermeasure  
 Require only domain accounts in your enterprise by limiting the use of Microsoft accounts. Click the **Users can???t add Microsoft accounts** setting option so that users will not be able to create new Microsoft accounts on a computer, switch a local account to a Microsoft account, or connect a domain account to a Microsoft account.  

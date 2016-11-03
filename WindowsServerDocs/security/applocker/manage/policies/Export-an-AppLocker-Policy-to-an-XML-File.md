@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to export an AppLocker policy to an XML file for review or testing in  Windows Server 2012  and Windows 8.
+This topic describes the steps to export an AppLocker policy to an XML file for review or testing in Windows Server 2012 and Windows 8.
 
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 

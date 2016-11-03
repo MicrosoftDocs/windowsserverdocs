@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This procedural topic describes the steps to test an AppLocker policy prior to importing it into a Group Policy Object (GPO) or another computer in  Windows Server 2012  and Windows 8.
+This procedural topic describes the steps to test an AppLocker policy prior to importing it into a Group Policy Object (GPO) or another computer in Windows Server 2012 and Windows 8.
 
 The **Test-applockerPolicy** Windows PowerShell cmdlet can be used to determine whether any of the rules in your rule collections will be blocked on your reference computer or the computer on which you maintain policies. Perform the following steps on any computer where the AppLocker policies are applied.
 

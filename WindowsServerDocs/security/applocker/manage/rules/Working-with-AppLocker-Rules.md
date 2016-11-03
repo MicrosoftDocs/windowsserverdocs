@@ -206,7 +206,7 @@ A rule can be configured to use allow or deny actions:
 > For a best practice, use allow actions with exceptions.  You can use a combination of allow and deny actions but understand that deny actions override allow actions in all cases, and can be circumvented.
 
 > [!IMPORTANT]
-> If you join a computer running  Windows Server 2012  or Windows 8 to a domain that already enforces AppLocker rules for Executables, users will not be able to run any packaged apps unless you also create rules for packaged apps. If you want to allow any packaged apps in your environment while continuing to control Executables, you should create the default rules for packaged apps and set the enforcement mode to Audit\-only for the packaged apps rule collection.
+> If you join a computer running Windows Server 2012 or Windows 8 to a domain that already enforces AppLocker rules for Executables, users will not be able to run any packaged apps unless you also create rules for packaged apps. If you want to allow any packaged apps in your environment while continuing to control Executables, you should create the default rules for packaged apps and set the enforcement mode to Audit\-only for the packaged apps rule collection.
 
 ## Rule exceptions
 You can apply AppLocker rules to individual users or to a group of users. If you apply a rule to a group of users, all users in that group are affected by that rule. If you need to allow a subset of a user group to use an application, you can create a special rule for that subset. For example, the rule "Allow Everyone to run Windows except Registry Editor" allows everyone in the organization to run the Windows operating system, but it does not allow anyone to run Registry Editor.
@@ -252,7 +252,7 @@ You can create rules by using two AppLocker wizards:
 
 -   AppLocker rules cannot be used to manage computers running a Windows operating system earlier than  Windows Server 2008 R2  or  Windows 7 . Software Restriction Policies must be used instead. If AppLocker rules are defined in a Group Policy Object \(GPO\), only those rules are applied. To ensure interoperability between Software Restriction Policies rules and AppLocker rules, define Software Restriction Policies rules and AppLocker rules in different GPOs.
 
--   The packaged apps and packaged apps installer rule collection is available only on  Windows Server 2012  and Windows 8.
+-   The packaged apps and packaged apps installer rule collection is available only on Windows Server 2012 and Windows 8.
 
 -   When the rules for the Executable rule collection are enforced and the packaged apps and packaged app installers rule collection does not contain any rules, no packaged apps and packaged app installers are allowed to run. In order to allow any packaged apps and packaged app installers you must create rules for the packaged apps and packaged app installers rule collection.
 

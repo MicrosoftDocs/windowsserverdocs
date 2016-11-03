@@ -40,7 +40,7 @@ There are no changes in functionality to the tools and snap-ins used to administ
 
 There were no policy settings added in  Windows Server 2012 R2  and Windows 8.1.
 
-The following table lists the Security Settings new for  Windows Server 2012  and Windows 8. For detailed descriptions of these and other settings, see [Security Policy Settings Reference](../group-managed-service-accounts/security-policy-settings-reference.md).
+The following table lists the Security Settings new for Windows Server 2012 and Windows 8. For detailed descriptions of these and other settings, see [Security Policy Settings Reference](../group-managed-service-accounts/security-policy-settings-reference.md).
 
 |Security policy|Location|Description|
 |----------|------|--------|

@@ -18,10 +18,10 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional describes concepts and lists procedures to help you manage Packaged apps with AppLocker as part of your overall application control strategy in  Windows Server 2012  and Windows 8.
+This topic for the IT professional describes concepts and lists procedures to help you manage Packaged apps with AppLocker as part of your overall application control strategy in Windows Server 2012 and Windows 8.
 
 ## Understanding Packaged apps and Packaged app installers for AppLocker
-Packaged apps (also known as Windows apps) in  Windows Server 2012  and Windows 8 are based on a model that ensures all the files within an app package share the same identity. With classic Win32 applications, each file within the application could have a unique identity. With Packaged apps, it is possible to control the entire application by using a single AppLocker rule.
+Packaged apps (also known as Windows apps) in Windows Server 2012 and Windows 8 are based on a model that ensures all the files within an app package share the same identity. With classic Win32 applications, each file within the application could have a unique identity. With Packaged apps, it is possible to control the entire application by using a single AppLocker rule.
 
 > [!NOTE]
 > AppLocker supports only publisher rules for Packaged apps. All Packaged apps must be signed by the software publisher because Windows does not support unsigned Packaged apps.
@@ -31,7 +31,7 @@ Typically, an app consists of multiple components: the installer that is used to
 AppLocker enforces rules for Packaged apps separately from classic applications. A single AppLocker rule for a packaged app can control installing and running the app.
 
 ### <a name="BKMK_CompareClassicMetro"></a>Comparing classic apps and Packaged apps
-AppLocker policies for Packaged apps can only be applied to applications installed on computers running  Windows Server 2012  or Windows 8, but classic apps can be controlled on  Windows Server 2012 , Windows Server 2008 R2, Windows 8, and Windows 7. The rules for classic apps and Packaged apps can be enforced in tandem. The differences between Packaged apps and classic apps that you should consider include:
+AppLocker policies for Packaged apps can only be applied to applications installed on computers running Windows Server 2012 or Windows 8, but classic apps can be controlled on  Windows Server 2012 , Windows Server 2008 R2, Windows 8, and Windows 7. The rules for classic apps and Packaged apps can be enforced in tandem. The differences between Packaged apps and classic apps that you should consider include:
 
 -   **Installing the apps** All Packaged apps can be installed by a standard user, whereas a number of classic apps require administrative privileges to install. In an environment where most of the users are standard users, you might not have numerous Exe rules (because classic apps require administrative privileges to install), but you might want to have more explicit policies for Packaged apps.
 
@@ -61,9 +61,9 @@ Consider the following information when you are designing and deploying apps:
 
 -   You cannot create hash- or path-based rules for Packaged apps because all Packaged apps and Packaged app installers are signed by the software publisher of the package. Classic apps were not always consistently signed; therefore, AppLocker has to support hash- or path-based rules.
 
--   By default, if there are no rules in a particular rule collection, AppLocker allows every file that is included in that rule collection. For example, if there are no Windows Installer rules, AppLocker allows all .msi, .msp, and .mst files to run. An existing AppLocker policy that was targeted at computers running Windows Server 2008 R2 and Windows 7 would not have rules for Packaged apps. Therefore, when a computer running  Windows Server 2012  or Windows 8 joins a domain where an AppLocker policy is already configured, users would be allowed to run any Packaged app. This might be contrary to your design.
+-   By default, if there are no rules in a particular rule collection, AppLocker allows every file that is included in that rule collection. For example, if there are no Windows Installer rules, AppLocker allows all .msi, .msp, and .mst files to run. An existing AppLocker policy that was targeted at computers running Windows Server 2008 R2 and Windows 7 would not have rules for Packaged apps. Therefore, when a computer running Windows Server 2012 or Windows 8 joins a domain where an AppLocker policy is already configured, users would be allowed to run any Packaged app. This might be contrary to your design.
 
-    To prevent all Packaged apps from running on a newly domain-joined computer, by default AppLocker blocks all Packaged apps on a computer running  Windows Server 2012  or Windows 8 if the existing domain policy has rules configured in the Exe rule collection. You must take explicit action to allow Packaged apps in your enterprise. You can allow only a select set of Packaged apps. Or if you want to allow all Packaged apps, you can create a default rule for the Packaged apps collection.
+    To prevent all Packaged apps from running on a newly domain-joined computer, by default AppLocker blocks all Packaged apps on a computer running Windows Server 2012 or Windows 8 if the existing domain policy has rules configured in the Exe rule collection. You must take explicit action to allow Packaged apps in your enterprise. You can allow only a select set of Packaged apps. Or if you want to allow all Packaged apps, you can create a default rule for the Packaged apps collection.
 
 ## Using AppLocker to manage Packaged apps
 Just as there are differences in managing each rule collection, you need to manage the Packaged apps with the following strategy:

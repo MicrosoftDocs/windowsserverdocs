@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how to maintain rules within AppLocker policies in  Windows Server 2012  and Windows 8.
+This topic describes how to maintain rules within AppLocker policies in Windows Server 2012 and Windows 8.
 
 Common AppLocker maintenance scenarios include:
 
@@ -86,9 +86,6 @@ For every scenario, the steps to maintain an AppLocker policy by using the Local
 
 ### Step 1: Understand the current behavior of the policy
 Before modifying a policy, evaluate how the policy is currently implemented. To read the procedures necessary to understand the current behavior of the policy, see [Monitor Application Usage with AppLocker](monitor-application-usage-with-applocker.md). Updating your AppLocker planning document will help you track your findings. For information about creating this document, see [Creating Your AppLocker Planning Document](http://technet.microsoft.com/library/ee449479(WS.10).aspx).
-
-> [!NOTE]
-> The AppLocker Planning Guide applies to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8 and  Windows 7 .
 
 ### Step 2: Update the AppLocker policy by modifying the appropriate AppLocker rule
 Rules are grouped into a collection, which can have the policy enforcement setting applied to it. By default, AppLocker rules do not allow users to open or run any files that are not specifically allowed.

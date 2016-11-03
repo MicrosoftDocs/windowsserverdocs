@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional describes Software Restriction Policies (SRP) in  Windows Server 2012  and Windows 8, and provides links to technical information about SRP beginning with Windows Server 2003.
+This topic for the IT professional describes Software Restriction Policies (SRP) in Windows Server 2012 and Windows 8, and provides links to technical information about SRP beginning with Windows Server 2003.
 
 For procedures and troubleshooting tips, see [Administer Software Restriction Policies](administer-software-restriction-policies.md) and [Troubleshoot Software Restriction Policies](troubleshoot-software-restriction-policies.md).
 

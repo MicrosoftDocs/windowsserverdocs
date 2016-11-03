@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to specify which applications can or cannot run as exceptions to an AppLocker rule in  Windows Server 2012  and Windows 8.
+This topic describes the steps to specify which applications can or cannot run as exceptions to an AppLocker rule in Windows Server 2012 and Windows 8.
 
 Rule exceptions allow you to specify files or folders to exclude from the rule. For more information about exceptions, see [Understanding AppLocker Rule Exceptions](../../get-started/how-applocker-works/understanding-applocker-rule-exceptions.md).
 

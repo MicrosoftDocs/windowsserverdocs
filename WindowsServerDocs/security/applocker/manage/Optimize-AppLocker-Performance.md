@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how to optimize AppLocker policy enforcement in  Windows Server 2012  and Windows 8.
+This topic describes how to optimize AppLocker policy enforcement in Windows Server 2012 and Windows 8.
 
 ## Optimization of Group Policy
 AppLocker policies can be implemented by organization unit (OU) using Group Policy. If so, your Group Policy infrastructure should be optimized and retested for performance when AppLocker policies are added to existing Group Policy Objects (GPOs) or new GPOs are created, as you do with adding any policies to your GPOs.

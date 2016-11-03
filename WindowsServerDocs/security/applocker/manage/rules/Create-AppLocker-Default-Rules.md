@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to create a standard set of AppLocker rules that will allow Windows system files to run in  Windows Server 2012  and Windows 8.
+This topic describes the steps to create a standard set of AppLocker rules that will allow Windows system files to run in Windows Server 2012 and Windows 8.
 
 AppLocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed to run.
 

@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic shows how to create an AppLocker rule with a publisher condition in  Windows Server 2012  and Windows 8.
+This topic shows how to create an AppLocker rule with a publisher condition in Windows Server 2012 and Windows 8.
 
 You can use publisher conditions only for files that are digitally signed; the publisher condition identifies an application based on its digital signature and extended attributes. The digital signature contains information about the company that created the application (the publisher). The extended attributes, which are obtained from the binary resource, contain the name of the product that the file is part of and the version number of the application. The publisher may be a software development company, such as Microsoft, or the information technology department of your organization.
 

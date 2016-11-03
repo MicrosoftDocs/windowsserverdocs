@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 This overview topic for the IT professional explains the AppLocker application control feature and provides links to the topics in the technical reference.
 
-AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. AppLocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications. These capabilities have been enhanced in  Windows Server 2012  and Windows 8.
+AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. AppLocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications. These capabilities have been enhanced in Windows Server 2012 and Windows 8.
 
 The AppLocker Technical Reference contains the following subjects:
 

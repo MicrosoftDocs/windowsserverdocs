@@ -153,7 +153,7 @@ Introduced in  Windows Server 2008 R2  and  Windows 7 , security auditing allows
 Often it is not enough to know simply that an object such as a file or folder was accessed. You may also want to know why the user was able to access this resource. You can obtain this forensic data by configuring the **Audit Handle Manipulation** setting with the **Audit File System** or with the **Audit Registry** audit setting. For more information, see "Step 3: Creating and verifying an audit policy that provides the reason for object access" in the [Advanced Security Auditing Walkthrough](advanced-security-auditing-walkthrough.md).
 
 ## <a name="BKMK_8"></a>How do I know when changes are made to access control settings, by whom, and what the changes were?
-To track access control changes on computers running  Windows Server 2012 R2 ,  Windows Server 2012  Windows 7 ,  Windows Server 2008 R2 , Windows Vista, or Windows Server 2008, you need to enable the following settings, which track changes to DACLs:
+To track access control changes on computers running  Windows Server 2012 R2 , Windows Server 2012 Windows 7 ,  Windows Server 2008 R2 , Windows Vista, or Windows Server 2008, you need to enable the following settings, which track changes to DACLs:
 
 -   **Audit File System** subcategory: Enable for success, failure, or success and failure
 

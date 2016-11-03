@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how to import an AppLocker policy in  Windows Server 2012  and Windows 8.
+This topic describes how to import an AppLocker policy in Windows Server 2012 and Windows 8.
 
 Before completing this procedure, you should have exported an AppLocker policy. For more information, see [Export an AppLocker Policy to an XML File](export-an-applocker-policy-to-an-xml-file.md).
 

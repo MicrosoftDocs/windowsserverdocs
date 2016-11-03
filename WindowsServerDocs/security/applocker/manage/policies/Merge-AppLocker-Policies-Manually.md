@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This procedural topic describes the steps to manually merge AppLocker policies to update the Group Policy Object (GPO) in  Windows Server 2012  and Windows 8.
+This procedural topic describes the steps to manually merge AppLocker policies to update the Group Policy Object (GPO) in Windows Server 2012 and Windows 8.
 
 If you have created multiple AppLocker policies and need to merge them to create one AppLocker policy, you can either manually merge the policies or use the Windows PowerShell cmdlets for AppLocker. You cannot automatically merge policies by using the AppLocker snap-in. You must create one rule collection from two or more policies. For information about merging policies by using the cmdlet, see [Merge AppLocker Policies by Using Set-applockerPolicy](merge-applocker-policies-by-using-set-applockerpolicy.md).
 

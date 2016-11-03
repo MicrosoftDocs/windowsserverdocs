@@ -374,7 +374,7 @@ Outside of using this command, data drives will be locked on shutdown and restar
 Yes. However, shadow copies made prior to enabling BitLocker will be automatically deleted when BitLocker is enabled on software\-encrypted drives. If you are using a hardware encrypted drive, the shadow copies are retained.
 
 ### <a name="BKMK_VHD"></a>Does BitLocker support virtual hard disks \(VHDs\)?
-BitLocker is not supported on bootable VHDs, but BitLocker is supported on data volume VHDs, such as those used by clusters, if you are running Windows 8, Windows 8.1,  Windows Server 2012  or  Windows Server 2012 R2 .
+BitLocker is not supported on bootable VHDs, but BitLocker is supported on data volume VHDs, such as those used by clusters, if you are running Windows 8, Windows 8.1, Windows Server 2012 or  Windows Server 2012 R2 .
 
 ## More information
 

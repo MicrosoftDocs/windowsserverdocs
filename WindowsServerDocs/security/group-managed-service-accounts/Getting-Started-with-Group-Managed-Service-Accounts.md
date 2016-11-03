@@ -57,7 +57,7 @@ Services have the following principals from which to choose, and each has certai
 |Virtual Account|Local|Limited to one server|Computer manages|
 |Windows 7 standalone Managed Service Account|Domain|Limited to one domain joined server|Computer manages|
 |User Account|Domain|Any domain joined server|None|
-|Group Managed Service Account|Domain|Any  Windows Server 2012  domain-joined server|The domain controller manages, and the host retrieves|
+|Group Managed Service Account|Domain|Any Windows Server 2012 domain-joined server|The domain controller manages, and the host retrieves|
 
 A Windows computer account, or a Windows 7 standalone Managed Service Account (sMSA), or virtual accounts cannot be shared across multiple systems. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts do not have the capability of single-point-of-control password management. This creates problem where each organization needs to create an expensive solution to update keys for the service in Active Directory and then distribute the keys to all instances of those services.
 
@@ -84,16 +84,16 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 |User account???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
 |Shared service member hosts|| Windows Server 2012 |
 |Member host???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
-|gMSA account???s domain DCs| Windows Server 2012  DCs available for host to retrieve the password|Domain with  Windows Server 2012  which can have some systems earlier than  Windows Server 2012 |
+|gMSA account???s domain DCs| Windows Server 2012  DCs available for host to retrieve the password|Domain with Windows Server 2012 which can have some systems earlier than  Windows Server 2012 |
 |Backend service host|RFC compliant Kerberos application server|At least Windows Server 2003|
 |Backend service account???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
 |Windows PowerShell for Active Directory|Windows PowerShell for Active Directory installed locally on a computer supporting a 64-bit architecture or on your remote management computer (for example, using the Remote Server Administration Toolkit)| Windows Server 2012 |
 
 **Active Directory Domain Service requirements**
 
--   The Active Directory schema in the gMSA domain???s forest needs to be updated to  Windows Server 2012  to create a gMSA.
+-   The Active Directory schema in the gMSA domain???s forest needs to be updated to Windows Server 2012 to create a gMSA.
 
-    You can update the schema by installing a domain controller that runs  Windows Server 2012  or by running the version of adprep.exe from a computer running  Windows Server 2012 . The object-version attribute value for the object CN=Schema,CN=Configuration,DC=Contoso,DC=Com must be 52.
+    You can update the schema by installing a domain controller that runs Windows Server 2012 or by running the version of adprep.exe from a computer running  Windows Server 2012 . The object-version attribute value for the object CN=Schema,CN=Configuration,DC=Contoso,DC=Com must be 52.
 
 -   New gMSA account provisioned
 
@@ -137,13 +137,13 @@ When deploying a new server farm, the service administrator will need to determi
 -   The password change interval (default is 30 days).
 
 ### <a name="BKMK_Step1"></a>Step 1: Provisioning group Managed Service Accounts
-You can create a gMSA only if the forest schema has been updated to  Windows Server 2012 , the master root key for Active Directory has been deployed, and there is at least one  Windows Server 2012  DC in the domain in which the gMSA will be created.
+You can create a gMSA only if the forest schema has been updated to  Windows Server 2012 , the master root key for Active Directory has been deployed, and there is at least one Windows Server 2012 DC in the domain in which the gMSA will be created.
 
 Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
 
 #### <a name="BKMK_CreateGMSA"></a>To create a gMSA using the New-ADServiceAccount cmdlet
 
-1.  On the  Windows Server 2012  domain controller, run Windows PowerShell from the Taskbar.
+1.  On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
 2.  At the command prompt for the Windows PowerShell, type the following commands, and then press ENTER. (The Active Directory module will load automatically.)
 
@@ -175,7 +175,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
 
 ##### To create a gMSA for outbound authentication only using the New-ADServiceAccount cmdlet
 
-1.  On the  Windows Server 2012  domain controller, run Windows PowerShell from the Taskbar.
+1.  On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
@@ -237,7 +237,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 #### To add member hosts using the Set-ADServiceAccount cmdlet
 
-1.  On the  Windows Server 2012  domain controller, run Windows PowerShell from the Taskbar.
+1.  On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
@@ -297,7 +297,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 ##### To remove member hosts using the Set-ADServiceAccount cmdlet
 
-1.  On the  Windows Server 2012  domain controller, run Windows PowerShell from the Taskbar.
+1.  On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
@@ -333,7 +333,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ##### To remove a gMSA using the Uninstall-ADServiceAccount cmdlet
 
-1.  On the  Windows Server 2012  domain controller, run Windows PowerShell from the Taskbar.
+1.  On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 

@@ -18,9 +18,9 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic shows how to create an AppLocker rule for packaged apps with a publisher condition in  Windows Server 2012  and Windows 8.
+This topic shows how to create an AppLocker rule for packaged apps with a publisher condition in Windows Server 2012 and Windows 8.
 
-Packaged apps (also known as Windows 8 apps) are new to  Windows Server 2012  and Windows 8. They are based on the new app model that ensures that all the files within an app package share the same identity. Therefore, it is possible to control the entire application using a single AppLocker rule as opposed to the non-packaged apps where each file within the app could have a unique identity. Windows does not support unsigned packaged apps which implies all packaged apps must be signed. AppLocker supports only publisher rules for Packaged apps. A publisher rule for a Packaged app is based on the following information:
+Packaged apps (also known as Windows 8 apps) are new to Windows Server 2012 and Windows 8. They are based on the new app model that ensures that all the files within an app package share the same identity. Therefore, it is possible to control the entire application using a single AppLocker rule as opposed to the non-packaged apps where each file within the app could have a unique identity. Windows does not support unsigned packaged apps which implies all packaged apps must be signed. AppLocker supports only publisher rules for Packaged apps. A publisher rule for a Packaged app is based on the following information:
 
 -   Publisher of the package
 

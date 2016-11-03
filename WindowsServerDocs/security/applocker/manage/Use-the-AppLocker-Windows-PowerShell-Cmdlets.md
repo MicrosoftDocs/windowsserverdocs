@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes how each AppLocker Windows PowerShell cmdlet can help you administer your AppLocker application control policies in  Windows Server 2012  and Windows 8.
+This topic describes how each AppLocker Windows PowerShell cmdlet can help you administer your AppLocker application control policies in Windows Server 2012 and Windows 8.
 
 ## AppLocker Windows PowerShell cmdlets
 The five AppLocker cmdlets are designed to streamline the administration of an AppLocker policy. They can be used to help create, test, maintain, and troubleshoot an AppLocker policy. The cmdlets are intended to be used in conjunction with the AppLocker user interface that is accessed through the Microsoft Management Console (MMC) snap-in extension to the Local Security Policy snap-in and Group Policy Management Console.

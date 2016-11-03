@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes steps to run the wizard to create AppLocker rules on a reference computer in  Windows Server 2012  and Windows 8.
+This topic describes steps to run the wizard to create AppLocker rules on a reference computer in Windows Server 2012 and Windows 8.
 
 AppLocker allows you to automatically generate rules for all files within a folder. It will scan the specified folder and create the condition types that you choose for each file in that folder.
 
