@@ -1,14 +1,12 @@
 ---
 title: About dump encryption
-description: " "
+description: "Describes how to encrypt dump files and troubleshoot encryption."
 ms.prod: windows-server-threshold
-ms.service: na
-manager: timlt
-ms.tgt_pltfrm: na
+manager: dongill
 ms.topic: article
 author: larsiwer
 ms.author: kathydav
-ms.date: 
+ms.date: 11/03/2016
 ---
 
 # About dump encryption
