@@ -1,5 +1,5 @@
 ---
-title:
+title: Migrate your Remote Desktop Services deployment to Windows Server 2016
 description: This article describes how to migrate your Remote Desktop Services deployment to new Windows Server 2016 servers.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -85,8 +85,7 @@ Follow these steps to migrate RD Gateway servers:
 ## Migrate RD Licensing servers
 
 Follow these steps to migrate an RD Licensing server from a source server running Windows Server 2012 or Windows Server 2012 R2 to a destination server running Windows Server 2012 R2.
-1. Migrate the Remote Desktop Services client access licenses (RDS CALs) from the source server to the destination server.
-For more information, see Migrate Remote Desktop Services Client Access Licenses (RDS CALs).
+1. [Migrate the Remote Desktop Services client access licenses (RDS CALs)](migrate-rds-cals.md) from the source server to the destination server.
 2. Edit the **Deployment Properties** in **Server Manager** on the Remote Desktop management server (which is typically being run on the first RD Connection Broker server) to include only the new RD Licensing servers running Windows Server 2016.
 3. Deactivate the source RD Licensing server by going to the **Remote Desktop Licensing Manager**, right-clicking the appropriate server, hovering over **Advanced** to select **Deactivate Server**, and then following the steps.
 4. Remove the source RD Licensing servers from the deployment in **Server Manager** on the Remote Desktop management server.
