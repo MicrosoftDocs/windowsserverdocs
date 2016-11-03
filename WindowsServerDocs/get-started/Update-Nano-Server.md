@@ -13,7 +13,7 @@ author: jaimeo
 ms.author: jaimeo
 ---
 # Updating Nano Server
-Nano Server offers a variety of methods for staying up to date. Compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to that of Windows 10. These periodic releases are known as **Current Branch for Business (CBB)** releases. This approach supports customers who nt to innovate more quickly and move at a cloud cadence of rapid development lifecycles. More information about CBB is available on the [Windows Server Blog](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+Nano Server offers a variety of methods for staying up to date. Compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to that of Windows 10. These periodic releases are known as **Current Branch for Business (CBB)** releases. This approach supports customers who want to innovate more quickly and move at a cloud cadence of rapid development lifecycles. More information about CBB is available on the [Windows Server Blog](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
 **Between these CBB releases**, Nano Server stays current with a series of *cumulative updates*. For example, the first cumulative update for Nano Server was released on September 26, 2016 with [KB3192366](https://support.microsoft.com/en-us/kb/3192366). With this and subsequent cumulative updates, we provide various options for installing these updates on Nano Server. In this article, we'll use the KB3192366 update as an example to illustrate how to obtain and apply cumulative updates to Nano Server. For more information on the cumulative update model, see the [Microsoft Update blog](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
 
@@ -77,11 +77,11 @@ Enter-PSSession $s
 - Using PowerShell
 ```powershell
 
-1. Apply the servicing stack update first and then restart
+# Apply the servicing stack update first and then restart
 Add-WindowsPackage -Online -PackagePath C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
 Restart-Computer; exit
 
-2. After restarting, apply the cumulative update and then restart
+# After restarting, apply the cumulative update and then restart
 Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Credential (Get-Credential)
 Add-WindowsPackage -Online -PackagePath C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab
 Restart-Computer; exit
@@ -89,13 +89,13 @@ Restart-Computer; exit
 - Using dism.exe
 ```powershell
 
-3. Apply the servicing stack update first and then restart
+# Apply the servicing stack update first and then restart
 dism.exe /Online /Add-Package /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
 
 After the operation completes successfully and you are prompted to restart, it's safe to press Ctrl+C to cancel the pipeline and return to the prompt
 Restart-Computer; exit
 
-4. After restarting, apply the cumulative update and then restart
+# After restarting, apply the cumulative update and then restart
 Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Credential (Get-Credential)
 dism.exe /Online /Add-Package /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab
 Restart-Computer; exit
