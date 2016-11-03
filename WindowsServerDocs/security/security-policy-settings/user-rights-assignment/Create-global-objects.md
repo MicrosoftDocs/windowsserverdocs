@@ -94,6 +94,6 @@ Do not assign the **Create a token object** user right to any users. Processes t
 None. Not Defined is the default domain policy configuration.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

@@ -20,15 +20,15 @@ ms.date: 10/12/2016
 
 This overview topic for the IT professional explains the AppLocker application control feature and provides links to the topics in the technical reference.
 
-AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. AppLocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications. These capabilities have been enhanced in  Windows Server 2012  and Windows 8.
+AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. AppLocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications. These capabilities have been enhanced in Windows Server 2012 and Windows 8.
 
 The AppLocker Technical Reference contains the following subjects:
 
--   [What Is AppLocker?](What-Is-AppLocker.md)
+-   [What Is AppLocker?](what-is-applocker.md)
 
     This topic describes what AppLocker is and how its features differ from Software Restriction Policies.
 
--   [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md)
+-   [Requirements to Use AppLocker](requirements-to-use-applocker.md)
 
     This topic lists software requirements that allow you to use AppLocker.
 
@@ -36,35 +36,35 @@ The AppLocker Technical Reference contains the following subjects:
 
     This topic describes the scenarios and applications in which AppLocker is useful.
 
--   [AppLocker Policy Use Scenarios](AppLocker-Policy-Use-Scenarios.md)
+-   [AppLocker Policy Use Scenarios](applocker-policy-use-scenarios.md)
 
     This topic lists the various application control scenarios in which AppLocker policies can be effectively implemented.
 
--   [How AppLocker Works](How-AppLocker-Works.md)
+-   [How AppLocker Works](how-applocker-works.md)
 
     This topic explains how the application identity service and the AppLocker engine work to set and enforce policies.
 
--   [AppLocker Architecture and Components](AppLocker-Architecture-and-Components.md)
+-   [AppLocker Architecture and Components](applocker-architecture-and-components.md)
 
     This topic describes the components that AppLocker uses for creating and applying application control policies.
 
--   [AppLocker Processes and Interactions](AppLocker-Processes-and-Interactions.md)
+-   [AppLocker Processes and Interactions](applocker-processes-and-interactions.md)
 
     This topic explains how AppLocker processes policies for both auditing and enforcing each rule collection type.
 
--   [AppLocker Functions](AppLocker-Functions.md)
+-   [AppLocker Functions](applocker-functions.md)
 
     This topic lists the functions and security levels for the Software Restriction Policies and AppLocker policies beginning with Windows Server 2003.
 
--   [Security Considerations for AppLocker](Security-Considerations-for-AppLocker.md)
+-   [Security Considerations for AppLocker](security-considerations-for-applocker.md)
 
     This topic describes the threats and vulnerabilities to AppLocker and how you can mitigate them.
 
--   [Tools to Use with AppLocker](Tools-to-Use-with-AppLocker.md)
+-   [Tools to Use with AppLocker](tools-to-use-with-applocker.md)
 
     This topic lists and describes the tools available to evaluate, review, create, modify, and test AppLocker policies.
 
--   [AppLocker Settings](AppLocker-Settings.md)
+-   [AppLocker Settings](applocker-settings.md)
 
     This topic lists the relevant Windows operating system settings for AppLocker.
 

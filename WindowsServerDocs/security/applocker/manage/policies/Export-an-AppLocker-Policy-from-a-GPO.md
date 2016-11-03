@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps to export an AppLocker policy from a Group Policy Object (GPO) so that it can be modified in  Windows Server 2012  and Windows 8.
+This topic describes the steps to export an AppLocker policy from a Group Policy Object (GPO) so that it can be modified in Windows Server 2012 and Windows 8.
 
 Updating an AppLocker policy that is currently enforced in your production environment can have unintended results. Therefore, export the policy from the GPO and update the rule or rules by using AppLocker on your AppLocker reference or test computer.
 

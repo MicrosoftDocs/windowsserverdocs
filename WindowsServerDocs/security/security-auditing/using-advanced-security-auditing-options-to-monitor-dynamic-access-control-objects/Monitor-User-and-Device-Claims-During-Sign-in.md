@@ -58,6 +58,6 @@ After you configure settings to monitor user and device claims, verify that the 
 4.  On the file server, open Event Viewer, expand **Windows Logs**, and select the **Security** log. Look for event 4626, and confirm that it contains information about user claims and device claims.
 
 ### Related resource
-[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)
+[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md)
 
 

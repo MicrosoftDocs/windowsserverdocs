@@ -49,6 +49,6 @@ The purpose of AppLocker is to restrict the access to software, and therefore, t
 -   In Windows 7, administrators have the option of restricting standard users from bypassing AppLocker policies when logging into their local computers in safe mode. For more information about this setting, see [article 977542](http://support.microsoft.com/kb/977542) in the Microsoft Knowledge Base.
 
 ## See Also
-[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
+[AppLocker Technical Reference](applocker-technical-reference.md)
 
 

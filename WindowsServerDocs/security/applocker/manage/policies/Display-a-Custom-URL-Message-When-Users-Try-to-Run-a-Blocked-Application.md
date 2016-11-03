@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes the steps for displaying a customized message to users when an AppLocker policy denies access to an application in  Windows Server 2012  and Windows 8.
+This topic describes the steps for displaying a customized message to users when an AppLocker policy denies access to an application in Windows Server 2012 and Windows 8.
 
 Using Group Policy, AppLocker can be configured to display a message with a custom URL. You can use this URL to redirect users to a support site that contains information about why the user received the error and which applications are allowed. If you do not display a custom message when an application is blocked, the default access denied message is displayed.
 

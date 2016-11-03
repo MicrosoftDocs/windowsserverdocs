@@ -29,12 +29,12 @@ For more information about Windows passwords, see the [Passwords Technical Overv
 In Windows and many other operating systems, the most common method for authenticating a user's identity is to use a secret passphrase or password. Securing your network environment requires that strong passwords be used by all users. This helps avoid the threat of a malicious user guessing a weak password, whether through manual methods or by using tools, to acquire the credentials of a compromised user account. This is especially true for administrative accounts. When you change a complex password regularly, it reduces the likelihood of a password attack compromising that account.
 
 ## <a name="BKMK_NEW"></a>New and changed functionality
-In  Windows Server 2012  and Windows 8, picture passwords are new. Picture passwords are a combination of a user selected image coupled with a series of gestures. Picture password functionality is disabled on domain\-joined computers. Links to more information about picture passwords are listed in [See Also](#BKMK_LINKS) below.
+In Windows Server 2012 and Windows 8, picture passwords are new. Picture passwords are a combination of a user selected image coupled with a series of gestures. Picture password functionality is disabled on domain\-joined computers. Links to more information about picture passwords are listed in [See Also](#BKMK_LINKS) below.
 
-There has been no change to password functionality in  Windows Server 2012  and Windows 8. No new Group Policy settings have been added. However, improvements and enhancements have been made in credential \(and password\) management, such as with picture passwords, Credential Locker and signing in to Windows 8 with a Microsoft account, formerly known as a Windows Live ID.
+There has been no change to password functionality in Windows Server 2012 and Windows 8. No new Group Policy settings have been added. However, improvements and enhancements have been made in credential \(and password\) management, such as with picture passwords, Credential Locker and signing in to Windows 8 with a Microsoft account, formerly known as a Windows Live ID.
 
 ## <a name="BKMK_DEP"></a>Deprecated functionality
-No password functionality has been deprecated in  Windows Server 2012  and Windows 8.
+No password functionality has been deprecated in Windows Server 2012 and Windows 8.
 
 ## <a name="BKMK_SOFT"></a>Software requirements
 In enterprise environments, passwords are typically managed with Active Directory Domain Services. Passwords can also be managed on the local computer using the settings in local Security Settings, Account Policies, Password Policy.

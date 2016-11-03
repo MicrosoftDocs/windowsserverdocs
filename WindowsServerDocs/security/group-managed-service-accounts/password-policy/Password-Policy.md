@@ -38,20 +38,20 @@ You can configure the password policy settings in the following location by usin
 
 If individual groups require distinct password policies, these groups should be separated into another domain or forest, based on additional requirements.
 
-For information about setting security policies, see [How to Configure Security Policy Settings](../How-to-Configure-Security-Policy-Settings.md).
+For information about setting security policies, see [How to Configure Security Policy Settings](../how-to-configure-security-policy-settings.md).
 
 The following topics provide a discussion of password policy implementation and best practices considerations, policy location, default values for the server type or GPO, relevant differences in operating system versions, security considerations (including the possible vulnerabilities of each setting), countermeasures that you can take, and the potential impact for each setting.
 
--   [Enforce password history](Enforce-password-history.md)
+-   [Enforce password history](enforce-password-history.md)
 
--   [Maximum password age](Maximum-password-age.md)
+-   [Maximum password age](maximum-password-age.md)
 
--   [Minimum password age](Minimum-password-age.md)
+-   [Minimum password age](minimum-password-age.md)
 
--   [Minimum password length](Minimum-password-length.md)
+-   [Minimum password length](minimum-password-length.md)
 
--   [Password must meet complexity requirements](Password-must-meet-complexity-requirements.md)
+-   [Password must meet complexity requirements](password-must-meet-complexity-requirements.md)
 
--   [Store passwords using reversible encryption](Store-passwords-using-reversible-encryption.md)
+-   [Store passwords using reversible encryption](store-passwords-using-reversible-encryption.md)
 
 

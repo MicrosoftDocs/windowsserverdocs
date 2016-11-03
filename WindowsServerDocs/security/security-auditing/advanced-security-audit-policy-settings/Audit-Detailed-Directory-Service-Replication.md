@@ -40,6 +40,6 @@ If this policy setting is configured, the following events appear on computers r
 |4937|A lingering object was removed from a replica.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

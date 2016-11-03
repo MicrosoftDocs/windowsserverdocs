@@ -73,6 +73,6 @@ After you modify the central access policies on the domain controller, verify th
 11. Expand **Windows Logs**, and then click **Security**. Verify that event 4819 appears in the security log.
 
 ## Related resource
-[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)
+[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md)
 
 

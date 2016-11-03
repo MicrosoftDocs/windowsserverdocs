@@ -24,11 +24,11 @@ Both manage-bde and the BitLocker cmdlets can be used to perform any task that c
 
 Repair-bde is a special circumstance tool that is provided for disaster recovery scenarios in which a BitLocker protected drive cannot be unlocked normally or using the recovery console.
 
-1.  [Manage-bde](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md#BKMK_managebde)
+1.  [Manage-bde](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md#BKMK_managebde)
 
-2.  [Repair-bde](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md#BKMK_repairbde)
+2.  [Repair-bde](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md#BKMK_repairbde)
 
-3.  [BitLocker cmdlets for Windows PowerShell](BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md#BKMK_blcmdlets)
+3.  [BitLocker cmdlets for Windows PowerShell](bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md#BKMK_blcmdlets)
 
 ## <a name="BKMK_managebde"></a>Manage-bde
 Manage-bde is a command-line tool that can be used for scripting BitLocker operations.  Manage-bde offers additional options not displayed in the BitLocker control panel.  For a complete list of the manage-bde options, see the [Manage-bde](../../management/windows-commands/Manage-bde.md) command-line reference.
@@ -222,12 +222,12 @@ Add-BitLockerKeyProtector C: -ADAccountOrGroupProtector -ADAccountOrGroup S-1-5-
 > Active Directory-based protectors are normally used to unlock Failover Cluster enabled volumes.
 
 ## More information
-[BitLocker Overview](BitLocker-Overview.md)
+[BitLocker Overview](bitlocker-overview.md)
 
-[Encrypted Hard Drive](Encrypted-Hard-Drive.md)
+[Encrypted Hard Drive](encrypted-hard-drive.md)
 
-[BitLocker Frequently Asked Questions FAQ](BitLocker-Frequently-Asked-Questions-FAQ.md)
+[BitLocker Frequently Asked Questions FAQ](bitlocker-frequently-asked-questions-faq.md)
 
-[BitLocker: How to deploy on Windows Server 2012](BitLocker-How-to-deploy-on-Windows-Server-2012.md)
+[BitLocker: How to deploy on Windows Server 2012](bitlocker-how-to-deploy-on-windows-server-2012.md)
 
 

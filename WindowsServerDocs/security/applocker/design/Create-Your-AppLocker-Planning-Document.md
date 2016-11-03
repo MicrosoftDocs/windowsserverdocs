@@ -25,15 +25,15 @@ The design process and the planning document help you investigate application us
 
 You should have completed these steps in the design and planning process:
 
-1.  [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+1.  [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 
-2.  [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+2.  [Create List of Applications Deployed to Each Business Group](create-list-of-applications-deployed-to-each-business-group.md)
 
-3.  [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+3.  [Select Types of Rules to Create](select-types-of-rules-to-create.md)
 
-4.  [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+4.  [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md)
 
-5.  [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+5.  [Plan for AppLocker Policy Management](plan-for-applocker-policy-management.md)
 
 ### AppLocker planning document contents
 Your planning document should contain:
@@ -90,9 +90,9 @@ You can use the following form to construct your own AppLocker planning document
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
 |---------|------------|------------|--------|-----------|-------------------------|---------|------|---------|
-|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|Web help|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-applockerTellerRules|Web help|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help desk|
-|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|Web help|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-applockerHRRules|Web help|
 ||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
 ||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition|Deny||Web help|
 ||||Windows files|C:\Windows|Use the default rule for the Windows path|Allow||Help desk|
@@ -113,7 +113,7 @@ You can use the following form to construct your own AppLocker planning document
 
 ### Additional resources
 
--   The AppLocker Policies Design Guide is the predecessor to the AppLocker Policies Deployment Guide. When planning is complete, see the [AppLocker Policies Deployment Guide](../deploy/AppLocker-Policies-Deployment-Guide.md).
+-   The AppLocker Policies Design Guide is the predecessor to the AppLocker Policies Deployment Guide. When planning is complete, see the [AppLocker Policies Deployment Guide](../deploy/applocker-policies-deployment-guide.md).
 
 
 

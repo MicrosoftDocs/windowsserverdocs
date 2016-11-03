@@ -73,6 +73,6 @@ After you configure settings to monitor resource attributes on files, verify tha
     Key information to look for includes the name and account domain of the principal attempting to change the resource attribute, the object that the principal is attempting to modify, and information about the changes that are being attempted.
 
 ### Related resource
-[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)
+[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md)
 
 

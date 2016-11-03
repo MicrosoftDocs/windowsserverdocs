@@ -90,6 +90,6 @@ Enable the **Enforce user logon restrictions** setting.
 None. This is the default configuration.
 
 ## See Also
-[Kerberos Policy](../../kerberos/Kerberos-Policy.md)
+[Kerberos Policy](../../kerberos/kerberos-policy.md)
 
 

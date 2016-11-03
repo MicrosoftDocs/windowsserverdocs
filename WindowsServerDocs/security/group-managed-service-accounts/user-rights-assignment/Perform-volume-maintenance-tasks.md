@@ -92,6 +92,6 @@ Ensure that only the local Administrators group is assigned the **Perform volume
 None. Restricting the **Perform volume maintenance tasks** user right to the local Administrators group is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

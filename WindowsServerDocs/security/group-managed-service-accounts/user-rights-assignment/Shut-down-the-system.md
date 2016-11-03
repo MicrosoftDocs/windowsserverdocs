@@ -75,7 +75,7 @@ Any change to the user rights assignment for an account becomes effective the ne
 ### Group Policy
 Do not apply this setting to computers running Microsoft Windows 2000 Server with Service Pack 1 or earlier.
 
-This user right does not have the same effect as **Force shutdown from a remote system**. For more information, see [Force shutdown from a remote system](Force-shutdown-from-a-remote-system.md).
+This user right does not have the same effect as **Force shutdown from a remote system**. For more information, see [Force shutdown from a remote system](force-shutdown-from-a-remote-system.md).
 
 Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
@@ -106,6 +106,6 @@ Ensure that only the Administrators and Backup Operators groups are assigned the
 The impact of removing these default groups from the **Shut down the system** user right could limit the delegated abilities of assigned roles in your environment. You should confirm that delegated activities are not adversely affected.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

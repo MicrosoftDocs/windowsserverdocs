@@ -21,38 +21,38 @@ ms.date: 10/12/2016
 User Account Control (UAC) helps prevent malicious programs (also called malware) from damaging a computer and helps organizations deploy a better-managed desktop. With UAC, applications and tasks always run in the security context of a non-administrator account, unless an administrator specifically authorizes administrator-level access to the system. UAC can block the automatic installation of unauthorized applications and prevent inadvertent changes to system settings.
 
 ## UAC Process and Interactions
-Each application that requires the administrator access token must prompt the administrator for consent. The one exception is the relationship that exists between parent and child processes. Child processes inherit the user access token from the parent process. Both the parent and child processes, however, must have the same integrity level.  Windows Server 2012  protects processes by marking their integrity levels. Integrity levels are measurements of trust. A "high" integrity application is one that performs tasks that modify system data, such as a disk partitioning application, while a "low" integrity application is one that performs tasks that could potentially compromise the operating system, such as a Web browser. Applications with lower integrity levels cannot modify data in applications with higher integrity levels. When a standard user attempts to run an application that requires an administrator access token, UAC requires that the user provide valid administrator credentials.
+Each application that requires the administrator access token must prompt the administrator for consent. The one exception is the relationship that exists between parent and child processes. Child processes inherit the user access token from the parent process. Both the parent and child processes, however, must have the same integrity level. Windows Server 2012 protects processes by marking their integrity levels. Integrity levels are measurements of trust. A "high" integrity application is one that performs tasks that modify system data, such as a disk partitioning application, while a "low" integrity application is one that performs tasks that could potentially compromise the operating system, such as a Web browser. Applications with lower integrity levels cannot modify data in applications with higher integrity levels. When a standard user attempts to run an application that requires an administrator access token, UAC requires that the user provide valid administrator credentials.
 
-In order to better understand how this process happens it is important to review the details of the  Windows Server 2012  logon process.
+In order to better understand how this process happens it is important to review the details of the Windows Server 2012 logon process.
 
 ### Windows Server?? 2012 Logon Process
 The following illustration demonstrates how the logon process for an administrator differs from the logon process for a standard user.
 
-![Illustration demonstrating how the logon process for an administrator differs from the logon process for a standard user](../../media/How-User-Account-Control-Works/UACWindowsLogonProcess.gif)
+![Illustration demonstrating how the logon process for an administrator differs from the logon process for a standard user](../../media/how-user-account-control-works/UACWindowsLogonProcess.gif)
 
 By default, standard users and administrators access resources and run applications in the security context of standard users. When a user logs on to a computer, the system creates an access token for that user. The access token contains information about the level of access that the user is granted, including specific security identifiers (SIDs) and Windows privileges.
 
 When an administrator logs on, two separate access tokens are created for the user: a standard user access token and an administrator access token. The standard user access token contains the same user-specific information as the administrator access token, but the administrative Windows privileges and SIDs are removed. The standard user access token is used to start applications that do not perform administrative tasks (standard user applications). The standard user access token is then used to display the desktop (Explorer.exe). Explorer.exe is the parent process from which all other user-initiated processes inherit their access token. As a result, all applications run as a standard user unless a user provides consent or credentials to approve an application to use a full administrative access token.
 
-A user that is a member of the Administrators group can log on, browse the Web, and read e-mail while using a standard user access token. When the administrator needs to perform a task that requires the administrator access token,  Windows Server 2012  automatically prompts the user for approval. This prompt is called an elevation prompt, and its behavior can be configured by using the Local Security Policy snap-in (Secpol.msc) or Group Policy.
+A user that is a member of the Administrators group can log on, browse the Web, and read e-mail while using a standard user access token. When the administrator needs to perform a task that requires the administrator access token, Windows Server 2012 automatically prompts the user for approval. This prompt is called an elevation prompt, and its behavior can be configured by using the Local Security Policy snap-in (Secpol.msc) or Group Policy.
 
 > [!NOTE]
-> The term "elevate" is used to refer to the process in  Windows Server 2012  that prompts the user for consent or credentials to use a full administrator access token.
+> The term "elevate" is used to refer to the process in Windows Server 2012 that prompts the user for consent or credentials to use a full administrator access token.
 
 ### The UAC User Experience
-When UAC is enabled, the user experience for standard users is different from that of administrators in Admin Approval Mode. The recommended and more secure method of running  Windows Server 2012  is to make your primary user account a standard user account. Running as a standard user helps to maximize security for a managed environment. With the built-in UAC elevation component, standard users can easily perform an administrative task by entering valid credentials for a local administrator account. The default, built-in UAC elevation component for standard users is the credential prompt.
+When UAC is enabled, the user experience for standard users is different from that of administrators in Admin Approval Mode. The recommended and more secure method of running Windows Server 2012 is to make your primary user account a standard user account. Running as a standard user helps to maximize security for a managed environment. With the built-in UAC elevation component, standard users can easily perform an administrative task by entering valid credentials for a local administrator account. The default, built-in UAC elevation component for standard users is the credential prompt.
 
 The alternative to running as a standard user is to run as an administrator in Admin Approval Mode. With the built-in UAC elevation component, members of the local Administrators group can easily perform an administrative task by providing approval. The default, built-in UAC elevation component for an administrator account in Admin Approval Mode is called the consent prompt. The UAC elevation prompting behavior can be configured by using the Local Security Policy snap-in (Secpol.msc) or Group Policy.
 
 **The consent and credential prompts**
 
-With UAC enabled,  Windows Server 2012  prompts for consent or prompts for credentials of a valid local administrator account before starting a program or task that requires a full administrator access token. This prompt ensures that no malicious software can be silently installed.
+With UAC enabled, Windows Server 2012 prompts for consent or prompts for credentials of a valid local administrator account before starting a program or task that requires a full administrator access token. This prompt ensures that no malicious software can be silently installed.
 
 **The consent prompt**
 
 The consent prompt is presented when a user attempts to perform a task that requires a user's administrative access token. The following is a screen shot of the UAC consent prompt.
 
-![Screen shot of the UAC consent prompt](../../media/How-User-Account-Control-Works/UACConsentPrompt.gif)
+![Screen shot of the UAC consent prompt](../../media/how-user-account-control-works/UACConsentPrompt.gif)
 
 **The credential prompt**
 
@@ -60,17 +60,17 @@ The credential prompt is presented when a standard user attempts to perform a ta
 
 The following screen shot is an example of the UAC credential prompt.
 
-![Screen shot showing an example of the UAC credential prompt](../../media/How-User-Account-Control-Works/UACCredentialPrompt.gif)
+![Screen shot showing an example of the UAC credential prompt](../../media/how-user-account-control-works/UACCredentialPrompt.gif)
 
 **UAC elevation prompts**
 
-The UAC elevation prompts are color-coded to be application-specific, enabling for immediate identification of an application's potential security risk. When an application attempts to run with an administrator's full access token,  Windows Server 2012  first analyzes the executable file to determine its publisher. Applications are first separated into three categories based on the executable file's publisher:  Windows Server 2012 , publisher verified (signed), and publisher not verified (unsigned). The following diagram illustrates how  Windows Server 2012  determines which color elevation prompt to present to the user.
+The UAC elevation prompts are color-coded to be application-specific, enabling for immediate identification of an application's potential security risk. When an application attempts to run with an administrator's full access token, Windows Server 2012 first analyzes the executable file to determine its publisher. Applications are first separated into three categories based on the executable file's publisher:  Windows Server 2012 , publisher verified (signed), and publisher not verified (unsigned). The following diagram illustrates how Windows Server 2012 determines which color elevation prompt to present to the user.
 
 The elevation prompt color-coding is as follows:
 
 -   Red background with a red shield icon: The application is blocked by Group Policy or is from a publisher that is blocked.
 
--   Blue background with a blue and gold shield icon: The application is a  Windows Server 2012  administrative application, such as a Control Panel item.
+-   Blue background with a blue and gold shield icon: The application is a Windows Server 2012 administrative application, such as a Control Panel item.
 
 -   Blue background with a blue shield icon: The application is signed by using Authenticode and is trusted by the local computer.
 
@@ -80,7 +80,7 @@ The elevation prompt color-coding is as follows:
 
 Some Control Panel items, such as **Date and Time Properties**, contain a combination of administrator and standard user operations. Standard users can view the clock and change the time zone, but a full administrator access token is required to change the local system time. The following is a screen shot of the **Date and Time Properties** Control Panel item.
 
-![Screen shot showing the **Date and Time Properties** Control Panel item](../../media/How-User-Account-Control-Works/UACShieldIcon.gif)
+![Screen shot showing the **Date and Time Properties** Control Panel item](../../media/how-user-account-control-works/UACShieldIcon.gif)
 
 The shield icon on the **Change date and time** button indicates that the process requires a full administrator access token and will display a UAC elevation prompt.
 
@@ -97,7 +97,7 @@ While malware could present an imitation of the secure desktop, this issue canno
 ## UAC Architecture
 The following diagram details the UAC architecture.
 
-![Diagram detailing the UAC architecture](../../media/How-User-Account-Control-Works/UACArchitecture.gif)
+![Diagram detailing the UAC architecture](../../media/how-user-account-control-works/UACArchitecture.gif)
 
 To better understand each component, review the table below:
 
@@ -120,7 +120,7 @@ To better understand each component, review the table below:
 |Virtualization|Virtualization technology ensures that non-compliant applications do not silently fail to run or fail in a way that the cause cannot be determined. UAC also provides file and registry virtualization and logging for applications that write to protected areas.|
 |File system and registry|The per-user file and registry virtualization redirects per-computer registry and file write requests to equivalent per-user locations. Read requests are redirected to the virtualized per-user location first and to the per-computer location second.|
 
-There is a change on  Windows Server 2012  UAC from previous Windows versions. The new slider will never turn UAC completely off. The new setting will:
+There is a change on Windows Server 2012 UAC from previous Windows versions. The new slider will never turn UAC completely off. The new setting will:
 
 -   Keep the UAC service running.
 
@@ -132,14 +132,14 @@ There is a change on  Windows Server 2012  UAC from previous Windows versions. T
 > In order to fully disable UAC you must disable the policy **User Account Control: Run all administrators in Admin Approval Mode**.
 
 > [!WARNING]
-> Tailored Applications will not work on  Windows Server 2012  when UAC is disabled.
+> Tailored Applications will not work on Windows Server 2012 when UAC is disabled.
 
 ### Virtualization
-Because system administrators in enterprise environments attempt to secure systems, many line-of-business (LOB) applications are designed to use only a standard user access token. As a result, IT administrators do not need to replace the majority of applications when running  Windows Server 2012  with UAC enabled.
+Because system administrators in enterprise environments attempt to secure systems, many line-of-business (LOB) applications are designed to use only a standard user access token. As a result, IT administrators do not need to replace the majority of applications when running Windows Server 2012 with UAC enabled.
 
- Windows Server 2012  includes file and registry virtualization technology for applications that are not UAC compliant and that require an administrator's access token to run correctly. Virtualization ensures that even applications that are not UAC compliant are compatible with  Windows Server 2012  . When an administrative application that is not UAC compliant attempts to write to a protected directory, such as Program Files, UAC gives the application its own virtualized view of the resource it is attempting to change. The virtualized copy is maintained in the user's profile. This strategy creates a separate copy of the virtualized file for each user that runs the non-compliant application.
+ Windows Server 2012  includes file and registry virtualization technology for applications that are not UAC compliant and that require an administrator's access token to run correctly. Virtualization ensures that even applications that are not UAC compliant are compatible with Windows Server 2012 . When an administrative application that is not UAC compliant attempts to write to a protected directory, such as Program Files, UAC gives the application its own virtualized view of the resource it is attempting to change. The virtualized copy is maintained in the user's profile. This strategy creates a separate copy of the virtualized file for each user that runs the non-compliant application.
 
-Most application tasks operate properly by using virtualization features. Although virtualization allows a majority of applications to run, it is a short-term fix and not a long-term solution. Application developers should modify their applications to be compliant with the  Windows Server 2012  logo program as soon as possible, rather than relying on file, folder, and registry virtualization.
+Most application tasks operate properly by using virtualization features. Although virtualization allows a majority of applications to run, it is a short-term fix and not a long-term solution. Application developers should modify their applications to be compliant with the Windows Server 2012 logo program as soon as possible, rather than relying on file, folder, and registry virtualization.
 
 Virtualization is not in option in the following scenarios:
 
@@ -155,7 +155,7 @@ An application manifest is an XML file that describes and identifies the shared 
 All UAC-compliant applications should have a requested execution level added to the application manifest. If the application requires administrative access to the system, then marking the application with a requested execution level of "require administrator" ensures that the system identifies this program as an administrative application and performs the necessary elevation steps. Requested execution levels specify the privileges required for an application.
 
 ### Installer Detection Technology
-Installation programs are applications designed to deploy software. Most installation programs write to system directories and registry keys. These protected system locations are typically writeable only by an administrator in Installer detection technology, which means that standard users do not have sufficient access to install programs.  Windows Server 2012  heuristically detects installation programs and requests administrator credentials or approval from the administrator user in order to run with access privileges.  Windows Server 2012  also heuristically detects updates and programs that uninstall applications. One of the design goals of UAC is to prevent installations from being run without the user's knowledge and consent because installation programs write to protected areas of the file system and registry.
+Installation programs are applications designed to deploy software. Most installation programs write to system directories and registry keys. These protected system locations are typically writeable only by an administrator in Installer detection technology, which means that standard users do not have sufficient access to install programs. Windows Server 2012 heuristically detects installation programs and requests administrator credentials or approval from the administrator user in order to run with access privileges. Windows Server 2012 also heuristically detects updates and programs that uninstall applications. One of the design goals of UAC is to prevent installations from being run without the user's knowledge and consent because installation programs write to protected areas of the file system and registry.
 
 Installer detection only applies to:
 

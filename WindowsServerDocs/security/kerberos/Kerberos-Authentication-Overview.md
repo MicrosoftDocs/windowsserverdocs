@@ -49,6 +49,6 @@ The benefits gained by using Kerberos for domain\-based authentication are:
     By using the Kerberos protocol, a party at either end of a network connection can verify that the party on the other end is the entity it claims to be. NTLM does not enable clients to verify a server???s identity or enable one server to verify the identity of another. NTLM authentication was designed for a network environment in which servers were assumed to be genuine. The Kerberos protocol makes no such assumption.
 
 ## See Also
-[Windows Authentication Overview](../windows-authentication/Windows-Authentication-Overview.md)
+[Windows Authentication Overview](../windows-authentication/windows-authentication-overview.md)
 
 

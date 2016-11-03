@@ -101,6 +101,6 @@ Assign the **Deny log on as a batch job** user right to the local Guest account.
 If you assign the **Deny log on as a batch job** user right to other accounts, you could deny the ability to perform required job activities to users who are assigned specific administrative roles. You should confirm that delegated tasks are not affected adversely.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

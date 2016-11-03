@@ -22,7 +22,7 @@ This topic for the IT professional describes how to monitor changes to resource 
 
 Resource attribute definitions define the basic properties of resource attributes, such as what it means for a resource to be defined as ???high business value.??? Resource attribute definitions are stored in AD DS under the Resource Properties container. Changes to these definitions could significantly change the protections that govern a resource, even if the resource attributes that apply to the resource remain unchanged. Changes can be monitored like any other AD DS object.
 
-For information about monitoring changes to the resource attributes that apply to files, see [Monitor the Resource Attributes on Files and Folders](Monitor-the-Resource-Attributes-on-Files-and-Folders.md).
+For information about monitoring changes to the resource attributes that apply to files, see [Monitor the Resource Attributes on Files and Folders](monitor-the-resource-attributes-on-files-and-folders.md).
 
 > [!NOTE]
 > The contents of this topic apply to the list of supported Windows operating systems designated in the **Applies To** list at the beginning of this topic.
@@ -73,6 +73,6 @@ After you configure settings to monitor changes to resource attributes in AD DS,
 7.  Expand **Windows Logs**, and then click **Security**. Verify that event 5137 appears in the security log.
 
 ### Related resource
-[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)
+[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects.md)
 
 

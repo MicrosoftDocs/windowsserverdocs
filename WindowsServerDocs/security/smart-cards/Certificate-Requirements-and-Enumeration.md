@@ -35,7 +35,7 @@ When a smart card is inserted, the following steps are performed:
 
 4.  The name of the container is retrieved by using the **PP_CONTAINER** parameter with **CryptGetProvParam**.
 
-5.  Using the context acquired in Step 3, the CSP is queried for the **PP_USER_CERTSTORE** parameter (added in Windows Vista). For more information, see [Smart Card Architecture](Smart-Card-Architecture.md). If the operation is successful, the name of a certificate store is returned, and the program flow skips to Step 8.
+5.  Using the context acquired in Step 3, the CSP is queried for the **PP_USER_CERTSTORE** parameter (added in Windows Vista). For more information, see [Smart Card Architecture](smart-card-architecture.md). If the operation is successful, the name of a certificate store is returned, and the program flow skips to Step 8.
 
 6.  If the operation in Step 5 fails, the default container context from Step 3 is queried for the **AT_KEYEXCHANGE** key.
 
@@ -89,7 +89,7 @@ If you enable the **Allow signature keys valid for Logon** credential provider p
 
 The following diagram illustrates how smart card sign-in works in the supported versions of Windows.
 
-![Diagram showing how smart card sign-in works in the supported versions of Windows](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_08.PNG)
+![Diagram showing how smart card sign-in works in the supported versions of Windows](../media/certificate-requirements-and-enumeration/WindowsSmartCardTechnicalReference_08.PNG)
 
 **Smart card sign-in flow**
 
@@ -213,21 +213,21 @@ The `<Issuer Name>` and `<Subject Name>` are taken from the client certificate, 
 
 **Certificate revocation list distribution points**
 
-![Screenshot showing Certificate revocation list distribution points](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_09.PNG)
+![Screenshot showing Certificate revocation list distribution points](../media/certificate-requirements-and-enumeration/WindowsSmartCardTechnicalReference_09.PNG)
 
 **UPN in Subject Alternative Name field**
 
-![Screnshot showing UPN in Subject Alternative Name field](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_10.PNG)
+![Screnshot showing UPN in Subject Alternative Name field](../media/certificate-requirements-and-enumeration/WindowsSmartCardTechnicalReference_10.PNG)
 
 **Subject and Issue fields**
 
-![Screnshot showing Subject and Issue fields](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_11.PNG)
+![Screnshot showing Subject and Issue fields](../media/certificate-requirements-and-enumeration/WindowsSmartCardTechnicalReference_11.PNG)
 
 This account mapping is supported by the KDC in addition to six other mapping methods. The following figure demonstrates a flow of user account mapping logic that is used by the KDC.
 
 **High-level flow of certificate processing for sign-in**
 
-![Flowchart showing High-level flow of certificate processing for sign-in](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_12.PNG)
+![Flowchart showing High-level flow of certificate processing for sign-in](../media/certificate-requirements-and-enumeration/WindowsSmartCardTechnicalReference_12.PNG)
 
 The certificate object is parsed to look for content to perform user account mapping.
 
@@ -243,7 +243,7 @@ The following figure illustrates the process of mapping user accounts for sign-i
 
 **Certificate processing logic**
 
-![Figure showing the process of mapping user accounts for sign-in in the directory by viewing various entries in the certificate](../media/Certificate-Requirements-and-Enumeration/WindowsSmartCardTechnicalReference_13.PNG)
+![Figure showing the process of mapping user accounts for sign-in in the directory by viewing various entries in the certificate](../media/certificate-requirements-and-enumeration/WindowsSmartCardTechnicalReference_13.PNG)
 
 NT_AUTH policy is best described in the CERT_CHAIN_POLICY_NT_AUTH parameter section of the CertVerifyCertificateChainPolicy function. For more information, see [CertVerifyCertificateChainPolicy](http://go.microsoft.com/fwlink/?LinkId=93738).
 
@@ -281,7 +281,7 @@ For account mapping to work across forests, particularly in cases where there is
 > For the hint field to appear during smart card sign-in, the **Allow user name hint** Group Policy setting (**X509HintsNeeded** registry key) must be enabled on the client.
 
 ## OCSP support for PKINIT
-Online Certificate Status Protocol (OCSP), which is defined in RFC 2560, enables applications to obtain timely information about the revocation status of a certificate. Because OCSP responses are small and well bound, constrained clients might want to use OCSP to check the validity of the certificates for Kerberos on the KDC, to avoid transmission of large CRLs, and to save bandwidth on constrained networks. For information about CRL registry keys, see [Smart Card Group Policy and Registry Settings](Smart-Card-Group-Policy-and-Registry-Settings.md).
+Online Certificate Status Protocol (OCSP), which is defined in RFC 2560, enables applications to obtain timely information about the revocation status of a certificate. Because OCSP responses are small and well bound, constrained clients might want to use OCSP to check the validity of the certificates for Kerberos on the KDC, to avoid transmission of large CRLs, and to save bandwidth on constrained networks. For information about CRL registry keys, see [Smart Card Group Policy and Registry Settings](smart-card-group-policy-and-registry-settings.md).
 
 The KDCs in Windows attempt to get OCSP responses and use them when available. This behavior cannot be disabled. CryptoAPI for OCSP caches OCSP responses and the status of the responses. The KDC supports only OCSP responses for the signer certificate.
 

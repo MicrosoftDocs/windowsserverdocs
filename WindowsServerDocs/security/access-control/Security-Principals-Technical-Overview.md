@@ -33,7 +33,7 @@ The following diagram illustrates the Windows authorization and access control p
 
 **Authorization and access control process**
 
-![Diagram showing the authorization and access control process](../media/Security-Principals-Technical-Overview/AuthorizationandAccessControlProcess.gif)
+![Diagram showing the authorization and access control process](../media/security-principals-technical-overview/AuthorizationandAccessControlProcess.gif)
 
 Security principals are closely related to the following components and technologies:
 
@@ -79,7 +79,7 @@ Permissions are different from user rights in that permissions are attached to o
 
 On computers, user rights enable administrators to control who has the authority to perform operations that affect an entire computer, rather than a particular object. Administrators assign user rights to individual users or groups as part of the security settings for the computer. Although user rights can be managed centrally through Group Policy, they are applied locally. Users can (and usually do) have different user rights on different computers.
 
-For information about which user rights are available and how they can be implemented, see [User Rights Assignment](User-Rights-Assignment.md).
+For information about which user rights are available and how they can be implemented, see [User Rights Assignment](user-rights-assignment.md).
 
 ### <a name="BKMK_AuthN"></a>Security context in authentication
 A user account enables a user to sign in to computers, networks, and domains with an identity that can be authenticated by the computer, network, or domain.
@@ -125,8 +125,8 @@ By using security groups to manage access control, you can:
 
 -   Minimize the size of access control lists (ACLs) and speed security checking. A security group has its own SID; therefore, the group SID can be used to specify permissions for a resource. In an environment with more than a few thousand users, if the SIDs of individual user accounts are used to specify access to a resource, the ACL of that resource can become unmanageably large, and the time that is needed for the system to check permissions to the resource can become unacceptable.
 
-For descriptions and settings information about the domain security groups that are defined in Active Directory, see [Active Directory Security Groups](Active-Directory-Security-Groups.md).
+For descriptions and settings information about the domain security groups that are defined in Active Directory, see [Active Directory Security Groups](active-directory-security-groups.md).
 
-For descriptions and settings information about the Special Identities group, see [Special Identities](Special-Identities.md).
+For descriptions and settings information about the Special Identities group, see [Special Identities](special-identities.md).
 
 

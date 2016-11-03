@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
   You can browse through the Active??Directory Administrative Center navigation pane by using the tree view, which is similar to the Active??Directory Users and Computers console tree, or by using the list view.
 
- Whether you use the tree view or the list view, you can customize your Active??Directory Administrative Center navigation pane anytime by adding various containers from the local domain or any foreign domain \(that is, a domain other than the local domain that has an established trust with the local domain\) to the navigation pane as separate nodes. Customizing the Active??Directory Administrative Center navigation pane can provide quicker access to Active??Directory objects. For more information, see [Manage Different Domains in Active Directory Administrative Center](Manage-Different-Domains-in-Active-Directory-Administrative-Center.md).
+ Whether you use the tree view or the list view, you can customize your Active??Directory Administrative Center navigation pane anytime by adding various containers from the local domain or any foreign domain \(that is, a domain other than the local domain that has an established trust with the local domain\) to the navigation pane as separate nodes. Customizing the Active??Directory Administrative Center navigation pane can provide quicker access to Active??Directory objects. For more information, see [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
  Also, to further customize the navigation pane, you can rename or remove these manually added navigation pane nodes, create duplicates of these nodes, or move them up or down in the navigation pane.
 

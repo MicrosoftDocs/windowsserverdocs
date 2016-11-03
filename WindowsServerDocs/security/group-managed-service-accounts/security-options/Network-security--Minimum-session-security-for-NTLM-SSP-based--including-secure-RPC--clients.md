@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/Network-security-Minimum-session-security-for-NTLM-SSP-based-including-secure-RPC-clients.md
+redirect_url: /windows-server-docs/security/group-managed-service-accounts/security-options/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-clients.md
 ---

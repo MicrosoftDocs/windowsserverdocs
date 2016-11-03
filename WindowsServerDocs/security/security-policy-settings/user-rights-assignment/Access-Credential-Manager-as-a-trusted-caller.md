@@ -88,6 +88,6 @@ Do not define the **Access Credential Manager as a trusted caller** policy setti
 None. Not defined is the default configuration.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

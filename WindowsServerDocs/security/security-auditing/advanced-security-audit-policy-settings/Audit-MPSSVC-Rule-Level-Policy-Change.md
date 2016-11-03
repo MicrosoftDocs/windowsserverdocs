@@ -60,6 +60,6 @@ If this policy setting is configured, the following events appear on computers r
 |4958|Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer:|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

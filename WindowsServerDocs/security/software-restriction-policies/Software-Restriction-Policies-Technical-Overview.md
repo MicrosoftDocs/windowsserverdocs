@@ -27,15 +27,15 @@ Software restriction policies are trust policies, which are regulations set by a
 
 ## Procedures
 
--   [Administer Software Restriction Policies](Administer-Software-Restriction-Policies.md)
+-   [Administer Software Restriction Policies](administer-software-restriction-policies.md)
 
-    -   [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](Determine-Allow-Deny-List-and-Application-Inventory-for-Software-Restriction-Policies.md)
+    -   [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md)
 
-    -   [Work with Software Restriction Policies Rules](Work-with-Software-Restriction-Policies-Rules.md)
+    -   [Work with Software Restriction Policies Rules](work-with-software-restriction-policies-rules.md)
 
-    -   [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](Use-Software-Restriction-Policies-to-Help-Protect-Your-Computer-Against-an-Email-Virus.md)
+    -   [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md)
 
--   [Troubleshoot Software Restriction Policies](Troubleshoot-Software-Restriction-Policies.md)
+-   [Troubleshoot Software Restriction Policies](troubleshoot-software-restriction-policies.md)
 
 ## Software restriction policy usage scenarios
 Business users collaborate by using e-mail, instant messaging, and peer-to-peer applications. As these collaborations increase, especially with the use of the Internet in business computing, so do the threats from malicious code, such as worms, viruses, and malicious user or attacker threats.
@@ -67,7 +67,7 @@ Specifically, administrators can use software restriction policies for the follo
 -   Prevent executable files from running on the local computer, organizational unit (OU), site, or domain. This would be appropriate in cases when you are not using software restriction policies to address potential issues with malicious users.
 
 ## <a name="BKMK_Diffs_Changes"></a>Differences and changes in functionality
-There are no changes in functionality in SRP for  Windows Server 2012  and Windows 8.
+There are no changes in functionality in SRP for Windows Server 2012 and Windows 8.
 
 **Supported versions**
 
@@ -172,7 +172,7 @@ For more information about SRP architecture, how SRP manages rules, processes an
 |Content type|References|
 |--------|-------|
 |**Planning**|[Software Restriction Policies Technical Reference](http://technet.microsoft.com/library/cc728085(v=WS.10).aspx)|
-|**Operations**|[Administer Software Restriction Policies](Administer-Software-Restriction-Policies.md)|
+|**Operations**|[Administer Software Restriction Policies](administer-software-restriction-policies.md)|
 |**Troubleshooting**|[Software Restriction Policies Troubleshooting (2003)](http://technet.microsoft.com/library/cc737011(v=WS.10).aspx)|
 |**Security**|[Threats and Countermeasures for Software Restriction Polices (2008)](http://technet.microsoft.com/library/dd349795(v=WS.10).aspx)<br /><br />[Threats and Countermeasures for Software Restriction Polices (2008 R2)](http://technet.microsoft.com/library/hh125926(v=WS.10).aspx)|
 |**Tools and settings**|[Software Restriction Policies Tools and Settings (2003)](http://technet.microsoft.com/library/cc782454(v=WS.10).aspx)|

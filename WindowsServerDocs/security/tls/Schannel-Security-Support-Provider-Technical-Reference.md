@@ -26,7 +26,7 @@ These protocols provide a means to secure data that is being sent between applic
 This reference explains what TLS, SSL, and DTLS are; how TLS and SSL use the Security Support Provider Interface (SSPI) and Schannel SSP to secure data transfer across an untrusted network; and which tools and settings are available for configuring TLS and SSL.
 
 
-    -   [Transport Layer Security protocol](Transport-Layer-Security-protocol.md)
+    -   [Transport Layer Security protocol](transport-layer-security-protocol.md)
 
 ## See also
 [Windows Authentication](https://technet.microsoft.com/library/cc755284.aspx)

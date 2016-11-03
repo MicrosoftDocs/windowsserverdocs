@@ -64,7 +64,7 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.
 
 ### Policy dependencies
-The settings for this security policy are dependent on the **Network security: LAN Manager Authentication Level policy** setting value. For information about this policy, see [Network security: LAN Manager authentication level](Network-security-LAN-Manager-authentication-level.md).
+The settings for this security policy are dependent on the **Network security: LAN Manager Authentication Level policy** setting value. For information about this policy, see [Network security: LAN Manager authentication level](network-security-lan-manager-authentication-level.md).
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.

@@ -23,15 +23,15 @@ This planning topic describes the AppLocker policy maintenance information to re
 ## Record your findings
 To complete this AppLocker planning document, you should first complete the following steps:
 
-1.  [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+1.  [Determine Your Application Control Objectives](determine-your-application-control-objectives.md)
 
-2.  [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+2.  [Create List of Applications Deployed to Each Business Group](create-list-of-applications-deployed-to-each-business-group.md)
 
-3.  [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+3.  [Select Types of Rules to Create](select-types-of-rules-to-create.md)
 
-4.  [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+4.  [Determine Group Policy Structure and Rule Enforcement](determine-group-policy-structure-and-rule-enforcement.md)
 
-5.  [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+5.  [Plan for AppLocker Policy Management](plan-for-applocker-policy-management.md)
 
 The three key areas to determine for AppLocker policy management are:
 
@@ -51,9 +51,9 @@ The following table contains the added sample data that was collected when deter
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
 |---------|------------|------------|--------|-----------|-------------------------|---------|------|---------|
-|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|Web help|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-applockerTellerRules|Web help|
 ||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help desk|
-|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|Web help|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-applockerHRRules|Web help|
 ||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
 ||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition|Deny||Web help|
 ||||Windows files|C:\Windows|Use the default rule for the Windows path|Allow||Help desk|
@@ -85,6 +85,6 @@ The following table is an example of what to consider and record.
 ## Next steps
 After you have determined your application control management strategy for each of the business group's applications, the following task remains:
 
--   [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md)
+-   [Create Your AppLocker Planning Document](create-your-applocker-planning-document.md)
 
 

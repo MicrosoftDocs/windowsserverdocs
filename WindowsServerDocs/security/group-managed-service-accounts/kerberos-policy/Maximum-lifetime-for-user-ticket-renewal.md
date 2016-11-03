@@ -90,6 +90,6 @@ Configure the **Maximum lifetime for user ticket renewal** setting to 7 days.
 None. This is the default configuration.
 
 ## See Also
-[Kerberos Policy](../../kerberos/Kerberos-Policy.md)
+[Kerberos Policy](../../kerberos/kerberos-policy.md)
 
 

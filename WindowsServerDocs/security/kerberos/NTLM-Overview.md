@@ -18,11 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic for the IT professional describes NTLM, any changes in functionality, and provides links to technical resources to Windows Authentication and NTLM for  Windows Server 2012  and previous versions.
-
-**Did you mean???**
-
--   [LMcompatibilitylevel](http://technet.microsoft.com/magazine/2006.08.securitywatch.aspx)
+This topic for the IT professional describes NTLM, any changes in functionality, and provides links to technical resources to Windows Authentication and NTLM for Windows Server 2012 and previous versions.
 
 ## <a name="BKMK_OVER"></a>Feature description
 NTLM authentication is a family of authentication protocols that are encompassed in the Windows Msv1\_0.dll. The NTLM authentication protocols include LAN Manager version 1 and 2, and NTLM version 1 and 2. The NTLM authentication protocols authenticate users and computers based on a challenge\/response mechanism that proves to a server or domain controller that a user knows the password associated with an account. When the NTLM protocol is used, a resource server must take one of the following actions to verify the identity of a computer or user whenever a new access token is needed:

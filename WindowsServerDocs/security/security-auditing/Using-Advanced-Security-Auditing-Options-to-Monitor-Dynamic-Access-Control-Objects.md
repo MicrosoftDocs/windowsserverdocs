@@ -22,7 +22,7 @@ This guide explains the process of setting up advanced security auditing capabil
 
 These procedures can be deployed with the advanced security auditing capabilities described in the following document:
 
--   [Advanced Security Auditing Walkthrough](Advanced-Security-Auditing-Walkthrough.md)
+-   [Advanced Security Auditing Walkthrough](advanced-security-auditing-walkthrough.md)
 
 
 > [!NOTE]
@@ -33,26 +33,26 @@ Domain administrators can create and deploy expression-based security audit poli
 
 The procedures in this document describe how to:
 
--   [Monitor the Central Access Policies that Apply on a File Server](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-the-Central-Access-Policies-that-Apply-on-a-File-Server.md)
+-   [Monitor the Central Access Policies that Apply on a File Server](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-the-central-access-policies-that-apply-on-a-file-server.md)
 
--   [Monitor the Central Access Policies Associated with Files and Folders](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-the-Central-Access-Policies-Associated-with-Files-and-Folders.md)
+-   [Monitor the Central Access Policies Associated with Files and Folders](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-the-central-access-policies-associated-with-files-and-folders.md)
 
--   [Monitor the Resource Attributes on Files and Folders](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-the-Resource-Attributes-on-Files-and-Folders.md)
+-   [Monitor the Resource Attributes on Files and Folders](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-the-resource-attributes-on-files-and-folders.md)
 
--   [Monitor Claim Types](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-Claim-Types.md)
+-   [Monitor Claim Types](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-claim-types.md)
 
--   [Monitor User and Device Claims During Sign-in](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-User-and-Device-Claims-During-Sign-in.md)
+-   [Monitor User and Device Claims During Sign-in](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-user-and-device-claims-during-sign-in.md)
 
--   [Monitor Central Access Policy and Rule Definitions](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-Central-Access-Policy-and-Rule-Definitions.md)
+-   [Monitor Central Access Policy and Rule Definitions](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-central-access-policy-and-rule-definitions.md)
 
--   [Monitor Resource Attribute Definitions](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-Resource-Attribute-Definitions.md)
+-   [Monitor Resource Attribute Definitions](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-resource-attribute-definitions.md)
 
--   [Monitor the Use of Removable Storage Devices](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/Monitor-the-Use-of-Removable-Storage-Devices.md)
+-   [Monitor the Use of Removable Storage Devices](using-advanced-security-auditing-options-to-monitor-dynamic-access-control-objects/monitor-the-use-of-removable-storage-devices.md)
 
     > [!IMPORTANT]
     > This procedure can be configured on computers running any of the supported Windows operating systems. The other monitoring procedures can be configured only as part of a functioning dynamic access control deployment.
 
 ## Related resources
-[Security Auditing Overview](../access-control/Security-Auditing-Overview.md)
+[Security Auditing Overview](../access-control/security-auditing-overview.md)
 
 

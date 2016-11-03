@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/security/bitlocker/BitLocker-Use-BitLocker-Drive-Encryption-Tools-to-manage-BitLocker.md
+redirect_url: /windows-server-docs/security/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md
 ---

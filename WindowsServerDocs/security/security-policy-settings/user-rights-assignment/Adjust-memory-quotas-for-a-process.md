@@ -92,6 +92,6 @@ Restrict the **Adjust memory quotas for a process** user right to users who requ
 Organizations that have not restricted users to roles with limited privileges may find it difficult to impose this countermeasure. Also, if you have installed optional components such as ASP.NET or IIS, you may need to assign the **Adjust memory quotas for a process** user right to additional accounts that are required by those components. IIS requires that this privilege be explicitly assigned to the IWAM_<ComputerName>, Network Service, and Service accounts. Otherwise, this countermeasure should have no impact on most computers. If this user right is necessary for a user account, it can be assigned to a local computer account instead of to a domain account.  
   
 ## See Also  
-[User Rights Assignment](User-Rights-Assignment.md)  
+[User Rights Assignment](user-rights-assignment.md)  
   
 

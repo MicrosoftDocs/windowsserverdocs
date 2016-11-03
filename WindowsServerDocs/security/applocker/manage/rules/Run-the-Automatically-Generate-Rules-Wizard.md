@@ -18,11 +18,11 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This topic describes steps to run the wizard to create AppLocker rules on a reference computer in  Windows Server 2012  and Windows 8.
+This topic describes steps to run the wizard to create AppLocker rules on a reference computer in Windows Server 2012 and Windows 8.
 
 AppLocker allows you to automatically generate rules for all files within a folder. It will scan the specified folder and create the condition types that you choose for each file in that folder.
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](../Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](../administer-applocker.md#BKMK_Using_Snapins).
 
 ### <a name="BKMK_RunAGRwizardGPO"></a>To automatically generate rules
 
@@ -38,7 +38,7 @@ You can perform this task by using the Group Policy Management Console for an Ap
 
 6.  The wizard provides a name in the **Name to identify this set of rules** box based on the name of the folder that you have selected. Accept the provided name or type a different name, and then click **Next**.
 
-7.  On the **Rule Preferences** page, choose the conditions that you want the wizard to use while creating rules, and then click **Next**. For more information about rule conditions, see [Understanding AppLocker Rule Condition Types](../../get-started/how-applocker-works/Understanding-AppLocker-Rule-Condition-Types.md).
+7.  On the **Rule Preferences** page, choose the conditions that you want the wizard to use while creating rules, and then click **Next**. For more information about rule conditions, see [Understanding AppLocker Rule Condition Types](../../get-started/how-applocker-works/understanding-applocker-rule-condition-types.md).
 
     > [!NOTE]
     > The **Reduce the number of rules created by grouping similar files** check box is selected by default. This helps you organize AppLocker rules and reduce the number of rules that you create by performing the following operations for the rule condition that you select:
