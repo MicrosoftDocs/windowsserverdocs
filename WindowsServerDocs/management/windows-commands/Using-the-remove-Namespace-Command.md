@@ -18,28 +18,28 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes a custom namespace.
+removes a custom namespace.
 ## Syntax
 ```
-WDSUTIL /Remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/Force]
+wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/force]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/Namespace:<Namespace name>|Specifies the name of the namespace. This is not the friendly name, and it must be unique.<br /><br />-   **Deployment Server role service**: The syntax for namespace name is /Namespace:WDS:<ImageGroup>/<ImageName>/<Index>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value must match the name given to the namespace when it was created on the server.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
-|[/Force]|Removes the namespace immediately and terminates all clients. Note that unless you specify **/Force**, existing clients can complete the transfer, but new clients are not able to join.|
+|/Namespace:<Namespace name>|Specifies the name of the namespace. This is not the friendly name, and it must be unique.<br /><br />-   **Deployment Server role service**: The syntax for namespace name is /Namespace:WDS:<ImageGroup>/<ImageName>/<Index>. for example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value must match the name given to the namespace when it was created on the server.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server is used.|
+|[/force]|removes the namespace immediately and terminates all clients. Note that unless you specify **/force**, existing clients can complete the transfer, but new clients are not able to join.|
 ## <a name="BKMK_examples"></a>Examples
 To stop a namespace (current clients can complete the transfer but new clients are not able to join), type:
 ```
-WDSUTIL /Remove-Namespace /Namespace:"Custom Auto 1"
+wdsutil /remove-Namespace /Namespace:"Custom Auto 1"
 ```
 To force termination of all clients, type:
 ```
-WDSUTIL /Remove-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /Force
+wdsutil /remove-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /force
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the get-AllNamespaces Command](Using-the-get-AllNamespaces-Command.md)
-[Using the new-Namespace Command](Using-the-new-Namespace-Command.md)
-[Subcommand: start-Namespace](Subcommand-start-Namespace.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
+[Using the new-Namespace Command](using-the-new-namespace-command.md)
+[Subcommand: start-Namespace](subcommand-start-namespace.md)

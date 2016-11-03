@@ -1,5 +1,5 @@
 ---
-title: Robocopy
+title: robocopy
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Robocopy
+# robocopy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -28,48 +28,48 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |-------|--------|
 |<Source>|Specifies the path to the source directory.|
 |<Destination>|Specifies the path to the destination directory.|
-|<File>|Specifies the file or files to be copied. You can use wildcard characters (**\*** or **?**), if you want. If the **File** parameter is not specified, **\*.\*** is used as the default value.|
+|<File>|Specifies the file or files to be copied. You can use wildcard characters (**\*** or **?**), if you want. if the **File** parameter is not specified, **\*.\*** is used as the default value.|
 |<Options>|Specifies options to be used with the **robocopy**command.|
-#### Copy options
+#### copy options
 |Option|Description|
 |-----|--------|
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
-|/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [Remarks](Robocopy.md#BKMK_remarks).|
+|/e|Copies subdirectories. Note that this option includes empty directories. for additional information, see [remarks](robocopy.md#BKMK_remarks).|
 |/lev:<N>|Copies only the top *N* levels of the source directory tree.|
 |/z|Copies files in Restart mode.|
 |/b|Copies files in Backup mode.|
-|/zb|Uses Restart mode. If access is denied, this option uses Backup mode.|
+|/zb|Uses Restart mode. if access is denied, this option uses Backup mode.|
 |/efsraw|Copies all encrypted files in EFS RAW mode.|
-|/copy:<CopyFlags>|Specifies the file properties to be copied. The following are the valid values for this option:<br /><br />**D** Data<br /><br />**A** Attributes<br /><br />**T** Time stamps<br /><br />**S** NTFS access control list (ACL)<br /><br />**O** Owner information<br /><br />**U** Auditing information<br /><br />The default value for **CopyFlags** is **DAT** (data, attributes, and time stamps).|
+|/copy:<copyFlags>|Specifies the file properties to be copied. The following are the valid values for this option:<br /><br />**D** Data<br /><br />**A** attributes<br /><br />**T** time stamps<br /><br />**S** NTFS access control list (ACL)<br /><br />**O** Owner information<br /><br />**U** Auditing information<br /><br />The default value for **copyFlags** is **Dat** (data, attributes, and time stamps).|
 |/dcopy:T|Copies directory time stamps.|
-|/sec|Copies files with security (equivalent to **/copy:DAT**).|
-|/copyall|Copies all file information (equivalent to **/copy:DATSOU**).|
+|/sec|Copies files with security (equivalent to **/copy:Dat**).|
+|/copyall|Copies all file information (equivalent to **/copy:DatSOU**).|
 |/nocopy|Copies no file information (useful with **/purge**).|
 |/secfix|Fixes file security on all files, even skipped ones.|
 |/timfix|Fixes file times on all files, even skipped ones.|
-|/purge|Deletes destination files and directories that no longer exist in the source. For additional information, see [Remarks](Robocopy.md#BKMK_remarks).|
-|/mir|Mirrors a directory tree (equivalent to **/e** plus **/purge**). For additional information, see [Remarks](Robocopy.md#BKMK_remarks).|
-|/mov|Moves files, and deletes them from the source after they are copied.|
-|/move|Moves files and directories, and deletes them from the source after they are copied.|
-|/a+:[RASHCNET]|Adds the specified attributes to copied files.|
-|/a-:[RASHCNET]|Removes the specified attributes from copied files.|
-|/create|Creates a directory tree and zero-length files only.|
-|/fat|Creates destination files by using 8.3 character-length FAT file names only.|
+|/purge|deletes destination files and directories that no longer exist in the source. for additional information, see [remarks](robocopy.md#BKMK_remarks).|
+|/mir|Mirrors a directory tree (equivalent to **/e** plus **/purge**). for additional information, see [remarks](robocopy.md#BKMK_remarks).|
+|/mov|moves files, and deletes them from the source after they are copied.|
+|/move|moves files and directories, and deletes them from the source after they are copied.|
+|/a+:[RASHCNET]|adds the specified attributes to copied files.|
+|/a-:[RASHCNET]|removes the specified attributes from copied files.|
+|/create|creates a directory tree and zero-length files only.|
+|/fat|creates destination files by using 8.3 character-length Fat file names only.|
 |/256|Turns off support for very long paths (longer than 256 characters).|
 |/mon:<N>|Monitors the source, and runs again when more than *N* changes are detected.|
 |/mot:<M>|Monitors source, and runs again in *M* minutes if changes are detected.|
-|/MT[:N]|Creates multi-threaded copies with *N* threads. *N* must be an integer between 1 and 128. The default value for *N* is 8.<br /><br />The **/MT** parameter cannot be used with the **/IPG** and **/EFSRAW** parameters.<br /><br />Redirect output using **/LOG** option for better performance. **Note:** The /MT parameter applies to Windows Server 2008 R2 and Windows 7.|
+|/MT[:N]|creates multi-threaded copies with *N* threads. *N* must be an integer between 1 and 128. The default value for *N* is 8.<br /><br />The **/MT** parameter cannot be used with the **/IPG** and **/EFSRAW** parameters.<br /><br />Redirect output using **/LOG** option for better performance. **Note:** The /MT parameter applies to Windows Server 2008 R2 and Windows 7.|
 |/rh:hhmm-hhmm|Specifies run times when new copies may be started.|
 |/pf|Checks run times on a per-file (not per-pass) basis.|
 |/ipg:n|Specifies the inter-packet gap to free bandwidth on slow lines.|
 |/sl|Copies the symbolic link instead of the target.|
-> [!IMPORTANT]
+> [!importANT]
 > When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:
 > 
-> -   **/COPYALL**
-> -   **/COPY:O**
-> -   **/COPY:S**
-> -   **/COPY:U**
+> -   **/copyALL**
+> -   **/copy:O**
+> -   **/copy:S**
+> -   **/copy:U**
 > -   **/SEC**
 #### File selection options
 |Option|Description|
@@ -79,7 +79,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/ia:[RASHCNETO]|Includes only files for which any of the specified attributes are set.|
 |/xa:[RASHCNETO]|Excludes files for which any of the specified attributes are set.|
 |/xf <FileName>[ ...]|Excludes files that match the specified names or paths. Note that *FileName* can include wildcard characters (**\*** and **?**).|
-|/xd <Directory>[ ...]|Excludes directories that match the specified names and paths.|
+|/xd <directory>[ ...]|Excludes directories that match the specified names and paths.|
 |/xct|Excludes changed files.|
 |/xn|Excludes newer files.|
 |/xo|Excludes older files.|
@@ -92,10 +92,10 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/maxage:<N>|Specifies the maximum file age (to exclude files older than *N* days or date).|
 |/minage:<N>|Specifies the minimum file age (exclude files newer than *N* days or date).|
 |/maxlad:<N>|Specifies the maximum last access date (excludes files unused since *N*).|
-|/minlad:<N>|Specifies the minimum last access date (excludes files used since *N*) If *N* is less than 1900, *N* specifies the number of days. Otherwise, *N* specifies a date in the format YYYYMMDD.|
+|/minlad:<N>|Specifies the minimum last access date (excludes files used since *N*) if *N* is less than 1900, *N* specifies the number of days. Otherwise, *N* specifies a date in the format YYYYMMDD.|
 |/xj|Excludes junction points, which are normally included by default.|
-|/fft|Assumes FAT file times (two-second precision).|
-|/dst|Compensates for one-hour DST time differences.|
+|/fft|Assumes Fat file times (two-second precision).|
+|/dst|compensates for one-hour DST time differences.|
 |/xjd|Excludes junction points for directories.|
 |/xjf|Excludes junction points for files.|
 #### Retry options
@@ -113,7 +113,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/v|Produces verbose output, and shows all skipped files.|
 |/ts|Includes source file time stamps in the output.|
 |/fp|Includes the full path names of the files in the output.|
-|/bytes|Prints sizes, as bytes.|
+|/bytes|prints sizes, as bytes.|
 |/ns|Specifies that file sizes are not to be logged.|
 |/nc|Specifies that file classes are not to be logged.|
 |/nfl|Specifies that file names are not to be logged.|
@@ -137,9 +137,9 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/nosd|Indicates that no source directory is specified.|
 |/nodd|Indicates that no destination directory is specified.|
 |/if|Includes the specified files.|
-#### <a name="BKMK_remarks"></a>Remarks
+#### <a name="BKMK_remarks"></a>remarks
 -   The **/mir** option is equivalent to the **/e** plus **/purge** options with one small difference in behavior:
     -   With the **/e** plus **/purge** options, if the destination directory exists, the destination directory security settings are not overwritten.
     -   With the **/mir** option, if the destination directory exists, the destination directory security settings are overwritten.
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

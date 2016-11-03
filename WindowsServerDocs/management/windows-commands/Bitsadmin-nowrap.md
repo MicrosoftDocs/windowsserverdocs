@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin nowrap
-description: "Windows Commands topic for **Bitsadmin nowrap** - Truncates any line of output text extending beyond the rightmost edge of the command window."
+title: bitsadmin nowrap
+description: "Windows Commands topic for **bitsadmin nowrap** - Truncates any line of output text extending beyond the rightmost edge of the command window."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin nowrap
+# bitsadmin nowrap
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -23,12 +23,12 @@ Truncates any line of output text extending beyond the rightmost edge of the com
 ```
 bitsadmin /NoWrap
 ```
-## Remarks
+## remarks
 By default, all commands, except the **Monitor** command, wrap the output. Specify the **NoWrap** command before other commands.
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the state for the job named *myDownloadJob* and does not wrap the output
 ```
 C:\>bitsadmin /NoWrap /GetState myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

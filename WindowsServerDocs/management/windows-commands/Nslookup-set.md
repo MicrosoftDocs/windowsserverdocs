@@ -1,5 +1,5 @@
 ---
-title: Nslookup set
+title: nslookup set
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set
+# nslookup set
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes configuration settings that affect how lookups function.
+changes configuration settings that affect how lookups function.
 ## Syntax
 ```
 set <KeyWord>[=<Value>]
@@ -26,11 +26,11 @@ set <KeyWord>[=<Value>]
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<KeyWord>|Identifies subcommands that are derived from the **set** subcommand. For example, the subcommand **set d2** has a keyword of [**no**]**d2**. For the list of subcommands that are derived from the **set** subcommand, see Additional references.|
+|<KeyWord>|Identifies subcommands that are derived from the **set** subcommand. for example, the subcommand **set d2** has a keyword of [**no**]**d2**. for the list of subcommands that are derived from the **set** subcommand, see additional references.|
 |<Value>|Specifies the nslookup configuration setting value for each subcommand.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
+## remarks
 Use **set all** to see a listing of the current settings.
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Nslookup set all](Nslookup-set-all.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[nslookup set all](nslookup-set-all.md)

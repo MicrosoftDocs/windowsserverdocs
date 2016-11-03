@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Scwcmd-configure.md
+redirect_url: /windows-server-docs/management/windows-commands/scwcmd-configure.md
 ---

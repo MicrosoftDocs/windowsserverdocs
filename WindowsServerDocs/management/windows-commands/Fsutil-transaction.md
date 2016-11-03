@@ -1,5 +1,5 @@
 ---
-title: Fsutil transaction
+title: fsutil transaction
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Fsutil transaction
+# fsutil transaction
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Manages NTFS transactions.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples) .  
+for examples of how to use this command, see [Examples](#BKMK_examples) .  
   
 ## Syntax  
   
@@ -42,10 +42,10 @@ fsutil transaction [rollback] <GUID>
 |fileinfo|Displays transaction information for the specified file.|  
 |<Filename>|Specifies full path and file name.|  
 |list|Displays a list of currently running transactions.|  
-|query|Displays information for the specified transaction.<br /><br />-   If **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   If **fsutil transaction query All** is specified, all information for the transaction will be displayed.|  
+|query|Displays information for the specified transaction.<br /><br />-   if **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   if **fsutil transaction query All** is specified, all information for the transaction will be displayed.|  
 |rollback|Rolls back a specified transaction to the beginning.|  
   
-### Remarks  
+### remarks  
   
 -   Transactional NTFS was introduced in  Windows Server 2008 .  
   
@@ -56,10 +56,10 @@ To display transaction information for file c:\\test.txt, type:
 fsutil transaction fileinfo c:\test.txt    
 ```  
   
-### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
-[Fsutil](Fsutil.md)  
+[fsutil](fsutil.md)  
   
 [Transactional NTFS](http://go.microsoft.com/fwlink/?LinkID=165402)  
   

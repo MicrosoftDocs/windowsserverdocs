@@ -1,5 +1,5 @@
 ---
-title: Compact
+title: compact
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,32 +14,32 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Compact
+# compact
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays or alters the compression of files or directories on NTFS partitions. If used without parameters, **compact** displays the compression state of the current directory and the files it contains.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Displays or alters the compression of files or directories on NTFS partitions. if used without parameters, **compact** displays the compression state of the current directory and the files it contains.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-compact [/c | /u] [/s[:<Dir>]] [/a] [/i] [/f] [/q] [<FileName>[...]]
+compact [/c | /u] [/s[:<dir>]] [/a] [/i] [/f] [/q] [<FileName>[...]]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/c|Compresses the specified directory or file.|
+|/c|compresses the specified directory or file.|
 |/u|Uncompresses the specified directory or file.|
-|/s[:<Dir>]|Applies the **compact** command to all subdirectories of the specified directory (or of the current directory if none is specified).|
+|/s[:<dir>]|Applies the **compact** command to all subdirectories of the specified directory (or of the current directory if none is specified).|
 |/a|Displays hidden or system files.|
 |/i|Ignores errors.|
-|/f|Forces compression or uncompression of the specified directory or file. **/f** is used in the case of a file that was partly compressed when the operation was interrupted by a system crash. To force the file to be compressed in its entirety, use the **/c** and **/f** parameters and specify the partially compressed file.|
+|/f|forces compression or uncompression of the specified directory or file. **/f** is used in the case of a file that was partly compressed when the operation was interrupted by a system crash. To force the file to be compressed in its entirety, use the **/c** and **/f** parameters and specify the partially compressed file.|
 |/q|Reports only the most essential information.|
 |<FileName>|Specifies the file or directory. You can use multiple file names, and the **\*** and **?** wildcard characters.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   The **compact** command is the command-line version of the NTFS file system compression feature. The compression state of a directory indicates whether files are automatically compressed when they are added to the directory. Setting the compression state of a directory does not necessarily change the compression state of files that are already in the directory.
 -   You cannot use **compact** to read, write, or mount volumes that have been compressed using DriveSpace or DoubleSpace.
--   You cannot use **compact** to compress file allocation table (FAT) or FAT32 partitions.
+-   You cannot use **compact** to compress file allocation table (Fat) or Fat32 partitions.
 ## <a name="BKMK_examples"></a>Examples
 To set the compression state of the current directory, its subdirectories, and existing files, type:
 ```
@@ -67,5 +67,5 @@ To remove the compressed attribute from the directory C:\Tmp, without changing t
 ```
 compact /u c:\tmp
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

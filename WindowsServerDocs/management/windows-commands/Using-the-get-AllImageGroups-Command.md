@@ -21,22 +21,22 @@ ms.date: 10/12/2016
 Retrieves information about all image groups on a server and all images in those image groups.
 ## Syntax
 ```
-WDSUTIL [Options] /Get-AllImageGroups [/Server:<Server name>] [/Detailed]
+wdsutil [Options] /Get-AllImageGroups [/Server:<Server name>] [/detailed]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-|[/Detailed]|Returns the image metadata from each image. If this parameter is not used, the default behavior is to return only the image name, description, and file name for each image.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/detailed]|Returns the image metadata from each image. if this parameter is not used, the default behavior is to return only the image name, description, and file name for each image.|
 ## <a name="BKMK_examples"></a>Examples
 To view information about the image groups, type one of the following:
 ```
-WDSUTIL /Get-AllImageGroups
-WDSUTIL /Verbose /Get-AllImageGroups /Server:MyWDSServer /Detailed
+wdsutil /Get-AllImageGroups
+wdsutil /verbose /Get-AllImageGroups /Server:MyWDSServer /detailed
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the add-ImageGroup Command](Using-the-add-ImageGroup-Command.md)
-[Using the get-ImageGroup Command](Using-the-get-ImageGroup-Command.md)
-[Using the remove-ImageGroup Command](Using-the-remove-ImageGroup-Command.md)
-[Subcommand: set-ImageGroup](Subcommand-set-ImageGroup.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
+[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
+[Using the remove-ImageGroup Command](using-the-remove-imagegroup-command.md)
+[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)

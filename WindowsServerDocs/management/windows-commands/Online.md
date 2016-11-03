@@ -1,5 +1,5 @@
 ---
-title: Online
+title: online
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Online
+# online
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Takes an offline disk or volume to the online state.
 ## Syntax
 ```
-Offline disk
-Offline volume
+offline disk
+offline volume
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[Offline disk](Offline-disk.md)|Takes the offline disk with focus to the online state.|
-|[Offline volume](Offline-volume.md)|Takes the offline volume with focus to the online state.|
+|[offline disk](offline-disk.md)|Takes the offline disk with focus to the online state.|
+|[offline volume](offline-volume.md)|Takes the offline volume with focus to the online state.|
 

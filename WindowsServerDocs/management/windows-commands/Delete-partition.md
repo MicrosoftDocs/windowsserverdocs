@@ -1,5 +1,5 @@
 ---
-title: Delete partition
+title: delete partition
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Delete partition
+# delete partition
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes the partition with focus.  
+deletes the partition with focus.  
   
 ## Syntax  
   
@@ -31,12 +31,12 @@ delete partition [noerr] [override]
 |Parameter|Description|  
 |-------|--------|  
 |override|Enables DiskPart to delete any partition regardless of type. Typically, DiskPart only permits you to delete known data partitions.|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 > [!CAUTION]  
-> Deleting a partition on a dynamic disk can delete all dynamic volumes on the disk, thus destroying any data and leaving the disk in a corrupt state. To delete a dynamic volume, always use the **delete volume** command instead. Partitions can be deleted from dynamic disks, but they should not be created. For example, it is possible to delete an unrecognized GUID Partition Table \(GPT\) partition on a dynamic GPT disk. Deleting such a partition does not cause the resulting free space to become available. This command is intended to allow you to reclame space on a corrupted offline dynamic disk in an emergency situation where the **clean** command in DiskPart cannot be used.  
+> deleting a partition on a dynamic disk can delete all dynamic volumes on the disk, thus destroying any data and leaving the disk in a corrupt state. To delete a dynamic volume, always use the **delete volume** command instead. Partitions can be deleted from dynamic disks, but they should not be created. for example, it is possible to delete an unrecognized GUID Partition Table \(gpt\) partition on a dynamic gpt disk. deleting such a partition does not cause the resulting free space to become available. This command is intended to allow you to reclame space on a corrupted offline dynamic disk in an emergency situation where the **clean** command in DiskPart cannot be used.  
   
 -   You cannot delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.  
   
@@ -49,8 +49,8 @@ To delete the partition with focus, type:
 delete partition  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

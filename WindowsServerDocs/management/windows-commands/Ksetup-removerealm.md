@@ -1,5 +1,5 @@
 ---
-title: Ksetup:removerealm
+title: ksetup:removerealm
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ksetup:removerealm
+# ksetup:removerealm
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes all information for the specified realm from the registry. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+deletes all information for the specified realm from the registry. for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /removerealm <RealmName>
@@ -27,7 +27,7 @@ ksetup /removerealm <RealmName>
 |Parameter|Description|
 |-------|--------|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run.|
-## Remarks
+## remarks
 The realm name is stored in two places in the registry: **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** and **\CurrentControlSet\Control\Lsa\Kerberos**.
 You cannot remove the default realm name from the domain controller because this will reset its DNS information, and removing it might make the domain controller unusable.
 ## <a name="BKMK_Examples"></a>Examples
@@ -35,12 +35,12 @@ Mistakenly set the realm name by misspelling  .COM on the local computer to CORP
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```
-Remove that erroneous realm name from the local computer:
+remove that erroneous realm name from the local computer:
 ```
 ksetup /removerealm CORP.CONTOSO.CON
 ```
-Verify the removal by running **ksetup** and review the output.
-## Additional references
--   [Ksetup](Ksetup.md)
--   [Ksetup:setrealm](Ksetup-setrealm.md)
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+verify the removal by running **ksetup** and review the output.
+## additional references
+-   [ksetup](ksetup.md)
+-   [ksetup:setrealm](ksetup-setrealm.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

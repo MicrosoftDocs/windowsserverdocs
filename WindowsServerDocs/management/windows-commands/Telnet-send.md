@@ -1,5 +1,5 @@
 ---
-title: Telnet: send
+title: telnet: send
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Telnet: send
+# telnet: send
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sends Telnet commands to the Telnet server.   
+Sends telnet commands to the telnet server.   
 ## Syntax  
 ```  
 sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  
@@ -26,18 +26,18 @@ sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|ao|Sends the Telnet command  Abort Output.|  
-|ayt|Sends the Telnet command  Are You There.|  
-|brk|Sends the Telnet command  brk.|  
-|esc|Sends the current Telnet escape character.|  
-|ip|Sends the Telnet command  Interrupt Process.|  
-|synch|Sends the Telnet command  synch.|  
-|<string>|Sends whatever string you type to the Telnet server.|  
-|?|Displays Help associated with this command.|  
+|ao|Sends the telnet command  Abort Output.|  
+|ayt|Sends the telnet command  Are You There.|  
+|brk|Sends the telnet command  brk.|  
+|esc|Sends the current telnet escape character.|  
+|ip|Sends the telnet command  Interrupt Process.|  
+|synch|Sends the telnet command  synch.|  
+|<string>|Sends whatever string you type to the telnet server.|  
+|?|Displays help associated with this command.|  
 ## <a name="BKMK_Examples"></a>Examples  
-Send  Are you there to the Telnet server.  
+Send  Are you there to the telnet server.  
 ```  
 sen ayt  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

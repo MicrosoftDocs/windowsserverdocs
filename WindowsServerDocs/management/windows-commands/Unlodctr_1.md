@@ -1,5 +1,5 @@
 ---
-title: Unlodctr_1
+title: unlodctr_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Unlodctr_1
+# unlodctr_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes Performance counter names and Explain text for a service or device driver from the system registry.   
+removes Performance counter names and Explain text for a service or device driver from the system registry.   
 ## Syntax  
 ```  
 Unlodctr <DriverName>   
@@ -26,17 +26,17 @@ Unlodctr <DriverName>
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<DriverName>|Removes the Performance counter name settings and Explain text for driver or service <DriverName> from the Windows Server 2003 registry.|  
-|/?|Displays Help at the command prompt.|  
-## Remarks  
+|<DriverName>|removes the Performance counter name settings and Explain text for driver or service <DriverName> from the Windows Server 2003 registry.|  
+|/?|Displays help at the command prompt.|  
+## remarks  
 > [!WARNING]  
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  
-If the information that you supply contains spaces, use quotation marks around the text (for example, "<DriverName>").  
+if the information that you supply contains spaces, use quotation marks around the text (for example, "<DriverName>").  
 ## <a name="BKMK_Examples"></a>Examples  
 To remove the current Performance registry settings and counter Explain text for the Simple Mail Transfer Protocol (SMTP) service:  
 ```  
 unlodctr SMTPSVC  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
--   [Command-Line Reference_1](Command-Line-Reference_1.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   [Command-Line Reference_1](command-line-reference_1.md)  

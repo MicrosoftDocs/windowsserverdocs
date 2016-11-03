@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Target
+title: dfsutil Target
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Target
+# dfsutil Target
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,21 +25,21 @@ The **dfsutil target** command displays information about the folder target \(li
 ## Syntax
 
 ```
-dfsutil target [<DfsPath>] \\server\sharepath | Add | Remove | /?
+dfsutil target [<Dfspath>] \\server\sharepath | add | remove | /?
 ```
 
 ### Parameters
 
 |Parameter|Description|
 |-------|--------|
-|<DfsPath>|UNC path of DFS link.|
+|<Dfspath>|UNC path of DFS link.|
 |<\\\\server\\sharepath>|UNC path to the share on the Target Server.|
-|Dfsutil Target Add|Adds a new folder target.|
-|Dfsutil Target Remove|Removes the folder target.|
+|dfsutil Target add|adds a new folder target.|
+|dfsutil Target remove|removes the folder target.|
 |\/?||
 
-## Remarks
-To view properties of root target do not specify <DfsPath>.
+## remarks
+To view properties of root target do not specify <Dfspath>.
 
 ## Scripting <optional section>
 <Here is where you discuss using the command within a script. You should also provide an FWLink to the Script Center.>
@@ -63,10 +63,10 @@ To view help for this command, type:
 dfsutil target /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

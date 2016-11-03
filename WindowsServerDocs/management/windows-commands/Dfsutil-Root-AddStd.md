@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Root AddStd
+title: dfsutil Root addStd
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Root AddStd
+# dfsutil Root addStd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -35,8 +35,8 @@ dfsutil root addstd <\\server\share> [<Comment>] | /?
 |<Comment>|Specifies an administrator comment for the namespace.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
-Create the share on the namespace server before running this command.
+## remarks
+create the share on the namespace server before running this command.
 
 ## <a name="BKMK_Examples"></a>Examples
 To TBD, type:
@@ -57,12 +57,12 @@ To view help for this command, type:
 dfsutil root addstd /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil Root](Dfsutil-Root.md)
+-   [dfsutil Root](dfsutil-root.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

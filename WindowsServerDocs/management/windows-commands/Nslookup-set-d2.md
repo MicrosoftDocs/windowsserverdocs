@@ -1,5 +1,5 @@
 ---
-title: Nslookup set d2
+title: nslookup set d2
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set d2
+# nslookup set d2
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Turns exhaustive Debugging Mode on or off. All fields of every packet are printed.
+Turns exhaustive Debugging mode on or off. All fields of every packet are printed.
 ## Syntax
 ```
 set [no]d2
@@ -26,8 +26,8 @@ set [no]d2
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|**nod2**|Turns off exhaustive Debugging Mode. The default syntax is **nod2**.|
-|**d2**|Turns on exhaustive Debugging Mode.|
+|**nod2**|Turns off exhaustive Debugging mode. The default syntax is **nod2**.|
+|**d2**|Turns on exhaustive Debugging mode.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Netcfg
+title: netcfg
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Netcfg
+# netcfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -33,7 +33,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/c|Provides the class of the component to be installed; protocol, Service, or client|  
 |/i|Provides the component ID|  
 |/s|Provides the type of components to show<br /><br />\ta = adapters, n = net components|  
-|/?|Displays Help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
 ## <a name="BKMK_Examples"></a>Examples  
 To install the protocol *example* using c:\oemdir\example.inf:  
 ```  
@@ -63,5 +63,5 @@ To shows binding paths containing *MS_TCPIP*:
 ```  
 netcfg /b ms_tcpip  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

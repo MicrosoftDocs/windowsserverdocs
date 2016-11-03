@@ -1,5 +1,5 @@
 ---
-title: Nslookup view
+title: nslookup view
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup view
+# nslookup view
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sorts and lists the output of the previous **ls** subcommand or commands.  
+sorts and lists the output of the previous **ls** subcommand or commands.  
 ## Syntax  
 ```  
 view <FileName>  
@@ -28,6 +28,6 @@ view <FileName>
 |-------|--------|  
 |<FileName>|Specifies the name of the file containing output from the previous **ls** subcommand or commands.|  
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|  
-## Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
-[Nslookup ls](Nslookup-ls.md)  
+## additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
+[nslookup ls](nslookup-ls.md)  

@@ -35,7 +35,7 @@ detach vdisk [noerr]
 |-------|--------|  
 |noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.  
   
@@ -46,24 +46,24 @@ To detach the selected VHD, type:
 detach vdisk  
 ```  
   
-## Additional references  
+## additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
   
--   [Attach vdisk](Attach-vdisk.md)  
+-   [attach vdisk](attach-vdisk.md)  
   
--   [Compact vdisk](Compact-vdisk.md)  
+-   [compact vdisk](compact-vdisk.md)  
   
   
   
--   [Detail vdisk](Detail-vdisk.md)  
+-   [detail vdisk](detail-vdisk.md)  
   
--   [Expand vdisk](Expand-vdisk.md)  
+-   [expand vdisk](expand-vdisk.md)  
   
--   [Merge vdisk](Merge-vdisk.md)  
+-   [Merge vdisk](merge-vdisk.md)  
   
--   [Select vdisk](Select-vdisk.md)  
+-   [select vdisk](select-vdisk.md)  
   
--   [List_1](List_1.md)  
+-   [list_1](list_1.md)  
   
 

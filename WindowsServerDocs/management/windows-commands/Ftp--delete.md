@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-delete.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-delete.md
 ---

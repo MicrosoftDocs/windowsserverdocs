@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin getpeercachingflags
-description: "Windows Commands topic for **Bitsadmin getpeercachingflags** - Retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers."
+title: bitsadmin getpeercachingflags
+description: "Windows Commands topic for **bitsadmin getpeercachingflags** - Retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016 
 ---
-#Bitsadmin getpeercachingflags
+#bitsadmin getpeercachingflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -39,7 +39,7 @@ The following example retrieves the flags for the job named *myJob*.
 C:\>bitsadmin /GetPeerCachingFlags myJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

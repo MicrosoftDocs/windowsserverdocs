@@ -1,5 +1,5 @@
 ---
-title: Using the Remove Command
+title: Using the remove Command
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,20 +14,20 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Using the Remove Command
+# Using the remove Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 ## Subcommands
 |Subommand|Description|
 |-------|--------|
-|[Using the remove-Image Command](Using-the-remove-Image-Command.md)|Removes a boot or install image from the server.|
-|[Using the remove-ImageGroup Command](Using-the-remove-ImageGroup-Command.md)|Removes an image group from the server.|
-|[Using the remove-MulticastTransmission Command](Using-the-remove-MulticastTransmission-Command.md)|Disables multicast transmission of an image.|
-|[Using the remove-Namespace Command](Using-the-remove-Namespace-Command.md)|Removes a namespace from the server.|
-|[Using the remove-DriverGroupPackage Command](Using-the-remove-DriverGroupPackage-Command.md)|Removes a driver package from a driver group on a server.|
-|[Using the remove-DriverGroupPackages Command](Using-the-remove-DriverGroupPackages-Command.md)|Removes driver packages from a driver group on a server.|
-|[Using the remove-DriverPackage Command](Using-the-remove-DriverPackage-Command.md)|Removes a driver package from a server.|
-|[Using the remove-DriverPackages Command](Using-the-remove-DriverPackages-Command.md)|Removes driver packages from a server.|
-|[Using the remove-DriverGroup Command](Using-the-remove-DriverGroup-Command.md)|Removes a driver group from a server.|
-|[Using the remove-DriverGroupFilter Command](Using-the-remove-DriverGroupFilter-Command.md)|Removes a filter rule from a driver group on a server.|
+|[Using the remove-Image Command](using-the-remove-image-command.md)|removes a boot or install image from the server.|
+|[Using the remove-ImageGroup Command](using-the-remove-imagegroup-command.md)|removes an image group from the server.|
+|[Using the remove-MulticastTransmission Command](using-the-remove-multicasttransmission-command.md)|Disables multicast transmission of an image.|
+|[Using the remove-Namespace Command](using-the-remove-namespace-command.md)|removes a namespace from the server.|
+|[Using the remove-DriverGroupPackage Command](using-the-remove-drivergrouppackage-command.md)|removes a driver package from a driver group on a server.|
+|[Using the remove-DriverGroupPackages Command](using-the-remove-drivergrouppackages-command.md)|removes driver packages from a driver group on a server.|
+|[Using the remove-DriverPackage Command](using-the-remove-driverpackage-command.md)|removes a driver package from a server.|
+|[Using the remove-DriverPackages Command](using-the-remove-driverpackages-command.md)|removes driver packages from a server.|
+|[Using the remove-DriverGroup Command](using-the-remove-drivergroup-command.md)|removes a driver group from a server.|
+|[Using the remove-DriverGroupFilter Command](using-the-remove-drivergroupfilter-command.md)|removes a filter rule from a driver group on a server.|

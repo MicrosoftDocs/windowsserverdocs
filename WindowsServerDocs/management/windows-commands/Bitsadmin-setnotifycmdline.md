@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setnotifycmdline
-description: "Windows Commands topic for **** - Bitsadmin setnotifycmdlineSets the command-line command that will run when the job finishes transferring data or when a job enters a state."
+title: bitsadmin setnotifycmdline
+description: "Windows Commands topic for **** - bitsadmin setnotifycmdlineSets the command-line command that will run when the job finishes transferring data or when a job enters a state."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin setnotifycmdline
+# bitsadmin setnotifycmdline
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -29,10 +29,10 @@ bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
 |Job|The job's display name or GUID|
 |ProgramName|Name of the command to run when the job completes.|
 |ProgramParameters|Parameters that you want to pass to *ProgramName*.|
-## Remarks
-You can specify NULL for *ProgramName* and *ProgramParameters*. If *ProgramName* is NULL, *ProgramParameters* must be NULL.
-> [!IMPORTANT]
-> If *ProgramParameters* is not NULL, then the first parameter in *ProgramParameters* must match *ProgramName*.
+## remarks
+You can specify NULL for *ProgramName* and *ProgramParameters*. if *ProgramName* is NULL, *ProgramParameters* must be NULL.
+> [!importANT]
+> if *ProgramParameters* is not NULL, then the first parameter in *ProgramParameters* must match *ProgramName*.
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the command-line command used by the service to run notepad when the job named *myDownloadJob* completes.
 ```
@@ -41,5 +41,5 @@ C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
 C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe "notepad c:\eula.txt"
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

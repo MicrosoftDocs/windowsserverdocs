@@ -1,5 +1,5 @@
 ---
-title: Ftp: ascii
+title: ftp: ascii
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: ascii
+# ftp: ascii
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,15 +25,15 @@ ascii
 ```  
 ### Parameters  
 none  
-## Remarks  
+## remarks  
 -   The default file transfer type is ASCII.  
--   In ASCII mode, character conversions to and from the network standard character set are performed. For example, end-of-line characters are converted as necessary, based on the target operating system.  
--   **Ftp** supports both ASCII and binary image file transfer types. Use ASCII when transferring text files. For more information about binary file transfer, see **Ftp: binary** in Additional references.  
+-   In ASCII mode, character conversions to and from the network standard character set are performed. for example, end-of-line characters are converted as necessary, based on the target operating system.  
+-   **ftp** supports both ASCII and binary image file transfer types. Use ASCII when transferring text files. for more information about binary file transfer, see **ftp: binary** in additional references.  
 ## <a name="BKMK_Examples"></a>Examples  
 Set the file transfer type to ASCII.  
 ```  
 ascii  
 ```  
-## Additional references  
--   [Ftp: binary](Ftp-binary.md)  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [ftp: binary](ftp-binary.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

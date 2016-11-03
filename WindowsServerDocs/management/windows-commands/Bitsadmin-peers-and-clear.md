@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin peers and clear
-description: "Windows Commands topic for **Bitsadmin peers and clear** - Clears the peer list."
+title: bitsadmin peers and clear
+description: "Windows Commands topic for **bitsadmin peers and clear** - Clears the peer list."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin peers and clear
+# bitsadmin peers and clear
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -28,5 +28,5 @@ The following example clears the peer list.
 ```
 C:\>bitsadmin /Peers /Clear
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

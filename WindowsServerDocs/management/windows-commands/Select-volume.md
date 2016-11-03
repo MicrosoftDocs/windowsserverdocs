@@ -1,5 +1,5 @@
 ---
-title: Select volume
+title: select volume
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Select volume
+# select volume
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.  
+selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.  
   
   
   
@@ -35,15 +35,15 @@ select volume={<n>|<d>}
 |<n>|The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart.|  
 |<d>|The drive letter or mount point path of the volume to receive the focus.|  
   
-## Remarks  
+## remarks  
   
--   If no volume is specified, this command displays the volume that currently has the focus in the selected disk.  
+-   if no volume is specified, this command displays the volume that currently has the focus in the selected disk.  
   
 -   On a basic disk, selecting a volume also gives the focus to the corresponding partition.  
   
--   If a volume is selected with a corresponding partition, the partition will be automatically selected.  
+-   if a volume is selected with a corresponding partition, the partition will be automatically selected.  
   
--   If a partition is selected with a corresponding volume, the volume will be automatically selected.  
+-   if a partition is selected with a corresponding volume, the volume will be automatically selected.  
   
 ## <a name="BKMK_examples"></a>Examples  
 To shift the focus to volume 2, type:  
@@ -70,8 +70,8 @@ To display the volume that currently has the focus in the selected disk, type:
 select volume  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

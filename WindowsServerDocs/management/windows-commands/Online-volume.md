@@ -1,5 +1,5 @@
 ---
-title: Online volume
+title: online volume
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,16 +14,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Online volume
+# online volume
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Brings volumes that are currently offline to an online state  
   
-> [!IMPORTANT]  
+> [!importANT]  
 > This command is not available in any edition of Windows Vista.  
   
-> [!IMPORTANT]  
+> [!importANT]  
 > This command will fail if it is used on a read\-only volume.  
   
 ## Syntax  
@@ -36,9 +36,9 @@ online volume [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   This command operates on volumes that have failed, are failing, or are in failed redundancy state.  
   
@@ -51,8 +51,8 @@ To bring the volume with focus online, type:
 online volume  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

@@ -1,5 +1,5 @@
 ---
-title: Revert
+title: revert
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,25 +14,25 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Revert
+# revert
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Reverts a volume back to a specified shadow copy. This is supported only for shadow copies in the CLIENTACCESSIBLE context. These shadow copies are persistent and can only be made by the system provider. If used without parameters, **revert** displays help at the command prompt.  
+reverts a volume back to a specified shadow copy. This is supported only for shadow copies in the CLIENTACCESSIBLE context. These shadow copies are persistent and can only be made by the system provider. if used without parameters, **revert** displays help at the command prompt.  
   
 ## Syntax  
   
 ```  
-revert <ShadowCopyID>  
+revert <shadowcopyID>  
 ```  
   
 ## Parameters  
   
 |Parameter|Description|  
 |-------|--------|  
-|<ShadowCopyID>|Specifies the shadow copy ID to revert the volume to.|  
+|<shadowcopyID>|Specifies the shadow copy ID to revert the volume to.|  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

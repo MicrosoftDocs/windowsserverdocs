@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin util and help
-description: "Windows Commands topic for **Bitsadmin util and help** - Displays the command-line usage for the **Util** commands."
+title: bitsadmin util and help
+description: "Windows Commands topic for **bitsadmin util and help** - Displays the command-line usage for the **Util** commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin util and help
+# bitsadmin util and help
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays the command-line usage for the **Util** commands.
 ## Syntax
 ```
-Bitsadmin /Util /Help 
+bitsadmin /Util /help 
 ```
 ## <a name="BKMK_examples"></a>Examples
 The following command displays the command-line help for the **Util** commands.
 ```
-Bitsadmin /Util /Help
+bitsadmin /Util /help
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

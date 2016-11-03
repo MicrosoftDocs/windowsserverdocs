@@ -1,5 +1,5 @@
 ---
-title: Create and Manage Server Groups
+title: create and Manage Server Groups
 description: "Server Manager"
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Create and Manage Server Groups
+# create and Manage Server Groups
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -27,11 +27,11 @@ Servers can be a member of more than one group.
 
 #### To create a new server group
 
-1.  On the **Manage** menu, click **Create Server Group**.
+1.  On the **Manage** menu, click **create Server Group**.
 
 2.  In the **Server group name** text box, type a friendly name for your server group, such as **Accounting Servers**.
 
-3.  Add servers to the **Selected** list from the server pool, or add other servers to the group by using the **Active Directory**, **DNS**, or **Import** tabs. For more information about how to use these tabs, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md) in this guide.
+3.  add servers to the **selected** list from the server pool, or add other servers to the group by using the **active directory**, **DNS**, or **import** tabs. for more information about how to use these tabs, see [add Servers to Server Manager](add-servers-to-server-manager.md) in this guide.
 
 4.  When you have finished adding servers to the group, click **OK**. The new group is displayed in the Server Manager navigation pane under the **All Servers** group.
 
@@ -39,14 +39,14 @@ Servers can be a member of more than one group.
 
 1.  Do one of the following.
 
-    -   In the Server Manager navigation pane, right-click a server group, and then click **Edit Server Group**.
+    -   In the Server Manager navigation pane, right-click a server group, and then click **edit Server Group**.
 
-    -   On the home page for the server group, open the **Tasks** menu on the **Servers** tile, and then click **Edit Server Group**.
+    -   On the home page for the server group, open the **Tasks** menu on the **Servers** tile, and then click **edit Server Group**.
 
-2.  Change the group name, or add or remove servers from the group.
+2.  change the group name, or add or remove servers from the group.
 
     > [!NOTE]
-    > Removing servers from a server group does not remove servers from Server Manager. Servers that you remove from a group remain in the **All Servers** group, in the server pool.
+    > removing servers from a server group does not remove servers from Server Manager. Servers that you remove from a group remain in the **All Servers** group, in the server pool.
 
 3.  When you are finished with changes to the group, click **OK**.
 
@@ -54,20 +54,20 @@ Servers can be a member of more than one group.
 
 1.  Do one of the following.
 
-    -   In the Server Manager navigation pane, right-click a server group, and then click **Delete Server Group**.
+    -   In the Server Manager navigation pane, right-click a server group, and then click **delete Server Group**.
 
-    -   On the home page for the server group, open the **Tasks** menu on the **Servers** tile, and then click **Delete Server Group**.
+    -   On the home page for the server group, open the **Tasks** menu on the **Servers** tile, and then click **delete Server Group**.
 
 2.  When you are prompted to make sure you want to delete the server group, click **Yes**.
 
     > [!NOTE]
-    > Deleting a server group does not remove servers from Server Manager. Servers that were in a deleted group remain in the **All Servers** group, in the server pool.
+    > deleting a server group does not remove servers from Server Manager. Servers that were in a deleted group remain in the **All Servers** group, in the server pool.
 
 3.  When you are finished with changes to the group, click **OK**.
 
 ## See Also
-[Add Servers to Server Manager](Add-Servers-to-Server-Manager.md)
-[Server Manager](Server-Manager.md)
+[add Servers to Server Manager](add-servers-to-server-manager.md)
+[Server Manager](server-manager.md)
 
 
 

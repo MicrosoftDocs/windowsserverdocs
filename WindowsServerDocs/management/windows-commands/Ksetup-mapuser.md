@@ -1,5 +1,5 @@
 ---
-title: Ksetup:mapuser
+title: ksetup:mapuser
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ksetup:mapuser
+# ksetup:mapuser
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Maps the name of a Kerberos principal to an account. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Maps the name of a Kerberos principal to an account. for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /mapuser <Principal> <Account>
@@ -28,9 +28,9 @@ ksetup /mapuser <Principal> <Account>
 |-------|--------|
 |<Principal>|The fully qualified domain name of any principal; for example, mike@corp.CONTOSO.COM.|
 |<Account>|Any account or security group name that exists on this computer, such as Guest, Domain Users, or Administrator.|
-## Remarks
+## remarks
 An account can be specifically identified, such as domain guests. Or you can use the wildcard character (*) to include all accounts.
-If an account name is omitted, mapping is deleted for the specified principal.
+if an account name is omitted, mapping is deleted for the specified principal.
 The computer will only authenticate the principals of the given realm if they present valid Kerberos tickets.
 Use **ksetup** without any parameters or arguments to see the current mapped settings and the default realm.
 Whenever changes are made to the external Key Distribution Center (KDC) and the realm configuration, a restart of the computer where the setting was changed is required.
@@ -39,7 +39,7 @@ Map Mike Danseglio's account within the Kerberos realm CONTOSO to the guest acco
 ```
 ksetup /mapuser mike@corp.CONTOSO.COM guest
 ```
-Remove the mapping of Mike Danseglio's account to the guest account on this computer to prevent him from authenticating to this computer with his credentials from CONTOSO:
+remove the mapping of Mike Danseglio's account to the guest account on this computer to prevent him from authenticating to this computer with his credentials from CONTOSO:
 ```
 ksetup /mapuser mike@corp.CONTOSO.COM 
 ```
@@ -51,6 +51,6 @@ Map all accounts within the CONTOSO Kerberos realm to any existing account of th
 ```
 ksetup /mapuser * *
 ```
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Ksetup](Ksetup.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [ksetup](ksetup.md)

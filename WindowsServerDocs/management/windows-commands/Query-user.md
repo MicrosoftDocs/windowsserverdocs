@@ -1,5 +1,5 @@
 ---
-title: Query user
+title: query user
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Query user
+# query user
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays information about user sessions on a Remote Desktop Session Host (RD Session Host) server.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Displays information about user sessions on a remote Desktop Session Host (rd Session Host) server.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
@@ -32,18 +32,18 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 |<UserName>|Specifies the logon name of the user that you want to query.|
 |<SessionName>|Specifies the name of the session that you want to query.|
 |<SessionID>|Specifies the ID of the session that you want to query.|
-|/server:<ServerName>|Specifies the RD Session Host server that you want to query. Otherwise, the current RD Session Host server is used.|
+|/server:<ServerName>|Specifies the rd Session Host server that you want to query. Otherwise, the current rd Session Host server is used.|
 |/?|Displays help at the command prompt.|
-## Remarks
--   You can use this command to find out if a specific user is logged on to a specific RD Session Host server. **Query user** returns the following information:
+## remarks
+-   You can use this command to find out if a specific user is logged on to a specific rd Session Host server. **query user** returns the following information:
     -   The name of the user
-    -   The name of the session on the RD Session Host server
+    -   The name of the session on the rd Session Host server
     -   The session ID
     -   The state of the session (active or disconnected)
     -   The idle time (the number of minutes since the last keystroke or mouse movement at the session)
     -   The date and time the user logged on
--   To use **query user**, you must have Full Control permission or Query Information special access permission.
--   If you use **query user** without specifying <*UserName*>, <*SessionName*>, or <*SessionID*>, a list of all users who are logged on to the server is returned. Alternatively, you can also use **query session** to display a list of all sessions on a server.
+-   To use **query user**, you must have Full Control permission or query Information special access permission.
+-   if you use **query user** without specifying <*UserName*>, <*SessionName*>, or <*SessionID*>, a list of all users who are logged on to the server is returned. Alternatively, you can also use **query session** to display a list of all sessions on a server.
 -   When **query user** returns information, a greater than (>) symbol is displayed before the current session.
 -   The **/server** parameter is required only if you use **query user** from a remote server.
 ## <a name="BKMK_examples"></a>Examples
@@ -51,11 +51,11 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
     ```
     query user
     ```
--   To display information about the user USER1 on server SERVER1, type:
+-   To display information about the user USER1 on server SERver1, type:
     ```
-    query user USER1 /server:SERVER1
+    query user USER1 /server:SERver1
     ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Query](Query.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[query](query.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Endlocal
+title: endlocal
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Endlocal
+# endlocal
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Ends localization of environment changes in a batch file, and restores environment variables to their values before the corresponding **setlocal** command was run.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 endlocal
@@ -28,14 +28,14 @@ endlocal
 |Parameter|Description|
 |-------|--------|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   The **endlocal** command has no effect outside a script or batch file.
 -   There is an implicit **endlocal** command at the end of a batch file.
--   If command extensions are enabled (command extensions are enabled by default), the **endlocal** command restores the state of command extensions (that is, enabled or disabled) to what it was before the corresponding **setlocal** command was run.
+-   if command extensions are enabled (command extensions are enabled by default), the **endlocal** command restores the state of command extensions (that is, enabled or disabled) to what it was before the corresponding **setlocal** command was run.
 > [!NOTE]
-> For more information about enabling and disabling command extensions, see [Cmd](Cmd.md).
+> for more information about enabling and disabling command extensions, see [Cmd](Cmd.md).
 ## <a name="BKMK_examples"></a>Examples
-You can localize environment variables in a batch file. For example, the following program starts the superapp batch program on the network, directs the output to a file, and displays the file in Notepad:
+You can localize environment variables in a batch file. for example, the following program starts the superapp batch program on the network, directs the output to a file, and displays the file in Notepad:
 ```
 @echo off
 setlocal
@@ -44,5 +44,5 @@ call superapp>c:\superapp.out
 endlocal
 start notepad c:\superapp.out
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

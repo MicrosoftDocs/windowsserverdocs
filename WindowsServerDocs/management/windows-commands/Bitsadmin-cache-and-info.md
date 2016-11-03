@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin cache and info
-description: "Windows Commands topic for **Bitsadmin cache and info** - Dumps a specific cache entry."
+title: bitsadmin cache and info
+description: "Windows Commands topic for **bitsadmin cache and info** - Dumps a specific cache entry."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin cache and info
+# bitsadmin cache and info
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Dumps a specific cache entry.
 ## Syntax
 ```
-bitsadmin /Cache /Info RecordID [/Verbose] 
+bitsadmin /Cache /Info RecordID [/verbose] 
 ```
 ## Parameters
 |Parameter|Description|
@@ -32,5 +32,5 @@ The following example dumps the cache entry with the RecordID of {6511FB02-E195-
 ```
 C:\>bitsadmin /Cache /Info {6511FB02-E195-40A2-B595-E8E2F8F47702} 
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Change logon
+title: change logon
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -17,12 +17,12 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-# Change logon
+# change logon
 Enables or disables logons from client sessions, or displays current logon status.
 This utility is useful for system maintenance.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
@@ -36,9 +36,9 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 |/drain|Disables logons from new client sessions, but allows reconnections to existing sessions.|
 |/drainuntilrestart|Disables logons from new client sessions until the computer is restarted, but allows reconnections to existing sessions.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   Only administrators can use the **change logon** command.
--   Logons are re-enabled when you restart the system. If you are connected to the Remote Desktop Session Host (RD Session Host) server from a client session and disable logons, and then log off before re-enabling logons, you will not be able to reconnect to your session. To re-enable logons from client sessions, log on at the console.
+-   Logons are re-enabled when you restart the system. if you are connected to the remote Desktop Session Host (rd Session Host) server from a client session and disable logons, and then log off before re-enabling logons, you will not be able to reconnect to your session. To re-enable logons from client sessions, log on at the console.
 ## <a name="BKMK_examples"></a>Examples
 -   To display the current logon status, type:
     ```
@@ -52,7 +52,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
     ```
     change logon /disable
     ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Change](Change.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[change](change.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

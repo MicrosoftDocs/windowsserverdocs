@@ -18,24 +18,24 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays the Windows Deployment Services properties of all prestaged computers. A prestaged computer is a physical computer that has been linked to a computer account in Active Directory Domain Services.
+Displays the Windows Deployment Services properties of all prestaged computers. A prestaged computer is a physical computer that has been linked to a computer account in active directory Domain Services.
 ## Syntax
 ```
-WDSUTIL [Options] /Get-AllDevices [/Forest:{Yes | No}] [/ReferralServer:<Server name>]
+wdsutil [Options] /Get-AllDevices [/forest:{Yes | No}] [/ReferralServer:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
+|[/forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
 |[/ReferralServer:<Server name>]|Returns only those computers that are prestaged for the specified server.|
 ## <a name="BKMK_examples"></a>Examples
 To view all computers, type one of the following:
 ```
-WDSUTIL /Get-AllDevices
-WDSUTIL /Verbose /Get-AllDevices /Forest:Yes /ReferralServer:MyWDSServer
+wdsutil /Get-AllDevices
+wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Subcommand: set-Device](Subcommand-set-Device.md)
-[Using the add-Device command](Using-the-add-Device-command.md)
-[Using the get-Device Command](Using-the-get-Device-Command.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Subcommand: set-Device](subcommand-set-device.md)
+[Using the add-Device command](using-the-add-device-command.md)
+[Using the get-Device Command](using-the-get-device-command.md)

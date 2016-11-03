@@ -1,5 +1,5 @@
 ---
-title: The Verbose Command
+title: The verbose Command
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,17 +14,17 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# The Verbose Command
+# The verbose Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays verbose output for a specified command. You can use **/verbose** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
+Displays verbose output for a specified command. You can use **/verbose** with any other wdsutil commands that you run. Note that you must specify **/verbose** and **/progress** directly after **wdsutil**.
 ## Syntax
 ```
-WDSUTIL /verbose <commands>
+wdsutil /verbose <commands>
 ```
 ## Examples
-To delete approved computers from the Auto-Add database and show verbose output, type:
+To delete approved computers from the Auto-add database and show verbose output, type:
 ```
-WDSUTIL /Verbose /progress /Delete-AutoAddDevices /Server:MyWDSServer /DeviceType:ApprovedDevices
+wdsutil /verbose /progress /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```

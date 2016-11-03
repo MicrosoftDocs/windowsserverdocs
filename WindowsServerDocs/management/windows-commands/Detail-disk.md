@@ -1,5 +1,5 @@
 ---
-title: Detail disk
+title: detail disk
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Detail disk
+# detail disk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,11 +26,11 @@ Displays the properties of the selected disk and the volumes on that disk.
 detail disk  
 ```  
   
-## Remarks  
+## remarks  
   
 -   A disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
--   If the selected disk is a virtual hard disk \(VHD\), **detail disk** reports the disk's bus type as Virtual.  
+-   if the selected disk is a virtual hard disk \(VHD\), **detail disk** reports the disk's bus type as Virtual.  
   
 ## <a name="BKMK_examples"></a>Examples  
 To see the properties of the selected disk, and information about the volumes in the disk, type:  
@@ -39,8 +39,8 @@ To see the properties of the selected disk, and information about the volumes in
 detail disk  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

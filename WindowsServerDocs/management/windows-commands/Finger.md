@@ -1,5 +1,5 @@
 ---
-title: Finger
+title: finger
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Finger
+# finger
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays information about a user or users on a specified remote computer (typically a computer running UNIX) that is running the Finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. 
+Displays information about a user or users on a specified remote computer (typically a computer running UNIX) that is running the finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. 
 ## Syntax
 ```
 finger [-l] [<User>] [@<Host>] [...]
@@ -27,10 +27,10 @@ finger [-l] [<User>] [@<Host>] [...]
 |Parameter|Description|
 |-------|--------|
 |-l|Displays user information in long list format.|
-|<User>|Specifies the user about which you want information. If you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
-|@<Host>|Specifies the remote computer running the Finger service where you are looking for user information. You can specify a computer name or IP address.|
-|/?|Displays Help at the command prompt.|
-## Remarks
+|<User>|Specifies the user about which you want information. if you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
+|@<Host>|Specifies the remote computer running the finger service where you are looking for user information. You can specify a computer name or IP address.|
+|/?|Displays help at the command prompt.|
+## remarks
 Multiple User@Host parameters can be specified.
 You must prefix **finger** parameters with a hyphen (-) rather than a slash (/).
 This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
@@ -44,5 +44,5 @@ To display information for all users on the computer users.microsoft.com, type:
 ```
 finger @users.microsoft.com
 ```
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-mkdir.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-mkdir.md
 ---

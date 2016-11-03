@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getstate
+title: bitsadmin getstate
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin getstate
+# bitsadmin getstate
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -27,7 +27,7 @@ bitsadmin /GetState <Job>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-## Remarks
+## remarks
 The possible states are:
 |||
 |-|-|
@@ -44,5 +44,5 @@ The following example retrieves the state for the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /GetState myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

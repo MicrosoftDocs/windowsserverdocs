@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setvalidationstate
-description: "Windows Commands topic for **Bitsadmin setvalidationstate** - Sets the content validation state of the given file within the job."
+title: bitsadmin setvalidationstate
+description: "Windows Commands topic for **bitsadmin setvalidationstate** - Sets the content validation state of the given file within the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin setvalidationstate
+# bitsadmin setvalidationstate
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -31,7 +31,7 @@ bitsadmin /SetValidationState <Job> <file index> <true|false>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|File index|Starts from 0|
+|File index|starts from 0|
 |True&#124;False|Set to TRUE if the file content is valid, otherwise set to FALSE|
 
 ## <a name="BKMK_examples"></a>Examples
@@ -41,7 +41,7 @@ The following example sets the content validation state of file 2 to TRUE for th
 C:\>bitsadmin /SetValidationState myJob 2 TRUE 
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

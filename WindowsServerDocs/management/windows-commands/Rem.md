@@ -1,5 +1,5 @@
 ---
-title: Rem
+title: rem
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Rem
+# rem
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Records comments (remarks) in a batch file or CONFIG.SYS. If no comment is specified, **rem** adds vertical spacing.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Records comments (remarks) in a batch file or CONFIG.SYS. if no comment is specified, **rem** adds vertical spacing.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 rem [<Comment>]
@@ -29,7 +29,7 @@ rem [<Comment>]
 |-------|--------|
 |<Comment>|Specifies a string of characters to include as a comment.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   The **rem** command does not display comments on the screen. You must use the **echo on** command in your batch or CONFIG.SYS file to display comments on the screen.
 -   You cannot use a redirection character (**<** or **>**) or pipe (**|**) in a batch file comment.
 -   Although you can use **rem** without a comment to add vertical spacing to a batch file, you can also use blank lines. Blank lines are ignored when a batch program is processed.
@@ -49,5 +49,5 @@ To include an explanatory comment before the **prompt** command in your CONFIG.S
 rem Set prompt to indicate current directory
 prompt $p$g
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

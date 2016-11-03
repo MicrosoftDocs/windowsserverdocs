@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Server
+title: dfsutil Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Server
+# dfsutil Server
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -33,7 +33,7 @@ dfsutil server <Server> | /?
 |Parameter|Description|
 |-------|--------|
 |<Server>|Server on which the roots are hosted.|
-|Dfsutil Server Registry|Sets, resets, or displays registry keys of server.|
+|dfsutil Server registry|Sets, resets, or displays registry keys of server.|
 |\/?|<Another concise description, starts with verb.>|
 
 ## <a name="BKMK_Examples"></a>Examples
@@ -43,10 +43,10 @@ To view help for this command, type:
 dfsutil server /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

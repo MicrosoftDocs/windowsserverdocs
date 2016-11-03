@@ -1,7 +1,7 @@
 ---
-title: Bitsadmin peers and list
-description: "Windows Commands topic for **Bitsadmin peers and list** - 
-Lists all peers."
+title: bitsadmin peers and list
+description: "Windows Commands topic for **bitsadmin peers and list** - 
+lists all peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,19 +15,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin peers and list
+# bitsadmin peers and list
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Lists all peers.
+lists all peers.
 ## Syntax
 ```
-bitsadmin /Peers /List 
+bitsadmin /Peers /list 
 ```
 ## <a name="BKMK_examples"></a>Examples
 The following example lists all peers.
 ```
-C:\>bitsadmin /Peers /List
+C:\>bitsadmin /Peers /list
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

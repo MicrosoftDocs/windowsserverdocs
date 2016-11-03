@@ -1,6 +1,6 @@
 ---
 title: Begin restore
-description: "Windows Commands topic for **Begin restore** - Starts a restore session and issues a **PreRestore** event to involved writers."
+description: "Windows Commands topic for **Begin restore** - starts a restore session and issues a **PreRestore** event to involved writers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Starts a restore session and issues a **PreRestore** event to involved writers.  
+starts a restore session and issues a **PreRestore** event to involved writers.  
   
 ## Syntax  
   
@@ -26,7 +26,7 @@ Starts a restore session and issues a **PreRestore** event to involved writers.
 begin restore  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

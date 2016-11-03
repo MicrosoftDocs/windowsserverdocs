@@ -1,5 +1,5 @@
 ---
-title: Diskperf
+title: diskperf
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Diskperf
+# diskperf
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 In Windows 2000, physical and logical disk performance counters are not enabled by default.
-**Diskperf** is included in Windows XP, Windows Server 2003, Windows Server 2008, Windows Vista, Windows Server 2008 R2, and Windows 7 so that it can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows 2000.
+**diskperf** is included in Windows XP, Windows Server 2003, Windows Server 2008, Windows Vista, Windows Server 2008 R2, and Windows 7 so that it can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows 2000.
 ## Syntax
 ```
 diskperf [-Y[D|V] | -N[D|V]] [\\computername]
@@ -28,7 +28,7 @@ diskperf [-Y[D|V] | -N[D|V]] [\\computername]
 |Option|Description|
 |-----|--------|
 |-?|Displays context sensitive help.|
-|-Y|Start all disk performance counters when the computer restarts.|
+|-Y|start all disk performance counters when the computer restarts.|
 |-YD|Enable disk performance counters for physical drives when the computer restarts.|
 |-YV|Enable disk performance counters for logical drives or storage volumes when the computer restarts.|
 |-N|Disable all disk performance counters when the computer restarts.|

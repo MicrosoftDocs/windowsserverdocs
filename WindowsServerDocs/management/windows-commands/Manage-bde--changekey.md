@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Manage-bde-changekey.md
+redirect_url: /windows-server-docs/management/windows-commands/manage-bde-changekey.md
 ---

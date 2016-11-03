@@ -1,5 +1,5 @@
 ---
-title: Ftp: mdelete_1
+title: ftp: mdelete_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: mdelete_1
+# ftp: mdelete_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes files on the remote computer.   
+deletes files on the remote computer.   
 ## Syntax  
 ```  
-mdelete <RemoteFile>[ ]  
+mdelete <remoteFile>[ ]  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<RemoteFile>|Specifies the remote file to delete.|  
+|<remoteFile>|Specifies the remote file to delete.|  
 ## <a name="BKMK_Examples"></a>Examples  
-Delete remote files **a.exe** and **b.exe**.  
+delete remote files **a.exe** and **b.exe**.  
 ```  
 mdelete a.exe b.exe  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

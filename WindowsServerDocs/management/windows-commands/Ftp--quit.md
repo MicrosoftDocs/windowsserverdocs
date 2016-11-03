@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-quit.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-quit.md
 ---

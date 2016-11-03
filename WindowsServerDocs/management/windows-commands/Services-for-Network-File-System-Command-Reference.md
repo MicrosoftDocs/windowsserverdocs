@@ -25,11 +25,11 @@ The following is a list of NFS command\-line tools.
 |Command|Description|  
 |------|--------|  
 |[mapadmin](mapadmin.md)|Manage User Name Mapping for Microsoft Services for Network File System.|  
-|[Mount](Mount.md)|Mount Network File System \(NFS\) network shares.|  
-|[Nfsadmin](Nfsadmin.md)|Manage Server for NFS and Client for NFS.|  
-|[Nfsshare](Nfsshare.md)|Control Network File System \(NFS\) shares.|  
-|[Nfsstat](Nfsstat.md)|Display or reset counts of calls made to Server for NFS.|  
-|[Rpcinfo](Rpcinfo.md)|List programs on remote computers.|  
-|[Showmount](Showmount.md)|Display mounted directories.|
+|[mount](mount.md)|mount Network File System \(NFS\) network shares.|  
+|[nfsadmin](nfsadmin.md)|Manage Server for NFS and Client for NFS.|  
+|[nfsshare](nfsshare.md)|Control Network File System \(NFS\) shares.|  
+|[nfsstat](nfsstat.md)|Display or reset counts of calls made to Server for NFS.|  
+|[rpcinfo](rpcinfo.md)|list programs on remote computers.|  
+|[showmount](showmount.md)|Display mounted directories.|
   
 

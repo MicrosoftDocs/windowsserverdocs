@@ -1,5 +1,5 @@
 ---
-title: Nfsstat
+title: nfsstat
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nfsstat
+# nfsstat
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -22,4 +22,4 @@ You can use **nfsstat** to display or reset counts of calls made to Server for N
 ## Syntax
 **nfsstat** [-z]
 ## Description
-When used without the **-z** option, the **nfsstat** command-line utility displays the number of NFS V2, NFS V3, and Mount V3 calls made to the server since the counters were set to 0, either when the service started or when the counters were reset using **nfsstat -z**.
+When used without the **-z** option, the **nfsstat** command-line utility displays the number of NFS V2, NFS V3, and mount V3 calls made to the server since the counters were set to 0, either when the service started or when the counters were reset using **nfsstat -z**.

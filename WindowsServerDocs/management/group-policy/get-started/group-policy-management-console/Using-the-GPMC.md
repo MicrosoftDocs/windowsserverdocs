@@ -18,24 +18,24 @@ ms.date: 10/12/2016
 The Group Policy Management Console (GPMC) is a comprehensive administrative tool that administrators use to perform most Group Policy management tasks.  
   
 > [!NOTE]  
-> Configuring individual policy settings in Group Policy Objects is done by using the Local Group Policy Editor.  
+> Configuring individual policy settings in Group Policy Objects is done by using the Local Group Policy editor.  
   
 ## Install and open the GPMC  
 Use the following procedures to install and open the GPMC through Server Manager on the server.  
   
 #### To install the GPMC  
   
-1.  On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type Server Manager.  
+1.  On the **start** screen, click the **Apps** arrow. On the **Apps** screen, type Server Manager.  
   
-2.  Click **Server Manager**, and in the main pane, click **Add roles and features**.  
+2.  Click **Server Manager**, and in the main pane, click **add roles and features**.  
   
-3.  Follow the **Add Roles and Features Wizard** until you get to the **Features** menu.  
+3.  Follow the **add Roles and Features Wizard** until you get to the **Features** menu.  
   
-4.  Select **Group Policy Management** from the list of available features. Click **Install** and follow the steps in the wizard.  
+4.  select **Group Policy Management** from the list of available features. Click **Install** and follow the steps in the wizard.  
   
 #### To open the GPMC  
   
-1.  On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type **gpmc.msc**.  
+1.  On the **start** screen, click the **Apps** arrow. On the **Apps** screen, type **gpmc.msc**.  
   
 2.  Click **OK** or press **ENTER**.  
   

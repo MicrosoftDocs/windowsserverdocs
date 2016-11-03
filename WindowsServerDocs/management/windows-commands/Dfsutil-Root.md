@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Root
+title: dfsutil Root
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,18 +14,18 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Root
+# dfsutil Root
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The **dfsutil root** command displays information about the namespace root. Dfsutil Root commands support creating, removing, importing or exporting namespace roots.
+The **dfsutil root** command displays information about the namespace root. dfsutil Root commands support creating, removing, importing or exporting namespace roots.
 
 
 
 ## Syntax
 
 ```
-dfsutil root <\\server\share> [Verbose] | AddDom | AddStd | Remove | Export | Import | ForceSync | /?
+dfsutil root <\\server\share> [verbose] | addDom | addStd | remove | Export | import | forceSync | /?
 ```
 
 ### Parameters
@@ -33,13 +33,13 @@ dfsutil root <\\server\share> [Verbose] | AddDom | AddStd | Remove | Export | Im
 |Parameter|Description|
 |-------|--------|
 |<\\\\server\\share>|UNC path to the namespace.|
-|Verbose|Displays additional information while the command runs.|
-|[Dfsutil Root AddDom](Dfsutil-Root-AddDom.md)|Creates a new domain\-based namespace.|
-|[Dfsutil Root AddStd](Dfsutil-Root-AddStd.md)|Creates a new stand\-alone namespace.|
-|[Dfsutil Root Remove](Dfsutil-Root-Remove.md)|Removes the namespace.|
-|[Dfsutil Root Export](Dfsutil-Root-Export.md)|Exports the namespace configuration to a file.|
-|Dfsutil Root Import|Imports the namespace from another namespace or a file.|
-|Dfsutil Root ForceSync|Perform a Forced sync on the target of a namespace.|
+|verbose|Displays additional information while the command runs.|
+|[dfsutil Root addDom](dfsutil-root-adddom.md)|creates a new domain\-based namespace.|
+|[dfsutil Root addStd](dfsutil-root-addstd.md)|creates a new stand\-alone namespace.|
+|[dfsutil Root remove](dfsutil-root-remove.md)|removes the namespace.|
+|[dfsutil Root Export](dfsutil-root-export.md)|Exports the namespace configuration to a file.|
+|dfsutil Root import|imports the namespace from another namespace or a file.|
+|dfsutil Root forceSync|Perform a forced sync on the target of a namespace.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
@@ -64,13 +64,13 @@ dfsutil root \\SRV1\StandaloneNameSpace2 verbose
 To view help for this command, type:
 
 ```
-Dfsutil root /?
+dfsutil root /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

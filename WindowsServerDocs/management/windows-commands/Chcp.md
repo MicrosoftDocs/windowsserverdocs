@@ -1,5 +1,5 @@
 ---
-title: Chcp
+title: chcp
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Chcp
+# chcp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the active console code page. If used without parameters, **chcp** displays the number of the active console code page.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+changes the active console code page. if used without parameters, **chcp** displays the number of the active console code page.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 chcp [<NNN>]
@@ -42,9 +42,9 @@ The following table lists each supported code page and its country/region or lan
 |863|Canadian-French|
 |865|Nordic|
 |866|Russian|
-|869|Modern Greek|
-## Remarks
--   Only the original equipment manufacturer (OEM) code page that is installed with Windows appears correctly in a Command Prompt window that uses Raster fonts. Other code pages appear correctly in full-screen mode or in Command Prompt windows that use TrueType fonts.
+|869|modern Greek|
+## remarks
+-   Only the original equipment manufacturer (OEM) code page that is installed with Windows appears correctly in a Command prompt window that uses Raster fonts. Other code pages appear correctly in full-screen mode or in Command prompt windows that use Truetype fonts.
 -   You do not need to prepare code pages (as in MS-DOS).
 -   Programs that you start after you assign a new code page use the new code page. However, programs (except Cmd.exe) that you start before you assign the new code page use the original code page.
 ## <a name="BKMK_examples"></a>Examples
@@ -53,12 +53,12 @@ To view the active code page setting, type:
 chcp
 ```
 A message similar to the following appears:
-`Active code page: 437`
+`active code page: 437`
 To change the active code page to 850 (Multilingual), type:
 ```
 chcp 850
 ```
-If the specified code page is invalid, the following error message appears:
+if the specified code page is invalid, the following error message appears:
 `Invalid code page`
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

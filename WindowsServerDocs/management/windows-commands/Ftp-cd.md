@@ -1,5 +1,5 @@
 ---
-title: Ftp: cd
+title: ftp: cd
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,27 +14,27 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: cd
+# ftp: cd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the working directory on the remote computer.   
+changes the working directory on the remote computer.   
 ## Syntax  
 ```  
-cd <RemoteDirectory>  
+cd <remotedirectory>  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<RemoteDirectory>|Specifies the directory on the remote computer to which you want to change.|  
+|<remotedirectory>|Specifies the directory on the remote computer to which you want to change.|  
 ## <a name="BKMK_Examples"></a>Examples  
-Change the directory on the remote computer to **Docs**.  
+change the directory on the remote computer to **Docs**.  
 ```  
 cd Docs  
 ```  
-Change the directory on the remote computer to **May Videos**.  
+change the directory on the remote computer to **May Videos**.  
 ```  
 cd  May Videos  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

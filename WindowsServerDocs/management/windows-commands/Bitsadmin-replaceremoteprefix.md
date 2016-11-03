@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin replaceremoteprefix
-description: "Windows Commands topic for **Bitsadmin replaceremoteprefix** - All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*."
+title: bitsadmin replaceremoteprefix
+description: "Windows Commands topic for **bitsadmin replaceremoteprefix** - All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin replaceremoteprefix
+# bitsadmin replaceremoteprefix
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*.
 ## Syntax
 ```
-bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
+bitsadmin /replaceremotePrefix <Job> <OldPrefix> <NewPrefix
 ```
 ## Parameters
 |Parameter|Description|
@@ -32,7 +32,7 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 ## <a name="BKMK_examples"></a>Examples
 The following example changes all files in job named *myDownloadJob* whose remote URL begins with *http://stageserver* to *http://prodserver*.
 ```
-C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver
+C:\>bitsadmin /replaceremotePrefix myDownloadJob http://stageserver http://prodserver
 ```
-## Additional information
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional information
+[Command-Line Syntax Key](command-line-syntax-key.md)

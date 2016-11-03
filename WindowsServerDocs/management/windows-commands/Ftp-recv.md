@@ -1,5 +1,5 @@
 ---
-title: Ftp: recv
+title: ftp: recv
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,34 +14,34 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: recv
+# ftp: recv
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Copies a remote file to the local computer using the current file transfer type.   
 ## Syntax  
 ```  
-recv <RemoteFile> [<LocalFile>]  
+recv <remoteFile> [<LocalFile>]  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<RemoteFile>|Specifies the remote file to copy.|  
+|<remoteFile>|Specifies the remote file to copy.|  
 |[<LocalFile>]|Specifies the name to use on the local computer.|  
-## Remarks  
+## remarks  
 -   The **recv** command is identical to the **get** command.  
--   If *LocalFile* is not specified, the file is given the *RemoteFile* name.  
+-   if *LocalFile* is not specified, the file is given the *remoteFile* name.  
 ## <a name="BKMK_Examples"></a>Examples  
-Copy **test.txt** to the local computer using the current file transfer type.  
+copy **test.txt** to the local computer using the current file transfer type.  
 ```  
 recv test.txt  
 ```  
-Copy **test.txt** to the local computer as **test1.txt** using the current file transfer type.  
+copy **test.txt** to the local computer as **test1.txt** using the current file transfer type.  
 ```  
 recv test.txt test1.txt  
 ```  
-## Additional references  
--   [Ftp: ascii](Ftp-ascii.md)  
--   [Ftp: binary](Ftp-binary.md)  
--   [Ftp: get](Ftp-get.md)  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [ftp: ascii](ftp-ascii.md)  
+-   [ftp: binary](ftp-binary.md)  
+-   [ftp: get](ftp-get.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

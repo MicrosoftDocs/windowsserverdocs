@@ -1,5 +1,5 @@
 ---
-title: Detail
+title: detail
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Detail
+# detail
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -33,13 +33,13 @@ detail vdisk
   
 |Parameter|Description|  
 |-------|--------|  
-|[Detail disk](Detail-disk.md)|Displays the properties of the selected disk and the volumes on that disk.|  
-|[Detail partition](Detail-partition.md)|Displays the properties of the selected partition.|  
-|[Detail volume](Detail-volume.md)|Displays the disks on which the current volume resides.|  
-|[Detail vdisk](Detail-vdisk.md)|Displays the properties of the selected VHD.|  
+|[detail disk](detail-disk.md)|Displays the properties of the selected disk and the volumes on that disk.|  
+|[detail partition](detail-partition.md)|Displays the properties of the selected partition.|  
+|[detail volume](detail-volume.md)|Displays the disks on which the current volume resides.|  
+|[detail vdisk](detail-vdisk.md)|Displays the properties of the selected VHD.|  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

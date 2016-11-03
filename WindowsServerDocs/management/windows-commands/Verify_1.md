@@ -1,5 +1,5 @@
 ---
-title: Verify_1
+title: verify_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,12 +15,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Verify_1
+# verify_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Tells **cmd** whether to verify that your files are written correctly to a disk. If used without parameters, **verify** displays the current setting.  
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+Tells **cmd** whether to verify that your files are written correctly to a disk. if used without parameters, **verify** displays the current setting.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
 verify [on | off]  
@@ -37,7 +37,7 @@ verify
 ```  
 To turn the **verify** setting on, type:  
 ```  
-Verify on  
+verify on  
 ```  
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  

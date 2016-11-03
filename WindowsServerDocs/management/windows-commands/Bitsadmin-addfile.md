@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin addfile
-description: "Windows Commands topic for **Bitsadmin addfile** - Adds a file to the specified job."
+title: bitsadmin addfile
+description: "Windows Commands topic for **bitsadmin addfile** - adds a file to the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,25 +14,25 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin addfile
+# bitsadmin addfile
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Adds a file to the specified job.
+adds a file to the specified job.
 ## Syntax
 ```
-bitsadmin /AddFile <Job> <RemoteURL> <LocalName>
+bitsadmin /addFile <Job> <remoteURL> <LocalName>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|RemoteURL|The URL of the file on the server.|
+|remoteURL|The URL of the file on the server.|
 |LocalName|The name of the file on the local computer. *LocalName* must contain an absolute path to the file.|
 ## <a name="BKMK_examples"></a>Examples
-Add a file to the job. Repeat this call for each file you want to add. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
+add a file to the job. Repeat this call for each file you want to add. if multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
 ```
 C:\>bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

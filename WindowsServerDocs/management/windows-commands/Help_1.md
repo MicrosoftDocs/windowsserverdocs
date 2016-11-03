@@ -1,5 +1,5 @@
 ---
-title: Help_1
+title: help_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Help_1
+# help_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -34,9 +34,9 @@ help [<command>]
 |-------|--------|  
 |<command>|Specifies the command for which to display detailed help information.|  
   
-## Remarks  
+## remarks  
   
--   If no command is specified, **help** will display all possible commands.  
+-   if no command is specified, **help** will display all possible commands.  
   
 ## <a name="BKMK_examples"></a>Examples  
 To display a list of all commands available in DiskPart, type:  
@@ -51,8 +51,8 @@ To display detailed help information about how to use the **create partition pri
 help create partition primary  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

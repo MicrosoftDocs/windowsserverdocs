@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.  
+Ends a full backup session and issues a **Backupcomplete** event with the appropriate writer state, if needed.  
   
 ## Syntax  
   
@@ -27,11 +27,11 @@ Ends a full backup session and issues a **BackupComplete** event with the approp
 end backup  
 ```  
   
-## Remarks  
+## remarks  
   
 -   This command should be used for all full backups.  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

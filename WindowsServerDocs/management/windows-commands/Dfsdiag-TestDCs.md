@@ -1,5 +1,5 @@
 ---
-title: Dfsdiag TestDCs
+title: dfsdiag TestDCs
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,24 +14,24 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsdiag TestDCs
+# dfsdiag TestDCs
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  
   
--   Verifies that the Distributed File System \(DFS\) Namespace service is running and that its Startup Type is set to Automatic.  
+-   verifies that the Distributed File System \(DFS\) Namespace service is running and that its startup type is set to Automatic.  
   
--   Checks for the support of site\-costed referrals for NETLOGON and SYSVOL.  
+-   Checks for the support of site\-costed referrals for NETLOGON and SYSvol.  
   
--   Verifies the consistency of the site association by hostname and IP address.  
+-   verifies the consistency of the site association by hostname and IP address.  
   
   
   
 ## Syntax  
   
 ```  
-DFSDiag /TestDCs [/Domain:<Domain name>]  
+dfsdiag /TestDCs [/Domain:<Domain name>]  
 ```  
   
 ### Parameters  
@@ -40,20 +40,20 @@ DFSDiag /TestDCs [/Domain:<Domain name>]
 |-------|--------|  
 |\/Domain:<Domain name>|Domain that you want to check.|  
   
-## Remarks  
+## remarks  
 \/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 To verify the configuration of domain controllers in the Contoso.com domain, type:  
   
 ```  
-DFSDiag /TestDCs /Domain:Contoso.com  
+dfsdiag /TestDCs /Domain:Contoso.com  
 ```  
   
-## Additional references  
+## additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
   
--   [Dfsdiag](Dfsdiag.md)  
+-   [dfsdiag](dfsdiag.md)  
   
 

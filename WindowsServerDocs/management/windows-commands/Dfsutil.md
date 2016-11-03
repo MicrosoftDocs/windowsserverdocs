@@ -1,5 +1,5 @@
 ---
-title: Dfsutil
+title: dfsutil
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil
+# dfsutil
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The dfsutil command manages DFS Namespaces, servers and clients. Dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
+The dfsutil command manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
 
-For examples of how this command can be used, see 
+for examples of how this command can be used, see 
 
 ## Syntax
 
@@ -32,19 +32,19 @@ command </parameter> </param2>
 
 |Parameter|Description|
 |-------|--------|
-|[Dfsutil Root](Dfsutil-Root.md)|Displays,creates,removes,imports,exports namespace roots.|
-|[Dfsutil Link](Dfsutil-Link.md)|Displays, creates, removes, or moves folders \(links\).|
-|[Dfsutil Target](Dfsutil-Target.md)|Displays,create,remove folder target or namespace server.|
-|[Dfsutil Property](Dfsutil-Property.md)|Displays or modifies a folder target or namespace server.|
-|[Dfsutil Client](Dfsutil-Client.md)|Displays or modifies client information or registry keys.|
-|[Dfsutil Server](Dfsutil-Server.md)|Displays or modifies namespace configuration.|
-|[Dfsutil Diag](Dfsutil-Diag.md)|Perform diagnostics or view dfsdirs\/dfspath.|
-|[Dfsutil Domain](Dfsutil-Domain.md)|Displays all domain\-based namespaces in a domain.|
-|[Dfsutil Cache](Dfsutil-Cache.md)|Displays or flushes the client cache.|
-|[Dfsutil oldcli](Dfsutil-oldcli.md)|Use the Dfsutil \/oldcli command to use of the original Dfsutil syntax.|
+|[dfsutil Root](dfsutil-root.md)|Displays,creates,removes,imports,exports namespace roots.|
+|[dfsutil Link](dfsutil-link.md)|Displays, creates, removes, or moves folders \(links\).|
+|[dfsutil Target](dfsutil-target.md)|Displays,create,remove folder target or namespace server.|
+|[dfsutil Property](dfsutil-property.md)|Displays or modifies a folder target or namespace server.|
+|[dfsutil Client](dfsutil-client.md)|Displays or modifies client information or registry keys.|
+|[dfsutil Server](dfsutil-server.md)|Displays or modifies namespace configuration.|
+|[dfsutil Diag](dfsutil-diag.md)|Perform diagnostics or view dfsdirs\/dfspath.|
+|[dfsutil Domain](dfsutil-domain.md)|Displays all domain\-based namespaces in a domain.|
+|[dfsutil Cache](dfsutil-cache.md)|Displays or flushes the client cache.|
+|[dfsutil oldcli](dfsutil-oldcli.md)|Use the dfsutil \/oldcli command to use of the original dfsutil syntax.|
 
-## Remarks <optional section>
-If you specify an object \(such as a namespace server\) at the end of a command, most commands will display information about the object without requiring further parameters or commands. For example, when using the Dfsutil Root command, you can append a namespace root to the command to view information about the root.
+## remarks <optional section>
+if you specify an object \(such as a namespace server\) at the end of a command, most commands will display information about the object without requiring further parameters or commands. for example, when using the dfsutil Root command, you can append a namespace root to the command to view information about the root.
 
 ## <a name="BKMK_Examples"></a>Examples
 <Here is where you put a detailed description of your example.>
@@ -59,8 +59,8 @@ This /is /the /example /of /calling /command /with /parameters
 This /is /a:different /example
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

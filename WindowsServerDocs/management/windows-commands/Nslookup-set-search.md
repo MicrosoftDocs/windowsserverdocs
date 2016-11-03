@@ -1,5 +1,5 @@
 ---
-title: Nslookup set search
+title: nslookup set search
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set search
+# nslookup set search
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. This applies when the set and the lookup request contain at least one period, but do not end with a trailing period.
+appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. This applies when the set and the lookup request contain at least one period, but do not end with a trailing period.
 ## Syntax
 ```
 set [no]search
@@ -27,7 +27,7 @@ set [no]search
 |Parameter|Description|
 |-------|--------|
 |**nosearch**|Stops appending the Domain Name System (DNS) domain names in the DNS domain search list to the request.|
-|**search**|Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**.|
+|**search**|appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

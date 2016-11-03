@@ -18,31 +18,31 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the attributes of an image group.
+changes the attributes of an image group.
 ## Syntax
 ```
-WDSUTIL [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/Name:<New image group name>] [/Security:<SDDL>]
+wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/Name:<New image group name>] [/Security:<SDDL>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If not specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if not specified, the local server will be used.|
 |[/Name:<New image group name>]|Specifies the new name of the image group.|
 |[/Security:<SDDL>]|Specifies the new Security Descriptor of the image group, in security descriptor definition language (SDDL) format.|
 ## <a name="BKMK_examples"></a>Examples
 To set the name for an image group, type:
 ```
-WDSUTIL /Set-ImageGroumediaGroup:ImageGroup1 /Name:"New Image Group Name"
+wdsutil /Set-ImageGroumediaGroup:ImageGroup1 /Name:"New Image Group Name"
 ```
 To specify various settings for an image group, type:
 ```
-WDSUTIL /Verbose /Set-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /Name:"New Image Group Name" 
+wdsutil /verbose /Set-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /Name:"New Image Group Name" 
 /Security:"O:BAG:S-1-5-21-2176941838-3499754553-4071289181-513 D:AI(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA) (A;ID;0x1200a9;;;AU)(A;OICIIOID;GXGR;;;AU)"
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the add-ImageGroup Command](Using-the-add-ImageGroup-Command.md)
-[Using the get-AllImageGroups Command](Using-the-get-AllImageGroups-Command.md)
-[Using the get-ImageGroup Command](Using-the-get-ImageGroup-Command.md)
-[Using the remove-ImageGroup Command](Using-the-remove-ImageGroup-Command.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
+[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)
+[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
+[Using the remove-ImageGroup Command](using-the-remove-imagegroup-command.md)

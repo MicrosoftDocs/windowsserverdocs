@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setaclflag
-description: "Windows Commands topic for **Bitsadmin setaclflag** - Sets the access control list propagations flags."
+title: bitsadmin setaclflag
+description: "Windows Commands topic for **bitsadmin setaclflag** - Sets the access control list propagations flags."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin setaclflag
+# bitsadmin setaclflag
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -27,13 +27,13 @@ bitsadmin /SetAclFlags <Job> <Flags>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|Flags|Specify one or more of the following flag values:<br /><br />-   O: Copy owner information with file.<br />-   G: Copy group information with file.<br />-   D: Copy DACL information with file.<br />-   S :Copy SACL information with file.|
-## Remarks
+|Flags|Specify one or more of the following flag values:<br /><br />-   O: copy owner information with file.<br />-   G: copy group information with file.<br />-   D: copy DACL information with file.<br />-   S :copy SACL information with file.|
+## remarks
 The SetAclFlags command is used to maintain Owner and access control list information when a job is downloading data from a Windows (SMB) share.
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the access control list propagation flags for the job named *myDownloadJob* to maintain the owner and group information with the downloaded files.
 ```
 C:\>bitsadmin /setaclflags myDownloadJob OG
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Prompt
+title: prompt
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Prompt
+# prompt
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the Cmd.exe command prompt. If used without parameters, **prompt** resets the command prompt to the default setting, which is the current drive letter and directory followed by the greater than symbol (**>**).
-For examples of how to use this command, see [Examples](#BKMK_examples).
+changes the Cmd.exe command prompt. if used without parameters, **prompt** resets the command prompt to the default setting, which is the current drive letter and directory followed by the greater than symbol (**>**).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 prompt [<Text>]
@@ -29,7 +29,7 @@ prompt [<Text>]
 |-------|--------|
 |<Text>|Specifies the text and information that you want to include in the command prompt.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   You can customize the command prompt to display any text you want, including such information as the name of the current directory, the time and date, and the Microsoft Windows version number.
 -   The following table lists the character combinations that you can include instead of, or in addition to, one or more character strings in the *Text* parameter. The list includes a brief description of the text or information that each character combination adds to your command prompt.
     |Character|Description|
@@ -56,7 +56,7 @@ prompt [<Text>]
     |-------|--------|
     |$+|Zero or more plus sign (**+**) characters, depending on the depth of the **pushd** directory stack (one character for each level pushed).|
     |$m|The remote name associated with the current drive letter or the empty string if current drive is not a network drive.|
--   If you include the **$p** character in the text parameter, your disk is read after you enter each command (to determine the current drive and path). This can take extra time, especially for floppy disk drives.
+-   if you include the **$p** character in the text parameter, your disk is read after you enter each command (to determine the current drive and path). This can take extra time, especially for floppy disk drives.
 ## <a name="BKMK_examples"></a>Examples
 To set a two-line command prompt with the current time and date on the first line and the greater than sign on the next line, type:
 ```
@@ -75,5 +75,5 @@ To manually change the command prompt to the default setting (the current drive 
 ```
 prompt $p$g
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

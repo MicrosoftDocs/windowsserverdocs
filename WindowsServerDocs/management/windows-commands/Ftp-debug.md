@@ -1,5 +1,5 @@
 ---
-title: Ftp:debug
+title: ftp:debug
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,18 +14,18 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp:debug
+# ftp:debug
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Toggles Debugging Mode.   
+Toggles Debugging mode.   
 ## Syntax  
 ```  
 debug  
 ```  
 ### Parameters  
 none  
-## Remarks  
+## remarks  
 -   By default, debugging is off.  
 -   When debugging is on, each command that is sent to the remote computer is displayed, preceded by the greater than (>) character.  
 ## <a name="BKMK_Examples"></a>Examples  
@@ -33,5 +33,5 @@ Toggle debug mode on and off.
 ```  
 debug  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

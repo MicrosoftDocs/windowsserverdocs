@@ -50,7 +50,7 @@ You can use the GPMC to redirect the following folders:
 
 -   **Searches**
 
--   **Start Menu**
+-   **start Menu**
 
 -   **Videos**
 
@@ -58,22 +58,22 @@ You can use the GPMC to redirect the following folders:
 
 -   Even if users log on to different computers on the network, their data is always available.
 
--   Offline File technology (which is turned on by default) gives users access to the folder even when they are not connected to the network. This is especially useful for people who use portable computers.
+-   offline File technology (which is turned on by default) gives users access to the folder even when they are not connected to the network. This is especially useful for people who use portable computers.
 
 -   Data that is stored in a network folder can be backed up as part of routine system administration. This is safer because it requires no action by the user.
 
--   If you use Roaming User Profiles, you can use Folder Redirection to reduce the total size of your Roaming Profile and make the user logon and logoff process more efficient for the end-user. When you deploy Folder Redirection with Roaming User Profiles, the data synchronized with Folder Redirection is not part of the roaming profile and is synchronized in the background by using Offline Files after the user has logged on. Therefore, the user does not have to wait for this data to be synchronized when they log on or log off as is the case with Roaming User Profiles.
+-   if you use Roaming User Profiles, you can use Folder Redirection to reduce the total size of your Roaming Profile and make the user logon and logoff process more efficient for the end-user. When you deploy Folder Redirection with Roaming User Profiles, the data synchronized with Folder Redirection is not part of the roaming profile and is synchronized in the background by using offline Files after the user has logged on. Therefore, the user does not have to wait for this data to be synchronized when they log on or log off as is the case with Roaming User Profiles.
 
 -   Data that is specific to a user can be redirected to a different hard disk on the user's local computer from the hard disk that holds the operating system files. This makes the user's data safer in case the operating system has to be reinstalled.
 
 -   As an administrator, you can use Group Policy to set disk quotas, limiting how much space is taken up by user profile folders.
 
-## Selecting a Folder Redirection target
+## selecting a Folder Redirection target
 The **Target** tab of the folder's **Properties** box enables you to select the location of the redirected folder on a network or in the local user profile. You can choose between the following settings:
 
--   **Basic Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
+-   **Basic Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. for this setting, you have the following options in specifying a target folder location:
 
-    -   **Create a folder for each user under the root path**. This option creates a folder in the form **\\\server\share\User Account Name\Folder Name**. Each user has a unique path for their redirected folder.
+    -   **create a folder for each user under the root path**. This option creates a folder in the form **\\\server\share\User Account Name\Folder Name**. Each user has a unique path for their redirected folder.
 
 -   **Redirect to the following location**. This option uses an explicit path for the redirection location. This can cause multiple users to share the same path for the redirected folder.
 
@@ -88,14 +88,14 @@ In the **Settings** tab in the **Properties** box for a folder, you can enable t
 
 -   **Grant the user exclusive rights**. This setting is enabled by default and is a recommended setting. This setting specifies that the administrator and other users do not have permissions to access this folder.
 
--   **Move the contents of [FolderName] to the new location**. This setting moves all the data the user has in the local folder to the shared folder on the network.
+-   **move the contents of [FolderName] to the new location**. This setting moves all the data the user has in the local folder to the shared folder on the network.
 
--   **Policy Removal**. The following table summarizes the behavior of redirected folders and their contents when the GPO no longer applies, based on your selections for policy removal. The following policy removal options are available in the **Settings** tab, under **Policy Removal**.
+-   **Policy removal**. The following table summarizes the behavior of redirected folders and their contents when the GPO no longer applies, based on your selections for policy removal. The following policy removal options are available in the **Settings** tab, under **Policy removal**.
 
-|Policy Removal option|Selected setting|Result|
+|Policy removal option|selected setting|Result|
 |-------------|----------|-----|
 |**Redirect the folder back to the user profile location when policy is removed**|**Enabled**|-   The folder returns to its user profile location.<br />-   The contents are copied, not moved, back to the user profile location.<br />-   The contents are not deleted from the redirected location.<br />-   The user continues to have access to the contents, but only on the local computer.|
-|**Redirect the folder back to the user profile location when policy is removed**|**Disabled**|-   The folder returns to its user profile location.<br />-   The contents are not copied or moved to the user profile location. **Note:** If the contents of a folder are not copied to the user profile location, the user cannot see them.|
+|**Redirect the folder back to the user profile location when policy is removed**|**Disabled**|-   The folder returns to its user profile location.<br />-   The contents are not copied or moved to the user profile location. **Note:** if the contents of a folder are not copied to the user profile location, the user cannot see them.|
 |**Leave the folder in the new location when policy is removed**|Either **Enabled** or **Disabled**|-   The folder remains at its redirected location.<br />-   The contents remain at the redirected location.<br />-   The user continues to have access to the contents at the redirected folder.|
 
 ## How to specify the location of folders in a user profile
@@ -103,9 +103,9 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
 #### To specify the location of folders in a user profile
 
-1.  In the GPMC console tree, right-click the Group Policy Object that is linked to the site, domain, or organizational unit that contains the users whose user profile folders you want to redirect, and then click **Edit**.
+1.  In the GPMC console tree, right-click the Group Policy Object that is linked to the site, domain, or organizational unit that contains the users whose user profile folders you want to redirect, and then click **edit**.
 
-2.  In the Group Policy Management Editor window, right-click the user profile folder that you want to redirect. The path of the user profile folder is **User Configuration\Policies\Windows Settings\Folder Redirection\UserProfileFolderName**
+2.  In the Group Policy Management editor window, right-click the user profile folder that you want to redirect. The path of the user profile folder is **User Configuration\Policies\Windows Settings\Folder Redirection\UserProfileFolderName**
 
 3.  In the **Target** tab, under **Settings**, choose one of the following settings, follow the steps for that setting, and then click **OK**:
 
@@ -113,33 +113,33 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
     1.  Under **Target folder location**, select a location.
 
-    2.  If you want to redirect the folder to a specific location, select **Create a folder for each user under the root path** or **Redirect to the following location**, and then click **Browse** to specify a location.
+    2.  if you want to redirect the folder to a specific location, select **create a folder for each user under the root path** or **Redirect to the following location**, and then click **Browse** to specify a location.
 
-    3.  If you want to specify additional redirection settings for the folder, click the **Settings** tab to configure any of the following settings, and then click **OK**:
+    3.  if you want to specify additional redirection settings for the folder, click the **Settings** tab to configure any of the following settings, and then click **OK**:
 
     -   Grant the user exclusive rights to the folder (selected by default).
 
-    -   Move the contents of the folder to the new location (selected by default).
+    -   move the contents of the folder to the new location (selected by default).
 
     -   Specify policy removal settings (**Leave the folder in the new location when policy is removed** is selected by default).
 
     **Advanced Specify locations for various user groups**
 
-    1.  Under **Security Group Membership**, click **Add**.
+    1.  Under **Security Group Membership**, click **add**.
 
     2.  Under **Security Group Membership**, click **Browse** to find the security group.
 
     3.  Under **Target folder location**, select a location.
 
-    4.  If you want to redirect the folder to a specific location, select **Create a folder for each user under the root path** or **Redirect to the following location**, and then click **Browse** to specify a location.
+    4.  if you want to redirect the folder to a specific location, select **create a folder for each user under the root path** or **Redirect to the following location**, and then click **Browse** to specify a location.
 
-    5.  If you want to specify additional redirection settings for the folder, click the **Settings** tab to configure any of the following settings, and then click **OK**:
+    5.  if you want to specify additional redirection settings for the folder, click the **Settings** tab to configure any of the following settings, and then click **OK**:
 
     -   **Grant the user exclusive rights to [FolderName]** (selected by default).
 
-    -   **Move the contents of [FolderName] to the new location** (selected by default).
+    -   **move the contents of [FolderName] to the new location** (selected by default).
 
-    -   Specify **Policy Removal** settings (**Leave the folder in the new location when policy is removed** is selected by default).
+    -   Specify **Policy removal** settings (**Leave the folder in the new location when policy is removed** is selected by default).
 
     **Follow the documents folder**
 
@@ -147,14 +147,14 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
     This is the default setting. No changes are made to the current location of this folder.
 
-    **Additional considerations**
+    **additional considerations**
 
     -   You can also use the GPMC to configure the following Folder Redirection policy settings:
 
-        -   **Use localized subfolder names when redirecting Start and My Documents** This policy is located in the following paths: **Computer Configuration\Policies\Administrative Templates\System\Folder Redirection**, or **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
+        -   **Use localized subfolder names when redirecting start and My Documents** This policy is located in the following paths: **computer Configuration\Policies\Administrative Templates\System\Folder Redirection**, or **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
 
         -   **Do not automatically make redirected folders available offline** This policy is located in the following path: **User Configuration\Policies\Administrative Templates\System\Folder Redirection**.
 
-    -   For more information about User Profiles and Folder Redirection, see [http://go.microsoft.com/fwlink/?LinkId=66003](http://go.microsoft.com/fwlink/?LinkId=66003).
+    -   for more information about User Profiles and Folder Redirection, see [http://go.microsoft.com/fwlink/?LinkId=66003](http://go.microsoft.com/fwlink/?LinkId=66003).
 
 

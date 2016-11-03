@@ -1,5 +1,5 @@
 ---
-title: Detail vdisk
+title: detail vdisk
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Detail vdisk
+# detail vdisk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,7 +26,7 @@ Displays the properties of the selected virtual hard disk \(VHD\).
 detail vdisk  
 ```  
   
-## Remarks  
+## remarks  
   
 -   A VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a vdisk and shift the focus to it.  
   
@@ -37,24 +37,24 @@ To see details about the selected VHD, type:
 detail vdisk  
 ```  
   
-#### Additional references  
+#### additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
   
--   [Attach vdisk](Attach-vdisk.md)  
+-   [attach vdisk](attach-vdisk.md)  
   
--   [Compact vdisk](Compact-vdisk.md)  
+-   [compact vdisk](compact-vdisk.md)  
   
   
   
--   [Detach vdisk](Detach-vdisk.md)  
+-   [Detach vdisk](detach-vdisk.md)  
   
--   [Expand vdisk](Expand-vdisk.md)  
+-   [expand vdisk](expand-vdisk.md)  
   
--   [Merge vdisk](Merge-vdisk.md)  
+-   [Merge vdisk](merge-vdisk.md)  
   
--   [Select vdisk](Select-vdisk.md)  
+-   [select vdisk](select-vdisk.md)  
   
--   [List_1](List_1.md)  
+-   [list_1](list_1.md)  
   
 

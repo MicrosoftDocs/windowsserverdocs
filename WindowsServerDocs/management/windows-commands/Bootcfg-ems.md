@@ -1,6 +1,6 @@
 ---
-title: Bootcfg ems
-description: "Windows Commands topic for **Bootcfg ems** - 
+title: bootcfg ems
+description: "Windows Commands topic for **bootcfg ems** - 
 Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bootcfg ems
+# bootcfg ems
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -23,13 +23,13 @@ Enables the user to add or change the settings for redirection of the Emergency 
 
 ## Syntax
 ```
-bootcfg /ems {ON | OFF | EDIT} [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/port {COM1 | COM2 | COM3 | COM4 | BIOSSET}] [/baud {9600 | 19200 | 38400 | 57600 | 115200}] [/id <OSEntryLineNum>]
+bootcfg /ems {ON | OFF | edit} [/s <computer> [/u <Domain>\<User> /p <Password>]] [/port {COM1 | COM2 | COM3 | COM4 | BIOSSET}] [/baud {9600 | 19200 | 38400 | 57600 | 115200}] [/id <OSEntryLineNum>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|{ON &#124; OFF&#124; EDIT}|Specifies the value for Emergency Management Services redirection.<br /><br />**ON** - Enables remote output for the specified <OSEntryLineNum>. Adds a /redirect option to the specified <OSEntryLineNum> and a redirect=com<X> setting to the [boot loader] section. The value of com<X> is set by the **/port** parameter.<br /><br />**OFF** - Disables output to a remote computer. Removes the /redirect option from the specified <OSEntryLineNum> and the redirect=com<X> setting from the [boot loader] section.<br /><br />**EDIT** - Allows changes to port settings by changing the redirect=com<X> setting in the [boot loader] section. The value of com<X> is reset to the value specified by the **/port** parameter.|
-|/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
+|{ON &#124; OFF&#124; edit}|Specifies the value for Emergency Management Services redirection.<br /><br />**ON** - Enables remote output for the specified <OSEntryLineNum>. adds a /redirect option to the specified <OSEntryLineNum> and a redirect=com<X> setting to the [boot loader] section. The value of com<X> is set by the **/port** parameter.<br /><br />**OFF** - Disables output to a remote computer. removes the /redirect option from the specified <OSEntryLineNum> and the redirect=com<X> setting from the [boot loader] section.<br /><br />**edit** - Allows changes to port settings by changing the redirect=com<X> setting in the [boot loader] section. The value of com<X> is reset to the value specified by the **/port** parameter.|
+|/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
 |/port {COM1 &#124; COM2 &#124; COM3 &#124; COM4 &#124; BIOSSET}|Specifies the COM port to be used for redirection. **BIOSSET** directs Emergency Management Services to get the BIOS settings to determine which port should be used for redirection. Do not use the **/port** parameter if remotely administered output is being disabled.|
@@ -45,5 +45,5 @@ bootcfg /s srvmain /ems off /id 2
 bootcfg /ems edit /port com2 /baud 115200 
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /ems off /id 2
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

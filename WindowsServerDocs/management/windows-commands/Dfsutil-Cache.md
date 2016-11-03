@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Cache
+title: dfsutil Cache
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Cache
+# dfsutil Cache
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The Dfsutil Cache command displays or flushes the client cache.
+The dfsutil Cache command displays or flushes the client cache.
 
 
 
@@ -32,10 +32,10 @@ dfsutil cache </parameter> </param2>
 
 |Parameter|Description|
 |-------|--------|
-|[Dfsutil Cache Domain]|Views or flushes the DFS domain cache.|
-|[Dfsutil Cache Referral]|Views or flushes the DFS referral cache.|
-|[Dfsutil Cache Provider]|Views or flushes the DFS provider cache.|
-|Dfsutil Cache \/?|Displays help at the command prompt.|
+|[dfsutil Cache Domain]|Views or flushes the DFS domain cache.|
+|[dfsutil Cache Referral]|Views or flushes the DFS referral cache.|
+|[dfsutil Cache Provider]|Views or flushes the DFS provider cache.|
+|dfsutil Cache \/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To view help for this command, type:
@@ -44,10 +44,10 @@ To view help for this command, type:
 dfsutil cache /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

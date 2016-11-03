@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Bdehdcfg-size.md
+redirect_url: /windows-server-docs/management/windows-commands/bdehdcfg-size.md
 ---

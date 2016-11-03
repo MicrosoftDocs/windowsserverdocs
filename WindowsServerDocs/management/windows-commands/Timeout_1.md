@@ -1,5 +1,5 @@
 ---
-title: Timeout_1
+title: timeout_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,23 +15,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Timeout_1
+# timeout_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Pauses the command processor for the specified number of seconds.  
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+pauses the command processor for the specified number of seconds.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
-timeout/t <TimeoutInSeconds> [/nobreak]   
+timeout/t <timeoutInSeconds> [/nobreak]   
 ```  
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|/t <TimeoutInSeconds>|Specifies the decimal number of seconds (between -1 and 99999) to wait before the command processor continues processing. The value -1 causes the computer to wait indefinitely for a keystroke.|  
+|/t <timeoutInSeconds>|Specifies the decimal number of seconds (between -1 and 99999) to wait before the command processor continues processing. The value -1 causes the computer to wait indefinitely for a keystroke.|  
 |/nobreak|Specifies to ignore user key strokes.|  
 |/?|Displays help at the command prompt.|  
-## Remarks  
+## remarks  
 -   The **timeout** command is typically used in batch files.  
 -   A user keystroke resumes the command processor execution immediately, even if the timeout period has not expired.  
 -   When used in conjunction with the **sleep** command, **timeout** is similar to the **pause** command.  
@@ -48,5 +48,5 @@ To pause the command processor indefinitely until a key is pressed, type:
 ```  
 timeout /t -1  
 ```  
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  

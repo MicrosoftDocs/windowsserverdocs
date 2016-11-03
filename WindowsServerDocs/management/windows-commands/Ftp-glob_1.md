@@ -1,5 +1,5 @@
 ---
-title: Ftp: glob_1
+title: ftp: glob_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: glob_1
+# ftp: glob_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,7 +25,7 @@ glob
 ```  
 ### Parameters  
 none  
-## Remarks  
+## remarks  
 -   By default, globbing is on.  
 -   Globbing permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file or path names.  
 ## <a name="BKMK_Examples"></a>Examples  
@@ -33,5 +33,5 @@ Toggle wildcard expansion of local file names.
 ```  
 glob  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

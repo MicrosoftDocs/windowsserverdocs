@@ -1,5 +1,5 @@
 ---
-title: Pubprn.vbs
+title: pubprn
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,39 +14,39 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Pubprn.vbs
+# pubprn
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Publishes a printer to the Active Directory Domain Services.
+Publishes a printer to the active directory Domain Services.
 
 ## Syntax
 ```
-Cscript Pubprn.vbs {<ServerName> | <UNCPrinterPath>} 
+cscript pubprn {<ServerName> | <UNCprinterpath>} 
 "LDAP://CN=<Container>,DC=<Container>"
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<ServerName>|Specifies the name of the Windows server that hosts the printer that you want to publish. If you do not specify a computer, the local computer is used.|
-|<UNCPrinterPath>|The Universal Naming Convention (UNC) path to the shared printer that you want to publish.|
-|"LDAP://CN=<Container>,DC=<Container>"|Specifies the path to the container in Active Directory Domain Services where you want to publish the printer.|
+|<ServerName>|Specifies the name of the Windows server that hosts the printer that you want to publish. if you do not specify a computer, the local computer is used.|
+|<UNCprinterpath>|The Universal Naming Convention (UNC) path to the shared printer that you want to publish.|
+|"LDAP://CN=<Container>,DC=<Container>"|Specifies the path to the container in active directory Domain Services where you want to publish the printer.|
 |/?|Displays help at the command prompt.|
-## Remarks
--   The **Pubprn.vbs** command is a Visual Basic script located in the %WINDIR%\System32\Printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **Cscript** followed by the full path to the Pubprn.vbs file, or change directories to the appropriate folder. For example:
+## remarks
+-   The **pubprn** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the pubprn file, or change directories to the appropriate folder. for example:
     ```
-    Cscript %WINDIR%\System32\Printing_Admin_Scripts\en-US\Pubprn.vbs
+    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\pubprn
     ```
--   If the information that you supply contains spaces, use quotation marks around the text (for example, `"Computer Name"`).
+-   if the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).
 ## <a name="BKMK_examples"></a>Examples
-To publish all printers on the \\\Server1 computer to the MyContainer container in the MyDomain.Company.Com domain, type:
+To publish all printers on the \\\Server1 computer to the MyContainer container in the MyDomain.company.Com domain, type:
 ```
-Cscript Ppubprn.vbs Server1 "LDAP://CN=MyContainer,DC=MyDomain,DC=Company,DC=Com"
+cscript Ppubprn Server1 "LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com"
 ```
-To publish the LaserPrinter1 printer on the \\\Server1 server to the MyContainer container in the MyDomain.Company.Com domain, type:
+To publish the Laserprinter1 printer on the \\\Server1 server to the MyContainer container in the MyDomain.company.Com domain, type:
 ```
-Cscript Ppubprn.vbs \\Server1\LaserPrinter1 "LDAP://CN=MyContainer,DC=MyDomain,DC=Company,DC=Com"
+cscript Ppubprn \\Server1\Laserprinter1 "LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com"
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Print Command Reference](Print-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[print Command Reference](print-command-reference.md)

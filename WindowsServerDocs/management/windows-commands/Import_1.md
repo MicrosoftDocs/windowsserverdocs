@@ -1,5 +1,5 @@
 ---
-title: Import_1
+title: import_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Import_1
+# import_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Imports a foreign disk group into the disk group of the local computer.  
+imports a foreign disk group into the disk group of the local computer.  
   
 ## Syntax  
   
@@ -30,9 +30,9 @@ import [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   The import command imports every disk that is in the same group as the disk with focus.  
   
@@ -45,8 +45,8 @@ To import every disk that is in the same disk group as the disk with focus into 
 import  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin setminretrydelay
+title: bitsadmin setminretrydelay
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,24 +14,24 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin setminretrydelay
+# bitsadmin setminretrydelay
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Sets the length of time, in seconds, that the service waits after encountering a transient error before retrying to transfer the file.
 ## Syntax
 ```
-bitsadmin /SetMinRetryDelay <Job> <RetryDelay>
+bitsadmin /SetMinRetrydelay <Job> <Retrydelay>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|RetryDelay|A number represented in seconds.|
+|Retrydelay|A number represented in seconds.|
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the minimum retry delay for the job named *myDownloadJob* to 35 seconds.
 ```
-C:\>bitsadmin /SetMinRetryDelay myDownloadJob 35
+C:\>bitsadmin /SetMinRetrydelay myDownloadJob 35
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

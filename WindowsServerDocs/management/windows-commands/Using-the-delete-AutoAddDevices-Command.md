@@ -1,5 +1,5 @@
 ---
-title: Using the delete-AutoAddDevices Command
+title: Using the delete-AutoaddDevices Command
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,31 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Using the delete-AutoAddDevices Command
+# Using the delete-AutoaddDevices Command
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes computers that are pending, rejected, or approved from the Auto-Add database. This database stores information about these computers on the server.
+deletes computers that are pending, rejected, or approved from the Auto-add database. This database stores information about these computers on the server.
 ## Syntax
 ```
-WDSUTIL /Delete-AutoAddDevices [/Server:<Server name>] /DeviceType:{PendingDevices | RejectedDevices |ApprovedDevices}
+wdsutil /delete-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevices | RejectedDevices |ApprovedDevices}
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-|/DeviceType:{PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|Specifies the type of computer to delete from the database. This can be any of the following three types:<br /><br />-   **PendingDevices** returns all computers in the database that have a status of pending.<br />-   **RejectedDevices** returns all computers in the database that have a status of rejected.<br />-   **ApprovedDevices** returns all computers that have a status of approved.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|/Devicetype:{PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|Specifies the type of computer to delete from the database. This can be any of the following three types:<br /><br />-   **PendingDevices** returns all computers in the database that have a status of pending.<br />-   **RejectedDevices** returns all computers in the database that have a status of rejected.<br />-   **ApprovedDevices** returns all computers that have a status of approved.|
 ## <a name="BKMK_examples"></a>Examples
 To delete all rejected computers, type:
 ```
-WDSUTIL /Delete-AutoAddDevices /DeviceType:RejectedDevices
+wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices
 ```
 To delete all approved computers, type:
 ```
-WDSUTIL /Verbose /Delete-AutoAddDevices /Server:MyWDSServer /DeviceType:ApprovedDevices
+wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the Approve-AutoAddDevices Command](Using-the-Approve-AutoAddDevices-Command.md)
-[Using the get-AutoAddDevices Command](Using-the-get-AutoAddDevices-Command.md)
-[Using The Reject-AutoAddDevices Command](Using-The-Reject-AutoAddDevices-Command.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the Approve-AutoaddDevices Command](using-the-approve-autoadddevices-command.md)
+[Using the get-AutoaddDevices Command](using-the-get-autoadddevices-command.md)
+[Using The Reject-AutoaddDevices Command](using-the-reject-autoadddevices-command.md)

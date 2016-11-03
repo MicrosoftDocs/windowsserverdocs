@@ -1,6 +1,6 @@
 ---
-title: Bootcfg
-description: "Windows Commands topic for **Bootcfg** - Configures, queries, or changes Boot.ini file settings."
+title: bootcfg
+description: "Windows Commands topic for **bootcfg** - Configures, queries, or changes Boot.ini file settings."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,26 +15,26 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bootcfg
+# bootcfg
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Configures, queries, or changes Boot.ini file settings.  
 ## Syntax  
 ```  
-Bootcfg <parameter> [arguments...]  
+bootcfg <parameter> [arguments...]  
 ```  
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|[Bootcfg addsw](Bootcfg-addsw.md)|Adds operating system load options for a specified operating system entry.|  
-|[Bootcfg copy](Bootcfg-copy.md)|Makes a copy of an existing boot entry, to which you can add command-line options.|  
-|[Bootcfg dbg1394](Bootcfg-dbg1394.md)|Configures 1394 port debugging for a specified operating system entry.|  
-|[Bootcfg debug](Bootcfg-debug.md)|Adds or changes the debug settings for a specified operating system entry.|  
-|[Bootcfg default](Bootcfg-default.md)|Specifies the operating system entry to designate as the default.|  
-|[Bootcfg delete](Bootcfg-delete.md)|Deletes an operating system entry in the **[operating systems]** section of the Boot.ini file.|  
-|[Bootcfg ems](Bootcfg-ems.md)|Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.|  
-|[Bootcfg query](Bootcfg-query.md)|Queries and displays the [boot loader] and **[operating systems]** section entries from Boot.ini.|  
-|[Bootcfg raw](Bootcfg-raw.md)|Adds operating system load options specified as a string to an operating system entry in the **[operating systems]** section of the Boot.ini file.|  
-|[Bootcfg rmsw](Bootcfg-rmsw.md)|Removes operating system load options for a specified operating system entry.|  
-|[Bootcfg timeout](Bootcfg-timeout.md)|Changes the operating system time-out value.|  
+|[bootcfg addsw](bootcfg-addsw.md)|adds operating system load options for a specified operating system entry.|  
+|[bootcfg copy](bootcfg-copy.md)|Makes a copy of an existing boot entry, to which you can add command-line options.|  
+|[bootcfg dbg1394](bootcfg-dbg1394.md)|Configures 1394 port debugging for a specified operating system entry.|  
+|[bootcfg debug](bootcfg-debug.md)|adds or changes the debug settings for a specified operating system entry.|  
+|[bootcfg default](bootcfg-default.md)|Specifies the operating system entry to designate as the default.|  
+|[bootcfg delete](bootcfg-delete.md)|deletes an operating system entry in the **[operating systems]** section of the Boot.ini file.|  
+|[bootcfg ems](bootcfg-ems.md)|Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.|  
+|[bootcfg query](bootcfg-query.md)|Queries and displays the [boot loader] and **[operating systems]** section entries from Boot.ini.|  
+|[bootcfg raw](bootcfg-raw.md)|adds operating system load options specified as a string to an operating system entry in the **[operating systems]** section of the Boot.ini file.|  
+|[bootcfg rmsw](bootcfg-rmsw.md)|removes operating system load options for a specified operating system entry.|  
+|[bootcfg timeout](bootcfg-timeout.md)|changes the operating system time-out value.|  

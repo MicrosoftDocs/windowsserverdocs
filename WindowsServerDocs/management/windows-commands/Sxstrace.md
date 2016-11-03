@@ -1,5 +1,5 @@
 ---
-title: Sxstrace
+title: sxstrace
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,14 +15,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Sxstrace
+# sxstrace
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Diagnoses side-by-side problems.    
 ## Syntax  
 ```  
-Sxstrace [{[trace /logfile:<FileName> [/nostop]|[parse /logfile:<FileName> /outfile:<ParsedFile>  [/filter:<AppName>]}]  
+sxstrace [{[trace /logfile:<FileName> [/nostop]|[parse /logfile:<FileName> /outfile:<ParsedFile>  [/filter:<AppName>]}]  
 ```  
 ### Parameters  
 |Parameter|Description|  
@@ -37,7 +37,7 @@ Sxstrace [{[trace /logfile:<FileName> [/nostop]|[parse /logfile:<FileName> /outf
 |/filter|Allows the output to be filtered.|  
 |<AppName>|Specifies the name of the application.|  
 |stoptrace|Stop the trace if it is not stopped before.|  
-|/?|Displays Help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
 ## <a name="BKMK_Examples"></a>Examples  
 Enable tracing and save trace file to **sxstrace.etl**:  
 ```  
@@ -47,6 +47,6 @@ Translate the raw trace file into a human readable format and save the result to
 ```  
 sxstrace parse /logfile:sxstrace.etl /outfile:sxstrace.txt  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
--   [Command-Line Reference_1](Command-Line-Reference_1.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   [Command-Line Reference_1](command-line-reference_1.md)  

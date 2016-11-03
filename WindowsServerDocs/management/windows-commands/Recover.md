@@ -1,5 +1,5 @@
 ---
-title: Recover
+title: recover
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,22 +14,22 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Recover
+# recover
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Recovers readable information from a bad or defective disk.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+recovers readable information from a bad or defective disk.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-recover [<Drive>:][<Path>]<FileName>
+recover [<Drive>:][<path>]<FileName>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[<Drive>:][<Path>]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
+|[<Drive>:][<path>]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   The **recover** command reads a file, sector-by-sector, and recovers data from the good sectors. Data in bad sectors is lost.
 -   Bad sectors reported by **chkdsk** were marked as "bad" when your disk was prepared for operation. They pose no danger, and **recover** does not affect them.
 -   Because all data in bad sectors is lost when you recover a file, you should recover only one file at a time.
@@ -39,5 +39,5 @@ To recover the file Story.txt in the \Fiction directory on drive D, type:
 ```
 recover d:\fiction\story.txt 
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

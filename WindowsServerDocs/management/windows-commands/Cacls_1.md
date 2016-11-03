@@ -1,5 +1,5 @@
 ---
-title: Cacls_1
+title: cacls_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Cacls_1
+# cacls_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,20 +26,20 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<filename>|Required. Displays ACLs of specified files.|  
-|/t|Changes ACLs of specified files in the current directory and all subdirectories.|  
-|/m|Changes ACLs of volumes mounted to a directory.|  
+|<filename>|Required. Displays Acls of specified files.|  
+|/t|changes Acls of specified files in the current directory and all subdirectories.|  
+|/m|changes Acls of volumes mounted to a directory.|  
 |/l|Work on the Symbolic Link itself versus the target.|  
-|/s:sddl|Replaces the ACLs with those specified in the SDDL string (not valid with **/e**, **/g**, **/r**, **/p**, or **/d**).|  
-|/e|Edit ACL instead of replacing it.|  
+|/s:sddl|replaces the Acls with those specified in the SDDL string (not valid with **/e**, **/g**, **/r**, **/p**, or **/d**).|  
+|/e|edit ACL instead of replacing it.|  
 |/c|Continue on access denied errors.|  
 |/g user:<perm>|Grant specified user access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
 |/r user [...]|Revoke specified user's access rights (only valid with **/e**).|  
-|[/p user:<perm> [...]|Replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
+|[/p user:<perm> [...]|replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control|  
 |[/d user [...]|Deny specified user access.|  
 |/?|Displays help at the command prompt.|  
-## Remarks  
--   This command has been deprecated. Please use [Icacls](Icacls.md) instead.  
+## remarks  
+-   This command has been deprecated. Please use [icacls](icacls.md) instead.  
 -   Use the following table to interpret the results:  
     |Output|Access control entry (ACE) applies to|  
     |-----|----------------------|  
@@ -53,7 +53,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
     |(OI)(IO)|Files only.|  
 -   You can use wildcards (**?** and **\***) to specify multiple files.  
 -   You can specify more than one user.  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
--   [Command-Line Reference_1](Command-Line-Reference_1.md)  
--   [Icacls](Icacls.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   [Command-Line Reference_1](command-line-reference_1.md)  
+-   [icacls](icacls.md)  

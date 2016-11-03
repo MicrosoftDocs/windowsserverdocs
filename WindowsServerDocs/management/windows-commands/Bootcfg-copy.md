@@ -1,6 +1,6 @@
 ---
-title: Bootcfg copy
-description: "Windows Commands topic for **Bootcfg copy** - Makes a copy of an existing boot entry, to which you can add command-line options."
+title: bootcfg copy
+description: "Windows Commands topic for **bootcfg copy** - Makes a copy of an existing boot entry, to which you can add command-line options."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bootcfg copy
+# bootcfg copy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -22,12 +22,12 @@ Makes a copy of an existing boot entry, to which you can add command-line option
 
 ## Syntax
 ```
-bootcfg /copy [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/d <Description>] [/id <OSEntryLineNum>]
+bootcfg /copy [/s <computer> [/u <Domain>\<User> /p <Password>]] [/d <Description>] [/id <OSEntryLineNum>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
+|/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User>or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
 |/d <Description>|Specifies the description for the new operating system entry.|
@@ -38,5 +38,5 @@ The following examples show how you can use the **bootcfg /copy** command to cop
 ```
 bootcfg /copy /d "\ABC Server\" /id 1
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

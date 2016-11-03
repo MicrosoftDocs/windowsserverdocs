@@ -1,5 +1,5 @@
 ---
-title: Cls
+title: cls
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Cls
+# cls
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Clears the Command Prompt window.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Clears the Command prompt window.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 cls
@@ -29,9 +29,9 @@ cls
 |-------|--------|
 |/?|Displays help at the command prompt.|
 ## <a name="BKMK_examples"></a>Examples
-To clear all information that appears in the Command Prompt window and return to a blank window, type:
+To clear all information that appears in the Command prompt window and return to a blank window, type:
 ```
 cls 
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

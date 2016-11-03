@@ -1,5 +1,5 @@
 ---
-title: Nslookup set retry
+title: nslookup set retry
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set retry
+# nslookup set retry
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -28,8 +28,8 @@ set retry=<Number>
 |-------|--------|
 |<Number>|Specifies the new value for the number of retries. The default number of retries is 4.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
+## remarks
 -   When a reply to a request is not received within a certain amount of time, the time-out period is doubled and the request is resent. The retry value controls how many times a request is resent before giving up. You can change the time-out period with the **set timeout** subcommand.
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Nslookup set timeout](Nslookup-set-timeout.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[nslookup set timeout](nslookup-set-timeout.md)

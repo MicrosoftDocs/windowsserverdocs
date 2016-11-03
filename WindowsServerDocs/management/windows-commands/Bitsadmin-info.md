@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin info
-description: "Windows Commands topic for **Displays summary information about the specified job.** - Bitsadmin info"
+title: bitsadmin info
+description: "Windows Commands topic for **Displays summary information about the specified job.** - bitsadmin info"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin info
+# bitsadmin info
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -27,12 +27,12 @@ bitsadmin /Info <Job> [/verbose]
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-## Remarks
+## remarks
 Use the /verbose parameter to provide detailed information about the job.
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves information about the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /Info myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

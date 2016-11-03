@@ -1,5 +1,5 @@
 ---
-title: Perfmon
+title: perfmon
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Perfmon
+# perfmon
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Start Windows Reliability and Performance Monitor in a specific standalone mode.
+start Windows Reliability and Performance Monitor in a specific standalone mode.
 ## Syntax
 ```
 perfmon </res|report|rel|sys>
@@ -26,8 +26,8 @@ perfmon </res|report|rel|sys>
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/res|Start Resource View.|
-|/report|Start the System Diagnostics Data Collector Set and display a report of the results.|
-|/rel|Start Reliability Monitor.|
-|/sys|Start Performance Monitor.|
+|/res|start Resource View.|
+|/report|start the System Diagnostics Data Collector Set and display a report of the results.|
+|/rel|start Reliability Monitor.|
+|/sys|start Performance Monitor.|
 

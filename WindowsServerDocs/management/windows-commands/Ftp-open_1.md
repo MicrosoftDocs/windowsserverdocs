@@ -1,5 +1,5 @@
 ---
-title: Ftp: open_1
+title: ftp: open_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,30 +14,30 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: open_1
+# ftp: open_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Connects to the specified FTP server.   
+Connects to the specified ftp server.   
 ## Syntax  
 ```  
-open <Computer> [<Port>]  
+open <computer> [<Port>]  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<Computer>|Specifies the remote computer to which you are trying to connect.|  
-|[<Port>]|Specifies a TCP port number to use to connect to an FTP server. By default, TCP port 21 is used.|  
-## Remarks  
-You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **Computer**.  
+|<computer>|Specifies the remote computer to which you are trying to connect.|  
+|[<Port>]|Specifies a TCP port number to use to connect to an ftp server. By default, TCP port 21 is used.|  
+## remarks  
+You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **computer**.  
 ## <a name="BKMK_Examples"></a>Examples  
-Connect to the FTP server at **ftp.microsoft.com**.  
+Connect to the ftp server at **ftp.microsoft.com**.  
 ```  
 Open ftp.microsoft.com  
 ```  
-Connect to the FTP server at **ftp.microsoft.com** that is listening on TCP port 755.  
+Connect to the ftp server at **ftp.microsoft.com** that is listening on TCP port 755.  
 ```  
 open ftp.microsoft.com 755  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

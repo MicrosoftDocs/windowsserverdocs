@@ -1,5 +1,5 @@
 ---
-title: List providers
+title: list providers
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# List providers
+# list providers
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Lists shadow copy providers that are currently registered on the system.  
+lists shadow copy providers that are currently registered on the system.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -39,14 +39,14 @@ Output that is similar to the following displays:
   
 ```  
 * ProviderID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
-        Type: [1] VSS_PROV_SYSTEM  
-        Name: Microsoft Software Shadow Copy provider 1.0  
-        Version: 1.0.0.7  
-        CLSID: {65ee1dba-8ff4-4a58-ac1c-3470ee2f376a}  
+        type: [1] VSS_PROV_SYSTEM  
+        Name: Microsoft Software shadow copy provider 1.0  
+        version: 1.0.0.7  
+        clsID: {65ee1dba-8ff4-4a58-ac1c-3470ee2f376a}  
 1 provider registered.  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

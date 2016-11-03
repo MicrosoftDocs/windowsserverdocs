@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin peercaching and setconfigurationflags
-description: "Windows Commands topic for **Bitsadmin peercaching and setconfigurationflags** - 
+title: bitsadmin peercaching and setconfigurationflags
+description: "Windows Commands topic for **bitsadmin peercaching and setconfigurationflags** - 
 Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin peercaching and setconfigurationflags
+# bitsadmin peercaching and setconfigurationflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -32,7 +32,7 @@ bitsadmin /PeerCaching /SetConfigurationFlags <Job> <Value>
 ## <a name="BKMK_examples"></a>Examples
 The following example specifies the job's data to be downloaded from peers for the job named *myJob*.
 ```
-C:\> Bitsadmin /PeerCaching /SetConfigurationFlags myJob 1
+C:\> bitsadmin /PeerCaching /SetConfigurationFlags myJob 1
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

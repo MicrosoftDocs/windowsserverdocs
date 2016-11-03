@@ -17,21 +17,21 @@ ms.date: 10/12/2016
 
 You can use Resultant Set of Policy (RSoP) to simulate and test policy settings that are applied to computers or users using Group Policy.
 
-#### Open RSoP as an MMC snap-in
+#### Open RSoP as an mmc snap-in
 
 1.  Open Microsoft Management Console.
 
-2.  On the **File** menu, click **Add/Remove Snap-in**.
+2.  On the **File** menu, click **add/remove Snap-in**.
 
-3.  In the **Available snap-ins** box, click **Resultant Set of Policy**, and then click **Add**.
+3.  In the **Available snap-ins** box, click **Resultant Set of Policy**, and then click **add**.
 
 4.  Click **OK**.
 
 > [!NOTE]
-> You must add a Resultant Set of Policy snap-in to Microsoft Management Console (MMC) for each new RSoP query.
+> You must add a Resultant Set of Policy snap-in to Microsoft Management Console (mmc) for each new RSoP query.
 
 ## RSoP overview
-Resultant Set of Policy (RSoP) is an addition to Group Policy to assist in policy implementation and troubleshooting. RSoP is a query engine that polls existing policies and planned policies, and then reports the results of those queries. It polls existing policies based on site, domain, domain controller, and organizational unit. RSoP gathers this information from the Common Information Management Object Model (CIMOM) database (otherwise known as CIM-compliant object repository) through Windows Management Instrumentation (WMI).
+Resultant Set of Policy (RSoP) is an addition to Group Policy to assist in policy implementation and troubleshooting. RSoP is a query engine that polls existing policies and planned policies, and then reports the results of those queries. It polls existing policies based on site, domain, domain controller, and organizational unit. RSoP gathers this information from the Common Information Management Object model (CIMOM) database (otherwise known as CIM-compliant object repository) through Windows Management Instrumentation (WMI).
 
 RSoP provides details about all policy settings that are configured by an Administrator, including Administrative Templates, Folder Redirection, Internet Explorer Maintenance, Security Settings, Scripts, and Group Policy Software Installation.
 
@@ -39,6 +39,6 @@ When policies are applied on multiple levels (for example, site, domain, domain 
 
 RSoP consists of two modes: planning mode and logging mode. With planning mode, you can simulate the effect of policy settings that you want to apply to a computer and user. Logging mode reports the existing policy settings for a computer and user that is currently logged on.
 
-The Resultant Set of Policy Wizard helps you create an RSoP query. You can open the wizard from Microsoft Management Console (MMC), Active Directory Users and Computers, or Active Directory Sites and Services. You must run the wizard at least once to create an RSoP query. When complete, the wizard displays the query results in the RSoP snap-in in MMC. From here, you can save, change, and refresh your queries. You can create many RSoP queries by adding multiple Resultant Set of Policy snap-ins to MMC, one RSoP snap-in per query.
+The Resultant Set of Policy Wizard helps you create an RSoP query. You can open the wizard from Microsoft Management Console (mmc), active directory Users and computers, or active directory Sites and Services. You must run the wizard at least once to create an RSoP query. When complete, the wizard displays the query results in the RSoP snap-in in mmc. From here, you can save, change, and refresh your queries. You can create many RSoP queries by adding multiple Resultant Set of Policy snap-ins to mmc, one RSoP snap-in per query.
 
 

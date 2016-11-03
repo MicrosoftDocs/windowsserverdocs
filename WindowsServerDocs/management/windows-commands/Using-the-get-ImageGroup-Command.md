@@ -21,26 +21,26 @@ ms.date: 10/12/2016
 Retrieves information about an image group and the images within it.
 ## Syntax
 ```
-WDSUTIL [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/Detailed]
+wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/detailed]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-|[/Detailed]|Returns the image metadata for each image. If this parameter is not use, the default behavior is to return only the image name, description, and file name.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/detailed]|Returns the image metadata for each image. if this parameter is not use, the default behavior is to return only the image name, description, and file name.|
 ## <a name="BKMK_examples"></a>Examples
 To view information about an image group, type:
 ```
-WDSUTIL /Get-ImageGroumediaGroup:ImageGroup1
+wdsutil /Get-ImageGroumediaGroup:ImageGroup1
 ```
 To view information including metadata, type:
 ```
-WDSUTIL /Verbose /Get-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /Detailed
+wdsutil /verbose /Get-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /detailed
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the add-ImageGroup Command](Using-the-add-ImageGroup-Command.md)
-[Using the get-AllImageGroups Command](Using-the-get-AllImageGroups-Command.md)
-[Using the remove-ImageGroup Command](Using-the-remove-ImageGroup-Command.md)
-[Subcommand: set-ImageGroup](Subcommand-set-ImageGroup.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
+[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)
+[Using the remove-ImageGroup Command](using-the-remove-imagegroup-command.md)
+[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)

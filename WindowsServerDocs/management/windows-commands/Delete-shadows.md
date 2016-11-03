@@ -1,5 +1,5 @@
 ---
-title: Delete shadows
+title: delete shadows
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,30 +14,30 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Delete shadows
+# delete shadows
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes shadow copies.  
+deletes shadow copies.  
   
 ## Syntax  
   
 ```  
-delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <ShadowID> | exposed {<Drive> | <MountPoint>}]  
+delete shadows [all | volume <volume> | oldest <volume> | set <SetID> | id <shadowID> | exposed {<Drive> | <mountPoint>}]  
 ```  
   
 ## Parameters  
   
 |Parameter|Description|  
 |-------|--------|  
-|all|Deletes all shadow copies.|  
-|volume <Volume>|Deletes all shadow copies of the given volume.|  
-|oldest <Volume>|Deletes the oldest shadow copy of the given volume.|  
-|set <SetID>|Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|  
-|id <ShadowID>|Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|  
-|exposed {<Drive> &#124; <MountPoint>}|Deletes the shadow copy exposed at the specified drive letter or mount point. Specify mount points as c:\\mountPoint or by the drive letter such as p:.|  
+|all|deletes all shadow copies.|  
+|volume <volume>|deletes all shadow copies of the given volume.|  
+|oldest <volume>|deletes the oldest shadow copy of the given volume.|  
+|set <SetID>|deletes the shadow copies in the shadow copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|  
+|id <shadowID>|deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|  
+|exposed {<Drive> &#124; <mountPoint>}|deletes the shadow copy exposed at the specified drive letter or mount point. Specify mount points as c:\\mountPoint or by the drive letter such as p:.|  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

@@ -1,5 +1,5 @@
 ---
-title: Help
+title: help
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Help
+# help
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Provides online information about system commands (that is, non-network commands). if used without parameters, **help** lists and briefly describes every system command.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 help [<Command>] 
@@ -35,5 +35,5 @@ To view information about the **robocopy** command, type either of the following
 help robocopy
 robocopy /? 
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

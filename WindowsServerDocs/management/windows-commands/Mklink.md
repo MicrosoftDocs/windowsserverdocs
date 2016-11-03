@@ -1,5 +1,5 @@
 ---
-title: Mklink
+title: mklink
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Mklink
-Creates a symbolic link.
+# mklink
+creates a symbolic link.
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 mklink [[/d] | [/h] | [/j]] <Link> <Target>
@@ -27,9 +27,9 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/d|Creates a directory symbolic link. By default, **mklink** creates a file symbolic link.|
-|/h|Creates a hard link instead of a symbolic link.|
-|/j|Creates a Directory Junction.|
+|/d|creates a directory symbolic link. By default, **mklink** creates a file symbolic link.|
+|/h|creates a hard link instead of a symbolic link.|
+|/j|creates a directory Junction.|
 |<Link>|Specifies the name of the symbolic link that is being created.|
 |<Target>|Specifies the path (relative or absolute) that the new symbolic link refers to.|
 |/?|Displays help at the command prompt.|

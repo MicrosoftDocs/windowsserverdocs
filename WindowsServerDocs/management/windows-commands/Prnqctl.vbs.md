@@ -1,5 +1,5 @@
 ---
-title: Prnqctl.vbs
+title: prnqctl
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,47 +14,47 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Prnqctl.vbs
+# prnqctl
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Prints a test page, pauses or resumes a printer, and clears a printer queue.  
+prints a test page, pauses or resumes a printer, and clears a printer queue.  
   
 ## Syntax  
 ```  
-Cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
-[-p <PrinterName>] [-u <UserName>] [-w <Password>]  
+cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
+[-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|-z|Pauses printing on the printer specified with the **-p** parameter.|  
+|-z|pauses printing on the printer specified with the **-p** parameter.|  
 |-m|Resumes printing on the printer specified with the **-p** parameter.|  
-|-e|Prints a test page on the printer specified with the **-p** parameter.|  
+|-e|prints a test page on the printer specified with the **-p** parameter.|  
 |-x|Cancels all print jobs on the printer specified with the **-p** parameter.|  
-|-s <ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. If you do not specify a computer, the local computer is used.|  
-|-p <PrinterName>|Specifies the name of the printer that you want to manage. Required.|  
-|-u <UserName> -w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. If you do not specify an account, you must be logged on under an account with these permissions for the command to work.|  
+|-s <ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. if you do not specify a computer, the local computer is used.|  
+|-p <printerName>|Specifies the name of the printer that you want to manage. Required.|  
+|-u <UserName> -w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. if you do not specify an account, you must be logged on under an account with these permissions for the command to work.|  
 |/?|Displays help at the command prompt.|  
-## Remarks  
--   The **Prnqctl.vbs** command is a Visual Basic script located in the %WINDIR%\System32\Printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **Cscript** followed by the full path to the Prnqctl.vbs file, or change directories to the appropriate folder. For example:  
+## remarks  
+-   The **prnqctl** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnqctl file, or change directories to the appropriate folder. for example:  
     ```  
-    Cscript %WINDIR%\System32\Printing_Admin_Scripts\en-US\Prnqctl.vbs  
+    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
     ```  
--   If the information that you supply contains spaces, use quotation marks around the text (for example, `"Computer Name"`).  
+-   if the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).  
 ## <a name="BKMK_examples"></a>Examples  
-To print a test page on the LaserPrinter1 printer shared by the \\\Server1 computer, type:  
+To print a test page on the Laserprinter1 printer shared by the \\\Server1 computer, type:  
 ```  
-Cscript Prnqctl -e -s Server1 -p LaserPrinter1  
+cscript Prnqctl -e -s Server1 -p Laserprinter1  
 ```  
-To pause printing on the LaserPrinter1 printer on the local computer, type:  
+To pause printing on the Laserprinter1 printer on the local computer, type:  
 ```  
-Cscript Prnqctl -z -p LaserPrinter1  
+cscript Prnqctl -z -p Laserprinter1  
 ```  
-To cancel all print jobs on the LaserPrinter1 printer on the local computer, type:  
+To cancel all print jobs on the Laserprinter1 printer on the local computer, type:  
 ```  
-Cscript Prnqctl -x -p LaserPrinter1  
+cscript Prnqctl -x -p Laserprinter1  
 ```  
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
-[Print Command Reference](Print-Command-Reference.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
+[print Command Reference](print-command-reference.md)  

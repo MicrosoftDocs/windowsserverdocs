@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Remote-Desktop-Services-Terminal-Services-Command-Reference.md
+redirect_url: /windows-server-docs/management/windows-commands/remote-desktop-services-terminal-services-command-reference.md
 ---

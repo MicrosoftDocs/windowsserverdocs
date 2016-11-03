@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-lcd.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-lcd.md
 ---

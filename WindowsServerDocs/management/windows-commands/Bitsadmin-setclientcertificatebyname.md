@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setclientcertificatebyname
-description: "Windows Commands topic for **Bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS \(SSL\) request."
+title: bitsadmin setclientcertificatebyname
+description: "Windows Commands topic for **bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS \(SSL\) request."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin setclientcertificatebyname
+# bitsadmin setclientcertificatebyname
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -31,7 +31,7 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|Store\_location|Identifies the location of a system store to use for looking up the certificate. Possible values include:<br /><br />1 \(CURRENT\_USER\)<br /><br />2 \(LOCAL\_MACHINE\)<br /><br />3 \(CURRENT\_SERVICE\)<br /><br />4 \(SERVICES\)<br /><br />5 \(USERS\)<br /><br />6 \(CURRENT\_USER\_GROUP\_POLICY\)<br /><br />7 \(LOCAL\_MACHINE\_GROUP\_POLICY\)<br /><br />8 \(LOCAL\_MACHINE\_ENTERPRISE\)|
+|Store\_location|Identifies the location of a system store to use for looking up the certificate. Possible values include:<br /><br />1 \(CURrenT\_USER\)<br /><br />2 \(LOCAL\_MACHINE\)<br /><br />3 \(CURrenT\_SERVICE\)<br /><br />4 \(SERVICES\)<br /><br />5 \(USERS\)<br /><br />6 \(CURrenT\_USER\_GROUP\_POLICY\)<br /><br />7 \(LOCAL\_MACHINE\_GROUP\_POLICY\)<br /><br />8 \(LOCAL\_MACHINE\_ENTERPRISE\)|
 |Store\_name|The name of the certificate store. Possible values include:<br /><br />CA \(Certification Authority certificates\)<br /><br />MY \(Personal certificates\)<br /><br />ROOT \(Root certificates\)<br /><br />SPC \(Software Publisher Certificate\)|
 |Subject\_name|Name of the certificate|
 
@@ -39,10 +39,10 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject
 The following example specifies the name of the client certificate *myCertificate* to use for client authentication in an HTTPS \(SSL\) request for the job named *myJob*.
 
 ```
-C:\>bitsadmin Bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
+C:\>bitsadmin bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

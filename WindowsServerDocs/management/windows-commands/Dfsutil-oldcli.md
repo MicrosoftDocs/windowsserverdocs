@@ -1,5 +1,5 @@
 ---
-title: Dfsutil oldcli
+title: dfsutil oldcli
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil oldcli
+# dfsutil oldcli
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -34,7 +34,7 @@ dfsutil </parameter> </param2>
 |<\/parameter>|<Concise description, starts with verb   e.g.  restores  or  specifies. >|
 |<\/param2>|<Another concise description, starts with verb.>|
 
-## Remarks <optional section>
+## remarks <optional section>
 <Insert command specific to remarks here.>
 
 ## Scripting <optional section>
@@ -44,25 +44,25 @@ dfsutil </parameter> </param2>
 To TBD, type:
 
 ```
-Dfsutil 
+dfsutil 
 ```
 
 To enable verbose logging for this command, type:
 
 ```
-Dfsutil /v
+dfsutil /v
 ```
 
 To view help for this command, type:
 
 ```
-Dfsutil /?
+dfsutil /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

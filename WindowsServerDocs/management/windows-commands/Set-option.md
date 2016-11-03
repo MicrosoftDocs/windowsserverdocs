@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets the options for shadow copy creation. If used without parameters, **set option** displays help at the command prompt.  
+Sets the options for shadow copy creation. if used without parameters, **set option** displays help at the command prompt.  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover
 |\[txfrecover\]|Requests VSS to make the shadow copy transactionally consistent during creation.|  
 |\[noautorecover\]|Stops writers and the file system from performing any recovery changes to the shadow copy to a transactionally consistent state. **Noautorecover** cannot be used with **txfrecover** or **rollbackrecover**.|  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

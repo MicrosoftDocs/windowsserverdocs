@@ -1,5 +1,5 @@
 ---
-title: Typeperf
+title: typeperf
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,12 +15,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Typeperf
+# typeperf
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL+C.  
-For examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).  
+for examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).  
 ## Syntax  
 ```  
 typeperf <counter [counter ...]> [options]  
@@ -33,7 +33,7 @@ typeperf -qx [object] [options]
 |-------|--------|  
 |<counter [counter [ ]]>|Specifies performance counters to monitor.|  
 > [!NOTE]  
-> **<counter>** is the full name of a performance counter in *\\\Computer\Object(Instance)\Counter* format, such as **\\\Server1\Processor(0)\\% User Time**.  
+> **<counter>** is the full name of a performance counter in *\\\computer\Object(Instance)\Counter* format, such as **\\\Server1\Processor(0)\\% User time**.  
 ## Options  
 |Option|Description|  
 |-----|--------|  
@@ -49,9 +49,9 @@ typeperf -qx [object] [options]
 |-s <computer_name>|Specifies a remote computer to monitor if no computer is specified in the counter path.|  
 |-y|Answer yes to all questions without prompting.|  
 ## <a name="BKMK_EXAMPLES"></a>Examples  
--   The following example writes the values for the local computer's performance counter **\\\Processor(_Total)\\% Processor Time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.  
+-   The following example writes the values for the local computer's performance counter **\\\Processor(_Total)\\% Processor time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.  
     ```  
-    typeperf "\Processor)_Total)\% Processor Time"  
+    typeperf "\Processor)_Total)\% Processor time"  
     ```  
 -   The following example writes the values for the list of counters in the file **counters.txt** to the tab-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.  
     ```  

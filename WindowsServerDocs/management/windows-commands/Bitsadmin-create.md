@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin create
-description: "Windows Commands topic for **Bitsadmin create** - Creates a transfer job with the given display name."
+title: bitsadmin create
+description: "Windows Commands topic for **bitsadmin create** - creates a transfer job with the given display name."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,25 +14,25 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin create
+# bitsadmin create
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates a transfer job with the given display name.
+creates a transfer job with the given display name.
 ## Syntax
 ```
-bitsadmin /create [Type] DisplayName
+bitsadmin /create [type] DisplayName
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|Type|-   **/Download** transfers data from a server to a local file.<br />-   **/Upload** transfers data from a local file to a server.<br />-   **/Upload-Reply** transfers data from a local file to a server and receives a reply file from the server.<br />-   This parameter defaults to **/Download** when not specified on the command line.|
+|type|-   **/Download** transfers data from a server to a local file.<br />-   **/Upload** transfers data from a local file to a server.<br />-   **/Upload-Reply** transfers data from a local file to a server and receives a reply file from the server.<br />-   This parameter defaults to **/Download** when not specified on the command line.|
 |DisplayName|The display name assigned to the newly created job.|
-Use the [Bitsadmin resume](Bitsadmin-resume.md) switch to activate the job in the transfer queue.
+Use the [bitsadmin resume](bitsadmin-resume.md) switch to activate the job in the transfer queue.
 ## <a name="BKMK_examples"></a>Examples
-Creates a download job named *myDownloadJob*.
+creates a download job named *myDownloadJob*.
 ```
 C:\>bitsadmin /create myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

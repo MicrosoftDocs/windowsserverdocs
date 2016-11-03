@@ -1,5 +1,5 @@
 ---
-title: Select vdisk
+title: select vdisk
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Select vdisk
+# select vdisk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  
+selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  
   
 > [!NOTE]  
 > This command is only applicable to Windows 7 and Windows Server 2008 R2.  
@@ -43,24 +43,24 @@ To shift the focus to the VHD named Test.vhd, type:
 select vdisk file="c:\test\test.vhd"  
 ```  
   
-#### Additional references  
+#### additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
   
--   [Attach vdisk](Attach-vdisk.md)  
+-   [attach vdisk](attach-vdisk.md)  
   
--   [Compact vdisk](Compact-vdisk.md)  
+-   [compact vdisk](compact-vdisk.md)  
   
   
   
--   [Detach vdisk](Detach-vdisk.md)  
+-   [Detach vdisk](detach-vdisk.md)  
   
--   [Detail vdisk](Detail-vdisk.md)  
+-   [detail vdisk](detail-vdisk.md)  
   
--   [Expand vdisk](Expand-vdisk.md)  
+-   [expand vdisk](expand-vdisk.md)  
   
--   [Merge vdisk](Merge-vdisk.md)  
+-   [Merge vdisk](merge-vdisk.md)  
   
--   [List_1](List_1.md)  
+-   [list_1](list_1.md)  
   
 

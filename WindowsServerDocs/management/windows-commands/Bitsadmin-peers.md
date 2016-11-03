@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin peers
-description: "Windows Commands topic for **Bitsadmin peers** - Listing of the **Peers** commands."
+title: bitsadmin peers
+description: "Windows Commands topic for **bitsadmin peers** - listing of the **Peers** commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,22 +14,22 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin peers
+# bitsadmin peers
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 ```
-Bitsadmin /Peers /Help
-Bitsadmin /Peers /Discover
-Bitsadmin /Peers /Clear
-Bitsadmin /Peers /List
+bitsadmin /Peers /help
+bitsadmin /Peers /Discover
+bitsadmin /Peers /Clear
+bitsadmin /Peers /list
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[Bitsadmin peers and help](Bitsadmin-peers-and-help.md)|Displays the command-line usage for the /Peers commands.|
-|[Bitsadmin peers and discover](Bitsadmin-peers-and-discover.md)|Discovers peers again.|
-|[Bitsadmin peers and clear](Bitsadmin-peers-and-clear.md)|Clears the peers list.|
-|[Bitsadmin peers and list](Bitsadmin-peers-and-list.md)|List all peers.|
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+|[bitsadmin peers and help](bitsadmin-peers-and-help.md)|Displays the command-line usage for the /Peers commands.|
+|[bitsadmin peers and discover](bitsadmin-peers-and-discover.md)|Discovers peers again.|
+|[bitsadmin peers and clear](bitsadmin-peers-and-clear.md)|Clears the peers list.|
+|[bitsadmin peers and list](bitsadmin-peers-and-list.md)|list all peers.|
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

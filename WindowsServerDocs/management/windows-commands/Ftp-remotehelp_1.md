@@ -1,5 +1,5 @@
 ---
-title: Ftp: remotehelp_1
+title: ftp: remotehelp_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: remotehelp_1
+# ftp: remotehelp_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,8 +26,8 @@ remotehelp [<Command>]
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|[<Command>]|Specifies the name of the command about which you want help. If *Command* is not specified, **ftp** displays a list of all remote commands.|  
-## Remarks  
+|[<Command>]|Specifies the name of the command about which you want help. if *Command* is not specified, **ftp** displays a list of all remote commands.|  
+## remarks  
 You can run remote commands using **quote** or **literal**.  
 ## <a name="BKMK_Examples"></a>Examples  
 Display a list of remote commands.  
@@ -38,6 +38,6 @@ Display the syntax for the **feat** remote command.
 ```  
 remotehelp feat  
 ```  
-## Additional references  
--   [Ftp: quote](Ftp-quote.md)  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [ftp: quote](ftp-quote.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

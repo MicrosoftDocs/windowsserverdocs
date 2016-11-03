@@ -1,5 +1,5 @@
 ---
-title: Nslookup lserver
+title: nslookup lserver
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup lserver
+# nslookup lserver
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the default server to the specified Domain Name System (DNS) domain.
+changes the default server to the specified Domain Name System (DNS) domain.
 ## Syntax
 ```
 lserver <DNSDomain> 
@@ -28,8 +28,8 @@ lserver <DNSDomain>
 |-------|--------|
 |<DNSDomain>|Specifies the new DNS domain for the default server.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
+## remarks
 -   The **lserver** command uses the initial server to look up the information about the specified DNS domain. This is in contrast to the **server** command, which uses the current default server.
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Nslookup server](Nslookup-server.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[nslookup server](nslookup-server.md)

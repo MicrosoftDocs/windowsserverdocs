@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-rename.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-rename.md
 ---

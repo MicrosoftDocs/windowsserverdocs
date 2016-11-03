@@ -1,5 +1,5 @@
 ---
-title: Ntcmdprompt
+title: ntcmdprompt
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ntcmdprompt
+# ntcmdprompt
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -27,11 +27,11 @@ ntcmdprompt
 |Parameter|Description|
 |-------|--------|
 |/?|Displays help at the command prompt.|
-## Remarks
--   When **Command.com** is running, some features of **Cmd.exe**, such as the **doskey** display of command history, are not available. If you would prefer to run the **Cmd.exe** command interpreter after you have started a Terminate and Stay Resident (TSR) or started the command prompt from within an application based on MS-DOS, you can use the **ntcmdprompt** command. However, keep in mind that the TSR may not be available for use when you are running **Cmd.exe**. You can include the **ntcmdprompt** command in your **Config.nt** file or the equivalent custom startup file in an application's program information file (PIF).
+## remarks
+-   When **Command.com** is running, some features of **Cmd.exe**, such as the **doskey** display of command history, are not available. if you would prefer to run the **Cmd.exe** command interpreter after you have started a Terminate and Stay Resident (TSR) or started the command prompt from within an application based on MS-DOS, you can use the **ntcmdprompt** command. However, keep in mind that the TSR may not be available for use when you are running **Cmd.exe**. You can include the **ntcmdprompt** command in your **Config.nt** file or the equivalent custom startup file in an application's program information file (Pif).
 ## Examples
-To include **ntcmdprompt** in your **Config.nt** file, or the configuration startup file specified in the PIF, type:
+To include **ntcmdprompt** in your **Config.nt** file, or the configuration startup file specified in the Pif, type:
 **ntcmdprompt**
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Command-Line Reference_1](Command-Line-Reference_1.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Command-Line Reference_1](command-line-reference_1.md)

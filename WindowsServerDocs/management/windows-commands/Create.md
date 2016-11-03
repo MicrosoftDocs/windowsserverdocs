@@ -1,5 +1,5 @@
 ---
-title: Create
+title: create
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Create
+# create
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates a partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
+creates a partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
 ## Syntax
 ```
 create partition
@@ -28,7 +28,7 @@ create vdisk
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[Create partition |Creates a partition on a disk.|
-|[Create volume|Creates a volume on one or more disks, depending on the type of volume you specify.|
-|[Create vdisk|Creates a new VHD file using the available disk space on the computer, and then saves it to the location that you specify.|
+|[create partition |creates a partition on a disk.|
+|[create volume|creates a volume on one or more disks, depending on the type of volume you specify.|
+|[create vdisk|creates a new VHD file using the available disk space on the computer, and then saves it to the location that you specify.|
 

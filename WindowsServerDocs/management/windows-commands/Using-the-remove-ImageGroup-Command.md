@@ -18,25 +18,25 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes an image group from a server.
+removes an image group from a server.
 ## Syntax
 ```
-WDSUTIL [Options] /Remove-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]
+wdsutil [Options] /remove-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group to be removed|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
 ## <a name="BKMK_examples"></a>Examples
 To remove the image group, type one of the following:
 ```
-WDSUTIL /Remove-ImageGroumediaGroup:ImageGroup1
-WDSUTIL /Verbose /Remove-ImageGroumediaGroup:"My Image Group" /Server:MyWDSServer 
+wdsutil /remove-ImageGroumediaGroup:ImageGroup1
+wdsutil /verbose /remove-ImageGroumediaGroup:"My Image Group" /Server:MyWDSServer 
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the add-ImageGroup Command](Using-the-add-ImageGroup-Command.md)
-[Using the get-AllImageGroups Command](Using-the-get-AllImageGroups-Command.md)
-[Using the get-ImageGroup Command](Using-the-get-ImageGroup-Command.md)
-[Subcommand: set-ImageGroup](Subcommand-set-ImageGroup.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
+[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)
+[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
+[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)

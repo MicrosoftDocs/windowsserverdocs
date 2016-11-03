@@ -1,5 +1,5 @@
 ---
-title: Dfsdiag TestDFSIntegrity
+title: dfsdiag TestDFSIntegrity
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsdiag TestDFSIntegrity
+# dfsdiag TestDFSIntegrity
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -31,7 +31,7 @@ Checks the integrity of the Distributed File System \(DFS\) namespace by perform
 ## Syntax  
   
 ```  
-DFSDiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]  
+dfsdiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]  
 ```  
   
 ### Parameters  
@@ -40,19 +40,19 @@ DFSDiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
 |-------|--------|  
 |\/DFSRoot:<DFS root path>|The DFS namespace to diagnose.|  
 |\/Recurse|Performs the testing including the namespace interlinks.|  
-|\/Full|Verifies the consistency of share and NTFS ACLs and client side configuration on all folder targets. It also verifies that the Online property is set.|  
+|\/Full|verifies the consistency of share and NTFS Acls and client side configuration on all folder targets. It also verifies that the online property is set.|  
   
 ## <a name="BKMK_Examples"></a>Examples  
 To TBD, type:  
   
 ```  
-DFSDiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full  
+dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full  
 ```  
   
-## Additional references  
+## additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
   
--   [Dfsdiag](Dfsdiag.md)  
+-   [dfsdiag](dfsdiag.md)  
   
 

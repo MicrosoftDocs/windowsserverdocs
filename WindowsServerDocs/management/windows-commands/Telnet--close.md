@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Telnet-close.md
+redirect_url: /windows-server-docs/management/windows-commands/telnet-close.md
 ---

@@ -1,4 +1,4 @@
 
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-get.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-get.md
 ---

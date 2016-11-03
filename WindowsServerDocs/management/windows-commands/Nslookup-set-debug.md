@@ -1,5 +1,5 @@
 ---
-title: Nslookup set debug
+title: nslookup set debug
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set debug
+# nslookup set debug
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Turns Debugging Mode on or off.
+Turns Debugging mode on or off.
 ## Syntax
 ```
 set [no]debug
@@ -26,10 +26,10 @@ set [no]debug
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|**nodebug**|Turns off Debugging Mode. The default syntax is **nodebug**.|
-|**debug**|Turns on Debugging Mode.|
+|**nodebug**|Turns off Debugging mode. The default syntax is **nodebug**.|
+|**debug**|Turns on Debugging mode.|
 |**{help &#124; ?}**|Displays a short summary of **nslookup** subcommands.|
-## Remarks
--   With Debugging Mode turned on, more information is printed about the packet sent to the server and the resulting answer.
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## remarks
+-   With Debugging mode turned on, more information is printed about the packet sent to the server and the resulting answer.
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

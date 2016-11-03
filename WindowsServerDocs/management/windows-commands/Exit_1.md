@@ -1,5 +1,5 @@
 ---
-title: Exit_1
+title: exit_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Exit_1
+# exit_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Exits DiskShadow.  
+exits diskshadow.  
   
 ## Syntax  
   
@@ -26,7 +26,7 @@ Exits DiskShadow.
 exit  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

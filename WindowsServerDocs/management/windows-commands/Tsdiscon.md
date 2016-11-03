@@ -1,5 +1,5 @@
 ---
-title: Tsdiscon
+title: tsdiscon
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Tsdiscon
+# tsdiscon
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Disconnects a session from a Remote Desktop Session Host (RD Session Host) server.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Disconnects a session from a remote Desktop Session Host (rd Session Host) server.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
@@ -31,12 +31,12 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 |-------|--------|
 |<SessionId>|Specifies the ID of the session to disconnect.|
 |<SessionName>|Specifies the name of the session to disconnect.|
-|/server:<ServerName>|Specifies the terminal server that contains the session that you want to disconnect. Otherwise, the current RD Session Host server is used.|
+|/server:<ServerName>|Specifies the terminal server that contains the session that you want to disconnect. Otherwise, the current rd Session Host server is used.|
 |/v|Displays information about the actions being performed.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   You must have Full Control permission or Disconnect special access permission to disconnect another user from a session.
--   If no session ID or session name is specified, **tsdiscon** disconnects the current session.
+-   if no session ID or session name is specified, **tsdiscon** disconnects the current session.
 -   Any applications that were running when you disconnected the session are automatically running when you reconnect to that session with no loss of data. Use **reset session** to end the running applications of the disconnected session, but be aware that this might result in loss of data at the session.
 -   The **/server** parameter is required only if you use **tsdiscon** from a remote server.
 -   The console session cannot be disconnected.
@@ -53,6 +53,6 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
     ```
     tsdiscon TERM04
     ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

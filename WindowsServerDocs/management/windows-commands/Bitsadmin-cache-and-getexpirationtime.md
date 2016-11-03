@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin cache and getexpirationtime
-description: "Windows Commands topic for **Bitsadmin cache and getexpirationtime** - Retrieves the cache expiration time."
+title: bitsadmin cache and getexpirationtime
+description: "Windows Commands topic for **bitsadmin cache and getexpirationtime** - Retrieves the cache expiration time."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin cache and getexpirationtime
+# bitsadmin cache and getexpirationtime
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Retrieves the cache expiration time.
 ## Syntax
 ```
-bitsadmin /Cache /GetExpirationTime 
+bitsadmin /Cache /GetExpirationtime 
 ```
 ## <a name="BKMK_examples"></a>Examples
 The following retrieves the cache expiration time.
 ```
-C:\>bitsadmin /Cache /GetExpirationTime
+C:\>bitsadmin /Cache /GetExpirationtime
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

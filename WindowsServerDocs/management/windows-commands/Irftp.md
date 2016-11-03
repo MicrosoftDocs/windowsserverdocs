@@ -1,5 +1,5 @@
 ---
-title: Irftp
+title: irftp
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Irftp
+# irftp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Sends files over an infrared link.    
 ## Syntax  
 ```  
-irftp [<Drive>:\] [[<Path>] <FileName>] [/h][/s]  
+irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |Drive:\|Specifies the drive that contains the files that you want to send over an infrared link.|  
-|[Path]FileName|Specifies the location and name of the file or set of files that you want to send over an infrared link. If you specify a set of files, you must specify the full path for each file.|  
+|[path]FileName|Specifies the location and name of the file or set of files that you want to send over an infrared link. if you specify a set of files, you must specify the full path for each file.|  
 |/h|Specifies hidden mode. When hidden mode is used, the files are sent without displaying the Wireless Link dialog box.|  
 |/s|Opens the Wireless Link dialog box, so that you can select the file or set of files that you want to send without using the command line to specify the drive, path, and file names.|  
-## Remarks  
+## remarks  
 -   Before using this command, verify that the devices that you want to communicate over an infrared link have infrared functionality enabled and working correctly, and that an infrared link is established between the devices.  
 -   Used without parameters or used with **/s**, **irftp** opens the **Wireless Link** dialog box, where you can select the files that you want to send without using the command line.  
 ## <a name="BKMK_Examples"></a>Examples  
@@ -38,5 +38,5 @@ Send Example.txt over the infrared link.
 ```  
 irftp c:\example.txt  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

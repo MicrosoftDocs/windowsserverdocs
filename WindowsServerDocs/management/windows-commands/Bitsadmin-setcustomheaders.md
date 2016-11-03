@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setcustomheaders
-description: "Windows Commands topic for **Bitsadmin setcustomheaders** - Add a custom HTTP header to a GET request."
+title: bitsadmin setcustomheaders
+description: "Windows Commands topic for **bitsadmin setcustomheaders** - add a custom HTTP header to a GET request."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016 
 ---
-# Bitsadmin setcustomheaders
+# bitsadmin setcustomheaders
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Add a custom HTTP header to a GET request.
+add a custom HTTP header to a GET request.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
 |Job|The job's display name or GUID|
 |Header1 Header2 . . .|The custom headers for the job|
 
-## Remarks
+## remarks
 
 -   This command is used to add a custom HTTP header to a GET request sent to an HTTP server.
 
@@ -44,7 +44,7 @@ The following example adds a custom HTTP header for the job named *myDownloadJob
 C:\>bitsadmin / SetCustomHeaders myDownloadJob "Accept-encoding:deflate/gzip"
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

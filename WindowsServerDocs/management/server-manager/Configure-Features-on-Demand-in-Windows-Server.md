@@ -24,9 +24,9 @@ Features on Demand is a feature, introduced in Windows 8 and  Windows Server 201
 
 In a Features on Demand configuration, when feature files are not available on a computer, if an installation requires those feature files,  Windows Server 2012 R2  or  Windows Server 2012  can be directed to get the files from a side-by-side feature store (a shared folder that contains feature files, and is available to the computer on the network), from Windows Update, or from installation media. By default, when feature files are not available on the target server, Features on Demand searches for missing feature files by performing the following tasks, in the order shown.
 
-1.  Searching in a location that has been specified by users of the Add Roles and Features Wizard or DISM installation commands
+1.  Searching in a location that has been specified by users of the add Roles and Features Wizard or DISM installation commands
 
-2.  Evaluating the configuration of the Group Policy setting, **Computer Configuration\Administrative Templates\System\Specify settings for optional component installation and component repair**
+2.  Evaluating the configuration of the Group Policy setting, **computer Configuration\Administrative Templates\System\Specify settings for optional component installation and component repair**
 
 3.  Searching Windows Update
 
@@ -34,26 +34,26 @@ You can override default Features on Demand behavior by doing any of the followi
 
 -   Specifying an alternate source path as part of the `Install-WindowsFeature` cmdlet, by adding the `Source` parameter
 
--   Specifying an alternate source path on the **Confirm installation options** page while you are installing features by using the Add Roles and Features Wizard
+-   Specifying an alternate source path on the **Confirm installation options** page while you are installing features by using the add Roles and Features Wizard
 
 -   Configuring the Group Policy setting, **Specify settings for optional component installation and component repair**
 
 This topic contains the following sections.
 
--   [Create a feature file or side-by-side store](#BKMK_store)
+-   [create a feature file or side-by-side store](#BKMK_store)
 
 -   [Methods of removing feature files](#BKMK_methods)
 
--   [Remove feature files by using Uninstall-WindowsFeature](#BKMK_remove)
+-   [remove feature files by using Uninstall-WindowsFeature](#BKMK_remove)
 
-## <a name="BKMK_store"></a>Create a feature file or side-by-side store
+## <a name="BKMK_store"></a>create a feature file or side-by-side store
 This section describes how to set up a remote feature file shared folder (also called a side-by-side store) that stores the files required to install roles, role services, and features on servers that run  Windows Server 2012 R2  or  Windows Server 2012 . After you have set up a feature store, you can install roles, role services, and features on servers that are running those operating systems, and specify the feature store as the location of installation source files.
 
 #### To create a feature file store
 
-1.  Create a shared folder on a server on your network. For example, *\\\network\share\sxs*.
+1.  create a shared folder on a server on your network. for example, *\\\network\share\sxs*.
 
-2.  Verify that you have the correct permissions assigned to the feature store. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer accounts (*DOMAIN*\\*SERVERNAME*$) of servers on which you plan to install features by using this feature store; granting user account access is not sufficient.
+2.  verify that you have the correct permissions assigned to the feature store. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer accounts (*DOMAIN*\\*SERverNAME*$) of servers on which you plan to install features by using this feature store; granting user account access is not sufficient.
 
     You can access file sharing and permissions settings by doing either of the following on the Windows desktop.
 
@@ -64,59 +64,59 @@ This section describes how to set up a remote feature file shared folder (also c
     > [!NOTE]
     > Servers that are in workgroups cannot access external file shares, even if the computer account for the workgroup server has **Read** permissions on the external share. Alternate source locations that work for workgroup servers include installation media, Windows Update, and VHD or WIM files that are stored on the local workgroup server.
 
-3.  Copy the **Sources\SxS** folder from your Windows Server installation media to the shared folder that you created in step 1.
+3.  copy the **Sources\SxS** folder from your Windows Server installation media to the shared folder that you created in step 1.
 
 ## <a name="BKMK_methods"></a>Methods of removing feature files
 Two methods are available for removing feature files from Windows Server in a Features on Demand configuration.
 
--   The `Remove` parameter of the `Uninstall-WindowsFeature` cmdlet lets you delete feature files from a server or offline virtual hard disk (VHD) that is running  Windows Server 2012 R2  or  Windows Server 2012 . Valid values for the `Remove` parameter are the names of roles, role services, and features.
+-   The `remove` parameter of the `Uninstall-WindowsFeature` cmdlet lets you delete feature files from a server or offline virtual hard disk (VHD) that is running  Windows Server 2012 R2  or  Windows Server 2012 . Valid values for the `remove` parameter are the names of roles, role services, and features.
 
--   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. For more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](http://technet.microsoft.com/library/hh824822.aspx).
+-   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. for more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](http://technet.microsoft.com/library/hh824822.aspx).
 
-## <a name="BKMK_remove"></a>Remove feature files by using Uninstall-WindowsFeature
+## <a name="BKMK_remove"></a>remove feature files by using Uninstall-WindowsFeature
 You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role services, and features from servers and offline VHDs that are running  Windows Server 2012 R2  or  Windows Server 2012 , and to delete feature files. You can both uninstall and delete the same roles, role services, and features in the same command if desired.
 
-> [!IMPORTANT]
-> When you delete feature files for a role, role service, or feature, roles, role services, and features that depend upon the files you are removing are also deleted. If you are deleting feature files for a role service or subfeature, and no other role services or subfeatures for the parent role or feature remain installed, then files for the entire parent role or feature are deleted. To view all feature files that would be deleted by the `Uninstall-WindowsFeature -Remove` command, add the `whatIf` parameter to the command to run it and view results without actually deleting feature files.
+> [!importANT]
+> When you delete feature files for a role, role service, or feature, roles, role services, and features that depend upon the files you are removing are also deleted. if you are deleting feature files for a role service or subfeature, and no other role services or subfeatures for the parent role or feature remain installed, then files for the entire parent role or feature are deleted. To view all feature files that would be deleted by the `Uninstall-WindowsFeature -remove` command, add the `whatif` parameter to the command to run it and view results without actually deleting feature files.
 
 #### To remove role and feature files by using Uninstall-WindowsFeature
 
-1.  Do one of the following to open a Windows PowerShell session with elevated user rights.
+1.  Do one of the following to open a Windows powershell session with elevated user rights.
 
     > [!NOTE]
-    > If you are uninstalling roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.
+    > if you are uninstalling roles and features from a remote server, you do not need to run Windows powershell with elevated user rights.
 
-    -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.
+    -   On the Windows desktop, right-click **Windows powershell** on the taskbar, and then click **Run as Administrator**.
 
-    -   On the Windows **Start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.
+    -   On the Windows **start** screen, right-click the Windows powershell tile, and then on the app bar, click **Run as Administrator**.
 
     -   On a server that is running the Server Core installation option, type **powershell** into a command prompt, and then press **Enter**.
 
-2.  Type the following, and then press **Enter**.
+2.  type the following, and then press **Enter**.
 
     ```
-    Uninstall-WindowsFeature -Name <feature_name> -ComputerName <computer_name> -Remove
+    Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -remove
     ```
 
-    **Example:** Remote Desktop Licensing is the last remaining role service of Remote Desktop Services that is installed. The command uninstalls Remote Desktop Licensing, and then deletes feature files for the entire Remote Desktop Services role from the specified server, *contoso_1*.
+    **Example:** remote Desktop Licensing is the last remaining role service of remote Desktop Services that is installed. The command uninstalls remote Desktop Licensing, and then deletes feature files for the entire remote Desktop Services role from the specified server, *contoso_1*.
 
     ```
-    Uninstall-WindowsFeature -Name RDS-Licensing -ComputerName contoso_1 -Remove
+    Uninstall-WindowsFeature -Name rdS-Licensing -computerName contoso_1 -remove
     ```
 
-    **Example:** In the following example, the command removes Active Directory Domain Services and Group Policy Management from an offline VHD. The role and feature are first uninstalled, then their feature files removed entirely from the offline VHD, *Contoso.vhd*.
+    **Example:** In the following example, the command removes active directory Domain Services and Group Policy Management from an offline VHD. The role and feature are first uninstalled, then their feature files removed entirely from the offline VHD, *Contoso.vhd*.
 
     > [!NOTE]
-    > You must add the `ComputerName` parameter if you are running the cmdlet from a computer that is running Windows 8.1 or Windows 8.
+    > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running Windows 8.1 or Windows 8.
     > 
-    > If you enter the name of a VHD file from a network share, that share must grant **Read** and **Write** permissions to the computer account of the server that you selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.
+    > if you enter the name of a VHD file from a network share, that share must grant **Read** and **Write** permissions to the computer account of the server that you selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.
 
     ```
-    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -VHD C:\WS2012VHDs\Contoso.vhd -ComputerName ContosoDC1
+    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -VHD C:\WS2012VHDs\Contoso.vhd -computerName ContosoDC1
     ```
 
 ## See Also
-[Install or Uninstall Roles, Role Services, or Features](Install-or-Uninstall-Roles-Role-Services-or-Features.md)
+[Install or Uninstall Roles, Role Services, or Features](install-or-uninstall-roles-role-services-or-features.md)
 [Windows Server Installation Options](http://technet.microsoft.com/library/hh831786.aspx)
 [How to Enable or Disable Windows Features](http://technet.microsoft.com/library/hh824822.aspx)
 [Deployment Image Servicing and Management (DISM) Overview](http://technet.microsoft.com/library/hh825236.aspx)

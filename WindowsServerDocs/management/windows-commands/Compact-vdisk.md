@@ -1,5 +1,5 @@
 ---
-title: Compact vdisk
+title: compact vdisk
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Compact vdisk
+# compact vdisk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,7 +25,7 @@ Reduces the physical size of a dynamically expanding virtual hard disk (VHD) fil
 ```
 compact vdisk
 ```
-## Remarks
+## remarks
 -   A dynamically expanding VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 -   You can only compact dynamically expanding VHDs that are detached or attached as read-only.
 ## <a name="BKMK_Examples"></a>Examples
@@ -33,13 +33,13 @@ To compact a dynamically expanding VHD, type:
 ```
 compact vdisk
 ```
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Attach vdisk](Attach-vdisk.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [attach vdisk](attach-vdisk.md)
 
--   [Detail vdisk](Detail-vdisk.md)
--   [Detach vdisk](Detach-vdisk.md)
--   [Expand vdisk](Expand-vdisk.md)
--   [Merge vdisk](Merge-vdisk.md)
--   [Select vdisk](Select-vdisk.md)
--   [List_1](List_1.md)
+-   [detail vdisk](detail-vdisk.md)
+-   [Detach vdisk](detach-vdisk.md)
+-   [expand vdisk](expand-vdisk.md)
+-   [Merge vdisk](merge-vdisk.md)
+-   [select vdisk](select-vdisk.md)
+-   [list_1](list_1.md)

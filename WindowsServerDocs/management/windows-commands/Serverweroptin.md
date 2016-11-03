@@ -1,5 +1,5 @@
 ---
-title: Serverweroptin
+title: serverweroptin
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Serverweroptin
+# serverweroptin
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,10 +26,10 @@ serverweroptin [/query] [/detailed] [/summary]
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|/query|Verifies the current setting.|
+|/query|verifies the current setting.|
 |/detailed|Sends detailed reports automatically.|
 |/summary|Sends summary reports automatically.|
-|/?|Displays Help at the command prompt.|
+|/?|Displays help at the command prompt.|
 ## <a name="BKMK_Examples"></a>Examples
 To verify the current setting, type:
 ```
@@ -43,6 +43,6 @@ To automatically send summary reports, type
 ```
 serverweroptin /summary
 ```
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Command-Line Reference_1](Command-Line-Reference_1.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Command-Line Reference_1](command-line-reference_1.md)

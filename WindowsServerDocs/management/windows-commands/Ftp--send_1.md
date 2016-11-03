@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Ftp-send_1.md
+redirect_url: /windows-server-docs/management/windows-commands/ftp-send_1.md
 ---

@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin peercaching and getconfigurationflags
-description: "Windows Commands topic for **Bitsadmin peercaching and getconfigurationflags** - Gets the configuration flags that determine if the computer serves content to peers and can download content from peers."
+title: bitsadmin peercaching and getconfigurationflags
+description: "Windows Commands topic for **bitsadmin peercaching and getconfigurationflags** - Gets the configuration flags that determine if the computer serves content to peers and can download content from peers."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin peercaching and getconfigurationflags
+# bitsadmin peercaching and getconfigurationflags
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -30,7 +30,7 @@ bitsadmin /PeerCaching /GetConfigurationFlags <Job>
 ## <a name="BKMK_examples"></a>Examples
 The following example gets the configuration flags for the job named *myJob*.
 ```
-C:\> Bitsadmin /PeerCaching /GetConfigurationFlags myJob
+C:\> bitsadmin /PeerCaching /GetConfigurationFlags myJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

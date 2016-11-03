@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Subcommand-stop-Server.md
+redirect_url: /windows-server-docs/management/windows-commands/subcommand-stop-server.md
 ---

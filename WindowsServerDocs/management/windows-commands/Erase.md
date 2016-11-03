@@ -1,5 +1,5 @@
 ---
-title: Erase
+title: erase
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,8 +14,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Erase
+# erase
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This command is the same as the **del** command. See [Del](Del.md) for syntax and parameters.
+This command is the same as the **del** command. See [del](del.md) for syntax and parameters.

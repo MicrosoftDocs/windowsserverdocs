@@ -1,5 +1,5 @@
 ---
-title: Telnet: 
+title: telnet: 
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Telnet:
+# telnet:
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays Telnet Help.   
+Displays telnet help.   
 ## Syntax  
 ```  
 ?  
 ```  
 ### Parameters  
 none  
-## Remarks  
-You can also type **h** for Help.  
+## remarks  
+You can also type **h** for help.  
 ## <a name="BKMK_Examples"></a>Examples  
-Display Telnet Help.  
+Display telnet help.  
 ```  
 ?  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

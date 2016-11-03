@@ -1,5 +1,5 @@
 ---
-title: Manage-bde: tpm
+title: manage-bde: tpm
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Manage-bde: tpm
+# manage-bde: tpm
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-> [!IMPORTANT]
-> This command is not supported for use on computers running Windows 8,  Windows Server 2012  or later operating systems. For those computers, you can use the [TPM Management cmdlets for Windows PowerShell](http://technet.microsoft.com/library/jj603116.aspx).
-If you are using this command on computer running Windows 7 or Windows Server 2008, you can still configure the computer's Trusted Platform Module (TPM) using this command. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+> [!importANT]
+> This command is not supported for use on computers running Windows 8,  Windows Server 2012  or later operating systems. for those computers, you can use the [TPM Management cmdlets for Windows powershell](http://technet.microsoft.com/library/jj603116.aspx).
+if you are using this command on computer running Windows 7 or Windows Server 2008, you can still configure the computer's Trusted Platform Module (TPM) using this command. for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde -tpm [-turnon] [-takeownership <OwnerPassword>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
@@ -31,10 +31,10 @@ manage-bde -tpm [-turnon] [-takeownership <OwnerPassword>] [-computername <Name>
 |-turnon|Enables and activates the TPM, allowing the TPM owner password to be set. You can also use **-t** as an abbreviated version of this command.|
 |-takeownership|Takes ownership of the TPM by setting an owner password. You can also use **-o** as an abbreviated version of this command.|
 |<OwnerPassword>|Represents the owner password that you specify for the TPM.|
-|-computername|Specifies that Manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
+|-computername|Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
 |<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
-|-? or /?|Displays brief Help at the command prompt.|
-|-help or -h|Displays complete Help at the command prompt.|
+|-? or /?|Displays brief help at the command prompt.|
+|-help or -h|Displays complete help at the command prompt.|
 ## <a name="BKMK_Examples"></a>Examples
 The following example illustrates using the **-tpm** command to turn on the TPM.
 ```
@@ -44,6 +44,6 @@ The following example illustrates using the ** tpm** command to take ownership o
 ```
 manage-bde  tpm  takeownership 0wnerP@ss
 ```
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Manage-bde](Manage-bde.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [manage-bde](manage-bde.md)

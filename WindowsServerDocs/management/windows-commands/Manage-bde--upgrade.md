@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Manage-bde-upgrade.md
+redirect_url: /windows-server-docs/management/windows-commands/manage-bde-upgrade.md
 ---

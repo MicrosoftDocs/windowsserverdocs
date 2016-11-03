@@ -1,6 +1,6 @@
 ---
-title: The Server Cleanup Wizard
-description: "Windows Server Update Service (WSUS) topic - How to use the Server Cleanup Wizard to manage disk space"
+title: The Server cleanup Wizard
+description: "Windows Server Update Service (WSUS) topic - How to use the Server cleanup Wizard to manage disk space"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
@@ -13,17 +13,17 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# The Server Cleanup Wizard
+# The Server cleanup Wizard
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The Server Cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
+The Server cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
 
--   Remove unused updates and update revisions remove all older updates and update revisions that have not been approved.
+-   remove unused updates and update revisions remove all older updates and update revisions that have not been approved.
 
--   Delete computers not contacting the server delete all client computers that have not contacted the server in thirty days or more.
+-   delete computers not contacting the server delete all client computers that have not contacted the server in thirty days or more.
 
--   Delete unneeded update files delete all update files that are not needed by updates or by downstream servers.
+-   delete unneeded update files delete all update files that are not needed by updates or by downstream servers.
 
 -   Decline expired updates decline all updates that have been expired by Microsoft.
 
@@ -39,9 +39,9 @@ The Server Cleanup Wizard is integrated into the user interface and can be used 
 
     -   The superseding update must be approved for install to a computer group
 
-It is important to mention that if you choose to remove unneeded content with the Server Cleanup Wizard, all the private update files that you have downloaded from the Catalog Site will be removed as well. You will need to re-import these files after running the Server Cleanup Wizard.
+It is important to mention that if you choose to remove unneeded content with the Server cleanup Wizard, all the private update files that you have downloaded from the Catalog Site will be removed as well. You will need to re-import these files after running the Server cleanup Wizard.
 
-If updates are approved using an auto-approval rule, they might still be in the "Approved" state, and will not be removed by The Server Cleanup Wizard. To remove auto-approved updates that are in an "approved" state , the WSUS Admin must - at minimum - manually set the approval status of superseded updates to "Not Approved" so they will be eligible for declination by the Server Cleanup Wizard. The Server Cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as "Declined."
+if updates are approved using an auto-approval rule, they might still be in the "Approved" state, and will not be removed by The Server cleanup Wizard. To remove auto-approved updates that are in an "approved" state , the WSUS Admin must - at minimum - manually set the approval status of superseded updates to "Not Approved" so they will be eligible for declination by the Server cleanup Wizard. The Server cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as "Declined."
 
 
 

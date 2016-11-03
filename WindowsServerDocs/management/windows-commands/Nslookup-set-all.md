@@ -1,5 +1,5 @@
 ---
-title: Nslookup set all
+title: nslookup set all
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set all
+# nslookup set all
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Prints the current values of the configuration settings.
+prints the current values of the configuration settings.
 ## Syntax
 ```
 set all 
@@ -27,7 +27,7 @@ set all
 |Parameter|Description|
 |-------|--------|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
+## remarks
 -   **Set all** also prints information about the default server and computer (that is, the host).
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

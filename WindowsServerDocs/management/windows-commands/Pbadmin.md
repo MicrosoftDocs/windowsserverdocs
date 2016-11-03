@@ -1,5 +1,5 @@
 ---
-title: Pbadmin
+title: pbadmin
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,9 +14,9 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Pbadmin
+# pbadmin
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Pbadmin is deprecated, and is not guaranteed to be supported in future releases of Windows.
-This tool is included in Windows Server 2003. For more information see [Pbadmin](https://technet.microsoft.com/library/cc755767(v=ws.10).aspx).
+pbadmin is deprecated, and is not guaranteed to be supported in future releases of Windows.
+This tool is included in Windows Server 2003. for more information see [pbadmin](https://technet.microsoft.com/library/cc755767(v=ws.10).aspx).

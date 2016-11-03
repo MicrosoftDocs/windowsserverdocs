@@ -1,6 +1,6 @@
 ---
-title: Assoc
-description: "Windows Commands topic for **Assoc** - Displays or modifies file name extension associations."
+title: assoc
+description: "Windows Commands topic for **assoc** - Displays or modifies file name extension associations."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Assoc
+# assoc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Displays or modifies file name extension associations. if used without parameters, **assoc** displays a list of all the current file name extension associations.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-assoc [<.ext>[=[<FileType>]]]
+assoc [<.ext>[=[<Filetype>]]]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |<.ext>|Specifies the file name extension.|
-|<FileType>|Specifies the file type to associate with the specified file name extension.|
+|<Filetype>|Specifies the file type to associate with the specified file name extension.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
 -   To view current file types that have open command strings defined, use the **ftype** command.
 -   To redirect the output of **assoc** to a text file, use the **>** redirection operator.
@@ -53,5 +53,5 @@ To send the output of **assoc** to the file assoc.txt, type:
 ```
 assoc>assoc.txt
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

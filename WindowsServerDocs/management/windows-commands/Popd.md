@@ -1,5 +1,5 @@
 ---
-title: Popd
+title: popd
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Popd
+# popd
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the current directory to the directory that was most recently stored by the **pushd** command.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+changes the current directory to the directory that was most recently stored by the **pushd** command.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 popd
@@ -28,10 +28,10 @@ popd
 |Parameter|Description|
 |-------|--------|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   Every time you use the **pushd** command, a single directory is stored for your use. However, you can store multiple directories by using the **pushd** command multiple times.
-    The directories are stored sequentially in a virtual stack. If you use the **pushd** command once, the directory in which you use the command is placed at the bottom of the stack. If you use the command again, the second directory is placed on top of the first one. The process repeats every time you use the **pushd** command.
-    You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. If you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. If you use the **popd** command again, the next directory on the stack is removed.
+    The directories are stored sequentially in a virtual stack. if you use the **pushd** command once, the directory in which you use the command is placed at the bottom of the stack. if you use the command again, the second directory is placed on top of the first one. The process repeats every time you use the **pushd** command.
+    You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. if you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. if you use the **popd** command again, the next directory on the stack is removed.
 -   When command extensions are enabled, the **popd** command removes any drive-letter assignations created by **pushd**.
 ## <a name="BKMK_examples"></a>Examples
 The following example shows how you can use the **pushd** command and the **popd** command in a batch program to change the current directory from the one in which the batch program was run and then change it back:
@@ -44,7 +44,7 @@ popd
 cls
 echo All text files deleted in the %1 directory
 ```
-## Additional references
--   [Pushd](Pushd.md)
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Command-Line Reference_1](Command-Line-Reference_1.md)
+## additional references
+-   [pushd](pushd.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Command-Line Reference_1](command-line-reference_1.md)

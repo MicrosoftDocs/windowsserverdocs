@@ -23,18 +23,18 @@ You should check the WSUS administration console home page regularly to view ove
 ## In this guide  
 In this guide, you will find information about:  
   
--   [Setting up Update Synchronizations](Setting-up-Update-Synchronizations.md)  
+-   [Setting up Update Synchronizations](setting-up-update-synchronizations.md)  
   
--   [Managing WSUS Client Computers and WSUS Computer Groups](Managing-WSUS-Client-Computers-and-WSUS-Computer-Groups.md)  
+-   [Managing WSUS Client computers and WSUS computer Groups](managing-wsus-client-computers-and-wsus-computer-groups.md)  
   
--   [Viewing and Managing Updates](Viewing-and-Managing-Updates.md)  
+-   [Viewing and Managing Updates](viewing-and-managing-updates.md)  
   
--   [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md)  
+-   [WSUS and the Catalog Site](wsus-and-the-catalog-site.md)  
   
--   [Updates Operations](Updates-Operations.md)  
+-   [Updates Operations](updates-operations.md)  
   
--   [The Server Cleanup Wizard](The-Server-Cleanup-Wizard.md)  
+-   [The Server cleanup Wizard](the-server-cleanup-wizard.md)  
   
--   [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md)  
+-   [Running WSUS Replica mode](running-wsus-replica-mode.md)  
   
--   [WSUS Messages and Troubleshooting Tips](WSUS-Messages-and-Troubleshooting-Tips.md)  
+-   [WSUS Messages and Troubleshooting Tips](wsus-messages-and-troubleshooting-tips.md)  

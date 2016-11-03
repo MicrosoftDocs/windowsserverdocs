@@ -1,6 +1,6 @@
 ---
-title: Attributes
-description: "Windows Commands topic for **Attributes** - Displays, sets, or clears the attributes of a disk or volume."
+title: attributes
+description: "Windows Commands topic for **attributes** - Displays, sets, or clears the attributes of a disk or volume."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,20 +14,20 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Attributes
+# attributes
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays, sets, or clears the attributes of a disk or volume.
 ## Syntax
 ```
-Attributes disk
-Attributes volume
+attributes disk
+attributes volume
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[Attributes disk](Attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
-|[Attributes volume](Attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+|[attributes disk](attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
+|[attributes volume](attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

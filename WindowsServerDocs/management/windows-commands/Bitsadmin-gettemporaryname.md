@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin gettemporaryname
-description: "Windows Commands topic for **Bitsadmin gettemporaryname** - Reports the temporary filename of the given file within the job."
+title: bitsadmin gettemporaryname
+description: "Windows Commands topic for **bitsadmin gettemporaryname** - Reports the temporary filename of the given file within the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin gettemporaryname
+# bitsadmin gettemporaryname
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -31,7 +31,7 @@ bitsadmin /GetTemporaryName <Job> <file index>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|File index|Starts from 0|
+|File index|starts from 0|
 
 ## <a name="BKMK_examples"></a>Examples
 The following example reports the temporary filename of file 2 for the job named *myJob*.
@@ -40,7 +40,7 @@ The following example reports the temporary filename of file 2 for the job named
 C:\>bitsadmin /GetTemporaryName myJob 1 
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

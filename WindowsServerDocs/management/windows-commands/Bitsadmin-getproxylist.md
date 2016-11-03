@@ -1,7 +1,7 @@
 ---
-title: Bitsadmin getproxylist
+title: bitsadmin getproxylist
 Retrieves the proxy list for the specified job.
-description: "Windows Commands topic for **Bitsadmin getproxylist** - Retrieves the proxy list for the specified job."
+description: "Windows Commands topic for **bitsadmin getproxylist** - Retrieves the proxy list for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,25 +15,25 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin getproxylist
+# bitsadmin getproxylist
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Retrieves the proxy list for the specified job.
 ## Syntax
 ```
-bitsadmin /GetProxyList <Job>
+bitsadmin /GetProxylist <Job>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-## Remarks
+## remarks
 -   The proxy list is the list of proxy servers to use. The list is comma-delimited.
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the proxy list for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /GetProxyList myDownloadJob
+C:\>bitsadmin /GetProxylist myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

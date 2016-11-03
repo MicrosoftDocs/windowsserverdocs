@@ -1,5 +1,5 @@
 ---
-title: Nlbmgr
+title: nlbmgr
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nlbmgr
+# nlbmgr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -27,10 +27,10 @@ nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 |Parameter|Description|
 |-------|--------|
 |/help|Displays help at the command prompt.|
-|/noping|Prevents Network Load Balancing Manager from pinging the hosts prior to trying to contact them through Windows Management Instrumentation (WMI). Use this option if you have disabled Internet Control Message Protocol (ICMP) on all available network adapters. If Network Load Balancing Manager attempts to contact a host that is not available, you will experience a delay when using this option.|
+|/noping|Prevents Network Load Balancing Manager from pinging the hosts prior to trying to contact them through Windows Management Instrumentation (WMI). Use this option if you have disabled Internet Control Message Protocol (ICMP) on all available network adapters. if Network Load Balancing Manager attempts to contact a host that is not available, you will experience a delay when using this option.|
 |/hostlist <filename>|Loads the hosts specified in filename into Network Load Balancing Manager.|
-|/autorefresh <interval>|Causes Network Load Balancing Manager to refresh its host and cluster information every <interval> seconds. If no interval is specified, the information is refreshed every 60 seconds.|
-|/?|Displays Help at the command prompt.|
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
--   [Command-Line Reference_1](Command-Line-Reference_1.md)
+|/autorefresh <interval>|Causes Network Load Balancing Manager to refresh its host and cluster information every <interval> seconds. if no interval is specified, the information is refreshed every 60 seconds.|
+|/?|Displays help at the command prompt.|
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Command-Line Reference_1](command-line-reference_1.md)

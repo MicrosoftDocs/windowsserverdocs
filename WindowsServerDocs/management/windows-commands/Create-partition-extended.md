@@ -1,5 +1,5 @@
 ---
-title: Create partition extended
+title: create partition extended
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Create partition extended
+# create partition extended
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  
+creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  
   
   
   
@@ -32,12 +32,12 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|size\=<n>|Specifies the size of the partition in megabytes \(MB\). If no size is given, the partition continues until there is no more free space in the extended partition.|  
-|offset\=<n>|Specifies the offset in kilobytes \(KB\), at which the partition is created. If no offset is given, the partition will start at the beginning of the free space on the disk that is large enough to hold the new partition.|  
+|size\=<n>|Specifies the size of the partition in megabytes \(MB\). if no size is given, the partition continues until there is no more free space in the extended partition.|  
+|offset\=<n>|Specifies the offset in kilobytes \(KB\), at which the partition is created. if no offset is given, the partition will start at the beginning of the free space on the disk that is large enough to hold the new partition.|  
 |align\=<n>|Aligns all partition extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. <n> is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   After the partition has been created, the focus automatically shifts to the new partition.  
   
@@ -56,8 +56,8 @@ To create an extended partition of 1000 megabytes in size, type:
 create partition extended size=1000  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

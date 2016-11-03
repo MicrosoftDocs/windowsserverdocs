@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Subcommand-start-Namespace.md
+redirect_url: /windows-server-docs/management/windows-commands/subcommand-start-namespace.md
 ---

@@ -1,5 +1,5 @@
 ---
-title: Recover_1
+title: recover_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Recover_1
+# recover_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Refreshes the state of all disks in a disk group, attempt to recover disks in an invalid disk group, and resynchronizes mirrored volumes and RAID\-5 volumes that have stale data.  
   
-> [!IMPORTANT]  
+> [!importANT]  
 > This DiskPart command is not available in any edition of Windows Vista.  
   
 ## Syntax  
@@ -33,13 +33,13 @@ recover [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   This command operates on a disk group.  
   
--   This command applies only to groups of dynamic disks. If this command is used on a group with a basic disk, it will not return an error but no action will be taken.  
+-   This command applies only to groups of dynamic disks. if this command is used on a group with a basic disk, it will not return an error but no action will be taken.  
   
 -   This command operates on disks that are failed or failing. It also operates on volumes that are failed, failing, or in failed redundancy state.  
   
@@ -52,8 +52,8 @@ To recover the disk group that contains the disk with focus, type:
 recover  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

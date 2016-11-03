@@ -1,5 +1,5 @@
 ---
-title: Dfsdiag TestDFSConfig
+title: dfsdiag TestDFSConfig
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,15 +14,15 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsdiag TestDFSConfig
+# dfsdiag TestDFSConfig
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Checks the configuration of a Distributed File System \(DFS\) namespace by performing the following actions:  
   
--   Verifies that the DFS Namespace service is running and that its  Startup Type is set to Automatic on all namespace servers.  
+-   verifies that the DFS Namespace service is running and that its  startup type is set to Automatic on all namespace servers.  
   
--   Verifies that the DFS registry configuration is consistent among namespace servers.  
+-   verifies that the DFS registry configuration is consistent among namespace servers.  
   
 -   Validates the following dependencies on clustered namespace servers that are running Windows Server 2008 or later:  
   
@@ -37,7 +37,7 @@ Checks the configuration of a Distributed File System \(DFS\) namespace by perfo
 ## Syntax  
   
 ```  
-DFSDiag /TestDFSConfig /DFSRoot:<namespace>  
+dfsdiag /TestDFSConfig /DFSRoot:<namespace>  
 ```  
   
 ### Parameters  
@@ -50,13 +50,13 @@ DFSDiag /TestDFSConfig /DFSRoot:<namespace>
 To TBD, type:  
   
 ```  
-DFSDiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace  
+dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace  
 ```  
   
-## Additional references  
+## additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
   
--   [Dfsdiag](Dfsdiag.md)  
+-   [dfsdiag](dfsdiag.md)  
   
 

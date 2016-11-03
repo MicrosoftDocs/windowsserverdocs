@@ -1,5 +1,5 @@
 ---
-title: Convert basic
+title: convert basic
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Convert basic
+# convert basic
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Converts an empty dynamic disk to a basic disk.  
+converts an empty dynamic disk to a basic disk.  
   
-For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](http://go.microsoft.com/fwlink/?LinkId=207048) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207048\).  
+for instructions regarding how to use this command, see [change a Dynamic Disk Back to a Basic Disk](http://go.microsoft.com/fwlink/?LinkId=207048) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207048\).  
   
 ## Syntax  
   
@@ -32,11 +32,11 @@ convert basic [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
-> [!IMPORTANT]  
+> [!importANT]  
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk.  
   
 -   A dynamic disk must be selected for this operation to succeed. Use the **select disk** command to select a dynamic disk and shift the focus to it.  
@@ -48,8 +48,8 @@ To convert the selected dynamic disk to basic, type:
 convert basic  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

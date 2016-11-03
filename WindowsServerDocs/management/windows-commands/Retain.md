@@ -1,5 +1,5 @@
 ---
-title: Retain
+title: retain
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Retain
+# retain
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -23,7 +23,7 @@ Prepares an existing dynamic simple volume to be used as a boot or system volume
 ```
 retain
 ```
-## Remarks
+## remarks
 -   On a master boot record (MBR) dynamic disk, this command creates a partition entry in the master boot record.
--   On a GUID partition table (GPT) dynamic disk, this command creates a partition entry in the GUID partition table.
+-   On a GUID partition table (gpt) dynamic disk, this command creates a partition entry in the GUID partition table.
 

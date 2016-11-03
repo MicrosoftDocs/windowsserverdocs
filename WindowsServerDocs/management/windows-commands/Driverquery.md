@@ -1,5 +1,5 @@
 ---
-title: Driverquery
+title: driverquery
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Driverquery
+# driverquery
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Enables an administrator to display a list of installed device drivers and their properties. If used without parameters, **driverquery** runs on the local computer.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables an administrator to display a list of installed device drivers and their properties. if used without parameters, **driverquery** runs on the local computer.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 driverquery [/s <System> [/u [<Domain>\]<Username> [/p <Password>]]] [/fo {table | list | csv}] [/nh] [/v | /si]
@@ -56,5 +56,5 @@ To use the **driverquery** command on a remote server named **server1** using th
 ```
 driverquery /s server1 /u maindom\user1 /p p@ssw3d
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Vol
+title: vol
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Vol
+# vol
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays the disk volume label and serial number, if they exist.  If used without parameters, **vol** displays information for the current drive.
+Displays the disk volume label and serial number, if they exist.  if used without parameters, **vol** displays information for the current drive.
 ## Syntax
 ```
 vol [<Drive>:]
@@ -28,5 +28,5 @@ vol [<Drive>:]
 |-------|--------|
 |<Drive>:|Specifies the drive that contains the disk for which you want to display the volume label and serial number.|
 |/?|Displays help at the command prompt.|
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

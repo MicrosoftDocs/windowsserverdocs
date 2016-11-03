@@ -1,5 +1,5 @@
 ---
-title: Reg export
+title: reg export
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,15 +14,15 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Reg export
+# reg export
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Copies the specified subkeys, entries, and values of the local computer into a file for transfer to other servers.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-Reg export KeyName FileName [/y]
+reg export KeyName FileName [/y]
 ```
 ## Parameters
 |Parameter|Description|
@@ -31,7 +31,7 @@ Reg export KeyName FileName [/y]
 |<FileName>|Specifies the name and path of the file to be created during the operation. The file must have a .reg extension.|
 |/y|Overwrites any existing file with the name *FileName* without prompting for confirmation.|
 |/?|Displays help for **reg export** at the command prompt.|
-## Remarks
+## remarks
 The following table lists the return values for the **reg export** operation.
 |Value|Description|
 |-----|--------|
@@ -42,5 +42,5 @@ To export the contents of all subkeys and values of the key MyApp to the file Ap
 ```
 reg export HKLM\Software\MyCo\MyApp AppBkUp.reg
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

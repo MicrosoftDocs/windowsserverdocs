@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Property
+title: dfsutil Property
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Property
+# dfsutil Property
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -32,24 +32,24 @@ dfsutil property Sitecosting | RootScalability | ABE | Insite | TargetfailBack |
 
 |Parameter|Description|
 |-------|--------|
-|Dfsutil Property Sitecosting|Displays or modifies site costing for a namespace.|
-|Dfsutil Property RootScalability|Displays or modifies the namsespace polling mode.|
-|Dfsutil Property ABE|Enable\/Disable\/View ABE property of a namespace.|
-|Dfsutil Property Insite|Displays or modifies the in\-site property.|
-|DFSutil Property TargetfailBack)|Displays or modifies client fail back.|
-|Dfsutil Property SD]|Set\/Get Security Information on the folder.|
-|Dfsutil Property State|Displays or modifies a folder target or namespace server.|
-|Dfsutil Property TTL|Displays or changes client referral caching.|
-|Dfsutil Property PriorityRank|Displays or changes the ordering method \(priority rank\).|
-|Dfsutil Property PriorityClass|Displays or changes the target priority.|
-|Dfsutil Property Comment|Sets or displays the comment for a namespace or link.|
+|dfsutil Property Sitecosting|Displays or modifies site costing for a namespace.|
+|dfsutil Property RootScalability|Displays or modifies the namsespace polling mode.|
+|dfsutil Property ABE|Enable\/Disable\/View ABE property of a namespace.|
+|dfsutil Property Insite|Displays or modifies the in\-site property.|
+|dfsutil Property TargetfailBack)|Displays or modifies client fail back.|
+|dfsutil Property SD]|Set\/Get Security Information on the folder.|
+|dfsutil Property State|Displays or modifies a folder target or namespace server.|
+|dfsutil Property TTL|Displays or changes client referral caching.|
+|dfsutil Property PriorityRank|Displays or changes the ordering method \(priority rank\).|
+|dfsutil Property PriorityClass|Displays or changes the target priority.|
+|dfsutil Property Comment|Sets or displays the comment for a namespace or link.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To TBD, type:
 
 ```
-Dfsutil property 
+dfsutil property 
 ```
 
 To view help for this command, type:
@@ -58,10 +58,10 @@ To view help for this command, type:
 dfsutil property /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

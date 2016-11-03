@@ -1,5 +1,5 @@
 ---
-title: Change
+title: change
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Change
+# change
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes Remote Desktop Session Host (RD Session Host) server settings for logons, COM port mappings, and install mode.
+changes remote Desktop Session Host (rd Session Host) server settings for logons, COM port mappings, and install mode.
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 change logon
@@ -30,9 +30,9 @@ change user
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[Change logon](Change-logon.md)|Enables or disables logons from client sessions on an RD Session Host server, or displays current logon status.|
-|[Change port](Change-port.md)|Lists or changes the COM port mappings to be compatible with MS-DOS applications.|
-|[Change user](Change-user.md)|Changes the install mode for the RD Session Host server.|
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+|[change logon](change-logon.md)|Enables or disables logons from client sessions on an rd Session Host server, or displays current logon status.|
+|[change port](change-port.md)|lists or changes the COM port mappings to be compatible with MS-DOS applications.|
+|[change user](change-user.md)|changes the install mode for the rd Session Host server.|
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

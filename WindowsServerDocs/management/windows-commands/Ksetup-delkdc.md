@@ -1,5 +1,5 @@
 ---
-title: Ksetup:delkdc
+title: ksetup:delkdc
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ksetup:delkdc
+# ksetup:delkdc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes instances of Key Distribution Center (KDC) names for the Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+deletes instances of Key Distribution Center (KDC) names for the Kerberos realm. for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /delkdc <RealmName> <KDCName>
@@ -28,7 +28,7 @@ ksetup /delkdc <RealmName> <KDCName>
 |-------|--------|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run. It is to this realm from which you are attempting to delete the other KDC.|
 |<KDCName>|The KDC name is stated as a case-insensitive, fully qualified domain name, such as mitkdc.contoso.com.|
-## Remarks
+## remarks
 These mappings are stored in the registry in **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\Kerberos\Domains**. To remove realm configuration data from multiple computers, use the Security Configuration Template snap-in and policy distribution instead of using **ksetup** explicitly on individual computers.
 On computers running Windows 2000 Server with Service Pack 1 (SP1) and earlier, the computer must be restarted before the changed realm setting configuration will be used.
 To verify the default realm name for the computer, or to verify that this command worked as intended, run **ksetup** at the command prompt and verify that the KDC that was removed does not exist in the list.
@@ -37,10 +37,10 @@ The security requirements for this computer have changed so the link between the
 ```
 ksetup
 ```
-Remove the association by using the following command:
+remove the association by using the following command:
 ```
-Ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
+ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-## Additional references
--   [Ksetup](Ksetup.md)
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [ksetup](ksetup.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Ftp: bye
+title: ftp: bye
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,24 +14,24 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: bye
+# ftp: bye
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Ends the FTP session with the remote computer and exits.   
+Ends the ftp session with the remote computer and exits.   
 ## Syntax  
 ```  
 bye  
 ```  
 ### Parameters  
 none  
-## Remarks  
-**Bye** and **quit** both end the FTP session with the remote computer and exits.  
+## remarks  
+**Bye** and **quit** both end the ftp session with the remote computer and exits.  
 ## <a name="BKMK_Examples"></a>Examples  
-End the FTP session with the remote computer and exit.  
+End the ftp session with the remote computer and exit.  
 ```  
 bye  
 ```  
-## Additional references  
--   [Ftp: quit](Ftp-quit.md)  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [ftp: quit](ftp-quit.md)  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

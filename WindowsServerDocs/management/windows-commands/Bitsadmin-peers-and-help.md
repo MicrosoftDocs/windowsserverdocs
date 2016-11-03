@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin peers and help
-description: "Windows Commands topic for **Bitsadmin peers and help** - Displays the command-line usage for the **Peers** commands."
+title: bitsadmin peers and help
+description: "Windows Commands topic for **bitsadmin peers and help** - Displays the command-line usage for the **Peers** commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin peers and help
+# bitsadmin peers and help
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays the command-line usage for the **Peers** commands.
 ## Syntax
 ```
-Bitsadmin /Peers /Help 
+bitsadmin /Peers /help 
 ```
 ## <a name="BKMK_examples"></a>Examples
 The following command displays the command-line help for the **Peers** commands.
 ```
-Bitsadmin /Peers /Help
+bitsadmin /Peers /help
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

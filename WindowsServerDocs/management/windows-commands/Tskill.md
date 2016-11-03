@@ -1,5 +1,5 @@
 ---
-title: Tskill
+title: tskill
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Tskill
+# tskill
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Ends a process running in a session on a Remote Desktop Session Host (RD Session Host) server.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Ends a process running in a session on a remote Desktop Session Host (rd Session Host) server.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /a] [/v]
@@ -31,15 +31,15 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |-------|--------|
 |<ProcessID>|Specifies the ID of the process that you want to end.|
 |<ProcessName>|Specifies the name of the process that you want to end. This parameter can include wildcard characters.|
-|/server:<ServerName>|Specifies the terminal server that contains the process that you want to end. If **/server** is not specified, the current RD Session Host server is used.|
+|/server:<ServerName>|Specifies the terminal server that contains the process that you want to end. if **/server** is not specified, the current rd Session Host server is used.|
 |/id:<SessionID>|Ends the process that is running in the specified session.|
 |/a|Ends the process that is running in all sessions.|
 |/v|Displays information about the actions being performed.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   You can use **tskill** to end only those processes that belong to you, unless you are an administrator. Administrators have full access to all **tskill** functions and can end processes that are running in other user sessions.
 -   When all processes that are running in a session end, the session also ends.
--   If you use the *ProcessName* and the **/server:***ServerName* parameters, you must also specify either the **/id:***SessionID* or the **/a** parameter.
+-   if you use the *ProcessName* and the **/server:***ServerName* parameters, you must also specify either the **/id:***SessionID* or the **/a** parameter.
 ## <a name="BKMK_examples"></a>Examples
 -   To end process 6543, type:
     ```
@@ -49,6 +49,6 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
     ```
     tskill explorer /id:5
     ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

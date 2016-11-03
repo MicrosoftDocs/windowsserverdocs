@@ -1,5 +1,5 @@
 ---
-title: Ksetup:domain
+title: ksetup:domain
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ksetup:domain
+# ksetup:domain
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets the domain name for all Kerberos operations. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the domain name for all Kerberos operations. for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /domain <DomainName>
@@ -27,7 +27,7 @@ ksetup /domain <DomainName>
 |Parameter|Description|
 |-------|--------|
 |<DomainName>|Name of the domain to which you want to establish a connection. Use the fully qualified domain name or a simple form of the name, such as contoso.com or contoso.|
-## Remarks
+## remarks
 None.
 ## <a name="BKMK_Examples"></a>Examples
 Establish a connection to a valid domain, such as Microsoft by using the /mapuser subcommand:
@@ -35,6 +35,6 @@ Establish a connection to a valid domain, such as Microsoft by using the /mapuse
 ksetup /mapuser principal@realm domain-user /domain domain-name
 ```
 When the connection is successful, you will receive a new TGT or an existing TGT will be refreshed.
-## Additional references
--   [Ksetup](Ksetup.md)
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [ksetup](ksetup.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

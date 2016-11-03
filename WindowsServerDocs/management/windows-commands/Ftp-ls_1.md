@@ -1,5 +1,5 @@
 ---
-title: Ftp: ls_1
+title: ftp: ls_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: ls_1
+# ftp: ls_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -24,21 +24,21 @@ ms.date: 10/12/2016
 Displays an abbreviated list of files and subdirectories from the remote computer.   
 ## Syntax  
 ```  
-ls [<RemoteDirectory>] [<LocalFile>]  
+ls [<remotedirectory>] [<LocalFile>]  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|[<RemoteDirectory>]|Specifies the directory for which you want to see a listing. If no directory is specified, the current working directory on the remote computer is used.|  
-|[<LocalFile>]|Specifies a local file in which to store the listing. If a local file is not specified, results are displayed on the screen.|  
+|[<remotedirectory>]|Specifies the directory for which you want to see a listing. if no directory is specified, the current working directory on the remote computer is used.|  
+|[<LocalFile>]|Specifies a local file in which to store the listing. if a local file is not specified, results are displayed on the screen.|  
 ## <a name="BKMK_Examples"></a>Examples  
 Display an abbreviated list of files and subdirectories from the remote computer.  
 ```  
 ls  
 ```  
-Get an abbreviated directory listing of **Dir1** on the remote computer and save it in a local file called **DirList.txt**  
+Get an abbreviated directory listing of **dir1** on the remote computer and save it in a local file called **dirlist.txt**  
 ```  
-ls Dir1 DirList.txt   
+ls dir1 dirlist.txt   
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

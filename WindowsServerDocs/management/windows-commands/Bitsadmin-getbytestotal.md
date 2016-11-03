@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin getbytestotal
-description: "Windows Commands topic for **Bitsadmin getbytestotal** - 
+title: bitsadmin getbytestotal
+description: "Windows Commands topic for **bitsadmin getbytestotal** - 
 Retrieves the size of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin getbytestotal
+# bitsadmin getbytestotal
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -33,5 +33,5 @@ The following example retrieves the size of the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /GetBytesTotal myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

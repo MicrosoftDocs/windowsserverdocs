@@ -1,5 +1,5 @@
 ---
-title: List shadows
+title: list shadows
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,27 +14,27 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# List shadows
+# list shadows
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Lists persistent and existing non\-persistent shadow copies that are on the system.  
+lists persistent and existing non\-persistent shadow copies that are on the system.  
   
 ## Syntax  
   
 ```  
-list shadows {all | set <SetID> | id <ShadowID>}  
+list shadows {all | set <SetID> | id <shadowID>}  
 ```  
   
 ## Parameters  
   
 |Parameter|Description|  
 |-------|--------|  
-|all|Lists all shadow copies.|  
-|set <SetID>|Lists shadow copies that belong to the specified Shadow Copy Set ID.|  
-|id <ShadowID>|Lists any shadow copy with the specified shadow copy ID.|  
+|all|lists all shadow copies.|  
+|set <SetID>|lists shadow copies that belong to the specified shadow copy Set ID.|  
+|id <shadowID>|lists any shadow copy with the specified shadow copy ID.|  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

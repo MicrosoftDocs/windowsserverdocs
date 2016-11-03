@@ -1,5 +1,5 @@
 ---
-title: Exit_2
+title: exit_2
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,27 +15,27 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Exit_2
+# exit_2
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Exits the Cmd.exe program (the command interpreter) or the current batch script.  
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+exits the Cmd.exe program (the command interpreter) or the current batch script.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
-exit [/b] [<ExitCode>]  
+exit [/b] [<exitCode>]  
 ```  
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|/b|Exits the current batch script instead of exiting Cmd.exe. If executed from outside a batch script, exits Cmd.exe.|  
-|<ExitCode>|Specifies a numeric number. If **/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting **Cmd.exe**, the process exit code is set to that number.|  
+|/b|exits the current batch script instead of exiting Cmd.exe. if executed from outside a batch script, exits Cmd.exe.|  
+|<exitCode>|Specifies a numeric number. if **/b** is specified, the ERRORLEVEL environment variable is set to that number. if you are quitting **Cmd.exe**, the process exit code is set to that number.|  
 |/?|Displays help at the command prompt.|  
 ## <a name="BKMK_examples"></a>Examples  
 To close the command interpreter, Cmd.exe, type:  
 ```  
 exit  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
--   [Command-Line Reference_1](Command-Line-Reference_1.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   [Command-Line Reference_1](command-line-reference_1.md)  

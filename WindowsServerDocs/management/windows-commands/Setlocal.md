@@ -1,5 +1,5 @@
 ---
-title: Setlocal
+title: setlocal
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,12 +15,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Setlocal
+# setlocal
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Starts localization of environment variables in a batch file. Localization continues until a matching **endlocal** command is encountered or the end of the batch file is reached.  
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+starts localization of environment variables in a batch file. Localization continues until a matching **endlocal** command is encountered or the end of the batch file is reached.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
 setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabledelayedexpansion]  
@@ -33,7 +33,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 |enabledelayedexpansion|Enables the delayed environment variable expansion until the matching **endlocal** command is encountered, regardless of the setting before the **setlocal** command was run.|  
 |disabledelayedexpansion|Disables the delayed environment variable expansion until the matching **endlocal** command is encountered, regardless of the setting before the **setlocal** command was run.|  
 |/?|Displays help at the command prompt.|  
-## Remarks  
+## remarks  
 -   Using **setlocal**  
     When you use **setlocal** outside of a script or batch file, it has no effect.  
 -   Changing environmental variables  
@@ -41,7 +41,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 -   Nesting commands  
     You can have more than one **setlocal** or **endlocal** command in a batch program (that is, nested commands).  
 -   Testing for command extensions in batch files  
-    The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it is set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:  
+    The **setlocal** command sets the ERRORLEVEL variable. if you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it is set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:  
     ```  
     setlocal enableextensions  
     verify other 2>nul  
@@ -63,5 +63,5 @@ call superapp>c:\superapp.out
 endlocal  
 start notepad c:\superapp.out  
 ```  
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  

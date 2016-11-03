@@ -1,5 +1,5 @@
 ---
-title: Ftp: hash_1
+title: ftp: hash_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: hash_1
+# ftp: hash_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,7 +25,7 @@ hash
 ```  
 ### Parameters  
 none  
-## Remarks  
+## remarks  
 -   The size of a data block is 2048 bytes.  
 -   By default, **hash** is off.  
 ## <a name="BKMK_Examples"></a>Examples  
@@ -33,5 +33,5 @@ Toggle number sign (#) printing for each data block that is transferred.
 ```  
 hash  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Root Import Compare
+title: dfsutil Root import compare
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Root Import Compare
+# dfsutil Root import compare
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -24,7 +24,7 @@ The **dfsutil root import compare** command compares a namespace on one server w
 ## Syntax
 
 ```
-dfsutil root import compare <\\srcserver\share>|<filename> <\\destserver\share> [Verbose] /?
+dfsutil root import compare <\\srcserver\share>|<filename> <\\destserver\share> [verbose] /?
 ```
 
 ### Parameters
@@ -34,10 +34,10 @@ dfsutil root import compare <\\srcserver\share>|<filename> <\\destserver\share> 
 |<\\\\srcserver\\share>|UNC path to the namespace on the first namespace server that you want to compare.|
 |<\\\\destserver\\share>|UNC path to the namespace on the second namespace server that you want to compare.|
 |<filename>|Name of the XML file that contains the namespace configuration that you want to compare.|
-|Verbose|Displays detailed status of the import process|
+|verbose|Displays detailed status of the import process|
 |\/?|Displays help at the command prompt.|
 
-## Remarks <optional section>
+## remarks <optional section>
 <Insert command specific to remarks here.>
 
 ## Scripting <optional section>
@@ -68,12 +68,12 @@ To view help for this command, type:
 dfsutil root import compare /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil Root](Dfsutil-Root.md)
+-   [dfsutil Root](dfsutil-root.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

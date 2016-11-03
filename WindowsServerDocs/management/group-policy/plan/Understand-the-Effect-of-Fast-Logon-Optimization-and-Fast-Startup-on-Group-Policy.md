@@ -1,5 +1,5 @@
 ---
-title: Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
+title: Understand the Effect of Fast Logon Optimization and Fast startup on Group Policy
 description: "Group Policy"
 ms.prod: windows-server-threshold
 ms.technology: manage-group-policy
@@ -11,7 +11,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
+# Understand the Effect of Fast Logon Optimization and Fast startup on Group Policy
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -21,7 +21,7 @@ This troubleshooting topic explains the interaction between the required synchro
 This topic applies to computers that are running Windows 8.1, Windows 8, Windows 7, Windows Vista, or Windows XP.
 
 ## Group Policy settings and CSEs
-Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. For this discussion, it s important to understand that Group Policy preference extensions represent a set of client-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
+Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. for this discussion, it s important to understand that Group Policy preference extensions represent a set of client-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
 
 ## <a name="bkmk_SyncAsync"></a>Asynchronous and synchronous processing
 Asynchronous processing refers to processes that do not depend on the outcome of other processes. Therefore, they can occur on different threads simultaneously.
@@ -30,44 +30,44 @@ Synchronous processing refers to processes that depend on each other s outcome. 
 
 Asynchronous processing affects Group Policy in the following ways:
 
--   **At startup** The client computer does not wait for the network to be fully initialized before sign-in is available to the user. Group Policy for the client computer processes when the network becomes available in parallel to startup and sign-in activities.
+-   **at startup** The client computer does not wait for the network to be fully initialized before sign-in is available to the user. Group Policy for the client computer processes when the network becomes available in parallel to startup and sign-in activities.
 
--   **At sign-in** A user does not have to wait for Group Policy to finish processing before signing in.
+-   **at sign-in** A user does not have to wait for Group Policy to finish processing before signing in.
 
-For CSEs such as Folder Redirection, Software Installation, and Drive Maps preference extension, the outcome of Group Policy processing might adversely affect the user s experience, for example, a program being uninstalled while the user is working with it. To keep this from happening, the CSE is designed to require synchronous processing to apply the new settings. During asynchronous processing, the CSE signals the system to indicate that a synchronous application of Group Policy is required. A synchronous application of Group Policy occurs at the next startup (if it is signaled during the computer Group Policy refresh) or at the user s next sign-in (if it is signaled during the user Group Policy refresh).
+for CSEs such as Folder Redirection, Software Installation, and Drive Maps preference extension, the outcome of Group Policy processing might adversely affect the user s experience, for example, a program being uninstalled while the user is working with it. To keep this from happening, the CSE is designed to require synchronous processing to apply the new settings. During asynchronous processing, the CSE signals the system to indicate that a synchronous application of Group Policy is required. A synchronous application of Group Policy occurs at the next startup (if it is signaled during the computer Group Policy refresh) or at the user s next sign-in (if it is signaled during the user Group Policy refresh).
 
-## Foreground and background processing
+## foreground and background processing
 Group Policy foreground processing applies when the computer starts or shuts down and when the user signs in or signs out. During foreground processing, policy settings can be applied asynchronously or synchronously.
 
-Group Policy background processing applies during periodic refreshes after the computer has started or a user has signed in. All requested Group Policy refreshes that are performed by using **GPUpdate.exe** also run as background processing. During background processing, policy settings are only applied asynchronously.
+Group Policy background processing applies during periodic refreshes after the computer has started or a user has signed in. All requested Group Policy refreshes that are performed by using **gpupdate.exe** also run as background processing. During background processing, policy settings are only applied asynchronously.
 
 ## <a name="BKMK_REQ"></a>CSE processing requirements
 When Group Policy processes on a Windows-based computer, client-side extensions interpret the stored policy settings and make the appropriate changes to the environment. When troubleshooting a given client-side extension s application of Group Policy, the administrator can view the configuration parameters that affect that extension s operation. These parameters are in the form of registry values.
 
-> [!IMPORTANT]
-> This section provides an overview about the information that is stored in the registry. This is for informational purposes, and it is not recommended that you adjust the CSE processing properties by using the registry. Serious problems might occur if you modify the registry incorrectly. If you do make any changes to the registry, it is recommended that you back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [article 322756](http://support.microsoft.com/kb/322756) in the Microsoft Knowledge Base.
+> [!importANT]
+> This section provides an overview about the information that is stored in the registry. This is for informational purposes, and it is not recommended that you adjust the CSE processing properties by using the registry. Serious problems might occur if you modify the registry incorrectly. if you do make any changes to the registry, it is recommended that you back up the registry before you modify it. Then, you can restore the registry if a problem occurs. for more information about how to back up and restore the registry, see [article 322756](http://support.microsoft.com/kb/322756) in the Microsoft Knowledge Base.
 
 Each client-side extension is identified by a subkey under the following path:
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Currentversion\Winlogon\GPExtensions
 
-The subkey name takes the form of a Globally Unique Identifier (GUID). For more information about identifying registered Group Policy client-side extensions, see [article 216357](http://support.microsoft.com/kb/216357/EN-US) in the Microsoft Knowledge Base.
+The subkey name takes the form of a Globally Unique Identifier (GUID). for more information about identifying registered Group Policy client-side extensions, see [article 216357](http://support.microsoft.com/kb/216357/EN-US) in the Microsoft Knowledge Base.
 
-The **NoBackgroundPolicy** registry key determines if a CSE is called during Group Policy background policy processing. If this value is set to 1, the CSE will not be called during background processing. A CSE that requires synchronous processing can still be called during background processing. However, because background processing is always performed in asynchronous mode, a CSE that requires synchronous processing exits after signaling a request for the next sign-in  to be run in synchronous mode.
+The **NoBackgroundPolicy** registry key determines if a CSE is called during Group Policy background policy processing. if this value is set to 1, the CSE will not be called during background processing. A CSE that requires synchronous processing can still be called during background processing. However, because background processing is always performed in asynchronous mode, a CSE that requires synchronous processing exits after signaling a request for the next sign-in  to be run in synchronous mode.
 
 Each CSE determines if it requires synchronous processing to apply changes to the policy settings.
 
 The following table provides information about the synchronous processing requirements and the default background processing behavior of CSEs in Group Policy.
 
-|CSE name|Requires synchronous processing|Called during background processing|
+|CSE name|Requires synchronous processing|called during background processing|
 |------|------------------|--------------------|
 |Disk Quota|No|Yes|
-|EFS Recovery|No|Yes|
+|EFS recovery|No|Yes|
 |Folder Redirection|Yes|Yes|
 |Internet Explorer Maintenance|No|Yes|
 |IP security|No|Yes|
-|Registry|No|Yes|
-|Scripts|-   Startup scripts run synchronously by default.<br />-   Sign-in scripts run asynchronously by default.|Yes, but scripts are run only in foreground processing.|
+|registry|No|Yes|
+|Scripts|-   startup scripts run synchronously by default.<br />-   Sign-in scripts run asynchronously by default.|Yes, but scripts are run only in foreground processing.|
 |Security|No|Yes|
 |Software Installation|Yes|Yes|
 |Wired Networking|No|Yes|
@@ -86,15 +86,15 @@ The following table provides information about the synchronous processing requir
 |Network Options preference extension|No|Yes|
 |Network Shares preference extension|No|Yes|
 |Power Options preference extension|No|Yes|
-|Printers preference extension|No|Yes|
-|Regional Options preference extension|No|Yes|
-|Registry preference extension|No|Yes|
+|printers preference extension|No|Yes|
+|regional Options preference extension|No|Yes|
+|registry preference extension|No|Yes|
 |Scheduled Tasks preference extension|No|Yes|
 |Services preference extension|No|Yes|
 |Shortcuts preference extension|No|Yes|
-|Start Menu preference extension|No|Yes|
+|start Menu preference extension|No|Yes|
 
-Although the requirement to run a client-side extension in synchronous mode is not configurable, other default behavior for each CSE can be configured through policy settings. To configure the properties that are associated with a CSE, apply the Administrative Templates computer configuration policy settings that are created for this purpose. The following table provides the names of the policy settings and the CSE properties that can be modified. If the CSE property includes an X, it can be modified for the specific CSE.
+Although the requirement to run a client-side extension in synchronous mode is not configurable, other default behavior for each CSE can be configured through policy settings. To configure the properties that are associated with a CSE, apply the Administrative Templates computer configuration policy settings that are created for this purpose. The following table provides the names of the policy settings and the CSE properties that can be modified. if the CSE property includes an X, it can be modified for the specific CSE.
 
 |Policy Setting Name|Allows processing across a slow network connection|Do not apply during periodic background processing|Process even if the Group Policy Objects have not changed|Allows background processing priority|
 |------------|---------------------------|---------------------------|-------------------------------|---------------------|
@@ -103,7 +103,7 @@ Although the requirement to run a client-side extension in synchronous mode is n
 |Configure Folder Redirection policy processing|X||X||
 |Configure Internet Explorer Maintenance policy processing|X|X|X||
 |Configure IP security policy processing|X|X|X||
-|Configure Registry policy processing||X|X||
+|Configure registry policy processing||X|X||
 |Configure Scripts policy processing|X|X|X||
 |Configure Security policy processing||X|X||
 |Configure Software Installation policy processing|X||X||
@@ -123,13 +123,13 @@ Although the requirement to run a client-side extension in synchronous mode is n
 |Configure Network Options preference extension policy processing|X|X|X|X|
 |Configure Network Shares preference extension policy processing|X|X|X|X|
 |Configure Power Options preference extension policy processing|X|X|X|X|
-|Configure Printers preference extension policy processing|X|X|X|X|
-|Configure Regional Options preference extension policy processing|X|X|X|X|
-|Configure Registry preference extension policy processing|X|X|X|X|
+|Configure printers preference extension policy processing|X|X|X|X|
+|Configure regional Options preference extension policy processing|X|X|X|X|
+|Configure registry preference extension policy processing|X|X|X|X|
 |Configure Scheduled Tasks preference extension policy processing|X|X|X|X|
 |Configure Services preference extension policy processing|X|X|X|X|
 |Configure Shortcuts preference extension policy processing|X|X|X|X|
-|Configure Start Menu preference extension policy processing|X|X|X|X|
+|Configure start Menu preference extension policy processing|X|X|X|X|
 
 ## Fast Logon Optimization and Group Policy processing
 By default in Windows 8.1,  Windows 8, Windows 7, Windows Vista, and Windows XP, the Fast Logon Optimization feature is set for domain and workgroup members. Policy settings apply asynchronously when the computer starts and when the user signs in. As a result, these operating systems do not wait for the network to be fully initialized at startup and sign-in. Existing users are signed in by using cached credentials. This results in shorter sign-in times. Group Policy is applied after the network becomes available.
@@ -162,7 +162,7 @@ When synchronous policy application is required and Fast Logon Optimization is e
 > [!NOTE]
 > These examples assume that only policy settings for a single CSE that requires synchronous processing have changed.
 > 
-> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs. You may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. For more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
+> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs. You may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. for more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
 
 **Example 1: Fast Logon Optimization with synchronous processing when the user is not signed in**
 
@@ -172,7 +172,7 @@ When the user signs in, Fast Logon Optimization is in effect and Group Policy pr
 
 The CSE determines that it requires synchronous processing to apply the new settings. With the current processing session in asynchronous mode, the CSE exits without applying the policy settings, and the CSE signals to the Group Policy engine that synchronous processing is needed for the next sign-in.
 
-At the second sign-in, Group Policy processes synchronously. The Group Policy engine determines that the CSE did not completely process the policy settings during the last sign-in session. The Group Policy engine calls the CSE. The CSE determines that Group Policy is processing synchronously, and the CSE applies the policy settings.
+at the second sign-in, Group Policy processes synchronously. The Group Policy engine determines that the CSE did not completely process the policy settings during the last sign-in session. The Group Policy engine calls the CSE. The CSE determines that Group Policy is processing synchronously, and the CSE applies the policy settings.
 
 **Example 2: Fast Logon Optimization with synchronous processing when the user is signed in**
 
@@ -182,28 +182,28 @@ When the user stays signed in to a client computer, by default, background proce
 
 The CSE determines that it requires synchronous processing to apply the new settings. With the background processing session in asynchronous mode, the CSE exits without applying the policy settings. The CSE signals to the Group Policy engine that synchronous processing is needed for the next sign-in. During subsequent background refreshes, the CSE is called, but it exits without applying the policy settings because it still requires synchronous processing.
 
-At the next sign-in, Group Policy processes synchronously. The Group Policy engine determines that the CSE did not complete processing during the last sign-in session. The Group Policy engine calls the CSE. The CSE determines that Group Policy is processing synchronously, and the CSE applies the policy settings with a single sign-in.
+at the next sign-in, Group Policy processes synchronously. The Group Policy engine determines that the CSE did not complete processing during the last sign-in session. The Group Policy engine calls the CSE. The CSE determines that Group Policy is processing synchronously, and the CSE applies the policy settings with a single sign-in.
 
 ### Fast Logon Optimization, required synchronous processing, and required foreground processing for a CSE
 A CSE can require synchronous processing and foreground processing to apply settings. The foreground processing requirement is set when the **NoBackgroundPolicy** registry key is set to a value of 1. In this case, the CSE applies the policy settings with two sign-ins.
 
-For example, the user is signed in to the computer when there is a change to a user policy setting that requires synchronous processing and can only be applied during foreground processing. The user stays signed in to the client computer until Group Policy background processing occurs (by default, approximately every ninety minutes). During background processing, the Group Policy engine determines that there is a change to the policy settings for a CSE, but the **NoBackgroundPolicy** registry key is set to 1, and the Group Policy engine does not call this CSE during background processing. Additionally, during subsequent background refreshes, the Group Policy engine does not call the CSE.
+for example, the user is signed in to the computer when there is a change to a user policy setting that requires synchronous processing and can only be applied during foreground processing. The user stays signed in to the client computer until Group Policy background processing occurs (by default, approximately every ninety minutes). During background processing, the Group Policy engine determines that there is a change to the policy settings for a CSE, but the **NoBackgroundPolicy** registry key is set to 1, and the Group Policy engine does not call this CSE during background processing. additionally, during subsequent background refreshes, the Group Policy engine does not call the CSE.
 
-At the next sign-in, Group Policy processes asynchronously because Fast Logon Optimization is in effect. This is foreground processing, so the Group Policy engine calls the CSE, which was set to only process in the foreground.
+at the next sign-in, Group Policy processes asynchronously because Fast Logon Optimization is in effect. This is foreground processing, so the Group Policy engine calls the CSE, which was set to only process in the foreground.
 
 The CSE determines that it requires synchronous processing to apply the new policy settings. With the current processing session in asynchronous mode, the CSE exits without applying the policy settings. The CSE signals to the Group Policy engine that synchronous processing is needed for the next sign-in.
 
-At the next sign-in, Group Policy processes synchronously. The Group Policy engine determines that the CSE did not completely process the policy settings during the last sign-in session. The Group Policy engine calls the CSE. The CSE determines that Group Policy is processing synchronously and applies the policy settings. In this case, it takes two sign-ins for the CSE to apply the settings.
+at the next sign-in, Group Policy processes synchronously. The Group Policy engine determines that the CSE did not completely process the policy settings during the last sign-in session. The Group Policy engine calls the CSE. The CSE determines that Group Policy is processing synchronously and applies the policy settings. In this case, it takes two sign-ins for the CSE to apply the settings.
 
 > [!NOTE]
 > This example assumes that only policy settings for a single CSE that requires synchronous processing and foreground processing, have changed.
 > 
-> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs, and you may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. For more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
+> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs, and you may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. for more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
 
 ## Fast startup and Group Policy processing
-Group Policy settings or scripts that are applied during startup or shutdown might not be applied on computers that are running Windows 8.1 or Windows 8 because, by default, these computers are not fully shut down by the **Shut down** command. Instead, the computer enters a hibernate state. Full shutdown only occurs when the system is set to reboot or when a pending software update or other event causes the computer to process a full shutdown. You can use the **Restart Computer** command in Windows 8.1 and Windows 8 to achieve startup or shutdown on client computers.
+Group Policy settings or scripts that are applied during startup or shutdown might not be applied on computers that are running Windows 8.1 or Windows 8 because, by default, these computers are not fully shut down by the **Shut down** command. Instead, the computer enters a hibernate state. Full shutdown only occurs when the system is set to reboot or when a pending software update or other event causes the computer to process a full shutdown. You can use the **Restart computer** command in Windows 8.1 and Windows 8 to achieve startup or shutdown on client computers.
 
-If you do not want fast startup to apply to computers in your enterprise, you can apply a GPO that disables the **Computer Configuration/Policies/Administrative Templates/System/Shutdown/Require use of fast startup** policy setting. Be aware that disabling this policy setting results in full shutdowns  and longer startup times for client computers. The enabled state of the **Require use of fast startup** policy setting does not take precedence over any Group Policy setting that disables hibernation.
+if you do not want fast startup to apply to computers in your enterprise, you can apply a GPO that disables the **computer Configuration/Policies/Administrative Templates/System/shutdown/Require use of fast startup** policy setting. Be aware that disabling this policy setting results in full shutdowns  and longer startup times for client computers. The enabled state of the **Require use of fast startup** policy setting does not take precedence over any Group Policy setting that disables hibernation.
 
 
 

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Subcommand-set-DriverGroup.md
+redirect_url: /windows-server-docs/management/windows-commands/subcommand-set-drivergroup.md
 ---

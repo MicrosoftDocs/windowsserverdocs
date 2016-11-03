@@ -1,5 +1,5 @@
 ---
-title: Set_2
+title: set_2
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Set_2
+# set_2
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets the context, options, verbose mode, and metadata file for shadow copy creation. If used without parameters, **set** lists all current settings.  
+Sets the context, options, verbose mode, and metadata file for shadow copy creation. if used without parameters, **set** lists all current settings.  
   
 ## Syntax  
   
@@ -34,13 +34,13 @@ set metadata <MetaData.cab>
   
 |Sub\-command|Description|  
 |--------|--------|  
-|context|Sets the context for shadow copy creation. See [Set context](Set-context.md) for syntax and parameters.|  
-|option|Sets options for shadow copy creation. See [Set option](Set-option.md) for syntax and parameters.|  
-|verbose|Turns the verbose output mode on or off. See [Set verbose](Set-verbose.md) for syntax and parameters.|  
-|metadata|Sets the name and location of the shadow creation metadata file. See [Set metadata](Set-metadata.md) for syntax and parameters.|  
+|context|Sets the context for shadow copy creation. See [Set context](set-context.md) for syntax and parameters.|  
+|option|Sets options for shadow copy creation. See [Set option](set-option.md) for syntax and parameters.|  
+|verbose|Turns the verbose output mode on or off. See [Set verbose](set-verbose.md) for syntax and parameters.|  
+|metadata|Sets the name and location of the shadow creation metadata file. See [Set metadata](set-metadata.md) for syntax and parameters.|  
 |\/?|Displays help at the command prompt.|  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

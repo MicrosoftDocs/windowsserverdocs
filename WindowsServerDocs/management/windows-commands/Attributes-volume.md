@@ -1,6 +1,6 @@
 ---
-title: Attributes volume
-description: "Windows Commands topic for **Attributes volume** - Displays, sets, or clears the attributes of a volume."
+title: attributes volume
+description: "Windows Commands topic for **attributes volume** - Displays, sets, or clears the attributes of a volume."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Attributes volume
+# attributes volume
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -38,13 +38,13 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 |hidden|Specifies that the volume is hidden.|  
 |nodefaultdriveletter|Specifies that the volume does not receive a drive letter by default.|  
 |shadowcopy|Specifies that the volume is a shadow copy volume.|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   On basic master boot record \(MBR\) disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply to all volumes on the disk.  
   
--   On basic GUID partition table \(GPT\) disks, and on dynamic MBR and GPT disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply only to the selected volume.  
+-   On basic GUID partition table \(gpt\) disks, and on dynamic MBR and gpt disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply only to the selected volume.  
   
 -   A volume must be selected for the **attributes volume** command to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
   
@@ -67,8 +67,8 @@ To remove the hidden and read\-only attributes on the selected volume, type:
 attributes volume clear hidden readonly  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

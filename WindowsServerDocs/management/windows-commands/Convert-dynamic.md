@@ -1,5 +1,5 @@
 ---
-title: Convert dynamic
+title: convert dynamic
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Convert dynamic
+# convert dynamic
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Converts a basic disk into a dynamic disk.  
+converts a basic disk into a dynamic disk.  
   
-For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207047) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207047\).  
+for instructions regarding how to use this command, see [change a Basic Disk into a Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207047) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207047\).  
   
 ## Syntax  
   
@@ -32,9 +32,9 @@ convert dynamic [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
 -   Any existing partitions on the basic disk become simple volumes.  
   
@@ -47,8 +47,8 @@ To convert a basic disk into a dynamic disk, type:
 convert dynamic  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

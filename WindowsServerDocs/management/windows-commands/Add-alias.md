@@ -1,6 +1,6 @@
 ---
-title: Add alias
-description: "Windows Commands topic for **add alias** - Adds aliases to the alias environment."
+title: add alias
+description: "Windows Commands topic for **add alias** - adds aliases to the alias environment."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Add alias
+# add alias
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt.  
+adds aliases to the alias environment. if used without parameters, **add alias** displays help at the command prompt.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ add alias <AliasName> <AliasValue>
 |<AliasValue>|Specifies the value of the alias.|  
 |\/?|Displays help at the command prompt.|  
   
-## Remarks  
+## remarks  
   
 -   Aliases are saved in the metadata file and will be loaded with the **load metadata** command.  
   
@@ -47,17 +47,17 @@ To list all shadows, including their aliases, type:
 list shadows all  
 ```  
   
-The following excerpt shows a shadow copy to which the default alias, VSS\_SHADOW\_x, has been assigned:  
+The following excerpt shows a shadow copy to which the default alias, VSS\_shadow\_x, has been assigned:  
   
 ```  
-* Shadow Copy ID = {ff47165a-1946-4a0c-b7f4-80f46a309278}  
-%VSS_SHADOW_1%  
+* shadow copy ID = {ff47165a-1946-4a0c-b7f4-80f46a309278}  
+%VSS_shadow_1%  
 ```  
   
 To assign a new alias with the name System1 to this shadow copy, type:  
   
 ```  
-add alias System1 %VSS_SHADOW_1%  
+add alias System1 %VSS_shadow_1%  
 ```  
   
 Alternatively, you can assign the alias by using the shadow copy ID:  
@@ -66,7 +66,7 @@ Alternatively, you can assign the alias by using the shadow copy ID:
 add alias System1 {ff47165a-1946-4a0c-b7f4-80f46a309278}  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

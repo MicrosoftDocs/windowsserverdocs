@@ -1,5 +1,5 @@
 ---
-title: Cmstp
+title: cmstp
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Cmstp
+# cmstp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,23 +26,23 @@ ServiceProfileFileName .exe /q:a /c:"cmstp.exe ServiceProfileFileName .inf [/nf]
 ```
 Syntax 2:
 ```
-cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][Path]ServiceProfileFileName.inf"
+cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileName.inf"
 ```
 ### Parameters
 |Parameter|Description|
 |-------|--------|
 |< ServiceProfileFileName >.exe|Specifies, by name, the installation package that contains the profile that you want to install.<br /><br />Required for Syntax 1 but not valid for Syntax 2.|
 |/q:a|Specifies that the profile should be installed without prompting the user. The verification message that the installation has succeeded will still appear.<br /><br />Required for Syntax 1 but not valid for Syntax 2.|
-|[Drive:][Path] <ServiceProfileFileName>.inf|Required. Specifies, by name, the configuration file that determines how the profile should be installed.<br /><br />The [Drive:][Path] parameter is not valid for Syntax 1.|
+|[Drive:][path] <ServiceProfileFileName>.inf|Required. Specifies, by name, the configuration file that determines how the profile should be installed.<br /><br />The [Drive:][path] parameter is not valid for Syntax 1.|
 |/nf|Specifies that the support files should not be installed.|
-|/ni|Specifies that a desktop icon should not be created. This parameter is only valid for computers running Windows 95, Windows 98, Windows NT 4.0, or Windows Millennium Edition.|
+|/ni|Specifies that a desktop icon should not be created. This parameter is only valid for computers running Windows 95, Windows 98, Windows NT 4.0, or Windows Millennium edition.|
 |/ns|Specifies that a desktop shortcut should not be created. This parameter is only valid for computers running a member of the Windows Server 2003 family, Windows 2000, or Windows XP.|
 |/s|Specifies that the service profile should be installed or uninstalled silently (without prompting for user response or displaying verification message).|
 |/su|Specifies that the service profile should be installed for a single user rather than for all users. This parameter is only valid for computers running a Windows Server 2003, Windows 2000, or Windows XP.|
 |/au|Specifies that the service profile should be installed for all users. This parameter is only valid for computers running Windows Server 2003, Windows 2000, or Windows XP.|
 |/u|Specifies that the service profile should be uninstalled.|
-|/?|Displays Help at the command prompt.|
-## Remarks
+|/?|Displays help at the command prompt.|
+## remarks
 **/s** is the only parameter that you can use in combination with **/u**.
 Syntax 1 is the typical syntax used in a custom installation application. To use this syntax, you must run **cmstp** from the directory that contains the <ServiceProfileFileName>.exe file.
 ## <a name="BKMK_Examples"></a>Examples
@@ -58,5 +58,5 @@ To silently uninstall the Fiction service profile, type:
 ```
 fiction.exe /c:"cmstp.exe fiction.inf /s /u"
 ```
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

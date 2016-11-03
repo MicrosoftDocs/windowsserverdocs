@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Link
+title: dfsutil Link
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Link
+# dfsutil Link
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,17 +25,17 @@ The **dfsutil link** command displays the information about the link\(folder\) a
 ## Syntax
 
 ```
-dfsutil link <DfsPath> | add | Remove | move | /?
+dfsutil link <Dfspath> | add | remove | move | /?
 ```
 
 ### Parameters
 
 |Parameter|Description|
 |-------|--------|
-|<DfsPath>|UNC path of the link.|
-|Dfsutil Link Add|Creates a new folder.|
-|Dfsutil Link Remove|Removes the specified folder.|
-|Dfsutil Link Move|Moves the folder to another location in the namespace.|
+|<Dfspath>|UNC path of the link.|
+|dfsutil Link add|creates a new folder.|
+|dfsutil Link remove|removes the specified folder.|
+|dfsutil Link move|moves the folder to another location in the namespace.|
 |\/?||
 
 ## <a name="BKMK_Examples"></a>Examples
@@ -54,13 +54,13 @@ dfsutil link \\SRV1\StandaloneNamespace1\Link1
 To view help for this command, type:
 
 ```
-Dfsutil link /?
+dfsutil link /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

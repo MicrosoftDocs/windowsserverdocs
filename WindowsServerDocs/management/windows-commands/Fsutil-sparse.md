@@ -1,5 +1,5 @@
 ---
-title: Fsutil sparse
+title: fsutil sparse
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Fsutil sparse
+# fsutil sparse
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Manages sparse files.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 |<BeginningOffset>|Specifies the offset within the file to mark as sparse.|  
 |<Length>|Specifies the length of the region in the file to be marked as sparse \(in bytes\).|  
   
-## Remarks  
+## remarks  
   
 -   A sparse file is a file with one or more regions of unallocated data in it. A program will see these unallocated regions as containing bytes with the value zero, but no disk space is used to represent these zeros. All meaningful or nonzero data is allocated, whereas all nonmeaningful data \(large strings of data that is composed of zeros\) is not allocated. When a sparse file is read, allocated data is returned as stored, and unallocated data is returned, by default, as zeros, in accordance with the C2 security requirement specification. Sparse file support allows data to be deallocated from anywhere in the file.  
   
@@ -51,7 +51,7 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
   
 -   Only compressed or sparse files can have zeroed ranges known to the operating system.  
   
--   If the file is sparse or compressed, NTFS may deallocate disk space within the file. This sets the range of bytes to zeroes without extending the file size.  
+-   if the file is sparse or compressed, NTFS may deallocate disk space within the file. This sets the range of bytes to zeroes without extending the file size.  
   
 ## <a name="BKMK_examples"></a>Examples  
 To mark a file named Sample.txt in the C:\\Temp directory as sparse, type:  
@@ -60,9 +60,9 @@ To mark a file named Sample.txt in the C:\\Temp directory as sparse, type:
 fsutil sparse setflag c:\temp\sample.txt   
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
-[Fsutil](Fsutil.md)  
+[fsutil](fsutil.md)  
   
 

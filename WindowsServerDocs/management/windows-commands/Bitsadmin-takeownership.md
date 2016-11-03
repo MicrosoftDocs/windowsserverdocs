@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin takeownership
-description: "Windows Commands topic for **Bitsadmin takeownership** - Lets a user with administrative privileges take ownership of the specified job."
+title: bitsadmin takeownership
+description: "Windows Commands topic for **bitsadmin takeownership** - Lets a user with administrative privileges take ownership of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin takeownership
+# bitsadmin takeownership
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Lets a user with administrative privileges take ownership of the specified job.
 ## Syntax
 ```
-bitsadmin /TakeOwnership <Job>
+bitsadmin /takeownership <Job>
 ```
 ## Parameters
 |Parameter|Description|
@@ -30,7 +30,7 @@ bitsadmin /TakeOwnership <Job>
 ## <a name="BKMK_examples"></a>Examples
 The following example takes ownership of the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /TakeOwnership myDownloadJob
+C:\>bitsadmin /takeownership myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Dfsdiag
+title: dfsdiag
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsdiag
+# dfsdiag
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The `Dfsdiag` command provides diagnostic information for DFS Namespaces.
+The `dfsdiag` command provides diagnostic information for DFS Namespaces.
 ## Syntax
 ```
-dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| /DFSPath:<namespace root or DFS folder> [/Recurse]> [/Full] | /TestDFSConfig /DFSRoot:<namespace> | /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full] | /TestReferral /DFSPath:<DFS path for getting referrals> [/Full] | /?]
+dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS folder> [/Recurse]> [/Full] | /TestDFSConfig /DFSRoot:<namespace> | /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full] | /TestReferral /DFSpath:<DFS path for getting referrals> [/Full] | /?]
 ```
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|[Dfsdiag TestDCs](Dfsdiag-TestDCs.md)|Checks domain controller configuration.|
-|[Dfsdiag TestSites](Dfsdiag-TestSites.md)|Checks site associations.|
-|[Dfsdiag TestDFSConfig](Dfsdiag-TestDFSConfig.md)|Checks DFS Namespace configuration.|
-|[Dfsdiag TestDFSIntegrity](Dfsdiag-TestDFSIntegrity.md)|Checks DFS Namespace integrity.|
-|[Dfsdiag TestReferral](Dfsdiag-TestReferral.md)|Checks referral responses.|
+|[dfsdiag TestDCs](dfsdiag-testdcs.md)|Checks domain controller configuration.|
+|[dfsdiag TestSites](dfsdiag-testsites.md)|Checks site associations.|
+|[dfsdiag TestDFSConfig](dfsdiag-testdfsconfig.md)|Checks DFS Namespace configuration.|
+|[dfsdiag TestDFSIntegrity](dfsdiag-testdfsintegrity.md)|Checks DFS Namespace integrity.|
+|[dfsdiag TestReferral](dfsdiag-testreferral.md)|Checks referral responses.|
 |/?|Displays help at the command prompt.|
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

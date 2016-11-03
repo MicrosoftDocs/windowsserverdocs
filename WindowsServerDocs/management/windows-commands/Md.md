@@ -18,27 +18,27 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates a directory or subdirectory.
+creates a directory or subdirectory.
 > [!NOTE]
 > This command is the same as the **mkdir** command.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-md [<Drive>:]<Path>
-mkdir [<Drive>:]<Path>
+md [<Drive>:]<path>
+mkdir [<Drive>:]<path>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |<Drive>:|Specifies the drive on which you want to create the new directory.|
-|<Path>|Required. Specifies the name and location of the new directory. The maximum length of any single path is determined by the file system.|
+|<path>|Required. Specifies the name and location of the new directory. The maximum length of any single path is determined by the file system.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 Command extensions, which are enabled by default, allow you to use a single **md** command to create intermediate directories in a specified path.
 ## <a name="BKMK_examples"></a>Examples
-To create a directory named Directory1 within the current directory, type:
+To create a directory named directory1 within the current directory, type:
 ```
-md Directory1
+md directory1
 ```
 To create the directory tree Taxes\Property\Current within the root directory, with command extensions enabled, type:
 ```
@@ -52,6 +52,6 @@ md Property
 cd Property
 md Current
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 [Cmd](Cmd.md)

@@ -1,5 +1,5 @@
 ---
-title: Print Command Reference
+title: print Command Reference
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,22 +14,22 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Print Command Reference
+# print Command Reference
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The following is a list of Print command-line tools.
+The following is a list of print command-line tools.
 |Command|Description|
 |------|--------|
-|[Lpq]Lpq.md)|Displays the status of a print queue on a computer running Line Printer Daemon (LPD).|
-|[Lpr](Lpr.md)|Sends a file to a computer or printer sharing device running the Line Printer Daemon (LPD) service in preparation for printing.|
-|[Net print](Net-print.md)|Displays information about a specified printer queue, displays information about a specified print job, or controls a specified print job.|
-|[Print](Print.md)|Sends a text file to a printer.|
-|[Prncnfg.vbs](Prncnfg.vbs.md)|Configures or displays configuration information about a printer.|
-|[Prndrvr.vbs](Prndrvr.vbs.md)|Adds, deletes, and lists printer drivers.|
-|[Prnjobs.vbs](Prnjobs.vbs.md)|Pauses, resumes, cancels, and lists print jobs.|
-|[Prnmngr.vbs](Prnmngr.vbs.md)|Adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer.|
-|[Prnport.vbs](Prnport.vbs.md)|Creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.|
-|[Prnqctl.vbs](Prnqctl.vbs.md)|Prints a test page, pauses or resumes a printer, and clears a printer queue.|
-|[Pubprn.vbs](Pubprn.vbs.md)|Publishes a printer to the Active Directory directory service.|
-|[Rundll32 printui.dll,PrintUIEntry](Rundll32-printui.dll,PrintUIEntry.md)|Enables you to automate the installation and configuration of printers using scripts or the command prompt.|
+|[lpq]lpq.md)|Displays the status of a print queue on a computer running Line printer Daemon (LPD).|
+|[lpr](lpr.md)|Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.|
+|[Net print](net-print.md)|Displays information about a specified printer queue, displays information about a specified print job, or controls a specified print job.|
+|[print](print.md)|Sends a text file to a printer.|
+|[prncnfg](prncnfg.md)|Configures or displays configuration information about a printer.|
+|[prndrvr](prndrvr.md)|adds, deletes, and lists printer drivers.|
+|[prnjobs](prnjobs.md)|pauses, resumes, cancels, and lists print jobs.|
+|[prnmngr](prnmngr.md)|adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer.|
+|[prnport](prnport.md)|creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.|
+|[prnqctl](prnqctl.md)|prints a test page, pauses or resumes a printer, and clears a printer queue.|
+|[pubprn](pubprn.md)|Publishes a printer to the active directory directory service.|
+|[rundll32 printui.dll,printUIEntry](rundll32-printui.md)|Enables you to automate the installation and configuration of printers using scripts or the command prompt.|

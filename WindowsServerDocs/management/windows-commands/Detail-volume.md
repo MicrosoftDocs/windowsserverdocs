@@ -1,5 +1,5 @@
 ---
-title: Detail volume
+title: detail volume
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Detail volume
+# detail volume
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,11 +26,11 @@ Displays the disks on which the current volume resides.
 detail volume  
 ```  
   
-## Remarks  
+## remarks  
   
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
   
--   The volume details are not applicable to read\-only volumes, such as a DVD\-ROM or CD\-ROM drive.  
+-   The volume details are not applicable to read\-only volumes, such as a DVD\-ROM or cd\-ROM drive.  
   
 ## <a name="BKMK_examples"></a>Examples  
 To see all the disks in which the current volume resides, type:  
@@ -39,8 +39,8 @@ To see all the disks in which the current volume resides, type:
 detail volume  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

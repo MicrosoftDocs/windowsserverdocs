@@ -1,5 +1,5 @@
 ---
-title: Ftp: mkdir
+title: ftp: mkdir
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,23 +14,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: mkdir
+# ftp: mkdir
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates a directory on the remote computer.   
+creates a directory on the remote computer.   
 ## Syntax  
 ```  
-mkdir <Directory>  
+mkdir <directory>  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<Directory>|Specifies the name of the new remote directory.|  
+|<directory>|Specifies the name of the new remote directory.|  
 ## <a name="BKMK_Examples"></a>Examples  
-Create a directory called **Dir1** on the remote computer.  
+create a directory called **dir1** on the remote computer.  
 ```  
-mkdir Dir1  
+mkdir dir1  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

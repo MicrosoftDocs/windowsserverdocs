@@ -18,11 +18,11 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates capture and discover images, multicast transmissions, and namespaces.
+creates capture and discover images, multicast transmissions, and namespaces.
 ## Subcommands
 |Subcommand|Description|
 |-------|--------|
-|[Using the new-CaptureImage Command](Using-the-new-CaptureImage-Command.md)|Creates a new capture image from an existing boot image.|
-|[Using the new-DiscoverImage Command](Using-the-new-DiscoverImage-Command.md)|Creates a new discover image from an existing boot image.|
-|[Using the new-MulticastTransmission Command](Using-the-new-MulticastTransmission-Command.md)|Creates a new multicast transmission.|
-|[Using the new-Namespace Command](Using-the-new-Namespace-Command.md)|Creates a new namespace.|
+|[Using the new-CaptureImage Command](using-the-new-captureimage-command.md)|creates a new capture image from an existing boot image.|
+|[Using the new-DiscoverImage Command](using-the-new-discoverimage-command.md)|creates a new discover image from an existing boot image.|
+|[Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md)|creates a new multicast transmission.|
+|[Using the new-Namespace Command](using-the-new-namespace-command.md)|creates a new namespace.|

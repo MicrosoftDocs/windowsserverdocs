@@ -1,6 +1,6 @@
 ---
-title: Autofmt
-description: "Windows Commands topic for **Autofmt** - Formats a drive or partition when called from the Windows Recovery Console."
+title: autofmt
+description: "Windows Commands topic for **autofmt** - formats a drive or partition when called from the Windows recovery Console."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Autofmt
+# autofmt
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Formats a drive or partition when called from the Windows Recovery Console.
-## Remarks
-You cannot run **Autofmt** directly from the command-line.
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+formats a drive or partition when called from the Windows recovery Console.
+## remarks
+You cannot run **autofmt** directly from the command-line.
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 [Working with File Systems](http://go.microsoft.com/fwlink/?LinkId=4509)

@@ -1,5 +1,5 @@
 ---
-title: Reg restore
+title: reg restore
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,15 +14,15 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Reg restore
+# reg restore
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Writes saved subkeys and entries back to the registry.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-Reg restore <KeyName> <FileName>
+reg restore <KeyName> <FileName>
 ```
 ## Parameters
 |Parameter|Description|
@@ -30,8 +30,8 @@ Reg restore <KeyName> <FileName>
 |<KeyName>|Specifies the full path of the subkey to be restored. The restore operation works only with the local computer. The KeyName must include a valid root key. Valid root keys are: HKLM, HKCU, HKCR, HKU, and HKCC.|
 |<FileName>|Specifies the name and path of the file with content to be written into the registry. This file must be created in advance with the **reg save** operation using a .hiv extension.|
 |/?|Displays help for **reg restore** at the command prompt.|
-## Remarks
--   Before editing any registry entries, save the parent subkey with the **reg save** operation. If the edit fails, restore the original subkey with the **reg restore** operation.
+## remarks
+-   Before editing any registry entries, save the parent subkey with the **reg save** operation. if the edit fails, restore the original subkey with the **reg restore** operation.
 -   The following table lists the return values for the **reg restore** operation.
 |Value|Description|
 |-----|--------|
@@ -40,7 +40,7 @@ Reg restore <KeyName> <FileName>
 ## <a name="BKMK_examples"></a>Examples
 To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResKit, and overwrite the existing contents of the key, type:
 ```
-REG RESTORE HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv
+reg RESTORE HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

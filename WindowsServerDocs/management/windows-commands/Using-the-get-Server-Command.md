@@ -21,29 +21,29 @@ ms.date: 10/12/2016
 Retrieves information from the specified Windows Deployment Services server.
 ## Syntax
 ```
-WDSUTIL [Options] /Get-Server [/Server:<Server name>] /Show:{Config | Images | All} [/Detailed]
+wdsutil [Options] /Get-Server [/Server:<Server name>] /Show:{Config | Images | All} [/detailed]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server is used.|
 |/Show:{Config &#124; Images &#124; All}|Specifies the type of information to return.<br /><br />-   **Config** returns configuration information.<br />-   **Images** returns information about image groups, boot images, and install images.<br />-   **All** returns configuration information and image information.|
-|[/Detailed]|You can use this option with **/Show:Images** or **/Show:All** to indicate that all image metadata from each image should be returned. If the **/Detailed** option is not used, the default behavior is to return the image name, description, and file name.|
+|[/detailed]|You can use this option with **/Show:Images** or **/Show:All** to indicate that all image metadata from each image should be returned. if the **/detailed** option is not used, the default behavior is to return the image name, description, and file name.|
 ## <a name="BKMK_examples"></a>Examples
 To view information about the server, type:
 ```
-WDSUTIL /Get-Server /Show:Config
+wdsutil /Get-Server /Show:Config
 ```
 To view detailed information about the server, type:
 ```
-WDSUTIL /Verbose /Get-Server /Server:MyWDSServer /Show:All /Detailed
+wdsutil /verbose /Get-Server /Server:MyWDSServer /Show:All /detailed
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the disable-Server Command](Using-the-disable-Server-Command.md)
-[Using the enable-Server Command](Using-the-enable-Server-Command.md)
-[Using the Initialize-Server Command](Using-the-Initialize-Server-Command.md)
-[Subcommand: set-Server](Subcommand-set-Server.md)
-[Subcommand: start-Server](Subcommand-start-Server.md)
-[Subcommand: stop-Server](Subcommand-stop-Server.md)
-[The uninitialize-Server Option](The-uninitialize-Server-Option.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the disable-Server Command](using-the-disable-server-command.md)
+[Using the enable-Server Command](using-the-enable-server-command.md)
+[Using the Initialize-Server Command](using-the-initialize-server-command.md)
+[Subcommand: set-Server](subcommand-set-server.md)
+[Subcommand: start-Server](subcommand-start-server.md)
+[Subcommand: stop-Server](subcommand-stop-server.md)
+[The uninitialize-Server Option](the-uninitialize-server-option.md)

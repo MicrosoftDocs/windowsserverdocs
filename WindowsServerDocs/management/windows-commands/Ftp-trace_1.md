@@ -1,5 +1,5 @@
 ---
-title: Ftp: trace_1
+title: ftp: trace_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: trace_1
+# ftp: trace_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,12 +25,12 @@ trace
 ```  
 ### Parameters  
 none  
-## Remarks  
-**Trace** displays the series of internal FTP function calls when running an **ftp** command.  
+## remarks  
+**Trace** displays the series of internal ftp function calls when running an **ftp** command.  
 ## <a name="BKMK_Examples"></a>Examples  
 Toggle tracing on and off.  
 ```  
 trace  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

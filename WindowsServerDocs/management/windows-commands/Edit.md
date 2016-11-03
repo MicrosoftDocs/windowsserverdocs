@@ -1,5 +1,5 @@
 ---
-title: Edit
+title: edit
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,31 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Edit
+# edit
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Starts MS-DOS Editor, which creates and changes ASCII text files.  
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+starts MS-DOS editor, which creates and changes ASCII text files.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
-edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<Path>]<FileName> [<FileName2> [...]]  
+edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<path>]<FileName> [<FileName2> [...]]  
 ```  
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|[<Drive>:][<Path>]<FileName> [<FileName2> [...]]|Specifies the location and name of one or more ASCII text files. If the file does not exist, MS-DOS Editor creates it. If the file exists, MS-DOS Editor opens it and displays its contents on the screen. *FileName* can contain wildcard characters (**\*** and **?**). Separate multiple file names with spaces.|  
-|/b|Forces monochrome mode, so that MS-DOS Editor displays in black and white.|  
+|[<Drive>:][<path>]<FileName> [<FileName2> [...]]|Specifies the location and name of one or more ASCII text files. if the file does not exist, MS-DOS editor creates it. if the file exists, MS-DOS editor opens it and displays its contents on the screen. *FileName* can contain wildcard characters (**\*** and **?**). Separate multiple file names with spaces.|  
+|/b|forces monochrome mode, so that MS-DOS editor displays in black and white.|  
 |/h|Displays the maximum number of lines possible for the current monitor.|  
 |/r|Loads file(s) in read-only mode.|  
-|/s|Forces the use of short filenames.|  
+|/s|forces the use of short filenames.|  
 |<NNN>|Loads binary file(s), wrapping lines to *NNN* characters wide.|  
 |/?|Displays help at the command prompt.|  
-## Remarks  
--   For additional help, open MS-DOS Editor, and then press the F1 key.  
--   Some monitors do not support the display of shortcut keys by default. If your monitor does not display shortcut keys, use **/b**.  
+## remarks  
+-   for additional help, open MS-DOS editor, and then press the F1 key.  
+-   Some monitors do not support the display of shortcut keys by default. if your monitor does not display shortcut keys, use **/b**.  
 ## <a name="BKMK_examples"></a>Examples  
-To open MS-DOS Editor, type:  
+To open MS-DOS editor, type:  
 ```  
 edit  
 ```  

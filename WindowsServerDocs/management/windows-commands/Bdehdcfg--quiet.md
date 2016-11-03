@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Bdehdcfg-quiet.md
+redirect_url: /windows-server-docs/management/windows-commands/bdehdcfg-quiet.md
 ---

@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin cache and deleteurl
-description: "Windows Commands topic for **Bitsadmin cache and deleteurl** - Deletes all cache entries for the given URL."
+title: bitsadmin cache and deleteurl
+description: "Windows Commands topic for **bitsadmin cache and deleteurl** - deletes all cache entries for the given URL."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin cache and deleteurl
+# bitsadmin cache and deleteurl
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes all cache entries for the given URL.
+deletes all cache entries for the given URL.
 ## Syntax
 ```
-bitsadmin /DeleteURL url
+bitsadmin /deleteURL url
 ```
 ## Parameters
 |Parameter|Description|
@@ -30,7 +30,7 @@ bitsadmin /DeleteURL url
 ## <a name="BKMK_examples"></a>Examples
 The following example deletes all cache entries for http://www.microsoft.com/en/us/default.aspx
 ```
-C:\>bitsadmin /DeleteURL http://www.microsoft.com/en/us/default.aspx 
+C:\>bitsadmin /deleteURL http://www.microsoft.com/en/us/default.aspx 
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

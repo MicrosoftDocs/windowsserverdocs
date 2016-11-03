@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin cache and delete
-description: "Windows Commands topic for **Bitsadmin cache and delete** - Deletes a specific cache entry."
+title: bitsadmin cache and delete
+description: "Windows Commands topic for **bitsadmin cache and delete** - deletes a specific cache entry."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin cache and delete
+# bitsadmin cache and delete
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Deletes a specific cache entry.
+deletes a specific cache entry.
 ## Syntax
 ```
-bitsadmin /Cache /Delete RecordID 
+bitsadmin /Cache /delete RecordID 
 ```
 ## Parameters
 |Parameter|Description|
@@ -30,7 +30,7 @@ bitsadmin /Cache /Delete RecordID
 ## <a name="BKMK_examples"></a>Examples
 The following example deletes the cache entry with the RecordID of {6511FB02-E195-40A2-B595-E8E2F8F47702}.
 ```
-C:\>bitsadmin /Cache /Delete {6511FB02-E195-40A2-B595-E8E2F8F47702} 
+C:\>bitsadmin /Cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702} 
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
-title: Break_2
-description: "Windows Commands topic for **Break_2** - Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume."
+title: break_2
+description: "Windows Commands topic for **break_2** - Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,16 +14,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Break_2
+# break_2
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume. The volume can then be accessed using a drive letter \(if assigned\) or volume name. If used without parameters, **break** displays help at the command prompt.  
+Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume. The volume can then be accessed using a drive letter \(if assigned\) or volume name. if used without parameters, **break** displays help at the command prompt.  
   
 > [!NOTE]  
 > This command is relevant only for hardware shadow copies after import.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -38,9 +38,9 @@ break [writable] <SetID>
 |\[writable\]|Enables read\/write access on the volume.|  
 |<SetID>|Specifies the ID of the shadow copy set.|  
   
-## Remarks  
+## remarks  
   
--   Exposed volumes, like the shadow copies they originate from, are read\-only by default.  
+-   exposed volumes, like the shadow copies they originate from, are read\-only by default.  
   
 -   The alias of the shadow copy ID, which is stored as an environment variable by the **load metadata** command, can be used in the *SetID* parameter.  
   
@@ -54,7 +54,7 @@ break writable %Alias1%
 > [!NOTE]  
 > Access to the volume is made directly to the hardware provider without record of the volume having been a shadow copy.  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

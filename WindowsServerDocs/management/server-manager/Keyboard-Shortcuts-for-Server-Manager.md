@@ -23,15 +23,15 @@ Because Server Manager was fully redesigned starting in Windows Server 2012, key
 Commands that do not have their own keyboard shortcuts or access keys are accessible by pressing the **Tab** key, and tabbing through their control group when it is in focus.
 
 ## Access keys
-**Active Control Area in Server Manager**
+**active Control Area in Server Manager**
 
 **Welcome Tile**
 
 |Control Group|Access Key|
 |---------|-------|
-|Welcome tile - Quick Start tab|**Alt+Q**|
+|Welcome tile - Quick start tab|**Alt+Q**|
 |Welcome tile - What's New tab|**Alt+W**|
-|Welcome tile - Learn More tab|**Alt+L**|
+|Welcome tile - Learn more tab|**Alt+L**|
 |Welcome tile Hide command|**Alt+D**|
 
 **Role and Group Thumbnails**
@@ -45,13 +45,13 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |Control Group|Access Key|
 |---------|-------|
 |Back button in the address bar|**Alt+Left arrow** or **Backspace**|
-|Forward button in the address bar|**Alt+right arrow**|
+|forward button in the address bar|**Alt+right arrow**|
 |Refresh|**F5**|
-|Notifications area, open Task Details dialog box|**Alt+N**|
+|Notifications area, open Task details dialog box|**Alt+N**|
 |Manage menu|**Alt+M**|
 |View menu|**Alt+V**|
-|Help menu|**Alt+H**|
-|Open Server Manager Help|**F1**|
+|help menu|**Alt+H**|
+|Open Server Manager help|**F1**|
 |Zoom in|**Ctrl+Plus (+)**|
 |Zoom out|**Ctrl+Minus (-)**|
 |Display console at 100%|**Ctrl+0**|
@@ -72,20 +72,20 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 
 |Control Group|Access Key|
 |---------|-------|
-|Computer name|**Alt+C**|
+|computer name|**Alt+C**|
 |Last installed updates|**Alt+L**|
 |Domain or Workgroup|**Alt+D**|
 |Windows Update|**Alt+W**|
 |Last checked for updates|**Alt+S**|
-|Remote management|**Alt+R**|
+|remote management|**Alt+R**|
 |Windows Firewall|**Alt+F**|
-|Remote Desktop|**Alt+K**|
+|remote Desktop|**Alt+K**|
 |Windows Error Reporting|**Alt+G**|
 |NIC Teaming|**Alt+T**|
 |Customer Experience Improvement Program|**Alt+X**|
 |Wired Ethernet connection|**Alt+O**|
 |IE Enhanced Security Configuration|**Alt+Y**|
-|Time zone|**Alt+Z**|
+|time zone|**Alt+Z**|
 
 **Navigating within Events, Services, BPA, Performance, and Roles and Features tiles**
 
@@ -93,5 +93,5 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |---------|-------|
 |Tasks menu|**Alt+T**|
 |Filter control|**Alt+F**|
-|Query control|**Alt+Q**|
+|query control|**Alt+Q**|
 |Save queries|**Alt+S**|

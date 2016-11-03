@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin cache and help
-description: "Windows Commands topic for **Bitsadmin cache and help** - Displays the command-line usage for the **Cache** commands."
+title: bitsadmin cache and help
+description: "Windows Commands topic for **bitsadmin cache and help** - Displays the command-line usage for the **Cache** commands."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,19 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin cache and help
+# bitsadmin cache and help
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays the command-line usage for the **Cache** commands.
 ## Syntax
 ```
-Bitsadmin /Cache /Help 
+bitsadmin /Cache /help 
 ```
 ## <a name="BKMK_examples"></a>Examples
 The following command displays the command-line help for the **Cache** commands.
 ```
-Bitsadmin /Cache /Help
+bitsadmin /Cache /help
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

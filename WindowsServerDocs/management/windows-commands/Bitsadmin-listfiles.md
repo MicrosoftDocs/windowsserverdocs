@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin listfiles
-description: "Windows Commands topic for **Bitsadmin listfiles** - Lists the files in the specified job."
+title: bitsadmin listfiles
+description: "Windows Commands topic for **bitsadmin listfiles** - lists the files in the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin listfiles
+# bitsadmin listfiles
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Lists the files in the specified job.
+lists the files in the specified job.
 ## Syntax
 ```
-bitsadmin /ListFiles <Job>
+bitsadmin /listFiles <Job>
 ```
 ## Parameters
 |Parameter|Description|
@@ -32,5 +32,5 @@ The following example retrieves the list of files for the job named *myDownloadJ
 ```
 C:\>bitsadmin /GetNotifyFlags myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

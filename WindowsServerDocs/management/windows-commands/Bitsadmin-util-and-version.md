@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin util and version
-description: "Windows Commands topic for **Bitsadmin util and version** - Displays the version of BITS service."
+title: bitsadmin util and version
+description: "Windows Commands topic for **bitsadmin util and version** - Displays the version of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,24 +14,24 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin util and version
+# bitsadmin util and version
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays the version of BITS service.
 ## Syntax
 ```
-bitsadmin /Util /Version [/Verbose]
+bitsadmin /Util /version [/verbose]
 ```
-## Remarks
-The **Verbose** command performs the following:
+## remarks
+The **verbose** command performs the following:
 -   Displays the file version for each BITS related DLL
--   Verifies the BITS Service can be started
+-   verifies the BITS Service can be started
 -   Displays BITS Group Policy values (Windows Vista only)
 ## <a name="BKMK_examples"></a>Examples
 The following example the version of the BITS Service.
 ```
-C:\>bitsadmin /Util /Version
+C:\>bitsadmin /Util /version
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

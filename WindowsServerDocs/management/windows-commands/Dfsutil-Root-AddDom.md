@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Root AddDom
+title: dfsutil Root addDom
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Root AddDom
+# dfsutil Root addDom
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -24,7 +24,7 @@ The **dfsutil root adddom** command  creates a new domain\-based DFS namespace.
 ## Syntax
 
 ```
-dfsutil root adddom <\\server\share> [<Version>] [<Comment>] | /?
+dfsutil root adddom <\\server\share> [<version>] [<Comment>] | /?
 ```
 
 ### Parameters
@@ -33,17 +33,17 @@ dfsutil root adddom <\\server\share> [<Version>] [<Comment>] | /?
 |-------|--------|
 |<\\\\server\\share>|UNC path to the namespace.|
 |<Comment>|Specifies an administrator comment for the namespace.|
-|<Version>|Version of the namespace, possible values are V1 or V2. V1 \- Creates a Windows 2000 Server mode namespace. V2 \- Creates a Windows Server 2008 mode namespace.|
+|<version>|version of the namespace, possible values are V1 or V2. V1 \- creates a Windows 2000 Server mode namespace. V2 \- creates a Windows Server 2008 mode namespace.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 Note the following about this command:
 
 -   To add new root targets, use the "dfsutil target add" command.
 
 -   The default version for creating a new namespace is V2.
 
--   Create the share on the namespace server before running this command.
+-   create the share on the namespace server before running this command.
 
 ## <a name="BKMK_Examples"></a>Examples
 To TBD, type:
@@ -70,12 +70,12 @@ To view help for this command, type:
 dfsutil root adddom /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil Root](Dfsutil-Root.md)
+-   [dfsutil Root](dfsutil-root.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

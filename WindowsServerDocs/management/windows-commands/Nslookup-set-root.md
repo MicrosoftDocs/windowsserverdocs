@@ -1,5 +1,5 @@
 ---
-title: Nslookup set root
+title: nslookup set root
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Nslookup set root
+# nslookup set root
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Changes the name of the root server used for queries.
+changes the name of the root server used for queries.
 ## Syntax
 ```
 set root=<RootServer>
@@ -28,8 +28,8 @@ set root=<RootServer>
 |-------|--------|
 |<RootServer>|Specifies the new name for the root server. The default value is ns.nic.ddn.mil.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
+## remarks
 -   The **set root** subcommand affects the **root** subcommand.
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Nslookup root](Nslookup-root.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[nslookup root](nslookup-root.md)

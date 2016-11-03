@@ -1,5 +1,5 @@
 ---
-title: Ftp: mdir
+title: ftp: mdir
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,34 +14,34 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: mdir
+# ftp: mdir
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays a directory list of files and subdirectories in a remote directory.   
 ## Syntax  
 ```  
-mdir <RemoteFile>[ ] <LocalFile>  
+mdir <remoteFile>[ ] <LocalFile>  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<RemoteFile>|Specifies the directory or file for which you want to see a listing.|  
+|<remoteFile>|Specifies the directory or file for which you want to see a listing.|  
 |<LocalFile>|Specifies a local file to store the listing. This parameter is required.|  
-## Remarks  
+## remarks  
 -   You can use **mdir** to specify multiple files.  
--   Specifying *RemoteFile*  
-    Type a hyphen (**-**) to use the current working directory on the remote computer.  
+-   Specifying *remoteFile*  
+    type a hyphen (**-**) to use the current working directory on the remote computer.  
 -   Specifying a *LocalFile*  
-    Type a hyphen (**-**) to display the listing on the screen.  
+    type a hyphen (**-**) to display the listing on the screen.  
 ## <a name="BKMK_Examples"></a>Examples  
-Display a directory listing of **Dir1** and **Dir2** on the screen  
+Display a directory listing of **dir1** and **dir2** on the screen  
 ```  
-mdir Dir1 Dir2 -  
+mdir dir1 dir2 -  
 ```  
-Save the combined directory listing of **Dir1** and **Dir2** in a local file called **dirlist.txt**  
+Save the combined directory listing of **dir1** and **dir2** in a local file called **dirlist.txt**  
 ```  
-mdir Dir1 Dir2 dirlist.txt  
+mdir dir1 dir2 dirlist.txt  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

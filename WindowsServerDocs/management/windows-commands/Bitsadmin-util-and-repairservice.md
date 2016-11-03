@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin util and repairservice
-description: "Windows Commands topic for **Bitsadmin util and repairservice** - Commmand used to fix known issues with various versions of BITS service."
+title: bitsadmin util and repairservice
+description: "Windows Commands topic for **bitsadmin util and repairservice** - Commmand used to fix known issues with various versions of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,29 +14,29 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin util and repairservice
+# bitsadmin util and repairservice
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Commmand used to fix known issues with various versions of BITS service.
 ## Syntax
 ```
-bitsadmin /Util /RepairService [/Force]
+bitsadmin /Util /repairService [/force]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|Force|Optional deletes and recreates the service.|
-## Remarks
+|force|Optional deletes and recreates the service.|
+## remarks
 This command resolves errors related to incorrect service configuration and dependencies on Windows services and the network directory. This command generates output that indicates if the issues that were resolved.
 > [!NOTE]
 > that if BITS recreates the service, the service description string may be set to English in a localized system.
-> [!IMPORTANT]
+> [!importANT]
 > This command is not supported on Windows Vista.
 ## <a name="BKMK_examples"></a>Examples
 The following example repairs the BITS Service configuration.
 ```
-C:\>bitsadmin /Util /RepairService
+C:\>bitsadmin /Util /repairService
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

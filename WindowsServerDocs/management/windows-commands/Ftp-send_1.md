@@ -1,5 +1,5 @@
 ---
-title: Ftp: send_1
+title: ftp: send_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,31 +14,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: send_1
+# ftp: send_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Copies a local file to the remote computer using the current file transfer type.   
 ## Syntax  
 ```  
-send <LocalFile> [<RemoteFile>]  
+send <LocalFile> [<remoteFile>]  
 ```  
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |<LocalFile>|Specifies the local file to copy.|  
-|<RemoteFile>|Specifies the name to use on the remote computer.|  
-## Remarks  
+|<remoteFile>|Specifies the name to use on the remote computer.|  
+## remarks  
 -   The **send** command is identical to the **put** command.  
--   If *RemoteFile* is not specified, the file is given the *LocalFile* name.  
+-   if *remoteFile* is not specified, the file is given the *LocalFile* name.  
 ## <a name="BKMK_Examples"></a>Examples  
-Copy the local file **test.txt** and name it **test1.txt** on the remote computer.  
+copy the local file **test.txt** and name it **test1.txt** on the remote computer.  
 ```  
 send test.txt test1.txt  
 ```  
-Copy the local file **program.exe** to the remote computer.  
+copy the local file **program.exe** to the remote computer.  
 ```  
 send program.exe  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

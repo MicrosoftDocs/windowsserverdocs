@@ -1,5 +1,5 @@
 ---
-title: Certreq_OLD
+title: certreq_old
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,8 +14,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Certreq_OLD
+# certreq_old
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-This article will be permanently removed in the near future. The replacement topic is [Certreq_1](Certreq_1.md)  
+This article will be permanently removed in the near future. The replacement topic is [certreq_1](certreq_1.md)  

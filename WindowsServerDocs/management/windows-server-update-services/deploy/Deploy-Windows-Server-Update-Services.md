@@ -21,12 +21,12 @@ In a WSUS implementation, at least one WSUS server in the network must connect t
 
 This guide provides conceptual information for planning and deploying Windows Server Update Service.  
 
--   [Plan your WSUS deployment](../plan/Plan-Your-WSUS-Deployment.md)  
+-   [Plan your WSUS deployment](../plan/plan-your-wsus-deployment.md)  
 
--   [Step 1: Install the WSUS Server Role](1-Install-the-WSUS-Server-Role.md)  
+-   [Step 1: Install the WSUS Server Role](1-install-the-wsus-server-role.md)  
 
--   [Step 2: Configure WSUS](2-Configure-WSUS.md)  
+-   [Step 2: Configure WSUS](2-configure-wsus.md)  
 
--   [Step 3: Approve and Deploy Updates in WSUS](3-Approve-and-Deploy-Updates-in-WSUS.md)  
+-   [Step 3: Approve and Deploy Updates in WSUS](3-approve-and-deploy-updates-in-wsus.md)  
 
--   [Step 4: Configure Group Policy Settings for Automatic Updates](4-Configure-Group-Policy-Settings-for-Automatic-Updates.md)  
+-   [Step 4: Configure Group Policy Settings for Automatic Updates](4-configure-group-policy-settings-for-automatic-updates.md)  

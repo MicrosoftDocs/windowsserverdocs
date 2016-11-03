@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setpriority
-description: "Windows Commands topic for **Bitsadmin setpriority** - 
+title: bitsadmin setpriority
+description: "Windows Commands topic for **bitsadmin setpriority** - 
 Sets the priority of the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin setpriority
+# bitsadmin setpriority
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -28,11 +28,11 @@ bitsadmin /SetPriority <Job> <Priority>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|Priority|One of the following values:<br /><br />-   FOREGROUND<br />-   HIGH<br />-   NORMAL<br />-   LOW|
+|Priority|One of the following values:<br /><br />-   foregROUND<br />-   HIGH<br />-   NORMAL<br />-   LOW|
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the priority for the job named *myDownloadJob* to normal.
 ```
 C:\>bitsadmin /SetPriority myDownloadJob NORMAL
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

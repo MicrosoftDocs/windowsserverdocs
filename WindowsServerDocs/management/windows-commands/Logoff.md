@@ -1,5 +1,5 @@
 ---
-title: Logoff
+title: logoff
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,14 +14,14 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Logoff
+# logoff
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Logs off a user from a session on a Remote Desktop Session Host (RD Session Host) server and deletes the session from the server.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Logs off a user from a session on a remote Desktop Session Host (rd Session Host) server and deletes the session from the server.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
@@ -31,13 +31,13 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 |-------|--------|
 |<SessionName>|Specifies the name of the session.|
 |<SessionID>|Specifies the numeric ID which identifies the session to the server.|
-|/server:<ServerName>|Specifies the RD Session Host server that contains the session whose user you want to log off. If unspecified, the server on which you are currently active is used.|
+|/server:<ServerName>|Specifies the rd Session Host server that contains the session whose user you want to log off. if unspecified, the server on which you are currently active is used.|
 |/v|Displays information about the actions being performed.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   You can always log off from the session to which you are currently logged on. You must, however, have Full Control permission to log off users from other sessions.
 -   Logging off a user from a session without warning can result in loss of data at the user's session. You should send a message to the user by using the **msg** command to warn the user before taking this action.
--   If <*SessionID*> or <*SessionName*> is not specified, **logoff** logs off the user from the current session. If you specify <*SessionName*>, it must be an active one.
+-   if <*SessionID*> or <*SessionName*> is not specified, **logoff** logs off the user from the current session. if you specify <*SessionName*>, it must be an active one.
 -   When you log off a user, all processes end and the session is deleted from the server.
 -   You cannot log off a user from the console session.
 ## <a name="BKMK_examples"></a>Examples
@@ -53,6 +53,6 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
     ```
     logoff TERM04 /server:Server1
     ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

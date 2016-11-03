@@ -1,5 +1,5 @@
 ---
-title: Graftabl
+title: graftabl
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Graftabl
+# graftabl
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Enables Windows operating systems to display an extended character set in graphics mode. If used without parameters, **graftabl** displays the previous and the current code page.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables Windows operating systems to display an extended character set in graphics mode. if used without parameters, **graftabl** displays the previous and the current code page.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 graftabl <CodePage>
@@ -28,13 +28,13 @@ graftabl /status
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<CodePage>|Specifies a code page to define the appearance of extended characters in graphics mode.<br /><br />Valid code page identification numbers are:<br /><br />437: United States<br /><br />850: Multilingual (Latin I)<br /><br />852: Slavic (Latin II)<br /><br />855: Cyrillic (Russian)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: Modern Greek|
+|<CodePage>|Specifies a code page to define the appearance of extended characters in graphics mode.<br /><br />Valid code page identification numbers are:<br /><br />437: United States<br /><br />850: Multilingual (Latin I)<br /><br />852: Slavic (Latin II)<br /><br />855: Cyrillic (Russian)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: modern Greek|
 |/status|Displays the current code page that **graftabl** is using.|
 |/?|Displays help at the command prompt.|
-## Remarks
--   **Graftabl** affects only the monitor display of extended characters of the code page that you specify. It does not change the actual console input code page. To change the console input code page, use the **mode** or **chcp** command.
+## remarks
+-   **graftabl** affects only the monitor display of extended characters of the code page that you specify. It does not change the actual console input code page. To change the console input code page, use the **mode** or **chcp** command.
 -   The following table lists each exit code and a brief description of it.
-    |Exit code|Description|
+    |exit code|Description|
     |-------|--------|
     |0|Character set was loaded successfully. No previous code page was loaded.|
     |1|An incorrect parameter was specified. No action was taken.|
@@ -53,7 +53,7 @@ To load the graphics character set for code page 850 (multilingual) into memory,
 ```
 graftabl 850
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Freedisk](Freedisk.md)
-[Chcp](Chcp.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[freedisk](freedisk.md)
+[chcp](chcp.md)

@@ -1,5 +1,5 @@
 ---
-title: Mqtgsvc
+title: mqtgsvc
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,16 +14,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Mqtgsvc
+# mqtgsvc
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true. For examples of how the Message Queuing Triggers service can be used, see [Message Queuing Triggers](http://go.microsoft.com/fwlink/?LinkId=248725)on MSDN.
+Monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true. for examples of how the Message Queuing Triggers service can be used, see [Message Queuing Triggers](http://go.microsoft.com/fwlink/?LinkId=248725)on MSDN.
 ## Syntax
 ```
-Mqtgsvc.exe
+mqtgsvc.exe
 ```
 ### Parameters
 None
-## Additional references
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [Command-Line Syntax Key](command-line-syntax-key.md)

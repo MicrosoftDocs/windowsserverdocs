@@ -1,6 +1,6 @@
 ---
-title: Bootcfg default
-description: "Windows Commands topic for **Bootcfg default** - Specifies the operating system entry to designate as the default."
+title: bootcfg default
+description: "Windows Commands topic for **bootcfg default** - Specifies the operating system entry to designate as the default."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bootcfg default
+# bootcfg default
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -22,12 +22,12 @@ Specifies the operating system entry to designate as the default.
 
 ## Syntax
 ```
-bootcfg /default [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]
+bootcfg /default [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
+|/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
 |/id <OSEntryLineNum>|Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to designate as default. The first line after the [operating systems] section header is 1.|
@@ -38,5 +38,5 @@ The following examples show how you can use the **bootcfg /default**command:
 bootcfg /default /id 2
 bootcfg /default /s srvmain /u maindom\hiropln /p p@ssW23 /id 2
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Manage-bde-pause.md
+redirect_url: /windows-server-docs/management/windows-commands/manage-bde-pause.md
 ---

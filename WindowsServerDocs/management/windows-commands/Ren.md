@@ -1,5 +1,5 @@
 ---
-title: Ren
+title: ren
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,28 +14,28 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ren
+# ren
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Renames files or directories. This command is the same as the **rename** command.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+renames files or directories. This command is the same as the **rename** command.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-ren [<Drive>:][<Path>]<FileName1> <FileName2>
-rename [<Drive>:][<Path>]<FileName1> <FileName2>
+ren [<Drive>:][<path>]<FileName1> <FileName2>
+rename [<Drive>:][<path>]<FileName1> <FileName2>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[<Drive>:][<Path>]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters (**\*** and **?**).|
+|[<Drive>:][<path>]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters (**\*** and **?**).|
 |<FileName2>|Specifies the new name for the file. You can use wildcard characters to specify new names for multiple files.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   You cannot specify a new drive or path when renaming files.
 -   You cannot use the **ren** command to rename files across drives or to move files to a different directory.
 -   You can use wildcard characters (**\*** and **?**) in either *FileName* parameter. Characters that are represented by wildcard characters in *FileName2* will be identical to the corresponding characters in *FileName1*.
--   *FileName2* must be a unique file name. If *FileName2* matches an existing file name, **ren** displays the following message:
+-   *FileName2* must be a unique file name. if *FileName2* matches an existing file name, **ren** displays the following message:
     ```
     Duplicate file name or file not found
     ```
@@ -48,5 +48,5 @@ To change the name of a directory from Chap10 to Part10, type:
 ```
 ren chap10 part10 
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

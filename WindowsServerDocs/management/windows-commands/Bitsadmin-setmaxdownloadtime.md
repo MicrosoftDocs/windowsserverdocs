@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin setmaxdownloadtime
-description: "Windows Commands topic for **Bitsadmin setmaxdownloadtime** - Sets the download timeout in seconds."
+title: bitsadmin setmaxdownloadtime
+description: "Windows Commands topic for **bitsadmin setmaxdownloadtime** - Sets the download timeout in seconds."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016 
 ---
-# Bitsadmin setmaxdownloadtime
+# bitsadmin setmaxdownloadtime
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -23,7 +23,7 @@ Sets the download timeout in seconds.
 ## Syntax
 
 ```
-bitsadmin /SetMaxDownloadTime <Job> <Timeout>
+bitsadmin /SetMaxDownloadtime <Job> <timeout>
 ```
 
 ## Parameters
@@ -31,9 +31,9 @@ bitsadmin /SetMaxDownloadTime <Job> <Timeout>
 |Parameter|Description|
 |-------|--------|
 |Job|The job's display name or GUID|
-|Timeout|The timeout in seconds|
+|timeout|The timeout in seconds|
 
-## Remarks
+## remarks
 
 -   N\/A
 
@@ -41,10 +41,10 @@ bitsadmin /SetMaxDownloadTime <Job> <Timeout>
 The following example sets the timeout for the job named *myDownloadJob* to 10 seconds.
 
 ```
-C:\>bitsadmin /SetMaxDownloadTime myDownloadJob 10
+C:\>bitsadmin /SetMaxDownloadtime myDownloadJob 10
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

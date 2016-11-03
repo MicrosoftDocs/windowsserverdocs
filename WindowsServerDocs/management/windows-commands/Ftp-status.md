@@ -1,5 +1,5 @@
 ---
-title: Ftp: status
+title: ftp: status
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: status
+# ftp: status
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays the current status of FTP connections.   
+Displays the current status of ftp connections.   
 ## Syntax  
 ```  
 status  
@@ -26,9 +26,9 @@ status
 ### Parameters  
 none  
 ## <a name="BKMK_Examples"></a>Examples  
-Display the current status of FTP connections.  
+Display the current status of ftp connections.  
 ```  
 status  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

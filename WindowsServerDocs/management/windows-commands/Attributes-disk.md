@@ -1,6 +1,6 @@
 ---
-title: Attributes disk
-description: "Windows Commands topic for **Attributes disk** - Displays, sets, or clears the attributes of a disk."
+title: attributes disk
+description: "Windows Commands topic for **attributes disk** - Displays, sets, or clears the attributes of a disk."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,13 +14,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Attributes disk
+# attributes disk
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays, sets, or clears the attributes of a disk.  
   
-> [!IMPORTANT]  
+> [!importANT]  
 > This parameter is not available in any edition of Windows Vista.  
   
 ## Syntax  
@@ -36,11 +36,11 @@ attributes disk [{set | clear}] [readonly] [noerr]
 |set|Sets the specified attribute of the disk with focus.|  
 |clear|Clears the specified attribute of the disk with focus.|  
 |readonly|Specifies that the disk is read\-only.|  
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## Remarks  
+## remarks  
   
--   When **attributes disk** is used to display the current attributes of a disk, the startup disk attribute denotes the disk that is used to start the computer. For a dynamic mirror, it is displayed for the disk that contains the boot plex of the boot volume.  
+-   When **attributes disk** is used to display the current attributes of a disk, the startup disk attribute denotes the disk that is used to start the computer. for a dynamic mirror, it is displayed for the disk that contains the boot plex of the boot volume.  
   
 -   A disk must be selected for the **attributes disk** command to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
@@ -57,8 +57,8 @@ To set the selected disk as read\-only, type:
 attributes disk set readonly  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

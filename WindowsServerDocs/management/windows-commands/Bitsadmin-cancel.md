@@ -1,7 +1,7 @@
 ---
-title: Bitsadmin cancel
-description: "Windows Commands topic for **Bitsadmin cancel** - 
-Removes the job from the transfer queue and deletes all temporary files associated with the job."
+title: bitsadmin cancel
+description: "Windows Commands topic for **bitsadmin cancel** - 
+removes the job from the transfer queue and deletes all temporary files associated with the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,11 +15,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin cancel
+# bitsadmin cancel
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes the job from the transfer queue and deletes all temporary files associated with the job.
+removes the job from the transfer queue and deletes all temporary files associated with the job.
 ## Syntax
 ```
 bitsadmin /cancel <Job>
@@ -33,5 +33,5 @@ The following example removes the *myDownloadJob* job from the transfer queue.
 ```
 C:\>bitsadmin /cancel myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

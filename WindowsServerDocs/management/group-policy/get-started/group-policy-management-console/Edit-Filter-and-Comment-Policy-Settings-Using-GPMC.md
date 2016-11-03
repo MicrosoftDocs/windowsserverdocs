@@ -1,5 +1,5 @@
 ---
-title: Edit, Filter, and Comment Policy Settings Using GPMC
+title: edit, Filter, and Comment Policy Settings Using GPMC
 description: "Group Policy"
 ms.prod: windows-server-threshold
 ms.technology: manage-group-policy
@@ -12,41 +12,41 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Edit, Filter, and Comment Policy Settings Using GPMC
+# edit, Filter, and Comment Policy Settings Using GPMC
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 This topic provides links to tasks associated with configuring policy settings using the Group Policy Management Console (GPMC).
 
-The Group Policy Management Console or the Group Policy Management Editor, can help you manage policy settings through the following tasks.
+The Group Policy Management Console or the Group Policy Management editor, can help you manage policy settings through the following tasks.
 
--   [Administrative Templates (ADMX)](manage-policy-settings-using-gpmc/Administrative-Template-Policy-Settings.md#BKMK_Edit_ADMX)
+-   [Administrative Templates (ADMX)](manage-policy-settings-using-gpmc/administrative-template-policy-settings.md#BKMK_edit_ADMX)
 
-    -   Edit settings
+    -   edit settings
 
     -   Filter settings
 
-    -   Add comments to settings
+    -   add comments to settings
 
--   [Classic Administrative Templates (ADM)](manage-policy-settings-using-gpmc/Administrative-Template-Policy-Settings.md#BKMK_Edit_ADM)
+-   [Classic Administrative Templates (ADM)](manage-policy-settings-using-gpmc/administrative-template-policy-settings.md#BKMK_edit_ADM)
 
-    -   Add templates
+    -   add templates
 
     -   Filter templates
 
--   [Editing Software Settings Using GPMC](manage-policy-settings-using-gpmc/Editing-Software-Settings-Using-GPMC.md)
+-   [editing Software Settings Using GPMC](manage-policy-settings-using-gpmc/editing-software-settings-using-gpmc.md)
 
     -   Set options for installation
 
-    -   Assign, publish and upgrade an application
+    -   assign, publish and upgrade an application
 
-    -   Remove a managed application
+    -   remove a managed application
 
     -   Set application properties
 
-    -   Add or remove modifications for an application package
+    -   add or remove modifications for an application package
 
--   [Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy](Using-Startup-Shutdown-Logon-and-Logoff-Scripts-in-Group-Policy.md)
+-   [Using startup, shutdown, Logon, and logoff Scripts in Group Policy](using-startup-shutdown-logon-and-logoff-scripts-in-group-policy.md)
 
     -   How to set up scripts on the domain controller
 
@@ -58,15 +58,15 @@ The Group Policy Management Console or the Group Policy Management Editor, can h
 
     -   How to assign user logoff scripts
 
--   [Using Folder Redirection in Group Policy](manage-policy-settings-using-gpmc/Using-Folder-Redirection-in-Group-Policy.md)
+-   [Using Folder Redirection in Group Policy](manage-policy-settings-using-gpmc/using-folder-redirection-in-group-policy.md)
 
-    -   Selecting a Folder Redirection target
+    -   selecting a Folder Redirection target
 
     -   Configuring additional settings for the redirected folder
 
     -   How to specify the location of folders in a user profile
 
 > [!NOTE]
-> For policies that can be administered on the local computer, the Local Group Policy Editor can be used. However, if the computer is joined to a domain and administered by Group Policy, settings on the local computer can be overwritten.
+> for policies that can be administered on the local computer, the Local Group Policy editor can be used. However, if the computer is joined to a domain and administered by Group Policy, settings on the local computer can be overwritten.
 
 

@@ -1,5 +1,5 @@
 ---
-title: Get Started with Windows Server Update Services (WSUS)
+title: Get started with Windows Server Update Services (WSUS)
 description: "Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications"
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -23,7 +23,7 @@ Windows Server Update Services (WSUS) enables information technology administrat
 A WSUS server provides features that you can use  to manage and distribute updates through a management console. A WSUS server can also be the update source for other WSUS servers within the organization. The WSUS server that acts as an update source is called an upstream server. In a WSUS implementation, at least one WSUS server on your network must be able to connect to Microsoft Update to get available update information. As an administrator, you can determine - based on network security and configuration - how many other WSUS servers connect directly to Microsoft Update.
 
 ### Practical applications
-Update management is the process of controlling the deployment and maintenance of interim software releases into production environments. It helps you maintain operational efficiency, overcome security vulnerabilities, and maintain the stability of your production environment. If your organization cannot determine and maintain a known level of trust within its operating systems and application software, it might have a number of security vulnerabilities that, if exploited, could lead to a loss of revenue and intellectual property. Minimizing this threat requires you to have properly configured systems, use the latest software, and install the recommended software updates.
+Update management is the process of controlling the deployment and maintenance of interim software releases into production environments. It helps you maintain operational efficiency, overcome security vulnerabilities, and maintain the stability of your production environment. if your organization cannot determine and maintain a known level of trust within its operating systems and application software, it might have a number of security vulnerabilities that, if exploited, could lead to a loss of revenue and intellectual property. Minimizing this threat requires you to have properly configured systems, use the latest software, and install the recommended software updates.
 
 The core scenarios where WSUS adds value to your business are:
 
@@ -44,28 +44,28 @@ Windows Server Update Services is a built-in server role that includes the follo
 
 -   Can be added and removed by using the Server Manager
 
--   Includes Windows PowerShell cmdlets to manage the most important administrative tasks in WSUS
+-   Includes Windows powershell cmdlets to manage the most important administrative tasks in WSUS
 
--   Adds SHA256 hash capability for additional security
+-   adds SHA256 hash capability for additional security
 
--   Provides client and server separation: Versions of the Windows Update Agent (WUA) can ship independently of WSUS
+-   Provides client and server separation: versions of the Windows Update Agent (WUA) can ship independently of WSUS
 
-### Using Windows PowerShell to manage WSUS
-For system administrators to automate their operations, they need coverage through command-line automation. The main goal is to facilitate WSUS administration by allowing system administrators to automate their day-to-day operations.
+### Using Windows powershell to manage WSUS
+for system administrators to automate their operations, they need coverage through command-line automation. The main goal is to facilitate WSUS administration by allowing system administrators to automate their day-to-day operations.
 
 **What value does this change add?**
 
-By exposing core WSUS operations through Windows PowerShell, system administrators can increase productivity, reduce the learning curve for new tools, and reduce errors due to failed expectations resulting from a lack of consistency across similar operations.
+By exposing core WSUS operations through Windows powershell, system administrators can increase productivity, reduce the learning curve for new tools, and reduce errors due to failed expectations resulting from a lack of consistency across similar operations.
 
 **What works differently?**
 
-In earlier versions of the Windows Server operating system, there were no Windows PowerShell cmdlets, and update management automation was challenging. The Windows PowerShell cmdlets for WSUS operations add flexibility and agility for the system administrator.
+In earlier versions of the Windows Server operating system, there were no Windows powershell cmdlets, and update management automation was challenging. The Windows powershell cmdlets for WSUS operations add flexibility and agility for the system administrator.
 
 ## In this collection
 The  following guides for planning, deploying, and managing WSUS are in this collection:
 
--   [Deploy Windows Server Update Services](../deploy/Deploy-Windows-Server-Update-Services.md)
+-   [Deploy Windows Server Update Services](../deploy/deploy-windows-server-update-services.md)
 
--   [Manage Updates using Windows Server Update Services](../manage/Update-Management-with-Windows-Server-Update-Services.md)
+-   [Manage Updates using Windows Server Update Services](../manage/update-management-with-windows-server-update-services.md)
 
 

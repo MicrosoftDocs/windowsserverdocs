@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin monitor
-description: "Windows Commands topic for **Bitsadmin monitor** - 
+title: bitsadmin monitor
+description: "Windows Commands topic for **bitsadmin monitor** - 
 Monitors jobs in the transfer queue that the current user owns."
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,7 +15,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin monitor
+# bitsadmin monitor
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -29,7 +29,7 @@ bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
 |-------|--------|
 |Allusers|Optional monitors jobs for all users|
 |Refresh|Optional refreshes the data at an interval specified by *Seconds*. The default refresh interval is five seconds.|
-## Remarks
+## remarks
 -   You must have administrator privileges to use the **Allusers** parameter.
 -   Use CTRL+C to stop the refresh.
 ## <a name="BKMK_examples"></a>Examples
@@ -37,5 +37,5 @@ The following example monitors the transfer queue for jobs owned by the current 
 ```
 C:\>bitsadmin /Monitor /refesh 60
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,5 +1,5 @@
 ---
-title: Wmic
+title: wmic
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,12 +14,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Wmic
+# wmic
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
 Displays WMI information inside an interactive command shell.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 command </parameter>
@@ -28,16 +28,16 @@ command </parameter>
 The following sub-commands are available at all times:
 |Sub-command|Description|
 |--------|--------|
-|class|Escapes from the default alias mode of WMIC to access classes in the WMI schema directly.|
-|path|Escapes from the default alias mode of WMIC to access instances in the WMI schema directly.|
+|class|Escapes from the default alias mode of wmic to access classes in the WMI schema directly.|
+|path|Escapes from the default alias mode of wmic to access instances in the WMI schema directly.|
 |context|Displays the current values of all global switches.|
-|[quit &#124; exit]|Exits the WMIC command shell.|
+|[quit &#124; exit]|exits the wmic command shell.|
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |<\/parameter>|<Concise description, starts with a verb.>|
 |<\/param2>|<Another concise description, starts with a verb.>|
-## Remarks
+## remarks
 ## Scripting
 ## <a name="BKMK_examples"></a>Examples
 To display the current values of all global switches, type:
@@ -49,23 +49,23 @@ Output similar to the following displays:
 NAMESPACE    : root\cimv2
 ROLE         : root\cli
 NODE(S)      : BOBENTERPRISE
-IMPLEVEL     : IMPERSONATE
+IMPLEVEL     : IMPERSONatE
 [AUTHORITY   : N/A]
 AUTHLEVEL    : PKTPRIVACY
 LOCALE       : ms_409
 PRIVILEGES   : ENABLE
 TRACE        : OFF
-RECORD       : N/A
-INTERACTIVE  : OFF
+RECOrd       : N/A
+INTERactive  : OFF
 FAILFAST     : OFF
 OUTPUT       : STDOUT
-APPEND       : STDOUT
+append       : STDOUT
 USER         : N/A
-AGGREGATE    : ON
+AGGregatE    : ON
 ```
 To change the language ID used by the command line to English (locale ID 409), type:
 ```
 wmic /locale:ms_409
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

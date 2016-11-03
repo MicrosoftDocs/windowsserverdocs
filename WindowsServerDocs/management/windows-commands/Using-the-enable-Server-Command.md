@@ -21,24 +21,24 @@ ms.date: 10/12/2016
 Enables all services for Windows Deployment Services.
 ## Syntax
 ```
-WDSUTIL [Options] /Enable-Server [/Server:<Server name>]
+wdsutil [Options] /Enable-Server [/Server:<Server name>]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
 ## <a name="BKMK_examples"></a>Examples
 To enable the services on the server, run one of the following:
 ```
-WDSUTIL /Enable-Server
-WDSUTIL /Verbose /Enable-Server /Server:MyWDSServer
+wdsutil /Enable-Server
+wdsutil /verbose /Enable-Server /Server:MyWDSServer
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Using the disable-Server Command](Using-the-disable-Server-Command.md)
-[Using the get-Server Command](Using-the-get-Server-Command.md)
-[Using the Initialize-Server Command](Using-the-Initialize-Server-Command.md)
-[Subcommand: set-Server](Subcommand-set-Server.md)
-[Subcommand: start-Server](Subcommand-start-Server.md)
-[Subcommand: stop-Server](Subcommand-stop-Server.md)
-[The uninitialize-Server Option](The-uninitialize-Server-Option.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the disable-Server Command](using-the-disable-server-command.md)
+[Using the get-Server Command](using-the-get-server-command.md)
+[Using the Initialize-Server Command](using-the-initialize-server-command.md)
+[Subcommand: set-Server](subcommand-set-server.md)
+[Subcommand: start-Server](subcommand-start-server.md)
+[Subcommand: stop-Server](subcommand-stop-server.md)
+[The uninitialize-Server Option](the-uninitialize-server-option.md)

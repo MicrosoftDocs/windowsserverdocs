@@ -18,24 +18,24 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes a filter rule from a driver group on a server.
+removes a filter rule from a driver group on a server.
 ## Syntax
 ```
-WDSUTIL /Remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>] /FilterType:<Filter Type>
+wdsutil /remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>] /Filtertype:<Filter type>
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
-|[/FilterType:<FilterType>]|Specifies the type of the filter to remove from the group. <FilterType> can be one of the following:<br /><br />**BiosVendor**<br /><br />**BiosVersion**<br /><br />**ChassisType**<br /><br />**Manufacturer**<br /><br />**Uuid**<br /><br />**OsVersion**<br /><br />**OsEdition**<br /><br />**OsLanguage**|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. if a server name is not specified, the local server is used.|
+|[/Filtertype:<Filtertype>]|Specifies the type of the filter to remove from the group. <Filtertype> can be one of the following:<br /><br />**BiosVendor**<br /><br />**Biosversion**<br /><br />**Chassistype**<br /><br />**Manufacturer**<br /><br />**Uuid**<br /><br />**Osversion**<br /><br />**Osedition**<br /><br />**OsLanguage**|
 ## <a name="BKMK_examples"></a>Examples
 To remove a filter, type one of the following:
 ```
-WDSUTIL /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer
+wdsutil /remove-DriverGroupFilter /DriverGroup:printerdrivers /Filtertype:Manufacturer
 ```
 ```
-WDSUTIL /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /FilterType:OSLanguage
+wdsutil /remove-DriverGroupFilter /DriverGroup:printerdrivers /Filtertype:Manufacturer /Filtertype:OSLanguage
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

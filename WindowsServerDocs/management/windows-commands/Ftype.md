@@ -1,5 +1,5 @@
 ---
-title: Ftype
+title: ftype
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,25 +14,25 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftype
+# ftype
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays or modifies file types that are used in file name extension associations. If used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. If used without parameters, **ftype** displays the file types that have open command strings defined.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Displays or modifies file types that are used in file name extension associations. if used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. if used without parameters, **ftype** displays the file types that have open command strings defined.
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
-ftype [<FileType>[=[<OpenCommandString>]]]
+ftype [<Filetype>[=[<OpenCommandString>]]]
 ```
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<FileType>|Specifies the file type to display or change.|
+|<Filetype>|Specifies the file type to display or change.|
 |<OpenCommandString>|Specifies the open command string to use when opening files of the specified file type.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 The following table describes how **ftype** substitutes variables within an open command string:
-|Variable|Replacement value|
+|Variable|replacement value|
 |------|-----------|
 |%0 or %1|Gets substituted with the file name being launched through the association.|
 |%*|Gets all of the parameters.|
@@ -62,7 +62,7 @@ ftype PerlScript=perl.exe %1 %*
 ```
 To eliminate the need to type the .pl file name extension when invoking a Perl script, type:
 ```
-set PATHEXT=.pl;%PATHEXT%
+set pathEXT=.pl;%pathEXT%
 ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

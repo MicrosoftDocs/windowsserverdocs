@@ -1,3 +1,3 @@
 ---
-redirect_url: WindowsServerDocs/management/windows-commands/Bdehdcfg-newdriveletter.md
+redirect_url: WindowsServerdocs/management/windows-commands/bdehdcfg-newdriveletter.md
 ---

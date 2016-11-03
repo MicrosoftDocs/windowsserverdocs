@@ -1,5 +1,5 @@
 ---
-title: Telnet: unset
+title: telnet: unset
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Telnet: unset
+# telnet: unset
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -28,16 +28,16 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 |-------|--------|  
 |bsasdel|Sends **Backspace** as a **Backspace**.|  
 |crlf|Sends the **Enter** key as a CR. Also known as line feed mode.|  
-|delasbs|Sends **Delete** as **Delete**.|  
-|escape|Removes the escape character setting.|  
+|delasbs|Sends **delete** as **delete**.|  
+|escape|removes the escape character setting.|  
 |localecho|Turns off localecho.|  
 |logging|Turns off logging.|  
 |ntlm|Turns off NTLM authentication.|  
-|?|Displays Help for this command.|  
+|?|Displays help for this command.|  
 ## <a name="BKMK_Examples"></a>Examples  
 Turn off logging.  
 ```  
 u logging  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

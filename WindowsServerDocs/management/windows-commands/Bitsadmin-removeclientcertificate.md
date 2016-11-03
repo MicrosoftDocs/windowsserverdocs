@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin removeclientcertificate
-description: "Windows Commands topic for **Bitsadmin removeclientcertificate** - Removes the client certificate from the job."
+title: bitsadmin removeclientcertificate
+description: "Windows Commands topic for **bitsadmin removeclientcertificate** - removes the client certificate from the job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,16 +14,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin removeclientcertificate
+# bitsadmin removeclientcertificate
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes the client certificate from the job.
+removes the client certificate from the job.
 
 ## Syntax
 
 ```
-bitsadmin /RemoveClientCertificate <Job> 
+bitsadmin /removeClientCertificate <Job> 
 ```
 
 ## Parameters
@@ -36,10 +36,10 @@ bitsadmin /RemoveClientCertificate <Job>
 The following example removes the client certificate from the job named *myJob*.
 
 ```
-C:\>Bitsadmin /RemoveClientCertificate myJob 
+C:\>bitsadmin /removeClientCertificate myJob 
 ```
 
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
 
 

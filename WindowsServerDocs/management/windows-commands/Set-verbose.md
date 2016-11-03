@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Specifies whether verbose output is provided during shadow copy creation. If used without parameters, **set verbose** displays help at the command prompt.  
+Specifies whether verbose output is provided during shadow copy creation. if used without parameters, **set verbose** displays help at the command prompt.  
   
 ## Syntax  
   
@@ -32,11 +32,11 @@ set verbose {on | off}
 |-------|--------|  
 |{on &#124; off}|Turns verbose mode on or off.|  
   
-## Remarks  
+## remarks  
   
--   If verbose mode is on, **set** provides details of writer inclusion or exclusion and details of metadata compression and extraction.  
+-   if verbose mode is on, **set** provides details of writer inclusion or exclusion and details of metadata compression and extraction.  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

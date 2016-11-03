@@ -1,5 +1,5 @@
 ---
-title: Title_1
+title: title_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,12 +15,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Title_1
+# title_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Creates a title for the Command Prompt window.  
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+creates a title for the Command prompt window.  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
 ```  
 title [<String>]  
@@ -28,19 +28,19 @@ title [<String>]
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<String>|Specifies the title of the Command Prompt window.|  
+|<String>|Specifies the title of the Command prompt window.|  
 |/?|Displays help at the command prompt.|  
-## Remarks  
+## remarks  
 -   To create window title for batch programs, include the **title** command at the beginning of a batch program.  
 -   After a window title is set, you can reset it only by using the **title** command.  
 ## <a name="BKMK_examples"></a>Examples  
-In the following sample script, the title of the Command Prompt window is changed to "Updating Files" while the batch file executes the **copy** command. After the command is executed, the text `Files Updated` is displayed, and the title of the Command Prompt window is changed back to "Command Prompt."  
+In the following sample script, the title of the Command prompt window is changed to "Updating Files" while the batch file executes the **copy** command. After the command is executed, the text `Files Updated` is displayed, and the title of the Command prompt window is changed back to "Command prompt."  
 ```  
 @echo off  
 title Updating Files  
 copy \\server\share\*.xls c:\users\common\*.xls  
 echo Files Updated.  
-title Command Prompt  
+title Command prompt  
 ```  
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  

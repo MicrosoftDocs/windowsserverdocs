@@ -1,5 +1,5 @@
 ---
-title: Create_1
+title: create_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Create_1
+# create_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Starts the shadow copy creation process, using the current context and option settings. Requires at least one volume in the Shadow Copy Set.  
+starts the shadow copy creation process, using the current context and option settings. Requires at least one volume in the shadow copy Set.  
   
 ## Syntax  
   
@@ -26,7 +26,7 @@ Starts the shadow copy creation process, using the current context and option se
 create  
 ```  
   
-## Remarks  
+## remarks  
   
 -   You must add at least one volume with the **add volume** command before you can use the **create** command.  
   
@@ -34,7 +34,7 @@ create
   
 -   After you run the **create** command, you can use the **exec** command to run a duplication script for backup from the shadow copy.  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

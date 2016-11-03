@@ -1,3 +1,3 @@
 ---
-redirect_url: /windowsserverdocs/management/windows-commands/Manage-bde--WipeFreeSpace.md
+redirect_url: /windowsserverdocs/management/windows-commands/manage-bde--wipefreespace.md
 ---

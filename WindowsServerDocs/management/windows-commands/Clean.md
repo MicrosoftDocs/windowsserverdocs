@@ -1,5 +1,5 @@
 ---
-title: Clean
+title: clean
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Clean
+# clean
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-The Diskpart Clean command removes any and all partition or volume formatting from the disk with focus.
+The Diskpart clean command removes any and all partition or volume formatting from the disk with focus.
 ## Syntax
 ```
 clean [all]
@@ -27,9 +27,9 @@ clean [all]
 |Parameter|Description|
 |-------|--------|
 |all|Specifies that each and every sector on the disk is set to zero, which completely deletes all data contained on the disk.|
-## Remarks
+## remarks
 -   On master boot record (MBR) disks, only the MBR partitioning information and hidden sector information are overwritten.
--   On GUID Partition Table (GPT) disks, the GPT partitioning information, including the Protective MBR, is overwritten. There is no hidden sector information.
+-   On GUID Partition Table (gpt) disks, the gpt partitioning information, including the Protective MBR, is overwritten. There is no hidden sector information.
 -   A disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 ## <a name="BKMK_examples"></a>Examples
 To remove all formatting from the selected disk, type:

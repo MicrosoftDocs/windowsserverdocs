@@ -1,3 +1,3 @@
 ---
-redirect_url: /windows-server-docs/management/windows-commands/Scwcmd-rollback.md
+redirect_url: /windows-server-docs/management/windows-commands/scwcmd-rollback.md
 ---

@@ -1,5 +1,5 @@
 ---
-title: Detail partition
+title: detail partition
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Detail partition
+# detail partition
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -26,7 +26,7 @@ Displays the properties of the selected partition.
 detail partition  
 ```  
   
-## Remarks  
+## remarks  
   
 -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.  
   
@@ -37,8 +37,8 @@ To see the properties of the selected partition, type:
 detail partition  
 ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

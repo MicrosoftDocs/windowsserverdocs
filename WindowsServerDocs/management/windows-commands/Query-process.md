@@ -1,5 +1,5 @@
 ---
-title: Query process
+title: query process
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,15 +14,15 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Query process
+# query process
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays information about processes that are running on a Remote Desktop Session Host (RD Session Host) server.
+Displays information about processes that are running on a remote Desktop Session Host (rd Session Host) server.
 You can use this command to find out which programs a specific user is running, and also which users are running a specific program.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 ## Syntax
 ```
 query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <ProgramName>] [/server:<ServerName>]
@@ -30,19 +30,19 @@ query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <Progra
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|*|Lists the processes for all sessions.|
+|*|lists the processes for all sessions.|
 |<ProcessID>|Specifies the numeric ID identifying the process that you want to query.|
 |<UserName>|Specifies the name of the user whose processes you want to list.|
 |<SessionName>|Specifies the name of the session whose processes you want to list.|
 |/id:<nn>|Specifies the ID of the session whose processes you want to list.|
 |<ProgramName>|Specifies the name of the program whose processes you want to query. The .exe extension is required.|
-|/server:<ServerName>|Specifies the RD Session Host server whose processes you want to list. If unspecified, the server where you are currently logged on is used.|
+|/server:<ServerName>|Specifies the rd Session Host server whose processes you want to list. if unspecified, the server where you are currently logged on is used.|
 |/?|Displays help at the command prompt.|
-## Remarks
+## remarks
 -   Administrators have full access to all **query process** functions.
--   If you do not specify the <*UserName*>, <*SessionName*>, **/id:**<*nn*>, <*ProgramName*>, or **\*** parameters, **query process** displays only the processes that belong to the current user.
--   If a session is specified, it must identify an active session.
--   **Query process** returns the following information:
+-   if you do not specify the <*UserName*>, <*SessionName*>, **/id:**<*nn*>, <*ProgramName*>, or **\*** parameters, **query process** displays only the processes that belong to the current user.
+-   if a session is specified, it must identify an active session.
+-   **query process** returns the following information:
     -   The user who owns the process
     -   The session that owns the process
     -   The ID of the session
@@ -58,7 +58,7 @@ query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <Progra
     ```
     query process /ID:2
     ```
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-[Query](Query.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
+#### additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)
+[query](query.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Fveupdate
+title: fveupdate
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,8 +14,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Fveupdate
+# fveupdate
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-FveUpdate is an internally used tool that is run by setup when a computer is upgraded from Windows Vista or  Windows Server 2008  to  Windows 7  or  Windows Server 2008 R2 . It updates the metadata associated with BitLocker to the latest version. This tool cannot be run independently.
+fveupdate is an internally used tool that is run by setup when a computer is upgraded from Windows Vista or  Windows Server 2008  to  Windows 7  or  Windows Server 2008 R2 . It updates the metadata associated with BitLocker to the latest version. This tool cannot be run independently.

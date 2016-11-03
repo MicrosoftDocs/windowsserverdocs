@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 A server role describes the primary function of the server. Administrators can choose to dedicate an entire server to one role, or install multiple server roles and sub roles on a single computer. Each role may include additional command-line tools, installed as part of the role. The following topics provide a list of commands associated with each server role.
 
--   [Print Command Reference](Print-Command-Reference.md)
--   [Services for Network File System Command Reference](Services-for-Network-File-System-Command-Reference.md)
--   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services-Terminal-Services-Command-Reference.md)
--   [Windows Server Backup Command Reference](Windows-Server-Backup-Command-Reference.md)
+-   [print Command Reference](print-command-reference.md)
+-   [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
+-   [remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+-   [Windows Server Backup Command Reference](windows-server-backup-command-reference.md)

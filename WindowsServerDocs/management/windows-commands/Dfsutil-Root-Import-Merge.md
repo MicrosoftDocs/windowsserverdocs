@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Root Import Merge
+title: dfsutil Root import Merge
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Root Import Merge
+# dfsutil Root import Merge
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -24,7 +24,7 @@ The **dfsutil root import merge** command imports folders, folder targets and co
 ## Syntax
 
 ```
-dfsutil root import merge <filename> <\\destserver\share> [NoBackup] [Verbose] /?
+dfsutil root import merge <filename> <\\destserver\share> [NoBackup] [verbose] /?
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ dfsutil root import merge <filename> <\\destserver\share> [NoBackup] [Verbose] /
 |<\\\\destserver\\share>|UNC path to the namespace to which you want to import the configuration.|
 |<filename>|Name of the xml file from which you want to import the namespace configuration.|
 |NoBackup|Does not create backup file to restore overwritten folders and folder targets.|
-|Verbose|Displays detailed status of the import process.|
+|verbose|Displays detailed status of the import process.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
@@ -56,12 +56,12 @@ To view help for this command, type:
 dfsutil root import Merge /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil Root](Dfsutil-Root.md)
+-   [dfsutil Root](dfsutil-root.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

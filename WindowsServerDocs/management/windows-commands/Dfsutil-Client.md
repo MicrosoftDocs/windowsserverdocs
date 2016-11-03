@@ -1,5 +1,5 @@
 ---
-title: Dfsutil Client
+title: dfsutil Client
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Dfsutil Client
+# dfsutil Client
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 The **dfsutil client** command is used to modify or view the client registry keys or display the site information.
@@ -24,16 +24,16 @@ The **dfsutil client** command is used to modify or view the client registry key
 ## Syntax
 
 ```
-dfsutil client | Registry | SiteInfo | Property | /?
+dfsutil client | registry | SiteInfo | Property | /?
 ```
 
 ### Parameters
 
 |Parameter|Description|
 |-------|--------|
-|Dfsutil Client Registry|Sets, resets, or displays registry keys.|
-|Dfsutil Client SiteInfo|Displays the Siteinformation.|
-|Dfsutil Client Property|Displays or modifies local machine's cache information.|
+|dfsutil Client registry|Sets, resets, or displays registry keys.|
+|dfsutil Client SiteInfo|Displays the Siteinformation.|
+|dfsutil Client Property|Displays or modifies local machine's cache information.|
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
@@ -43,10 +43,10 @@ To view help for this command, type:
 dfsutil client /?
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 
--   [Dfsutil](Dfsutil.md)
+-   [dfsutil](dfsutil.md)
 
 

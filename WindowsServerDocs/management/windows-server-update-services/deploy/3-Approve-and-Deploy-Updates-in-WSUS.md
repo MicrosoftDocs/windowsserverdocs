@@ -15,13 +15,13 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Computers in a computer group automatically contact the WSUS server over the next 24 hours to obtain updates. You can use the WSUS reporting feature to determine whether those updates were deployed to the test computers. When the tests are successfully completed, you can approve the updates for the applicable computer groups in your organization. The following checklist describes the steps to approve and deploy updates by using WSUS management console.
+computers in a computer group automatically contact the WSUS server over the next 24 hours to obtain updates. You can use the WSUS reporting feature to determine whether those updates were deployed to the test computers. When the tests are successfully completed, you can approve the updates for the applicable computer groups in your organization. The following checklist describes the steps to approve and deploy updates by using WSUS management console.
 
 |Task|Description|
 |----|--------|
-|[3.1. Approve and deploy WSUS updates](3-Approve-and-Deploy-Updates-in-WSUS.md#BKM_3.1.)|Approve and deploy WSUS updates by using the WSUS Management Console.|
-|[3.2. Configure auto-approval rules](3-Approve-and-Deploy-Updates-in-WSUS.md#BKM_3.2.a.)|Configure WSUS to automatically approve installation of updates for selected groups, and how to approve revisions to existing updates.|
-|[3.3. Review installed updates with WSUS Reports](3-Approve-and-Deploy-Updates-in-WSUS.md#BKM_3.3.)|Review the updates that were installed, the computers that received those updates and other details by using the WSUS Reporting feature.|
+|[3.1. Approve and deploy WSUS updates](3-approve-and-deploy-updates-in-wsus.md#BKM_3.1.)|Approve and deploy WSUS updates by using the WSUS Management Console.|
+|[3.2. Configure auto-approval rules](3-approve-and-deploy-updates-in-wsus.md#BKM_3.2.a.)|Configure WSUS to automatically approve installation of updates for selected groups, and how to approve revisions to existing updates.|
+|[3.3. Review installed updates with WSUS Reports](3-approve-and-deploy-updates-in-wsus.md#BKM_3.3.)|Review the updates that were installed, the computers that received those updates and other details by using the WSUS Reporting feature.|
 
 ## <a name="BKM_3.1."></a>3.1. Approve and deploy WSUS updates
 Use the following procedure to approve and deploy updates.
@@ -32,7 +32,7 @@ Use the following procedure to approve and deploy updates.
 
 2.  In the **All Updates** section, click **Updates needed by computers**.
 
-3.  In the list of updates, select the updates that you want to approve for installation in your test computer group. Information about a selected update is available in the bottom pane of the **Updates** panel. To select multiple contiguous updates, hold down the **SHIFT** key while clicking the update names. To select multiple noncontiguous updates, press down the **CTRL** key while clicking the update names.
+3.  In the list of updates, select the updates that you want to approve for installation in your test computer group. Information about a selected update is available in the bottom pane of the **Updates** panel. To select multiple contiguous updates, hold down the **shift** key while clicking the update names. To select multiple noncontiguous updates, press down the **CTRL** key while clicking the update names.
 
 4.  Right-click the selection, and then click **Approve**.
 
@@ -51,9 +51,9 @@ Automatic Approvals enables you to specify how to automatically approve installa
 
 2.  In **Options**, click **Automatic Approvals**. The Automatic Approvals dialog opens.
 
-3.  In **Update Rules**, click **New Rule**. The **Add Rule** dialog opens.
+3.  In **Update Rules**, click **New Rule**. The **add Rule** dialog opens.
 
-4.  In **Add Rule**, in **Step 1: Select Properties**, select any single option, or combination of options from the following:
+4.  In **add Rule**, in **Step 1: select Properties**, select any single option, or combination of options from the following:
 
     -   **When an update is in a specific classification**
 
@@ -61,7 +61,7 @@ Automatic Approvals enables you to specify how to automatically approve installa
 
     -   **Set a deadline for the approva**l
 
-5.  In **Step 2: Edit the properties**, click each of the options listed, and then select the appropriate options for each.
+5.  In **Step 2: edit the properties**, click each of the options listed, and then select the appropriate options for each.
 
 6.  In  **Step 3: Specify a name**, type a name for your rule, and then click **OK**.
 
@@ -76,7 +76,7 @@ Automatic Approvals enables you to specify how to automatically approve installa
 
 2.  On the **Reports** page, click the **Update Status Summary** report. The **Updates Report** window appears.
 
-3.  If you want to filter the list of updates, select the criteria that you want to use, for example, **Include updates in these classifications**, and then click **Run Report**.
+3.  if you want to filter the list of updates, select the criteria that you want to use, for example, **Include updates in these classifications**, and then click **Run Report**.
 
 4.  You will see the **Updates Report** pane. You can check the status of individual updates by selecting the update in the left section of the pane. The last section of the report pane shows the status summary of the update.
 

@@ -1,6 +1,6 @@
 ---
-title: Bitsadmin geterror
-description: "Windows Commands topic for **Bitsadmin geterror** - Retrieves detailed error information for the specified job."
+title: bitsadmin geterror
+description: "Windows Commands topic for **bitsadmin geterror** - Retrieves detailed error information for the specified job."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Bitsadmin geterror
+# bitsadmin geterror
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -32,5 +32,5 @@ The following example retrieves the error information for the job named *myDownl
 ```
 C:\>bitsadmin /GetError myDownloadJob
 ```
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](command-line-syntax-key.md)

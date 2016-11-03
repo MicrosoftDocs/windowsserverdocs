@@ -1,5 +1,5 @@
 ---
-title: Msiexec
+title: msiexec
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,10 +15,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Msiexec
+# msiexec
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-## Msiexec  
+## msiexec  
 Provides the means to install, modify, and perform operations on Windows Installer from the command line.  
-For the syntax and examples of how to use this command, see [Msiexec](http://go.microsoft.com/fwlink/?LinkId=94329).  
+for the syntax and examples of how to use this command, see [msiexec](http://go.microsoft.com/fwlink/?LinkId=94329).  

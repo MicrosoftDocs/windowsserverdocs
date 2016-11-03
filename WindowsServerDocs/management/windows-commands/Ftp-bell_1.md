@@ -1,5 +1,5 @@
 ---
-title: Ftp: bell_1
+title: ftp: bell_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ftp: bell_1
+# ftp: bell_1
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
@@ -25,12 +25,12 @@ bell
 ```  
 ### Parameters  
 none  
-## Remarks  
+## remarks  
 By default, bell is off.  
 ## <a name="BKMK_Examples"></a>Examples  
 Toggle an audible sound to occur after each file transfer command is completed.  
 ```  
 bell  
 ```  
-## Additional references  
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+## additional references  
+-   [Command-Line Syntax Key](command-line-syntax-key.md)  

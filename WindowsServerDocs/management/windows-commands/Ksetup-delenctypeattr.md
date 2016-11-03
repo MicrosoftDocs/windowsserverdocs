@@ -1,5 +1,5 @@
 ---
-title: Ksetup:delenctypeattr
+title: ksetup:delenctypeattr
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,11 +14,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-# Ksetup:delenctypeattr
+# ksetup:delenctypeattr
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Removes the encryption type attribute for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+removes the encryption type attribute for the domain. for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /delenctypeattr <DomainName> 
@@ -27,7 +27,7 @@ ksetup /delenctypeattr <DomainName>
 |Parameter|Description|
 |-------|--------|
 |<DomainName>|Name of the domain to which you want to establish a connection. Use the fully qualified domain name or a simple form of the name, such as corp.contoso.com or contoso.|
-## Remarks
+## remarks
 To view the encryption type for the Kerberos ticket-granting ticket (TGT) and the session key, run the **klist** command and view the output.
 A status message is displayed upon successful or failed completion.
 To set the domain that you want to connect to and use, run the **ksetup /domain <DomainName>** command.
@@ -40,18 +40,18 @@ Set the domain to mit.contoso.com:
 ```
 ksetup /domain mit.contoso.com
 ```
-Verify what the encryption type attribute is for the domain:
+verify what the encryption type attribute is for the domain:
 ```
 ksetup /getenctypeattr mit.contoso.com
 ```
-Remove the set encryption type attribute for the domain mit.contoso.com:
+remove the set encryption type attribute for the domain mit.contoso.com:
 ```
 ksetup /delenctypeattr mit.contoso.com
 ```
-## Additional references
--   [Klist](Klist.md)
--   [Ksetup:domain](Ksetup-domain.md)
--   [Ksetup:addenctypeattr](Ksetup-addenctypeattr.md)
--   [Ksetup:setenctypeattr](Ksetup-setenctypeattr.md)
--   [Ksetup:delenctypeattr](Ksetup-delenctypeattr.md)
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## additional references
+-   [klist](klist.md)
+-   [ksetup:domain](ksetup-domain.md)
+-   [ksetup:addenctypeattr](ksetup-addenctypeattr.md)
+-   [ksetup:setenctypeattr](ksetup-setenctypeattr.md)
+-   [ksetup:delenctypeattr](ksetup-delenctypeattr.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
