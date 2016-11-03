@@ -24,8 +24,8 @@ The first step of planning for an advanced DirectAccess deployment on a single s
 |----|--------|  
 |[1.1 Plan network topology and settings](#bkmk_11Networksvrtopsettings)|Decide where to place the DirectAccess server (at the edge, or behind a Network Address Translation (NAT) device or firewall), and plan IP addressing, routing, and force tunneling.|  
 |[1.2 Plan firewall requirements](#bkmk_ConfigFirewalls)|Plan for allowing DirectAccess traffic through edge firewalls.|  
-|[1.3 Plan certificate requirements](#bkmk_12CAsandcerts)|Decide whether you want to use Kerberos or certificates for client authentication, and plan your website certificates. IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate to the IP-HTTPS server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the DirectAccess server.|  
-|[1.4 Plan DNS requirements](#bkmk_13DNS)|Plan Domain Name System (DNS) settings for the DirectAccess server, infrastructure servers, local name resolution options, and client connectivity.|  
+|[1.3 Plan certificate requirements](#bkmk_12CAsandCerts)|Decide whether you want to use Kerberos or certificates for client authentication, and plan your website certificates. IP-HTTPS is a transition protocol that is used by DirectAccess clients to tunnel IPv6 traffic over IPv4 networks. Decide whether to authenticate to the IP-HTTPS server by using a certificate that is issued by a certification authority (CA), or by using a self-signed certificate that is issued automatically by the DirectAccess server.|  
+|[1.4 Plan DNS requirements](#bkmk_14Dns)|Plan Domain Name System (DNS) settings for the DirectAccess server, infrastructure servers, local name resolution options, and client connectivity.|  
 |[1.5 Plan the network location server](#bkmk_14NLS)|The network location server is used by DirectAccess clients to determine whether they are located on the internal network. Decide where to place the network location server website in your organization (on the DirectAccess server or an alternate server), and plan the certificate requirements if the network location server is located on the DirectAccess server.|  
 |[1.6 Plan management servers](#bkmk_15mgmtservers)|You can remotely manage DirectAccess client computers that are located outside the corporate network on the Internet. Plan for management servers (such as update servers) that are used during remote client management.|  
 |[1.7 Plan Active Directory Domain Services](#bkmk_16AD)|Plan for your domain controllers, your Active Directory requirements, client authentication, and multiple domains.|  
@@ -139,7 +139,7 @@ When you use additional firewalls, apply the following internal network firewall
   
 -   ICMP for all IPv4 and IPv6 traffic (when using Teredo only)  
   
-## <a name="bkmk_12CAsandcerts"></a>1.3 Plan certificate requirements  
+## <a name="bkmk_12CAsandCerts"></a>1.3 Plan certificate requirements  
 There are three scenarios that require certificates when you deploy a single DirectAccess server:  
   
 -   [1.3.1 Plan computer certificates for IPsec authentication](#BKMK_compcert)  
@@ -292,7 +292,7 @@ When you plan for the network location server website, consider the following:
     > [!NOTE]  
     > Ensure that the certificates for IP-HTTPS and the network location server have a **Subject Name**. If the certificate does not have a **Subject Name**, but it has an **Alternative Name**, it will not be accepted by the Remote Access Wizard.  
   
-## <a name="bkmk_13DNS"></a>1.4 Plan DNS requirements  
+## <a name="bkmk_14Dns"></a>1.4 Plan DNS requirements  
 This section explains  the DNS requirements for DirectAccess client requests and infrastructure servers in a Remote Access deployment. It includes the following subsections:  
   
 -   [1.4.1 Plan for DNS server requirements](#bkmk_dnsserverrequirements)  
@@ -675,7 +675,7 @@ The Remote Access Management console will display the following error message: *
   
 ## <a name="BKMK_Links"></a>Next step  
   
--   [Step 2: Plan DirectAccess Deployments](../../../remote-access/directaccess/single-server-advanced/Step-2-Plan-DirectAccess-Deployments.md)  
+-   [Step 2: Plan DirectAccess Deployments](da-adv-plan-s2-deployments.md)  
   
 
 

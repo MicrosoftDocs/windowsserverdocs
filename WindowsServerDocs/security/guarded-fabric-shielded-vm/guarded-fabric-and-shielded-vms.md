@@ -54,7 +54,7 @@ Encryption-supported VMs are intended for use where the fabric administrators ar
 
 Shielded VMs are intended for use in fabrics where the data and state of the VM must be protected from both fabric administrators and untrusted software that might be running on the Hyper-V hosts. For example, shielded VMs will never permit a VM console connection whereas a fabric administrator can turn this protection on or off for encryption supported VMs.
 
-The followuing table summarizes the differences between encryption support and shielded VMs.
+The following table summarizes the differences between encryption-supported and shielded VMs.
 
 | Capability        | Generation 2 Encryption Supported     | Generation 2 Shielded         |
 |----------|--------------------|----------------|

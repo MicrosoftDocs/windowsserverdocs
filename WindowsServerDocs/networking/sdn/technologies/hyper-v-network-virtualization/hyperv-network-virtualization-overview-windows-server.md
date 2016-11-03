@@ -1,5 +1,7 @@
 ---
 title: Hyper-V Network Virtualization Overview in Windows Server 2016
+description: This topic provides an overview of Hyper-V Network Virtualization in Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,7 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
-ms.author: victorh
+ms.author: jamesmci
 author: vhorne
 ---
 # Hyper-V Network Virtualization Overview in Windows Server 2016
