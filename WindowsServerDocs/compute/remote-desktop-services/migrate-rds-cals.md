@@ -21,7 +21,7 @@ You have three options to migrate your RDS CALs:
 2. Using a web browser: This method allows migration when the server running the Remote Desktop Licensing Manager tool does not have internet connectivity, but the administrator has internet connectivity on a separate device. The URL for the Web migration method is displayed in the Manage RDS CALs Wizard. 
 3. Using a telephone: This method allows the administrator to complete the migration process over the phone with a Microsoft representative. The appropriate telephone number is determined by the country/region that you chose in the Activate Server Wizard and is displayed in the Manage RDS CALs Wizard.
 
-In this article, the [Establish RDS CAL migration method](#establish-RDS-CAL-migration-method) highlights the general steps common across any RDS CAL migration method, while [Migrate RDS CALs](#migrate-RDS-CALs) highlights the steps specific each migration method.
+In this article, the [Establish RDS CAL migration method](#establish-RDS-CAL-migration-method) highlights the general steps common across any RDS CAL migration method, while [Migrate RDS CALs](#migrate-RDS-CALs) highlights the steps specific to each migration method.
 
 Regardless of migration method, you must, at a minimum, be a member of the local Administrators group to perform the migration steps.
 
@@ -39,11 +39,11 @@ Regardless of migration method, you must, at a minimum, be a member of the local
     
        On the Source License Server Information page, enter the name or IP address of the source license server.
 
-       If the source license server is available on the network, click **Next**. The wizard contacts the source license server. If the source license server is running an operating system earlier than Windows Server 2008 R2 or the source license server is deactivated, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the Obtain Client License Key Pack page appears.
+       If the source license server is available on the network, click **Next**. The wizard contacts the source license server. If the source license server is running an operating system earlier than Windows Server 2008 R2 or the source license server is deactivated, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the **Obtain Client License Key Pack** page appears.
 
-       If the source license server is not available on the network, select **The specified source license server is not available on the network**. Specify the operating system that the source license server is running, and then provide the license server ID for the source license server. After you click **Next**, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the Obtain Client License Key Pack page appears.
+       If the source license server is not available on the network, select **The specified source license server is not available on the network**. Specify the operating system that the source license server is running, and then provide the license server ID for the source license server. After you click **Next**, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the **Obtain Client License Key Pack** page appears.
 
-    - If you chose **The source license server is no longer functioning** as the reason for migrating the RDS CALs, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the Obtain Client License Key Pack page appears.
+    - If you chose **The source license server is no longer functioning** as the reason for migrating the RDS CALs, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the **Obtain Client License Key Pack** page appears.
 
 The next step is to migrate the CALs - use the information below to complete the wizard. Note that what you see in the wizard depends on the connection method you identified in Step 2 above.
 
@@ -70,11 +70,8 @@ If you are running Remote Desktop Licensing Manager on a computer that does not 
     - **License Program**: Choose the program through which you purchased your RDS CALs.
 4. Provide the following required information, then click **Next**:
     - Last name or surname
-
     - First name or given name
-
     - Company name
-
     - Country/region
 
     You can also provide the optional information requested, such as company address, e-mail address, and phone number. In the organizational unit field, you can describe the unit within your organization that this license server serves.
@@ -82,8 +79,8 @@ If you are running Remote Desktop Licensing Manager on a computer that does not 
 5. The License Program that you selected on the previous page determines what information you need to provide on the next page. In most cases, you must provide either a license code or an agreement number. Consult the documentation provided when you purchased your RDS CALs. In addition, you need to specify which type of RDS CAL and the quantity that you want to migrate to the license server.
 6. After you have entered the required information, click **Next**.
 7. Verify that all of the information that you have entered is correct, then click **Next** to submit your request to the Microsoft Clearinghouse. The web page then displays a license key pack ID generated by the Microsoft Clearinghouse.
-    > [!IMPORTANT] 
-    > Keep a copy of the license key pack ID. Having this information with you facilitates communications with the Microsoft Clearinghouse, should you need assistance with recovering RDS CALs.
+   > [!IMPORTANT] 
+   > Keep a copy of the license key pack ID. Having this information with you facilitates communications with the Microsoft Clearinghouse, should you need assistance with recovering RDS CALs.
 8. On the same **Obtain Client License Key Pack** page, enter the license key pack ID, and then click **Next** to migrate the RDS CALs to your license server.
 9. Click **Finish** to complete the RDS CAL migration process.
 
