@@ -157,7 +157,7 @@ If using the Cluster powershell cmdlet:
     + CategoryInfo          : NotSpecified: (:) [Move-ClusterGroup], ClusterCmdletException
     + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 
-This occurs due to a product limitation in Windows Server 2016. As a workaround, use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster. This behavior may change in a later release. 
+This occurs due to a by-design behavior in Windows Server 2016. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.  
 
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found" 
 When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You recieve the following error:
