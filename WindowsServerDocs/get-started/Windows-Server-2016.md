@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/10/2016
+ms.date: 11/02/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -28,44 +28,44 @@ manager: dongill
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/1-getstarted.png" alt="alt text" title="Get started" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/1-getstarted.png" alt="alt text" title="Get started" />
       </a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/2-compute.png" alt="alt text" title="Windows Server Compute" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/2-compute.png" alt="alt text" title="Windows Server Compute" />
       </a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/failover-clustering/failover-clustering-overview">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/3-failover.png" alt="Failover clustering" title="Failover clustering" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/3-failover.png" alt="Failover clustering" title="Failover clustering" />
       </a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/identity/identity-and-access">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/4-identity.png" alt="alt text" title="Windows Server Identity and Access" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/4-identity.png" alt="alt text" title="Windows Server Identity and Access" />
       </a>
     </td>
   </tr>
   <tr style="text-align:center;">
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/security/security-and-assurance">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/5-security.png" alt="alt text" title="Windows Server Security and Assurance" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/5-security.png" alt="alt text" title="Windows Server Security and Assurance" />
       </a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/networking/networking">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/6-networking.png" alt="alt text" title="Windows Server Networking" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/6-networking.png" alt="alt text" title="Windows Server Networking" />
       </a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/7-storage.png" alt="alt text" title="Windows Server Storage" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/7-storage.png" alt="alt text" title="Windows Server Storage" />
       </a>
     </td>
     <td style="width:25%; border:0;">
       <a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
-        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/8-management.png" alt="alt text" title="Windows Server Management and Automation" />
+        <img height=145 src="https://i-technet.sec.s-msft.com/en-us/windows-server-docs/get-started/media/8-management.png" alt="alt text" title="Windows Server Management and Automation" />
       </a>
     </td>
   </tr>
@@ -106,9 +106,9 @@ Now that you know which edition and installation option is right for you, click 
 
 <table border=0 width="100%">
   <tr style='text-align:center;'>
-    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server">![Nano](nano.png)</a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core">![Server core](servercore.png)</a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience">![Desktop](desktop.png)</a></td>
+    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server">![Nano](media/nano.png)</a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core">![Server core](media/servercore.png)</a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience">![Desktop](media/desktop.png)</a></td>
   </tr>
 </table>
 
