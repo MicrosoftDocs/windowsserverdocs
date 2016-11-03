@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/31/2016
+ms.date: 11/03/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -36,6 +36,10 @@ To avoid this, after the first boot, set the print spooler to disabled.
 
 [comment]: # (ID: 373; Submitter: plang; state: signed off)  
 - The NanoServerPackage OneGet provider does not work in Windows Containers. To work around this, use Find-NanoServerPackage and Save-NanoServerPackage on a different computer (not a container) to download the needed package. Then copy the packages into the container and install them.
+
+## Microsoft Exchange
+[comment]: # (ID: 375; Submitter: wgries; state: signed off)
+If you attempt to run Microsoft Exchange 2016 CU3 on Windows Server 2016, you will experience errors in the IIS host process W3WP.exe. There is no workaround at this time. You should postpone deployment of Exchange 2016 CU3 on Windows Server 2016 until a supported fix is available.
 
 ## Remote Server Administration Tools (RSAT)
 [comment]: # (ID: 374; Submitter: ryanpu; state: signed off)
