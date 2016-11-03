@@ -92,7 +92,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
 -   **IPv6 prefixes**  
   
-    If the Remote Access Server Setup Wizard detects that IPv6 has been deployed on the network adapters, it automatically populates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 infrastructure, you must manually change them. For more information, see [1.1 Plan network topology and settings](da-adv-plan-s1-infrastructure.md#bkmk_1_1_Network_svr_top_settings).  
+    If the Remote Access Server Setup Wizard detects that IPv6 has been deployed on the network adapters, it automatically populates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 infrastructure, you must manually change them. For more information, see [1.1 Plan network topology and settings](da-adv-plan-s1-infrastructure.md#bkmk_11Networksvrtopsettings).  
   
 -   **Authentication**  
   
@@ -100,7 +100,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/en-us/library/hh831379.aspx).  
   
-    -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](Step-1-Plan-the-DirectAccess-Infrastructure.md#bkmk_12CAsandCerts).  
+    -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](da-adv-plan-s1-infrastructure.md#bkmk_12CAsandCerts).  
   
     -   **Windows 7 clients**. By default, client computers that are running  Windows 7 cannot connect to a  Windows Server 2012 R2 or  Windows Server 2012 DirectAccess deployment. If you have clients in your organization that are running  Windows 7, and they require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the DirectAccess Client Setup Wizard.  
   
