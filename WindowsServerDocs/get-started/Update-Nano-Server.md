@@ -69,12 +69,14 @@ If you have a running Nano Server VM or physical host and you've downloaded the 
 
 > [!NOTE]
 > If you've created the Nano Server VHD or VHDX image using the New-NanoServerImage cmdlet and didn't specify a MaxSize for the virtual hard disk file, the default size of 4GB is too small to apply the cumulative update. Prior to installing the update, use Hyper-V Manager, Disk Management, PowerShell, or other tool to expand the size of the virtual hard disk and system volume to at least 10GB, or use the ScratchDir parameter on the DISM tools to set the scratch directory to a volume with at least 10GB of free space.
+
 ```powershell
 $s = New-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Credential (Get-Credential)
 Copy-Item -ToSession $s -Path C:\ServicingPackages_cabs -Destination C:\ServicingPackages_cabs -Recurse
 Enter-PSSession $s
 ```
 - Using PowerShell
+
 ```powershell
 
 # Apply the servicing stack update first and then restart
