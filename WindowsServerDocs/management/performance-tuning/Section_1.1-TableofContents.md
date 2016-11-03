@@ -23,6 +23,8 @@ ms.date: 10/31/2016
 
 -   [Processor Power Management Tuning for Windows Server](./Section_3.1-PPMTuning.md)
 
+-   [Recommended Power Management Tuning Parameters](./Section_3.2-RecommendedPPMParameters.md)
+
 ## Subsystem Performance
 
 **Performance Tuning for Network Subsystems**
