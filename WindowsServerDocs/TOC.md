@@ -952,7 +952,7 @@
 ####### [What's New in RAS Gateway](networking/sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)
 ####### [RAS Gateway Deployment Architecture](networking/sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)
 ####### [RAS Gateway High Availability](networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)
-###### [Software Load Balancing (SLB) for SDN](networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)
+###### [Software Load Balancing (SLB) for SDN](networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
 ##### [Switch Embedded Teaming for SDN](networking/sdn/technologies/Set-for-Sdn.md)
 ##### [Container Networking](networking\sdn\technologies\Containers\Container-networking-overview.md)
 #### [Plan Software Defined Networking](networking/sdn/plan/Plan-Software-Defined-Networking.md)
