@@ -1,0 +1,75 @@
+---
+title: fsutil quota
+description: "Windows Commands topic for **** - "
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: ba654192-e712-4e22-95e9-7049f23bd7ac
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
+---
+# fsutil quota
+
+>Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+
+Manages disk quotas on NTFS volumes to provide more precise control of network\-based storage.  
+  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
+  
+## Syntax  
+  
+```  
+fsutil quota [disable] <volumepath>  
+fsutil quota [enforce] <volumepath>  
+fsutil quota [modify] <volumepath> <Threshold> <Limit> <UserName>  
+fsutil quota [query] <volumepath>  
+fsutil quota [track] <volumepath>  
+fsutil quota [violations]  
+```  
+  
+## Parameters  
+  
+|Parameter|Description|  
+|-------|--------|  
+|disable|Disables quota tracking and enforcement on the specified volume.|  
+|enforce|Enforces quota usage on the specified volume.|  
+|modify|Modifies an existing disk quota or creates a new quota.|  
+|query|lists existing disk quotas.|  
+|track|Tracks disk usage on the specified volume.|  
+|violations|Searches the system and application logs and displays a message to indicate that quota violations have been detected or that a user has reached a quota threshold or quota limit.|  
+|<volumepath>|Required. Specifies the drive name followed by a colon or the GUID in the format **volume{***GUID***}**.|  
+|<Threshold>|Sets the limit \(in bytes\) at which warnings are issued. This parameter is required for the **fsutil quota modify** command.|  
+|<Limit>|Sets the maximum allowed disk usage \(in bytes\). This parameter is required for the **fsutil quota modify** command.|  
+|<UserName>|Specifies the domain or user name. This parameter is required for the **fsutil quota modify** command.|  
+  
+## remarks  
+  
+-   Disk quotas are implemented on a per\-volume basis, and they enable both hard and soft storage limits to be implemented on a per\-user basis.  
+  
+-   You can use write scripts that use **fsutil quota** to set the quota limits every time you add a new user or to automatically track quota limits, compile them into a report, and automatically send them to the system administrator in e\-mail.  
+  
+### <a name="BKMK_examples"></a>Examples  
+To list existing disk quotas for a disk volume that is specified with the GUID, {928842df\-5a01\-11de\-a85c\-806e6f6e6963}, type:  
+  
+```  
+fsutil quota query volume{928842df-5a01-11de-a85c-806e6f6e6963}  
+```  
+  
+To list existing disk quotas for a disk volume that is specified with the drive letter, **C:**, type:  
+  
+```  
+fsutil quota query C:  
+```  
+  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
+  
+[fsutil](fsutil.md)  
+  
+
