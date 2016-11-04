@@ -1,5 +1,7 @@
 ---
 title: Plan Software Defined Networking
+description: The topics in this section provide deployment planning and prerequisite information about the Software Defined Networking technologies that are included in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,7 +10,7 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2feb222-328b-4f2e-9290-09fe3c3d5cf0
-ms.author: vhorne
+ms.author: jamesmci
 author: vhorne
 ---
 # Plan Software Defined Networking
