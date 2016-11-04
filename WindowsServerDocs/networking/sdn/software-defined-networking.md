@@ -37,7 +37,8 @@ This topic contains the following sections.
 -   [Windows Server Technologies for Software Defined Networking](#bkmk_ws)  
 
   
-## <a name="bkmk_sdn"></a>Software Defined Networking Overview  
+## <a name="bkmk_sdn"></a>Software Defined Networking Overview
+
 Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and Windows Server Gateway are designed to be integral elements of your software defined networking infrastructure. While you can still use your existing physical switches, routers, and other hardware devices, you can achieve deeper integration between the virtual network and the physical network if these devices are designed for compatibility with software defined networking.  
   
 Software defined networking is possible because the network planes - the management, control, and data planes - are no longer bound to the network devices themselves, but are abstracted for use by other entities, such as datacenter management software like System Center.  
@@ -71,7 +72,8 @@ Windows Server includes the following software defined networking technologies.
   
  
   
-### <a name="bkmk_nc"></a>Network Controller  
+### <a name="bkmk_nc"></a>Network Controller
+
 New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
   
 Network Controller is a highly available and scalable server role, and provides one application programming interface (API) - the Southbound API - that allows Network Controller to communicate with the network, and a second API - the Northbound API - that allows you to communicate with Network Controller.  
@@ -92,12 +94,14 @@ Using Windows PowerShell, the Representational State Transfer (REST) API, or a m
   
 For more information, see [Network Controller](../sdn/technologies/network-controller/Network-Controller.md).  
   
-### <a name="bkmk_hv"></a>Hyper-V Network Virtualization  
+### <a name="bkmk_hv"></a>Hyper-V Network Virtualization
+
 Hyper-V Network Virtualization helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. In addition, virtual networks are compatible with virtual Local Area Networks (VLANs).  
   
 For more information, see [Hyper-V Network Virtualization](../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
-### <a name="bkmk_switch"></a>Hyper-V Virtual Switch  
+### <a name="bkmk_switch"></a>Hyper-V Virtual Switch
+
 The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
   
 In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
@@ -105,11 +109,13 @@ In Hyper-V Virtual Switch in  Windows Server 2016, you can also deploy Switch Em
 For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
 ### <a name="bkmk_idns"></a>Internal DNS Service &#40;iDNS&#41;
+
 Hosted virtual machines \(VMs\) and applications require DNS to communicate within their own networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local name space and for Internet resources.
 
 For more information, see [Internal DNS Service &#40;iDNS&#41; for SDN](technologies/Idns-for-Sdn.md).
   
-### <a name="bkmk_nfv"></a>Network Function Virtualization  
+### <a name="bkmk_nfv"></a>Network Function Virtualization
+
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
 The following NFV technologies are now available.  
@@ -120,7 +126,7 @@ The following NFV technologies are now available.
   
     For more information, see [Datacenter Firewall Overview](../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).  
   
--   **Gateways**. You can use gateways for bridging traffic between virtual networks and non-virtualized networks; specifically, you can deploy site-to-site VPN gateways, forwarding gateways, and Generic Routing Encapsulation (GRE) gateways. In addition, M+N redundancy of gateways is supported.  
+-   **RAS Gateway**. You can use gateways for bridging traffic between virtual networks and non-virtualized networks; specifically, you can deploy site-to-site VPN gateways, forwarding gateways, and Generic Routing Encapsulation (GRE) gateways. In addition, M+N redundancy of gateways is supported.  
   
 For more information, see [Network Function Virtualization](../sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
