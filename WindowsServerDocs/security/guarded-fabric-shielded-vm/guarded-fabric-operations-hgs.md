@@ -46,6 +46,7 @@ If you used `Install-HgsServer` to set up a new forest for HGS, these groups wil
 If you joined HGS to an existing domain, you should refer to the group names you specified in `Initialize-HgsServer`.
 
 **Create standard users for the HGS administrator and reviewer roles**
+
 ```powershell
 $hgsServiceName = (Get-ClusterResource HgsClusterResource | Get-ClusterParameter DnsName).Value
 $adminGroup = $hgsServiceName + "Administrators"
@@ -62,12 +63,14 @@ Add-ADGroupMember -Identity $reviewerGroup -Members 'hgsreviewer01'
 
 On a remote machine that has network connectivity to HGS, run the following commands in PowerShell to enter the JEA session with the reviewer credentials.
 It is important to note that since the reviewer account is just a standard user, it cannot be used for regular PowerShell remoting, Remote Desktop access to HGS, etc.
+
 ```powershell
 Enter-PSSession -ComputerName <hgsnode> -Credential '<hgsdomain>\hgsreviewer01' -ConfigurationName 'microsoft.windows.hgs'
 ```
 
 You can then check which commands are allowed in the session with `Get-Command` and run any allowed commands to audit the configuration.
 In the below example, we are checking which policies are enabled on HGS.
+
 ```powershell
 Get-Command
 
@@ -101,8 +104,22 @@ Remove-PSSession -Session $session
 ```
 
 ## Monitoring HGS
-### Forwarding events to a Windows Event Collector
+### Event sources and forwarding
+Events from HGS will show up in the Windows event log under 2 sources:
+- **HostGuardianService-Attestation**
+- **HostGuardianService-KeyProtection**
+
+You can view these events by opening Event Viewer and navigating to Microsoft-Windows-HostGuardianService-Attestation and Microsoft-Windows-HostGuardianService-KeyProtection.
+
+In a large environment, it is often preferable to forward events to a central Windows Event Collector to make analyzation of the events easier.
+For more information, check out the [W]indows Event Forwarding documentation](https://msdn.microsoft.com/library/windows/desktop/bb427443.aspx).
+
 ### Using System Center Operations Manager
+You can also use System Center 2016 - Operations Manager to monitor HGS and your guarded hosts.
+The guarded fabric management pack has event monitors to check for common misconfigurations that can lead to datacenter downtime, including hosts not passing attestation and HGS servers reporting errors.
+
+To get started, [install and configure SCOM 2016](https://technet.microsoft.com/system-center-docs/om/welcome-to-operations-manager) and [download the guarded fabric management pack](https://www.microsoft.com/download/details.aspx?id=52764).
+The included management pack guide explains how to configure the management pack and understand the scope of its monitors.
 
 ## Backing up and restoring HGS
 ### Disaster recovery planning
@@ -165,11 +182,13 @@ Should an untrusted entity gain access to these keys, they could use that materi
 To back up the HGS attestation policies, run the following command on any working HGS server node.
 You will be prompted to provide a password.
 This password is used to encrypt any certificates added to HGS using a PFX file (instead of a certificate thumbprint).
+
 ```powershell
 Export-HgsServerState -Path C:\temp\HGSBackup.xml
 ```
 
-> **Note**: If you are using AD-trusted attestation, you must separately back up membership in the security groups used by HGS to authorize guarded hosts.
+> [!NOTE]
+> If you are using AD-trusted attestation, you must separately back up membership in the security groups used by HGS to authorize guarded hosts.
 > HGS will only back up the SID of the security groups, not the membership within them.
 > In the event these groups are lost during a disaster, you will need to recreate the group(s) and add each guarded host to them again.
 
@@ -178,6 +197,7 @@ Export-HgsServerState -Path C:\temp\HGSBackup.xml
 The `Export-HgsServerState` command will back up any PFX-based certificates added to HGS at the time the command is run.
 If you added certificates to HGS using a thumbprint (typical for non-exportable and hardware-backed certificates), you will need to manually back up the private keys for your certificates.
 To identify which certificates are registered with HGS and need to be backed up manually, run the following PowerShell command on any working HGS server node.
+
 ```powershell
 Get-HgsKeyProtectionCertificate | Where-Object { $_.CertificateData.GetType().Name -eq 'CertificateReference' } | Format-Table Thumbprint, @{ Label = 'Subject'; Expression = { $_.CertificateData.Certificate.Subject } }
 ```
@@ -221,18 +241,26 @@ Specifically, you will need to:
 2. [Initialize the HGS server](TODO) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](TODO) after importing your actual keys from the HGS backup files.
 3. [Import HGS settings](TODO) from your backup to restore the trusted host groups, code integrity policies, TPM baselines, and TPM identifiers
 
-> **Note** The new HGS cluster does not need to use the same certificates, service name, or domain as the HGS instance from which your backup file was exported.
+> [!TIP]
+> The new HGS cluster does not need to use the same certificates, service name, or domain as the HGS instance from which your backup file was exported.
 
 #### Import settings from a backup
+> [!WARNING]
+> `Import-HgsServerState` may not succeed in certain configurations until an update is made available.
+> Please ensure certificates and attestation artifacts are backed up separately until then.
+> This notice will be updated when the update is published.
+
 To restore attestation policies, PFX-based certificates, and the public keys of non-PFX certificates to your HGS node from a backup file, run the following command on an initialized HGS server node.
 You will be prompted to enter the password you specified when creating the backup.
+
 ```powershell
 Import-HgsServerState -Path C:\Temp\HGSBackup.xml
 ```
 
 If you only want to import AD-trusted attestation policies or TPM-trusted attestation policies, you can do so by specifying the `-ImportActiveDirectoryModeState` or `-ImportTpmModeState` flags to [Import-HgsServerState](https://technet.microsoft.com/en-us/library/mt652168.aspx).
 
-> **Note** If you restore policies on an existing HGS node that already has one or more of those policies installed, the import command will show an error for each duplicate policy.
+> [!NOTE]
+> If you restore policies on an existing HGS node that already has one or more of those policies installed, the import command will show an error for each duplicate policy.
 > This is an expected behavior and can be safely ignored in most cases.
 
 #### Reinstall private keys for certificates
@@ -252,6 +280,7 @@ If you find any policies which no longer match your security posture, you can [d
 #### Run diagnostics to check system state
 After you have finished setting up and restoring the state of your HGS node, you should run the HGS diagnostics tool to check the state of the system.
 To do this, run the following command on the HGS node where you restored the configuration:
+
 ```powershell
 Get-HgsTrace -RunDiagnostics
 ```
@@ -275,6 +304,7 @@ If an update for HGS introduces or significantly changes the behavior of an atte
 Policy changes are only enacted after exporting and importing the HGS state.
 You should only activate the new or changed policies after you have applied the cumulative update to all hosts and all HGS nodes in your environment.
 Once every machine has been updated, run the following commands on any HGS node to trigger the upgrade process:
+
 ```powershell
 $password = Read-Host -AsSecureString -Prompt "Enter a temporary password"
 Export-HgsServerState -Path .\temporaryExport.xml -Password $password
@@ -283,6 +313,7 @@ Import-HgsServerState -Path .\temporaryExport.xml -Password $password
 
 If a new policy was introduced, it will be disabled by default.
 To enable the new policy, first find it in the list of Microsoft policies (prefixed with 'HGS_') and then enable it using the following commands:
+
 ```powershell
 Get-HgsAttestationPolicy
 
@@ -329,6 +360,7 @@ Windows Server 2016 Standard cannot run shielded VMs in a guarded fabric.
 The host may be installed with any of the installation options (server with desktop experience, Server Core, and Nano Server).
 
 On server with desktop experience and Server Core, you need to install the Hyper-V and Host Guardian Hyper-V Support server roles:
+
 ```powershell
 Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
 ```
@@ -341,11 +373,13 @@ Typically, each domain will have one security group for guarded hosts.
 If you have already registered that group with HGS, the only action you need to take is to restart the host to refresh its group membership.
 
 You can check which security groups are trusted by HGS by running the following command:
+
 ```powershell
 Get-HgsAttestationHostGroup
 ```
 
 To register a new security group with HGS, first capture the security identifier (SID) of the group in the host's domain and register the SID with HGS.
+
 ```powershell
 Add-HgsAttestationHostGroup -Name "Contoso Guarded Hosts" -Identifier "S-1-5-21-3623811015-3361044348-30300820-1013"
 ```
@@ -361,11 +395,13 @@ As long as the host is running the same software (and has the same code integrit
 On the new host, run the following command to capture the TPM identifier.
 Be sure to specify a unique name for the host that will help you look it up on HGS.
 You will need this information if you decommission the host or want to prevent it from running shielded VMs in HGS.
+
 ```powershell
 (Get-PlatformIdentifier -Name "Host01").InnerXml | Out-File C:\temp\host01.xml -Encoding UTF8
 ```
 
 Copy this file to your HGS server, then run the following command to register the host with HGS.
+
 ```powershell
 Add-HgsAttestationTpmHost -Name 'Host01' -Path C:\temp\host01.xml
 ```
@@ -373,17 +409,20 @@ Add-HgsAttestationTpmHost -Name 'Host01' -Path C:\temp\host01.xml
 **Adding a new TPM baseline**
 If the new host is running a new hardware or firmware configuration for your environment, you may need to take a new TPM baseline.
 To do this, run the following command on the host.
+
 ```powershell
 Get-HgsAttestationBaselinePolicy -Path 'C:\temp\hardwareConfig01.tcglog'
 ```
 
-> **Note** If you receive an error saying your host failed validation and will not successfully attest, do not worry.
+> [!NOTE]
+> If you receive an error saying your host failed validation and will not successfully attest, do not worry.
 > This is a prerequisite check to make sure your host can run shielded VMs, and likely means that you have not yet applied a code integrity policy or other required setting.
 > Read the error message, make any changes suggested by it, then try again.
 > Alternatively, you can skip the validation at this time by adding the `-SkipValidation` flag to the command.
 
 Copy the TPM baseline to your HGS server, then register it with the following command.
 We encourage you to use a naming convention that helps you understand the hardware and firmware configuration of this class of Hyper-V host.
+
 ```powershell
 Add-HgsAttestationTpmPolicy -Name 'HardwareConfig01' -Path 'C:\temp\hardwareConfig01.tcglog'
 ```
@@ -395,6 +434,7 @@ We encourage you to use the **FilePublisher** level and **Hash** fallback for Hy
 You should first create a CI policy in audit mode to ensure that everything is working as expected.
 After validating a sample workload on the system, you can enforce the policy and copy the enforced version to HGS.
 For a complete list of code integrity policy configuration options, consult the [Device Guard documentation](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies).
+
 ```powershell
 # Capture a new CI policy with the FilePublisher primary level and Hash fallback and enable user mode code integrity protections
 New-CIPolicy -FilePath 'C:\temp\ws2016-hardware01-ci.xml' -Level FilePublisher -Fallback Hash -UserPEs
@@ -417,6 +457,7 @@ Restart-Computer
 ```
 
 Once you have your policy created, tested and enforced, copy the binary file (.p7b) to your HGS server and register the policy.
+
 ```powershell
 Add-HgsAttestationCiPolicy -Name 'WS2016-Hardware01' -Path 'C:\temp\ws2016-hardware01-ci.p7b'
 ```
@@ -425,18 +466,21 @@ Add-HgsAttestationCiPolicy -Name 'WS2016-Hardware01' -Path 'C:\temp\ws2016-hardw
 After registering the necessary information with HGS, you should check if the host passes attestation.
 On the newly-added Hyper-V host, run `Set-HgsClientConfiguration` and supply the correct URLs for your HGS cluster.
 These URLs can be obtained by running `Get-HgsServer` on any HGS node.
+
 ```powershell
 Set-HgsClientConfiguration -KeyProtectionServerUrl 'http://hgs.relecloud.com/KeyProtection' -AttestationServerUrl 'http://hgs.relecloud.com/Attestation'
 ```
 
 If the resulting status does not indicate "IsHostGuarded : True" you will need to troubleshoot the configuration.
 On the host that failed attestation, run the following command to get a detailed report about issues that may help you resolve the failed attestation.
+
 ```powershell
 Get-HgsTrace -RunDiagnostics -Detailed
 ```
 
 ### Review attestation policies
 To review the current state of the policies configured on HGS, run the following commands on any HGS node:
+
 ```powershell
 # List all trusted security groups for AD-trusted attestation
 Get-HgsAttestationHostGroup
@@ -446,6 +490,7 @@ Get-HgsAttestationPolicy
 ```
 
 If you find a policy enabled that no longer meets your security requirement (e.g. an old code integrity policy which is now deemed unsafe), you can disable it by replacing the name of the policy in the following command:
+
 ```powershell
 Disable-HgsAttestationPolicy -Name 'PolicyName'
 ```
@@ -464,6 +509,7 @@ This does not affect the current operational state of HGS.
 The commands below must be run on a machine that has access to all of the hosts in the environment and at least one HGS node.
 If your firewall or other security policies prevent this, you can skip this step.
 When possible, we recommend running the synthetic attestation to give you a good indication of whether "flipping" to TPM mode will cause downtime for your VMs. 
+
 ```powershell
 # Get information for each host in your environment
 $hostNames = 'host01.contoso.com', 'host02.contoso.com', 'host03.contoso.com'
@@ -483,6 +529,7 @@ Re-run the diagnostics until you get a "pass" from each host, then proceed to ch
 
 **Changing to TPM mode** takes just a second to complete.
 Run the following command on any HGS node to update the attestation mode.
+
 ```powershell
 Set-HgsServer -TrustTpm
 ```
@@ -524,10 +571,11 @@ Consult your HSM vendor's documentation for exact steps and capabilities.
 3. Install the certificates in each HGS node's local certificate store per your HSM vendor's guidance.
 4. If your HSM uses granular permissions to grant specific applications or users permission to use the private key, you will need to grant your HGS group managed service account access to the certificate. You can find the name of the HGS gMSA account by running `(Get-IISAppPool -Name KeyProtection).ProcessModel.UserName`
 5. Add the signing and encryption certificates to HGS by replacing the thumbprints with those of your certificates' in the following commands:
-```powershell
-Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "AABBCCDDEEFF00112233445566778899"
-Add-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint "99887766554433221100FFEEDDCCBBAA"
-```
+
+    ```powershell
+    Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "AABBCCDDEEFF00112233445566778899"
+    Add-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint "99887766554433221100FFEEDDCCBBAA"
+    ```
 
 **Option 2: Adding non-exportable software certificates**
 
@@ -535,11 +583,13 @@ If you have a software-backed certificate issued by your company's or a public c
 1. Install the certificate on your machine according to your certificate authority's instructions.
 2. Grant the HGS group managed service account read-access to the private key of the certificate. You can find the name of the HGS gMSA account by running `(Get-IISAppPool -Name KeyProtection).ProcessModel.UserName`
 3. Register the certificate with HGS using the following command and substituting in your certificate's thumbprint (change *Encryption* to *Signing* for signing certificates):
-```powershell
-Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "AABBCCDDEEFF00112233445566778899"
-```
 
-> **Note** You will need to install the private key and grant read access to the gMSA account on each HGS node.
+    ```powershell
+    Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "AABBCCDDEEFF00112233445566778899"
+    ```
+
+> [!IMPORTANT]
+> You will need to manually install the private key and grant read access to the gMSA account on each HGS node.
 > HGS cannot automatically replicate private keys for *any* certificate registered by its thumbprint.
 
 **Option 3: Adding certificates stored in PFX files**
@@ -547,6 +597,7 @@ Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "AABBCCD
 If you have a software-backed certificate with an exportable private key that can be stored in the PFX file format and secured with a password, HGS can automatically manage your certificates for you.
 Certificates added with PFX files are automatically replicated to every node of your HGS cluster and HGS secures access to the private keys.
 To add a new certificate using a PFX file, run the following commands on any HGS node (change *Encryption* to *Signing* for signing certificates):
+
 ```powershell
 $certPassword = Read-Host -AsSecureString -Prompt "Provide the PFX file password"
 Add-HgsKeyProtectionCertificate -CertificateType Encryption -CertificatePath "C:\temp\encryptionCert.pfx" -CertificatePassword $certPassword
@@ -556,11 +607,13 @@ Add-HgsKeyProtectionCertificate -CertificateType Encryption -CertificatePath "C:
 While HGS can support multiple signing and encryption certificates, it uses one pair as its "primary" certificates.
 These are the certificates that will be used if someone downloads the guardian metadata for that HGS cluster.
 To check which certificates are currently marked as your primary certificates, run the following command:
+
 ```powershell
 Get-HgsKeyProtectionCertificate -IsPrimary $true
 ```
 
 To set a new primary encryption or signing certificate, find the thumbprint of the desired certificate and mark it as primary using the following commands:
+
 ```powershell
 Get-HgsKeyProtectionCertificate
 Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "AABBCCDDEEFF00112233445566778899" -IsPrimary
@@ -587,16 +640,18 @@ On an HGS node, perform the following steps to register a new pair of encryption
 See the section on [adding new keys](TODO) for detailed information the various ways to add new keys to HGS.
 1. Create a new pair of encryption and signing certificates for your HGS server. Ideally, these will be created in a hardware security module.
 2. Register the new encryption and signing certificates with **Add-HgsKeyProtectionCertificate**
-```powershell
-Add-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint>
-Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>
-```
+
+    ```powershell
+    Add-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint>
+    Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>
+    ```
 3. If you used thumbprints, you'll need to go to each node in the cluster to install the private key and grant the HGS gMSA access to the key.
 4. Make the new certificates the default certificates in HGS
-```powershell
-Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
-Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
-```
+
+    ```powershell
+    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
+    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsPrimary
+    ```
 
 At this point, shielding data created with metadata obtained from the HGS node will use the new certificates, but existing VMs will continue to work because the older certificates are still there.
 In order to ensure all existing VMs will work with the new keys, you will need to update the key protector on each VM.
@@ -607,22 +662,25 @@ For each shielded VM, perform the following steps:
 7. Transfer the KP to the VM owner
 8. Have the owner download the updated guardian info from HGS and import it on their local system
 9. Read the current KP into memory, grant the new guardian access to the KP, and save it to a new file by running the following commands:
-```powershell
-$kpraw = Get-Content -Path .\VM001.kp
-$kp = ConvertTo-HgsKeyProtector -Bytes $kpraw
-$newGuardian = Get-HgsGuardian -Name 'UpdatedHgsGuardian'
-$updatedKP = Grant-HgsKeyProtectorAccess -KeyProtector $kp -Guardian $newGuardian
-$updatedKP.RawData | Out-File .\updatedVM001.kp
-```
+
+    ```powershell
+    $kpraw = Get-Content -Path .\VM001.kp
+    $kp = ConvertTo-HgsKeyProtector -Bytes $kpraw
+    $newGuardian = Get-HgsGuardian -Name 'UpdatedHgsGuardian'
+    $updatedKP = Grant-HgsKeyProtectorAccess -KeyProtector $kp -Guardian $newGuardian
+    $updatedKP.RawData | Out-File .\updatedVM001.kp
+    ```
 10. Copy the updated KP back to the hosting fabric
 11. Apply the KP to the original VM:
-```powershell
-$updatedKP = Get-Content -Path .\updatedVM001.kp
-Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
-```
+
+    ```powershell
+    $updatedKP = Get-Content -Path .\updatedVM001.kp
+    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
+    ```
 12.	Finally, start the VM and ensure it runs successfully.
 
-> **Note** if the VM owner sets an incorrect key protector on the VM and does not authorize your fabric to run the VM, you will be unable to start up the shielded VM.
+> [!NOTE]
+> If the VM owner sets an incorrect key protector on the VM and does not authorize your fabric to run the VM, you will be unable to start up the shielded VM.
 > To return to the last known good key protector, run `Set-VMKeyProtector -RestoreLastKnownGoodKeyProtector`
 
 Once all VMs have been updated to authorize the new guardian keys, you can disable and remove the old keys.
@@ -630,7 +688,8 @@ Once all VMs have been updated to authorize the new guardian keys, you can disab
 14. Disable each certificate by replacing the certificate type and thumbprint in the following command: `Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false`
 15. After ensuring VMs are still able to start with the certificates disabled, remove the certificates from HGS with `Remove-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>`
 
-> **Important** VM backups will contain old key protector information that allow the old certificates to be used to start up the VM.
+> [!IMPORTANT]
+> VM backups will contain old key protector information that allow the old certificates to be used to start up the VM.
 > If you are aware that your private key has been compromised, you should assume that the VM backups can be compromised, too, and take appropriate action.
 > Destroying the VM configuration from the backups (.vmcx) will remove the key protectors, at the cost of needing to use the BitLocker recovery password to boot the VM the next time.
 
