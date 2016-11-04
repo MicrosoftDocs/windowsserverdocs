@@ -19,7 +19,7 @@ manager: dongill
 
 <img src="media/2whats-new.png" alt="alt text" title="What's new in Windows Server 2016?" />
     <font size="5">
-    &nbsp;<a href="what-s-new-in-windows-server-2016">Read what's new in Windows Server 2016</a></font>
+    &nbsp;[Read what's new in Windows Server 2016](what-s-new-in-windows-server-2016.md)</font>
 <br/><br/>
 [![Storage Spaces Direct Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
 

@@ -56,9 +56,8 @@ There are many technologies that work together to create Microsoft's Software De
     Network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances.  
   
     Microsoft has virtualized networks, switches, gateways, NATs, load balancers, and firewalls.  
-  
-  
--   **[RAS Gateway for SDN](../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)**  
+
+-   **[RAS Gateway for SDN](../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)**
   
     RAS Gateway  is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016 that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
       
@@ -66,17 +65,19 @@ There are many technologies that work together to create Microsoft's Software De
   
     You can use a converged NIC to combine both RDMA and Ethernet traffic using a single network adapter. The converged NIC allows you to use a single network adapter for management, Remote Direct Memory Access (RDMA)-enabled storage, and tenant traffic. This reduces the capital expenditures that are associated with each server in your datacenter, because you need fewer network adapters to manage different types of traffic per server.  
   
-    SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In  Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA.  
+    SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In  Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA.
   
--   **[Software Load Balancing &#40;SLB&#41; for SDN](../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)**  
+
+-   **[Software Load Balancing &#40;SLB&#41; for SDN](../../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)**  
+
   
     Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
   
--   **[System Center](../../sdn/Sc-Tech-for-Sdn.md)**   
-    System Center Virtual Machine Manager (VMM) can be used to deploy and manage many SDN components.  
+-   **[System Center](../../sdn/Sc-Tech-for-Sdn.md)**
+    You can use System Center 2016 Virtual Machine Manager (VMM) and Operations Manager to deploy and manage the SDN infrastructure, including network controllers, software load balancers, and gateways. You can also use VMM to centrally define and control virtual network policies and link the policies to your applications or workloads.
   
 - **[Windows Containers](../technologies/Containers/Container-networking-overview.md)**
     
-    You can connect Windows Containers to virtual networks. 
+    Windows Server Containers are a lightweight operating system virtualization method used to separate applications or services from other services that are running on the same container host. To enable this, each container has its own view of the operating system, processes, file system, registry, and IP addresses. With Windows Server 2016, you can now connect Windows Server containers to virtual networks. Windows containers function similarly to virtual machines in regards to networking. Each container has a virtual network adapter that is connected to a virtual switch, over which inbound and outbound traffic is forwarded. To enforce isolation between containers on the same host, a network compartment is created for each Windows Server and Hyper-V Container into which the network adapter for the container is installed. Windows Server containers use a Host vNIC to attach to the virtual switch. Hyper-V Containers use a Synthetic VM NIC (not exposed to the Utility VM) to attach to the virtual switch.
 

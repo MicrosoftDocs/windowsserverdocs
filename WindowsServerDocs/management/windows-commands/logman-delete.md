@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Delete an existing data collector.  
+delete an existing data collector.  
   
 ## Syntax  
 ```  
@@ -39,5 +39,5 @@ The following command deletes the data collector perf_log.
 ```  
 logman delete perf_log  
 ```  
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  
