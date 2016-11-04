@@ -10,6 +10,9 @@ ms.technology: security-guarded-fabric
 ---
 
 # Managing the Host Guardian Service
+
+> Applies To: Windows Server 2016
+
 The Host Guardian Service (HGS) is the centerpiece of the guarded fabric solution.
 It is responsible for ensuring that Hyper-V hosts in the fabric are known to the hoster or enterprise and running trusted software and for managing the keys used to start up shielded VMs.
 When a tenant decides to trust you to host their shielded VMs, they are placing their trust in your configuration and management of the Host Guardian Service.
