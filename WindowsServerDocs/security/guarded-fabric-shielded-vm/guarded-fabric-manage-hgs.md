@@ -158,20 +158,20 @@ It is **not recommended** to back up or attempt to restore an entire system imag
 In the event you have lost your entire cluster, the best practice is to set up a brand new HGS node and restore just the HGS state, not the entire server OS.
 
 #### Recovering from the loss of one node
-If you lose one or more nodes (but not every node) in your HGS cluster, you can simply add [additional nodes to your cluster](TODO) following the guidance in the deployment guide.
+If you lose one or more nodes (but not every node) in your HGS cluster, you can simply add [additional nodes to your cluster](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-secondary-hgs-nodes) following the guidance in the deployment guide.
 The attestation policies will sync automatically, as will any certificates which were provided to HGS as PFX files with accompanying passwords.
 For certificates added to HGS using a thumbprint (non-exportable and hardware backed certificates, commonly), you will need to ensure each new node has access to the private key of each certificate.
 
 #### Recovering from the loss of the entire cluster
 If your entire HGS cluster goes down and you are unable to bring it back online, you will need to restore HGS from a backup.
-Restoring HGS from a backup involves first setting up a new HGS cluster per the [guidance in the deployment guide](TODO).
+Restoring HGS from a backup involves first setting up a new HGS cluster per the [guidance in the deployment guide](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 It is highly recommended, but not required, to use the same cluster name when setting up the recovery HGS environment to assist with name resolution from hosts.
 Using the same name avoids having to reconfigure hosts with new attestation and key protection URLs.
 If you restored objects to the Active Directory domain backing HGS, it is recommended that you remove the objects representing the HGS cluster, computers, service account and JEA groups before initializing the HGS server.
 
 Once you have set up your first HGS node (e.g. it has been installed and initialized), you will follow the procedures under [Restoring HGS from a backup](#restoring-hgs-from-a-backup) to restore the attestation policies and public halves of the key protection certificates.
 You will need to restore the private keys for your certificates manually according to the guidance of your certificate provider (e.g. import the certificate in Windows, or configure access to HSM-backed certificates).
-After the first node is set up, you can continue to [install additional nodes to the cluster](TODO) until you have reached the capacity and resiliency you desire.
+After the first node is set up, you can continue to [install additional nodes to the cluster](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-secondary-hgs-nodes) until you have reached the capacity and resiliency you desire.
 
 ### Backing up HGS
 The HGS administrator should be responsible for backing up HGS on a regular basis.
@@ -234,12 +234,12 @@ The steps are relevant to both situations where you are trying to undo changes m
 #### Set up a replacement HGS cluster
 Before you can restore HGS, you need to have an initialized HGS cluster to which you can restore the configuration.
 If you are simply importing settings that were accidentally deleted to an existing (running) cluster, you can skip this step.
-If you are recovering from a complete loss of HGS, you will need to install and initialize at least one HGS node following the [guidance in the deployment guide](TODO).
+If you are recovering from a complete loss of HGS, you will need to install and initialize at least one HGS node following the [guidance in the deployment guide](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 
 Specifically, you will need to:
-1. [Set up the HGS domain](TODO) or [join HGS to an existing domain](TODO)
-2. [Initialize the HGS server](TODO) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](TODO) after importing your actual keys from the HGS backup files.
-3. [Import HGS settings](TODO) from your backup to restore the trusted host groups, code integrity policies, TPM baselines, and TPM identifiers
+1. [Set up the HGS domain](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#install-hgs-in-its-own-new-forest) or join HGS to an existing domain
+2. [Initialize the HGS server](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#initialize-the-hgs-server-with-your-chosen-mode-of-attestation) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](#renewing-or-replacing-keys) after importing your actual keys from the HGS backup files.
+3. [Import HGS settings](#import-settings-from-a-backup) from your backup to restore the trusted host groups, code integrity policies, TPM baselines, and TPM identifiers
 
 > [!TIP]
 > The new HGS cluster does not need to use the same certificates, service name, or domain as the HGS instance from which your backup file was exported.
@@ -273,9 +273,9 @@ Similarly, if your certificates are hardware-backed, you will need to consult yo
 As a reminder, certificates added to HGS using thumbprints require manual replication of the private keys to each node.
 You will need to repeat this step on each additional node you add to the restored HGS cluster.
 
-#### Review attestation policies
-After you've imported your settings from a backup, it is recommended to closely [review all of the imported policies](TODO) using `Get-HgsAttestationPolicy` to make sure only the hosts you trust to run shielded VMs will be able to successfully attest.
-If you find any policies which no longer match your security posture, you can [disable or remove them](TODO).
+#### Review imported attestation policies
+After you've imported your settings from a backup, it is recommended to closely review all the imported policies using `Get-HgsAttestationPolicy` to make sure only the hosts you trust to run shielded VMs will be able to successfully attest.
+If you find any policies which no longer match your security posture, you can [disable or remove them](#review-attestation-policies).
 
 #### Run diagnostics to check system state
 After you have finished setting up and restoring the state of your HGS node, you should run the HGS diagnostics tool to check the state of the system.
@@ -502,7 +502,7 @@ If you no longer need a policy and wish to remove it from all HGS nodes, run `Re
 ## Changing attestation modes
 If you started your guarded fabric using AD-trusted attestation, you will likely want to upgrade to the much-stronger TPM attestation mode as soon as you have enough TPM 2.0-compatible hosts in your environment.
 When you're ready to switch, you can pre-load all of the attestation artifacts (CI policies, TPM baselines and TPM identifiers) in HGS while continuing to run HGS in AD-trusted mode.
-To do this, simply follow the instruction in the [authorizing a new guarded host](TODO) section.
+To do this, simply follow the instruction in the [authorizing a new guarded host](#authorizing-new-guarded-hosts) section.
 
 Once you've added all of your policies to HGS, the next step is to run a synthetic attestation attempt on your hosts to see if they would pass attestation in TPM mode.
 This does not affect the current operational state of HGS.
@@ -637,7 +637,7 @@ Please note that the following guidance represents a significant undertaking tha
 Proper planning for changing HGS keys is required to minimize service disruption and ensure the security of tenant VMs.
 
 On an HGS node, perform the following steps to register a new pair of encryption and signing certificates.
-See the section on [adding new keys](TODO) for detailed information the various ways to add new keys to HGS.
+See the section on [adding new keys](#adding-new-keys) for detailed information the various ways to add new keys to HGS.
 1. Create a new pair of encryption and signing certificates for your HGS server. Ideally, these will be created in a hardware security module.
 2. Register the new encryption and signing certificates with **Add-HgsKeyProtectionCertificate**
 
@@ -709,4 +709,4 @@ These tasks add extra operational burden, however they are required for HSM-back
 
 **SSL Certificates** are never replicated in any form.
 It is your responsibility to initialize each HGS server with the same SSL certificate and update each server whenever you choose to renew or replace the SSL certificate.
-When replacing the SSL certificate, it is recommended that you do so using the [Set-HgsServer](TODO) cmdlet.
+When replacing the SSL certificate, it is recommended that you do so using the [Set-HgsServer](https://technet.microsoft.com/en-us/library/mt652180.aspx) cmdlet.
