@@ -67,7 +67,9 @@ There are many technologies that work together to create Microsoft's Software De
   
     SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In  Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA.
   
--   **[Software Load Balancing &#40;SLB&#41; for SDN](../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)**
+
+-   **[Software Load Balancing &#40;SLB&#41; for SDN](../../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)**  
+
   
     Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   

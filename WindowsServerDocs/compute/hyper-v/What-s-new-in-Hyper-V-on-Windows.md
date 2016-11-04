@@ -84,7 +84,7 @@ For details and instructions, see [Nested Virtualization](https://msdn.microsoft
 ## <a name="BKMK_networking"></a>Networking features \(new\) 
 New networking features include:  
   
--   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../networking/sdn/Software-Defined-Networking--SDN-.md#bkmk_rdma).  
+-   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../networking/sdn/software-defined-networking.md#bkmk_rdma).  
   
 -   **Virtual machine multi queues (VMMQ)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.  
   
