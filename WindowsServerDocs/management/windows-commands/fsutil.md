@@ -16,7 +16,8 @@ ms.date: 11/07/2016
 
 Performs tasks that are related to file allocation table (FAT) and NTFS file systems, such as managing reparse points, managing sparse files, or dismounting a volume. If it is used without parameters, **Fsutil** displays a list of supported subcommands. 
 
-> [!Note] You must be logged on as an administrator or a member of the Administrators group to use Fsutil. The Fsutil command is quite powerful and should be used only by advanced users who have a thorough knowledge of Windows operating systems.
+> [!Note] 
+> You must be logged on as an administrator or a member of the Administrators group to use Fsutil. The Fsutil command is quite powerful and should be used only by advanced users who have a thorough knowledge of Windows operating systems.
 
 ## Parameters
 
