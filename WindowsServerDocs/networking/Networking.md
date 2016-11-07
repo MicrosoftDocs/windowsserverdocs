@@ -105,6 +105,10 @@ Network Load Balancing \(NLB\) distributes traffic across several servers using 
 
 Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 
+### [Network Policy Server](technologies/nps/nps-top.md)
+
+Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
+
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
 NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.

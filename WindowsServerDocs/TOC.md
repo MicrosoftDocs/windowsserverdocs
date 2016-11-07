@@ -789,6 +789,7 @@
 ###### [Manage Role Based Access Control with Windows PowerShell](networking/technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md)
 ### [Network Load Balancing](networking/technologies/Network-Load-Balancing.md)
 ### [Network Offload and Optimization Technologies](networking/technologies/network-offload.md)
+### [Network Policy Server](networking/technologies/nps/nps-top.md)
 ### [NIC Teaming](networking/technologies/nic-teaming/NIC-Teaming.md)
 #### [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
 #### [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)
