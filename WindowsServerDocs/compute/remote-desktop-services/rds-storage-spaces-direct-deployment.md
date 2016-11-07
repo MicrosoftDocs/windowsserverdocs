@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 11/01/2016
+ms.date: 11/07/2016
 manager: scottman
 ---
 # Deploy a two-node S2D SOFS for UPD storage in Azure
@@ -19,6 +19,9 @@ manager: scottman
 >Applies To: Windows Server 2016
 
 Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct (S2D) with Windows Server 2016. If you’re not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
+
+> [!NOTE] 
+> Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/documentation/templates/301-storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article. 
 
 We recommend deploying your SOFS with DS-series VMs and premium storage data disks, where there are the same number and size of data disks on each VM. You will need a minimum of two storage accounts. 
 
