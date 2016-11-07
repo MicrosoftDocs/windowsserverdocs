@@ -30,7 +30,6 @@ The following are the requirements for deploying AD FS:
   
 -   [Browser requirements](AD-FS-2016-Requirements.md#BKMK_6)  
   
--   [Extranet requirements](AD-FS-2016-Requirements.md#BKMK_extranet)  
   
 -   [Network requirements](AD-FS-2016-Requirements.md#BKMK_7)  
   
