@@ -7,7 +7,9 @@ ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Guarded fabric and shielded VMs
 
 >Applies To: Windows Server 2016
@@ -19,12 +21,16 @@ Ensure that you have installed all available updates before you deploy Shielded 
 
 ## Learn more about guarded fabrics and shielded VMs
 
-- [Guarded fabric and shielded VMs overview](guarded-fabric-and-shielded-vms.md)
+- [Guarded fabric and shielded VMs overview](Guarded-Fabric-and-Shielded-VMs.md)
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
-    - [Prerequisites for deploying Host Guardian Service and guarded hosts](guarded-fabric-deployment-prerequisites.md)
     - [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
-    - [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md)<br><br>
+    - [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+        - [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns.md)
+        - [Admin-trusted attestation for a guarded fabric - creating a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
+        - [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
+        - [Configuring a guarded fabric - confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+        - [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md)<br><br>
 
 - [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
     - [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
@@ -34,4 +40,3 @@ Ensure that you have installed all available updates before you deploy Shielded 
     - [Scenario 2 - Deploy a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
     - [Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function](guarded-fabric-sample-unattend-xml-file.md)
     - [Shielded VMs - Create a new shielded VM on-premises and move it to a guarded fabric](guarded-fabric-create-vm-move-to-guarded-fabric.md)
-

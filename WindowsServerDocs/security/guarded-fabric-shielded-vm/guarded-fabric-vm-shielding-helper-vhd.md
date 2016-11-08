@@ -7,7 +7,9 @@ ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD
 
 >Applies To: Windows Server 2016

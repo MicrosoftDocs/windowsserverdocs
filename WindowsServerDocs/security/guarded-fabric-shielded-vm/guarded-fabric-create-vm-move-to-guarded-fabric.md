@@ -7,7 +7,9 @@ ms.assetid: 0ca1efa0-01f9-4b6f-87d4-c66db00d7d70
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Shielded VMs - Create a new shielded VM on-premises and move it to a guarded fabric
 
 >Applies To: Windows Server 2016
