@@ -37,6 +37,10 @@ To avoid this, after the first boot, set the print spooler to disabled.
 [comment]: # (ID: 373; Submitter: plang; state: signed off)  
 - The NanoServerPackage OneGet provider does not work in Windows Containers. To work around this, use Find-NanoServerPackage and Save-NanoServerPackage on a different computer (not a container) to download the needed package. Then copy the packages into the container and install them.
 
+## Device Guard
+[comment]: # (ID: 369; Submitter: nirb; state: signed off)
+If you use virtualization-based protection of code integrity or Shielded virtual machines (that use virtualization-based protection of code integrity), you should be aware that these technologies could be incompatible with some devices and applications. You should test such configurations in your lab before enabling the features on production systems. Failure to do so could result in unexpected data loss or stop errors.
+
 ## Microsoft Exchange
 [comment]: # (ID: 375; Submitter: wgries; state: signed off)
 If you attempt to run Microsoft Exchange 2016 CU3 on Windows Server 2016, you will experience errors in the IIS host process W3WP.exe. There is no workaround at this time. You should postpone deployment of Exchange 2016 CU3 on Windows Server 2016 until a supported fix is available.
@@ -49,7 +53,7 @@ To avoid this, upgrade the client computer to Windows 10 Anniversary Update (or 
 
 
 ## Shielded virtual machines
-[comment]: # (ID: 369; Submitter: nirb; state: in review)  
+[comment]: # (ID: 369; Submitter: nirb; state: signed off)  
 - Ensure that you have installed all available updates before you deploy Shielded virtual machines in production.
 
 - If you use virtualization-based protection of code integrity or Shielded virtual machines (that use virtualization-based protection of code integrity), you should be aware that these technologies could be incompatible with some devices and applications. You should test such configurations in your lab before enabling the features on production systems. Failure to do so could result in unexpected data loss or stop errors.
