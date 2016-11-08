@@ -14,6 +14,13 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
+You can use this topic to learn about connection request processing in Network Policy Server in Windows Server 2016.
+
+>[!NOTE]
+>In addition to this topic, the following connection request processing documentation is available.
+> - [Connection Request Policies](nps-crp-crpolicies.md)
+> - [Remote RADIUS Server Groups](nps-crp-rrsg.md)
+
 You can use connection request processing to specify where the authentication of connection requests is performed - on the local computer or at a remote RADIUS server that is a member of a remote RADIUS server group. 
 
 If you want the local server running Network Policy Server (NPS) to perform authentication for connection requests, you can use the default connection request policy without additional configuration. Based on the default policy, NPS authenticates users and computers that have an account in the local domain and in trusted domains.

@@ -793,6 +793,7 @@
 ### [Network Policy Server](networking/technologies/nps/nps-top.md)
 #### [Connection Request Processing](networking/technologies/nps/nps-crp-top.md)
 ##### [Connection Request Policies](networking/technologies/nps/nps-crp-crpolicies.md)
+##### [Remote RADIUS Server Groups](networking/technologies/nps/nps-crp-rrsg.md)
 ### [NIC Teaming](networking/technologies/nic-teaming/NIC-Teaming.md)
 #### [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
 #### [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)
