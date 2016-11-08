@@ -42,3 +42,4 @@ To configure a connection request policy that specifies which NPS or RADIUS serv
 
 To specify NPS or other RADIUS servers to which authentication requests are forwarded, see Remote RADIUS Server Groups.
 
+For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
