@@ -42,7 +42,7 @@ This occurs in the following four steps:
 5. Replace the original file stream of now optimized files with a reparse point to the chunk store.  
 ![Replace file stream with reparse point](media/understanding-dedup-how-dedup-works-5.gif)
 
-When optimized files are read, the file system sends the files with a reparse point to the Data Deduplication file system filter (Dedup.sys). The filter redirects the read operation to the appropriate chunks that constitute the stream for that file in the chunk store. Modifications to ranges of a deduplicated files get written unoptimized to the disk and are optimized by the [Optimization job](understand.md#job-info-optimization) the next time it runs.
+When optimized files are read, the file system sends the files with a reparse point to the Data Deduplication file system filter (Dedup.sys). The filter redirects the read operation to the appropriate chunks that constitute the stream for that file in the chunk store. Modifications to ranges of a deduplicated files get written unoptimized to the disk and are optimized by the [Optimization job](understand.md#job-info) the next time it runs.
 
 ## <a id="usage-type"></a>Usage Types
 The following Usage Types provide reasonable Data Deduplication configuration for common workloads:  
