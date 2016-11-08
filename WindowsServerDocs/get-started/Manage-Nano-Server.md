@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/27/2016
+ms.date: 11/02/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
@@ -203,7 +203,7 @@ Get-WindowsPackage--Online
 ---  
 The commands listed above will query the Windows Update and Microsoft Update serviceon the Internet to find and download updates. If you use WSUS, you can set registry keys on the Nano Server to use your WSUS server instead.  
   
-See the "Windows Update Agent Environment Options Registry Keys" table in  [Configure Automatic Updates in a Non-Active Directory Environment](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
+See the "Windows Update Agent Environment Options Registry Keys" table in  [Configure Automatic Updates in a Non-Active-Directory Environment](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
   
 You should set at least the **WUServer** and **WUStatusServer** registry keys, but depending on how you have implemented WSUS, other values might be needed. You can always confirm these settings by examining another Windows Server in the same environment.  
 
