@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 11/03/2016
+ms.date: 11/08/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -49,8 +49,10 @@ To avoid this, upgrade the client computer to Windows 10 Anniversary Update (or 
 
 
 ## Shielded virtual machines
-[comment]: # (ID: 369; Submitter: nirb; state: signed off)  
+[comment]: # (ID: 369; Submitter: nirb; state: in review)  
 - Ensure that you have installed all available updates before you deploy Shielded virtual machines in production.
+
+- If you use virtualization-based protection of code integrity or Shielded virtual machines (that use virtualization-based protection of code integrity), you should be aware that these technologies could be incompatible with some devices and applications. You should test such configurations in your lab before enabling the features on production systems. Failure to do so could result in unexpected data loss or stop errors.
 
 
 ## Start menu
