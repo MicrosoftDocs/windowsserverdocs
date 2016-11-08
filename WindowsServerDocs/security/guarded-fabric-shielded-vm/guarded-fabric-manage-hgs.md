@@ -26,13 +26,13 @@ Additionally, it is recommended that you only manage HGS from secure workstation
 ### Separation of Duties
 When setting up HGS, you are given the option of creating an isolated Active Directory forest just for HGS or to join HGS to an existing, trusted domain.
 This decision, as well as the roles you assign the admins in your organization, determine the trust boundary for HGS.
-Whoever has access to HGS, whether directly as an admin or indirectly as an admin of something else (e.g. AD) that can influence HGS, has control over your guarded fabric.
+Whoever has access to HGS, whether directly as an admin or indirectly as an admin of something else (e.g. Active Directory) that can influence HGS, has control over your guarded fabric.
 HGS admins choose which Hyper-V hosts are authorized to run shielded VMs and manage the certificates necessary to start up shielded VMs.
 An attacker or malicious admin who has access to HGS can use this power to authorize compromised hosts to run shielded VMs, initiate a denial-of-service attack by removing key material, and more.
 
 To avoid this risk, it is *strongly* recommended that you limit the overlap between the admins of your HGS (including the domain to which HGS is joined) and Hyper-V environments.
 By ensuring no one admin has access to both systems, an attacker would need to compromise 2 different accounts from 2 individuals to complete his mission to change the HGS policies.
-This also means that the domain and enterprise admins for the two Active Directory environments should not be the same person, nor should HGS use the same AD forest as your Hyper-V hosts.
+This also means that the domain and enterprise admins for the two Active Directory environments should not be the same person, nor should HGS use the same Active Directory forest as your Hyper-V hosts.
 Anyone who can grant themselves access to more resources poses a security risk.
 
 ### Using Just Enough Administration
@@ -65,7 +65,7 @@ Add-ADGroupMember -Identity $reviewerGroup -Members 'hgsreviewer01'
 **Audit policies with the reviewer role**
 
 On a remote machine that has network connectivity to HGS, run the following commands in PowerShell to enter the JEA session with the reviewer credentials.
-It is important to note that since the reviewer account is just a standard user, it cannot be used for regular PowerShell remoting, Remote Desktop access to HGS, etc.
+It is important to note that since the reviewer account is just a standard user, it cannot be used for regular Windows PowerShell remoting, Remote Desktop access to HGS, etc.
 
 ```powershell
 Enter-PSSession -ComputerName <hgsnode> -Credential '<hgsdomain>\hgsreviewer01' -ConfigurationName 'microsoft.windows.hgs'
@@ -115,7 +115,7 @@ Events from HGS will show up in the Windows event log under 2 sources:
 You can view these events by opening Event Viewer and navigating to Microsoft-Windows-HostGuardianService-Attestation and Microsoft-Windows-HostGuardianService-KeyProtection.
 
 In a large environment, it is often preferable to forward events to a central Windows Event Collector to make analyzation of the events easier.
-For more information, check out the [W]indows Event Forwarding documentation](https://msdn.microsoft.com/library/windows/desktop/bb427443.aspx).
+For more information, check out the [Windows Event Forwarding documentation](https://msdn.microsoft.com/library/windows/desktop/bb427443.aspx).
 
 ### Using System Center Operations Manager
 You can also use System Center 2016 - Operations Manager to monitor HGS and your guarded hosts.
@@ -134,7 +134,7 @@ This section covers the steps necessary to prepare for such a scenario.
 First, it's important to understand what about HGS is important to back up.
 HGS retains several pieces of information that help it determine which hosts are authorized to run shielded VMs.
 This includes:
-1. Active Directory security identifiers for the groups containing trusted hosts (when using AD attestation);
+1. Active Directory security identifiers for the groups containing trusted hosts (when using Active Directory attestation);
 2. Unique TPM identifiers for each host in your environment;
 3. TPM policies for each unique configuration of host; and
 4. Code integrity policies that determine which software is allowed to run on your hosts.
@@ -191,7 +191,7 @@ Export-HgsServerState -Path C:\temp\HGSBackup.xml
 ```
 
 > [!NOTE]
-> If you are using AD-trusted attestation, you must separately back up membership in the security groups used by HGS to authorize guarded hosts.
+> If you are using admin-trusted attestation, you must separately back up membership in the security groups used by HGS to authorize guarded hosts.
 > HGS will only back up the SID of the security groups, not the membership within them.
 > In the event these groups are lost during a disaster, you will need to recreate the group(s) and add each guarded host to them again.
 
@@ -221,7 +221,7 @@ For example, if the Attestation URL is "http://hgs.contoso.com/Attestation", "hg
 
 The Active Directory domain used by HGS should be managed like any other Active Directory domain.
 When restoring HGS after a disaster, you will not necessarily need to recreate the exact objects that are present in the current domain.
-However, it will make recovery easier if you back up Active Directory and keep a list of the JEA users authorized to manage the system as well as the membership of any security groups used by AD-trusted attestation to authorize guarded hosts.
+However, it will make recovery easier if you back up Active Directory and keep a list of the JEA users authorized to manage the system as well as the membership of any security groups used by admin-trusted attestation to authorize guarded hosts.
 
 To identify the thumbprint of the SSL certificates configured for HGS, run the following command in PowerShell.
 You can then back up those SSL certificates according to your certificate provider's instructions.
@@ -260,7 +260,7 @@ You will be prompted to enter the password you specified when creating the backu
 Import-HgsServerState -Path C:\Temp\HGSBackup.xml
 ```
 
-If you only want to import AD-trusted attestation policies or TPM-trusted attestation policies, you can do so by specifying the `-ImportActiveDirectoryModeState` or `-ImportTpmModeState` flags to [Import-HgsServerState](https://technet.microsoft.com/en-us/library/mt652168.aspx).
+If you only want to import admin-trusted attestation policies or TPM-trusted attestation policies, you can do so by specifying the `-ImportActiveDirectoryModeState` or `-ImportTpmModeState` flags to [Import-HgsServerState](https://technet.microsoft.com/en-us/library/mt652168.aspx).
 
 > [!NOTE]
 > If you restore policies on an existing HGS node that already has one or more of those policies installed, the import command will show an error for each duplicate policy.
@@ -328,10 +328,10 @@ HGS maintains several attestation policies which define the minimum set of requi
 Some of these policies are defined by Microsoft, others are added by you to define the allowable code integrity policies, TPM baselines, and hosts in your environment.
 Regular maintenance of these policies is necessary to ensure hosts can continue attesting properly as you update and replace them, and to ensure any untrusted hosts or configurations are blocked from successfully attesting.
 
-For AD-trusted attestation, there is only one policy which determines if a host is healthy: membership in a known, trusted security group.
+For admin-trusted attestation, there is only one policy which determines if a host is healthy: membership in a known, trusted security group.
 TPM attestation is more complicated, and involves various policies to measure the code and configuration of a system before determining if it is healthy.
 
-A single HGS can be configured with both AD and TPM policies at once, but the service will only check the policies for the current mode which it is configured for when a host tries attesting.
+A single HGS can be configured with both Active Directory and TPM policies at once, but the service will only check the policies for the current mode which it is configured for when a host tries attesting.
 To check the mode of your HGS server, run `Get-HgsServer`.
 
 ### Default policies
@@ -370,8 +370,8 @@ Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
 
 For Nano Server, you should prepare the image with the **Compute**, **Microsoft-NanoServer-SecureStartup-Package** and **Microsoft-NanoServer-ShieldedVM-Package** packages.
 
-#### AD-trusted attestation
-To register a new host in HGS when using AD-trusted attestation, you must first add the host to a security group in the domain to which it's joined.
+#### admin-trusted attestation
+To register a new host in HGS when using admin-trusted attestation, you must first add the host to a security group in the domain to which it's joined.
 Typically, each domain will have one security group for guarded hosts.
 If you have already registered that group with HGS, the only action you need to take is to restart the host to refresh its group membership.
 
@@ -485,7 +485,7 @@ Get-HgsTrace -RunDiagnostics -Detailed
 To review the current state of the policies configured on HGS, run the following commands on any HGS node:
 
 ```powershell
-# List all trusted security groups for AD-trusted attestation
+# List all trusted security groups for admin-trusted attestation
 Get-HgsAttestationHostGroup
 
 # List all policies configured for TPM-trusted attestation
@@ -503,8 +503,8 @@ Similarly, you can use `Enable-HgsAttestationPolicy` to re-enable a policy.
 If you no longer need a policy and wish to remove it from all HGS nodes, run `Remove-HgsAttestationPolicy -Name 'PolicyName'` to permanently delete the policy.
 
 ## Changing attestation modes
-If you started your guarded fabric using AD-trusted attestation, you will likely want to upgrade to the much-stronger TPM attestation mode as soon as you have enough TPM 2.0-compatible hosts in your environment.
-When you're ready to switch, you can pre-load all of the attestation artifacts (CI policies, TPM baselines and TPM identifiers) in HGS while continuing to run HGS in AD-trusted mode.
+If you started your guarded fabric using admin-trusted attestation, you will likely want to upgrade to the much-stronger TPM attestation mode as soon as you have enough TPM 2.0-compatible hosts in your environment.
+When you're ready to switch, you can pre-load all of the attestation artifacts (CI policies, TPM baselines and TPM identifiers) in HGS while continuing to run HGS with admin-trusted attestation.
 To do this, simply follow the instruction in the [authorizing a new guarded host](#authorizing-new-guarded-hosts) section.
 
 Once you've added all of your policies to HGS, the next step is to run a synthetic attestation attempt on your hosts to see if they would pass attestation in TPM mode.
@@ -537,10 +537,10 @@ Run the following command on any HGS node to update the attestation mode.
 Set-HgsServer -TrustTpm
 ```
 
-If you run into problems and need to switch back to AD mode, you can do so by running `Set-HgsServer -TrustActiveDirectory`.
+If you run into problems and need to switch back to Active Directory mode, you can do so by running `Set-HgsServer -TrustActiveDirectory`.
 
-Once you have confirmed everything is working as expected, you should remove all trusted AD host groups from HGS and remove the trust between the HGS and fabric domains.
-If you leave the AD trust in place, you risk someone re-enabling the trust and switching HGS to AD mode, which could allow untrusted code to run unchecked on your guarded hosts.
+Once you have confirmed everything is working as expected, you should remove all trusted Active Directory host groups from HGS and remove the trust between the HGS and fabric domains.
+If you leave the Active Directory trust in place, you risk someone re-enabling the trust and switching HGS to Active Directory mode, which could allow untrusted code to run unchecked on your guarded hosts.
 
 ## Key management
 The guarded fabric solution uses several public/private key pairs to validate the integrity of various components in the solution and encrypt tenant secrets.
