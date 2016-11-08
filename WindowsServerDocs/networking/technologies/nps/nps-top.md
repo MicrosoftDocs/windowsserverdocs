@@ -21,8 +21,9 @@ You can use this topic for an overview of Network Policy Server in Windows Serve
 > - Deploy NPS using the section "Deploying optional features for network access authentication and Web services" in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_optionalfeatures).
 > - Deploy server certificates to NPS servers with the guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
 > - Use NPS for wireless authentication with the guide [Deploy Password-Based 802.1X Authenticated Wireless Access](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access).
+> - [Connection Request Processing](nps-crp-top.md)
 
-Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization. 
+Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 
 You can also configure NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy to forward connection requests to a remote NPS or other RADIUS server so that you can load balance connection requests and forward them to the correct domain for authentication and authorization.
 
@@ -45,19 +46,78 @@ You can use NPS as a RADIUS server, a RADIUS proxy, or both.
 
 ### RADIUS server
 
-NPS is the Microsoft implementation of the RADIUS standard specified by the Internet Engineering Task Force (IETF) in RFCs 2865 and 2866. As a RADIUS server, NPS performs centralized connection authentication, authorization, and accounting for many types of network access, including wireless, authenticating switch, dial-up and virtual private network (VPN) remote access, and router-to-router connections.
+NPS is the Microsoft implementation of the RADIUS standard specified by the Internet Engineering Task Force \(IETF\) in RFCs 2865 and 2866. As a RADIUS server, NPS performs centralized connection authentication, authorization, and accounting for many types of network access, including wireless, authenticating switch, dial-up and virtual private network \(VPN\) remote access, and router-to-router connections.
 
 NPS enables the use of a heterogeneous set of wireless, switch, remote access, or VPN equipment. You can use NPS with the Remote Access service, which is available in Windows Server 2016.
 
-When a server running NPS is a member of an Active Directory&reg; Domain Services (AD DS) domain, NPS uses the directory service as its user account database and is part of a single sign-on solution. The same set of credentials is used for network access control (authenticating and authorizing access to a network) and to log on to an AD DS domain.
+NPS uses an Active Directory Domain Services \(AD DS\) domain or the local Security Accounts Manager (SAM) user accounts database to authenticate user credentials for connection attempts. When a server running NPS is a member of an AD DS domain, NPS uses the directory service as its user account database and is part of a single sign-on solution. The same set of credentials is used for network access control \(authenticating and authorizing access to a network\) and to log on to an AD DS domain.
+
+>[!NOTE]
+>NPS uses the dial-in properties of the user account and network policies to authorize a connection.
 
 Internet service providers (ISPs) and organizations that maintain network access have the increased challenge of managing all types of network access from a single point of administration, regardless of the type of network access equipment used. The RADIUS standard supports this functionality in both homogeneous and heterogeneous environments. RADIUS is a client-server protocol that enables network access equipment (used as RADIUS clients) to submit authentication and accounting requests to a RADIUS server.
 
 A RADIUS server has access to user account information and can check network access authentication credentials. If user credentials are authenticated and the connection attempt is authorized, the RADIUS server authorizes user access on the basis of specified conditions, and then logs the network access connection in an accounting log. The use of RADIUS allows the network access user authentication, authorization, and accounting data to be collected and maintained in a central location, rather than on each access server.
 
+#### Using NPS as a RADIUS server
+
+You can use NPS as a RADIUS server when:
+
+- You are using an AD DS domain or the local SAM user accounts database as your user account database for access clients. 
+- You are using Remote Access on multiple dial-up servers, VPN servers, or demand-dial routers and you want to centralize both the configuration of network policies and connection logging and accounting. 
+- You are outsourcing your dial-up, VPN, or wireless access to a service provider. The access servers use RADIUS to authenticate and authorize connections that are made by members of your organization.
+- You want to centralize authentication, authorization, and accounting for a heterogeneous set of access servers.
+
+The following illustration shows NPS as a RADIUS server for a variety of access clients. 
+
+![NPS as a RADIUS Server](../../media/Nps-Server/Nps-Server.jpg)
+
+
+#### NPS as a RADIUS server connection request processing
+
+When you use NPS as a RADIUS server, RADIUS messages provide authentication, authorization, and accounting for network access connections in the following way:
+
+1. Access servers, such as dial-up network access servers, VPN servers, and wireless access points, receive connection requests from access clients. 
+
+2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS server. 
+
+3. The NPS server evaluates the Access-Request message. 
+
+4. If required, the NPS server sends an Access-Challenge message to the access server. The access server processes the challenge and sends an updated Access-Request to the NPS server. 
+
+5. The user credentials are checked and the dial-in properties of the user account are obtained by using a secure connection to a domain controller. 
+
+6. The connection attempt is authorized with both the dial-in properties of the user account and network policies. 
+
+7. If the connection attempt is both authenticated and authorized, the NPS server sends an Access-Accept message to the access server. If the connection attempt is either not authenticated or not authorized, the NPS server sends an Access-Reject message to the access server. 
+
+8. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS server, where the message is logged. 
+
+9. The NPS server sends an Accounting-Response to the access server. 
+
+>[!NOTE]
+>The access server also sends Accounting-Request messages during the time in which the connection is established, when the access client connection is closed, and when the access server is started and stopped.
+
 ### RADIUS proxy
 
-As a RADIUS proxy, NPS forwards authentication and accounting messages to NPS and other RADIUS servers. 
+As a RADIUS proxy, NPS forwards authentication and accounting messages to NPS and other RADIUS servers. You can use NPS as a RADIUS proxy to provide the routing of RADIUS messages between RADIUS clients \(also called network access servers\) and RADIUS servers that perform user authentication, authorization, and accounting for the connection attempt. 
+
+When used as a RADIUS proxy, NPS is a central switching or routing point through which RADIUS access and accounting messages flow. NPS records information in an accounting log about the messages that are forwarded.
+
+#### Using NPS as a RADIUS proxy
+
+You can use NPS as a RADIUS proxy when:
+
+- You are a service provider who offers outsourced dial-up, VPN, or wireless network access services to multiple customers. Your NASs send connection requests to the NPS RADIUS proxy. Based on the realm portion of the user name in the connection request, the NPS RADIUS proxy forwards the connection request to a RADIUS server that is maintained by the customer and can authenticate and authorize the connection attempt.
+- You want to provide authentication and authorization for user accounts that are not members of either the domain in which the NPS server is a member or another domain that has a two-way trust with the domain in which the NPS server is a member. This includes accounts in untrusted domains, one-way trusted domains, and other forests. Instead of configuring your access servers to send their connection requests to an NPS RADIUS server, you can configure them to send their connection requests to an NPS RADIUS proxy. The NPS RADIUS proxy uses the realm name portion of the user name and forwards the request to an NPS server in the correct domain or forest. Connection attempts for user accounts in one domain or forest can be authenticated for NASs in another domain or forest.
+- You want to perform authentication and authorization by using a database that is not a Windows account database. In this case, connection requests that match a specified realm name are forwarded to a RADIUS server, which has access to a different database of user accounts and authorization data. Examples of other user databases include Novell Directory Services (NDS) and Structured Query Language (SQL) databases.
+- You want to process a large number of connection requests. In this case, instead of configuring your RADIUS clients to attempt to balance their connection and accounting requests across multiple RADIUS servers, you can configure them to send their connection and accounting requests to an NPS RADIUS proxy. The NPS RADIUS proxy dynamically balances the load of connection and accounting requests across multiple RADIUS servers and increases the processing of large numbers of RADIUS clients and authentications per second.
+- You want to provide RADIUS authentication and authorization for outsourced service providers and minimize intranet firewall configuration. An intranet firewall is between your perimeter network (the network between your intranet and the Internet) and intranet. By placing an NPS server on your perimeter network, the firewall between your perimeter network and intranet must allow traffic to flow between the NPS server and multiple domain controllers. By replacing the NPS server with an NPS proxy, the firewall must allow only RADIUS traffic to flow between the NPS proxy and one or multiple NPS servers within your intranet.
+
+The following illustration shows NPS as a RADIUS proxy between RADIUS clients and RADIUS servers.
+
+![NPS as a RADIUS Proxy](../../media/Nps-Proxy/Nps-Proxy.jpg)
+
 
 With NPS, organizations can also outsource remote access infrastructure to a service provider while retaining control over user authentication, authorization, and accounting.
 
@@ -68,6 +128,30 @@ NPS configurations can be created for the following scenarios:
 - Outsourced dial-up or wireless access
 - Internet access
 - Authenticated access to extranet resources for business partners
+
+#### NPS as a RADIUS proxy connection request processing
+
+When NPS is used as a RADIUS proxy between a RADIUS client and a RADIUS server, RADIUS messages for network access connection attempts are forwarded in the following way:
+
+1. Access servers, such as dial-up network access servers, virtual private network (VPN) servers, and wireless access points, receive connection requests from access clients.
+
+2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS server that is being used as the NPS RADIUS proxy.
+
+3. The NPS RADIUS proxy receives the Access-Request message and, based on the locally configured connection request policies, determines where to forward the Access-Request message.
+
+4. The NPS RADIUS proxy forwards the Access-Request message to the appropriate RADIUS server.
+
+5. The RADIUS server evaluates the Access-Request message.
+
+6. If required, the RADIUS server sends an Access-Challenge message to the NPS RADIUS proxy, where it is forwarded to the access server. The access server processes the challenge with the access client and sends an updated Access-Request to the NPS RADIUS proxy, where it is forwarded to the RADIUS server.
+
+7. The RADIUS server authenticates and authorizes the connection attempt.
+
+8. If the connection attempt is both authenticated and authorized, the RADIUS server sends an Access-Accept message to the NPS RADIUS proxy, where it is forwarded to the access server. If the connection attempt is either not authenticated or not authorized, the RADIUS server sends an Access-Reject message to the NPS RADIUS proxy, where it is forwarded to the access server.
+
+9. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS RADIUS proxy. The NPS RADIUS proxy logs the accounting data and forwards the message to the RADIUS server.
+
+10. The RADIUS server sends an Accounting-Response to the NPS RADIUS proxy, where it is forwarded to the access server.
 
 ## RADIUS server and RADIUS proxy configuration examples
 
@@ -82,8 +166,6 @@ The following configuration examples demonstrate how you can configure NPS as a 
 **NPS as a RADIUS server with remote accounting servers**. In this example, the local NPS server is not configured to perform accounting and the default connection request policy is revised so that RADIUS accounting messages are forwarded to an NPS server or other RADIUS server in a remote RADIUS server group. Although accounting messages are forwarded, authentication and authorization messages are not forwarded, and the local NPS server performs these functions for the local domain and all trusted domains.
 
 **NPS with remote RADIUS to Windows user mapping**. In this example, NPS acts as both a RADIUS server and as a RADIUS proxy for each individual connection request by forwarding the authentication request to a remote RADIUS server while using a local Windows user account for authorization. This configuration is implemented by configuring the Remote RADIUS to Windows User Mapping attribute as a condition of the connection request policy. \(In addition, a user account must be created locally on the RADIUS server that has the same name as the remote user account against which authentication is performed by the remote RADIUS server.\)
-
-
 
 ## Configuration
 
