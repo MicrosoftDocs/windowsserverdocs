@@ -29,7 +29,7 @@ The following are the requirements for deploying AD FS:
 -   [Configuration database requirements](AD-FS-2016-Requirements.md#BKMK_5)  
   
 -   [Browser requirements](AD-FS-2016-Requirements.md#BKMK_6)  
-   
+
 -   [Network requirements](AD-FS-2016-Requirements.md#BKMK_7)  
   
 -   [Permissions requirements](AD-FS-2016-Requirements.md#BKMK_13)  
