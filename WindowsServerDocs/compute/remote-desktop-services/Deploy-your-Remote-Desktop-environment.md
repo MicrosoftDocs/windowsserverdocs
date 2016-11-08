@@ -20,7 +20,8 @@ manager: dongill
 
 Use the following steps to deploy the Remote Desktop servers in your environment.  
   
->[NOTE] The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS virtual machine, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment.  
+>[NOTE] 
+> The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS virtual machine, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment.  
   
 1.  Connect to the RDMS virtual machine using the Remote Desktop (RDC) client:  
     1.  In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.  
@@ -54,7 +55,7 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     3.  Enter the SSL certificate name for the RD Gateway server using the external fully qualified DNS Name (FQDN) of the RD Gateway server. In Azure, this is the **DNS name** label and uses the format servicename.location.cloudapp.azure.com. For example, contoso.westus.cloudapp.azure.com.  
     4.  Click **Next**, and then click **Add**.
 
->[NOTE] Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.
+   >[NOTE] Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.
   
 7.  Create and install self-signed certificates for the RD Gateway and RD Connection Broker servers. Note that this procedure will be different if you are using certificates from a trusted certificate authority.    
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
