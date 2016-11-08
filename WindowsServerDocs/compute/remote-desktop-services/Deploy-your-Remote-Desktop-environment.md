@@ -55,7 +55,8 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     3.  Enter the SSL certificate name for the RD Gateway server using the external fully qualified DNS Name (FQDN) of the RD Gateway server. In Azure, this is the **DNS name** label and uses the format servicename.location.cloudapp.azure.com. For example, contoso.westus.cloudapp.azure.com.  
     4.  Click **Next**, and then click **Add**.
 
-   >[NOTE] Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.
+   > [!NOTE] 
+   > Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.
   
 7.  Create and install self-signed certificates for the RD Gateway and RD Connection Broker servers. Note that this procedure will be different if you are using certificates from a trusted certificate authority.    
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
