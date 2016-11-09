@@ -14,16 +14,19 @@ ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 >Applies To: Windows Server 2016
 
 This topic introduces the resiliency options available in Storage Spaces Direct and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each. It also presents some usage instructions to get you started, and references some great papers, blogs, and additional content where you can learn more.
+
 If you are already familiar with Storage Spaces, you may want to skip to the Summary section.
 
 ## Overview
 
 At its heart, Storage Spaces is about providing fault tolerance, often called ‘resiliency’, for your data. Its implementation is similar to RAID, except distributed across servers and implemented in software.
+
 As with RAID, there are a few different ways Storage Spaces can do this, which make different tradeoffs between fault tolerance, storage efficiency, and compute complexity. These broadly fall into two categories: ‘mirroring’ and ‘parity’, the latter sometimes called ‘erasure coding’.
 
 ## Mirroring
 
 Mirroring provides fault tolerance by keeping multiple copies of all data. This most closely resembles RAID-1. How that data is striped and placed is non-trivial, but it is absolutely true to say that any data stored using mirroring is written, in its entirety, multiple times. Each copy is written to different physical hardware (different drives in different servers) which are assumed to fail independently.
+
 In Windows Server 2016, Storage Spaces offers two flavors of mirroring – ‘two-way’ and ‘three-way’.
 
 ### Two-way mirror
@@ -48,6 +51,7 @@ Mirroring, of either flavor, provides the fastest possible reads and writes, wit
 ## Parity
 
 Parity encoding, often called ‘erasure coding’, provides fault tolerance using bitwise arithmetic, which can get [remarkably complicated](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf). The way this works is less obvious than mirroring, and there are many great online resources (for example, this third-party [Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)) that can help you get the idea. Sufficed to say it provides better storage efficiency without compromising fault tolerance.
+
 In Windows Server 2016, Storage Spaces offers two flavors of parity – ‘single’ parity and ‘dual’ parity, the latter employing an advanced technique called ‘local reconstruction codes’ at larger scales.
 
 ### Single parity
@@ -85,10 +89,12 @@ Although parity can achieve far better storage efficiency than mirroring, this c
 ## Mixed resiliency
 
 Beginning in Windows Server 2016, one Storage Spaces Direct volume can be part mirror and part parity. Based on read/write activity, the new Resilient File System (ReFS) intelligently moves data between the two resiliency types in real-time to keep the most active data in the mirror part. Effectively, this is [using mirroring to accelerate erasure coding](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), giving the best of both: fast, cheap writes of hot data, and better storage efficiency for cooler data.
+
 To mix three-way mirror and dual parity, you need at least four fault domains, meaning four servers.
 
 ### Storage efficiency
 The storage efficiency of mixed resiliency is in between what you’d get from using all mirror or all parity, and depends on the proportions you choose. For example, the demo at the 37-minute mark of this presentation shows [various mixes achieving 46%, 54%, and 65% efficiency](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) with 12 servers.
+
 Try our online [capacity calculator web app](http://aka.ms/s2dcalc) to see how different configurations and mixes affects your available capacity and storage efficiency.
 
 ### When to use mixed resiliency
@@ -148,6 +154,7 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 ## Usage in PowerShell
 
 When you create volumes ("Storage Spaces"), you can specify which resiliency type to use. In PowerShell, you can use the the New-Volume cmdlet and its ResiliencySettingName and PhysicalDiskRedundancy parameters.
+
 Each of the following four cmdlets creates one volume. Mirror 1 uses two-way mirror; Mirror 2 uses three-way mirror; Parity 1 uses single parity; and Parity 2 uses dual parity. So long as you have the minimum number of fault domains required for each, these cmdlets individually are the most prescriptive and surefire way to create exactly what you want. Remember to specify whatever FriendlyName and Size you want.
 
 ```
