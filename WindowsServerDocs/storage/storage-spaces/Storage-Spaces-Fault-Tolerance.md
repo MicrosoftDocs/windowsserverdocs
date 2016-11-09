@@ -26,9 +26,11 @@ As with RAID, there are a few different ways Storage Spaces can do this, which m
 Mirroring provides fault tolerance by keeping multiple copies of all data. This most closely resembles RAID-1. How that data is striped and placed is non-trivial, but it is absolutely true to say that any data stored using mirroring is written, in its entirety, multiple times. Each copy is written to different physical hardware (different drives in different servers) which are assumed to fail independently.
 In Windows Server 2016, Storage Spaces offers two flavors of mirroring – ‘two-way’ and ‘three-way’.
 
-###Two-way mirror
+### Two-way mirror
 
 Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware ‘fault domains’](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains) – with Storage Spaces Direct, that means two servers.
+
+![two-way-mirror](../media/Storage-Spaces-Fault-Tolerance/two-way-mirror.png)
 
    >[!NOTE]
    > Tip: We discourage using single parity. It can only safely tolerate one hardware failure at a time. If you’re rebooting one server, and a drive fails in another server, you will experience downtime. If you only have three servers, we recommend using three-way mirroring. If you have four or more, see the next section.
@@ -36,6 +38,8 @@ Two-way mirroring writes two copies of everything. Its storage efficiency is 50%
 ### Three-way mirror
 
 Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers.
+
+![three-way-mirror](../media/Storage-Spaces-Fault-Tolerance/two-way-mirror.png)
 
 ### When to use mirroring
 
@@ -55,14 +59,24 @@ Single parity keeps only one bitwise parity symbol, which provides fault toleran
 ### Dual parity
 
 Dual parity implements Reed-Solomon error-correcting codes to keep two bitwise parity symbols, thereby providing the same fault tolerance as three-way mirroring (i.e. up to two failures at once), but with better storage efficiency. It most closely resembles RAID-6. To use dual parity, you need at least four hardware fault domains – with Storage Spaces Direct, that means four servers. At that scale, the storage efficiency is 50% – to store 2 TB of data, you need 4 TB of physical storage capacity.
+
+![dual-parity](../media/Storage-Spaces-Fault-Tolerance/dual-parity.png)
+
 The storage efficiency of dual parity increases the more hardware fault domains you have, from 50% up to 80%. For example, at seven (with Storage Spaces Direct, that means seven servers) the efficiency jumps to 66.7% – to store 4 TB of data, you need just 6 TB of physical storage capacity.
+
+![dual-parity](../media/Storage-Spaces-Fault-Tolerance/dual-parity-wide.png)
+
 See Table 3 for the efficiency of dual party and local reconstruction codes at every scale.
 
 ### Local reconstruction codes
 
 Storage Spaces in Windows Server 2016 introduces an advanced technique developed by Microsoft Research called ‘local reconstruction codes’, or LRC. At large scale, dual parity uses LRC to split its encoding/decoding into a few smaller groups, to reduce the overhead required to make writes or recover from failures.
+
 With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here’s what the layout looks like with hard disk drives and 12 hardware fault domains (i.e. 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
-We recommend this in-depth yet eminently readable walkthrough of [how local reconstruction codes handle various failure scenarios, and why they’re appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own Claus Joergensen.
+
+![local-reconstruction-codes](../media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes.png)
+
+We recommend this in-depth yet eminently readable walkthrough of [how local reconstruction codes handle various failure scenarios, and why they’re appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
 
 ### When to use parity
 
@@ -154,6 +168,8 @@ If your deployment uses Storage Spaces Direct with four or more servers, ‘tier
 ```
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
 ```
+
+![storage-tiers-screenshot](../media/Storage-Spaces-Fault-Tolerance/storage-tiers-screenshot.png)
 
 To create volumes, and especially mixed resiliency volumes, reference these tier templates using the StorageTierFriendlyNames and StorageTierSizes parameters. The following cmdlet creates a 1 TB mixed volume, split 30% three-way mirror and 70% dual parity.
 
