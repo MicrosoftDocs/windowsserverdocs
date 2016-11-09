@@ -44,9 +44,9 @@ Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows
 ### [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/)
 The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment.
 
-## [Remote Desktop Services](./remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
+## [Remote Desktop Services](./remote-desktop-services/welcome-to-rds.md)
 
-Learn how to create a desktop hosting environment based on Remote Desktop Services and Azure services. Also included is information about using MultiPoint Services in Windows Server 2016.
+Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely. You can use Remote Desktop Services plus Azure services to create hosting solutions. 
 
 ## [Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)
 
