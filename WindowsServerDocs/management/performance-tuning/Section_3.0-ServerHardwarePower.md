@@ -30,7 +30,7 @@ Memory accounts for an increasing fraction of the total system power. Many facto
 
 
 ## Disks Recommendations
-Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives. For more info about the energy costs for different RAID configurations, see [Performance Tuning for Storage Subsystems](performance-tuning-for-storage-subsystems.md).
+Higher RPM means increased energy consumption. SSD drives are more power efficient than rotational drives. Also, 2.5-inch drives generally require less power than 3.5-inch drives. For more info about the energy costs for different RAID configurations, see [Performance Tuning for Storage Subsystems](./Section_5.0-performance-tuning-for-storage-subsystems.md).
 
 
 ## Network and Storage Adapter Recommendations
@@ -74,7 +74,7 @@ The processor terminology used throughout this topic reflects the hierarchy of c
 
 Energy efficiency is increasingly important in enterprise and data center environments, and it adds another set of tradeoffs to the mix of configuration options.
 
-Windows Server 2016 is optimized for excellent energy efficiency with minimum performance impact across a wide range of customer workloads. [Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan](processor-power-management--ppm--tuning-for-the-windows-server-balanced-power-plan.md) describes the workloads used for tuning the default parameters in Windows Server 2016, and provides suggestions for customized tunings. This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server 2016.
+Windows Server 2016 is optimized for excellent energy efficiency with minimum performance impact across a wide range of customer workloads. [Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan](./Section_3.1-PPMTuning.md) describes the workloads used for tuning the default parameters in Windows Server 2016, and provides suggestions for customized tunings. This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server 2016.
 
 ### Calculating server energy efficiency
 
