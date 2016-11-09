@@ -26,10 +26,10 @@ rpcinfo [/p [<Node>]] [/b <Program version>] [/t <Node Program> [<version>]] [/u
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|/p [<Node>]|lists all programs registered with the port mapper on the specified host. if you do not specify a node (computer) name, the program queries the port mapper on the local host.|
+|/p [<Node>]|lists all programs registered with the port mapper on the specified host. If you do not specify a node (computer) name, the program queries the port mapper on the local host.|
 |/b <Program version>|Requests a response from all network nodes that have the specified program and version registered with the port mapper. You must specify both a program name or number and a version number.|
-|/t <Node Program> [<version>]|Uses the TCP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. if you do not specify a version, the program calls all versions.|
-|/u <Node Program> [<version>]|Uses the UDP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. if you do not specify a version, the program calls all versions.|
+|/t <Node Program> [<version>]|Uses the TCP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. If you do not specify a version, the program calls all versions.|
+|/u <Node Program> [<version>]|Uses the UDP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. If you do not specify a version, the program calls all versions.|
 |/?|Displays help at the command prompt.|
 ## <a name="BKMK_Examples"></a>Examples
 To list all programs registered with the port mapper, type:

@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied. This command is necessary to create shadow copies. if used without parameters, **add volume** displays help at the command prompt.  
+adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied. This command is necessary to create shadow copies. If used without parameters, **add volume** displays help at the command prompt.  
   
 for examples of how to use this command, see [Examples](#BKMK_examples).  
   
@@ -34,7 +34,7 @@ add volume <volume> [provider <ProviderID>]
 |Parameter|Description|  
 |-------|--------|  
 |<volume>|Specifies a volume to add to the shadow copy Set. at least one volume is required for shadow copy creation.|  
-|\[provider <ProviderID>\]|Specifies the Provider ID of a registered provider to use to create the shadow copy. if **provider** is not specified, the default provider is used.|  
+|\[provider <ProviderID>\]|Specifies the Provider ID of a registered provider to use to create the shadow copy. If **provider** is not specified, the default provider is used.|  
   
 ## remarks  
   

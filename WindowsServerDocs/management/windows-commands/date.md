@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays or sets the system date. if used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
+Displays or sets the system date. If used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -35,7 +35,7 @@ date [/t | <Month-Day-Year>]
 -   You must separate values for *Month*, *Day*, and *Year* with periods (.), hyphens (-), or slash marks (/).
 -   Valid *Month* values are 1 through 12.
 -   Valid *Day* values are 1 through 31.
--   Valid *Year* values are either 00 through 99, or 1980 through 2099. if you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
+-   Valid *Year* values are either 00 through 99, or 1980 through 2099. If you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
 ## <a name="BKMK_examples"></a>Examples
 if command extensions are enabled, to display the current system date, type:
 ```

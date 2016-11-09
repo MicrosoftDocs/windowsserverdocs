@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Encrypts the drive and turns on BitLocker. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Encrypts the drive and turns on BitLocker. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde  on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey <pathToExternaldirectory>]|[-startupkey <pathToExternalKeydirectory>]|[-certificate]|
@@ -42,11 +42,11 @@ manage-bde  on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey <p
 |-tpmandpinandstartupkey|adds a TPM, PIN, and startup key protector for the operating system drive. You can also use **-tpsk** as an abbreviated version of this command.|
 |-password|adds a password key protector for the data drive. You can also use **-pw** as an abbreviated version of this command.|
 |-ADAccountOrGroup|adds a SID-based identity protector for the volume. The volume will automatically unlock if the user or computer has the proper credentials. When specifying a computer account, append a **$** to the computer name and specify ** service** to indicate that the unlock should happen in the content of the BitLocker server instead of the user. You can also use **-sid** as an abbreviated version of this command.|
-|-UsedSpaceOnly|Sets the encryption mode to Used Space Only encryption. The sections of the volume containing used space will be encrypted but the free space will not. if this option is not specified, all used space and free space on the volume will be encrypted.. You can also use **-used** as an abbreviated version of this command.|
+|-UsedSpaceOnly|Sets the encryption mode to Used Space Only encryption. The sections of the volume containing used space will be encrypted but the free space will not. If this option is not specified, all used space and free space on the volume will be encrypted.. You can also use **-used** as an abbreviated version of this command.|
 |-encryptionMethod|Configures the encryption algorithm and key size. You can also use **-em** as an abbreviated version of this command.|
 |-skiphardwaretest|Begins encryption without a hardware test. You can also use **-s** as an abbreviated version of this command.|
 |-discoveryvolumetype|Specifies the file system to use for the discovery data drive. The discovery data drive is a hidden drive added to a Fat-formatted, BitLocker-protected removable data drive that contains the BitLocker To Go Reader so that Windows Vista or Windows XP operating systems can be used to view BitLocker-protected drives.|
-|-forceEncryptiontype|forces BitLocker to use either software or hardware encryption. You can specify either **Hardware** or **Software** as the encryption type. if the **hardware** parameter is selected, but the drive does not support hardware encryption, manage-bde returns an error. if Group Policy settings forbids the specified encryption type, manage-bde returns an error. You can also use **-fet** as an abbreviated version of this command.|
+|-forceEncryptiontype|forces BitLocker to use either software or hardware encryption. You can specify either **Hardware** or **Software** as the encryption type. If the **hardware** parameter is selected, but the drive does not support hardware encryption, manage-bde returns an error. If Group Policy settings forbids the specified encryption type, manage-bde returns an error. You can also use **-fet** as an abbreviated version of this command.|
 |-removevolumeshadowCopies|force deletikon of volume shadow Copies for the volume. You will not be able to restore this volume using previous system restore points after running this command. You can also use **-rvsc** as an abbreviated version of this command.|
 |<FileSystemtype>|Specifies which file systems can be used with discovery data drives: Fat32, default, or none.|
 |-computername|Specifies that manage-bde is being used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|

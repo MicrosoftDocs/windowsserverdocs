@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 Takes the online volume with focus to the offline state.  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This DiskPart command is not available in any edition of Windows Vista.  
   
 ## Syntax  

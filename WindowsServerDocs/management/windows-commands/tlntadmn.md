@@ -47,7 +47,7 @@ tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |-?|Displays help at the command prompt.|  
 ## remarks  
 -   To display the server settings, type **tlntadmn** without any parameters.  
--   To use the **tlntadmn** command, you must log on to the local computer with administrative credentials. To administer a remote computer, you must also provide administrative credentials for the remote computer. You can do so by logging on to the local computer with an account that has administrative credentials for both the local computer and the remote computer. if you cannot use this method, you can use the **-u** and **-p** parameters to provide administrative credentials for the remote computer.  
+-   To use the **tlntadmn** command, you must log on to the local computer with administrative credentials. To administer a remote computer, you must also provide administrative credentials for the remote computer. You can do so by logging on to the local computer with an account that has administrative credentials for both the local computer and the remote computer. If you cannot use this method, you can use the **-u** and **-p** parameters to provide administrative credentials for the remote computer.  
 ## <a name="BKMK_Examples"></a>Examples  
 Configure the idle session timeout to 30 minutes.  
 ```  

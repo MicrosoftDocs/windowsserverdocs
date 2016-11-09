@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive. if used without parameters, **diskcopy** uses the current drive for the source disk and the destination disk.
+Copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive. If used without parameters, **diskcopy** uses the current drive for the source disk and the destination disk.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -33,7 +33,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 |/?|Displays help at the command prompt.|
 ## remarks
 -   Using disks
-    **diskcopy** works only with removable disks such as floppy disks, which must be the same type. You cannot use **diskcopy** with a hard disk. if you specify a hard disk drive for *Drive1* or *Drive2*, **diskcopy** displays the following error message:
+    **diskcopy** works only with removable disks such as floppy disks, which must be the same type. You cannot use **diskcopy** with a hard disk. If you specify a hard disk drive for *Drive1* or *Drive2*, **diskcopy** displays the following error message:
     ```
     Invalid drive specification
     Specified drive does not exist or is nonremovable
@@ -51,9 +51,9 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 -   Disk serial numbers
     if the source disk has a volume serial number, **diskcopy** creates a new volume serial number for the destination disk and displays the number when the copy operation is complete.
 -   Omitting drive parameters
-    if you omit the *Drive2* parameter, **diskcopy** uses the current drive as the destination drive. if you omit both drive parameters, **diskcopy** uses the current drive for both. if the current drive is the same as *Drive1*, **diskcopy** prompts you to swap disks as necessary.
+    if you omit the *Drive2* parameter, **diskcopy** uses the current drive as the destination drive. If you omit both drive parameters, **diskcopy** uses the current drive for both. If the current drive is the same as *Drive1*, **diskcopy** prompts you to swap disks as necessary.
 -   Using one drive for copying
-    Run **diskcopy** from a drive other than the floppy disk drive, for example the C drive. if floppy disk *Drive1* and floppy disk *Drive2* are the same, **diskcopy** prompts you to switch disks. if the disks contain more information than the available memory can hold, **diskcopy** cannot read all of the information at once. **diskcopy** reads from the source disk, writes to the destination disk, and prompts you to insert the source disk again. This process continues until you have copied the entire disk.
+    Run **diskcopy** from a drive other than the floppy disk drive, for example the C drive. If floppy disk *Drive1* and floppy disk *Drive2* are the same, **diskcopy** prompts you to switch disks. If the disks contain more information than the available memory can hold, **diskcopy** cannot read all of the information at once. **diskcopy** reads from the source disk, writes to the destination disk, and prompts you to insert the source disk again. This process continues until you have copied the entire disk.
 -   Avoiding disk fragmentation
     Fragmentation is the presence of small areas of unused disk space between existing files on a disk. A fragmented source disk can slow down the process of finding, reading, or writing files.
     Because **diskcopy** makes an exact copy of the source disk on the destination disk, any fragmentation on the source disk is transferred to the destination disk. To avoid transferring fragmentation from one disk to another, use **copy** or **xcopy** to copy your disk. Because **copy** and **xcopy** copy files sequentially, the new disk is not fragmented.

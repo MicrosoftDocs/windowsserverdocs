@@ -30,7 +30,7 @@ wbadmin get versions
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|-backupTarget|Specifies the storage location that contains the backups that you want the details for. Use for listing backups stored at that target location. Backup target locations can be locally attached disk drives, volumes, remote shared folders, removable media such as DVD drives or other optical media. if **wbadmin get versions** is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
+|-backupTarget|Specifies the storage location that contains the backups that you want the details for. Use for listing backups stored at that target location. Backup target locations can be locally attached disk drives, volumes, remote shared folders, removable media such as DVD drives or other optical media. If **wbadmin get versions** is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
 |-machine|Specifies the computer that you want backup details for. Use when backups of multiple computers are stored in the same location. Should be used when **-backupTarget** is specified.|
 ## remarks
 To list items available for recovery from a specific backup, use **wbadmin get items**.

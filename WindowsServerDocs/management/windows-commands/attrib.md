@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays, sets, or removes attributes assigned to files or directories. if used without parameters, **attrib** displays attributes of all files in the current directory.
+Displays, sets, or removes attributes assigned to files or directories. If used without parameters, **attrib** displays attributes of all files in the current directory.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```

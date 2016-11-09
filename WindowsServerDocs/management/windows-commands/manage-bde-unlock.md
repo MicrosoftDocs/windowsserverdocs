@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Unlocks a BitLocker-protected drive by using a recovery password or a recovery key. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Unlocks a BitLocker-protected drive by using a recovery password or a recovery key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde -unlock {-recoverypassword <Password>|-recoverykey <pathToExternalKeyFile>} <Drive> [-certificate {-cf pathToCertificateFile | -ct CertificateThumbprint} {-pin}] [-password] [-computername <Name>] [{-?|/?}] [{-help|-h}]

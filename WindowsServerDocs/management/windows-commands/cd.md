@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays the name of or changes the current directory. if used with only a drive letter (for example, `cd C:`), **cd** displays the names of the current directory in the specified drive. if used without parameters, **cd** displays the current drive and directory.  
+Displays the name of or changes the current directory. If used with only a drive letter (for example, `cd C:`), **cd** displays the names of the current directory in the specified drive. If used without parameters, **cd** displays the current drive and directory.  
 > [!NOTE]  
 > This command is the same as the **chdir** command.  
 for examples of how to use this command, see [Examples](#BKMK_examples).  
@@ -39,8 +39,8 @@ chdir [..]
 |/?|Displays help at the command prompt.|  
 ## remarks  
 if command extensions are enabled, the following conditions apply to the **cd** command:  
--   The current directory string is converted to use the same case as the names on the disk. for example, `cd C:\TEMP` would set the current directory to C:\Temp if that is the case on the disk.  
--   Spaces are not treated as delimiters, so *path* can contain spaces without enclosing quotation marks. for example:  
+-   The current directory string is converted to use the same case as the names on the disk. For example, `cd C:\TEMP` would set the current directory to C:\Temp if that is the case on the disk.  
+-   Spaces are not treated as delimiters, so *path* can contain spaces without enclosing quotation marks. For example:  
     ```  
     cd username\programs\start menu  
     ```  

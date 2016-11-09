@@ -42,23 +42,23 @@ You can run Group Policy infrastructure health checks only by using the GPMC fro
 
 -    Windows Server 2012  or  Windows Server 2012 R2 
 
--   Windows 8 or Windows 8.1 with remote Server Administration Tools for Windows 8
+-   Windows 8 or Windows 8.1 with Remote Server Administration Tools for Windows 8
 
 An understanding of how GPOs are stored in a domain will help you make full use of the data that is displayed on the infrastructure status page.
 
 In a domain that contains more than one domain controller, Group Policy information takes time to propagate or replicate from one domain controller to another. Low-bandwidth network connections between domain controllers slow replication. The Group Policy infrastructure has mechanisms to manage these issues.
 
-Each GPO is stored partly in active directory and partly in SYSvol on the domain controller. The portion of the GPO that is stored in active directory is called the Group Policy container, and the portion of the GPO that is stored in SYSvol is called the Group Policy template. The GPMC and Group Policy Management editor manage the GPO as a single unit. for example, when you set permissions on a GPO in the GPMC, the GPMC is actually setting permissions for objects in active directory and in SYSvol. It is not recommended that you manipulate these separate objects independently outside of the GPMC and the Group Policy Management editor. It is important to understand that these two separate features of a GPO rely on different replication mechanisms. The file system portion, Group Policy template, is replicated through Distributed File Service Replication (DFS-R) or File Replication Service (FRS), independently of the replication that is handled by active directory in the Group Policy container.
+Each GPO is stored partly in active directory and partly in SYSvol on the domain controller. The portion of the GPO that is stored in active directory is called the Group Policy container, and the portion of the GPO that is stored in SYSvol is called the Group Policy template. The GPMC and Group Policy Management editor manage the GPO as a single unit. For example, when you set permissions on a GPO in the GPMC, the GPMC is actually setting permissions for objects in active directory and in SYSvol. It is not recommended that you manipulate these separate objects independently outside of the GPMC and the Group Policy Management editor. It is IMPORTANT to understand that these two separate features of a GPO rely on different replication mechanisms. The file system portion, Group Policy template, is replicated through Distributed File Service Replication (DFS-R) or File Replication Service (FRS), independently of the replication that is handled by active directory in the Group Policy container.
 
 Temporary lack of synchronization can occur between the GPO data that is stored in active directory (Group Policy container) and the GPO data that is stored on SYSvol (Group Policy template). This is due to the differences in the replication schemes used by active directory and DFS-R or FRS.
 
-Group Policy provides a framework that extends Group Policy management to more features. These components are referred to as Group Policy snap-ins or extensions. for those Group Policy extensions that store data in only one data store (active directory or SYSvol), this is not an issue, and Group Policy is applied as it is read. Such extensions include administrative templates, scripts, folder redirection, and most of the security settings.
+Group Policy provides a framework that extends Group Policy management to more features. These components are referred to as Group Policy snap-ins or extensions. For those Group Policy extensions that store data in only one data store (active directory or SYSvol), this is not an issue, and Group Policy is applied as it is read. Such extensions include administrative templates, scripts, folder redirection, and most of the security settings.
 
 for any Group Policy extension that stores data in active directory and SYSvol, the extension must properly handle the possibility that the data is unsynchronized. This is also true for extensions that need multiple objects in a single store to be atomic in nature, because neither storage location handles transactions.
 
-An example of an extension that stores data in active directory and SYSvol is Software Installation. The script files are stored in SYSvol, and the Windows Installer package definition is stored in active directory. if a script exists, but the corresponding active directory features are not present, nothing happens. if a script file is missing, but the package is known in active directory, application installation fails gracefully and retries on the next processing of Group Policy.
+An example of an extension that stores data in active directory and SYSvol is Software Installation. The script files are stored in SYSvol, and the Windows Installer package definition is stored in active directory. If a script exists, but the corresponding active directory features are not present, nothing happens. If a script file is missing, but the package is known in active directory, application installation fails gracefully and retries on the next processing of Group Policy.
 
-The tools used to manage active directory and Group Policy (such as GPMC, the Group Policy Object editor, and active directory Users and computers) communicate through domain controllers. if there are several domain controllers available, changes to objects (including users, computers, organizational units, and GPOs) may take time to appear on other domain controllers. The administrator may see different data depending on the last domain controller on which the changes were made and on which domain controller they are currently viewing the data.
+The tools used to manage active directory and Group Policy (such as GPMC, the Group Policy Object editor, and active directory Users and computers) communicate through domain controllers. If there are several domain controllers available, changes to objects (including users, computers, organizational units, and GPOs) may take time to appear on other domain controllers. The administrator may see different data depending on the last domain controller on which the changes were made and on which domain controller they are currently viewing the data.
 
 Ideally, you would like to proactively check to make sure that all your GPOs within a domain are consistent. In the past, **GPOTool.exe** was used for this check. However, **GPOTool.exe** is limited to checking the values in the gpt.ini file, which only indicates if the versions in the Group Policy container and the Group Policy template on each domain controller are in sync.
 
@@ -67,8 +67,8 @@ In  Windows Server 2012  and  Windows Server 2012 R2 , the GPMC contains a more 
 ## <a name="BKMK_Step1"></a>Step 1: Check Group Policy infrastructure health
  Windows Server 2012  includes a graphical reporting feature in the GPMC that enables you to choose a baseline domain controller for comparison. You can see the current Group Policy replication status with synchronization details when a comparison finds a differential from the baseline domain controller.
 
-> [!importANT]
-> You can only run the Group Policy infrastructure status report from the GPMC. You cannot schedule this report, and there is no Windows powershell or other command-line equivalent.
+> [!IMPORTANT]
+> You can only run the Group Policy infrastructure status report from the GPMC. You cannot schedule this report, and there is no Windows PowerShell or other command-line equivalent.
 > 
 > The report does not persist between GPMC sessions. Do not close the GPMC until the report gathering process has completed to avoid losing the report information.
 
@@ -132,7 +132,7 @@ if you suspect that you have an issue with active directory replication, see the
 
 -   [Troubleshooting active directory Replication Problems](http://technet.microsoft.com/library/cc949120.aspx)
 
--   [active directory Replication and Topology Management Using Windows powershell](http://technet.microsoft.com/library/hh831757.aspx)
+-   [active directory Replication and Topology Management Using Windows PowerShell](http://technet.microsoft.com/library/hh831757.aspx)
 
 ## <a name="BKMK_Step4"></a>Step 4: Check file services replication issues
 The Group Policy template portion of Group Policy resides in SYSvol. Group Policy depends on SYSvol replication working correctly for the Group Policy template to remain consistent between domain controllers within a domain. SYSvol replication depends on the Distributed File System Replication (DFS-R) or the File Replication Service (FSR), depending on how you have configured your domain controllers.

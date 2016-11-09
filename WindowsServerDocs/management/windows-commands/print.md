@@ -27,7 +27,7 @@ print [/d:<printerName>] [<Drive>:][<path>]<FileName>[ ...]
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/d:<printerName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name (\\\\*ServerName*\\*printerName*). if you do not specify a printer, the print job is sent to LPT1 by default.|
+|/d:<printerName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name (\\\\*ServerName*\\*printerName*). If you do not specify a printer, the print job is sent to LPT1 by default.|
 |<Drive>:|Specifies the logical or physical drive where the file you want to print is located. This parameter is not required if the file you want to print is located on the current drive.|
 |<path>|Specifies the location of the file you want to print. This parameter is not required if the file you want to print is located in the current directory.|
 |<FileName>[ ...]|Required. Specifies the file you want to print. You can include multiple files in one command.|

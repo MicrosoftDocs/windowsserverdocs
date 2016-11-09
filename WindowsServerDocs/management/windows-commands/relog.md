@@ -34,7 +34,7 @@ Specifies the performance counter path to log. To specify multiple counter paths
 **-cf** *FileName*  
 Specifies the pathname of the text file that lists the performance counters to be included in a relog file. Use this option to list counter paths in an input file, one per line. Default setting is all counters in the original log file are relogged.  
 **-f** {**bin**| **csv**| **tsv**| **SQL**}  
-Specifies the pathname of the output file format. The default format is **bin**. for a SQL database, the output file specifies the *DSN!CounterLog*. You can specify the database location by using the ODBC manager to configure the DSN (Database System Name).  
+Specifies the pathname of the output file format. The default format is **bin**. For a SQL database, the output file specifies the *DSN!CounterLog*. You can specify the database location by using the ODBC manager to configure the DSN (Database System Name).  
 **-t** *Value*  
 Specifies sample intervals in "*N*" records. Includes every nth data point in the relog file. Default is every data point.  
 **-o** {*OutputFile* | *DSN!CounterLog*}  
@@ -54,7 +54,7 @@ Displays help at the command prompt.
 ## remarks  
 Counter path format:  
 -   The general format for counter paths is as follows: [**\\\\**<computer>] \\<Object>[<Parent>**/**<Instance#Index>] **\\**<Counter>] where the parent, instance, index, and counter components of the format may contain either a valid name or a wildcard character. The computer, parent, instance, and index components are not necessary for all counters.  
--   You determine the counter paths to use based on the counter itself. for example, the LogicalDisk object has an instance <Index>, so you must provide the <#index> or a wildcard. Therefore, you could use the following format: **\LogicalDisk(\*/\*#\*)\\\***  
+-   You determine the counter paths to use based on the counter itself. For example, the LogicalDisk object has an instance <Index>, so you must provide the <#index> or a wildcard. Therefore, you could use the following format: **\LogicalDisk(\*/\*#\*)\\\***  
 -   In comparison, the Process object does not require an instance <Index>. Therefore, you could use the following format: **\Process(\*)\ID Process**  
 -   The following is a list of the possible formats:  
     -   \\\\<computer>\\<Object>(<Parent>/<Instance#Index>)\\<Counter>  
@@ -72,7 +72,7 @@ Counter path format:
 -   if a wildcard character is specified in the counter name, all counters of the specified object are returned.  
 -   Partial counter path string matches (for example, pro*) are not supported.  
 Counter files:  
--   Counter files are text files that list one or more of the performance counters in the existing log. copy the full counter name from the log or the **/q** output in [**\\\\**<computer>**\\**<Object> [<Instance>] **\\**<Counter>] format. list one counter path on each line.  
+-   Counter files are text files that list one or more of the performance counters in the existing log. Copy the full counter name from the log or the **/q** output in [**\\\\**<computer>**\\**<Object> [<Instance>] **\\**<Counter>] format. list one counter path on each line.  
 copying counters:  
 -   When executed, **relog** copies specified counters from every record in the input file, converting the format if necessary. Wildcard paths are allowed in the counter file.  
 Saving input file subsets:  
@@ -83,7 +83,7 @@ Using the **/config** option:
 -   The contents of the setting file used with the **/config** option should have the following format:  
     -   [<CommandOption>]  
     -   *Value*  
-    -   where <CommandOption> is a command line option and <Value> specifies its value. for example:  
+    -   where <CommandOption> is a command line option and <Value> specifies its value. For example:  
     -   [o]  
     -   output.txt  
     -   [f]  

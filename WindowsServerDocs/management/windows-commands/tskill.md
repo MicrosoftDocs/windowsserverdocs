@@ -31,7 +31,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |-------|--------|
 |<ProcessID>|Specifies the ID of the process that you want to end.|
 |<ProcessName>|Specifies the name of the process that you want to end. This parameter can include wildcard characters.|
-|/server:<ServerName>|Specifies the terminal server that contains the process that you want to end. if **/server** is not specified, the current rd Session Host server is used.|
+|/server:<ServerName>|Specifies the terminal server that contains the process that you want to end. If **/server** is not specified, the current rd Session Host server is used.|
 |/id:<SessionID>|Ends the process that is running in the specified session.|
 |/a|Ends the process that is running in all sessions.|
 |/v|Displays information about the actions being performed.|

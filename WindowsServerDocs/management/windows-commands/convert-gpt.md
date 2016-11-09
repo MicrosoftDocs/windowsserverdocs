@@ -36,7 +36,7 @@ convert gpt [noerr]
   
 ## remarks  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > The disk must be empty to convert it into a gpt disk. Back up your data, and then delete all partitions or volumes before converting the disk.  
   
 -   The required minimum disk size for conversion to gpt is 128 megabytes.  

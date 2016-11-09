@@ -28,7 +28,7 @@ scwcmd register /kbname:<MyApp> [/kbfile:<kb.xml>] [/kb:<path>] [/d]
 |-------|--------|
 |/kbname:<MyApp>|Specifies the name under which the Security Configuration Database extension will be registered. This parameter must be specified.|
 |/kbfile:<Kb.xml>|Specifies the path and file name of the Security Configuration Database file that will be used to extend or customize the base Security Configuration Database. To validate that the Security Configuration Database file is compliant with the SCW schema, use the %windir%\security\KBregistrationInfo.xsd schema definition file. This option must be provided unless the **/d** parameter is specified.|
-|/kb:<path>|Specifies the path to the directory that contains the SCW Security Configuration Database files to be updated. if this option is not specified, %windir%\security\msscw\kbs is used.|
+|/kb:<path>|Specifies the path to the directory that contains the SCW Security Configuration Database files to be updated. If this option is not specified, %windir%\security\msscw\kbs is used.|
 |/d|Unregisters a Security Configuration Database extension from the Security Configuration Database. The extension to unregister is specified by the /kbname parameter. (The **/kbfile** parameter should not be specified.) The Security Configuration Database to unregister the extension from is specified by the **/kb** parameter.|
 |/?|Displays help at the command prompt.|
 ## remarks

@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 Refreshes the state of all disks in a disk group, attempt to recover disks in an invalid disk group, and resynchronizes mirrored volumes and RAID\-5 volumes that have stale data.  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This DiskPart command is not available in any edition of Windows Vista.  
   
 ## Syntax  
@@ -39,7 +39,7 @@ recover [noerr]
   
 -   This command operates on a disk group.  
   
--   This command applies only to groups of dynamic disks. if this command is used on a group with a basic disk, it will not return an error but no action will be taken.  
+-   This command applies only to groups of dynamic disks. If this command is used on a group with a basic disk, it will not return an error but no action will be taken.  
   
 -   This command operates on disks that are failed or failing. It also operates on volumes that are failed, failing, or in failed redundancy state.  
   

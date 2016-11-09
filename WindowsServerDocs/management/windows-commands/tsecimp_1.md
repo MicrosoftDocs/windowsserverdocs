@@ -30,7 +30,7 @@ tsecimp /d
 |/f <Filename>|Required. Specifies the name of the XML file that contains the assignment information that you want to import.|  
 |/v|Validates the structure of the XML file without importing the information into the Tsec.ini file.|  
 |/u|Checks whether each user is a member of the domain specified in the XML file. The computer on which you use this parameter must be connected to the network. This parameter might significantly slow performance if you are processing a large amount of user assignment information.|  
-|/d|Displays a list of installed telephony providers. for each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.|  
+|/d|Displays a list of installed telephony providers. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.|  
 |/?|Displays help at the command prompt.|  
 ### remarks  
 -   The XML file from which you want to import assignment information must follow the structure described below.  
@@ -40,12 +40,12 @@ tsecimp /d
         Each **User** element contains information about a user who is a member of a domain. Each user might be assigned one or more line devices.  
         additionally, each **User** element might have an attribute named **NoMerge**. When this attribute is specified, all current line device assignments for the user are removed before new ones are made. You can use this attribute to easily remove unwanted user assignments. By default, this attribute is not set.  
         The **User** element must contain a single **DomainuserName** element, which specifies the domain and user name of the user. The **User** element might also contain one **FriendlyName** element, which specifies a friendly name for the user.  
-        The **User** element might contain one **Linelist** element. if a **Linelist** element is not present, all line devices for this user are removed.  
+        The **User** element might contain one **Linelist** element. If a **Linelist** element is not present, all line devices for this user are removed.  
     -   **Linelist** element  
         The **Linelist** element contains information about each line or device that  might be assigned to the user. Each **Linelist** element can contain more than one **Line** element.  
     -   **Line** element  
         Each **Line** element specifies a line device. You must identify each line device by adding either an **address** element or a **PermanentID** element under the **Line** element.  
-        for each **Line** element, you can set the **remove** attribute. if you set this attribute, the user is no longer assigned that line device. if this attribute is not set, the user gains access to that line device. No error is given if the line device is not available to the user.  
+        for each **Line** element, you can set the **remove** attribute. If you set this attribute, the user is no longer assigned that line device. If this attribute is not set, the user gains access to that line device. No error is given if the line device is not available to the user.  
 -   The following sample XML code segments illustrate correct usage of the elements defined above.  
     -   The following code removes all line devices assigned to User1.  
         ```  
@@ -117,7 +117,7 @@ tsecimp /d
           </User>  
         </Userlist>  
         ```  
--   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. for each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
+-   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
     ```  
     NDIS Proxy TAPI Service Provider  
             Line: "WAN Miniport (L2TP)"  

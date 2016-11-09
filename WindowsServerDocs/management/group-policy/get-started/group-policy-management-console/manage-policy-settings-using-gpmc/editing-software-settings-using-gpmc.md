@@ -41,7 +41,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   In **Default package location**, specify the default software distribution point.
 
-    -   In **New packages**, specify how to add new packages to user settings. By default, packages can either be published or assigned. (To computers, they can only be assigned). if you want to select these options for each package, click **Display the Deploy Software** dialog box. for even more control on a per-package basis, click **Advanced**.
+    -   In **New packages**, specify how to add new packages to user settings. By default, packages can either be published or assigned. (To computers, they can only be assigned). If you want to select these options for each package, click **Display the Deploy Software** dialog box. For even more control on a per-package basis, click **Advanced**.
 
     -   In **Installation user interface options**, click **Basic** or **Maximum**, depending on how apparent you want the installation process to be to users.
 
@@ -55,7 +55,7 @@ To add software installation packages to user settings, you can either publish o
 
 4.  On the **File Extensions** tab, specify the following options:
 
-    -   **select file extension:** Displays a list of all available file name extensions for the managed software. When an extension is selected, all applications in active directory that are associated with the selected file name extension are displayed in the **Application precedence** list box. for example, many applications can be associated with the .htm file extension, such as Microsoft Word, Microsoft Internet Explorer, and Netscape Communicator.
+    -   **select file extension:** Displays a list of all available file name extensions for the managed software. When an extension is selected, all applications in active directory that are associated with the selected file name extension are displayed in the **Application precedence** list box. For example, many applications can be associated with the .htm file extension, such as Microsoft Word, Microsoft Internet Explorer, and Netscape Communicator.
 
     -   **Application precedence:** lists all the applications that are associated with the selected file name extension. You can determine precedence by using the **Up** and **Down** buttons to set the order of the applications.
 
@@ -77,11 +77,11 @@ To add software installation packages to user settings, you can either publish o
 
 4.  To create or change the list of categories under which programs appear in **add or remove Programs** in **Control Panel**, do any of the following:
 
-    -   To create a new category, click **add**, and then type the new category name. if you do not have permission to add categories, the **add** button is unavailable.
+    -   To create a new category, click **add**, and then type the new category name. If you do not have permission to add categories, the **add** button is unavailable.
 
-    -   To modify an existing category, click the category that you want to modify, click **Modify**, and then change the text of the selected category. if you do not have permission to edit categories, the **Modify** button is unavailable.
+    -   To modify an existing category, click the category that you want to modify, click **Modify**, and then change the text of the selected category. If you do not have permission to edit categories, the **Modify** button is unavailable.
 
-    -   To remove a category from the **Categories** list, click the category name, and then click **remove**. if you do not have permission to edit categories, the **remove** button is unavailable.
+    -   To remove a category from the **Categories** list, click the category name, and then click **remove**. If you do not have permission to edit categories, the **remove** button is unavailable.
 
     **additional considerations**
 
@@ -159,7 +159,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   Before you can perform this procedure, you must first assign or publish the upgrade package.
 
-    -   Depending on the GPO, the list of packages under **Package to upgrade** might have zero or more entries. if this is an upgrade under **computer Configuration** in the Group Policy console tree, the **Required upgrade for existing packages** check box is selected and unavailable because packages can only be assigned to computers they cannot be published.
+    -   Depending on the GPO, the list of packages under **Package to upgrade** might have zero or more entries. If this is an upgrade under **computer Configuration** in the Group Policy console tree, the **Required upgrade for existing packages** check box is selected and unavailable because packages can only be assigned to computers they cannot be published.
 
 #### To remove a managed application
 
@@ -171,7 +171,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   To specify that the application should be removed the next time a user logs on or restarts the computer, click **Immediately uninstall the software from users and computers**.
 
-    -   To specify that users can continue to use the application if they have already installed it, click **Allow users to continue to use the software, but prevent new installations**. if users have removed the application or if they have never installed it, they will not be able to install it.
+    -   To specify that users can continue to use the application if they have already installed it, click **Allow users to continue to use the software, but prevent new installations**. If users have removed the application or if they have never installed it, they will not be able to install it.
 
 ## How to set application properties
 
@@ -191,7 +191,7 @@ To add software installation packages to user settings, you can either publish o
 
 5.  Under **Deployment options**, select the check boxes for the following options that you want:
 
-    -   **Autoinstall this application by file extension activation**: select this option if you want to use the application precedence for the file name extension as it is determined on the **File Extensions** tab in the **Software installation properties** dialog box. if the application is not already installed, selecting this option causes the application to be installed when the user opens a file with this file association (for example, by double-clicking the file).
+    -   **Autoinstall this application by file extension activation**: select this option if you want to use the application precedence for the file name extension as it is determined on the **File Extensions** tab in the **Software installation properties** dialog box. If the application is not already installed, selecting this option causes the application to be installed when the user opens a file with this file association (for example, by double-clicking the file).
 
     -   **Uninstall this application when it falls out of the scope of management**: select this option if you want the application to be removed when users log on, or when computers start up, if they have moved to a site, domain, or organizational unit for which the application is not deployed.
 
@@ -303,8 +303,8 @@ To add software installation packages to user settings, you can either publish o
 
 7.  When you are sure that the modifications are configured the way you want them, click **OK**.
 
-    > [!importANT]
-    > Do not click **OK** until you have finished configuring the modifications. When you click **OK**, the package is assigned or published immediately. if the modifications are not properly configured, you will have to uninstall the package or upgrade the package with a correctly configured version.
+    > [!IMPORTANT]
+    > Do not click **OK** until you have finished configuring the modifications. When you click **OK**, the package is assigned or published immediately. If the modifications are not properly configured, you will have to uninstall the package or upgrade the package with a correctly configured version.
 
 **additional considerations**
 

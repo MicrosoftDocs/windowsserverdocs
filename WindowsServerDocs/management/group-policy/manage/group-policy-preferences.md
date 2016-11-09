@@ -28,9 +28,9 @@ Group Policy is a management technology included in Windows Server that enables 
 
 A Group Policy object (GPO) is a logical object composed of two components, a Group Policy container and a Group Policy template. Windows stores both of these objects on domain controllers in the domain. The Group Policy container object is stored in the domain partition of active directory. The Group Policy template is a collection of files and folders stored on the system volume (SYSvol) of each domain controller in the domain. Windows copies the container and template to all domain controllers in a domain. active directory replication copies the Group Policy container while the File Replication Service (FRS) or the Distributed File System Replication (DFSR) service copies the data on SYSvol.
 
-The Group Policy container and template together; make the logical object called a Group Policy object. Each Group Policy object contains two classes of configuration: user and computer. computer configuration settings affect the computer as whole, regardless of the logged on user. User configuration settings affect the currently logged on user, and may vary with each user. Some examples of computers settings are power management, user rights, and firewall settings. Examples of user settings include Internet Explorer, display settings, and Folder Redirection.
+The Group Policy container and template together; make the logical object called a Group Policy object. Each Group Policy object contains two classes of configuration: user and computer. Computer configuration settings affect the computer as whole, regardless of the logged on user. User configuration settings affect the currently logged on user, and may vary with each user. Some examples of computers settings are power management, user rights, and firewall settings. Examples of user settings include Internet Explorer, display settings, and Folder Redirection.
 
-Group Policy objects and their settings apply to computers and user to which they are linked. You can link GPOs to an active directory site, domain, organizational unit, or nested organizational unit. Group Policy objects separate from the containers to which they are linked. This separation enables you to link a single GPO to multiple containers. Linking GPOs to many containers enables a single GPO to apply to users or computer within multiple container. This defines the scope of the GPO. computer configurations apply to computers within the container or nested containers. User configurations apply to users in the same fashion.
+Group Policy objects and their settings apply to computers and user to which they are linked. You can link GPOs to an active directory site, domain, organizational unit, or nested organizational unit. Group Policy objects separate from the containers to which they are linked. This separation enables you to link a single GPO to multiple containers. Linking GPOs to many containers enables a single GPO to apply to users or computer within multiple container. This defines the scope of the GPO. Computer configurations apply to computers within the container or nested containers. User configurations apply to users in the same fashion.
 
 Policy settings apply to computers at computer startup and to users during user logon. Windows Server 2012 and Windows 8 includes a Group Policy service. During computer startup, the Group Policy service queries active directory for the list of GPOs that are within scope (linked) of the computer object. Again, this includes:
 
@@ -40,11 +40,11 @@ Policy settings apply to computers at computer startup and to users during user 
 
 -   The parent organizational unit to which the computer is a direct member and any other organizational units above the parent OU.
 
-The Group Policy service decides which GPOs apply to computers (there are many ways to filer GPOs from applying, which is beyond the scope of this introduction) and applies those policy settings. Client-side extensions (CSEs) are responsible for applying policy settings contained in the GPOs. A Group Policy client-side extension is a separate component from the Group Policy service that is responsible for reading specific policy setting data from the GPO and applying it to the computer or user. for example, the Group Policy registry client-side extension reads registry policy setting data from each GPO and then applies that information into the registry. The security CSE reads and applies security policy settings. The Folder Redirection CSE reads and applies Folder Redirection policy settings.
+The Group Policy service decides which GPOs apply to computers (there are many ways to filer GPOs from applying, which is beyond the scope of this introduction) and applies those policy settings. Client-side extensions (CSEs) are responsible for applying policy settings contained in the GPOs. A Group Policy client-side extension is a separate component from the Group Policy service that is responsible for reading specific policy setting data from the GPO and applying it to the computer or user. For example, the Group Policy registry client-side extension reads registry policy setting data from each GPO and then applies that information into the registry. The security CSE reads and applies security policy settings. The Folder Redirection CSE reads and applies Folder Redirection policy settings.
 
 Group Policy processing repeats when the user logs on the computer. The Group Policy service decides the GPOs that apply to the user and then applies user policy settings.
 
-It s important that you have a firm understanding of how to create, modify, and link Group Policy objects to containers in active directory. Group Policy Preferences use the same concepts as Group Policy. In fact, you manage Group Policy Preferences the same way that you manage Group Policy. This is a review of Group Policy; it s not complete. if you are unfamiliar with how to manage Group Policy or you need a thorough refresher, then you can read the Windows Group Policy Resource Kit: Windows Server 2008 and Windows Vista (Microsoft Press 2008).
+It s IMPORTANT that you have a firm understanding of how to create, modify, and link Group Policy objects to containers in active directory. Group Policy Preferences use the same concepts as Group Policy. In fact, you manage Group Policy Preferences the same way that you manage Group Policy. This is a review of Group Policy; it s not complete. If you are unfamiliar with how to manage Group Policy or you need a thorough refresher, then you can read the Windows Group Policy Resource Kit: Windows Server 2008 and Windows Vista (Microsoft Press 2008).
 
 ### Client-side Extensions
 A Group Policy client-side extensions is an isolated component that is responsible for processing specific policy settings delivered by the Group Policy infrastructure.  The format in which each Group Policy client-side extension saves data can be unique to each extension.  And, the Group Policy infrastructure is unaware of this format, nor does it care.  Group Policy s purpose is to deliver settings to the computer where each client-side extension applies their portion of the policy settings from multiple Group Policy objects.
@@ -133,7 +133,7 @@ Once WMI filtering completes, the Group Policy service has a list of filter Grou
 
 ***Processing Order***
 
-Group Policy has a specific order in which it applies Group Policy objects. Understanding the order in which Group Policy objects apply is important because Group Policy uses the order of application to resolve conflicting policy settings among different Group Policy objects linked to different locations within active directory.
+Group Policy has a specific order in which it applies Group Policy objects. Understanding the order in which Group Policy objects apply is IMPORTANT because Group Policy uses the order of application to resolve conflicting policy settings among different Group Policy objects linked to different locations within active directory.
 
 **Local, Site, Domain, and OU**
 
@@ -225,7 +225,7 @@ Group Policy Preferences extends Group Policy. Preferences are not Group Policy 
 
 You can configure Windows using the user interface. The user interface presents you with choices; you choose the options you like; and click OK or close the dialog box. Windows then saves your choices to the registry so it can recall those settings later. Settings configurable by the user are known as preferences (notice the lowercase p). Mapping a shared folder or choosing a default home page is an example of preferences. When you set the home page using Internet Explorer, you can close the web browser and open it up again and it remembers your home page. Policy settings differ from preferences because policy settings are enforced on the user or computer. Policy prevents the user from changing their settings. Typically, users configure preferences.
 
-Group Policy Preferences enables you to deploy desired configurations to computers and users without limiting the user from choosing a different configuration.  It is important to remember that while the user can change the configuration, Group Policy Preferences are Group Policy client-side extensions. Group Policy Preferences refresh with Group Policy; therefore, Group Policy overwrites any preference settings altered by the user with the value configured in a Group Policy Preference.  Replacing a user configured preference setting with one configured using Group Policy Preferences is not the same as Group Policy. A true Group Policy setting enforces the setting and restricts the user from changing the setting.  Users can easily change preference values enabled by Group Policy Preferences until the next refresh of Group Policy (which returns the preference settings back to the value configured in the Group Policy Preference item).
+Group Policy Preferences enables you to deploy desired configurations to computers and users without limiting the user from choosing a different configuration.  It is IMPORTANT to remember that while the user can change the configuration, Group Policy Preferences are Group Policy client-side extensions. Group Policy Preferences refresh with Group Policy; therefore, Group Policy overwrites any preference settings altered by the user with the value configured in a Group Policy Preference.  Replacing a user configured preference setting with one configured using Group Policy Preferences is not the same as Group Policy. A true Group Policy setting enforces the setting and restricts the user from changing the setting.  Users can easily change preference values enabled by Group Policy Preferences until the next refresh of Group Policy (which returns the preference settings back to the value configured in the Group Policy Preference item).
 
 #### Client-side Extensions
 Group Policy Preferences are Group Policy client-side extensions.  There are 20 extensions that makes up Group Policy Preferences.  These extensions include
@@ -245,7 +245,7 @@ Group Policy Preferences are Group Policy client-side extensions.  There are 20 
 |Group Policy INI Files|add, replace, or delete sections or properties in configuration settings (.ini) or setup information (.inf) files.|
 |Group Policy Folder Options|create, modify, or delete folders.|
 |Group Policy Schedule Tasks|create, modify, or delete scheduled or immediate tasks.|
-|Group Policy registry|copy registry settings and apply them to other computers. create, replace, or delete registry settings.|
+|Group Policy registry|copy registry settings and apply them to other computers. Create, replace, or delete registry settings.|
 |Group Policy printers|create, modify, or delete TCP/IP, shared, and local printer connections.|
 |Group Policy Shortcuts|create, modify, or delete shortcuts.|
 |Group Policy Internet Settings|Modify user-configurable Internet settings|
@@ -263,7 +263,7 @@ Each preference extension can contain one or more preference items. By default, 
 
 if the **Stop processing items in this extension if an error occurs on this item** option is selected, a failing preference item prevents remaining preference items within the extension from processing. This change in behavior is limited to the hosting Group Policy object (GPO) and client-side extension. It does not extend to other GPOs.
 
-It s important to understand that Group Policy Preference extensions process preference items from the top of the list and work their way to the bottom. The preference extension only stops processing preference items that follow the failing preference item (items appearing below the failing preference items as they appear in the list).
+It s IMPORTANT to understand that Group Policy Preference extensions process preference items from the top of the list and work their way to the bottom. The preference extension only stops processing preference items that follow the failing preference item (items appearing below the failing preference items as they appear in the list).
 
 ***Run in logged-on user's security context (user policy option)***
 
@@ -271,7 +271,7 @@ There are two security contexts in which Group Policy applies user preferences: 
 
 By default, Group Policy processes user preference items using the security context of the SYSTEM account. In this security context, the preference extension is limited to environment variables and system resources available only to the computer.
 
-if the **Run in logged-on user's security context** option is selected, it changes the security context under which the preference item is processed. The preference extension processes preference items in the security context of the logged-on user. This allows the preference extension to access resources as the user rather than the computer. This can be important when using drive maps or other preferences in which the computer may not have permissions to resources or when using environment variables. The value of many environment variables differ when evaluated in a security context other than the logged-on user.
+if the **Run in logged-on user's security context** option is selected, it changes the security context under which the preference item is processed. The preference extension processes preference items in the security context of the logged-on user. This allows the preference extension to access resources as the user rather than the computer. This can be IMPORTANT when using drive maps or other preferences in which the computer may not have permissions to resources or when using environment variables. The value of many environment variables differ when evaluated in a security context other than the logged-on user.
 
 Group Policy Preference extensions that need to process in the user s security context, such as Drive Maps and printers **automatically** switch to the user s context and do not need you to adjust this setting.
 
@@ -281,7 +281,7 @@ Group Policy applies policy settings and preference items to users and computers
 
 Unlike policy settings, the Group Policy service does not remove preference settings when the hosting GPO becomes out of scope for the user or computer.
 
-if the **remove this item when it is no longer applied** option is selected, it changes this behavior. After selecting this option, the preference extension decides if the preference item should not apply to targeted users or computers (out of scope). if the preference extension decides the preference item is out of scope, it removes the settings associated with the preference item.
+if the **remove this item when it is no longer applied** option is selected, it changes this behavior. After selecting this option, the preference extension decides if the preference item should not apply to targeted users or computers (out of scope). If the preference extension decides the preference item is out of scope, it removes the settings associated with the preference item.
 
 selecting this setting changes the preference item s action to **replace**. During Group Policy application, the preference extension recreates (deletes and creates) the results of the preference item. When the preference item is out of scope for the user or computer, the results of the preference item are deleted, but not created. Preference items can become out of scope by using item-level targeting or by higher-level Group Policy filters such as WMI and security group filters.
 
@@ -300,85 +300,85 @@ Group Policy provides filters to control which policy settings and preference it
 
 Use item-level targeting to change the scope of individual preference items, so they apply only to selected users or computers. Within a single Group Policy object (GPO), you can include multiple preference items each customized for selected users or computers and each targeted to apply settings only to the relevant users or computers.
 
-Each targeting item results in a value of either true or false. You can apply multiple targeting items to a preference item and select the logical operation (AND or OR) by which to combine each targeting item with the preceding one. if the combined result of all targeting items for a preference item is false, then the settings in the preference item are not applied to the user or computer. Using targeting collections, you can also create parenthetical expressions.
+Each targeting item results in a value of either true or false. You can apply multiple targeting items to a preference item and select the logical operation (AND or OR) by which to combine each targeting item with the preceding one. If the combined result of all targeting items for a preference item is false, then the settings in the preference item are not applied to the user or computer. Using targeting collections, you can also create parenthetical expressions.
 
 ***Battery Present***
 
-A Battery Present targeting item allows a preference item to be applied to computers or users only if one or more batteries are present in the processing computer. if Is Not is selected, it allows the preference item to be applied only if the processing computer does not have one or more batteries present.
+A Battery Present targeting item allows a preference item to be applied to computers or users only if one or more batteries are present in the processing computer. If Is Not is selected, it allows the preference item to be applied only if the processing computer does not have one or more batteries present.
 
 if an uninterruptible power supply (UPS) is connected to the processing computer, a Battery Present targeting item may detect the UPS and identify it as a battery.
 
 ***computer Name***
 
-A computer Name targeting item allows a preference item to be applied to computers or users only if the computer's name matches the specified computer name in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the computer's name does not match the specified computer name in the targeting item.
+A computer Name targeting item allows a preference item to be applied to computers or users only if the computer's name matches the specified computer name in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the computer's name does not match the specified computer name in the targeting item.
 
 ***CPU Speed***
 
-A CPU Speed targeting item allows a preference item to be applied to computers or users only if the processing computer's CPU speed is greater than or equal to the value specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the processing computer's CPU speed is less than or equal to the value specified in the targeting item.
+A CPU Speed targeting item allows a preference item to be applied to computers or users only if the processing computer's CPU speed is greater than or equal to the value specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the processing computer's CPU speed is less than or equal to the value specified in the targeting item.
 
 ***date Match***
 
-A date Match targeting item allows a preference item to be applied to computers or users only if the day or date matches that specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the day or date does not match that specified in the targeting item.
+A date Match targeting item allows a preference item to be applied to computers or users only if the day or date matches that specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the day or date does not match that specified in the targeting item.
 
 ***Dial-up Connection***
 
-A Dial-Up Connection targeting item allows a preference item to be applied to users only if a network connection of the type specified in the targeting item is connected. if Is Not is selected, it allows the preference item to be applied only if no network connection of the type specified in the targeting item is connected.
+A Dial-Up Connection targeting item allows a preference item to be applied to users only if a network connection of the type specified in the targeting item is connected. If Is Not is selected, it allows the preference item to be applied only if no network connection of the type specified in the targeting item is connected.
 
 Dial-Up Connection targeting items detect whether a type of network connection exists, not whether the user is logged on through a connection of that type.
 
 ***Disk Space***
 
-A Disk Space targeting item allows a preference item to be applied to computers or users only if the processing computer's available disk space is greater than or equal to the amount specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the processing computer's available disk space is less than or equal to the amount specified in the targeting item.
+A Disk Space targeting item allows a preference item to be applied to computers or users only if the processing computer's available disk space is greater than or equal to the amount specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the processing computer's available disk space is less than or equal to the amount specified in the targeting item.
 
 ***Domain***
 
-A Domain targeting item allows a preference item to be applied to computers or users only if the user is logged on to or the computer is a member of the domain or workgroup specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the user is not logged on to or the computer is not a member of the domain or workgroup specified in the targeting item.
+A Domain targeting item allows a preference item to be applied to computers or users only if the user is logged on to or the computer is a member of the domain or workgroup specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the user is not logged on to or the computer is not a member of the domain or workgroup specified in the targeting item.
 
 ***Environment Variables***
 
-An Environment Variable targeting item allows a preference item to be applied to computers or users only if the environment variable and value specified in the targeting item are equal. if Is Not is selected, it allows the preference item to be applied only if the environment variable and value specified in the targeting item are not equal or if the environment variable does not exist.
+An Environment Variable targeting item allows a preference item to be applied to computers or users only if the environment variable and value specified in the targeting item are equal. If Is Not is selected, it allows the preference item to be applied only if the environment variable and value specified in the targeting item are not equal or if the environment variable does not exist.
 
-if you want to restrict the scope of multiple preference items with a complex set of targeting items, you can simplify configuration by using an environment variable. for example, create an Environment Variable preference item that generates a new environment variable with a value of 1, and apply the targeting items to it. To apply the same targeting to other preference items, add an Environment Variable targeting item to those preference items, and configure it to require a value of 1 for the variable that you created using an Environment Variable preference item.
+if you want to restrict the scope of multiple preference items with a complex set of targeting items, you can simplify configuration by using an environment variable. For example, create an Environment Variable preference item that generates a new environment variable with a value of 1, and apply the targeting items to it. To apply the same targeting to other preference items, add an Environment Variable targeting item to those preference items, and configure it to require a value of 1 for the variable that you created using an Environment Variable preference item.
 
 ***File Match***
 
-A File Match targeting item allows a preference item to be applied to computers or users only if the file or folder specified in the targeting item exists, or only if the file exists and is a version within the range specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the file or folder specified in the targeting item does not exist, or only if the version of the file is not within the range specified in the targeting item.
+A File Match targeting item allows a preference item to be applied to computers or users only if the file or folder specified in the targeting item exists, or only if the file exists and is a version within the range specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the file or folder specified in the targeting item does not exist, or only if the version of the file is not within the range specified in the targeting item.
 
 ***IP address Match***
 
-An IP address Range targeting item allows a preference item to be applied to computers or users only if the processing computer's IP address is within the range specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the processing computer's IP address is not within the range specified in the targeting item.
+An IP address Range targeting item allows a preference item to be applied to computers or users only if the processing computer's IP address is within the range specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the processing computer's IP address is not within the range specified in the targeting item.
 
 ***Language***
 
-A Language targeting item allows a preference item to be applied to computers or users only if the locale specified in the targeting item is installed on the processing computer. additional options allow you to restrict the targeting to the user's or computer's locale. if Is Not is selected, it allows the preference item to be applied only if the processing computer's locale does not match the specified locale in the targeting item.
+A Language targeting item allows a preference item to be applied to computers or users only if the locale specified in the targeting item is installed on the processing computer. additional options allow you to restrict the targeting to the user's or computer's locale. If Is Not is selected, it allows the preference item to be applied only if the processing computer's locale does not match the specified locale in the targeting item.
 
-A locale is composed of a language and, in some cases, a geographic area in which the language is spoken or the alphabet used. for example, French (Canada) is a locale composed of the language French and the geographic area Canada.
+A locale is composed of a language and, in some cases, a geographic area in which the language is spoken or the alphabet used. For example, French (Canada) is a locale composed of the language French and the geographic area Canada.
 
 ***LDAP query***
 
-An LDAP query targeting item allows a preference item to be applied to computers or users only if the LDAP query returns a value for the attribute specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the LDAP query does not return a value for the attribute specified in the targeting item.
+An LDAP query targeting item allows a preference item to be applied to computers or users only if the LDAP query returns a value for the attribute specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the LDAP query does not return a value for the attribute specified in the targeting item.
 
 ***MAC address Range***
 
-A MAC address Range targeting item allows a preference item to be applied to computers or users only if any of the processing computer's MAC addresses are within the range specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if none of the processing computer's MAC addresses are not within the range specified in the targeting item.
+A MAC address Range targeting item allows a preference item to be applied to computers or users only if any of the processing computer's MAC addresses are within the range specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if none of the processing computer's MAC addresses are not within the range specified in the targeting item.
 
 Range starting points and ending points are inclusive. You can specify a single address by typing the same value in both boxes.
 
 ***MSI query***
 
-An MSI query targeting item allows a preference item to be applied to computers or users only if certain aspects of an MSI installed product, update, or component on the processing computer match the specified criteria in the targeting item. if Is Not is selected, it allows the preference item to be applied only if certain aspects of an MSI installed product, update, or component on the processing computer do not match the specified the specified criteria in the targeting item.
+An MSI query targeting item allows a preference item to be applied to computers or users only if certain aspects of an MSI installed product, update, or component on the processing computer match the specified criteria in the targeting item. If Is Not is selected, it allows the preference item to be applied only if certain aspects of an MSI installed product, update, or component on the processing computer do not match the specified the specified criteria in the targeting item.
 
 ***Operating System***
 
-An Operating System targeting item allows a preference item to be applied to computers or users only if the processing computer's operating system's product name, release, edition, or computer role matches those specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the operating system's product name, release, edition, or computer role does not match those specified in the targeting item.
+An Operating System targeting item allows a preference item to be applied to computers or users only if the processing computer's operating system's product name, release, edition, or computer role matches those specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the operating system's product name, release, edition, or computer role does not match those specified in the targeting item.
 
 ***Organizational Unit***
 
-An Organizational Unit targeting item allows a preference item to be applied to computers or users only if the user or computer is a member of the organizational unit (OU) specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the user or computer is a not member of the OU specified in the targeting item.
+An Organizational Unit targeting item allows a preference item to be applied to computers or users only if the user or computer is a member of the organizational unit (OU) specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the user or computer is a not member of the OU specified in the targeting item.
 
 ***PCMCIA Present***
 
-A PCMCIA Present targeting item allows a preference item to be applied to computers or users only if the processing computer has at least one PCMCIA slot present. if Is Not is selected, it allows the preference item to be applied only if the processing computer does not have any PCMCIA slots present.
+A PCMCIA Present targeting item allows a preference item to be applied to computers or users only if the processing computer has at least one PCMCIA slot present. If Is Not is selected, it allows the preference item to be applied only if the processing computer does not have any PCMCIA slots present.
 
 A PCMCIA slot is considered present when the drivers for the slot are installed and the slot is functioning correctly.
 
@@ -388,19 +388,19 @@ A Portable computer targeting item allows a preference item to be applied to com
 
 ***Processing mode***
 
-A Processing mode targeting item allows a preference item to be applied to computers or users only if the Group Policy processing mode or conditions on the processing computer match at least one of those specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the Group Policy processing mode or conditions on the processing computer do not match any of those specified in the targeting item.
+A Processing mode targeting item allows a preference item to be applied to computers or users only if the Group Policy processing mode or conditions on the processing computer match at least one of those specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the Group Policy processing mode or conditions on the processing computer do not match any of those specified in the targeting item.
 
 ***RAM***
 
-A RAM targeting item allows a preference item to be applied to computers or users only if total amount of physical memory in the processing computer is greater than or equal to the amount specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the total amount of physical memory in the processing computer is less than the amount specified in the targeting item.  Provide the total amount of physical memory in megabytes (MB). One gigabyte (GB) of physical memory is entered as 1024. Four gigabytes of physical memory are entered as 4096.
+A RAM targeting item allows a preference item to be applied to computers or users only if total amount of physical memory in the processing computer is greater than or equal to the amount specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the total amount of physical memory in the processing computer is less than the amount specified in the targeting item.  Provide the total amount of physical memory in megabytes (MB). One gigabyte (GB) of physical memory is entered as 1024. Four gigabytes of physical memory are entered as 4096.
 
 ***registry Match***
 
-A registry Match targeting item allows a preference item to be applied to computers or users only if the registry key or value specified in the targeting item exists, if the registry value contains the data specified in the targeting item, or if the version number in the registry value is within the range specified in the targeting item. if the targeting item allows the preference item and if Get value data is selected in the targeting item, then the targeting item saves the value data of the specified registry value to the environment variable specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the registry key or value specified in the targeting item does not exist, if the registry value does not contains the data specified in the targeting item, or if the version number in the registry value is not within the range specified in the targeting item.
+A registry Match targeting item allows a preference item to be applied to computers or users only if the registry key or value specified in the targeting item exists, if the registry value contains the data specified in the targeting item, or if the version number in the registry value is within the range specified in the targeting item. If the targeting item allows the preference item and if Get value data is selected in the targeting item, then the targeting item saves the value data of the specified registry value to the environment variable specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the registry key or value specified in the targeting item does not exist, if the registry value does not contains the data specified in the targeting item, or if the version number in the registry value is not within the range specified in the targeting item.
 
 ***Security Group***
 
-A Security Group targeting item allows a preference item to be applied to computers or users only if the processing computer or user is a member of the group specified in the targeting item and optionally only if the specified group is the primary group for the processing computer or user. if Is Not is selected, it allows the preference item to be applied only if the processing computer or user is not a member of the group specified in the targeting item and optionally only if the specified group is not the primary group for the processing computer or user.
+A Security Group targeting item allows a preference item to be applied to computers or users only if the processing computer or user is a member of the group specified in the targeting item and optionally only if the specified group is the primary group for the processing computer or user. If Is Not is selected, it allows the preference item to be applied only if the processing computer or user is not a member of the group specified in the targeting item and optionally only if the specified group is not the primary group for the processing computer or user.
 
 **Security Group**
 
@@ -420,29 +420,29 @@ A Security Group targeting item allows a preference item to be applied to comput
 
 ***Site***
 
-A Site targeting item allows a preference item to be applied to computers or users only if the processing computer is in the site in active directory specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the processing computer is not in the site in active directory specified in the targeting item.
+A Site targeting item allows a preference item to be applied to computers or users only if the processing computer is in the site in active directory specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the processing computer is not in the site in active directory specified in the targeting item.
 
 ***Targeting Collection***
 
 The targeting items applied to a preference item are evaluated as a logical expression. A targeting collection allows you create a parenthetical grouping within that expression. You can nest one targeting collection within another to create more complex logical expressions.
 
-A targeting collection allows a preference item to be applied to computers or users only if the collection of targeting items specified results in a value of true. if Is Not is selected, it allows the preference item to be applied only if the collection of targeting items specified results in a value of false.
+A targeting collection allows a preference item to be applied to computers or users only if the collection of targeting items specified results in a value of true. If Is Not is selected, it allows the preference item to be applied only if the collection of targeting items specified results in a value of false.
 
 ***Terminal Session***
 
-A Terminal Session targeting item allows a preference item to be applied to users only if the processing user is logged on to a terminal services session with the settings specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the user is not logged on to a terminal services session or the user is logged on to a terminal services session without the settings specified in the targeting item.
+A Terminal Session targeting item allows a preference item to be applied to users only if the processing user is logged on to a terminal services session with the settings specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the user is not logged on to a terminal services session or the user is logged on to a terminal services session without the settings specified in the targeting item.
 
 ***time Range***
 
-A time Range targeting item allows a preference item to be applied to computers or users only if the current time on the end user's computer is within the time range specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the current time on the end user's computer is not within the range specified in the targeting item.
+A time Range targeting item allows a preference item to be applied to computers or users only if the current time on the end user's computer is within the time range specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the current time on the end user's computer is not within the range specified in the targeting item.
 
 **User**
 
-A User targeting item allows a preference item to be applied to users only if the processing user is the user specified in the targeting item. if Is Not is selected, it allows the preference item to be applied only if the processing user is not the user specified in the targeting item.
+A User targeting item allows a preference item to be applied to users only if the processing user is the user specified in the targeting item. If Is Not is selected, it allows the preference item to be applied only if the processing user is not the user specified in the targeting item.
 
 ***WMI query***
 
-A WMI query targeting item allows a preference item to be applied to computers or users only if the processing computer evaluates the WMI query as true. if Is Not is selected, it allows the preference item to be applied only if the processing computer evaluates the WMI query as false.
+A WMI query targeting item allows a preference item to be applied to computers or users only if the processing computer evaluates the WMI query as true. If Is Not is selected, it allows the preference item to be applied only if the processing computer evaluates the WMI query as false.
 
 #### Processing
 Earlier, this document explained Group Policy processing.  Group Policy Preference client-side extensions adhere to these same rules.  Therefore, linked hierarchy, security and WMI filtering can change the scope of Group Policy object configured with Group Policy Preferences.  By changing the scope, users and computers may or may not receive settings or preference items configured in these Group Policy objects.

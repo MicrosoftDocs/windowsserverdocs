@@ -31,7 +31,7 @@ reg restore <KeyName> <FileName>
 |<FileName>|Specifies the name and path of the file with content to be written into the registry. This file must be created in advance with the **reg save** operation using a .hiv extension.|
 |/?|Displays help for **reg restore** at the command prompt.|
 ## remarks
--   Before editing any registry entries, save the parent subkey with the **reg save** operation. if the edit fails, restore the original subkey with the **reg restore** operation.
+-   Before editing any registry entries, save the parent subkey with the **reg save** operation. If the edit fails, restore the original subkey with the **reg restore** operation.
 -   The following table lists the return values for the **reg restore** operation.
 |Value|Description|
 |-----|--------|

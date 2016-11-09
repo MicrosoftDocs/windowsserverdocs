@@ -28,17 +28,17 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |-------|--------|
 |<Source>|Specifies the path to the source directory.|
 |<Destination>|Specifies the path to the destination directory.|
-|<File>|Specifies the file or files to be copied. You can use wildcard characters (**\*** or **?**), if you want. if the **File** parameter is not specified, **\*.\*** is used as the default value.|
+|<File>|Specifies the file or files to be copied. You can use wildcard characters (**\*** or **?**), if you want. If the **File** parameter is not specified, **\*.\*** is used as the default value.|
 |<Options>|Specifies options to be used with the **robocopy**command.|
 #### copy options
 |Option|Description|
 |-----|--------|
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
-|/e|Copies subdirectories. Note that this option includes empty directories. for additional information, see [remarks](robocopy.md#BKMK_remarks).|
+|/e|Copies subdirectories. Note that this option includes empty directories. For additional information, see [remarks](robocopy.md#BKMK_remarks).|
 |/lev:<N>|Copies only the top *N* levels of the source directory tree.|
 |/z|Copies files in Restart mode.|
 |/b|Copies files in Backup mode.|
-|/zb|Uses Restart mode. if access is denied, this option uses Backup mode.|
+|/zb|Uses Restart mode. If access is denied, this option uses Backup mode.|
 |/efsraw|Copies all encrypted files in EFS RAW mode.|
 |/copy:<copyFlags>|Specifies the file properties to be copied. The following are the valid values for this option:<br /><br />**D** Data<br /><br />**A** attributes<br /><br />**T** time stamps<br /><br />**S** NTFS access control list (ACL)<br /><br />**O** Owner information<br /><br />**U** Auditing information<br /><br />The default value for **copyFlags** is **Dat** (data, attributes, and time stamps).|
 |/dcopy:T|Copies directory time stamps.|
@@ -47,8 +47,8 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/nocopy|Copies no file information (useful with **/purge**).|
 |/secfix|Fixes file security on all files, even skipped ones.|
 |/timfix|Fixes file times on all files, even skipped ones.|
-|/purge|deletes destination files and directories that no longer exist in the source. for additional information, see [remarks](robocopy.md#BKMK_remarks).|
-|/mir|Mirrors a directory tree (equivalent to **/e** plus **/purge**). for additional information, see [remarks](robocopy.md#BKMK_remarks).|
+|/purge|deletes destination files and directories that no longer exist in the source. For additional information, see [remarks](robocopy.md#BKMK_remarks).|
+|/mir|Mirrors a directory tree (equivalent to **/e** plus **/purge**). For additional information, see [remarks](robocopy.md#BKMK_remarks).|
 |/mov|moves files, and deletes them from the source after they are copied.|
 |/move|moves files and directories, and deletes them from the source after they are copied.|
 |/a+:[RASHCNET]|adds the specified attributes to copied files.|
@@ -63,7 +63,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/pf|Checks run times on a per-file (not per-pass) basis.|
 |/ipg:n|Specifies the inter-packet gap to free bandwidth on slow lines.|
 |/sl|Copies the symbolic link instead of the target.|
-> [!importANT]
+> [!IMPORTANT]
 > When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:
 > 
 > -   **/copyALL**

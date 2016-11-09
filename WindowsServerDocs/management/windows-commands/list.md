@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-lists writers, shadow copies, or currently registered shadow copy providers that are on the system. if used without parameters, **list** displays help at the command prompt.  
+lists writers, shadow copies, or currently registered shadow copy providers that are on the system. If used without parameters, **list** displays help at the command prompt.  
   
 for examples of how to use this command, see [Examples](#BKMK_examples).  
   

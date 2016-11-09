@@ -31,8 +31,8 @@ wbadmin get items
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|-version|Specifies the version of the backup in MM/DD/YYYY-HH:MM format. if you do not know the version information, type **wbadmin get versions**.|
-|-backupTarget|Specifies the storage location that contains the backups for which you want the details. Use for listing backups stored at that target location. Backup target locations can be a locally attached disk drive or a remote shared folder. if **wbadmin get items**is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
+|-version|Specifies the version of the backup in MM/DD/YYYY-HH:MM format. If you do not know the version information, type **wbadmin get versions**.|
+|-backupTarget|Specifies the storage location that contains the backups for which you want the details. Use for listing backups stored at that target location. Backup target locations can be a locally attached disk drive or a remote shared folder. If **wbadmin get items**is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
 |-machine|Specifies the name of the computer that you want the backup details for. Useful when multiple computers have been backed up to the same location. Should be used when **-backupTarget** is specified.|
 ## <a name="BKMK_examples"></a>Examples
 To list items from the backup that was run on March 31, 2013 at 9:00 A.M., type:

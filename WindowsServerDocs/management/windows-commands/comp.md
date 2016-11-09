@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-compares the contents of two files or sets of files byte-by-byte. if used without parameters, **comp** prompts you to enter the files to compare.
+compares the contents of two files or sets of files byte-by-byte. If used without parameters, **comp** prompts you to enter the files to compare.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -52,16 +52,16 @@ comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 -   comparing files in different locations
     **comp** can compare files on the same drive or on different drives, and in the same directory or in different directories. When **comp** compares the files, it displays their locations and file names.
 -   comparing files with the same names
-    The files that you compare can have the same file name, provided they are in different directories or on different drives. if you do not specify a file name for *Data2*, the default file name for *Data2* is the same as the file name in *Data1*. You can use wildcard characters (**\*** and **?**) to specify file names.
+    The files that you compare can have the same file name, provided they are in different directories or on different drives. If you do not specify a file name for *Data2*, the default file name for *Data2* is the same as the file name in *Data1*. You can use wildcard characters (**\*** and **?**) to specify file names.
 -   comparing files of different sizes
-    You must specify **/n** to compare files of different sizes. if the file sizes are different and **/n** is not specified, **comp** displays the following message:
+    You must specify **/n** to compare files of different sizes. If the file sizes are different and **/n** is not specified, **comp** displays the following message:
     `Files are different sizes`
     `compare more files (Y/N)?`
     To compare these files, press N to stop the **comp** command. Then, rerun the **comp** command with the **/n** option to compare only the first portion of each file.
 -   comparing files sequentially
     if you use wildcard characters (**\*** and **?**) to specify multiple files, **comp** finds the first file that matches *Data1* and compares it with the corresponding file in *Data2*, if it exists. The **comp** command reports the results of the comparison for each file matching *Data1*. When finished, **comp** displays the following message:
     `compare more files (Y/N)?`
-    To compare more files, press Y. The **comp** command prompts you for the locations and names of the new files. To stop the comparisons, press N. When you press Y, **comp** prompts you for command-line options to use. if you do not specify any command-line options, **comp** uses the ones you specified before.
+    To compare more files, press Y. The **comp** command prompts you for the locations and names of the new files. To stop the comparisons, press N. When you press Y, **comp** prompts you for command-line options to use. If you do not specify any command-line options, **comp** uses the ones you specified before.
 ## <a name="BKMK_examples"></a>Examples
 To compare the contents of the directory C:\Reports with the backup directory \\\Sales\Backup\April, type:
 ```

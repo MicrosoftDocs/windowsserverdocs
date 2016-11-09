@@ -27,7 +27,7 @@ Local Group Policy editor consists of two main sections:
 
 These sections are further divided into the different types of policies that can be set, such as Administrative Templates, Security, and Folder Redirection.
 
-To work efficiently, administrators need to have immediate access to information about the function and purpose of individual policy settings. for Administrative Templates policy settings, Local Group Policy editor provides information about each policy setting directly in the web view of the console. This information shows operating system requirements, defines the policy setting, and includes any specific details about the effect of enabling or disabling the policy setting.
+To work efficiently, administrators need to have immediate access to information about the function and purpose of individual policy settings. For Administrative Templates policy settings, Local Group Policy editor provides information about each policy setting directly in the web view of the console. This information shows operating system requirements, defines the policy setting, and includes any specific details about the effect of enabling or disabling the policy setting.
 
 In addition, developers should be able to quickly and easily add Group Policy support to their software products. The Local Group Policy editor is designed to be extensible. The easiest way for developers to extend Local Group Policy editor for their applications is to write custom Administrative Template files that  they can add to Local Group Policy editor.
 

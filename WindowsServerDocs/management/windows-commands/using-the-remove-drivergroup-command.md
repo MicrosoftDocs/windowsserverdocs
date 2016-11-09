@@ -27,7 +27,7 @@ wdsutil /remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group to remove.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. if a server name is not specified, the local server is used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
 ## <a name="BKMK_examples"></a>Examples
 To remove a driver group, type one of the following:
 ```

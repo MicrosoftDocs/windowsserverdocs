@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde -lock [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]

@@ -29,8 +29,8 @@ move [{/y | /-y}] [<Source>] [<Target>]
 |-------|--------|
 |/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |/-y|Causes prompting to confirm that you want to overwrite an existing destination file.|
-|<Source>|Specifies the path and name of the file or files to move. if you want to move or rename a directory, *Source* should be the current directory path and name.|
-|<Target>|Specifies the path and name to move files to. if you want to move or rename a directory, *Target* should be the desired directory path and name.|
+|<Source>|Specifies the path and name of the file or files to move. If you want to move or rename a directory, *Source* should be the current directory path and name.|
+|<Target>|Specifies the path and name to move files to. If you want to move or rename a directory, *Target* should be the desired directory path and name.|
 |/?|Displays help at the command prompt.|
 ## remarks
 -   The **/y** command-line option might be preset in the copyCMD environment variable. You can override this with **/-y** on the command line. The default is to prompt before overwriting files unless the **copy** command is run from within a batch script.

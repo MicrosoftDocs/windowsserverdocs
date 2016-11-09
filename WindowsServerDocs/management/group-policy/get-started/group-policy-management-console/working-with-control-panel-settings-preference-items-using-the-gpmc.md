@@ -19,7 +19,7 @@ This topic describes how to configure Control Panel settings preferences when yo
   
 The Group Policy Management Console allows you to configure preferences when you edit any domain-based Group Policy object. Group Policy Preferences let you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language. You can use preference items to reduce scripting and the number of custom system images needed, standardize management, and help secure your networks. By using preference item-level targeting, you can streamline desktop management by reducing the number of Group Policy objects needed.  
   
-additionally, you can manage Preferences using Windows powershell. for information how to do this, see Windows powershell Cmdlets for Group Policy.  
+additionally, you can manage Preferences using Windows PowerShell. For information how to do this, see Windows PowerShell Cmdlets for Group Policy.  
   
 ## Data Sources extension  
 Group Policy includes the Data Sources preference extension. This extension allows you to centrally configure Open Database Connectivity (ODBC) data source names for user or computers.  
@@ -60,22 +60,22 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new data source name for the user or computer. if the data source exists, then do not modify it.|  
+|**create**|create a new data source name for the user or computer. If the data source exists, then do not modify it.|  
 |**delete**|remove a data source name from the user or computer. The extension performs no action if the data source does not exist.|  
-|**replace**|delete and recreate a data source name for the user or computer. The net result of the **replace** action overwrites all existing settings associated with the data source name. if the data source name does not exist, then the **replace** action creates the new data source name.|  
-|**Update**|Modify settings of an existing data source name. This action differs from replace in that it only updates settings defined within the preference item. All other settings remain as they were previously configured. if the data source name does not exist, then the **Update** action creates a new data source name.|  
+|**replace**|delete and recreate a data source name for the user or computer. The net result of the **replace** action overwrites all existing settings associated with the data source name. If the data source name does not exist, then the **replace** action creates the new data source name.|  
+|**Update**|Modify settings of an existing data source name. This action differs from replace in that it only updates settings defined within the preference item. All other settings remain as they were previously configured. If the data source name does not exist, then the **Update** action creates a new data source name.|  
   
 ### Data source settings  
   
 |||  
 |-|-|  
 |**User Data Source** or **System Data Source**|select the visibility of the data source name. User data sources are available to users receiving the preference item. System data sources are available to all the users of the computer (including the Local System).|  
-|**Data Source Name**|type the name used to identify the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select. You can import a local data source name into the Data Source preference item. Click Browse **()** to display a list of the data sources names on the current computer. **important:** attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
+|**Data Source Name**|type the name used to identify the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select. You can import a local data source name into the Data Source preference item. Click Browse **()** to display a list of the data sources names on the current computer. **IMPORTANT:** attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
 |**Driver**|type the name of the ODBC driver used to connect to the data provider. Click Browse **()** to choose from a list of ODBC drivers.|  
 |**Description**|Provide text used to describe the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select.|  
 |**User Name**|type the user name used to connect to the indicated data provider.|  
 |**Password**|type the password used to connect to the indicated data provider. type the same password in the **Confirm Password** box. **Security Note:** This password is protected by 256-bit Advanced Encryption Standard (AES) encryption and stored as part of the GPO in SYSvol. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
-|**attributes**|Data Source item attributes allow you to supply additional information for the data provider. Each attribute consists of an attribute name and its associated value.<br /><br />-   Click **add** to create new attributes in the Data Source item.<br />-   Click **remove** to delete existing attributes.<br />-   Click **change** to alter the attribute name or value. **important:** attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
+|**attributes**|Data Source item attributes allow you to supply additional information for the data provider. Each attribute consists of an attribute name and its associated value.<br /><br />-   Click **add** to create new attributes in the Data Source item.<br />-   Click **remove** to delete existing attributes.<br />-   Click **change** to alter the attribute name or value. **IMPORTANT:** attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
   
 #### additional considerations  
   
@@ -100,9 +100,9 @@ You can create and configure Device preference items for any domain-based Group 
   
 for information about how to use this extension to create and configure a preference item, see the following topics:  
   
-Device preference items allow you to enable or disable classes of or types of hardware devices. Device classes allow you to enable or disable a broader ranger of device types. Device types allow you to enable or disable a specific type of hardware device. for example, disabling the device class **DVD/cd-ROM drives** disables all hardware devices within the selected class. Disabling the device type **MS cd/DVD-ROM atA Device** only disables hardware devices of that type, not the entire class. Before you create a Device preference item, you should review the behavior of each type of action possible with this extension.  
+Device preference items allow you to enable or disable classes of or types of hardware devices. Device classes allow you to enable or disable a broader ranger of device types. Device types allow you to enable or disable a specific type of hardware device. For example, disabling the device class **DVD/cd-ROM drives** disables all hardware devices within the selected class. Disabling the device type **MS cd/DVD-ROM atA Device** only disables hardware devices of that type, not the entire class. Before you create a Device preference item, you should review the behavior of each type of action possible with this extension.  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > Make certain to test Device preference items before deploying them to a production environment. Disabling devices has the potential to render Windows inoperable.  
   
 ### How to create a Device item  
@@ -206,10 +206,10 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new Open With association. if a file name extension in the Open With item exists within the user's profile, then the new association is not created.|  
+|**create**|create a new Open With association. If a file name extension in the Open With item exists within the user's profile, then the new association is not created.|  
 |**delete**|remove an existing Open With association. An association exists when the file name extension in the Open With item exists within the user's profile. No action is performed if the association does not exist.|  
-|**replace**|delete and recreate an Open With association. The net result of the **replace** action overwrites all existing settings associated with the Open With association. if the Open With association does not exist, then the **replace** action creates a new Open With association.|  
-|**Update**|Modify an Open With association. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the Open With association does not exist, then the **Update** action creates a new Open With association.|  
+|**replace**|delete and recreate an Open With association. The net result of the **replace** action overwrites all existing settings associated with the Open With association. If the Open With association does not exist, then the **replace** action creates a new Open With association.|  
+|**Update**|Modify an Open With association. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the Open With association does not exist, then the **Update** action creates a new Open With association.|  
   
 #### Open With settings  
   
@@ -251,10 +251,10 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new file type association. if the file name extension in the file type item is registered on the computer, then the new file type association is not created.|  
+|**create**|create a new file type association. If the file name extension in the file type item is registered on the computer, then the new file type association is not created.|  
 |**delete**|remove an existing file type association. An association exists when the file name extension in the file type item is registered on the computer. No action is performed if the association does not exist.|  
-|**replace**|delete and recreate the file type association. The net result of the **replace** action overwrites all existing settings associated with the file type association. if the file type association does not exist, then the **replace** action creates a new file type association.|  
-|**Update**|Modify a file type association. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the file type association does not exist, then the **Update** action creates a new file type association.|  
+|**replace**|delete and recreate the file type association. The net result of the **replace** action overwrites all existing settings associated with the file type association. If the file type association does not exist, then the **replace** action creates a new file type association.|  
+|**Update**|Modify a file type association. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the file type association does not exist, then the **Update** action creates a new file type association.|  
   
 #### File type settings  
   
@@ -279,7 +279,7 @@ select **Configure class settings** to configure advanced class settings.
 -   Preference items are available only in domain-based GPOs.  
   
 ## Internet Settings extension  
-Group Policy includes the Internet Settings preference extension. for users, this extension allows you to:  
+Group Policy includes the Internet Settings preference extension. For users, this extension allows you to:  
   
 -   Require a specific configuration of Internet settings.  
   
@@ -338,16 +338,16 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new local group on the local computer. if the local group exists, then do not modify it.|  
+|**create**|create a new local group on the local computer. If the local group exists, then do not modify it.|  
 |**delete**|remove a local group with the matching name from the local computer. The extension performs no action if the group does not exist.|  
-|**replace**|delete and recreate a local group with the matching name for the local computer. The net result of the **replace** action overwrites all existing settings associated with the local group. if the local group does not exist, then the **replace** action creates a new local group. **important:** Windows assigns each group a security identifier (SID). Windows uses this information to determine if a group is allowed to access a particular resource. Use caution when using the **replace** action as the newly created group has a new SID. This may prevent groups from having access to resources.|  
-|**Update**|rename or modify settings, including group membership, of an existing group. This action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the local group does not exist, then the **Update** action creates a new local group. **important:** The **Update** action does not change the SID of the group.|  
+|**replace**|delete and recreate a local group with the matching name for the local computer. The net result of the **replace** action overwrites all existing settings associated with the local group. If the local group does not exist, then the **replace** action creates a new local group. **IMPORTANT:** Windows assigns each group a security identifier (SID). Windows uses this information to determine if a group is allowed to access a particular resource. Use caution when using the **replace** action as the newly created group has a new SID. This may prevent groups from having access to resources.|  
+|**Update**|rename or modify settings, including group membership, of an existing group. This action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the local group does not exist, then the **Update** action creates a new local group. **IMPORTANT:** The **Update** action does not change the SID of the group.|  
   
 #### Local Group settings  
   
 |||  
 |-|-|  
-|**Group Name**|type the name of the targeted local group. The preference extension creates a new group with this name if the group does not exist. if the group exists, the preference extension uses the group with this name as the target of the requested action.|  
+|**Group Name**|type the name of the targeted local group. The preference extension creates a new group with this name if the group does not exist. If the group exists, the preference extension uses the group with this name as the target of the requested action.|  
 |**rename to:**|type in the new name of the local group. This option is only available when using the **Update** action. The preference extension renames the group with the name that matches in the **Group Name** box to the name provided in the **rename to** box.|  
 |**Description**|Text used to describe the purpose or use of the local group. Press F3 to display a list of variables from which you can select.|  
 |**add the current user**|Use this setting to include the currently logged on user as a member of the local group. **Note:** This setting is available only when editing the preference item under **User Configuration**.|  
@@ -395,16 +395,16 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new local user on the local computer. if the local user exists, then do not modify it.|  
+|**create**|create a new local user on the local computer. If the local user exists, then do not modify it.|  
 |**delete**|remove a local user with the matching name from the local computer. The extension performs no action if the local user does not exist.|  
-|**replace**|delete and recreate a local user with the matching name for the local computer. The net result of the **replace** action overwrites all existing settings associated with the local user. if the local user does not exist, then the **replace** action creates a new local user. **important:** Windows assigns each user a SID. Windows uses this information to determine if a user is allowed to access a particular resource. Use caution when using the **replace** action as the newly created user has a new SID. This may prevent users from having access to resources.|  
-|**Update**|rename a user or modify user settings. This action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the local user does not exist, then the **Update** action creates a new local user. **important:** The **Update** action does not change the SID of the user.|  
+|**replace**|delete and recreate a local user with the matching name for the local computer. The net result of the **replace** action overwrites all existing settings associated with the local user. If the local user does not exist, then the **replace** action creates a new local user. **IMPORTANT:** Windows assigns each user a SID. Windows uses this information to determine if a user is allowed to access a particular resource. Use caution when using the **replace** action as the newly created user has a new SID. This may prevent users from having access to resources.|  
+|**Update**|rename a user or modify user settings. This action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the local user does not exist, then the **Update** action creates a new local user. **IMPORTANT:** The **Update** action does not change the SID of the user.|  
   
 #### Local User settings  
   
 |||  
 |-|-|  
-|**User Name**|type the name of the targeted local user. The preference extension creates a new user with this name if the user does not exist. if the user exists, the preference extension uses the user with this name as the target of the requested action.|  
+|**User Name**|type the name of the targeted local user. The preference extension creates a new user with this name if the user does not exist. If the user exists, the preference extension uses the user with this name as the target of the requested action.|  
 |**rename to:**|type the new name of the local user. This option is only available when using the **Update** action. The preference extension renames the user with the name that matches in the **User Name** box to the name provided in the **rename to** box.|  
 |**Full name**|Text used to display the full name of the local user. Press F3 to display a list of variables from which you can select.|  
 |**Description**|Text used to describe the purpose or use of the local user. Press F3 to display a list of variables from which you can select.|  
@@ -460,10 +460,10 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new network connection. if a connection with the same name exists, then do not modify it.|  
+|**create**|create a new network connection. If a connection with the same name exists, then do not modify it.|  
 |**delete**|remove a network connection with the same name. The extension performs no action if the connection does not exist.|  
-|**replace**|delete and recreate the network connection. The net result of the **replace** action overwrites all existing settings associated with the connection. if the connection does not exist, then the **replace** action creates a new connection.|  
-|**Update**|rename or modify a network connection. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the connection does not exist, then the **Update** action creates a new connection.|  
+|**replace**|delete and recreate the network connection. The net result of the **replace** action overwrites all existing settings associated with the connection. If the connection does not exist, then the **replace** action creates a new connection.|  
+|**Update**|rename or modify a network connection. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the connection does not exist, then the **Update** action creates a new connection.|  
   
 #### Dial-up networking connection settings  
   
@@ -506,10 +506,10 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new network connection. if the connection with the same name exists, then do not modify it.|  
+|**create**|create a new network connection. If the connection with the same name exists, then do not modify it.|  
 |**delete**|remove a network connection with the same name. The extension performs no action if the connection does not exist.|  
-|**replace**|delete and recreate the network connection. The net result of the **replace** action overwrites all existing settings associated with the connection. if the connection does not exist, then the **replace** action creates a new connection.|  
-|**Update**|rename or modify a network connection. The action differs from **replace** because it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the connection does not exist, then the **Update** action creates a new connection.|  
+|**replace**|delete and recreate the network connection. The net result of the **replace** action overwrites all existing settings associated with the connection. If the connection does not exist, then the **replace** action creates a new connection.|  
+|**Update**|rename or modify a network connection. The action differs from **replace** because it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the connection does not exist, then the **Update** action creates a new connection.|  
   
 #### Virtual private network connection settings  
   
@@ -576,10 +576,10 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a newly configured power plan. if a power plan with the same name as the Power Plan item exists, then the existing power plan is not changed.|  
+|**create**|create a newly configured power plan. If a power plan with the same name as the Power Plan item exists, then the existing power plan is not changed.|  
 |**delete**|remove a power plan with the same name as the Power Plan preference item. The extension performs no action if the power plan does not exist. Built-in power plans cannot be deleted.|  
-|**replace**|delete and re-create the named power plan. The net result of the **replace** action overwrites all existing settings associated with the power plan. if the power plan does not exist, then the **replace** action creates a newly configured power plan. Built-in power plans cannot be replaced.|  
-|**Update**|Modify a power plan. The action differs from **replace** because it updates the settings that are defined within the preference item. All other settings remain as they were previously configured. if the power plan does not exist, then the **Update** action creates a new power plan.|  
+|**replace**|delete and re-create the named power plan. The net result of the **replace** action overwrites all existing settings associated with the power plan. If the power plan does not exist, then the **replace** action creates a newly configured power plan. Built-in power plans cannot be replaced.|  
+|**Update**|Modify a power plan. The action differs from **replace** because it updates the settings that are defined within the preference item. All other settings remain as they were previously configured. If the power plan does not exist, then the **Update** action creates a new power plan.|  
   
 ##### additional considerations  
   
@@ -630,16 +630,16 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new local printer. if a local printer with the same name exists, then it does not modify it.|  
-|**delete**|remove a local printer with the same name. The extension performs no action if the local printer does not exist. **important:** This action does not remove the printer driver. It only removes the local printer.|  
-|**replace**|delete and recreate the local printer. The net result of the **replace** action overwrites all existing settings associated with the local printer. if the local printer does not exist, then the **replace** action creates a new local printer.|  
-|**Update**|rename or modify a local printer. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the local printer does not exist, then the **Update** action creates a new local printer.|  
+|**create**|create a new local printer. If a local printer with the same name exists, then it does not modify it.|  
+|**delete**|remove a local printer with the same name. The extension performs no action if the local printer does not exist. **IMPORTANT:** This action does not remove the printer driver. It only removes the local printer.|  
+|**replace**|delete and recreate the local printer. The net result of the **replace** action overwrites all existing settings associated with the local printer. If the local printer does not exist, then the **replace** action creates a new local printer.|  
+|**Update**|rename or modify a local printer. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the local printer does not exist, then the **Update** action creates a new local printer.|  
   
 #### Local printer settings  
   
 |||  
 |-|-|  
-|**Connection Name**|type the name of the targeted local printer. The preference extension creates a new local printer with this name if the local printer does not exist. if the printer exists, the preference extension uses the local printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select.|  
+|**Connection Name**|type the name of the targeted local printer. The preference extension creates a new local printer with this name if the local printer does not exist. If the printer exists, the preference extension uses the local printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select.|  
 |**Port**|Choose a local port from the supplied list or type the name of the local port.|  
 |**printer path**|type or click Browse **()** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver. The actual printer should be physically connected to the workstation.|  
 |**Set this printer as the default printer**|select this check box to make the local printer the default Windows printer for the current user.|  
@@ -675,10 +675,10 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new shared printer connection. if a local printer with the same name exists, then it does not modify it.|  
-|**delete**|remove a shared printer connection with the same share path. The extension performs no action if the shared printer connection does not exist. **important:** This action does not remove the printer driver. It only removes the shared printer connection.|  
-|**replace**|delete and recreate the shared printer connection. The net result of the **replace** action overwrites all existing settings associated with the shared printer connection. if the shared printer connection does not exist, then the **replace** action creates a new shared printer connection.|  
-|**Update**|Modify a shared printer connection. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the shared printer connection does not exist, then the **Update** action creates a new shared printer connection.|  
+|**create**|create a new shared printer connection. If a local printer with the same name exists, then it does not modify it.|  
+|**delete**|remove a shared printer connection with the same share path. The extension performs no action if the shared printer connection does not exist. **IMPORTANT:** This action does not remove the printer driver. It only removes the shared printer connection.|  
+|**replace**|delete and recreate the shared printer connection. The net result of the **replace** action overwrites all existing settings associated with the shared printer connection. If the shared printer connection does not exist, then the **replace** action creates a new shared printer connection.|  
+|**Update**|Modify a shared printer connection. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the shared printer connection does not exist, then the **Update** action creates a new shared printer connection.|  
   
 #### Shared printer settings  
   
@@ -686,9 +686,9 @@ This type of preference item provides a choice of four actions: **create**, **re
 |-|-|  
 |**Share path**|type or click Browse **()** to choose a fully qualified UNC path of a shared printer.|  
 |**Set this printer as the default printer**|select this check box to make the shared printer connection the default Windows printer for the current user.|  
-|**Only if a local printer is not present**|select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **important:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP/IP printers, and virtual printers installed through software.|  
+|**Only if a local printer is not present**|select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **IMPORTANT:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP/IP printers, and virtual printers installed through software.|  
 |**delete all shared printer connections**|select this check box if you want to delete all shared printer connections for the current user. This setting is available only when the preference item's action is set to **delete**|  
-|**Local Port**|Choose a local port to which you want the shared connection mapped. This setting is optional. **important:** When the **Local Port** box contains a value and the preference item action is set to **delete**, the preference extension deletes the shared printer connection associated with that local port.|  
+|**Local Port**|Choose a local port to which you want the shared connection mapped. This setting is optional. **IMPORTANT:** When the **Local Port** box contains a value and the preference item action is set to **delete**, the preference extension deletes the shared printer connection associated with that local port.|  
 |**Reconnect**|select this check box if you want the shared printer connection persistent. This option is unavailable until you choose a value from the **Local Port** list.|  
 |**Unmap all local ports**|select this check box if you want shared printer connections from all local ports. This setting is available only when the preference item's action is set to **delete**.|  
   
@@ -726,20 +726,20 @@ This type of preference item provides a choice of four actions: **create**, **re
   
 |||  
 |-|-|  
-|**create**|create a new TCP/IP printer connection. if a TCP/IP printer connection with the same IP address exists, then it does not modify it.|  
-|**delete**|remove a TCP/IP printer connection with the same IP address. The extension performs no action if the TCP/IP printer connection does not exist. **important:** This action does not remove the printer driver or port. It only removes the TCP/IP printer connection.|  
-|**replace**|delete and recreate the TCP/IP printer connection. The net result of the **replace** action overwrites all existing settings associated with the TCP/IP printer connection. if the TCP/IP printer connection does not exist, then the **replace** action creates a new TCP/IP printer connection.|  
-|**Update**|Modify a TCP/IP printer connection. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. if the TCP/IP printer connection does not exist, then the **Update** action creates a new TCP/IP printer connection.|  
+|**create**|create a new TCP/IP printer connection. If a TCP/IP printer connection with the same IP address exists, then it does not modify it.|  
+|**delete**|remove a TCP/IP printer connection with the same IP address. The extension performs no action if the TCP/IP printer connection does not exist. **IMPORTANT:** This action does not remove the printer driver or port. It only removes the TCP/IP printer connection.|  
+|**replace**|delete and recreate the TCP/IP printer connection. The net result of the **replace** action overwrites all existing settings associated with the TCP/IP printer connection. If the TCP/IP printer connection does not exist, then the **replace** action creates a new TCP/IP printer connection.|  
+|**Update**|Modify a TCP/IP printer connection. The action differs from **replace** in that it updates the settings defined within the preference item. All other settings remain as they were previously configured. If the TCP/IP printer connection does not exist, then the **Update** action creates a new TCP/IP printer connection.|  
   
 #### TCP/IP printer settings  
   
 |||  
 |-|-|  
-|**IP address** or **DNS name**|type the IP address of the remote printer. Or select the **Use DNS name** check box and type the fully qualified domain name of the remote printer. **important:** The printers preference extension uses the TCP/IP address or the DNS Name to determine if a TCP/IP printer exists when a Local Name is not provided. **Note:** IPv6 addresses are not supported.|  
-|**Local Name**|type the local name of the targeted TCP/IP printer connection. The preference extension creates a new TCP/IP printer connection with this name if one does not exist. if a TCP/IP printer connection with this name exists, the preference extension uses the TCP/IP printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select. **important:** The printers preference extension uses Local Name to determine if a TCP/IP printer exists when a Local Name is provided. Otherwise, the preference extension uses the TCP/IP address or the DNS Name to determine if the TCP/IP connection exits.|  
+|**IP address** or **DNS name**|type the IP address of the remote printer. Or select the **Use DNS name** check box and type the fully qualified domain name of the remote printer. **IMPORTANT:** The printers preference extension uses the TCP/IP address or the DNS Name to determine if a TCP/IP printer exists when a Local Name is not provided. **Note:** IPv6 addresses are not supported.|  
+|**Local Name**|type the local name of the targeted TCP/IP printer connection. The preference extension creates a new TCP/IP printer connection with this name if one does not exist. If a TCP/IP printer connection with this name exists, the preference extension uses the TCP/IP printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select. **IMPORTANT:** The printers preference extension uses Local Name to determine if a TCP/IP printer exists when a Local Name is provided. Otherwise, the preference extension uses the TCP/IP address or the DNS Name to determine if the TCP/IP connection exits.|  
 |**printer path**|type a fully qualified UNC path or click Browse **()** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver.|  
 |**Set this printer as the default printer**|select this check box to make the local printer the default Windows printer for the current user.|  
-|**Only if a local printer is not present**|select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **important:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP/IP printers, and virtual printers installed through software.|  
+|**Only if a local printer is not present**|select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **IMPORTANT:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP/IP printers, and virtual printers installed through software.|  
 |**delete all IP printer connections**|select this check box if you want to delete all TCP/IP printer connections for the current user. This setting is available only when the preference item's action is set to **delete**|  
 |**Location**|type text to describe where the printer is located. This information appears in the printer's **Location** box. Press F3 to display a list of variables from which you can select.|  
 |**Comment**|type text that provides additional comments about the printer. This information appears in the printer's **Comments** box. Press F3 to display a list of variables from which you can select.|  
@@ -770,7 +770,7 @@ for information about how to use this extension to create and configure a prefer
 You configure **regional Options** just as you would in **regional and Language Options** in **Control Panel**. select the **User Locale** on the **regional Options** tab. This selection resets the values on the remaining tabs; however, you can then modify the remaining values.  
   
 > [!NOTE]  
-> Unlike other preference extensions, you can only update **regional Options** preference items. for this reason, the preference item does not provide a choice of actions.  
+> Unlike other preference extensions, you can only update **regional Options** preference items. For this reason, the preference item does not provide a choice of actions.  
   
 ##### To create a new regional Options preference item  
   
@@ -857,8 +857,8 @@ This type of preference item provides a choice of four actions: **create**, **re
 |-|-|  
 |**create**|create a new scheduled task for users or computers.|  
 |**delete**|remove a scheduled task for users or computers.|  
-|**replace**|delete and re-create scheduled tasks for users or computers. The net result of the **replace** action is to overwrite all existing settings associated with the task. if the task does not exist, then the **replace** action creates a new scheduled task.|  
-|**Update**|Modify the settings of an existing scheduled task for users or computers. This action differs from **replace** because it only updates settings that are defined within the preference item. All other settings remain as configured in the task. if the task does not exist, then the **Update** action creates a new scheduled task.|  
+|**replace**|delete and re-create scheduled tasks for users or computers. The net result of the **replace** action is to overwrite all existing settings associated with the task. If the task does not exist, then the **replace** action creates a new scheduled task.|  
+|**Update**|Modify the settings of an existing scheduled task for users or computers. This action differs from **replace** because it only updates settings that are defined within the preference item. All other settings remain as configured in the task. If the task does not exist, then the **Update** action creates a new scheduled task.|  
   
 #### General task settings  
   
@@ -874,7 +874,7 @@ This type of preference item provides a choice of four actions: **create**, **re
 |**Configure for**|You can restrict the options displayed to those that are also available in previous operating systems. Doing this does not configure the task or the preference item to run on earlier operating systems.|  
   
 #### Triggers  
-if creating, updating, or replacing a task, configure when the task begins and the frequency with which to run the task on the **Triggers** tab. for a task scheduled to run daily, weekly, monthly, or one time only, select the start time at which to begin the task.  
+if creating, updating, or replacing a task, configure when the task begins and the frequency with which to run the task on the **Triggers** tab. For a task scheduled to run daily, weekly, monthly, or one time only, select the start time at which to begin the task.  
   
 Configure any optional scheduling settings desired:  
   
@@ -889,7 +889,7 @@ Configure any optional scheduling settings desired:
 > [!NOTE]  
 > All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
-A task can start a program, send an e-mail, or display a message. if configuring a task to start a program, on the **Actions** tab click **New**, select **start a program**, and configure the following options:  
+A task can start a program, send an e-mail, or display a message. If configuring a task to start a program, on the **Actions** tab click **New**, select **start a program**, and configure the following options:  
   
 |||  
 |-|-|  
@@ -949,7 +949,7 @@ Immediate Task preference items allow you to create tasks to be run immediately 
 > [!NOTE]  
 > All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
-A task can start a program, send an e-mail, or display a message. if configuring a task to start a program, on the **Actions** tab click **New**, select **start a program**, and configure the following options:  
+A task can start a program, send an e-mail, or display a message. If configuring a task to start a program, on the **Actions** tab click **New**, select **start a program**, and configure the following options:  
   
 |||  
 |-|-|  
@@ -998,8 +998,8 @@ This type of preference item provides a choice of four actions: **create**, **re
 |-|-|  
 |**create**|create a new scheduled task for users or computers.|  
 |**delete**|remove a scheduled task for users or computers.|  
-|**replace**|delete and re-create scheduled tasks for users or computers. The net result of the **replace** action is to overwrite all existing settings associated with the scheduled task. if the scheduled task does not exist, then the **replace** action creates a new scheduled task.|  
-|**Update**|Modify settings of an existing scheduled task for users or computers. This action differs from **replace** because it only updates settings that are defined within the preference item. All other settings remain as configured in the scheduled task. if the scheduled task does not exist, then the **Update** action creates a new scheduled task.|  
+|**replace**|delete and re-create scheduled tasks for users or computers. The net result of the **replace** action is to overwrite all existing settings associated with the scheduled task. If the scheduled task does not exist, then the **replace** action creates a new scheduled task.|  
+|**Update**|Modify settings of an existing scheduled task for users or computers. This action differs from **replace** because it only updates settings that are defined within the preference item. All other settings remain as configured in the scheduled task. If the scheduled task does not exist, then the **Update** action creates a new scheduled task.|  
   
 #### Task settings  
   
@@ -1017,7 +1017,7 @@ This type of preference item provides a choice of four actions: **create**, **re
 |**Enabled**|select this check box so that the task will run. To configure the task for users or computers without letting it run, clear this check box.<br /><br />This check box is available only if the action selected is **create**, **replace**, or **Update**.|  
   
 #### Schedule settings  
-if creating, updating, or replacing a task, configure the frequency with which to run the task on the **Schedule** tab. for a task scheduled to be run daily, weekly, monthly, or one time only, select the start time at which to begin the task.  
+if creating, updating, or replacing a task, configure the frequency with which to run the task on the **Schedule** tab. For a task scheduled to be run daily, weekly, monthly, or one time only, select the start time at which to begin the task.  
   
 Configure any optional scheduling settings desired:  
   
@@ -1025,7 +1025,7 @@ Configure any optional scheduling settings desired:
   
 -   To run the task repeatedly, click the **Advanced** button, select **Repeat task**, and configure the frequency and end time or duration.  
   
--   You can configure multiple schedules. To do this, select the **Show multiple schedules** check box. for the first schedule that you want to create, select a frequency, start time, and any advanced options for the task. Click **New** to add another schedule to the list, and then configure settings for it. Any schedule modifications are applied to the schedule currently viewed, but all the schedules are run.  
+-   You can configure multiple schedules. To do this, select the **Show multiple schedules** check box. For the first schedule that you want to create, select a frequency, start time, and any advanced options for the task. Click **New** to add another schedule to the list, and then configure settings for it. Any schedule modifications are applied to the schedule currently viewed, but all the schedules are run.  
   
     > [!NOTE]  
     > To return to a single schedule display, delete all except one of the schedules in the list, and then clear the **Show multiple schedules** check box.  
@@ -1091,7 +1091,7 @@ The Services preference extension allows you to configure existing services on c
 |||  
 |-|-|  
 |**startup**|Choose the startup type for the service<br /><br />-   **No change**: Use this setting when you do not want to change the startup type.<br />-   **Automatic**: Use this setting to configure the service to automatically start during the boot and logon process.<br />-   **Disabled**: Use this setting to disable the service. Disabling the service prevents the service from starting.<br />-   **Automatic (delayed start)**: Use this setting to configure the service to automatically start during the boot and logon process. The startup of the service is briefly delayed during the logon process to increase logon performance.|  
-|**Service name**|type the unique name for the service, or click Browse **()** to select a service from a list of installed services on the current computer. **important:** A service's unique name does not always match its display name. for example, the unique name of the *Server* service is *LanmanServer*.|  
+|**Service name**|type the unique name for the service, or click Browse **()** to select a service from a list of installed services on the current computer. **IMPORTANT:** A service's unique name does not always match its display name. For example, the unique name of the *Server* service is *LanmanServer*.|  
 |**Wait timeout if service is locked**|type a timeout value in seconds the preference extension waits to write configuration data, if the service is locked or transitioning from a stop, started, or restarted state,|  
 |**Log on as: No change**|Use this setting to keep the service's logon credentials as previously configured.|  
 |**Log on as: Local System account**|Use this setting to change the service's logon credentials to the Local System account.|  
@@ -1132,7 +1132,7 @@ Configure how the computer responds if the service fails after one, two, or more
 -   Preference items are available only in domain-based GPOs.  
   
 ## start Menu extension  
-Group Policy includes the start Menu preference extension. for users, this extension allows you to:  
+Group Policy includes the start Menu preference extension. For users, this extension allows you to:  
   
 -   Require a specific configuration of the **start** menu.  
   

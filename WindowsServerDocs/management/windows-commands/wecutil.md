@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Enables you to create and manage subscriptions to events that are forwarded from remote computers, which support WS-Management protocol. for examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to create and manage subscriptions to events that are forwarded from remote computers, which support WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 wecutil  [{es | enum-subscription}] 
@@ -44,13 +44,13 @@ wecutil  [{es | enum-subscription}]
 ## Options
 |Option|Description|
 |-----|--------|
-|/f:<format>|Specifies the format of the information that is displayed. <format> can be XML or Terse. if <format> is XML, the output is displayed in XML format. if <format> is Terse, the output is displayed in name-value pairs. The default is Terse.|
+|/f:<format>|Specifies the format of the information that is displayed. <format> can be XML or Terse. If <format> is XML, the output is displayed in XML format. If <format> is Terse, the output is displayed in name-value pairs. The default is Terse.|
 |/c:<Configfile>|Specifies the path to the XML file that contains a subscription configuration. The path can be absolute or relative to the current directory. This option can only be used with the **/cun** and **/cup** options and is mutually exclusive with all other options.|
 |/e:[<Subenabled>]|Enables or disables a subscription. <Subenabled> can be true or false. The default value of this option is true.|
 |/esa:<address>|Specifies the address of an event source. <address> is a string that contains a fully qualified domain name, a NetBIOS name, or an IP address, which identifies a computer that serves as a source of events. This option should be used with the **/ese**, **/aes**, **/res**, or **/un** and **/up** options.|
 |/ese:[<Srcenabled>]|Enables or disables an event source. <Srcenabled> can be true or false. This option is allowed only if the **/esa** option is specified. The default value of this option is true.|
-|/aes|adds the event source that is specified by the **/esa** option if it is not already a part of the subscription. if the address specified by the **/esa** option is already a part of the subscription, an error is reported. This option is only allowed if the **/esa** option is specified.|
-|/res|removes the event source that is specified by the **/esa** option if it is already a part of the subscription. if the address specified by the **/esa** option is not a part of the subscription, an error is reported. This option is only allowed if **/esa** option is specified.|
+|/aes|adds the event source that is specified by the **/esa** option if it is not already a part of the subscription. If the address specified by the **/esa** option is already a part of the subscription, an error is reported. This option is only allowed if the **/esa** option is specified.|
+|/res|removes the event source that is specified by the **/esa** option if it is already a part of the subscription. If the address specified by the **/esa** option is not a part of the subscription, an error is reported. This option is only allowed if **/esa** option is specified.|
 |/un:<Username>|Specifies the user credential to use with the event source specified by the **/esa** option. This option is only allowed if the **/esa** option is specified.|
 |/up:<Password>|Specifies the password that corresponds to the user credential. This option is only allowed if the **/un** option is specified.|
 |/d:<Desc>|Provides a description for the subscription.|
@@ -67,17 +67,17 @@ wecutil  [{es | enum-subscription}]
 |/hi:<Heartbeat>|Defines the heartbeat interval. <Heartbeat> is the number of milliseconds. This option is only valid if **/cm** is set to Custom.|
 |/cf:<Content>|Specifies the format of the events that are returned. <Content> can be Events or renderedText. When the value is renderedText, the events are returned with the localized strings (such as event description) attached to the event. The default value is renderedText.|
 |/l:<Locale>|Specifies the locale for delivery of the localized strings in renderedText format. <Locale> is a language and country/region identifier, for example, "EN-us". This option is only valid if the **/cf** option is set to renderedText.|
-|/ree:[<Readexist>]|Identifies the events that will be delivered for the subscription. <Readexist> can true or false. When the <Readexist> is true, all existing events are read from the subscription event sources. When the <Readexist> is false, only future (arriving) events are delivered. The default value is true for a **/ree** option without a value. if no **/ree** option is specified, the default value is false.|
+|/ree:[<Readexist>]|Identifies the events that will be delivered for the subscription. <Readexist> can true or false. When the <Readexist> is true, all existing events are read from the subscription event sources. When the <Readexist> is false, only future (arriving) events are delivered. The default value is true for a **/ree** option without a value. If no **/ree** option is specified, the default value is false.|
 |/lf:<Logfile>|Specifies the local event log that is used to store events received from the event sources.|
 |/pn:<Publishername>|Specifies the publisher name. It must be a publisher that owns or imports the log specified by the **/lf** option.|
 |/essp:<Enableport>|Specifies that the port number must be appended to the service principal name of the remote service. <Enableport> can be true or false. The port number is appended when <Enableport> is true. When the port number is appended, some configuration may be required to prevent the access to event sources from being denied.|
 |/hn:<hostname>|Specifies the DNS name of the local computer. This name is used by remote event source to push back events and must be used only for a push subscription.|
 |/ct:<type>|Sets the credential type for the remote source access. <type> should be one of the following values: default, negotiate, digest, basic or localmachine. The default value is default.|
-|/cun:<Comusername>|Sets the shared user credential to be used for event sources that do not have their own user credentials. if this option is specified with the **/c** option, UserName and UserPassword settings for individual event sources from the configuration file are ignored. if you want to use a different credential for a specific event source, you should override this value by specifying the **/un** and **/up** options for a specific event source on the command line of another **ss** command.|
+|/cun:<Comusername>|Sets the shared user credential to be used for event sources that do not have their own user credentials. If this option is specified with the **/c** option, UserName and UserPassword settings for individual event sources from the configuration file are ignored. If you want to use a different credential for a specific event source, you should override this value by specifying the **/un** and **/up** options for a specific event source on the command line of another **ss** command.|
 |/cup:<compassword>|Sets the user password for the shared user credential. When <compassword> is set to \* (asterisk), the password is read from the console. This option is only valid when the **/cun** option is specified.|
-|/q:[<Quiet>]|Specifies whether the configuration procedure will prompt for confirmation. <Quiet> can be true or false. if <Quiet> is true, the configuration procedure will not prompt for confirmation. The default value of this option is false.|
+|/q:[<Quiet>]|Specifies whether the configuration procedure will prompt for confirmation. <Quiet> can be true or false. If <Quiet> is true, the configuration procedure will not prompt for confirmation. The default value of this option is false.|
 ## remarks
-> [!importANT]
+> [!IMPORTANT]
 > if you receive the message,  The RPC server is unavailable  when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 -   The following example shows the contents of a configuration file:
     ```

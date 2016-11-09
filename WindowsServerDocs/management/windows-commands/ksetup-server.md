@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Allows you to specify a name for a computer running the Windows operating system so that the changes made by using **ksetup** will update the target computer. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to specify a name for a computer running the Windows operating system so that the changes made by using **ksetup** will update the target computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /server <ServerName>

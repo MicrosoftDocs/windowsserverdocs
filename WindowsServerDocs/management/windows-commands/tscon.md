@@ -29,7 +29,7 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 ## Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|<SessionID>|Specifies the ID of the session to which you want to connect. if you use the optional **/dest:**<*SessionName*> parameter, this is the ID of the session to which you want to connect.|  
+|<SessionID>|Specifies the ID of the session to which you want to connect. If you use the optional **/dest:**<*SessionName*> parameter, this is the ID of the session to which you want to connect.|  
 |<SessionName>|Specifies the name of the session to which you want to connect.|  
 |/dest:<SessionName>|Specifies the name of the current session. This session will disconnect when you connect to the new session.|  
 |/password:<pw>|Specifies the password of the user who owns the session to which you want to connect. This password is required when the connecting user does not own the session.|  

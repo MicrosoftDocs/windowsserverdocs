@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde -changepin [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]

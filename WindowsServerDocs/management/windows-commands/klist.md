@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays a list of currently cached Kerberos tickets. This information applies to  Windows Server 2012 . for examples of how this command can be used, see [Examples](#BKMK_Examples).  
+Displays a list of currently cached Kerberos tickets. This information applies to  Windows Server 2012 . For examples of how this command can be used, see [Examples](#BKMK_Examples).  
 ## Syntax  
 ```  
 klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | sessions | kcd_cache | get | add_bind | query_bind | purge_bind  
@@ -26,8 +26,8 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|-lh|Denotes the high part of the user s locally unique identifier (LUID), expressed in hexadecimal. if neither  lh or  li are present, the command defaults to the LUID of the user who is currently signed in.|  
-|-li|Denotes the low part of the user s locally unique identifier (LUID), expressed in hexadecimal. if neither  lh or  li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|-lh|Denotes the high part of the user s locally unique identifier (LUID), expressed in hexadecimal. If neither  lh or  li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|-li|Denotes the low part of the user s locally unique identifier (LUID), expressed in hexadecimal. If neither  lh or  li are present, the command defaults to the LUID of the user who is currently signed in.|  
 |tickets|lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option.|  
 |tgt|Displays the initial Kerberos TGT.|  
 |purge|Allows you to delete all the tickets of the specified logon session.|  
@@ -70,17 +70,17 @@ The parameters display the following information:
     -   timeSkew: time difference with the Key Distribution Center (KDC)  
     -   EncodedTicket: Encoded ticket  
 -   **purge**  
-    Allows you to delete a specific ticket. Purging tickets destroys all tickets that you have cached, so use this attribute with caution. It might stop you from being able to authenticate to resources. if this happens, you will have to log off and log on again.  
+    Allows you to delete a specific ticket. Purging tickets destroys all tickets that you have cached, so use this attribute with caution. It might stop you from being able to authenticate to resources. If this happens, you will have to log off and log on again.  
     -   LogonID: Identified in hexadecimal  
 -   **sessions**  
     Allows you to list and display the information for all logon sessions on this computer.  
-    -   LogonID: if specified, displays the logon session only by the given value. if not specified, displays all the logon sessions on this computer.  
+    -   LogonID: if specified, displays the logon session only by the given value. If not specified, displays all the logon sessions on this computer.  
 -   **kcd_cache**  
     Allows you to display the Kerberos constrained delegation cache information.  
-    -   LogonID: if specified, displays the cache information for the logon session by the given value. if not specified, displays the cache information for the current user s logon session.  
+    -   LogonID: if specified, displays the cache information for the logon session by the given value. If not specified, displays the cache information for the current user s logon session.  
 -   **get**  
     Allows you to request a ticket to the target that is specified by the SPN.  
-    -   LogonID: if specified, requests a ticket by using the logon session by the given value. if not specified, requests a ticket by using the current user s logon session.  
+    -   LogonID: if specified, requests a ticket by using the logon session by the given value. If not specified, requests a ticket by using the current user s logon session.  
     -   kdcoptions: Requests a ticket with the given KDC options  
 -   **add_bind**  
     Allows you to specify a preferred domain controller for Kerberos authentication.  

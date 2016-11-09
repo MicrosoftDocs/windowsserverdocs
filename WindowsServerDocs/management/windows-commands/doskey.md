@@ -33,16 +33,16 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
 |/macros:all|Displays **doskey** macros for all executables.|  
 |/macros:<ExeName>|Displays **doskey** macros for the executable specified by *ExeName*.|  
 |/history|Displays all commands that are stored in memory. You can use the redirection symbol (**>**) with **/history** to redirect the list to a file. You can abbreviate **/history** as **/h**.|  
-|[/insert &#124; /overstrike]|Specifies whether to insert or overwrite text as you type. if you use **/insert**, new text that you type on a line is inserted into the midst of the existing text. if you use **/overstrike**, new text replaces existing text. The default setting is **/overstrike**.|  
+|[/insert &#124; /overstrike]|Specifies whether to insert or overwrite text as you type. If you use **/insert**, new text that you type on a line is inserted into the midst of the existing text. If you use **/overstrike**, new text replaces existing text. The default setting is **/overstrike**.|  
 |/exename=<ExeName>|Specifies the program (that is, executable) in which the **doskey** macro runs.|  
 |/macrofile=<FileName>|Specifies a file that contains the macros that you want to install.|  
-|<MacroName>=[<Text>]|creates a macro that carries out the commands specified by *Text*. *MacroName* specifies the name you want to assign to the macro. *Text* specifies the commands you want to record. if *Text* is left blank, *MacroName* is cleared of any assigned commands.|  
+|<MacroName>=[<Text>]|creates a macro that carries out the commands specified by *Text*. *MacroName* specifies the name you want to assign to the macro. *Text* specifies the commands you want to record. If *Text* is left blank, *MacroName* is cleared of any assigned commands.|  
 |/?|Displays help at the command prompt.|  
 ## remarks  
 -   Using doskey.exe  
     doskey.exe is always available for all character-based, interactive programs (such as program debuggers or file transfer programs), and it maintains a command history buffer and macros for each program that it starts. You cannot use **doskey** command-line options from a program. You must run **doskey** command-line options before you start a program. Program key assignments override **doskey** key assignments.  
 -   Recalling a command  
-    To recall a command, you can use any of the following keys after you start doskey.exe. if you use doskey.exe within a program, that program's key assignments take precedence.  
+    To recall a command, you can use any of the following keys after you start doskey.exe. If you use doskey.exe within a program, that program's key assignments take precedence.  
     |Key|Description|  
     |----|--------|  
     |UP ARROW|Recalls the command that you used before the one that is displayed.|  
@@ -50,7 +50,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
     |PAGE UP|Recalls the first command that you used in the current session.|  
     |PAGE DOWN|Recalls the most recent command that you used in the current session.|  
 -   editing the command line  
-    With doskey.exe, you can edit the current command line. if you use doskey.exe within a program, that program's key assignments take precedence and some doskey.exe editing keys might not work.  
+    With doskey.exe, you can edit the current command line. If you use doskey.exe within a program, that program's key assignments take precedence and some doskey.exe editing keys might not work.  
     The following table lists **doskey** editing keys and their functions.  
     |Key or key combination|Description|  
     |-------------|--------|  
@@ -73,8 +73,8 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
     |F9|prompts you for a history buffer command number, and then displays the command associated with the number that you specify. Press ENTER to run the command. To display all the numbers and their associated commands, press F7.|  
     |ALT+F10|deletes all macro definitions.|  
 -   Using **doskey** within a program  
-    Certain character-based, interactive programs, such as program debuggers or file transfer programs (ftp) automatically use doskey.exe. To use doskey.exe, a program must be a console process and use buffered input. Program key assignments override **doskey** key assignments. for example, if the program uses the F7 key for a function, you cannot get a **doskey** command history in a pop-up window.  
-    With doskey.exe, you can maintain a command history for each program that you start or repeat. You can edit previous commands at the program's prompt, and start **doskey** macros created for the program. if you exit and then restart a program from the same Command prompt window, the command history from the previous program session is available.  
+    Certain character-based, interactive programs, such as program debuggers or file transfer programs (ftp) automatically use doskey.exe. To use doskey.exe, a program must be a console process and use buffered input. Program key assignments override **doskey** key assignments. For example, if the program uses the F7 key for a function, you cannot get a **doskey** command history in a pop-up window.  
+    With doskey.exe, you can maintain a command history for each program that you start or repeat. You can edit previous commands at the program's prompt, and start **doskey** macros created for the program. If you exit and then restart a program from the same Command prompt window, the command history from the previous program session is available.  
     You must run doskey.exe before you start a program. You cannot use **doskey** command-line options from a program's command prompt, even if the program has a shell command.  
     if you want to customize how doskey.exe works with a program and create **doskey** macros for that program, you can create a batch program that modifies doskey.exe and starts the program.  
 -   Specifying a default Insert mode  
@@ -92,9 +92,9 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
     |$T or $t|Separates commands. Use either of these special characters to separate commands when you create macros or type commands on the **doskey** command line. These special characters are equivalent to using the ampersand (**&**) on a command line.|  
     |$$|Specifies the dollar-sign character (**$**).|  
     |$1 through $9|Represent any command-line information you want to specify when you run the macro. The special characters **$1** through **$9** are batch parameters that enable you to use different data on the command line each time you run the macro. The **$1** character in a **doskey** command is similar to the **%1** character in a batch program.|  
-    |$*|Represents all the command-line information that you want to specify when you type the macro name. The special character **$\*** is a replaceable parameter that is similar to the batch parameters **$1** through **$9**, with one important difference: everything you type on the command line after the macro name is substituted for the **$\*** in the macro.|  
+    |$*|Represents all the command-line information that you want to specify when you type the macro name. The special character **$\*** is a replaceable parameter that is similar to the batch parameters **$1** through **$9**, with one IMPORTANT difference: everything you type on the command line after the macro name is substituted for the **$\*** in the macro.|  
 -   Running a **doskey** macro  
-    To run a macro, type the macro name at the command prompt, starting at the first position. if the macro was defined with **$\*** or any of the batch parameters **$1** through **$9**, use a space to separate the parameters. You cannot run a **doskey** macro from a batch program.  
+    To run a macro, type the macro name at the command prompt, starting at the first position. If the macro was defined with **$\*** or any of the batch parameters **$1** through **$9**, use a space to separate the parameters. You cannot run a **doskey** macro from a batch program.  
 -   Creating a macro with the same name as a Windows Server 2003 family command  
     if you always use a particular command with specific command-line options, you can create a macro that has the same name as the command. To specify whether you want to run the macro or the command, follow these guidelines:  
     -   To run the macro, type the macro name at the command prompt. Do not add a space before the macro name.  
@@ -105,7 +105,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
     doskey <MacroName> =  
     ```  
 ## <a name="BKMK_examples"></a>Examples  
-The **/macros** and **/history** command-line options are useful for creating batch programs to save macros and commands. for example, to store all current **doskey** macros, type:  
+The **/macros** and **/history** command-line options are useful for creating batch programs to save macros and commands. For example, to store all current **doskey** macros, type:  
 ```  
 doskey /macros > macinit   
 ```  

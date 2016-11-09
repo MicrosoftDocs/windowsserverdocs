@@ -33,7 +33,7 @@ tree [<Drive>:][<path>] [/f] [/a]
 |/a|Specifies that **tree**is to use text characters instead of graphic characters to show the lines that link subdirectories.|  
 |/?|Displays help at the command prompt.|  
 ## remarks  
-The structure displayed by **tree** depends upon the parameters that you specify at the command prompt. if you do not specify a drive or path, **tree** displays the tree structure beginning with the current directory of the current drive.  
+The structure displayed by **tree** depends upon the parameters that you specify at the command prompt. If you do not specify a drive or path, **tree** displays the tree structure beginning with the current directory of the current drive.  
 ## <a name="BKMK_examples"></a>Examples  
 To display the names of all the subdirectories on the disk in your current drive, type:  
 ```  

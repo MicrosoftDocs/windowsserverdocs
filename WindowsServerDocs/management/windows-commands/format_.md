@@ -31,14 +31,14 @@ format <volume> [/q]
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<volume>|Specifies the mount point, volume name, or drive letter (followed by a colon) of the drive that you want to format. if you do not specify any of the following command-line options, **format** uses the volume type to determine the default format for the disk.|
+|<volume>|Specifies the mount point, volume name, or drive letter (followed by a colon) of the drive that you want to format. If you do not specify any of the following command-line options, **format** uses the volume type to determine the default format for the disk.|
 |/fs:{Fat&#124;Fat32&#124;NTFS&#124;UDF}|Specifies the type of the file system: Fat, Fat32, NTFS, or UDF. Floppy disks can use only the Fat file system.|
-|/v:<label>|Specifies the volume label. if you omit the **/v** command-line option or use it without specifying a volume label, **format** prompts you for the volume label after the formatting is complete. Use the syntax **/v:** to prevent the prompt for a volume label. if you use a single **format** command to format more than one disk, all of the disks will be given the same volume label.|
-|/a:<UnitSize>|Specifies the allocation unit size to use on Fat, Fat32, or NTFS volumes. if you do not specify *UnitSize*, it is chosen based on volume size. Default settings are strongly recommended for general use. The following list presents valid values for NTFS, Fat, and Fat32 *UnitSize*:<br /><br />512<br /><br />1024<br /><br />2048<br /><br />4096<br /><br />8192<br /><br />16K<br /><br />32K<br /><br />64K<br /><br />Fat and Fat32 also support 128K and 256K for a sector size greater than 512 bytes.|
+|/v:<label>|Specifies the volume label. If you omit the **/v** command-line option or use it without specifying a volume label, **format** prompts you for the volume label after the formatting is complete. Use the syntax **/v:** to prevent the prompt for a volume label. If you use a single **format** command to format more than one disk, all of the disks will be given the same volume label.|
+|/a:<UnitSize>|Specifies the allocation unit size to use on Fat, Fat32, or NTFS volumes. If you do not specify *UnitSize*, it is chosen based on volume size. Default settings are strongly recommended for general use. The following list presents valid values for NTFS, Fat, and Fat32 *UnitSize*:<br /><br />512<br /><br />1024<br /><br />2048<br /><br />4096<br /><br />8192<br /><br />16K<br /><br />32K<br /><br />64K<br /><br />Fat and Fat32 also support 128K and 256K for a sector size greater than 512 bytes.|
 |/q|Performs a quick format. deletes the file table and the root directory of a previously formatted volume, but does not perform a sector-by-sector scan for bad areas. You should use the **/q** command-line option to format only previously formatted volumes that you know are in good condition. Note that **/q** overrides **/p**.|
 |/f:<Size>|Specifies the size of the floppy disk to format. When possible, use this command-line option instead of the **/t** and **/n** command-line options. Windows accepts the following values for size:<br /><br />-   1440 or 1440k or 1440kb<br />-   1.44 or 1.44m or 1.44mb<br />-   1.44-MB, double-sided, quadruple-density, 3.5-inch disk|
-|/t:<Tracks>|Specifies the number of tracks on the disk. When possible, use the **/f** command-line option instead. if you use the **/t** option, you must also use the **/n** option. These options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/f** option.|
-|/n:<Sectors>|Specifies the number of sectors per track. When possible, use the **/f** command-line option instead of **/n**. if you use **/n**, you must also use **/t**. These two options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/f** option.|
+|/t:<Tracks>|Specifies the number of tracks on the disk. When possible, use the **/f** command-line option instead. If you use the **/t** option, you must also use the **/n** option. These options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/f** option.|
+|/n:<Sectors>|Specifies the number of sectors per track. When possible, use the **/f** command-line option instead of **/n**. If you use **/n**, you must also use **/t**. These two options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/f** option.|
 |/p:<Passes>|Zeros every sector on the volume for the number of passes specified. This option is not valid with the **/q** option.|
 |/c|NTFS only. Files created on the new volume will be compressed by default.|
 |/x|Causes the volume to dismount, if necessary, before it is formatted. Any open handles to the volume will no longer be valid.|
@@ -51,7 +51,7 @@ format <volume> [/q]
 -   adding a volume label
     After formatting a floppy disk, **format** displays the following message:
     `volume label (11 characters, ENTER for none)?`
-    To add a volume label, type up to 11 characters (including spaces). if you do not want to add a volume label to the disk, press ENTER.
+    To add a volume label, type up to 11 characters (including spaces). If you do not want to add a volume label to the disk, press ENTER.
 -   formatting a hard disk
 > [!NOTE]
 > You must be a member of the Administrators group to format a hard disk.

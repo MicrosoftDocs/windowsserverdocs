@@ -23,7 +23,7 @@ In Windows Server you can manage multiple remote servers by using a single Serve
 This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
-> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. if you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
+> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
 >
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
 >
@@ -44,7 +44,7 @@ As you add remote servers to Server Manager, some of the servers that you add mi
 
 -   *Domain*\\*User name*
 
-The **Windows Security** dialog box that is opened by the **Manage As** command cannot accept smart card credentials; providing smart card credentials through Server Manager is not supported. Credentials that you provide for a managed server by using the **Manage As** command are cached, and persist as long as you are managing the server by using the same computer on which you are currently running Server Manager, or as long as you do not overwrite them by specifying blank or different credentials for the same server. if you export your Server Manager settings to other computers, or configure your domain profile to be roaming to allow Server Manager settings to be used on other computers, **Manage As** credentials for servers in your server pool are not stored in the roaming profile. Server Manager users must add them on each computer from which they want to manage.
+The **Windows Security** dialog box that is opened by the **Manage As** command cannot accept smart card credentials; providing smart card credentials through Server Manager is not supported. Credentials that you provide for a managed server by using the **Manage As** command are cached, and persist as long as you are managing the server by using the same computer on which you are currently running Server Manager, or as long as you do not overwrite them by specifying blank or different credentials for the same server. If you export your Server Manager settings to other computers, or configure your domain profile to be roaming to allow Server Manager settings to be used on other computers, **Manage As** credentials for servers in your server pool are not stored in the roaming profile. Server Manager users must add them on each computer from which they want to manage.
 
 After you add servers to manage by following procedures in this topic, but before you use the **Manage As** command to specify alternate credentials that might be required to manage a server that you have added, the following manageability status errors can be displayed for the server:
 
@@ -55,7 +55,7 @@ After you add servers to manage by following procedures in this topic, but befor
 -   online - Access denied
 
 > [!NOTE]
-> Roles and features that do not support the **Manage As** command include remote Desktop Services (rdS) and IP address Management (IPAM) Server. if you cannot manage the remote rdS or IPAM server by using the same credentials you are using on the computer on which you are running Server Manager, try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running Server Manager. Then, log on to the computer that is running Server Manager with the account you use to manage the remote server that is running rdS or IPAM.
+> Roles and features that do not support the **Manage As** command include remote Desktop Services (rdS) and IP address Management (IPAM) Server. If you cannot manage the remote rdS or IPAM server by using the same credentials you are using on the computer on which you are running Server Manager, try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running Server Manager. Then, log on to the computer that is running Server Manager with the account you use to manage the remote server that is running rdS or IPAM.
 
 ## <a name="BKMK_add"></a>add servers to manage
 You can add servers to Server Manager to manage by using any of three methods in the **add Servers** dialog box.
@@ -68,7 +68,7 @@ You can add servers to Server Manager to manage by using any of three methods in
 
 #### To add servers to the server pool
 
-1.  if Server Manager is already open, go on to the next step. if Server Manager is not already open, open it by doing one of the following.
+1.  if Server Manager is already open, go on to the next step. If Server Manager is not already open, open it by doing one of the following.
 
     -   On the Windows desktop, start Server Manager by clicking **Server Manager** in the Windows taskbar.
 
@@ -107,7 +107,7 @@ These or similar errors can occur in the following conditions.
 
 ##### To add remote workgroup servers to Server Manager
 
-1.  On the computer that is running Server Manager, add the workgroup server name to the **TrustedHosts** list. This is a requirement of NTLM authentication. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. for example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
+1.  On the computer that is running Server Manager, add the workgroup server name to the **TrustedHosts** list. This is a requirement of NTLM authentication. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
 
     ```
     Set-Item wsman:\localhost\Client\TrustedHosts Server01 -Concatenate -force
@@ -119,7 +119,7 @@ These or similar errors can occur in the following conditions.
 
     if they are not in the same subnet, or if the workgroup server's network profile is not set to **Private**, on the workgroup server, change the inbound **Windows remote Management (HTTP-In)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **computers** tab of the setting's **Properties** dialog box.
 
-3.  > [!importANT]
+3.  > [!IMPORTANT]
     > Running the cmdlet in this step overrides User Account Control (UAC) measures that prevent elevated processes from running on workgroup computers unless the built-in Administrator or the System account is running the processes. The cmdlet lets members of the Administrators group manage the workgroup server without logging on as the built-in Administrator. Allowing additional users to manage the workgroup server can reduce its security; however, this is more secure than providing built-in Administrator account credentials to what might be multiple people who are managing the workgroup server.
 
     To override UAC restrictions on running elevated processes on workgroup computers, create a registry entry called **LocalAccountTokenFilterPolicy** on the workgroup server by running the following cmdlet.
@@ -130,7 +130,7 @@ These or similar errors can occur in the following conditions.
 
 4.  On the computer on which you are running Server Manager, open the **All Servers** page.
 
-5.  if the computer that is running Server Manager and the target workgroup server are in the same workgroup, skip to the last step. if the two computers are not in the same workgroup, right-click the target workgroup server in the **Servers** tile, and then click **Manage as**.
+5.  if the computer that is running Server Manager and the target workgroup server are in the same workgroup, skip to the last step. If the two computers are not in the same workgroup, right-click the target workgroup server in the **Servers** tile, and then click **Manage as**.
 
 6.  Log on to the workgroup server by using the built-in Administrator account for the workgroup server.
 
@@ -138,7 +138,7 @@ These or similar errors can occur in the following conditions.
 
 ##### To add remote servers when Server Manager is running on a workgroup computer
 
-1.  On the computer that is running Server Manager, add remote servers to the local computer's **TrustedHosts** list in a Windows powershell session. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. for example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
+1.  On the computer that is running Server Manager, add remote servers to the local computer's **TrustedHosts** list in a Windows PowerShell session. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
 
     ```
     Set-Item wsman:\localhost\Client\TrustedHosts Server01 -Concatenate -force
@@ -152,7 +152,7 @@ These or similar errors can occur in the following conditions.
 
 3.  On the computer on which you are running Server Manager, open the **All Servers** page.
 
-4.  verify that Server Manager is able to connect to and collect data from the remote server by refreshing the **All Servers** page, and then viewing the manageability status for the remote server. if the **Servers** tile still displays a manageability error for the remote server, go on to the next step.
+4.  verify that Server Manager is able to connect to and collect data from the remote server by refreshing the **All Servers** page, and then viewing the manageability status for the remote server. If the **Servers** tile still displays a manageability error for the remote server, go on to the next step.
 
 5.  Log off of the computer on which you are running Server Manager, and then log on again by using the built-in Administrator account. Repeat the preceding step, to verify that Server Manager is able to connect to and collect data from the remote server.
 

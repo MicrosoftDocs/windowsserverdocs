@@ -45,7 +45,7 @@ Use Diskpart `/s` to run scripts that automate disk\-related tasks, such as crea
     diskpart /s scriptname.txt > logfile.txt  
     ```  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > When using the **DiskPart** command as a part of a script, we recommend that you complete all of the DiskPart operations together as part of a single DiskPart script. You can run consecutive DiskPart scripts, but you must allow at least 15 seconds between each script for a complete shutdown of the previous execution before running the **DiskPart** command again in successive scripts. Otherwise, the successive scripts might fail. You can add a pause between consecutive DiskPart scripts by adding the timeout `/t 15` command to your batch file along with your DiskPart scripts.  
   
 When DiskPart starts, the DiskPart version and computer name display at the command prompt. By default, if DiskPart encounters an error while attempting to perform a scripted task, DiskPart stops processing the script and displays an error code \(unless you specified the **noerr** parameter\). However, DiskPart always returns errors when it encounters syntax errors, regardless of whether you used the **noerr** parameter. The **noerr** parameter enables you to perform useful tasks such as using a single script to delete all partitions on all disks regardless of the total number of disks.  
@@ -53,6 +53,6 @@ When DiskPart starts, the DiskPart version and computer name display at the comm
 ## See Also  
 [Sample: Configure UEFI\/gpt\-Based Hard Drive Partitions by Using Windows PE and DiskPart](http://technet.microsoft.com/library/hh825686.aspx)  
 [Sample: Configure BIOS\/MBR\-Based Hard Disk Partitions by Using Windows PE and DiskPart](http://technet.microsoft.com/library/hh825677.aspx)  
-[Storage Cmdlets in Windows powershell](http://technet.microsoft.com/library/hh848705.aspx)  
+[Storage Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh848705.aspx)  
   
 

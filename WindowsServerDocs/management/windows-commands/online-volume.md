@@ -20,10 +20,10 @@ ms.date: 10/12/2016
 
 Brings volumes that are currently offline to an online state  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This command is not available in any edition of Windows Vista.  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This command will fail if it is used on a read\-only volume.  
   
 ## Syntax  

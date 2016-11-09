@@ -139,7 +139,7 @@ Each preference extension can contain one or more preference items.
 
 -   if the **Stop processing items in this extension if an error occurs on this item** option is selected, a failing preference item prevents remaining preference items within the extension from processing. This change in behavior is limited to the hosting Group Policy object (GPO) and does not extend to other GPOs.
 
-    > [!importANT]
+    > [!IMPORTANT]
     > Preference extensions start processing preference items from the bottom of the list and work their way to the top. Preference items successfully applied prior to the failing preference item are applied. The preference extension only stops processing preference items that follow the failing preference item.
 
 #### <a name="BKMK_Run"></a>Run in logged-on user's security context (user policy option)
@@ -147,16 +147,16 @@ There are two security contexts in which Group Policy applies user preferences: 
 
 -   By default, Group Policy processes user preferences using the security context of the SYSTEM account. In this security context, the preference extension is limited to environment variables and system resources available only to the computer.
 
--   if the **Run in logged-on user's security context** option is selected, it changes the security context under which the preference item is processed. The preference extension processes preference items in the security context of the logged-on user. This allows the preference extension to access resources as the user rather than the computer. This can be especially important when using drive maps or other preferences in which the computer may not have permissions to resources or when using environment variables. The value of many environment variables differs when evaluated in a security context other than the logged-on user.
+-   if the **Run in logged-on user's security context** option is selected, it changes the security context under which the preference item is processed. The preference extension processes preference items in the security context of the logged-on user. This allows the preference extension to access resources as the user rather than the computer. This can be especially IMPORTANT when using drive maps or other preferences in which the computer may not have permissions to resources or when using environment variables. The value of many environment variables differs when evaluated in a security context other than the logged-on user.
 
 #### <a name="BKMK_remove"></a>remove this item when it is no longer applied
 Group Policy applies policy settings and preference items to users and computers. You determine which users and computers receive these items by linking one or more Group Policy objects (GPOs) to active directory sites, domains, or organizational units. User and computer objects that reside in these containers receive policy settings and preference items defined in the linked GPOs because they are within the scope of the GPO.
 
 -   Unlike policy settings, by default preference items are not removed when the hosting GPO becomes out of scope for the user or computer.
 
--   if the **remove this item when it is no longer applied** option is selected, it changes this behavior. After selecting this option, the preference extension determines if the preference item should not apply to targeted users or computers (out of scope). if the preference extension determines the preference item is out of scope, it removes the settings associated with the preference item.
+-   if the **remove this item when it is no longer applied** option is selected, it changes this behavior. After selecting this option, the preference extension determines if the preference item should not apply to targeted users or computers (out of scope). If the preference extension determines the preference item is out of scope, it removes the settings associated with the preference item.
 
-    > [!importANT]
+    > [!IMPORTANT]
     > selecting this option changes the action to **replace**. During Group Policy application, the preference extension recreates (deletes and creates) the results of the preference item. When the preference item is out of scope for the user or computer, the results of the preference item are deleted, but not created. Preference items can become out of scope by using item-level targeting or by higher-level Group Policy filters such as WMI and security group filters.
 
     > [!NOTE]
@@ -170,7 +170,7 @@ Preference items are applied when Group Policy refreshes.
 -   if the **Apply once and do not reapply** option is selected, it changes this behavior, so the preference extension applies the results of the preference item to the user or computer only once. This option is useful when you do not want the results of a preference item to reapply.
 
 #### <a name="BKMK_Item"></a>Item-level targeting
-Group Policy provides filters to control which policy settings and preference items apply to users and computers. Preferences provide an additional layer of filtering called targeting. Item-level targeting allows you to control if a preference item applies to a group of users or computers. for more information, see [Preference item-level targeting](https://technet.microsoft.com/library/cc733022.aspx).
+Group Policy provides filters to control which policy settings and preference items apply to users and computers. Preferences provide an additional layer of filtering called targeting. Item-level targeting allows you to control if a preference item applies to a group of users or computers. For more information, see [Preference item-level targeting](https://technet.microsoft.com/library/cc733022.aspx).
 
 ## Enable and disable settings in a Preference item
 In addition to enabling and disabling preference items within a Group Policy object (GPO), you can individually enable and disable underlined settings or settings preceded by a circle within a preference item.

@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Modifies the startup key for an operating system drive. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Modifies the startup key for an operating system drive. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde -changekey [<Drive>] [<pathToExternalKeydirectory>] [-computername <Name>] [{-?|/?}] [{-help|-h}]

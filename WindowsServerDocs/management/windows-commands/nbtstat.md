@@ -39,7 +39,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 |/RR|Releases and then refreshes NetBIOS names for the local computer that is registered with WINS servers.|
 |/s|Displays NetBIOS client and server sessions, attempting to convert the destination IP address to a name.|
 |/S|Displays NetBIOS client and server sessions, listing the remote computers by destination IP address only.|
-|<Interval>|Redisplays selected statistics, pausing the number of seconds specified in *Interval* between each display. Press CTRL+C to stop redisplaying statistics. if this parameter is omitted, **nbtstat** prints the current configuration information only once.|
+|<Interval>|Redisplays selected statistics, pausing the number of seconds specified in *Interval* between each display. Press CTRL+C to stop redisplaying statistics. If this parameter is omitted, **nbtstat** prints the current configuration information only once.|
 |/?|Displays help at the command prompt.|
 
 ## remarks
@@ -56,7 +56,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
     |Life|The remaining time that a name table cache entry will live before it is purged.|
     |Local Name|The local NetBIOS name associated with the connection.|
     |remote Host|The name or IP address associated with the remote computer.|
-    |<03>|The last byte of a NetBIOS name converted to hexadecimal. Each NetBIOS name is 16 characters long. This last byte often has special significance because the same name might be present several times on a computer, differing only in the last byte. for example, <20> is a space in ASCII text.|
+    |<03>|The last byte of a NetBIOS name converted to hexadecimal. Each NetBIOS name is 16 characters long. This last byte often has special significance because the same name might be present several times on a computer, differing only in the last byte. For example, <20> is a space in ASCII text.|
     |type|The type of name. A name can either be a unique name or a group name.|
     |Status|Whether the NetBIOS service on the remote computer is running (registered) or a duplicate computer name has registered the same service (Conflict).|
     |State|The state of NetBIOS connections.|

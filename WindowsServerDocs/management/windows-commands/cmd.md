@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-starts a new instance of the command interpreter, Cmd.exe. if used without parameters, **cmd** displays the version and copyright information of the operating system.
+starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
 ## Syntax
 ```
 cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}] [/v:{on|off}] [<String>]
@@ -63,7 +63,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 |f|Bright white|
 ## remarks
 -   Using multiple commands
-    To use multiple commands for <String>, separate them by the command separator **&&** and enclose them in quotation marks. for example:
+    To use multiple commands for <String>, separate them by the command separator **&&** and enclose them in quotation marks. For example:
     ```
     "<Command>&&<Command>&&<Command>"
     ```
@@ -74,7 +74,7 @@ The following table lists valid hexadecimal digits that you can use as the value
     -   You do not use any special characters within the quotation marks (for example: & < > ( ) @ ^ | ).
     -   You use one or more white-space characters within the quotation marks.
     -   The *String* within quotation marks is the name of an executable file.
-    if the previous conditions are not met, *String* is processed by examining the first character to verify whether it is an opening quotation mark. if the first character is an opening quotation mark, it is stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
+    if the previous conditions are not met, *String* is processed by examining the first character to verify whether it is an opening quotation mark. If the first character is an opening quotation mark, it is stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
 -   executing registry subkeys
     if you do not specify **/d** in *String*, Cmd.exe looks for the following registry subkeys:
     **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun\reg_SZ**
@@ -120,7 +120,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 if you enable file and directory name completion by using **/f:on**, use CTRL+D for directory name completion and CTRL+F for file name completion. To disable a particular completion character in the registry, use the value for white space [**0 20**] because it is not a valid control character.
-When you press CTRL+D or CTRL+F, **cmd** processes file and directory name completion. These key combination functions append a wildcard character to *String* (if one is not present), build a list of paths that match, and then display the first matching path. if none of the paths match, the file and directory name completion function beeps and does not change the display. To move through the list of matching paths, press CTRL+D or CTRL+F repeatedly. To move through the list backwards, press the shift key and CTRL+D or CTRL+F simultaneously. To discard the saved list of matching paths and generate a new list, edit *String* and press CTRL+D or CTRL+F. if you switch between CTRL+D and CTRL+F, the saved list of matching paths is discarded and a new list is generated. The only difference between the key combinations CTRL+D and CTRL+F is that CTRL+D only matches directory names and CTRL+F matches both file and directory names. if you use file and directory name completion on any of the built-in directory commands that is, **cd**, **MD**, or **rd**), directory completion is assumed.
+When you press CTRL+D or CTRL+F, **cmd** processes file and directory name completion. These key combination functions append a wildcard character to *String* (if one is not present), build a list of paths that match, and then display the first matching path. If none of the paths match, the file and directory name completion function beeps and does not change the display. To move through the list of matching paths, press CTRL+D or CTRL+F repeatedly. To move through the list backwards, press the shift key and CTRL+D or CTRL+F simultaneously. To discard the saved list of matching paths and generate a new list, edit *String* and press CTRL+D or CTRL+F. If you switch between CTRL+D and CTRL+F, the saved list of matching paths is discarded and a new list is generated. The only difference between the key combinations CTRL+D and CTRL+F is that CTRL+D only matches directory names and CTRL+F matches both file and directory names. If you use file and directory name completion on any of the built-in directory commands that is, **cd**, **MD**, or **rd**), directory completion is assumed.
 File and directory name completion correctly processes file names that contain white space or special characters if you place quotation marks around the matching path.
 The following special characters require quotation marks: & < > [ ] { } ^ = ; ! ' + , ` ~ [white space].
 if the information that you supply contains spaces, use quotation marks around the text (for example, "computer Name").

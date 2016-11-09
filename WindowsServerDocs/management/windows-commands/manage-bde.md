@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Used to turn on or turn off BitLocker, specify unlock mechanisms, update recovery methods, and unlock BitLocker-protected data drives. This command-line tool can be used in place of the **BitLocker Drive Encryption** Control Panel item. for examples of how this command can be used, see [Examples](#BKMK_Examples).  
+Used to turn on or turn off BitLocker, specify unlock mechanisms, update recovery methods, and unlock BitLocker-protected data drives. This command-line tool can be used in place of the **BitLocker Drive Encryption** Control Panel item. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ manage-bde [-status] [ on] [ off] [ pause] [ resume] [ lock] [ unlock] [ autounl
 |[manage-bde: unlock](manage-bde-unlock.md)|Allows access to BitLocker-protected data with a recovery password or a recovery key.|  
 |[manage-bde: autounlock](manage-bde-autounlock.md)|Manages automatic unlocking of data drives.|  
 |[manage-bde: protectors](manage-bde-protectors.md)|Manages protection methods for the encryption key.|  
-|[manage-bde: tpm](manage-bde-tpm.md)|Configures the computer's Trusted Platform Module (TPM). This command is not supported on computers running Windows 8 or **win8_server_2**. To manage the TPM on these computers, use either the TPM Management mmc snap-in or the TPM Management cmdlets for Windows powershell.|  
+|[manage-bde: tpm](manage-bde-tpm.md)|Configures the computer's Trusted Platform Module (TPM). This command is not supported on computers running Windows 8 or **win8_server_2**. To manage the TPM on these computers, use either the TPM Management mmc snap-in or the TPM Management cmdlets for Windows PowerShell.|  
 |[manage-bde: setidentifier](manage-bde-setidentifier.md)|Sets the drive identifier field on the drive to the value specified in the **Provide the unique identifiers for your organization** Group Policy setting.|  
 |[manage-bde: forcerecovery](manage-bde-forcerecovery.md)|forces a BitLocker-protected drive into recovery mode on restart. This command deletes all TPM-related key protectors from the drive. When the computer restarts, only a recovery password or recovery key can be used to unlock the drive.|  
 |[manage-bde: changepassword](manage-bde-changepassword.md)|Modifies the password for a data drive.|  

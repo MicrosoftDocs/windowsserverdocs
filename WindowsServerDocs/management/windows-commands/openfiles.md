@@ -32,9 +32,9 @@ openfiles /disconnect [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]]
 ##### Parameters
 |Parameter|Description|
 |-------|--------|
-|/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. if you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
-|/u [<Domain>\\]<UserName>|executes the command by using the permissions of the specified user account. if you do not use the **/u** option, system permissions are used by default.|
-|/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. if you do not use the **/p** option, a password prompt appears when the command is executed.|
+|/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
+|/u [<Domain>\\]<UserName>|executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
+|/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
 |/id <OpenFileID>|Disconnects open files by the specified file ID. The wildcard character (**\***) can be used with this parameter. **Note:** You can use the **openfiles /query** command to find the file ID.|
 |/a <AccessedBy>|Disconnects all open files associated with the user name that is specified in the *AccessedBy* parameter. The wildcard character (**\***) can be used with this parameter.|
 |/o {read &#124; write &#124; read/write}|Disconnects all open files with the specified open modevalue. Valid values are Read, Write, or Read/Write. The wildcard character (**\***) can be used with this parameter.|
@@ -70,9 +70,9 @@ openfiles /query [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]] [/fo
 ##### Parameters
 |Parameter|Description|
 |-------|--------|
-|/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. if you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
-|/u [<Domain>\\]<UserName>|executes the command by using the permissions of the specified user account. if you do not use the **/u** option, system permissions are used by default.|
-|/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. if you do not use the **/p** option, a password prompt appears when the command is executed.|
+|/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
+|/u [<Domain>\\]<UserName>|executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
+|/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
 |[/fo {TABLE &#124; list &#124; CSV}]|Displays the output in the specified format. Valid values for *format* are:<br /><br />TABLE:  Displays output in a table.<br /><br />list: Displays output in a list.<br /><br />CSV: Displays output in Comma Separated Values format.|
 |/nh|Suppresses column header in the output. Valid only when the **/fo** parameter is set to **TABLE** or **CSV**.|
 |/v|Specifies that detailed information be displayed in the output.|
@@ -97,7 +97,7 @@ openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 > [!NOTE]
 > In this example, the password is supplied on the command line. To prevent displaying the password, leave out the **/p** option. You will be prompted for the password, which will not be echoed to the screen.
 ## <a name="BKMK_local"></a>openfiles /local
-Enables or disables the system Maintain Objects list global flag. if used without parameters, **openfiles /local** displays the current status of the Maintain Objects list global flag.
+Enables or disables the system Maintain Objects list global flag. If used without parameters, **openfiles /local** displays the current status of the Maintain Objects list global flag.
 ##### Syntax
 ```
 openfiles /local [on | off]

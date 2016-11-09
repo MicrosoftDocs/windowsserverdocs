@@ -27,8 +27,8 @@ reg copy <KeyName1> <KeyName2> [/s] [/f]
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<KeyName1>|Specifies the full path of the subkey to copy. To specify a remote computer, include the computer name (in the format \\\computerName\\) as part of the *KeyName*. Omitting \\\computerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. if a remote computer is specified, valid root keys are: HKLM and HKU.|
-|<KeyName2>|Specifies the full path of the subkey destination. To specify a remote computer, include the computer name (in the format \\\computerName\\) as part of the *KeyName*. Omitting \\\computerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. if a remote computer is specified, valid root keys are: HKLM and HKU.|
+|<KeyName1>|Specifies the full path of the subkey to copy. To specify a remote computer, include the computer name (in the format \\\computerName\\) as part of the *KeyName*. Omitting \\\computerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|<KeyName2>|Specifies the full path of the subkey destination. To specify a remote computer, include the computer name (in the format \\\computerName\\) as part of the *KeyName*. Omitting \\\computerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |/s|Copies all subkeys and entries under the specified subkey.|
 |/f|Copies the subkey without prompting for confirmation.|
 |/?|Displays help for **reg** copy at the command prompt.|

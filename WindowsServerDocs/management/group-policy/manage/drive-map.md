@@ -45,11 +45,11 @@ The preference item provides a choice of four actions:  **create**, **replace**,
 
 3.  **replace**
 
-    **delete** and **create** mapped drives for users. The result of the **replace** action is to overwrite all existing settings associated with the mapped drive. if the drive mapping does not exist, then the **replace** action creates a new drive mapping.
+    **delete** and **create** mapped drives for users. The result of the **replace** action is to overwrite all existing settings associated with the mapped drive. If the drive mapping does not exist, then the **replace** action creates a new drive mapping.
 
 4.  **Update**
 
-    Modify settings of an existing mapped drive for users. This action differs from **replace** in that it only updates settings defined within the preference item. All other settings remain as configured on the mapped drive. if the drive mapping does not exist, then the **Update** action creates a new drive mapping.
+    Modify settings of an existing mapped drive for users. This action differs from **replace** in that it only updates settings defined within the preference item. All other settings remain as configured on the mapped drive. If the drive mapping does not exist, then the **Update** action creates a new drive mapping.
 
 ## Location (2)
 To configure a new drive mapping or recreate a drive mapping, type a fully qualified UNC path for the network share (such as \\\server\sharename, \\\server\hiddenshare$, or \\\server\sharename\foldername).  Alternatively, you can use built-in Group Policy Preference variables by pressing F3 and selecting a variable from the Variable browser.
@@ -102,7 +102,7 @@ You can use a Drive Map preference item to configure the visibility of a physica
 ## Hide/Show all drives (8)
 Configure the visibility of all mapped and physical drives in Windows Explorer. The options are comparable to those for **Hide/Show this drive**, but apply globally to all drives.
 
-Hide/Show this drive options have precedence over **Hide/Show all drives**. for example, if a Drive Map preference item has the **Hide/Show this drive** option set to **Hide this drive** and the **Hide/Show all drives** option set to **Show all drives**, then all drives are visible except the drive designated as hidden.
+Hide/Show this drive options have precedence over **Hide/Show all drives**. For example, if a Drive Map preference item has the **Hide/Show this drive** option set to **Hide this drive** and the **Hide/Show all drives** option set to **Show all drives**, then all drives are visible except the drive designated as hidden.
 
 ## How does it work?
 The Group Policy Drive Map preference extension is a Group Policy client side extension that is hosted in the gpprefcl.dll dynamic linked library.  As part of the Group Policy specification, each component of data stored in a Group Policy object must be have two 128-bit unique identifiers in string format.
@@ -312,7 +312,7 @@ This aspect of the update portion does not skip physical drive letters.  As a re
 
 The second possible action from this configuration occurs when the **useLetter** attribute value equals 0 and the **path** attribute value contains a UNC path of remote file share.  This configuration instructs the extension to search through the existing drive letters starting with the drive letter that equals the value in the **letter** attribute (inclusive) and perform the update on the drive letter where the drive letter's mapped network location matches the value configured in the **path** attribute.
 
-It is important to understand that the Group Policy Drive Map extension cannot update the Location, Reconnect, or Connect as (optional) settings.  Configure the preference item action to replace to modify these drive map settings.
+It is IMPORTANT to understand that the Group Policy Drive Map extension cannot update the Location, Reconnect, or Connect as (optional) settings.  Configure the preference item action to replace to modify these drive map settings.
 
 ```
 <Properties action="C" path="\\server\share" useLetter="1" letter="F"/>
@@ -331,7 +331,7 @@ The SHOW value instructs the extension to show all the drive letters for all the
 
 remember, drive visibility and labels extend beyond mapped drive letters and include physical drive letters.
 
-The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is important to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attribute  s value of the **Properties** element.
+The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is IMPORTANT to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attribute  s value of the **Properties** element.
 
 The default value for the **allDrives** attribute is NOchange.
 
@@ -373,7 +373,7 @@ A Properties element within a Drive inner element with a persistent attribute eq
 
 A Properties element within a Drive inner element with a persistent attribute equaling false indicates the Group Policy Drive Map extension creates the drive mapping not to persist between user logons and computer reboots.  Windows does not remember the mapped drive and does not reestablish the drive mapping on subsequent reboots.
 
-It  s important to understand that Windows configures drive persistency at the time it creates the mapped drive.  Therefore, if you want need to use the replace action if you need to change a mapped drive persistent state.
+It  s IMPORTANT to understand that Windows configures drive persistency at the time it creates the mapped drive.  Therefore, if you want need to use the replace action if you need to change a mapped drive persistent state.
 
 ***Useletter***
 
@@ -397,7 +397,7 @@ The SHOW value instructs the extension to show the configured drive letter for c
 
 remember, drive visibility and labels extend beyond mapped drive letters and include physical drive letters.
 
-The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is important to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attribute  s value of the **Properties** element.
+The **allDrives** attribute when combined with the **thisDrive** attribute by provides varying configuration permutations.  It is IMPORTANT to remember that the **thisDrive** attribute value has precedence over the **allDrives** attribute value, but only for the drive letter configured in the **letter** attribute  s value of the **Properties** element.
 
 The default value for the **thisDrives** attribute is NOchange.
 
@@ -565,7 +565,7 @@ The create actions represents a configuration where the extension creates a new 
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. if the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -703,7 +703,7 @@ The delete action represents a configuration where the extension deletes all map
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. if the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -746,11 +746,11 @@ delete action processing is complete.  The extension moves to the next inner ele
 ### replace
 The replace action represents a configuration where the extension replaces a new mapped drive with a new mapped drive based on the configuration in the current inner element.
 
-It is important to understand the difference between replace and update.  The replace action typically deletes the existing mapped drive and creates a new one  essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
+It is IMPORTANT to understand the difference between replace and update.  The replace action typically deletes the existing mapped drive and creates a new one  essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. if the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -888,13 +888,13 @@ The extension completes the processing by updating its %LastDriveMapped% environ
 replace action processing is complete.  The extension moves to the next inner element (preference item) and begins inner element processing on the new, current inner element.
 
 ## Update
-The update action represents a configuration where the extension refreshes an existing mapped drive based on the configuration in the current inner element.  It is important to understand the difference between replace and update.
+The update action represents a configuration where the extension refreshes an existing mapped drive based on the configuration in the current inner element.  It is IMPORTANT to understand the difference between replace and update.
 
 The replace action typically deletes the existing mapped drive and creates a new one  essentially changing all configurations elements of the mapped drive.  The update action only updates a portion of configuration elements in an existing mapped drive.
 
 ***Prologue***
 
-The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. if the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
+The extension extracts the values for the <path>, <letter>, <persistent>, <username>, and <cPassword> attributes from the configuration information. If the <cPassword> attribute contains a value, then the extension reverse-obfuscates the password into its clear text equivalent.   The extension continues extracting the values for the <allDrives>, <thisDrive>, and <useLetter> attributes.  The extension completes the prologue portion of the processing by impersonating the user logging on the computer using the user  s full authentication token.  Any failure attempting the impersonation results in the extension aborting its processing and to return the underlying error code that resulted in the impersonation failure.
 
 ***Core***
 
@@ -1085,7 +1085,7 @@ The Windows operating system enables many different configurations to accomplish
 
 The most common configuration for mapping network drives occurs during the user logon. Historically, IT departments have accomplished this configuration using network logon scripts  scripts that process as part of the user logon.  Another configuration for mapping Home drives is to configure the shared network folder on the user  s object in active directory.  Windows clients looking for this configuration and automatically connect the shared network folder to the configured drive letter. Users can map network drives using Windows Explorer and make them persistent between computer reboots.  Lastly, you can use the Group Policy Drive Map extension to map drives during logon.
 
-Flexible configurations are important; however, understanding that incorporating the one or more of the configurations into one solution needs to be thoroughly tested for each specific environment as many of these technologies can encroach on the other thereby creating unpredictable results.  A suggested best practice is to pick one configuration and use it exclusively in your environment, especially when mapping network drives during logon.  Each configuration maps the drive during different stages of the logon process.  Incorporating multiple configurations could be counterproductive and cause conflict between the two configurations.  This conflict is likely to produce unwanted results, increases the complexity of the solution, increases administrative overhead of the solution, and increase the difficulty of troubleshooting the cause of the problem.
+Flexible configurations are IMPORTANT; however, understanding that incorporating the one or more of the configurations into one solution needs to be thoroughly tested for each specific environment as many of these technologies can encroach on the other thereby creating unpredictable results.  A suggested best practice is to pick one configuration and use it exclusively in your environment, especially when mapping network drives during logon.  Each configuration maps the drive during different stages of the logon process.  Incorporating multiple configurations could be counterproductive and cause conflict between the two configurations.  This conflict is likely to produce unwanted results, increases the complexity of the solution, increases administrative overhead of the solution, and increase the difficulty of troubleshooting the cause of the problem.
 
 ## Logging
 In addition to the event messages recorded in the application log, the Group Policy Drive Map extension has trace logging to help diagnose preference items that are not applying or undesired or unexpected results from preference items that are applying.

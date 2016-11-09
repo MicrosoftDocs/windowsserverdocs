@@ -51,7 +51,7 @@ This section describes how to set up a remote feature file shared folder (also c
 
 #### To create a feature file store
 
-1.  create a shared folder on a server on your network. for example, *\\\network\share\sxs*.
+1.  create a shared folder on a server on your network. For example, *\\\network\share\sxs*.
 
 2.  verify that you have the correct permissions assigned to the feature store. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer accounts (*DOMAIN*\\*SERverNAME*$) of servers on which you plan to install features by using this feature store; granting user account access is not sufficient.
 
@@ -71,26 +71,26 @@ Two methods are available for removing feature files from Windows Server in a Fe
 
 -   The `remove` parameter of the `Uninstall-WindowsFeature` cmdlet lets you delete feature files from a server or offline virtual hard disk (VHD) that is running  Windows Server 2012 R2  or  Windows Server 2012 . Valid values for the `remove` parameter are the names of roles, role services, and features.
 
--   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. for more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](http://technet.microsoft.com/library/hh824822.aspx).
+-   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. For more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](http://technet.microsoft.com/library/hh824822.aspx).
 
 ## <a name="BKMK_remove"></a>remove feature files by using Uninstall-WindowsFeature
 You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role services, and features from servers and offline VHDs that are running  Windows Server 2012 R2  or  Windows Server 2012 , and to delete feature files. You can both uninstall and delete the same roles, role services, and features in the same command if desired.
 
-> [!importANT]
-> When you delete feature files for a role, role service, or feature, roles, role services, and features that depend upon the files you are removing are also deleted. if you are deleting feature files for a role service or subfeature, and no other role services or subfeatures for the parent role or feature remain installed, then files for the entire parent role or feature are deleted. To view all feature files that would be deleted by the `Uninstall-WindowsFeature -remove` command, add the `whatif` parameter to the command to run it and view results without actually deleting feature files.
+> [!IMPORTANT]
+> When you delete feature files for a role, role service, or feature, roles, role services, and features that depend upon the files you are removing are also deleted. If you are deleting feature files for a role service or subfeature, and no other role services or subfeatures for the parent role or feature remain installed, then files for the entire parent role or feature are deleted. To view all feature files that would be deleted by the `Uninstall-WindowsFeature -remove` command, add the `whatif` parameter to the command to run it and view results without actually deleting feature files.
 
 #### To remove role and feature files by using Uninstall-WindowsFeature
 
-1.  Do one of the following to open a Windows powershell session with elevated user rights.
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.
 
     > [!NOTE]
-    > if you are uninstalling roles and features from a remote server, you do not need to run Windows powershell with elevated user rights.
+    > if you are uninstalling roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.
 
-    -   On the Windows desktop, right-click **Windows powershell** on the taskbar, and then click **Run as Administrator**.
+    -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.
 
-    -   On the Windows **start** screen, right-click the Windows powershell tile, and then on the app bar, click **Run as Administrator**.
+    -   On the Windows **start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.
 
-    -   On a server that is running the Server Core installation option, type **powershell** into a command prompt, and then press **Enter**.
+    -   On a server that is running the Server Core installation option, type **PowerShell** into a command prompt, and then press **Enter**.
 
 2.  type the following, and then press **Enter**.
 

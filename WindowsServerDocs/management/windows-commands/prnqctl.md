@@ -32,12 +32,12 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 |-m|Resumes printing on the printer specified with the **-p** parameter.|  
 |-e|prints a test page on the printer specified with the **-p** parameter.|  
 |-x|Cancels all print jobs on the printer specified with the **-p** parameter.|  
-|-s <ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. if you do not specify a computer, the local computer is used.|  
+|-s <ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. If you do not specify a computer, the local computer is used.|  
 |-p <printerName>|Specifies the name of the printer that you want to manage. Required.|  
-|-u <UserName> -w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. if you do not specify an account, you must be logged on under an account with these permissions for the command to work.|  
+|-u <UserName> -w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. If you do not specify an account, you must be logged on under an account with these permissions for the command to work.|  
 |/?|Displays help at the command prompt.|  
 ## remarks  
--   The **prnqctl** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnqctl file, or change directories to the appropriate folder. for example:  
+-   The **prnqctl** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnqctl file, or change directories to the appropriate folder. For example:  
     ```  
     cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
     ```  

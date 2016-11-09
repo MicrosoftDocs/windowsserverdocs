@@ -47,7 +47,7 @@ if defined <Variable> <Command> [else <Expression>]
 |<Expression>|Specifies a command-line command and any parameters to be passed to the command in an **else** clause.|
 |/?|Displays help at the command prompt.|
 ## remarks
--   if the condition specified in an **if** clause is true, the command that follows the condition is carried out. if the condition is false, the command in the **if** clause is ignored and the command executes any command that is specified in the **else** clause.
+-   if the condition specified in an **if** clause is true, the command that follows the condition is carried out. If the condition is false, the command in the **if** clause is ignored and the command executes any command that is specified in the **else** clause.
 -   When a program stops, it returns an exit code. To use exit codes as conditions, use **errorlevel**.
 -   if you use **defined**, the following three variables are added to the environment: **%errorlevel%**, **%cmdcmdline%**, and **%cmdextversion%**.
     -   **%errorlevel%** expands into a string representation of the current value of the ERRORLEVEL environment variable. This assumes that there is not an existing environment variable with the name ERRORLEVEL if there is, you will get that ERRORLEVEL value instead.

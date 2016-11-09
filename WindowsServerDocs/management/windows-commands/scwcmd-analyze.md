@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Determines whether a computer is in compliance with a policy. Results are returned in an .xml file. Also accepts a list of computer names as input. To view the results in your browser, use **scwcmd view** and specify **%windir%\security\msscw\TransformFiles\scwanalysis.xsl** as the .xsl transform. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Determines whether a computer is in compliance with a policy. Results are returned in an .xml file. Also accepts a list of computer names as input. To view the results in your browser, use **scwcmd view** and specify **%windir%\security\msscw\TransformFiles\scwanalysis.xsl** as the .xsl transform. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 scwcmd analyze [[[/m:<computerName> | /ou:<Ou>] /p:<Policy>] | /i:<computerlist>] [/o:
@@ -27,8 +27,8 @@ scwcmd analyze [[[/m:<computerName> | /ou:<Ou>] /p:<Policy>] | /i:<computerlist>
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|/m:<computerName>|Specifies the NetBIOS name, DNS name, or IP address of the computer to analyze. if the **/m** parameter is specified, then the **/p** parameter must also be specified.|
-|/ou:<OuName>|Specifies the fully qualified domain name (FQDN) of an organizational unit (OU) in active directory Domain Services. if the **/ou** parameter is specified, then the **/p** parameter must also be specified. All computers in the OU will be analyzed against the given policy.|
+|/m:<computerName>|Specifies the NetBIOS name, DNS name, or IP address of the computer to analyze. If the **/m** parameter is specified, then the **/p** parameter must also be specified.|
+|/ou:<OuName>|Specifies the fully qualified domain name (FQDN) of an organizational unit (OU) in active directory Domain Services. If the **/ou** parameter is specified, then the **/p** parameter must also be specified. All computers in the OU will be analyzed against the given policy.|
 |/p:<Policy>|Specifies the path and file name of the .xml policy file to be used to perform the analysis.|
 |/i:<computerlist>|Specifies the path and file name of an .xml file that contains a list of computers along with their expected policy files. All computers in the .xml file will be analyzed against their corresponding policy files. A sample .xml file is %windir%\security\SampleMachinelist.xml.|
 |/o:<Resultdir>|Specifies the path and directory where the analysis result files should be saved. The default is the current directory.|
