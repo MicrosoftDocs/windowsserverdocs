@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 485a0774-0785-457f-a964-0e9403c12bb1
 author: coreyp-at-msft
 ms.author: coreyp
-manager: dongill
+manager: dongill-
 ms.date: 10/12/2016
 ---
 # Windows Authentication Overview
