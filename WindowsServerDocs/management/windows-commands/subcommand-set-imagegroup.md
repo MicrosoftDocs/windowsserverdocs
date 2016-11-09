@@ -27,7 +27,7 @@ wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if not specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If not specified, the local server will be used.|
 |[/Name:<New image group name>]|Specifies the new name of the image group.|
 |[/Security:<SDDL>]|Specifies the new Security Descriptor of the image group, in security descriptor definition language (SDDL) format.|
 ## <a name="BKMK_examples"></a>Examples

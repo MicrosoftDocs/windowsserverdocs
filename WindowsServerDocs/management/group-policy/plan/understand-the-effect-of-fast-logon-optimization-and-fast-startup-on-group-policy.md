@@ -21,7 +21,7 @@ This troubleshooting topic explains the interaction between the required synchro
 This topic applies to computers that are running Windows 8.1, Windows 8, Windows 7, Windows Vista, or Windows XP.
 
 ## Group Policy settings and CSEs
-Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. for this discussion, it s important to understand that Group Policy preference extensions represent a set of client-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
+Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. For this discussion, it s IMPORTANT to understand that Group Policy preference extensions represent a set of client-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
 
 ## <a name="bkmk_SyncAsync"></a>Asynchronous and synchronous processing
 Asynchronous processing refers to processes that do not depend on the outcome of other processes. Therefore, they can occur on different threads simultaneously.
@@ -44,16 +44,16 @@ Group Policy background processing applies during periodic refreshes after the c
 ## <a name="BKMK_REQ"></a>CSE processing requirements
 When Group Policy processes on a Windows-based computer, client-side extensions interpret the stored policy settings and make the appropriate changes to the environment. When troubleshooting a given client-side extension s application of Group Policy, the administrator can view the configuration parameters that affect that extension s operation. These parameters are in the form of registry values.
 
-> [!importANT]
-> This section provides an overview about the information that is stored in the registry. This is for informational purposes, and it is not recommended that you adjust the CSE processing properties by using the registry. Serious problems might occur if you modify the registry incorrectly. if you do make any changes to the registry, it is recommended that you back up the registry before you modify it. Then, you can restore the registry if a problem occurs. for more information about how to back up and restore the registry, see [article 322756](http://support.microsoft.com/kb/322756) in the Microsoft Knowledge Base.
+> [!IMPORTANT]
+> This section provides an overview about the information that is stored in the registry. This is for informational purposes, and it is not recommended that you adjust the CSE processing properties by using the registry. Serious problems might occur if you modify the registry incorrectly. If you do make any changes to the registry, it is recommended that you back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [article 322756](http://support.microsoft.com/kb/322756) in the Microsoft Knowledge Base.
 
 Each client-side extension is identified by a subkey under the following path:
 
 HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Currentversion\Winlogon\GPExtensions
 
-The subkey name takes the form of a Globally Unique Identifier (GUID). for more information about identifying registered Group Policy client-side extensions, see [article 216357](http://support.microsoft.com/kb/216357/EN-US) in the Microsoft Knowledge Base.
+The subkey name takes the form of a Globally Unique Identifier (GUID). For more information about identifying registered Group Policy client-side extensions, see [article 216357](http://support.microsoft.com/kb/216357/EN-US) in the Microsoft Knowledge Base.
 
-The **NoBackgroundPolicy** registry key determines if a CSE is called during Group Policy background policy processing. if this value is set to 1, the CSE will not be called during background processing. A CSE that requires synchronous processing can still be called during background processing. However, because background processing is always performed in asynchronous mode, a CSE that requires synchronous processing exits after signaling a request for the next sign-in  to be run in synchronous mode.
+The **NoBackgroundPolicy** registry key determines if a CSE is called during Group Policy background policy processing. If this value is set to 1, the CSE will not be called during background processing. A CSE that requires synchronous processing can still be called during background processing. However, because background processing is always performed in asynchronous mode, a CSE that requires synchronous processing exits after signaling a request for the next sign-in  to be run in synchronous mode.
 
 Each CSE determines if it requires synchronous processing to apply changes to the policy settings.
 
@@ -94,7 +94,7 @@ The following table provides information about the synchronous processing requir
 |Shortcuts preference extension|No|Yes|
 |start Menu preference extension|No|Yes|
 
-Although the requirement to run a client-side extension in synchronous mode is not configurable, other default behavior for each CSE can be configured through policy settings. To configure the properties that are associated with a CSE, apply the Administrative Templates computer configuration policy settings that are created for this purpose. The following table provides the names of the policy settings and the CSE properties that can be modified. if the CSE property includes an X, it can be modified for the specific CSE.
+Although the requirement to run a client-side extension in synchronous mode is not configurable, other default behavior for each CSE can be configured through policy settings. To configure the properties that are associated with a CSE, apply the Administrative Templates computer configuration policy settings that are created for this purpose. The following table provides the names of the policy settings and the CSE properties that can be modified. If the CSE property includes an X, it can be modified for the specific CSE.
 
 |Policy Setting Name|Allows processing across a slow network connection|Do not apply during periodic background processing|Process even if the Group Policy Objects have not changed|Allows background processing priority|
 |------------|---------------------------|---------------------------|-------------------------------|---------------------|
@@ -162,7 +162,7 @@ When synchronous policy application is required and Fast Logon Optimization is e
 > [!NOTE]
 > These examples assume that only policy settings for a single CSE that requires synchronous processing have changed.
 > 
-> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs. You may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. for more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
+> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs. You may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. For more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
 
 **Example 1: Fast Logon Optimization with synchronous processing when the user is not signed in**
 
@@ -198,7 +198,7 @@ at the next sign-in, Group Policy processes synchronously. The Group Policy engi
 > [!NOTE]
 > This example assumes that only policy settings for a single CSE that requires synchronous processing and foreground processing, have changed.
 > 
-> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs, and you may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. for more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
+> When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs, and you may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. For more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
 
 ## Fast startup and Group Policy processing
 Group Policy settings or scripts that are applied during startup or shutdown might not be applied on computers that are running Windows 8.1 or Windows 8 because, by default, these computers are not fully shut down by the **Shut down** command. Instead, the computer enters a hibernate state. Full shutdown only occurs when the system is set to reboot or when a pending software update or other event causes the computer to process a full shutdown. You can use the **Restart computer** command in Windows 8.1 and Windows 8 to achieve startup or shutdown on client computers.

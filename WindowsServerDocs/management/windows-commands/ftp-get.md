@@ -27,7 +27,7 @@ get <remoteFile> [<LocalFile>]
 |Parameter|Description|  
 |-------|--------|  
 |<remoteFile>|Specifies the remote file to copy.|  
-|[<LocalFile>]|Specifies the name of the file to use on the local computer. if *LocalFile* is not specified, the file is given the *remoteFile* name.|  
+|[<LocalFile>]|Specifies the name of the file to use on the local computer. If *LocalFile* is not specified, the file is given the *remoteFile* name.|  
 ## remarks  
 The **get** command is identical to the **recv** command.  
 ## <a name="BKMK_Examples"></a>Examples  

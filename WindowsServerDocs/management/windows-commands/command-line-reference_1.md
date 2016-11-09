@@ -55,7 +55,7 @@ The information that is contained in this overview applies to:
 ### <a name="BKMK_OVR"></a>Command shell overview
 The command shell is a software program that provides direct communication between the user and the operating system. The non\-graphical, command shell user interface provides the environment in which you run character\-based applications and utilities. The command shell executes programs and displays their output on the screen by using individual characters similar to the MS\-DOS command interpreter, Command.com. The command shell in the Windows Server operating system uses the command interpreter, Cmd.exe. Cmd.exe loads applications, directs the flow of information between applications, and translates user input into a form that the operating system understands.
 
-You can use the command shell to create and edit scripts to automate routine tasks. for example, you can create simple scripts in batch \(.bat\) files to automate the management of user accounts or nightly backups. You can also use the command\-line version of Windows Script Host to run more sophisticated scripts in the command shell. for more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
+You can use the command shell to create and edit scripts to automate routine tasks. For example, you can create simple scripts in batch \(.bat\) files to automate the management of user accounts or nightly backups. You can also use the command\-line version of Windows Script Host to run more sophisticated scripts in the command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
 
 ### <a name="BKMK_Custom"></a>Customize the Command prompt window
 You can change the properties for the Command prompt window.
@@ -482,9 +482,9 @@ To find information about a specific command, in the following A\-Z menu, click 
 -   [popd](popd.md)
 
 
--   [powershell](powershell.md)
+-   [PowerShell](PowerShell.md)
 
--   [powershell_ise](powershell_ise.md)
+-   [PowerShell_ise](PowerShell_ise.md)
 
 -   [print](print.md)
 

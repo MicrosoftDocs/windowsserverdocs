@@ -63,7 +63,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 -   Using or omitting **/b** when copying to a device  
     When *Destination* is a device (for example, Com1 or Lpt1), **/b** copies data to the device in binary mode. In binary mode, **copy /b** copies all characters (including special characters such as CTRL+C, CTRL+S, CTRL+Z, and ENTER) to the device as data. However, if you omit **/b**, data is copied to the device in ASCII mode. In ASCII mode, special characters might cause files to combine during the copying process.  
 -   Using the default destination file  
-    if you do not specify a destination file, a copy is created with the same name, modified date, and modified time as the original file. The new copy is stored in the current directory on the current drive. if the source file is on the current drive and in the current directory and you do not specify a different drive or directory for the destination file, the **copy** command stops and displays the following error message:  
+    if you do not specify a destination file, a copy is created with the same name, modified date, and modified time as the original file. The new copy is stored in the current directory on the current drive. If the source file is on the current drive and in the current directory and you do not specify a different drive or directory for the destination file, the **copy** command stops and displays the following error message:  
     `File cannot be copied onto itself`  
     `0 File(s) copied`  
 -   Combining files  
@@ -93,7 +93,7 @@ To combine Mar89.rpt, Apr89.rpt, and May89.rpt, which are located in the current
 ```  
 copy mar89.rpt + apr89.rpt + may89.rpt Report  
 ```  
-When you combine files, **copy** marks the destination file with the current date and time. if you omit *Destination*, the files are combined and stored under the name of the first file in the list. for example, to combine all files in Report when a file named Report already exists, type:  
+When you combine files, **copy** marks the destination file with the current date and time. If you omit *Destination*, the files are combined and stored under the name of the first file in the list. For example, to combine all files in Report when a file named Report already exists, type:  
 ```  
 copy report + mar89.rpt + apr89.rpt + may89.rpt  
 ```  
@@ -101,13 +101,13 @@ To combine all files in the current directory that have the.txt file name extens
 ```  
 copy *.txt Combined.doc   
 ```  
-if you want to combine several binary files into one file by using wildcard characters, include **/b**. This prevents Windows from treating CTRL+Z as an end-of-file character. for example, type:  
+if you want to combine several binary files into one file by using wildcard characters, include **/b**. This prevents Windows from treating CTRL+Z as an end-of-file character. For example, type:  
 ```  
 copy /b *.exe Combined.exe  
 ```  
 > [!CAUTION]  
 > if you combine binary files, the resulting file might be unusable due to internal formatting.  
-In the following example, **copy** combines each file that has a .txt extension with its corresponding .ref file. The result is a file with the same file name but with a .doc extension. **copy** combines File1.txt with File1.ref to form File1.doc, and then **copy** combines File2.txt with File2.ref to form File2.doc, and so on. for example, type:  
+In the following example, **copy** combines each file that has a .txt extension with its corresponding .ref file. The result is a file with the same file name but with a .doc extension. **copy** combines File1.txt with File1.ref to form File1.doc, and then **copy** combines File2.txt with File2.ref to form File2.doc, and so on. For example, type:  
 ```  
 copy *.txt + *.ref *.doc  
 ```  

@@ -33,9 +33,9 @@ extend filesystem [noerr]
   
 |Parameter|Description|  
 |-------|--------|  
-|size\=<n>|Specifies the amount of space in megabytes \(MB\) to add to the current volume or partition. if no size is given, all of the contiguous free space that is available on the disk is used.|  
-|disk\=<n>|Specifies the disk on which the volume or partition is extended. if no disk is specified, the volume or partition is extended on the current disk.|  
-|filesystem|extends the file system of the volume with focus. for use only on disks where the file system was not extended with the volume.|  
+|size\=<n>|Specifies the amount of space in megabytes \(MB\) to add to the current volume or partition. If no size is given, all of the contiguous free space that is available on the disk is used.|  
+|disk\=<n>|Specifies the disk on which the volume or partition is extended. If no disk is specified, the volume or partition is extended on the current disk.|  
+|filesystem|extends the file system of the volume with focus. For use only on disks where the file system was not extended with the volume.|  
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
 ## remarks  

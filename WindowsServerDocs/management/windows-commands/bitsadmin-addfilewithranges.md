@@ -34,7 +34,7 @@ bitsadmin /addFileWithRanges <Job> <remoteURL> <LocalName> <Rangelist>
 -   The token **eof** is a valid length value within the offset and length pairs in the *<Rangelist>*. It instructs the service to read to the end of the specified file.
 -   Note that addFileWithRanges will fail with error code 0x8020002c when a zero-length range is specified along with another range with same offset, such as: C:\bits>bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:0,100:5
     Error message: Unable to add file to job - 0x8020002c. The list of byte ranges contains some overlapping ranges, which are not supported.
-    Workaround: do not specify the zero-length range first. for example: bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:5,100:0.
+    Workaround: do not specify the zero-length range first. For example: bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:5,100:0.
 ## <a name="BKMK_examples"></a>Examples
 The following example tells BITS to transfer 100 bytes from offset 0, 100 bytes from offset 2000, and the remaining bytes from offset 5000 to the end of the file.
 ```

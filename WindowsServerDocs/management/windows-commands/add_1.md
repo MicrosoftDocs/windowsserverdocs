@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. if used without subcommands, **add** lists the current volumes and aliases.  
+adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.  
   
 > [!NOTE]  
 > Aliases are not added to the alias environment until the shadow copy is created. Aliases that you need immediately should be added by using **add alias**.  

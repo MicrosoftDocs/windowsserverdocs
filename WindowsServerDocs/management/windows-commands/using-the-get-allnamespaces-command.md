@@ -31,7 +31,7 @@ wdsutil /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/d
 ## Parameters
 |Parameter|Windows Server 2008|Windows Server 2008 R2|
 |-------|------------|-------------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.||
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.||
 |[/ContentProvider:<name>]|Displays the namespaces for the specified content provider only.||
 |[/Show:Clients]|Only supported for Windows Server 2008. Displays information about client computers that are connected to the namespace.||
 |[/details:Clients]|Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.||

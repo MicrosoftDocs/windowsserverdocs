@@ -45,18 +45,18 @@ defrag <volume> /T [/H] [/U] [/V]
 ## remarks
 -   You cannot defragment specific types of file system volumes or drives:
     -   You cannot defragment volumes that the file system has locked.
-    -   You cannot defragment volumes that the file system has marked as dirty, which indicates possible corruption. You must run **chkdsk** on a dirty volume before you can defragment it. You can determine if a volume is dirty by using the **fsutil** dirty query command. for more information about **chkdsk** and **fsutil** dirty, see [additional references](defrag.md#BKMK_additionalRef).
+    -   You cannot defragment volumes that the file system has marked as dirty, which indicates possible corruption. You must run **chkdsk** on a dirty volume before you can defragment it. You can determine if a volume is dirty by using the **fsutil** dirty query command. For more information about **chkdsk** and **fsutil** dirty, see [additional references](defrag.md#BKMK_additionalRef).
     -   You cannot defragment network drives.
     -   You cannot defragment cdROMs.
     -   You cannot defragment file system volumes that are not **NTFS**, **Fat** or **Fat32**.
 -   With  Windows Server 2008 R2 ,  Windows Server 2008 , and, Windows Vista, you can schedule to defragment a volume. However, you cannot schedule to defragment a Solid State Drive (SSD) or a volume on a Virtual Hard Disk (VHD) that resides on an SSD.
--   To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. if the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using Run as to perform this procedure.
--   A volume must have at least 15% free space for **defrag** to completely and adequately defragment it. **defrag** uses this space as a sorting area for file fragments. if a volume has less than 15% free space, **defrag** will only partially defragment it. To increase the free space on a volume, delete unneeded files or move them to another disk.
+-   To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using Run as to perform this procedure.
+-   A volume must have at least 15% free space for **defrag** to completely and adequately defragment it. **defrag** uses this space as a sorting area for file fragments. If a volume has less than 15% free space, **defrag** will only partially defragment it. To increase the free space on a volume, delete unneeded files or move them to another disk.
 -   While **defrag** is analyzing and defragmenting a volume, it displays a blinking cursor. When **defrag** is finished analyzing and defragmenting the volume, it displays the analysis report, the defragmentation report, or both reports, and then exits to the command prompt.
 -   By default, **defrag** displays a summary of both the analysis and defragmentation reports if you do not specify the **/a** or **/v** parameters.
--   You can send the reports to a text file by typing **>***FileName.txt*, where *FileName.txt* is a file name you specify. for example: `defragvolume/v>FileName.txt`
+-   You can send the reports to a text file by typing **>***FileName.txt*, where *FileName.txt* is a file name you specify. For example: `defragvolume/v>FileName.txt`
 -   To interrupt the defragmentation process, at the command line, press **CTRL+C**.
--   Running the **defrag** command and Disk defragmenter are mutually exclusive. if you are using Disk defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk defragmenter, the defragmentation options in Disk defragmenter are unavailable.
+-   Running the **defrag** command and Disk defragmenter are mutually exclusive. If you are using Disk defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk defragmenter, the defragmentation options in Disk defragmenter are unavailable.
 ## <a name="BKMK_examples"></a>Examples
 To defragment the volume on drive C while providing progress and verbose output, type:
 ```

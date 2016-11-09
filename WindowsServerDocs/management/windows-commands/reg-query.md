@@ -27,17 +27,17 @@ reg query <KeyName> [{/v <ValueName> | /ve}] [/s] [/se <Separator>] [/f <Data>] 
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<KeyName>|Specifies the full path of the subkey. for specifying remote computers, include the computer name (in the format \\\computerName\\) as part of the *KeyName*. Omitting \\\computerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. if a remote computer is specified, valid root keys are: HKLM and HKU.|
-|/v <ValueName>|Specifies the registry value name that is to be queried. if omitted, all value names for *KeyName* are returned. *ValueName* for this parameter is optional if the **/f** option is also used.|
+|<KeyName>|Specifies the full path of the subkey. For specifying remote computers, include the computer name (in the format \\\computerName\\) as part of the *KeyName*. Omitting \\\computerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|/v <ValueName>|Specifies the registry value name that is to be queried. If omitted, all value names for *KeyName* are returned. *ValueName* for this parameter is optional if the **/f** option is also used.|
 |/ve|Runs a query for value names that are empty.|
 |/s|Specifies to query all subkeys and value names recursively.|
-|/se <Separator>|Specifies the single value separator to search for in the value name type reg_MULTI_SZ. if *Separator* is not specified, **\0** is used.|
-|/f <Data>|Specifies the data or pattern to search for. Use double quotes if a string contains spaces. if not specified, a wildcard (**\***) is used as the search pattern.|
+|/se <Separator>|Specifies the single value separator to search for in the value name type reg_MULTI_SZ. If *Separator* is not specified, **\0** is used.|
+|/f <Data>|Specifies the data or pattern to search for. Use double quotes if a string contains spaces. If not specified, a wildcard (**\***) is used as the search pattern.|
 |/k|Specifies to search in key names only.|
 |/d|Specifies to search in data only.|
 |/c|Specifies that the query is case sensitive. By default, queries are not case sensitive.|
 |/e|Specifies to return only exact matches. By default, all the matches are returned.|
-|/t <type>|Specifies registry types to search. Valid types are: reg_SZ, reg_MULTI_SZ, reg_expand_SZ, reg_DWOrd, reg_BINARY, reg_NONE. if not specified, all types are searched.|
+|/t <type>|Specifies registry types to search. Valid types are: reg_SZ, reg_MULTI_SZ, reg_expand_SZ, reg_DWOrd, reg_BINARY, reg_NONE. If not specified, all types are searched.|
 |/z|Specifies to include the numeric equivalent for the registry type in search results.|
 |/?|Displays help for **reg query** at the command prompt.|
 ## remarks <optional section>

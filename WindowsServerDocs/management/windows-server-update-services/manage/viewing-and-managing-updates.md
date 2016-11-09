@@ -26,7 +26,7 @@ On the **Updates** page, you can do the following:
 
 -   Filter updates. In the default view you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that have had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
 
--   create new update views. In the **Actions** pane, click **New Update View**. You can filter updates by classification, product, the group for which they have been approved, and synchronization date. You can sort the list by clicking the appropriate column heading in the title bar.
+-   Create new update views. In the **Actions** pane, click **New Update View**. You can filter updates by classification, product, the group for which they have been approved, and synchronization date. You can sort the list by clicking the appropriate column heading in the title bar.
 
 -   Search for updates. You can search for an individual update or set of updates by title, description, Knowledge Base article, or the Microsoft Security Response Center number for the update.
 
@@ -38,7 +38,7 @@ On the **Updates** page, you can do the following:
 
 1.  In the WSUS administration console, expand the Updates node, and then click All Updates.
 
-2.  By default, updates are displayed with their title, classification, installed/not applicable percentage, and approval status. if you wish to display more or different update properties, right-click the column heading bar and select the appropriate columns.
+2.  By default, updates are displayed with their title, classification, installed/not applicable percentage, and approval status. If you wish to display more or different update properties, right-click the column heading bar and select the appropriate columns.
 
 3.  To sort by different criteria, such as download status, title, classification, release date, or approval status, click the appropriate column heading.
 
@@ -54,17 +54,17 @@ On the **Updates** page, you can do the following:
 
 2.  In the **Actions** pane, click **New Update View**.
 
-3.  In the **add Update View** window, under **Step 1: select properties**, select the properties you need to filter the update view:
+3.  In the **Add Update View** window, under **Step 1: select properties**, select the properties you need to filter the update view:
 
-    -   select Updates are in a specific classification to filter on updates belonging to one or more update classifications.
+    -   Select Updates are in a specific classification to filter on updates belonging to one or more update classifications.
 
-    -   select Updates are for a specific product to filter on updates for one or more products or product families.
+    -   Select Updates are for a specific product to filter on updates for one or more products or product families.
 
-    -   select Updates are approved for a specific group to filter on updates approved for one or more computer groups.
+    -   Select Updates are approved for a specific group to filter on updates approved for one or more computer groups.
 
-    -   select Updates were synchronized within a specific time period to filter on updates synchronized at a specific time.
+    -   Select Updates were synchronized within a specific time period to filter on updates synchronized at a specific time.
 
-    -   select Updates are WSUS updates to filter on WSUS updates.
+    -   Select Updates are WSUS updates to filter on WSUS updates.
 
 4.  Under **Step 2: edit the properties**, click the underlined words to pick the values you want.
 
@@ -76,7 +76,7 @@ Your new view will appear in the tree view pane under Updates. It will be displa
 
 #### To search for an update
 
-1.  select the **Updates** node (or any node under it).
+1.  Select the **Updates** node (or any node under it).
 
 2.  In the **Actions** pane, click **Search**.
 
@@ -112,16 +112,16 @@ Your new view will appear in the tree view pane under Updates. It will be displa
 
         -   The update ID
 
-Note that you can perform this procedure on only one update at a time. if you select multiple updates, only the first update in the list will be displayed in the **Properties** pane.
+Note that you can perform this procedure on only one update at a time. If you select multiple updates, only the first update in the list will be displayed in the **Properties** pane.
 
 ## Managing Updates with WSUS
 Updates are used for updating or providing a full file replacement for software that is installed on a computer. Every update that is available on Microsoft Update is made up of two components:
 
--   Metadata: Provides information about the update. for example, metadata supplies information for the properties of an update, thus enabling you to find out for what the update is useful. Metadata also includes Microsoft Software License Terms. The metadata package downloaded for an update is typically much smaller than the actual update file package.
+-   Metadata: Provides information about the update. For example, metadata supplies information for the properties of an update, thus enabling you to find out for what the update is useful. Metadata also includes Microsoft Software License Terms. The metadata package downloaded for an update is typically much smaller than the actual update file package.
 
 -   Update files: The actual files required to install an update on a computer.
 
-When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored either on your WSUS server or on Microsoft Update servers, depending on how you have configured your synchronization options. if you choose to store update files on Microsoft Update servers, only metadata is downloaded at the time of synchronization; you approve the updates through the WSUS console, and then client computers get the update files directly from Microsoft Update at the time of installation. for more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#BKMK_1.3.) of Step 1: Prepare for Your WSUS Deployment, in the WSUS deployment guide.
+When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored either on your WSUS server or on Microsoft Update servers, depending on how you have configured your synchronization options. If you choose to store update files on Microsoft Update servers, only metadata is downloaded at the time of synchronization; you approve the updates through the WSUS console, and then client computers get the update files directly from Microsoft Update at the time of installation. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#BKMK_1.3.) of Step 1: Prepare for Your WSUS Deployment, in the WSUS deployment guide.
 
 You will be setting up and running synchronizations, adding computers and computer groups, and deploying updates on a regular basis. The following list gives examples of general tasks you might undertake in updating computers with WSUS.
 
@@ -141,16 +141,16 @@ You will be setting up and running synchronizations, adding computers and comput
 
 -   Approve or decline updates. You have the option of allowing users to install the updates themselves (if they are local administrators on their client computers).
 
--   Configure automatic approvals. You can also configure whether you want to enable automatic approval of revisions to existing updates or approve revisions manually. if you choose to approve revisions manually, then your WSUS server will continue using the older version until you manually approve the new revision.
+-   Configure automatic approvals. You can also configure whether you want to enable automatic approval of revisions to existing updates or approve revisions manually. If you choose to approve revisions manually, then your WSUS server will continue using the older version until you manually approve the new revision.
 
 -   Check the status of updates. You can view update status, print a status report, or configure e-mail for regular status reports.
 
 ## Update Products and Classifications
 Updates available on Microsoft Update are differentiated by product (or product family) and classification.
 
-A product is a specific edition of an operating system or application, for example, Windows Server 2012. A product family is the base operating system or application from which the individual products are derived. An example of a product family is Microsoft Windows, of which Windows Server 2012 is a member. You can select the products or product families for which you want your server to synchronize updates. You can specify a product family or individual products within the family. selecting any product or product family will get updates for current and future versions of the product.
+A product is a specific edition of an operating system or application, for example, Windows Server 2012. A product family is the base operating system or application from which the individual products are derived. An example of a product family is Microsoft Windows, of which Windows Server 2012 is a member. You can select the products or product families for which you want your server to synchronize updates. You can specify a product family or individual products within the family. Selecting any product or product family will get updates for current and future versions of the product.
 
-Update classifications represent the type of update. for any given product or product family, updates could be available among multiple update classifications (for example, Windows 7 family Critical Updates and Security Updates). The following table lists update classifications.
+Update classifications represent the type of update. For any given product or product family, updates could be available among multiple update classifications (for example, Windows 7 family Critical Updates and Security Updates). The following table lists update classifications.
 
 | Update Classifications  | Description   |
 |--|--|

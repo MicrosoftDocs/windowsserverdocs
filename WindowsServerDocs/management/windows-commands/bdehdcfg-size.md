@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Specifies the size of the system partition when a new system drive is being created. for an example of how this command can be used, see [Examples](#BKMK_Examples).
+Specifies the size of the system partition when a new system drive is being created. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink} -size <SizeinMB>
@@ -28,7 +28,7 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink} -size <SizeinMB>
 |-------|--------|
 |<SizeinMB>|Indicates the number of megabytes (MB) to use for the new partition.|
 ## remarks
-if you do not specify a size, the tool will use the default value of 300 MB. The minimum size of the system drive is 100 MB. if you will store system recovery or other system tools on the system partition, you should increase the size accordingly.
+if you do not specify a size, the tool will use the default value of 300 MB. The minimum size of the system drive is 100 MB. If you will store system recovery or other system tools on the system partition, you should increase the size accordingly.
 > [!NOTE]
 > The **size** command cannot be combined with the **target**  <DriveLetter> **merge** command.
 ## <a name="BKMK_Examples"></a>Examples

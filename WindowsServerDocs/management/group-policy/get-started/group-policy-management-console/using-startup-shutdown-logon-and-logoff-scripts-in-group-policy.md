@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 
 This topic contains procedures for using the GPMC tool to configure and run four types of Group Policy.  
   
-This topic describes how to install and use scripts on a domain controller. if you want information about script use for the local computer, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy editor](../local-group-policy-editor/working-with-startup-shutdown-logon-and-logoff-scripts-using-the-local-group-policy-editor.md).  
+This topic describes how to install and use scripts on a domain controller. If you want information about script use for the local computer, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy editor](../local-group-policy-editor/working-with-startup-shutdown-logon-and-logoff-scripts-using-the-local-group-policy-editor.md).  
   
 Group Policy allows you to associate one or more scripting files to four triggered events:  
   
@@ -29,7 +29,7 @@ Group Policy allows you to associate one or more scripting files to four trigger
   
 -   User logoff  
   
--   You can use Windows powershell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages and command files are also used, including VBScript and Jscript.  
+-   You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages and command files are also used, including VBScript and Jscript.  
   
 ## How to set up scripts on the domain controller  
   
@@ -57,11 +57,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. for example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **startup Properties** dialog box, specify the options that you want:  
   
-    -   **startup Scripts for <Group Policy object>**: lists all the scripts that currently are assigned to the selected GPO. if you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **startup Scripts for <Group Policy object>**: lists all the scripts that currently are assigned to the selected GPO. If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **add**: Opens the **add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -97,11 +97,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. for example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **shutdown Properties** dialog box, specify the options that you want:  
   
-    -   **shutdown Scripts for <Group Policy object>**: lists all the scripts that are currently assigned to the selected Group Policy object (GPO). if you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **shutdown Scripts for <Group Policy object>**: lists all the scripts that are currently assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **add**: Opens the **add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -133,11 +133,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. for example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Logon Properties** dialog box, specify the options that you want:  
   
-    -   **Logon Scripts for <Group Policy object>**: lists all the scripts that currently are assigned to the selected Group Policy object (GPO). if you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **Logon Scripts for <Group Policy object>**: lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **add**: Opens the **add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -169,11 +169,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. for example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **logoff Properties** dialog box, specify the options the you want:  
   
-    -   **logoff Scripts for <Group Policy object>**: lists all the scripts that currently are assigned to the selected Group Policy object (GPO). if you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **logoff Scripts for <Group Policy object>**: lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **add**: Opens the **add a Script** dialog box, where you can specify any additional scripts to use.  
   

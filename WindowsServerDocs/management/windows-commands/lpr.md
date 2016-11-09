@@ -29,10 +29,10 @@ lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o |
 |-------|--------|  
 |-S <ServerName>|Specifies (by name or IP address) the computer or printer sharing device that hosts the LPD print queue with a status that you want to display. Required.|  
 |-P <printerName>|Specifies (by name) the printer for the print queue with a status that you want to display. Required.|  
-|-C <BannerContent>|Specifies the content to print on the banner page of the print job. if you do not include this parameter, the name of the computer from which the print job was sent appears on the banner page.|  
-|-J <JobName>|Specifies the print job name that will be printed on the banner page. if you do not include this parameter, the name of the file being printed appears on the banner page.|  
+|-C <BannerContent>|Specifies the content to print on the banner page of the print job. If you do not include this parameter, the name of the computer from which the print job was sent appears on the banner page.|  
+|-J <JobName>|Specifies the print job name that will be printed on the banner page. If you do not include this parameter, the name of the file being printed appears on the banner page.|  
 |[-o&#124; "-o l"]|Specifies the type of file that you want to print. The parameter **-o** specifies that you want to print a text file. The parameter **"-o l"** specifies that you want to print a binary file (for example, a PostScript file).|  
-|-d|Specifies that the data file must be sent before the control file. Use this parameter if your printer requires the data file to be sent first. for more information, see your printer documentation.|  
+|-d|Specifies that the data file must be sent before the control file. Use this parameter if your printer requires the data file to be sent first. For more information, see your printer documentation.|  
 |-x|Specifies that the **lpr** command must be compatible with the Sun Microsystems operating system (referred to as SunOS) for releases up to and including 4.1.4_u1.|  
 |<FileName>|Specifies (by name) the file to be printed. Required.|  
 |/?|Displays help at the command prompt.|  

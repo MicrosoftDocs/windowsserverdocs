@@ -47,7 +47,7 @@ wdsutil [Options] /replace-Imagmedia:<Image name> [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image to be replaced.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediatype:{Boot &#124; Install}|Specifies the type of image to be replaced.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be replaced. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture ensures that the correct image is replaced.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|

@@ -27,7 +27,7 @@ wdsutil /remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server nam
 |Parameter|Description|
 |-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. if a server name is not specified, the local server is used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
 |[/Filtertype:<Filtertype>]|Specifies the type of the filter to remove from the group. <Filtertype> can be one of the following:<br /><br />**BiosVendor**<br /><br />**Biosversion**<br /><br />**Chassistype**<br /><br />**Manufacturer**<br /><br />**Uuid**<br /><br />**Osversion**<br /><br />**Osedition**<br /><br />**OsLanguage**|
 ## <a name="BKMK_examples"></a>Examples
 To remove a filter, type one of the following:

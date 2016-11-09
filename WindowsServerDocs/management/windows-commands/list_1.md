@@ -41,7 +41,7 @@ list { disk | partition | volume | vdisk }
   
 -   The object marked with an asterisk \(\*\) has focus.  
   
--   When listing disks, if a disk is missing, its disk number is prefixed with M. for example, the first missing disk is numbered M0.  
+-   When listing disks, if a disk is missing, its disk number is prefixed with M. For example, the first missing disk is numbered M0.  
   
 ## <a name="BKMK_examples"></a>Examples  
   

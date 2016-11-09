@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 Displays, sets, or clears the attributes of a disk.  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This parameter is not available in any edition of Windows Vista.  
   
 ## Syntax  
@@ -40,7 +40,7 @@ attributes disk [{set | clear}] [readonly] [noerr]
   
 ## remarks  
   
--   When **attributes disk** is used to display the current attributes of a disk, the startup disk attribute denotes the disk that is used to start the computer. for a dynamic mirror, it is displayed for the disk that contains the boot plex of the boot volume.  
+-   When **attributes disk** is used to display the current attributes of a disk, the startup disk attribute denotes the disk that is used to start the computer. For a dynamic mirror, it is displayed for the disk that contains the boot plex of the boot volume.  
   
 -   A disk must be selected for the **attributes disk** command to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   

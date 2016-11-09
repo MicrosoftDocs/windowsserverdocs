@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays or alters the compression of files or directories on NTFS partitions. if used without parameters, **compact** displays the compression state of the current directory and the files it contains.
+Displays or alters the compression of files or directories on NTFS partitions. If used without parameters, **compact** displays the compression state of the current directory and the files it contains.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```

@@ -27,7 +27,7 @@ irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]
 |Parameter|Description|  
 |-------|--------|  
 |Drive:\|Specifies the drive that contains the files that you want to send over an infrared link.|  
-|[path]FileName|Specifies the location and name of the file or set of files that you want to send over an infrared link. if you specify a set of files, you must specify the full path for each file.|  
+|[path]FileName|Specifies the location and name of the file or set of files that you want to send over an infrared link. If you specify a set of files, you must specify the full path for each file.|  
 |/h|Specifies hidden mode. When hidden mode is used, the files are sent without displaying the Wireless Link dialog box.|  
 |/s|Opens the Wireless Link dialog box, so that you can select the file or set of files that you want to send without using the command line to specify the drive, path, and file names.|  
 ## remarks  

@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-creates, changes, or deletes the volume label (that is, the name) of a disk. if used without parameters, the **label** command changes the current volume label or deletes the existing label.
+creates, changes, or deletes the volume label (that is, the name) of a disk. If used without parameters, the **label** command changes the current volume label or deletes the existing label.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -28,7 +28,7 @@ label [/mp] [<volume>] [<label>]
 |Parameter|Description|
 |-------|--------|
 |/mp|Specifies that the volume should be treated as a mount point or volume name.|
-|<volume>|Specifies a drive letter (followed by a colon), mount point, or volume name. if a volume name is specified, the **/mp** parameter is unnecessary.|
+|<volume>|Specifies a drive letter (followed by a colon), mount point, or volume name. If a volume name is specified, the **/mp** parameter is unnecessary.|
 |<label>|Specifies the label for the volume.|
 |/?|Displays help at the command prompt.|
 ## remarks
@@ -40,7 +40,7 @@ label [/mp] [<volume>] [<label>]
     volume Serial Number is xxxx-xxxx 
     volume label (32 characters, ENTER for none)?
     ```
-    You can type a new volume label or press ENTER to keep the current label. if you press ENTER and the volume currently has a label, the **label** command prompts you with the following message:
+    You can type a new volume label or press ENTER to keep the current label. If you press ENTER and the volume currently has a label, the **label** command prompts you with the following message:
     ```
     delete current volume label (Y/N)?
     ```

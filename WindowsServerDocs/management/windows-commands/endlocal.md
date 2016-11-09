@@ -35,7 +35,7 @@ endlocal
 > [!NOTE]
 > for more information about enabling and disabling command extensions, see [Cmd](Cmd.md).
 ## <a name="BKMK_examples"></a>Examples
-You can localize environment variables in a batch file. for example, the following program starts the superapp batch program on the network, directs the output to a file, and displays the file in Notepad:
+You can localize environment variables in a batch file. For example, the following program starts the superapp batch program on the network, directs the output to a file, and displays the file in Notepad:
 ```
 @echo off
 setlocal

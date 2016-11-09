@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Manages the protection methods used for the BitLocker encryption key. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Manages the protection methods used for the BitLocker encryption key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup}] <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
@@ -57,12 +57,12 @@ manage-bde  protectors  add [<Drive>] [-forceupgrade] [-recoverypassword <Numeri
 |-cf|Specifies that a certificate file will be used to provide the public key certificate.|
 |<pathToCertificateFile>|Represents the directory path to the certificate file.|
 |-ct|Specifies that a certificate thumbprint will be used to identify the public key certificate|
-|<CertificateThumbprint>|Specifies the value of the thumbprint property of the certificate you want to use. for example, a certificate thumbprint value of "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" should be specified as "a909502dd82ae41433e6f83886b00d4277a32a7b."|
+|<CertificateThumbprint>|Specifies the value of the thumbprint property of the certificate you want to use. For example, a certificate thumbprint value of "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" should be specified as "a909502dd82ae41433e6f83886b00d4277a32a7b."|
 |-tpmandpin|adds a Trusted Platform Module (TPM) and personal identification number (PIN) protector for the operating system drive. You can also use **-tp** as an abbreviated version of this command.|
 |-tpmandstartupkey|adds a TPM and startup key protector for the operating system drive. You can also use **-tsk** as an abbreviated version of this command.|
 |-tpmandpinandstartupkey|adds a TPM, PIN, and startup key protector for the operating system drive. You can also use **-tpsk** as an abbreviated version of this command.|
 |-password|adds a password key protector for the data drive. You can also use **-pw** as an abbreviated version of this command.|
-|-adaccountorgroup|adds a security identifier(SID)-based identity protector for the volume.  You can also use **-sid** as an abbreviated version of this command. **important:** By default, you cannot add an ADAccountOrGroup protector remotely using either WMI or manage-bde.  if your deployment requires the ability to add this protector remotely you must enable constrained delegation.|
+|-adaccountorgroup|adds a security identifier(SID)-based identity protector for the volume.  You can also use **-sid** as an abbreviated version of this command. **IMPORTANT:** By default, you cannot add an ADAccountOrGroup protector remotely using either WMI or manage-bde.  if your deployment requires the ability to add this protector remotely you must enable constrained delegation.|
 |-computername|Specifies that manage-bde is being used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
 |<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
 ### <a name="BKMK_deleteprotectors"></a>-delete syntax and parameters
@@ -96,7 +96,7 @@ manage-bde  protectors  disable <Drive> [-RebootCount <integer 0 - 15>] [-comput
 |Parameter|Description|
 |-------|--------|
 |<Drive>|Represents a drive letter followed by a colon.|
-|RebootCount|Specifies that protection of the operating system volume has been suspended and will resume after Windows has been restarted the number of times specified in the RebootCount parameter. Specify 0 to suspend protection indefinitely. if this parameter is not specified BitLocker protection will automatically resume when Windows is restarted. You can also use **-rc** as an abbreviated version of this command.|
+|RebootCount|Specifies that protection of the operating system volume has been suspended and will resume after Windows has been restarted the number of times specified in the RebootCount parameter. Specify 0 to suspend protection indefinitely. If this parameter is not specified BitLocker protection will automatically resume when Windows is restarted. You can also use **-rc** as an abbreviated version of this command.|
 |-computername|Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
 |<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
 |-? or /?|Displays brief help at the command prompt.|

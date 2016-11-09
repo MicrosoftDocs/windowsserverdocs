@@ -19,9 +19,9 @@ ms.date: 10/12/2016
 
 A WSUS server running in replica mode inherits the update approvals and computer groups created on an administration server. In a scenario that uses replica mode, you typically have a single administration server, and one or more subordinate replica WSUS servers spread out throughout the organization, based on site or organizational topography. You approve updates and create computer groups on the administration server, which the replica mode servers will then mirror. Replica mode servers can be set up only during WSUS Setup, and if you implemented this scenario, it is likely because it is important in your organization that update approvals and computer groups are managed centrally.
 
-if your WSUS server is running in replica mode, you will be able to perform only limited administration capabilities on the server, which will primarily consist of:
+If your WSUS server is running in replica mode, you will be able to perform only limited administration capabilities on the server, which will primarily consist of:
 
--   adding and removing computers from computer groups. computer group membership is not distributed to replica servers, only the computer groups themselves. Therefore, on a replica mode server, you will inherit the computer groups that you created on the administration server. However, the computer groups will be empty. You must then assign the client computers that connect to the replica server to the computer groups.
+-   Adding and removing computers from computer groups. Computer group membership is not distributed to replica servers, only the computer groups themselves. Therefore, on a replica mode server, you will inherit the computer groups that you created on the administration server. However, the computer groups will be empty. You must then assign the client computers that connect to the replica server to the computer groups.
 
 -   Setting a synchronization schedule
 

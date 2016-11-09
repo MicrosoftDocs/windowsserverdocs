@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets the context, options, verbose mode, and metadata file for shadow copy creation. if used without parameters, **set** lists all current settings.  
+Sets the context, options, verbose mode, and metadata file for shadow copy creation. If used without parameters, **set** lists all current settings.  
   
 ## Syntax  
   

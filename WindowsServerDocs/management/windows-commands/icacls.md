@@ -46,7 +46,7 @@ icacls <directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 |[/substitute <SidOld> <SidNew> [...]]|replaces an existing SID (*SidOld*) with a new SID (*SidNew*). Requires the *directory* parameter.|  
 |/restore <ACLfile> [/c] [/l] [/q]|Applies stored DAcls from *ACLfile* to files in the specified directory. Requires the *directory* parameter.|  
 ## remarks  
--   SIDs may be in either numerical or friendly name form. if you use a numerical form, affix the wildcard character **\*** to the beginning of the SID.  
+-   SIDs may be in either numerical or friendly name form. If you use a numerical form, affix the wildcard character **\*** to the beginning of the SID.  
 -   **icacls** preserves the canonical order of ACE entries as:  
     -   Explicit denials  
     -   Explicit grants  

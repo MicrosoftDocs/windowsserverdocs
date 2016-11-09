@@ -39,7 +39,7 @@ takeown [/s <computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File n
 -   This command is typically used in batch files.
 -   if the **/a** parameter is not specified, file ownership is given to the user who is currently logged on to the computer.
 -   Mixed patterns using (**?** and **\***) are not supported by **takeown** command.
--   After deleting the lock with **takeown**, you might have to use Windows Explorer or the **cacls** command to give yourself full permissions to the files and directories before you can delete them. for more information about **cacls**, see "additional references" at the end of this topic.
+-   After deleting the lock with **takeown**, you might have to use Windows Explorer or the **cacls** command to give yourself full permissions to the files and directories before you can delete them. For more information about **cacls**, see "additional references" at the end of this topic.
 ## <a name="BKMK_examples"></a>Examples
 To take ownership of a file named Lostfile, type:
 ```

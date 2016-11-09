@@ -27,7 +27,7 @@ wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Nam
 |Parameter|Description|
 |-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. if a server name is not specified, the local server is used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
 |[/Name:<New Group Name>]|Specifies the new name for the driver group.|
 |[/Enabled:{Yes &#124; No}|Enables or disables the driver group.|
 |[/Applicability:{Matched &#124; All}]|Specifies which packages to install if the filter criteria is met. **Matched** means install only the driver packages that match a client s hardware. **All** means install all packages to clients regardless of their hardware.|

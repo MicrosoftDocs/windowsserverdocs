@@ -34,11 +34,11 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
 |<SessionID>|Specifies the numeric ID of the session whose user you want to receive a message.|
 |@<FileName>|Identifies a file containing a list of user names, session names, and session IDs that you want to receive the message.|
 |*|Sends the message to all user names on the system.|
-|/server:<ServerName>|Specifies the rd Session Host server whose session or user you want to receive the message. if unspecified, **/server** uses the server to which you are currently logged on.|
-|/time:<Seconds>|Specifies the amount of time that the message you sent is displayed on the user's screen. After the time limit is reached, the message disappears. if no time limit is set, the message remains on the user's screen until the user sees the message and clicks **OK**.|
+|/server:<ServerName>|Specifies the rd Session Host server whose session or user you want to receive the message. If unspecified, **/server** uses the server to which you are currently logged on.|
+|/time:<Seconds>|Specifies the amount of time that the message you sent is displayed on the user's screen. After the time limit is reached, the message disappears. If no time limit is set, the message remains on the user's screen until the user sees the message and clicks **OK**.|
 |/v|Displays information about the actions being performed.|
 |/w|Waits for an acknowledgment from the user that the message has been received. Use this parameter with **/time:**<*Seconds*> to avoid a possible long delay if the user does not immediately respond. Using this parameter with **/v** is also helpful.|
-|<Message>|Specifies the text of the message that you want to send. if no message is specified, you will be prompted to enter a message. To send a message that is contained in a file, type the less than (<) symbol followed by the file name.|
+|<Message>|Specifies the text of the message that you want to send. If no message is specified, you will be prompted to enter a message. To send a message that is contained in a file, type the less than (<) symbol followed by the file name.|
 |/?|Displays help at the command prompt.|
 ## remarks
 -   if you do not specify a user or a session, **msg** displays an error message. When specifying a session, it must be an active one.

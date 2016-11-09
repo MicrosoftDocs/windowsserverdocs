@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-associates a path with a drive letter. if used without parameters, **subst** displays the names of the virtual drives in effect.
+associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -40,7 +40,7 @@ subst <Drive1>: /d
     **format**
     **label**
     **recover**
--   The *Drive1* parameter must be within the range that is specified by the **lastdrive** command. if not, **subst** displays the following error message:
+-   The *Drive1* parameter must be within the range that is specified by the **lastdrive** command. If not, **subst** displays the following error message:
     `Invalid parameter - drive1:`
 ## <a name="BKMK_examples"></a>Examples
 To create a virtual drive Z for the path B:\User\Betty\forms, type:

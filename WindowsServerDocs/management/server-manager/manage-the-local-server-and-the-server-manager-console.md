@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 In Windows Server, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
-The **Local Server** page in Server Manager displays server properties, events, service and performance counter data, and Best Practices Analyzer (BPA) results for the local server. Event, service, BPA, and performance tiles function as they do on role and server group pages. for more information about configuring the data that is displayed in these tiles, see [View and Configure Performance, Event, and Service Data](view-and-configure-performance-event-and-service-data.md) and [Run Best Practices Analyzer Scans and Manage Scan Results](run-best-practices-analyzer-scans-and-manage-scan-results.md).
+The **Local Server** page in Server Manager displays server properties, events, service and performance counter data, and Best Practices Analyzer (BPA) results for the local server. Event, service, BPA, and performance tiles function as they do on role and server group pages. For more information about configuring the data that is displayed in these tiles, see [View and Configure Performance, Event, and Service Data](view-and-configure-performance-event-and-service-data.md) and [Run Best Practices Analyzer Scans and Manage Scan Results](run-best-practices-analyzer-scans-and-manage-scan-results.md).
 
 Menu commands and settings in the Server Manager console heading bars apply globally to all servers in your server pool, and let you use Server Manager to manage the entire server pool.
 
@@ -37,7 +37,7 @@ This topic contains the following sections.
 -   [Manage roles on role home pages](#BKMK_roles)
 
 ## <a name="BKMK_shutdown"></a>Shut down the local server
-The **Tasks** menu in the local server **Properties** tile lets you start a Windows powershell session on the local server, open the **computer Management** mmc snap-in, or open mmc snap-ins for roles or features that are installed on the local server. You can also shut down the local server by using the **Shut Down Local Server** command in this **Tasks** menu. The **Shut Down Local Server** command is also available for the local server in the **Servers** tile on the **All Servers** page, or on any role or group page in which the local server is represented.
+The **Tasks** menu in the local server **Properties** tile lets you start a Windows PowerShell session on the local server, open the **computer Management** mmc snap-in, or open mmc snap-ins for roles or features that are installed on the local server. You can also shut down the local server by using the **Shut Down Local Server** command in this **Tasks** menu. The **Shut Down Local Server** command is also available for the local server in the **Servers** tile on the **All Servers** page, or on any role or group page in which the local server is represented.
 
 Shutting down the local server by using this method, unlike shutting down Windows Server 2016 from the **start** screen, opens the **Shut Down Windows** dialog box, which lets you specify reasons for shutdown in the **shutdown Event Tracker** area.
 
@@ -56,19 +56,19 @@ You can view or change the following settings in the **Properties** tile on the 
 |------|--------|
 |computer name|Displays the computer friendly name, and opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
 |Domain (or Workgroup, if the server is not joined to a domain)|Displays the domain or workgroup of which the server is a member. Opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
-|Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. for more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkId=253465).|
-|remote management|Displays Server Manager and Windows powershell remote management status. Opens the **Configure remote Management** dialog box. for more information about remote management, see [Configure remote Management in Server Manager](configure-remote-management-in-server-manager.md).|
+|Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkId=253465).|
+|remote management|Displays Server Manager and Windows PowerShell remote management status. Opens the **Configure remote Management** dialog box. For more information about remote management, see [Configure remote Management in Server Manager](configure-remote-management-in-server-manager.md).|
 |remote Desktop|Shows whether users can connect to the server remotely by using remote Desktop sessions. Opens the **remote** tab of the **System Properties** dialog box.|
-|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. for more information about NIC Teaming, see the [NIC Teaming white paper](http://go.microsoft.com/fwlink/?LinkID=253449).|
+|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](http://go.microsoft.com/fwlink/?LinkID=253449).|
 |Ethernet|Displays the networking status of the server. Opens **Control Panel\Network and Internet\Network Connections**.|
 |Operating system version|This read-only field displays the version number of the Windows operating system that the local server is running.|
 |Hardware information|This read-only field displays the manufacturer and model name and number of the server hardware.|
 |Last installed updates|Displays the day and time that Windows updates were last installed. Opens **Control Panel\System and Security\Windows Update**.|
 |Windows Update|Displays Windows Update settings for the local server. Opens **Control Panel\System and Security\Windows Update**.|
 |Last checked for updates|Displays the day and time that the server last checked for available Windows updates. Opens **Control Panel\System and Security\Windows Update**.|
-|Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. for more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](http://go.microsoft.com/fwlink/?LinkID=245991).|
-|Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. for more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkID=245992).|
-|Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. for more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/?LinkId=253461).|
+|Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. For more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](http://go.microsoft.com/fwlink/?LinkID=245991).|
+|Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkID=245992).|
+|Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/?LinkId=253461).|
 |time zone|Displays the local server's time zone. Opens the **date and time** dialog box.|
 |Product ID|Displays the Windows activation status and product ID number (if Windows has been activated) of the Windows Server 2016 operating system. This is not the same number as the Windows product key. Opens the **Windows Activation** dialog box.|
 |Processors|This read-only field displays manufacturer, model name, and speed information about the local server's processors.|
@@ -79,7 +79,7 @@ You can view or change the following settings in the **Properties** tile on the 
 Global settings that apply to the entire Server Manager console, and to all remote servers that have been added to the Server Manager server pool, are found in the heading bars at the top of the Server Manager console window.
 
 ### add servers to Server Manager
-The command that opens the **add Servers** dialog box, and lets you add remote physical or virtual servers to the Server Manager server pool, is in the **Manage** menu of the Server Manager console. for detailed information about how to add servers, see [add Servers to Server Manager](add-servers-to-server-manager.md).
+The command that opens the **add Servers** dialog box, and lets you add remote physical or virtual servers to the Server Manager server pool, is in the **Manage** menu of the Server Manager console. For detailed information about how to add servers, see [add Servers to Server Manager](add-servers-to-server-manager.md).
 
 ### Refresh data that is displayed in Server Manager
 You can configure the refresh interval for data that is displayed in Server Manager on the **Server Manager Properties** dialog box, which you open from the **Manage** menu.
@@ -98,15 +98,15 @@ When servers that are in a cluster are added to Server Manager, whether they are
 Data that is displayed in role home pages in Server Manager for remote Desktop Services, IP address Management, and File and Storage Services does not refresh automatically. Refresh data that is displayed in these pages manually, by pressing **F5** or clicking **Refresh** in the Server Manager console heading while you are on those pages.
 
 ### add or remove roles or features
-The commands that open the add Roles and Features Wizard and remove Roles and Features Wizard, and let you add or remove roles, role services, and features to servers in your server pool, are in the **Manage** menu of the Server Manager console, and the **Tasks** menu of the **Roles and Features** tile on role or group pages. for detailed information about how to add or remove roles or features, see [Install or Uninstall Roles, Role Services, or Features](install-or-uninstall-roles-role-services-or-features.md).
+The commands that open the add Roles and Features Wizard and remove Roles and Features Wizard, and let you add or remove roles, role services, and features to servers in your server pool, are in the **Manage** menu of the Server Manager console, and the **Tasks** menu of the **Roles and Features** tile on role or group pages. For detailed information about how to add or remove roles or features, see [Install or Uninstall Roles, Role Services, or Features](install-or-uninstall-roles-role-services-or-features.md).
 
 In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.
 
 ### create server groups
-The command that opens the **create Server Group** dialog box, and lets you create custom groups of servers, is in the **Manage** menu of the Server Manager console. for detailed information about how to create server groups, see [create and Manage Server Groups](create-and-manage-server-groups.md).
+The command that opens the **create Server Group** dialog box, and lets you create custom groups of servers, is in the **Manage** menu of the Server Manager console. For detailed information about how to create server groups, see [create and Manage Server Groups](create-and-manage-server-groups.md).
 
 ### Prevent Server Manager from opening automatically at logon
-The **Do not start Server Manager automatically at logon** check box in the **Server Manager Properties** dialog box controls whether Server Manager opens automatically at logon for members of the Administrators group on a local server. This setting does not affect Server Manager behavior when it is running on Windows 10 as part of remote Server Administration Tools. for more information about configuring this setting, see [Server Manager](server-manager.md).
+The **Do not start Server Manager automatically at logon** check box in the **Server Manager Properties** dialog box controls whether Server Manager opens automatically at logon for members of the Administrators group on a local server. This setting does not affect Server Manager behavior when it is running on Windows 10 as part of Remote Server Administration Tools. For more information about configuring this setting, see [Server Manager](server-manager.md).
 
 ### Zoom in or out
 To zoom in or out on your view of the Server Manager console, you can either use the **Zoom** commands on the **View** menu, or press **Ctrl+Plus (+)** to zoom in and **Ctrl+Minus (-)** to zoom out.
@@ -116,11 +116,11 @@ The **Tools** menu in Server Manager includes soft links to shortcuts in the **A
 
 To customize the **Tools** menu, copy tool or script shortcuts that you want to use to the **Administrative Tools** folder. You can also organize your shortcuts in folders, which create cascading menus in the **Tools** menu. additionally, if you want to restrict access to the custom tools on the **Tools** menu, you can set user access rights on both your custom tool folders in Administrative Tools, or directly on the original tool or script files.
 
-We recommend against reorganizing system and administrative tools, and any management tools associated with roles and features that are installed on the local server. Moving role and feature management tools can prevent successful uninstallation of those management tools, when necessary. After uninstallation of a role or feature, a nonfunctional link to a tool whose shortcut has been moved might remain in the **Tools** menu. if you reinstall the role, a duplicate link to the same tool is created in the **Tools** menu, but one of the links will not work.
+We recommend against reorganizing system and administrative tools, and any management tools associated with roles and features that are installed on the local server. Moving role and feature management tools can prevent successful uninstallation of those management tools, when necessary. After uninstallation of a role or feature, a nonfunctional link to a tool whose shortcut has been moved might remain in the **Tools** menu. If you reinstall the role, a duplicate link to the same tool is created in the **Tools** menu, but one of the links will not work.
 
-Role and feature tools that are installed as part of remote Server Administration Tools on a Windows client-based computer can be organized into custom folders, however. Uninstalling the parent role or feature has no effect on the tool shortcuts that are available on a remote computer that is running Windows 10.
+Role and feature tools that are installed as part of Remote Server Administration Tools on a Windows client-based computer can be organized into custom folders, however. Uninstalling the parent role or feature has no effect on the tool shortcuts that are available on a remote computer that is running Windows 10.
 
-The following procedure describes how to create an example folder called *MyTools*, and move shortcuts for two Windows powershell scripts into the folder that are then accessible from the Server Manager Tools menu.
+The following procedure describes how to create an example folder called *MyTools*, and move shortcuts for two Windows PowerShell scripts into the folder that are then accessible from the Server Manager Tools menu.
 
 #### To customize the Tools menu by adding shortcuts in Administrative Tools
 
@@ -157,9 +157,9 @@ After you add servers to the Server Manager server pool, and Server Manager coll
 
 In Windows Server 2016, the following roles and feature have management tools that are integrated into Server Manager console as pages.
 
--   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. for more information about deploying and managing File and Storage Services, see [File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530).
+-   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530).
 
--   **remote Desktop Services.** remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. for more information about deploying and managing remote Desktop Services, see [remote Desktop Services (rdS)](http://go.microsoft.com/fwlink/p/?LinkId=241532).
+-   **remote Desktop Services.** remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing remote Desktop Services, see [remote Desktop Services (rdS)](http://go.microsoft.com/fwlink/p/?LinkId=241532).
 
 -   **IP address Management (IPAM).** The IPAM role page includes a custom **Welcome** tile containing links to common IPAM configuration and management tasks, including a wizard for provisioning an IPAM server. The IPAM home page also includes tiles for viewing the managed network, configuration summary, and scheduled tasks.
 

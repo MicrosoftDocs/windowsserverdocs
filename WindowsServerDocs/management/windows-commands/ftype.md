@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays or modifies file types that are used in file name extension associations. if used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. if used without parameters, **ftype** displays the file types that have open command strings defined.
+Displays or modifies file types that are used in file name extension associations. If used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. If used without parameters, **ftype** displays the file types that have open command strings defined.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```

@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-lists the available realm flags that can be reported by **ksetup**. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+lists the available realm flags that can be reported by **ksetup**. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /listrealmflags
@@ -26,7 +26,7 @@ ksetup /listrealmflags
 ### Parameters
 None
 ## remarks
-The realm flags specify additional features of a non-Windows-based Kerberos realm. computers that are running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  can use a non-Windows-based Kerberos server to administer authentication instead of using a domain that is running a Windows Server operating system. These systems participate in a Kerberos realm instead of a Windows domain. This entry establishes the features of the realm. The following table describes each.
+The realm flags specify additional features of a non-Windows-based Kerberos realm. Computers that are running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  can use a non-Windows-based Kerberos server to administer authentication instead of using a domain that is running a Windows Server operating system. These systems participate in a Kerberos realm instead of a Windows domain. This entry establishes the features of the realm. The following table describes each.
 |Value|Realm flag|Description|
 |-----|-------|--------|
 |0xF|All|All realm flags are set.|

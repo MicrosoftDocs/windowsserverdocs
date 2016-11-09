@@ -39,7 +39,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
     The following attributes apply to the **for** command:
     -   The **for** command replaces **%***Variable* or **%%***Variable* with each text string in the specified set until the specified command processes all of the files.
     -   Variable names are case sensitive, global, and no more than 52 can be active at a time.
-    -   To avoid confusion with the batch parameters **%0** through **%9**, you can use any character for *Variable* except the numerals 0 through 9. for simple batch files, a single character such as **%%f** will work.
+    -   To avoid confusion with the batch parameters **%0** through **%9**, you can use any character for *Variable* except the numerals 0 through 9. For simple batch files, a single character such as **%%f** will work.
     -   You can use multiple values for *Variable* in complex batch files to distinguish different replaceable variables.
 -   Specifying a group of files
     The *Set* parameter can represent a single group of files or several groups of files. You can use wildcard characters (**\*** and **?**) to specify a file set. The following are valid file sets:
@@ -51,7 +51,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
     ```
     When you use the **for** command, the first value in *Set* replaces **%***Variable* or **%%***Variable*, and then the specified command processes this value. This continues until all of the files (or groups of files) that correspond to the *Set* value are processed.
 -   Using the **in** and **do** keywords
-    **In** and **do** are not parameters, but you must use them with **for**. if you omit either of these keywords, an error message appears.
+    **In** and **do** are not parameters, but you must use them with **for**. If you omit either of these keywords, an error message appears.
 -   Using additional forms of **for**
     if command extensions are enabled (that is the default), the following additional forms of **for** are supported:
     -   directories only
@@ -61,13 +61,13 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         for /d {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>] 
         ```
     -   Recursive
-        Walks the directory tree that is rooted at *Drive*:*path* and executes the **for** statement in each directory of the tree. if no directory is specified after **/r**, the current directory is used as the root directory. if *Set* is just a single period (.), it only enumerates the directory tree.
+        Walks the directory tree that is rooted at *Drive*:*path* and executes the **for** statement in each directory of the tree. If no directory is specified after **/r**, the current directory is used as the root directory. If *Set* is just a single period (.), it only enumerates the directory tree.
         The syntax is:
         ```
         for /r [[<Drive>:]<path>] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         ```
     -   Iterating a range of values
-        Use an iterative variable to set the starting value (*start*#) and then step through a set range of values until the value exceeds the set ending value (*End*#). **/l** will execute the iterative by comparing *start*# with *End*#. if *start*# is less than *End*# the command will execute. When the iterative variable exceeds *End*#, the command shell exits the loop. You can also use a negative *Step*# to step through a range in decreasing values. for example, (1,1,5) generates the sequence 1 2 3 4 5 and (5,-1,1) generates the sequence 5 4 3 2 1.
+        Use an iterative variable to set the starting value (*start*#) and then step through a set range of values until the value exceeds the set ending value (*End*#). **/l** will execute the iterative by comparing *start*# with *End*#. If *start*# is less than *End*# the command will execute. When the iterative variable exceeds *End*#, the command shell exits the loop. You can also use a negative *Step*# to step through a range in decreasing values. For example, (1,1,5) generates the sequence 1 2 3 4 5 and (5,-1,1) generates the sequence 5 4 3 2 1.
         The syntax is:
         ```
         for /l {%%|%}<Variable> in (<start#>,<Step#>,<End#>) do <Command> [<CommandLineOptions>]
@@ -94,7 +94,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         |eol=<c>|Specifies an end of line character (just one character).|
         |skip=<N>|Specifies the number of lines to skip at the beginning of the file.|
         |delims=<xxx>|Specifies a delimiter set. This replaces the default delimiter set of space and tab.|
-        |tokens=<X,Y,M N>|Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *M* *N* specifies a range, from the *M*th through the *N*th tokens. if the last character in the **tokens=** string is an asterisk (**\***), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed.|
+        |tokens=<X,Y,M N>|Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *M* *N* specifies a range, from the *M*th through the *N*th tokens. If the last character in the **tokens=** string is an asterisk (**\***), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed.|
         |usebackq|Specifies to execute a back-quoted stringas a command, and a single-quoted string as a literal string command. Also, allows file names in *Set* to be enclosed in quotation marks.|
     -   Variable substitution
         The following table lists optional syntax (for any variable **I**).
@@ -110,7 +110,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         |%~aI|expands **%I** to the file attributes of file.|
         |%~tI|expands **%I** to the date and time of file.|
         |%~zI|expands **%I** to the size of the file.|
-        |%~$path:I|Searches the directories listed in the path environment variable and expands **%I** to the fully qualified name of the first directory found. if the environment variable name is not defined or the file is not found by the search, this modifier expands to the empty string.|
+        |%~$path:I|Searches the directories listed in the path environment variable and expands **%I** to the fully qualified name of the first directory found. If the environment variable name is not defined or the file is not found by the search, this modifier expands to the empty string.|
         The following table lists modifier combinations that you can use to get compound results.
         |Variable with combined modifiers|Description|
         |------------------|--------|
@@ -139,7 +139,7 @@ To parse a file, ignoring commented lines, type:
 ```
 for /f "eol=; tokens=2,3* delims=," %i in (myfile.txt) do @echo %i %j %k
 ```
-This command parses each line in Myfile.txt. It ignores lines that begin with a semicolon and passes the second and third token from each line to the **for** body (tokens are delimited by commas or spaces). The body of the **for** statement references **%i** to get the second token, **%j** to get the third token, and **%k** to get all of the remaining tokens. if the file names that you supply contain spaces, use quotation marks around the text (for example, "File Name"). To use quotation marks, you must use **usebackq**. Otherwise, the quotation marks are interpreted as defining a literal string to parse.
+This command parses each line in Myfile.txt. It ignores lines that begin with a semicolon and passes the second and third token from each line to the **for** body (tokens are delimited by commas or spaces). The body of the **for** statement references **%i** to get the second token, **%j** to get the third token, and **%k** to get all of the remaining tokens. If the file names that you supply contain spaces, use quotation marks around the text (for example, "File Name"). To use quotation marks, you must use **usebackq**. Otherwise, the quotation marks are interpreted as defining a literal string to parse.
 **%i** is explicitly declared in the **for** statement. **%j** and **%k** are implicitly declared by using **tokens=**. You can use **tokens=** to specify up to 26 tokens, provided that it does not cause an attempt to declare a variable higher than the letter "z" or "Z."
 The following example enumerates the environment variable names in the current environment. To parse the output of a command by placing *Set* between the parentheses, type:
 ```

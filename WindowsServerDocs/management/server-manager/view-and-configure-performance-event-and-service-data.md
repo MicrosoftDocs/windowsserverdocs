@@ -41,13 +41,13 @@ This topic contains the following sections.
 ## <a name="BKMK_thumb"></a>What are thumbnails?  
 *Thumbnails* are displayed on the Server Manager dashboard for each role (a role's thumbnail reflects data collected about all of the servers in the Server Manager pool that are running the role), for each server group, for the **All Servers** group (all of the servers in the Server Manager pool), and for the local server. After Server Manager gets data from managed servers, thumbnails are automatically created for roles that are running on servers in the server pool.  
 
-if the Server Manager console is running on a client computer as part of remote Server Administration Tools, there is no **Local Server** thumbnail.  
+if the Server Manager console is running on a client computer as part of Remote Server Administration Tools, there is no **Local Server** thumbnail.  
 
 The thumbnail displays a quick view of the status and manageability of roles, servers, and server groups. The thumbnail heading row changes color (and highlighted numbers are displayed in the left margin) when events, performance counters, Best Practices Analyzer results, services, or general manageability issues meet criteria that you configure in the **detail View** dialog boxes opened by clicking thumbnail rows. The following table describes the data displayed in thumbnails.  
 
 |Thumbnail Row|Description|  
 |---------|--------|  
-|Manageability|The manageability of a server includes several measures: whether the server is online or offline, whether it is accessible and reporting data to Server Manager, whether the user who is logged on to the local computer has adequate user rights to access or manage the remote server, whether the remote server is running all of the software that is required to manage it remotely, or whether the server is configured in a way that allows it to be queried and managed by using Server Manager. The only manageability data that Server Manager can collect from a server that is running Windows Server 2003 is whether the server is online or offline. for detailed information about manageability status errors and how to resolve them, see the [Server Manager Troubleshooting Guide](http://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx).|  
+|Manageability|The manageability of a server includes several measures: whether the server is online or offline, whether it is accessible and reporting data to Server Manager, whether the user who is logged on to the local computer has adequate user rights to access or manage the remote server, whether the remote server is running all of the software that is required to manage it remotely, or whether the server is configured in a way that allows it to be queried and managed by using Server Manager. The only manageability data that Server Manager can collect from a server that is running Windows Server 2003 is whether the server is online or offline. For detailed information about manageability status errors and how to resolve them, see the [Server Manager Troubleshooting Guide](http://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx).|  
 |Events|You can configure the **Events** row of a thumbnail to display alerts when events are logged that match severity levels, sources, time periods, servers, or event IDs that you specify. View details about events, and change the alerts you want to see by clicking the **Events** row, and opening the **Events detail View** dialog box for the role or server group.|  
 |Services|You can configure the **Services** row to display alerts when services are found in a role or server group that match startup types, service status, service names, and servers that you specify in the **Services detail View** dialog box.<br /><br />After a server has been added to the Server Manager server pool, service alerts about the Shell Hardware Detection service can be displayed if there are no users logged on to the managed server. This occurs because the Shell Hardware Detection service runs only when users are logged on to the managed server, or connected to a remote Desktop session on the managed server. To avoid seeing Shell Hardware Detection service alerts for this case, click **Services** in the thumbnails for server groups, including the **All Servers** group. In the **Services detail View** dialog box, on the **Services** drop-down list, clear the check box for **Shell Hardware Detection**, and then click **OK**.|  
 |Performance|You can configure the **Performance** row to display alerts for a role or server group when performance alerts occur that match resource types, servers, or time periods that you specify in the **Performance detail View** dialog box.<br /><br />By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **online - Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **start Performance Counters**. You can also start performance counters by right-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **start Performance Counters**.|  
@@ -75,7 +75,7 @@ In this section, learn how to configure what event log data is collected from se
 
 #### To configure the events highlighted in thumbnails  
 
-1.  if Server Manager is already open, go on to the next step. if Server Manager is not already open, open it by doing one of the following.  
+1.  if Server Manager is already open, go on to the next step. If Server Manager is not already open, open it by doing one of the following.  
 
     -   On the Windows desktop, start Server Manager by clicking **Server Manager** in the Windows taskbar.  
 
@@ -91,7 +91,7 @@ In this section, learn how to configure what event log data is collected from se
 
 6.  In the **time period** field, specify a time period up to 1440 minutes, 24 hours, or 1 day.  
 
-7.  In the **Event IDs** field, type the event ID numbers of specific events about which you want to be alerted. You can type a range of event IDs separated by a dash (**-**), and exclude event IDs from the range by typing the dash before the event ID or range of event IDs that you want to exclude. for example, the value **1,3,5-99,-76** means that alerts are raised for event IDs 1 and 3, and all events with IDs between 5 and 99 except for event ID 76.  
+7.  In the **Event IDs** field, type the event ID numbers of specific events about which you want to be alerted. You can type a range of event IDs separated by a dash (**-**), and exclude event IDs from the range by typing the dash before the event ID or range of event IDs that you want to exclude. For example, the value **1,3,5-99,-76** means that alerts are raised for event IDs 1 and 3, and all events with IDs between 5 and 99 except for event ID 76.  
 
 8.  As you change the criteria for which alerts are displayed, the number of event alerts that are displayed in the results pane at the bottom of the dialog box might change. select entries in the list and click **Hide Alerts** to prevent them from affecting the alert count that is displayed in the source thumbnail. Press and hold **Ctrl** as you select alerts to select multiple alerts at one time. You can do this for alerts that match your event alerting criteria, but that you do not need to see.  
 
@@ -107,13 +107,13 @@ By default, performance counters are turned off. Managed servers that are runnin
 > [!NOTE]  
 > The performance alerts you view in thumbnails are a subset of the total performance counter data that you instruct Server Manager to collect from managed servers. Although changing performance alert criteria in the **Configure Performance Alerts** dialog box in **Performance** tiles can change the numbers of alerts you see on the Server Manager dashboard, changing the performance alert criteria in thumbnails has no effect on the performance log data that is collected from managed servers.  
 >   
-> Because of this, the maximum age of performance data that you can display in thumbnails cannot be greater than the maximum graph display period that is configured in the **Configure Performance Alerts** dialog box. for example, if the **Graph display period** value in **Configure Performance Alerts** is **1 day**, the maximum value for the **time period** field in a **Performance detail View** dialog box that you have opened from the Server Manager dashboard can be **1 day**, **24 hours**, or **1,440 minutes**.  
+> Because of this, the maximum age of performance data that you can display in thumbnails cannot be greater than the maximum graph display period that is configured in the **Configure Performance Alerts** dialog box. For example, if the **Graph display period** value in **Configure Performance Alerts** is **1 day**, the maximum value for the **time period** field in a **Performance detail View** dialog box that you have opened from the Server Manager dashboard can be **1 day**, **24 hours**, or **1,440 minutes**.  
 
 #### To configure the performance log data collected from managed servers  
 
 1.  In the Server Manager console, open any page except the dashboard. You can configure the performance data that you want collected from managed servers in the **Performance** tile on role, server group, or local server pages.  
 
-2.  To collect performance log data from managed servers, performance counters must be turned on. if performance counters are turned off, right-click an entry in the **Performance** tile list, and then click **start Performance Counters**. Performance counter data collection can require some time, depending on the number of servers from which data is collected, and available network bandwidth. View the status in the **Counter Status** column.  
+2.  To collect performance log data from managed servers, performance counters must be turned on. If performance counters are turned off, right-click an entry in the **Performance** tile list, and then click **start Performance Counters**. Performance counter data collection can require some time, depending on the number of servers from which data is collected, and available network bandwidth. View the status in the **Counter Status** column.  
 
 3.  On the **Tasks** menu of the **Performance** tile, click **Configure Performance Alerts**.  
 
@@ -181,7 +181,7 @@ In this section, learn how to start, stop, restart, pause, or resume services th
 
 2.  In the **Services** tile for the role or group, right-click a service.  
 
-3.  In the context menu, click the action that you want to perform on the service. if the service is stopped, the only action you can perform is to start the service. Similarly, if the service is paused, the only action you can perform is to resume the service.  
+3.  In the context menu, click the action that you want to perform on the service. If the service is stopped, the only action you can perform is to start the service. Similarly, if the service is paused, the only action you can perform is to resume the service.  
 
 4.  Note that when you start, stop, restart, pause, or resume a service, the value of the **Status** column changes for the service in the **Services** tile.  
 

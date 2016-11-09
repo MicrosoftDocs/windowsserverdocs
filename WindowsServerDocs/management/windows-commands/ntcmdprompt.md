@@ -28,7 +28,7 @@ ntcmdprompt
 |-------|--------|
 |/?|Displays help at the command prompt.|
 ## remarks
--   When **Command.com** is running, some features of **Cmd.exe**, such as the **doskey** display of command history, are not available. if you would prefer to run the **Cmd.exe** command interpreter after you have started a Terminate and Stay Resident (TSR) or started the command prompt from within an application based on MS-DOS, you can use the **ntcmdprompt** command. However, keep in mind that the TSR may not be available for use when you are running **Cmd.exe**. You can include the **ntcmdprompt** command in your **Config.nt** file or the equivalent custom startup file in an application's program information file (Pif).
+-   When **Command.com** is running, some features of **Cmd.exe**, such as the **doskey** display of command history, are not available. If you would prefer to run the **Cmd.exe** command interpreter after you have started a Terminate and Stay Resident (TSR) or started the command prompt from within an application based on MS-DOS, you can use the **ntcmdprompt** command. However, keep in mind that the TSR may not be available for use when you are running **Cmd.exe**. You can include the **ntcmdprompt** command in your **Config.nt** file or the equivalent custom startup file in an application's program information file (Pif).
 ## Examples
 To include **ntcmdprompt** in your **Config.nt** file, or the configuration startup file specified in the Pif, type:
 **ntcmdprompt**

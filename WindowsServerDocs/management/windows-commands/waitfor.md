@@ -37,12 +37,12 @@ waitfor [/t <timeout>] <SignalName>
 |/?|Displays help at the command prompt.|
 ## remarks
 -   Signal names cannot exceed 225 characters. Valid characters include a-z, A-Z, 0-9, and the ASCII extended character set (128-255).
--   if you do not use **/s**, the signal is broadcast to all the systems in a domain. if you use **/s**, the signal is sent only to the specified system.
+-   if you do not use **/s**, the signal is broadcast to all the systems in a domain. If you use **/s**, the signal is sent only to the specified system.
 -   You can run multiple instances of **waitfor** on a single computer, but each instance of **waitfor** must wait for a different signal. Only one instance of **waitfor** can wait for a given signal on a given computer.
 -   You can activate a signal manually by using the **/si** command-line option.
 -   **waitfor** runs only on Windows XP and servers running a Windows Server 2003 operating system, but it can send signals to any computer running a Windows operating system.
 -   computers can only receive signals if they are in the same domain as the computer sending the signal.
--   You can use **waitfor** when you test software builds. for example, the compiling computer can send a signal to several computers running **waitfor** after the compile has completed successfully. On receipt of the signal, the batch file that includes **waitfor** can instruct the computers to immediately start installing software or running tests on the compiled build.
+-   You can use **waitfor** when you test software builds. For example, the compiling computer can send a signal to several computers running **waitfor** after the compile has completed successfully. On receipt of the signal, the batch file that includes **waitfor** can instruct the computers to immediately start installing software or running tests on the compiled build.
 ## <a name="BKMK_examples"></a>Examples
 To wait until the "espresso\build007" signal is received, type:
 ```

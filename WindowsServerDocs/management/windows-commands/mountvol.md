@@ -37,7 +37,7 @@ mountvol <Drive>: /s
 |<volumeName>|Specifies the volume name that is the target of the mount point. The volume name uses the following syntax, where *GUID* is a globally unique identifier:<br /><br />\\\\?\volume\\{GUID}\\<br /><br />The brackets { } are required.|
 |/d|removes the volume mount point from the specified folder.|
 |/l|lists the mounted volume name for the specified folder.|
-|/p|removes the volume mount point from the specified directory, dismounts the basic volume, and takes the basic volume offline, making it unmountable. if other processes are using the volume, **mountvol** closes any open handles before dismounting the volume.|
+|/p|removes the volume mount point from the specified directory, dismounts the basic volume, and takes the basic volume offline, making it unmountable. If other processes are using the volume, **mountvol** closes any open handles before dismounting the volume.|
 |/r|removes volume mount point directories and registry settings for volumes that are no longer in the system, preventing them from being automatically mounted and given their former volume mount point(s) when added back to the system.|
 |/n|Disables automatic mounting of new basic volumes. New volumes are not mounted automatically when added to the system.|
 |/e|Re-enables automatic mounting of new basic volumes.|

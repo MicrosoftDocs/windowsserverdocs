@@ -772,7 +772,7 @@ CTLObject: Identifies the CTL to verify:
 -   AuthRoot: read registry cached AuthRoot CTL.  Use with -f and a             CertFile that is not already trusted to force updating the registry cached AuthRoot and Disallowed Certificate CTLs.
 -   Disallowed: read registry cached Disallowed Certificates CTL. -f has the same behavior as with AuthRoot.
 -   CTLFileName: file or http: path to CTL or CAB
-Certdir: folder containing certificates matching CTL entries. An http: folder path must end with a path separator. if a folder is not specified with AuthRoot or Disallowed, multiple locations will be searched for matching certificates: local certificate stores, crypt32.dll resources and the local URL cache. Use -f to download from Windows Update when necessary. Otherwise defaults to the same folder or web site as the CTLObject.
+Certdir: folder containing certificates matching CTL entries. An http: folder path must end with a path separator. If a folder is not specified with AuthRoot or Disallowed, multiple locations will be searched for matching certificates: local certificate stores, crypt32.dll resources and the local URL cache. Use -f to download from Windows Update when necessary. Otherwise defaults to the same folder or web site as the CTLObject.
 CertFile: file containing certificate(s) to verify. Certificates will be matched against CTL entries, and match results displayed. Suppresses most of the default output.
 [-f] [-user] [-split]
 Return to [Menu](certutil.md#BKMK_menu)
@@ -796,7 +796,7 @@ ObjectIdlist: comma separated extension ObjectId list to remove
 ```
 HashAlgorithm: Name of the hash algorithm preceded by a # sign
 AlternateSignatureAlgorithm: alternate Signature algorithm specifier
-A minus sign causes serial numbers and extensions to be removed. A plus sign causes serial numbers to be added to a CRL. When removing items from a CRL, the list may contain both serial numbers and ObjectIds. A minus sign before AlternateSignatureAlgorithm causes the legacy signature format to be used. A plus sign before AlternateSignatureAlgorithm causes the alternature signature format to be used. if AlternateSignatureAlgorithm is not specified then the signature format in the certificate or CRL is used.
+A minus sign causes serial numbers and extensions to be removed. A plus sign causes serial numbers to be added to a CRL. When removing items from a CRL, the list may contain both serial numbers and ObjectIds. A minus sign before AlternateSignatureAlgorithm causes the legacy signature format to be used. A plus sign before AlternateSignatureAlgorithm causes the alternature signature format to be used. If AlternateSignatureAlgorithm is not specified then the signature format in the certificate or CRL is used.
 [-nullsign] [-f] [-silent] [-Cert CertId]
 Return to [Menu](certutil.md#BKMK_menu)
 ## <a name="BKMK_vroot"></a>-vroot
@@ -878,9 +878,9 @@ chain: Use chain configuration registry key
 PolicyServers: Use Policy Servers registry key
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 registryValueName: registry value name (use "Name*" to prefix match)
-Value: new numeric, string or date registry value or filename. if a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 if a string value starts with "+" or "-", and the existing value is a reg_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a reg_MULTI_SZ value, add a "\n" to the end of the string value.
-if the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. if it does not refer to a valid file, it is instead parsed as [date][+|-][dd:hh] - an optional date plus or minus optional days and hours. if both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+if the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [date][+|-][dd:hh] - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 Return to [Menu](certutil.md#BKMK_menu)
@@ -897,9 +897,9 @@ chain: Use chain configuration registry key
 PolicyServers: Use Policy Servers registry key
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 registryValueName: registry value name (use "Name*" to prefix match)
-Value: new numeric, string or date registry value or filename. if a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 if a string value starts with "+" or "-", and the existing value is a reg_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a reg_MULTI_SZ value, add a "\n" to the end of the string value.
-if the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. if it does not refer to a valid file, it is instead parsed as [date][+|-][dd:hh] - an optional date plus or minus optional days and hours. if both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+if the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [date][+|-][dd:hh] - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 Return to [Menu](certutil.md#BKMK_menu)
@@ -916,9 +916,9 @@ chain: Use chain configuration registry key
 PolicyServers: Use Policy Servers registry key
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 registryValueName: registry value name (use "Name*" to prefix match)
-Value: new numeric, string or date registry value or filename. if a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 if a string value starts with "+" or "-", and the existing value is a reg_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a reg_MULTI_SZ value, add a "\n" to the end of the string value.
-if the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. if it does not refer to a valid file, it is instead parsed as [date][+|-][dd:hh] - an optional date plus or minus optional days and hours. if both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+if the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [date][+|-][dd:hh] - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
 Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 Return to [Menu](certutil.md#BKMK_menu)
@@ -958,7 +958,7 @@ Can be any of the following:
 6.  UPN (user@domain)
 recoveryBlobOutFile: output file containing a certificate chain and an associated private key, still encrypted to one or more Key recovery Agent certificates.
 OutputScriptFile: output file containing a batch script to retrieve and recover private keys.
-OutputFileBaseName: output file base name. for retrieve, any extension is truncated and a certificate-specific string and the .rec extension are appended for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key recovery Agent certificates. for recover, any extension is truncated and the .p12 extension is appended.  Contains the recovered certificate chains and associated private keys, stored as a PFX file.
+OutputFileBaseName: output file base name. For retrieve, any extension is truncated and a certificate-specific string and the .rec extension are appended for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key recovery Agent certificates. For recover, any extension is truncated and the .p12 extension is appended.  Contains the recovered certificate chains and associated private keys, stored as a PFX file.
 [-f] [-UnicodeText] [-silent] [-config Machine\CAName] [-p Password] [-ProtectTo SAMNameAndSIDlist] [-csp Provider]
 Return to [Menu](certutil.md#BKMK_menu)
 ## <a name="BKMK_recoverKey"></a>-recoverKey
@@ -983,7 +983,7 @@ cast: Use CAST 64 encryption
 cast-: Use CAST 64 encryption (export)
 V3CACertId: V3 CA Certificate match token.  See [-store](certutil.md#BKMK_Store) CertId description.
 Salt: EPF output file salt string
-The password specified on the command line is a comma separated password list. if more than one password is specified, the last password is used for the output file.  if only one password is provided or if the last password is "*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  if only one password is provided or if the last password is "*", the user will be prompted for the output file password.
 [-f] [-silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
 Return to [Menu](certutil.md#BKMK_menu)
 ## <a name="BKMK_Options"></a>Options
@@ -1008,11 +1008,11 @@ This section defines the options that you can specify with the command.
 |-pin PIN|Smart Card PIN|
 |-urlfetch|Retrieve and verify AIA Certs and cdP CRLs|
 |-config Machine\CAName|CA and computer name string|
-|-PolicyServer URLOrId|Policy Server URL or Id. for selection U/I, use -PolicyServer. for all Policy Servers, use -PolicyServer *|
+|-PolicyServer URLOrId|Policy Server URL or Id. For selection U/I, use -PolicyServer. For all Policy Servers, use -PolicyServer *|
 |-Anonymous|Use anonymous SSL credentials|
 |-Kerberos|Use Kerberos SSL credentials|
-|-ClientCertificate ClientCertId|Use X.509 Certificate SSL credentials. for selection U/I, use -clientCertificate.|
-|-UserName UserName|Use named account for SSL credentials. for selection U/I, use -UserName.|
+|-ClientCertificate ClientCertId|Use X.509 Certificate SSL credentials. For selection U/I, use -clientCertificate.|
+|-UserName UserName|Use named account for SSL credentials. For selection U/I, use -UserName.|
 |-Cert CertId|Signing certificate|
 |-dc DCName|Target a specific Domain Controller|
 |-restrict Restrictionlist|Comma separated Restriction list. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:<br /><br />"RequestId = 47"<br /><br />"+RequesterName >= a, RequesterName < b"<br /><br />"-RequesterName > DOMAIN, Disposition = 21"|

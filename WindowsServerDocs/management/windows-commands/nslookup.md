@@ -79,11 +79,11 @@ nslookup /view <FileName>
 |[nslookup set vc](nslookup-set-vc.md)|Specifies to use or not use a virtual circuit when sending requests to the server.|
 |[nslookup view](nslookup-view.md)|sorts and lists the output of the previous **ls** subcommand or commands.|
 ## remarks
--   if *computerTofind* is an IP address and the query is for an A or PTR resource record type, the name of the computer is returned. if *computerTofind* is a name and does not have a trailing period, the default DNS domain name is appended to the name. This behavior depends on the state of the following **set** subcommands: **domain**, **srchlist**, **defname**, and **search**.
+-   if *computerTofind* is an IP address and the query is for an A or PTR resource record type, the name of the computer is returned. If *computerTofind* is a name and does not have a trailing period, the default DNS domain name is appended to the name. This behavior depends on the state of the following **set** subcommands: **domain**, **srchlist**, **defname**, and **search**.
 -   if you type a hyphen (-) instead of *computerTofind*, the command prompt changes to **nslookup** interactive mode.
 -   The command-line length must be less than 256 characters.
 -   **nslookup** has two modes: interactive and noninteractive.
-    if you need to look up only a single piece of data, use noninteractive mode. for the first parameter, type the name or IP address of the computer that you want to look up. for the second parameter, type the name or IP address of a DNS name server. if you omit the second argument, **nslookup** uses the default DNS name server.
+    if you need to look up only a single piece of data, use noninteractive mode. For the first parameter, type the name or IP address of the computer that you want to look up. For the second parameter, type the name or IP address of a DNS name server. If you omit the second argument, **nslookup** uses the default DNS name server.
     if you need to look up more than one piece of data, you can use interactive mode. type a hyphen (-) for the first parameter and the name or IP address of a DNS name server for the second parameter. Or, omit both parameters and **nslookup** uses the default DNS name server. Following are some tips about working in interactive mode:
     -   To interrupt interactive commands at any time, press CTRL+B.
     -   To exit, type **exit**.
@@ -105,7 +105,7 @@ nslookup /view <FileName>
     -   Albitz, P., Loukides, M. and C. Liu. 2001. *DNS and BIND, Fourth edition*. Sebastopol, California: O'Reilly and associates, Inc.
     -   Larson, M. and C. Liu. 2001. *DNS on Windows 2000*. Sebastopol, California: O'Reilly and associates, Inc.
 #### Examples
-Each command-line option consists of a hyphen (-) followed immediately by the command name and, in some cases, an equal sign (=) and then a value. for example, to change the default query type to host (computer) information and the initial time-out to 10 seconds, type:
+Each command-line option consists of a hyphen (-) followed immediately by the command name and, in some cases, an equal sign (=) and then a value. For example, to change the default query type to host (computer) information and the initial time-out to 10 seconds, type:
 **nslookup -querytype=hinfo -timeout=10**
 ## See Also
 [Command-Line Syntax Key](command-line-syntax-key.md)

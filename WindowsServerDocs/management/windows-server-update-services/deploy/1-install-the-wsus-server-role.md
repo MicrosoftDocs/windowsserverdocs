@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 
 The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
 
-> [!importANT]
+> [!IMPORTANT]
 > This installation procedure only covers how to install WSUS using Windows Internal Database (WID). The procedures to install WSUS using Microsoft SQL Server are documented in [this article](http://social.technet.microsoft.com/wiki/contents/articles/10020.installing-wsus-server-role-on-windows-server-2012-with-microsoft-sql-database.aspx).
 
 ### To install the WSUS server role
@@ -32,21 +32,21 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 
 5.  On the **select destination server** page, choose where the server is located (from a server pool or from a virtual hard disk). After you select the location, choose the server on which you want to install the WSUS server role, and then click **Next**.
 
-6.  On the **select server roles** page, select **Windows Server Update Services**.  **add features that are required for Windows Server Update Services** opens. Click **add Features**, and then click **Next**.
+6.  On the **select server roles** page, select **Windows Server Update Services**.  **Add features that are required for Windows Server Update Services** opens. Click **Add Features**, and then click **Next**.
 
 7.  On the **select features**page. retain the default selections, and then click **Next**.
 
-    > [!importANT]
-    > WSUS only requires the default Web Server role configuration. if you are prompted for additional Web Server role configuration while setting up WSUS you can safely accept the default values and continue setting up WSUS.
+    > [!IMPORTANT]
+    > WSUS only requires the default Web Server role configuration. If you are prompted for additional Web Server role configuration while setting up WSUS you can safely accept the default values and continue setting up WSUS.
 
 8.  On the **Windows Server Update Services** page, click **Next**.
 
-9. On the **select Role Services** page, leave the default selections, and then click **Next**.
+9. On the **Select Role Services** page, leave the default selections, and then click **Next**.
 
     > [!TIP]
-    > You must select one Database type. if the database options are all cleared (not selected), post installation tasks will fail.
+    > You must select one Database type. If the database options are all cleared (not selected), post installation tasks will fail.
 
-10. On the **Content location selection** page, type a valid location to store the updates. for example, you can create a folder named WSUS_database at the root of drive K specifically for this purpose, and type **k:\WSUS_database** as the valid location.
+10. On the **Content location selection** page, type a valid location to store the updates. For example, you can create a folder named WSUS_database at the root of drive K specifically for this purpose, and type **k:\WSUS_database** as the valid location.
 
 11. Click **Next**. The **Web Server Role (IIS)** page opens. Review the information, and then click **Next**. In **select the role services to install for Web Server (IIS)**, retain the defaults, and then click **Next**.
 
@@ -54,8 +54,8 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 
 13. Once WSUS installation is complete, in the summary window on the **Installation progress** page, click **Launch Post-Installation tasks**. The text changes, requesting: **Please wait while your server is configured**. When the task has finished, the text changes to: **Configuration successfully completed**. Click **Close**.
 
-14. In **Server Manager**, verify if a notification appears to inform you that a restart is required. This can vary according to the installed server role. if it requires a restart make sure to restart the server to complete the installation.
+14. In **Server Manager**, verify if a notification appears to inform you that a restart is required. This can vary according to the installed server role. If it requires a restart make sure to restart the server to complete the installation.
 
-> [!importANT]
-> at this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 2: Configure WSUS](2-configure-wsus.md).
+> [!IMPORTANT]
+> At this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 2: Configure WSUS](2-configure-wsus.md).
 

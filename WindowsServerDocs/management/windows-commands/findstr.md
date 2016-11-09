@@ -50,7 +50,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 |/?|Displays help at the command prompt.|
 ## remarks
 -   All **findstr** command-line options must precede *Strings* and *FileName* in the command string.
--   regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax it matches an occurrence of that character. for example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
+-   regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax it matches an occurrence of that character. For example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
     The following table lists the metacharacters that **findstr** accepts.
     |Metacharacter|Value|
     |---------|-----|
@@ -64,7 +64,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
     |\x|Escape: literal use of a metacharacter x|
     |\\<string|Word position: beginning of the word|
     |string\\>|Word position: end of the word|
-    The special characters in regular expression syntax have the most power when you use them together. for example, use the following combination of the wildcard character (.) and repeat (*) character to match any string of characters:
+    The special characters in regular expression syntax have the most power when you use them together. For example, use the following combination of the wildcard character (.) and repeat (*) character to match any string of characters:
     ```
     .*
     ```
@@ -94,7 +94,7 @@ To find all occurrences of lines that begin with "for" and are preceded by zero 
 ```
 findstr /b /n /r /c:"^ *for" *.bas 
 ```
-To search for multiple strings in a set of files, create a text file that contains each search criterion on a separate line. You can also list the exact files that you want to search in a text file. for example, to use the search criteria in the file Stringlist.txt, search the files listed in Filelist.txt, and then store the results in the file Results.out, type:
+To search for multiple strings in a set of files, create a text file that contains each search criterion on a separate line. You can also list the exact files that you want to search in a text file. For example, to use the search criteria in the file Stringlist.txt, search the files listed in Filelist.txt, and then store the results in the file Results.out, type:
 ```
 findstr /g:stringlist.txt /f:filelist.txt > results.out 
 ```

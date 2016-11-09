@@ -32,11 +32,11 @@ wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:In
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediatype:{Boot &#124; Install}|Specifies the type of image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image. Because it is possible to have the same image name for boot images in different architectures, specifying the architecture value ensures that the correct image is returned.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. if no image group is specified and only one image group exists on the server, that group will be used. if more than one image group exists on the server, you must use this parameter to specify the image group.|
+|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group is specified and only one image group exists on the server, that group will be used. If more than one image group exists on the server, you must use this parameter to specify the image group.|
 ## <a name="BKMK_examples"></a>Examples
 To retrieve information about a boot image, type one of the following:
 ```

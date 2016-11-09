@@ -94,8 +94,8 @@ for use with VDS 1.1 providers only. adds to or replaces the list of controller 
 **targets**
 for use with VDS 1.1 providers only. adds to or replaces the list of iSCSI targets that are associated with the currently selected LUN.
 **add**
-for VDS 1.0 providers, adds the specified controllers to the existing list of controllers associated with the LUN. if this parameter is not specified, the list of controllers replaces the existing list of controllers associated with this LUN.
-for VDS 1.1 providers, adds the specified controller ports to the existing list of controller ports associated with the LUN. if this parameter is not specified, the list of controller ports replaces the existing list of controller ports associated with this LUN.
+for VDS 1.0 providers, adds the specified controllers to the existing list of controllers associated with the LUN. If this parameter is not specified, the list of controllers replaces the existing list of controllers associated with this LUN.
+for VDS 1.1 providers, adds the specified controller ports to the existing list of controller ports associated with the LUN. If this parameter is not specified, the list of controller ports replaces the existing list of controller ports associated with this LUN.
 ```
 <n>[,<n> [, ...]]
 ```
@@ -158,7 +158,7 @@ break plex=<plex_number> [noerr]
 ```
 ##### Parameters
 **plex**
-Specifies the number of the plex to remove. The plex and the data it contained will not be retained, and the resources used by this plex will be reclaimed. The data contained on the LUN is not guaranteed to be consistent. if you want to retain this plex, use the volume shadow copy Service (VSS).
+Specifies the number of the plex to remove. The plex and the data it contained will not be retained, and the resources used by this plex will be reclaimed. The data contained on the LUN is not guaranteed to be consistent. If you want to retain this plex, use the volume shadow copy Service (VSS).
 **noerr**
 Specifies that any failures that occur while performing this operation will be ignored. This is useful in script mode.
 ##### remarks
@@ -187,7 +187,7 @@ Sets the shared secret in the currently selected iSCSI target used for CHAP auth
 **target remember**
 Communicates the CHAP secret of an iSCSI initiator to the current in-focus iSCSI target so that the target can use the secret in order to authenticate itself to the initiator during mutual CHAP authentication.
 **secret**
-Specifies the secret to use. if empty the secret will be cleared.
+Specifies the secret to use. If empty the secret will be cleared.
 **target**
 Specifies a target in the currently selected subsystem to associate with the secret. This is optional when setting a secret on the initiator and leaving it out indicates that the secret will be used for all targets that do not already have an associated secret.
 **initiatorname**
@@ -216,8 +216,8 @@ creates a mirrored LUN.
 **automagic**
 creates a LUN using the *automagic* hints currently in effect. See the **automagic** sub-command for more information.
 **size**=
-Specifies the total LUN size in megabytes. if the **size=** parameter is not specified, the LUN created will be the largest possible size allowed by all the specified drives.
-A provider typically creates a LUN at least as big as the requested size, but the provider may have to round up to the next largest size in some cases. for example, if size is specified as .99 GB and the provider can only allocate GB disk extents, the resulting LUN would be 1 GB.
+Specifies the total LUN size in megabytes. If the **size=** parameter is not specified, the LUN created will be the largest possible size allowed by all the specified drives.
+A provider typically creates a LUN at least as big as the requested size, but the provider may have to round up to the next largest size in some cases. For example, if size is specified as .99 GB and the provider can only allocate GB disk extents, the resulting LUN would be 1 GB.
 To specify the size using other units, use one of the following recognized suffixes immediately after the size:
 -   **B** for byte.
 -   **KB** for kilobyte.
@@ -226,7 +226,7 @@ To specify the size using other units, use one of the following recognized suffi
 -   **TB** for terabyte.
 -   **PB** for petabyte.
 **drives**=
-Specifies the *drive_number* for the drives to use to create a LUN. if the **size=** parameter is not specified, the LUN created is the largest possible size allowed by all the specified drives. if the **size=** parameter is specified, providers will select drives from the specified drive list to create the LUN. Providers will attempt to use the drives in the order specified when possible.
+Specifies the *drive_number* for the drives to use to create a LUN. If the **size=** parameter is not specified, the LUN created is the largest possible size allowed by all the specified drives. If the **size=** parameter is specified, providers will select drives from the specified drive list to create the LUN. Providers will attempt to use the drives in the order specified when possible.
 **stripesize**=
 Specifies the size in megabytes for a *stripe* or *RAID* LUN. The stripesize cannot be changed after the LUN is created.
 To specify the size using other units, use one of the following recognized suffixes immediately after the size:
@@ -292,7 +292,7 @@ lists detailed information about the currently selected controller port.
 **drive**
 lists detailed information about the currently selected drive, including the occupying LUNs.
 **lun**
-lists detailed information about the currently selected LUN, including the contributing drives. The output differs slightly depending on whether the LUN is part of a Fibre Channel or iSCSI subsystem. if the Unmasked Hosts list contains only an asterisk, this means that the LUN is unmasked to all hosts.
+lists detailed information about the currently selected LUN, including the contributing drives. The output differs slightly depending on whether the LUN is part of a Fibre Channel or iSCSI subsystem. If the Unmasked Hosts list contains only an asterisk, this means that the LUN is unmasked to all hosts.
 **tportal**
 lists detailed information about the currently selected iSCSI target portal.
 **target**
@@ -352,7 +352,7 @@ extend lun [size=<LUN_size>] [drives=<drive_number>, [<drive_number>, ...]] [noe
 ```
 ##### Parameters
 **size=**
-Specifies the size in megabytes to extend the LUN. if the **size=** parameter is not specified, the LUN is extended by the largest possible size allowed by all the specified drives. if the **size=** parameter is specified, providers select drives from the list specified by the **drives=** parameter to create the LUN.
+Specifies the size in megabytes to extend the LUN. If the **size=** parameter is not specified, the LUN is extended by the largest possible size allowed by all the specified drives. If the **size=** parameter is specified, providers select drives from the list specified by the **drives=** parameter to create the LUN.
 To specify the size using other units, use one of the following recognized suffixes immediately after the size:
 -   **B** for byte.
 -   **KB** for kilobyte.
@@ -361,7 +361,7 @@ To specify the size using other units, use one of the following recognized suffi
 -   **TB** for terabyte
 -   **PB** for petabyte
 **drives=**
-Specifies the <drive_number> for the drives to use when creating a LUN. if the **size=** parameter is not specified, the LUN created is the largest possible size allowed by all the specified drives. Providers use the drives in the order specified when possible.
+Specifies the <drive_number> for the drives to use when creating a LUN. If the **size=** parameter is not specified, the LUN created is the largest possible size allowed by all the specified drives. Providers use the drives in the order specified when possible.
 **noerr**
 Specifies that any failures that occur while performing this operation should be ignored. This is useful in script mode.
 ##### remarks
@@ -386,7 +386,7 @@ importtarget subsystem [set target]
 ```
 ##### Parameter
 **set target**
-if specified, sets the currently selected target to the VSS import target for the currently selected subsystem. if not specified, the command retrieves the current VSS import target that is set for the currently selected subsystem.
+if specified, sets the currently selected target to the VSS import target for the currently selected subsystem. If not specified, the command retrieves the current VSS import target that is set for the currently selected subsystem.
 #### <a name="BKMK_15"></a>initiator
 Retrieves information about the local iSCSI initiator.
 ##### Syntax
@@ -408,7 +408,7 @@ lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[
 ```
 ##### Parameters
 **type**
-Specifies the load balance policy. if the type is not specified, then the **path** parameter must be specified. type can be one of the following:
+Specifies the load balance policy. If the type is not specified, then the **path** parameter must be specified. type can be one of the following:
 **FAILOver**: Uses one primary path with other paths being backup paths.
 **ROUNDROBIN**: Uses all paths in round-robin fashion, which tries each path sequentially.
 **SUBSETROUNDROBIN**: Uses all primary paths in round-robin fashion; backup paths are used only if all primary paths fail.
@@ -457,7 +457,7 @@ login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none
 ```
 ##### Parameters
 **type**
-Specifies the type of login to perform: **manual**, **persistent**, or **boot**. if unspecified, a manual login will be performed.
+Specifies the type of login to perform: **manual**, **persistent**, or **boot**. If unspecified, a manual login will be performed.
 **manual** - Login manually.
 **persistent** - Automatically use the same login when the computer is restarted.
 **boot** - (This option is for future development and is not currently used*.*)
@@ -503,7 +503,7 @@ name {subsystem | lun | target} [<name>]
 ```
 ##### Parameter
 <name>
-Specifies a name for the subsystem, LUN, or target. The name must be less than 64 characters in length. if no name is supplied, the existing name, if any, is deleted.
+Specifies a name for the subsystem, LUN, or target. The name must be less than 64 characters in length. If no name is supplied, the existing name, if any, is deleted.
 #### <a name="BKMK_24"></a>offline
 Sets the state of the currently selected object of the specified type to **offline**.
 ##### Syntax
@@ -515,7 +515,7 @@ offline <object>
 Specifies the type of object on which to perform this operation. The <object>
 type can be **subsystem**, **controller**, **drive**, **LUN**, or **tportal**.
 #### <a name="BKMK_25"></a>online
-Sets the state of the selected object of the specified type to **online**. if object is **hbaport**, changes the status of the paths to the currently selected HBA port to **online**.
+Sets the state of the selected object of the specified type to **online**. If object is **hbaport**, changes the status of the paths to the currently selected HBA port to **online**.
 ##### Syntax
 ```
 online <object> 
@@ -525,13 +525,13 @@ online <object>
 Specifies the type of object on which to perform this operation. The <object>
 type can be **hbaport**, **subsystem**, **controller**, **drive**, **LUN**, or **tportal**.
 #### <a name="BKMK_26"></a>recover
-Performs operations necessary, such as resynchronization or hot sparing, to repair the currently selected fault-tolerant LUN. for example, recover might cause a hot spare to be bound to a RAID set that has a failed disk or other disk extent reallocation.
+Performs operations necessary, such as resynchronization or hot sparing, to repair the currently selected fault-tolerant LUN. For example, recover might cause a hot spare to be bound to a RAID set that has a failed disk or other disk extent reallocation.
 ##### Syntax
 ```
 recover <lun>
 ```
 #### <a name="BKMK_27"></a>reenumerate
-Reenumerates objects of the specified type. if you use the extend LUN command, you must use the refresh command to update the disk size before using the reenumerate command.
+Reenumerates objects of the specified type. If you use the extend LUN command, you must use the refresh command to update the disk size before using the reenumerate command.
 ##### Syntax
 ```
 reenumerate {subsystems | drives}
@@ -596,31 +596,31 @@ select {hbaport | iadapter | iportal | provider | subsystem | controller | port 
 **object**
 Specifies the type of object to select. The <object> type can be **provider**, **subsystem**, **controller**, **drive**, or **LUN**.
 **hbaport** [<n>]
-Sets the focus to the specified local HBA port. if no HBA port is specified, the command displays the currently selected HBA port (if any). Specifying an invalid HBA port index results in no in-focus HBA port. selecting an HBA port deselects any selected initiator adapters and initiator portals.
+Sets the focus to the specified local HBA port. If no HBA port is specified, the command displays the currently selected HBA port (if any). Specifying an invalid HBA port index results in no in-focus HBA port. selecting an HBA port deselects any selected initiator adapters and initiator portals.
 **iadapter** [<n>]
-Sets the focus to the specified local iSCSI initiator adapter. if no initiator adapter is specified, the command displays the currently selected initiator adapter (if any). Specifying an invalid initiator adapter index results in no in-focus initiator adapter. selecting an initiator adapter deselects any selected HBA ports and initiator portals.
+Sets the focus to the specified local iSCSI initiator adapter. If no initiator adapter is specified, the command displays the currently selected initiator adapter (if any). Specifying an invalid initiator adapter index results in no in-focus initiator adapter. selecting an initiator adapter deselects any selected HBA ports and initiator portals.
 **iportal** [<n>]
-Sets the focus to the specified local iSCSI initiator portal within the selected iSCSI initiator adapter. if no initiator portal is specified, the command displays the currently selected initiator portal (if any). Specifying an invalid initiator portal index results in no selected initiator portal.
+Sets the focus to the specified local iSCSI initiator portal within the selected iSCSI initiator adapter. If no initiator portal is specified, the command displays the currently selected initiator portal (if any). Specifying an invalid initiator portal index results in no selected initiator portal.
 **provider** [<n>]
-Sets the focus to the specified provider. if no provider is specified, the command displays the currently selected provider (if any). Specifying an invalid provider index results in no in-focus provider.
+Sets the focus to the specified provider. If no provider is specified, the command displays the currently selected provider (if any). Specifying an invalid provider index results in no in-focus provider.
 **subsystem** [<n>]
-Sets the focus to the specified subsystem. if no subsystem is specified, the command displays the subsystem with focus (if any). Specifying an invalid subsystem index results in no in-focus subsystem. selecting a subsystem implicitly selects its associated provider.
+Sets the focus to the specified subsystem. If no subsystem is specified, the command displays the subsystem with focus (if any). Specifying an invalid subsystem index results in no in-focus subsystem. selecting a subsystem implicitly selects its associated provider.
 **controller** [<n>]
-Sets the focus to the specified controller within the currently selected subsystem. if no controller is specified, the command displays the currently selected controller (if any). Specifying an invalid controller index results in no in-focus controller. selecting a controller deselects any selected controller ports, drives, LUNs, target portals, targets, and target portal groups.
+Sets the focus to the specified controller within the currently selected subsystem. If no controller is specified, the command displays the currently selected controller (if any). Specifying an invalid controller index results in no in-focus controller. selecting a controller deselects any selected controller ports, drives, LUNs, target portals, targets, and target portal groups.
 **port** [<n>]
-Sets the focus to the specified controller port within the currently selected controller. if no port is specified, the command displays the currently selected port (if any). Specifying an invalid port index results in no selected port.
+Sets the focus to the specified controller port within the currently selected controller. If no port is specified, the command displays the currently selected port (if any). Specifying an invalid port index results in no selected port.
 **drive** [<n>]
-Sets the focus to the specified drive, or physical spindle, within the currently selected subsystem. if no drive is specified, the command displays the currently selected drive (if any). Specifying an invalid drive index results in no in-focus drive. selecting a drive deselects any selected controllers, controller ports, LUNs, target portals, targets, and target portal groups.
+Sets the focus to the specified drive, or physical spindle, within the currently selected subsystem. If no drive is specified, the command displays the currently selected drive (if any). Specifying an invalid drive index results in no in-focus drive. selecting a drive deselects any selected controllers, controller ports, LUNs, target portals, targets, and target portal groups.
 **lun** [<n>]
-Sets the focus to the specified LUN within the currently selected subsystem. if no LUN is specified, the command displays the currently selected LUN (if any). Specifying an invalid LUN index results in no selected LUN. selecting a LUN deselects any selected controllers, controller ports, drives, target portals, targets, and target portal groups.
+Sets the focus to the specified LUN within the currently selected subsystem. If no LUN is specified, the command displays the currently selected LUN (if any). Specifying an invalid LUN index results in no selected LUN. selecting a LUN deselects any selected controllers, controller ports, drives, target portals, targets, and target portal groups.
 **tportal** [<n>]
-Sets the focus to the specified iSCSI target portal within the currently selected subsystem. if no target portal is specified, the command displays the currently selected target portal (if any). Specifying an invalid target portal index results in no selected target portal. selecting a target portal deselects any controllers, controller ports, drives, LUNs, targets, and target portal groups.
+Sets the focus to the specified iSCSI target portal within the currently selected subsystem. If no target portal is specified, the command displays the currently selected target portal (if any). Specifying an invalid target portal index results in no selected target portal. selecting a target portal deselects any controllers, controller ports, drives, LUNs, targets, and target portal groups.
 **target** [<n>]
-Sets the focus to the specified iSCSI target within the currently selected subsystem. if no target is specified, the command displays the currently selected target (if any). Specifying an invalid target index results in no selected target. selecting a target deselects any controllers, controller ports, drives, LUNs, target portals, and target portal groups.
+Sets the focus to the specified iSCSI target within the currently selected subsystem. If no target is specified, the command displays the currently selected target (if any). Specifying an invalid target index results in no selected target. selecting a target deselects any controllers, controller ports, drives, LUNs, target portals, and target portal groups.
 **tpgroup** [<n>]
-Sets the focus to the specified iSCSI target portal group within the currently selected iSCSI target. if no target portal group is specified, the command displays the currently selected target portal group (if any). Specifying an invalid target portal group index results in no in-focus target portal group.
+Sets the focus to the specified iSCSI target portal group within the currently selected iSCSI target. If no target portal group is specified, the command displays the currently selected target portal group (if any). Specifying an invalid target portal group index results in no in-focus target portal group.
 [<n>]
-Specifies the <object number> to select. if the <object number> specified is not valid, any existing selections for objects of the specified type are cleared. if no <object number> is specified, the current object is displayed.
+Specifies the <object number> to select. If the <object number> specified is not valid, any existing selections for objects of the specified type are cleared. If no <object number> is specified, the current object is displayed.
 #### <a name="BKMK_34"></a>setflag
 Sets the currently selected drive as a hot spare.
 ##### Syntax
@@ -663,14 +663,14 @@ unmask LUN {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [
 ##### Parameters
 **all**
 Specifies that the LUN should be made accessible from all hosts. However, you cannot unmask the LUN to all targets in an iSCSI subsystem.
-> [!importANT]
+> [!IMPORTANT]
 > You must logout of the target before you run the UNmask ALL command.
 **none**
 Specifies that the LUN should not be accessible to any host.
-> [!importANT]
+> [!IMPORTANT]
 > You must logout of the target before you run the UNmask LUN NONE command.
 **add**
-Specifies that the hosts specified must be added to the existing list of hosts that this LUN is accessible from. if this parameter is not specified, the list of hosts supplied replaces the existing list of hosts that this LUN is accessible from.
+Specifies that the hosts specified must be added to the existing list of hosts that this LUN is accessible from. If this parameter is not specified, the list of hosts supplied replaces the existing list of hosts that this LUN is accessible from.
 **WWN=**
 Specifies a list of hexadecimal numbers representing world-wide names from which the LUN or hosts should be made accessible. To mask/unmask to a specific set of hosts in a Fibre Channel subsystem, you can type a semicolon-separated list of WWN s for the ports on the host machines of interest.
 **initiator=**

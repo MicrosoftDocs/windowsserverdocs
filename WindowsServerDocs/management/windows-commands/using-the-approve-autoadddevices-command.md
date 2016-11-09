@@ -27,15 +27,15 @@ wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<R
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if a server name is not specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If a server name is not specified, the local server will be used.|
 |/RequestId:{Request ID &#124; ALL}|Specifies the request ID assigned to the pending computer. Specify **ALL** to approve all pending computers.|
 |[/MachineName:<Device name>]|Specifies the name of the computer to be added. You cannot use this option when approving all computers.|
-|[/OU:<DN of OU>]|Specifies the distinguished name of the organizational unit (OU) where the computer account object should be created. for example: **OU=MyOU,CN=Test,DC=Domain,DC=com**. The default location is the container of the default computer.|
+|[/OU:<DN of OU>]|Specifies the distinguished name of the organizational unit (OU) where the computer account object should be created. For example: **OU=MyOU,CN=Test,DC=Domain,DC=com**. The default location is the container of the default computer.|
 |[/User:<Domain\User &#124; User@Domain>]|Sets permissions on the computer account object to assign the specified user the necessary rights.|
 |[/JoinRights:{JoinOnly &#124; Full}]|Specifies the type of rights to be assigned to the specified user.<br /><br />-   **JoinOnly** requires the administrator to reset the computer account before the user can join the computer to the domain.<br />-   **Full** gives full access to the user, which includes the right to join the computer to the domain.|
 |[/JoinDomain:{Yes &#124; No}]|Specifies whether or not the computer should be joined to the domain as this computer account during operating system installation. The default value is **Yes**.|
 |[/ReferralServer:<Server name>]|Specifies the name of the server to be contacted to download the network boot program and boot image by using Trivial File Transfer Protocol (tftp).|
-|[/BootProgram:<Relative path>]|Specifies the relative path from the remoteInstall folder to the network boot program that this computer should receive. for example: **boot\x86\pxeboot.com**.|
+|[/BootProgram:<Relative path>]|Specifies the relative path from the remoteInstall folder to the network boot program that this computer should receive. For example: **boot\x86\pxeboot.com**.|
 |[/WdsClientUnattend:<Relative path>]|Specifies the relative path from the remoteInstall folder to the unattend file that automates the Windows Deployment Services client.|
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that this computer should receive.|
 ## <a name="BKMK_examples"></a>Examples

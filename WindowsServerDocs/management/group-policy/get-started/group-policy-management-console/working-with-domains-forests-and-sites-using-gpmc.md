@@ -54,7 +54,7 @@ GPMC supports management of multiple forests from within the console, when there
   
 2.  In the **add forest** dialog box, type the DNS or NetBIOS name of any domain in the forest, and then click **OK**.  
   
-You can specify either the DNS name or the NetBIOS name of any domain in the forest. if you specify a NetBIOS name, you must confirm that the NetBIOS name corresponds to the DNS name of the domain.  
+You can specify either the DNS name or the NetBIOS name of any domain in the forest. If you specify a NetBIOS name, you must confirm that the NetBIOS name corresponds to the DNS name of the domain.  
   
 ## How to add a site  
 Sites do not appear in the console tree unless you explicitly add them. adding a site to the GPMC does not create a new site but allows you to view and manage that site from the GPMC.  

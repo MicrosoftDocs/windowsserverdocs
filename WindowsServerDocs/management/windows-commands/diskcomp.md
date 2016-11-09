@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 # diskcomp
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
-compares the contents of two floppy disks. if used without parameters, **diskcomp** uses the current drive to compare both disks.
+compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -31,7 +31,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 |/?|Displays help at the command prompt.|
 ## remarks
 -   Using disks
-    The **diskcomp** command works only with floppy disks. You cannot use **diskcomp** with a hard disk. if you specify a hard disk drive for *Drive1* or *Drive2*, **diskcomp** displays the following error message:
+    The **diskcomp** command works only with floppy disks. You cannot use **diskcomp** with a hard disk. If you specify a hard disk drive for *Drive1* or *Drive2*, **diskcomp** displays the following error message:
     ```
     Invalid drive specification
     Specified drive does not exist
@@ -51,19 +51,19 @@ diskcomp [<Drive1>: [<Drive2>:]]
     ```
     compare another diskette (Y/N)?
     ```
-    if you press Y, **diskcomp** prompts you to insert the disk for the next comparison. if you press N, **diskcomp** stops the comparison.
+    if you press Y, **diskcomp** prompts you to insert the disk for the next comparison. If you press N, **diskcomp** stops the comparison.
     When **diskcomp** makes the comparison, it ignores a disk's volume number.
 -   Omitting drive parameters
-    if you omit the *Drive2* parameter, **diskcomp** uses the current drive for *Drive2*. if you omit both drive parameters, **diskcomp** uses the current drive for both. if the current drive is the same as *Drive1*, **diskcomp** prompts you to swap disks as necessary.
+    if you omit the *Drive2* parameter, **diskcomp** uses the current drive for *Drive2*. If you omit both drive parameters, **diskcomp** uses the current drive for both. If the current drive is the same as *Drive1*, **diskcomp** prompts you to swap disks as necessary.
 -   Using one drive
     if you specify the same floppy disk drive for *Drive1* and *Drive2*, **diskcomp** compares them by using one drive and prompts you to insert the disks as necessary. You might have to swap the disks more than once, depending on the capacity of the disks and the amount of available memory.
 -   comparing different types of disks
-    **diskcomp** cannot compare a single-sided disk with a double-sided disk, nor a high-density disk with a double-density disk. if the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:
+    **diskcomp** cannot compare a single-sided disk with a double-sided disk, nor a high-density disk with a double-density disk. If the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:
     ```
     Drive types or diskette types not compatible
     ```
 -   Using **diskcomp** with networks and redirected drives
-    **diskcomp** does not work on a network drive or on a drive created by the **subst** command. if you attempt to use **diskcomp** with a drive of any of these types, **diskcomp** displays the following error message:
+    **diskcomp** does not work on a network drive or on a drive created by the **subst** command. If you attempt to use **diskcomp** with a drive of any of these types, **diskcomp** displays the following error message:
     ```
     Invalid drive specification
     ```

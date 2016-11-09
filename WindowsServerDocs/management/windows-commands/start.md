@@ -30,7 +30,7 @@ start ["<Title>"] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |-------|--------|  
 |"<Title>"|Specifies the title to display in the Command prompt window title bar.|  
 |/d <path>|Specifies the startup directory.|  
-|/i|Passes the Cmd.exe startup environment to the new Command prompt window. if **/i** is not specified, the current environment is used.|  
+|/i|Passes the Cmd.exe startup environment to the new Command prompt window. If **/i** is not specified, the current environment is used.|  
 |{/min &#124; /max}|Specifies to minimize (**/min**) or maximize (**/max**) the new Command prompt window.|  
 |{/separate &#124; /shared}|starts 16-bit programs in a separate memory space (**/separate**) or shared memory space (**/shared**). These options are not supported on 64-bit platforms.|  
 |{/low &#124; /normal &#124; /high &#124; /realtime &#124; /abovenormal &#124; /belownormal}|starts an application in the specified priority class. Valid priority class values are **/low**, **/normal**, **/high**, **/realtime**, **/abovenormal**, and **/belownormal**.|  
@@ -49,7 +49,7 @@ start ["<Title>"] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
     .COM;.EXE;.Bat;.CMD   
     ```  
     Note that the syntax is the same as the path variable, with semicolons separating each extension.  
--   When it searches for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. if it does, **start** opens Explorer.exe on that path.  
+-   When it searches for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.  
 ## <a name="BKMK_examples"></a>Examples  
 To start the Myapp program at the command prompt and retain use of the current Command prompt window, type:  
 ```  

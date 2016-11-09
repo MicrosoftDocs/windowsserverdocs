@@ -30,9 +30,9 @@ tasklist [/s <computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 |/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
 |/u [<Domain>\\]<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
-|/m <Module>|lists all tasks with DLL modules loaded that match the given pattern name. if the module name is not specified, this option displays all modules loaded by each task.|
+|/m <Module>|lists all tasks with DLL modules loaded that match the given pattern name. If the module name is not specified, this option displays all modules loaded by each task.|
 |/svc|lists all the service information for each process without truncation. Valid when the **/fo** parameter is set to **table**.|
-|/v|Displays verbose task information in the output. for complete verbose output without truncation, use **/v** and **/svc** together.|
+|/v|Displays verbose task information in the output. For complete verbose output without truncation, use **/v** and **/svc** together.|
 |/fo {table &#124; list &#124; csv}|Specifies the format to use for the output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**.|
 |/nh|Suppresses column headers in the output. Valid when the **/fo** parameter is set to **table** or **csv**.|
 |/fi <Filter>|Specifies the types of processes to include in or exclude from the query. See the following table for valid filter names, operators, and values.|

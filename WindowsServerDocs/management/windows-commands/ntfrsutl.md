@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Dumps the internal tables, thread, and memory information for the NT File Replication Service \(NTFRS\). It runs against local and remote servers. The recovery setting for NTFRS in Service Control Manager \(SCM\) can be critical to locating and keeping important log events on the computer. This tool provides a convenient method of reviewing those settings.   
+Dumps the internal tables, thread, and memory information for the NT File Replication Service \(NTFRS\). It runs against local and remote servers. The recovery setting for NTFRS in Service Control Manager \(SCM\) can be critical to locating and keeping IMPORTANT log events on the computer. This tool provides a convenient method of reviewing those settings.   
   
 ## Syntax  
   

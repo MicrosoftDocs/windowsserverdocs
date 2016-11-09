@@ -48,11 +48,11 @@ wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Displays the multicast transmission that is associated with this image.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server is used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 mediatype:Install|Specifies the image type. Note that this option must be set to **Install**.|
-|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. if no image group name is specified and only one image group exists on the server, that image group is used. if more than one image group exists on the server, you must use this option to specify an image group.|
+|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify an image group.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image that is associated with the transmission. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure                                   that the correct image is used.|
-|[/Filename:<File name>]|Specifies the file that contains the image. if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
+|[/Filename:<File name>]|Specifies the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |[/Show:Clients]<br /><br />or<br /><br />[/details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
 ## <a name="BKMK_examples"></a>Examples
 **Windows Server 2008**

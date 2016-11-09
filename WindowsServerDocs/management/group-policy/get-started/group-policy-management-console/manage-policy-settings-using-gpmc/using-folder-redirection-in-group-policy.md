@@ -71,7 +71,7 @@ You can use the GPMC to redirect the following folders:
 ## selecting a Folder Redirection target
 The **Target** tab of the folder's **Properties** box enables you to select the location of the redirected folder on a network or in the local user profile. You can choose between the following settings:
 
--   **Basic Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. for this setting, you have the following options in specifying a target folder location:
+-   **Basic Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
 
     -   **create a folder for each user under the root path**. This option creates a folder in the form **\\\server\share\User Account Name\Folder Name**. Each user has a unique path for their redirected folder.
 

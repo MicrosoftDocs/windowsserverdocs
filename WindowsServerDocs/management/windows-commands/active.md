@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 On basic disks, marks the partition with focus as active.
 > [!CAUTION]
-> DiskPart verifies only that the partition is capable of containing the operating system startup files. DiskPart does not check the contents of the partition. if you mistakenly mark a partition as active and it does not contain the operating system startup files, your computer might not start.
+> DiskPart verifies only that the partition is capable of containing the operating system startup files. DiskPart does not check the contents of the partition. If you mistakenly mark a partition as active and it does not contain the operating system startup files, your computer might not start.
 ## Syntax
 ```
 active

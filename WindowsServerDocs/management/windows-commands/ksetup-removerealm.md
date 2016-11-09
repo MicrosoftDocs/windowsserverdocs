@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-deletes all information for the specified realm from the registry. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+deletes all information for the specified realm from the registry. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /removerealm <RealmName>

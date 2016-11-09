@@ -32,7 +32,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 |escape <Character>|Sets the escape character used to enter the telnet client prompt. The escape character can be a single character, or it can be a combination of the **CTRL** key plus a character. To set a control-key combination, hold down the **CTRL** key while you type the character that you want to assign.|  
 |localecho|Turns on local echo.|  
 |logfile <FileName>|Logs the current telnet session to the local file. Logging begins automatically when you set this option.|  
-|logging|Turns on logging. if no log file is set, an error message appears.|  
+|logging|Turns on logging. If no log file is set, an error message appears.|  
 |mode {console &#124; screen}|Sets the operation mode.|  
 |ntlm|Turns on NTLM authentication.|  
 |term {ansi &#124; vt100 &#124; vt52 &#124; vtnt}|Sets the terminal type.|  

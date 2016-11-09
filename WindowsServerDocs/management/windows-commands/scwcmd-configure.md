@@ -26,8 +26,8 @@ scwcmd configure [[[/m:<computerName> | /ou:<OuName>] /p:<Policy>] | /i:<compute
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|/m:<computerName>|Specifies the NetBIOS name, DNS name, or IP address of the computer to configure. if the **/m** parameter is specified, then the **/p** parameter must also be specified.|
-|/ou:<OuName>|Specifies the fully qualified domain name (FQDN) of an organizational unit (OU) in active directory Domain Services. if the **/ou** parameter is specified, then the **/p** parameter must also be specified. All computers in the OU will be analyzed according to the given policy.|
+|/m:<computerName>|Specifies the NetBIOS name, DNS name, or IP address of the computer to configure. If the **/m** parameter is specified, then the **/p** parameter must also be specified.|
+|/ou:<OuName>|Specifies the fully qualified domain name (FQDN) of an organizational unit (OU) in active directory Domain Services. If the **/ou** parameter is specified, then the **/p** parameter must also be specified. All computers in the OU will be analyzed according to the given policy.|
 |/p:<Policy>|Specifies the path and file name of the .xml policy file to be used to perform the configuration.|
 |/i:<computerlist>|Specifies the path and file name of an .xml file that contains a list of computers along with their expected policy files. All computers in the .xml file will be configured according to their corresponding policy files. A sample .xml file is %windir%\security\SampleMachinelist.xml.|
 |/u:<UserName>|Specifies an alternate user credential to use when configuring a remote computer. The default is the logged on user.|

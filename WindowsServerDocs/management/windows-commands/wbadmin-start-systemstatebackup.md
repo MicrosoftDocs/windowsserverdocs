@@ -32,7 +32,7 @@ wbadmin start systemstatebackup
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|-backupTarget|Specifies the location where you want to store the backup. The storage location requires a drive letter or a GUID-based volume of the format: \\\\?\volume{*GUID*}.<br /><br />A system state backup to a shared network folder is not supported on a computer running Windows Server 2008. if your server is running Windows Server 2008 R2 or later you can use the command **-backuptarget:\\\servername\sharedFolder\\** to store system state backups.|
+|-backupTarget|Specifies the location where you want to store the backup. The storage location requires a drive letter or a GUID-based volume of the format: \\\\?\volume{*GUID*}.<br /><br />A system state backup to a shared network folder is not supported on a computer running Windows Server 2008. If your server is running Windows Server 2008 R2 or later you can use the command **-backuptarget:\\\servername\sharedFolder\\** to store system state backups.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 ## remarks
 for information about saving a system state backup to a volume that, in turn, contains system state files, see article 944530 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=110439](http://go.microsoft.com/fwlink/?LinkId=110439)).

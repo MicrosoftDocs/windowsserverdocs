@@ -31,7 +31,7 @@ Servers can be a member of more than one group.
 
 2.  In the **Server group name** text box, type a friendly name for your server group, such as **Accounting Servers**.
 
-3.  add servers to the **selected** list from the server pool, or add other servers to the group by using the **active directory**, **DNS**, or **import** tabs. for more information about how to use these tabs, see [add Servers to Server Manager](add-servers-to-server-manager.md) in this guide.
+3.  add servers to the **selected** list from the server pool, or add other servers to the group by using the **active directory**, **DNS**, or **import** tabs. For more information about how to use these tabs, see [add Servers to Server Manager](add-servers-to-server-manager.md) in this guide.
 
 4.  When you have finished adding servers to the group, click **OK**. The new group is displayed in the Server Manager navigation pane under the **All Servers** group.
 

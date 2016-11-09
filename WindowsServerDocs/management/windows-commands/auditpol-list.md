@@ -30,8 +30,8 @@ auditpol /list
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/user|Retrieves all users for whom the per-user audit policy has been defined. if used with the /v parameter, the security identifier (SID) of the user is also displayed.|
-|/category|Displays the names of categories understood by the system. if used with the /v parameter, the category globally unique identifier (GUID) is also displayed.|
+|/user|Retrieves all users for whom the per-user audit policy has been defined. If used with the /v parameter, the security identifier (SID) of the user is also displayed.|
+|/category|Displays the names of categories understood by the system. If used with the /v parameter, the category globally unique identifier (GUID) is also displayed.|
 |/subcategory|Displays the names of subcategories and their associated GUID.|
 |/v|Displays the GUID with the category or subcategory, or when used with /user, displays the SID of each user.|
 |/r|Displays the output as a report in comma-separated value (CSV) format.|

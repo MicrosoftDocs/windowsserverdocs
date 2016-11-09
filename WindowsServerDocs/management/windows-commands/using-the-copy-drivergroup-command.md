@@ -26,7 +26,7 @@ wdsutil /copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Nam
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. if no server name is specified, the local server is used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
 |/DriverGroup:<Source Group Name>|Specifies the name of the source driver group.|
 |/GroupName:<New Group Name>|Specifies the name of the new driver group.|
 ## <a name="BKMK_examples"></a>Examples

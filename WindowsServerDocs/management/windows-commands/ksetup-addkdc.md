@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-adds a Key Distribution Center (KDC) address for the given Kerberos realm. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+adds a Key Distribution Center (KDC) address for the given Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /addkdc <RealmName> [<KDCName>] 
@@ -27,7 +27,7 @@ ksetup /addkdc <RealmName> [<KDCName>]
 |Parameter|Description|
 |-------|--------|
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run. It is to this realm that you are attempting to add the other KDC.|
-|<KDCName>|The KDC name is stated as a case insensitive fully qualified domain name, such as mitkdc.microsoft.com. if the KDC name is omitted, DNS will locate KDCs.|
+|<KDCName>|The KDC name is stated as a case insensitive fully qualified domain name, such as mitkdc.microsoft.com. If the KDC name is omitted, DNS will locate KDCs.|
 ## remarks
 These mappings are stored in the registry under **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\Kerberos\Domains**. To deploy Kerberos realm configuration data to multiple computers, use the Security Configuration Template snap-in and policy distribution instead of using **ksetup** explicitly on individual computers.
 The computer must be restarted before the new realm setting will be used.

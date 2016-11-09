@@ -22,7 +22,7 @@ starter Group Policy Objects are derived from a Group Policy Object, and provide
 
 System starter Group Policy Objects (GPOs) are read-only starter GPOs that provide a baseline of settings for a specific scenario. Like starter GPOs, they derive from a GPO, provide the ability to store a collection of Administrative Template policy settings in a single object, and can be imported. You can determine whether a starter GPO is a System starter GPO by viewing the **starter GPO type** on the **details** tab of the starter GPO.
 
-A variety of System starter GPOs are included with Windows Server. for information about the recommended use of each System starter GPO, see the **Comment** on the **details** tab for that starter GPO.
+A variety of System starter GPOs are included with Windows Server. For information about the recommended use of each System starter GPO, see the **Comment** on the **details** tab for that starter GPO.
 
 ## <a name="BKMK_create"></a>How to create a starter GPO
 
@@ -119,11 +119,11 @@ There are two ways to create a new Group Policy object from a starter GPO. You c
 
 3.  In the **Backup starter GPO** dialog box, in the **Location** box, enter the path for the location where you want to store the starter GPO backups. Or click **Browse**, locate the folder in which you want to store the starter GPO backups, and then click **OK**.
 
-4.  In the **Description** box, type a description for the starter GPOs that you want to back up, and then click **Back Up**. if you are backing up multiple starter GPOs, the description will apply to all starter GPOs you back up.
+4.  In the **Description** box, type a description for the starter GPOs that you want to back up, and then click **Back Up**. If you are backing up multiple starter GPOs, the description will apply to all starter GPOs you back up.
 
 5.  After the operation completes, click **OK**.
 
-    > [!importANT]
+    > [!IMPORTANT]
     > To secure backed-up starter GPOs, ensure that only authorized administrators have permission to access the folder to which you are backing up the starter GPOs.
 
 ## How to restore a starter GPO
