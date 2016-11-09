@@ -133,7 +133,7 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 
 **Table 3** Shows the storage efficiency of dual parity and local reconstruction codes at each scale.
 
-|    Fault domains      |    SSD + HDD                          |    All SSD                             |
+|    Fault domains      |    SSD + HDD        |                 |    All SSD           |                 |
 |-----------------------|---------------------|-----------------|----------------------|-----------------|
 |                       |    Layout           |    Efficiency   |    Layout            |    Efficiency   |
 |    2                  |    –                |    –            |    –                 |    –            |
