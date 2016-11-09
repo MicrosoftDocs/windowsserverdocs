@@ -46,7 +46,7 @@ This guide provides instructions on how to deploy Network Controller with virtua
 
 Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.
 
-### [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)
+### [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
 
 Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
 ### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
@@ -104,6 +104,10 @@ Network Load Balancing \(NLB\) distributes traffic across several servers using 
 ### [Network Offload and Optimization Technologies](technologies/network-offload.md)
 
 Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
+
+### [Network Policy Server](technologies/nps/nps-top.md)
+
+Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
