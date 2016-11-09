@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: "Windows Commands topic for **bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS \(SSL\) request."
+description: "Windows Commands topic for **bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
