@@ -77,9 +77,5 @@ Described in RFC 2869, "RADIUS Extensions," a Message Digest 5 \(MD5\) hash of t
 >[!NOTE]
 >The Message Authenticator attribute is required and enabled by default when you use Extensible Authentication Protocol \(EAP\) authentication. 
 
-### Client is NAP-capable
-
-A designation that the RADIUS client is compatible with Network Access Protection \(NAP\), and NPS sends NAP attributes to the RADIUS client in the Access-Accept message.
-
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
 
