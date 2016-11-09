@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 08/01/2016
+ms.date: 11/08/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb58cc93-d39a-4677-9bde-d8d816a7e636
@@ -22,8 +22,9 @@ Use the following steps to configure trusted certificates.
   
 1. Connect to the RDMS server in the Azure portal, using the Remote Desktop Connection client.
 
+   >[NOTE] 
+   > Certificate operations (Steps 2-4) will differ if you plan on using a certificate from a trusted root certification authority.
 
->[NOTE] Certificate operations (Steps 2-4) will differ if you plan on using a certificate from a trusted root certification authority.  
 2. Create and install self-signed certificates for the RD Connection Broker servers. (This procedure will differ if you're using certificates from a trusted certificate authority.)  
     1. In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.   
     2. Expand **Certificates**.   
