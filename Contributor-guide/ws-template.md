@@ -24,7 +24,7 @@ ms.assetid: [GET ONE FROM guidgenerator.com]
 
 # Metadata and Markdown Template
 
-This OPS template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the raw Markdown and the rendered view. (The raw Markdown shows the metadata block, while the rendered view does not.)
+This OPS template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/Microsoft/WindowsServerDocs-pr/master/Contributor-guide/ws-template.md?token=AG1vEhARRHNLtPgKXP35BGjNZGajKOArks5YLNIwwA%3D%3D) and the [rendered view](https://github.com/Microsoft/WindowsServerDocs-pr/blob/master/Contributor-guide/ws-template.md). (The raw Markdown shows the metadata block, while the rendered view does not.)
 
 When creating a Markdown file, you should copy this template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content. Anything in CAPS in square brackets requires your attention.
 
