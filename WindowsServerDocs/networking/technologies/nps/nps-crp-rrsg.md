@@ -36,3 +36,5 @@ Each server in the group has the following settings.
 - **Load balancing**. A priority setting is used to indicate which member of the group is the primary server (the priority is set to 1). For group members that have the same priority, a weight setting is used to calculate how often RADIUS messages are sent to each server. You can use additional settings to configure the way in which the NPS server detects when a group member first becomes unavailable and when it becomes available after it has been determined to be unavailable.
 
 After you have configured a Remote RADIUS Server Group, you can specify the group in the authentication and accounting settings of a connection request policy. Because of this, you can configure a remote RADIUS server group first. Next, you can configure the connection request policy to use the newly configured remote RADIUS server group. Alternatively, you can use the New Connection Request Policy Wizard to create a new remote RADIUS server group while you are creating the connection request policy.
+
+For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
