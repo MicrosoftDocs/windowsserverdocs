@@ -1,7 +1,6 @@
 ---
-title: bdehdcfg: driveinfo
-description: "Windows Commands topic for ** bdehdcfg: driveinfo** - 
-Displays the drive letter, the total size, the maximum free space, and the partition characteristics."
+title: bdehdcfg driveinfo
+description: "Windows Commands topic for ** bdehdcfg: driveinfo** - Displays the drive letter, the total size, the maximum free space, and the partition characteristics."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
