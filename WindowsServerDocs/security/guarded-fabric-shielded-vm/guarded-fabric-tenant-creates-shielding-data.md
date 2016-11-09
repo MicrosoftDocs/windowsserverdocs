@@ -7,7 +7,9 @@ ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Shielded VMs - Tenant creates shielding data to define a shielded VM
 
 >Applies To: Windows Server 2016
@@ -34,7 +36,7 @@ One way to verify you are connecting to the intended server is to install and co
 
 If you are evaluating shielded VMs and are not yet ready to request a certificate from your certificate authority, you can create a self-signed certificate on the tenant machine by running the following Windows PowerShell command (where *contoso.com* is the tenant's domain):
 
-``` syntax
+``` powershell
 $rdpCertificate = New-SelfSignedCertificate -DnsName '\*.contoso.com'
 $password = ConvertTo-SecureString -AsPlainText 'Password1' -Force
 Export-PfxCertificate -Cert $RdpCertificate -FilePath .\rdpCert.pfx -Password $password

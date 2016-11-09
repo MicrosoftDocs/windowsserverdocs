@@ -7,7 +7,9 @@ ms.assetid: cf257b3a-9365-42e2-a37c-327cac6028d4
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Guarded fabric and shielded VMs overview
 
 >Applies To: Windows Server 2016
@@ -33,7 +35,7 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 The HGS supports two different attestation modes for a guarded fabric:
 
 - TPM-trusted attestation (Hardware based)
-- Admin-trusted attestation (AD based)
+- Admin-trusted attestation (Active Directory based)
 
 TPM-trusted attestation is recommended because it offers stronger assurances, as explained in the following table, but it requires that your Hyper-V hosts have TPM 2.0. If you currently do not have TPM 2.0, you can use Admin-trusted attestation. If you decide to move to TPM-trusted attestation when you acquire new hardware, you can switch the attestation mode on the Host Guardian Service with little or no interruption to your fabric.
 

@@ -7,7 +7,9 @@ ms.assetid: 095315e4-c4a7-4b80-91d8-528119b62c4c
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Scenario 2 - Deploy a shielded VM by using Windows Azure Pack
 
 >Applies To: Windows Server 2016

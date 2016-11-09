@@ -7,7 +7,9 @@ ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function
 
 >Applies To: Windows Server 2016
@@ -122,7 +124,7 @@ After the setup is complete and you have signed in, you can check the following 
 
 Here is an example of what a successful output looks like:
 
-```powershell
+```
 Updating policy...
 Computer Policy update has completed successfully.
 User Policy update has completed successfully.
