@@ -72,32 +72,6 @@ The following illustration shows NPS as a RADIUS server for a variety of access 
 
 ![NPS as a RADIUS Server](../../media/Nps-Server/Nps-Server.jpg)
 
-
-#### NPS as a RADIUS server connection request processing
-
-When you use NPS as a RADIUS server, RADIUS messages provide authentication, authorization, and accounting for network access connections in the following way:
-
-1. Access servers, such as dial-up network access servers, VPN servers, and wireless access points, receive connection requests from access clients. 
-
-2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS server. 
-
-3. The NPS server evaluates the Access-Request message. 
-
-4. If required, the NPS server sends an Access-Challenge message to the access server. The access server processes the challenge and sends an updated Access-Request to the NPS server. 
-
-5. The user credentials are checked and the dial-in properties of the user account are obtained by using a secure connection to a domain controller. 
-
-6. The connection attempt is authorized with both the dial-in properties of the user account and network policies. 
-
-7. If the connection attempt is both authenticated and authorized, the NPS server sends an Access-Accept message to the access server. If the connection attempt is either not authenticated or not authorized, the NPS server sends an Access-Reject message to the access server. 
-
-8. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS server, where the message is logged. 
-
-9. The NPS server sends an Accounting-Response to the access server. 
-
->[!NOTE]
->The access server also sends Accounting-Request messages during the time in which the connection is established, when the access client connection is closed, and when the access server is started and stopped.
-
 ### RADIUS proxy
 
 As a RADIUS proxy, NPS forwards authentication and accounting messages to NPS and other RADIUS servers. You can use NPS as a RADIUS proxy to provide the routing of RADIUS messages between RADIUS clients \(also called network access servers\) and RADIUS servers that perform user authentication, authorization, and accounting for the connection attempt. 
@@ -128,30 +102,6 @@ NPS configurations can be created for the following scenarios:
 - Outsourced dial-up or wireless access
 - Internet access
 - Authenticated access to extranet resources for business partners
-
-#### NPS as a RADIUS proxy connection request processing
-
-When NPS is used as a RADIUS proxy between a RADIUS client and a RADIUS server, RADIUS messages for network access connection attempts are forwarded in the following way:
-
-1. Access servers, such as dial-up network access servers, virtual private network (VPN) servers, and wireless access points, receive connection requests from access clients.
-
-2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS server that is being used as the NPS RADIUS proxy.
-
-3. The NPS RADIUS proxy receives the Access-Request message and, based on the locally configured connection request policies, determines where to forward the Access-Request message.
-
-4. The NPS RADIUS proxy forwards the Access-Request message to the appropriate RADIUS server.
-
-5. The RADIUS server evaluates the Access-Request message.
-
-6. If required, the RADIUS server sends an Access-Challenge message to the NPS RADIUS proxy, where it is forwarded to the access server. The access server processes the challenge with the access client and sends an updated Access-Request to the NPS RADIUS proxy, where it is forwarded to the RADIUS server.
-
-7. The RADIUS server authenticates and authorizes the connection attempt.
-
-8. If the connection attempt is both authenticated and authorized, the RADIUS server sends an Access-Accept message to the NPS RADIUS proxy, where it is forwarded to the access server. If the connection attempt is either not authenticated or not authorized, the RADIUS server sends an Access-Reject message to the NPS RADIUS proxy, where it is forwarded to the access server.
-
-9. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS RADIUS proxy. The NPS RADIUS proxy logs the accounting data and forwards the message to the RADIUS server.
-
-10. The RADIUS server sends an Accounting-Response to the NPS RADIUS proxy, where it is forwarded to the access server.
 
 ## RADIUS server and RADIUS proxy configuration examples
 

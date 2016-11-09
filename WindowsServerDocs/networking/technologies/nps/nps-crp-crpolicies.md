@@ -14,6 +14,8 @@ author: jamesmci
 
 >Applies To: Windows Server&reg; 2016
 
+You can use this topic to learn how to use NPS connection request policies to configure the NPS server as a RADIUS server, a RADIUS proxy, or both.
+
 Connection request policies are sets of conditions and settings that allow network administrators to designate which Remote Authentication Dial-In User Service (RADIUS) servers perform the authentication and authorization of connection requests that the server running Network Policy Server (NPS) receives from RADIUS clients. Connection request policies can be configured to designate which RADIUS servers are used for RADIUS accounting.
 
 You can create connection request policies so that some RADIUS request messages sent from RADIUS clients are processed locally (NPS is used as a RADIUS server) and other types of messages are forwarded to another RADIUS server (NPS is used as a RADIUS proxy).
