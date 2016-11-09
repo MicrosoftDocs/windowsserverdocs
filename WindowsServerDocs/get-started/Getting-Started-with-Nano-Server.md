@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 10/20/2016
+ms.date: 11/09/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
