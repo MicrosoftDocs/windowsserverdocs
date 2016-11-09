@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 08/01/2016
+ms.date: 11/08/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ed2eb96-2bc4-4b1a-977c-ff7a11f21cef
@@ -20,7 +20,7 @@ manager: dongill
 
 Use the following steps to deploy the Remote Desktop servers in your environment.  
   
->[NOTE] 
+>[!NOTE] 
 > The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS virtual machine, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment.  
   
 1.  Connect to the RDMS virtual machine using the Remote Desktop (RDC) client:  
