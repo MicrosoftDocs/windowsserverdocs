@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Recreates the default Group Policy Objects (GPOs) for a domain. for examples of how this command can be used, see [Examples](#BKMK_Examples).  
+Recreates the default Group Policy Objects (GPOs) for a domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
 ## Syntax  
 ```  
 dcgpofix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]  

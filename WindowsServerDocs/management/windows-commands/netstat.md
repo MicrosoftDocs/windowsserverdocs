@@ -30,10 +30,10 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
 |-e|Displays Ethernet statistics, such as the number of bytes and packets sent and received. This parameter can be combined with **-s**.|
 |-n|Displays active TCP connections, however, addresses and port numbers are expressed numerically and no attempt is made to determine names.|
 |-o|Displays active TCP connections and includes the process ID (PID) for each connection. You can find the application based on the PID on the Processes tab in Windows Task Manager. This parameter can be combined with **-a**, **-n**, and **-p**.|
-|-p <Protocol>|Shows connections for the protocol specified by *Protocol*. In this case, the *Protocol* can be tcp, udp, tcpv6, or udpv6. if this parameter is used with **-s** to display statistics by protocol, *Protocol* can be tcp, udp, icmp, ip, tcpv6, udpv6, icmpv6, or ipv6.|
-|-s|Displays statistics by protocol. By default, statistics are shown for the TCP, UDP, ICMP, and IP protocols. if the IPv6 protocol is installed, statistics are shown for the TCP over IPv6, UDP over IPv6, ICMPv6, and IPv6 protocols. The **-p** parameter can be used to specify a set of protocols.|
+|-p <Protocol>|Shows connections for the protocol specified by *Protocol*. In this case, the *Protocol* can be tcp, udp, tcpv6, or udpv6. If this parameter is used with **-s** to display statistics by protocol, *Protocol* can be tcp, udp, icmp, ip, tcpv6, udpv6, icmpv6, or ipv6.|
+|-s|Displays statistics by protocol. By default, statistics are shown for the TCP, UDP, ICMP, and IP protocols. If the IPv6 protocol is installed, statistics are shown for the TCP over IPv6, UDP over IPv6, ICMPv6, and IPv6 protocols. The **-p** parameter can be used to specify a set of protocols.|
 |-r|Displays the contents of the IP routing table. This is equivalent to the route print command.|
-|<Interval>|Redisplays the selected information every *Interval* seconds. Press CTRL+C to stop the redisplay. if this parameter is omitted, **netstat** prints the selected information only once.|
+|<Interval>|Redisplays the selected information every *Interval* seconds. Press CTRL+C to stop the redisplay. If this parameter is omitted, **netstat** prints the selected information only once.|
 |/?|Displays help at the command prompt.|
 ## remarks
 -   Parameters used with this command must be prefixed with a hyphen (**-**) rather than a slash (**/**).
@@ -41,9 +41,9 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
     -   Proto
         The name of the protocol (TCP or UDP).
     -   Local address
-        The IP address of the local computer and the port number being used. The name of the local computer that corresponds to the IP address and the name of the port is shown unless the **-n** parameter is specified. if the port is not yet established, the port number is shown as an asterisk (*).
+        The IP address of the local computer and the port number being used. The name of the local computer that corresponds to the IP address and the name of the port is shown unless the **-n** parameter is specified. If the port is not yet established, the port number is shown as an asterisk (*).
     -   foreign address
-        The IP address and port number of the remote computer to which the socket is connected. The names that corresponds to the IP address and the port are shown unless the **-n** parameter is specified. if the port is not yet established, the port number is shown as an asterisk (*).
+        The IP address and port number of the remote computer to which the socket is connected. The names that corresponds to the IP address and the port are shown unless the **-n** parameter is specified. If the port is not yet established, the port number is shown as an asterisk (*).
     -   (state)
         Indicates the state of a TCP connection. The possible states are as follows:
         CLOSE_WAIT

@@ -27,7 +27,7 @@ finger [-l] [<User>] [@<Host>] [...]
 |Parameter|Description|
 |-------|--------|
 |-l|Displays user information in long list format.|
-|<User>|Specifies the user about which you want information. if you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
+|<User>|Specifies the user about which you want information. If you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
 |@<Host>|Specifies the remote computer running the finger service where you are looking for user information. You can specify a computer name or IP address.|
 |/?|Displays help at the command prompt.|
 ## remarks

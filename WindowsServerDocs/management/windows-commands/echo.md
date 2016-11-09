@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays messages or turns on or off the command echoing feature. if used without parameters, **echo** displays the current echo setting.
+Displays messages or turns on or off the command echoing feature. If used without parameters, **echo** displays the current echo setting.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -58,7 +58,7 @@ To prevent all commands in a batch file (including the **echo off** command) fro
 ```
 @echo off
 ```
-You can use the **echo** command as part of an **if** statement. for example, to search the current directory for any file with the .rpt file name extension, and to echo a message if such a file is found, type:
+You can use the **echo** command as part of an **if** statement. For example, to search the current directory for any file with the .rpt file name extension, and to echo a message if such a file is found, type:
 ```
 if exist *.rpt echo The report has arrived.
 ```

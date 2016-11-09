@@ -35,7 +35,7 @@ winsat mfmedia <parameters>
 |-nopmp|Do not make use of the Media Foundation Protected Media Pipeline (MFPMP) process during the assessment.|
 |-pmp|Always make use of the MFPMP process during the assessment. **Note:** if **-pmp** or **-nopmp** is not specified, MFPMP will be used only when necessary.|
 |-v|Send verbose output to STDOUT, including status and progress information. Any errors will also be written to the command window.|
-|-xml <file name>|Save the output of the assessment as the specified XML file. if the specified file exists, it will be overwritten.|
+|-xml <file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
 |-idiskinfo|Save information about physical volumes and logical disks as part of the **<SystemConfig>** section in the XML output.|
 |-iguid|create a globally unique identifier (GUID) in the XML output file.|
 |-note "note text"|add the note text to the **<note>** section in the XML output file.|

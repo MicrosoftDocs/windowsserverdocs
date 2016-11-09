@@ -26,7 +26,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. if **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. if a file transfer is successful, the data transfer rate is displayed.|  
+|-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. If **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  
 |<Host>|Specifies the local or remote computer.|  
 |put|Transfers the file *Source* on the local computer to the file *Destination* on the remote computer. Because the tftp protocol does not support user authentication, the user must be logged onto the remote computer, and the files must be writable on the remote computer.|  
 |get|Transfers the file *Destination* on the remote computer to the file *Source* on the local computer.|  

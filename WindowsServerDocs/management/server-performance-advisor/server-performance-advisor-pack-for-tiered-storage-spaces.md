@@ -36,7 +36,7 @@ schtasks /change /TN  \Microsoft\Windows\Storage Tiers Management\Storage Tiers 
 
 The SPA Advisor Pack for Tiered Storage Spaces expects to find the results of the optimizer in the Windows folder. The report will not collect this file if it is moved to another location.
 
-The Storage Tier Optimization task is configured to run daily on all tiered volumes by default. The Windows powershell command above only modifies this scheduled task to save the output. There is no artificial constraint introduced on the system, only the latest version of the output is stored and uses a constant amount of memory.
+The Storage Tier Optimization task is configured to run daily on all tiered volumes by default. The Windows PowerShell command above only modifies this scheduled task to save the output. There is no artificial constraint introduced on the system, only the latest version of the output is stored and uses a constant amount of memory.
 
 The recommended setup for using the SPA Pack for Tiered Storage Spaces is running the analysis for 10-20 minute durations every hour or two hours when testing the system response with a tiered storage space. This will minimize network traffic and give a time series view of the system state over the day or week. This allows you to get a picture of the workload running on the system and how the tiering setup performed at different points in the workload.
 
@@ -76,7 +76,7 @@ Each time the SPA Advisor Pack for Tiered Storage Space runs on a server, a repo
 
 5.  **Tiering Engine**
 
-    This pane shows collected statistics from the Storage Optimizer, which can be printed to the console during regularly scheduled runs of the Storage Optimizer. if the previous configuration steps were performed correctly, and the regularly scheduled storage optimizer has run since the last analysis, you should see a file with a format similar to that shown below. if you see a **&lt;null&gt;** instead, make sure that you ran the setup commands described earlier on the server being analyzed, and that the new scheduled task has run at least once.
+    This pane shows collected statistics from the Storage Optimizer, which can be printed to the console during regularly scheduled runs of the Storage Optimizer. If the previous configuration steps were performed correctly, and the regularly scheduled storage optimizer has run since the last analysis, you should see a file with a format similar to that shown below. If you see a **&lt;null&gt;** instead, make sure that you ran the setup commands described earlier on the server being analyzed, and that the new scheduled task has run at least once.
 
     ![tiering engine pane](../media/server-performance-advisor/spa-tss-pack-tiering-engine.png)
 
@@ -102,7 +102,7 @@ A good indicator of the basic performance of the Tiered Storage Space is the % r
 
     -   The Storage Optimizer hasn t run and optimized the tiers on the volume yet. To fix this, repeat the readings after the Storage Optimizer has run. You can also run the Storage Optimizer task manually by using Task Scheduler.
 
-    -   The Storage Optimizer does not have enough heat information yet about the workload or the workload is perfectly random. Fix: Let the Storage Optimizer run for a few days. if the workload is not mostly random, there should be improvements in the SSD read/write %.
+    -   The Storage Optimizer does not have enough heat information yet about the workload or the workload is perfectly random. Fix: Let the Storage Optimizer run for a few days. If the workload is not mostly random, there should be improvements in the SSD read/write %.
 
     -   The working set size is too large compared to the size of the SSD tier provisioned. To fix this, increase the size of the SSD tier in accordance with the Storage Optimizer Report described in the next section. The amount to increase and the expected gains are also described in the Storage Optimizer report.
 
@@ -122,7 +122,7 @@ The last section of the report refers to the size of all files manually pinned t
 
 ![storage optimizer chart](../media/server-performance-advisor/spa-tss-pack-storage-optimizer-chart-2.png)
 
-The main section of the report is the table of percentage I/Os serviced from SSD vs. the SSD tier size required. The 100% I/O s SSD size is a good indication of the working set size for the workload on the system. if the SSD tier was this size (4.36 GB in the example) then given the past week s pattern of I/O s seen, you would get close to all of the I/O s going to the SSD tier.
+The main section of the report is the table of percentage I/Os serviced from SSD vs. the SSD tier size required. The 100% I/O s SSD size is a good indication of the working set size for the workload on the system. If the SSD tier was this size (4.36 GB in the example) then given the past week s pattern of I/O s seen, you would get close to all of the I/O s going to the SSD tier.
 
 The distribution of this data is non-linear and the exact distribution depends on the characteristics of the workload. The sample data was imported into Microsoft Excel, and, after normalizing to gigabytes, the data gave the following distribution:
 

@@ -30,7 +30,7 @@ remove [{letter=<d> | mount=<path> | all}] [dismount] [noerr]
 |letter=<d>|Specifies the drive letter to be removed.|
 |mount=<path>|Specifies the mount point path to be removed.|
 |all|removes all current drive letters and mount points.|
-|dismount|Dismounts the basic volume, when all drive letters and mount points have been removed from the volume, and takes the basic volume offline, making it unmountable. if other processes are using the volume, DiskPart closes any open files in use by an application before dismounting the volume. You can make the volume mountable again by assigning it a driver letter or by creating a mount point path to the volume. Dismount will fail if used on a volume that has any remaining drive letters or mount points. for scripting, using **remove all dismount** is recommended.|
+|dismount|Dismounts the basic volume, when all drive letters and mount points have been removed from the volume, and takes the basic volume offline, making it unmountable. If other processes are using the volume, DiskPart closes any open files in use by an application before dismounting the volume. You can make the volume mountable again by assigning it a driver letter or by creating a mount point path to the volume. Dismount will fail if used on a volume that has any remaining drive letters or mount points. For scripting, using **remove all dismount** is recommended.|
 |noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 ## remarks
 -   if no drive letter or mount point is specified, DiskPart removes the first drive letter or mount point it encounters.

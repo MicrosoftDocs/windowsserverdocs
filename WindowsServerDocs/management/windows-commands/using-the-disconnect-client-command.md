@@ -27,8 +27,8 @@ wdsutil /Disconnect-Client /ClientId:<Client ID> [/Server:<Server name>] [/force
 |Parameter|Description|
 |-------|--------|
 |/ClientId:<Client ID>|Specifies the ID of the client to be disconnected. To view the ID of a client, type **wdsutil /get-multicasttransmission /show:clients**.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server is used.|
-|[/force]|Stops the installation completely and does not use a fallback method. Note that Wdsmcast.exe does not support any fallback mechanism. if you do not use this option, the default behavior is as follows:<br /><br />-   if you are using the Windows Deployment Services client, the client continues the installation by using unicasting.<br />-   if you are not using the Windows Deployment Services client, the installation fails. **important:** You should use this option with caution because the installation will fail and the computer could be left in an unusable state.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
+|[/force]|Stops the installation completely and does not use a fallback method. Note that Wdsmcast.exe does not support any fallback mechanism. If you do not use this option, the default behavior is as follows:<br /><br />-   if you are using the Windows Deployment Services client, the client continues the installation by using unicasting.<br />-   if you are not using the Windows Deployment Services client, the installation fails. **IMPORTANT:** You should use this option with caution because the installation will fail and the computer could be left in an unusable state.|
 ## <a name="BKMK_examples"></a>Examples
 To disconnect a client, type:
 ```

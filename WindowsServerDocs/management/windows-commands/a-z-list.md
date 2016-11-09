@@ -174,7 +174,7 @@ Alphabetical listing of commands:
 -   [pnpunattend](pnpunattend.md)  
 -   [pnputil](pnputil.md)  
 -   [popd](popd.md)  
--   [powershell](powershell.md)  
+-   [PowerShell](PowerShell.md)  
 -   [print](print.md)  
 -   [prncnfg](prncnfg.md)  
 -   [prndrvr](prndrvr.md)  

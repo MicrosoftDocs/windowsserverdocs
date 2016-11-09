@@ -52,7 +52,7 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
     ```
     rdpsign /sha1 hash /l file1.rdp
     ```
--   To sign multiple .rdp files, separate the file names by using spaces. for example, to sign multiple .rdp files that are named File1.rdp, File2.rdp, and File3.rdp, type the following:
+-   To sign multiple .rdp files, separate the file names by using spaces. For example, to sign multiple .rdp files that are named File1.rdp, File2.rdp, and File3.rdp, type the following:
     ```
     rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
     ```

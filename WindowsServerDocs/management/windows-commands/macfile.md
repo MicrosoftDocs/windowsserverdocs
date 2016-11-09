@@ -30,15 +30,15 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
 ```
 ### Parameters
 -   /server:\\\\<computerName>
-    Specifies the server on which to change a directory. if omitted, the operation is performed on the local computer.
+    Specifies the server on which to change a directory. If omitted, the operation is performed on the local computer.
 -   /path:<directory>
     Required. Specifies the path to the directory that you want to change. The directory must exist. **macfile directory** does not create directories.
 -   /owner:<OwnerName>
-    changes the owner of the directory. if omitted, the owner remains unchanged.
+    changes the owner of the directory. If omitted, the owner remains unchanged.
 -   /group:<GroupName>
-    Specifies or changes the Macintosh primary group that is associated with the directory. if omitted, the primary group remains unchanged.
+    Specifies or changes the Macintosh primary group that is associated with the directory. If omitted, the primary group remains unchanged.
 -   /permissions:<Permissions>
-    Sets permissions on the directory for the owner, primary group, and world (everyone). An 11-digit number is used to set permissions. The number 1 grants permission and 0 revokes permission (for example, 11111011000). if omitted, permissions remain unchanged.
+    Sets permissions on the directory for the owner, primary group, and world (everyone). An 11-digit number is used to set permissions. The number 1 grants permission and 0 revokes permission (for example, 11111011000). If omitted, permissions remain unchanged.
     The position of the digit determines which permission is set, as described in the following table.
     |Position|Sets Permission for|
     |------|------------|
@@ -71,7 +71,7 @@ macfile forkize[/server:\\<computerName>] [/creator:<CreatorName>] [/type:<typeN
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|/server:\\\\<computerName>|Specifies the server on which to join files. if omitted, the operation is performed on the local computer.|
+|/server:\\\\<computerName>|Specifies the server on which to join files. If omitted, the operation is performed on the local computer.|
 |/creator:<CreatorName>|Specifies the creator of the file. The Macintosh finder uses the **/creator** command-line option to determine the application that created the file.|
 |/type:<typeName>|Specifies the type of file. The Macintosh finder uses the **/type** command-line option to determine the file type within the application that created the file.|
 |/datafork:<Filepath>|Specifies the location of the data fork that is to be joined. You can specify a remote path.|
@@ -97,9 +97,9 @@ macfile server [/server:\\<computerName>] [/maxsessions:{Number | unlimited}] [/
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|/server:\\\\<computerName>|Specifies the server on which to change parameters. if omitted, the operation is performed on the local computer.|
-|/maxsessions:{Number &#124; unlimited}|Specifies the maximum number of users who can simultaneously use File and print Servers for Macintosh. if omitted, the **maxsessions** setting for the server remains unchanged.|
-|/loginmessage:<Message>|changes the message Macintosh users see when logging on to the File Server for Macintosh server. The maximum number of characters for the logon message is 199. if omitted, the **loginmessage** message for the server remains unchanged. To remove an existing logon message, include the **/loginmessage** parameter, but leave the *Message* variable blank.|
+|/server:\\\\<computerName>|Specifies the server on which to change parameters. If omitted, the operation is performed on the local computer.|
+|/maxsessions:{Number &#124; unlimited}|Specifies the maximum number of users who can simultaneously use File and print Servers for Macintosh. If omitted, the **maxsessions** setting for the server remains unchanged.|
+|/loginmessage:<Message>|changes the message Macintosh users see when logging on to the File Server for Macintosh server. The maximum number of characters for the logon message is 199. If omitted, the **loginmessage** message for the server remains unchanged. To remove an existing logon message, include the **/loginmessage** parameter, but leave the *Message* variable blank.|
 |/?|Displays help at the command prompt.|
 ### remarks
 -   if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, **"***computer Name***"**).
@@ -118,13 +118,13 @@ macfile volume /remove[/server:\\<computerName>] /name:<volumeName>
 |Parameter|Description|
 |-------|--------|
 |{/add &#124; /set}|Required when you are adding or changing a Macintosh-accessible volume. adds or changes the specified volume.|
-|/server:\\\\<computerName>|Specifies the server on which to add, change, or remove a volume. if omitted, the operation is performed on the local computer.|
+|/server:\\\\<computerName>|Specifies the server on which to add, change, or remove a volume. If omitted, the operation is performed on the local computer.|
 |/name:<volumeName>|Required. Specifies the volume name to be added, changed, or removed.|
 |/path:<directory>|Required and valid only when you are adding a volume. Specifies the path to the root directory of the volume to be added.|
-|/readonly:{true &#124; false}|Specifies whether users can change files in the volume. type true to specify that users cannot change files in the volume. type false to specify that users can change files in the volume. if omitted when adding a volume, changes to files are allowed. if omitted when changing a volume, the **readonly** setting for the volume remains unchanged.|
-|/guestsallowed:{true &#124; false}|Specifies whether users who log on as guests can use the volume. type true to specify that guests can use the volume. type false to specify that guests cannot use the volume. if omitted when adding a volume, guests can use the volume. if omitted when changing a volume, the **guestsallowed** setting for the volume remains unchanged.|
-|/password:<Password>|Specifies a password that will be required to access the volume. if omitted when adding a volume, no password is created. if omitted when changing a volume, the password remains unchanged.|
-|/maxusers:{<Number>>&#124;unlimited}|Specifies the maximum number of users who can simultaneously use the files on the volume. if omitted when adding a volume, an unlimited number of users can use the volume. if omitted when changing a volume, the **maxusers** value remains unchanged.|
+|/readonly:{true &#124; false}|Specifies whether users can change files in the volume. type true to specify that users cannot change files in the volume. type false to specify that users can change files in the volume. If omitted when adding a volume, changes to files are allowed. If omitted when changing a volume, the **readonly** setting for the volume remains unchanged.|
+|/guestsallowed:{true &#124; false}|Specifies whether users who log on as guests can use the volume. type true to specify that guests can use the volume. type false to specify that guests cannot use the volume. If omitted when adding a volume, guests can use the volume. If omitted when changing a volume, the **guestsallowed** setting for the volume remains unchanged.|
+|/password:<Password>|Specifies a password that will be required to access the volume. If omitted when adding a volume, no password is created. If omitted when changing a volume, the password remains unchanged.|
+|/maxusers:{<Number>>&#124;unlimited}|Specifies the maximum number of users who can simultaneously use the files on the volume. If omitted when adding a volume, an unlimited number of users can use the volume. If omitted when changing a volume, the **maxusers** value remains unchanged.|
 |/remove|Required when you are removing a Macintosh-accesible volume. removes the specified volume.|
 |/?|Displays help at the command prompt.|
 ### remarks

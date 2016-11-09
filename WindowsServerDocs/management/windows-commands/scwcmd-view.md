@@ -27,7 +27,7 @@ scwcmd view /x:<Xmlfile.xml> [/s:<Xslfile.xsl>]
 |Parameter|Description|
 |-------|--------|
 |/x:<Xmlfile.xml>|Specifies the .xml file to be viewed. This parameter must be specified.|
-|/s:<Xslfile.xsl>|Specifies the .xsl transform to apply to the .xml file as part of the rendering process. This parameter is optional for SCW .xml files. When the **view** command is used to render an SCW .xml file, it will automatically try to load the correct default transform for the specified .xml file. if an .xsl transform is specified, the transform must be written under the assumption that the .xml file is in the same directory as the .xsl transform.|
+|/s:<Xslfile.xsl>|Specifies the .xsl transform to apply to the .xml file as part of the rendering process. This parameter is optional for SCW .xml files. When the **view** command is used to render an SCW .xml file, it will automatically try to load the correct default transform for the specified .xml file. If an .xsl transform is specified, the transform must be written under the assumption that the .xml file is in the same directory as the .xsl transform.|
 |/?|Displays help at the command prompt.|
 ## remarks
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.

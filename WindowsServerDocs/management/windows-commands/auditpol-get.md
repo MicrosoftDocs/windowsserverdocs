@@ -34,7 +34,7 @@ auditpol /get
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|/user|Displays the security principal for whom the per-user audit policy is queried. Either the /category or /subcategory parameter must be specified. The user may be specified as a security identifier (SID) or name. if no user account is specified, then the system audit policy is queried.|
+|/user|Displays the security principal for whom the per-user audit policy is queried. Either the /category or /subcategory parameter must be specified. The user may be specified as a security identifier (SID) or name. If no user account is specified, then the system audit policy is queried.|
 |/category|One or more audit categories specified by globally unique identifier (GUID) or name. An asterisk (*) may be used to indicate that all audit categories should be queried.|
 |/subcategory|One or more audit subcategories specified by GUID or name.|
 |/sd|Retrieves the security descriptor used to delegate access to the audit policy.|
@@ -51,7 +51,7 @@ To retrieve the per-user audit policy for the Guest account and display the outp
 auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:"System","detailed Tracking","Object Access"
 ```
 > [!NOTE]
-> This command is useful in two scenarios. When monitoring a specific user account for suspicious activity, you can use the /get command to retrieve the results in specific categories by using an inclusion policy to enable additional auditing. Or, if audit settings on an account are logging numerous but superfluous events, you can use the /get command to filter out extraneous events for that account with an exclusion policy. for a list of all categories, use the auditpol /list /category command.
+> This command is useful in two scenarios. When monitoring a specific user account for suspicious activity, you can use the /get command to retrieve the results in specific categories by using an inclusion policy to enable additional auditing. Or, if audit settings on an account are logging numerous but superfluous events, you can use the /get command to filter out extraneous events for that account with an exclusion policy. For a list of all categories, use the auditpol /list /category command.
 To retrieve the per-user audit policy for a category and a particular subcategory, which reports the inclusive and exclusive settings for that subcategory under the System category for the Guest account, type:
 ```
 auditpol /get /user:guest /category:"System" /subcategory:{0ccee921a-69ae-11d9-bed3-505054503030}

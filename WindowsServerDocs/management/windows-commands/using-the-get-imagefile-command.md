@@ -27,7 +27,7 @@ wdsutil [Options] /Get-ImageFilmediaFile:<wim file path> [/detailed]
 |Parameter|Description|
 |-------|--------|
 mediaFile:<WIM file path>|Specifies the full path and file name of the .wim file.|
-|[/detailed]|Returns all image metadata from each image. if this option is not used, the default behavior is to return only the image name, description, and file name.|
+|[/detailed]|Returns all image metadata from each image. If this option is not used, the default behavior is to return only the image name, description, and file name.|
 ## <a name="BKMK_examples"></a>Examples
 To view information about an image, type:
 ```

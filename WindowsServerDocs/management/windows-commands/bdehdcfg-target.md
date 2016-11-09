@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Prepares a partition for use as a system drive by BitLocker and Windows recovery. By default, this partition is created without a drive letter. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Prepares a partition for use as a system drive by BitLocker and Windows recovery. By default, this partition is created without a drive letter. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}

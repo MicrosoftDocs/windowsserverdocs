@@ -30,7 +30,7 @@ type [<typeName>]
 ## remarks  
 -   if *typeName* is not specified, the current type is displayed.  
 -   **ftp** supports two file transfer types, ASCII and binary.  
-    The default file transfer type is ASCII.  The **ascii** command should be used when transferring text files. In ASCII mode, character conversions to and from the network standard character set are performed. for example, end-of-line characters are converted as required, based on the operating system at the destination.  
+    The default file transfer type is ASCII.  The **ascii** command should be used when transferring text files. In ASCII mode, character conversions to and from the network standard character set are performed. For example, end-of-line characters are converted as required, based on the operating system at the destination.  
     The **binary** command should be used when transferring executable files. In binary mode, the file is moved in one-byte units.  
 ## <a name="BKMK_Examples"></a>Examples  
 Set the file transfer type to ASCII.  

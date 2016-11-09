@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-replaces files. if used with the **/a** option, **replace** adds new files to a directory instead of replacing existing files.
+replaces files. If used with the **/a** option, **replace** adds new files to a directory instead of replacing existing files.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
@@ -29,11 +29,11 @@ replace [<Drive1>:][<path1>]<FileName> [<Drive2>:][<path2>] [/p] [/r] [/s] [/w] 
 |Parameter|Description|
 |-------|--------|
 |[<Drive1>:][<path1>]<FileName>|Specifies the location and name of the source file or set of files. *FileName* is required, and can include wildcard characters (**\*** and **?**).|
-|[<Drive2>:][<path2>]|Specifies the location of the destination file. You cannot specify a file name for files you replace. if you do not specify a drive or path, **replace** uses the current drive and directory as the destination.|
+|[<Drive2>:][<path2>]|Specifies the location of the destination file. You cannot specify a file name for files you replace. If you do not specify a drive or path, **replace** uses the current drive and directory as the destination.|
 |/a|adds new files to the destination directory instead of replacing existing files. You cannot use this command-line option with the **/s** or **/u** command-line option.|
 |/p|prompts you for confirmation before replacing a destination file or adding a source file.|
-|/r|replaces Read-only and unprotected files. if you attempt to replace a Read-only file, but you do not specify **/r**, an error results and stops the replacement operation.|
-|/w|Waits for you to insert a disk before the search for source files begins. if you do not specify **/w**, **replace** begins replacing or adding files immediately after you press ENTER.|
+|/r|replaces Read-only and unprotected files. If you attempt to replace a Read-only file, but you do not specify **/r**, an error results and stops the replacement operation.|
+|/w|Waits for you to insert a disk before the search for source files begins. If you do not specify **/w**, **replace** begins replacing or adding files immediately after you press ENTER.|
 |/s|Searches all subdirectories in the destination directory and replaces matching files. You cannot use **/s** with the **/a** command-line option. The **replace** command does not search subdirectories that are specified in *path1*.|
 |/u|replaces only those files on the destination directory that are older than those in the source directory. You cannot use **/u** with the **/a** command-line option.|
 |/?|Displays help at the command prompt.|

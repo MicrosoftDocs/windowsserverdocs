@@ -26,7 +26,7 @@ at the domain level, a GPO is a collection of Group Policy settings stored as a 
 Because GPOs contain policy settings, the GPOs can be configured, backed up, restored, copied, and scoped using the GPMC.
 
 ## How to add a comment to a Group Policy Object
-You can include comments for each Group Policy object. You can use this space to document the Group Policy object and why its implementation is important to your environment. Commenting GPOs allows you to later use keyword filter to help you quickly find GPOs with matching keywords.
+You can include comments for each Group Policy object. You can use this space to document the Group Policy object and why its implementation is IMPORTANT to your environment. Commenting GPOs allows you to later use keyword filter to help you quickly find GPOs with matching keywords.
 
 #### adding a comment to a Group Policy Object
 
@@ -52,11 +52,11 @@ You can include comments for each Group Policy object. You can use this space to
 
 3.  In the **Backup Group Policy object** dialog box, in the **Location** box, enter the path for the location in which you want to store the GPO backups, or click **Browse**, locate the folder in which you want to store the GPO backups, and then click **OK**.
 
-4.  In the **Description** box, type a description for the GPOs that you want to back up, and then click **Back Up**. if you are backing up multiple GPOs, the description will apply to all GPOs you back up.
+4.  In the **Description** box, type a description for the GPOs that you want to back up, and then click **Back Up**. If you are backing up multiple GPOs, the description will apply to all GPOs you back up.
 
 5.  After the operation completes, click **OK**.
 
-    > [!importANT]
+    > [!IMPORTANT]
     > To secure backed-up GPOs, ensure that only authorized administrators have permission to access the folder to which you are exporting the GPOs.
 
 ### additional considerations
@@ -118,7 +118,7 @@ You can copy a Group Policy object (GPO) either by using the drag-and-drop metho
 ## How to create and edit a Group Policy Object
 
 > [!NOTE]
-> You can also create a GPO from a starter GPO. for more information, see [create a New GPO from a starter GPO](https://technet.microsoft.com/library/cc753835.aspx).
+> You can also create a GPO from a starter GPO. For more information, see [create a New GPO from a starter GPO](https://technet.microsoft.com/library/cc753835.aspx).
 
 ### <a name="BKMK_create"></a>
 ##### To create a Group Policy object
@@ -138,7 +138,7 @@ You can copy a Group Policy object (GPO) either by using the drag-and-drop metho
 
 3.  In the console tree, edit the settings as appropriate.
 
-    > [!importANT]
+    > [!IMPORTANT]
     > The Default Domain Policy GPO and Default Domain Controllers Policy GPO are vital to the health of any domain. As a best practice, you should not edit the Default Domain Controllers Policy GPO or the Default Domain Policy GPO, except in the following cases:
 
     -   Account policy settings are required to be configured in the Default Domain GPO.
@@ -190,7 +190,7 @@ You can use the migration table editor to scan one or more Group Policy objects 
 
         **SID**: for example, S-1-11-111111111-111111111-1111111111-1112. You must specify the type as Free Text or SID.
 
-    2.  Under **Source type**, specify the type of source in the cell adjacent to the source name cell by using the drop-down list and selecting the appropriate type. if you have used **Browse** to find the source name, the source type is entered by default.
+    2.  Under **Source type**, specify the type of source in the cell adjacent to the source name cell by using the drop-down list and selecting the appropriate type. If you have used **Browse** to find the source name, the source type is entered by default.
 
     3.  Under **Destination Name**, type the destination name or right-click the cell adjacent to the source name and source type cells, and then do one of the following:
 
@@ -204,7 +204,7 @@ You can use the migration table editor to scan one or more Group Policy objects 
 
 6.  Specify the location where you want to save the migration table, and then click **Save**.
 
-You can use the migration table editor to check that destination entries can be resolved. if destination entries do not resolve in the migration table, then the copy or import operation might fail. To validate your migration table, from the **Tools** menu, click **Validate**.
+You can use the migration table editor to check that destination entries can be resolved. If destination entries do not resolve in the migration table, then the copy or import operation might fail. To validate your migration table, from the **Tools** menu, click **Validate**.
 
 #### To automatically populate a migration table from a GPO
 
@@ -245,7 +245,7 @@ Insert section body here.
 
 -   To delete a GPO, you must have edit Settings, delete, and Modify Security permissions for the GPO.
 
--   When you delete a GPO, GPMC attempts to delete all links to that GPO in the domain of the GPO. if you do not have rights to delete a link, the GPO will be deleted, but the link will remain. Links from other domains and sites are not deleted. The link to a deleted GPO appears in GPMC as **Not Found**. To delete **Not Found** links, you must have permission on the site, domain, or organizational unit containing the link.
+-   When you delete a GPO, GPMC attempts to delete all links to that GPO in the domain of the GPO. If you do not have rights to delete a link, the GPO will be deleted, but the link will remain. Links from other domains and sites are not deleted. The link to a deleted GPO appears in GPMC as **Not Found**. To delete **Not Found** links, you must have permission on the site, domain, or organizational unit containing the link.
 
 -   You cannot delete the Default Domain Controllers Policy GPO or the Default Domain Policy GPO.
 
@@ -310,7 +310,7 @@ Insert section body here.
 ## How to filter Group Policy Objects using WMI filters
 Windows Management Instrumentation (WMI) filters allow you to dynamically determine the scope of Group Policy objects (GPOs), based on attributes of the target computer.
 
-When a GPO that is linked to a WMI filter is applied on the target computer, the filter is evaluated on the target computer. if the WMI filter evaluates to false, the GPO is not applied (unless the client computer is running Windows 2000, in which case the filter is ignored and the GPO is always applied). if the WMI filter evaluates to true, the GPO is applied.
+When a GPO that is linked to a WMI filter is applied on the target computer, the filter is evaluated on the target computer. If the WMI filter evaluates to false, the GPO is not applied (unless the client computer is running Windows 2000, in which case the filter is ignored and the GPO is always applied). If the WMI filter evaluates to true, the GPO is applied.
 
 #### To create a WMI filter
 

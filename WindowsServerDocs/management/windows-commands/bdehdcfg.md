@@ -28,7 +28,7 @@ Prepares a hard drive with the partitions necessary for BitLocker Drive Encrypti
 > -   if you attempted to use unallocated space to create the system drive, a raw partition will be created. However, the raw partition will not be formatted. The following error message is displayed: "The new active Drive cannot be formatted. You may need to manually prepare your drive for BitLocker."
 > -   if you attempted to merge an existing drive into the system drive, the tool will fail to copy the required boot file onto the target drive to create the system drive. The following error message is displayed: "BitLocker setup failed to copy boot files. You may need to manually prepare your drive for BitLocker."
 > 
-> if this policy setting is being enforced, a hard drive cannot be repartitioned because the drive is protected. if you are upgrading computers in your organization from a previous version of Windows and those computers were configured with a single partition, you should create the required BitLocker system partition before applying the policy setting to the computers.
+> if this policy setting is being enforced, a hard drive cannot be repartitioned because the drive is protected. If you are upgrading computers in your organization from a previous version of Windows and those computers were configured with a single partition, you should create the required BitLocker system partition before applying the policy setting to the computers.
 for examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```

@@ -44,7 +44,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
     ```
     Enum: more data, need 1822 bytes start resume at index 79
     ```
-    To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. for example, the remaining output would be displayed by typing the following at the command prompt:
+    To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:
     ```
     sc query bufsize= 1822 ri= 79
     ```

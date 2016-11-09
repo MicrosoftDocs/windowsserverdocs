@@ -24,7 +24,7 @@ You can use **showmount** to display mounted directories.
 **showmount** `{`\-e `|` \-a `|` \-d`} [`*Server*`]`  
   
 ## Description  
-The **showmount** command\-line utility displays information about mounted file systems exported by Server for NFS on the computer specified by *Server*. if *Server* is not provided, **showmount** displays information about the computer on which the **showmount** command is run.  
+The **showmount** command\-line utility displays information about mounted file systems exported by Server for NFS on the computer specified by *Server*. If *Server* is not provided, **showmount** displays information about the computer on which the **showmount** command is run.  
   
 You must provide one of the following options:  
   

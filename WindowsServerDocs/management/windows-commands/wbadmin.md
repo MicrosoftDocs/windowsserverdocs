@@ -26,7 +26,7 @@ You must run **wbadmin** from an elevated command prompt. (To open an elevated c
 |-------|--------|  
 |[wbadmin enable backup](wbadmin-enable-backup.md)|Configures and enables a regularly scheduled backup.|  
 |[wbadmin disable backup](wbadmin-disable-backup.md)|Disables your daily backups.|  
-|[wbadmin start backup](wbadmin-start-backup.md)|Runs a one-time backup. if used with no parameters, uses the settings from the daily backup schedule.|  
+|[wbadmin start backup](wbadmin-start-backup.md)|Runs a one-time backup. If used with no parameters, uses the settings from the daily backup schedule.|  
 |[wbadmin stop job](wbadmin-stop-job.md)|Stops the currently running backup or recovery operation.|  
 |[wbadmin get versions](wbadmin-get-versions.md)|lists details of backups recoverable from the local computer or, if another location is specified, from another computer.|  
 |[wbadmin get items](wbadmin-get-items.md)|lists the items included in a backup.|  
@@ -41,4 +41,4 @@ You must run **wbadmin** from an elevated command prompt. (To open an elevated c
 |[wbadmin delete catalog](wbadmin-delete-catalog.md)|deletes the backup catalog on the local computer. Use this subcommand only if the backup catalog on this computer is corrupted and you have no backups stored at another location that you can use to restore the catalog.|  
 ## additional references  
 -   [Backup and recovery](http://go.microsoft.com/fwlink/?LinkID=195054)  
--   [Windows Server Backup Cmdlets in Windows powershell](http://technet.microsoft.com/library/jj902428.aspx)  
+-   [Windows Server Backup Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/jj902428.aspx)  

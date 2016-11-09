@@ -50,7 +50,7 @@ wbadmin start systemstaterecovery
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|-version|Specifies the version identifier for the backup to recover in MM/DD/YYYY-HH:MM format. if you do not know the version identifier, type **wbadmin get versions**.|
+|-version|Specifies the version identifier for the backup to recover in MM/DD/YYYY-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.|
 |-showsummary|Reports the summary of the last system state recovery (after the restart required to complete the operation). This parameter cannot be accompanied by any other parameters.|
 |-backupTarget|Specifies the storage location that contains the backup or backups you want to recover. This parameter is useful when the storage location is different from where the backups of this computer are usually stored.|
 |-machine|Specifies the name of the computer that you want to recover. This parameter is useful when multiple computers have been backed up to the same location. Should be used when the **-backupTarget** parameter is specified.|

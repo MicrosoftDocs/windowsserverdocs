@@ -24,7 +24,7 @@ You can use the information in this topic to configure the firewall port require
 By default, Windows Firewall enables all outbound network traffic,and it allows only inbound traffic that is enabled by firewall rules. This topic identifies the TCP and UDP ports for which you must have active firewall rules to allow the inbound traffic. This allows Group Policy to perform remote Group Policy Results reporting from client computers and to perform remote Group Policy refresh to client-based computers. You can use the information in this topic to configure non-Microsoft firewall products and to create a GPO to configure a client computer with the required firewall rules. This topic also presents two new starter Group Policy Objects (GPOs) that configure the proper firewall rules on client computers.
 
 > [!NOTE]
-> if you have configured client computers by using Group Policy, the Group Policy settings override any manual configuration of client computers to which the policies are applied. if you want to review these rules, from the Group Policy Management Console (GPMC), you can run a Group Policy Results report or Group Policy Planning report. Or from a client computer, open the Windows Firewall with Advanced Security mmc snap-in and click **Inbound Rules**.
+> if you have configured client computers by using Group Policy, the Group Policy settings override any manual configuration of client computers to which the policies are applied. If you want to review these rules, from the Group Policy Management Console (GPMC), you can run a Group Policy Results report or Group Policy Planning report. Or from a client computer, open the Windows Firewall with Advanced Security mmc snap-in and click **Inbound Rules**.
 > 
 > Membership in the Administrators group or equivalent is the minimum permissions required to make these configuration changes.
 
@@ -65,9 +65,9 @@ In  Windows Server 2012 , Group Policy adds a new starter GPO called, **Group Po
 
 6.  select the GPO that you just created. Click the Up arrow until the GPO you just created is located above the Default Domain Policy. The new GPO will then have a smaller link-order value than the Default Domain Policy.
 
-![Icon representing the powershell logo](../../media/configure-firewall-port-requirements-for-group-policy/powershellLogoSmall.gif)****Windows powershell equivalent commands****
+![Icon representing the PowerShell logo](../../media/configure-firewall-port-requirements-for-group-policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
-The following Windows powershell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 You can use the **New-GPO** cmdlet with the ** starterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
 
@@ -115,9 +115,9 @@ In  Windows Server 2012 , Group Policy adds a new starter GPO called **Group Pol
 
 6.  select the GPO that you just created. Click the up arrow until the GPO you just created is above the Default Domain Policy in link order. The new GPO will then have a smaller link order value than the Default Domain Policy.
 
-![Icon representing the powershell logo](../../media/configure-firewall-port-requirements-for-group-policy/powershellLogoSmall.gif)****Windows powershell equivalent commands****
+![Icon representing the PowerShell logo](../../media/configure-firewall-port-requirements-for-group-policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
-The following Windows powershell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 You can use the **New-GPO** cmdlet with the ** starterGpoName** parameter to create a new GPO. You can then pipe the output from the **New-GPO** cmdlet to the **New-GPLink** cmdlet.
 

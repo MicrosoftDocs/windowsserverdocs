@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-adds images to a Windows Deployment Services server. for examples of how you can use this command, see [Examples](#BKMK_examples).
+adds images to a Windows Deployment Services server. For examples of how you can use this command, see [Examples](#BKMK_examples).
 ## Syntax
 for boot images, use the following syntax:
 ```
@@ -42,15 +42,15 @@ wdsutil /add-ImagmediaFile:<wim file path>
 |Parameter|Description|
 |-------|--------|
 mediaFile:<.wim file path>|Specifies the full path and file name of the Windows Image (.wim) file that contains the images to be added.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if a server name is not specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If a server name is not specified, the local server will be used.|
 mediatype:{Boot&#124;Install}|Specifies the type of images to be added.|
 |[/Skipverify]|Specifies that integrity verification will not be performed on the source image file before the image is added.|
 |[/Name:<Name>]|Sets the display name of the image.|
 |[/Description:<Description>]|Sets the description of the image.|
-|[/Filename:<Filename>]|Specifies the new file name for the .wim file. This enables you to change the file name of the .wim file when adding the image. if no file name is specified, the source image file name will be used. In all cases, Windows Deployment Services checks to determine whether the file name is unique in the boot image store of the destination computer.|
-|\mediaGroup:<Image group name>]|Specifies the name of the image group in which the images are to be added. if more than one image group exists on the server, the image group must be specified. if this is not specified and an image group does not already exist, a new image group will be created. Otherwise, the existing image group will be used.|
+|[/Filename:<Filename>]|Specifies the new file name for the .wim file. This enables you to change the file name of the .wim file when adding the image. If no file name is specified, the source image file name will be used. In all cases, Windows Deployment Services checks to determine whether the file name is unique in the boot image store of the destination computer.|
+|\mediaGroup:<Image group name>]|Specifies the name of the image group in which the images are to be added. If more than one image group exists on the server, the image group must be specified. If this is not specified and an image group does not already exist, a new image group will be created. Otherwise, the existing image group will be used.|
 |[/SingleImage:<Single image name>] [/Name:<Name>] [/Description:<Description>]|Copies the specified single image out of a .wim file, and sets the image's display name and description.|
-|[/UnattendFile:<Unattend file path>]|Specifies the full path to the unattended installation file to be associated with the images that are being added. if **/SingleImage** is not specified, the same unattend file will be associated with all of the images in the .wim file.|
+|[/UnattendFile:<Unattend file path>]|Specifies the full path to the unattended installation file to be associated with the images that are being added. If **/SingleImage** is not specified, the same unattend file will be associated with all of the images in the .wim file.|
 ## <a name="BKMK_examples"></a>Examples
 To add a boot image, type:
 ```

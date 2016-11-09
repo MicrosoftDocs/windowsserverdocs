@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /changepassword <OldPasswd> <NewPasswd>

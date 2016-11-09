@@ -31,7 +31,7 @@ forfiles [/p <path>] [/m <Searchmask>] [/s] [/c "<Command>"] [/d [{+|-}][{<date>
 |/m <Searchmask>|Searches files according to the specified search mask. The default search mask is **\*.\***.|
 |/s|Instructs the **forfiles** command to search into subdirectories recursively.|
 |/c "<Command>"|Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is **"cmd /c echo @file"**.|
-|/d [{+&#124;-}][{<date>&#124;<Days>}]|selects files with a last modified date within the specified time frame.<br /><br />-   selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the format MM/DD/YYYY.<br />-   selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.<br />-   Valid values for *Days* include any number in the range 0 32,768. if no sign is specified, **+** is used by default.|
+|/d [{+&#124;-}][{<date>&#124;<Days>}]|selects files with a last modified date within the specified time frame.<br /><br />-   selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the format MM/DD/YYYY.<br />-   selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.<br />-   Valid values for *Days* include any number in the range 0 32,768. If no sign is specified, **+** is used by default.|
 |/?|Displays help at the command prompt.|
 ## remarks
 -   **forfiles** is most commonly used in batch files.
@@ -48,7 +48,7 @@ forfiles [/p <path>] [/m <Searchmask>] [/s] [/c "<Command>"] [/d [{+|-}][{<date>
     |@FSIZE|File size, in bytes.|
     |@Fdate|Last modified date stamp on the file.|
     |@Ftime|Last modified time stamp on the file.|
--   With **forfiles**, you can run a command on or pass arguments to multiple files. for example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name "Myinput.txt" as the first argument.
+-   With **forfiles**, you can run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name "Myinput.txt" as the first argument.
 -   With **forfiles**, you can do any of the following:
     -   select files by an absolute date or a relative date by using the **/d** parameter.
     -   Build an archive tree of files by using variables such as @FSIZEand @Fdate.

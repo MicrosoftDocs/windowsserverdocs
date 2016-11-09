@@ -28,7 +28,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 |-------|--------|
 |-v|Suppresses display of remote server responses.|
 |-n|Suppresses auto-login upon initial connection.|
-|-g|Disables file name globbing.  **Glob** permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file and path names. for more information, see [additional references](ftp.md#BKMK_additionalRef).|
+|-g|Disables file name globbing.  **Glob** permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file and path names. For more information, see [additional references](ftp.md#BKMK_additionalRef).|
 |-s:<FileName>|Specifies a text file that contains **ftp** commands. These commands run automatically after **ftp** starts. This parameter allows no spaces. Use this parameter instead of redirection (**<**). **Note:** In Windows 8 and  Windows Server 2012  or later operating systems, the text file must be written in UTF-8.|
 |-a|Specifies that any local interface can be used when binding the ftp data connection.|
 |-A|Logs onto the ftp server as anonymous.|
@@ -42,8 +42,8 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 -   for more information about **ftp** commands on Windows Server 2003, see [ftp](https://technet.microsoft.com/library/cc756013(v=ws.10).aspx).
 -   **ftp** command-line parameters are case-sensitive.
 -   This command is available only if the **Internet Protocol (TCP/IP)** protocol is installed as a component in the properties of a network adapter in Network Connections.
--   **ftp** can be used interactively. After it is started, **ftp** creates a sub-environment in which you can use **ftp** commands. You can return to the command prompt by typing the **quit** command. When the **ftp** sub-environment is running, it is indicated by the **ftp >** command prompt. for more information see the **ftp** commands.
--   **ftp** supports the use of IPv6 when the IPv6 protocol is installed. for more information, see [additional references](ftp.md#BKMK_additionalRef).
+-   **ftp** can be used interactively. After it is started, **ftp** creates a sub-environment in which you can use **ftp** commands. You can return to the command prompt by typing the **quit** command. When the **ftp** sub-environment is running, it is indicated by the **ftp >** command prompt. For more information see the **ftp** commands.
+-   **ftp** supports the use of IPv6 when the IPv6 protocol is installed. For more information, see [additional references](ftp.md#BKMK_additionalRef).
 ## <a name="BKMK_Examples"></a>Examples
 To log on to the ftp server named ftp.example.microsoft.com, type:
 ```

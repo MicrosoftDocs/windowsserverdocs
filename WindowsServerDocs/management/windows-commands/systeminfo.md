@@ -28,7 +28,7 @@ systeminfo [/s <computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE 
 |Parameter|Description|
 |-------|--------|
 |/s <computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
-|/u <Domain>\\<UserName>|Runs the command with the account permissions of the specified user account. if **/u** is not specified, this command uses the permissions of the user who is currently logged on to the computer that is issuing the command.|
+|/u <Domain>\\<UserName>|Runs the command with the account permissions of the specified user account. If **/u** is not specified, this command uses the permissions of the user who is currently logged on to the computer that is issuing the command.|
 |/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
 |/fo <format>|Specifies the output format with one of the following values:<br /><br />TABLE: Displays output in a table.<br /><br />list: Displays output in a list.<br /><br />CSV: Displays output in Comma Separated Values format.|
 |/nh|Suppresses column headers in the output. Valid when the **/fo** parameter is set to TABLE or CSV.|

@@ -26,7 +26,7 @@ remotehelp [<Command>]
 ### Parameters  
 |Parameter|Description|  
 |-------|--------|  
-|[<Command>]|Specifies the name of the command about which you want help. if *Command* is not specified, **ftp** displays a list of all remote commands.|  
+|[<Command>]|Specifies the name of the command about which you want help. If *Command* is not specified, **ftp** displays a list of all remote commands.|  
 ## remarks  
 You can run remote commands using **quote** or **literal**.  
 ## <a name="BKMK_Examples"></a>Examples  

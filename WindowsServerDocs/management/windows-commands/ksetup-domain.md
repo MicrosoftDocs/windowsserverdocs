@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets the domain name for all Kerberos operations. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the domain name for all Kerberos operations. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /domain <DomainName>

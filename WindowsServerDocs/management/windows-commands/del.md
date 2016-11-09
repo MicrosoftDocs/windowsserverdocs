@@ -28,7 +28,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <Names>
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|<Names>|Specifies a list of one or more files or directories. Wildcards may be used to delete multiple files. if a directory is specified, all files within the directory will be deleted.|
+|<Names>|Specifies a list of one or more files or directories. Wildcards may be used to delete multiple files. If a directory is specified, all files within the directory will be deleted.|
 |/p|prompts for confirmation before deleting the specified file.|
 |/f|forces deletion of read-only files.|
 |/s|deletes specified files from the current directory and all subdirectories. Displays the names of the files as they are being deleted.|
@@ -42,11 +42,11 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <Names>
     `FileName, delete (Y/N)?`
     To confirm the deletion, press Y. To cancel the deletion and display the next file name (that is, if you specified a group of files), press N. To stop the **del** command, press CTRL+C.
 -   if you disable command extensions, **/s** displays the names of any files that were not found instead of displaying the names of files that are being deleted (that is, the behavior is reversed).
--   if you specify a folder in *Names*, all of the files in the folder are deleted. for example, the following command deletes all of the files in the \Work folder:
+-   if you specify a folder in *Names*, all of the files in the folder are deleted. For example, the following command deletes all of the files in the \Work folder:
     ```
     del \work
     ```
--   You can use wildcards (**\*** and **?**) to delete more than one file at a time. However, to avoid deleting files unintentionally, you should use wildcards cautiously with the **del** command. for example, if you type the following command:
+-   You can use wildcards (**\*** and **?**) to delete more than one file at a time. However, to avoid deleting files unintentionally, you should use wildcards cautiously with the **del** command. For example, if you type the following command:
     ```
     del *.*
     ```

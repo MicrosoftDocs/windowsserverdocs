@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Validates the security settings stored in a security template (.inf file). for examples of how this command can be used, see [Examples](secedit-validate.md#BKMK_Examples).
+Validates the security settings stored in a security template (.inf file). For examples of how this command can be used, see [Examples](secedit-validate.md#BKMK_Examples).
 ## Syntax
 ```
 secedit /validate <configuration file name>
@@ -31,7 +31,7 @@ secedit /validate <configuration file name>
 Validating security templates can help you if one is corrupted or inappropriately set.
 An invalid security template will not be applied.
 The log file will not be updated.
-In Windows Server 2008, `secedit /refreshpolicy` has been replaced with `gpupdate`. for information on how to refresh security settings, see [gpupdate](gpupdate.md).
+In Windows Server 2008, `secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [gpupdate](gpupdate.md).
 ## <a name="BKMK_Examples"></a>Examples
 After a rollback is performed on a security template, you want to verify that the rollback inf file, secRBKcontoso.inf, is valid.
 ```

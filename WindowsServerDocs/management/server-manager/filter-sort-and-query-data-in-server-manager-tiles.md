@@ -59,9 +59,9 @@ You can create custom queries in the Events, Performance, Best Practices Analyze
   
 4.  select criteria to add. When you are finished, click **add**. Criteria that you selected are added to the query-building area.  
   
-5.  Click the hypertext operator to select an operator. for numerical or date and time criteria, for example, the default is **less than or equal to**.  
+5.  Click the hypertext operator to select an operator. For numerical or date and time criteria, for example, the default is **less than or equal to**.  
   
-6.  Specify acceptable values for the criteria. for example, if you selected **date and time**, provide a date in the format *m/d/yyyy*.  
+6.  Specify acceptable values for the criteria. For example, if you selected **date and time**, provide a date in the format *m/d/yyyy*.  
   
 7.  Repeat these steps from step 3 forward to add more criteria to your query.  
   
@@ -71,7 +71,7 @@ You can create custom queries in the Events, Performance, Best Practices Analyze
   
 8.  When you are finished adding criteria and specifying operators and values, click **Save** to save the query.  
   
-9. Enter a friendly name for the query. for example, the query created in the preceding step can be named **Licensing events**.  
+9. Enter a friendly name for the query. For example, the query created in the preceding step can be named **Licensing events**.  
   
 10. When you are finished viewing query results, click **Clear All** to clear all filters and queries, and display all entries in the list.  
   

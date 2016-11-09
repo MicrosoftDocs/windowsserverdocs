@@ -18,10 +18,10 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Checks the file system and file system metadata of a volume for logical and physical errors. if used without parameters, **chkdsk** displays only the status of the volume and does not fix any errors. if used with the **\/f**, **\/r**, **\/x**, or **\/b** parameters, it fixes errors on the volume.  
-> [!importANT]  
+Checks the file system and file system metadata of a volume for logical and physical errors. If used without parameters, **chkdsk** displays only the status of the volume and does not fix any errors. If used with the **\/f**, **\/r**, **\/x**, or **\/b** parameters, it fixes errors on the volume.  
+> [!IMPORTANT]  
 > Membership in the local **Administrators** group, or equivalent, is the minimum required to run **chkdsk**.  
-> [!importANT]  
+> [!IMPORTANT]  
 > Interrupting **chkdsk** is not recommended. However, canceling or interrupting **chkdsk** should not leave the volume any more corrupt than it was before **chkdsk** was run. Rerunning **chkdsk** checks and repairs any remaining corruption on the volume.  
 for examples of how to use this command, see [Examples](#BKMK_examples).  
 ## Syntax  
@@ -33,27 +33,27 @@ chkdsk [<volume>[[<path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 |-------|--------|  
 |<volume>|Specifies the drive letter \(followed by a colon\), mount point, or volume name.|  
 |\[<path>\]<FileName>|Use with file allocation table \(Fat\) and Fat32 only. Specifies the location and name of a file or set of files that you want **chkdsk** to check for fragmentation. You can use the **?** and **\*** wildcard characters to specify multiple files.|  
-|\/f|Fixes errors on the disk. The disk must be locked. if **chkdsk** cannot lock the drive, a message appears that asks you if you want to check the drive the next time you restart the computer.|  
+|\/f|Fixes errors on the disk. The disk must be locked. If **chkdsk** cannot lock the drive, a message appears that asks you if you want to check the drive the next time you restart the computer.|  
 |\/v|Displays the name of each file in every directory as the disk is checked.|  
 |\/r|Locates bad sectors and recovers readable information. The disk must be locked. **\/r** includes the functionality of **\/f**, with the additional analysis of physical disk errors.|  
 |\/x|forces the volume to dismount first, if necessary. All open handles to the drive are invalidated. **\/x** also includes the functionality of **\/f**.|  
 |\/i|Use with NTFS only. Performs a less vigorous check of index entries, which reduces the amount of time required to run **chkdsk**.|  
 |\/c|Use with NTFS only. Does not check cycles within the folder structure, which reduces the amount of time required to run **chkdsk**.|  
-|\/l\[:<Size>\]|Use with NTFS only. changes the log file size to the size you type. if you omit the size parameter, **\/l** displays the current size.|  
+|\/l\[:<Size>\]|Use with NTFS only. Changes the log file size to the size you type. If you omit the size parameter, **\/l** displays the current size.|  
 |\/b|NTFS only: Clears the list of bad clusters on the volume and rescans all allocated and free clusters for errors. **\/b** includes the functionality of **\/r**. Use this parameter after imaging a volume to a new hard disk drive.|  
 |\/?|Displays help at the command prompt.|  
 ## remarks  
 -   Skipping volume checks  
     The **\/i** or **\/c** switch reduces the amount of time required to run **chkdsk** by skipping certain volume checks.  
 -   Checking a locked drive at restart  
-    if you want **chkdsk** to correct disk errors, you cannot have open files on the drive. if files are open, the following error message appears:  
+    if you want **chkdsk** to correct disk errors, you cannot have open files on the drive. If files are open, the following error message appears:  
     ```  
     chkdsk cannot run because the volume is in use by another process. Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)  
     ```  
-    if you choose to check the drive the next time you restart the computer, **chkdsk** checks the drive and corrects errors automatically when you restart the computer. if the drive partition is a boot partition, **chkdsk** automatically restarts the computer after it checks the drive.  
+    if you choose to check the drive the next time you restart the computer, **chkdsk** checks the drive and corrects errors automatically when you restart the computer. If the drive partition is a boot partition, **chkdsk** automatically restarts the computer after it checks the drive.  
     You can also use the **chkntfs \/c** command to schedule the volume to be checked the next time the computer is restarted. Use the **fsutil dirty set** command to set the volume's dirty bit \(indicating corruption\), so that Windows runs **chkdsk** when the computer is restarted.  
 -   Reporting disk errors  
-    You should use **chkdsk** occasionally on Fat and NTFS file systems to check for disk errors. **chkdsk** examines disk space and disk use and provides a status report specific to each file system. The status report shows errors found in the file system. if you run **chkdsk** without the **\/f** parameter on an active partition, it might report spurious errors because it cannot lock the drive.  
+    You should use **chkdsk** occasionally on Fat and NTFS file systems to check for disk errors. **chkdsk** examines disk space and disk use and provides a status report specific to each file system. The status report shows errors found in the file system. If you run **chkdsk** without the **\/f** parameter on an active partition, it might report spurious errors because it cannot lock the drive.  
 -   Fixing logical disk errors  
     **chkdsk** corrects logical disk errors only if you specify the **\/f** parameter. **chkdsk** must be able to lock the drive to correct errors.  
     Because repairs on Fat file systems usually change a disk's file allocation table and sometimes cause a loss of data, **chkdsk** might display a confirmation message similar to the following:  
@@ -61,13 +61,13 @@ chkdsk [<volume>[[<path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
     10 lost allocation units found in 3 chains.  
     convert lost chains to files?  
     ```  
-    if you press **Y**, Windows saves each lost chain in the root directory as a file with a name in the format File<nnnn>.chk. When **chkdsk** finishes, you can check these files to see if they contain any data you need. if you press **N**, Windows fixes the disk, but it does not save the contents of the lost allocation units.  
+    if you press **Y**, Windows saves each lost chain in the root directory as a file with a name in the format File<nnnn>.chk. When **chkdsk** finishes, you can check these files to see if they contain any data you need. If you press **N**, Windows fixes the disk, but it does not save the contents of the lost allocation units.  
     if you do not use the **\/f** parameter, **chkdsk** displays a message that the file needs to be fixed, but it does not fix any errors.  
     if you use **chkdsk \/f** on a very large disk or a disk with a very large number of files \(for example, millions of files\), **chkdsk \/f** might take a long time to complete.  
 -   finding physical disk errors  
     Use the **\/r** parameter to find physical disk errors in the file system and attempt to recover data from any affected disk sectors.  
 -   Using **chkdsk** with open files  
-    if you specify the **\/f** parameter, **chkdsk** displays an error message if there are open files on the disk. if you do not specify the **\/f** parameter and open files exist, **chkdsk** might report lost allocation units on the disk. This could happen if open files have not yet been recorded in the file allocation table. if **chkdsk** reports the loss of a large number of allocation units, consider repairing the disk.  
+    if you specify the **\/f** parameter, **chkdsk** displays an error message if there are open files on the disk. If you do not specify the **\/f** parameter and open files exist, **chkdsk** might report lost allocation units on the disk. This could happen if open files have not yet been recorded in the file allocation table. If **chkdsk** reports the loss of a large number of allocation units, consider repairing the disk.  
 -   Using **chkdsk** with shadow Copies for Shared Folders  
     Because the shadow Copies for Shared Folders source volume cannot be locked while shadow Copies for Shared Folders is enabled, running **chkdsk** against the source volume might report false errors or cause **chkdsk** to unexpectedly quit. You can, however, check shadow copies for errors by running **chkdsk** in Read\-only mode \(without parameters\) to check the shadow Copies for Shared Folders storage volume.  
 -   Understanding exit codes  

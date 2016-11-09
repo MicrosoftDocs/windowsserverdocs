@@ -26,7 +26,7 @@ wdsutil [Options] /Get-AutoaddDevices [/Server:<Server name>] /Devicetype:{Pendi
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Devicetype:{PendingDevices &#124; RejectedDevices &#124; ApprovedDevices}|Specifies the type of computer to return.<br /><br />-   **PendingDevices** returns all computers in the database that have a status of pending.<br />-   **RejectedDevices** returns all computers in the database that have a status of rejected.<br />-   **ApprovedDevices** returns all computers in the database that have a status of approved.|
 ## <a name="BKMK_examples"></a>Examples
 To see all of the approved computers, type:

@@ -26,7 +26,7 @@ wdsutil [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Show:{Config}|Returns configuration information about the specified Transport Server.|
 ## <a name="BKMK_examples"></a>Examples
 To view information about the server, type:

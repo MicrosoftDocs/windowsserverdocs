@@ -19,7 +19,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays system status, changes system settings, or reconfigures ports or devices. if used without parameters, **mode** displays all the controllable attributes of the console and the available COM devices.  
+Displays system status, changes system settings, or reconfigures ports or devices. If used without parameters, **mode** displays all the controllable attributes of the console and the available COM devices.  
 You can use **mode** to perform the following tasks each task uses a different syntax:  
 -   [To configure a serial communications port](#BKMK_1)  
 -   [To display the status of all devices or of a single device](#BKMK_2)  
@@ -39,7 +39,7 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 |baud=<B>|Specifies the transmission rate in bits per second. The following table lists valid abbreviations for *B* and their related rates.<br /><br />-   **11** = 110 baud<br />-   **15** = 150 baud<br />-   **30** = 300 baud<br />-   **60** = 600 baud<br />-   **12** = 1200 baud<br />-   **24** = 2400 baud<br />-   **48** = 4800 baud<br />-   **96** = 9600 baud<br />-   **19** = 19,200 baud|  
 |parity=<P>|Specifies how the system uses the parity bit to check for transmission errors. The following table lists valid values for *P*. The default value is **e**. Not all computers support the values **m** and **s**.<br /><br />-   **n** = none<br />-   **e** = even<br />-   **o** = odd<br />-   **m** = mark<br />-   **s** = space|  
 |data=<D>|Specifies the number of data bits in a character. Valid values for **d** are in the range 5 through 8. The default value is 7. Not all computers support the values 5 and 6.|  
-|stop=<S>|Specifies the number of stop bits that define the end of a character: 1, 1.5, or 2. if the baud rate is 110, the default value is 2. Otherwise, the default value is 1. Not all computers support the value 1.5.|  
+|stop=<S>|Specifies the number of stop bits that define the end of a character: 1, 1.5, or 2. If the baud rate is 110, the default value is 2. Otherwise, the default value is 1. Not all computers support the value 1.5.|  
 |to={on &#124; off}|Specifies whether infinite time-out processing is on or off. The default is off.|  
 |xon={on &#124; off}|Specifies whether the xon or xoff protocol for data-flow control is on or off.|  
 |odsr={on &#124; off}|Specifies whether output handshaking that uses the Data Set Ready (DSR) circuit is on or off.|  
@@ -128,8 +128,8 @@ mode con[:] [rate=<R> delay=<D>]
 ##### remarks  
 -   The typematic rate is the rate at which a character repeats when you hold down the key for that character. The typematic rate has two components, the rate and the delay. Some keyboards do not recognize this command.  
 -   Using **rate=***R*  
-    Valid values are in the range 1 through 32. These values are equal to approximately 2 to 30 characters per second. The default value is 20 for IBM at-compatible keyboards, and 21 for IBM PS/2-compatible keyboards. if you set the rate, you must also set the delay.  
+    Valid values are in the range 1 through 32. These values are equal to approximately 2 to 30 characters per second. The default value is 20 for IBM at-compatible keyboards, and 21 for IBM PS/2-compatible keyboards. If you set the rate, you must also set the delay.  
 -   Using **delay**=*D*  
-    Valid values for *D* are 1, 2, 3, and 4 (representing 0.25, 0.50, 0.75, and 1 second). The default value is 2. if you set the delay, you must also set the rate.  
+    Valid values for *D* are 1, 2, 3, and 4 (representing 0.25, 0.50, 0.75, and 1 second). The default value is 2. If you set the delay, you must also set the rate.  
 #### additional references  
 [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -36,9 +36,9 @@ With GPMC, the following tasks can be delegated:
 
 -   Set permissions on a WMI filter.
 
-GPMC simplifies delegation by managing the various ACEs required for a task as a single bundle of permissions for the task. if you want to see the ACL in detail, you can click the Advanced button on the delegation tab. The underlying mechanism for achieving delegation is the application of the appropriate DAcls to GPOs and other objects in active directory. This mechanism is identical to using security groups to filter the application of GPOs to various users.
+GPMC simplifies delegation by managing the various ACEs required for a task as a single bundle of permissions for the task. If you want to see the ACL in detail, you can click the Advanced button on the delegation tab. The underlying mechanism for achieving delegation is the application of the appropriate DAcls to GPOs and other objects in active directory. This mechanism is identical to using security groups to filter the application of GPOs to various users.
 
-You can also specify Group Policy to control the behavior of mmc and mmc snap-ins. for example, you can use Group Policy to manage the rights to create, configure, and use mmc consoles, and to control access to individual snap-ins.
+You can also specify Group Policy to control the behavior of mmc and mmc snap-ins. For example, you can use Group Policy to manage the rights to create, configure, and use mmc consoles, and to control access to individual snap-ins.
 
 ## How to delegate permissions for a group or user on a Group Policy Object
 

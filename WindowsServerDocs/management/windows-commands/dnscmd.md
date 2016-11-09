@@ -77,7 +77,7 @@ dnscmd [<ServerName>] /ageallrecords <ZoneName>[<NodeName>] | [/tree]|[/f]
 ```  
 #### Parameters  
 <ServerName>  
-Specifies the DNS server that the administrator plans to manage, represented by IP address, fully qualified domain name (FQDN), or Host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server that the administrator plans to manage, represented by IP address, fully qualified domain name (FQDN), or Host name. If this parameter is omitted, the local server is used.  
 <ZoneName>  
 Specifies the FQDN of the zone.  
 <NodeName>  
@@ -92,9 +92,9 @@ Runs the command without asking for confirmation.
 #### remarks  
 -   The **ageallrecords** command is for backward compatibility between the current version of DNS and previous releases of DNS in which aging and scavenging were not supported. It adds a time stamp with the current time to resource records that do not have a time stamp, and it sets the current time on resource records that do have a time stamp.  
 -   Record scavenging does not occur unless the records are time stamped. Name server (NS) resource records, start of authority (SOA) resource records, and Windows Internet Name Service (WINS) resource records are not included in the scavenging process, and they are not time stamped even when the **ageallrecords** command runs.  
--   This command fails unless scavenging is enabled for the DNS server and the zone. for information about how to enable scavenging for the zone, see the **aging** parameter under Zone-Level Syntax in the [config](#BKMK_3) command.  
+-   This command fails unless scavenging is enabled for the DNS server and the zone. For information about how to enable scavenging for the zone, see the **aging** parameter under Zone-Level Syntax in the [config](#BKMK_3) command.  
 -   The addition of a time stamp to DNS resource records makes them incompatible with DNS servers that run on operating systems other than Windows 2000, Windows XP, or Windows Server 2003. A time stamp that you add by using the **ageallrecords** command cannot be reversed.  
--   if none of the optional parameters are specified, the command returns all resource records at the specified node. if a value is specified for at least one of the optional parameters, **dnscmd** enumerates only the resource records that correspond to the value or values that are specified in the optional parameter or parameters.  
+-   if none of the optional parameters are specified, the command returns all resource records at the specified node. If a value is specified for at least one of the optional parameters, **dnscmd** enumerates only the resource records that correspond to the value or values that are specified in the optional parameter or parameters.  
 #### Example  
 See [Example 1: Set the current time on a time stamp to resource records](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx).  
 ### <a name="BKMK_2"></a>dnscmd /clearcache  
@@ -105,13 +105,13 @@ dnscmd [<ServerName>] /clearcache
 ```  
 #### Parameters  
 <ServerName>  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /clearcache`  
 ### <a name="BKMK_3"></a>dnscmd /config  
 changes values in the registry for the DNS server and individual zones. Accepts server-level settings and zone-level settings.  
 > [!CAUTION]  
-> Do not edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console (mmc). if you must edit the registry directly, back it up first. Read the registry editor help for more information.  
+> Do not edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console (mmc). If you must edit the registry directly, back it up first. Read the registry editor help for more information.  
 #### Server-level syntax  
 ```  
 dnscmd [<ServerName>] /config <Parameter>  
@@ -120,7 +120,7 @@ dnscmd [<ServerName>] /config <Parameter>
 Modifies the configuration of the specified server.  
 #### Parameters  
 <ServerName>  
-Specifies the DNS server that you are planning to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server that you are planning to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 <Parameter>  
 Specify a setting and, as an option, a value. Parameter values use this syntax: *Parameter* [*Value*]  
 The following parameter values are described in the remainder of this section:  
@@ -261,16 +261,16 @@ The DNS Server service attempts to resolve names by querying the GlobalNames zon
 **1**  
 The DNS Server service attempts to resolve names by querying the zones for which it is authoritative before it queries the GlobalNames zone.  
 **/globalqueryblocklist[[<name> [<name>]...]**  
-replaces the current global query block list with a list of the names that you specify. if you do not specify any names, this command clears the block list. By default, the global query block list contains the following items:  
+replaces the current global query block list with a list of the names that you specify. If you do not specify any names, this command clears the block list. By default, the global query block list contains the following items:  
 -   isatap  
 -   wpad  
 The DNS Server service can remove either or both of these names when it starts the first time, if it finds these names in an existing zone.  
 **/isslave [0|1]**  
 Determines how the DNS server responds when queries that it forwards receive no response.  
 **0**  
-Specifies that the DNS server is not a subordinate (also known as a *slave*). if the forwarder does not respond, the DNS server attempts to resolve the query itself. This is the default setting.  
+Specifies that the DNS server is not a subordinate (also known as a *slave*). If the forwarder does not respond, the DNS server attempts to resolve the query itself. This is the default setting.  
 **1**  
-Specifies that the DNS server is a subordinate. if the forwarder does not respond, the DNS server terminates the search and sends a failure message to the resolver.  
+Specifies that the DNS server is a subordinate. If the forwarder does not respond, the DNS server terminates the search and sends a failure message to the resolver.  
 **/localnetpriority [0|1]**  
 Determines the order in which host records are returned when the DNS server has multiple host records for the same name.  
 **0**  
@@ -284,7 +284,7 @@ Specifies the path of the Dns.log file. The default path is %systemroot%\System3
 **/logipfilterlist <IPaddress> [,<IPaddress>...]**  
 Specifies which packets are logged in the debug log file. The entries are a list of IP addresses. Only packets going to and from the IP addresses in the list are logged.  
 **/loglevel [<Eventtype>]**  
-Determines which types of events are recorded in the Dns.log file. Each event type is represented by a hexadecimal number. if you want more than one event in the log, use hexadecimal addition to add the values, and then enter the sum.  
+Determines which types of events are recorded in the Dns.log file. Each event type is represented by a hexadecimal number. If you want more than one event in the log, use hexadecimal addition to add the values, and then enter the sum.  
 **0x0**  
 The DNS server does not create a log. This is the default entry.  
 **0x10**  
@@ -320,7 +320,7 @@ Logs write-through transactions.
 **/maxcachesize**  
 Specifies the maximum size, in kilobytes (KB), of the DNS server s memory cache.  
 **/maxcachettl [<seconds>]**  
-Determines how many seconds (0x0-0xFFFFFFFF) a record is saved in the cache. if the **0x0** setting is used, the DNS server does not cache records. The default setting is **0x15180** (86,400 seconds or 1 day).  
+Determines how many seconds (0x0-0xFFFFFFFF) a record is saved in the cache. If the **0x0** setting is used, the DNS server does not cache records. The default setting is **0x15180** (86,400 seconds or 1 day).  
 **/maxnegativecachettl [<seconds>]**  
 Specifies how many seconds (0x1-0xFFFFFFFF) an entry that records a negative answer to a query remains stored in the DNS cache. The default setting is **0x384** (900 seconds).  
 **/namecheckflag [0|1|2|3]**  
@@ -374,7 +374,7 @@ Saves only the records that belong to the same DNS subtree to a cache.
 **/sendport [<port>]**  
 Specifies the port number (0x0-0xFFFFFFFF) that DNS uses to send recursive queries to other DNS servers. The default setting is **0x0**, which means that the port number is selected randomly.  
 **/serverlevelplugindll[<Dllpath>]**  
-Specifies the path of a custom plug-in. When *Dllpath* specifies the fully qualified path name of a valid DNS server plug-in, the DNS server calls functions in the plug-in to resolve name queries that are outside the scope of all locally hosted zones. if a queried name is out of the scope of the plug-in, the DNS server performs name resolution using forwarding or recursion, as configured. if *Dllpath* is not specified, the DNS server ceases to use a custom plug-in if a custom plug-in was previously configured.  
+Specifies the path of a custom plug-in. When *Dllpath* specifies the fully qualified path name of a valid DNS server plug-in, the DNS server calls functions in the plug-in to resolve name queries that are outside the scope of all locally hosted zones. If a queried name is out of the scope of the plug-in, the DNS server performs name resolution using forwarding or recursion, as configured. If *Dllpath* is not specified, the DNS server ceases to use a custom plug-in if a custom plug-in was previously configured.  
 **/strictfileparsing [0|1]**  
 Determines a DNS server's behavior when it encounters an erroneous record while loading a zone.  
 **0**  
@@ -382,7 +382,7 @@ The DNS server continues to load the zone even if the server encounters an erron
 **1**  
 The DNS server stops loading the zone, and it records the error in the DNS log.  
 **/updateoptions <RecordValue>**  
-Prohibits dynamic updates of specified types of records. if you want more than one record type to be prohibited in the log, use hexadecimal addition to add the values, and then enter the sum.  
+Prohibits dynamic updates of specified types of records. If you want more than one record type to be prohibited in the log, use hexadecimal addition to add the values, and then enter the sum.  
 **0x0**  
 Does not restrict any record types.  
 **0x1**  
@@ -459,7 +459,7 @@ dnscmd [<ServerName>] /createbuiltindirectorypartitions [/forest] [/alldomains]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **/forest**  
 creates a DNS directory partition for the forest.  
 **/alldomains**  
@@ -472,7 +472,7 @@ dnscmd [<ServerName>] /createdirectorypartition <PartitionFQDN>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<PartitionFQDN>**  
 The FQDN of the DNS application directory partition that will be created.  
 ### <a name="BKMK_6"></a>dnscmd /deletedirectorypartition  
@@ -483,7 +483,7 @@ dnscmd [<ServerName>] /deletedirectorypartition <PartitionFQDN>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<PartitionFQDN>**  
 The FQDN of the DNS application directory partition that will be removed.  
 ### <a name="BKMK_7"></a>dnscmd /directorypartitioninfo  
@@ -494,7 +494,7 @@ dnscmd [<ServerName>] /directorypartitioninfo <PartitionFQDN> [/detail]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<PartitionFQDN>**  
 The FQDN of the DNS application directory partition.  
 **/detail**  
@@ -507,7 +507,7 @@ dnscmd [<ServerName>] /enlistdirectorypartition <PartitionFQDN>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<PartitionFQDN>**  
 The FQDN of the DNS application directory partition.  
 ### <a name="BKMK_9"></a>dnscmd /enumdirectorypartitions  
@@ -518,7 +518,7 @@ dnscmd [<ServerName>] /enumdirectorypartitions [/custom]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **/custom**  
 lists only user-created directory partitions.  
 ### <a name="BKMK_10"></a>dnscmd /enumrecords  
@@ -529,7 +529,7 @@ dnscmd [<ServerName>] /enumrecords <ZoneName> <NodeName> [/type <RRtype> <Rrdata
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server that you plan to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server that you plan to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **/enumrecords**  
 lists resource records in the specified zone.  
 **<ZoneName>**  
@@ -572,7 +572,7 @@ dnscmd [<ServerName>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **/primary | /secondary | /forwarder | /stub | /cache | /auto-created**  
 Filters the types of zones to display:  
 **/primary**  
@@ -608,7 +608,7 @@ lists all zones that are stored in the domain directory partition.
 **/directorypartition <PartitionFQDN>**  
 lists all zones that are stored in the specified directory partition.  
 #### remarks  
--   The **enumzones** parameters act as filters on the list of zones. if no filters are specified, a complete list of zones is returned. When a filter is specified, only the zones that meet that filter's criteria are included in the returned list of zones.  
+-   The **enumzones** parameters act as filters on the list of zones. If no filters are specified, a complete list of zones is returned. When a filter is specified, only the zones that meet that filter's criteria are included in the returned list of zones.  
 #### Example  
 See [Example 2: Display a complete list of zones on a DNS server](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx) or [Example 3: Display a list of autocreated zones on a DNS server](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx).  
 ### <a name="BKMK_25a"></a>dnscmd /exportsettings  
@@ -619,7 +619,7 @@ dnscmd [<ServerName>] /exportsettings
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 #### remarks  
 -   You can use the information in the file that **dnscmd /exportsettings** creates to troubleshoot configuration problems or to ensure that you have configured multiple servers identically.  
 ### <a name="BKMK_12"></a>dnscmd /info  
@@ -630,9 +630,9 @@ dnscmd [<ServerName>] /info [<Setting>]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<Setting>**  
-Any setting that the **info** command returns can be specified individually. if a setting is not specified, a report of common settings is returned.  
+Any setting that the **info** command returns can be specified individually. If a setting is not specified, a report of common settings is returned.  
 #### remarks  
 -   This command displays registry settings that are at the DNS server level. To display zone-level registry settings, use the [zoneinfo](#BKMK_26) command. To see a list of settings that can be displayed with this command, see the [config](#BKMK_3) description.  
 #### Example  
@@ -645,7 +645,7 @@ dnscmd [<ServerName>] /ipvalidate <Context> [<ZoneName>] [[<IPaddress>]]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<Context>**  
 Specifies the type of test to perform. You can specify any of the following tests:  
 -   **/dnsservers** tests that the computers with the addresses that you specify are functioning DNS servers.  
@@ -667,7 +667,7 @@ dnscmd [<ServerName>] /nodedelete <ZoneName> <NodeName> [/tree] [/f]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone.  
 **<NodeName>**  
@@ -686,7 +686,7 @@ dnscmd [<ServerName>] /recordadd <ZoneName> <NodeName> <RRtype> <Rrdata>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the zone in which the record resides.  
 **<NodeName>**  
@@ -696,7 +696,7 @@ Specifies the type of record to be added.
 **<Rrdata>**  
 Specifies the type of data that is expected.  
 > [!NOTE]  
-> When you add a record, make sure that you use the correct data type and data format. for a list of resource record types and the appropriate data types, see [Resource records reference](https://technet.microsoft.com/library/cc758321(v=ws.10).aspx).  
+> When you add a record, make sure that you use the correct data type and data format. For a list of resource record types and the appropriate data types, see [Resource records reference](https://technet.microsoft.com/library/cc758321(v=ws.10).aspx).  
 #### Sample usage  
 <pre>dnscmd dnssvr1.contoso.com /recordadd test A 10.0.0.5  
 dnscmd /recordadd test.contoso.com test MX 10 mailserver.test.contoso.com</pre>  
@@ -708,7 +708,7 @@ dnscmd <ServerName> /recorddelete <ZoneName> <NodeName> <RRtype> <Rrdata>[/f]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the zone in which the resource record resides.  
 **<NodeName>**  
@@ -731,7 +731,7 @@ dnscmd [<ServerName>] /resetforwarders [<IPaddress> [,<IPaddress>]...][/timeout 
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<IPaddress>**  
 lists the IP addresses to which the DNS server forwards unresolved queries.  
 **/timeout <timeOut>**  
@@ -744,7 +744,7 @@ Prevents the DNS server from performing its own iterative queries if the forward
 Allows the DNS server to perform its own iterative queries if the forwarder fails to resolve a query. This is the default setting.  
 #### remarks  
 -   By default, a DNS server performs iterative queries when it cannot resolve a query.  
--   Setting IP addresses by using the **resetforwarders** command causes the DNS server to perform recursive queries to the DNS servers at the specified IP addresses. if the forwarders do not resolve the query, the DNS server can then perform its own iterative queries.  
+-   Setting IP addresses by using the **resetforwarders** command causes the DNS server to perform recursive queries to the DNS servers at the specified IP addresses. If the forwarders do not resolve the query, the DNS server can then perform its own iterative queries.  
 -   if the **/slave** parameter is used, the DNS server does not perform its own iterative queries. This means that the DNS server forwards unresolved queries only to the DNS servers in the list, and it does not attempt iterative queries if the forwarders do not resolve them. It is more efficient to set one IP address as a forwarder for a DNS server. You can use the **resetforwarders** command for internal servers in a network to forward their unresolved queries to one DNS server that has an external connection.  
 -   listing a forwarder s IP address twice causes the DNS server to attempt to forward to that server twice.  
 #### Sample usage  
@@ -758,9 +758,9 @@ dnscmd [<ServerName>] /resetlistenaddresses [<listenaddress>]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<listenaddress>**  
-Specifies an IP address on the DNS server that listens for DNS client requests. if no listen address is specified, all IP addresses on the server listen for client requests.  
+Specifies an IP address on the DNS server that listens for DNS client requests. If no listen address is specified, all IP addresses on the server listen for client requests.  
 #### remarks  
 -   By default, all IP addresses on a DNS server listen for client DNS requests.  
 #### Sample usage  
@@ -773,7 +773,7 @@ dnscmd [<ServerName>] /startscavenging
 ```  
 #### Parameter  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 #### remarks  
 -   Successful completion of this command starts a scavenge immediately.  
 -   Although the command to start the scavenge appears to complete successfully, the scavenge does not start unless the following preconditions are met:  
@@ -795,9 +795,9 @@ dnscmd [<ServerName>] /statistics [<StatID>] [/clear]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<StatID>**  
-Specifies which statistic or combination of statistics to display. An identification number is used to identify a statistic. if no statistic ID number is specified, all statistics display.  
+Specifies which statistic or combination of statistics to display. An identification number is used to identify a statistic. If no statistic ID number is specified, all statistics display.  
 The following is a list of numbers that can be specified and the corresponding statistic that displays:  
 **00000001**  
 time  
@@ -843,7 +843,7 @@ dnscmd [<ServerName>] /unenlistdirectorypartition <PartitionFQDN>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<PartitionFQDN>**  
 The FQDN of the DNS application directory partition that will be removed.  
 ### <a name="BKMK_21"></a>dnscmd /writebackfiles  
@@ -854,7 +854,7 @@ dnscmd [<ServerName>] /writebackfiles [<ZoneName>]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to be updated.  
 #### remarks  
@@ -869,7 +869,7 @@ dnscmd [<ServerName>] /zoneadd <ZoneName> <Zonetype> [/dp <FQDN>| {/domain|/ente
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone.  
 **<Zonetype>**  
@@ -911,7 +911,7 @@ dnscmd [<ServerName>] /zonechangedirectorypartition <ZoneName>] {[<NewPartitionN
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 The FQDN of the current directory partition on which the zone resides.  
 **<NewPartitionName>**  
@@ -932,7 +932,7 @@ dnscmd [<ServerName>] /zonedelete <ZoneName> [/dsdel] [/f]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to be deleted.  
 **/dsdel**  
@@ -947,7 +947,7 @@ creates a text file that lists the resource records of a specified zone.
 `dnscmd [<ServerName>] /zoneexport <ZoneName> <ZoneExportFile>`  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone.  
 **<ZoneExportFile>**  
@@ -964,11 +964,11 @@ dnscmd [<ServerName>] /zoneinfo <ZoneName>  [<Setting>]
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone.  
 **<Setting>**  
-You can individually specify any setting that the **zoneinfo** command returns. if you do not specify a setting, all settings are returned.  
+You can individually specify any setting that the **zoneinfo** command returns. If you do not specify a setting, all settings are returned.  
 #### remarks  
 -   The **zoneinfo** command displays registry settings that are at the DNS zone level at **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\\<ZoneName>**.  
 -   To display server-level registry settings, use the [info](#BKMK_12) command.  
@@ -983,7 +983,7 @@ dnscmd [<ServerName>] /zonepause <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to be paused.  
 #### remarks  
@@ -998,7 +998,7 @@ dnscmd [<ServerName>] /zoneprint <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Identifies the zone to be listed.  
 ### <a name="BKMK_30"></a>dnscmd /zonerefresh  
@@ -1009,11 +1009,11 @@ dnscmd <ServerName> /zonerefresh <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to be refreshed.  
 #### remarks  
--   The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. if the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. if the version number is the same, no zone transfer occurs.  
+-   The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.  
 -   The forced check occurs by default every 15 minutes. To change the default, use the **dnscmd config refreshinterval** command.  
 #### Sample usage  
 `dnscmd dnssvr1.contoso.com /zonerefresh test.contoso.com`  
@@ -1025,7 +1025,7 @@ dnscmd <ServerName> /zonereload <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to be reloaded.  
 #### remarks  
@@ -1041,7 +1041,7 @@ dnscmd <ServerName> /zoneresetmasters <ZoneName> [/local] [<IPaddress> [<IPaddre
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to be reloaded.  
 **/local**  
@@ -1061,11 +1061,11 @@ dnscmd [<ServerName>] /zoneresetscavengeservers <ZoneName> [<IPaddress> [<IPaddr
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Identifies the zone to scavenge.  
 **<IPaddress>**  
-lists the IP addresses of the servers that can perform the scavenge. if this parameter is omitted, all servers that host this zone can scavenge it.  
+lists the IP addresses of the servers that can perform the scavenge. If this parameter is omitted, all servers that host this zone can scavenge it.  
 #### remarks  
 -   By default, all servers that host a zone can scavenge that zone.  
 -   if a zone is hosted on more than one DNS server, you can use this command to reduce the number of times a zone is scavenged.  
@@ -1080,7 +1080,7 @@ dnscmd [<ServerName>] /zoneresetsecondaries <ZoneName> {/noxfr | /nonsecure | /s
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if the is parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If the is parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone that will have its secondary servers reset.  
 **/noxfr | /nonsecure | /securens | /securelist <SecurityIPaddresses>**  
@@ -1118,7 +1118,7 @@ dnscmd [<ServerName>] /zoneresettype <ZoneName> <Zonetype> [/overwrite_mem | /ov
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Identifies the zone on which the type will be changed.  
 **<Zonetype>**  
@@ -1156,7 +1156,7 @@ dnscmd <ServerName> /zoneresume <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to resume.  
 #### remarks  
@@ -1171,7 +1171,7 @@ dnscmd <ServerName> /zoneupdatefromds <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to update.  
 #### remarks  
@@ -1186,7 +1186,7 @@ dnscmd <ServerName> /zonewriteback <ZoneName>
 ```  
 #### Parameters  
 **<ServerName>**  
-Specifies the DNS server to manage, represented by IP address, FQDN, or host name. if this parameter is omitted, the local server is used.  
+Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.  
 **<ZoneName>**  
 Specifies the name of the zone to update.  
 #### remarks  

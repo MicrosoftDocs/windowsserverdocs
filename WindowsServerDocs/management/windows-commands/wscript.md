@@ -44,7 +44,7 @@ wscript[<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/j
 ## remarks
 -   Performing this task does not require you to have administrative credentials. Therefore, as a security best practice, consider performing this task as a user without administrative credentials.
 -   To open a command prompt, on the **start** screen, type **cmd**, and then click **command prompt**.
--   Each parameter is optional; however, you cannot specify script arguments without specifying a script. if you do not specify a script or any script arguments, **wscript.exe** displays the **Windows Script Host Settings** dialog box, which you can use to set global scripting properties for all scripts that **wscript.exe** runs on the local computer.
+-   Each parameter is optional; however, you cannot specify script arguments without specifying a script. If you do not specify a script or any script arguments, **wscript.exe** displays the **Windows Script Host Settings** dialog box, which you can use to set global scripting properties for all scripts that **wscript.exe** runs on the local computer.
 -   The **/t** parameter prevents excessive running of scripts by setting a timer. When the time exceeds the specified value, **wscript** interrupts the script engine and ends the process.
 -   Windows script files usually have one of the following file name extensions: **.wsf**, **.vbs**, **.js**.
 -   if you double-click a script file with an extension that has no association, the **Open With** dialog box appears. select **wscript** or **cscript**, and then select **Always use this program to open this file type**. This registers **wscript.exe** or **cscript** as the default script host for files of this file type.

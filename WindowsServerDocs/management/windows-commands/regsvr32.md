@@ -30,7 +30,7 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 |/u|Unregisters server.|
 |/s|Runs **regsvr32** without displaying messages.|
 |/n|Runs **regsvr32** without calling **DllregisterServer**. (Requires the **/i** parameter.)|
-|/i:<cmdline>|Passes an optional command-line string (*cmdline*) to **DllInstall**. if you use this parameter in conjunction with the **/u** parameter, it calls **DllUninstall**.|
+|/i:<cmdline>|Passes an optional command-line string (*cmdline*) to **DllInstall**. If you use this parameter in conjunction with the **/u** parameter, it calls **DllUninstall**.|
 |<DllName>|The name of the .dll file that will be registered.|
 |/?|Displays help at the command prompt.|
 ## <a name="BKMK_examples"></a>Examples

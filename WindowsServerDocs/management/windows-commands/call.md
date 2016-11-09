@@ -50,7 +50,7 @@ You can use the following optional syntaxes as substitutions for batch parameter
 |%~a1|expands **%1** to the file attributes.|
 |%~t1|expands **%1** to the date and time of file.|
 |%~z1|expands **%1** to the size of the file.|
-|%~$path:1|Searches the directories listed in the path environment variable, and expands **%1** to the fully qualified name of the first directory found. if the environment variable name is not defined or the file is not found by the search, then this modifier expands to the empty string.|
+|%~$path:1|Searches the directories listed in the path environment variable, and expands **%1** to the fully qualified name of the first directory found. If the environment variable name is not defined or the file is not found by the search, then this modifier expands to the empty string.|
 The following table shows how you can combine modifiers with the batch parameters for compound results:
 |Batch Parameter with Modifier|Description|
 |-----------------|--------|

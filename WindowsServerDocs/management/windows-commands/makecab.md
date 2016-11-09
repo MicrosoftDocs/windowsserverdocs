@@ -28,7 +28,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 |Parameter|Description|
 |-------|--------|
 |<source>|File to compress.|
-|<destination>|File name to give compressed file. if omitted, the last character of the source file name is replaced with an underscore (_) and used as the destination.|
+|<destination>|File name to give compressed file. If omitted, the last character of the source file name is replaced with an underscore (_) and used as the destination.|
 |/f <directives_file>|A file with **makecab** directives (may be repeated).|
 |/d var=<value>|Defines variable with specified value.|
 |/l <dir>|Location to place destination (default is current directory).|

@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Fix domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Fix domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 gpfixup [/v] 
@@ -38,7 +38,7 @@ gpfixup [/v]
 |/dc:<DCNAME>|Connect to the domain controller named *<DCNAME>* (a DNS name or a NetBIOS name). *<DCNAME>* must host a writable replica of the domain directory partition as indicated by one of the following:<br /><br />-   The DNS name *<NEWDNSNAME>* by using **/newdns**<br />-   The NetBIOS name *<NEWFLatNAME>* by using **/newnb**<br /><br />if this parameter is not used, connect to any domain controller in the renamed domain indicated by *<NEWDNSNAME>* or *<NEWFLatNAME>*.|
 |/sionly|Performs only the Group Policy fix that relates to managed software installation (the Software Installation extension for Group Policy). Skip the actions that fix Group Policy links and the SYSvol paths in GPOs.|
 |/user:<USERNAME>|Runs this command in the security context of the user *<USERNAME>*, where *<USERNAME>* is in the format domain\user.<br /><br />if this parameter is not used, runs this command as the logged in user.|
-|/pwd:{<PASSWOrd>&#124;*}|Specifies the password for the other security context indicated by using **/user**. if **\*** is specified instead of a password, you are prompted for a password.|
+|/pwd:{<PASSWOrd>&#124;*}|Specifies the password for the other security context indicated by using **/user**. If **\*** is specified instead of a password, you are prompted for a password.|
 |/?|Displays help at the command prompt.|
 ## remarks
 -   The **gpfixup** command is available in  Windows Server 2008 R2  and  Windows Server 2008 , except on Server Core installations.

@@ -45,7 +45,7 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 ### remarks
 -   Performing this task does not require you to have administrative credentials. Therefore, as a security best practice, consider performing this task as a user without administrative credentials.
 -   To open a command prompt, on the **start** screen, type **cmd**, and then click **command prompt**.
--   Each parameter is optional; however, you cannot specify script arguments without specifying a script. if you do not specify a script or any script arguments, cscript.exe displays the cscript.exe syntax and the valid host options.
+-   Each parameter is optional; however, you cannot specify script arguments without specifying a script. If you do not specify a script or any script arguments, cscript.exe displays the cscript.exe syntax and the valid host options.
 -   The **/T** parameter prevents excessive running of scripts by setting a timer. When the run time exceeds the specified value, cscript interrupts the script engine and ends the process.
 -   Windows script files usually have one of the following file name extensions: .wsf, .vbs, .js.
 -   You can set properties for individual scripts. See Related Topics for more information.

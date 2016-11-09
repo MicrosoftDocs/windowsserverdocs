@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-deletes the system state backups that you specify. if the specified volume contains backups other than system state backups of your local server, those backups will not be deleted.
+deletes the system state backups that you specify. If the specified volume contains backups other than system state backups of your local server, those backups will not be deleted.
 > [!NOTE]
 > Windows Server Backup does not back up or recover registry user hives (HKEY_CURrenT_USER) as part of system state backup or system state recovery.
 To delete a system state backup with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command prompt**, and then click **Run as administrator**.)
@@ -31,13 +31,13 @@ wbadmin delete systemstatebackup
 [-machine:<BackupMachineName>]
 [-quiet]
 ```
-> [!importANT]
+> [!IMPORTANT]
 > One and only one of these parameters must be specified: **-keepversions**, **-version**, or **-deleteOldest**.
 ## Parameters
 |Parameter|Description|
 |-------|--------|
 |-keepversions|Specifies the number of the latest system state backups to keep. The value must be a positive integer. The parameter value **-keepversions:0** deletes all the system state backups.|
-|-version|Specifies the version identifier of the backup in MM/DD/YYYY-HH:MM format. if you do not know the version identifier, type **wbadmin get versions**.<br /><br />versions that are exclusively system state backups can be deleted using this command. Use **wbadmin get items** to view the version type.|
+|-version|Specifies the version identifier of the backup in MM/DD/YYYY-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.<br /><br />versions that are exclusively system state backups can be deleted using this command. Use **wbadmin get items** to view the version type.|
 |-deleteOldest|deletes the oldest system state backup.|
 |-backupTarget|Specifies the storage location for the backup that you want to delete. The storage location for backups of disks can be a drive letter, a mount point, or a GUID-based volume path. This value only needs to be specified for locating backups that are not of the local computer. Information about backups for the local computer will be available in the backup catalog on the local computer.|
 |-machine|Specifies the computer whose system state backup you want to delete. Useful when multiple computers were backed up to the same location. Should be used when the **-backupTarget** parameter is specified.|

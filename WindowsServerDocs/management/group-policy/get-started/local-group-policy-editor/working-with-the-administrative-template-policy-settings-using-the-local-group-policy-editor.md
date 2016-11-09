@@ -50,7 +50,7 @@ Administrative Templates are registry-based policy settings that appear in the L
 
 -   Administrative Template policy settings are also known as registry-based policy settings.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to filter Administrative Template policy settings
 The Local Group Policy editor provides the option to filter Administrative Template policy settings based on:
@@ -131,7 +131,7 @@ The Commented property filter has three states: **Any**, **Yes**, and **No**. Se
 
 -   Filters do not work with Classic Administrative Templates.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to filter with Keyword filters
 The Local Group Policy editor allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings. However, you can use keyword filters to change how the Local Group Policy editor displays Administrative Template policy settings.
@@ -170,7 +170,7 @@ The Local Group Policy editor allows you to change the criteria for displaying A
 
 -   Filters do not work with Classic Administrative Templates.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to filter with Requirement Filters
 The Local Group Policy editor allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings. However, you can use requirement filters to change how the Local Group Policy editor displays Administrative Template policy settings.
@@ -204,10 +204,10 @@ The Local Group Policy editor allows you to change the criteria for displaying A
 
 -   Filters do not work with Classic Administrative Templates.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to comment an Administrative Templates policy setting
-You can include comments on each Administrative Template policy setting. You can use this space to further document the policy setting and why its implementation is important to your environment. Commenting policy settings allows you to use keyword filters to help you quickly find policy settings with matching keywords.
+You can include comments on each Administrative Template policy setting. You can use this space to further document the policy setting and why its implementation is IMPORTANT to your environment. Commenting policy settings allows you to use keyword filters to help you quickly find policy settings with matching keywords.
 
 #### To comment an Administrative Templates policy setting
 
@@ -225,7 +225,7 @@ You can include comments on each Administrative Template policy setting. You can
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to add or remove classic Administrative Templates
 Classic Administrative Template files (also known as ADM files) are not authored using XML. Earlier versions of the Local Group Policy editor displayed these settings under the **Administrative Templates** node.
@@ -250,6 +250,6 @@ The current version of Administrative Template files are authored using XML (kno
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 

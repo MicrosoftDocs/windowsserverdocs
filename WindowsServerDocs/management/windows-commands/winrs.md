@@ -41,7 +41,7 @@ winrs [/<parameter>[:<value>]] <command>
 |/[use]ssl|Use an SSL connection when using a remote endpoint.  Specifying this instead of the transport **https:** will use the default **WinRM** default port.|  
 |/?|Displays help at the command prompt.|  
 ## remarks  
--   All command-line options accept either short form or long form. for example both **/r** and **/remote** are valid.  
+-   All command-line options accept either short form or long form. For example both **/r** and **/remote** are valid.  
 -   To terminate the **/remote** command, the user can type **Ctrl-C** or **Ctrl-break**, which will be sent to the remote shell. The second **Ctrl-C** will force termination of **winrs.exe**.  
 -   To manage active remote shells or winrs configuration, use the WinRM tool.  The URI alias to manage active shells is **shell/cmd**.  The URI alias for winrs configuration is **winrm/config/winrs**.  
 ## <a name="BKMK_Examples"></a>Examples  

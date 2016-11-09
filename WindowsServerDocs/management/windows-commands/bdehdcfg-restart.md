@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Informs the bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. for an example of how this command can be used, see [Examples](#BKMK_Examples).
+Informs the bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -restart

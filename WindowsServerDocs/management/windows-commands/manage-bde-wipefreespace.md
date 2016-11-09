@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the  Used Space Only encryption method provides the same level of protection as the  Full volume Encryption encryption method. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the  Used Space Only encryption method provides the same level of protection as the  Full volume Encryption encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 manage-bde  WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]

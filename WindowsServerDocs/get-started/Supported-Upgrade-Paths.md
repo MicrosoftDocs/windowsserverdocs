@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/22/2016
+ms.date: 11/09/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -106,16 +106,16 @@ For the evaluation version of Windows Server 2016 Standard, you can also convert
 > Tip 
 >For more information about Dism.exe, see [DISM Command-line options](http://go.microsoft.com/fwlink/?LinkId=192466).
 
-## Converting a current retail version to a different current retail version
+## Converting a current retail edition to a different current retail edition
 
 At any time after installing Windows Server 2016, you can run Setup to repair the installation (sometimes called “repair in place”) or, in certain cases, to convert to a different edition.
 You can run Setup to perform a “repair in place” on any edition of Windows Server 2016; the result will be the same edition you started with.
 
 For Windows Server 2016 Standard, you can convert the system to Windows Server 2016 Datacenter as follows: From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
 
-## Converting a current volume-licensed version to a current retail version
+## Converting a current retail version to a current volume-licensed version
 
-At any time after installing Windows Server 2016, you can freely convert it between a volume-licensed version, a retail version, or an OEM version. The edition remains the same during this conversion.
+At any time after installing Windows Server 2016, you can freely convert it between a retail version, a volume-licensed version, or an OEM version. The edition remains the same during this conversion. If you are starting with an evaluation version, convert it to the retail version first, and then you can inter-convert as described here.
 
 To do this, from an elevated command prompt, run:
 **slmgr /ipk \<key\>**

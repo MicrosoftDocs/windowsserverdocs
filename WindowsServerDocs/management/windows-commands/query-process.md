@@ -36,7 +36,7 @@ query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <Progra
 |<SessionName>|Specifies the name of the session whose processes you want to list.|
 |/id:<nn>|Specifies the ID of the session whose processes you want to list.|
 |<ProgramName>|Specifies the name of the program whose processes you want to query. The .exe extension is required.|
-|/server:<ServerName>|Specifies the rd Session Host server whose processes you want to list. if unspecified, the server where you are currently logged on is used.|
+|/server:<ServerName>|Specifies the rd Session Host server whose processes you want to list. If unspecified, the server where you are currently logged on is used.|
 |/?|Displays help at the command prompt.|
 ## remarks
 -   Administrators have full access to all **query process** functions.

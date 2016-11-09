@@ -1,5 +1,5 @@
 ---
-title: Working with local Group Policy Objects for Windows settings using  the Local Group Policy editor
+title: Working with Local Group Policy Objects for Windows settings using the Local Group Policy editor
 description: Using the Local Group Policy editor
 ms.prod: windows-server-threshold
 ms.technology: manage-group-policy
@@ -18,11 +18,11 @@ ms.date: 10/12/2016
 This topic describes how to use the Local Group Policy editor (gpedit) to perform basic procedures on GPOs.
 
 ## Introduction
-**editing Windows settings**
+**Editing Windows settings**
 
-Windows Settings are available under both User Configuration and computer Configuration in the console tree of Group Policy Management editor and the Local Group Policy editor.
+Windows Settings are available under both User Configuration and Computer Configuration in the console tree of Group Policy Management editor and the Local Group Policy editor.
 
-**computer Configuration**\Windows Settings is for Windows settings that apply to all users who log on to the computer. It includes five subitems:
+**Computer Configuration**\Windows Settings is for Windows settings that apply to all users who log on to the computer. It includes five subitems:
 
 -   Name Resolution Policy
 
@@ -46,9 +46,9 @@ Windows Settings are available under both User Configuration and computer Config
 
 -   Internet Explorer Maintenance
 
-Modifying Windows Settings on the local computer, whether creating new settings or editing existing ones, can be performed using the Local Group Policy editor by selecting the subitem and then selecting the appropriate task from the **Action** menu. if the computer is joined to a domain, the changes to the setting might be overridden by the next refresh of a GPO. if changes to the setting are done on the server where your GPOs are maintained, using the Group Policy Management editor, the GPO that contains the setting must be updated as well.
+Modifying Windows Settings on the local computer, whether creating new settings or editing existing ones, can be performed using the Local Group Policy editor by selecting the subitem and then selecting the appropriate task from the **Action** menu. If the computer is joined to a domain, the changes to the setting might be overridden by the next refresh of a GPO. If changes to the setting are done on the server where your GPOs are maintained, using the Group Policy Management editor, the GPO that contains the setting must be updated as well.
 
-**editing software settings**
+**Editing software settings**
 
 Group Policy Software Installation enables you to provide on-demand software installation and automatic repair of applications. Group Policy offers a convenient method for delivering software, especially if you are already using Group Policy for other purposes such as securing your client and server computers.
 
@@ -60,7 +60,7 @@ Group Policy Software Installation enables you to:
 
 -   Set application properties such as installation options, categories for add or remove Programs, automatic installation, and installation permissions
 
--   add or remove modifications for an application package
+-   Add or remove modifications for an application package
 
 ## How to edit a single local GPO
 
@@ -72,11 +72,11 @@ Group Policy Software Installation enables you to:
 
 3.  In the results pane, double-click a policy setting to open the **Properties** dialog box, and then edit the policy setting.
 
-### additional considerations
+### Additional considerations
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to edit multiple local GPOs
 Multiple Local Group Policy is a collection of Local Group Policy objects (LGPOs) designed to provide improved management for computers that are not part of a domain. This collection consists of the following LGPOs:
@@ -95,9 +95,9 @@ Multiple Local Group Policy is a collection of Local Group Policy objects (LGPOs
 
 2.  Click **File** and then click **add/remove Snap-in**.
 
-3.  Click **Group Policy Object editor** in the **Available Snap-ins** list and click **add**.
+3.  Click **Group Policy Object editor** in the **Available Snap-ins** list and click **Add**.
 
-4.  Click the **Browse** button in the **select Group Policy Object** dialog box.
+4.  Click the **Browse** button in the **Select Group Policy Object** dialog box.
 
 5.  Click the **Users** tab in the **Browse for the Group Policy Object** dialog box.
 
@@ -105,7 +105,7 @@ Multiple Local Group Policy is a collection of Local Group Policy objects (LGPOs
 
 7.  Configure policy settings.
 
-### additional considerations
+### Additional considerations
 
 -   Multiple Local Group Policy objects (MLGPOs) are not available on domain controllers.
 
@@ -117,7 +117,7 @@ Multiple Local Group Policy is a collection of Local Group Policy objects (LGPOs
 
     3.  User-specific Local Group Policy.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to disable user or computer policy settings in a Local Group Policy Object
 Occasionally you may want to disable policy settings rather than delete the entire Local Group Policy.
@@ -152,7 +152,7 @@ Occasionally you may want to disable policy settings rather than delete the enti
 
 -   Local computer Policy allows you to disable both computer and user configurations. Administrators, Non-Administrators, and User-Specific Local Group Policies allow you to disable only the user configuration.
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to delete Multiple Local Group Policy Objects
 You can delete Multiple Local Group Policy objects. Use this procedure to delete Administrators, Non-Administrators, or User-Specific Local Group Policy objects.
@@ -161,13 +161,13 @@ You can delete Multiple Local Group Policy objects. Use this procedure to delete
 
 1.  Open Microsoft Management Console.
 
-2.  Click **File**, and then click **add/remove Snap-in**.
+2.  Click **File**, and then click **Add/remove Snap-in**.
 
-3.  Click **Group Policy Object editor** in the **Available Snap-ins** list and click **add**.
+3.  Click **Group Policy Object editor** in the **Available Snap-ins** list and click **Add**.
 
 4.  In the **select Group Policy Object** dialog box, click **Browse**. Click the **Users** tab.
 
-5.  Right-click the **Administrators, Non-Administrators,** or **User-Specific** Local Group Policy object. Click **remove Group Policy Object**.
+5.  Right-click the **Administrators, Non-Administrators,** or **User-Specific** Local Group Policy object. Click **Remove Group Policy Object**.
 
 6.  Click **Yes** to confirm the deletion of the Local Group Policy object.
 
@@ -182,4 +182,4 @@ You can delete Multiple Local Group Policy objects. Use this procedure to delete
 
 -   You cannot delete the Local Group Policy Object (also known as Local computer Policy).
 
--   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. for more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).

@@ -27,7 +27,7 @@ wdsutil [Options] /remove-ImageGroumediaGroup:<Image group name> [/Server:<Serve
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group to be removed|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 ## <a name="BKMK_examples"></a>Examples
 To remove the image group, type one of the following:
 ```

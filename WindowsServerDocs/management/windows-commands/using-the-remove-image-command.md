@@ -32,10 +32,10 @@ wdsutil [Options] /remove-Imagmedia:<Image name> [/Server:<Server name>mediatype
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). if no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediatype:{Boot &#124; Install}|Specifies the type of image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture value ensures that the correct image will be removed.|
-|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. if no image group name is specified and only one image group exists on the server, that image group will be used. if more than one image group exists, you must use this option to specify the image group.|
+|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group will be used. If more than one image group exists, you must use this option to specify the image group.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
 ## <a name="BKMK_examples"></a>Examples
 To remove a boot image, type:

@@ -34,7 +34,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 |/v|Displays information about the actions being performed.|
 |/?|Displays help at the command prompt.|
 ## remarks
--   You can either view or actively control the session. if you choose to actively control a user's session, you will be able to input keyboard and mouse actions to the session.
+-   You can either view or actively control the session. If you choose to actively control a user's session, you will be able to input keyboard and mouse actions to the session.
 -   You can always remotely control your own sessions (except the current session), but you must have Full Control permission or remote Control special access permission to remotely control another session.
 -   You can also initiate remote control by using remote Desktop Services Manager.
 -   Before monitoring begins, the server warns the user that the session is about to be remotely controlled, unless this warning is disabled. Your session might appear to be frozen for a few seconds while it waits for a response from the user. To configure remote control for users and sessions, use the remote Desktop Services Configuration tool or the remote Desktop Services extensions to Local Users and Groups and active directory Users and computers.

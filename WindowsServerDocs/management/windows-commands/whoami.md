@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Displays user, group and privileges information for the user who is currently logged on to the local system. if used without parameters, **whoami** displays the current domain and user name.
+Displays user, group and privileges information for the user who is currently logged on to the local system. If used without parameters, **whoami** displays the current domain and user name.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```

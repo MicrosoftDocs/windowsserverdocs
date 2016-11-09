@@ -30,8 +30,8 @@ bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
 |ProgramName|Name of the command to run when the job completes.|
 |ProgramParameters|Parameters that you want to pass to *ProgramName*.|
 ## remarks
-You can specify NULL for *ProgramName* and *ProgramParameters*. if *ProgramName* is NULL, *ProgramParameters* must be NULL.
-> [!importANT]
+You can specify NULL for *ProgramName* and *ProgramParameters*. If *ProgramName* is NULL, *ProgramParameters* must be NULL.
+> [!IMPORTANT]
 > if *ProgramParameters* is not NULL, then the first parameter in *ProgramParameters* must match *ProgramName*.
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the command-line command used by the service to run notepad when the job named *myDownloadJob* completes.

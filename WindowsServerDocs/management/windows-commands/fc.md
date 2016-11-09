@@ -32,13 +32,13 @@ fc /b [<Drive1:>][<path1>]<FileName1> [<Drive2:>][<path2>]<FileName2>
 |/b|compares the two files in binary mode, byte by byte, and does not attempt to resynchronize the files after finding a mismatch. This is the default mode for comparing files that have the following file extensions: .exe, .com, .sys, .obj, .lib, or .bin.|
 |/c|Ignores the letter case.|
 |/l|compares the files in ASCII mode, line-by-line, and attempts to resynchronize the files after finding a mismatch. This is the default mode for comparing files, except files with the following file extensions: .exe, .com, .sys, .obj, .lib, or .bin.|
-|/lb<N>|Sets the number of lines for the internal line buffer to *N*. The default length of the line buffer is 100 lines. if the files that you are comparing have more than 100 consecutive differing lines, **fc** cancels the comparison.|
+|/lb<N>|Sets the number of lines for the internal line buffer to *N*. The default length of the line buffer is 100 lines. If the files that you are comparing have more than 100 consecutive differing lines, **fc** cancels the comparison.|
 |/n|Displays the line numbers during an ASCII comparison.|
 |/off[line]|Does not skip files that have the offline attribute set.|
 |/t|Prevents **fc** from converting tabs to spaces. The default behavior is to treat tabs as spaces, with stops at each eighth character position.|
 |/u|compares files as Unicode text files.|
-|/w|compresses white space (that is, tabs and spaces) during the comparison. if a line contains many consecutive spaces or tabs, **/w** treats these characters as a single space. When used with **/w**, **fc** ignores white space at the beginning and end of a line.|
-|/<NNNN>|Specifies the number of consecutive lines that must match following a mismatch, before **fc** considers the files to be resynchronized. if the number of matching lines in the files is less than *NNNN*, **fc** displays the matching lines as differences. The default value is 2.|
+|/w|compresses white space (that is, tabs and spaces) during the comparison. If a line contains many consecutive spaces or tabs, **/w** treats these characters as a single space. When used with **/w**, **fc** ignores white space at the beginning and end of a line.|
+|/<NNNN>|Specifies the number of consecutive lines that must match following a mismatch, before **fc** considers the files to be resynchronized. If the number of matching lines in the files is less than *NNNN*, **fc** displays the matching lines as differences. The default value is 2.|
 |[<Drive1>:][<path1>]<FileName1>|Specifies the location and name of the first file or set of files to compare. *FileName1* is required.|
 |[<Drive2>:][<path2>]<FileName2>|Specifies the location and name of the second file or set of files to compare. *FileName2* is required.|
 |/?|Displays help at the command prompt.|
@@ -56,9 +56,9 @@ fc /b [<Drive1:>][<path1>]<FileName1> [<Drive2:>][<path2>]<FileName2>
     `<XXXXXXXX: YY ZZ>`
     The value of *XXXXXXXX* specifies the relative hexadecimal address for the pair of bytes, measured from the beginning of the file. addresses start at 00000000. The hexadecimal values for *YY* and *ZZ* represent the mismatched bytes from *FileName1* and *FileName2*, respectively.
 -   Using wildcard characters
-    You can use wildcard characters (**\*** and **?**) in *FileName1* and *FileName2*. if you use a wildcard in *FileName1*, **fc** compares all the specified files to the file or set of files specified by *FileName2*. if you use a wildcard in *FileName2*, **fc** uses the corresponding value from *FileName1*.
+    You can use wildcard characters (**\*** and **?**) in *FileName1* and *FileName2*. If you use a wildcard in *FileName1*, **fc** compares all the specified files to the file or set of files specified by *FileName2*. If you use a wildcard in *FileName2*, **fc** uses the corresponding value from *FileName1*.
 -   Working with memory
-    When comparing ASCII files, **fc** uses an internal buffer (large enough to hold 100 lines) as storage. if the files are larger than the buffer, **fc** compares what it can load into the buffer. if **fc** does not find a match in the loaded portions of the files, it stops and displays the following message:
+    When comparing ASCII files, **fc** uses an internal buffer (large enough to hold 100 lines) as storage. If the files are larger than the buffer, **fc** compares what it can load into the buffer. If **fc** does not find a match in the loaded portions of the files, it stops and displays the following message:
     `Resynch failed. Files are too different.`
     When comparing binary files that are larger than the available memory, **fc** compares both files completely, overlaying the portions in memory with the next portions from the disk. The output is the same as that for files that fit completely in memory.
 ## <a name="BKMK_examples"></a>Examples

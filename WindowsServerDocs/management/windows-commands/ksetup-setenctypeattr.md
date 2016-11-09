@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Sets the encryption type attribute for the domain. for examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the encryption type attribute for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
 ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | AES128-CTS-HMAC-SHA1-96 | AES256-CTS-HMAC-SHA1-96}

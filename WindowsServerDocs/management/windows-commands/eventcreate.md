@@ -18,7 +18,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-Enables an administrator to create a custom event in a specified event log. for examples of how to use this command, see [Examples](#BKMK_examples).
+Enables an administrator to create a custom event in a specified event log. For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 eventcreate [/s <computer> [/u <Domain\User> [/p <Password>]] {[/l {APPLICatION|SYSTEM}]|[/so <SrcName>]} /t {ERROR|WARNING|INformatION|SUCCESSAUDIT|FAILUREAUDIT} /id <EventID> /d <Description>

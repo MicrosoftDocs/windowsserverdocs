@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 Takes the online disk with focus to the offline state.  
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This DiskPart command is not available in any edition of Windows Vista.  
   
 ## Syntax  
@@ -39,7 +39,7 @@ offline disk [noerr]
   
 -   This command operates on disks that are in san online mode. It changes their san mode to offline.  
   
--   if a dynamic disk in a disk group is taken offline, the status of the disk changes to **missing** and the group shows a disk that is offline. The missing disk is moved to the invalid group. if the dynamic disk is the last disk in the group, then the status of the disk will change to **offline**, and the empty group will be removed.  
+-   if a dynamic disk in a disk group is taken offline, the status of the disk changes to **missing** and the group shows a disk that is offline. The missing disk is moved to the invalid group. If the dynamic disk is the last disk in the group, then the status of the disk will change to **offline**, and the empty group will be removed.  
   
 -   A disk must be selected for the **offline disk** command to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   

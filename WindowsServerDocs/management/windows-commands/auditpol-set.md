@@ -37,8 +37,8 @@ auditpol /set
 |/user|The security principal for whom the per-user audit policy specified by the category or subcategory is set. Either the category or subcategory option must be specified, as a security identifier (SID) or name.|
 |/include|Specified with /user; indicates that the user's per-user policy will cause an audit to be generated even if it is not specified by the system audit policy. This setting is the default and is automatically applied if neither the /include nor /exclude parameters are explicitly specified.|
 |/exclude|Specified with /user; indicates that the user's per-user policy will cause an audit to be suppressed regardless of the system audit policy. This setting is ignored for users who are members of the local Administrators group.|
-|/category|One or more audit categories specified by globally unique identifier (GUID) or name. if no user is specified, the system policy is set.|
-|/subcategory|One or more audit subcategories specified by GUID or name. if no user is specified, the system policy is set.|
+|/category|One or more audit categories specified by globally unique identifier (GUID) or name. If no user is specified, the system policy is set.|
+|/subcategory|One or more audit subcategories specified by GUID or name. If no user is specified, the system policy is set.|
 |/success|Specifies success auditing. This setting is the default and is automatically applied if neither the /success nor /failure parameters are explicitly specified. This setting must be used with a parameter indicating whether to enable or disable the setting.|
 |/failure|Specifies failure auditing. This setting must be used with a parameter indicating whether to enable or disable the setting.|
 |/option|Sets the audit policy for the CrashOnAuditFail, FullprivilegeAuditing, AuditBaseObjects, or AuditBasedirectories options.|

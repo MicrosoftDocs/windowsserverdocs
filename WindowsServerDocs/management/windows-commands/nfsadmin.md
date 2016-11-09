@@ -48,7 +48,7 @@ You can use **nfsadmin** to manage Server for NFS and Client for NFS.
 **nfsadmin client** `[`*computerName*`] [`\-u *UserName* `[`\-p *Password*`]]` config *Option*`[...]`  
   
 ## Description  
-The **nfsadmin** command\-line utility administers Server for NFS or Client for NFS on the local or remote computer running Microsoft Services for Network File System \(NFS\). if you are logged on with an account that does not have the required privileges, you can specify a user name and password of an account that does. The action performed by **nfsadmin** depends on the command arguments you supply.  
+The **nfsadmin** command\-line utility administers Server for NFS or Client for NFS on the local or remote computer running Microsoft Services for Network File System \(NFS\). If you are logged on with an account that does not have the required privileges, you can specify a user name and password of an account that does. The action performed by **nfsadmin** depends on the command arguments you supply.  
   
 In addition to service\-specific command arguments and options, **nfsadmin** accepts the following:  
   
@@ -59,7 +59,7 @@ Specifies the remote computer you want to administer. You can specify the comput
 Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form *domain***\\***UserName*  
   
 **\-p** *Password*  
-Specifies the password of the user specified using the **\-u** option. if you specify the **\-u** option but omit the **\-p** option, you are prompted for the user's password.  
+Specifies the password of the user specified using the **\-u** option. If you specify the **\-u** option but omit the **\-p** option, you are prompted for the user's password.  
   
 #### Administering Server for NFS  
 Use the **nfsadmin server** command to administer Server for NFS. The specific action that **nfsadmin server** takes depends on the command option or argument you specify:  
@@ -104,7 +104,7 @@ Sets the file specified by *file* as the audit file. The default is %sfudir%\\lo
 Sets *size* as the maximum size in megabytes of the audit file. The default maximum size is 7 MB.  
   
 **audit\=**\[**\+**|**\-**\]**mount** \[**\+**|**\-**\]**read** \[**\+**|**\-**\]**write** \[**\+**|**\-**\]**create** \[**\+**|**\-**\]**delete** \[**\+**|**\-**\]**locking** \[**\+**|**\-**\]**all**  
-Specifies the events to be logged. To start logging an event, type a plus sign \(**\+**\) before the event name; to stop logging an event, type a minus sign \(**\-**\) before the event name. if the sign is omitted, the plus sign is assumed. Do not use **all** with any other event name.  
+Specifies the events to be logged. To start logging an event, type a plus sign \(**\+**\) before the event name; to stop logging an event, type a minus sign \(**\-**\) before the event name. If the sign is omitted, the plus sign is assumed. Do not use **all** with any other event name.  
   
 **lockperiod\=***seconds*  
 Specifies the number of seconds that Server for NFS will wait to reclaim locks after a connection to Server for NFS has been lost and then reestablished or after the Server for NFS service has been restarted.  
@@ -137,7 +137,7 @@ Specifies the number of seconds that elapse before a client is forced to be reau
 Specifies the size in kilobytes of the directory cache. The number specified as *size* must be a multiple of 4 between 4 and 128. The default directory\-cache size is 128 KB.  
   
 **translationfile**\=\[file\]  
-Specifies a file containing mapping information for replacing characters in the names of files when moving them from Windows\-based to UNIX\-based file systems. if *file* is not specified, then file name character translation is disabled. if the value of **translationfile** is changed, you must restart the server for the change to take effect.  
+Specifies a file containing mapping information for replacing characters in the names of files when moving them from Windows\-based to UNIX\-based file systems. If *file* is not specified, then file name character translation is disabled. If the value of **translationfile** is changed, you must restart the server for the change to take effect.  
   
 **dotfileshidden**\={**yes** | **no**}  
 Specifies whether files that are created with names beginning with a period \(.\) will be marked as hidden in the Windows file system and consequently hidden from NFS clients. The default setting is **no**.  
@@ -151,7 +151,7 @@ HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel
   
 DWOrd  obcaseinsensitive   
   
-> [!importANT]  
+> [!IMPORTANT]  
 > This section applies only to Windows Server 2008 R2, Windows Server 2008, and Windows Server 2003. This section does not apply to Windows Server 2012 R2 or Windows Server 2012.  
   
 **ntfscase\=**{**lower** | **upper** | **preserve**}  
@@ -193,13 +193,13 @@ Stops the Client for NFS service.
 Specifies general settings for Client for NFS. You must supply at least one of the following options with the **config** command argument:  
   
 **fileaccess\=***mode*  
--   Specifies the default permission mode for files created on Network File System \(NFS\) servers. The *mode* argument consists of a three digits from 0 to 7 \(inclusive\) representing the default permissions granted the user, group, and others \(respectively\). The digits translate to UNIX\-style permissions as follows: 0\=none, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw, and 7\=rwx. for example, **fileaccess\=750** gives rwx permission to the owner, rx permission to the group, and no access permission to others.  
+-   Specifies the default permission mode for files created on Network File System \(NFS\) servers. The *mode* argument consists of a three digits from 0 to 7 \(inclusive\) representing the default permissions granted the user, group, and others \(respectively\). The digits translate to UNIX\-style permissions as follows: 0\=none, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw, and 7\=rwx. For example, **fileaccess\=750** gives rwx permission to the owner, rx permission to the group, and no access permission to others.  
   
 **mapsvr\=***server*  
 Sets *server* as the User Name Mapping server for Client for NFS. Although this option continues to be supported for compatibility with previous versions, you should use the **sfuadmin** utility instead.  
   
 **mtype\=**{**hard** | **soft**}  
-Specifies the default mount type. for a hard mount, Client for NFS continues to retry a failed RPC until it succeeds. for a soft mount, Client for NFS returns failure to the calling application after retrying the call the number of times specified by the **retry** option.  
+Specifies the default mount type. For a hard mount, Client for NFS continues to retry a failed RPC until it succeeds. For a soft mount, Client for NFS returns failure to the calling application after retrying the call the number of times specified by the **retry** option.  
   
 **retry\=***number*  
 Specifies the number of times to try to make a connection for a soft mount. This value must be from 1 to 10, inclusive. The default is 1.  
@@ -230,7 +230,7 @@ Restores the following performance settings to default values:
 -   **wsize**  
   
 **fileaccess\=***mode*  
-Specifies the default permission mode for files created on Network File System \(NFS\) servers. The *mode* argument consists of a three digits from 0 to 7 \(inclusive\) representing the default permissions granted the user, group, and others \(respectively\). The digits translate to UNIX\-style permissions as follows: 0\=none, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw, and 7\=rwx. for example, **fileaccess\=750** gives rwx permission to the owner, rx permission to the group, and no access permission to others.  
+Specifies the default permission mode for files created on Network File System \(NFS\) servers. The *mode* argument consists of a three digits from 0 to 7 \(inclusive\) representing the default permissions granted the user, group, and others \(respectively\). The digits translate to UNIX\-style permissions as follows: 0\=none, 1\=x, 2\=w, 3\=wx, 4\=r, 5\=rx, 6\=rw, and 7\=rwx. For example, **fileaccess\=750** gives rwx permission to the owner, rx permission to the group, and no access permission to others.  
   
 if you do not specify a command option or argument, **nfsadmin client** displays the current Client for NFS configuration settings.  
   

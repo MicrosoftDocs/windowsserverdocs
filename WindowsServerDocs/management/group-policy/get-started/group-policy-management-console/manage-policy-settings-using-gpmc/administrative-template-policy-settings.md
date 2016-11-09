@@ -204,7 +204,7 @@ The Group Policy Management Console allows you to change the criteria for displa
 -   Filters do not work with [Classic Administrative Templates](https://technet.microsoft.com/library/cc725586.aspx).
 
 ### How to add comments to Administrative Template policy settings
-You can include comments for each Administrative Template policy setting. You can use this space to further document the policy setting and why its implementation is important to your environment. Commenting policy settings allows you to later use keyword filters to help you quickly find policy settings with matching keywords.
+You can include comments for each Administrative Template policy setting. You can use this space to further document the policy setting and why its implementation is IMPORTANT to your environment. Commenting policy settings allows you to later use keyword filters to help you quickly find policy settings with matching keywords.
 
 ##### To comment an Administrative Template policy setting
 
