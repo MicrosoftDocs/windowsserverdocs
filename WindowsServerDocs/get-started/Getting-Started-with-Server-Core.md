@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/29/2016
+ms.date: 11/09/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -23,6 +23,10 @@ When you install Windows Server 2016 using the Setup wizard, you can choose betw
 The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additionial user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). For an even more lightweight option, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
 With the Server Core option, the standard user interface (the "Server Graphical Shell") is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.
+
+>[!NOTE]
+>
+>Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. If you install Server Core and later decide to use Server with Desktop Experience, you should do a fresh installation.
 
 **User interface:** command prompt
 
