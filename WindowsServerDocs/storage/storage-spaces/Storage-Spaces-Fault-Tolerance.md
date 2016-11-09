@@ -15,7 +15,7 @@ ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 
 This topic introduces the resiliency options available in Storage Spaces Direct and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each. It also presents some usage instructions to get you started, and references some great papers, blogs, and additional content where you can learn more.
 
-If you are already familiar with Storage Spaces, you may want to skip to the Summary section.
+If you are already familiar with Storage Spaces, you may want to skip to the [Summary](#Summary) section.
 
 ## Overview
 
@@ -68,9 +68,9 @@ Dual parity implements Reed-Solomon error-correcting codes to keep two bitwise p
 
 The storage efficiency of dual parity increases the more hardware fault domains you have, from 50% up to 80%. For example, at seven (with Storage Spaces Direct, that means seven servers) the efficiency jumps to 66.7% – to store 4 TB of data, you need just 6 TB of physical storage capacity.
 
-![dual-parity](../media/Storage-Spaces-Fault-Tolerance/dual-parity-wide.png)
+![dual-parity-wide](../media/Storage-Spaces-Fault-Tolerance/dual-parity-wide.png)
 
-See Table 3 for the efficiency of dual party and local reconstruction codes at every scale.
+See the [Summary](#Summary) section for the efficiency of dual party and local reconstruction codes at every scale.
 
 ### Local reconstruction codes
 
@@ -153,9 +153,9 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 
 ## Usage in PowerShell
 
-When you create volumes ("Storage Spaces"), you can specify which resiliency type to use. In PowerShell, you can use the the New-Volume cmdlet and its ResiliencySettingName and PhysicalDiskRedundancy parameters.
+When you create volumes ("Storage Spaces"), you can specify which resiliency type to use. In PowerShell, you can use the the **New-Volume** cmdlet and its **ResiliencySettingName** and **PhysicalDiskRedundancy** parameters.
 
-Each of the following four cmdlets creates one volume. Mirror 1 uses two-way mirror; Mirror 2 uses three-way mirror; Parity 1 uses single parity; and Parity 2 uses dual parity. So long as you have the minimum number of fault domains required for each, these cmdlets individually are the most prescriptive and surefire way to create exactly what you want. Remember to specify whatever FriendlyName and Size you want.
+Each of the following four cmdlets creates one volume. *Mirror 1* uses two-way mirror; *Mirror 2* uses three-way mirror; *Parity 1* uses single parity; and *Parity 2* uses dual parity. So long as you have the minimum number of fault domains required for each, these cmdlets individually are the most prescriptive and surefire way to create exactly what you want. Remember to specify whatever **FriendlyName** and **Size** you want.
 
 ```
 New-Volume -FriendlyName "Mirror 1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 1
@@ -164,13 +164,13 @@ New-Volume -FriendlyName "Parity 1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyN
 New-Volume -FriendlyName "Parity 2” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
 ```
 
-To make things easier, if your deployment uses Storage Spaces Direct with only two or three servers, you can omit the ResiliencySettingName and PhysicalDiskRedundancy parameters altogether, and Storage Spaces will automatically use the most fault tolerant mirroring option. Easy!
+To make things easier, if your deployment uses Storage Spaces Direct with only two or three servers, you can omit the **ResiliencySettingName** and **PhysicalDiskRedundancy** parameters altogether, and Storage Spaces will automatically use the most fault tolerant mirroring option. Easy!
 
 ```
 New-Volume -FriendlyName "Bill Gates" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
-If your deployment uses Storage Spaces Direct with four or more servers, ‘tier templates’ are automatically created, called Performance and Capacity. They encapsulate definitions for three-way mirroring (Performance) and the best dual parity layout at your scale (Capacity). If you’re curious, you can see them by running the following cmdlets.
+If your deployment uses Storage Spaces Direct with four or more servers, ‘tier templates’ are automatically created, called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring (*Performance*) and the best dual parity layout at your scale (*Capacity*). If you’re curious, you can see them by running the following cmdlets.
 
 ```
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
@@ -178,13 +178,13 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 ![storage-tiers-screenshot](../media/Storage-Spaces-Fault-Tolerance/storage-tiers-screenshot.png)
 
-To create volumes, and especially mixed resiliency volumes, reference these tier templates using the StorageTierFriendlyNames and StorageTierSizes parameters. The following cmdlet creates a 1 TB mixed volume, split 30% three-way mirror and 70% dual parity.
+To create volumes, and especially mixed resiliency volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters. The following cmdlet creates a 1 TB mixed volume, split 30% three-way mirror and 70% dual parity.
 
 ```
 New-Volume -FriendlyName "Mixed" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 
-We recommend this blog about [how volumes are represented in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/), by our very own Cosmos Darwin, which includes guidance and scripting samples on how best to inspect them in PowerShell.
+We recommend this blog about [how volumes are represented in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/), by our very own [Cosmos Darwin](https://twitter.com/cosmosdarwin), which includes guidance and scripting samples on how best to inspect them in PowerShell.
 
 ## Related Topics  
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
@@ -194,7 +194,7 @@ We recommend this blog about [how volumes are represented in the Storage Managem
 
 Every link below is inline somewhere in the body of this topic.
 
-- [Erasure Coding in Windows Azure by Microsoft Research ](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [Erasure Coding in Windows Azure by Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
 - [Storage Efficiency Demo at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
