@@ -19,7 +19,7 @@ You can use this topic for an overview of network policies in NPS.
 >[!NOTE]
 >In addition to this topic, the following network policy documentation is available.
 > - [Access Permission](nps-np-access.md)
-> 
+> - [Configure Network Policies](nps-np-configure.md)
 
 Network policies are sets of conditions, constraints, and settings that allow you to designate who is authorized to connect to the network and the circumstances under which they can or cannot connect.
 
