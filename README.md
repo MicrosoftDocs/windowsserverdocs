@@ -9,7 +9,7 @@ This repo is accesible only to internal Microsoft employees, vendors, and contra
 Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **The writer for an assigned area reviews and approves all pull requests to add, update, or delete articles or art.** For Windows Server 2016 content, these writers are: 
 
 Windows Server 2016 Area|Owner|Github Alias
---|--|--
+---|---|---
 Compute|Kathy Davies|KBDAzure
 General, server-wide content|Jaime Ondrusek|jaimeo
 Networking|Jim McIllece|jamesmci
