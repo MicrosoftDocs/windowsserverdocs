@@ -799,6 +799,7 @@
 ###### [Access Permission](networking/technologies/nps/nps-np-access.md)
 ##### [NPS Templates](networking/technologies/nps/nps-templates.md)
 ##### [RADIUS Clients](networking/technologies/nps/nps-radius-clients.md)
+#### [Deploy Network Policy Server](networking/technologies/nps/nps-deploy.md)
 #### [Manage Network Policy Server](networking/technologies/nps/nps-manage-top.md)
 ##### [Configure Network Policies](networking/technologies/nps/nps-np-configure.md)
 ##### [Configure RADIUS Clients](networking/technologies/nps/nps-radius-clients-configure.md)
