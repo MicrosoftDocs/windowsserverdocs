@@ -23,4 +23,4 @@ You can use the topics in this section to manage Network Policy Server.
   
 This section contains the following topics.  
   
-- [Configure Network Policies](networking/technologies/nps/nps-np-configure.md)
+- [Configure Network Policies](nps-np-configure.md)
