@@ -1,6 +1,6 @@
 # WindowsServerDocs-pr
 
-Welcome to the private Windows Server Documentation Repository. It's available to internal Microsoft employees, vendors, and contractors only. It's actively managed technical content that includes the source for three content sets published to the TechNet technical library:
+This repo is accesible only to internal Microsoft employees, vendors, and contractors. It's actively managed and includes the source for three content sets published to the TechNet technical library:
 
 -  [Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/windows-server-2016)
 -  [Essentials Server 2016]()
@@ -11,13 +11,13 @@ Writers and engineering partners share responsibility for technical accuracy, wi
 |Windows Server 2016 Area|Owner|Github Alias|
 |--|--|--|
 |Compute|Kathy Davies|KBDAzure|
-|General, server-wide content|Jaime Ondrusek||
-|Networking|Jim McIllece| |
-|Remote Desktop Services|Liza Poggemeyer||
-|Security|Corey Plett||
-|Storage|Jason Gerend||
+|General, server-wide content|Jaime Ondrusek|jaimeo|
+|Networking|Jim McIllece|jamesmci|
+|Remote Desktop Services|Liza Poggemeyer|lizap|
+|Security|Corey Plett|coreyp-at-msft|
+|Storage|Jason Gerend|JasonGerend|
 
-Corey Plett is the writer\/approver for Essentials Server. Kathy Davies is the writer\/approver for Microsoft Hyper-V.
+Corey Plett is the writer and approver for Essentials Server. Kathy Davies is the writer and approver for Microsoft Hyper-V.
 
 To make a small update, simply edit the file and submit a pull request. For substantive changes, new articles, and deletions, consult with the area owner before spending any significant time. It's the writer's responsibility to manage their area as a content set within the larger content portfolio. This helps us avoid duplication, identify content gaps, and consider how the various articles fit together.
 
