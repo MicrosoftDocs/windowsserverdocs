@@ -24,3 +24,4 @@ You can use the topics in this section to manage Network Policy Server.
 This section contains the following topics.  
   
 - [Configure Network Policies](nps-np-configure.md)
+- [Configure RADIUS Clients](nps-radius-clients-configure.md)
