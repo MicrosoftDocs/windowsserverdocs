@@ -798,6 +798,7 @@
 ##### [Access Permission](networking/technologies/nps/nps-np-access.md)
 ##### [Configure Network Policies](networking/technologies/nps/nps-np-configure.md)
 #### [NPS Templates](networking/technologies/nps/nps-templates.md)
+#### [RADIUS Clients](networking/technologies/nps/nps-radius-clients.md)
 ### [NIC Teaming](networking/technologies/nic-teaming/NIC-Teaming.md)
 #### [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
 #### [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)
