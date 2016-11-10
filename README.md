@@ -6,16 +6,16 @@ This repo is accesible only to internal Microsoft employees, vendors, and contra
 -  [Essentials Server 2016]()
 -  [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/Hyper-V-Server-2016)
 
-Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **Writers for an assigned area review and approve all pull requests to add, update, or delete articles or art.** For Windows Server 2016 content, these are: 
+Writers and engineering partners share responsibility for technical accuracy, within specific technology areas. **The writer for an assigned area reviews and approves all pull requests to add, update, or delete articles or art.** For Windows Server 2016 content, these writers are: 
 
-|Windows Server 2016 Area|Owner|Github Alias|
-|--|--|--|
-|Compute|Kathy Davies|KBDAzure|
-|General, server-wide content|Jaime Ondrusek|jaimeo|
-|Networking|Jim McIllece|jamesmci|
-|Remote Desktop Services|Liza Poggemeyer|lizap|
-|Security|Corey Plett|coreyp-at-msft|
-|Storage|Jason Gerend|JasonGerend|
+Windows Server 2016 Area|Owner|Github Alias
+--|--|--
+Compute|Kathy Davies|KBDAzure
+General, server-wide content|Jaime Ondrusek|jaimeo
+Networking|Jim McIllece|jamesmci
+Remote Desktop Services|Liza Poggemeyer|lizap
+Security|Corey Plett|coreyp-at-msft
+Storage|Jason Gerend|JasonGerend
 
 Corey Plett is the writer and approver for Essentials Server. Kathy Davies is the writer and approver for Microsoft Hyper-V.
 
