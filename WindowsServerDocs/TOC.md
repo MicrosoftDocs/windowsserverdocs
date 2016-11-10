@@ -1007,7 +1007,7 @@
 #### [Data Deduplication interoperability](storage/data-deduplication/interop.md)
 ### [Storage Spaces Direct](storage/storage-spaces/storage-spaces-direct-overview.md)
 #### [Hyper-converged solution using Storage Spaces Direct](storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)
-#### [Storage Spaces Fault Tolerance](storage/storage-spaces/Storage-Spaces-Fault-Tolerance.md)
+#### [Fault tolerance and storage efficiency](storage/storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Software Storage Bus](storage/storage-spaces/Software-Storage-Bus-Overview.md)
 #### [Adding nodes or drives](storage/storage-spaces/add-nodes.md)
 #### [Updating drive firmware](storage/update-firmware.md)
