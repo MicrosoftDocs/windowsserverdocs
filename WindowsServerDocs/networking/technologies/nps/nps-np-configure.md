@@ -110,4 +110,6 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 4. Follow the instructions in the wizard to complete creation of your new policies.
 
+For more information about network policies, see [Network Policies](nps-np-overview.md).
+
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).

@@ -1,4 +1,4 @@
-cd---
+---
 title: Kerberos Constrained Delegation Overview
 description: "Windows Server Security"
 ms.custom: na
