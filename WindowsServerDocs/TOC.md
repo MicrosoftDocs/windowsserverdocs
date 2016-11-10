@@ -801,6 +801,7 @@
 ##### [RADIUS Clients](networking/technologies/nps/nps-radius-clients.md)
 #### [Manage Network Policy Server](networking/technologies/nps/nps-manage-top.md)
 ##### [Configure Network Policies](networking/technologies/nps/nps-np-configure.md)
+##### [Configure RADIUS Clients](networking/technologies/nps/nps-radius-clients-configure.md)
 ### [NIC Teaming](networking/technologies/nic-teaming/NIC-Teaming.md)
 #### [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
 #### [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)
