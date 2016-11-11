@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>Default groups are created when you install Windows client or server operating systems and Active??Directory Domain Services (AD??DS) domains. Domain member computers and stand-alone computers have default local groups that are created automatically in their local security accounts database. Domain controllers are an exception: they use the central Active??Directory database to create default groups. All domain member computers can access the central Active??Directory database.</para>

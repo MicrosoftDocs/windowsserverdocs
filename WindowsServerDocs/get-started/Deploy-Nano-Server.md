@@ -270,7 +270,7 @@ Though offline installation of server roles and other packages is recommended, y
    
      
 ```  
- <?xml version="1.0" encoding="utf-8"?>  
+   
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  

@@ -91,7 +91,7 @@ Though offline installation of the server role is recommended, you might need to
 
 
 ```  
- <?xml version="1.0" encoding="utf-8"?>  
+   
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  
