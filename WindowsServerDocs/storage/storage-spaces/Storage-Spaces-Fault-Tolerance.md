@@ -32,16 +32,16 @@ In Windows Server 2016, Storage Spaces offers two flavors of mirroring – ‘tw
 
 Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware ‘fault domains’](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains) – with Storage Spaces Direct, that means two servers.
 
-![two-way-mirror](media/Storage-Spaces-Fault-Tolerance/two-way-mirror.png)
+![two-way-mirror](media/Storage-Spaces-Fault-Tolerance/two-way-mirror-180px.png)
 
    >[!TIP]
-   > We discourage using single parity. It can only safely tolerate one hardware failure at a time. If you’re rebooting one server, and a drive fails in another server, you will experience downtime. If you only have three servers, we recommend using three-way mirroring. If you have four or more, see the next section.
+   > Unless you have only two servers, we discourage using two-way mirroring. It can only safely tolerate one hardware failure at a time. If you’re rebooting one server, and a drive fails in another server, you will experience downtime. Stuff happens – keep three copies.
 
 ### Three-way mirror
 
 Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers.
 
-![three-way-mirror](media/Storage-Spaces-Fault-Tolerance/two-way-mirror.png)
+![three-way-mirror](media/Storage-Spaces-Fault-Tolerance/three-way-mirror-180px.png)
 
 ### When to use mirroring
 
@@ -57,17 +57,17 @@ In Windows Server 2016, Storage Spaces offers two flavors of parity – ‘singl
 Single parity keeps only one bitwise parity symbol, which provides fault tolerance against only one failure at a time. It most closely resembles RAID-5. To use single parity, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers. Because three-way mirroring provides more fault tolerance at the same scale, we discourage using single parity. But, it’s there if you insist on using it, and it is fully supported.
 
    >[!TIP]
-   > Unless you have only two servers, we discourage using two-way mirroring. It can only safely tolerate one hardware failure at a time. If you’re rebooting one server, and a drive fails in another server, you will experience downtime. Stuff happens – keep three copies.
+   > We discourage using single parity. It can only safely tolerate one hardware failure at a time. If you’re rebooting one server, and a drive fails in another server, you will experience downtime. If you only have three servers, we recommend using three-way mirroring. If you have four or more, see the next section.
 
 ### Dual parity
 
 Dual parity implements Reed-Solomon error-correcting codes to keep two bitwise parity symbols, thereby providing the same fault tolerance as three-way mirroring (i.e. up to two failures at once), but with better storage efficiency. It most closely resembles RAID-6. To use dual parity, you need at least four hardware fault domains – with Storage Spaces Direct, that means four servers. At that scale, the storage efficiency is 50% – to store 2 TB of data, you need 4 TB of physical storage capacity.
 
-![dual-parity](media/Storage-Spaces-Fault-Tolerance/dual-parity.png)
+![dual-parity](media/Storage-Spaces-Fault-Tolerance/dual-parity-180px.png)
 
 The storage efficiency of dual parity increases the more hardware fault domains you have, from 50% up to 80%. For example, at seven (with Storage Spaces Direct, that means seven servers) the efficiency jumps to 66.7% – to store 4 TB of data, you need just 6 TB of physical storage capacity.
 
-![dual-parity-wide](media/Storage-Spaces-Fault-Tolerance/dual-parity-wide.png)
+![dual-parity-wide](media/Storage-Spaces-Fault-Tolerance/dual-parity-wide-180px.png)
 
 See the [Summary](#Summary) section for the efficiency of dual party and local reconstruction codes at every scale.
 
@@ -77,7 +77,7 @@ Storage Spaces in Windows Server 2016 introduces an advanced technique developed
 
 With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here’s what the layout looks like with hard disk drives and 12 hardware fault domains (i.e. 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
 
-![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes.png)
+![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes-180px.png)
 
 We recommend this in-depth yet eminently readable walkthrough of [how local reconstruction codes handle various failure scenarios, and why they’re appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
 
@@ -134,7 +134,7 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 
 |    Fault domains      |    SSD + HDD        |                 |    All SSD           |                 |
 |-----------------------|---------------------|-----------------|----------------------|-----------------|
-|                       |    Layout           |    Efficiency   |    Layout            |    Efficiency   |
+|    /                  |    Layout           |    Efficiency   |    Layout            |    Efficiency   |
 |    2                  |    –                |    –            |    –                 |    –            |
 |    3                  |    –                |    –            |    –                 |    –            |
 |    4                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
@@ -160,7 +160,7 @@ Each of the following four cmdlets creates one volume. *Mirror 1* uses two-way m
 New-Volume -FriendlyName "Mirror 1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 1
 New-Volume -FriendlyName "Mirror 2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 2
 New-Volume -FriendlyName "Parity 1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity -PhysicalDiskRedundancy 1
-New-Volume -FriendlyName "Parity 2” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
+New-Volume -FriendlyName "Parity 2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
 ```
 
 To make things easier, if your deployment uses Storage Spaces Direct with only two or three servers, you can omit the **ResiliencySettingName** and **PhysicalDiskRedundancy** parameters altogether, and Storage Spaces will automatically use the most fault tolerant mirroring option. Easy!
@@ -169,7 +169,7 @@ To make things easier, if your deployment uses Storage Spaces Direct with only t
 New-Volume -FriendlyName "Bill Gates" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
-If your deployment uses Storage Spaces Direct with four or more servers, ‘tier templates’ are automatically created, called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring (*Performance*) and the best dual parity layout at your scale (*Capacity*). If you’re curious, you can see them by running the following cmdlets.
+If your deployment uses Storage Spaces Direct with four or more servers, ‘tier templates’ are automatically created, called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring (*Performance*) and the best dual parity layout at your scale (*Capacity*). If you’re curious, you can see them by running the following cmdlet.
 
 ```
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
