@@ -28,11 +28,12 @@ This topic provides an overview of the Hyper-V Virtual Switch, and contains the 
 > [!NOTE]  
 > In addition to this topic, the following Hyper-V Virtual Switch documentation is available.  
 >   
-> -   [Manage Hyper-V Virtual Switch](../../technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md) 
-> -   [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
-> -   [Create networks with VMM 2012](http://social.technet.microsoft.com/wiki/contents/articles/3140.create-networks-with-vmm-2012.aspx)  
-> -   [Hyper-V: Configure VLANs and VLAN Tagging](http://social.technet.microsoft.com/wiki/contents/articles/1306.hyper-v-configure-vlans-and-vlan-tagging.aspx)  
-> -   [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](http://social.technet.microsoft.com/wiki/contents/articles/13071.hyper-v-the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions.aspx)  
+> - [Manage Hyper-V Virtual Switch](Manage-Hyper-V-Virtual-Switch.md) 
+> - [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](RDMA-and-Switch-Embedded-Teaming.md)
+> - [Network Switch Team Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj553812.aspx)
+> - [Create networks with VMM 2012](http://social.technet.microsoft.com/wiki/contents/articles/3140.create-networks-with-vmm-2012.aspx)  
+> - [Hyper-V: Configure VLANs and VLAN Tagging](http://social.technet.microsoft.com/wiki/contents/articles/1306.hyper-v-configure-vlans-and-vlan-tagging.aspx)  
+> - [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](http://social.technet.microsoft.com/wiki/contents/articles/13071.hyper-v-the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions.aspx)  
   
 ## <a name="bkmk_switch"></a>Hyper-V Virtual Switch  
 The  Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
