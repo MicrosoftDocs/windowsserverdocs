@@ -32,16 +32,21 @@ Hyper-V hosts that will become guarded hosts using TPM-trusted attestation must 
     - Configured to boot using UEFI (not BIOS or "legacy" mode)
     - Secure boot enabled
         
-    For TPM-trusted attestation, we recommend that you elect a "reference host" to represent each unique class of hardware configuration within your datacenter. You will use the reference host to capture some of the necessary information for TPM-trusted attestation. 
+    For TPM-trusted attestation, we recommend that you elect a "reference host" to represent each unique class of hardware configuration within your datacenter. 
+    You will use the reference host to capture some of the necessary information for TPM-trusted attestation. 
 
 -   **Operating system**: Windows Server 2016 Datacenter edition
 
-    [!IMPORTANT]
-    Ensure that you have installed the latest cumulative update before you deploy shielded virtual machines in production.  
+    > [!IMPORTANT]
+    > Ensure that you have installed the latest cumulative update before you deploy shielded virtual machines in production.  
 
 -   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is necessary to let the Hyper-V host communicate with HGS to attest to its health and request keys for shielded VMs. This feature is only available on Datacenter editions of Windows Server 2016. If you are using the Nano Server installation option of Windows Server 2016, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md). 
 
->**Warning**&nbsp;&nbsp;The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. We strongly recommend testing this configuration in your lab before enabling this feature. Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error).
+> [!WARNING]
+> The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. 
+> We strongly recommend testing this configuration in your lab before enabling this feature. 
+> Failure to do so may result in unexpected failures up to and including data loss or a blue screen error (also called a stop error). 
+> For more information, see [Compatible hardware with Windows Server 2016 Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).
 
 ## Capture hardware and software information 
 
