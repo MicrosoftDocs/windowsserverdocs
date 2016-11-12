@@ -23,8 +23,10 @@ You can use the topics in this section to manage Network Policy Server.
   
 This section contains the following topics.  
   
+- [Configure Connection Request Policies](nps-crp-configure.md)
 - [Configure Firewalls for RADIUS Traffic](nps-firewalls-configure.md)
 - [Configure Network Policies](nps-np-configure.md)
 - [Configure Network Policy Server Accounting](nps-accounting-configure.md)
 - [Configure NPS UDP Port Information](nps-udp-ports-configure.md)
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
+- [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
