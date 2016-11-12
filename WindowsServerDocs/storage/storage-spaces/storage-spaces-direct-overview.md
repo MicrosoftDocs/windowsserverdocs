@@ -43,7 +43,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Fault Tolerance.</b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
+			<b>Fault Tolerance.</b> <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -104,7 +104,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Storage Pool.** The collection of drives that will form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings.
 
-**Storage Spaces.** Storage Spaces provides fault tolerance to virtual “disks” using [mirroring, erasure coding, or both](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
+**Storage Spaces.** Storage Spaces provides fault tolerance to virtual "disks" using [mirroring, erasure coding, or both](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
 
 **Resilient File System (ReFS).** ReFS is the premier filesystem purpose-built for virtualization. It includes dramatic accelerations for .vhdx file operations such as creation, expansion, and checkpoint merging, and built-in checksums to detect and correct bit errors. It also introduces real-time tiers that rotate data between so-called “hot” and “cold” storage tiers in real-time based on usage.
 
