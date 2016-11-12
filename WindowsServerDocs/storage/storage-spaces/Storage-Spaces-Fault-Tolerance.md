@@ -6,7 +6,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/09/2016
+ms.date: 11/11/2016
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 ---
 # Fault tolerance and storage efficiency in Storage Spaces Direct
@@ -14,7 +14,7 @@ ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 
 This topic introduces the resiliency options available in [Storage Spaces Direct](storage-spaces-direct-overview.md) and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each. It also presents some usage instructions to get you started, and references some great papers, blogs, and additional content where you can learn more.
 
-If you are already familiar with Storage Spaces, you may want to skip to the [Summary](#Summary) section.
+If you are already familiar with Storage Spaces, you may want to skip to the [Summary](#summary) section.
 
 ## Overview
 
@@ -69,7 +69,7 @@ The storage efficiency of dual parity increases the more hardware fault domains 
 
 ![dual-parity-wide](media/Storage-Spaces-Fault-Tolerance/dual-parity-wide-180px.png)
 
-See the [Summary](#Summary) section for the efficiency of dual party and local reconstruction codes at every scale.
+See the [Summary](#summary) section for the efficiency of dual party and local reconstruction codes at every scale.
 
 ### Local reconstruction codes
 
@@ -100,7 +100,7 @@ Try our online [capacity calculator web app](http://aka.ms/s2dcalc) to see how d
 
 Consider using mixed resiliency when most of your data is "cold" data, but you still expect some sustained write activity to some data.
 
-## Summary
+## <a name="summary"></a>Summary
 
 **Table 1** Shows each resiliency type, the number of failures it can safely tolerate at once, and its storage efficiency.
 
@@ -125,30 +125,50 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 |    2                |    •                 |                        |                     |                   |             |
 |    3                |    •                 |    •                   |    •                |                   |             |
 |    4                |    •                 |    •                   |    •                |    •              |    •        |
-|    5                |    •                 |    •                   |    •                |    •              |    •        |
-|    …                |    •                 |    •                   |    •                |    •              |    •        |
-|    15               |    •                 |    •                   |    •                |    •              |    •        |
-|    16               |    •                 |    •                   |    •                |    •              |    •        |
+|    +                |    •                 |    •                   |    •                |    •              |    •        |
 
-**Table 3** Shows the storage efficiency of dual parity and local reconstruction codes at each scale.
+**Table 3** Shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
 
-|    Fault domains      |    SSD + HDD        |                 |    All SSD           |                 |
-|-----------------------|---------------------|-----------------|----------------------|-----------------|
-|    /                  |    Layout           |    Efficiency   |    Layout            |    Efficiency   |
-|    2                  |    –                |    –            |    –                 |    –            |
-|    3                  |    –                |    –            |    –                 |    –            |
-|    4                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
-|    5                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
-|    6                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
-|    7                  |    RS 4+2           |    66.7%        |    RS 4+2            |    66.7%        |
-|    8                  |    RS 4+2           |    66.7%        |    RS 4+2            |    66.7%        |
-|    9                  |    RS 4+2           |    66.7%        |    RS 6+2            |    75.0%        |
-|    10                 |    RS 4+2           |    66.7%        |    RS 6+2            |    75.0%        |
-|    11                 |    RS 4+2           |    66.7%        |    RS 6+2            |    75.0%        |
-|    12                 |    LRC (8, 2, 1)    |    72.7%        |    RS 6+2            |    75.0%        |
-|    13                 |    LRC (8, 2, 1)    |    72.7%        |    RS 6+2            |    75.0%        |
-|    14                 |    LRC (8, 2, 1)    |    72.7%        |    RS 6+2            |    75.0%        |
-|    15                 |    LRC (8, 2, 1)    |    72.7%        |    LRC (12, 2, 1)    |    80.0%        |
+|    Fault domains      |    Layout           |    Efficiency   |
+|-----------------------|---------------------|-----------------|
+|    2                  |    –                |    –            |
+|    3                  |    –                |    –            |
+|    4                  |    RS 2+2           |    50.0%        |
+|    5                  |    RS 2+2           |    50.0%        |
+|    6                  |    RS 2+2           |    50.0%        |
+|    7                  |    RS 4+2           |    66.7%        |
+|    8                  |    RS 4+2           |    66.7%        |
+|    9                  |    RS 4+2           |    66.7%        |
+|    10                 |    RS 4+2           |    66.7%        |
+|    11                 |    RS 4+2           |    66.7%        |
+|    12                 |    LRC (8, 2, 1)    |    72.7%        |
+|    13                 |    LRC (8, 2, 1)    |    72.7%        |
+|    14                 |    LRC (8, 2, 1)    |    72.7%        |
+|    15                 |    LRC (8, 2, 1)    |    72.7%        |
+|    16                 |    LRC (8, 2, 1)    |    72.7%        |
+
+**Table 4** Shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can user larger group sizes and achieve slightly better storage efficiency with all-flash.
+
+   >[!TIP]
+   > The table below applies only to all-flash deployments. For deployments which contain both hard disk drives (HDD) and solid-state drives (SSD), see Table 3, above.
+
+|    Fault domains      |    Layout           |    Efficiency   |
+|-----------------------|---------------------|-----------------|
+|    2                  |    –                |    –            |
+|    3                  |    –                |    –            |
+|    4                  |    RS 2+2           |    50.0%        |
+|    5                  |    RS 2+2           |    50.0%        |
+|    6                  |    RS 2+2           |    50.0%        |
+|    7                  |    RS 4+2           |    66.7%        |
+|    8                  |    RS 4+2           |    66.7%        |
+|    9                  |    RS 6+2           |    75.0%        |
+|    10                 |    RS 6+2           |    75.0%        |
+|    11                 |    RS 6+2           |    75.0%        |
+|    12                 |    RS 6+2           |    75.0%        |
+|    13                 |    RS 6+2           |    75.0%        |
+|    14                 |    RS 6+2           |    75.0%        |
+|    15                 |    RS 6+2           |    75.0%        |
+|    16                 |    LRC (12, 2, 1)   |    80.0%        |
 
 ## Usage in PowerShell
 
@@ -195,4 +215,4 @@ Every link below is inline somewhere in the body of this topic.
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
 - [Storage Efficiency Demo at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [Capacity Calculator for Storage Spaces Direct](http://aka.ms/s2dcalc)
+- [Capacity Calculator PREVIEW for Storage Spaces Direct](http://aka.ms/s2dcalc)
