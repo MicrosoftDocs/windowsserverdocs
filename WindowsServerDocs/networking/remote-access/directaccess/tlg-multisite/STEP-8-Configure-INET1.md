@@ -12,8 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: coreyp
-author coreyp-at-msft
+author: coreyp-at-msft
 ---
+
 # STEP 8: Configure INET1
 
 >Applies To: Windows Server&reg; 2016
