@@ -805,6 +805,7 @@
 ##### [Configure Firewalls for RADIUS Traffic](networking/technologies/nps/nps-firewalls-configure.md)
 ##### [Configure Network Policies](networking/technologies/nps/nps-np-configure.md)
 ##### [Configure Network Policy Server Accounting](networking/technologies/nps/nps-accounting-configure.md)
+##### [Configure NPS on a Multihomed Computer](networking/technologies/nps/nps-multihomed-configure.md)
 ##### [Configure NPS UDP Port Information](networking/technologies/nps/nps-udp-ports-configure.md)
 ##### [Configure RADIUS Clients](networking/technologies/nps/nps-radius-clients-configure.md)
 ##### [Configure Remote RADIUS Server Groups](networking/technologies/nps/nps-crp-rrsg-configure.md)
