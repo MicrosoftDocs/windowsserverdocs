@@ -42,6 +42,7 @@ The following feature distribution map indicates the features in each version. T
 |Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|
 |vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||
+|PCI Passthrough/DDA|2016|&#10004;|&#10004;|&#10004;||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;||
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||
@@ -208,7 +209,7 @@ The following feature distribution map indicates the features in each version. T
 
       ```
 
-See Also
+## See Also
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
