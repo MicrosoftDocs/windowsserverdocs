@@ -14,7 +14,7 @@ ms.assetid: ca521c65-eab4-458e-b762-456ff043c4f7
 author: lizap
 manager: dongill
 ---
-# Install SQL native client on each RD Connection Broker server
+# Install the ODBC driver for SQL on each RD Connection Broker server 
 
 >Applies To: Windows Server 2016
 
