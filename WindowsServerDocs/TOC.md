@@ -810,6 +810,7 @@
 ##### [Configure NPS UDP Port Information](networking/technologies/nps/nps-udp-ports-configure.md)
 ##### [Configure RADIUS Clients](networking/technologies/nps/nps-radius-clients-configure.md)
 ##### [Configure Remote RADIUS Server Groups](networking/technologies/nps/nps-crp-rrsg-configure.md)
+##### [Use Regular Expressions in NPS](networking/technologies/nps/nps-crp-reg-expressions.md)
 ### [NIC Teaming](networking/technologies/nic-teaming/NIC-Teaming.md)
 #### [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
 #### [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)

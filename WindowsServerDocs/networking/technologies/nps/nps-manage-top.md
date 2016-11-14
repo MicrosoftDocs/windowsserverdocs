@@ -31,3 +31,5 @@ This section contains the following topics.
 - [Configure NPS UDP Port Information](nps-udp-ports-configure.md)
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
+- [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)
+
