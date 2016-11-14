@@ -31,7 +31,9 @@ Remote Desktop Services uses an ODBC driver to access Azure SQL. Use the followi
     2. Click **Connect > Open** to open the Remote Desktop client.  
     3. In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a domain administrator account.  
     4. Click **Yes** when warned about the certificate.    
-3. Download the [ODBC driver for SQL Server](https://www.microsoft.com/download/confirmation.aspx?id=50420).
+3. Download the [ODBC driver for SQL Server](https://www.microsoft.com/download/confirmation.aspx?id=50420) that matches the version in the ODBC connection string.
+   >[!NOTE]
+   > You got the ODBC connection string in Step 2 of [Create an Azure SQL database for the RD Connection Broker](create-an-azure-sql-database-for-the-rd-connection-broker.md).
 4. Copy the sqlincli.msi file to the first RD Connection Broker server.   
 5. Open the sqlincli.msi file and install the native client.  
 6. Repeat steps 1-5 for each additional RD Connection Broker virtual machine (for example, Contoso-Cb2).
