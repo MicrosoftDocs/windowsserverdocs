@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016
 
-Remote Desktop Services uses an ODBC driver to access Azure SQL. Use the following steps to install an ODBC driver on each RD COnnection Broker server:  
+Remote Desktop Services uses an ODBC driver to access Azure SQL. Use the following steps to install an ODBC driver on each RD Connection Broker server:  
   
 1. Create a public IP address for the first RD Connection Broker. (You only have to do this if the RDMS virtual machine does not already have a public IP address to allow RDP connections.)   
     1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment, and then click the first RD Connection Broker virtual machine (for example, Contoso-Cb1).  
