@@ -18,8 +18,8 @@ You can use the topics in this section to manage Network Policy Server.
   
 >[!NOTE]
 >For additional Network Policy Server documentation, you can use the following library sections.  
->- [Getting Started with Network Policy Server](nps-getstart-top.md)  
-  
+>- [Getting Started with Network Policy Server](nps-getstart-top.md)
+>- [Deploy Network Policy Server](nps-deploy.md)  
   
 This section contains the following topics.  
   
@@ -31,3 +31,5 @@ This section contains the following topics.
 - [Configure NPS UDP Port Information](nps-udp-ports-configure.md)
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
+- [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)
+
