@@ -20,7 +20,7 @@ Integrity streams is an optional feature in ReFS that validates and maintains fi
 
 ## How it works 
 
-Once integrity streams are enabled, ReFS will create and maintain a checksum in the metadata for the specified files. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
+Once integrity streams is enabled, ReFS will create and maintain a checksum in the metadata for the specified files. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
 
 ![Compute checksum for file data](media/compute-checksum.gif)
 
