@@ -27,17 +27,13 @@ Copying files is a common operation performed on a file server. Windows Server h
 ## <a href="" id="smbperftuning"></a>SMB performance tuning
 
 
-File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.02. You can check which version of SMB is in use on your network by using Windows PowerShell, as described in [Windows Server 2012: Which version of the SMB protocol (SMB 1.0, SMB 2.0, SMB 2.1, SMB 3.0, or SMB 3.02) are you using on your File Server?](http://blogs.technet.com/b/josebda/archive/2013/10/02/windows-server-2012-r2-which-version-of-the-smb-protocol-smb-1-0-smb-2-0-smb-2-1-smb-3-0-or-smb-3-02-you-are-using.aspx).
+File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
 
-### SMB 3.0 protocol
+### SMB 3.0 protocol family
 
-SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2. This version introduced technologies that may significantly improve performance and availability of the file server. For more info on what’s new in SMB 3.0 for Windows Server 2012 R2, see [What's New for SMB in Windows Server 2012 R2](http://technet.microsoft.com/library/hh831474.aspx).
+SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that may significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](https://aka.ms/smb3plus) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
 
-The following figure shows a basic scenario with a single channel, single client, and single server. The scenario shows the optional paths of SMB packets that use either TCP/IP or RDMA.
 
-![smb 3.0 packet flow options](../media/performance-tuning/perftune-guide-smb3-packet-flow.png)
-
-The following sections describe what can be achieved by combining these techniques across multiple channels (multiple interfaces in the server) and multiple nodes joined in SMB file server cluster. For more info about SMB 3.0, see [Updated Links on Windows Server 2012 File Server and SMB 3.0](http://blogs.technet.com/b/josebda/archive/2013/05/05/updated-links-on-windows-server-2012-file-server-and-smb-3-0.aspx) and [Updated Links on Windows Server 2012 R2 File Server and SMB 3.02](http://blogs.technet.com/b/josebda/archive/2013/07/31/updated-links-on-windows-server-2012-r2-file-server-and-smb-3-0.aspx).
 
 ### SMB Direct
 
@@ -47,19 +43,19 @@ Whenever SMB detects an RDMA-capable network, it automatically tries to use the 
 
 SMB Direct is not required in any SMB configuration, but it’s always recommended for those who want lower latency and lower CPU utilization.
 
-For more info about SMB Direct, see [Improve Performance of a File Server with SMB Direct](http://technet.microsoft.com/library/jj134210.aspx).
+For more info about SMB Direct, see [Improve Performance of a File Server with SMB Direct](https://aka.ms/smbdirect).
 
 ### SMB Multichannel
 
 SMB Multichannel allows file servers to use multiple network connections simultaneously and provides increased throughput.
 
-For more info about SMB Multichannel, see [The basics of SMB Multichannel, a feature of Windows Server 2012 and SMB 3.0](http://blogs.technet.com/b/josebda/archive/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0.aspx).
+For more info about SMB Multichannel, see [Deploy SMB Multichannel](https://aka.ms/smbmulti).
 
 ### SMB Transparent Failover
 
 SMB Transparent Failover is a feature that allows an SMB client to continue to work uninterrupted when there’s a failure in the SMB Scale-out file server cluster node that the client is using. This includes preserving information on the server side plus allowing the client to automatically reconnect to the same share and files on a surviving file server cluster node.
 
-For more info about SMB Transparent Failover, see [SMB Transparent Failover – making file shares continuously available](http://blogs.technet.com/b/clausjor/archive/2012/06/07/smb-transparent-failover-making-file-shares-continuously-available.aspx).
+For more info about SMB Transparent Failover, see [SMB Transparent Failover – making file shares continuously available](https://aka.ms/smbtfo).
 
 ### SMB Scale-Out
 
@@ -69,7 +65,7 @@ For more info about SMB Scale-Out, see [Scale-Out File Server for Application Da
 
 ### <a href="" id="smbcounters"></a>Performance counters for SMB 3.0
 
-The following SMB performance counters were introduced in Windows Server 2012, and they are considered a base set of counters when you monitor the resource usage of SMB 2 and higher versions. Log the performance counters to a local, raw (.blg) performance counter log. It is less expensive to collect all instances by using the wildcard character (\*), and then extract particular instances during postprocessing by using Relog.exe.
+The following SMB performance counters were introduced in Windows Server 2012, and they are considered a base set of counters when you monitor the resource usage of SMB 2 and higher versions. Log the performance counters to a local, raw (.blg) performance counter log. It is less expensive to collect all instances by using the wildcard character (\*), and then extract particular instances during post-processing by using Relog.exe.
 
 -   **SMB client shares**
 
@@ -182,11 +178,6 @@ The following settings can optimize a computer for file server performance in ma
 <td><p>MaxThreadsPerQueue</p></td>
 <td><p>64</p></td>
 <td><p>20</p></td>
-</tr>
-<tr class="odd">
-<td><p>MaxMpxCt (only applicable to SMB 1.0 clients)</p></td>
-<td><p>32768</p></td>
-<td><p>50</p></td>
 </tr>
 </tbody>
 </table>
