@@ -112,4 +112,6 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 For more information about network policies, see [Network Policies](nps-np-overview.md).
 
+For examples of pattern-matching syntax to specify network policy attributes, see [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
+
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
