@@ -50,7 +50,6 @@ ms.date: 10/31/2016
 
 -    [Using Storage Drivers for Storage Subsystem Performance](./Section_5.4-using-storage-drivers-for-storage-subsystem-performance.md)
 
--    [Performance Tuning for Data Deduplication](./Section_5.5-performance-tuning-for-data-deduplication.md)
 
 **Performance Tuning for Cache and Memory Manager Subsystems**
 
@@ -109,7 +108,9 @@ ms.date: 10/31/2016
 **Performance Tuning for Storage Features**
 -    [Storage Spaces Direct Performance Tuning](./Section_15-StorageSpacesDirect.md)
 
--    [Storage Replication Performance Tuning](./Section_15.1-StorageReplication.md)
+-    [Storage Replication Tuning](https://aka.ms/srfaq)
+
+-    [Data Deduplication Tuning](https://technet.microsoft.com/en-us/windows-server-docs/storage/data-deduplication/advanced-settings)
 
 **References**
 -    [References and Links](./Section_1.2-References.md)
