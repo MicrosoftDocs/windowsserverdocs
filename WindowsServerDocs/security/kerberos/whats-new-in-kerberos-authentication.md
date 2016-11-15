@@ -10,7 +10,7 @@ ms.technology: security-authentication
 ms.date: 11/09/2016
 ---
 
-# Preventing Kerberos change password that use RC4 secret keys
+# What's New in Kerberos Authentication
 
 >Applies To: Windows Server 2016 and Windows 10
 

@@ -23,7 +23,7 @@ Local Group Policy editor consists of two main sections:
 
 **User Configuration** Holds settings that are applied to users (at sign-in and during periodic background refresh),
 
-**computer Configuration** Holds settings that are applied to computers (at startup and during periodic background refresh).
+**Computer Configuration** Holds settings that are applied to computers (at startup and during periodic background refresh).
 
 These sections are further divided into the different types of policies that can be set, such as Administrative Templates, Security, and Folder Redirection.
 
@@ -36,25 +36,25 @@ The following procedures explain how to open the Local Group Policy editor from 
 
 #### To open the Local Group Policy editor from the command line
 
--   On the **start** screen, click the **Apps** arrow. On the **Apps** screen, type**gpedit.msc**, and then press **ENTER**.
+-   On the **start** screen, click the **Apps** arrow. On the **Apps** screen, type **gpedit.msc**, and then press **ENTER**.
 
 #### To open the Local Group Policy editor as a snap-in
 
 1.  On the **start** screen, click the **Apps** arrow. On the **Apps** screen, type**mmc**, and then press **ENTER**.
 
-2.  On the **File** menu, click **add/remove Snap-in**.
+2.  On the **File** menu, click **Add/remove Snap-in**.
 
-3.  In the **add or remove Snap-ins** dialog box, click **Local Group Policy editor**, and then click **add**.
+3.  In the **Add or remove Snap-ins** dialog box, click **Local Group Policy editor**, and then click **Add**.
 
-4.  In the **select Group Policy Object** dialog box, click **Browse**.
+4.  In the **Select Group Policy Object** dialog box, click **Browse**.
 
 5.  Click **This computer** to edit the Local Group Policy Object, or click **Another computer** to edit the Local Group Policy Object for a different computer. Click **Users** to edit Administrator, Non-Administrator, or per-user Local Group Policy Objects.
 
 6.  Click **Finish**.
 
 > [!NOTE]
-> if you want to save a Local Group Policy editor console and choose which GPO opens in it from the command line:
+> If you want to save a Local Group Policy editor console and choose which GPO opens in it from the command line:
 > 
-> In the **select Group Policy Object** dialog box, select the **Allow the focus of the Group Policy Snap-in to be changed when launching from the command line** check box.
+> In the **Select Group Policy Object** dialog box, select the **Allow the focus of the Group Policy Snap-in to be changed when launching from the command line** check box.
 
 

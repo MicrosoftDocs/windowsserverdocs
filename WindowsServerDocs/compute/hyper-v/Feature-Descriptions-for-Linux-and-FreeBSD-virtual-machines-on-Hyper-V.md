@@ -16,7 +16,7 @@ ms.date: 10/03/2016
 
 >Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine. 
+This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine.
 
 ## <a name="BKMK_core"></a>Core
 
@@ -42,6 +42,7 @@ This article describes features available in components such as core, networking
 |vRSS (Virtual Receive Side Scaling)|Spreads the load from a virtual network adapter across multiple virtual processors in a virtual machine.For more information, see [Virtual Receive-side Scaling in Windows Server 2012 R2](https://technet.microsoft.com/library/dn383582.aspx).|
 |TCP Segmentation and Checksum Offloads|Transfers segmentation and checksum work from the guest CPU to the host virtual switch or network adapter during network data transfers.|
 |Large Receive Offload (LRO)|Increases inbound throughput of high-bandwidth connections by aggregating multiple packets into a larger buffer, decreasing CPU overhead.|
+|SR-IOV|Single Root I/O devices use DDA to allow guests access to portions of specific NIC cards allowing for reduced latency and increased throughput. SR-IOV requires up to date physical function (PF) drivers on the host and virtual function (VF) drivers on the guest.|
 
 ## <a name="BKMK_Storage"></a>Storage
 
@@ -87,7 +88,7 @@ This article describes features available in components such as core, networking
 |Boot using UEFI|This feature allows virtual machines to boot using Unified Extensible Firmware Interface (UEFI).<br /><br />For more information, see [Generation 2 Virtual Machine Overview](https://technet.microsoft.com/library/dn282285.aspx).|
 |Secure boot|This feature allows virtual machines to use UEFI based secure boot mode. When a virtual machine is booted in secure mode, various operating system components are verified using signatures present in the UEFI data store.<br /><br />For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).|
 
-**See Also**
+## See Also
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

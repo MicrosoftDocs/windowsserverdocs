@@ -39,6 +39,7 @@ The following feature distribution map indicates the features in each version. T
 |vRSS|2016, 2012 R2|&#10004;|||||||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |Large Receive Offload (LRO)|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|||||
+|SR-IOV|2016|||||||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||||
 |VHDX resize|2016, 2012 R2|&#10004;||||||
 |Virtual Fibre Channel|2016, 2012 R2|||||||

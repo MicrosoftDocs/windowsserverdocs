@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 11/10/2016  
+ms.date: 11/14/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 176ae424-96e9-4c78-88f5-da418e76c3d7
@@ -22,7 +22,7 @@ Remote Desktop deployments are easily scaled. You can increase and decrease Remo
 
 Use the following information to build and deploy your Remote Desktop Services deployment:
 
-- [Migrate your RDS deployment to Windows Server 2016](migrate-rds-roles-services.md)
+- [Migrate your RDS deployment to Windows Server 2016](migrate-rds-role-services.md)
 - [Upgrade your RDS deployment to Windows Server 2016.](upgrade-to-rds-2016.md)
 - [Configure your desktop hosting environment.](configure-your-desktop-hosting-environment.md)
 - [Deploy a desktop hosting environment.](deploy-a-basic-desktop-hosting-environment-using-azure-iaas.md)
