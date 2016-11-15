@@ -18,13 +18,24 @@ Enables management of storage tier functions, such as setting and disabling flag
 ## Syntax
 
 ```
-fsutil tiering
+fsutil tiering [clearflags] <volume> <flags>
+fsutil tiering [queryflags] <volume>
+fsutil tiering [regionlist] <volume>
+fsutil tiering [setflags] <volume> <flags>
+fsutil tiering [tierlist] <volume>
 ```
 
 ### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
+|clearflags|Disables the tiering behavior flags of a volume.|
+|\<volume>|Specifies the volume.|
+|/TrNH|For volumes with tiered storage, causes Heat gathering to be disabled.<br /><br>Applies to NTFS and ReFS only.|
+|queryflags|Queries the tiering behavior flags of a volume.|
+|regionlist|Lists the regions of a volume and their respective storage tiers.|
+|setflags|Enables the tiering behavior flags of a volume.|
+|tierlist|Lists the storage tieres associated with a volume.|
 
 
 ### Remarks
@@ -32,6 +43,38 @@ fsutil tiering
 
 
 ### Examples
+
+To query the flags on volume C, type:
+
+```
+fsutil tiering clearflags C:
+```
+
+To set the flags on volume C, type:
+
+```
+fsutil tiering setflags C: /TrNH
+```
+
+To clear the flags on volume C, type:
+
+```
+fsutil tiering clearflags C: /TrNH
+```
+
+To list the regions of volume C and their respective storage tiers, type:
+
+```
+fsutil tiering regionlist C:
+```
+
+To list the tiers of volume C, type:
+
+```
+fsutil tiering tierlist C:
+```
+
+
 
 ### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
