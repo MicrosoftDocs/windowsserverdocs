@@ -31,5 +31,6 @@ This section contains the following topics.
 - [Configure NPS UDP Port Information](nps-udp-ports-configure.md)
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
+- [Disable NAS Notification Forwarding](nps-disable-nas-notifications.md)
+- [Increase Concurrent Authentications Processed by NPS](nps-concurrent-auth.md)
 - [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)
-
