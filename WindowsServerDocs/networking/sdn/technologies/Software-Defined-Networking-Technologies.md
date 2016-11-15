@@ -70,9 +70,7 @@ There are many technologies that work together to create Microsoft's Software De
 
 -   **[Software Load Balancing &#40;SLB&#41; for SDN](../../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)**  
 
-  
-    Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
-  
+	Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
   
 -   **[System Center](../../sdn/Sc-Tech-for-Sdn.md)**
     You can use System Center 2016 Virtual Machine Manager (VMM) and Operations Manager to deploy and manage the SDN infrastructure, including network controllers, software load balancers, and gateways. You can also use VMM to centrally define and control virtual network policies and link the policies to your applications or workloads.
