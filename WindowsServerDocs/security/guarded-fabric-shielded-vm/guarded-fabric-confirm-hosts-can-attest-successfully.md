@@ -30,7 +30,7 @@ Complete the following steps on at least one host that will run as a guarded hos
 
         `Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'`
 
-    - **Through VMM**: If you are using System Center 2016 - Virtual Machine Manager (VMM), you can configure  Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) in **Scenario 1 - Provision guarded hosts in VMM**.
+    - **Through VMM**: If you are using System Center 2016 - Virtual Machine Manager (VMM), you can configure  Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
     
     >**Notes**
     > - If the HGS administrator enabled HTTPS on the HGS server (as described in the [Initialize HGS server with an HTTPS Certificate](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#initialize-hgs-server-with-an-https-certificate) section in the HGS server topic), when specifying the host's Key Protection and Attestation URLs, remember to begin the URLs with `https://` rather than `http://`.
@@ -47,11 +47,13 @@ Complete the following steps on at least one host that will run as a guarded hos
 
 ## Next steps
 
-For hosters and tenant administrators, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md) for more information about how to deploy guarded hosts and prepare and create shielded VMs.
+For hosting service providers, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 For a list of all tasks for configuring a guarded fabric, see [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms).
 
 ## See also
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
-- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md)
+

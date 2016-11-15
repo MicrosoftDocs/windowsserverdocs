@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
-ms.date: 08/01/2016
+ms.date: 11/11/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
@@ -43,7 +43,7 @@ The deployment will not be available during RD Connection Broker servers upgrade
 
 5. **RD Licensing servers** can be upgraded anytime.
    > [!NOTE] 
-   > Windows Server 2012 and 2012 R2 RD Licensing servers will work with Windows Server 2016 deployments.
+   > Windows Server 2012 and 2012 R2 RD Licensing servers will work with Windows Server 2016 deployments, but they can only process CALs from Windows Server 2012 R2 and older. They cannot use Windows Server 2016 CALs.
 
 6. **RD Gateway servers** can be upgraded anytime.
    > [!NOTE]

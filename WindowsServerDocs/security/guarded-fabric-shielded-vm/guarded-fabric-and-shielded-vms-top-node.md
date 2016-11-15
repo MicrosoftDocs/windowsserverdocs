@@ -32,11 +32,14 @@ One of the most important goals of providing a hosted environment is to guarante
         - [Configuring a guarded fabric - confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
         - [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md)<br><br>
 
-- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
-    - [Scenario 1 - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
+- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+    - [Shielded VMs - Hosting service provider deploys guarded hosts in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts)
     - [Shielded VMs - Hosting service provider creates a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
-    - [Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)
-    - [Shielded VMs - Tenant creates shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md)
-    - [Scenario 2 - Deploy a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
-    - [Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function](guarded-fabric-sample-unattend-xml-file.md)
-    - [Shielded VMs - Create a new shielded VM on-premises and move it to a guarded fabric](guarded-fabric-create-vm-move-to-guarded-fabric.md)
+    - [Shielded VMs - Hosting service provider prepares a VM Shielding helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)
+    - [Shielded VMs - Hosting service provider sets up Windows Azure Pack](guarded-fabric-hoster-sets-up-windows-azure-pack.md)<br><br>
+
+- [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md)
+    - [Shielded VMs for tenants - Creating a template disk](guarded-fabric-tenant-creates-template-disk.md) (optional)
+    - [Shielded VMs for tenants - Creating shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md)
+    - [Shielded VMs for tenants - Deploying a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
+    - [Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
