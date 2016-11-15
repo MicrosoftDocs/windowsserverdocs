@@ -16,7 +16,9 @@ ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 # Integrity streams
 >Applies To: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
-Integrity streams is an optional feature in ReFS that validates and maintains file integrity. This feature improves upon the integrity tools within NTFS, as it validates data integrity by using a separate checksum for the data. This separate checksum allows ReFS to detect corruptions with greater precision, and if another copy of the corrupted data exists, ReFS can repair those corruptions while remaining online, providing continuous availability and integrity for your files. 
+Integrity streams is an optional feature in ReFS that validates and maintains file integrity. This feature improves upon the integrity tools within NTFS, as it validates data integrity by using a separate checksum for file data. (ReFS will always maintain checksums for metadata). This separate checksum allows ReFS to detect corruptions with greater precision, and if another copy of the corrupted data exists, ReFS can repair those corruptions while remaining online, providing continuous availability and integrity for your files. 
+
+Integrity streams are disabled by default for ReFS v2. 
 
 ## How it works 
 
@@ -32,7 +34,12 @@ If the checksums match, then the data is marked as valid and returned to the use
 
 ![Checksums match, mark data valid](media/valid-data.gif)
 
-If the checksums don't match, then the existing data is corrupted. If there isn't another valid copy of the data, ReFS will return an error to the user without returning the corrupted data. If a valid copy exists, ReFS will return the valid data to the user and correct the corrupted copy:
+If the checksums don't match, then the data is corrupted. The resiliency of the volume determines the next steps that ReFS will take. During mount, ReFS queries the device to determine its reliciency state. 
+- If ReFS is mounted on a non-resilient space, ReFS will return an error to the user without returning the corrupted data. If the file data is corrupted, ReFS still permits users to access the corrupted data through [FSCTL_INTEGRITY_FLAG_CHECKSUM_ENFORCEMENT_OFF](https://msdn.microsoft.com/en-us/library/hh553984.aspx).
+- If ReFS is mounted on a resilient space, ReFS will attempt to correct the corruptions by reading alternate copies of the data. The application will run without knowledge of the corruption. (Pictured below)
+
+ReFS will record all corruptions in the System Event Log, and the log will reflect whether the corruptions were fixed. 
+
 
 ![Checksums don't match, corrupted data corrected by other copy](media/corrupted-data.gif)
 
