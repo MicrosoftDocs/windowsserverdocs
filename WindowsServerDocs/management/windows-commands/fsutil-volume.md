@@ -29,9 +29,12 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 
 |Parameter|Description|
 |-------------|---------------|
+|allocationreport|Allocated clusters report.|
 |diskfree|Queries the hard disk drive to determine the amount of free space on it.|
 |dismount|Dismounts a volume.|
 |<VolumePath>|Specifies the drive letter (followed by a colon).|
+|filelayout|Queries all the information available about the specified file(s).|
+|list|Lists the volumes on the disk.|
 |querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |<cluster>|Specifies the logical cluster number (LCN).|
 

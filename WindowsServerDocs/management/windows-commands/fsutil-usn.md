@@ -43,6 +43,12 @@ fsutil usn [readdata] <FileName>
 |queryjournal|Queries a volume's USN data to gather information about the current change journal, its records, and its capacity.|
 |readdata|Reads the USN data for a file.|
 |<FileName>|Specifies the full path to the file, including the file name and extension For example: C:\documents\filename.txt|
+|readjournal|Reads the USN records in the USN journal.|
+|minver=\<number>|Minimum Major Version of USN_RECORD to return. Default = 2.|
+|maxver=\<number>|Maximum Major Version of USN_RECORD to return. Default = 4.|
+|startusn=\<USN number>|USN to start reading the USN journal from. Default = 0.|
+|enablerangetracking|Enable write range tracking for a volume.|
+
 
 ## Remarks
 
