@@ -38,10 +38,6 @@ fsutil tiering [tierlist] <volume>
 |tierlist|Lists the storage tieres associated with a volume.|
 
 
-### Remarks
-
-
-
 ### Examples
 
 To query the flags on volume C, type:

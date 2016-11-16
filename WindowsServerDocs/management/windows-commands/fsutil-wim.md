@@ -32,12 +32,10 @@ fsutil wim [removewim] <drive name> <data source>
 |\<drive name>|Specifies the drive name.|
 |\<data source>|Specifies the data source.|
 |enumwims|Enumerates backing WIM files.|
-|queryfile|Queries the origin of a specific file.|
+|queryfile|Queries if the file is backed by WIM, and if so, displays details about the WIM file.|
 |\<filename>|Specifies the filename.|
 |removewim|Removes a WIM from backing files.|
 
-
-### Remarks
 
 
 
@@ -55,7 +53,7 @@ To enumerate backing WIM files for drive C:, type:
 fsutil wim enumwims C:
 ```
 
-To query the origin of a file, type:
+To see if a file is backed by WIM, type:
 
 ```
 fsutil wim C:\Windows\Notepad.exe
