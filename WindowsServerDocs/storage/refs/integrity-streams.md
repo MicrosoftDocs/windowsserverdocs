@@ -24,15 +24,15 @@ Integrity streams is an optional feature in ReFS that validates and maintains fi
 Once integrity streams is enabled, ReFS will create and maintain a checksum in the metadata for the specified files. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
 
 <!--![Compute checksum for file data](media/compute-checksum-simple.gif)-->
-<img src=media/compute-checksum-simple.gif alt="Compute checksum for file data" style="width:400px;"/>
+<img src=media/compute-checksum-simple.gif alt="Compute checksum for file data" style="width:200px;"/>
 
 Then, this checksum is compared to the checksum contained in the file metadata:
 
-<img src=media/compare-checksum-simple.gif alt="Compute checksum for file data" style="width:400px;"/>
+<img src=media/compare-checksum-simple.gif alt="Compute checksum for file data" style="width:200px;"/>
 
 If the checksums match, then the data is marked as valid and returned to the user:
 
-<img src=media/valid-data.gif alt="Compute checksum for file data" style="width:400px;"/>
+<img src=media/valid-data.gif alt="Compute checksum for file data" style="width:200px;"/>
 
 If the checksums don't match, then the data is corrupted. The resiliency of the volume determines how ReFS responds to corruptions.  
 - If ReFS is mounted on a non-resilient simple space or a bare drive, ReFS will return an error to the user without returning the corrupted data. 
@@ -42,7 +42,7 @@ If the checksums don't match, then the data is corrupted. The resiliency of the 
 
 ReFS will record all corruptions in the System Event Log, and the log will reflect whether the corruptions were fixed. 
 
-<img src=media/corrupt-data.gif alt="Compute checksum for file data" style="width:400px;"/>
+<img src=media/corrupt-data.gif alt="Compute checksum for file data" style="width:200px;"/>
 
 ## Performance 
 
