@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # list writers
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 lists writers that are on the system. If used without parameters, **list** displays the output for **list metadata** by default.  
   

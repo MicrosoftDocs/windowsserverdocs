@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Local Accounts
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This reference topic for the IT professional describes the default local user accounts for servers, including how to manage these built-in accounts on a member or standalone server. This topic does not describe the default local user accounts for an Active Directory domain controller.
 

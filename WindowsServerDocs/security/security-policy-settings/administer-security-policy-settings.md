@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Administer Security Policy Settings
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional discusses different methods to administer security policy settings on the local computer or throughout a small- or medium-sized IT organization by using Windows Server 2012 and Windows 8.
 

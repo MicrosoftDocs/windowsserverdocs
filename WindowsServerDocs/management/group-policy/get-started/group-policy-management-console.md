@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Group Policy Management Console
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Install Group Policy Management Console (GPMC)
 Group Policy Management Console (GPMC) is a comprehensive administrative tool for Group Policy management. Administrators use GPMC to perform all Group Policy management tasks, with the exception of configuring individual policy settings in Group Policy Objects themselves, which is done with the Local Group Policy Object editor. You can install GPMC through Server Manager on the server as follows.

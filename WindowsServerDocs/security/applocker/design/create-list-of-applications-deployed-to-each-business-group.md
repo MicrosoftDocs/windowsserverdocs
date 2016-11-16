@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Create List of Applications Deployed to Each Business Group
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes the process of gathering application usage requirements from each business group in order to implement application control policies by using AppLocker.
 

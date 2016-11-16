@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Network Security: Allow PKU2U authentication requests to this computer to use online identities
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, and values for this policy setting.
 

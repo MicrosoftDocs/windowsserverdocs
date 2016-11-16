@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # AppLocker Policy Use Scenarios
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional lists the various application control scenarios in which AppLocker policies can be effectively implemented.
 

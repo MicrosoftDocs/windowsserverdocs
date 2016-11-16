@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the new-Namespace Command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates and configures a new namespace. You should use this option when you have only the Transport Server role service installed. If you have both the Deployment Server role service and the Transport Server role service installed (which is the default), use [Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md). Note that you must register the content provider before you use this option.
 ## Syntax

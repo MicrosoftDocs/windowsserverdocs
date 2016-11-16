@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 ---
 # start
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 starts a separate Command prompt window to run a specified program or command.  
 for examples of how to use this command, see [Examples](#BKMK_examples).  

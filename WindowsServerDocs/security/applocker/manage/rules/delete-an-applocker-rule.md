@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Delete an AppLocker Rule
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 This topic describes the steps to delete an AppLocker rule, which will prevent the application that is specified in the rule from running in Windows Server 2012 and Windows 8.
 
 As older applications are retired and new applications are deployed in your organization, it will be necessary to modify the application control policies. If an application becomes unsupported by the IT department or is no longer allowed due to the organization's security policy, then deleting the rule or rules associated with that application will prevent the application from running.

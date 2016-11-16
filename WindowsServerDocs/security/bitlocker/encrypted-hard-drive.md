@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Encrypted Hard Drive
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Encrypted Hard Drive feature in Windows 8 and Windows Server 2012 uses the rapid encryption that is provided by BitLocker Drive Encryption to enhance data security and management. By offloading the cryptographic operations to hardware, Encrypted Hard Drives increase BitLocker performance and reduce CPU usage and power consumption. Because Encrypted Hard Drives encrypt data quickly, enterprise clients can expand BitLocker deployment with minimal impact on productivity.
 

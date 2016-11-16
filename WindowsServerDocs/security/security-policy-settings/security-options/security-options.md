@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Options
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This reference topic for the IT professional provides an introduction to the settings under **Security Options** of the local security policies and links to information about each setting.  
   

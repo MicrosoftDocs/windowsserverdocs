@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Use the AppLocker Windows PowerShell Cmdlets
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how each AppLocker Windows PowerShell cmdlet can help you administer your AppLocker application control policies in Windows Server 2012 and Windows 8.
 

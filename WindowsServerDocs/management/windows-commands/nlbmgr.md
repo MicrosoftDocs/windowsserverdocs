@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # nlbmgr
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Using Network Load Balancing Manager, you can configure and manage your Network Load Balancing clusters and all cluster hosts from a single computer, and you can also replicate the cluster configuration to other hosts. You can start Network Load Balancing Manager from the command-line using the command **nlbmgr.exe**, which is installed in the **systemroot\System32** folder.
 ## Syntax
