@@ -22,6 +22,7 @@ Configures global resource system access control lists (SAcls).
 > [!NOTE]
 > Applies only to  Windows 7  and  Windows Server 2008 R2 .
 for examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 ## Syntax
 ```
 auditpol /resourceSACL
