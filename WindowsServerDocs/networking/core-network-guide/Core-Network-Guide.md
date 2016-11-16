@@ -952,7 +952,6 @@ NPS is an optional component of a core network, but you should install NPS if an
 
 -   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running  Windows Server 2016,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
 
--   You plan to deploy NAP.
 
 -   You plan to deploy 802.1X authentication for wired or wireless  access.
 

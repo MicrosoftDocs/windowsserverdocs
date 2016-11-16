@@ -38,15 +38,15 @@ Administrative Templates are registry-based policy settings that appear in the L
 
     -   **Disabled**: The registry reflects that the policy setting is not selected.
 
-6.  select any other options that you want, and then click **OK**.
+6.  Select any other options that you want, and then click **OK**.
 
-### additional considerations
+### Additional considerations
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
 -   In the Local Group Policy editor, there are two Administrative Templates branches. Settings for **HKEY_LOCAL_MACHINE** are under **computer Configuration**, and settings for **HKEY_CURrenT_USER** are under **User Configuration**.
 
--   if computer policy conflicts with user policy, computer policy generally takes precedence. However, if application authors disregard this convention, Group Policy cannot enforce it.
+-   If computer policy conflicts with user policy, computer policy generally takes precedence. However, if application authors disregard this convention, Group Policy cannot enforce it.
 
 -   Administrative Template policy settings are also known as registry-based policy settings.
 
@@ -102,7 +102,7 @@ The Configured property filter has three states: **Any**, **Yes**, and **No**. S
 
 1.  Open the **Local Group Policy editor**.
 
-2.  Right-click **Administrative Templates** located under **computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Configured** list, click the appropriate filter.
 
@@ -123,7 +123,7 @@ The Commented property filter has three states: **Any**, **Yes**, and **No**. Se
 
 4.  Click **OK** to apply the new filter settings and close the **Filter Options** dialog box.
 
-### additional considerations
+### Additional considerations
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
@@ -140,11 +140,11 @@ The Local Group Policy editor allows you to change the criteria for displaying A
 
 1.  Open the **Local Group Policy editor**.
 
-2.  Right-click **Administrative Templates** located under **computer Configuration** or **User Configuration**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
 
-3.  select the **Enable Keyword Filters** check box.
+3.  Select the **Enable Keyword Filters** check box.
 
-4.  type one or more keywords in the **Filter for word(s)** box, and click the appropriate filter:
+4.  Type one or more keywords in the **Filter for word(s)** box, and click the appropriate filter:
 
     -   **Any**: The filter includes any of the words in the **Filter for word(s)** box.
 
@@ -152,17 +152,17 @@ The Local Group Policy editor allows you to change the criteria for displaying A
 
     -   **Exact**: The filter includes exact matches of the words in the **Filter for word(s)** box.
 
-5.  select the appropriate check boxes next to **Within**.
+5.  Select the appropriate check boxes next to **Within**.
 
     -   **Policy Setting Title**: The filter includes searching the title of the policy setting.
 
-    -   **help Text**: The filter includes searching the help text of the policy setting.
+    -   **Help Text**: The filter includes searching the help text of the policy setting.
 
     -   **Comment**: The filter includes searching the comment of the policy setting
 
 6.  Click **OK** to apply the new filter settings and close the **Filter Options** dialog box.
 
-### additional considerations
+### Additional considerations
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
@@ -179,13 +179,13 @@ The Local Group Policy editor allows you to change the criteria for displaying A
 
 1.  Open the **Local Group Policy editor**.
 
-2.  Right-click **Administrative Templates** located under **computer Configuration** or **User Configuration**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
 
 3.  select the **Enable Requirements Filters** check box.
 
 4.  type one or more keywords in the **Filter for word(s)** box.
 
-5.  In the **select the desired platform and application filter(s)** list, click the appropriate filter:
+5.  In the **Select the desired platform and application filter(s)** list, click the appropriate filter:
 
     -   **Include settings that match any of the selected platforms**.
 
@@ -196,7 +196,7 @@ The Local Group Policy editor allows you to change the criteria for displaying A
 
 6.  Click **OK** to apply the new filter settings and close the **Filter Options** dialog box.
 
-### additional considerations
+### Additional considerations
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 
@@ -246,7 +246,7 @@ The current version of Administrative Template files are authored using XML (kno
 
     -   To remove a template, in the **Current Policy Templates** list, click the template, and then click **remove**.
 
-### additional considerations
+### Additional considerations
 
 -   To complete this procedure, you must have edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have edit setting permission to edit a GPO.
 

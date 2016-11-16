@@ -18,10 +18,19 @@ You can use the topics in this section to manage Network Policy Server.
   
 >[!NOTE]
 >For additional Network Policy Server documentation, you can use the following library sections.  
->- [Getting Started with Network Policy Server](nps-getstart-top.md)  
-  
+>- [Getting Started with Network Policy Server](nps-getstart-top.md)
+>- [Deploy Network Policy Server](nps-deploy.md)  
   
 This section contains the following topics.  
   
+- [Configure Connection Request Policies](nps-crp-configure.md)
+- [Configure Firewalls for RADIUS Traffic](nps-firewalls-configure.md)
 - [Configure Network Policies](nps-np-configure.md)
+- [Configure Network Policy Server Accounting](nps-accounting-configure.md)
+- [Configure NPS on a Multihomed Computer](nps-multihomed-configure.md)
+- [Configure NPS UDP Port Information](nps-udp-ports-configure.md)
 - [Configure RADIUS Clients](nps-radius-clients-configure.md)
+- [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
+- [Disable NAS Notification Forwarding](nps-disable-nas-notifications.md)
+- [Increase Concurrent Authentications Processed by NPS](nps-concurrent-auth.md)
+- [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)

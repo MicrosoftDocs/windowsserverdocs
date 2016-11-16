@@ -16,7 +16,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This guide provides troubleshooting information for Active Directory Domain Services (AD DS) in the <token>firstref_longhorincludes> operating system. It is designed to help you identify and resolve problems that may be related to AD DS. Conditions for domain controllers that are running versions of Windows Server 2003 in a <token>nextref_longhorincludes> forest are also discussed.</para>

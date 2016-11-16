@@ -18,12 +18,13 @@ You can use this topic for an overview of Network Policy Server in Windows Serve
 
 >[!NOTE]
 >In addition to this topic, the following NPS documentation is available.
-> - Deploy NPS using the section "Deploying optional features for network access authentication and Web services" in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_optionalfeatures).
-> - Deploy server certificates to NPS servers with the guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
-> - Use NPS for wireless authentication with the guide [Deploy Password-Based 802.1X Authenticated Wireless Access](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access).
+> - [Network Policy Server Best Practices](nps-best-practices.md)
 > - [Getting Started with Network Policy Server](nps-getstart-top.md)
+> - [Deploy Network Policy Server](nps-deploy.md)
 > - [Manage Network Policy Server](nps-manage-top.md)
-> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx)
+> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows&reg; 10
+> - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 R2 and Windows 8.1
+> - [NPS Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 and Windows 8
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 
