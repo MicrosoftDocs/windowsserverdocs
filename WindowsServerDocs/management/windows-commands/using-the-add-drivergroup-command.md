@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the add-DriverGroup command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds a driver group to the server.
 for examples of how you can use this command, see [Examples](#BKMK_examples).

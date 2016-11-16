@@ -15,7 +15,7 @@ manager: dongill
 
 # Get Connected in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  You can connect your computers to the Windows Server Essentials server by using the Connector software. The Connector software is installed when you connect a computer to the server by using the Connect a Computer to the Server Wizard. You can start this wizard by typing **http://<servername\>/connect**, where **<servername\>** is the name of your server.  
   

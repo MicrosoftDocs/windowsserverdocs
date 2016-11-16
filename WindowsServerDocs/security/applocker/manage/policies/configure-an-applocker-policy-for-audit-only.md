@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Configure an AppLocker Policy for Audit Only
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to set AppLocker policies to **Audit only** within your IT environment by using AppLocker in Windows Server 2012 and Windows 8.
 

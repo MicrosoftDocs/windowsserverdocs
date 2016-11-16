@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Auditing Overview
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This technical overview for the IT professional describes the security auditing features in Windows and how your organization can benefit from using these technologies to enhance the security and manageability of your network.
 

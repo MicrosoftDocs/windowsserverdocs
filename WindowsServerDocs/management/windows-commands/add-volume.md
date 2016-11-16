@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 ---
 # add volume
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied. This command is necessary to create shadow copies. If used without parameters, **add volume** displays help at the command prompt.  
   

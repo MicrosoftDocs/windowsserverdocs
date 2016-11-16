@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # comp
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 compares the contents of two files or sets of files byte-by-byte. If used without parameters, **comp** prompts you to enter the files to compare.
 for examples of how to use this command, see [Examples](#BKMK_examples).

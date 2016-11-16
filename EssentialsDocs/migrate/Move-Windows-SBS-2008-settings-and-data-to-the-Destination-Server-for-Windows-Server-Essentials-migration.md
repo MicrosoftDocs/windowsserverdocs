@@ -16,7 +16,7 @@ manager: dongill
 
 # Move Windows SBS 2008 settings and data to the Destination Server for Windows Server Essentials migration
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Move settings and data to the Destination Server as follows:  
   

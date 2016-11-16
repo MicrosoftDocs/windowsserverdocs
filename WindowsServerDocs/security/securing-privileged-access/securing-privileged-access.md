@@ -15,7 +15,7 @@ ms.date: 10/12/2016
 ---
 # Securing Privileged Access
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](http://www.microsoft.com/pth).
 

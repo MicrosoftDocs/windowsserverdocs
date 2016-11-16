@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Group Policy Overview
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Use this topic to find the documentation resources and other technical information you need to accomplish key Group Policy tasks. You can learn about new and updated functionality for Group Policy in  Windows Server 2012 R2  and Windows 8.1and ways to automate common Group Policy tasks by using Windows PowerShell.  
  

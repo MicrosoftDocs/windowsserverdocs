@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot computer monitoring in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in  Windows Server Essentials.  
   

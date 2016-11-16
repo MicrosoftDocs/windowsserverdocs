@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # select volume
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.  
   

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Server Manager
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable remote Desktop protocol (rdP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2  and  Windows Server 2008, Server Manager was updated in  Windows Server 2012  to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # reg
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Performs operations on registry subkey information and values in registry entries. The **reg** commands include:
 [reg add](reg-add.md)

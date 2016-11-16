@@ -16,7 +16,7 @@ manager: dongill
 
 # Configure Support for a Wireless Network
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can configure the operating system to support a wireless network. The following requirements must be met to enable wireless support on the server:  
   

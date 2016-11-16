@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Group Policy Preferences
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Group Policy Preferences is a collection of Group Policy client-side extensions that deliver preference settings to domain-joined computers running Microsoft Windows desktop and server operating systems.  Preference settings are administrative configuration choices deployed to desktops and servers.  Preference settings differ from policy settings because users have a choice to alter the administrative configuration.  Policy settings administratively enforce setting, which restricts user choice.
 

@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot Windows Server Essentials Log Collector Errors
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 When you run the Log Collector, you may encounter one of the following errors. To resolve an issue, follow the guidance provided for the associated error.  
   

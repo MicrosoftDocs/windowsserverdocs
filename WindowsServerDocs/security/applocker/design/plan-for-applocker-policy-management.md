@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Plan for AppLocker Policy Management
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for describes the decisions you need to make to establish the processes for managing and maintaining AppLocker policies.
 

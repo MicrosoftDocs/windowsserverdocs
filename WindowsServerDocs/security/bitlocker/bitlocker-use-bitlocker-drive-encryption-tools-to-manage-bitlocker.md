@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 BitLocker Drive Encryption Tools include the command line tools manage-bde and repair-bde and the BitLocker cmdlets for Windows PowerShell.
 

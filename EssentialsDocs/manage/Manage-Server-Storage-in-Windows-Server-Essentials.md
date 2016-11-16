@@ -18,7 +18,7 @@ manager: dongill
 
 # Manage Server Storage in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
    
  Windows Server Essentials enables you to manage all your server storage (including hard drives and storage spaces) from the **Hard Drives** pages on the **Storage** tab of the Dashboard.  
   

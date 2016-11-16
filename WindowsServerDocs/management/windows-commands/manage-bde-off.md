@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # manage-bde: off
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax

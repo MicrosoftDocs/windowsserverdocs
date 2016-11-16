@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 ---
 # exit_2
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 exits the Cmd.exe program (the command interpreter) or the current batch script.  
 for examples of how to use this command, see [Examples](#BKMK_examples).  

@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage SharePoint Online in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can manage your  SharePoint Online libraries and team sites from the Dashboard, without signing in to  Office 365, if you integrate  Office 365 with your  Windows Server Essentials server. You get  SharePoint Online libraries and team sites with any  Office 365 business plan. [Find out how to integrate Office 365 with your server](Manage-Office-365-in-Windows-Server-Essentials.md)  
   

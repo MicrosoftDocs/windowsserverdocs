@@ -16,7 +16,7 @@ manager: dongill
 
 # Deploy Windows Server Essentials Experience as a Hosted Server
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This document includes information that is specific to hosters who intend to deploy Microsoft Windows Server 16 with the Windows Server Essentials Experience role (referred to as Windows Server Essentials in the remainder of the document) installed in their lab and intend to offer Windows Server Essentials Experience as a service to their customers. This document includes the following sections:  
   

@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Check Group Policy Infrastructure Status
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Group Policy is a complicated infrastructure that allows you to apply policy settings to remotely configure computer and user experiences within a domain. Most of the troubleshooting advice comes to IT administrators when Group Policy fails to perform in the expected manner. But this advice does not scale well when you have thousands of Group Policy Objects (GPOs) that apply to thousands of computers and users.
 

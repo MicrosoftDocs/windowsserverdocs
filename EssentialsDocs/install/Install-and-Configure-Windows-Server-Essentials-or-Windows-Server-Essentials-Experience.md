@@ -16,7 +16,7 @@ manager: dongill
 
 # Install and Configure Windows Server Essentials or Windows Server Essentials Experience
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
  Windows Server Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
   

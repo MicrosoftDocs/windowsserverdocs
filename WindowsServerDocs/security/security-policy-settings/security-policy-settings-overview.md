@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Policy Settings Overview
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides high-level information about security settings in, and links to more detailed reference topics, procedures, and guides about security policy settings.
 

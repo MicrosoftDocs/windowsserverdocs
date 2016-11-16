@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # wbadmin get versions
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 lists details about the available backups that are stored on the local computer or another computer. When this subcommand is used without parameters, it lists all backups of the local computer, even if those backups are not available. The details provided for a backup include the backup time, the backup storage location, the version identifier (needed for the **wbadmin get items** subcommand and to perform recoveries), and the type of recoveries you can perform.
 To get details about available backups using this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt **Command prompt** and then click **Run as administrator**.)

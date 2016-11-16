@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # autochk
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Runs when the computer is started and prior to  Windows Server  2008 R2  starting to verify the logical integrity of a file system.
 **autochk.exe** is a version of **chkdsk** that runs only on NTFS disks and only before  Windows Server 2008 R2  starts. **autochk** cannot be run directly from the command-line. Instead, **autochk** runs in the following situations:

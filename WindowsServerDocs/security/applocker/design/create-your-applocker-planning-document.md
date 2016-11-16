@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Create Your AppLocker Planning Document
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This planning topic for the IT professional summarizes the information you need to research and include in your AppLocker planning document.
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Display a Custom URL Message When Users Try to Run a Blocked Application
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes the steps for displaying a customized message to users when an AppLocker policy denies access to an application in Windows Server 2012 and Windows 8.
 

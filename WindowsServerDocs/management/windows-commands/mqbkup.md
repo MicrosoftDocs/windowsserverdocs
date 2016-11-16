@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 ---
 # mqbkup
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.   
 Both the backup and the restore operation will stop the local MSMQ service. If the MSMQ service was started beforehand, the utility will attempt to restart the MSMQ service at the end of the backup or the restore operation. If the service was already stopped before running the utility, no attempt to restart the service is made.  
