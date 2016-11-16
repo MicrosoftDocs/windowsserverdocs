@@ -20,6 +20,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
+fsutil repair [enumerate] <volumepath> [<LogName>]
 fsutil repair [initiate] <VolumePath> <FileReference>
 fsutil repair [query] <VolumePath>
 fsutil repair [set] <VolumePath> <Flags>
@@ -32,7 +33,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 |Parameter|Description|
 |-------------|---------------|
 |enumerate|Enumerates the entires of a volume's corruption log.|
-|\<VolumePath>|Specifies the volume as the drive name followed by a colon.|
+|\<volumepath>|Specifies the volume as the drive name followed by a colon.|
 |\<LogName>|$Corrupt - The set of confirmed corruptions in the volume.<br />$Verify - A set of potential, unverified corruptions in the volume.|
 |initiate|Initiates NTFS self-healing.|
 |\<FileReference>|Specifies the NTFS volume-specific file ID (file reference number). The file reference includes the segment number of the file.|
@@ -48,6 +49,13 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 -   Self-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. This feature was introduced in Windows Server 2008. For more information, see [Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401).
 
 ## <a name="BKMK_examples"></a>Examples
+
+To enumerate the confirmed corruptions of a volume, type:
+
+```
+fsutil repair enumerate C: $Corrupt 
+```
+
 To enable self-healing repair on drive C, type:
 
 ```

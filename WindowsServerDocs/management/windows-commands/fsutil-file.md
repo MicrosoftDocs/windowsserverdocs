@@ -20,14 +20,19 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
-fsutil file [createnew] <FileName> <Length>
-fsutil file [findbysid] <UserName> <Directory>
-fsutil file [queryallocranges] offset=<Offset> length=<Length> <FileName>
-fsutil file [queryfileid] <FileName>
-fsutil file [queryfilenamebyid] <Volume> <Fileid>
-fsutil file [setshortname] <FileName> <ShortName>
-fsutil file [setvaliddata] <FileName> <DataLength>
-fsutil file [setzerodata] offset=<Offset> length=<Length> <FileName>
+fsutil file [createnew] <filename> <length>
+fsutil file [findbysid] <username> <directory>
+fsutil file [optimizemetadata] [/A] <filename>
+fsutil file [queryallocranges] offset=<offset> length=<length> <filename>
+fsutil file [queryextents] [/R] <filename> [<startingvcn> [<numvcns>]]
+fsutil file [queryfileid] <filename>
+fsutil file [queryfilenamebyid] <volume> <fileid>
+fsutil file [queryoptimizemetadata] <filename>
+fsutil file [queryvaliddata] [/R] [/D] <filename>
+fsutil file [seteof] <filename> <length>
+fsutil file [setshortname] <filename> <shortname>
+fsutil file [setvaliddata] <filename> <datalength>
+fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 
 ```
 
@@ -36,32 +41,32 @@ fsutil file [setzerodata] offset=<Offset> length=<Length> <FileName>
 |Parameter|Description|
 |-------------|---------------|
 |createnew|Creates a file of the specified name and size, with content that consists of zeroes.|
-|\<FileName>|Specifies the full path to the file including the file name and extension, for example C:\documents\filename.txt.|
-|\<Length>|Specifies the file's valid data length.|
+|\<filename>|Specifies the full path to the file including the file name and extension, for example C:\documents\filename.txt.|
+|\<length>|Specifies the file's valid data length.|
 |findbysid|Finds files that belong to a specified user on NTFS volumes where Disk Quotas are enabled.|
-|\<UserName>|Specifies the user's user name or logon name.|
-|\<Directory>|Specifies the full path to the directory, for example C:\users.|
+|\<username>|Specifies the user's user name or logon name.|
+|\<directory>|Specifies the full path to the directory, for example C:\users.|
 |optimizemetadata|Optimizes metadata for a file.|
 |/A|Analyze file metadata before and after optimization.|
 |queryallocranges|Queries the allocated ranges for a file on an NTFS volume. Useful for determining whether a file has sparse regions.|
-|offset=\<Offset>|Specifies the start of the range that should be set to zeroes.|
-|length=\<Length>|Specifies the length of the range (in bytes).|
+|offset=\<offset>|Specifies the start of the range that should be set to zeroes.|
+|length=\<length>|Specifies the length of the range (in bytes).|
 |queryextents|Queries extents of a file.|
 |/R|If <filename> is a reparse point, open it rather than its target.|
 |\<startingvcn>|Specifies first VCN to query. If omitted, start at VCN 0.|
 |\<numvcns>|Number of VCNs to query. If omitted or 0, query until EOF.|
 |queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|\<volume>|Specifies the volume as drive name followed by a colon.|
 |queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
-|\<Fileid>|Specifies the ID of the file on an NTFS volume.|
-|\<Volume>|Specifies the volume as drive name followed by a colon.|
+|\<fileid>|Specifies the ID of the file on an NTFS volume.|
 |queryoptimizemetadata|Queries the optimize metadata state of a file.|
 |queryvaliddata|Queries the valid data length for a file.|
 |/D|Display detailed valid data information.|
 |seteof|Sets the EOF of the file on an NTFS volume.|
 |setshortname|Sets the short name (8.3 character-length file name) for a file on an NTFS volume.|
-|\<ShortName>|Specifies the file's short name.|
+|\<shortname>|Specifies the file's short name.|
 |setvaliddata|Sets the valid data length for a file on an NTFS volume.|
-|\<DataLength>|Specifies the length of the file in bytes.|
+|\<datalength>|Specifies the length of the file in bytes.|
 |setzerodata|Sets a range (specified by *Offset* and *Length*) of the file to zeroes, which empties the file. If the file is a sparse file, the underlying allocation units are decommitted.|
 
 ## Remarks
@@ -87,6 +92,24 @@ To query the allocated ranges for a file on an NTFS volume, type:
 
 ```
 fsutil file queryallocranges offset=1024 length=64 c:\temp\sample.txt  
+```
+
+To optimize metadata for a file, type:
+
+```
+fsutil file optimizemetadata C:\largefragmentedfile.txt
+```
+
+To query the extents for a file, type:
+
+```
+fsutil file queryextents C:\Temp\sample.txt
+```
+
+To set the EOF for a file, type:
+
+```
+fsutil file seteof C:\testfile.txt 1000
 ```
 
 To set the short name for the file Longfilename.txt on drive C to Longfile.txt, type:

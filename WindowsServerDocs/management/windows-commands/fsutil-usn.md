@@ -19,10 +19,12 @@ Manages the update sequence number (USN) change journal.
 
 ```
 fsutil usn [createjournal] m=<MaxSize> a=<AllocationDelta> <VolumePath>
-fsutil usn [deletejournal] {/D | /N} <VolumePath>
+fsutil usn [deletejournal] {/D | /N} <volumepath>
+fsutil usn [enablerangetracking] <volumepath> [options]
 fsutil usn [enumdata] <FileRef> <LowUSN> <HighUSN> <VolumePath>
 fsutil usn [queryjournal] <VolumePath>
 fsutil usn [readdata] <FileName>
+fsutil usn [readjournal] [c= <chunk-size> s=<file-size-threshold>] <volumepath>
 ```
 
 ## Parameters
@@ -36,6 +38,9 @@ fsutil usn [readdata] <FileName>
 |deletejournal|Deletes or disables an active USN change journal. **Caution:** Deleting the change journal impacts the File Replication Service (FRS) and the Indexing Service, because it would require these services to perform a complete (and time-consuming) scan of the volume. This in turn negatively impacts FRS SYSVOL replication and replication between DFS link alternates while the volume is being rescanned.|
 |/d|Disables an active USN change journal, and returns input/output (I/O) control while the change journal is being disabled.|
 |/n|Disables an active USN change journal and returns I/O control only after the change journal is disabled.|
+|enablerangetracking|Enable write range tracking for a volume.|
+|c=\<chunk-size>|Specifies the chunk size to track on a volume.|
+|s=\<file-size-threshold>|Specifies the file size threshold for range tracking.|
 |enumdata|Enumerates and lists the change journal entries between two specified boundaries.|
 |<FileRef>|Specifies the ordinal position within the files on the volume at which the enumeration is to begin.|
 |<LowUSN>|Specifies the lower boundary of the range of USN values used to filter the records that are returned. Only records whose last change journal USN is between or equal to the *LowUSN* and *HighUSN* member values are returned.|
@@ -47,7 +52,6 @@ fsutil usn [readdata] <FileName>
 |minver=\<number>|Minimum Major Version of USN_RECORD to return. Default = 2.|
 |maxver=\<number>|Maximum Major Version of USN_RECORD to return. Default = 4.|
 |startusn=\<USN number>|USN to start reading the USN journal from. Default = 0.|
-|enablerangetracking|Enable write range tracking for a volume.|
 
 
 ## Remarks
@@ -87,6 +91,12 @@ To delete an active USN change journal on drive C, type:
 fsutil usn deletejournal /d c:
 ```
 
+To enable range tracking with a specified chunk-size and file-size-threshold, type:
+
+```
+fsutil usn enablerangetracking c=16384 s=67108864 C:
+```
+
 To enumerate and list the change journal entries between two specified boundaries on drive C, type:
 
 ```
@@ -103,6 +113,12 @@ To read the USN data for a file in the \Temp folder on drive C, type:
 
 ```
 fsutil usn readdata c:\temp\sample.txt
+```
+
+To read the USN journal with a specific start USN, type:
+
+```
+fsutil usn readjournal startusn=0xF00
 ```
 
 #### Additional references
