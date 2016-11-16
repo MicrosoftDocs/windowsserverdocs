@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Audit Network Policy Server
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Network Policy Server**, which determines whether the operating system generates audit events for RADIUS (IAS) and Network Access Protection (NAP) activity on user access requests (Grant, Deny, Discard, Quarantine, Lock, and Unlock).
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # vol
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the disk volume label and serial number, if they exist.  if used without parameters, **vol** displays information for the current drive.
 ## Syntax

@@ -16,7 +16,7 @@ manager: dongill
 
 # Restore or repair your server running Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
  
  This topic provides an overview and supporting procedures for restoring or repairing a server running  Windows Server Essentials, and includes the following sections:  
   

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # wbadmin delete systemstatebackup
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 deletes the system state backups that you specify. If the specified volume contains backups other than system state backups of your local server, those backups will not be deleted.
 > [!NOTE]

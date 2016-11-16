@@ -16,12 +16,13 @@ ms.date: 10/12/2016
 ---
 # auditpol resourceSACL
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures global resource system access control lists (SAcls).
 > [!NOTE]
 > Applies only to  Windows 7  and  Windows Server 2008 R2 .
 for examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 ## Syntax
 ```
 auditpol /resourceSACL

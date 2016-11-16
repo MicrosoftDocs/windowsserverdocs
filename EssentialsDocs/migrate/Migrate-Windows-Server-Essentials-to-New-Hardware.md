@@ -16,7 +16,7 @@ manager: dongill
 
 # Migrate Windows Server Essentials to New Hardware
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This guide describes how to migrate an existing  Windows Server® 2012 Essentials domain to  Windows Server Essentials on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the  Windows Server Essentials network after you finish the migration.  
   

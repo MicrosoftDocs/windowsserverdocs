@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Merge AppLocker Policies Manually
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This procedural topic describes the steps to manually merge AppLocker policies to update the Group Policy Object (GPO) in Windows Server 2012 and Windows 8.
 

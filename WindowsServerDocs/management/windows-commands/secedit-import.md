@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # secedit:import
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 imports security settings stored in an inf file previously exported from the database configured with security templates. For examples of how this command can be used, see [Examples](secedit-import.md#BKMK_Examples).
 ## Syntax

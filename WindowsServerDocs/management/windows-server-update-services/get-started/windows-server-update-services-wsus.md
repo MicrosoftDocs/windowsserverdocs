@@ -15,7 +15,7 @@ ms.date: 10/12/2016
 ---
 # Windows Server Update Services (WSUS)
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 

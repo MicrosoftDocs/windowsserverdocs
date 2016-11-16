@@ -16,7 +16,7 @@ manager: dongill
 
 # Create a Server Recovery DVD for Remotely Administered Servers
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_HeadlessRecovery"></a> Create a server recovery DVD for remotely administered servers  
  There are two models for factory reset and server recovery, and they differ based on the hardware that the customer received.  

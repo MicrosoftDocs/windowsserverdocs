@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # create volume stripe
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates a striped volume using two or more specified dynamic disks.  
   

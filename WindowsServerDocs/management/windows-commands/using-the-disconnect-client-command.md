@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the Disconnect-Client Command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disconnects a client from a multicast transmission or namespace. Unless you specify **/force**, the client will fall back to another transfer method (if it is supported by the client).
 ## Syntax

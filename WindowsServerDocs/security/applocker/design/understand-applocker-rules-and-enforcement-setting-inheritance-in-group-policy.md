@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes how application control policies configured in AppLocker are applied through Group Policy.
 

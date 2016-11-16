@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # gpt
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 On basic GUID partition table (gpt) disks, assigns the gpt attribute(s) to the partition with focus.  gpt partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.
 

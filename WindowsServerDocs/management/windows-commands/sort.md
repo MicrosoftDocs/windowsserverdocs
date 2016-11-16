@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # sort
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 for examples of how to use this command, see [Examples](#BKMK_examples).

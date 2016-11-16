@@ -16,7 +16,7 @@ manager: dongill
 
 # Add Microsoft Online Service Partner Agreement Partner-of-Record Information
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_3rdLevelDomanNames"></a>   
  If you are a Microsoft Online Service Partner Agreement (MOSPA) partner for Office 365, to ensure that you are correctly compensated when a subscription request is originated from  Windows Server Essentials via the Office 365 Integration Module, you need to create a registry key that contains your partner-of-record identification (POR ID). The following information is read and passed to the service provider through the Office 365 sign-up URLs.  

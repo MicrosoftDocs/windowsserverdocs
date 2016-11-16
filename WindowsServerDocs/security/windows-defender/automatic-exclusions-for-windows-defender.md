@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Automatic exclusions for Windows Defender
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic introduces automatic exclusions for Windows Defender on Windows Server 2016.
 

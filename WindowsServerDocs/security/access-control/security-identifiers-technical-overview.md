@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Identifiers Technical Overview
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes security identifiers and how they work in regards to accounts and groups in the Windows operating system.
 

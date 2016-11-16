@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Create a Rule That Uses a Path Condition
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic shows how to create an AppLocker rule with a path condition in Windows Server 2012 and Windows 8.
 

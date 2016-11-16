@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # bitsadmin addfilewithranges
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds a file to the specified job. BITS downloads the specified ranges from the remote file.
 ## Syntax

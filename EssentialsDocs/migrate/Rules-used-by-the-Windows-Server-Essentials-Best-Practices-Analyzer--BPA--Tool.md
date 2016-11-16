@@ -16,7 +16,7 @@ manager: dongill
 
 # Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This article describes the rules used by the  Windows Server Essentials Best Practices Analyzer (BPA). The BPA examines a server that is running  Windows Server Essentials and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for  Windows Server Essentials.  
   

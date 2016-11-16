@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # wbadmin enable backup
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates and enables a daily backup schedule or modifies an existing backup schedule. With no parameters specified, it displays the currently scheduled backup settings.
 To configure or modify a daily backup schedule, you must be a member of either the **Administrators** or **Backup Operators** group. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command prompt** and then click **Run as administrator**.)

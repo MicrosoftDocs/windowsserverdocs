@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Determine Group Policy Structure and Rule Enforcement
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This overview topic describes the process to follow when you are planning to deploy AppLocker rules.
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # rundll32
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Loads and runs 32-bit dynamic-link libraries (DLLs). There are no configurable settings for rundll32. help information is provided for a specific DLL you run with the **rundll32** command.
 You must run the **rundll32** command from an elevated command prompt. To open an elevated command prompt, click **start**, right-click **Command prompt**, and then click **Run as administrator**.

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Select Types of Rules to Create
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists resources you can use when selecting your application control policy rules by using AppLocker.
 

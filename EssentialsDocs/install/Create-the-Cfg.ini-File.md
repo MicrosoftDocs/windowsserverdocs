@@ -16,7 +16,7 @@ manager: dongill
 
 # Create the Cfg.ini File
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The cfg.ini file is used to automate an installation of the operating system in the following scenario:  
   

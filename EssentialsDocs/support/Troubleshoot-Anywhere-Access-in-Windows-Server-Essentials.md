@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot Anywhere Access in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This topic provides general instructions for using the Repair Anywhere Access wizard in  Windows Server Essentials to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities  œ Remote Web Access, virtual private network (VPN), and DirectAccess  œ enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
   

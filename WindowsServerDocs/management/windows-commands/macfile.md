@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # macfile
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Manages File Server for Macintosh servers, volumes, directories, and files. You can automate administrative tasks by including a series of commands in batch files and starting them manually or at predetermined times. 
 -   [To modify directories in Macintosh-accessible volumes](#BKMK_Moddirs)

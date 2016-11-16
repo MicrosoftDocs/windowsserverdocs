@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # auditpol
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about and performs functions to manipulate audit policies.  
 for examples of how this command can be used, see the Examples section in each topic.  

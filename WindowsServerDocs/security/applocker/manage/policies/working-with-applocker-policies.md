@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Working with AppLocker Policies
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides links to procedural topics about creating, maintaining, and testing AppLocker policies.
 

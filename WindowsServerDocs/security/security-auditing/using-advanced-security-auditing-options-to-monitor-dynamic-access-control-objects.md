@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This guide explains the process of setting up advanced security auditing capabilities that are made possible through settings and events that were introduced in Windows 8 and  Windows Server 2012 .
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # diskperf
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows 2000, physical and logical disk performance counters are not enabled by default.
 **diskperf** is included in Windows XP, Windows Server 2003, Windows Server 2008, Windows Vista, Windows Server 2008 R2, and Windows 7 so that it can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows 2000.

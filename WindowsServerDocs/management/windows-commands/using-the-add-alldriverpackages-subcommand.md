@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the add-AllDriverPackages subcommand
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds all driver packages that are stored in a folder to a server.
 ## Syntax

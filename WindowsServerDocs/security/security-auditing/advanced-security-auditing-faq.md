@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Advanced Security Auditing FAQ
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional lists questions and answers about understanding, deploying, and managing security audit policies.
 
