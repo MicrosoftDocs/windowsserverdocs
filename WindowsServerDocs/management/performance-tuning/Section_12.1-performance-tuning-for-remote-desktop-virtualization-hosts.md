@@ -16,9 +16,9 @@ ms.date: 10/31/2016
 # Performance Tuning for Remote Desktop Virtualization Hosts
 
 
-Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple concurrent users run Windows-based applications in virtual machines that are hosted on a server running Windows Server 2012 R2 and Hyper-V.
+Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple concurrent users run Windows-based applications in virtual machines that are hosted on a server running Windows Server 2016 and Hyper-V.
 
-Windows Server 2012 R2 supports two types of virtual desktops, personal virtual desktops and pooled virtual desktops.
+Windows Server 2016 supports two types of virtual desktops, personal virtual desktops and pooled virtual desktops.
 
 **In this topic:**
 
@@ -75,7 +75,7 @@ Microsoft RemoteFX for RD Virtualization Host delivers a rich graphics experienc
 
 The RemoteFX DirectX11 experience is available without a hardware GPU, through a software-emulated driver. Although this software GPU provides a good experience, the RemoteFX virtual graphics processing unit (VGPU) adds a hardware accelerated experience to virtual desktops.
 
-To take advantage of the RemoteFX VGPU experience on a server running Windows Server 2012 R2, you need a GPU driver (such as DirectX11.1 or WDDM 1.2) on the host server. For more information about GPU offerings to use with RemoteFX for RD Virtualization Host, contact your GPU provider.
+To take advantage of the RemoteFX VGPU experience on a server running Windows Server 2016, you need a GPU driver (such as DirectX11.1 or WDDM 1.2) on the host server. For more information about GPU offerings to use with RemoteFX for RD Virtualization Host, contact your GPU provider.
 
 If you use the RemoteFX virtual GPU in your VDI deployment, the deployment capacity will vary based on usage scenarios and hardware configuration. When you plan your deployment, consider the following:
 
@@ -184,7 +184,7 @@ Dynamic Memory enables more efficiently utilization of the memory resources of t
 
 Dynamic Memory enables you to increase virtual machine density with the resources you already have without sacrificing performance or scalability. The result is more efficient use of expensive server hardware resources, which can translate into easier management and lower costs.
 
-On guest operating systems running Windows 8 with virtual processors that span multiple logical processors, consider the tradeoff between running with Dynamic Memory to help minimize memory usage and disabling Dynamic Memory to improve the performance of an application that is computer-topology aware. Such an application can leverage the topology information to make scheduling and memory allocation decisions.
+On guest operating systems running Windows 8 and above with virtual processors that span multiple logical processors, consider the tradeoff between running with Dynamic Memory to help minimize memory usage and disabling Dynamic Memory to improve the performance of an application that is computer-topology aware. Such an application can leverage the topology information to make scheduling and memory allocation decisions.
 
 ### Tiered Storage
 
@@ -196,7 +196,7 @@ This deployment configuration assures cost effective performance where performan
 
 ### CSV cache
 
-Failover Clustering in Windows Server 2012 and Windows Server 2012 R2 provides caching on Cluster Shared Volumes (CSV). This is extremely beneficial for pooled virtual desktop collections where the majority of the read I/Os come from the management operating system. The CSV cache provides higher performance by several orders of magnitude because it caches blocks that are read more than once and delivers them from system memory, which reduces the I/O. For more info on CSV cache, see [How to Enable CSV Cache](http://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx).
+Failover Clustering in Windows Server 2012 and above provides caching on Cluster Shared Volumes (CSV). This is extremely beneficial for pooled virtual desktop collections where the majority of the read I/Os come from the management operating system. The CSV cache provides higher performance by several orders of magnitude because it caches blocks that are read more than once and delivers them from system memory, which reduces the I/O. For more info on CSV cache, see [How to Enable CSV Cache](http://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx).
 
 ### Pooled virtual desktops
 
