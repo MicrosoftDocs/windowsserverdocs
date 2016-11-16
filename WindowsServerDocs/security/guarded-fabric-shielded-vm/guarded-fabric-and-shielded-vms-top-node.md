@@ -19,9 +19,19 @@ One of the most important goals of providing a hosted environment is to guarante
 > [!IMPORTANT]
 > Ensure that you have installed the latest cumulative update before you deploy shielded virtual machines in production.
 
-## Learn more about guarded fabrics and shielded VMs
+## Videos, blog, and overview topic about guarded fabrics and shielded VMs
 
-- [Guarded fabric and shielded VMs overview](Guarded-Fabric-and-Shielded-VMs.md)
+- Video: [Introduction to Shielded Virtual Machines in Windows Server 2016](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+- Video: [Dive into Shielded VMs with Windows Server 2016 Hyper-V](https://channel9.msdn.com/events/Ignite/2016/BRK3124)
+- Blog: [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)
+- Overview topic: [Guarded fabric and shielded VMs overview](Guarded-Fabric-and-Shielded-VMs.md)
+
+## Planning topics
+
+- [Guarded fabric and shielded VM planning guide for hosters](guarded-fabric-planning-for-hosters.md)
+- [Guarded fabric and shielded VM planning guide for tenants](guarded-fabric-shielded-vm-planning-for-tenants.md)
+
+## Deployment topics
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
     - [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
@@ -43,3 +53,7 @@ One of the most important goals of providing a hosted environment is to guarante
     - [Shielded VMs for tenants - Creating shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md)
     - [Shielded VMs for tenants - Deploying a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md)
     - [Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+
+## Operations and management topic
+
+- [Managing the Host Guardian Service](guarded-fabric-manage-hgs.md)

@@ -1,3 +1,3 @@
 ---
-redirect_url: /window-server-docs/essentials/get-started/get-started
+redirect_url: /windows-server-docs/essentials/get-started/get-started
 ---
