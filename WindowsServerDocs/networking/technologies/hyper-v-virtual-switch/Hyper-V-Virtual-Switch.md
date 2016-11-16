@@ -47,7 +47,10 @@ In the following illustration, a Virtual Machine (VM) has a virtual NIC that is 
   
 ![Virtual Switch connections](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
   
-The capabilities provided in the Hyper-V Virtual Switch mean that your organization has more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious virtual machines.  
+The capabilities provided in the Hyper-V Virtual Switch mean that your organization has more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious virtual machines.
+
+>[!NOTE]
+> In Windows Server 2016, a VM with a virtual NIC accurately displays the maximum throughput for the virtual NIC. To view the virtual NIC speed in **Network Connections**, right-click the desired virtual NIC icon and then click **Status**. The virtual NIC **Status** dialog box opens. In **Connection**, the value of **Speed** matches the speed of the physical NIC installed in the server.
   
 ## <a name="bkmk_apps"></a>Practical Applications  
 **Displaying statistics**: A developer at a hosted cloud vendor implements a management package that displays the current state of the Hyper-V virtual switch. The management package can query switch-wide current capabilities, configuration settings, and individual port network statistics using WMI. The status of the switch is then displayed to give administrators a quick view of the state of the switch.  
