@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Domain Name System (DNS)
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.  
   
