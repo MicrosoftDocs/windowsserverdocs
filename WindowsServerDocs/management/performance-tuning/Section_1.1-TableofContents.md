@@ -128,9 +128,9 @@ ms.date: 10/31/2016
 **Performance Tuning for Storage Features**
 -    [Storage Spaces Direct Performance Tuning](./Section_15-StorageSpacesDirect.md)
 
--    [Storage Replication Tuning](https://aka.ms/srfaq)
+-    [Storage Replication FAQ](storage/storage-replica/storage-replica-frequently-asked-questions.md)
 
--    [Data Deduplication Tuning](https://technet.microsoft.com/en-us/windows-server-docs/storage/data-deduplication/advanced-settings)
+-    [Data Deduplication Advanced Settings](storage/data-deduplication/advanced-settings.md)
 
 **References**
 -    [References and Links](./Section_1.2-References.md)
