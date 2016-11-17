@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Microsoft network server: Attempt S4U2Self to obtain claim information
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, management, and security considerations for this policy setting.  
   

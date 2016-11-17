@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the Export-Image Command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exports an existing image from the image store to another Windows Image (.wim) file.
 ## Syntax

@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 09/14/2016  
+ms.date: 11/16/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
@@ -33,7 +33,7 @@ If you are a customer looking for a partner to help you host Windows desktops an
 2. Clear the **Location** field.
 3. Enter the name of the partner in the **I'm looking for help with** field.
 
-## Partners who have passed the learning path assessment (as of 09/12/2016)
+## Partners who have passed the learning path assessment (as of 10/27/2016)
 
 ### Hosting partners:
 Hosting partners typically offer a fully managed hosted Windows desktop and application service, which may include managing the Azure resources, operating systems, applications, and helpdesk using the partner’s licensing agreements with Microsoft and other software providers.
@@ -48,13 +48,18 @@ Hosting partners typically offer a fully managed hosted Windows desktop and appl
 - Connectria Hosting
 - Copaco Nederland B.V.
 - Ericom Software
+- EVRY ASA
 - Fujitsu Services United Kingdom
+- GCITS
 - GIVHAN TECHNOLOGIES LLC, DBA PARTNER I.T.
+- Gotham City Technologies
 - INSIGHT ENTERPRISES AUSTRALIA PTY LTD
-- ITON
+- MICROCITY COMPUTADORES E SISTEMAS LTDA
 - SaaSplaza
+- SaasPlaza Pte Ltd
 - Sierra Systems
 - Sogeti
+- Tech Data LTD
 - Telecomputing Sweden AB
 - TIETO CORPORATION
 - Trustmarque Solutions Ltd
@@ -67,8 +72,8 @@ Technology consulting partners typically provide a flexible set of services to h
 - AVALERIS INC
 - COMPUREP-COMPUTER SPECIALIST CC
 - Computacenter AG & Co. oHG
-- COMPUTER 2000 DISTRIBUTION LTD
 - Convergence Northwest, Inc.
+- Dionar
 - EUCafrica
 - FyrSoft LLC
 - Gill IT-Service
@@ -76,13 +81,20 @@ Technology consulting partners typically provide a flexible set of services to h
 - Inside Technologies
 - INTEGRIT S.A.
 - Interchange UC B.V.
+- ITCG AG
 - Peters&Associates
 - Powel ASA
+- Quadrasystems.net (India) P Ltd
 - Salcon Technology Solutions
+- Savvia Inc.
 - SCCT
+- Sirius Computer Solutions, Inc.
 - Spusht Technologies L.L.C
 - Strateco GmbH & Co.KG
+- Surevelox, Inc
 - Synergics c.v.b.a
+- TEKPOOL LTD
 - Terawe
+- Windward Software Inc
 - Wortell
 - Zirous, Inc.

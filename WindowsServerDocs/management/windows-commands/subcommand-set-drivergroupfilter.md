@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Subcommand: set-DriverGroupFilter
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds or removes an existing driver group filter from a driver group.
 ## Syntax

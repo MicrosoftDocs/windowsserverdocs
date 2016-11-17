@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Advanced Security Audit Policy Settings
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This reference for the IT professional provides information about  the Advanced Audit policy settings that are available in Windows operating systems and the audit events that they generate.
 

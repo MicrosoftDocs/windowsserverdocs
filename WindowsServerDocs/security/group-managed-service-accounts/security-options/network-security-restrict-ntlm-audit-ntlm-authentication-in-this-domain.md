@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Network Security: Restrict NTLM: Audit NTLM authentication in this domain
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, management aspects, and security considerations for this policy setting. This information applies to computers running at least the  Windows Server 2008 R2  or  Windows 7  operating systems.
 

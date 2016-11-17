@@ -111,29 +111,6 @@ In the following example, wcoast.microsoft.com is a unique user principal name (
 - **UPN suffix**:	`wcoast.microsoft.com`
 - **Pattern**:		`^wcoast\\|@wcoast\.microsoft\.com$`
 
-## Ping user-name
-
-Some RADIUS proxy servers and network access servers periodically send authentication and accounting requests (known as ping requests) to verify that the NPS server is present on the network. These ping requests include fictional user names. When NPS processes these requests, the event and accounting logs become filled with access reject records, making it more difficult to keep track of valid records.
-
-When you configure a registry entry for **ping user-name**, NPS matches the registry entry value against the user name value in ping requests by other servers. A **ping user-name** registry entry specifies the fictional user name (or a user name pattern, with variables, that matches the fictional user name) sent by RADIUS proxy servers and network access servers. When NPS receives ping requests that match the **ping user-name** registry entry value, NPS rejects the authentication requests without processing the request. NPS does not record transactions involving the fictional user name in any log files, which makes the event log easier to interpret.
-
-**Ping user-name** is not installed by default. You must add **ping user-name** to the registry. You can add an entry to the registry using Registry Editor.
-
->[!CAUTION]
->Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
-
-### To add ping user-name to the registry
-
-Ping user-name can be added to the following registry key as a string value by a member of the local Administrators group:
-
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\IAS\Parameters`
-
-- **Name**: `ping user-name`
-- **Type**:	`REG_SZ`
-- **Data**:	 *User name*
-
->[!TIP]
->To indicate more than one user name for a **ping user-name** value, enter a name pattern, such as a DNS name, including wildcard characters, in **Data**.
 
 For more information about managing NPS, see [Manage Network Policy Server](nps-manage-top.md).
 

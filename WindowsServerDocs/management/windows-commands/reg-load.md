@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # reg load
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Writes saved subkeys and entries into a different subkey in the registry. Intended for use with temporary files that are used for troubleshooting or editing registry entries.
 for examples of how to use this command, see [Examples](#BKMK_examples).

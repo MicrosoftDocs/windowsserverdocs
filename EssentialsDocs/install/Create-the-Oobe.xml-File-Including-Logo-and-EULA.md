@@ -16,7 +16,7 @@ manager: dongill
 
 # Create the Oobe.xml File Including Logo and EULA
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can add your own End User License Agreement (EULA) to Initial Configuration by using the Oobe.xml file. The Oobe.xml is a file used to provide text and images for Initial Configuration, Windows Welcome, and other pages presented to the end user. You can add multiple Oobe.xml files to customize the content based on the language and country or region selections of the end user. For more information, see the [Windows Assessment and Deployment Kit for Windows 8](http://go.microsoft.com/fwlink/?LinkId=248694) documentation.  
   

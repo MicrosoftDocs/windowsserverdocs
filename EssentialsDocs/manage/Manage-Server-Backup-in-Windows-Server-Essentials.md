@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Server Backup in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  The following topics include information about common backup tasks that you can accomplish by using the Windows Server Essentials Dashboard:  
   

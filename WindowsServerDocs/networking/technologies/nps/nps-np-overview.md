@@ -62,4 +62,6 @@ There are four categories of properties for each network policy:
 
 When you add a new network policy by using the NPS console, you must use the New Network Policy Wizard. After you have created a network policy by using the wizard, you can customize the policy by double-clicking the policy in the NPS console to obtain the policy properties.
 
+For examples of pattern-matching syntax to specify network policy attributes, see [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
+
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).

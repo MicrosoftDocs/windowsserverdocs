@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Update Management with Windows Server Update Services
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You should check the WSUS administration console home page regularly to view overall update compliance and network health. Check application logs frequently, if you suspect problems such as download failures or client computers that are failing to report to the WSUS server. This guide provides information to help you manage Windows Server Update Services.  
   

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # manage-bde
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Used to turn on or turn off BitLocker, specify unlock mechanisms, update recovery methods, and unlock BitLocker-protected data drives. This command-line tool can be used in place of the **BitLocker Drive Encryption** Control Panel item. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
   

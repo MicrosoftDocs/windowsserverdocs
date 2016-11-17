@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # nslookup root
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
 ## Syntax

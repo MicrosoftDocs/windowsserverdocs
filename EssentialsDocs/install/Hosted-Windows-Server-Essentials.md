@@ -16,7 +16,7 @@ manager: dongill
 
 # Hosted Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This document includes information that is specific to hosters who intend to deploy Windows ServerÃ �Â® 2012 Essentials in their lab and offer Windows Server Essentials as a service to their customers.  
   

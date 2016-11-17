@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Step 2: Configure WSUS
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After installing the WSUS server role on your server, you need to properly configure it. The following checklist summarises the steps involved in performing the initial configuration for your WSUS server.
 

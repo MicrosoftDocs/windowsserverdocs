@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # System cryptography: Force strong key protection for user keys stored on the computer - Explain text
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Settings page: Options
 User input is not required when keys are stored and used

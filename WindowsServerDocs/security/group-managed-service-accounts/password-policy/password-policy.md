@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Password Policy
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional provides an overview of password policies for Windows and links to information for each policy setting.
 

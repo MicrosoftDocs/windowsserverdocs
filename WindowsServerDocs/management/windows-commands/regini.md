@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # regini
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Modifies the registry from the command line or a script, and applies changes that were preset in one or more text files. You can create, modify, or delete registry keys, in addition to modifying the permissions on the registry keys.
 for details on the format and content of the text script file that regini.exe uses to make changes to the registry, see the regini reference document originally provided as part of the Windows Server 2000 Resource Kit, now available at the Microsoft Download Center at [http://go.microsoft.com/fwlink/?LinkId=201803](http://go.microsoft.com/fwlink/?LinkId=201803).

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # bcdboot
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to quickly set up a system partition, or to repair the boot environment located on the system partition. The system partition is set up by copying a simple set of Boot Configuration Data (Bcd) files to an existing empty partition.
 for more information about bcdboot, including information on where to find bcdboot and examples of how to use this command, see the [bcdboot Command-Line Options](http://technet.microsoft.com/library/hh824874.aspx) topic.

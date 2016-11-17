@@ -16,7 +16,7 @@ manager: dongill
 
 # Migrate from Previous Versions to Windows Server Essentials or Windows Server Essentials Experience
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This guide describes how to migrate from previous versions of Windows Small Business Server and Windows Server Essentials (including  Windows Server Essentials, Windows Small Business Server 2011 Standard, Windows Small Business Server 2011 Essentials, Windows Small Business Server 2008, and Windows Small Business Server 2003) to  Windows Server Essentials or to  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed.  
   

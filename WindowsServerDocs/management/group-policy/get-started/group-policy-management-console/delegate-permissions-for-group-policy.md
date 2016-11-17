@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # delegate Permissions for Group Policy
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes procedures for an administrator to delegate permissions to others using the GPMC so that they can perform some Group Policy administrative tasks.
 

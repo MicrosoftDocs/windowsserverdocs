@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # assoc
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
 for examples of how to use this command, see [Examples](#BKMK_examples).

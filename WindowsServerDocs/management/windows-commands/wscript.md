@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # wscript
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Script Host provides an environment in which users can execute scripts in a variety of languages, languages that use a variety of object models to perform tasks.
 ## Syntax

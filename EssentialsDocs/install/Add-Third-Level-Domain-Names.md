@@ -16,7 +16,7 @@ manager: dongill
 
 # Add Third-Level Domain Names
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can add the ability for users to request third-level domain names in the Set Up Domain Name Wizard. You do this by creating and installing a code assembly that is used by the Domain Manager in the operating system.  
   

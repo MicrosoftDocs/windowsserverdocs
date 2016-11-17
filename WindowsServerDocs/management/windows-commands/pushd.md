@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # pushd
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stores the current directory for use by the **popd** command, and then changes to the specified directory.
 for examples of how to use this command, see [Examples](#BKMK_examples).

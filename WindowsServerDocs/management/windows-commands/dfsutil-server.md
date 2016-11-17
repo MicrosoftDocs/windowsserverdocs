@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # dfsutil Server
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The **dfsutil server** command displays all the roots hosted on the server. Server command can also be used to modify the registry keys on the server.
 
