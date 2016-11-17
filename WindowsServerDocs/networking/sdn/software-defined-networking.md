@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Software Defined Networking (SDN)
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.  
   

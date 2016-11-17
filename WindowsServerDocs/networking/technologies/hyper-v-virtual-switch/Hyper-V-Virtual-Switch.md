@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides an overview of the Hyper-V Virtual Switch, and contains the following sections.  
   

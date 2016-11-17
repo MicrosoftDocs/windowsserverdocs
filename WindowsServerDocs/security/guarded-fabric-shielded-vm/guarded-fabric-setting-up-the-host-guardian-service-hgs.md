@@ -36,7 +36,10 @@ Together, HGS and the hosts it supports form a guarded fabric. After the guarded
 
 ### Supported upgrade scenarios
 
-On an HGS server or a guarded host (or a VMM server where applicable), an in-place upgrade from a previous Technical Preview release to Windows Server 2016 is supported. However, on the upgraded servers, you must create a new guarded fabric configuration and security artifacts, such as code integrity policies, template disks, and shielding data files. We recommend that all the servers run the same operating system patch level, although it is not required.
+Before you deploy a guarded fabric, make sure the servers have installed the latest Cumulative Update. 
+If you deployed a guarded fabric before the release of the [October 27, 2016 Cumulative Update](http://support.microsoft.com/kb/3197954), the servers need to be upgraded:
+- Guarded hosts can be upgraded in-place by installing the latest Cumulative Update.
+- HGS servers need to be rebuilt, including configuring certificates and information about the hosts, as explained in this topic. 
 
 Shielded VMs that ran on a guarded host with an earlier operating system version, such as TP5, can still run after the host is upgraded to Windows Server 2016. New shielded VMs cannot be created from template disks that were prepared using the template disk wizard from a Technical Preview build.
 

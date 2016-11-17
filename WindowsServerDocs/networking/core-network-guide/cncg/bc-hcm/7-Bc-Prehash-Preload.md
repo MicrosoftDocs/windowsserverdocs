@@ -16,7 +16,7 @@ author: jamesmci
 
 # Prehash and Preload Content on the Hosted Cache Server \(Optional\)
 
->Applies To: Windows Server&reg; 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use the procedures in this section to prehash content on your content servers, add the content to data packages, and then preload the content on your hosted cache servers. 
 

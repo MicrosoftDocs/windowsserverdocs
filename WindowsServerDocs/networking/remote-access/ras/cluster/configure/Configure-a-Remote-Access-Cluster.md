@@ -16,9 +16,9 @@ author: jamesmci
 ---
 # Configure a Remote Access Cluster
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
- Windows Server 2016 and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single  Windows Server 2016 or  Windows Server 2012  Remote Access server in a load-balanced cluster.  
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single  Windows Server 2016 or  Windows Server 2012  Remote Access server in a load-balanced cluster.  
   
 -  Step 1: [Deploy a Single DirectAccess Server with Advanced Settings](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).  
   

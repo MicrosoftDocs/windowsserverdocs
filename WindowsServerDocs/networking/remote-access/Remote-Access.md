@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Remote Access
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides an overview of the Remote Access server role in Windows Server 2016.  
   

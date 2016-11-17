@@ -6,7 +6,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/09/2016
+ms.date: 11/16/2016
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 ---
 # Fault tolerance and storage efficiency in Storage Spaces Direct
@@ -14,7 +14,7 @@ ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 
 This topic introduces the resiliency options available in [Storage Spaces Direct](storage-spaces-direct-overview.md) and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each. It also presents some usage instructions to get you started, and references some great papers, blogs, and additional content where you can learn more.
 
-If you are already familiar with Storage Spaces, you may want to skip to the [Summary](#Summary) section.
+If you are already familiar with Storage Spaces, you may want to skip to the [Summary](#summary) section.
 
 ## Overview
 
@@ -30,7 +30,7 @@ In Windows Server 2016, Storage Spaces offers two flavors of mirroring – ‘tw
 
 ### Two-way mirror
 
-Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware ‘fault domains’](https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains) – with Storage Spaces Direct, that means two servers.
+Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware ‘fault domains’](../../failover-clustering/fault-domains.md) – with Storage Spaces Direct, that means two servers.
 
 ![two-way-mirror](media/Storage-Spaces-Fault-Tolerance/two-way-mirror-180px.png)
 
@@ -69,13 +69,13 @@ The storage efficiency of dual parity increases the more hardware fault domains 
 
 ![dual-parity-wide](media/Storage-Spaces-Fault-Tolerance/dual-parity-wide-180px.png)
 
-See the [Summary](#Summary) section for the efficiency of dual party and local reconstruction codes at every scale.
+See the [Summary](#summary) section for the efficiency of dual party and local reconstruction codes at every scale.
 
 ### Local reconstruction codes
 
 Storage Spaces in Windows Server 2016 introduces an advanced technique developed by Microsoft Research called ‘local reconstruction codes’, or LRC. At large scale, dual parity uses LRC to split its encoding/decoding into a few smaller groups, to reduce the overhead required to make writes or recover from failures.
 
-With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here’s what the layout looks like with hard disk drives and 12 hardware fault domains (i.e. 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
+With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here's what the layout looks like with hard disk drives and 12 hardware fault domains (meaning 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
 
 ![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes-180px.png)
 
@@ -100,12 +100,11 @@ Try our online [capacity calculator web app](http://aka.ms/s2dcalc) to see how d
 
 Consider using mixed resiliency when most of your data is "cold" data, but you still expect some sustained write activity to some data.
 
-## Summary
+## <a name="summary"></a>Summary
 
-**Table 1** Shows each resiliency type, the number of failures it can safely tolerate at once, and its storage efficiency.
+This section summarizes the resiliency types available in Storage Spaces Direct, the minimum scale requirements to use each type, how many failures each type can tolerate, and the corresponding storage efficiency.
 
-   >[!TIP]
-   > In the table below, "Failure tolerance" refers to the number of hardware fault domains which can experience failure(s) AT ANY ONE TIME. For example, a failure tolerance of 2 means that all data remains safe and continuously accessible even if 2 drives fail simultaneously, or if 2 nodes go down simultaneously, or if 1 drive fails and 1 node goes down. Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one.
+### Resiliency types
 
 |    Resiliency          |    Failure tolerance       |    Storage efficiency      |
 |------------------------|----------------------------|----------------------------|
@@ -116,39 +115,98 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 |    Mixed               |    2                       |    33.3% - 80.0%           |
 
    >[!TIP]
-   > We recommend using three-way mirroring, dual parity, or mixing the two.
+   > Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they can tolerate two simultaneous failures. For examples of what this means, see the [Examples](#examples) section below.
 
-**Table 2** Shows the minimum number of hardware fault domains (with Storage Spaces Direct, that means minimum number of servers) required to use each resiliency type.
+### Minimum scale requirements
 
 |    Fault domains    |    Two-way mirror    |    Three-way mirror    |    Single parity    |    Dual parity    |    Mixed    |
 |---------------------|----------------------|------------------------|---------------------|-------------------|-------------|
-|    2                |    •                 |                        |                     |                   |             |
-|    3                |    •                 |    •                   |    •                |                   |             |
-|    4                |    •                 |    •                   |    •                |    •              |    •        |
-|    5                |    •                 |    •                   |    •                |    •              |    •        |
-|    …                |    •                 |    •                   |    •                |    •              |    •        |
-|    15               |    •                 |    •                   |    •                |    •              |    •        |
-|    16               |    •                 |    •                   |    •                |    •              |    •        |
+|    2                |    ✓                 |                        |                     |                   |             |
+|    3                |    ✓                 |    ✓                   |    ✓                |                   |             |
+|    4                |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
+|    ...              |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
+|    16               |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
 
-**Table 3** Shows the storage efficiency of dual parity and local reconstruction codes at each scale.
+   >[!TIP]
+   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
 
-|    Fault domains      |    SSD + HDD        |                 |    All SSD           |                 |
-|-----------------------|---------------------|-----------------|----------------------|-----------------|
-|    /                  |    Layout           |    Efficiency   |    Layout            |    Efficiency   |
-|    2                  |    –                |    –            |    –                 |    –            |
-|    3                  |    –                |    –            |    –                 |    –            |
-|    4                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
-|    5                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
-|    6                  |    RS 2+2           |    50.0%        |    RS 2+2            |    50.0%        |
-|    7                  |    RS 4+2           |    66.7%        |    RS 4+2            |    66.7%        |
-|    8                  |    RS 4+2           |    66.7%        |    RS 4+2            |    66.7%        |
-|    9                  |    RS 4+2           |    66.7%        |    RS 6+2            |    75.0%        |
-|    10                 |    RS 4+2           |    66.7%        |    RS 6+2            |    75.0%        |
-|    11                 |    RS 4+2           |    66.7%        |    RS 6+2            |    75.0%        |
-|    12                 |    LRC (8, 2, 1)    |    72.7%        |    RS 6+2            |    75.0%        |
-|    13                 |    LRC (8, 2, 1)    |    72.7%        |    RS 6+2            |    75.0%        |
-|    14                 |    LRC (8, 2, 1)    |    72.7%        |    RS 6+2            |    75.0%        |
-|    15                 |    LRC (8, 2, 1)    |    72.7%        |    LRC (12, 2, 1)    |    80.0%        |
+### Dual parity efficiency for hybrid deployments
+
+This table shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
+
+|    Fault domains      |    Layout           |    Efficiency   |
+|-----------------------|---------------------|-----------------|
+|    2                  |    –                |    –            |
+|    3                  |    –                |    –            |
+|    4                  |    RS 2+2           |    50.0%        |
+|    5                  |    RS 2+2           |    50.0%        |
+|    6                  |    RS 2+2           |    50.0%        |
+|    7                  |    RS 4+2           |    66.7%        |
+|    8                  |    RS 4+2           |    66.7%        |
+|    9                  |    RS 4+2           |    66.7%        |
+|    10                 |    RS 4+2           |    66.7%        |
+|    11                 |    RS 4+2           |    66.7%        |
+|    12                 |    LRC (8, 2, 1)    |    72.7%        |
+|    13                 |    LRC (8, 2, 1)    |    72.7%        |
+|    14                 |    LRC (8, 2, 1)    |    72.7%        |
+|    15                 |    LRC (8, 2, 1)    |    72.7%        |
+|    16                 |    LRC (8, 2, 1)    |    72.7%        |
+
+### Dual parity efficiency for all-flash deployments
+
+This table shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can use larger group sizes and achieve better storage efficiency in an all-flash configuration.
+
+|    Fault domains      |    Layout           |    Efficiency   |
+|-----------------------|---------------------|-----------------|
+|    2                  |    –                |    –            |
+|    3                  |    –                |    –            |
+|    4                  |    RS 2+2           |    50.0%        |
+|    5                  |    RS 2+2           |    50.0%        |
+|    6                  |    RS 2+2           |    50.0%        |
+|    7                  |    RS 4+2           |    66.7%        |
+|    8                  |    RS 4+2           |    66.7%        |
+|    9                  |    RS 6+2           |    75.0%        |
+|    10                 |    RS 6+2           |    75.0%        |
+|    11                 |    RS 6+2           |    75.0%        |
+|    12                 |    RS 6+2           |    75.0%        |
+|    13                 |    RS 6+2           |    75.0%        |
+|    14                 |    RS 6+2           |    75.0%        |
+|    15                 |    RS 6+2           |    75.0%        |
+|    16                 |    LRC (12, 2, 1)   |    80.0%        |
+
+## <a name="examples"></a>Examples
+
+Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they offer better fault tolerance. Specifically, they ensure that all data remains safe and continuously accessible even when two fault domains – with Storage Spaces Direct, that means two servers - are affected by simultaneous failures.
+
+### Examples where everything stays online
+
+These six examples show what three-way mirroring and/or dual parity **can** tolerate.
+
+- **1.**	One drive lost (includes cache drives)
+- **2.**	One server lost
+
+![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
+
+- **3.**	One server and one drive lost
+- **4.**	Two drives lost in different servers
+
+![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
+
+- **5.**	More than two drives lost, so long as at most two servers are affected
+- **6.**	Two servers lost
+
+![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
+
+...in every case, all volumes will stay online. (Make sure your cluster maintains quorum.)
+
+### Examples where everything goes offline
+
+Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one, given sufficient time. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and/or dual parity **cannot** tolerate.
+
+- **7.** Drives lost in three or more servers at once
+- **8.**	Three or more servers lost at once
+
+![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
 ## Usage in PowerShell
 
@@ -180,7 +238,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 To create volumes, and especially mixed resiliency volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters. The following cmdlet creates a 1 TB mixed volume, split 30% three-way mirror and 70% dual parity.
 
 ```
-New-Volume -FriendlyName "Mixed" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
+New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 
 We recommend this blog about [how volumes are represented in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/), by our very own [Cosmos Darwin](https://twitter.com/cosmosdarwin), which includes guidance and scripting samples on how best to inspect them in PowerShell.
@@ -195,4 +253,4 @@ Every link below is inline somewhere in the body of this topic.
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
 - [Storage Efficiency Demo at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [Capacity Calculator for Storage Spaces Direct](http://aka.ms/s2dcalc)
+- [Capacity Calculator PREVIEW for Storage Spaces Direct](http://aka.ms/s2dcalc)

@@ -18,7 +18,7 @@ There are three types of logging for Network Policy Server \(NPS\):
 
 - **Logging user authentication and accounting requests to a local file**. Used primarily for connection analysis and billing purposes. Also useful as a security investigation tool because it provides you with a method of tracking the activity of a malicious user after an attack. You can configure local file logging using the Accounting Configuration wizard.
 
-- **Logging user authentication and accounting requests to a Microsoft SQL Server&reg; XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
+- **Logging user authentication and accounting requests to a Microsoft SQL Server XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
 
 ## Use the Accounting Configuration wizard
 

@@ -16,9 +16,9 @@ author: jamesmci
 ---
 # DirectAccess Test Lab Guides
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
-Following are links to the test lab guides for DirectAccess in Windows Server 2016, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012.
+Following are links to the test lab guides for DirectAccess in Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012.
 
 - [Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB.md)
 

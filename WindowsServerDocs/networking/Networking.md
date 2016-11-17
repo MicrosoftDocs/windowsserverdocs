@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Networking in Windows Server 2016 
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 <img src="../get-started/media/6-networking.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization.
 
