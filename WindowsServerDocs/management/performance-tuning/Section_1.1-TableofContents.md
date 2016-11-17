@@ -29,13 +29,33 @@ ms.date: 10/31/2016
 
 **Performance Tuning for Network Subsystems**
 
--    [Performance Tuning for Network Subsystems](./Section_4.0-performance-tuning-for-network-subsystems.md)
+-    [Performance Tuning for Network Subsystems](networking/technologies/network-subsystem/net-sub-performance-top.md)
 
--    [NIC Teaming for Network Subsystem Perf](./Section_4.1-using-nic-teaming-for-network-subsystem-performance.md)
+-    [Choosing a Network Adapter](networking/technologies/network-subsystem/net-sub-choose-nic.md)
 
--    [Network Adapter Selection for Network Subsystem Performance](./Section_4.2-choosing-a-network-adapter-for-network-subsystem-performance.md)
+-    [Configure the Order of Network Interfaces](networking/technologies/network-subsystem/net-sub-interface-metric.md)
 
--    [Tuning Network Subsystem Performance](./Section_4.3-tuning-a-network-adapter-for-network-subsystem-performance.md)
+-    [Performance Tuning Network Adapters](networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)
+
+-    [Network-Related Performance Counters](networking/technologies/network-subsystem/net-sub-performance-counters.md)
+
+-    [Performance Tools for Network Workloads](networking/technologies/network-subsystem/net-sub-performance-tools.md)
+
+-    [NIC Teaming for Network Subsystem Perf](networking/technologies/nic-teaming/NIC-Teaming.md)
+
+-    [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
+
+-    [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)
+
+-    [NIC Teaming MAC address Use and Management](networking/technologies/nic-teaming/NIC-Teaming-MAC-address-Use-and-Management.md)
+
+-    [Create a New NIC Team on a Host computer or VM](networking/technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
+
+-    [Create a New NIC Team in a VM](networking/technologies/nic-teaming/create-a-New-NIC-Team-in-a-VM.md)
+
+-    [Create a New NIC Team](networking/technologies/nic-teaming/create-a-New-NIC-Team.md)
+
+-    [Troubleshooting NIC Teaming](networking/technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
 
 **Performance Tuning for Storage Subsystems**
