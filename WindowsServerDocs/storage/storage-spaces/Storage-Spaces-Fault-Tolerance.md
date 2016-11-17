@@ -102,12 +102,9 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 
 ## <a name="summary"></a>Summary
 
-### Table 1
+This section summarizes the resiliency types available in Storage Spaces Direct, the minimum scale requirements to use each type, how many failures each type can tolerate, and the corresponding storage efficiency.
 
-Shows each resiliency type, the number of failures it can safely tolerate at once, and its storage efficiency.
-
-   >[!TIP]
-   > In the table below, "Failure tolerance" refers to the number of hardware fault domains which can experience failure(s) AT ANY ONE TIME. For example, a failure tolerance of 2 means that all data remains safe and continuously accessible even if 2 drives fail simultaneously, or if 2 servers go down simultaneously, or if 1 drive fails and 1 server goes down. Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one.
+### Resiliency types
 
 |    Resiliency          |    Failure tolerance       |    Storage efficiency      |
 |------------------------|----------------------------|----------------------------|
@@ -118,22 +115,24 @@ Shows each resiliency type, the number of failures it can safely tolerate at onc
 |    Mixed               |    2                       |    33.3% - 80.0%           |
 
    >[!TIP]
-   > We recommend using three-way mirroring, dual parity, or mixing the two.
+   > We recommend using three-way mirroring or dual parity, because they can tolerate two simultaneous failures. For example, all data remains safe and continuously accessible even if two drives fail at once, or if two servers go down at once, or if one drive fails and one server goes down. Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one.
 
-### Table 2
-
-Shows the minimum number of hardware fault domains (with Storage Spaces Direct, that means minimum number of servers) required to use each resiliency type.
+### Minimum scale requirements
 
 |    Fault domains    |    Two-way mirror    |    Three-way mirror    |    Single parity    |    Dual parity    |    Mixed    |
 |---------------------|----------------------|------------------------|---------------------|-------------------|-------------|
-|    2                |    •                 |                        |                     |                   |             |
-|    3                |    •                 |    •                   |    •                |                   |             |
-|    4                |    •                 |    •                   |    •                |    •              |    •        |
-|    +                |    •                 |    •                   |    •                |    •              |    •        |
+|    2                |    ✓                 |                        |                     |                   |             |
+|    3                |    ✓                 |    ✓                   |    ✓                |                   |             |
+|    4                |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
+|    ...              |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
+|    16               |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
 
-### Table 3
+   >[!TIP]
+   > With Storage Spaces Direct, 'fault domains' typically refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
 
-Shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
+### Dual parity layout and efficiency, hybrid (SSD + HDD)
+
+This table shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
 
 |    Fault domains      |    Layout           |    Efficiency   |
 |-----------------------|---------------------|-----------------|
@@ -153,12 +152,9 @@ Shows the storage efficiency of dual parity and local reconstruction codes at ea
 |    15                 |    LRC (8, 2, 1)    |    72.7%        |
 |    16                 |    LRC (8, 2, 1)    |    72.7%        |
 
-### Table 4
+### Dual parity layout and efficiency, all flash (SSD)
 
-Shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can user larger group sizes and achieve slightly better storage efficiency with all-flash.
-
-   >[!TIP]
-   > The table below applies only to all-flash deployments. For deployments which contain both hard disk drives (HDD) and solid-state drives (SSD), see Table 3, above.
+This table shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can user larger group sizes and achieve slightly better storage efficiency with all-flash.
 
 |    Fault domains      |    Layout           |    Efficiency   |
 |-----------------------|---------------------|-----------------|
