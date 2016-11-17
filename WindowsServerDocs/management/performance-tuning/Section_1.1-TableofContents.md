@@ -29,33 +29,33 @@ ms.date: 10/31/2016
 
 **Performance Tuning for Network Subsystems**
 
--    [Performance Tuning for Network Subsystems](networking/technologies/network-subsystem/net-sub-performance-top.md)
+-    [Performance Tuning for Network Subsystems](../../networking/technologies/network-subsystem/net-sub-performance-top.md)
 
--    [Choosing a Network Adapter](networking/technologies/network-subsystem/net-sub-choose-nic.md)
+    -    [Choosing a Network Adapter](../../networking/technologies/network-subsystem/net-sub-choose-nic.md)
 
--    [Configure the Order of Network Interfaces](networking/technologies/network-subsystem/net-sub-interface-metric.md)
+    -    [Configure the Order of Network Interfaces](../../networking/technologies/network-subsystem/net-sub-interface-metric.md)
 
--    [Performance Tuning Network Adapters](networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)
+    -    [Performance Tuning Network Adapters](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)
 
--    [Network-Related Performance Counters](networking/technologies/network-subsystem/net-sub-performance-counters.md)
+    -    [Network-Related Performance Counters](../../networking/technologies/network-subsystem/net-sub-performance-counters.md)
 
--    [Performance Tools for Network Workloads](networking/technologies/network-subsystem/net-sub-performance-tools.md)
+    -    [Performance Tools for Network Workloads](../../networking/technologies/network-subsystem/net-sub-performance-tools.md)
 
--    [NIC Teaming for Network Subsystem Perf](networking/technologies/nic-teaming/NIC-Teaming.md)
+-    [NIC Teaming for Network Subsystem Perf](../../networking/technologies/nic-teaming/NIC-Teaming.md)
 
--    [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/nict-vms.md)
+    -    [NIC Teaming in Virtual Machines (VMs)](../../networking/technologies/nic-teaming/nict-vms.md)
 
--    [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/nict-and-vlans.md)
+    -    [NIC Teaming and Virtual Local Area Networks (VLANs)](../../networking/technologies/nic-teaming/nict-and-vlans.md)
 
--    [NIC Teaming MAC address Use and Management](networking/technologies/nic-teaming/NIC-Teaming-MAC-address-Use-and-Management.md)
+    -    [NIC Teaming MAC address Use and Management](../../networking/technologies/nic-teaming/NIC-Teaming-MAC-address-Use-and-Management.md)
 
--    [Create a New NIC Team on a Host computer or VM](networking/technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
+    -    [Create a New NIC Team on a Host computer or VM](../../networking/technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
 
--    [Create a New NIC Team in a VM](networking/technologies/nic-teaming/create-a-New-NIC-Team-in-a-VM.md)
+    -    [Create a New NIC Team in a VM](../../networking/technologies/nic-teaming/create-a-New-NIC-Team-in-a-VM.md)
 
--    [Create a New NIC Team](networking/technologies/nic-teaming/create-a-New-NIC-Team.md)
+    -    [Create a New NIC Team](../../networking/technologies/nic-teaming/create-a-New-NIC-Team.md)
 
--    [Troubleshooting NIC Teaming](networking/technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
+    -    [Troubleshooting NIC Teaming](../../networking/technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
 
 **Performance Tuning for Storage Subsystems**
@@ -120,7 +120,7 @@ ms.date: 10/31/2016
 
 -    [Performance Tuning for Hyper-V Servers](./Section_13.0-performance-tuning-for-hyper-v-servers.md)
 
--    [Containers Performance Tuning](./Section_13.1-containers.md)
+-    [Containers Performance Tuning](./Section_13.2-containers.md)
 
 **Performance Tuning for Powershell**
 -    [Powershell Performance Tuning](./Section_14-Powershell.md)
@@ -128,9 +128,9 @@ ms.date: 10/31/2016
 **Performance Tuning for Storage Features**
 -    [Storage Spaces Direct Performance Tuning](./Section_15-StorageSpacesDirect.md)
 
--    [Storage Replication Tuning](https://aka.ms/srfaq)
+-    [Storage Replication FAQ](storage/storage-replica/storage-replica-frequently-asked-questions.md)
 
--    [Data Deduplication Tuning](https://technet.microsoft.com/en-us/windows-server-docs/storage/data-deduplication/advanced-settings)
+-    [Data Deduplication Advanced Settings](storage/data-deduplication/advanced-settings.md)
 
 **References**
 -    [References and Links](./Section_1.2-References.md)
