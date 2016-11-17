@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Installation and Preparation Requirements for Deploying Network Controller
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to prepare your datacenter for Network Controller deployment.  
   
