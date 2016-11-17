@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
-author: rpsqrd
+author: nirb-ms
 ms.technology: security-guarded-fabric
 ---
 
