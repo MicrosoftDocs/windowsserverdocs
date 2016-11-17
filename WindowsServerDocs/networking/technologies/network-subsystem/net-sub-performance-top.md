@@ -37,13 +37,6 @@ Performance tuning the network subsystem, particularly for network intensive wor
 5. **User-Mode Applications**. These are typically Microsoft solutions or custom applications.
 
 The table below provides a vertical illustration of the layers of the network stack, including examples of items that run in each layer.  
-  
-||||||  
-|-|-|-|-|-|  
-|5|**User-Mode Applications**|WMS|DNS|IIS|  
-|4|**System Drivers**|AFD.sys|HTTP.sys|&nbsp;|  
-|3|**Protocol Stack**|TCP/IP|UDP/IP|VPN|  
-|2|**NDIS**|Network Driver Interface Specification (NDIS)|&nbsp;|&nbsp;|  
-|1|**Network interface**|Network driver|&nbsp;|&nbsp;|  
 
+![Network Stack Layers](../../media/Network-Subsystem/network-layers.jpg)
 
