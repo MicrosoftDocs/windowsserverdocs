@@ -178,14 +178,14 @@ This table shows the storage efficiency of dual parity and local reconstruction 
 
 Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they offer better fault tolerance. Specifically, they ensure that all data remains safe and continuously accessible even when two fault domains – with Storage Spaces Direct, that means two servers - are affected by simultaneous failures.
 
-These six examples show what three-way mirroring and dual parity **can** tolerate. In every case, all volumes will stay online. (Make sure your cluster maintains quorum.)
+These six examples show what three-way mirroring and/or dual parity **can** tolerate.
 
-1.	One drive lost (includes cache drives)
-2.	One server lost (includes maintenance and rebooting)
-3.	One server lost and one drive lost
-4.	Two drives lost in different servers
-5.	More than two drives lost, so long as at most two servers are affected
-6.	Two servers lost
+**1**	One drive lost (includes cache drives)
+**2**	One server lost
+**3**	One server and one drive lost
+**4**	Two drives lost in different servers
+**5**	More than two drives lost, so long as at most two servers are affected
+**6**	Two servers lost
 
 ![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
 
@@ -193,10 +193,12 @@ These six examples show what three-way mirroring and dual parity **can** tolerat
 
 ![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
 
-Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and dual parity **cannot** tolerate.
+...in every case, all volumes will stay online. (Make sure your cluster maintains quorum.)
 
-7.	Drives lost in three or more servers at once
-8.	Three or more servers lost at once
+Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and/or dual parity **cannot** tolerate.
+
+**7** Drives lost in three or more servers at once
+**8**	Three or more servers lost at once
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
