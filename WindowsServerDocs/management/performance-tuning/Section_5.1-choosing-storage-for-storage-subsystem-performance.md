@@ -113,7 +113,7 @@ You must also consider how much space is used by operating system files, applica
 <tr class="even">
 <td><p>Data layout and redundancy</p></td>
 <td><p>Varies depending on cost, performance, reliability, availability, and power goals.</p>
-<p>For more info, see [Performance Tuning for Subsystems](performance-tuning-for-subsystems.md#bkmk-hardwarearray).</p></td>
+</td>
 </tr>
 <tr class="odd">
 <td><p>Shadow copies</p></td>
@@ -133,7 +133,7 @@ Some administrators will choose to deploy a traditional storage array, backed by
 
 ![storage deployment models](../media/performance-tuning/perftune-guide-storage-deployment-models.png)
 
-Alternatively, Windows Server 2012 introduced a new technology called Storage Spaces, which provides platform storage virtualization and is further enhanced in Windows Server 2012 R2. This enables customers to deploy storage solutions that are cost-efficient, highly-available, resilient, and performance by using commodity SAS/SATA hard drives and JBOD enclosures. For more info, see [Using Storage Spaces for Storage Subsystem Performance](using-storage-spaces-for-storage-subsystem-performance.md).
+Alternatively, Windows Server 2012 introduced a new technology called Storage Spaces, which provides platform storage virtualization and is further enhanced in Windows Server 2012 R2. This enables customers to deploy storage solutions that are cost-efficient, highly-available, resilient, and performance by using commodity SAS/SATA hard drives and JBOD enclosures. 
 
 The following table describes some of the options and considerations for a traditional storage array solution.
 
