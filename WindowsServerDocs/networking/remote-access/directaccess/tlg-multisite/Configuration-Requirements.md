@@ -16,11 +16,11 @@ author: jamesmci
 ---
 # Configuration Requirements
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 The following components are required to configure Remote Access in the test lab:  
   
--   The product disc or files for  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
+-   The product disc or files for  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.  
   
 -   Nine computers or virtual machines that meet the minimum hardware requirements for  Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012  ; three of these computers have two network adapters installed.  
   
