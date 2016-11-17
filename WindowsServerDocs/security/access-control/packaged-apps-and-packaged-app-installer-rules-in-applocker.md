@@ -47,7 +47,7 @@ In summary, including AppLocker rules for packaged apps in your policy design pr
 |Resource|Windows Server 2008 R2 and Windows 7|Windows Server 2012 and Windows 8|
 |------|--------------------|------------------------------------------------------------|
 |Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step\-by\-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|
-|Procedures|[AppLocker Operations Guide](http://technet.microsoft.com/library/ee791916(WS.10).aspx)|[Administer AppLocker](../AppLocker/manage/administer-applocker.md)<br /><br />[Manage Packaged Apps with AppLocker](../AppLocker/manage/manage-packaged-apps-with-applocker.md)|
+|Procedures|[AppLocker Operations Guide](http://technet.microsoft.com/library/ee791916(WS.10).aspx)|
 |Scripting|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|
 |Technical content|[AppLocker Technical Reference](http://technet.microsoft.com/library/ee844115(v=WS.10).aspx)|[AppLocker Technical Reference](http://technet.microsoft.com/library/ee844115(v=WS.10).aspx)|
 |Design, planning and deployment|[AppLocker Policies Design Guide](http://technet.microsoft.com/library/ee449480(WS.10).aspx)<br /><br />[AppLocker Policies Deployment Guide](http://technet.microsoft.com/library/ee791890(WS.10).aspx)|[AppLocker Policies Design Guide](http://technet.microsoft.com/library/ee449480(WS.10).aspx)<br /><br />[AppLocker Policies Deployment Guide](http://technet.microsoft.com/library/ee791890(WS.10).aspx)|
