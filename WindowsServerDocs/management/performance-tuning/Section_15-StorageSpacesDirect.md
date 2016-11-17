@@ -13,9 +13,9 @@ ms.date: 11/17/2016
 
 # Performance tuning for Storage Spaces Direct
 
-Storage Spaces Direct, a Windows Server-based software-defined storage solution, automatically tunes its performance based on the cache configuration of the hardware you use, as described in this topic. For background info, see [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md).
+Storage Spaces Direct, a Windows Server-based software-defined storage solution, automatically tunes its performance, obviating the need to manually specify column counts, the cache configuration of the hardware you use, and other factors that must be set manually with shared SAS storage solutions. For background info, see [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md).
 
-Unlike Storage Spaces with shared SAS storage, the Storage Spaces Direct Software Storage Bus Cache will automatically configure based on the types of storage present in the system. Three types recognized: **HDD**, **SSD** and **NVMe**. Based on the combination the cache will claim the fastest storage as cache and configure itself for read and/or write caching, as appropriate.
+The Storage Spaces Direct Software Storage Bus Cache is automatically configured based on the types of storage present in the system. Three types recognized: **HDD**, **SSD** and **NVMe**. The cache claims the fastest storage for read and/or write caching, as appropriate, and uses the slower storage for persistent storage of data.
 
 The following table summarizes the defaults:
 
