@@ -6,7 +6,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/11/2016
+ms.date: 11/16/2016
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 ---
 # Fault tolerance and storage efficiency in Storage Spaces Direct
@@ -102,10 +102,12 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 
 ## <a name="summary"></a>Summary
 
-**Table 1** Shows each resiliency type, the number of failures it can safely tolerate at once, and its storage efficiency.
+### Table 1
+
+Shows each resiliency type, the number of failures it can safely tolerate at once, and its storage efficiency.
 
    >[!TIP]
-   > In the table below, "Failure tolerance" refers to the number of hardware fault domains which can experience failure(s) AT ANY ONE TIME. For example, a failure tolerance of 2 means that all data remains safe and continuously accessible even if 2 drives fail simultaneously, or if 2 nodes go down simultaneously, or if 1 drive fails and 1 node goes down. Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one.
+   > In the table below, "Failure tolerance" refers to the number of hardware fault domains which can experience failure(s) AT ANY ONE TIME. For example, a failure tolerance of 2 means that all data remains safe and continuously accessible even if 2 drives fail simultaneously, or if 2 servers go down simultaneously, or if 1 drive fails and 1 server goes down. Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one.
 
 |    Resiliency          |    Failure tolerance       |    Storage efficiency      |
 |------------------------|----------------------------|----------------------------|
@@ -118,7 +120,9 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
    >[!TIP]
    > We recommend using three-way mirroring, dual parity, or mixing the two.
 
-**Table 2** Shows the minimum number of hardware fault domains (with Storage Spaces Direct, that means minimum number of servers) required to use each resiliency type.
+### Table 2
+
+Shows the minimum number of hardware fault domains (with Storage Spaces Direct, that means minimum number of servers) required to use each resiliency type.
 
 |    Fault domains    |    Two-way mirror    |    Three-way mirror    |    Single parity    |    Dual parity    |    Mixed    |
 |---------------------|----------------------|------------------------|---------------------|-------------------|-------------|
@@ -127,7 +131,9 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 |    4                |    •                 |    •                   |    •                |    •              |    •        |
 |    +                |    •                 |    •                   |    •                |    •              |    •        |
 
-**Table 3** Shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
+### Table 3
+
+Shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
 
 |    Fault domains      |    Layout           |    Efficiency   |
 |-----------------------|---------------------|-----------------|
@@ -147,7 +153,9 @@ Consider using mixed resiliency when most of your data is "cold" data, but you s
 |    15                 |    LRC (8, 2, 1)    |    72.7%        |
 |    16                 |    LRC (8, 2, 1)    |    72.7%        |
 
-**Table 4** Shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can user larger group sizes and achieve slightly better storage efficiency with all-flash.
+### Table 4
+
+Shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can user larger group sizes and achieve slightly better storage efficiency with all-flash.
 
    >[!TIP]
    > The table below applies only to all-flash deployments. For deployments which contain both hard disk drives (HDD) and solid-state drives (SSD), see Table 3, above.
@@ -200,7 +208,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 To create volumes, and especially mixed resiliency volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters. The following cmdlet creates a 1 TB mixed volume, split 30% three-way mirror and 70% dual parity.
 
 ```
-New-Volume -FriendlyName "Mixed" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
+New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 
 We recommend this blog about [how volumes are represented in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/), by our very own [Cosmos Darwin](https://twitter.com/cosmosdarwin), which includes guidance and scripting samples on how best to inspect them in PowerShell.
