@@ -128,7 +128,7 @@ This section summarizes the resiliency types available in Storage Spaces Direct,
 |    16               |    ✓                 |    ✓                   |    ✓                |    ✓              |    ✓        |
 
    >[!TIP]
-   > The number of fault domains usually refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
+   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
 
 ### Dual parity efficiency for hybrid deployments
 
@@ -174,6 +174,32 @@ This table shows the storage efficiency of dual parity and local reconstruction 
 |    15                 |    RS 6+2           |    75.0%        |
 |    16                 |    LRC (12, 2, 1)   |    80.0%        |
 
+## <a name="examples"></a>Examples
+
+Unless you have only two servers, we recommend using three-way mirroring or dual parity, because they offer better fault tolerance. Specifically, they ensure that all data remains safe and continuously accessible even when two [hardware ‘fault domains’](../../failover-clustering/fault-domains.md) – with Storage Spaces Direct, that means two servers - are affected by simultaneous failures.
+
+These six examples show what three-way mirroring and dual parity **can** tolerate. In every case, all volumes will stay online. (Make sure your cluster maintains quorum.)
+
+1.	One drive lost (includes cache drives)
+2.	One server lost (includes maintenance and rebooting)
+3.	One server lost and one drive lost
+4.	Two drives lost in different servers
+5.	More than two drives lost, so long as at most two servers are affected
+6.	Two servers lost
+
+![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
+
+![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
+
+![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
+
+Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and dual parity **cannot** tolerate.
+
+7.	Drives lost in three or more servers at once
+8.	Three or more servers lost at once
+
+![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
+
 ## Usage in PowerShell
 
 When you create volumes ("Storage Spaces"), you can specify which resiliency type to use. In PowerShell, you can use the the **New-Volume** cmdlet and its **ResiliencySettingName** and **PhysicalDiskRedundancy** parameters.
@@ -208,32 +234,6 @@ New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFrie
 ```
 
 We recommend this blog about [how volumes are represented in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/), by our very own [Cosmos Darwin](https://twitter.com/cosmosdarwin), which includes guidance and scripting samples on how best to inspect them in PowerShell.
-
-## <a name="examples"></a>Examples
-
-Unless you have only two servers, we recommend using three-way mirroring or dual parity, because they offer better fault tolerance. Specifically, three-way mirroring and dual parity ensure that all data remains safe and continuously accessible even when two [hardware ‘fault domains’](../../failover-clustering/fault-domains.md) – with Storage Spaces Direct, that typically means two servers - are affected by simultaneous failures.
-
-The six circumstances pictured below are examples of what three-way mirroring and dual parity **can** tolerate. In every case, all volumes will stay online, so long as the cluster maintains quorum.
-
-1.	One drive lost (includes cache drives)
-2.	One server lost (includes maintenance and rebooting)
-3.	One server lost and one drive lost
-4.	Two drives lost in different servers
-5.	More than two drives lost, so long as at most two servers are affected
-6.	Two servers lost
-
-![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
-
-![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
-
-![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
-
-Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one. However, at most two fault domains may be affected by failures at any given moment. The following are examples of what three-way mirroring and dual parity **cannot** tolerate.
-
-7.	Drives lost in three or more servers at once
-8.	Three or more servers lost at once
-
-![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
 ## See Also
 
