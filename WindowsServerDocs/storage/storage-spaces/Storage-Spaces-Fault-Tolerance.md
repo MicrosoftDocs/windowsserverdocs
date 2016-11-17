@@ -75,7 +75,7 @@ See the [Summary](#summary) section for the efficiency of dual party and local r
 
 Storage Spaces in Windows Server 2016 introduces an advanced technique developed by Microsoft Research called ‘local reconstruction codes’, or LRC. At large scale, dual parity uses LRC to split its encoding/decoding into a few smaller groups, to reduce the overhead required to make writes or recover from failures.
 
-With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here’s what the layout looks like with hard disk drives and 12 hardware fault domains (i.e. 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
+With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here's what the layout looks like with hard disk drives and 12 hardware fault domains (meaning 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
 
 ![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes-180px.png)
 
@@ -184,14 +184,16 @@ These six examples show what three-way mirroring and/or dual parity **can** tole
 
 - **1.**	One drive lost (includes cache drives)
 - **2.**	One server lost
-- **3.**	One server and one drive lost
-- **4.**	Two drives lost in different servers
-- **5.**	More than two drives lost, so long as at most two servers are affected
-- **6.**	Two servers lost
 
 ![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
 
+- **3.**	One server and one drive lost
+- **4.**	Two drives lost in different servers
+
 ![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
+
+- **5.**	More than two drives lost, so long as at most two servers are affected
+- **6.**	Two servers lost
 
 ![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
 
@@ -199,7 +201,7 @@ These six examples show what three-way mirroring and/or dual parity **can** tole
 
 ### Examples where everything goes offline
 
-Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and/or dual parity **cannot** tolerate.
+Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one, given sufficient time. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and/or dual parity **cannot** tolerate.
 
 - **7.** Drives lost in three or more servers at once
 - **8.**	Three or more servers lost at once
