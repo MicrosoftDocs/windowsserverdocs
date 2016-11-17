@@ -115,7 +115,7 @@ This section summarizes the resiliency types available in Storage Spaces Direct,
 |    Mixed               |    2                       |    33.3% - 80.0%           |
 
    >[!TIP]
-   > Unless you have only two servers, we recommend using three-way mirroring or dual parity, because they can tolerate two failures at once. For examples of what this means, see the [Examples](#examples) section below.
+   > Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they can tolerate two simultaneous failures. For examples of what this means, see the [Examples](#examples) section below.
 
 ### Minimum scale requirements
 
@@ -176,7 +176,7 @@ This table shows the storage efficiency of dual parity and local reconstruction 
 
 ## <a name="examples"></a>Examples
 
-Unless you have only two servers, we recommend using three-way mirroring or dual parity, because they offer better fault tolerance. Specifically, they ensure that all data remains safe and continuously accessible even when two [hardware ‘fault domains’](../../failover-clustering/fault-domains.md) – with Storage Spaces Direct, that means two servers - are affected by simultaneous failures.
+Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they offer better fault tolerance. Specifically, they ensure that all data remains safe and continuously accessible even when two fault domains – with Storage Spaces Direct, that means two servers - are affected by simultaneous failures.
 
 These six examples show what three-way mirroring and dual parity **can** tolerate. In every case, all volumes will stay online. (Make sure your cluster maintains quorum.)
 
