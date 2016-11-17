@@ -7,7 +7,7 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 manager: eldenc
-ms.date: 09/25/2016
+ms.date: 11/16/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct in Windows Server 2016
@@ -27,7 +27,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/simplicity-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Simplicity.</b> Go from industry-standard servers running Windows Server 2016 to your first Storage Spaces Direct cluster in under 15 minutes. For System Center users, deployment is just <a href="https://channel9.msdn.com/Blogs/hybrid-it-management/Demo-Creating-a-Storage-Spaces-Direct-Hyperconverged-Cluster-using-System-Center-2016-VMM">one checkbox</a>.
+			<b>Simplicity.</b> Go from industry-standard servers running Windows Server 2016 to your first Storage Spaces Direct cluster in under 15 minutes. For System Center users, deployment is just one checkbox.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -43,7 +43,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Fault Tolerance.</b> <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/fault-domains">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
+			<b>Fault Tolerance.</b> <a href="storage-spaces-fault-tolerance.md">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -59,7 +59,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Manageability.</b> Use <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-qos/storage-qos-overview">Storage QoS Controls</a> to keep overly busy VMs in check with minimum and maximum per-VM IOPS limits. The <a href="https://technet.microsoft.com/en-us/windows-server-docs/failover-clustering/health-service-overview">Health Service</a> provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
+			<b>Manageability.</b> Use <a href="../storage-qos/storage-qos-overview.md">Storage QoS Controls</a> to keep overly busy VMs in check with minimum and maximum per-VM IOPS limits. The <a href="../../failover-clustering/health-service-overview.md">Health Service</a> provides continuous built-in monitoring and alerting, and new APIs make it easy to collect rich, cluster-wide performance and capacity metrics.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -100,11 +100,11 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Software Storage Bus.** The Software Storage Bus is new in Storage Spaces Direct. It spans the cluster and establishes a software-defined storage fabric whereby all the servers can see all of each other’s local drives. You can think of it as replacing costly and restrictive Fibre Channel or Shared SAS cabling.
 
-**Storage Bus Layer Cache.** The [Software Storage Bus](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/software-storage-bus-overview) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
+**Storage Bus Layer Cache.** The [Software Storage Bus](software-storage-bus-overview.md) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
 **Storage Pool.** The collection of drives that will form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings.
 
-**Storage Spaces.** Storage Spaces provides fault tolerance to virtual "disks" using [mirroring, erasure coding, or both](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
+**Storage Spaces.** Storage Spaces provides fault tolerance to virtual "disks" using [mirroring, erasure coding, or both](storage-spaces-fault-tolerance.md). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
 
 **Resilient File System (ReFS).** ReFS is the premier filesystem purpose-built for virtualization. It includes dramatic accelerations for .vhdx file operations such as creation, expansion, and checkpoint merging, and built-in checksums to detect and correct bit errors. It also introduces real-time tiers that rotate data between so-called “hot” and “cold” storage tiers in real-time based on usage.
 
