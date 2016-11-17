@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # BranchCache Additional Resources
 
->Applies To: Windows Server&reg; 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 For more information about the technologies that are discussed in this guide, see the following resources:
 
