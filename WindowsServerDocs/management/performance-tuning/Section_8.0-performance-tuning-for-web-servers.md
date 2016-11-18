@@ -815,7 +815,7 @@ The use of Transport Layer Security (TLS) imposes additional CPU cost. The most 
 
 ### Internet Server Application Programming Interface (ISAPI)
 
-No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use. For more information, see [Other issues that affect IIS performance](#bkmk-iisother").
+No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use.
 
 ### Managed code tuning guidelines
 
@@ -853,10 +853,3 @@ Disabling the updates is effective when you are using large data sets (or many h
 
 **Caution**  
 Some applications, such as incremental backup utilities, rely on this update information, and they do not function correctly without it.
-
- 
-
-## <a href="" id="netsub"></a>Networking subsystem performance settings for IIS
-
-
-For networking subsystem performance settings, see [Performance Tuning for Network Subsystems](./Section-4.0_performance-tuning-for-network-subsystems.md).
