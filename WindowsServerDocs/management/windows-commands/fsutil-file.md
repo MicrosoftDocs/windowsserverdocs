@@ -51,7 +51,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 |queryallocranges|Queries the allocated ranges for a file on an NTFS volume. Useful for determining whether a file has sparse regions.|
 |offset=\<offset>|Specifies the start of the range that should be set to zeroes.|
 |length=\<length>|Specifies the length of the range (in bytes).|
-|queryextents|Queries extents of a file.|
+|queryextents|Queries extents for a file.|
 |/R|If <filename> is a reparse point, open it rather than its target.|
 |\<startingvcn>|Specifies first VCN to query. If omitted, start at VCN 0.|
 |\<numvcns>|Number of VCNs to query. If omitted or 0, query until EOF.|
