@@ -67,11 +67,11 @@ The default installation will set up a new Active Directory forest for HGS and c
 
 There are no technical requirements that prevent installing HGS in an existing forest, but there are operational requirements and security-related best practices. Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). Such forests are suitable and usually exhibit the following characteristics:
 
-- They have few admins 
+- They have few admins (separate from fabric admins)
 - They are not general-purpose in nature 
 - They have a low number of logons
 
-General purpose forests such as CORP forests are not suitable for use by the HGS. Because the HGS needs to be isolated from fabric administrators, fabric forests are unsuitable.
+General purpose forests such as production forests are not suitable for use by the HGS. Because the HGS needs to be isolated from fabric administrators, fabric forests are unsuitable.
 
 Depending on your deployment scenario, follow the steps to [install HGS in its own new forest](#install-hgs-in-its-own-new-forest) or [initialize HGS in an existing bastion forest](#initialize-hgs-in-an-existing-bastion-forest). 
 
