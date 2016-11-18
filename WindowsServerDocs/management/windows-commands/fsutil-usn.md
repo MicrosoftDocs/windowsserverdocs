@@ -38,7 +38,7 @@ fsutil usn [readjournal] [c= <chunk-size> s=<file-size-threshold>] <volumepath>
 |deletejournal|Deletes or disables an active USN change journal. **Caution:** Deleting the change journal impacts the File Replication Service (FRS) and the Indexing Service, because it would require these services to perform a complete (and time-consuming) scan of the volume. This in turn negatively impacts FRS SYSVOL replication and replication between DFS link alternates while the volume is being rescanned.|
 |/d|Disables an active USN change journal, and returns input/output (I/O) control while the change journal is being disabled.|
 |/n|Disables an active USN change journal and returns I/O control only after the change journal is disabled.|
-|enablerangetracking|Enable write range tracking for a volume.|
+|enablerangetracking|Enables USN write range tracking for a volume.|
 |c=\<chunk-size>|Specifies the chunk size to track on a volume.|
 |s=\<file-size-threshold>|Specifies the file size threshold for range tracking.|
 |enumdata|Enumerates and lists the change journal entries between two specified boundaries.|
