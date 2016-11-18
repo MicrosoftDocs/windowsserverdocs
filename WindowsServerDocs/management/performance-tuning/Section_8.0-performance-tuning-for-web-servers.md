@@ -190,44 +190,12 @@ This section describes the settings that affect caching behavior in IIS 10.0. T
 
 **system.webServer/caching**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Enabled</p></td>
-<td><p>Disables the user-mode IIS cache when set to <strong>False</strong>. When the cache hit rate is very small, you can disable the cache completely to avoid the overhead that is associated with the cache code path. Disabling the user-mode cache does not disable the kernel-mode cache.</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="even">
-<td><p>enableKernelCache</p></td>
-<td><p>Disables the kernel-mode cache when set to <strong>False</strong>.</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="odd">
-<td><p>maxCacheSize</p></td>
-<td><p>Limits the IIS user-mode cache size to the specified size in Megabytes. IIS adjusts the default depending on available memory. Choose the value carefully based on the size of the set of frequently accessed files versus the amount of RAM or the IIS process address space.</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>maxResponseSize</p></td>
-<td><p>Caches files up to the specified size. The actual value depends on the number and size of the largest files in the data set versus the available RAM. Caching large, frequently requested files can reduce CPU usage, disk access, and associated latencies.</p></td>
-<td><p>262144</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|Enabled|Disables the user-mode IIS cache when set to **False**. When the cache hit rate is very small, you can disable the cache completely to avoid the overhead that is associated with the cache code path. Disabling the user-mode cache does not disable the kernel-mode cache.|True|
+|enableKernelCache|Disables the kernel-mode cache when set to **False**.|True|
+|maxCacheSize|Limits the IIS user-mode cache size to the specified size in Megabytes. IIS adjusts the default depending on available memory. Choose the value carefully based on the size of the set of frequently accessed files versus the amount of RAM or the IIS process address space.|0|
+|maxResponseSize|Caches files up to the specified size. The actual value depends on the number and size of the largest files in the data set versus the available RAM. Caching large, frequently requested files can reduce CPU usage, disk access, and associated latencies.|262144|
 
 ### Compression behavior settings
 
@@ -237,86 +205,24 @@ To completely disable compression, remove StaticCompressionModule and DynamicCom
 
 **system.webServer/httpCompression**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>staticCompression-EnableCpuUsage</p>
-<p>staticCompression-DisableCpuUsage</p>
-<p>dynamicCompression-EnableCpuUsage</p>
-<p>dynamicCompression-DisableCpuUsage</p></td>
-<td><p>Enables or disables compression if the current percentage CPU usage goes above or below specified limits.</p>
-<p>Starting with IIS 7.0, compression is automatically disabled if steady-state CPU increases above the disable threshold. Compression is enabled if CPU drops below the enable threshold.</p></td>
-<td><p>50, 100, 50, and 90 respectively</p></td>
-</tr>
-<tr class="even">
-<td><p>directory</p></td>
-<td><p>Specifies the directory in which compressed versions of static files are temporarily stored and cached. Consider moving this directory off the system drive if it is accessed frequently.</p></td>
-<td><p>%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files</p></td>
-</tr>
-<tr class="odd">
-<td><p>doDiskSpaceLimiting</p></td>
-<td><p>Specifies whether a limit exists for how much disk space all compressed files can occupy. Compressed files are stored in the compression directory that is specified by the <strong>directory</strong> attribute.</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="even">
-<td><p>maxDiskSpaceUsage</p></td>
-<td><p>Specifies the number of bytes of disk space that compressed files can occupy in the compression directory.</p>
-<p>This setting might need to be increased if the total size of all compressed content is too large.</p></td>
-<td><p>100 MB</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|staticCompression-EnableCpuUsage<br><br>staticCompression-DisableCpuUsage<br><br>dynamicCompression-EnableCpuUsage<br><br>dynamicCompression-DisableCpuUsage|Enables or disables compression if the current percentage CPU usage goes above or below specified limits.<br><br>Starting with IIS 7.0, compression is automatically disabled if steady-state CPU increases above the disable threshold. Compression is enabled if CPU drops below the enable threshold.|50, 100, 50, and 90 respectively|
+|directory|Specifies the directory in which compressed versions of static files are temporarily stored and cached. Consider moving this directory off the system drive if it is accessed frequently.|%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files|
+|doDiskSpaceLimiting|Specifies whether a limit exists for how much disk space all compressed files can occupy. Compressed files are stored in the compression directory that is specified by the **directory** attribute.|True|
+|maxDiskSpaceUsage|Specifies the number of bytes of disk space that compressed files can occupy in the compression directory.<br><br>This setting might need to be increased if the total size of all compressed content is too large.|100 MB|
 
 **system.webServer/urlCompression**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>doStaticCompression</p></td>
-<td><p>Specifies whether static content is compressed.</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="even">
-<td><p>doDynamicCompression</p></td>
-<td><p>Specifies whether dynamic content is compressed.</p></td>
-<td><p>True</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|doStaticCompression|Specifies whether static content is compressed.|True|
+|doDynamicCompression|Specifies whether dynamic content is compressed.|True|
 
 **Note**  
 For servers running IIS 10.0 that have low average CPU usage, consider enabling compression for dynamic content, especially if responses are large. This should first be done in a test environment to assess the effect on the CPU usage from the baseline.
 
  
-
 ### Tuning the default document list
 
 The default document module handles HTTP requests for the root of a directory and translates them into requests for a specific file, such as Default.htm or Index.htm. On average, around 25 percent of all requests on the Internet go through the default document path. This varies significantly for individual sites. When an HTTP request does not specify a file name, the default document module searches the list of allowed default documents for each name in the file system. This can adversely affect performance, especially if reaching the content requires making a network round trip or touching a disk.
@@ -329,34 +235,10 @@ To disable default documents completely, remove DefaultDocumentModule from the l
 
 **system.webServer/defaultDocument**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>enabled</p></td>
-<td><p>Specifies that default documents are enabled.</p></td>
-<td><p>True</p></td>
-</tr>
-<tr class="even">
-<td><p>&lt;files&gt; element</p></td>
-<td><p>Specifies the file names that are configured as default documents.</p></td>
-<td><p>The default list is Default.htm, Default.asp, Index.htm, Index.html, Iisstart.htm, and Default.aspx.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|enabled|Specifies that default documents are enabled.|True|
+|&lt;files&gt; element|Specifies the file names that are configured as default documents.|The default list is Default.htm, Default.asp, Index.htm, Index.html, Iisstart.htm, and Default.aspx.|
 
 ### Central binary logging
 
@@ -366,60 +248,17 @@ You can enable central binary logging by setting the centralLogFileMode attribut
 
 **system.applicationHost/log**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>centralLogFileMode</p></td>
-<td><p>Specifies the logging mode for a server. Change this value to CentralBinary to enable central binary logging.</p></td>
-<td><p>Site</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|centralLogFileMode|Specifies the logging mode for a server. Change this value to CentralBinary to enable central binary logging.|Site|
 
 **system.applicationHost/log/centralBinaryLogFile**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>enabled</p></td>
-<td><p>Specifies whether central binary logging is enabled.</p></td>
-<td><p>False</p></td>
-</tr>
-<tr class="even">
-<td><p>directory</p></td>
-<td><p>Specifies the directory where log entries are written.</p></td>
-<td><p>%SystemDrive%\inetpub\logs\LogFiles</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|Default|
+|--- |--- |--- |
+|enabled|Specifies whether central binary logging is enabled.|False|
+|directory|Specifies the directory where log entries are written.|%SystemDrive%\inetpub\logs\LogFiles|
 
- 
 
 ### Application and site tunings
 
@@ -427,60 +266,16 @@ The following settings relate to application pool and site tunings.
 
 **system.applicationHost/applicationPools/applicationPoolDefaults**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>queueLength</p></td>
-<td><p>Indicates to HTTP.sys how many requests are queued for an application pool before future requests are rejected. When the value for this property is exceeded, IIS rejects subsequent requests with a 503 error.</p>
-<p>Consider increasing this for applications that communicate with high-latency back-end data stores if 503 errors are observed.</p></td>
-<td><p>1000</p></td>
-</tr>
-<tr class="even">
-<td><p>enable32BitAppOnWin64</p></td>
-<td><p>When True, enables a 32-bit application to run on a computer that has a 64-bit processor.</p>
-<p>Consider enabling 32-bit mode if memory consumption is a concern. Because pointer sizes and instruction sizes are smaller, 32-bit applications use less memory than 64-bit applications. The drawback to running 32-bit applications on a 64-bit computer is that user-mode address space is limited to 4 GB.</p></td>
-<td><p>False</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|queueLength|Indicates to HTTP.sys how many requests are queued for an application pool before future requests are rejected. When the value for this property is exceeded, IIS rejects subsequent requests with a 503 error.<br><br>Consider increasing this for applications that communicate with high-latency back-end data stores if 503 errors are observed.|1000|
+|enable32BitAppOnWin64|When True, enables a 32-bit application to run on a computer that has a 64-bit processor.<br><br>Consider enabling 32-bit mode if memory consumption is a concern. Because pointer sizes and instruction sizes are smaller, 32-bit applications use less memory than 64-bit applications. The drawback to running 32-bit applications on a 64-bit computer is that user-mode address space is limited to 4 GB.|False|
 
 **system.applicationHost/sites/VirtualDirectoryDefault**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>allowSubDirConfig</p></td>
-<td><p>Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IIS 10.0 can know that, unless <strong>/&lt;name&gt;.htm</strong> is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content.</p></td>
-<td><p>True</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|Default|
+|--- |--- |--- |
+|allowSubDirConfig|Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IIS 10.0 can know that, unless **/&lt;name&gt;.htm** is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content.|True|
 
 ### Managing IIS 10.0 modules
 
@@ -498,100 +293,25 @@ The following settings are used to configure the classic ASP template cache and 
 
 **system.webServer/asp/cache**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>diskTemplateCacheDirectory</p></td>
-<td><p>The name of the directory that ASP uses to store compiled templates when the in-memory cache overflows.</p>
-<p>Recommendation: Set to a directory that is not heavily used, for example, a drive that is not shared with the operating system, IIS log, or other frequently accessed content.</p></td>
-<td><p>%SystemDrive%\inetpub\temp\ASP Compiled Templates</p></td>
-</tr>
-<tr class="even">
-<td><p>maxDiskTemplateCacheFiles</p></td>
-<td><p>Specifies the maximum number of compiled ASP templates that can be cached on disk.</p>
-<p>Recommendation: Set to the maximum value of 0x7FFFFFFF.</p></td>
-<td><p>2000</p></td>
-</tr>
-<tr class="odd">
-<td><p>scriptFileCacheSize</p></td>
-<td><p>This attribute specifies the maximum number of compiled ASP templates that can be cached in memory.</p>
-<p>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many ASP templates as memory limits allow.</p></td>
-<td><p>500</p></td>
-</tr>
-<tr class="even">
-<td><p>scriptEngineCacheMax</p></td>
-<td><p>Specifies the maximum number of script engines that will keep cached in memory.</p>
-<p>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many script engines as the memory limit allows.</p></td>
-<td><p>250</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|diskTemplateCacheDirectory|The name of the directory that ASP uses to store compiled templates when the in-memory cache overflows.<br><br>Recommendation: Set to a directory that is not heavily used, for example, a drive that is not shared with the operating system, IIS log, or other frequently accessed content.|%SystemDrive%\inetpub\temp\ASP Compiled Templates|
+|maxDiskTemplateCacheFiles|Specifies the maximum number of compiled ASP templates that can be cached on disk.<br><br>Recommendation: Set to the maximum value of 0x7FFFFFFF.|2000|
+|scriptFileCacheSize|This attribute specifies the maximum number of compiled ASP templates that can be cached in memory.<br><br>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many ASP templates as memory limits allow.|500|
+|scriptEngineCacheMax|Specifies the maximum number of script engines that will keep cached in memory.<br><br>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many script engines as the memory limit allows.|250|
 
 **system.webServer/asp/limits**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>processorThreadMax</p></td>
-<td><p>Specifies the maximum number of worker threads per processor that ASP can create. Increase if the current setting is insufficient to handle the load, which can cause errors when it is serving requests or cause under-usage of CPU resources.</p></td>
-<td><p>25</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+|Attribute|Description|Default|
+|--- |--- |--- |
+|processorThreadMax|Specifies the maximum number of worker threads per processor that ASP can create. Increase if the current setting is insufficient to handle the load, which can cause errors when it is serving requests or cause under-usage of CPU resources.|25|
 
 **system.webServer/asp/comPlus**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>executeInMta</p></td>
-<td><p>Set to <strong>True</strong> if errors or failures are detected while IIS is serving ASP content. This can occur, for example, when hosting multiple isolated sites in which each site runs under its own worker process. Errors are typically reported from COM+ in the Event Viewer. This setting enables the multi-threaded apartment model in ASP.</p></td>
-<td><p>False</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|Default|
+|--- |--- |--- |
+|executeInMta|Set to **True** if errors or failures are detected while IIS is serving ASP content. This can occur, for example, when hosting multiple isolated sites in which each site runs under its own worker process. Errors are typically reported from COM+ in the Event Viewer. This setting enables the multi-threaded apartment model in ASP.|False|
 
- 
 
 ### ASP.NET concurrency setting
 
@@ -632,44 +352,13 @@ You can enable process recycling for a particular application by adding attribut
 
 **system.applicationHost/applicationPools/ApplicationPoolDefaults/recycling/periodicRestart**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>memory</p></td>
-<td><p>Enable process recycling if virtual memory consumption exceeds the specified limit in kilobytes. This is a useful setting for 32-bit computers that have a small, 2 GB address space. It can help avoid failed requests due to out-of-memory errors.</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>privateMemory</p></td>
-<td><p>Enable process recycling if private memory allocations exceed a specified limit in kilobytes.</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>requests</p></td>
-<td><p>Enable process recycling after a certain number of requests.</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>time</p></td>
-<td><p>Enable process recycling after a specified time period.</p></td>
-<td><p>29:00:00</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|Default|
+|--- |--- |--- |
+|memory|Enable process recycling if virtual memory consumption exceeds the specified limit in kilobytes. This is a useful setting for 32-bit computers that have a small, 2 GB address space. It can help avoid failed requests due to out-of-memory errors.|0|
+|privateMemory|Enable process recycling if private memory allocations exceed a specified limit in kilobytes.|0|
+|requests|Enable process recycling after a certain number of requests.|0|
+|time|Enable process recycling after a specified time period.|29:00:00|
 
- 
 
 ### Dynamic worker-process page-out tuning
 
@@ -692,96 +381,20 @@ Ideally, the sites that you will configure for suspension or termination are tho
 
 Keep in mind that once a specific user connects to the site, they will typically stay on it for at least a while, making additional requests, and so just counting daily requests may not accurately reflect the real traffic patterns. To get a more accurate reading, you can also use a tool, such as Microsoft Excel, to calculate the average time between requests. For example:
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p></p></td>
-<td><p>Request URL</p></td>
-<td><p>Request time</p></td>
-<td><p>Delta</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>/SourceSilverLight/Geosource.web/grosource.html</p></td>
-<td><p>10:01</p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>/SourceSilverLight/Geosource.web/sliverlight.js</p></td>
-<td><p>10:10</p></td>
-<td><p>0:09</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>/SourceSilverLight/Geosource.web/clientbin/geo/1.aspx</p></td>
-<td><p>10:11</p></td>
-<td><p>0:01</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>/lClientAccessPolicy.xml</p></td>
-<td><p>10:12</p></td>
-<td><p>0:01</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>/ SourceSilverLight/GeosourcewebService/Service.asmx</p></td>
-<td><p>10:23</p></td>
-<td><p>0:11</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>/ SourceSilverLight/Geosource.web/GeoSearchServer….</p></td>
-<td><p>11:50</p></td>
-<td><p>1:27</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>/rest/Services/CachedServices/Silverlight_load_la…</p></td>
-<td><p>12:50</p></td>
-<td><p>1:00</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>/rest/Services/CachedServices/Silverlight_basemap….</p></td>
-<td><p>12:51</p></td>
-<td><p>0:01</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>/rest/Services/DynamicService/ Silverlight_basemap….</p></td>
-<td><p>12:59</p></td>
-<td><p>0:08</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>/rest/Services/CachedServices/Ortho_2004_cache.as...</p></td>
-<td><p>13:40</p></td>
-<td><p>0:41</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>/rest/Services/CachedServices/Ortho_2005_cache.js</p></td>
-<td><p>13:40</p></td>
-<td><p>0:00</p></td>
-</tr>
-<tr class="odd">
-<td><p>12</p></td>
-<td><p>/rest/Services/CachedServices/OrthoBaseEngine.aspx</p></td>
-<td><p>13:41</p></td>
-<td><p>0:01</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+||Request URL|Request time|Delta|
+|--- |--- |--- |--- |
+|1|/SourceSilverLight/Geosource.web/grosource.html|10:01||
+|2|/SourceSilverLight/Geosource.web/sliverlight.js|10:10|0:09|
+|3|/SourceSilverLight/Geosource.web/clientbin/geo/1.aspx|10:11|0:01|
+|4|/lClientAccessPolicy.xml|10:12|0:01|
+|5|/ SourceSilverLight/GeosourcewebService/Service.asmx|10:23|0:11|
+|6|/ SourceSilverLight/Geosource.web/GeoSearchServer….|11:50|1:27|
+|7|/rest/Services/CachedServices/Silverlight_load_la…|12:50|1:00|
+|8|/rest/Services/CachedServices/Silverlight_basemap….|12:51|0:01|
+|9|/rest/Services/DynamicService/ Silverlight_basemap….|12:59|0:08|
+|10|/rest/Services/CachedServices/Ortho_2004_cache.as...|13:40|0:41|
+|11|/rest/Services/CachedServices/Ortho_2005_cache.js|13:40|0:00|
+|12|/rest/Services/CachedServices/OrthoBaseEngine.aspx|13:41|0:01|
 
 The hard part, though, is figuring out what setting to apply to make sense. In our case, the site gets a bunch of requests from users, and the table above shows that a total of 4 unique sessions occurred in a period of 4 hours. With the default settings for worker process suspension of the application pool, the site would be terminated after the default timeout of 20 minutes, which means each of these users would experience the site spin-up cycle. This makes it an ideal candidate for worker process suspension, because for most of the time, the site is idle, and so suspending it would conserve resources, and allow the users to reach the site almost instantly.
 
@@ -795,7 +408,6 @@ To configure a pre-fixed page file size, you need to calculate its ideal size, w
 When sites are suspended, they will consume approximately 6 MB each, so in our case, memory usage if all sites are suspended would be around 3 GB. In reality, though, you’re probably never going to have them all suspended at the same time.
 
  
-
 ### Transport Layer Security tuning parameters
 
 The use of Transport Layer Security (TLS) imposes additional CPU cost. The most expensive component of TLS is the cost of establishing a session establishment because it involves a full handshake. Reconnection, encryption, and decryption also add to the cost. For better TLS performance, do the following:
@@ -812,7 +424,6 @@ The use of Transport Layer Security (TLS) imposes additional CPU cost. The most 
 -   All components might not need to be encrypted. However, mixing plain HTTP and HTTPS might result in a pop-up warning that not all content on the page is secure.
 
  
-
 ### Internet Server Application Programming Interface (ISAPI)
 
 No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use. For more information, see [Other issues that affect IIS performance](#bkmk-iisother").
