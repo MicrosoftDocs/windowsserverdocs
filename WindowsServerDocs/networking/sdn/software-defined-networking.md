@@ -30,20 +30,15 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > - [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
 > - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)  
   
-This topic contains the following sections.  
-  
--   [Software Defined Networking Overview](#bkmk_sdn)  
-  
--   [Windows Server Technologies for Software Defined Networking](#bkmk_ws)  
-
-  
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
 
-Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and Windows Server Gateway are designed to be integral elements of your software defined networking infrastructure. While you can still use your existing physical switches, routers, and other hardware devices, you can achieve deeper integration between the virtual network and the physical network if these devices are designed for compatibility with software defined networking.  
+Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure. 
+
+While you can still use your existing physical switches, routers, and other hardware devices, you can achieve deeper integration between the virtual network and the physical network if these devices are designed for compatibility with software defined networking.  
   
-Software defined networking is possible because the network planes - the management, control, and data planes - are no longer bound to the network devices themselves, but are abstracted for use by other entities, such as datacenter management software like System Center.  
+SDN is possible because the network planes - the management, control, and data planes - are no longer bound to the network devices themselves, but are abstracted for use by other entities, such as datacenter management software like System Center 2016.  
   
-Software defined networking allows you to dynamically manage your datacenter network to provide an automated, centralized way to meet the requirements of your applications and workloads. Software defined networking provides the following capabilities.  
+SDN allows you to dynamically manage your datacenter network to provide an automated, centralized way to meet the requirements of your applications and workloads. Software defined networking provides the following capabilities.  
   
 -   The ability to abstract your applications and workloads from the underlying physical network, which is accomplished by virtualizing the network. Just as with server virtualization using Hyper-V, the abstractions are consistent and work with your applications and workloads in a non-disruptive manner. For example, software defined networking provides virtual abstractions for your physical network elements, such as IP addresses, switches, and load balancers.  
   
@@ -53,25 +48,7 @@ Software defined networking allows you to dynamically manage your datacenter net
   
 ## <a name="bkmk_ws"></a>Windows Server Technologies for Software Defined Networking  
 Windows Server includes the following software defined networking technologies.  
-  
--   [Network Controller](#bkmk_nc)  
-  
--   [Hyper-V Network Virtualization](#bkmk_hv)  
-  
--   [Hyper-V Virtual Switch](#bkmk_switch)
 
--   [Internal DNS  Service &#40;iDNS&#41;](#bkmk_idns)
-  
--   [Network Function Virtualization](#bkmk_nfv)  
-
--   [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](#bkmk_rdma)  
-  
--   [RAS Gateway for SDN](#bkmk_rras)  
-  
--   [Software Load Balancing &#40;SLB&#41;](#bkmk_slb)  
-  
- 
-  
 ### <a name="bkmk_nc"></a>Network Controller
 
 New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
@@ -118,7 +95,7 @@ For more information, see [Internal DNS Service &#40;iDNS&#41; for SDN](technolo
 
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
-The following NFV technologies are now available.  
+The following Network Function Virtualization technologies are available.  
   
 -   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. The north-south and east-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer. For more information, see [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/software-load-balancing-for-sdn.md).  
   
@@ -126,9 +103,9 @@ The following NFV technologies are now available.
   
     For more information, see [Datacenter Firewall Overview](../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).  
   
--   **RAS Gateway**. You can use gateways for bridging traffic between virtual networks and non-virtualized networks; specifically, you can deploy site-to-site VPN gateways, forwarding gateways, and Generic Routing Encapsulation (GRE) gateways. In addition, M+N redundancy of gateways is supported.  
+-   **RAS Gateway**. You can use gateways for bridging traffic between virtual networks and non-virtualized networks; specifically, you can deploy site-to-site VPN gateways, forwarding gateways, and Generic Routing Encapsulation (GRE) gateways. In addition, M+N redundancy of gateways is supported. For more information, see [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
   
-For more information, see [Network Function Virtualization](../sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).  
+For more information, see [Network Function Virtualization](technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
 ### <a name="bkmk_rdma"></a>Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)  
 In  Windows Server 2016, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET). This allows you to use fewer network adapters when you want to use RDMA and SET at the same time.  
@@ -147,9 +124,13 @@ RAS Gateway is a software-based, multitenant, Border Gateway Protocol (BGP) capa
   
 RAS Gateway provides gateway pools, M+N redundancy, multiple types of site-to-site VPN connections, and BGP Route Reflector to provide you with flexible design choices for your gateway infrastructure.  
   
-For more information, see [RAS Gateway for SDN](../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
+For more information, see [RAS Gateway for SDN](technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
   
 ### <a name="bkmk_slb"></a>Software Load Balancing (SLB)  
 Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in  Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
 For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md).
+
+### Windows Server Containers
+
+Windows Server Containers are a lightweight operating system virtualization method used to separate applications or services from other services that are running on the same container host. To enable this, each container has its own view of the operating system, processes, file system, registry, and IP addresses. With Windows Server 2016, you can now connect Windows Server containers to virtual networks. For more information, see [Windows Server Containers](technologies/containers/Container-networking-overview.md).
