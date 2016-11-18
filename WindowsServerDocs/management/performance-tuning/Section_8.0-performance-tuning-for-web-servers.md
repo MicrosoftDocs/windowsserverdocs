@@ -16,7 +16,7 @@ ms.date: 10/31/2016
 # Performance Tuning for Web Servers
 
 
-This topic describes performance tuning methods and recommendations for Windows Server 2012 R2 web servers.
+This topic describes performance tuning methods and recommendations for Windows Server 2016 web servers.
 
 **In this topic:**
 
@@ -24,7 +24,7 @@ This topic describes performance tuning methods and recommendations for Windows 
 
 -   [Operating system best practices](# os)
 
--   [Tuning IIS 8.5](#iis)
+-   [Tuning IIS 10.0](#iis)
 
 -   [NTFS file system setting](#filesystem)
 
@@ -37,7 +37,7 @@ It is important to select the proper hardware to satisfy the expected web load, 
 
 [Performance Tuning for Server Hardware](./Section_2.0-ServerHardwarePerf.md) provides recommendations for hardware to avoid the following performance constraints:
 
--   Slow CPUs offer limited processing power for CPU intensive workloads such as ASP, ASP.NET, and SSL scenarios.
+-   Slow CPUs offer limited processing power for CPU intensive workloads such as ASP, ASP.NET, and TLS scenarios.
 
 -   A small L2 or L3/LLC processor cache might adversely affect performance.
 
@@ -58,18 +58,18 @@ To reduce contention for system resources, install Microsoft SQL Server and IIS 
 
 Avoid installing non-essential services and applications. In some cases, it might be worthwhile to disable services that are not required on a system.
 
-## <a href="" id="iis"></a>Tuning IIS 8.5
+## <a href="" id="iis"></a>Tuning IIS 10.0
 
 
-Internet Information Services (IIS) 8.5 is included with Windows Server 2012 R2. It uses a process model similar to that of IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
+Internet Information Services (IIS) 10.0 is included with Windows Server 2016. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
 
 HTTP.sys is responsible for connection management and request handling. The request can be served from the HTTP.sys cache or passed to a worker process for further handling. Multiple worker processes can be configured, which provides isolation at a reduced cost. For more info on how request handling works, see the following figure:
 
-![request handling in iis 8.5](../media/performance-tuning/perftune-guide-iis-request-handling.png)
+![request handling in iis 10.0](../media/performance-tuning/perftune-guide-iis-request-handling.png)
 
-HTTP.sys includes a response cache. When a request matches an entry in the response cache, HTTP.sys sends the cache response directly from kernel mode. Some web application platforms, such as ASP.NET, provide mechanisms to enable any dynamic content to be cached in the kernel-mode cache. The static file handler in IIS 8.5 automatically caches frequently requested files in http.sys.
+HTTP.sys includes a response cache. When a request matches an entry in the response cache, HTTP.sys sends the cache response directly from kernel mode. Some web application platforms, such as ASP.NET, provide mechanisms to enable any dynamic content to be cached in the kernel-mode cache. The static file handler in IIS 10.0 automatically caches frequently requested files in http.sys.
 
-Because a web server has kernel-mode and user-mode components, both components must be tuned for optimal performance. Therefore, tuning IIS 8.5 for a specific workload includes configuring the following:
+Because a web server has kernel-mode and user-mode components, both components must be tuned for optimal performance. Therefore, tuning IIS 10.0 for a specific workload includes configuring the following:
 
 -   HTTP.sys and the associated kernel-mode cache
 
@@ -77,11 +77,11 @@ Because a web server has kernel-mode and user-mode components, both components m
 
 -   Certain tuning parameters that affect performance
 
-The following sections discuss how to configure the kernel-mode and user-mode aspects of IIS 8.5.
+The following sections discuss how to configure the kernel-mode and user-mode aspects of IIS 10.0.
 
 ### Kernel-mode settings
 
-Performance-related http.sys settings fall into two broad categories: cache management and connection and request management. All registry settings are stored under the following registry entry:
+Performance-related HTTP.sys settings fall into two broad categories: cache management and connection and request management. All registry settings are stored under the following registry entry:
 
 ``` syntax
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Http\Parameters
@@ -94,9 +94,9 @@ If the HTTP service is already running, you must restart it for the changes to t
 
 ### Cache management settings
 
-One benefit that HTTP.sys provides is a kernel-mode cache. If the response is in the kernel-mode cache, you can satisfy an HTTP request entirely from the kernel mode, which significantly lowers the CPU cost of handling the request. However, the kernel-mode cache of IIS 8.5 is based on physical memory, and the cost of an entry is the memory that it occupies.
+One benefit that HTTP.sys provides is a kernel-mode cache. If the response is in the kernel-mode cache, you can satisfy an HTTP request entirely from the kernel mode, which significantly lowers the CPU cost of handling the request. However, the kernel-mode cache of IIS 10.0 is based on physical memory, and the cost of an entry is the memory that it occupies.
 
-An entry in the cache is helpful only when it is used. However, the entry always consumes physical memory, whether or not the entry is being used. You must evaluate the usefulness of an item in the cache (the savings from being able to serve it from the cache) and its cost (the physical memory occupied) over the lifetime of the entry by considering the available resources (CPU and physical memory) and the workload requirements. HTTP.sys tries to keep only useful, actively accessed items in the cache, but you can increase the performance of the web server by tuning the http.sys cache for particular workloads.
+An entry in the cache is helpful only when it is used. However, the entry always consumes physical memory, whether or not the entry is being used. You must evaluate the usefulness of an item in the cache (the savings from being able to serve it from the cache) and its cost (the physical memory occupied) over the lifetime of the entry by considering the available resources (CPU and physical memory) and the workload requirements. HTTP.sys tries to keep only useful, actively accessed items in the cache, but you can increase the performance of the web server by tuning the HTTP.sys cache for particular workloads.
 
 The following are some useful settings for the HTTP.sys kernel-mode cache:
 
@@ -123,7 +123,7 @@ The following are some useful settings for the HTTP.sys kernel-mode cache:
 
 ### Request and connection management settings
 
-In Windows Server 2012 R2, http.sys manages connections automatically. The following registry settings are no longer used:
+In Windows Server 2016, HTTP.sys manages connections automatically. The following registry settings are no longer used:
 
 -   **MaxConnections**
 
@@ -161,17 +161,32 @@ In Windows Server 2012 R2, http.sys manages connections automatically. The foll
     HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Http\Parameters\InternalRequestLookasideDepth
     ```
 
+
 ### User-mode settings
 
-The settings in this section affect the IIS 8.5 worker process behavior. Most of these settings can be found in the following XML configuration file:
+The settings in this section affect the IIS 10.0 worker process behavior. Most of these settings can be found in the following XML configuration file:
 
 %SystemRoot%\\system32\\inetsrv\\config\\applicationHost.config
 
-Use Appcmd.exe or the IIS 8.5 Management Console to change them. Most settings are automatically detected, and they do not require a restart of the IIS 8.5 worker processes or web application server. For more info about the applicationHost.config file, see [Introduction to ApplicationHost.config](http://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig).
+Use Appcmd.exe, the IIS 10.0 Management Console, the WebAdministration or IISAdministration PowerShell Cmdlets to change them. Most settings are automatically detected, and they do not require a restart of the IIS 10.0 worker processes or web application server. For more info about the applicationHost.config file, see [Introduction to ApplicationHost.config](http://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig).
+
+
+### Ideal CPU setting for NUMA hardware
+
+Starting from Windows 2016, IIS 10.0 supports automatic ideal CPU assignment for its thread pool threads to enhance the performance and scalability on NUMA hardware. This feature is enabled by default and can be configured through the following registry key:
+
+``` syntax
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadPoolUseIdealCpu
+```
+
+With this feature enabled, IIS thread manager makes its best effort to evenly distribute IIS thread pool threads across all CPUs in all NUMA nodes based on their current loads. In general, it is recommended to keep this default setting unchanged for NUMA hardware.
+
+**Note**  
+The ideal CPU setting is different from the worker process NUMA node assignment settings (numaNodeAssignment and numaNodeAffinityMode) introduced in [CPU Settings for an Application Pool](https://www.iis.net/configreference/system.applicationhost/applicationpools/add/cpu). The ideal CPU setting affects how IIS distributes its thread pool threads, while the worker process NUMA node assignment settings determine on which NUMA node a worker process starts.
 
 ### User-mode cache behavior settings
 
-This section describes the settings that affect caching behavior in IIS 8.5. The user-mode cache is implemented as a module that listens to the global caching events that are raised by the integrated pipeline. To completely disable the user-mode cache, remove the FileCacheModule (cachfile.dll) module from the list of installed modules in the system.webServer/globalModules configuration section in applicationHost.config.
+This section describes the settings that affect caching behavior in IIS 10.0. The user-mode cache is implemented as a module that listens to the global caching events that are raised by the integrated pipeline. To completely disable the user-mode cache, remove the FileCacheModule (cachfile.dll) module from the list of installed modules in the system.webServer/globalModules configuration section in applicationHost.config.
 
 **system.webServer/caching**
 
@@ -216,7 +231,7 @@ This section describes the settings that affect caching behavior in IIS 8.5. Th
 
 ### Compression behavior settings
 
-IIS starting from 7.0 compresses static content by default. Also, compression of dynamic content is enabled by default when the DynamicCompressionModule is installed. Compression reduces bandwidth usage but increases CPU usage. Compressed content is cached in the kernel-mode cache if possible. IIS 8.5 lets compression be controlled independently for static and dynamic content. Static content typically refers to content that does not change, such as GIF or HTM files. Dynamic content is typically generated by scripts or code on the server, that is, ASP.NET pages. You can customize the classification of any particular extension as static or dynamic.
+IIS starting from 7.0 compresses static content by default. Also, compression of dynamic content is enabled by default when the DynamicCompressionModule is installed. Compression reduces bandwidth usage but increases CPU usage. Compressed content is cached in the kernel-mode cache if possible. Starting from 8.5, IIS lets compression be controlled independently for static and dynamic content. Static content typically refers to content that does not change, such as GIF or HTM files. Dynamic content is typically generated by scripts or code on the server, that is, ASP.NET pages. You can customize the classification of any particular extension as static or dynamic.
 
 To completely disable compression, remove StaticCompressionModule and DynamicCompressionModule from the list of modules in the system.webServer/globalModules section in applicationHost.config.
 
@@ -298,7 +313,7 @@ To completely disable compression, remove StaticCompressionModule and DynamicCom
  
 
 **Note**  
-For servers running IIS 8.5 that have low average CPU usage, consider enabling compression for dynamic content, especially if responses are large. This should first be done in a test environment to assess the effect on the CPU usage from the baseline.
+For servers running IIS 10.0 that have low average CPU usage, consider enabling compression for dynamic content, especially if responses are large. This should first be done in a test environment to assess the effect on the CPU usage from the baseline.
 
  
 
@@ -345,7 +360,7 @@ To disable default documents completely, remove DefaultDocumentModule from the l
 
 ### Central binary logging
 
-Binary IIS logging reduces CPU usage, disk I/O, and disk space usage. Central binary logging is directed to a single file in binary format, regardless of the number of hosted sites. Parsing binary-format logs requires a post-processing tool.
+When the server session has numerous URL groups under it, the process of creating hundreds of formatted log files for individual URL groups and writing the log data to a disk can quickly consume valuable CPU and memory resources, thereby creating performance and scalability issues. Centralized binary logging minimizes the amount of system resources that are used for logging, while at the same time providing detailed log data for organizations that require it. Parsing binary-format logs requires a post-processing tool.
 
 You can enable central binary logging by setting the centralLogFileMode attribute to CentralBinary and setting the **enabled** attribute to **True**. Consider moving the location of the central log file off the system partition and onto a dedicated logging drive to avoid contention between system activities and logging activities.
 
@@ -461,17 +476,15 @@ The following settings relate to application pool and site tunings.
 <tbody>
 <tr class="odd">
 <td><p>allowSubDirConfig</p></td>
-<td><p>Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IIS 8.0 can know that, unless <strong>/&lt;name&gt;.htm</strong> is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content.</p></td>
+<td><p>Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IIS 10.0 can know that, unless <strong>/&lt;name&gt;.htm</strong> is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content.</p></td>
 <td><p>True</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+### Managing IIS 10.0 modules
 
-### Managing IIS 8.5 modules
-
-IIS 8.5 has been factored into multiple, user-extensible modules to support a modular structure. This factorization has a small cost. For each module the integrated pipeline must call the module for every event that is relevant to the module. This happens regardless of whether the module must do any work. You can conserve CPU cycles and memory by removing all modules that are not relevant to a particular website.
+IIS 10.0 has been factored into multiple, user-extensible modules to support a modular structure. This factorization has a small cost. For each module the integrated pipeline must call the module for every event that is relevant to the module. This happens regardless of whether the module must do any work. You can conserve CPU cycles and memory by removing all modules that are not relevant to a particular website.
 
 A web server that is tuned for simple static files might include only the following five modules: UriCacheModule, HttpCacheModule, StaticFileModule, AnonymousAuthenticationModule, and HttpLoggingModule.
 
@@ -479,7 +492,9 @@ To remove modules from applicationHost.config, remove all references to the modu
 
 ### Classic ASP settings
 
-The following settings apply only to classic ASP pages and do not affect ASP.NET settings. For ASP.NET performance recommendations, see [10 Tips for Writing High-Performance Web Applications](http://msdn.microsoft.com/magazine/cc163854.aspx).
+The major cost of processing a classic ASP request includes initializing a script engine, compiling the requested ASP script into an ASP template, and executing the template on the script engine. While the template execution cost depends on the complexity of the requested ASP script, IIS classic ASP module can cache script engines in memory and cache templates in both memory and disk (only if in-memory template cache overflows) to boost performance in CPU-bound scenarios.
+
+The following settings are used to configure the classic ASP template cache and script engine cache, and they do not affect ASP.NET settings.
 
 **system.webServer/asp/cache**
 
@@ -505,20 +520,20 @@ The following settings apply only to classic ASP pages and do not affect ASP.NET
 </tr>
 <tr class="even">
 <td><p>maxDiskTemplateCacheFiles</p></td>
-<td><p>Specifies the maximum number of compiled ASP templates that can be stored.</p>
+<td><p>Specifies the maximum number of compiled ASP templates that can be cached on disk.</p>
 <p>Recommendation: Set to the maximum value of 0x7FFFFFFF.</p></td>
 <td><p>2000</p></td>
 </tr>
 <tr class="odd">
 <td><p>scriptFileCacheSize</p></td>
-<td><p>This attribute specifies the number of precompiled script files to cache.</p>
-<p>Recommendation: Set to as many ASP templates as memory limits allow.</p></td>
+<td><p>This attribute specifies the maximum number of compiled ASP templates that can be cached in memory.</p>
+<p>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many ASP templates as memory limits allow.</p></td>
 <td><p>500</p></td>
 </tr>
 <tr class="even">
 <td><p>scriptEngineCacheMax</p></td>
-<td><p>Specifies the maximum number of scripting engines that ASP pages will keep cached in memory.</p>
-<p>Recommendation: Set to as many script engines as the memory limit allows.</p></td>
+<td><p>Specifies the maximum number of script engines that will keep cached in memory.</p>
+<p>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many script engines as the memory limit allows.</p></td>
 <td><p>250</p></td>
 </tr>
 </tbody>
@@ -580,21 +595,38 @@ The following settings apply only to classic ASP pages and do not affect ASP.NET
 
 ### ASP.NET concurrency setting
 
-By default, ASP.NET limits request concurrency to reduce steady-state memory consumption on the server. High concurrency applications might need to adjust some settings to improve overall performance. These settings are stored under the following registry setting:
+#### ASP.NET 3.5
+By default, ASP.NET limits request concurrency to reduce steady-state memory consumption on the server. High concurrency applications might need to adjust some settings to improve overall performance. You can change this setting in aspnet.config file:
 
 ``` syntax
-HKEY_LOCAL_MACHINE\Software\Microsoft\ASP.NET\4.0.30319.0\Parameters
+<system.web>
+  <applicationPool maxConcurrentRequestsPerCPU=”5000″/>
+</system.web>
 ```
 
 The following setting is useful to fully use resources on a system:
 
--   **MaxConcurrentRequestPerCpu** Default value: 5000
+-   **maxConcurrentRequestPerCpu** Default value: 5000
 
     This setting limits the maximum number of concurrently executing ASP.NET requests on a system. The default value is conservative to reduce memory consumption of ASP.NET applications. Consider increasing this limit on systems that run applications that perform long, synchronous I/O operations. Otherwise, users can experience high latency because of queuing or request failures due to exceeding queue limits under a high load when the default setting is used.
 
+#### ASP.NET 4.6
+Besides the maxConcurrentRequestPerCpu setting, ASP.NET 4.7 also provides settings to improve the performance in the applications which heavily rely on asynchronous operation. The setting can be changed in aspnet.config file.
+
+``` syntax
+<system.web>
+  <applicationPool percentCpuLimit=”90″ percentCpuLimitMinActiveRequestPerCpu=”100”/>
+</system.web>
+```
+
+-   **percentCpuLimit** Default value: 90
+Asynchronous request has some scalability issues when a huge load (beyond the hardware capabilities) is put on such scenario. The problem is due to the nature of allocation on asynchronous scenarios. In these conditions, allocation will happen when the asynchronous operation starts, and it will be consumed when it completes. By that time, it’s very possible the objects have been moved to generation 1 or 2 by GC. When this happens, increasing the load will show increase on request per second (rps) until a point. Once we pass that point, the time spent in GC will start to become a problem and the rps will start to dip, having a negative scaling effect. To fix the problem, when the cpu usage exceeds percentCpuLimit setting, requests will be sent to the ASP.NET native queue.
+-   **percentCpuLimitMinActiveRequestPerCpu** Default value: 100
+CPU throttling(percentCpuLimit setting) is not based on number of requests but on how expensive they are. As a result, there could be just a few CPU-intensive requests causing a backup in the native queue with no way to empty it aside from incoming requests. To solve this problme, percentCpuLimitMinActiveRequestPerCpu can be used to ensure a minimum number of requests are being served before throttling kicks in.
+
 ### Worker process and recycling options
 
-You can use the IIS Administrator user interface to configure options for recycling IIS worker processes and provide practical solutions to acute situations or events without requiring intervention or resetting a service or computer. Such situations and events include memory leaks, increasing memory load, or unresponsive or idle worker processes. Under ordinary conditions, recycling options might not be needed and recycling can be turned off or the system can be configured to recycle very infrequently.
+You can configure options for recycling IIS worker processes and provide practical solutions to acute situations or events without requiring intervention or resetting a service or computer. Such situations and events include memory leaks, increasing memory load, or unresponsive or idle worker processes. Under ordinary conditions, recycling options might not be needed and recycling can be turned off or the system can be configured to recycle very infrequently.
 
 You can enable process recycling for a particular application by adding attributes to the **recycling/periodicRestart** element. The recycle event can be triggered by several events including memory usage, a fixed number of requests, and a fixed time period. When a worker process is recycled, the queued and executing requests are drained, and a new process is simultaneously started to service new requests. The **recycling/periodicRestart** element is per-application, which means that each attribute in the following table is partitioned on a per-application basis.
 
@@ -641,11 +673,9 @@ You can enable process recycling for a particular application by adding attribut
 
 ### Dynamic worker-process page-out tuning
 
-Starting in Windows Server 2012 R2, IIS now offers the option of configuring sites to suspend after they have been idle for a while (in addition to the option of terminate, which existed since IIS 7).
+Starting in Windows Server 2012 R2, IIS offers the option of configuring worker process to suspend after they have been idle for a while (in addition to the option of terminate, which existed since IIS 7).
 
-Let’s have a look at fine-tuning the settings for optimal performance.
-
-The main purpose of both the WP Page-out and WP Termination features is to conserve memory utilization on the server, since a site can consume a lot of memory even if it’s just sitting there, listening. Depending on the technology used on the site (static content vs ASP.NET vs other frameworks), the memory used can be anywhere from about 10 MB to hundreds of MBs, and this means that if your server is configured with many sites, figuring out the most effective settings for your sites can dramatically improve performance of both active and suspended sites.
+The main purpose of both the idle worker process page-out and idle worker process termination features is to conserve memory utilization on the server, since a site can consume a lot of memory even if it’s just sitting there, listening. Depending on the technology used on the site (static content vs ASP.NET vs other frameworks), the memory used can be anywhere from about 10 MB to hundreds of MBs, and this means that if your server is configured with many sites, figuring out the most effective settings for your sites can dramatically improve performance of both active and suspended sites.
 
 Before we go into specifics, we must keep in mind that if there are no memory constraints, then it’s probably best to simply set the sites to never suspend or terminate. After all, there’s little value in terminating a worker process if it’s the only one on the machine.
 
@@ -654,9 +684,9 @@ In case the site runs unstable code, such as code with a memory leak, or otherwi
 
  
 
-Another factor to consider is that if the site does use a lot of memory, then the suspension process itself takes a toll, because the computer has to write the data used by the Worker Process to disk. If the WP is using a large chunk of memory, then suspending it might be more expensive than the cost of having to wait for it to start back up.
+Another factor to consider is that if the site does use a lot of memory, then the suspension process itself takes a toll, because the computer has to write the data used by the worker process to disk. If the worker process is using a large chunk of memory, then suspending it might be more expensive than the cost of having to wait for it to start back up.
 
-To make the best of the site suspension feature, you need to review your sites, and decide which should be suspended, which should be terminated, and which should be active indefinitely. For each action and each site, you need to figure out the ideal time-out period.
+To make the best of the worker process suspension feature, you need to review your sites in each application pool, and decide which should be suspended, which should be terminated, and which should be active indefinitely. For each action and each site, you need to figure out the ideal time-out period.
 
 Ideally, the sites that you will configure for suspension or termination are those that have visitors every day, but not enough to warrant keeping it active all the time. These are usually sites with around 20 unique visitors a day or less. You can analyze the traffic patterns using the site’s log files and calculate the average daily traffic.
 
@@ -753,24 +783,24 @@ Keep in mind that once a specific user connects to the site, they will typically
 
  
 
-The hard part, though, is figuring out what setting to apply to make sense. In our case, the site gets a bunch of requests from users, and the table above shows that a total of 4 unique sessions occurred in a period of 4 hours. With the default settings for site suspension, the site would be terminated after the default timeout of 20 minutes, which means each of these users would experience the site spin-up cycle. This makes it an ideal candidate for site suspension, because for most of the time, the site is idle, and so suspending it would conserve resources, and allow the users to reach the site almost instantly.
+The hard part, though, is figuring out what setting to apply to make sense. In our case, the site gets a bunch of requests from users, and the table above shows that a total of 4 unique sessions occurred in a period of 4 hours. With the default settings for worker process suspension of the application pool, the site would be terminated after the default timeout of 20 minutes, which means each of these users would experience the site spin-up cycle. This makes it an ideal candidate for worker process suspension, because for most of the time, the site is idle, and so suspending it would conserve resources, and allow the users to reach the site almost instantly.
 
 A final, and very important note about this is that disk performance is crucial for this feature. Because the suspension and wake-up process involve writing and reading large amount of data to the hard drive, we strongly recommend using a fast disk for this. Solid State Drives (SSDs) are ideal and highly recommended for this, and you should make sure that the Windows page file is stored on it (if the operating system itself is not installed on the SSD, configure the operating system to move the page file to it).
 
 Whether you use an SSD or not, we also recommend fixing the size of the page file to accommodate writing the page-out data to it without file-resizing. Page-file resizing might happen when the operating system needs to store data in the page file, because by default, Windows is configured to automatically adjust its size based on need. By setting the size to a fixed one, you can prevent resizing and improve performance a lot.
 
-To configure a pre-fixed page file size, you need to calculate its ideal size, which depends on how many sites you will be suspending, and how much memory they consume. If the average is 200 MB for an active worker process (W3WP) and you have 500 sites on the servers that will be suspending, then the page file should be at least (200 \* 500) MB over the base size of the page file (so base + 100 GB in our example).
+To configure a pre-fixed page file size, you need to calculate its ideal size, which depends on how many sites you will be suspending, and how much memory they consume. If the average is 200 MB for an active worker process and you have 500 sites on the servers that will be suspending, then the page file should be at least (200 \* 500) MB over the base size of the page file (so base + 100 GB in our example).
 
 **Note**  
 When sites are suspended, they will consume approximately 6 MB each, so in our case, memory usage if all sites are suspended would be around 3 GB. In reality, though, you’re probably never going to have them all suspended at the same time.
 
  
 
-### Secure Sockets Layer tuning parameters
+### Transport Layer Security tuning parameters
 
-The use of SSL imposes additional CPU cost. The most expensive component of SSL is the cost of establishing a session establishment because it involves a full handshake. Reconnection, encryption, and decryption also add to the cost. For better SSL performance, do the following:
+The use of Transport Layer Security (TLS) imposes additional CPU cost. The most expensive component of TLS is the cost of establishing a session establishment because it involves a full handshake. Reconnection, encryption, and decryption also add to the cost. For better TLS performance, do the following:
 
--   Enable HTTP keep-alives for SSL sessions. This eliminates the session establishment costs.
+-   Enable HTTP keep-alives for TLS sessions. This eliminates the session establishment costs.
 
 -   Reuse sessions when appropriate, especially with non-keep-alive traffic.
 
@@ -785,19 +815,22 @@ The use of SSL imposes additional CPU cost. The most expensive component of SSL 
 
 ### Internet Server Application Programming Interface (ISAPI)
 
-No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use.
+No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use. For more information, see [Other issues that affect IIS performance](#bkmk-iisother").
 
 ### Managed code tuning guidelines
 
-The integrated pipeline model in IIS 8.5 enables a high degree of flexibility and extensibility. Custom modules that are implemented in native or managed code can be inserted into the pipeline, or they can replace existing modules. Although this extensibility model offers convenience and simplicity, you should be careful before you insert new managed modules that hook into global events. Adding a global managed module means that all requests, including static file requests, must touch managed code. Custom modules are susceptible to events such as garbage collection. In addition, custom modules add significant CPU cost due to marshaling data between native and managed code. If possible, you should implement global modules in native code.
+The integrated pipeline model in IIS 10.0 enables a high degree of flexibility and extensibility. Custom modules that are implemented in native or managed code can be inserted into the pipeline, or they can replace existing modules. Although this extensibility model offers convenience and simplicity, you should be careful before you insert new managed modules that hook into global events. Adding a global managed module means that all requests, including static file requests, must touch managed code. Custom modules are susceptible to events such as garbage collection. In addition, custom modules add significant CPU cost due to marshaling data between native and managed code. If possible, you should set preCondition to managedHandler for managed module.
 
-Before you deploy an ASP.NET website, make sure that you compile all scripts. You can do this by calling one .NET script in each directory. After the compilation is complete, you should restart IIS. You should also recompile the scripts after you make changes to machine.config, web.config, or any .aspx scripts.
+To get better cold startup performance, make sure that you precompile the ASP.NET web site or leverage IIS Application Initialization feature to warm up the application.
 
 If session state is not needed, make sure that you turn it off for each page.
 
+If there are many I/O bound operations, try to use asynchronous version of relevant APIs which will give you much better scalability.
+
+Also using Output Cache properly will also boost the performance of your web site.
+
 When you run multiple hosts that contain ASP.NET scripts in isolated mode (one application pool per site), monitor the memory usage. Make sure that the server has enough RAM for the expected number of concurrently running application pools. Consider using multiple application domains instead of multiple isolated processes.
 
-For ASP.NET performance recommendations, see [10 Tips for Writing High-Performance Web Applications](http://msdn.microsoft.com/magazine/cc163854.aspx).
 
 ### <a href="" id="bkmk-iisother"></a>Other issues that affect IIS performance
 
@@ -809,12 +842,12 @@ The following issues can affect IIS performance:
 
 -   Common Gateway Interface (CGI) requests
 
-    For performance reasons, the use of CGI applications to serve requests is not recommended with IIS. Frequently creating and deleting CGI processes involves significant overhead. Better alternatives include using ISAPI application scripts and ASP or ASP.NET scripts. Isolation is available for each of these options.
+    For performance reasons, the use of CGI applications to serve requests is not recommended with IIS. Frequently creating and deleting CGI processes involves significant overhead. Better alternatives include using FastCGI, ISAPI application scripts and ASP or ASP.NET scripts. Isolation is available for each of these options.
 
 ## <a href="" id="filesystem"></a>NTFS file system setting
 
 
-The system-global switch **NtfsDisableLastAccessUpdate** (REG\_DWORD) 1 is located under **HKLM\\System\\CurrentControlSet\\Control\\FileSystem** and is set by default to 1. This switch reduces disk I/O load and latencies by disabling date and time stamp updating for the last file or directory access. Clean installations of Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 enable this setting by default, and you do not need to adjust it. Earlier versions of Windows did not set this key. If your server is running an earlier version of Windows, or it was upgraded to Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, you should enable this setting.
+The system-global switch **NtfsDisableLastAccessUpdate** (REG\_DWORD) 1 is located under **HKLM\\System\\CurrentControlSet\\Control\\FileSystem** and is set by default to 1. This switch reduces disk I/O load and latencies by disabling date and time stamp updating for the last file or directory access. Clean installations of Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 enable this setting by default, and you do not need to adjust it. Earlier versions of Windows did not set this key. If your server is running an earlier version of Windows, or it was upgraded to Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, you should enable this setting.
 
 Disabling the updates is effective when you are using large data sets (or many hosts) that contain thousands of directories. We recommend that you use IIS logging instead if you maintain this information only for Web administration.
 
@@ -826,4 +859,4 @@ Some applications, such as incremental backup utilities, rely on this update inf
 ## <a href="" id="netsub"></a>Networking subsystem performance settings for IIS
 
 
-For networking subsystem performance settings, see [Performance Tuning for Network Subsystems](../../networking/technologies/network-subsystem/net-sub-performance-top.md).
+For networking subsystem performance settings, see [Performance Tuning for Network Subsystems](./Section-4.0_performance-tuning-for-network-subsystems.md).
