@@ -101,25 +101,6 @@ If you need to achieve the lowest latency, you should request a BIOS version fro
 
  You can performance tune TCP using the following items.
 
-###  <a name="bkmk_tcpreceive"></a> TCP Receive Window Auto-Tuning
-
-Prior to Windows Server 2008, the network stack used a fixed-size receive-side window that limited the overall potential throughput for connections
-
-One of the most significant changes to the TCP stack is TCP receive window auto-tuning. You can calculate the total throughput of a single connection when you use this fixed size default as:
-
-**Total achievable throughput in bytes = TCP window \* (1 / connection latency)**
-
-For example, the total achievable throughput is only 51 Mbps on a 1 GB connection with 10 ms latency – which is a reasonable value for a large corporate network infrastructure.
-
- With auto-tuning, however, the receive-side window is adjustable, and it can grow to meet the demands of the sender. It is entirely possible for a connection to achieve the full line rate of a 1 GB connection. Network usage scenarios that might have been limited in the past by the total achievable throughput of TCP connections can now fully use the network.
-
-###  <a name="bkmk_wfp"></a> Windows Filtering Platform
-
-The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
-
->[!NOTE]
->A poorly written WFP filter can significantly decrease a server’s networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](http://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
-
 ###  <a name="bkmk_tcp_params"></a>  TCP Receive Window Auto-Tuning
 
 Prior to Windows Server 2008, the network stack used a fixed-size receive-side window that limited the overall potential throughput for connections. One of the most significant changes to the TCP stack is TCP receive window auto-tuning. 
@@ -147,6 +128,15 @@ All of these settings had the following registry location:
 - NumTcbTablePartitions  
 
 - MaxHashTableSize  
+
+
+
+###  <a name="bkmk_wfp"></a> Windows Filtering Platform
+
+The Windows Filtering Platform (WFP) that was introduced in Windows Vista and Windows Server 2008 provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
+
+>[!NOTE]
+>A poorly written WFP filter can significantly decrease a server’s networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](http://msdn.microsoft.com/windows/hardware/gg463267.aspx) in the Windows Dev Center.
 
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).
