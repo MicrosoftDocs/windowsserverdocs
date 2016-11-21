@@ -115,7 +115,7 @@ Any user or process that accesses the system as a batch job (or through the batc
 ## <a name="BKMK_CreatorGroup"></a>Creator Group
 The person who created the file or the directory is a member of this special identity group. Windows Server operating systems use this identity to automatically grant access permissions to the creator of a file or directory.
 
-A placeholder security identifier (SID) is created in an inheritable access control entry (ACE). When the ACE is inherited, the system replaces this SID with the SID for the primary group of the object???s current owner. The primary group is used only by the Portable Operating System Interface for UNIX (POSIX) subsystem.
+A placeholder security identifier (SID) is created in an inheritable access control entry (ACE). When the ACE is inherited, the system replaces this SID with the SID for the primary group of the object's current owner. The primary group is used only by the Portable Operating System Interface for UNIX (POSIX) subsystem.
 
 |Attribute|Value|
 |-------|-----|
@@ -125,7 +125,7 @@ A placeholder security identifier (SID) is created in an inheritable access cont
 |Default User Rights|None|
 
 ## <a name="BKMK_CreatorOwner"></a>Creator Owner
-The person who created the file or the directory is a member of this special identity group. Windows Server operating systems use this identity to automatically grant access permissions to the creator of a file or directory. A placeholder SID is created in an inheritable ACE. When the ACE is inherited, the system replaces this SID with the SID for the object???s current owner.
+The person who created the file or the directory is a member of this special identity group. Windows Server operating systems use this identity to automatically grant access permissions to the creator of a file or directory. A placeholder SID is created in an inheritable ACE. When the ACE is inherited, the system replaces this SID with the SID for the object's current owner.
 
 |Attribute|Value|
 |-------|-----|
@@ -267,7 +267,7 @@ This identity represents all users who are currently logged on to a computer by 
 |Default User Rights|None|
 
 ## <a name="BKMK_RestrictedCode"></a>Restricted
-Users and computers with restricted capabilities have the Restricted identity. This identity group is used by a process that is running in a restricted security context, such as running an application with the RunAs service. When code runs at the Restricted security level, the Restricted SID is added to the user???s access token.
+Users and computers with restricted capabilities have the Restricted identity. This identity group is used by a process that is running in a restricted security context, such as running an application with the RunAs service. When code runs at the Restricted security level, the Restricted SID is added to the user's access token.
 
 |Attribute|Value|
 |-------|-----|

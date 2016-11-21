@@ -144,9 +144,9 @@ The Kerberos authentication protocol consists of three types of exchanges, also 
   
 -   The Client/Server (AP) Exchange (KRB_AP_*)  
   
-The AS exchange is where the client uses the account???s password or private key to create a pre-authenticator to request a ticket-granting ticket (TGT). This happens at user sign-on or the first time a service ticket is needed.  
+The AS exchange is where the client uses the account's password or private key to create a pre-authenticator to request a ticket-granting ticket (TGT). This happens at user sign-on or the first time a service ticket is needed.  
   
-The TGS exchange is where the account???s TGT is used to create an authenticator to request a service ticket. This happens when an authenticated connection is needed.  
+The TGS exchange is where the account's TGT is used to create an authenticator to request a service ticket. This happens when an authenticated connection is needed.  
   
 The AP exchange occurs as typically as data inside the application protocol and is not impacted by authentication policies.  
   
@@ -180,7 +180,7 @@ You can restrict service ticket requests through a ticket-granting service (TGS)
 A high-value account with administrative privilege should be a member of the **Protected Users** group. By default, no accounts are members of the **Protected Users** group. Before you add accounts to the group, configure domain controller support and create an audit policy to ensure that there are no blocking issues.  
   
 #### Configure domain controller support  
-The user???s account domain must be at  Windows Server 2012 R2  domain functional level (DFL). Ensure all the domain controllers are  Windows Server 2012 R2 , and then use Active Directory Domains and Trusts to [raise the DFL](http://technet.microsoft.com/library/cc753104.aspx) to  Windows Server 2012 R2 .  
+The user's account domain must be at  Windows Server 2012 R2  domain functional level (DFL). Ensure all the domain controllers are  Windows Server 2012 R2 , and then use Active Directory Domains and Trusts to [raise the DFL](http://technet.microsoft.com/library/cc753104.aspx) to  Windows Server 2012 R2 .  
   
 **To configure support for Dynamic Access Control**  
   
@@ -295,7 +295,7 @@ The user???s account domain must be at  Windows Server 2012 R2  domain functiona
 ##### Troubleshoot missing computer claims  
 If the claim has been provisioned, but is not available, it might only be configured for **Computer** classes.  
   
-Let???s say you wanted to restrict authentication based on the organizational unit (OU) of the computer, which was already configured, but only for **Computer** classes.  
+Let's say you wanted to restrict authentication based on the organizational unit (OU) of the computer, which was already configured, but only for **Computer** classes.  
   
 ![Screenshot showing how to to restrict authentication based on the organizational unit (OU) of the computer](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
   
@@ -381,11 +381,11 @@ Additionally, accounts in an authentication policy silo have a silo claim, which
   
 A new security descriptor can be configured to control issuing service ticket based on:  
   
--   User, user???s security groups, and/or user???s claims  
+-   User, user's security groups, and/or user's claims  
   
--   Device, device???s security group, and/or device???s claims  
+-   Device, device's security group, and/or device's claims  
   
-Getting this information to the resource???s DCs requires Dynamic Access Control:  
+Getting this information to the resource's DCs requires Dynamic Access Control:  
   
 -   User claims:  
   

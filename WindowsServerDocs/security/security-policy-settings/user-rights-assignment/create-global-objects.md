@@ -23,7 +23,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference  
 This policy setting determines which users can create global objects that are available to all sessions. Users can still create objects that are specific to their own session if they do not have this user right.  
   
-A global object is an object that is created to be used by any number of processes or threads, even those not started within the user???s session. Remote Desktop Services uses global objects in its processes to facilitate connections and access.  
+A global object is an object that is created to be used by any number of processes or threads, even those not started within the user's session. Remote Desktop Services uses global objects in its processes to facilitate connections and access.  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
@@ -45,7 +45,7 @@ Constant: SeCreateGlobalPrivilege
 ### Default values  
 By default, members of the Administrators group have this right, as do Local Service and Network Service accounts on the supported versions of Windows. Service is included for backwards compatibility with earlier versions of Windows.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

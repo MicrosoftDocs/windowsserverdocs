@@ -20,7 +20,7 @@ ms.date: 10/12/2016
 
 This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit MPSSVC Rule-Level Policy Change**, which determines whether the operating system generates audit events when changes are made to policy rules for the Microsoft Protection Service (MPSSVC.exe).
 
-The Microsoft Protection Service, which is used by Windows Firewall, is an integral part of the computer???s threat protection against Internet-bound threats such as Trojans and spyware. The tracked activities include:
+The Microsoft Protection Service, which is used by Windows Firewall, is an integral part of the computer's threat protection against Internet-bound threats such as Trojans and spyware. The tracked activities include:
 
 -   Active policies when the Windows Firewall service starts.
 

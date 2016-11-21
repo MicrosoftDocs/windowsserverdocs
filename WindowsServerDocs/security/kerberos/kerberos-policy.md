@@ -38,11 +38,11 @@ The following topics provide a discussion of implementation and best practices c
 
 -   [Maximum lifetime for user ticket](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-user-ticket.md)
 
-    This policy setting determines the maximum amount of time \(in hours\) that a user???s ticket\-granting ticket can be used.
+    This policy setting determines the maximum amount of time \(in hours\) that a user's ticket\-granting ticket can be used.
 
 -   [Maximum lifetime for user ticket renewal](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-user-ticket-renewal.md)
 
-    This policy setting determines the period of time \(in days\) during which a user???s ticket\-granting ticket can be renewed.
+    This policy setting determines the period of time \(in days\) during which a user's ticket\-granting ticket can be renewed.
 
 -   [Maximum tolerance for computer clock synchronization](../group-managed-service-accounts/kerberos-policy/maximum-tolerance-for-computer-clock-synchronization.md)
 

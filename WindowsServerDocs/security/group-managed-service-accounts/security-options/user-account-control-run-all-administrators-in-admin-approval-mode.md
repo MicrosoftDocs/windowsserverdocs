@@ -44,7 +44,7 @@ This policy setting determines the behavior of all User Account Control (UAC) po
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|
