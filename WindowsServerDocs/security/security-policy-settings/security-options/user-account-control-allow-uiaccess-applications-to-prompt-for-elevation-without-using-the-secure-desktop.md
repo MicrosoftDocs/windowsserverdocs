@@ -68,7 +68,7 @@ If you disable this setting, the secure desktop can only be disabled by the user
 *GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|
@@ -114,6 +114,6 @@ The requirement to be in a protected path can be disabled by the **User Account 
 Disable the **User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop** setting.
 
 ### Potential impact
-If a user requests remote assistance from an administrator and the remote assistance session is established, elevation prompts appear on the interactive user's secure desktop and the administrator's remote session is paused. To avoid pausing the remote administrator???s session during elevation requests, the user can select the "Allow IT Expert to respond to User Account Control prompts" check box when setting up the remote assistance session. However, selecting this check box requires that the interactive user respond to an elevation prompt on the secure desktop. If the interactive user is a standard user, the user does not have the required credentials to allow elevation.
+If a user requests remote assistance from an administrator and the remote assistance session is established, elevation prompts appear on the interactive user's secure desktop and the administrator's remote session is paused. To avoid pausing the remote administrator's session during elevation requests, the user can select the "Allow IT Expert to respond to User Account Control prompts" check box when setting up the remote assistance session. However, selecting this check box requires that the interactive user respond to an elevation prompt on the secure desktop. If the interactive user is a standard user, the user does not have the required credentials to allow elevation.
 
 

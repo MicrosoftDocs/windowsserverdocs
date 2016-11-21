@@ -29,7 +29,7 @@ Security settings can control:
 
 -   The resources that users are permitted to access.
 
--   Whether to record a user????????s or group????????s actions in the Event log.
+-   Whether to record a user?????'s or group?????'s actions in the Event log.
 
 -   Membership in a group.
 
@@ -88,7 +88,7 @@ As part of your security strategy, you can create GPOs with security settings po
 
 You can create an organizational unit (OU) structure that groups computers according to their roles. Using OUs is the best method for separating specific security requirements for the different computer roles in your network. This approach also allows you to apply customized security templates to each class of server or computer. After creating the security templates, you create a new GPO for each of the OUs, and then import the security template (.inf file) into the new GPO.
 
-Importing a security template to a GPO ensures that any accounts to which the GPO is applied automatically receive the template????????s security settings when the Group Policy settings are refreshed. On a workstation or server, the security settings are refreshed at regular intervals (with a random offset of at most 30 minutes), and, on a domain controller, this process occurs every few minutes if changes have occurred in any of the GPO settings that apply. The settings are also refreshed every 16 hours, whether or not any changes have occurred.
+Importing a security template to a GPO ensures that any accounts to which the GPO is applied automatically receive the template?????'s security settings when the Group Policy settings are refreshed. On a workstation or server, the security settings are refreshed at regular intervals (with a random offset of at most 30 minutes), and, on a domain controller, this process occurs every few minutes if changes have occurred in any of the GPO settings that apply. The settings are also refreshed every 16 hours, whether or not any changes have occurred.
 
 > [!NOTE]
 > These refresh settings vary between versions of the operating system and can be configured.
@@ -132,7 +132,7 @@ For computers that are members of a  Windows Server 2012 , Windows Server 2008 R
 
 -   **Resultant Set of Policy (RSoP)**
 
-    An enhanced Group Policy infrastructure that uses WMI in order to make it easier to plan and debug policy settings. RSoP provides public methods that expose what an extension to Group Policy would do in a what-if situation, and what the extension has done in an actual situation. This allows administrators to easily determine the combination of policy settings that apply to, or will apply to, a user or computer. In  Windows Server 2012 , this feature has tighter coupling with Group Policy????????s Infrastructure Status feature.
+    An enhanced Group Policy infrastructure that uses WMI in order to make it easier to plan and debug policy settings. RSoP provides public methods that expose what an extension to Group Policy would do in a what-if situation, and what the extension has done in an actual situation. This allows administrators to easily determine the combination of policy settings that apply to, or will apply to, a user or computer. In  Windows Server 2012 , this feature has tighter coupling with Group Policy?????'s Infrastructure Status feature.
 
 -   **Service Control Manager (SCM)**
 
@@ -295,7 +295,7 @@ A Group Policy Object (GPO) is a virtual object that is identified by a Globally
 
     The Group Policy container is an Active Directory container that contains GPO properties, such as version information, GPO status, plus a list of other component settings.
 
--   **Group Policy templates in a domain????????s system volume folder (SYSVOL).**
+-   **Group Policy templates in a domain?????'s system volume folder (SYSVOL).**
 
     The Group Policy template is a file system folder that includes policy data specified by .admx files, security settings, script files, and information about applications that are available for installation. The Group Policy template is located in the SYSVOL folder in the domain\Policies subfolder.
 
