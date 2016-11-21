@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-This policy setting determines which users can view a sample performance of an application process. Typically, you do not need this user right to use the performance reporting tools included in the operating system. However, you do need this user right if the system' monitor components are configured to collect data through Windows Management Instrumentation (WMI).  
+This policy setting determines which users can view a sample performance of an application process. Typically, you do not need this user right to use the performance reporting tools included in the operating system. However, you do need this user right if the system's monitor components are configured to collect data through Windows Management Instrumentation (WMI).  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
@@ -45,7 +45,7 @@ Constant: SeProfileSingleProcessPrivilege
 ### Default values  
 By default this setting is Administrators on domain controllers and on stand-alone servers.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

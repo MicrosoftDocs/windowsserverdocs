@@ -35,13 +35,13 @@ This policy setting is supported on versions of Windows that are designated in t
   
 If **Account lockout threshold** is configured, after the specified number of failed attempts, the account will be locked out. If th **Account lockout duration** is set to 0, the account will remain locked until an administrator unlocks it manually.  
   
-It is advisable to set **Account lockout duration** to approximately 30 minutes. To specify that the account will never be locked out, set the value to 0. To configure the value for this policy setting so that it never automatically unlocks the account might seem like a good idea; however, doing so can increase the number of requests that your organization' Help Desk receives to unlock accounts that were locked by mistake.  
+It is advisable to set **Account lockout duration** to approximately 30 minutes. To specify that the account will never be locked out, set the value to 0. To configure the value for this policy setting so that it never automatically unlocks the account might seem like a good idea; however, doing so can increase the number of requests that your organization's Help Desk receives to unlock accounts that were locked by mistake.  
   
 #### Location  
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy**  
   
 #### Default values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or Group Policy Object (GPO)|Default value|  
 |-----------------------|---------|  

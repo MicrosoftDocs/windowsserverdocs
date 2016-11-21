@@ -26,7 +26,7 @@ In  Windows Server 2008 R2  and  Windows 7  the Negotiate Security Support Provi
 When computers are configured to accept authentication requests by using online IDs, Negoexts.dll calls the PKU2U SSP on the computer that is used to log on. The PKU2U SSP obtains a local certificate and exchanges the policy between the peer computers. When validated on the peer computer, the certificate within the metadata is sent to the logon peer for validation. It associates the user's certificate to a security token, and then the logon process completes.
 
 > [!NOTE]
-> The ability to link online IDs can be performed by anyone with an account that has Standard User' credentials through the **Credential Manager** under User Accounts from the Control Panel.
+> The ability to link online IDs can be performed by anyone with an account that has Standard User's credentials through the **Credential Manager** under User Accounts from the Control Panel.
 
 This policy is not configured by default on domain-joined computers. This would disallow the online identities to be able to authenticate to the domain-joined computers in Windows 7.
 
@@ -49,7 +49,7 @@ Within a domain, domain accounts should be used for authentication. Set this pol
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy' property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or Group Policy Object (GPO)|Default value|
 |-----------------------|---------|
@@ -67,7 +67,7 @@ This policy was introduced in  Windows Server 2008 R2  and  Windows 7 , and it c
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
 
 ### Vulnerability
-Enabling this policy setting allows a user' account on one computer to be associated with an online identity, such as Windows Live ID, so that account can log on to a peer computer (if the peer computer is likewise configured) without the use of a Windows logon account (domain or local). Although this is beneficial for workgroups or home groups, using this feature in a domain-joined environment might circumvent your established security policies.
+Enabling this policy setting allows a user's account on one computer to be associated with an online identity, such as Windows Live ID, so that account can log on to a peer computer (if the peer computer is likewise configured) without the use of a Windows logon account (domain or local). Although this is beneficial for workgroups or home groups, using this feature in a domain-joined environment might circumvent your established security policies.
 
 ### Countermeasure
 Set this policy to Disabled or do not configure this security policy for domain-joined computers.

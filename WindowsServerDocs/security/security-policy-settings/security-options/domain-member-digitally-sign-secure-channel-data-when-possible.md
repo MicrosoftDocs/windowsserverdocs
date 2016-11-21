@@ -66,7 +66,7 @@ When a computer running  Windows Server 2008 R2 ,  Windows Server 2008 , or Wind
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy' property page.  
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

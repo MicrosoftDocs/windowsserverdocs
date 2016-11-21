@@ -59,7 +59,7 @@ Constant: SeImpersonatePrivilege
 ### Default values  
 By default, this setting is Administrators, Local Service, Network Service, and Service on domain controllers and stand-alone servers.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

@@ -21,7 +21,7 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.
 
 ## Reference
-The **Maximum lifetime for user ticket renewal** policy setting determines the period of time (in days) during which a user' ticket-granting ticket can be renewed.
+The **Maximum lifetime for user ticket renewal** policy setting determines the period of time (in days) during which a user's ticket-granting ticket can be renewed.
 
 The possible values for this Group Policy setting are:
 
@@ -41,7 +41,7 @@ This policy setting is supported on versions of Windows that are designated in t
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\
 
 #### Default values
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

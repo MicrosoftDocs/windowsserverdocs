@@ -71,7 +71,7 @@ Constant: SeBackupPrivilege
 ### Default values
 By default, this right is granted to Administrators and Backup Operators on workstations and servers. On domain controllers, Administrators, Backup Operators, and Server Operators have this right.
 
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

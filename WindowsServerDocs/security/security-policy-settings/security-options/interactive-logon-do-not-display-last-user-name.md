@@ -23,9 +23,9 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference  
 This security setting determines whether the name of the last user to log on to the computer is displayed on the Secure Desktop.  
   
-If this policy is enabled, the full name of the last user to successfully log on is not displayed on the Secure Desktop, nor is the user' logon tile displayed. Additionally, if the **Switch user** feature is used, the full name and logon tile are not displayed. The logon screen requests a qualified domain account name (or local user name) and password.  
+If this policy is enabled, the full name of the last user to successfully log on is not displayed on the Secure Desktop, nor is the user's logon tile displayed. Additionally, if the **Switch user** feature is used, the full name and logon tile are not displayed. The logon screen requests a qualified domain account name (or local user name) and password.  
   
-If this policy is disabled, the full name of the last user to log on is displayed, and the user' logon tile is displayed. This behavior is the same when the **Switch user** feature is used.  
+If this policy is disabled, the full name of the last user to log on is displayed, and the user's logon tile is displayed. This behavior is the same when the **Switch user** feature is used.  
   
 ### Possible values  
   
@@ -36,7 +36,7 @@ If this policy is disabled, the full name of the last user to log on is displaye
 -   Not defined  
   
 ### Best practices  
-Your implementation of this policy depends on your security requirements for displayed logon information. If you have running computers that store sensitive data, with monitors displayed in unsecured locations, or if you have computers with sensitive data that are remotely accessed, revealing logged on user' full names or domain account names might contradict your overall security policy.  
+Your implementation of this policy depends on your security requirements for displayed logon information. If you have running computers that store sensitive data, with monitors displayed in unsecured locations, or if you have computers with sensitive data that are remotely accessed, revealing logged on user's full names or domain account names might contradict your overall security policy.  
   
 Depending on your security policy, you might also want to enable the **Interactive logon: Display user information when the session is locked** policy, which will prevent the Windows operating system from displaying the logon name when the session is locked or started.  
   

@@ -45,7 +45,7 @@ Constant: SeMachineAccountPrivilege
 ### Default values
 By default, this setting allows access for Authenticated Users on domain controllers, and it is not defined on stand-alone servers.
 
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|
@@ -62,7 +62,7 @@ There are no differences in the way this policy setting works between the suppor
 ## Policy management
 Users can also join a computer to a domain if they have the Create Computer Objects permission for an organizational unit (OU) or for the Computers container in the directory. Users who are assigned this permission can add an unlimited number of computers to the domain regardless of whether they have the **Add workstations to domain** user right.
 
-Furthermore, computer accounts that are created by means of the **Add workstations to domain** user right have Domain Administrators as the owner of the computer account. Computer accounts that are created by means of permissions on the computer' container use the creator as the owner of the computer account. If a user has permissions on the container and also has the **Add workstation to domain** user right, the computer is added based on the computer container permissions rather than the user right.
+Furthermore, computer accounts that are created by means of the **Add workstations to domain** user right have Domain Administrators as the owner of the computer account. Computer accounts that are created by means of permissions on the computer's container use the creator as the owner of the computer account. If a user has permissions on the container and also has the **Add workstation to domain** user right, the computer is added based on the computer container permissions rather than the user right.
 
 A restart of the computer is not required for this policy setting to be effective.
 

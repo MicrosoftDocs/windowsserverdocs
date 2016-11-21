@@ -21,28 +21,28 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, and security considerations for this policy setting.
 
 ## Reference
-When a session is locked in a Windows operating system (meaning the user at the computer pressed CTRL+ALT+DEL and the Secure Desktop is displayed), user information is displayed. By default, this information is in the form of **<user name> is logged on**. The displayed user name is the user' full name as set on the Properties page for that user. These settings do not apply to the logon tiles, which are displayed on the desktop after using the **Switch User** feature. The information that is displayed can be changed to meet your security requirements using the following possible values.
+When a session is locked in a Windows operating system (meaning the user at the computer pressed CTRL+ALT+DEL and the Secure Desktop is displayed), user information is displayed. By default, this information is in the form of **<user name> is logged on**. The displayed user name is the user's full name as set on the Properties page for that user. These settings do not apply to the logon tiles, which are displayed on the desktop after using the **Switch User** feature. The information that is displayed can be changed to meet your security requirements using the following possible values.
 
 ### Possible values
 
 -   **User display name, domain and user names**
 
-    If this is a local logon, the user' full name is displayed on the Secure Desktop. If it is a domain logon, the user' domain and user' account name is displayed.
+    If this is a local logon, the user's full name is displayed on the Secure Desktop. If it is a domain logon, the user's domain and user's account name is displayed.
 
 -   **User display name only**
 
-    The name of the user who locked the session is displayed on the Secure Desktop as the user' full name.
+    The name of the user who locked the session is displayed on the Secure Desktop as the user's full name.
 
 -   **Do not display user information**
 
-    No names are displayed on the Secure Desktop, but user' full names will be displayed on the **Switch user** desktop.
+    No names are displayed on the Secure Desktop, but user's full names will be displayed on the **Switch user** desktop.
 
 -   Blank.
 
-    Default setting. This translates to ???Not defined,??? but it will display the user' full name in the same manner as the **User display name, domain and user names** option. When an option is set, you cannot reset this policy to blank, or not defined.
+    Default setting. This translates to ???Not defined,??? but it will display the user's full name in the same manner as the **User display name, domain and user names** option. When an option is set, you cannot reset this policy to blank, or not defined.
 
 ### Best practices
-Your implementation of this policy depends on your security requirements for displayed logon information. If you have running computers that store sensitive data, with monitors displayed in unsecured locations, or if you have computers with sensitive data that are remotely accessed, revealing logged on user' full names or domain account names might contradict your overall security policy.
+Your implementation of this policy depends on your security requirements for displayed logon information. If you have running computers that store sensitive data, with monitors displayed in unsecured locations, or if you have computers with sensitive data that are remotely accessed, revealing logged on user's full names or domain account names might contradict your overall security policy.
 
 Depending on your security policy, you might also want to enable the **Interactive logon: Do not display last user name** policy, which will prevent the Windows operating system from displaying the logon name and logon tile of the last user to logon.
 

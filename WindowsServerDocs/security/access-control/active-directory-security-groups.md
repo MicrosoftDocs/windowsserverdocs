@@ -45,7 +45,7 @@ Security groups can provide an efficient way to assign access to resources on yo
 
 -   Assign user rights to security groups in Active Directory.
 
-    User rights are assigned to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when Active Directory is installed to help administrators define a person' administrative role in the domain.
+    User rights are assigned to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when Active Directory is installed to help administrators define a person's administrative role in the domain.
 
     For example, a user who is added to the Backup Operators group in Active Directory has the ability to back up and restore files and directories that are located on each domain controller in the domain. This is possible because, by default, the user rights **Backup files and directories** and **Restore files and directories** are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
 
@@ -476,7 +476,7 @@ This security group has not changed since Windows Server 2008.
 |Default User Rights|None|
 
 ### <a name="BKMK_DomainGuests"></a>Domain Guests
-The Domain Guests group includes the domain' built-in Guest account. When members of this group sign in as local guests on a domain-joined computer, a domain profile is created on the local computer.
+The Domain Guests group includes the domain's built-in Guest account. When members of this group sign in as local guests on a domain-joined computer, a domain profile is created on the local computer.
 
 The Domain Guests group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
@@ -600,7 +600,7 @@ This security group has not changed since Windows Server 2008.
 |Default User Rights|See [Denied RODC Password Replication Group](active-directory-security-groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_Guests"></a>Guests
-Members of the Guests group have the same access as members of the Users group by default, except that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to sign in with limited privileges to a computer' built-in Guest account.
+Members of the Guests group have the same access as members of the Users group by default, except that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to sign in with limited privileges to a computer's built-in Guest account.
 
 When a member of the Guests group signs out, the entire profile is deleted. This includes everything that is stored in the **%userprofile%** directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the Group Policy setting **Do not logon users with temporary profiles** when it is enabled. This setting is located under the following path:
 
@@ -857,13 +857,13 @@ This security group is designed as part of a strategy to effectively protect and
 
 This domain-related, global group triggers non-configurable protection on devices and host computers running  Windows Server 2012 R2  and Windows 8.1, and on domain controllers in domains with a primary domain controller running  Windows Server 2012 R2 . This greatly reduces the memory footprint of credentials when users sign in to computers on the network from a non-compromised computer.
 
-Depending on the account' domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
+Depending on the account's domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
 
 -   Members of the Protected Users group cannot authenticate by using the following Security Support Providers (SSPs): NTLM, Digest Authentication, or CredSSP. Passwords are not cached on a device running Windows 8.1,  so the device fails to authenticate to a domain when the account is a member of the Protected User group.
 
 -   The Kerberos protocol will not use the weaker DES or RC4 encryption types in the preauthentication process. This means that the domain must be configured to support at least the AES cipher suite.
 
--   The user' account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
+-   The user's account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
 
 -   The default Kerberos ticket-granting tickets (TGTs) lifetime setting of four hours is configurable by using Authentication Policies and Silos, which can be accessed through the Active Directory Administrative Center. This means that when four hours has passed, the user must authenticate again.
 
