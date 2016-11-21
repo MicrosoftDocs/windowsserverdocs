@@ -21,7 +21,7 @@ Integrity streams is an optional feature in ReFS that validates and maintains da
 
 ## How it works 
 
-Once integrity streams is enabled, ReFS will create and maintain a checksum for the specified file(s) in the file's metadata. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
+Once integrity streams is enabled, ReFS will create and maintain a checksum for the specified file(s) in that file's metadata. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
 
 <!--![Compute checksum for file data](media/compute-checksum-simple.gif)-->
 <img src=media/compute-checksum-simple.gif alt="Compute checksum for file data"/>
@@ -48,7 +48,7 @@ ReFS will record all corruptions in the System Event Log, and the log will refle
 
 Though integrity streams provides greater data integrity for the system, it also incurs a performance cost. There are a couple different reasons for this:
 - If integrity streams are enabled, all write operations become allocate-on-write operations. Though this avoids the read-modify-write bottleneck, data frequently becomes fragmented, which delays reads. 
-- Depending on the workload and underlying storage of the system, the computational cost of computing and validating the checksum can cause IO latency to incease. 
+- Depending on the workload and underlying storage of the system, the computational cost of computing and validating the checksum can cause IO latency to increase. 
 
 Because integrity streams carries a performance cost, we recommend leaving integrity streams disabled on highly performant systems. 
 
