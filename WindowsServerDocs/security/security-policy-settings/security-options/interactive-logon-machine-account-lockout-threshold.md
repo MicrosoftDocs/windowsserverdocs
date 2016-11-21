@@ -37,7 +37,7 @@ Use this policy setting in conjunction with your other failed account logon atte
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy' property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

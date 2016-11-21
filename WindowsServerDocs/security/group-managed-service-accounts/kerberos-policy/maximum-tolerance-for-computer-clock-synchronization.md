@@ -46,7 +46,7 @@ To prevent replay attacks, the Kerberos protocol uses time stamps as part of its
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\
 
 #### Default values
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

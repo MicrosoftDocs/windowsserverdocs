@@ -24,7 +24,7 @@ This topic for the IT professional describes access control in Windows, which is
 ## <a name="BKMK_OVER"></a>Feature description
 Computers that are running a supported version of Windows can control the use of system and network resources through the interrelated mechanisms of authentication and authorization. After a user is authenticated, the Windows operating system uses built-in authorization and access control technologies to implement the second phase of protecting resources: determining if an authenticated user has the correct permissions to access a resource.
 
-Shared resources are available to users and groups other than the resource???s owner, and they need to be protected from unauthorized use. In the access control model, users and groups (also referred to as security principals) are represented by unique security identifiers (SIDs). They are assigned rights and permissions that inform the operating system what each user and group can do. Each resource has an owner who grants permissions to security principals. During the access control check, these permissions are examined to determine which security principals can access the resource and how they can access it.
+Shared resources are available to users and groups other than the resource' owner, and they need to be protected from unauthorized use. In the access control model, users and groups (also referred to as security principals) are represented by unique security identifiers (SIDs). They are assigned rights and permissions that inform the operating system what each user and group can do. Each resource has an owner who grants permissions to security principals. During the access control check, these permissions are examined to determine which security principals can access the resource and how they can access it.
 
 Security principals perform actions (which include Read, Write, Modify, or Full control) on objects. Objects include files, folders, printers, registry keys, and Active Directory Domain Services (AD DS) objects. Shared resources use access control lists (ACLs) to assign permissions. This enables resource managers to enforce access control in the following ways:
 
@@ -61,7 +61,7 @@ Administrators who use the supported version of Windows can refine the applicati
 
 -   Enable users to access resources from a variety of devices in numerous locations.
 
--   Update users??? ability to access resources on a regular basis as an organization???s policies change or as users??? jobs change.
+-   Update users??? ability to access resources on a regular basis as an organization' policies change or as users??? jobs change.
 
 -   Account for a growing number of use scenarios (such as access from remote locations or from a rapidly expanding variety of devices, such as tablet computers and mobile phones).
 

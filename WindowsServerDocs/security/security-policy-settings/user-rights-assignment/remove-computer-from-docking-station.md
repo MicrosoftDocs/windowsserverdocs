@@ -23,7 +23,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference  
 This security setting determines whether a user can undock a portable computer from its docking station without logging on. This policy setting only affects scenarios that involve a portable computer and its docking station.  
   
-If this user right is assigned to the user???s account (or if the user is a member of the assigned group), the user must log on before removing the portable computer from its docking station. Otherwise, as a security measure, the user will not be able to log on after the computer is removed from the docking station. If this policy is not assigned, the user may remove the portable computer from its docking station without logging on, and then have the ability to start and log on to the computer afterwards in its undocked state.  
+If this user right is assigned to the user' account (or if the user is a member of the assigned group), the user must log on before removing the portable computer from its docking station. Otherwise, as a security measure, the user will not be able to log on after the computer is removed from the docking station. If this policy is not assigned, the user may remove the portable computer from its docking station without logging on, and then have the ability to start and log on to the computer afterwards in its undocked state.  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
@@ -45,7 +45,7 @@ Constant: SeUndockPrivilege
 ### Default values  
 Although this portable computer scenario does not normally apply to servers, by default this setting is Administrators on domain controllers and on stand-alone servers.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

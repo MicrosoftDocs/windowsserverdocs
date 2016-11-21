@@ -53,7 +53,7 @@ Also included in this topic:
 [Security Support Provider selection](security-support-provider-interface-architecture.md#BKMK_SecuritySupportProviderSelection)
 
 ### <a name="BKMK_KerbSSP"></a>Kerberos Security Support Provider
-This SSP uses only the Kerberos version 5 protocol as implemented by Microsoft. This protocol is based on the Network Working Group???s RFC 4120 and draft revisions. It is an industry standard protocol that is used with a password or a smart card for an interactive logon. It is also the preferred authentication method for services in Windows.
+This SSP uses only the Kerberos version 5 protocol as implemented by Microsoft. This protocol is based on the Network Working Group' RFC 4120 and draft revisions. It is an industry standard protocol that is used with a password or a smart card for an interactive logon. It is also the preferred authentication method for services in Windows.
 
 Because the Kerberos protocol has been the default authentication protocol since Windows 2000, all domain services support the Kerberos SSP. These services include:
 

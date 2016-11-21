@@ -43,7 +43,7 @@ Constant: SeSyncAgentPrivilege
 ### Default values  
 By default this setting is not defined on domain controllers and on stand-alone servers.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

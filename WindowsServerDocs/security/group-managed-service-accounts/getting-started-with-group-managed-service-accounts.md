@@ -81,17 +81,17 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 |Element|Requirement|Operating system|
 |------|--------|----------|
 |Client Application host|RFC compliant Kerberos client|At least Windows XP|
-|User account???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
+|User account' domain DCs|RFC compliant KDC|At least Windows Server 2003|
 |Shared service member hosts|| Windows Server 2012 |
-|Member host???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
-|gMSA account???s domain DCs| Windows Server 2012  DCs available for host to retrieve the password|Domain with Windows Server 2012 which can have some systems earlier than  Windows Server 2012 |
+|Member host' domain DCs|RFC compliant KDC|At least Windows Server 2003|
+|gMSA account' domain DCs| Windows Server 2012  DCs available for host to retrieve the password|Domain with Windows Server 2012 which can have some systems earlier than  Windows Server 2012 |
 |Backend service host|RFC compliant Kerberos application server|At least Windows Server 2003|
-|Backend service account???s domain DCs|RFC compliant KDC|At least Windows Server 2003|
+|Backend service account' domain DCs|RFC compliant KDC|At least Windows Server 2003|
 |Windows PowerShell for Active Directory|Windows PowerShell for Active Directory installed locally on a computer supporting a 64-bit architecture or on your remote management computer (for example, using the Remote Server Administration Toolkit)| Windows Server 2012 |
 
 **Active Directory Domain Service requirements**
 
--   The Active Directory schema in the gMSA domain???s forest needs to be updated to Windows Server 2012 to create a gMSA.
+-   The Active Directory schema in the gMSA domain' forest needs to be updated to Windows Server 2012 to create a gMSA.
 
     You can update the schema by installing a domain controller that runs Windows Server 2012 or by running the version of adprep.exe from a computer running  Windows Server 2012 . The object-version attribute value for the object CN=Schema,CN=Configuration,DC=Contoso,DC=Com must be 52.
 
@@ -215,7 +215,7 @@ To configure the services in  Windows Server 2012 , see the following feature do
 Other services could support gMSA. See the appropriate product documentation for details on how to configure those services.
 
 ## <a name="BKMK_AddMemberHosts"></a>Adding member hosts to an existing server farm
-If using security groups for managing member hosts, add the computer account for the new member host to the security group (that the gMSA???s member hosts are a member of) using one of the following methods.
+If using security groups for managing member hosts, add the computer account for the new member host to the security group (that the gMSA' member hosts are a member of) using one of the following methods.
 
 Membership in **Domain Admins**, or the ability to add members to the security group object, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
 
@@ -277,7 +277,7 @@ For detailed information how to set these properties, see [Set-ADServiceAccount]
 Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
 
 ### Step 1: Remove member host from gMSA
-If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA???s member hosts are a member of using either of the following methods.
+If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA' member hosts are a member of using either of the following methods.
 
 -   Method 1: Active Directory Users and Computers
 

@@ -25,7 +25,7 @@ This policy setting determines whether the elevation request prompts on the inte
 
 The secure desktop presents the logon UI and restricts functionality and access to the system until the logon requirements are satisfied.
 
-The secure desktop???s primary difference from the user desktop is that only trusted processes running as SYSTEM are allowed to run here (that is, nothing is running at the user???s privilege level). The path to get to the secure desktop from the user desktop must also be trusted through the entire chain.
+The secure desktop' primary difference from the user desktop is that only trusted processes running as SYSTEM are allowed to run here (that is, nothing is running at the user' privilege level). The path to get to the secure desktop from the user desktop must also be trusted through the entire chain.
 
 ### Possible values
 
@@ -45,7 +45,7 @@ The secure desktop???s primary difference from the user desktop is that only tru
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy' property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

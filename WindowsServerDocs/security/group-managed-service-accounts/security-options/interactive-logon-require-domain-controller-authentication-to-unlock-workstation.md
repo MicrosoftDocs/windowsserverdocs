@@ -45,7 +45,7 @@ It is advisable to set **Interactive logon: Require Domain Controller authentica
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy' property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|
@@ -75,7 +75,7 @@ This policy setting can be configured by using the Group Policy Management Conso
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
 
 ### Vulnerability
-By default, the computer caches locally in memory the credentials of any users who are authenticated. The computer uses these cached credentials to authenticate anyone who attempts to unlock the console. When cached credentials are used, any changes that have recently been made to the account???such as user rights assignments, account lockout, or the account being disabled???are not considered or applied after the account is authenticated. User privileges are not updated, and disabled accounts are still able to unlock the console of the computer.
+By default, the computer caches locally in memory the credentials of any users who are authenticated. The computer uses these cached credentials to authenticate anyone who attempts to unlock the console. When cached credentials are used, any changes that have recently been made to the account'uch as user rights assignments, account lockout, or the account being disabled???are not considered or applied after the account is authenticated. User privileges are not updated, and disabled accounts are still able to unlock the console of the computer.
 
 ### Countermeasure
 Configure the **Interactive logon: Require Domain Controller authentication to unlock workstation** setting to Enabled and configure the **Interactive logon: Number of previous logons to cache (in case domain controller is not available)** setting to 0.

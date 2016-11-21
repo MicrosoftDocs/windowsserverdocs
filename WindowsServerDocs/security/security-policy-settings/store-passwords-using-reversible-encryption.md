@@ -45,7 +45,7 @@ Set the value for **Store password using reversible encryption**  to Disabled. I
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy\\**  
   
 ### Default values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy' property page.  
   
 |Server type or Group Policy Object (GPO)|Default value|  
 |-----------------------|---------|  
