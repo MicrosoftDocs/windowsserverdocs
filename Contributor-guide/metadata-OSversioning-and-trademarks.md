@@ -1,6 +1,9 @@
 # Metadata and version identifiers
 
-This article discusses metadata and versioning for the articles in windowsserverdocs-pr repository. 
+Here's what you need to know about trademarks, versioning, and metadata for the articles in windowsserverdocs-pr repository. Article authors are responsible for making sure their articles adhere to these standards and requirements.
+
+## Trademarks
+Don't use trademark symbols after product references in articles in the technical library. They aren't required because technet.microsoft.com, docs.microsoft.com, and other official Microsoft publishing channels include a [Trademark](https://www.microsoft.com/trademarks) footer link to a list of Microsoft trademarks. That link fulfills the legal requirement. For background, see guidance from [CELA](https://microsoft.sharepoint.com/sites/LCAWeb/Home/Copyrights-Trademarks-and-Patents/Trademarks/Trademark-List-and-Usage), under "websites" and the Microsoft Writing Style Guide [Copyrights and trademarks](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=26696) page, under "Webpages on Microsoft.com" 
 
 ## Versioning
 Several types of versioning apply to the articles in this repo: 
@@ -13,8 +16,8 @@ Several types of versioning apply to the articles in this repo:
 ## Metadata structure and format
 
 - Put Metadata at the top of the file, above the H1 heading.
-- Separate the block from the rest of the file contents by using three dashes only in the first and last lines of the block.
-- Put each metadata name/value pair on a separate line
+- Separate the block from the rest of the file contents by using only three dashes in the first and last lines of the block. Don't put any other text on those lines.
+- Put each metadata name/value pair on a separate line.
 - Use one of the following syntax patterns, depending on whether the metadata requires predefined values or accepts custom values. 
 
         ---
@@ -48,4 +51,4 @@ Check your file for these and any other obvious errors, then submit a PR to publ
 
 ## See also
 Metadata used in this repo is based on metadata used in Content Services & International \(CSI\). More info, including optional metadata, is available at [http://aka.ms/skyeye/meta](http://aka.ms/skyeye/meta).
-For BI resources, see CSI BI teams [wiki](https://microsoft.sharepoint.com/teams/STBCSI/Insights/Selfserve%20BI%20wiki/Self-serve%20BI%20wiki.aspx).
+For business intelligence resources, see the CSI BI team's [wiki](https://microsoft.sharepoint.com/teams/STBCSI/Insights/Selfserve%20BI%20wiki/Self-serve%20BI%20wiki.aspx).

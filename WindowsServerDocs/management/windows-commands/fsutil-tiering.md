@@ -33,7 +33,7 @@ fsutil tiering [tierlist] <volume>
 |\<volume>|Specifies the volume.|
 |/TrNH|For volumes with tiered storage, causes Heat gathering to be disabled.<br /><br>Applies to NTFS and ReFS only.|
 |queryflags|Queries the tiering behavior flags of a volume.|
-|regionlist|Lists the regions of a volume and their respective storage tiers.|
+|regionlist|Lists the tiered regions of a volume and their respective storage tiers.|
 |setflags|Enables the tiering behavior flags of a volume.|
 |tierlist|Lists the storage tieres associated with a volume.|
 
