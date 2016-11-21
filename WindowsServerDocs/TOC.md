@@ -1245,7 +1245,6 @@
 ###### [Shutdown: Clear virtual memory pagefile](security/group-managed-service-accounts/security-options/shutdown-clear-virtual-memory-pagefile.md)
 ###### [System cryptography: force strong key protection for user keys stored on the computer - Explain text](security/group-managed-service-accounts/security-options/system-cryptography-force-strong-key-protection-for-user-keys-stored-on-the-computer-explain-text.md)
 ###### [System cryptography: force strong key protection for user keys stored on the computer](security/group-managed-service-accounts/security-options/system-cryptography-force-strong-key-protection-for-user-keys-stored-on-the-computer.md)
-###### [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](security/bitlocker/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing.md)
 ###### [System objects: Require case insensitivity for non-Windows subsystems](security/group-managed-service-accounts/security-options/system-objects-require-case-insensitivity-for-non-windows-subsystems.md)
 ###### [System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)](security/group-managed-service-accounts/security-options/system-objects-strengthen-default-permissions-of-internal-system-objects.md)
 ###### [System settings: Optional subsystems](security/group-managed-service-accounts/security-options/system-settings-optional-subsystems.md)
