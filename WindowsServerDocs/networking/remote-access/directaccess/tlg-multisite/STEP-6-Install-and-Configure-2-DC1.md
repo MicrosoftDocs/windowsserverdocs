@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 6 Install and Configure 2-DC1
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 2-DC1 provides the following services:  
   
@@ -39,7 +39,7 @@ author: jamesmci
 - Force replication between DC1 and 2-DC1
   
 ## Install the operating system on 2-DC1  
-First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
+First, install  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.  
   
 ### To install the operating system on 2-DC1  
   

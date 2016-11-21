@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # prnport
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 

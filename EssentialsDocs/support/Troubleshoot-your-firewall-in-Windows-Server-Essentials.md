@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot your firewall in Windows Server Essentials
  
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  If you experience problems with remote access, run the Repair Anywhere Access Wizard.  
   

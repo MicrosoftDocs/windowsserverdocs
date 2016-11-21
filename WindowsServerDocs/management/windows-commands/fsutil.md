@@ -24,7 +24,7 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 |Subcommand |Description|
 |---|---|
 |[Fsutil 8dot3name](fsutil-8dot3name.md) | Queries or changes the settings for short name behavior on the system, for example, generates 8.3 character-length file names. Removes short names for all files within a directory. Scans a directory and identifies registry keys that might be impacted if short names were stripped from the files in the directory.|
-|[Fsutil behavior](fsutil-behavior.md) |Queries or sets NTFS volume behavior.|
+|[Fsutil behavior](fsutil-behavior.md) |Queries or sets volume behavior.|
 |[Fsutil dirty](fsutil-dirty.md)| Queries whether the volume's dirty bit is set or sets a volume's dirty bit. When a volume's dirty bit is set, **autochk** automatically checks the volume for errors the next time the computer is restarted.|
 |[Fsutil file](fsutil-file.md)|Finds a file by user name (if Disk Quotas are enabled), queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, creates a new file of a specified size, finds a file ID if given the name, or finds a file link name for a specified file ID.|
 |[Fsutil fsinfo](fsutil-fsinfo.md)|Lists all drives and queries the drive type, volume information, NTFS-specific volume information, or file system statistics.|

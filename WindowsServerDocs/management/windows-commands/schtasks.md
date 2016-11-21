@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # schtasks
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Schedules commands and programs to run periodically or at a specific time. adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 To view the command syntax, click one of the following commands:

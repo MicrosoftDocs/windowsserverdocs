@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Protecting cluster shared volumes and storage area networks with BitLocker
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server 2012 introduces the ability to use BitLocker encrypted volumes on a failover cluster.  BitLocker will have the ability to protect both physical disk resources and cluster shared volumes version 2.0 (CSV2.0). BitLocker on clustered volumes allows for an additional layer of protection for administrators wishing to protect sensitive, highly available data.  By adding additional protectors to the clustered volume, administrators can also add an additional barrier of security to resources within an organization by allowing only certain user accounts access to unlock the BitLocker volume.
 

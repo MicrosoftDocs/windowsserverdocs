@@ -16,7 +16,7 @@ manager: dongill
 
 # Configure DirectAccess in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This topic provides step-by-step instructions for configuring DirectAccess in  Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization „¢s network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their  Windows 8.1,  Windows 8, and  Windows 7 computers.  
   

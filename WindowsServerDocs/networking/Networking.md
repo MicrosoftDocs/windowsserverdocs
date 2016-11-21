@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Networking in Windows Server 2016 
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 <img src="../get-started/media/6-networking.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization.
 
@@ -108,6 +108,10 @@ Network offload and optimization technologies in Windows Server 2016 include Sof
 ### [Network Policy Server](technologies/nps/nps-top.md)
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
+
+### [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
+
+This topic provides information about choosing the right network adapter for your server workload, ordering network interfaces, network related performance counters, and performance tuning network adapters and related networking technologies, such as Receive Side Scaling \(RSS\), Receive Side Coalescing \(RSC\), and others.
 
 ### [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 

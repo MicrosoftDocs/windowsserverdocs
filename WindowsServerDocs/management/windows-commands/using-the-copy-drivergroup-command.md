@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the copy-DriverGroup Command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 ## Syntax

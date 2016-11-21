@@ -30,7 +30,9 @@ Here's how to create a local branch, save your changes, and then push them to yo
 
   This creates the local branch directly from the upstream branch and helps you avoid merging the wrong files into your new local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
       
-        git checkout upstream/ga-threshold -b working-8-31  
+        git checkout upstream/master -b working-11-18
+
+  If you're working on content that should be merged into branch that's not         
 
 5. Add the local working branch to your fork:
 
@@ -38,7 +40,7 @@ Here's how to create a local branch, save your changes, and then push them to yo
 
 6. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. For basic formatting help, see this [article](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) in Github.
 
-7. Add required metadata and version info, according to [Metadata and product versioning](metadata-and-subject-versioning.md).
+7. Add required metadata and version info, according to [Metadata and product versioning](metadata-OSversioning-and-trademarks.md).
 
 8. Check status, then add and commit your changes:
 

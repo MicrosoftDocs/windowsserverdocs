@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # tree
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the directory structure of a path or of the disk in a drive graphically.  
 for examples of how to use this command, see [Examples](#BKMK_examples).  

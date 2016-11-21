@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Which Editions of Windows Support Advanced Audit Policy Configuration
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This reference topic for the IT professional describes which versions of the Windows operating systems support advanced security auditing policies.
 

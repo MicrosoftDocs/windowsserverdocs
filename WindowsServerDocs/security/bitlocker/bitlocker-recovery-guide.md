@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # BitLocker Recovery Guide
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Organizations can use BitLocker recovery information saved in Active Directory Domain Services \(AD????DS\) to access BitLocker\-protected data. Creating a recovery model for BitLocker while you are planning your BitLocker deployment is recommended.
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # dfsutil Link
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The **dfsutil link** command displays the information about the link\(folder\) and link\(folder\) targets.Link commands are used to create a new link, delete a link or move the links.
 

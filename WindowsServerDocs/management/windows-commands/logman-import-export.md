@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # logman import | export
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
   

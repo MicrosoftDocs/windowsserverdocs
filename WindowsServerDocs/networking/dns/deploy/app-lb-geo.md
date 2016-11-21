@@ -16,7 +16,7 @@ author: jamesmci
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 

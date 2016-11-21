@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # bdehdcfg
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption. Most installations of  Windows 7  will not need to use this tool because BitLocker setup includes the ability to prepare and repartition drives as required.
 > [!WARNING]

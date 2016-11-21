@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # getmac
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Returns the media access control (MAC) address and list of network protocols associated with each address for all network cards in each computer, either locally or across a network. 
 ## Syntax

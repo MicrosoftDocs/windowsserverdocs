@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Local Group Policy editor
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Local Group Policy editor is a Microsoft Management Console (mmc) snap-in that is used to configure and modify Group Policy settings within Group Policy Objects (GPOs).
 

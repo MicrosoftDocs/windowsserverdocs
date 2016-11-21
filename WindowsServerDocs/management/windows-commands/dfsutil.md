@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # dfsutil
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The dfsutil command manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
 

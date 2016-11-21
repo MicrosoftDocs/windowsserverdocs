@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # logoff
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Logs off a user from a session on a remote Desktop Session Host (rd Session Host) server and deletes the session from the server.
 for examples of how to use this command, see [Examples](#BKMK_examples).

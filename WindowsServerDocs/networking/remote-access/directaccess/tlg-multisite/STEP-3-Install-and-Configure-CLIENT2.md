@@ -16,9 +16,9 @@ author: jamesmci
 ---
 # STEP 3 Install and Configure CLIENT2
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
-CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server&reg; 2016 servers.  
+CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server 2016 servers.  
   
 1. To install the operating system on CLIENT2. Install Windows&reg; 7 Enterprise or Windows&reg; 7 Ultimate on CLIENT2.  
   

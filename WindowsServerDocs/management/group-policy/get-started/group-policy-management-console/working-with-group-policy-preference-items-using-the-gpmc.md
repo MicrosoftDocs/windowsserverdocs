@@ -14,7 +14,7 @@ ms.date: 10/12/2016
 
 # Working with Group Policy Preference Items Using the GPMC
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes Group Policy Preferences and explains some common configuration procedures. It also contains links to topics about working with Preferences using the GPMC for Windows settings and Control Panel settings as well as item-level targeting.
 

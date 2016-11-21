@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
-ms.date: 11/11/2016
+ms.date: 11/16/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
@@ -30,20 +30,20 @@ The deployment will not be available during RD Connection Broker servers upgrade
    > [!NOTE] 
    > It is mandatory to upgrade RD Connection Broker servers. We do not support Windows Server 2012 R2 RD Connection Broker servers in a mixed deployment with Windows Server 2016 servers. Once the RD Connection Broker server(s) are running Windows Server 2016 the deployment will be functional, even if the rest of the servers in the deployment are still running Windows Server 2012 R2.
 
-2. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](Upgrade-to-RDSH-2016.md).
+2. **RD License servers** should be upgraded before you upgrade your RD Session Host servers.
+   > [!NOTE] 
+   > Windows Server 2012 and 2012 R2 RD license servers will work with Windows Server 2016 deployments, but they can only process CALs from Windows Server 2012 R2 and older. They cannot use Windows Server 2016 CALs. See [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md) for more information about RD license servers.
 
-3. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDVH-2016.md).
+3. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](Upgrade-to-RDSH-2016.md).
 
-4. **RD Web Access servers** can be upgraded anytime.
+4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDVH-2016.md).
+
+5. **RD Web Access servers** can be upgraded anytime.
    > [!NOTE]
    > Upgrading RD Web may reset IIS properties (such as any configuration files). To not lose your changes, make notes or copies of customizations done to the RD Web site in IIS.
 
    > [!NOTE] 
    > Windows Server 2012 and 2012 R2 RD Web Access servers will work with Windows Server 2016 deployments.
-
-5. **RD Licensing servers** can be upgraded anytime.
-   > [!NOTE] 
-   > Windows Server 2012 and 2012 R2 RD Licensing servers will work with Windows Server 2016 deployments, but they can only process CALs from Windows Server 2012 R2 and older. They cannot use Windows Server 2016 CALs.
 
 6. **RD Gateway servers** can be upgraded anytime.
    > [!NOTE]

@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Understand the Effect of Fast Logon Optimization and Fast startup on Group Policy
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This troubleshooting topic explains the interaction between the required synchronous processing for certain Group Policy client-side extensions (CSEs) and Fast Logon Optimization, which was introduced in Windows XP. Fast Logon Optimization may cause you to sign in or restart the computer multiple times before certain Group Policy settings are applied to the client computer. This topic also discusses the effect that the fast startup feature introduced in Windows 8 has on Group Policy settings that are applied during startup or shutdown.
 

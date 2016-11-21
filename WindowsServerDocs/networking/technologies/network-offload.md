@@ -16,7 +16,7 @@ author: jamesmci
 
 # Network Offload and Optimization Technologies
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic for a brief overview of Network Offload and Optimization technologies that are available in Windows Server 2016.
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Monitor the Central Access Policies Associated with Files and Folders
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes how to monitor changes to the central access policies that are associated with files and folders when you are using Advanced Security Auditing options to monitor dynamic access control objects.
 

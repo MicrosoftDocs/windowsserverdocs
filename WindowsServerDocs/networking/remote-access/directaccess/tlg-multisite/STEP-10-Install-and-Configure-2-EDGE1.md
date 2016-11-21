@@ -16,11 +16,11 @@ author: jamesmci
 ---
 # STEP 10 Install and Configure 2-EDGE1
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 2-EDGE1 configuration consists of the following:  
   
-- Install the operating system on 2-EDGE1. Install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 on 2-EDGE1.  
+- Install the operating system on 2-EDGE1. Install  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 on 2-EDGE1.  
   
 - Configure TCP/IP properties. Configure 2-EDGE1 with static addresses on both network interfaces.  
   

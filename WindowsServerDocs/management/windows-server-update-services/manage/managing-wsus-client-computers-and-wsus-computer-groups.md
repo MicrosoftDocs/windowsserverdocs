@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Managing WSUS Client computers and WSUS computer Groups
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The computers node is central access point in the WSUS administrative console for managing WSUS client computers and devices. Under this node you can find the different groups you have set up (plus the default group, Unassigned computers).
 

@@ -16,7 +16,7 @@ manager: dongill
 
 # Use the My Server App to Connect to Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The My Server apps for  Windows Server Essentials let you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your laptop, PC, or Surface device. In My Server, you can manage users, devices, and alerts, and work with shared files on the server. When you are offline, you can continue to work with files recently accessed in My Server; your offline changes are automatically synchronized with the server the next time you connect.  
   

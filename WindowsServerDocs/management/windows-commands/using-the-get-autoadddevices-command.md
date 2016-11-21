@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the get-AutoaddDevices Command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays all computers that are in the Auto-add database on a Windows Deployment Services server.
 ## Syntax

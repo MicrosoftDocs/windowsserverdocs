@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Using the add-ImageDriverPackages Command
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 adds driver packages from the driver store to a boot image. The image version must be Windows 7 or Windows Server 2008 R2 or later.
 for examples of how you can use this command, see [Examples](#BKMK_examples).

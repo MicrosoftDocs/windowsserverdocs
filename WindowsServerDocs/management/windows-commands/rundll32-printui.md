@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # rundll32 printui.dll,printUIEntry
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Automates many printer configuration tasks. printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
 ## Syntax  

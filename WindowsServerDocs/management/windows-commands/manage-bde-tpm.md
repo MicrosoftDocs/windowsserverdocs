@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # manage-bde: tpm
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 > [!IMPORTANT]
 > This command is not supported for use on computers running Windows 8,  Windows Server 2012  or later operating systems. For those computers, you can use the [TPM Management cmdlets for Windows PowerShell](http://technet.microsoft.com/library/jj603116.aspx).

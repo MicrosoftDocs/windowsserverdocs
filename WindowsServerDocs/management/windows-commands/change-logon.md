@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/12/2016
 --
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # change logon
 Enables or disables logons from client sessions, or displays current logon status.

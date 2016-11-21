@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # BranchCache Deployment Guide
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this guide to learn how to deploy BranchCache in Windows Server 2016.  
   

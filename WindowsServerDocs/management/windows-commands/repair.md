@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # repair
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 repairs the RAID\-5 volume with focus by replacing the failed disk region with the specified dynamic disk.  
   
