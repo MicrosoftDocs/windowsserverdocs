@@ -15,23 +15,30 @@ ms.date: 10/31/2016
 
 # Software Defined Networking SLB Gateway Performance
 
-Software load balancing is provided by a combination of a load balancer manager in the network controller, the Hyper-V Virtual Switch and as set of Load Balancer Multixplexor (Mux) VMs.
+Software load balancing is provided by a combination of a load balancer manager in the Network Controller VMs, the Hyper-V Virtual Switch and a set of Load Balancer Multixplexor (Mux) VMs.
 
-No additional performance tuning is required to configure the network controller or the Hyper-V host for load balancing beyond what is described in the [Software Defined Networking](./Section_11.0-SoftwareDefinedNetworking.md) section, unless you will be using SR-IOV as described below.
+No additional performance tuning is required to configure the Network Controller or the Hyper-V host for load balancing beyond what is described in the [Software Defined Networking](./Section_11.0-SoftwareDefinedNetworking.md) section, unless you will be using SR-IOV for the Muxes as described below.
  
 ## SLB Mux VM Configuration
 
-SLB Mux virtual machines are deployed in an Active-Active configuration.  This means that every Mux VM that is deployed and added to the network controller is able to process incoming requests.  This means the total aggregate throughput of all of the connections is only limited by the number of Mux VMs that you have deployed.  Each individual connection will be limited to the throughput of a single Mux VM.  Muxes only process the inbound traffic that is destined to a virtual IP (VIP).  Response packets go directly from the VM that is sending the response to the physical switch which forwards it on to the client.
+SLB Mux virtual machines are deployed in an Active-Active configuration.  This means that every Mux VM that is deployed and added to the Network Controller is able to process incoming requests.  As a result, the total aggregate throughput of all of the connections is only limited by the number of Mux VMs that you have deployed.  
+
+An individual connection to a Virtual IP (VIP) will always be sent to the same Mux, assuming the number of muxes remains constant, and as a result its throughput will be limited to the throughput of a single Mux VM.  Muxes only process the inbound traffic that is destined to a VIP.  Response packets go directly from the VM that is sending the response to the physical switch which forwards it on to the client.
+
+In some cases when the source of the request originates from an SDN host that is added to the same Network Controller that manages the VIP, further optimization of the inbound path for the request is also performed which enables most packets to travel directly from the client to the server, bypassing the Mux VM entirely.  No additional configuration is required for this optimization to take place.
 
 Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
 
-## SR-IOV
+## Single Root IO virtualization (SR-IOV)
 
-When using 40Gbit ethernet, the processing of packets in the virtual switch becomes the limiting factor for SLB Mux VM throughput.  Because of that it is recommended that you enable SR-IOV on the SLB VM's VM Network Adapter to ensure that the virtual switch is not the bottleneck.
+When using 40Gbit ethernet, the ability for the virtual switch to process packets for the Mux VM becomes the limiting factor for Mux VM throughput.  Because of this it is recommended that SR-IOV be enabled on the SLB VM's VM Network Adapter to ensure that the virtual switch is not the bottleneck.
 
-To enable SR-IOV, you must enable it on the virtual switch when the virtual switch is created:
+To enable SR-IOV, you must enable it on the virtual switch when the virtual switch is created.  In this example we are creating a virtual switch with SET and SR-IOV:
 
-    TODO: Enable SRIOV command
+    new-vmswitch -Name SDNSwitch -EnableEmbeddedTeaming $true -NetAdapterName @("NIC1", "NIC2") -EnableIOV $true
 
-Then, it must be enabled on the virtual network adapter of the SLB Mux VM:
+Then, it must be enabled on the virtual network adapter(s) of the SLB Mux VM which process the data traffic.  In this example SR-IOV is being enabled on all adapters:
+
+    get-vmnetworkadapter -VMName SLBMUX1 | set-vmnetworkadapter -IovWeight 50
+
 
