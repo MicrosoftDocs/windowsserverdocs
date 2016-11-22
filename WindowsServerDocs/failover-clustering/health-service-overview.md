@@ -39,7 +39,7 @@ In Windows Server 2016, the Health Service provides the following metrics:
 To get metrics for the entire Storage Spaces Direct cluster run the following PowerShell cmdlet. The **&lt;Count&gt;** parameter indicates how many sets of values to return, at one second intervals.  
 
 ```PowerShell
-Get-StorageSubSystem clus* | Get-StorageHealthReport -Count <Count>  
+Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>  
 ```
 
 You can also get metrics for one specific volume or node using the following cmdlets:  
