@@ -16,7 +16,7 @@ author: vhorne
 ---
 # Deploy Software Defined Networking
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 The topics in this section provide information about the different methods you can use to deploy a Software Defined Networking (SDN) infrastructure and the individual technologies that are included in  Windows Server 2016.  
   

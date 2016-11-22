@@ -114,7 +114,7 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 <tr class="even">
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
-<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/151515.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md#steps-tenants-take-to-create-shielded-vms-with-windows-azure-pack) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p>
+<td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/151515.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p>
 <p><img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-plain-spacer-15.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p></td>
 </tr></tbody>
 </table>

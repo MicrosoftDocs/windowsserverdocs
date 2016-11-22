@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # DNS Responses Based on Time of Day with an Azure Cloud App Server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day. 
 

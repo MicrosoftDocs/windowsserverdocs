@@ -16,7 +16,7 @@ manager: dongill
 
 # Step 2: Install Windows Server Essentials as a new replica domain controller
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This section describes how to install  Windows Server Essentials and  Windows Server 2012 R2 Standard (with the Windows Server Essentials Experience role enabled) as a domain controller.  
   

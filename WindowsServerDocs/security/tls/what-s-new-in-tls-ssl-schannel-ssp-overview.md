@@ -16,13 +16,13 @@ ms.date: 10/12/2016
 ---
 # Overview of TLS - SSL (Schannel SSP)
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes the changes in functionality in the Schannel Security Support Provider (SSP), which includes the Transport Layer Security (TLS), the Secure Sockets Layer (SSL), and the Datagram Transport Layer Security (DTLS) authentication protocols, for  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, and Windows 8.
 
 Schannel is a Security Support Provider (SSP) that implements the SSL, TLS and DTLS Internet standard authentication protocols. The Security Support Provider Interface (SSPI) is an API used by Windows systems to perform security-related functions including authentication. The SSPI functions as a common interface to several Security Support Providers (SSPs), including the Schannel SSP.
 
-For more information about Microsoft???s implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](http://technet.microsoft.com/library/cc784149(v=ws.10).aspx).
+For more information about Microsoft's implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](http://technet.microsoft.com/library/cc784149(v=ws.10).aspx).
 
 
 ##TLS/SSL (Schannel SSP) features
@@ -96,7 +96,7 @@ For information about what data, including the application-defined store, is def
 
 **Defaults for Trust Modes**
 
-There are three Client Authentication Trust Modes supported by the Schannel provider. The trust mode controls how validation of the client???s certificate chain is performed and is a system-wide setting controlled by the REG_DWORD ???ClientAuthTrustMode??? under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
+There are three Client Authentication Trust Modes supported by the Schannel provider. The trust mode controls how validation of the client's certificate chain is performed and is a system-wide setting controlled by the REG_DWORD ???ClientAuthTrustMode??? under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
 
 |Value|Trust Mode|Description|
 |-----|-------|--------|

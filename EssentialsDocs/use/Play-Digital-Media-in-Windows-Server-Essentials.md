@@ -16,7 +16,7 @@ manager: dongill
 
 # Play Digital Media in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Digital media refers to audio, video, and photo content that has been digitally compressed.  Windows Server Essentials makes it possible for networked computers and some networked digital media devices to play digital media files that are stored on the server.  
   

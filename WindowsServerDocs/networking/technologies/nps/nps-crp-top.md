@@ -12,13 +12,14 @@ author: jamesmci
 
 # Connection Request Processing
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about connection request processing in Network Policy Server in Windows Server 2016.
 
 >[!NOTE]
 >In addition to this topic, the following connection request processing documentation is available.
 > - [Connection Request Policies](nps-crp-crpolicies.md)
+> - [Realm Names](nps-crp-realm-names.md)
 > - [Remote RADIUS Server Groups](nps-crp-rrsg.md)
 
 You can use connection request processing to specify where the authentication of connection requests is performed - on the local computer or at a remote RADIUS server that is a member of a remote RADIUS server group. 

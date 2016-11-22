@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # prompt
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the Cmd.exe command prompt. If used without parameters, **prompt** resets the command prompt to the default setting, which is the current drive letter and directory followed by the greater than symbol (**>**).
 for examples of how to use this command, see [Examples](#BKMK_examples).

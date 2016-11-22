@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Kerberos Policy
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes the Kerberos Policy settings and provides links to policy setting descriptions.
 
@@ -38,11 +38,11 @@ The following topics provide a discussion of implementation and best practices c
 
 -   [Maximum lifetime for user ticket](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-user-ticket.md)
 
-    This policy setting determines the maximum amount of time \(in hours\) that a user???s ticket\-granting ticket can be used.
+    This policy setting determines the maximum amount of time \(in hours\) that a user's ticket\-granting ticket can be used.
 
 -   [Maximum lifetime for user ticket renewal](../group-managed-service-accounts/kerberos-policy/maximum-lifetime-for-user-ticket-renewal.md)
 
-    This policy setting determines the period of time \(in days\) during which a user???s ticket\-granting ticket can be renewed.
+    This policy setting determines the period of time \(in days\) during which a user's ticket\-granting ticket can be renewed.
 
 -   [Maximum tolerance for computer clock synchronization](../group-managed-service-accounts/kerberos-policy/maximum-tolerance-for-computer-clock-synchronization.md)
 

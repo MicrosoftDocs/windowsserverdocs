@@ -16,7 +16,7 @@ manager: dongill
 
 # Prepare your Source Server for Windows Server Essentials migration1
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   

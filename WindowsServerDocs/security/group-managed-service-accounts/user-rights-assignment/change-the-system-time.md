@@ -16,12 +16,12 @@ ms.date: 10/12/2016
 ---
 # Change the system time
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.
 
 ## Reference
-This policy setting determines which users can adjust the time on the computer's internal clock. This right allows the computer user to change the date and time associated with records in the event logs, database transactions, and the file system. This right is also required by the process that performs time synchronization. This setting does not impact the user???s ability to change the time zone or other display characteristics of the system time. For information about assigning the right to change the time zone, see [Change the time zone](change-the-time-zone.md).
+This policy setting determines which users can adjust the time on the computer's internal clock. This right allows the computer user to change the date and time associated with records in the event logs, database transactions, and the file system. This right is also required by the process that performs time synchronization. This setting does not impact the user's ability to change the time zone or other display characteristics of the system time. For information about assigning the right to change the time zone, see [Change the time zone](change-the-time-zone.md).
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -43,7 +43,7 @@ Constant: SeSystemtimePrivilege
 ### Default values
 By default, members of the Administrators and Local Service groups have this right on workstations and servers. Members of the Administrators, Server Operators, and Local Service groups have this right on domain controllers.
 
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

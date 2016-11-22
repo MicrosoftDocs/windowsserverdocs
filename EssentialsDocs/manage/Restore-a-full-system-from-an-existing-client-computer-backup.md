@@ -16,7 +16,7 @@ manager: dongill
 
 # Restore a full system from an existing client computer backup
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials 
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
   
  Hardware and operating system failures are rare, but they can happen. A malfunctioning fan could overheat a computer motherboard and render it useless. The operating system could become corrupt and refuse to start. Fire and water damage can result in permanent hardware damage. A hard disk drive may fail or you may decide to replace it with a larger hard disk drive.  
   

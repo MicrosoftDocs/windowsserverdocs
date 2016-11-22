@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy editor
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to use the Local Group Policy editor (gpedit) to manage four types of event-driven scripting files.  
   

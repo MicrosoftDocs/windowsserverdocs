@@ -16,7 +16,7 @@ manager: dongill
 
 # Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_O365"></a>   
  If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the  Windows Server Essentials Office 365 integration module.  

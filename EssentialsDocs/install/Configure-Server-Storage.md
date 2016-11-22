@@ -16,7 +16,7 @@ manager: dongill
 
 # Configure Server Storage
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ## Sample hard disk configurations  
  The following table suggests sample hard disk configurations. The estimates are based on typical usage and functionality, but they do not address issues that affect optimal performance. You can use any type of supported hard disks for these configurations (such as SATA or SCSI), based on the preferences and needs of your customer.  

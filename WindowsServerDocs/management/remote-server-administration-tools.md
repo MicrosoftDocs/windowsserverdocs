@@ -16,9 +16,9 @@ ms.date: 10/12/2016
 ---
 # Remote Server Administration Tools
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic supports Remote Server Administration Tools for Windows 10&reg;.
+This topic supports Remote Server Administration Tools for Windows 10.
 
 To help ease Remote server management, you can [download and install Remote Server Administration Tools](http://go.microsoft.com/fwlink/?LinkID=404281). Remote Server Administration Tools includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server.
 

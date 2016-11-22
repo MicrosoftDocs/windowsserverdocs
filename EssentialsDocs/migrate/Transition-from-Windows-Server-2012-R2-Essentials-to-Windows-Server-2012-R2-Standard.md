@@ -16,7 +16,7 @@ manager: dongill
 
 # Transition from Windows Server Essentials to Windows Server 2012 R2 Standard
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Windows Server 2016 is the cloud-ready operating system that supports your current workloads while introducing new technologies that make it easy to transition to cloud computing. Windows Server 2016 content helps get you ready.
 

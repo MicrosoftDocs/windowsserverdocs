@@ -16,7 +16,7 @@ manager: dongill
 
 # Install Windows Server Essentials in migration mode1
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can have only one server on your network that is running  Windows Server Essentials, and that server must be a domain controller for the network.  
   

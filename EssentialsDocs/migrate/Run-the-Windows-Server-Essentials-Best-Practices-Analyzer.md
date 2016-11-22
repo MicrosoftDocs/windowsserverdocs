@@ -16,7 +16,7 @@ manager: dongill
 
 # Run the Windows Server Essentials Best Practices Analyzer6
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 When you finish migrating your settings and data to  Windows Server Essentials, you should run the  Windows Server Essentials Best Practices Analyzer (BPA) on the Destination Server. The BPA examines a server that is running  Windows Server Essentials and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for  Windows Server Essentials.  
   

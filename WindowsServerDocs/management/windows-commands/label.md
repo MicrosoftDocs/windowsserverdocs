@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # label
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates, changes, or deletes the volume label (that is, the name) of a disk. If used without parameters, the **label** command changes the current volume label or deletes the existing label.
 for examples of how to use this command, see [Examples](#BKMK_examples).

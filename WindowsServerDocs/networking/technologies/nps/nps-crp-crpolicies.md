@@ -12,9 +12,14 @@ author: jamesmci
 
 # Connection Request Policies
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn how to use NPS connection request policies to configure the NPS server as a RADIUS server, a RADIUS proxy, or both.
+
+>[!NOTE]
+>In addition to this topic, the following connection request policy documentation is available.
+> - [Configure Connection Request Policies](nps-crp-configure.md)
+> - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
 
 Connection request policies are sets of conditions and settings that allow network administrators to designate which Remote Authentication Dial-In User Service (RADIUS) servers perform the authentication and authorization of connection requests that the server running Network Policy Server (NPS) receives from RADIUS clients. Connection request policies can be configured to designate which RADIUS servers are used for RADIUS accounting.
 
@@ -149,6 +154,8 @@ Find-and-replace rule processing occurs for one of the preceding attributes befo
 >[!NOTE]
 >If you are using the MS-CHAP v2 authentication protocol, you cannot manipulate the User Name attribute if the connection request policy is used to forward the RADIUS message. The only exception occurs when a backslash (\) character is used and the manipulation only affects the information to the left of it. A backslash character is typically used to indicate a domain name (the information to the left of the backslash character) and a user account name within the domain (the information to the right of the backslash character). In this case, only attribute manipulation rules that modify or replace the domain name are allowed.
 
+For examples of how to manipulate the realm name in the User Name attribute, see the section "Examples for manipulation of the realm name in the User Name attribute" in the topic [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
+
 ### Forwarding request
 
 You can set the following forwarding request options that are used for RADIUS Access-Request messages:
@@ -161,6 +168,8 @@ You can set the following forwarding request options that are used for RADIUS Ac
 
 >[!NOTE]
 >This authentication option cannot be used when the authentication protocol of the access client is MS-CHAP v2 or Extensible Authentication Protocol-Transport Layer Security (EAP-TLS), both of which provide mutual authentication. In mutual authentication, the access client proves that it is a valid access client to the authenticating server (the NPS server), and the authenticating server proves that it is a valid authenticating server to the access client. When this authentication option is used, the Access-Accept message is returned. However, the authenticating server does not provide validation to the access client, and mutual authentication fails.
+
+For examples of how to use regular expressions to create routing rules that forward RADIUS messages with a specified realm name to a remote RADIUS server group, see the section "Example for RADIUS message forwarding by a proxy server" in the topic [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
 
 ### Advanced
 

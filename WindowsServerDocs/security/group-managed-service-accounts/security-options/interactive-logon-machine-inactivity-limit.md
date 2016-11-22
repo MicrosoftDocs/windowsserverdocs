@@ -16,12 +16,12 @@ ms.date: 10/12/2016
 ---
 # Interactive logon: Machine inactivity limit
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, management, and security considerations for this policy setting.
 
 ## Reference
-Beginning with Windows Server 2012 and Windows 8, Windows detects user-input inactivity of a sign-in (logon) session by using the security policy setting **Interactive logon: Machine inactivity limit**. If the amount of inactive time exceeds the inactivity limit set by this policy, then the user???s session locks by invoking the screen saver. This policy setting allows you to control the locking time by using Group Policy.
+Beginning with Windows Server 2012 and Windows 8, Windows detects user-input inactivity of a sign-in (logon) session by using the security policy setting **Interactive logon: Machine inactivity limit**. If the amount of inactive time exceeds the inactivity limit set by this policy, then the user's session locks by invoking the screen saver. This policy setting allows you to control the locking time by using Group Policy.
 
 In versions earlier than Windows Server 2012 and Windows 8, the desktop-locking mechanism was set on individual computers in Personalization in Control Panel.
 
@@ -31,13 +31,13 @@ The automatic lock of the computer is set in elapsed seconds of inactivity, whic
 If no value (blank) or zero (0) is present in the **Machine will be locked after** input field, then the policy setting is disabled and no action is taken on user-input inactivity for the session.
 
 ### Best practices
-Set the time for elapsed user-input inactivity based on the computer???s usage and location requirements. For example, if the computer or device is in a public area, you might want to have the desktop automatically lock after a short period of inactivity to prevent unauthorized access. However, if the computer or device is used by an individual or group of trusted individuals, such as in a restricted manufacturing area, automatically locking the desktop might hinder productivity.
+Set the time for elapsed user-input inactivity based on the computer's usage and location requirements. For example, if the computer or device is in a public area, you might want to have the desktop automatically lock after a short period of inactivity to prevent unauthorized access. However, if the computer or device is used by an individual or group of trusted individuals, such as in a restricted manufacturing area, automatically locking the desktop might hinder productivity.
 
 ### Location
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|
@@ -67,7 +67,7 @@ This section describes how an attacker might exploit a feature or its configurat
 This policy setting helps you prevent unauthorized access to computers or devices under your control when the currently signed-in user leaves without deliberately locking the desktop. In versions earlier than Windows Server 2012 and Windows 8, the desktop-locking mechanism was set on individual computers in Personalization in Control Panel.
 
 ### Countermeasure
-Set the time for elapsed user-input inactivity time by using the security policy setting **Interactive logon: Machine inactivity limit** based on the computer???s usage and location requirements.
+Set the time for elapsed user-input inactivity time by using the security policy setting **Interactive logon: Machine inactivity limit** based on the computer's usage and location requirements.
 
 ### Potential impact
 This security policy setting can limit unauthorized access to unsecured computers; however, that requirement must be balanced with the productivity requirements of the intended computer user.

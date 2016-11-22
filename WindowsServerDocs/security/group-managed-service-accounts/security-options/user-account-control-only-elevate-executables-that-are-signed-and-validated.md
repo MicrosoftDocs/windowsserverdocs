@@ -16,14 +16,14 @@ ms.date: 10/12/2016
 ---
 # User Account Control: Only elevate executables that are signed and validated
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management and security considerations for this policy setting.
 
 ## Reference
 This policy setting enforces public key infrastructure (PKI) signature checks on any interactive application that requests elevation of privilege. Enterprise administrators can control the applications that are allowed to run through the population of certificates in the local computer's Trusted Publishers store.
 
-A trusted publisher is a certificate issuer that the computer???s user has chosen to trust and that has certificate details that have been added to the store of trusted publishers.
+A trusted publisher is a certificate issuer that the computer's user has chosen to trust and that has certificate details that have been added to the store of trusted publishers.
 
 The Windows operating system maintains certificates in certificate stores. These stores can be represented by containers in the file system or the registry, or they can be implemented as physical stores such as smart cards. Certificate stores are associated with the computer object or they are owned by a distinct user who has a security context and profile on that computer. In addition, services can have certificate stores. A certificate store will often contain numerous certificates, possibly issued from a number of different certification authorities (CAs).
 
@@ -47,7 +47,7 @@ When certificate path discovery is initiated, the Windows operating system attem
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

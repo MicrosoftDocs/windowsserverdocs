@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Recovery console: Allow automatic administrative logon
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management and security considerations for this policy setting,
 
@@ -47,7 +47,7 @@ The Recovery Console can be very useful when troubleshooting and repairing syste
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Support Provider Interface Architecture
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This reference topic for the IT professional describes the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 
@@ -53,7 +53,7 @@ Also included in this topic:
 [Security Support Provider selection](security-support-provider-interface-architecture.md#BKMK_SecuritySupportProviderSelection)
 
 ### <a name="BKMK_KerbSSP"></a>Kerberos Security Support Provider
-This SSP uses only the Kerberos version 5 protocol as implemented by Microsoft. This protocol is based on the Network Working Group???s RFC 4120 and draft revisions. It is an industry standard protocol that is used with a password or a smart card for an interactive logon. It is also the preferred authentication method for services in Windows.
+This SSP uses only the Kerberos version 5 protocol as implemented by Microsoft. This protocol is based on the Network Working Group's RFC 4120 and draft revisions. It is an industry standard protocol that is used with a password or a smart card for an interactive logon. It is also the preferred authentication method for services in Windows.
 
 Because the Kerberos protocol has been the default authentication protocol since Windows 2000, all domain services support the Kerberos SSP. These services include:
 

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # rem
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Records comments (remarks) in a batch file or CONFIG.SYS. If no comment is specified, **rem** adds vertical spacing.
 for examples of how to use this command, see [Examples](#BKMK_examples).

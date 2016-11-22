@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Net print
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about a specified printer queue or a specified print job, or controls a specified print job.
 for examples of how to use this command, see the [Examples](#BKMK_examples) section of this document.

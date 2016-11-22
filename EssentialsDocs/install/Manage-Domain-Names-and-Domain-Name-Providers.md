@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Domain Names and Domain Name Providers
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can use the information in this section to manage third-level domain names and domain name providers.  
   

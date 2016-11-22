@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 ---
 # bitsadmin getminretrydelay
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file.
 ## Syntax

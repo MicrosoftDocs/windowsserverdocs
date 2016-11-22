@@ -18,7 +18,7 @@ There are three types of logging for Network Policy Server \(NPS\):
 
 - **Logging user authentication and accounting requests to a local file**. Used primarily for connection analysis and billing purposes. Also useful as a security investigation tool because it provides you with a method of tracking the activity of a malicious user after an attack. You can configure local file logging using the Accounting Configuration wizard.
 
-- **Logging user authentication and accounting requests to a Microsoft SQL Server&reg; XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
+- **Logging user authentication and accounting requests to a Microsoft SQL Server XML-compliant database**. Used to allow multiple servers running NPS to have one data source. Also provides the advantages of using a relational database. You can configure SQL Server logging by using the Accounting Configuration wizard.
 
 ## Use the Accounting Configuration wizard
 
@@ -110,3 +110,27 @@ Membership in Domain Admins, or equivalent, is the minimum required to complete 
 7. To test the connection between NPS and SQL Server, click **Test Connection**. Click **OK** to close **Data Link Properties**.
 8. In **Logging failure action**, select **Enable text file logging for failover** if you want NPS to continue with text file logging if SQL Server logging fails. 
 9. In **Logging failure action**, select **If logging fails, discard connection requests** if you want NPS to stop processing Access-Request messages when log files are full or unavailable for some reason. If you want NPS to continue processing connection requests if logging fails, do not select this check box.
+
+## Ping user-name
+
+Some RADIUS proxy servers and network access servers periodically send authentication and accounting requests (known as ping requests) to verify that the NPS server is present on the network. These ping requests include fictional user names. When NPS processes these requests, the event and accounting logs become filled with access reject records, making it more difficult to keep track of valid records.
+
+When you configure a registry entry for **ping user-name**, NPS matches the registry entry value against the user name value in ping requests by other servers. A **ping user-name** registry entry specifies the fictional user name (or a user name pattern, with variables, that matches the fictional user name) sent by RADIUS proxy servers and network access servers. When NPS receives ping requests that match the **ping user-name** registry entry value, NPS rejects the authentication requests without processing the request. NPS does not record transactions involving the fictional user name in any log files, which makes the event log easier to interpret.
+
+**Ping user-name** is not installed by default. You must add **ping user-name** to the registry. You can add an entry to the registry using Registry Editor.
+
+>[!CAUTION]
+>Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+
+### To add ping user-name to the registry
+
+Ping user-name can be added to the following registry key as a string value by a member of the local Administrators group:
+
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\IAS\Parameters`
+
+- **Name**: `ping user-name`
+- **Type**:	`REG_SZ`
+- **Data**:	 *User name*
+
+>[!TIP]
+>To indicate more than one user name for a **ping user-name** value, enter a name pattern, such as a DNS name, including wildcard characters, in **Data**.

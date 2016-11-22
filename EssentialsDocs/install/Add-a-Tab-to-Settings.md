@@ -16,7 +16,7 @@ manager: dongill
 
 # Add a Tab to Settings
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can add a tab to Settings on the Dashboard by creating and installing a code assembly that is used by the Settings Manager in operating system.  
   

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # append
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows programs to open data files in specified directories as if they were in the current directory. If used without parameters, **append** displays the appended directory list.
 for examples of how to use this command, see [Examples](#BKMK_examples).

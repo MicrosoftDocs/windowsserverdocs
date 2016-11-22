@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # setx
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates or modifies environment variables in the user or system environment, without requiring programming or scripting. The **setx** command also retrieves the values of registry keys and writes them to text files.
 for examples of how to use this command, see [Examples](#BKMK_examples).

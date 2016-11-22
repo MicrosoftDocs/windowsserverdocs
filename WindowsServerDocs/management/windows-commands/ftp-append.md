@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # ftp: append
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 appends a local file to a file on the remote computer using the current file type setting.   
 ## Syntax  

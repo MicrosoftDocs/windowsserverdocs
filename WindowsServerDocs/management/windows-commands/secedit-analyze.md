@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # secedit:analyze
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to analyze current systems settings against baseline settings that are stored in a database. For examples of how this command can be used, see [Examples](secedit-analyze.md#BKMK_Examples).
 ## Syntax

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Policy Settings Overview
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides high-level information about security settings in, and links to more detailed reference topics, procedures, and guides about security policy settings.
 
@@ -31,7 +31,7 @@ Security settings can control:
 
 -   The resources that users are permitted to access.
 
--   Whether to record a user???s or group???s actions in the Event log.
+-   Whether to record a user's or group's actions in the Event log.
 
 -   Membership in a group.
 
@@ -47,7 +47,7 @@ The following table lists the Security Settings new for Windows Server 2012 and 
 |Accounts: Block Microsoft accounts|Windows Settings/Security Settings/Local Policies/Security Options|This policy setting prevents users from adding new Microsoft accounts on this computer.|
 |Interactive logon: Machine account threshold.|Windows Settings/Security Settings/Local Policies/Security Options|The computer lockout policy is enforced only on those computers that have BitLocker enabled for protecting operating system volumes. Please ensure that appropriate recovery password backup policies are enabled.|
 |Interactive logon: Machine inactivity limit.|Windows Settings/Security Settings/Local Policies/Security Options|Windows notices inactivity of a logon session, and if the amount of inactive time exceeds the inactivity limit, then the screen saver will run, locking the session.|
-|Microsoft network server: Attempt S4U2Self to obtain claim information|Windows Settings/Security Settings/Local Policies/Security Options|This security setting is to support clients running a version of Windows prior to Windows 8 that are trying to access a file share that requires user claims. This setting determines whether the local file server will attempt to use Kerberos Service-For-User-To-Self (S4U2Self) functionality to obtain a network client principal???s claims from the client???s account domain|
+|Microsoft network server: Attempt S4U2Self to obtain claim information|Windows Settings/Security Settings/Local Policies/Security Options|This security setting is to support clients running a version of Windows prior to Windows 8 that are trying to access a file share that requires user claims. This setting determines whether the local file server will attempt to use Kerberos Service-For-User-To-Self (S4U2Self) functionality to obtain a network client principal's claims from the client's account domain|
 |Packaged app Rules|Windows Settings/Security Settings/Application Control Policies/AppLocker|AppLocker rules that apply to files that share the same attributes: publisher name, package name, and package version.|
 
 

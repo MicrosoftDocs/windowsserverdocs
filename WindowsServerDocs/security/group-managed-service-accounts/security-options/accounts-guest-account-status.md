@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Accounts: Guest account status
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, and security considerations for this policy setting
 
@@ -34,13 +34,13 @@ This account allows unauthenticated network users to gain access to the system b
 -   Not defined
 
 ### Best practices
-Set **Accounts: Guest account status** to Disabled so that the built-in Guest account is no longer usable. All network users will have to authenticate before they can access shared resources on the system. If the Guest account is disabled and **Network access: Sharing and security model for local accounts** is set to **Guest only**, network logons???such as those performed by the SMB Service???will fail.
+Set **Accounts: Guest account status** to Disabled so that the built-in Guest account is no longer usable. All network users will have to authenticate before they can access shared resources on the system. If the Guest account is disabled and **Network access: Sharing and security model for local accounts** is set to **Guest only**, network logons'such as those performed by the SMB Service???will fail.
 
 ### Location
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

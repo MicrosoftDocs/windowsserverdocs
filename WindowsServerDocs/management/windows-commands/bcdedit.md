@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # bcdedit
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Boot Configuration Data (Bcd) files provide a store that is used to describe boot applications and boot application settings. The objects and elements in the store effectively replace Boot.ini.
 bcdedit is a command-line tool for managing Bcd stores. It can be used for a variety of purposes, including creating new stores, modifying existing stores, adding boot menu parameters, and so on. bcdedit serves essentially the same purpose as bootcfg.exe on earlier versions of Windows, but with two major improvements:

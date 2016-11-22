@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # retain
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Prepares an existing dynamic simple volume to be used as a boot or system volume.
 ## Syntax

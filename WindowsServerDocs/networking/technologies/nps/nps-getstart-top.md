@@ -12,12 +12,13 @@ author: jamesmci
 
 # Getting Started with Network Policy Server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use the topics in this section to learn about Network Policy Server features and capabilities.  
   
 >[!NOTE]
 >For additional Network Policy Server documentation, you can use the following library sections.  
+>- [Deploy Network Policy Server](nps-deploy.md)
 >- [Manage Network Policy Server](nps-manage-top.md)
   
   

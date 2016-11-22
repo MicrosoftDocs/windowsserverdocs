@@ -37,7 +37,10 @@ These hosts run Hyper-V and are required to host SDN infrastructure and tenant v
       
   
 ## Physical Network Configuration  
-Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s). The network is segregated into multiple logical network segments optionally backed by a Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN). The IP subnet prefixes and VLAN IDs shown below are examples and must be customized for your environment based on guidance from your network administrator. If any of your logical networks are untagged or in access mode, use VLAN ID 0 for these networks when configuring the logical subnets in either System Center Virtual Machine Manager or PowerShell script configuration files.  
+Each physical compute host requires network connectivity through one or more network adapters attached to a physical switch port(s). The network is segregated into multiple logical network segments optionally backed by a Layer-2 [VLAN](https://en.wikipedia.org/wiki/Virtual_LAN). The IP subnet prefixes and VLAN IDs shown below are examples and must be customized for your environment based on guidance from your network administrator. If any of your logical networks are untagged or in access mode, use VLAN ID 0 for these networks when configuring the logical subnets in either System Center Virtual Machine Manager or PowerShell script configuration files.
+
+>[!IMPORTANT]
+>Windows Server 2016 Software Defined Networking supports IPv4 addressing for the underlay and the overlay. IPv6 is not supported.
   
 ### Management and HNV Provider logical networks  
 All physical compute hosts need to have access to the Management logical network and the HNV Provider logical network. If the logical networks use VLANs, the physical compute hosts must to be connected to a trunked switch port which has access to these VLANs. Similarly, the physical network adapters on the compute host must not have any VLAN filtering activated. If you are using Switch-Embedded Teaming (SET) and have multiple NIC team members (i.e. network adapters) in your compute hosts, you must connect all of the NIC team members for that particular host to the same Layer-2 broadcast domain.  

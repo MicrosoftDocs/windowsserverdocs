@@ -12,7 +12,7 @@ author: jamesmci
 
 # Network Policies
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic for an overview of network policies in NPS.
 
@@ -61,5 +61,7 @@ There are four categories of properties for each network policy:
  These properties allow you to specify the settings that NPS applies to the connection request if all of the network policy conditions for the policy are matched.
 
 When you add a new network policy by using the NPS console, you must use the New Network Policy Wizard. After you have created a network policy by using the wizard, you can customize the policy by double-clicking the policy in the NPS console to obtain the policy properties.
+
+For examples of pattern-matching syntax to specify network policy attributes, see [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).

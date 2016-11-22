@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # create_1
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 starts the shadow copy creation process, using the current context and option settings. Requires at least one volume in the shadow copy Set.  
   

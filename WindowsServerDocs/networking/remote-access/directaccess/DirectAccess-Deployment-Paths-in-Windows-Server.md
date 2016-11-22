@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # DirectAccess Deployment Paths in Windows Server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides a listing of the documentation for the two main Remote Access deployment paths: **Basic** and **Advanced**.  
   

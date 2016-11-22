@@ -16,13 +16,13 @@ ms.date: 10/12/2016
 ---
 # What&#39;s New for Managed Service Accounts
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes the changes in functionality for Managed Service Accounts with the introduction of the group Managed Service Account (gMSA) in Windows Server 2012 and Windows 8.
 
 The managed service account is designed to provide services and tasks such as Windows services and IIS application pools to share their own domain accounts, while eliminating the need for an administrator to manually administer passwords for these accounts. It is a managed domain account that provides automatic password management.
 
-## <a name="versions"></a>What???s new for Managed Service Accounts in Windows Server 2012 and Windows 8
+## <a name="versions"></a>What's new for Managed Service Accounts in Windows Server 2012 and Windows 8
 The following describes what changes in functionality were made to MSA in Windows Server 2012 and Windows 8.
 
 ### Group Managed Service Accounts

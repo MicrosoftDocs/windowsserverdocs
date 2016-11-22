@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # pnputil
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 pnputil.exe is a command line utility that you can use to manage the driver store. You can use pnputil to add driver packages, remove driver packages, and list driver packages that are in the store.
 ## Syntax
