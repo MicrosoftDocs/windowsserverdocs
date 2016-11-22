@@ -130,7 +130,15 @@ Just like with processors, excessive network adapter utilization will cause long
 
 This is critical to performance. Clients falling out of site can experience poor performance for authentications and queries. Furthermore, with the introduction of IPv6 on clients, the request can come from either the IPv4 or the IPv6 address and Active Directory needs to have sites properly defined for IPv6. The operating system prefers IPv6 to IPv4 when both are configured.
 
-Starting in Windows Server 2008, the domain controller attempts to use name resolution to do a reverse lookup in order to determine the site the client should be in. This can cause exhaustion of the ATQ Thread Pool and cause the domain controller to become unresponsive. The appropriate resolution to this is to properly define the site topology for IPv6. As a workaround, you can optimize the name resolution infrastructure to respond quickly to domain controller requests. For more info see [Windows Server 2008 or Windows Server 2008 R2 Domain Controller delayed response to LDAP or Kerberos requests](http://support.microsoft.com/kb/2668820).
+Starting in Windows Server 2008, the domain controller attempts to use name resolution to do a reverse lookup in order to determine the site the client should be in. This can cause exhaustion of the ATQ Thread Pool and cause the domain controller to become unresponsive. The appropriate resolution to this is to properly define the site topology for IPv6. As a workaround, one can optimize the name resolution infrastructure to respond quickly to domain controller requests. For more info see [Windows Server 2008 or Windows Server 2008 R2 Domain Controller delayed response to LDAP or Kerberos requests](http://support.microsoft.com/kb/2668820).
+
+An additional area of consideration is locating Read/Write DCs for scenarios where RODCs are in use.  Certain operations require access to a writable Domain Controller or target a writable Domain Controller when a Read-Only Domain Controller would suffice.  Optimizing these scenarios would take two paths:
+-   Contacting writable Domain Controllers when a Read-Only Domain Controller would suffice.  This requires an application code change.
+-   Where a writable Domain Controller may be necessary.  Place read-write Domain Controllers at central locations to minimize latency.
+
+For further information reference:
+-   [Application Compatibility with RODCs](https://technet.microsoft.com/en-us/library/cc772597.aspx)
+-   [Active Directory Service Interface (ADSI) and the Read Only Domain Controller (RODC) – Avoiding performance issues](https://blogs.technet.microsoft.com/fieldcoding/2012/06/24/active-directory-service-interface-adsi-and-the-read-only-domain-controller-rodc-avoiding-performance-issues/)
 
 ### Optimize for referrals
 
@@ -192,13 +200,15 @@ There is extensive documentation on MSDN about how to properly write, structure,
 
 ### Optimize LDAP page sizes
 
-When returning results with multiple objects in response to client requests, the domain controller has to temporarily store the result set in memory. Increasing page sizes will cause more memory usage and can age items out of cache unnecessarily. In this case, the default settings are optimal. There are several scenarios where recommendations were made to increase the page size settings. We recommend using the default values.
+When returning results with multiple objects in response to client requests, the domain controller has to temporarily store the result set in memory. Increasing page sizes will cause more memory usage and can age items out of cache unnecessarily. In this case, the default settings are optimal. There are several scenarios where recommendations were made to increase the page size settings. We recommend using the default values unless specifically identified as inadequate.
+
+When queries have many results, a limit of similar queries concurrently executed may be encountered.  This occurs as the LDAP server may deplete a global memory area known as the cookie pool.  It may be necessary to increase the size of the pool as discussed in [How LDAP Server Cookies Are Handled](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/manage/how-ldap-server-cookies-are-handled).
 
 To tune these settings, see [Windows Server 2008 and newer domain controller returns only 5000 values in a LDAP response](http://support.microsoft.com/kb/2009267).
 
 ### Determine whether to add indices
 
-Indexing attributes is useful when you search for objects that have the attribute name in a filter. Indexing can reduce the number of objects that must be visited when you evaluate the filter. However, this reduces the performance of write operations because the index must be updated when the corresponding attribute is modified or added. It also increases the size of the directory database. You can use logging to find the expensive and inefficient queries. Once you’ve identified them, you can index some attributes that are used in the corresponding queries to improve the search performance. For more info on how Active Directory Searches work, see [How Active Directory Searches Work](http://technet.microsoft.com/library/cc755809.aspx).
+Indexing attributes is useful when searching for objects that have the attribute name in a filter. Indexing can reduce the number of objects that must be visited when evaluating the filter. However, this reduces the performance of write operations because the index must be updated when the corresponding attribute is modified or added. It also increases the size of the directory database, though the benefits often outweigh the cost of storage. Logging can be used to find the expensive and inefficient queries. Once identified, consider indexing some attributes that are used in the corresponding queries to improve the search performance. For more info on how Active Directory Searches work, see [How Active Directory Searches Work](http://technet.microsoft.com/library/cc755809.aspx).
 
 Some scenarios in which to add indices include:
 
