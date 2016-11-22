@@ -35,11 +35,12 @@ The guidance provided in the [Hyper-V network I/O performance](#netio) section o
 
 For best performance and fail-over capabilities, it is recommended that you configure the physical network adapters to be teamed.  When using SDN you must create the team with Switch Embedded Teaming (SET).  
 
-The optimal number of team members is two as virtualized traffic will be spread across both of the team members in both inbound and outbound directions.  You can have more than two team members, however inbound traffic will be spread over at most two of the adapters.  Outbound traffic will always be spread across all adapters if Dynamic load balancing is configured on the virtual switch.
+The optimal number of team members is two as virtualized traffic will be spread across both of the team members for both inbound and outbound directions.  You can have more than two team members, however inbound traffic will be spread over at most two of the adapters.  Outbound traffic will always be spread across all adapters if the default of dynamic load balancing remains configured on the virtual switch.
+
 
 ### Encapsulation Offloads
 
-SDN relies on encapsulation of packets to to virtualize the network.  For optimal performance it is important that the network adapter supports hardware offload for the encapsulation format that is used.  There is no significant performance benefit of one encapsulation format over another.  The default encapsulation format is VXLAN.
+SDN relies on encapsulation of packets to to virtualize the network.  For optimal performance it is important that the network adapter supports hardware offload for the encapsulation format that is used.  There is no significant performance benefit of one encapsulation format over another.  The default encapsulation format when the network controller is used is VXLAN.
 
 You can determine which encapsulation format is being used through the network controller with the following powershell cmdlet:
 
@@ -49,23 +50,25 @@ For best performance, if VXLAN is returned then you must make sure your physical
 
 ### MTU
 
-Encapsulation results in extra bytes being added to each packet.  This requires that the physical network is configured to use jumbo frames with a MTU that is configured large enough to contain the original packet plus the encapsulation.  An MTU of 9234 is recommended size for either VXLAN or NVGRE and must be configured on the physical switch for the physical interfaces of the host ports (L2) and the router interfaces (L3) of the VLANs over which encapsulated packets will be sent.  This includes the Transit, HNV Provider and Management networks. 
+Encapsulation results in extra bytes being added to each packet.  In order to avoid fragmentation of these packets, the physical network must be configured to use jumbo frames.  An MTU value of 9234 is the recommended size for either VXLAN or NVGRE and must be configured on the physical switch for the physical interfaces of the host ports (L2) and the router interfaces (L3) of the VLANs over which encapsulated packets will be sent.  This includes the Transit, HNV Provider and Management networks. 
 
 MTU on the Hyper-V host is configured through the network adapter, and the Network Controller Host Agent running on the Hyper-V host will adjust for the encapsulation overhead automatically if supported by the network adapter driver.  
 
 Once traffic egresses from the virtual network via a Gateway, the encapsulation is removed and the original MTU as sent from the VM is used.
 
-### Single Root I/O Virtualization (SR-IOV)
+### Single Root IO Virtualization (SR-IOV)
 
 SDN is implemented on the Hyper-V host using a forwarding switch extension in the virtual switch.  In order for this switch extension to process packets, SR-IOV must not be used on virtual network interfaces that are configured for use with the network controller as it causes VM traffic to bypass the virtual swtich.
 
-SR-IOV can be enabled on the virtual switch and can be used by VM network adapters that are not controlled by the network controller.  These SR-IOV VMs can coexist on the same virtual switch as network controller controlled VMs which do not use SR-IOV.
+SR-IOV can still be enabled on the virtual switch if desired and can be used by VM network adapters that are not controlled by the network controller.  These SR-IOV VMs can coexist on the same virtual switch as network controller controlled VMs which do not use SR-IOV.
+
+If you are using 40Gbit network adapters it is recomended that you enable SR-IOV on the virtual switch for the Software Load Balancing (SLB) Gateways to achieve maximum throughput.  This is covered in more detail in the [Software Load Balancer Gateways](./Section_11.2-SoftwareDefinedNetworking-SLB.md) section.
 
 ## HNV Gateways
 
 You can find information on tuning HNV Gateways for use with SDN in the [RAS Gateways](./Section_11.1-SoftwareDefinedNetworking-RAS.md) section.
 
-## Software Load Balancing
+## Software Load Balancer (SLB)
 
-Software Load Balancing (SLB) Gateways can only be used with SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](./Section_11.2-SoftwareDefinedNetworking-SLB.md) section.
+SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](./Section_11.2-SoftwareDefinedNetworking-SLB.md) section.
 
