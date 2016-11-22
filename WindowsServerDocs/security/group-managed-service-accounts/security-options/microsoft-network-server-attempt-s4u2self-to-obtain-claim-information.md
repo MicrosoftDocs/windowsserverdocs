@@ -21,9 +21,9 @@ ms.date: 10/12/2016
 This security policy reference topic for the IT professional describes the best practices, location, values, management, and security considerations for this policy setting.
 
 ## <a name="BKMK_Reference"></a>Reference
-This security setting supports client computers running a version of Windows prior to Windows 8 that are trying to access a file share that requires user claims. This setting determines whether the local file server will attempt to use Kerberos Service-for-User-to-Self (S4U2Self) functionality to obtain a network client principal???s claims from the client???s account domain. This setting should only be enabled if the file server is using user claims to control access to files, and if the file server will support client principals whose accounts might be in a domain that has client computers and domain controllers running a version of Windows prior to Windows 8 or  Windows Server 2012 .
+This security setting supports client computers running a version of Windows prior to Windows 8 that are trying to access a file share that requires user claims. This setting determines whether the local file server will attempt to use Kerberos Service-for-User-to-Self (S4U2Self) functionality to obtain a network client principal's claims from the client's account domain. This setting should only be enabled if the file server is using user claims to control access to files, and if the file server will support client principals whose accounts might be in a domain that has client computers and domain controllers running a version of Windows prior to Windows 8 or  Windows Server 2012 .
 
-When enabled, this security setting causes the Windows file server to examine the access token of an authenticated network client principal and determines if claim information is present. If claims are not present, the file server will then use the Kerberos S4U2Self feature to attempt to contact a Windows Server 2012 domain controller in the client???s account domain and obtain a claims-enabled access token for the client principal. A claims-enabled token might be needed to access files or folders that have claim-based access control policy applied.
+When enabled, this security setting causes the Windows file server to examine the access token of an authenticated network client principal and determines if claim information is present. If claims are not present, the file server will then use the Kerberos S4U2Self feature to attempt to contact a Windows Server 2012 domain controller in the client's account domain and obtain a claims-enabled access token for the client principal. A claims-enabled token might be needed to access files or folders that have claim-based access control policy applied.
 
 If this setting is disabled, the Windows file server will not attempt to obtain a claim-enabled access token for the client principal.
 
@@ -50,7 +50,7 @@ This setting should be set to **Default** so that the file server can automatica
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or GPO|Default value|
 |-----------|---------|

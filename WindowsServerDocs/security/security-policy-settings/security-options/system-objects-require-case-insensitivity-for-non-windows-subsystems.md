@@ -45,7 +45,7 @@ Because Windows is case insensitive but the POSIX subsystem will support case se
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

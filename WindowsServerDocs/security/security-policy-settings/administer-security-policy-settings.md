@@ -31,7 +31,7 @@ Security settings can control:
 
 -   The resources that users are permitted to access.
 
--   Whether to record a user???s or group???s actions in the Event log.
+-   Whether to record a user's or group's actions in the Event log.
 
 -   Membership in a group.
 
@@ -75,7 +75,7 @@ The Secedit command-line tool works with security templates and provides six pri
 
 -   The **Configure** parameter helps you resolve security discrepancies between servers by applying the correct security template to the errant server.
 
--   The **Analyze** parameter compares the server???s security configuration with the selected template.
+-   The **Analyze** parameter compares the server's security configuration with the selected template.
 
 -   The **Import** parameter allows you to create a database from an existing template. The Security Configuration and Analysis tool does this also.
 
@@ -83,7 +83,7 @@ The Secedit command-line tool works with security templates and provides six pri
 
 -   The **Validate** parameter allows you to validate the syntax of each or any lines of text that you created or added to a security template. This ensures that if the template fails to apply syntax, the template will not be the issue.
 
--   The **Generate Rollback** parameter saves the server???s current security settings into a security template so it can be used to restore most of the server???s security settings to a known state. The exceptions are that, when applied, the rollback template will not change access control list entries on files or registry entries that were changed by the most recently applied template.
+-   The **Generate Rollback** parameter saves the server's current security settings into a security template so it can be used to restore most of the server's security settings to a known state. The exceptions are that, when applied, the rollback template will not change access control list entries on files or registry entries that were changed by the most recently applied template.
 
 For more information about the Secedit.exe tool, see [Secedit](../../management/windows-commands/Secedit.md).
 
@@ -132,7 +132,7 @@ The SCW can be accessed through Server Manager or by running Scw.exe. The wizard
 
 -   Roll back the last applied security policy.
 
-The Security Policy Wizard configures services and network security based on the server???s role, as well as configures auditing and registry settings.
+The Security Policy Wizard configures services and network security based on the server's role, as well as configures auditing and registry settings.
 
 For more information about SCW, including procedures, see the [Security Configuration Wizard](http://technet.microsoft.com/library/cc754997.aspx).
 
@@ -220,7 +220,7 @@ With the local security policy, you can control:
 
 -   What resources users are authorized to use on your computer.
 
--   Whether or not a user???s or group's actions are recorded in the event log.
+-   Whether or not a user's or group's actions are recorded in the event log.
 
 If your local computer is joined to a domain, you are subject to obtaining a security policy from the domain's policy or from the policy of any organizational unit that you are a member of. If you are getting a policy from more than one source, conflicts are resolved in the following order of precedence.
 
@@ -316,7 +316,7 @@ You can resolve discrepancies between analysis database and system settings by:
 
 Changes to the analysis database are made to the stored template in the database, not to the security template file. The security template file will only be modified if you either return to Security Templates and edit that template or export the stored configuration to the same template file.
 
-You should use **Configure Computer Now** only to modify security areas *not* affected by Group Policy settings, such as security on local files and folders, registry keys, and system services. Otherwise, when the Group Policy settings are applied, it will take precedence over local settings???such as account policies. In general, do not use **Configure Computer Now** when you are analyzing security for domain-based clients, since you will have to configure each client individually. In this case, you should return to Security Templates, modify the template, and reapply it to the appropriate Group Policy Object.
+You should use **Configure Computer Now** only to modify security areas *not* affected by Group Policy settings, such as security on local files and folders, registry keys, and system services. Otherwise, when the Group Policy settings are applied, it will take precedence over local settings'such as account policies. In general, do not use **Configure Computer Now** when you are analyzing security for domain-based clients, since you will have to configure each client individually. In this case, you should return to Security Templates, modify the template, and reapply it to the appropriate Group Policy Object.
 
 #### <a name="BKMK_AutoSecCfgTasks"></a>Automating security configuration tasks
 By calling the Secedit.exe tool at a command prompt from a batch file or automatic task scheduler, you can use it to automatically create and apply templates, and analyze system security. You can also run it dynamically from a command prompt.

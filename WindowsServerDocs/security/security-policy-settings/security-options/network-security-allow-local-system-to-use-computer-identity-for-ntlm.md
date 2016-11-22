@@ -37,7 +37,7 @@ When a service connects with the computer identity, signing and encryption are s
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**  
   
 ### Default values  
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.  
   
 |Server type or Group Policy object (GPO)|Default value|  
 |-----------------------|---------|  

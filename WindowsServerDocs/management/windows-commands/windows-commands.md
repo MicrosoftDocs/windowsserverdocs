@@ -172,7 +172,7 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [fondue](fondue.md)
 -   [for](for.md)
 -   [forfiles](forfiles.md)
--   [format_](format_.md)
+-   [format](format.md)
 -   [freedisk](freedisk.md)
 -   [fsutil](fsutil.md)
 -   [ftp](ftp.md)

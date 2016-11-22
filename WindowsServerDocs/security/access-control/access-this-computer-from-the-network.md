@@ -50,7 +50,7 @@ Constant: SeNetworkLogonRight
 **\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**  
   
 ### Default values  
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

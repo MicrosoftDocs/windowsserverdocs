@@ -58,7 +58,7 @@ The default local user accounts are built-in accounts that are created automatic
 
 After the Windows Server operating system is installed, the default local user accounts cannot be removed or deleted. In addition, default local user accounts do not provide access to network resources.
 
-Default local user accounts are used to manage access to the local server???s resources based on the rights and permissions that are assigned to the account. The default local user accounts, and the local user accounts that you create, are located in the Users folder. The Users folder is located in the Local Users and Groups folder in the local Computer Management Microsoft Management Console (MMC). Computer Management is a collection of administrative tools that you can use to manage a single local or remote computer. For more information, see [How to manage local accounts](#SEC_Manage_Accounts) later in this topic.
+Default local user accounts are used to manage access to the local server's resources based on the rights and permissions that are assigned to the account. The default local user accounts, and the local user accounts that you create, are located in the Users folder. The Users folder is located in the Local Users and Groups folder in the local Computer Management Microsoft Management Console (MMC). Computer Management is a collection of administrative tools that you can use to manage a single local or remote computer. For more information, see [How to manage local accounts](#SEC_Manage_Accounts) later in this topic.
 
 The default local user accounts that are provided include the Administrator account, Guest account and HelpAssistant account. Each of these default local user accounts is described in the following sections.
 
@@ -125,7 +125,7 @@ In addition, the guest user in the Guest account should not be able to view the 
 ### <a name="SEC_HelpAssistant"></a>HelpAssistant account (installed by using a Remote Assistance session)
 The default HelpAssistant account is enabled when a Windows Remote Assistance session is run. The Windows Remote Assistance session can be used to connect from the server to another computer running the Windows operating system. For solicited remote assistance, a user initiates a Windows Remote Assistance session, and it is initiated by invitation. For solicited remote assistance, a user sends an invitation from their computer, through e-mail or as a file, to a person who can provide assistance.
 
-After the user???s invitation for a Windows Remote Assistance session is accepted, the default HelpAssistant account is automatically created. The HelpAssistant account provides limited access to the computer to the person who provides assistance. The HelpAssistant account is managed by the Remote Desktop Help Session Manager service. The HelpAssistant account is automatically deleted after there are no Remote Assistance requests are pending.
+After the user's invitation for a Windows Remote Assistance session is accepted, the default HelpAssistant account is automatically created. The HelpAssistant account provides limited access to the computer to the person who provides assistance. The HelpAssistant account is managed by the Remote Desktop Help Session Manager service. The HelpAssistant account is automatically deleted after there are no Remote Assistance requests are pending.
 
 The security identifiers (SIDs) that pertain to the default HelpAssistant account include:
 
@@ -359,7 +359,7 @@ Passwords can be randomized by:
 
 -   Purchasing and implementing an enterprise tool to accomplish this task. These tools are commonly referred to as "privileged password management" tools.
 
--   Configuring, customizing and implementing a free tool to accomplish this task. A sample tool with source code is available at [Solution for management of built-in Administrator account???s password via GPO](http://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789).
+-   Configuring, customizing and implementing a free tool to accomplish this task. A sample tool with source code is available at [Solution for management of built-in Administrator account's password via GPO](http://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789).
 
     > [!NOTE]
     > This tool is not supported by Microsoft. There are some important considerations to make before deploying this tool because this tool requires client-side extensions and schema extensions to support password generation and storage.
