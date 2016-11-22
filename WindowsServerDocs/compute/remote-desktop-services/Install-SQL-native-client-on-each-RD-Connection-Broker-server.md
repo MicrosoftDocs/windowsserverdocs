@@ -1,3 +1,3 @@
 ---
-redirect_url: install-SQL-on-connection-broker.md
+redirect_url: install-SQL-on-connection-broker
 ---

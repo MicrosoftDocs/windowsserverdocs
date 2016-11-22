@@ -1,3 +1,3 @@
 ---
-redirect_url: desktop-hosting-service.md
+redirect_url: desktop-hosting-service
 ---
