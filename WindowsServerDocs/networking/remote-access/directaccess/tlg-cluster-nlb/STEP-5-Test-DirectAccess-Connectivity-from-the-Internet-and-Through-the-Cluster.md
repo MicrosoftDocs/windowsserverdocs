@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 CLIENT1 is now ready for DirectAccess testing.  
   

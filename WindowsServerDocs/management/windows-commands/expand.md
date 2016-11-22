@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # expand
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 expands one or more compressed files. You can use this command to retrieve compressed files from distribution disks.  
 ## Syntax  

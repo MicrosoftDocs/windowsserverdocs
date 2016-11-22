@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Windows Defender Overview for Windows Server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Windows Server 2016 now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 against known malware and can regularly update antimalware definitions through Windows Update.
 

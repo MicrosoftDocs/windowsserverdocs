@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # wbadmin restore catalog
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 recovers a backup catalog for the local computer from a storage location that you specify.
 To recover a backup catalog with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command prompt**, and then click **Run as administrator**.)

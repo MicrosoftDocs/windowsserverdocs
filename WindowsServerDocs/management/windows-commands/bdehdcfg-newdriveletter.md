@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # bdehdcfg: newdriveletter
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 assigns a new drive letter to the portion of a drive used as the system drive. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax

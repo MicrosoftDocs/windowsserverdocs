@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Transport Layer Security protocol
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 
@@ -58,7 +58,7 @@ The Schannel SSP implements the TLS and SSL protocols without modification. The 
 ## <a name="BKMK_SessionResumption"></a>TLS session resumption
 Introduced in  Windows Server 2012 R2 , the Schannel SSP implemented the server-side portion of TLS session resumption. The client-side implementation of RFC 5077 was added in Windows 8.
 
-Devices that connect TLS to servers frequently need to reconnect. TLS session resumption reduces the cost of establishing TLS connections because resumption involves an abbreviated TLS handshake. This facilitates more resumption attempts by allowing a group of TLS servers to resume each other???s TLS sessions. This modification provides the following savings for any TLS client that supports RFC 5077, including Windows Phone and Windows RT devices:
+Devices that connect TLS to servers frequently need to reconnect. TLS session resumption reduces the cost of establishing TLS connections because resumption involves an abbreviated TLS handshake. This facilitates more resumption attempts by allowing a group of TLS servers to resume each other's TLS sessions. This modification provides the following savings for any TLS client that supports RFC 5077, including Windows Phone and Windows RT devices:
 
 -   Reduced resource usage on the server
 

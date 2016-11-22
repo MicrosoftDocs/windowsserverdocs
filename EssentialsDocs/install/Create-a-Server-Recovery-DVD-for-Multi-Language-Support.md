@@ -16,7 +16,7 @@ manager: dongill
 
 # Create a Server Recovery DVD for Multi-Language Support
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_MLHeadedRecovery"></a> Create a server setup and server recovery DVD for multiple language support on locally administered servers  
   

@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot connecting computers to the server in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials 
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
   
  This topic contains troubleshooting guidance for issues that you might encounter when you connect a computer to the server that is running  Windows Server Essentials or  Windows Server Essentials.  
   

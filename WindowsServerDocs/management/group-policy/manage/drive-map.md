@@ -13,7 +13,7 @@ ms.date: 10/12/2016
 ---
 # Drive Map
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 File servers revolutionized centralized storage of user data.  However, it also introduced usability problems for end users attempting to remember long and complex paths to access their files and folders. IT Professionals resolved that problem by introducing users to Drive Mappings.  Drive maps enable users to simply associate a single drive letter to files and folders that reside on file servers.  Drive maps reduced returned usability back to the end user because it removed the requirement of users remembering long and complex paths to access centralized data.  Now, when a user needs access to their data, they can simply select the H drive from Windows Explorer, which represents the users HOME folder. Or, they can access the S drive for data that is shared among the department or organization.
 

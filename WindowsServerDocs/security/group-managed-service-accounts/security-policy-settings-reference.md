@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Security Policy Settings Reference
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This reference of security settings provides information about how to implement and manage security policies, including setting options and security considerations. Applicable operating system versions are listed on each policy setting description.
 

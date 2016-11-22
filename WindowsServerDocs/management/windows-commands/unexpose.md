@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # unexpose
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 unexposes a shadow copy that was exposed by using the **expose** command. The exposed shadow copy can be specified by its shadow ID, drive letter, share, or mount point.  
   

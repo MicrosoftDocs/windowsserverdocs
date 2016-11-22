@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # ksetup
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Performs tasks that are related to setting up and maintaining Kerberos protocol and the Key Distribution Center (KDC) to support Kerberos realms, which are not also Windows domains. For examples of how this command can be used, see the Examples section in each of the related subtopics.
 ## Syntax

@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Protected Users Security Group
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional describes the Active Directory security group Protected Users, and explains how it works. This group was introduced in  Windows Server 2012 R2 .
 
@@ -29,13 +29,13 @@ This security group is designed as part of a strategy to effectively protect and
 
 This domain-related, global group triggers non-configurable protection on devices and host computers running  Windows Server 2012 R2  and Windows 8.1, and on domain controllers in domains with a primary domain controller running  Windows Server 2012 R2 . This greatly reduces the memory footprint of credentials when users sign in to computers on the network from a non-compromised computer.
 
-Depending on the account???s domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
+Depending on the account's domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
 
 -   The member of the Protected Users group cannot authenticate by using NTLM, Digest Authentication, or CredSSP. On a device running Windows 8.1, passwords are not cached, so the device that uses any one of these Security Support Providers (SSPs) will fail to authenticate to a domain when the account is a member of the Protected User group.
 
 -   The Kerberos protocol will not use the weaker DES or RC4 encryption types in the pre-authentication process. This means that the domain must be configured to support at least the AES cipher suite.
 
--   The user???s account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
+-   The user's account cannot be delegated with Kerberos constrained or unconstrained delegation. This means that former connections to other systems may fail if the user is a member of the Protected Users group.
 
 -   The default Kerberos Ticket Granting Tickets (TGTs) lifetime setting of four hours is configurable by using Authentication Policies and Silos, which can be accessed through the Active Directory Administrative Center (ADAC). This means that when four hours has passed, the user must authenticate again.
 
@@ -107,7 +107,7 @@ Two operational administrative logs are available to help troubleshoot events th
 |Event ID and Log|Description|
 |----------|--------|
 |104<br /><br />**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<br /><br />The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<br /><br />Displays the package name, user name, domain name, and server name.|
-|304<br /><br />**ProtectedUser-Client**|Reason: The security package does not store the Protected User???s credentials.<br /><br />An informational event is logged in the client to indicate that the security package does not cache the user???s sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<br /><br />Displays the package name, user name, and domain name.|
+|304<br /><br />**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<br /><br />An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<br /><br />Displays the package name, user name, and domain name.|
 |100<br /><br />**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<br /><br />An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<br /><br />Displays the account name and device name.|
 |104<br /><br />**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<br /><br />Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<br /><br />(AES is acceptable.)|
 |303<br /><br />**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|

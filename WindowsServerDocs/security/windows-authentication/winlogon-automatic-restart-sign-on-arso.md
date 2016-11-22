@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
@@ -29,7 +29,7 @@ Windows 8 introduced lock screen apps.  These are the applications that run and 
 ## What's changed?  
 When a user signs in on a Windows 8.1 device, LSA will save the user credentials in encrypted memory accessible only by lsass.exe. When Windows Update initiates an automatic reboot without user presence, these credentials will be used to configure Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.  
   
-On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user???s session. The locking will be initiated via Winlogon whereas the credential management is done by LSA.  By automatically signing on and locking the user on the console, the user???s lock screen applications will be restarted and available.  
+On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by LSA.  By automatically signing on and locking the user on the console, the user's lock screen applications will be restarted and available.  
   
 > [!NOTE]  
 > After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked so the user's lock screen apps can run.  
@@ -106,7 +106,7 @@ Value: 0 or 1
 ![Screenshot showing policy setting controls UI where you can specify whether a device will automatically sign-in the last interactive user after Windows Update restarts the system](../media/winlogon-automatic-restart-sign-on-arso/GTR_ADDS_SignInPolicy.gif)  
   
 ## Troubleshooting  
-When WinLogon automatically locks, WinLogon???s state trace will be stored in the WinLogon event log.  
+When WinLogon automatically locks, WinLogon's state trace will be stored in the WinLogon event log.  
   
 The status of an Autologon configuration attempt is logged  
   
@@ -118,7 +118,7 @@ The status of an Autologon configuration attempt is logged
   
     -   records what the failure was  
   
--   When BitLocker???s state changes:  
+-   When BitLocker's state changes:  
   
     -   the removal of credentials will be logged  
   

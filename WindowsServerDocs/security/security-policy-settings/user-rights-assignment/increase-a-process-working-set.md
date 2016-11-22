@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Increase a process working set
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
@@ -43,7 +43,7 @@ Constant: SeIncreaseWorkingSetPrivilege
 ### Default values  
 By default, standard users have this right.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  
@@ -84,7 +84,7 @@ This section describes how an attacker might exploit a feature or its configurat
 Increasing the working set size for a process decreases the amount of physical memory that is available to the rest of the system.  
   
 ### Countermeasure  
-Increase user???s awareness about the impact of increasing the working set of a process and how to recognize that their system is adversely affected if they change this setting.  
+Increase user's awareness about the impact of increasing the working set of a process and how to recognize that their system is adversely affected if they change this setting.  
   
 ### Potential impact  
 None. Allowing standard users to increase the working set of a process is the default configuration.  

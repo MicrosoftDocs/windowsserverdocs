@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # manage-bde: resume
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Resumes BitLocker encryption or decryption after it has been paused. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax

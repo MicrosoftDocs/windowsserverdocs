@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Network security: Allow Local System to use computer identity for NTLM
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the location, values, policy management, and security considerations for this policy setting.  
   
@@ -37,7 +37,7 @@ When a service connects with the computer identity, signing and encryption are s
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**  
   
 ### Default values  
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.  
   
 |Server type or Group Policy object (GPO)|Default value|  
 |-----------------------|---------|  

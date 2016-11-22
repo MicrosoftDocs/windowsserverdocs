@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Microsoft network server: Server SPN target name validation level
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, and values, policy management and security considerations for this policy setting.
 
@@ -36,7 +36,7 @@ The options for validation levels are:
 
 -   **Accept if provided by client**
 
-    The SMB server will accept and validate the SPN provided by the SMB client and allow a session to be established if it matches the SMB server???s list of SPN???s. If the SPN does not match, the session request for that SMB client will be denied.
+    The SMB server will accept and validate the SPN provided by the SMB client and allow a session to be established if it matches the SMB server's list of SPN's. If the SPN does not match, the session request for that SMB client will be denied.
 
 -   **Required from client**
 
@@ -54,7 +54,7 @@ This setting affects the server SMB behavior, and its implementation should be c
 *GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
 
 ### Default values
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.
 
 |Server type or Group Policy object (GPO)|Default value|
 |-----------------------|---------|

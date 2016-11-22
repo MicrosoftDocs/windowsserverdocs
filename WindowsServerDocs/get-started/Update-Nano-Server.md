@@ -93,6 +93,7 @@ Enter-PSSession $s
    # Apply the servicing stack update first and then restart
    Add-WindowsPackage -Online -PackagePath C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
    Restart-Computer; exit
+
    # After restarting, apply the cumulative update and then restart
    Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Credential (Get-Credential)
    Add-WindowsPackage -Online -PackagePath C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab
@@ -101,10 +102,11 @@ Enter-PSSession $s
 
 - Using dism.exe
    ```powershell
-   # Apply the servicing stack update first and then restart dism.exe /Online /Add-Package 
-   /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
+   # Apply the servicing stack update first and then restart
+   dism.exe /Online /Add-Package /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
    
-   #After the operation completes successfully and you are prompted to restart, it's safe to press Ctrl+C to cancel the pipeline and return to the prompt
+   # After the operation completes successfully and you are prompted to restart, it's safe to
+   # press Ctrl+C to cancel the pipeline and return to the prompt
    Restart-Computer; exit
 
    # After restarting, apply the cumulative update and then restart

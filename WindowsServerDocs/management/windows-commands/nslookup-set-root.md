@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # nslookup set root
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the name of the root server used for queries.
 ## Syntax

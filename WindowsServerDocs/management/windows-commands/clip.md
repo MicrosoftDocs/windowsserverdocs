@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # clip
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Redirects command output from the command line to the Windows clipboard. You can then paste this text output into other programs.
 for examples of how to use this command, see [Examples](#BKMK_examples).

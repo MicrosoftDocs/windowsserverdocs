@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # echo
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays messages or turns on or off the command echoing feature. If used without parameters, **echo** displays the current echo setting.
 for examples of how to use this command, see [Examples](#BKMK_examples).

@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # STEP 2 Install and Configure ROUTER1
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 In this multisite test lab guide, the router computer provides an IPv4 and IPv6 bridge between the Corpnet and 2-Corpnet subnets, and acts as a router for IP-HTTPS and Teredo traffic.  
   
@@ -29,7 +29,7 @@ In this multisite test lab guide, the router computer provides an IPv4 and IPv6 
 - Configure routing and forwarding
   
 ## Install the operating system on ROUTER1  
-First, install  Windows Server 2016, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
+First, install  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.  
   
 ### To install the operating system on ROUTER1  
   

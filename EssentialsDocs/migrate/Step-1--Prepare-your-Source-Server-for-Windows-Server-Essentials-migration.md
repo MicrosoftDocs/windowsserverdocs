@@ -16,7 +16,7 @@ manager: dongill
 
 # Step 1: Prepare your Source Server for Windows Server Essentials migration
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This topic explains how to back up the Source Server, evaluate the Source Server system health, install the most recent service packs and fixes, and verify the network configuration.  
   

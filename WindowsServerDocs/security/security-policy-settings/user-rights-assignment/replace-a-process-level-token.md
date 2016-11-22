@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Replace a process level token
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
@@ -49,7 +49,7 @@ Constant: SeAssignPrimaryTokenPrivilege
 ### Default values  
 By default this setting is Network Service and Local Service on domain controllers and on stand-alone servers.  
   
-The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  
@@ -87,7 +87,7 @@ When a local setting is greyed out, it indicates that a GPO currently controls t
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-Users with the **Replace a process level token** user right can start processes as another user if they know the user???s credentials.  
+Users with the **Replace a process level token** user right can start processes as another user if they know the user's credentials.  
   
 ### Countermeasure  
 For member servers, ensure that only the Local Service and Network Service accounts have the **Replace a process level token** user right.  

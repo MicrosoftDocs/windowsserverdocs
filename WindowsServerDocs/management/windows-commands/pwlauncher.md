@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # pwlauncher
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables or disables the Windows To Go startup Options (pwlauncher). The **pwlauncher** command-line tool allows you to configure the computer to boot into a Windows To Go workspace automatically (assuming one is present), without requiring you to enter your firmware or change your startup options.
 for examples of how to use this command, see [Examples](#BKMK_examples).

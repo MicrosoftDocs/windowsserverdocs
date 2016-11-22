@@ -13,7 +13,7 @@ ms.author: coreyp
 ---
 # Security and Assurance in Windows Server 2016
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 <img src="../get-started/media/5-security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 <br><br><br><br><br><br>

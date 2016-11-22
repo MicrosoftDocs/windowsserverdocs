@@ -16,7 +16,7 @@ manager: dongill
 
 # Customize Shared Folders
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 By default, the server folders are created on the largest data partition on Disk 0. Partners can customize the location and specify additional server folders by using the following steps:  
   

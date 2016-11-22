@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # wbadmin start systemstatebackup
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates a system state backup of the local computer and stores it on the location specified.
 > [!NOTE]

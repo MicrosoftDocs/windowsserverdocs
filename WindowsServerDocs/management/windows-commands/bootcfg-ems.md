@@ -17,7 +17,7 @@ ms.date: 10/12/2016
 ---
 # bootcfg ems
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer. By enabling Emergency Management Services, you add a "redirect=Port#" line to the [boot loader] section of the Boot.ini file and a /redirect option to the specified operating system entry line. The Emergency Management Services feature is enabled only on servers.
 

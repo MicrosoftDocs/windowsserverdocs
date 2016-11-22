@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Interactive logon: Machine account lockout threshold
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This security policy reference topic for the IT professional describes the best practices, location, values, management, and security considerations for this policy setting.  
   
@@ -37,7 +37,7 @@ Use this policy setting in conjunction with your other failed account logon atte
 *GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
-The following table lists the actual and effective default values for this policy. Default values are also listed on the policy???s property page.  
+The following table lists the actual and effective default values for this policy. Default values are also listed on the policy's property page.  
   
 |Server type or GPO|Default value|  
 |-----------|---------|  

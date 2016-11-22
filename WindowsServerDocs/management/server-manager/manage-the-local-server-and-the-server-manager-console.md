@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Manage the Local Server and the Server Manager Console
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows Server, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
