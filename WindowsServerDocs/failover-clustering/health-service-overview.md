@@ -7,7 +7,7 @@ ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
-ms.date: 10/12/2016
+ms.date: 11/22/2016
 ---
 # Health Service in Windows Server 2016
 > Applies to Windows Server 2016
@@ -22,7 +22,8 @@ The Health Service is enabled by default with Storage Spaces Direct. No addition
 
 The Health Service reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
 
-### Coverage  
+### Coverage
+
 In Windows Server 2016, the Health Service provides the following metrics:  
 -   IOPS (Read, Write, Total)  
 -   IO Throughput (Read, Write, Total)  
@@ -53,7 +54,7 @@ Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>
 > The metrics returned in each case will be the subset applicable to that scope.  
 
 
-### Capacity: Putting It All Together  
+### Capacity: Putting it all together  
 
 The notion of available capacity in Storage Spaces is nuanced. To help you plan effectively, the Health Service provides six distinct metrics for capacity. Here is what each represents:  
 
@@ -107,6 +108,7 @@ For example, here is a typical fault:
  > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
 
 ### Coverage  
+
 In Windows Server 2016, the Health Service provides the following Fault coverage:  
 
 -   **Essential cluster hardware**:  
@@ -223,6 +225,7 @@ In Windows Server 2016, the **Get-StorageHealthAction** cmdlet can return any of
 -   Rebalancing storage pool  
 
 ## Automation  
+
 This section describes workflows which are automated by the Health Service in the disk lifecycle.  
 
 ### Disk Lifecycle   
@@ -262,50 +265,78 @@ If possible, the Health Service will begin blinking the indicator light on the r
 
 You should replace the retired physical disk when possible. Most often, this consists of a hot-swap - i.e. powering off the node or storage enclosure is not required. See the Fault for helpful location and part information.  
 
-#### Quarantine  
+#### Verification
 
-When the replacement disk is inserted, it will be verified against the Allow List of supported devices. See the next section to learn more.  
+When the replacement disk is inserted, it will be verified against the Supported Components Document (see the next section).
 
 #### Pooling  
 
 If allowed, the replacement disk is automatically substituted into its predecessor's pool to enter use. At this point, the system is returned to its initial state of perfect health, and then the Fault disappears.  
 
-## Quarantine  
-The Health Service provides an enforcement mechanism to restrict the components and devices used by a Spaces Direct cluster to those on an Allow List provided by the administrator or solution vendor. This can be used to prevent mistaken use of unsupported hardware by you or others, which may help with warranty or support contract compliance. This functionality is currently limited to physical disk devices, including SSDs, HDDs, and NVMe devices. The Allow List can restrict on model, manufacturer (optional), and firmware version (optional).  
- If an Allow List is specified, unlisted disk devices are prevented from joining pools, which effectively precludes their use in production. If no Allow List is specified, any disk device will be allowed to join pools.   
+## Supported Components Document  
 
->[!IMPORTANT]
-> This does not apply retroactively to drives already pooled and in use.  
+The Health Service provides an enforcement mechanism to restrict the components used by Storage Spaces Direct to those on a Supported Components Document provided by the administrator or solution vendor. This can be used to prevent mistaken use of unsupported hardware by you or others, which may help with warranty or support contract compliance. This functionality is currently limited to physical disk devices, including SSDs, HDDs, and NVMe drives. The Supported Components Document can restrict on model, manufacturer (optional), and firmware version (optional).
 
 ### Usage  
 
-The Allow List is specified using an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free [here](http://code.visualstudio.com/)) or Notepad, to create an XML document which you can save and reuse.  
+The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free [here](http://code.visualstudio.com/)) or Notepad, to create an XML document which you can save and reuse.
 
-#### Example Allow list  
+#### Sections
+
+The document has two independent sections: **Disks** and **Cache**.
+
+If the **Disks** section is provided, only the drives listed are allowed to join pools. Any unlisted drives are prevented from joining pools, which effectively precludes their use in production. If this section is left empty, any drive will be allowed to join pools.
+
+If the **Cache** section is provided, only the drives listed will be used for caching. If this section is left empty, Storage Spaces Direct will attempt to guess based on media type and bus type. For example, if your deployment uses solid-state drives (SSD) and hard disk drives (HDD), the former is automatically chosen for caching; however, if your deployment uses all-flash, you may need to specify the higher endurance devices you'd like to use for caching here.
+
+>[!IMPORTANT]
+> The Supported Components Document does not apply retroactively to drives already pooled and in use.  
+
+#### Example  
 
 ```XML
-    <Components>  
-     <Disks>  
-       <Disk>  
-         <Manufacturer>Contoso</Manufacturer>  
-         <Model>XYZ9000</Model>  
-         <AllowedFirmware>  
-          <Version>2.0</Version>  
-          <Version>2.1</Version>  
-          <Version>2.2</Version>  
-        </AllowedFirmware>  
-       </Disk>  
-     </Disks>  
-    </Components>         
+<Components>
+
+  <Disks>
+    <Disk>
+      <Manufacturer>Contoso</Manufacturer>
+      <Model>XYZ9000</Model>
+      <AllowedFirmware>
+        <Version>2.0</Version>
+        <Version>2.1</Version>
+        <Version>2.2</Version>
+      </AllowedFirmware>
+      <TargetFirmware>
+        <Version>2.1</Version>
+        <BinaryPath>\\path\to\image.bin</BinaryPath>
+      </TargetFirmware>
+    </Disk>
+  </Disks>
+
+  <Cache>
+    <Disk>
+      <Manufacturer>Fabrikam</Manufacturer>
+      <Model>QRSTUV</Model>
+    </Disk>
+  </Cache>
+
+</Components>
+
 ```
 
-To allow multiple disk devices, simply add additional **&lt;Disk&gt;** tags with the fields you'd like to restrict on.  
+To list multiple drives, simply add additional **&lt;Disk&gt;** tags within either section.
 
-To set the Allow List, run the following PowerShell cmdlet:  
+To inject this XML when deploying Storage Spaces Direct, use the **-XML** flag:
 
 ```PowerShell
-$xml = Get-Content <Path/To/File.xml> | Out-String  
-Get-StorageSubSystem clus* | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $xml  
+Enable-ClusterS2D -XML <MyXML>
+```
+
+To set or modify the Supported Components Document once Storage Spaces Direct has been deployed (i.e. once the Health Service is already running), use the following PowerShell cmdlet:
+
+```PowerShell
+$MyXML = Get-Content <\\path\to\file.xml> | Out-String  
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $MyXML  
 ```
 
 >[!NOTE]
@@ -317,6 +348,7 @@ You can verify using the following PowerShell cmdlet:
 Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion  
 ```
 
-## See also  
+## See also
+
 - [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)  
