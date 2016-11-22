@@ -12,7 +12,7 @@ ms.date: 11/22/2016
 # Health Service in Windows Server 2016
 > Applies to Windows Server 2016
 
-The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
+The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
 
 ## Prerequisites  
 
@@ -25,18 +25,24 @@ The Health Service reduces the work required to get live performance and capacit
 ### Coverage
 
 In Windows Server 2016, the Health Service provides the following metrics:  
--   IOPS (Read, Write, Total)  
--   IO Throughput (Read, Write, Total)  
--   IO Latency (Read, Write)  
--   Physical Capacity (Total, Remaining)  
--   Pool Capacity (Total, Remaining)  
--   Volume Capacity (Total, Remaining)  
--   CPU Utilization %, All Machines Average  
--   Memory, All Machines (Total, Available)  
+-   **IOPS** (Read, Write, Total)  
+-   **IO Throughput** (Read, Write, Total)  
+-   **IO Latency** (Read, Write)  
+-   **Physical Capacity** (Total, Remaining)  
+-   **Pool Capacity** (Total, Remaining)  
+-   **Volume Capacity** (Total, Remaining)  
+-   **CPU Utilization %**, All Machines Average  
+-   **Memory**, All Machines (Total, Available)  
 
 ### Usage  
 
-To get metrics for the entire Storage Spaces Direct cluster run the following PowerShell cmdlet. The **&lt;Count&gt;** parameter indicates how many sets of values to return, at one second intervals.  
+Use the following PowerShell cmdlet to get metrics for the entire Storage Spaces Direct cluster:
+
+```PowerShell
+Get-StorageSubSystem Cluster* | Get-StorageHealthReport
+```
+
+The optional **Count** parameter indicates how many sets of values to return, at one second intervals.  
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>  
@@ -47,12 +53,11 @@ You can also get metrics for one specific volume or node using the following cmd
 ```PowerShell
 Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
 
-Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>
+Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 ```
 
 > [!NOTE]
 > The metrics returned in each case will be the subset applicable to that scope.  
-
 
 ### Capacity: Putting it all together  
 
@@ -68,7 +73,6 @@ The notion of available capacity in Storage Spaces is nuanced. To help you plan 
 The following diagram illustrates the relationship between these quantities.  
 
 ![Breakdown of Capacity Metrics](media/health-service-overview/overview-CapacityMetricsBreakdown.png)  
-
 
 ## Faults  
 
@@ -406,5 +410,5 @@ See the previous section.
 
 ## See also
 
-- [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)  
+- [Developer documentation, sample code, and API reference on MSDN](https://msdn.microsoft.com/windowshealthservice)
