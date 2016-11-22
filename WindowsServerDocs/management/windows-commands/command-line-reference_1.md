@@ -283,7 +283,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [forfiles](forfiles.md)
 
--   [format_](format_.md)
+-   [format](format.md)
 
 -   [freedisk](freedisk.md)
 

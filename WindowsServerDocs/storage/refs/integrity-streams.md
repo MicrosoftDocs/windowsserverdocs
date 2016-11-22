@@ -1,7 +1,5 @@
 ---
-# required metadata
-
-title: Integrity streams
+title: ReFS integrity streams
 description:
 author: gawatu
 ms.author: jgerend
@@ -13,8 +11,8 @@ ms.technology: storage
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 ---
 
-# Integrity streams
->Applies To: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+# ReFS integrity streams
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 Integrity streams is an optional feature in ReFS that validates and maintains data integrity. ReFS uses checksums for metadata and optionally for file data--file data checksums are disabled by default on current versions of ReFS. Using checksums is an important feature for ReFS, for it enables ReFS to clearly determine if a block is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically. 
 
