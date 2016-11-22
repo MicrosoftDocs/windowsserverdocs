@@ -136,8 +136,9 @@ In Windows Server 2016, the Health Service provides the following Fault coverage
     -   Any issues with automation, described in later sections  
     -   Quarantined physical disk device  
 
-       <sup>1</sup>  Indicates the volume has reached 80% full (minor severity) or 90% full (major severity).  
-       <sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.  
+
+<sup>1</sup>  Indicates the volume has reached 80% full (minor severity) or 90% full (major severity).  
+<sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.  
 
 >[!NOTE]
 > The health of storage enclosure components such as fans, power supplies, and sensors is derived from SCSI Enclosure Services (SES). If your vendor does not provide this information, the Health Service cannot display it.  
@@ -147,7 +148,7 @@ In Windows Server 2016, the Health Service provides the following Fault coverage
 To see any current Faults, run the following cmdlet in PowerShell:  
 
 ```PowerShell
-Get-StorageSubSystem clus* | Debug-StorageSubSystem  
+Get-StorageSubSystem Cluster* | Debug-StorageSubSystem  
 ```
 
 This returns any Faults which affect the overall Storage Spaces Direct cluster. Most often, these Faults relate to hardware or configuration. If there are no Faults, this cmdlet will return nothing.  
