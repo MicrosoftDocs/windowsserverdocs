@@ -357,13 +357,13 @@ Use the following PowerShell cmdlet to set or modify settings.
 ### Usage
 
 ```PowerShell
-Set-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>  
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>  
 ```
 
 #### Example
 
 ```PowerShell
-Set-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.Volume.CapacityThreshold.Warning" -Value 70
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.Volume.CapacityThreshold.Warning" -Value 70
 ```
 
 ### Common settings
