@@ -17,7 +17,7 @@ author: jamesmci
 
 >Applies To: Windows Server 2016
 
-You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.  
+You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server Datacenter edition, System Center 2016, and Microsoft Azure.  
   
 > [!NOTE]  
 > In addition to this topic, the following SDN content is available.  
@@ -32,7 +32,10 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
 
-Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure. 
+Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure.
+
+>[!NOTE]
+>For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server 2016 Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server 2016 Standard edition.
 
 While you can still use your existing physical switches, routers, and other hardware devices, you can achieve deeper integration between the virtual network and the physical network if these devices are designed for compatibility with software defined networking.  
   
