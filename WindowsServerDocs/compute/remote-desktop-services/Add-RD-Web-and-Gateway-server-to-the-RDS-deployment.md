@@ -1,25 +1,29 @@
 ---
 title: Add RD Web and Gateway server to the RDS deployment
+Description: Provides steps for installing the RD Web and Gateway servers in an RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac7e1cf8-b63f-4a3b-92ef-56dc8512f7db
 author: lizap
-manager: msswadhwa
+ms.author: elizapo
+ms.date: 11/08/2016
+manager: dongill
 ---
 # Add RD Web and Gateway server to the RDS deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to add the RD Web and Gateway server you created to your existing Remote Desktop Services basic deployment.  
 
->[NOTE] Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
-   
+>[!NOTE] 
+> Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
+
+ 
 1. Create a public IP address for the virtual machine running Remote Desktop Management Services (RDMS). The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.  
     1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment and then click the RDMS virtual machine (for example, Contoso-Cb1).  
     2. Click **Settings > Network interfaces**, and then click the corresponding network interface.   

@@ -1,21 +1,23 @@
 ---
 title: Network Function Virtualization
+description: You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances like Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing (SLB) in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
+ms.author: jamesmci
 author: vhorne
 ---
 # Network Function Virtualization
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliance such as a datacenter firewall, a multitenant gateway, and a software load balancing multiplexer (MUX)  
+You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
   
 >[!NOTE]  
 >In addition to this topic, the following Network Function Virtualization documentation is available.  
@@ -25,7 +27,7 @@ You can use this topic to learn about Network Function Virtualization, which all
   
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
-Microsoft included a standalone gateway as a virtual appliance starting with  Windows Server 2012 R2 . For more information, see [Windows Server Gateway](assetId:///e39e8b8c-a23c-4dbd-b895-d1e3f2885e9e). Now with Windows Server 2016 Technical Preview Microsoft continues to expand and invest in the network function virtualization market.  
+Microsoft included a standalone gateway as a virtual appliance starting with  Windows Server 2012 R2 . For more information, see [Windows Server Gateway](https://technet.microsoft.com/library/dn313101.aspx). Now with Windows Server 2016 Microsoft continues to expand and invest in the network function virtualization market.  
   
 ## Virtual appliance benefits  
 A virtual appliance is dynamic and easy to change because it is a pre-built, customized virtual machine. It can be one or more virtual machines packaged, updated, and maintained as a unit. Together with software defined networking (SDN), you get the agility and flexibility needed in today's cloud-based infrastructure. For example:  
@@ -46,7 +48,7 @@ A virtual appliance is dynamic and easy to change because it is a pre-built, cus
   
     -   Customers can scale virtual appliances up or down dynamically based on demand.  
   
-For more information about Microsoft SDN see [Software Defined Networking](assetId:///42e98b43-126b-4e4f-a169-0df56daf4a4a).  
+For more information about Microsoft SDN see [Software Defined Networking](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking--sdn-).  
   
 ### What network functions are being virtualized?  
 The marketplace for virtualized network functions is growing quickly. The following network functions are being virtualized:  
@@ -80,22 +82,22 @@ The marketplace for virtualized network functions is growing quickly. The follow
     -   HTTP proxy  
   
 ## Why Microsoft is a great platform for virtual appliances  
-![](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
+![Virtual network stack](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
   
 The Microsoft platform has been engineered to be a great platform to build and deploy virtual appliances. Here's why:  
   
--   Microsoft provides key virtualized network functions with Windows Server 2016 Technical Preview.  
+-   Microsoft provides key virtualized network functions with Windows Server 2016.  
   
 -   You can deploy a virtual appliance from the vendor of your choice.  
   
--   You can deploy, configure, and manage your virtual appliances with the Microsoft Network Controller which comes with Windows Server 2016 Technical Preview. For more information about the Network Controller, see [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md).  
+-   You can deploy, configure, and manage your virtual appliances with the Microsoft Network Controller which comes with Windows Server 2016. For more information about the Network Controller, see [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md).  
   
 -   Hyper-V can host the top guest operating systems that you need.  
   
-## Network function virtualization in Windows Server 2016 Technical Preview  
+## Network function virtualization in Windows Server 2016  
   
 ### Virtual appliances functions provided by Microsoft  
-The following virtual appliances are provided with Windows Server 2016 Technical Preview:  
+The following virtual appliances are provided with Windows Server 2016:  
   
 **Software load balancer**  
   
@@ -113,7 +115,7 @@ A layer-4 load balancer operating at datacenter scale. This is a similar version
   
 -   **GRE tunnel gateways**  
   
-    GRE based tunnels enable connectivity between tenant virtual networks and external networks. Since the GRE protocol is lightweight and support for GRE is available on most network devices, it becomes an ideal choice for tunneling where data encryption is not required. GRE support in Site to Site (S2S) tunnels solves the problem of forwarding between tenant virtual networks and tenant external networks using a multi-tenant gateway. For more information about GRE tunnels, see [GRE Tunneling in Windows Server Technical Preview](https://technet.microsoft.com/library/dn765485.aspx).  
+    GRE based tunnels enable connectivity between tenant virtual networks and external networks. Since the GRE protocol is lightweight and support for GRE is available on most network devices, it becomes an ideal choice for tunneling where data encryption is not required. GRE support in Site to Site (S2S) tunnels solves the problem of forwarding between tenant virtual networks and tenant external networks using a multi-tenant gateway. For more information about GRE tunnels, see [GRE Tunneling in Windows Server 2016](https://technet.microsoft.com/library/dn765485.aspx).  
   
 **Routing control plane with BGP**  
   

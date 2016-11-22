@@ -1,17 +1,19 @@
 ---
+ms.assetid: 208928eb-bb17-4984-a312-23fff43133e3
 title: Auditing Enhancements to AD FS in Windows Server 2016
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Auditing Enhancements to AD FS in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Currently, in AD FS for Windows Server 2012 R2 there are numerous audit events generated for a single request and the relevant information about a log-in or token issuance activity is either absent (in some versions of AD FS) or spread across multiple audit events. By default the AD FS audit events are turned off due to their verbose nature.  
     With the release of AD FS in Windows Server 2016, auditing has become more streamlined and less verbose.  
@@ -28,11 +30,11 @@ By default, AD FS in Windows Server 2016 has basic auditing enabled.  With basic
   
 To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.  
   
-![](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)  
+![audit enhancements](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)  
   
 The auditing level can be raised or lowered using the PowerShell cmdlt:  Set-AdfsProperties -AuditLevel.  
   
-![](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)  
+![audit enhancements](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)  
   
 ## Types of Audit Events  
 AD FS Audit Events can be of different types, based on the different types of requests processed by AD FS. Each type of Audit Event has specific data associated with it.  The type of audit events can be differentiated between login requests (i.e. token requests) versus system requests (server-server calls including fetching configuration information).    

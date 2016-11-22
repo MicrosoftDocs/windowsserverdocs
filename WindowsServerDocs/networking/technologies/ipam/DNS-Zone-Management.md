@@ -1,19 +1,22 @@
 ---
 title: DNS Zone Management
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de3dc14b-164a-49f1-8a57-b9e788046c23
+ms.author: jamesmci
 author: jamesmci
 ---
 # DNS Zone Management
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic provides information about managing DNS zones by using the IPAM client console.  
   
@@ -25,7 +28,7 @@ This topic provides information about managing DNS zones by using the IPAM clien
 > -   [View DNS Resource Records for a DNS Zone](../../technologies/ipam/View-DNS-Resource-Records-for-a-DNS-Zone.md)  
 > -   [View DNS Zones](../../technologies/ipam/View-DNS-Zones.md)  
   
-When you deploy IPAM in Windows Server&reg; 2016 Technical Preview, you can use IPAM to manage DNS zones.  
+When you deploy IPAM in  Windows Server 2016, you can use IPAM to manage DNS zones.  
   
 In the IPAM console, you can view DNS resource records for a specific DNS zone, and filter the records based on type, IP address, resource record data, and other filtering options. In addition, you can edit DNS resource records for specific zones  
   

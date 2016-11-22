@@ -1,21 +1,22 @@
 ---
+ms.assetid: e4ff3f20-7284-40a8-8fe2-3a1b34fde1df
 title: Replication error 8453 Replication access was denied
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 985b9945-78c9-4754-8a69-146878d9f790
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Replication error 8453 Replication access was denied
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error 8453 Replication access was denied.</para>

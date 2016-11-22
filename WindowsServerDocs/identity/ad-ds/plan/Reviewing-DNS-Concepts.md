@@ -1,19 +1,20 @@
 ---
+ms.assetid: 133474ee-316d-4b1c-acc6-ad5434a064d5
 title: Reviewing DNS Concepts
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: aeb2265d-8965-4b7e-bb28-704c36be4d40
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Reviewing DNS Concepts
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Domain Name System (DNS) is a distributed database that represents a namespace. The namespace contains all of the information needed for any client to look up any name. Any DNS server can answer queries about any name within its namespace. A DNS server answers queries in one of the following ways:  
   
@@ -30,7 +31,7 @@ For more information about DNS and Active Directory Domain Services (AD DS), see
 ## Delegation  
 For a DNS server to answer queries about any name, it must have a direct or indirect path to every zone in the namespace. These paths are created by means of delegation. A delegation is a record in a parent zone that lists a name server that is authoritative for the zone in the next level of the hierarchy. Delegations make it possible for servers in one zone to refer clients to servers in other zones. The following illustration shows one example of delegation.  
   
-![](../../media/Reviewing-DNS-Concepts/0c24b576-d41a-4e5d-ad3d-6be81e095835.gif)  
+![DNS concepts](../../media/Reviewing-DNS-Concepts/0c24b576-d41a-4e5d-ad3d-6be81e095835.gif)  
   
 The DNS root server hosts the root zone represented as a dot ( . ). The root zone contains a delegation to a zone in the next level of the hierarchy, the com zone. The delegation in the root zone tells the DNS root server that, to find the com zone, it must contact the Com server. Likewise, the delegation in the com zone tells the Com server that, to find the contoso.com zone, it must contact the Contoso server.  
   
@@ -49,7 +50,7 @@ In some configurations, DNS servers include root hints (that is, a list of names
 ### Resolving names by using root hints  
 Root hints enable any DNS server to locate the DNS root servers. After a DNS server locates the DNS root server, it can resolve any query for that namespace. The following illustration describes how DNS resolves a name by using root hints.  
   
-![](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)  
+![DNS concepts](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)  
   
 In this example, the following events occur:  
   
@@ -68,7 +69,7 @@ In this example, the following events occur:
 ### Resolving names by using forwarding  
 Forwarding enables you to route name resolution through specific servers instead of using root hints. The following illustration describes how DNS resolves a name by using forwarding.  
   
-![](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)  
+![DNS concepts](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)  
   
 In this example, the following events occur:  
   

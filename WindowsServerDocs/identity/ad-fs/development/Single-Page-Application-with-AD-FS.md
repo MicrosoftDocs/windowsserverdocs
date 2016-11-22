@@ -3,7 +3,7 @@ title: Single Page Application with AD FS
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -21,7 +21,6 @@ This walkthrough provides instruction for authenticating against AD FS using ADA
 
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
-
 
 
 ![AD FS Authorization](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG)
@@ -70,11 +69,20 @@ The key files containing authentication logic are the following:
 **Startup.Auth.cs** - contains configuration for the WebAPI to use Active Directory Federation Service for bearer authentication.
 
 ## Registering the public client in AD FS
-In the sample, the WebAPI is configured to listen at https://localhost:44326/. In order for configuring implicit grant flow for the client, it should be registered as public client. Open PowerShell on the AD FS server under administrative privileges and execute the below command:
+In the sample, the WebAPI is configured to listen at https://localhost:44326/. The application group **Web browser accessing a web application** can be used for configuring implicit grant flow application.
 
-    Add-AdfsClient -ClientId https://localhost:44326/ -RedirectUri https://localhost:44326/ -Name SPAJS -Description 'Test SPA'
+1. Open the AD FS management console and click on **Add Application Group**. In the **Add Application Group Wizard** enter the name of the application, description and select the **Web browser accessing a web application** template from the **Client-Server applications** section as shown below
+    <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
-![Register the client](media/Single-Page-Application-with-AD-FS/singleapp2.PNG)
+2. On the next page **Native application**, provide the application client identifier and redirect URI as shown below
+    <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
+
+3. On the next page **Apply Access Control Policy** leave the permissions as *Permit everyone*
+
+4. The summary page should look similar to below
+    <br>![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
+
+5. Click on **Next** to complete the addition of the application group and close the wizard.
 
 ## Modifying the sample
 Configure ADAL JS

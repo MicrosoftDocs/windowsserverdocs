@@ -1,21 +1,20 @@
 ---
+ms.assetid: e3d55565-ad45-4504-ad73-8103d1a92170
 title: Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 2ba77b0f-0803-4255-8bf7-a78a60ee2c9b
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to add child and tree domains to an existing Windows Server 2012 forest, using Server Manager or Windows PowerShell.  
   
@@ -28,7 +27,7 @@ This topic explains how to add child and tree domains to an existing Windows Ser
 ## <a name="BKMK_Workflow"></a>Child and Tree Domain Workflow  
 The following diagram illustrates the Active Directory Domain Services configuration process when you previously installed the AD DS role and you have started the Active Directory Domain Services Configuration Wizard using Server Manager to create a new domain in an existing forest.  
   
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/adds_childtreedeploy_beta1.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/adds_childtreedeploy_beta1.png)  
   
 ## <a name="BKMK_PS"></a>Child and Tree Domain Windows PowerShell  
   
@@ -45,11 +44,11 @@ The following diagram illustrates the Active Directory Domain Services configura
 ### Deployment Configuration  
 The following screenshot shows the options for adding a child domain:  
   
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildDeployConfig.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildDeployConfig.png)  
   
 The following screenshot shows the options for adding a tree domain:  
   
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_TreeDeployConfig.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_TreeDeployConfig.png)  
   
 Server Manager begins every domain controller promotion with the **Deployment Configuration** page. The remaining options and required fields change on this page and subsequent pages, depending on which deployment operation you select.  
   
@@ -74,7 +73,7 @@ Install-AddsDomain
 ```  
   
 ### Domain Controller Options  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_DCOptions_Child.gif)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_DCOptions_Child.gif)  
   
 The **Domain Controller Options** page specifies the domain controller options for the new domain controller. The configurable domain controller options include **DNS server** and **Global Catalog**; you cannot configure read-only domain controller as the first domain controller in a new domain.  
   
@@ -154,7 +153,7 @@ The ADDSDeployment module offers an additional option to skip automatic configur
 ```  
   
 ### DNS Options and DNS Delegation Credentials  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildDNSOptions.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildDNSOptions.png)  
   
 The **DNS Options** page enables you to provide alternate DNS Admin credentials for delegation.  
   
@@ -170,7 +169,7 @@ The **DNS Options** ADDSDeployment Windows PowerShell arguments are:
 For more information about DNS delegation, see [Understanding Zone Delegation](http://technet.microsoft.com/library/cc771640.aspx).  
   
 ### Additional Options  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildAdditionalOptions.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildAdditionalOptions.png)  
   
 The **Additional Options** page shows the NetBIOS name of the domain and enables you to override it. By default, the NetBIOS domain name matches the left-most label of the fully qualified domain name provided on the **Deployment Configuration** page. For example, if you provided the fully qualified domain name of corp.contoso.com, the default NetBIOS domain name is CORP.  
   
@@ -195,7 +194,7 @@ The **Additional Options** ADDSDeployment cmdlet argument is:
 ```  
   
 ### Paths  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_UpgradePaths.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_UpgradePaths.png)  
   
 The **Paths** page enables you to override the default folder locations of the AD DS database, the data base transaction logs, and the SYSVOL share. The default locations are always in subdirectories of %systemroot%.  
   
@@ -208,7 +207,7 @@ The **Paths** ADDSDeployment cmdlet arguments are:
 ```  
   
 ### Review Options and View Script  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildReviewOptions.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildReviewOptions.png)  
   
 The **Review Options** page enables you to validate your settings and ensure they meet your requirements before you start the installation. This is not the last opportunity to stop the installation when using Server Manager. This is simply an option to confirm your settings before continuing the configuration  
   
@@ -244,10 +243,10 @@ Install-ADDSDomain `
   
 Use the optional **Whatif** argument with the **Install-ADDSForest** cmdlet to review configuration information. This enables you to see the explicit and implicit values of the arguments for a cmdlet.  
   
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildWhatIf.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildWhatIf.png)  
   
 ### Prerequisites Check  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildPrereqCheck.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildPrereqCheck.png)  
   
 The **Prerequisites Check** is a new feature in AD DS domain configuration. This new phase validates that the server configuration is capable of supporting a new AD DS domain.  
   
@@ -269,7 +268,7 @@ You cannot bypass the **Prerequisite Check** when using Server Manager, but you 
 Click **Install** to begin the domain controller promotion process. This is last opportunity to cancel the installation. You cannot cancel the promotion process once it begins. The computer will reboot automatically at the end of promotion, regardless of the promotion results.  
   
 ### Installation  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildInstallation.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildInstallation.png)  
   
 When the **Installation** page displays, the domain controller configuration begins and cannot be halted or canceled. Detailed operations display on this page and are written to logs:  
   
@@ -285,9 +284,9 @@ Install-addsdomain
   
 See [Child and Tree Domain Windows PowerShell](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_PS) for required and optional arguments.The **Install-addsdomain** cmdlet only has two phases (prerequisite checking and installation). The two figures below show the installation phase with the minimum required arguments of **-domaintype**, **-newdomainname**, **-parentdomainname**, and **-credential**. Note how, just like Server Manager, **Install-ADDSDomain** reminds you that promotion will reboot the server automatically.  
   
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_PSInstallADDSDomain.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_PSInstallADDSDomain.png)  
   
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_PSInstallADDSDomainProgress.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_PSInstallADDSDomainProgress.png)  
   
 To accept the reboot prompt automatically, use the **-force** or **-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **-norebootoncompletion** argument.  
   
@@ -295,7 +294,7 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
 > Overriding the reboot is not recommended. The domain controller must reboot to function correctly  
   
 ### Results  
-![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)  
+![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)  
   
 The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller will automatically reboot after 10 seconds.  
   

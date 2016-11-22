@@ -1,33 +1,25 @@
 ---
+ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Storage-class Memory (NVDIMM-N) Health Management in Windows
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
 ms.topic: article
-ms.assetid: 
-author: jasongerend
+author: JasonGerend
+ms.date: 08/24/2016
 ---
-
->Applies To: Windows Server 2016, Windows 10 Anniversary Edition
-
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
+> Applies To: Windows Server 2016, Windows 10 (version 1607)
 
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 
-If you aren't familiar with Windows’ support for storage-class memory devices, these two short videos provide an overview:
+If you aren't familiar with Windows’ support for storage-class memory devices, these short videos provide an overview:
+- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
+- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
+- [Accelerating SQL Server 2016 peformance with Persistent Memory in Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
 
-- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows
-    Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
-
-- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in
-    Windows Server
-    2016](https://channel9.msdn.com/Events/Build/2016/P470)
-
-JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 Anniversary Edition. While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
+JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 (version 1607). While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
 
 All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used.
 

@@ -1,29 +1,28 @@
 ---
 title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016
-description: " "
+description: "Gives instructions and considerations for upgrading the version of a virtual machine"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
-author: cwatsonmsft
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/03/2016
 ---
 # Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016
 
->Applies To: Windows 10, Windows Server Technical Preview
+>Applies To: Windows 10, Windows Server 2016 
 
-**This is preliminary content and subject to change.**  
 Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:  
   
 - You upgrade your Hyper-V hosts to the latest version of Windows or Windows Server.  
 - You upgrade the cluster functional level.   
 - You're sure that you won't need to move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server.  
   
-For more information, see [Cluster Operating System Rolling Upgrade ](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Upgrading Windows Server 2012 R2 clusters to Windows Server 2016 Technical Preview in VMM](https://technet.microsoft.com/library/mt445417.aspx).  
+For more information, see [Cluster Operating System Rolling Upgrade ](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Upgrading Windows Server 2012 R2 clusters to Windows Server 2016 in VMM](https://technet.microsoft.com/library/mt445417.aspx).  
     
 Step 1: Check the virtual machine configuration versions  
 ---  
@@ -51,10 +50,12 @@ The following table shows which virtual machine configuration versions are suppo
 
 |Hyper-V host Windows version|  Supported virtual machine configuration versions|  
 |-|-|  
+|Windows Server 2016 | 8.0, 7.1, 7.0, 6.2, 5.0| 
+|Windows 10 Anniversary Update |8.0, 7.1, 7.0, 6.2, 5.0|
 |Windows Server 2016 Technical Preview| 7.1, 7.0, 6.2, 5.0|  
 |Windows 10 build 10565 or later|   7.0, 6.2, 5.0 |  
 |Windows 10 builds earlier than 10565  |    6.2, 5.0 |  
-| Windows Server 2012 R2 |  5.0|  
+|Windows Server 2012 R2 |  5.0|  
 |Windows 8.1    |5.0|  
   
 Run the PowerShell cmdlet [Get-VMHostSupportedVersion](https://technet.microsoft.com/library/mt653838.aspx) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.  
@@ -68,7 +69,7 @@ New-VM -Name "WindowsCV5" -Version 5.0
    
 Why should I upgrade the virtual machine configuration version?  
 ---  
-When you move or import a virtual machine to a computer that runs Hyper-V on Windows Server 2016 Technical Preview or Windows 10, the virtual machine"s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.  
+When you move or import a virtual machine to a computer that runs Hyper-V on Windows Server 2016 or Windows 10, the virtual machine"s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.  
   
    
 The virtual machine configuration version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. When you update the configuration version, you change the file structure that is used to store the virtual machines configuration and the checkpoint files. You also update the configuration version to the latest version supported by that Hyper-V host. Upgraded virtual machines use a new configuration file format, which is designed to increase the efficiency of reading and writing virtual machine configuration data. The upgrade also reduces the potential for data corruption in the event of a storage failure.  
@@ -98,7 +99,13 @@ The following table shows the minimum virtual machine configuration version requ
 |PowerShell Direct |6.2|  
 |Virtual Machine Grouping|6.2|  
 |Virtual Trusted Platform Module (vTPM)|7.0|  
-|Virtual machine multi queues (VMMQ)|7.1|   
+|Virtual machine multi queues (VMMQ)|7.1|  
+|XSAVE support|8.0|
+|Key storage drive|8.0|
+|Guest Virtualization Based Security support (VBS)|8.0|
+|Nested virtualization|8.0| 
+|Virtual processor count|8.0|
+|Large memory VMs|8.0|
   
 For more information about these features, see [What's new in Hyper-V on Windows Server 2016](../What-s-new-in-Hyper-V-on-Windows.md).
 

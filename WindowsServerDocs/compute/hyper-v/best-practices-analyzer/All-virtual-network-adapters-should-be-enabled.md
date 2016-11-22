@@ -1,26 +1,25 @@
 ---
 title: All virtual network adapters should be enabled
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # All virtual network adapters should be enabled
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
+
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

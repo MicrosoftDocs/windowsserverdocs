@@ -1,21 +1,22 @@
 ---
+ms.assetid: 24136758-d192-44f3-9c6e-41af70aa1d1c
 title: Event ID 1388 or 1988 - A lingering object is detected
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: d8e0b934-be71-4929-b377-d3330c6811e9
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Event ID 1388 or 1988: A lingering object is detected
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>If a destination domain controller logs Event ID 1388 or Event ID 1988, a lingering object has been detected and one of two conditions exists on the destination domain controller: </para>

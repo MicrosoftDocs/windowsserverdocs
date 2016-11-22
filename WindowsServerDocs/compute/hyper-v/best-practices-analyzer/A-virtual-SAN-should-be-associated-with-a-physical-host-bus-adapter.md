@@ -1,28 +1,25 @@
 ---
 title: A virtual SAN should be associated with a physical host bus adapter
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: 14bca69b-e779-4e90-b5c1-1b015625572f
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # A virtual SAN should be associated with a physical host bus adapter
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview |  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

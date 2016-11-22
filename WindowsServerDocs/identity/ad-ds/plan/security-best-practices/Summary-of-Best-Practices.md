@@ -1,21 +1,20 @@
 ---
+ms.assetid: e48cc19d-65a7-4dca-b515-e08181ec7e71
 title: Summary of Best Practices
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 00b3b7d4-c4f5-457f-8223-5b7692267652
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Summary of Best Practices
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following table contains a summary of the best practices for securing Active Directory as described in this document, with hyperlinks to the sections in which the recommendations are detailed. Practices and controls that are described as tactical in nature may be implemented more quickly and with less effort than those that are described as strategic or are applicable to discrete components in the larger infrastructure.  
 

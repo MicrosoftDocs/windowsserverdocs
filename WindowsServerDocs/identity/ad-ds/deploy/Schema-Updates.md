@@ -1,21 +1,20 @@
 ---
+ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema Updates
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: a2db7dab-8013-4257-abcf-622e12ee7681
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Schema Updates
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists the LDF files that include the changes that Adprep.exe makes in  Windows Server 2012 R2  and.  
   

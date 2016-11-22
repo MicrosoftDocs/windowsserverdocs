@@ -1,21 +1,20 @@
 ---
+ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 6fa9e6b7-e95d-4473-8928-1fa0f358bc74
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers the updated Active Directory Administrative Center with its new Active Directory Recycle Bin, Fine-grained Password policy, and Windows PowerShell History Viewer in more detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
   
@@ -46,7 +45,7 @@ The module and underlying architecture of Active Directory Administrative Center
   
 The underlying Windows PowerShell and layer of operations for the new Recycle Bin functionality are illustrated below:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)  
   
 ## <a name="BKMK_EnableRecycleBin"></a>Enabling and Managing the Active Directory Recycle Bin Using Active Directory Administrative Center  
   
@@ -84,7 +83,7 @@ You cannot use the Active Directory Administrative Center to make this change - 
 ### Enabling Active Directory Recycle Bin using Active Directory Administrative Center  
 To enable the Active Directory Recycle Bin, open the **Active Directory Administrative Center** and click the name of your forest in the navigation pane. From the **Tasks** pane, click **Enable Recycle Bin**.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)  
   
 The Active Directory Administrative Center shows the **Enable Recycle Bin Confirmation** dialog. This dialog warns you that enabling the recycle bin is irreversible. Click **OK** to enable the Active Directory Recycle Bin. The Active Directory Administrative Center shows another dialog to remind you that the Active Directory Recycle Bin is not fully functional until all domain controllers replicate the configuration change.  
   
@@ -105,12 +104,12 @@ For more information about using Windows PowerShell to enable the Active Directo
 ### Managing Active Directory Recycle Bin using Active Directory Administrative Center  
 This section uses the example of an existing domain named **corp.contoso.com**. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contain further OUs, users, and groups.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)  
   
 #### Storage and Filtering  
 The Active Directory Recycle Bin preserves all objects deleted in the forest. It saves these objects according to the **msDS-deletedObjectLifetime** attribute, which by default is set to match the **tombstoneLifetime** attribute of the forest. In any forest created using Windows Server 2003 SP1 or later, the value of **tombstoneLifetime** is set to 180 days by default. In any forest upgraded from Windows 2000 or installed with Windows Server 2003 (no service pack), the default tombstoneLifetime attribute is NOT SET and Windows therefore uses the internal default of 60 days. All of this is configurable.You can use the Active Directory Administrative Center to restore any objects deleted from the domain partitions of the forest. You must continue to use the cmdlet **Restore-ADObject** to restore deleted objects from other partitions, such as Configuration.Enabling the Active Directory Recycle Bin makes the **Deleted Objects** container visible under every domain partition in the Active Directory Administrative Center.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)  
   
 The **Deleted Objects** container shows you all the restorable objects in that domain partition. Deleted objects older than **msDS-deletedObjectLifetime** are known as recycled objects. The Active Directory Administrative Center does not show recycled objects and you cannot restore these objects using Active Directory Administrative Center.  
   
@@ -118,14 +117,14 @@ For a deeper explanation of the recycle bin's architecture and processing rules,
   
 The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can raise this limit as high as 100,000 objects by clicking the **Manage** menu, then **Management List Options**.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)  
   
 #### Restoration  
   
 ##### Filtering  
 Active Directory Administrative Center offers powerful criteria and filtering options that you should become familiar with before you need to use them in a real-life restoration. Domains intentionally delete many objects over their lifetime .With a likely deleted object lifetime of 180 days, you cannot simply restore all objects when an accident occurs.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)  
   
 Rather than writing complex LDAP filters and converting UTC values into dates and times, use the basic and advanced **Filter** menu to list only the relevant objects. If you know the day of deletion, the names of objects, or any other key data, use that to your advantage when filtering. Toggle the advanced filter options by clicking the chevron to the right of the search box.  
   
@@ -175,7 +174,7 @@ You can add multiple criteria. For example, you can find all user objects delete
   
 You can also add, modify, or reorder the column headers to provide more detail when evaluating which objects to recover.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
   
 For more information about Ambiguous Name Resolution, see [ANR Attributes](http://msdn.microsoft.com/library/ms675092(VS.85).aspx).  
   
@@ -190,16 +189,16 @@ Restoring deleted objects has always been a single operation.  The Active Direct
   
 The object restores to its original location.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreSingle.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreSingle.gif)  
   
 Click **Restore To...** to change the restore location. This is useful if the deleted object's parent container was also deleted but you do not want to restore the parent.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)  
   
 ##### Multiple Peer Objects  
 You can restore multiple peer-level objects, such as all the users in an OU. Hold down the CTRL key and click one or more deleted objects you want to restore. Click **Restore** from the Tasks pane. You can also select all displayed objects by holding down the CTRL and A keys, or a range of objects using SHIFT and clicking.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)  
   
 ##### Multiple Parent and Child Objects  
 It is critical to understand the restoration process for a multi-parent-child restoration because the Active Directory Administrative Center cannot restore a nested tree of deleted objects with a single action.  
@@ -222,19 +221,19 @@ Consider the scenario where an administrator accidentally deletes the Sales OU, 
   
 First, observe the value of the **Last Known Parent** attribute for all the deleted users and how it reads **OU=Sales\0ADEL:*<guid+deleted objects container distinguished name>***:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
   
 Filter on the ambiguous name Sales to return the deleted OU, which you then restore:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSales.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSales.png)  
   
 Refresh the Active Directory Administrative Center to see the deleted user object's Last Known Parent attribute change to the restored Sales OU distinguished name:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesRestored.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesRestored.gif)  
   
 Filter on all the Sales users. Hold down the CTRL and A keys to select all the deleted Sales users. Click **Restore** to move the objects from the **Deleted Objects** container to the Sales OU with their group memberships and attributes intact.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesUndelete.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesUndelete.png)  
   
 If the **Sales** OU contained child OUs of its own, then you would restore the child OUs first before restoring their children, and so on.  
   
@@ -267,18 +266,18 @@ For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained 
   
 In the Navigation pane, click Tree View, click your domain, click **System**, click **Password Settings Container**, and then in the Tasks pane, click **New** and **Password Settings**.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)  
   
 ### Managing Fine-Grained Password Policies  
 Creating a new FGPP or editing an existing one brings up the **Password Settings** editor. From here, you configure all desired password policies, as you would have in Windows Server 2008 or Windows Server 2008 R2, only now with a purpose-built editor.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)  
   
 Fill out all required (red asterisk) fields and any optional fields, and then click **Add** to set the users or groups that receives this policy. FGPP overrides default domain policy settings for those specified security principals. In the figure above, an extremely restrictive policy applies only to the built-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high-risk account used only by IT professionals.  
   
 You also set precedence and to which users and groups the policy applies within a given domain.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_Precedence.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_Precedence.png)  
   
 The Active Directory Windows PowerShell cmdlets for Fine-Grained Password Policy are:  
   
@@ -295,15 +294,15 @@ Set-ADFineGrainedPasswordPolicy
   
 Fine-Grained Password Policy cmdlet functionality did not change between the Windows Server 2008 R2 and Windows Server 2012. As a convenience, the following diagram illustrates the associated arguments for cmdlets:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)  
   
 The Active Directory Administrative Center also enables you to locate the resultant set of applied FGPP for a specific user. Right click any user and click **View resultant password settings...** to open the *Password Settings* page that applies to that user through implicit or explicit assignment:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)  
   
 Examining the **Properties** of any user or group shows the **Directly Associated Password Settings**, which are the explicitly assigned FGPPs:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)  
   
 Implicit FGPP assignment does not display here; for that, you must use the **View resultant password settings...** option.  
   
@@ -314,27 +313,27 @@ The Active Directory Administrative Center now provides a complete history of al
   
 The Active Directory Administrative Center Windows PowerShell History Viewer's purpose is for you to learn through practical experience.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)  
   
 Click the chevron (arrow) to show Windows PowerShell History Viewer.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RaiseViewer.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RaiseViewer.png)  
   
 Then, create a user or modify a group's membership. The history viewer continually updates with a collapsed view of each cmdlet that the Active Directory Administrative Center ran with the arguments specified.  
   
 Expand any line item of interest to see all values provided to the cmdlet's arguments:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)  
   
 Click the **Start Task** menu to create a manual notation before you use Active Directory Administrative Center to create, modify, or delete an object. Type in what you were doing.  When done with your change, select **End Task**. The task note groups all of those actions performed into a collapsible note you can use for better understanding.  
   
 For example, to see the Windows PowerShell commands used to change a user's password and remove him from a group:  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RemoveUser.gif)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RemoveUser.gif)  
   
 Selecting the Show All check box also shows the Get-* verb Windows PowerShell cmdlets that only retrieve data.  
   
-![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)  
+![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)  
   
 The history viewer shows the literal commands run by the Active Directory Administrative Center and you might note that some cmdlets appear to run unnecessarily. For example, you can create a new user with:  
   

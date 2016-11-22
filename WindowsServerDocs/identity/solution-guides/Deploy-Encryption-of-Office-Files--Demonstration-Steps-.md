@@ -1,18 +1,20 @@
 ---
+ms.assetid: 2c76e81a-c2eb-439f-a89f-7d3d70790244
 title: Deploy Encryption of Office Files (Demonstration Steps)
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: 
+ms.technology: identity-adds
 ---
 
 # Deploy Encryption of Office Files (Demonstration Steps)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Contoso's Finance Department has a number of file servers that store their documents. These documents can be general documentation or they can have a high-business impact (HBI). For example, any document that contains confidential information is deemed, by Contoso, to have a high-business impact. Contoso wants to ensure that all their documentation has a minimum amount of protection and that their HBI documentation is restricted to the appropriate people. To accomplish this, Contoso is exploring using the File Classification Infrastructure (FCI) and AD RMS that is available in  Windows Server 2012 . By using FCI, Contoso will classify all of the documents on their file server, based on the content, and then use AD RMS to apply the appropriate rights policy.  
   
@@ -45,7 +47,7 @@ In this scenario, you'll perform the following steps:
   
 7.  Click **Add**, and then scroll down to and click **Impact** to add it to the list. Do the same for **Personally Identifiable Information**. Click **OK** twice to finish.  
   
-![](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -89,7 +91,7 @@ You will also create a **High PII** rule. This rule searches the content of docu
   
 14. Click the **Evaluation Type** tab.  Click **Re-evaluate existing property values**, click **Overwrite**the existing value, and then click **OK** to finish.  
   
-![](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -131,7 +133,7 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
   
 12. Click the **Evaluation Type** tab.  Select **Re-evaluate existing property values**, **Overwrite**the existing value, and then click **OK** to finish.  
   
-![](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -168,7 +170,7 @@ Now that you've created rules to automatically classify documents based on conte
   
 9. In the **Continuous operation** section, select **Run task continuously on new files**, and then click **OK**. You should now have a file management task named High PII.  
   
-![](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

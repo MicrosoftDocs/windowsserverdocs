@@ -1,21 +1,20 @@
 ---
+ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN and UPN uniqueness
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 257cefbc-a2f5-461a-b19f-080b0ff6b5f0
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # SPN and UPN uniqueness
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
@@ -58,29 +57,29 @@ Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged
 ### DSA.msc  
 The user logon name you have chosen is already in use in this enterprise. Choose another logon name, and then try again.  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig01_DupUPN.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig01_DupUPN.gif)  
   
 Modify an existing account:  
   
 The specified user logon name already exists in the enterprise. Specify a new one, either by changing the prefix or selecting a different suffix from the list.  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig02_DupUPNMod.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig02_DupUPNMod.gif)  
   
 ### Active Directory Administrative Center (DSAC.exe)  
 An attempt to create a new user in Active Directory Administrative Center with a UPN that already exists will yield the following error.  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig03_DupUPNADAC.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig03_DupUPNADAC.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 1 error displayed in AD Administrative Center when new user creation fails due to duplicate UPN**  
   
 ### Event 2974 Source: ActiveDirectory_DomainService  
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig04_Event2974.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig04_Event2974.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 2 Event ID 2974 with error 8648**  
   
 The event 2974 lists the value that was blocked and a list of one or more objects (up to 10) that already contain that value.  In the following figure, you can see that UPN attribute value ***dhunt@blue.contoso.com*** already exists on four other objects.  Since this is a new feature in Windows Server 2012 R2, accidental creation of duplicate UPN and SPNs in a mixed environment will still occur when down-level DCs process the write attempt.  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 3 Event 2974 showing all objects containing the duplicate UPN**  
   
@@ -103,33 +102,33 @@ The operation failed because UPN value provided for addition/modification is not
 000021C8: AtrErr: DSID-03200BBA, #1: 0: 000021C8: DSID-03200BBA, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 90290 (userPrincipalName)  
 ```  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig06_ADSI21c8.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig06_ADSI21c8.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 4  Error message displayed in ADSIEdit when addition of duplicate UPN is blocked**  
   
 ### Windows PowerShell  
 Windows Server 2012 R2:  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig07_SetADUser2012.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig07_SetADUser2012.gif)  
   
 PS running from Server 2012 targeting a Windows Server 2012 R2 DC:  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig08_SetADUser2012R2.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig08_SetADUser2012R2.gif)  
   
 DSAC.exe running on Windows Server 2012 targeting a Windows Server 2012 R2 DC:  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig09_UserCreateError.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig09_UserCreateError.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 5 DSAC user creation error on non-Windows Server 2012 R2 while targeting Windows Server 2012 R2 DC**  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig10_UserModError.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig10_UserModError.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 6 DSAC user modification error on non-Windows Server 2012 R2 while targeting Windows Server 2012 R2 DC**  
   
 ### Restore of an object that would result in a duplicate UPN fails:  
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig11_RestoreDupUPN.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig11_RestoreDupUPN.gif)  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig12_RestoreDupUPNError.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig12_RestoreDupUPNError.gif)  
   
 No event is logged when an object fails to restore because of a duplicate UPN / SPN.  
   
@@ -185,7 +184,7 @@ DN: CN=Dianne Hunt2\0ADEL:dd3ab8a4-3005-4f2f-814f-d6fc54a1a1c0,CN=Deleted Object
   
 -   Select **Apply**  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearch.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearch.gif)  
   
 ### Using Windows PowerShell  
   
@@ -193,19 +192,19 @@ DN: CN=Dianne Hunt2\0ADEL:dd3ab8a4-3005-4f2f-814f-d6fc54a1a1c0,CN=Deleted Object
 Get-ADObject -LdapFilter "(userPrincipalName=dhunt@blue.contoso.com)" -IncludeDeletedObjects -SearchBase "DC=blue,DC=Contoso,DC=com" -SearchScope Subtree -Server winbluedc1.blue.contoso.com  
 ```  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearchPS.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearchPS.gif)  
   
 If the object needs to be restored, you will need remove the duplicate UPNs from the other objects.  For only one object, it is simple enough to use ADSIEdit to remove the duplicate.  If there are multiple objects with duplicates, then Windows PowerShell might be the better tool to use.  
   
 To null out the UserPrincipalName attribute using Windows PowerShell:  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig15_NullUPN.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig15_NullUPN.gif)  
   
 > [!NOTE]  
 > The userPrincipalName attribute is single-valued attribute, so this procedure will only remove the duplicate UPN.  
   
 ### Duplicate SPN  
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig16_DupSPN.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig16_DupSPN.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 8 Error message displayed in ADSIEdit when addition of duplicate SPN is blocked**  
   
@@ -219,7 +218,7 @@ servicePrincipalName Value=<SPN>
 <Object DN> Winerror: 8467  
 ```  
   
-![](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig17_DupSPN2974.gif)  
+![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig17_DupSPN2974.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 9 Error logged when creation of duplicate SPN is blocked**  
   

@@ -1,21 +1,20 @@
 ---
+ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 016befea-01e0-4385-8045-fc353c52758b
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Troubleshooting Domain Controller Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers detailed methodology on troubleshooting domain controller configuration and deployment.  
   
@@ -24,7 +23,7 @@ This topic covers detailed methodology on troubleshooting domain controller conf
 -   [Troubleshooting Options](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Options)  
   
 ## <a name="BKMK_Intro"></a>Introduction to Troubleshooting  
-![](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
+![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
   
 ## <a name="BKMK_Options"></a>Troubleshooting Options  
   
@@ -106,7 +105,7 @@ Domain controller promotion and demotion always returns a code at the end of ope
   
     Errors in prerequisite validation and verification do not continue on to a reboot, so they are visible in all cases. For example:  
   
-  ![](media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)  
+  ![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)  
   
 3.  In any scenario, examine the dcpromo.log and dcpromoui.log.  
   

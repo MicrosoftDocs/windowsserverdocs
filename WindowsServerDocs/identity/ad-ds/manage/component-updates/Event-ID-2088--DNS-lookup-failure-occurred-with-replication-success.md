@@ -1,40 +1,42 @@
 ---
+ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: Event ID 2088 - DNS lookup failure occurred with replication success
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 15df3aec-0e5c-41da-a7c6-7710d57f9ffd
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Event ID 2088: DNS lookup failure occurred with replication success
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
-<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
-  <introduction>
+    
+    <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
+      <introduction>
     <para>When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved. </para>
     <para>The following is an example of the event text: </para>
     <code>Log Name: Directory Service
-Source: Microsoft-Windows-ActiveDirectory_DomainService
-Date: 3/15/2008  9:20:11 AM
-Event ID: 2088
-Task Category: DS RPC Client 
-Level: Warning
-Keywords: Classic
-User: ANONYMOUS LOGON
-Computer: DC3.contoso.com
-Description:
-Active Directory could not use DNS to resolve the IP address of the 
-source domain controller listed below. To maintain the consistency 
-of Security groups, group policy, users and computers and their passwords, 
-Active Directory Domain Services successfully replicated using the NetBIOS 
-or fully qualified computer name of the source domain controller. 
+
+	Source: Microsoft-Windows-ActiveDirectory_DomainService
+	Date: 3/15/2008  9:20:11 AM
+	Event ID: 2088
+	Task Category: DS RPC Client 
+	Level: Warning
+	Keywords: Classic
+	User: ANONYMOUS LOGON
+	Computer: DC3.contoso.com
+	Description:
+	Active Directory could not use DNS to resolve the IP address of the 
+	source domain controller listed below. To maintain the consistency 
+	of Security groups, group policy, users and computers and their passwords, 
+	Active Directory Domain Services successfully replicated using the NetBIOS 
+	or fully qualified computer name of the source domain controller. 
 
 Invalid DNS configuration may be affecting other essential operations on 
 member computers, domain controllers or application servers in this 

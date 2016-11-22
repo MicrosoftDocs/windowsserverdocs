@@ -1,28 +1,25 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows Server 2008 R2 and enabled for Dynamic Memory
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: db0bff4c-39fe-49c1-903a-1f2a0b0db891
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows Server 2008 R2 and enabled for Dynamic Memory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  

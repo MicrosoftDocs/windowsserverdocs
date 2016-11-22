@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink"><ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Active Directory Module for Windows PowerShell</ui></Token>

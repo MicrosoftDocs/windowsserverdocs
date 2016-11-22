@@ -1,18 +1,20 @@
 ---
+ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
 title: AD FS Scenarios for Developers
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # AD FS Scenarios for Developers
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 AD FS in Windows Server 2016 [AD FS 2016] enables you to add industry standard OpenID Connect and OAuth 2.0 based authentication and authorization to applications you are developing, and have those applications authenticate users directly against AD FS.    
   
@@ -42,7 +44,7 @@ In AD FS scenarios of course, it is AD FS and not Azure AD that serves as the id
   
 The most basic scenario consists of a user or "resource owner", interacting with a browser to access a web application:  
   
-![ADFS_DEV_1media/ADFS_DEV_1.png)  
+![AD FS for developers](media/ADFS_DEV_1.png)  
   
 The web application is called a "client" because it initiates the request to the authorization server (AD FS) for an access token to the resource.  The resource may be hosted by the web app itself or may be accessible as a web API somewhere on the network or internet.   The user or "resource owner" authorizes the client web app to receive that access token by providing credentials to the authorization server.    
   
@@ -53,7 +55,7 @@ OAuth 2.0 and OpenID Connect scenarios in AD FS make use of the same set of tool
   
 The roles of these components are shown in the diagram below:  
   
-![ADFS_DEV_1media/ADFS_DEV_2.png)  
+![AD FS for developers](media/ADFS_DEV_2.png)  
   
 ## Modeling these scenarios in AD FS 2016  
   
@@ -105,7 +107,7 @@ This scenario enables the user of a native client application to call an AD FS 2
 * The native client application uses ADAL to send authorization and token requests to AD FS, prompting for credentials from the user as necessary, then sends the resulting token as an HTTP header on the request to the Web API  
 * [This part is for demonstration purposes only] The web API reads the claims from the ClaimsPrincipal object that results from the access token sent by the client, and sends them back to the client.  
   
-![Description of protocol flowmedia/ADFS_DEV_3.png)  
+![Description of protocol flow](media/ADFS_DEV_3.png)  
   
 1.  The native client application initiates the flow with a call to the ADAL library.  This triggers a browser based HTTP GET to the AD FS authorize endpoint:  
   
@@ -147,12 +149,15 @@ Subsequent client requests within 1 hour (by default) the access_token will stil
 After the access token expires, ADAL will automatically send a refresh token based request to the AD FS token endpoint (skipping the authorization request automatically).  
 **Refresh token request:**  
 POST https://fs.contoso.com/adfs/oautincludes   
-Parameter|Value  
----------|---------  
-grant_type|"refresh_token"  
-resource|RP ID (Identifier) of Web API in application group  
-client_id|client Id of the native application in the application group  
-refresh_token|the refresh token issued by AD FS in response to the initial token request  
+
+Parameter|Value|
+---------|---------
+grant_type|"refresh_token"|
+resource|RP ID (Identifier) of Web API in application group|
+client_id|client Id of the native application in the application group
+refresh_token|the refresh token issued by AD FS in response to the initial token request
+
+  
   
 **Refresh token request response:**  
 If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials.  For more information on SSO settings see [AD FS Single Sign On Settings](../../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)  
@@ -166,7 +171,7 @@ There are two scenarios that accomplish this.
 #### Oauth confidential client  
 This scenario is similar to the above in that there is an authorization request, followed by a code for token exchange.  The web app (modeled as a Server Application in AD FS) initiates the authorization request via the browser and exchanges the code for the token (by connecting directly to AD FS)  
   
-![Description of protocol flowmedia/ADFS_DEV_4.png)  
+![Description of protocol flow](media/ADFS_DEV_4.png)  
   
 1.  The Web App initiates an authorization request via the browser, which sends an HTTP GET to the AD FS authorize endpoint  
 **Authorization request**:  
@@ -230,7 +235,7 @@ If the refresh token has expired, the request results in an HTTP 401 with error 
 #### OpenID Connect: Hybrid flow  
 This scenario is similar to the above in that there is an authorization request initiated by the web app via browser redirect, and a code for token exchange from the web app to AD FS.  The difference in this scenario is that AD FS issues an id_token as part of the initial authorization request response.  
   
-![Description of protocol flowmedia/ADFS_DEV_5.png)  
+![Description of protocol flow](media/ADFS_DEV_5.png)  
   
 1.  The Web App initiates an authorization request via the browser, which sends an HTTP GET to the AD FS authorize endpoint  
   
@@ -279,9 +284,10 @@ The single sign on behavior is the same as for the Oauth 2.0 confidential client
 ### On Behalf Of  
 In this scenario, a web app uses the original access token from a user to request and obtain another access token for another Web API, which the web app will then access as the end user.  This is called an "on behalf of" flow.  
   
-![Description of protocol flowmedia/ADFS_DEV_6.png)  
+![Description of protocol flow](media/ADFS_DEV_6.png)  
   
 Steps 1 and 2 work just like steps 3 and 4 in the previous flow.  
 In Step 3, the key requirement is that the client_id parameter, the client ID of the Web app 2, must match the RP ID of Web API A.  In other words, the audience of the access token being exchanged for the new token must match the client ID of the entity requesting the new token.  
 
-
+## Related content  
+See [AD FS Development](../AD-FS-Development.md) for the complete list of walk-through articles, which provide step-by-step instructions on using the related flows. 

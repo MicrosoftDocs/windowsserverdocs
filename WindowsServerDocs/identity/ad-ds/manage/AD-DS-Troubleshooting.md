@@ -1,21 +1,22 @@
 ---
+ms.assetid: fd3bc84a-48eb-4f00-9dc2-846bf2c2668b
 title: AD DS Troubleshooting
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 5728f47d-e9a2-4d42-8e90-3923c848988c
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # AD DS Troubleshooting
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This guide provides troubleshooting information for Active Directory Domain Services (AD DS) in the <token>firstref_longhorincludes> operating system. It is designed to help you identify and resolve problems that may be related to AD DS. Conditions for domain controllers that are running versions of Windows Server 2003 in a <token>nextref_longhorincludes> forest are also discussed.</para>

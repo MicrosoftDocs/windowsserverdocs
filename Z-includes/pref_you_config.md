@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:</Token>

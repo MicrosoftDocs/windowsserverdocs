@@ -1,26 +1,29 @@
 ---
 title: Troubleshooting Web Probe URLs
+description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6dfffd1e-f4f4-43b6-9e3c-49015ce34338
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Troubleshooting Web Probe URLs
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic contains troubleshooting information for issues related to the `Set-DAEntryPointDC` command. To confirm that the error you received is related to setting the entry point domain controller, check in the Windows Event log for the event ID 10065.  
   
 ## <a name="SaveGPOSettings"></a>Saving server GPO settings  
 **Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
-To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
+To troubleshoot this error, see Saving server GPO settings.  
   
 ## Remote Access is not configured  
 **Error received**. Remote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  

@@ -1,1 +1,0 @@
-Any user account can be used to complete this procedure.

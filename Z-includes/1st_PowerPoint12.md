@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft Office PowerPoint 2007</Token>

@@ -1,19 +1,22 @@
 ---
 title: Deploy a Single DirectAccess Server with Advanced Settings
+description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.  
   
@@ -25,7 +28,7 @@ You can use the following topics to review prerequisites and other information b
 -   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running either  Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with advanced settings.  
+In this scenario, a single computer running either   Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with advanced settings.  
   
 > [!NOTE]  
 > If you want to configure a basic deployment with simple settings only, see [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md). In the simple scenario, DirectAccess is configured with default settings by using a wizard, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
@@ -76,7 +79,7 @@ Deploying a single DirectAccess server provides the following:
 The following table lists the roles and features that are required for this scenario:  
   
 |Role/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess and Routing and Remote Access Services (RRAS). The Remote Access role consists of two components:<br/><br/>1.  DirectAccess and RRAS VPN. DirectAccess and VPN are managed together in the Remote Access Management console.<br/>2.  RRAS Routing. RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following server roles/features:<br/><br/> - Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the DirectAccess server, and the default web probe.<br/> - Windows Internal Database. Used for local accounting on the DirectAccess server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a DirectAccess server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the DirectAccess server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access graphical user interface (GUI)<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
@@ -85,7 +88,7 @@ Hardware requirements for this scenario include the following:
   
 -   Server requirements:  
   
-    -   A computer that meets the hardware requirements for   Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012 .  
+    -   A computer that meets the hardware requirements for    Windows Server 2016,  Windows Server 2012 R2  or  Windows Server 2012 .  
   
     -   The server must have at least one network adapter installed, enabled, and connected to the internal network. When two adapters are used, there should be one adapter connected to the internal corporate network, and one connected to the external network (Internet, or private network).  
   
@@ -139,7 +142,7 @@ There are a number of requirements for this scenario:
 The following table provides links to additional resources.  
   
 |Content type|References|  
-|----------------|--------------|  
+|--------|-------|  
 |**Deployment**|[DirectAccess Deployment Paths in Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<br /><br />[Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
 |**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
 |**Community resources**|[DirectAccess Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  

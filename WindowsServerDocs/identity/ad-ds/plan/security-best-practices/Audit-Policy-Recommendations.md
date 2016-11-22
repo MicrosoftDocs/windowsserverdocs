@@ -1,21 +1,20 @@
 ---
+ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: Audit Policy Recommendations
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 8c16a727-bf25-4613-8ebb-4e3fdceda627
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Audit Policy Recommendations
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section addresses the Windows default audit policy settings, baseline recommended audit policy settings, and the more aggressive recommendations from Microsoft, for workstation and server products.  
 

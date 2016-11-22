@@ -5,8 +5,9 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: spatnaik
+ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c9b98b8-4eca-4a39-b10b-2bac729f7f44
@@ -15,7 +16,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Session Host to Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.

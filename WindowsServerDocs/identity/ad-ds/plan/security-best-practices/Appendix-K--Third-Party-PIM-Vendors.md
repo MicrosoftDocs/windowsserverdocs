@@ -1,21 +1,20 @@
 ---
+ms.assetid: 85c662bf-abfe-43be-9c79-0649c8cc9ffd
 title: Appendix K - Third-Party PIM Vendors
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 73c58cf4-8119-4a98-b916-372eaff558d2
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Appendix K: Third-Party PIM Vendors
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix K: Third-Party PIM Vendors  

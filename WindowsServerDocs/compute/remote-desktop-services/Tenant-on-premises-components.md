@@ -1,20 +1,22 @@
 ---
 title: Tenant on-premises components
+description: Describes the on-premises components in your RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: elizapo
+ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b3eebb38-a835-4fa6-9e41-1966014bf2cb
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Tenant on-premises components
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following information describes the on-premises components that make up the desktop hosting deployment.  
   

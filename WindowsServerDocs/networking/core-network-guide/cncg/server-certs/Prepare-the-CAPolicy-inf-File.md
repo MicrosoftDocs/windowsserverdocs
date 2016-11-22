@@ -1,16 +1,21 @@
 ---
 title: Prepare the CAPolicy.inf File
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: dongill
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c36201de-7eb6-4e38-87da-cf7dd981a442
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Prepare the CAPolicy.inf File
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 On CA1, you must prepare the CAPolicy.inf file before installing Active Directory Certificate Services.  
   
@@ -55,7 +60,7 @@ To perform this procedure, you must be a member of the Administrators group.
   
 5.  When you are prompted to overwrite the file, click **Yes**.  
   
-    ![](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)  
+    ![Notepad dialog box](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)  
   
     > [!CAUTION]  
     > Be sure to save the CAPolicy.inf with the inf extension. If you do not specifically type **.inf** at the end of the file name and select the options as described, the file will be saved as a text file and will not be used during CA installation.  

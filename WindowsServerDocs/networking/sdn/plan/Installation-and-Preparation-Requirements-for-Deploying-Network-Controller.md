@@ -1,19 +1,21 @@
 ---
 title: Installation and Preparation Requirements for Deploying Network Controller
+description: You can use this topic to prepare your datacenter for Network Controller deployment.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
+ms.author: jamesmci
 author: jamesmci
 ---
 # Installation and Preparation Requirements for Deploying Network Controller
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic to prepare your datacenter for Network Controller deployment.  
   
@@ -30,12 +32,12 @@ Following are the installation, software, and other requirements and preparation
 ### Installation requirements  
 Following are the installation requirements for Network Controller.  
   
--   For Windows Server 2016 Technical Preview deployments, you can deploy Network Controller on one or more computers, one or more  VMs, or a combination of computers and VMs.  
+-   For  Windows Server 2016 deployments, you can deploy Network Controller on one or more computers, one or more  VMs, or a combination of computers and VMs.  
   
 ### Software requirements  
 Network Controller deployment requires one or more computers or VMs that will serve as the Network Controller, and one computer or VM to serve as a management client for Network Controller. These computers or VMs must run the following operating systems.  
   
--   Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016 Technical Preview.  
+-   Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of  Windows Server 2016.  
   
 -   The management client computer or VM for Network Controller must be running Windows&reg; 8, Windows&reg; 8.1, or Windows 10&reg;.  
   
@@ -52,30 +54,6 @@ If the computers or VMs for Network Controller and the management client are dom
     > For more information on creating a group in Active Directory Users and Computers, see [Create a new group](https://technet.microsoft.com/en-us/library/cc783256(v=ws.10).aspx).  
   
 -   Create a security group and add all of the users who have permission to configure and manage the network by using Network Controller.  For example, create a new group named **Network Controller Users**. All of the users that you add to the new group must also be members of the **Domain Users** group in Active Directory Users and Computers. All Network Controller configuration and management is performed using Representational State Transfer (REST).  
-  
-**Configure certificates for non-Kerberos deployments**  
-  
-If the computers or VMs for Network Controller and the management client are not domain-joined, you must configure certificate-based authentication by completing the following steps.  
-  
--   Create a certificate on the Network Controller for Computer authentication. The certificate subject name must be same as the DNS name of the Network Controller computer or VM.  
-  
--   Create a certificate on the management client. This certificate must be trusted by the Network Controller.  
-  
--   Enroll a certificate on the Network Controller computer or VM. The certificate must meet the following requirements.  
-  
-    -   The Server Authentication purpose is present in Enhanced Key Usage (EKU) extensions.  
-  
-    -   The certificate subject name should resolve to:  
-  
-        -   The IP address of the Network Controller computer or VM, if Network Controller is deployed on a single computer or VM.  
-  
-        -   The REST IP address, if Network Controller is deployed on multiple computers, multiple VMs, or both.  
-  
-    -   This certificate must be trusted by all the REST clients. The certificate must also be trusted by the Software Load Balancing (SLB) Multiplexer (MUX) and the southbound host computers that are managed by Network Controller.  
-  
-    -   The certificate can be enrolled by a Certification Authority (CA) or can be a self-signed certificate. Self-signed certificates are not recommended for production deployments, but are acceptable for test lab environments.  
-  
-    -   The same certificate must be provisioned on all the Network Controller nodes. After creating the certificate on one node, you can export the certificate (with private key) and import it on the other nodes.  
   
 **Configure log file locations if needed**  
   

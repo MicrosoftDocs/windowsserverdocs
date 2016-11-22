@@ -1,21 +1,20 @@
 ---
+ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: How LDAP Server Cookies Are Handled
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 9cf73015-6cf3-4799-97e7-228aa5b12b0f
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # How LDAP Server Cookies Are Handled
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In LDAP, some queries result in a large result set. Such queries pose some challenges to the Windows Server.  
   

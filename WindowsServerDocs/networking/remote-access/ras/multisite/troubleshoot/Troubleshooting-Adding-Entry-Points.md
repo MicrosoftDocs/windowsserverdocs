@@ -1,26 +1,24 @@
 ---
 title: Troubleshooting Adding Entry Points
+description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Troubleshooting Adding Entry Points
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic contains troubleshooting information for issues related to the `Add-DAEntryPoint` command. To confirm that the error you received is related to adding an entry point, check in the Windows Event log for the event ID 10067.  
-  
-## <a name="InternalServerError"></a>Internal error occurred  
-**Error received**. An internal error occurred.  
-  
-To troubleshoot this error, see [Internal error occurred](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#InternalServerError).  
   
 ## Missing RemoteAccessServer parameter  
 **Error received**. You must supply a value for the parameter RemoteAccessServer.  
@@ -234,7 +232,7 @@ When you add name suffixes without specifying a server address, the suffix is tr
 ## Saving server GPO settings  
 **Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
-To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
+To troubleshoot this error, see Saving server GPO settings in [Troubleshooting Enabling Multisite](https://technet.microsoft.com/library/jj591658.aspx).  
   
 ## GPO updates cannot be applied  
 **Warning received**. GPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  

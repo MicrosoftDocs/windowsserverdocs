@@ -1,21 +1,22 @@
 ---
+ms.assetid: 9e7b0141-9b48-49a1-a9de-a3e8e90ce22b
 title: Replication error 8606 Insufficient attributes were given to create an object
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 8d8439ba-9a88-48ed-80da-fae13fda82d6
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Replication error 8606 Insufficient attributes were given to create an object
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This article covers symptoms, root causes, and how to resolve Active Directory replication error 8606: Insufficient attributes were given to create an object. </para>

@@ -1,28 +1,25 @@
 ---
 title: Windows 7 should be configured with at least the minimum amount of memory
-description: " "
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with at least the minimum amount of memory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  

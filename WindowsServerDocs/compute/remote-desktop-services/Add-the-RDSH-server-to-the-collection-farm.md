@@ -1,24 +1,27 @@
 ---
 title: Add the RDSH server to the collection farm
+description: Learn how to add an RD Session Host to an RDS collection farm.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services 
+ms.author: elizapo
+ms.date: 11/08/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1905e1fc-bd2c-45d9-95f2-d4ff55ea2481
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Add the RDSH server to the collection farm
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Now that your environment is ready, use the following steps to add the Remote Desktop Session Host server to the collection farm.  
 
->[NOTE] Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
+>[!NOTE] 
+> Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
    
 1. Create a public IP address for the virtual machine running Remote Desktop Management Services (RDMS). The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.  
     1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment and then click the RDMS virtual machine (for example, Contoso-Cb1).  

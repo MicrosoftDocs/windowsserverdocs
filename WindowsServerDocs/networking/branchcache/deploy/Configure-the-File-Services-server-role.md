@@ -1,21 +1,24 @@
 ---
 title: Configure the File Services server role
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure the File Services server role
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-You can deploy BranchCache file server-based content servers on computers running Windows Server 2016 Technical Preview and the File Services server role with the **BranchCache for network files** role service installed.  
+You can deploy BranchCache file server-based content servers on computers running Windows Server 2016 and the File Services server role with the **BranchCache for network files** role service installed.  
   
 -   To install a BranchCache content server on a computer that does not already have File Services installed, see [Install a New File Server as a Content Server](../../branchcache/deploy/Install-a-New-File-Server-as-a-Content-Server.md).  
   

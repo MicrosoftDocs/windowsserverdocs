@@ -1,19 +1,22 @@
 ---
 title: Overview of the Test Lab Scenario
+description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Overview of the Test Lab Scenario
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 In this test lab scenario, DirectAccess is deployed with:  
   
@@ -47,7 +50,7 @@ The test lab consists of four subnets that simulate the following:
   
 Computers on each subnet connect using either a physical or virtual hub or switch, as shown in the following figure.  
   
-![](../../../media/Overview-of-the-Test-Lab-Scenario_4/TLG_DA_Multisite.png)  
+![Test lab overview](../../../media/Overview-of-the-Test-Lab-Scenario_4/TLG_DA_Multisite.png)  
   
 
 

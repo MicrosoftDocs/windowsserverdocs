@@ -1,51 +1,46 @@
 ---
 title: Configure a Multi-Forest Deployment
+description: This topic is part of the guide Deploy Remote Access in a Multi-Forest Environment in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Configure a Multi-Forest Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic describes how to configure a Remote Access multi-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.  
-  
--   [Accessing resources from Forest2](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#AccessForest2)  
-  
--   [Enabling clients from Forest2 to connect via DirectAccess](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#EnableForest2DA)  
-  
--   [Adding entry points from Forest2](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#AddEPForest2)  
-  
--   [Configure OTP in a multi-forest deployment](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#OTPMultiForest)  
   
 ## <a name="AccessForest2"></a>Access resources from Forest2  
 In this scenario, DirectAccess is already deployed on Forest1, and is configured to allow clients from Forest1 to access the corporate network. By default, clients connected via DirectAccess can access only resources in Forest1 and cannot access any servers in Forest2.  
   
 #### To enable DirectAccess clients to access resources from Forest2  
   
-1.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the domains in Forest2, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
+1.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the domains in Forest2, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list.  
   
-2.  Add the relevant internal IPv6 prefixes in Forest2 if IPv6 is deployed on the internal network. See [Add internal IPv6 prefix](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#IPv6Prefix).  
+2.  Add the relevant internal IPv6 prefixes in Forest2 if IPv6 is deployed on the internal network.  
   
 ## <a name="EnableForest2DA"></a>Enable clients from Forest2 to connect via DirectAccess  
-In this scenario, you configure the Remote Access deployment to allow clients from Forest2 to access the corporate network. It is assumed that you have created the required security groups for client computers in Forest2. For information about the required security groups, see [Plan client security groups](assetId:///7fcabd7c-614f-49c3-9de6-970546dcd2a9#ClientSG).  
+In this scenario, you configure the Remote Access deployment to allow clients from Forest2 to access the corporate network. It is assumed that you have created the required security groups for client computers in Forest2.   
   
 #### To allow clients from Forest2 to access the corporate network  
   
-1.  Add the security group of the clients from Forest2. See [Add client security groups](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#SGs).  
+1.  Add the security group of the clients from Forest2.  
   
-2.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the clients' domain in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
+2.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the clients' domain in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. 
   
-3.  Add the internal IPv6 prefixes in Forest2 to enable DirectAccess to create the IPsec tunnel to the domain controllers for authentication. See [Add internal IPv6 prefix](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#IPv6Prefix).  
+3.  Add the internal IPv6 prefixes in Forest2 to enable DirectAccess to create the IPsec tunnel to the domain controllers for authentication.  
   
-4.  Refresh the management servers list. See [Refresh the management servers list](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#RefreshMgmtServers).  
+4.  Refresh the management servers list.  
   
 ## <a name="AddEPForest2"></a>Add entry points from Forest2  
 In this scenario, DirectAccess is deployed in a multisite configuration on Forest1, and you want to add a Remote Access server, named DA2, from Forest2 as an entry point to the existing DirectAccess multisite deployment.  
@@ -54,13 +49,13 @@ In this scenario, DirectAccess is deployed in a multisite configuration on Fores
   
 1.  Make sure that the Remote Access administrator has sufficient permissions to write GPOs on the domain of DA2, and that the Remote Access administrator is a local administrator on DA2.  
   
-2.  Add DA2 as an entry point. See [3.7. Add entry points to the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_EntryPoint).  
+2.  Add DA2 as an entry point.   
   
-3.  Add NRPT rules with the suffixes of the domains in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
+3.  Add NRPT rules with the suffixes of the domains in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list.  
   
-4.  Add the relevant internal IPv6 prefixes in Forest2, if required, to enable Remote Access to establish the IPsec tunnel to the corporate resources and to make sure that NCSI probes work correctly. See [Add internal IPv6 prefix](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#IPv6Prefix).  
+4.  Add the relevant internal IPv6 prefixes in Forest2, if required, to enable Remote Access to establish the IPsec tunnel to the corporate resources and to make sure that NCSI probes work correctly.  
   
-5.  Refresh the management servers list. See [Refresh the management servers list](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#RefreshMgmtServers).  
+5.  Refresh the management servers list.  
   
 ## <a name="OTPMultiForest"></a>Configure OTP in a multi-forest deployment  
 Note the following terms when configuring OTP in a multi-forest deployment:  
@@ -231,7 +226,7 @@ To enable Windows 8 client computers from Forest2 to access resources through Di
   
 7.  On the **Applying Remote Access Setup Wizard Settings** dialog box, click **Close**.  
   
-To enable  Windows 7  client computers from Forest2 to access resources through DirectAccess when multisite is enabled, you must add the security group from Forest2 to the Remote Access deployment for each entry point. For information about adding  Windows 7  security groups, see the description of the **Client Support** page in [3.6. Enable the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_Enable).  
+To enable  Windows 7  client computers from Forest2 to access resources through DirectAccess when multisite is enabled, you must add the security group from Forest2 to the Remote Access deployment for each entry point. For information about adding  Windows 7  security groups, see the description of the **Client Support** page in 3.6. Enable the multisite deployment.  
   
 ### <a name="RefreshMgmtServers"></a>Refresh the management servers list  
 Remote Access automatically discovers the infrastructure servers in all the forests that contain DirectAccess configuration GPOs. If DirectAccess was deployed on a server from Forest1, the server GPO will be written to its domain in Forest1. If you enabled access to DirectAccess for clients from Forest2, the client GPO will be written to a domain in Forest2.  

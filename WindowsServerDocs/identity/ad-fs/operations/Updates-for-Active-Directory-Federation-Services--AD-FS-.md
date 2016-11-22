@@ -1,21 +1,23 @@
 ---
+ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Updates for Active Directory Federation Services (AD FS)
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Updates for Active Directory Federation Services (AD FS)
 
->Applies To: Windows Server Technical Preview
-  
+>Applies To: Windows Server 2016
+
 ## Updates for Active Directory Federation Services \(AD FS\)  
 Updates have been released for Active Directory Federation Services \(AD FS\) 2.0, AD FS in Windows Server 2012 and AD FS in Windows Server 2012 R2. This following tables capture the updates that are available for download.  
-  
+
 ## Updates for AD FS 2.0 and 2.1
 The following table lists the updates that have been released for AD FS 2.0 and 2.1
 
@@ -29,12 +31,12 @@ The following table lists the updates that have been released for AD FS 2.0 and 
 |[2926658](http://support.microsoft.com/kb/2926658)|ADFS SQL farm deployment fails if you do not have SQL permissions|October 2014|AD FS 2.1
 |[2896713](http://support.microsoft.com/kb/2896713) or [2989956](http://support.microsoft.com/kb/2989956)|Update is available to fix several issues after you install security update 2843638 on an AD FS server|November 2013</br></br>September 2014|AD FS 2.0 / 2.1
 |[2877424](http://support.microsoft.com/kb/2877424)|Update enables you to use one certificate for multiple Relying Party Trusts in an AD FS 2.1 farm|October 2013|AD FS 2.1
-|[2873168](http://support.microsoft.com/kb/2873168)|FIX: An error occurs when you use a third-party CSP and HSM and then configure a claims provider trust in Update Rollup 3 for AD FS 2.0 on Windows Server 2008 R2 Service Pack 1|September 2013|AD FS 2.0 
+|[2873168](http://support.microsoft.com/kb/2873168)|FIX: An error occurs when you use a third-party CSP and HSM and then configure a claims provider trust in Update Rollup 3 for AD FS 2.0 on Windows Server 2008 R2 Service Pack 1|September 2013|AD FS 2.0
 |[2861090](http://support.microsoft.com/kb/2861090)|A comma in the subject name of an encryption certificate causes an exception in Windows Server 2008 R2 SP1|August 2013|AD FS 2.0
 |[2843639](http://support.microsoft.com/kb/2843639)|[Security] Vulnerability in Active Directory Federation Services Could Allow Information Disclosure|November 2013|AD FS 2.1
-|[2843638](http://support.microsoft.com/kb/2843638)|MS13-066: Description of the security update for Active Directory Federation Services 2.0: August 13, 2013|August 2013|AD FS 2.0 
+|[2843638](http://support.microsoft.com/kb/2843638)|MS13-066: Description of the security update for Active Directory Federation Services 2.0: August 13, 2013|August 2013|AD FS 2.0
 |[2827748](http://support.microsoft.com/kb/2827748)|Federationmetadata.xml file does not contain the MEX endpoint information for the WS-Trust and WS-Federation endpoints in Windows Server 2012|May 2013|AD FS 2.1
-|[2790338](http://support.microsoft.com/kb/2790338)|Description of Update Rollup 3 for Active Directory Federation Services (AD FS) 2.0|March 2013|AD FS 2.0 
+|[2790338](http://support.microsoft.com/kb/2790338)|Description of Update Rollup 3 for Active Directory Federation Services (AD FS) 2.0|March 2013|AD FS 2.0
 
 ## Updates for AD FS and WAP in Windows Server 2012 R2
 Updates have been released for Active Directory Federation Services (AD FS) in Windows Server 2012 R2. There are update rollup releases as well as individual hotfix releases. The following provides a timeline view on those releases and the issues that have been fixed.
@@ -68,9 +70,9 @@ Updates have been released for Active Directory Federation Services (AD FS) in W
 |[2955164](http://support.microsoft.com/kb/2955164)|Windows Server 2012 R2 Update Roll-up|May 2014
 |[2919355](http://support.microsoft.com/kb/2919355)|Windows Server 2012 R2 Update Roll-up|April 2014
 
-## Updates for AD FS and WAP in Windows Server 2016 Technical Preview
+## Updates for AD FS and WAP in Windows Server 2016
 
-Updates have been released for Active Directory Federation Services (AD FS) in Windows Server 2016 Technical Preview. There are update rollup releases as well as individual hotfix releases. The following provides a timeline view on those releases and the issues that have been fixed.
+Updates have been released for Active Directory Federation Services (AD FS) in Windows Server 2016. There are update rollup releases as well as individual hotfix releases. The following provides a timeline view on those releases and the issues that have been fixed.
 
 |KB # |Description|Date Released
 |----- | ----- |-----

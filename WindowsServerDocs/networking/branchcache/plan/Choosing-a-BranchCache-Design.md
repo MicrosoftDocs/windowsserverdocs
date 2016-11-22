@@ -1,19 +1,22 @@
 ---
 title: Choosing a BranchCache Design
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
+ms.author: jamesmci
 author: jamesmci
 ---
 # Choosing a BranchCache Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about BranchCache modes and to select the best modes for your deployment.  
   
@@ -27,7 +30,7 @@ You can use this guide to deploy BranchCache in the following modes and mode com
   
 The following illustration depicts a dual mode installation, with one branch office configured for distributed cache mode and one branch office configured for hosted cache mode.  
   
-![](../../media/Choosing-a-BranchCache-Design/bc_new_modes.jpg)  
+![Choosing a BranchCache design](../../media/Choosing-a-BranchCache-Design/bc_new_modes.jpg)  
   
 Before you deploy BranchCache, select the mode you prefer for each branch office in your organization.  
   

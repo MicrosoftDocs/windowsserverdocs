@@ -1,1 +1,0 @@
-This section applies to a server running Windows Server 2012 Essentials.

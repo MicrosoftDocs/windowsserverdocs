@@ -1,28 +1,27 @@
 ---
 title: Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: 4cabbce3-9367-4ddc-a108-1e5e1ab2bcff
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
+
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  

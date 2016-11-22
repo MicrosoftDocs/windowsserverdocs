@@ -1,19 +1,20 @@
 ---
+ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: Selecting the Forest Root Domain
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 3e6a25db-b784-4b16-bfe8-d96585de9c20
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Selecting the Forest Root Domain
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first domain that you deploy in an Active Directory forest is called the forest root domain. This domain remains the forest root domain for the life cycle of the AD DS deployment.  
   

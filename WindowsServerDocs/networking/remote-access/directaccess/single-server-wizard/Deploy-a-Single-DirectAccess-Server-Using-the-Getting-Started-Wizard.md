@@ -1,19 +1,22 @@
 ---
 title: Deploy a Single DirectAccess Server Using the Getting Started Wizard
+description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess in a few easy steps.  
   
@@ -25,7 +28,7 @@ You can use the following topics to review prerequisites and other information b
 -   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running either  Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with default settings in a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
+In this scenario, a single computer running either   Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with default settings in a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
   
 > [!NOTE]  
 > If you want to configure an advanced deployment with custom settings, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
@@ -89,7 +92,7 @@ Deploying a single Remote Access server provides the following:
 The following table lists the roles and features required for the scenario:  
   
 |Role/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN. DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing. RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database. Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
@@ -98,7 +101,7 @@ Hardware requirements for this scenario include the following:
   
 -   Server requirements:  
   
-    -   A computer that meets the hardware requirements for Windows Server 2016 Technical Preview,   Windows Server 2012 R2 , or  Windows Server 2012 .  
+    -   A computer that meets the hardware requirements for  Windows Server 2016,   Windows Server 2012 R2 , or  Windows Server 2012 .  
   
     -   The server must have at least one network adapter installed, enabled, and connected to the internal network. When two adapters are used, there should be one adapter connected to the internal corporate network, and one connected to the external network (Internet, or private network).  
   
@@ -112,13 +115,13 @@ Hardware requirements for this scenario include the following:
         > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document does not support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.  
   
         > [!NOTE]  
-        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise, Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
+        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 -   Infrastructure and management server requirements:  
   
     -   If VPN is enabled and a static IP address pool is not configured, you must deploy a DHCP server to allocate IP addresses automatically to VPN clients.  
   
--   A DNS server running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 SP2, or Windows Server 2008 R2 is required.  
+-   A DNS server running  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 SP2, or Windows Server 2008 R2 is required.  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
@@ -135,13 +138,13 @@ There are a number of requirements for this scenario:
   
     -   DirectAccess clients must be domain members. Domains containing clients can belong to the same forest as the Remote Access server, or have a two-way trust with the Remote Access server forest.  
   
-    -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. If a security group is not specified when configuring DirectAccess client settings, by default the client GPO is applied on all laptop computers in the Domain Computers security group. Only the following operating systems can be used as DirectAccess clients: Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise, and Windows 7 Ultimate.  
+    -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. If a security group is not specified when configuring DirectAccess client settings, by default the client GPO is applied on all laptop computers in the Domain Computers security group. Only the following operating systems can be used as DirectAccess clients:  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 ## <a name="BKMK_LINKS"></a>See also  
 The following table provides links to additional resources.  
   
 |Content type|References|  
-|----------------|--------------|  
+|--------|-------|  
 |**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb545655.aspx)|  
 |**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
 |**Community resources**|[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  

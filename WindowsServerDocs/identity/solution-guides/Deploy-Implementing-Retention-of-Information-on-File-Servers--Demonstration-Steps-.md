@@ -1,18 +1,20 @@
 ---
+ms.assetid: ee008835-7d3b-4977-adcb-7084c40e5918
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: 
+ms.technology: identity-adds
 ---
 
 # Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can set retention periods for folders and put files on legal hold by using File Classification Infrastructure and File Server Resource Manager.  
   
@@ -51,7 +53,7 @@ In this step, we enable the Retention Period and Discoverability resource proper
   
 5.  Right-click **Discoverability**, and then click **Enable**.  
   
-![](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -85,7 +87,7 @@ In this step, we use the File Server Resource Manager console to configure the S
   
 6.  Click **OK**.  
   
-![](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -136,7 +138,7 @@ In this step, we use the File Server Resource Manager console to create a file m
   
 11. Click **OK**.  
   
-![](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

@@ -1,21 +1,22 @@
 ---
+ms.assetid: 7fc8f228-9bd8-4615-8139-344be9b61eed
 title: Replication error 8456 or 8457 The source | destination server is currently rejecting replication requests
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 01360da7-92b6-4890-9e4d-ea38e63169c3
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Replication error 8456 or 8457 The source | destination server is currently rejecting replication requests
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains the symptoms, causes, and how to resolve Active Directory replication error 8456: the source server is currently rejecting replication requests or Active Directory replication error 8457: the destination server is currently rejecting replication requests. </para>

@@ -1,21 +1,24 @@
 ---
 title: Deploy Multiple Remote Access Servers in a Multisite Deployment
+description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 In a multisite deployment two or more Remote Access servers or server clusters are deployed and configured as different entry points in a single location, or in dispersed geographical locations. Deploying multiple entry points in a single location allows for server redundancy, or for the alignment of Remote Access servers with existing network architecture. Deployment by geographical location ensures efficient use of resources, as remote client computers can connect to internal network resources using an entry point closest to them. Traffic across a multisite deployment can be distributed and balanced with an external global load balancer.  
@@ -33,7 +36,7 @@ Support for clients running Windows 7 must be manually enabled on each entry poi
 ## Prerequisites  
 Before you begin deploying this scenario, review this list for important requirements:  
   
--   [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6) must be deployed before a multisite deployment.  
+-   [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before a multisite deployment.  
   
 -   Windows 7 clients will always connect to a specific site. They will not be able to connect to the closest site based on location of the client (unlike Windows 10, 8, or 8.1 clients).  
   
@@ -48,13 +51,13 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The multisite deployment scenario includes a number of steps:  
   
-1.  **[Plan and deploy a single server](assetId:///3475e527-541f-4a34-b940-18d481ac59f6)**. A single Remote Access server with advanced settings must be deployed before setting up a multisite deployment.  
+1. [Deploy a single DirectAccess server with advanced settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a multisite deployment.  
   
-2.  **[Plan a  multisite deployment](assetId:///00701341-eec3-4b8a-b72b-819fc1ed1496)**. To build a multisite deployment from a single server a number of additional planning steps are required, including compliance with multisite prerequisites, and planning for Active Directory security groups, Group Policy Objects (GPOs), DNS, and client settings.  
+2. [Plan a Multisite Deployment](plan/Plan-a-Multisite-Deployment.md). To build a multisite deployment from a single server a number of additional planning steps are required, including compliance with multisite prerequisites, and planning for Active Directory security groups, Group Policy Objects (GPOs), DNS, and client settings.  
   
-3.  **[Configure a multisite deployment](assetId:///68492f3d-772e-4e68-a0ae-572be4e7d35f)**. This consists of a number of configuration steps, including preparation of the Active Directory infrastructure, configuration of the existing Remote Access server, and the addition of multiple Remote Access servers as entry points to the multisite deployment.  
+3. [Configure a Multisite Deployment](configure/Configure-a-Multisite-Deployment.md). This consists of a number of configuration steps, including preparation of the Active Directory infrastructure, configuration of the existing Remote Access server, and the addition of multiple Remote Access servers as entry points to the multisite deployment.  
   
-4.  **[Troubleshoot a Multisite Deployment](assetId:///972a6d12-57b4-4be2-9692-a40d19244691)**. This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access in a multisite deployment.  
+4. [Troubleshoot a Multisite Deployment](troubleshoot/Troubleshoot-a-Multisite-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access in a multisite deployment.
   
 ## <a name="BKMK_APP"></a>Practical applications  
 A multisite deployment provides the following:  
@@ -67,14 +70,14 @@ A multisite deployment provides the following:
 The following table lists the roles and features used in this scenario.  
   
 |Role/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services (RRAS), which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
 Hardware requirements for this scenario include the following:  
   
--   At least two Remote Access computers to be gathered into a multisite deployment. Hardware requirements for these computers are described in [Deploying advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   At least two Remote Access computers to be gathered into a multisite deployment.   
   
 -   In order to test the scenario, at least one computer running Windows 8 and configured as a DirectAccess client is required. To test the scenario for clients running Windows 7 at least one computer running Windows 7 is required.  
   
@@ -83,7 +86,7 @@ Hardware requirements for this scenario include the following:
 ## <a name="BKMK_SOFT"></a>Software requirements  
 Software requirements for this scenario include the following:  
   
--   Software requirements for single server deployment. For more information see [Deploying advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   Software requirements for single server deployment.  
   
 -   In addition to software requirements for a single server there are a number of multisite-specific requirements:  
   

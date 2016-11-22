@@ -1,17 +1,19 @@
 ---
+ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: Configuring Alternate Login ID
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Users can sign in to Active Directory Federation Services (AD FS) enabled applications using any form of user identifier that is accepted by Active Directory Domain Services (AD DS). These include User Principal Names (UPNs) (johndoe@contoso.com) or domain qualified sam-account names (contoso\johndoe or contoso.com\johndoe).
 
@@ -40,11 +42,11 @@ Please refer to the table below for the user experience with Alternate ID using 
 |OneDrive for Business|Supported - client side registry key recommended|With Alternate ID configured you will see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
 |OneDrive for Business Mobile Client|Supported|||
 
-![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID1.png)
+![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID1.png)
 
-![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID2.png)
+![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID2.png)
 
-![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID3.png)
+![alternate login](media/Configure-Alternate-Login-ID/ADFS_Alt_ID3.png)
 
 ## To configure alternate login ID
 In order to configure alternate login ID, you must perform the following tasks:

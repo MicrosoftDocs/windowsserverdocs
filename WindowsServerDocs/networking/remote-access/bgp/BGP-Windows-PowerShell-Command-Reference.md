@@ -1,23 +1,26 @@
 ---
 title: BGP Windows PowerShell Command Reference
+description: You can use this topic as a reference, when writing Windows PowerShell scripts in Windows Server 2016, to add, configure, and remove BGP capabilities from RAS Gateway and Remote Access Local Area Network (LAN) routers.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f
+ms.author: jamesmci
 author: jamesmci
 ---
 # BGP Windows PowerShell Command Reference
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic as a reference, when writing Windows PowerShell scripts, to add, configure, and remove BGP capabilities from RAS Gateway and Remote Access Local Area Network (LAN) routers.  
   
-These BGP commands are part of the Remote Access Windows PowerShell command set for Windows Server 2016 Technical Preview. This topic helps you quickly locate the BGP commands that you want to use in scripts.  
+These BGP commands are part of the Remote Access Windows PowerShell command set for  Windows Server 2016. This topic helps you quickly locate the BGP commands that you want to use in scripts.  
   
 For more information on all Remote Access commands, see [Remote Access Cmdlets](https://technet.microsoft.com/en-us/library/hh918399.aspx).  
   

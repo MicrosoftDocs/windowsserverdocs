@@ -1,21 +1,26 @@
 ---
 title: Install the Certification Authority
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: dongill
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Install the Certification Authority
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this procedure to install Active Directory Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.  
   
 > [!IMPORTANT]  
-> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the Windows Server 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) at http://technet.microsoft.com/library/hmt604042.aspx.  
+> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the  Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide).  
 > -   To perform this procedure, the computer on which you are installing AD CS must be joined to a domain where Active Directory Domain Services (AD DS) is installed.  
   
 Membership in both the **Enterprise Admins** and the root domain's **Domain Admins** group is the minimum required to complete this procedure.  

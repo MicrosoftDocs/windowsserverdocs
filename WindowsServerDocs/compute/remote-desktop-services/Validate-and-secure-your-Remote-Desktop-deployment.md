@@ -1,20 +1,22 @@
 ---
 title: Validate and secure your Remote Desktop deployment
+description: Learn how to verify that your RDS deployment is functioning.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: elizapo
+ms.date: 11/08/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: adc85c02-5391-4f8a-abd7-827a70746c4d
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Validate and secure your Remote Desktop deployment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Once you have deployed your Remote Desktop servers, you can validate the deployment by connecting to Remote Desktop from a client computer over the Internet.   
   
@@ -25,7 +27,10 @@ Use the following information to do both of these tasks.
 ## Connect to a Remote Desktop deployment over the Internet  
 Use the following steps to connect from a client computer:  
   
->[NOTE] This certificate installation step is not required if the certificate has been obtained from a trusted root certificate authority. 
+>[!NOTE] 
+> This certificate installation step is not required if the certificate has been obtained from a trusted root certificate authority.
+
+
 1.  Install the self-signed client certificates on the client computer:  
     1.  Sign into the client computer with an administrative account, and then navigate to the folder where you copied the certificates. Right-click one of the certificate files, and then click **Install certificate**.  
     2.  In the Certificate Import Wizard, click **Local Machine > Place all certificates in the following store**.  

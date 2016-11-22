@@ -1,16 +1,21 @@
 ---
 title: Verify Server Enrollment of a Server Certificate
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: dongill
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Verify Server Enrollment of a Server Certificate
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this procedure to verify that your Network Policy Server (NPS) servers have enrolled a server certificate from the certification authority (CA).   
   

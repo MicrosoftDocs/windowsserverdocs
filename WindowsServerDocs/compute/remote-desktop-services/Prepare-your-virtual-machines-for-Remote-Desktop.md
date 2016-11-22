@@ -1,20 +1,22 @@
 ---
 title: Prepare your virtual machines for Remote Desktop
+description: Get your VMs ready for Remote Desktop components
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: elizapo
+ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2fc39dff-61ca-4eba-81ab-52289081bead
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Prepare your virtual machines for Remote Desktop
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to prepare the virtual machines hosting the Remote Desktop Services roles you created in the previous step.  
   

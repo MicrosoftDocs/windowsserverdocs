@@ -1,33 +1,29 @@
 ---
+ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Active Directory Domain Services
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 5df97522-e05c-42de-ab79-65d02a1e0dd3
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Active Directory Domain Services
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
-**[This information is preliminary and subject to change.]**  
-  
 You will find links to Active Directory Domain services content on this page.   
-  
-  
-* [What's new in Active Directory Domain Services Technical Preview](../whats-new-active-directory-domain-services.md)  
+
+
+* [What's new in Active Directory Domain Services](../whats-new-active-directory-domain-services.md)  
 * [AD DS Getting Started](../ad-ds/AD-DS-Getting-Started.md)   
 * [AD DS Design and Planning](../ad-ds/plan/AD-DS-Design-and-Planning.md)  
 * [AD DS Deployment](../ad-ds/deploy/AD-DS-Deployment.md)  
 * [AD DS Operations](../ad-ds/manage/component-updates/AD-DS-Operations.md)   
 * [Active Directory Domain Services Virtualization](../ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Virtualization.md)  
 * [AD DS Troubleshooting](../ad-ds/manage/AD-DS-Troubleshooting.md)
-
-

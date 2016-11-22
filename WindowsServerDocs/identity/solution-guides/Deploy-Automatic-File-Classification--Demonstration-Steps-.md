@@ -1,18 +1,20 @@
 ---
+ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: 
+ms.technology: identity-adds
 ---
 
 # Deploy Automatic File Classification (Demonstration Steps)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to enable resource properties in Active Directory, create classification rules on the file server, and then assign values to the resource properties for files on the file server. For this example, the following classification rules are created:  
   
@@ -50,7 +52,7 @@ The Impact and Personally Identifiable Information resource properties are enabl
   
 5.  Right-click **Personally Identifiable Information**, and then click **Enable**.  
   
-![](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -101,7 +103,7 @@ A string content classification rule scans a file for a specific string. If the 
   
 13. On the **Evaluation Type** tab, select the **Re-evaluate existing property values** check box, click **Overwrite the existing value**, and then click **OK**.  
   
-![](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -149,7 +151,7 @@ A regular expression classification rule scans a file for a pattern that matches
   
 12. On the **Evaluation Type** tab, select the **Re-evaluate existing property values** check box, click **Overwrite the existing value**, and then click **OK**.  
   
-![](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![solution guides](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

@@ -1,21 +1,20 @@
 ---
+ms.assetid: 84754c23-f039-4de4-a378-853942e662df
 title: Introduction
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 7e52c3b5-5aab-46c0-9bc7-565bc64eb1fc
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Introduction
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Attacks against computing infrastructures, whether simple or complex, have existed as long as computers have. However, within the past decade, increasing numbers of organizations of all sizes, in all parts of the world have been attacked and compromised in ways that have significantly changed the threat landscape. Cyber-warfare and cybercrime have increased at record rates. "Hacktivism," in which attacks are motivated by activist positions, has been claimed as the motivation for a number of breaches intended to expose organizations' secret information, to create denials-of-service, or even to destroy infrastructure. Attacks against public and private institutions with the goal of exfiltrating the organizations' intellectual property (IP) have become ubiquitous.  
   

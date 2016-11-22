@@ -5,8 +5,9 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: spatnaik
+ms.date: 11/16/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
@@ -16,10 +17,10 @@ notes: http://social.technet.microsoft.com/wiki/contents/articles/22069.remote-d
 ---
 # Upgrading your Remote Desktop Services deployments to Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016 Technical Preview 5.
+Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016.
 
 ## Flow for deployment upgrades
 In order to keep the down-time to a minimum, it is best to follow the steps below:
@@ -29,20 +30,20 @@ The deployment will not be available during RD Connection Broker servers upgrade
    > [!NOTE] 
    > It is mandatory to upgrade RD Connection Broker servers. We do not support Windows Server 2012 R2 RD Connection Broker servers in a mixed deployment with Windows Server 2016 servers. Once the RD Connection Broker server(s) are running Windows Server 2016 the deployment will be functional, even if the rest of the servers in the deployment are still running Windows Server 2012 R2.
 
-2. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](Upgrade-to-RDSH-2016.md).
+2. **RD License servers** should be upgraded before you upgrade your RD Session Host servers.
+   > [!NOTE] 
+   > Windows Server 2012 and 2012 R2 RD license servers will work with Windows Server 2016 deployments, but they can only process CALs from Windows Server 2012 R2 and older. They cannot use Windows Server 2016 CALs. See [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md) for more information about RD license servers.
 
-3. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDVH-2016.md).
+3. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](Upgrade-to-RDSH-2016.md).
 
-4. **RD Web Access servers** can be upgraded anytime.
+4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDVH-2016.md).
+
+5. **RD Web Access servers** can be upgraded anytime.
    > [!NOTE]
    > Upgrading RD Web may reset IIS properties (such as any configuration files). To not lose your changes, make notes or copies of customizations done to the RD Web site in IIS.
 
    > [!NOTE] 
    > Windows Server 2012 and 2012 R2 RD Web Access servers will work with Windows Server 2016 deployments.
-
-5. **RD Licensing servers** can be upgraded anytime.
-   > [!NOTE] 
-   > Windows Server 2012 and 2012 R2 RD Licensing servers will work with Windows Server 2016 deployments.
 
 6. **RD Gateway servers** can be upgraded anytime.
    > [!NOTE]
@@ -50,27 +51,6 @@ The deployment will not be available during RD Connection Broker servers upgrade
 
    > [!NOTE] 
    > Windows Server 2012 and 2012 R2 RD Gateway servers will work with Windows Server 2016 deployments.
-
-## VDI deployment – supported guest OSs 
-Windows Server 2016 RD Virtualization Host servers support the following guest OSs:
-
-- Windows 10 Enterprise
-- Windows 8.1 Enterprise 
-- Windows 8 Enterprise 
-- Windows 7 SP1 Enterprise 
-
-The table below shows the supported RD Virtualization Hosts operating systems and guest operating system combinations:
-
-| RDVH OS Version        | Guest OS Version           |
-| ------------- |-------------|
-| Windows Server 2016      | Windows 7 SP1, Windows 8, Windows 8.1, Windows 10 |
-| Windows Server 2012 R2   | Windows 7 SP1, Windows 8, Windows 8.1 |
-| Windows Server 2012      | Windows 7 SP1, Windows 8, Windows 8.1 |
-
-> [!NOTE]  
-> - Windows Server 2016 Remote Desktop Services does not support heterogeneous collections. All VMs in a collection must be same OS version. 
-> - You can have separate homogeneous collections with different guest OS versions on the same host. 
-> - VM templates must be created on a Windows Server 2016 Hyper-V host to used as guest OS on a Windows Server 2016 Hyper-V host.
 
 ## VDI deployment – supported guest OS upgrade
 Administrators will have the following options to upgrade of VM collections:

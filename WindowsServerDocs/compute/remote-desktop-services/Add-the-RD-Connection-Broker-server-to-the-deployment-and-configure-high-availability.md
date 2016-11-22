@@ -1,20 +1,22 @@
 ---
 title: Add the RD Connection Broker server to the deployment and configure high availability
+Description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: elizapo
+ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6581da74-f36a-48b6-a33c-97d02285389d
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Add the RD Connection Broker server to the deployment and configure high availability
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 1. Connect to the RDMS server virtual machine. (The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.)   
     1.  In the Azure portal click **Browse > Resource groups** and click the resource group for the deployment.  

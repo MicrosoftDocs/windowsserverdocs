@@ -1,19 +1,22 @@
 ---
 title: Identify and resolve Remote Access server operations problems
+description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Identify and resolve Remote Access server operations problems
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
@@ -24,11 +27,11 @@ You can using the following procedures to identify Remote Access server operatio
   
 This topic includes information about performing the following tasks:  
   
-[Simulate an operations issue](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Simulate)  
+- Simulate an operations issue  
   
-[Identify the operations issue and take corrective action](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Identify)  
+- Identify the operations issue and take corrective action  
   
-[Restore the IP Helper service](assetId:///01913def-a5fe-48d0-b687-eec40b268bb2#BKMK_Restart)  
+- Restore the IP Helper service  
   
 ### <a name="BKMK_Simulate"></a>Simulate an operations issue  
   
@@ -83,7 +86,7 @@ To restore the IP Helper service on your Remote Access server, you can follow th
   
 2.  In the list of **Services**, scroll down and right-click **IP Helper**, and then click **Start**.  
   
-![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

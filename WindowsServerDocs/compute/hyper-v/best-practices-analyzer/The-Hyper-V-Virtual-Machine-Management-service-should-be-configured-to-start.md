@@ -1,28 +1,25 @@
 ---
 title: The Hyper-V Virtual Machine Management service should be configured to start automatically
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: 222bbe76-c514-4a3f-b61b-860a4dc2826a
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # The Hyper-V Virtual Machine Management service should be configured to start automatically
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
@@ -46,7 +43,7 @@ Virtual machines that are running will continue to run. However, you won't be ab
 > [!TIP]  
 > If you can't find the service in the desktop app or the command-line tool reports that the service doesn't exist, the Hyper-V Management tools probably aren't installed. To install them:  
 >   
-> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more details, see [Install the Hyper-V role on Windows Server Technical Preview](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
+> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more details, see [Install the Hyper-V role on Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
 > - On Windows, from the Desktop, begin typing **programs**, click **Programs and Features** (Control panel) > **Turn Windows features on or off** > **Hyper-V** > **Hyper-V Management Tools**. Then, click **OK**.  
   
 #### To reconfigure the service to start automatically using the Services desktop app  

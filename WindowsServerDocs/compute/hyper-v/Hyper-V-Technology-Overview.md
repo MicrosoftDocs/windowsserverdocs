@@ -1,28 +1,24 @@
 ---
 title: Hyper-V Technology Overview
-description: " "
+description: "Describes what Hyper-V is, how to get it, key features and common uses"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
+ms.author: kathydav
+ms.date: 11/21/2016
 ---
 # Hyper-V Technology Overview
 
->Applies To: Windows Server 2016 Technical Preview
-
-**This is preliminary content and subject to change.**  
+>Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016
+ 
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.  
   
 Hyper-V runs each virtual machine in its own isolated space, which means you can run more than one virtual machine on the same hardware at the same time. You might want to do this to avoid problems such as a crash affecting the other workloads, or to give different people, groups or services access to different systems.  
-  
->[!NOTE]  
->Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC.  
   
 ## Some ways Hyper-V can help you   
   
@@ -37,7 +33,11 @@ Hyper-V can help you:
 -   **Establish or expand a virtual desktop infrastructure (VDI).** Use a centralized desktop strategy with VDI can help you increase business agility and data security, as well as simplify regulatory compliance and manage desktop operating systems and applications. Deploy Hyper-V and Remote Desktop Virtualization Host (RD Virtualization Host) on the same  server to make personal virtual desktops or virtual desktop pools available to your users.  
   
 -   **Make development and test more efficient.** Reproduce different computing environments without having to buy or maintain all the hardware you'd need if you only used physical systems.  
-  
+
+## Hyper-V and other virtualization products
+Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC. Hyper-V offers networking, performance, storage and security features not available in these older products.
+Hyper-V and most third-party virtualization applications that require the same processor features aren't compatible. That's because the processor features, known as hardware virtualization extensions, are designed to not be shared.
+
 ## What features does Hyper-V have?  
   
 Hyper-V offers many features. This is an overview, grouped by what the features provide or help you do.   
@@ -54,10 +54,10 @@ Hyper-V offers many features. This is an overview, grouped by what the features 
    
 **Security** - Secure boot and shielded virtual machines help protect against malware and other unauthorized access to a virtual machine and its data.  
   
-For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
+For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016](What-s-new-in-Hyper-V-on-Windows.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
   
 ## How to get Hyper-V  
-Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server Technical Preview](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).
+Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).
   
 ## Supported operating systems  
   
@@ -65,10 +65,10 @@ Many operating systems will run on virtual machines. In general, an operating sy
   
 -   [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
   
--   [Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
+-   [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
   
 ## How Hyper-V works  
-Hyper-V is a hypervisor-based virtualization technology. Hyper-V uses the Windows hypervisor, which requires a physical processor with specific features. For hardware details, see [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows.md).  
+Hyper-V is a hypervisor-based virtualization technology. Hyper-V uses the Windows hypervisor, which requires a physical processor with specific features. For hardware details, see [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md).  
   
 In most cases, the hypervisor manages the interactions between the hardware and the virtual machines. This hypervisor-controlled access to the hardware gives virtual machines the isolated environment in which they run. In some configurations, a virtual machine or the operating system running in the virtual machine has direct access to graphics, networking, or storage hardware.  
   
@@ -84,9 +84,9 @@ Hyper-V also has tools for management and connectivity. You can install these on
 ## Related technologies  
 These are some technologies from Microsoft that are often used with Hyper-V:  
   
-* [Failover Clustering](../failover-clustering/whats-new-failover-clustering-windows-server.md)  
+* [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)  
 * [Remote Desktop Services](../remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
-* [Virtual Machine Manager](https://technet.microsoft.com/library/en-us/system-center-docs/vmm/virtual-machine-manager)  
+* [Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/vmm)  
   
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct  
   

@@ -1,21 +1,22 @@
 ---
+ms.assetid: 6a06a2e6-f056-458a-9fff-e7b6c2feec37
 title: Replication error 1722 The RPC server is unavailable
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 33500c62-ab27-4796-8b51-b7a812d56e04
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Replication error 1722 The RPC server is unavailable
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This topic explains symptoms, causes and how to resolve Active Directory replication error 1722: The RPC server is unavailable.</para>

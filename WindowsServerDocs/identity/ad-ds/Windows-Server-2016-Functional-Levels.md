@@ -1,22 +1,21 @@
 ---
+ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 Functional Levels
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: caeb7a68-bc10-4e4e-8bfa-1433447ca82e
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Windows Server 2016 Functional Levels
 
->Applies To: Windows Server Technical Preview
-
-  
+>Applies To: Windows Server 
+ 
 With the end of life of Windows 2003, Windows 2003 domain controllers need to be updated to Windows Server 2008, 2012 or 2016. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain. The domain and forest functional level should be raised to at least Windows Server 2008 to prevent a domain controller that runs an earlier version of Windows Server from being added to the environment.  
   
 We recommend that customers update their domain functional level (DFL) and forest functional level (FFL) as part of this, since the 2003 DFL and FFL have been deprecated in Windows Server 2016 and they will no longer be supported in future releases.   

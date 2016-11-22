@@ -1,21 +1,24 @@
 ---
 title: Install the BranchCache Feature
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
+ms.author: jamesmci
 author: jamesmci
 ---
 # Install the BranchCache Feature
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-You can use this procedure to install the BranchCache feature and start the BranchCache service on a computer running  Windows Server 2012 .  
+You can use this procedure to install the BranchCache feature and start the BranchCache service on a computer running Windows Server&reg; 2016, Windows Server 2012 R2, or Windows Server 2012.  
   
 Membership in **Administrators** or equivalent is the minimum required to perform this procedure.  
   

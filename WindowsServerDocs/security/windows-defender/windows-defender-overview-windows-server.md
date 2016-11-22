@@ -1,22 +1,24 @@
 ---
-title: Windows Defender Overview for Windows Server Technical Preview
+title: Windows Defender Overview for Windows Server 
+description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-security
+ms.technology: security-windows-defender
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
-manager: dongill
 author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
 ---
-# Windows Defender Overview for Windows Server Technical Preview
+# Windows Defender Overview for Windows Server
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 Technical Preview against known malware and can regularly update antimalware definitions through Windows Update.
+Windows Server 2016 now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 against known malware and can regularly update antimalware definitions through Windows Update.
 
 This topic includes information important for running Windows Defender on a server platform. Use the following links to get to the information you need in this topic:
 
@@ -31,7 +33,7 @@ This topic includes information important for running Windows Defender on a serv
 -   [Automatic exclusions](../windows-defender/windows-defender-overview-windows-server.md#BKMK_DefExclusions)
 
 ## <a name="BKMK_UsingDef"></a>Using Windows Defender
-By default, Windows Defender is installed and functional on Windows Server 2016 Technical Preview. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell, or by using Group Policy.
+By default, Windows Defender is installed and functional on Windows Server 2016. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell, or by using Group Policy.
 
 If the user interface is not installed,  use **Add Roles and Features Wizard**, or the **Install-WindowsFeature** cmdlet.
 
@@ -46,7 +48,7 @@ To uninstall Windows Defender, start a Windows PowerShell console as an administ
 `Uninstall-WindowsFeature -Name Windows-Server-Antimalware`
 
 > [!TIP]
-> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](../windows-defender/Windows-Defender-Events.md).
+> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](../windows-defender/windows-defender-events.md).
 
 ## <a name="BKMK_DefRun"></a>Verify Windows Defender is running
 To verify that Windows Defender is running on the server, run the following command: `sc query Windefend`. The `sc query` command returns information about the Windows Defender service. If Windows Defender is running, the `STATE` value displays `RUNNING`.
@@ -54,7 +56,7 @@ To verify that Windows Defender is running on the server, run the following comm
 ## <a name="BKMK_UpdateDef"></a>Update antimalware definitions
 In order to get updated antimalware definitions, you must have the Windows Update service running. If you use an update management service, like Windows Server Update Services (WSUS), make sure that updates for Windows Defender definitions are approved for the computers you manage.
 
-By default, Windows Update does not download and install updates automatically on Windows Server 2016 Technical Preview. You can change this configuration by using one of the following methods:
+By default, Windows Update does not download and install updates automatically on Windows Server 2016. You can change this configuration by using one of the following methods:
 
 -   **Windows Update** in Control Panel.
 
@@ -81,7 +83,7 @@ To ensure that protection from malware is maintained, we recommend that you enab
 The following table lists the services for Windows Defender and the dependent services.
 
 |Service Name|File Location|Description|
-|----------------|-----------------|---------------|
+|--------|---------|--------|
 |Windows Defender Service (Windefend)|C:\Program Files\Windows Defender\MsMpEng.exe|This is the main Windows Defender service that needs to be running at all times.|
 |Windows Defender Network Inspection Service (Wdnissvc)|C:\Program Files\Windows Defender\NisSrv.exe|This service is invoked when Windows Defender encounters a trigger to load it.|
 |Windows Error Reporting Service (Wersvc)|C:\WINDOWS\System32\svchost.exe -k WerSvcGroup|This service sends   error reports back to Microsoft.|
@@ -103,7 +105,7 @@ We collect program executable files, such as EXE files and DLL files. We do not 
 
 -   To enable automatic sample submission, start a Windows PowerShell console as an administrator, and set the **SubmitSamplesConsent** value data according to one of the following settings:
 
-    -   **0** Always prompt. The Windows Defender service prompts you to confirm submission of all required files. This is the default setting for Windows Defender, but is not recommended for Windows Server 2016 Technical Preview installations without a GUI.
+    -   **0** Always prompt. The Windows Defender service prompts you to confirm submission of all required files. This is the default setting for Windows Defender, but is not recommended for Windows Server 2016 installations without a GUI.
 
     -   **1** Send safe samples automatically. The Windows Defender service sends all files marked as "safe" and prompts for the remainder of the files.
 
@@ -112,7 +114,7 @@ We collect program executable files, such as EXE files and DLL files. We do not 
     -   **3** Send all samples automatically. The Windows Defender service sends all files without a prompt for confirmation.
 
 ## <a name="BKMK_DefExclusions"></a>Automatic exclusions
-To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install. Windows Defender delivers automatic exclusions for Windows Server 2016 Technical Preview roles via the regularly scheduled definition update process.
+To help ensure security and performance, certain exclusions are automatically added based on the roles and features you install. Windows Defender delivers automatic exclusions for Windows Server 2016 roles via the regularly scheduled definition update process.
 
 To add custom exclusions in addition to the ones automatically added, start a Windows PowerShell console as an administrator, and run the following command:
 
@@ -125,12 +127,12 @@ To remove exclusions, start a Windows PowerShell console as an administrator, an
 > [!TIP]
 > Custom and duplicate exclusions do not conflict with automatic exclusions.
 
-For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](../windows-defender/Automatic-exclusions-for-Windows-Defender.md).
+For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](../windows-defender/automatic-exclusions-for-windows-defender.md).
 
 ## See Also
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
-[Windows Defender Events](../windows-defender/Windows-Defender-Events.md)
-[Automatic exclusions for Windows Defender](../windows-defender/Automatic-exclusions-for-Windows-Defender.md)
+[Windows Defender Events](../windows-defender/windows-defender-events.md)
+[Automatic exclusions for Windows Defender](../windows-defender/automatic-exclusions-for-windows-defender.md)
 
 
 

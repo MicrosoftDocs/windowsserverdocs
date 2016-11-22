@@ -1,19 +1,21 @@
 ---
 title: RAS Gateway High Availability
+description: You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN) in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
+ms.author: jamesmci
 author: jamesmci
 ---
 # RAS Gateway High Availability
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN).  
   
@@ -34,16 +36,16 @@ You can deploy RAS Gateway in multitenant mode as an edge gateway to route tenan
   
 When you deploy multiple instances of RAS Gateway VMs that provide high availability and failover, you are deploying a gateway pool. In Windows Server 2012 R2, all the gateway VMs formed a single pool, which made a logical separation of the gateway deployment a little difficult.  Windows Server 2012 R2  gateway  offered a 1:1 redundancy deployment for the gateway VMs, which resulted in under-utilization of the available capacity for site-to-site (S2S) VPN connections.  
   
-This issue is resolved in Windows Server 2016 Technical Preview, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
+This issue is resolved in  Windows Server 2016, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
   
 For more overview information about RAS Gateway, see [RAS Gateway](../../../remote-access/ras-gateway/RAS-Gateway.md).  
   
 ## <a name="bkmk_pools"></a>Gateway Pools Overview  
-In Windows Server 2016 Technical Preview, you can deploy gateways in one or more pools.  
+In  Windows Server 2016, you can deploy gateways in one or more pools.  
   
 The following illustration shows different types of gateway pools that provide traffic routing between virtual networks.  
   
-![](../../../media/RAS-Gateway-High-Availability/ras_pools.png)  
+![RAS Gateway pools](../../../media/RAS-Gateway-High-Availability/ras_pools.png)  
   
 Each pool has the following properties.  
   
@@ -68,7 +70,7 @@ Gateway pools also provide the flexibility to enable additional scenarios:
 ## <a name="bkmk_deployment"></a>RAS Gateway Deployment Overview  
 The following illustration demonstrates a typical Cloud Service Provider (CSP) deployment of RAS Gateway.  
   
-![](../../../media/RAS-Gateway-High-Availability/ras_csp_deploy.png)  
+![RAS Gateway Deployment Overview](../../../media/RAS-Gateway-High-Availability/ras_csp_deploy.png)  
   
 With this type of deployment, the gateway pools are deployed behind a Software Load Balancing (SLB), which enables the CSP to assign a single public IP address for the entire deployment. Multiple gateway connections of a tenant can terminate on multiple gateway pools - and also on multiple gateways within a pool. This is illustrated through IKEv2 S2S connections in the above diagram, but the same is applicable to other gateway functions too, such as L3 and GRE gateways.  
   
@@ -77,7 +79,7 @@ In the illustration, the MT BGP device is a RAS Multitenant Gateway with BGP. Mu
 The BGP router is separated out in the diagram to depict this centralized routing concept. The gateway BGP implementation also provides transit routing, which enables the cloud to act as a transit point for routing between two tenant sites. These BGP capabilities are applicable to all gateway functions.  
   
 ## <a name="bkmk_integration"></a>RAS Gateway Integration with Network Controller  
-RAS Gateway is fully integrated with Network Controller in Windows Server 2016 Technical Preview. When RAS Gateway and Network Controller are deployed, Network Controller performs the following functions.  
+RAS Gateway is fully integrated with Network Controller in  Windows Server 2016. When RAS Gateway and Network Controller are deployed, Network Controller performs the following functions.  
   
 -   Deployment of the gateway pools  
   
@@ -135,7 +137,7 @@ Network Controller handles the failure of gateways in the following manner.
 ### <a name="bkmk_gre"></a>High Availability for GRE  
 The process of RAS Gateway failover response by Network Controller - including failure detection, copying connection and routing configuration to the standby gateway, failover of BGP/static routing of the impacted connections (including the withdrawal and re-plumbing of routes on compute hosts and BGP re-peering), and reconfiguration of Hyper-V Network Virtualization policies on compute hosts -  is the same for GRE gateways and connections. The re-establishment of GRE connections happens differently, however, and the high availability solution for GRE has some additional requirements.  
   
-![](../../../media/RAS-Gateway-High-Availability/ras_ha.png)  
+![High Availability for GRE](../../../media/RAS-Gateway-High-Availability/ras_ha.png)  
   
 At the time of gateway deployment, every RAS Gateway VM is assigned a Dynamic IP address (DIP). In addition, every gateway VM is also assigned a virtual IP address (VIP) for GRE high availability. VIPs are assigned only to gateways in pools that can accept GRE connections, and not to non-GRE pools. The VIPs assigned are advertised to the top of rack (TOR) switches using BGP, which then further advertises the VIPs into the cloud physical network. This makes the gateways reachable from the remote routers or third party devices where the other end of the GRE connection resides. This BGP peering is different than the tenant-level BGP peering for the exchange of tenant routes.  
   
@@ -164,7 +166,7 @@ Following are example tenant gateway configurations as depicted in the illustrat
   
 Following is the illustration of these configurations in a CSP datacenter.  
   
-![](../../../media/RAS-Gateway-High-Availability/ras_fwdgw.png)  
+![High Availability for L3 Forwarding Gateways](../../../media/RAS-Gateway-High-Availability/ras_fwdgw.png)  
   
 The gateway failures, failure detection, and the gateway failover process in the context of an L3 forwarding gateway is similar to the processes for IKEv2 and GRE RAS Gateways. The differences are in the way the external IP addresses are handled.  
   

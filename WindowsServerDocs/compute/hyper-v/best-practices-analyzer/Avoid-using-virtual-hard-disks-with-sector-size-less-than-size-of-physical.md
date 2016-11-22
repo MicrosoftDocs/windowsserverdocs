@@ -1,28 +1,25 @@
 ---
 title: Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: b7cf994e-bf4b-4b1b-bad6-ecf7d46d105e
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-[This information is preliminary and subject to change.]  
-  
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
 |-|-|  
-|**Operating** <br />**System**|Windows Server 2016 Technical Preview|  
+|**Operating** <br />**System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

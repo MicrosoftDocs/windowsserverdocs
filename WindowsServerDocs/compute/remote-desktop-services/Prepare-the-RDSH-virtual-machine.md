@@ -1,20 +1,22 @@
 ---
 title: Prepare the RDSH virtual machine
+descriptioN: Get the VM ready for the RD Session Host
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
+ms.author: elizapo
+ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d720a65e-b33c-4577-84ad-d84f47dee15b
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Prepare the RDSH virtual machine
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to prepare the virtual machine for the Remote Desktop Session Host server:  
   

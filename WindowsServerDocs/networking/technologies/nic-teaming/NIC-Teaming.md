@@ -1,45 +1,35 @@
 ---
 title: NIC Teaming
+description: This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
+ms.author: jamesmci
 author: jamesmci
 ---
 # NIC Teaming
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server&reg; 2016 Technical Preview, and contains the following sections.  
-  
--   [NIC Teaming Overview](#bkmk_over)  
-  
--   [NIC Teaming Availability](#bkmk_avail)  
-  
--   [Supported and Unsupported NICs for NIC Teaming](#bkmk_nics)  
-  
--   [NIC Teaming Compatibility](#bkmk_compat)  
-  
--   [NIC Teaming and Virtual Machine Queues (VMQs)](#bkmk_vmq)  
-  
--   [NIC Teaming and Hyper-V Network Virtualization (HNV)](#bkmk_hnv)  
-  
--   [NIC Teaming and Live Migration](#bkmk_live)  
-  
+This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server 2016.
+
 > [!NOTE]  
 > In addition to this topic, the following NIC Teaming content is available.  
 >   
-> -   [NIC Teaming in Virtual Machines &#40;VMs&#41;](../../technologies/nic-teaming/../../technologies/nic-teaming/NIC-Teaming-in-Virtual-Machines--VMs-.md)  
-> -   [NIC Teaming and Virtual Local Area Networks &#40;VLANs&#41;](../../technologies/nic-teaming/NIC-Teaming-and-Virtual-Local-Area-Networks--VLANs-.md)  
-> -   [NIC Teaming MAC Address Use and Management](../../technologies/nic-teaming/NIC-Teaming-MAC-Address-Use-and-Management.md)  
-> -   [Troubleshooting NIC Teaming](../../technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)  
-> -   [Create a New NIC Team on a Host Computer or VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)  
-> -   [NIC Teaming (NetLBFO) Cmdlets in Windows PowerShell](https://technet.microsoft.com/en-us/library/jj130849(v=wps.630).aspx)  
+> - [NIC Teaming in Virtual Machines &#40;VMs&#41;](nict-vms.md)
+> - [NIC Teaming and Virtual Local Area Networks &#40;VLANs&#41;](nict-and-vlans.md)
+> - [NIC Teaming MAC Address Use and Management](NIC-Teaming-MAC-Address-Use-and-Management.md)
+> - [Troubleshooting NIC Teaming](Troubleshooting-NIC-Teaming.md) 
+> - [Create a New NIC Team on a Host Computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)
+> - [NIC Teaming (NetLBFO) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj130849.aspx)
+> - TechNet Gallery Download: [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0)
   
 ## <a name="bkmk_over"></a>NIC Teaming Overview  
 NIC Teaming allows you to group between one and thirty-two physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
@@ -49,19 +39,19 @@ NIC Team member network adapters must all be installed in the same physical host
 > [!NOTE]  
 > A NIC team that contains only one network adapter cannot provide load balancing and failover; however with one network adapter, you can use NIC Teaming for separation of network traffic when you are also using virtual Local Area Networks (VLANs).  
   
-When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server&reg; 2016 Technical Preview supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
+When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server 2016 supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
   
 The following illustration depicts a NIC Team with multiple tNICs.  
   
-![](../../media/NIC-Teaming/nict_overview.jpg)  
+![NIC Team with multiple tNICs](../../media/NIC-Teaming/nict_overview.jpg)  
   
 In addition, you can connect your teamed NICs to the same switch or to different switches. If you connect NICs to different switches, both switches must be on the same subnet.  
   
 ## <a name="bkmk_avail"></a>NIC Teaming Availability  
-NIC Teaming is available in all versions of Windows Server 2016 Technical Preview. In addition, you can use Windows PowerShell commands, Remote Desktop, and Remote Server Administration Tools to manage NIC Teaming from computers that are running a client operating system upon which the tools are supported.  
+NIC Teaming is available in all versions of Windows Server 2016. In addition, you can use Windows PowerShell commands, Remote Desktop, and Remote Server Administration Tools to manage NIC Teaming from computers that are running a client operating system upon which the tools are supported.  
   
 ## <a name="bkmk_nics"></a>Supported and Unsupported NICs for NIC Teaming  
-You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo test (WHQL tests) in a NIC Team in Windows Server 2016 Technical Preview.  
+You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo test (WHQL tests) in a NIC Team in Windows Server 2016.  
   
 The following NICs cannot be placed in a NIC team.  
   
@@ -77,7 +67,7 @@ The following NICs cannot be placed in a NIC team.
 -   NICs that use technologies other than Ethernet, such as WWAN, WLAN/Wi-Fi, Bluetooth, and Infiniband, including Internet Protocol over Infiniband (IPoIB) NICs.  
   
 ## <a name="bkmk_compat"></a>NIC Teaming Compatibility  
-NIC teaming is compatible with all networking technologies in Windows Server 2016 Technical Preview with the following exceptions.  
+NIC teaming is compatible with all networking technologies in Windows Server 2016 with the following exceptions.  
   
 -   **Single-root I/O virtualization (SR-IOV)**. For SR-IOV, data is delivered directly to the NIC without passing it through the networking stack (in the host operating system, in the case of virtualization). Therefore, it is not possible for the NIC team to inspect or redirect the data to another path in the team.  
   

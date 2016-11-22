@@ -1,19 +1,21 @@
 ---
 title: Hyper-V Virtual Switch
+description: This topic provides an overview of the Hyper-V Virtual Switch in Windows Server 2016. 
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-hv-switch
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
+ms.author: jamesmci
 author: jamesmci
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic provides an overview of the Hyper-V Virtual Switch, and contains the following sections.  
   
@@ -26,11 +28,12 @@ This topic provides an overview of the Hyper-V Virtual Switch, and contains the 
 > [!NOTE]  
 > In addition to this topic, the following Hyper-V Virtual Switch documentation is available.  
 >   
-> -   [Manage Hyper-V Virtual Switch](../../technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md) 
-> -   [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
-> -   [Create networks with VMM 2012](http://social.technet.microsoft.com/wiki/contents/articles/3140.create-networks-with-vmm-2012.aspx)  
-> -   [Hyper-V: Configure VLANs and VLAN Tagging](http://social.technet.microsoft.com/wiki/contents/articles/1306.hyper-v-configure-vlans-and-vlan-tagging.aspx)  
-> -   [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](http://social.technet.microsoft.com/wiki/contents/articles/13071.hyper-v-the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions.aspx)  
+> - [Manage Hyper-V Virtual Switch](Manage-Hyper-V-Virtual-Switch.md) 
+> - [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](RDMA-and-Switch-Embedded-Teaming.md)
+> - [Network Switch Team Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj553812.aspx)
+> - [Create networks with VMM 2012](http://social.technet.microsoft.com/wiki/contents/articles/3140.create-networks-with-vmm-2012.aspx)  
+> - [Hyper-V: Configure VLANs and VLAN Tagging](http://social.technet.microsoft.com/wiki/contents/articles/1306.hyper-v-configure-vlans-and-vlan-tagging.aspx)  
+> - [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](http://social.technet.microsoft.com/wiki/contents/articles/13071.hyper-v-the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions.aspx)  
   
 ## <a name="bkmk_switch"></a>Hyper-V Virtual Switch  
 The  Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.  
@@ -42,9 +45,12 @@ The Hyper-V Virtual Switch includes tenant isolation capabilities, traffic shapi
   
 In the following illustration, a Virtual Machine (VM) has a virtual NIC that is connected to the Hyper-V Virtual Switch through a switch port.  
   
-![](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
+![Virtual Switch connections](../../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)  
   
-The capabilities provided in the Hyper-V Virtual Switch mean that your organization has more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious virtual machines.  
+The capabilities provided in the Hyper-V Virtual Switch mean that your organization has more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious virtual machines.
+
+>[!NOTE]
+> In Windows Server 2016, a VM with a virtual NIC accurately displays the maximum throughput for the virtual NIC. To view the virtual NIC speed in **Network Connections**, right-click the desired virtual NIC icon and then click **Status**. The virtual NIC **Status** dialog box opens. In **Connection**, the value of **Speed** matches the speed of the physical NIC installed in the server.
   
 ## <a name="bkmk_apps"></a>Practical Applications  
 **Displaying statistics**: A developer at a hosted cloud vendor implements a management package that displays the current state of the Hyper-V virtual switch. The management package can query switch-wide current capabilities, configuration settings, and individual port network statistics using WMI. The status of the switch is then displayed to give administrators a quick view of the state of the switch.  

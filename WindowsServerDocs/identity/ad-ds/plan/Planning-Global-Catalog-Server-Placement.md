@@ -1,25 +1,26 @@
 ---
+ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: Planning Global Catalog Server Placement
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: d59c8afc-9781-442e-8421-ee549a696665
-author: Femila
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Planning Global Catalog Server Placement
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Global catalog placement requires planning except if you have a single-domain forest. In a single-domain forest, configure all domain controllers as global catalog servers. Because every domain controller stores the only domain directory partition in the forest, configuring each domain controller as a global catalog server does not require any additional disk space usage, CPU usage, or replication traffic. In a single-domain forest, all domain controllers act as virtual global catalog servers; that is, they can all respond to any authentication or service request. This special condition for single-domain forests is by design. Authentication requests do not require contacting a global catalog server as they do when there are multiple domains, and a user can be a member of a universal group that exists in a different domain. However, only domain controllers that are designated as global catalog servers can respond to global catalog queries on the global catalog port 3268. To simplify administration in this scenario and to ensure consistent responses, designating all domain controllers as global catalog servers eliminates the concern about which domain controllers can respond to global catalog queries. Specifically, any time a user uses Start\Search\For People or Find Printers or expands Universal Groups, these requests go only to the global catalog.  
   
 In multiple-domain forests, global catalog servers facilitate user logon requests and forest-wide searches. The following illustration shows how to determine which locations require global catalog servers.  
   
-![](media/Planning-Global-Catalog-Server-Placement/8fc4777c-47b6-4ee7-b8ad-a04e7c5ee67f.gif)  
+![planning gc placement](media/Planning-Global-Catalog-Server-Placement/8fc4777c-47b6-4ee7-b8ad-a04e7c5ee67f.gif)  
   
 In most cases, it is recommended that you include the global catalog when you install new domain controllers. The following exceptions apply:  
   

@@ -1,22 +1,20 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
-description: " "
+description: "Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs."
 ms.prod: windows-server-threshold
 ms.service: na
-ms.suite: na
-ms.technology:
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-author: cwatsonmsft
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->Applies To: Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server Technical Preview
-
-**This content is preliminary and subject to change.**  
+>Applies To: Microsoft Hyper-V Server 2016, Windows 10, Windows Server 2016
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 
@@ -28,7 +26,7 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
 
 -   Generation 2 doesn't support the boot method you want to use.  
 
-For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](https://technet.microsoft.com/library/mt695680.aspx).
+For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).
 
 You can't change a virtual machine's generation after you've created it. So review the following sections in this article to make sure the generation you pick supports the operating system, boot method, and features you want to use.  
 
@@ -84,7 +82,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
 
 
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
-he following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
+The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
 
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -246,6 +244,6 @@ To enable kernel debugging by using a COM port, follow these steps:
 ## See Also  
 
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
-- [Use local resources on Hyper-V virtual machine with VMConnect](https://technet.microsoft.com/library/dn282274.aspx)
-- [Plan for Hyper-V scalability in Windows Server 2016](https://technet.microsoft.com/library/jj680093.aspx)
+- [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
+- [Plan for Hyper-V scalability in Windows Server 2016](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
   

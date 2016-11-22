@@ -1,20 +1,24 @@
 ---
 title: Deploy Remote Access with OTP Authentication
+description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+manager: dongill
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
-author: coreyp-at-msft
+ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy Remote Access with OTP Authentication
-Windows Server&reg; 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
-  
-  
+
+>Applies To: Windows Server 2016
+
+ Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
+
 ## <a name="BKMK_OVER"></a>Scenario description  
 In this scenario a Remote Access server with DirectAccess enabled is configured to authenticate DirectAccess client users with two\-factor one-time password \(OTP\) authentication, in addition to standard Active Directory credentials.  
   
@@ -63,7 +67,7 @@ Increase security-Using OTP increases the security of your DirectAccess deployme
 The following table lists the roles and features required for the scenario:  
   
 |Role\/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |*Remote Access Management role*|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services \(RRAS\) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access role is dependent on the following server features:<br /><br />-   Internet Information Services \(IIS\) Web Server - This feature is required to configure the network location server, utilize OTP authentication, and configure the default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit \(CMAK\)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
@@ -103,7 +107,7 @@ There are a number of requirements for this scenario:
   
         4.  In a Remote Access multisite deployment, OTP settings are global and identify for all entry points. If multiple RADIUS or CA servers are configured for OTP, they are sorted by each Remote Access server according to availability and proximity.  
   
-        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842(WS.10).aspx).  
+        5.  When configuring OTP in a Remote Access multi\-forest environment, OTP CAs should be from the resource forest only, and certificate enrollment should be configured across forest trusts. For more information, see [AD CS: Cross-forest Certificate Enrollment with Windows Server 2008 R2](http://technet.microsoft.com/library/ff955842.aspx).  
   
         6.  Users who are using a KEY FOB OTP token should insert the PIN followed by the tokencode \(without any separators\) in the DirectAccess OTP dialog. Users who are using PIN PAD OTP token should insert only the tokencode in the dialog.  
   

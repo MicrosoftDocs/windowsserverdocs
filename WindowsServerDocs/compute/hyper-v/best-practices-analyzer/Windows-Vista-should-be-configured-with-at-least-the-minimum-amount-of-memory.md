@@ -1,26 +1,25 @@
 ---
 title: Windows Vista should be configured with at least the minimum amount of memory
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
-ms.tgt_pltfrm: na
+manager: dongill
+ms.technology: compute-hyper-v
+ms.author: kathydav
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Vista should be configured with at least the minimum amount of memory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  

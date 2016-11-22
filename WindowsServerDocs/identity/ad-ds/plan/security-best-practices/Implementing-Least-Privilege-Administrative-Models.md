@@ -1,21 +1,20 @@
 ---
+ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementing Least-Privilege Administrative Models
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 09/29/2016
 ms.topic: article
-ms.assetid: 448eb7c2-afca-40e9-a3dd-0777ff618282
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: identity-adds
 ---
+
 # Implementing Least-Privilege Administrative Models
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following excerpt is from [The Administrator Accounts Security Planning Guide](http://technet.microsoft.com/library/cc162797.aspx), first published on April 1, 1999:  
   
@@ -140,7 +139,7 @@ In one or more GPOs that you create and link to workstation and member server OU
 > We recommend restricting local Administrator accounts on member servers and workstations in the same manner as domain-based Administrator accounts. Therefore, you should generally add the Administrator account for each domain in the forest and the Administrator account for the local computers to these user rights settings. The following screenshot shows an example of configuring these user rights to block local Administrator accounts and a domain's Administrator account from performing logons that should not be needed for these accounts.  
 
 >   
-> ![](media/Implementing-Least-Privilege-Administrative-Models/SAD_20.gif)  
+> ![least priviledge admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_20.gif)  
   
 ##### Configuring GPOs to Restrict Administrator Accounts on Domain Controllers  
 In each domain in the forest, the Default Domain Controllers policy or a policy linked to the Domain Controllers OU should be modified to add each domain's Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
@@ -246,7 +245,7 @@ Administrators are, by default, the owners of most of the AD DS objects in their
 > When you implement restrictions on the Administrators group in GPOs, Windows applies the settings to members of a computer's local Administrators group in addition to the domain's Administrators group. Therefore, you should use caution when implementing restrictions on the Administrators group. Although prohibiting network, batch and service logons for members of the Administrators group is advised wherever it is feasible to implement, do not restrict local logons or logons through Remote Desktop Services. Blocking these logon types can block legitimate administration of a computer by members of the local Administrators group. The following screenshot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer's Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.  
 
 >   
-> ![](media/Implementing-Least-Privilege-Administrative-Models/SAD_3.gif)  
+> ![least priviledge admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_3.gif)  
   
 ### Role-Based Access Controls (RBAC) for Active Directory  
 Generally speaking, role-based access controls (RBAC) are a mechanism for grouping users and providing access to resources based on business rules. In the case of Active Directory, implementing RBAC for AD DS is the process of creating roles to which rights and permissions are delegated to allow members of the role to perform day-to-day administrative tasks without granting them excessive privilege. RBAC for Active Directory can be designed and implemented via native tooling and interfaces, by leveraging software you may already own, by purchasing third-party products, or any combination of these approaches. This section does not provide step-by-step instructions to implement RBAC for Active Directory, but instead discusses factors you should consider in choosing an approach to implementing RBAC in your AD DS installations.  
@@ -329,7 +328,7 @@ Although a thorough discussion of attacks against public key infrastructures (PK
   
 When a certificate is presented for authentication to a domain-joined system, the contents of the Subject or the Subject Alternative Name (SAN) attribute in the certificate are used to map the certificate to a user object in Active Directory. Depending on the type of certificate and how it is constructed, the Subject attribute in a certificate typically contains a user's common name (CN), as shown in the following screenshot.  
   
-![](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)  
+![least priviledge admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)  
   
 By default, Active Directory constructs a user's CN by concatenating the account's first name + " "+ last name. However, CN components of user objects in Active Directory are not required or guaranteed to be unique, and moving a user account to a different location in the directory changes the account's distinguished name (DN), which is the full path to the object in the directory, as shown in the bottom pane of the previous screenshot.  
   
