@@ -58,17 +58,12 @@ Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>
 
 The notion of available capacity in Storage Spaces is nuanced. To help you plan effectively, the Health Service provides six distinct metrics for capacity. Here is what each represents:  
 
--   Physical Capacity Total: The sum of the raw capacity of all physical storage devices managed by the cluster.  
-
--   Physical Capacity Available: The physical capacity which is not in any non-primordial storage pool.  
-
--   Pool Capacity Total: The amount of raw capacity in storage pools.  
-
--   Pool Capacity Available: The pool capacity which is not allocated to the footprint of volumes.  
-
--   Volume Capacity Total: The total usable ("inside") capacity of existing volumes.  
-
--   Volume Capacity Available: The amount of additional data which can be stored in existing volumes.  
+-   **Physical Capacity Total**: The sum of the raw capacity of all physical storage devices managed by the cluster.
+-   **Physical Capacity Available**: The physical capacity which is not in any non-primordial storage pool.
+-   **Pool Capacity Total**: The amount of raw capacity in storage pools.
+-   **Pool Capacity Available**: The pool capacity which is not allocated to the footprint of volumes.
+-   **Volume Capacity Total**: The total usable ("inside") capacity of existing volumes.
+-   **Volume Capacity Available**: The amount of additional data which can be stored in existing volumes.
 
 The following diagram illustrates the relationship between these quantities.  
 
@@ -81,28 +76,21 @@ The Health Service constantly monitors your Storage Spaces Direct cluster to det
 
 Each Fault contains five important fields:  
 
--   Severity  
-
--   Description of the problem  
-
--   Recommended next step(s) to address the problem  
-
--   Identifying information for the faulting entity  
-
--   Its physical location (if applicable)  
+-   Severity
+-   Description of the problem
+-   Recommended next step(s) to address the problem
+-   Identifying information for the faulting entity
+-   Its physical location (if applicable)
 
 For example, here is a typical fault:  
 
-     Severity: MINOR                                         
-
-     Reason: Connectivity has been lost to the physical disk.                           
-
-     Recommendation: Check that the physical disk is working and properly connected.    
-
-     Part: Manufacturer Contoso, Model XYZ9000, Serial 123456789                        
-
-     Location: Seattle DC, Rack B07, Node 4, Slot 11                                  |  
-
+```
+Severity: MINOR                                         
+Reason: Connectivity has been lost to the physical disk.                           
+Recommendation: Check that the physical disk is working and properly connected.    
+Part: Manufacturer Contoso, Model XYZ9000, Serial 123456789                        
+Location: Seattle DC, Rack B07, Node 4, Slot 11
+```
 
  >[!NOTE]
  > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
@@ -114,55 +102,41 @@ In Windows Server 2016, the Health Service provides the following Fault coverage
 -   **Essential cluster hardware**:  
 
     -   Node down, quarantined, or isolated  
-
     -   Node network adapter failure, disabled, or disconnected  
-
     -   Node missing one or more cluster networks  
-
     -   Node temperature sensor  
 
 -   **Essential storage hardware**:  
 
     -   Physical disk media failure, lost connectivity, or unresponsive  
-
-     -   Storage enclosure lost connectivity  
-
+    -   Storage enclosure lost connectivity  
     -   Storage enclosure fan failure or power supply failure  
-
     -   Storage enclosure current, voltage, or temperature sensors triggered  
 
 -   **The Storage Spaces software stack**:  
 
     -   Storage pool unrecognized metadata  
-
     -   Data not fully resilient, or detached  
-
     -   Volume low capacity<sup>1</sup>  
 
 -   **Storage Quality of Service (Storage QoS)**  
 
     -   Storage QoS malformed policy  
-
     -   Storage QoS policy breach<sup>2</sup>  
 
 -   **Storage Replica**  
 
     -   Replication failed to sync, write, start, or stop  
-
     -   Target or source replication group failure or lost communication  
-
     -   Unable to meet configured recovery point objective  
-
     -   Log or metadata corruption  
 
 -   **Health Service**  
 
     -   Any issues with automation, described in later sections  
-
     -   Quarantined physical disk device  
 
        <sup>1</sup>  Indicates the volume has reached 80% full (minor severity) or 90% full (major severity).  
-
        <sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.  
 
 >[!NOTE]
