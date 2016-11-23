@@ -1,13 +1,12 @@
 ---
 title: Storage Spaces Direct in Windows Server 2016
 ms.prod: windows-server-threshold
-ms.author: jgerend
+ms.author: cosdar
 ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-manager: eldenc
-ms.date: 11/16/2016
+ms.date: 11/23/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct in Windows Server 2016
@@ -43,7 +42,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Fault Tolerance.</b> <a href="storage-spaces-fault-tolerance.md">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
+			<b>Fault Tolerance. </b><a href="storage-spaces-fault-tolerance.md">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -106,7 +105,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Storage Bus Layer Cache.** The [Software Storage Bus](software-storage-bus-overview.md) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
-**Storage Pool.** The collection of drives that will form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings.
+**Storage Pool.** The collection of drives that form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings. Read our [Deep Dive into the Storage Pool](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/) to learn more.
 
 **Storage Spaces.** Storage Spaces provides fault tolerance to virtual "disks" using [mirroring, erasure coding, or both](storage-spaces-fault-tolerance.md). You can think of it as distributed, software-defined RAID using the drives in the pool. In Storage Spaces Direct, these virtual disks typically have resiliency to two simultaneous drive or server failures (e.g. 3-way mirroring, with each data copy in a different server) though chassis and rack fault tolerance is also available.
 
@@ -121,7 +120,9 @@ Here's an overview of the Storage Spaces Direct stack:
 Try Storage Spaces Direct today [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download the [Windows Server 2016 Technical Preview](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview).
 
 ## See Also  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md) 
+-   [(VIDEO) Discover Storage Spaces Direct at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs)
+-   [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md)
+-   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)
