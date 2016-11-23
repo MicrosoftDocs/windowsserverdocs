@@ -1,11 +1,11 @@
 ---
 title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server-threshold
-ms.author: eldenc
+ms.author: jgerend
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
-author: eldenchristensen
+author: cosmosdarwin
 ms.date: 11/23/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
@@ -49,13 +49,29 @@ In addition, the following requirements apply.
 
 - Local-attached SATA, SAS, or NVMe drives
 - Every drive must be physically connected to only one server
+- Ensure SSDs have power-loss protection, i.e. they are "enterprise-grade"
+- Ensure SSDs used for cache have high endurance, we recommend 5+ drive-writes-per-day (DWPD)
+- Separate dedicated drive for boot
 - **Not supported: ** multi-path IO (MPIO) or physically connecting drives via multiple paths
-- For hybrid (SSD/NVMe + HDD) configurations, minimum of 2 SSD/NVMe + 4 HDD
-- For all-flash (SSD only) configurations, minimum of 4 SSD/NVMe
+
+#### Minimum number of drives
+
+- If there are drives used as cache, there must be at least 2 per server
+- There must be at least 4 other non-cache drives per server
+
+| Number of device types | Device types present               | Minimum number required         |
+|------------------------|------------------------------------|---------------------------------|
+| 1                      | All NVMe (same model)              | 4 NVMe                          |
+| 1                      | All SATA/SAS SSD (same model)      | 4 SATA/SAS SSD                  |
+| 2                      | NVMe + SATA/SAS SSD                | 2 NVMe + 4 SATA/SAS SSD         |
+| 2                      | NVMe + SATA/SAS HDD                | 2 NVMe + 4 SATA/SAS HDD         |
+| 2                      | SATA/SAS SSD + SATA/SAS HDD        | 2 SATA/SAS SSD + 4 SATA/SAS HDD |
+| 3                      | NVMe + SATA/SAS SSD + SATA/SAS HDD | 2 NVMe + 4 Others               |
+
+#### Maximum
+
 - Maximum of 416 drives total across all servers
 - Maximum of 1 PB of total raw capacity
-- Ensure that all SSDs have power-loss protection, i.e. they are "enterprise-grade"
-- Separate dedicated drive for boot
 
 ### Host-bus adapter (HBA)
 
