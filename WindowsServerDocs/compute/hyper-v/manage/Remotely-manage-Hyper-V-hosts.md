@@ -1,20 +1,22 @@
 ---
 title: Remotely manage Hyper-V hosts
-description: "Gives instructions for installing Hyper-V Manager and using it to remotely manage Hyper-V hosts."
+description: "How to install Hyper-V Manager and use it to manage remote and local Hyper-V hosts."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: XYZ
+ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 author: KBDAzure
 ms.author: kathydav
-ms.date: 11/22/2016
+ms.date: 11/28/2016
 ---
 # Remotely manage Hyper-V hosts
 
->Applies To: Windows 10, Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
+
+This article lists the supported versions of Hyper-V hosts you can manage with supported versions of Hyper-V and shows you how to use Hyper-V Manager to connect to remote and local Hyper-V hosts. 
 
 On Win 10, add via PowerShell:
 
@@ -23,48 +25,27 @@ On Win 10, add via PowerShell:
 >---! from current article
 Hyper-V Manager is an in-box tool for diagnosing and managing your local Hyper-V host and a small number of remote hosts. This article documents the configuration steps for connecting to Hyper-V hosts using Hyper-V Manager in all supported configurations.
 
-Hyper-V Manager is available through **Programs and Features** as **Hyper-V Management Tools** on [any Windows OS with Hyper-V included](../quick_start/walkthrough_compatibility.md#operating-system-requirements). You can install and use the Hyper-V tools.
+Hyper-V Manager is available through **Programs and Features** as **Hyper-V Management Tools** on [any Windows operating system that includes Hyper-V](../quick_start/walkthrough_compatibility.md#operating-system-requirements). You can install and use the Hyper-V tools without installing the Hyper-V platform. This means you can install and use the management tools on a computer that doesn't have the hardware required to install and use the Hyper-V platform. For details about hardware for Hyper-V hosts, see [System requirements](..\System-requirements-for-Hyper-V-on-Windows.md).
 
 To connect to a Hyper-V host from Hyper-V Manager, right-click **Hyper-V Manager** in the left pane, and then click **Connect to Server**.
 
-![Screenshot that shows how to connect to a server from Hyper-V Manager](media/HyperVManager-ConnectToHost.png)
-
 ## Supported Hyper-V host combinations with Hyper-V Manager
-Hyper-V Manager in Windows 10 allows you to manage the following Hyper-V hosts:
-* Windows 10
-* Windows 8.1
-* Windows 8
-* Windows Server 2016 — all editions and installation options, including Nano Server, and corresponding version of Hyper-V Server
-* Windows Server 2012 R2 — all editions and installation options, and corresponding version of Hyper-V Server
-* Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server
 
-Hyper-V Manager in Windows 8.1 and Windows Server 2012 R2 allows you to manage:
-* Windows 8.1
-* Windows 8
-* Windows Server 2012 R2 — all editions and installation options, and corresponding version of Hyper-V Server
-* Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server
+In some cases you can use a different version of Hyper-V Manager than the Hyper-V version on the host, as shown in the table. When you do this, Hyper-V Manager provides the features available for the version of Hyper-V on the host you're managing. For example, if you use the version of Hyper-V Manager in Windows Server 2012 R2 to remotely manage a host running Hyper-V in Windows Server 2012, you won't be able to use features available in Windows Server 2012 R2 on that Hyper-V host.
 
-Hyper-V Manager in Windows 8 and Windows Server 2012 allows you to manage:
-* Windows 8
-* Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server
+The following table shows which versions of a Hyper-V host you can manage from a particular version of Hyper-V Manager. Only supported operating system versions are listed. For details about the support status of a particular operating system version, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle). In general, older versions of Hyper-V Manager can only manage a Hyper-V host running the same version or the comparable Windows Server version.
 
-Hyper-V Manager in Windows 7 and Windows Server 2008 R2 allows you to manage:
-* Windows Server 2008 R2 — all editions and installation options, and corresponding version of Hyper-V Server
-
-Hyper-V Manager in Windows Vista and Windows Server 2008 allows you to manage:
-* Windows Server 2008  — all editions and installation options, and corresponding version of Hyper-V Server
-
-> [!NOTE]
-Hyper-V Manager functionality matches the functionality available for version you're managing. In other words, if you're managing a remote Windows Server 2012 host from Windows Server 2012 R2, the new Hyper-V Manager features from Windows Server 2012 R2 won't be available.
+|Hyper-V Manager version | Hyper-V host version|
+|---|---|
+|Windows 2016, Windows 10|- Windows Server 2016: all editions and installation options, including Nano Server, and corresponding version of Hyper-V Server <br>- Windows Server 2012 R2 — all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server <br> - Windows 10 <br> - Windows 8.1  |
+| Windows Server 2012 R2, Windows 8.1 | - Windows Server 2012 R2 — all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows 8.1 
 
 ## Manage Hyper-V on a local computer
-Hyper-V Manager doesn't list any computers that host Hyper-V until you add the computer, including a local computer. 
+Hyper-V Manager doesn't list any computers that host Hyper-V until you add the computer, including a local computer. To do this:
 
 1. In the left pane, right-click **Hyper-V Manager**.
 2. Click **Connect to Server**.
 3. From **Select Computer**, click **Local computer** and then click **OK**.
-
-![Screen shot that shows adding the local computer to the list of hosts in Hyper-V Manager.](media/HyperVManager-ConnectToLocalHost.png)
 
 If you can't connect:
 
@@ -74,11 +55,11 @@ If you can't connect:
 
 ## Manage another Hyper-V host in the same domain ##
 
-To add a remote Hyper-V host to Hyper-V Manager, select **Another computer** in the **Select Computer** dialogue box and enter the remote host's hostname, NetBIOS, or FQDN into the text field.
+To add a remote Hyper-V host to Hyper-V Manager, select **Another computer** in the **Select Computer** dialogue box and enter the remote host's hostname, NetBIOS name, or FQDN into the text field.
 
 ![](media/HyperVManager-ConnectToRemoteHost.png)
 
-In order to manage remote Hyper-V hosts, remote management must be enabled on both the local computer and remote host.
+To manage remote Hyper-V hosts, remote management must be enabled on both the local computer and remote host.
 
 You can do this through `Server Manager -> Remote management` or by running the following PowerShell command as Administrator: 
 
@@ -86,41 +67,45 @@ You can do this through `Server Manager -> Remote management` or by running the 
 Enable-PSRemoting
 ```
 
-If your current user account matches a Hyper-V Administrator account on the remote host, go ahead and press **OK** to Connect.  
+If your current user account matches a Hyper-V Administrator account on the remote host, click **OK** to Connect.  
 
 > This is the only supported way to manage a remote host in Hyper-V Manager in Windows 8 or Windows 8.1.
 
 Windows 10 greatly expanded the possible combinations of remote connection types.  
-Now you can connect to a remote Windows 10 or later host using either the host name or IP address.  Hyper-V Manager now supports alternate user credentials as well.  
+Now you can connect to a remote Windows 10 or later host using either the host name or IP address. Hyper-V Manager now supports alternate user credentials as well.  
 
 ### Connect to a Windows 2016 or Windows 10 remote host as a different user
 
-Hyper-V in Windows 2016 and Windows 10 lets you use a different user account to connect remotely. To do this:
+Starting with Windows 2016 and Windows 10, Hyper-V Manager lets you use a different user account to connect remotely. To do this:
 
 1. Select **Connect as another user: ** in the **Select Computer** dialogue box.
 2. Select **Set User...**.
 
 ![Screen shot that shows how to use a different user name and password to connect to a remote Hyper-V host.](media/HyperVManager-ConnectToRemoteHostAltCreds.png)
 
-
 ### Connect to the remote host using IP address
-> This is only available when connecting to a Windows 10 or Windows Server 2016 Technical Preview 3 or later remote host
+
+This is only available when connecting to a Windows 10 or Windows Server 2016 remote host
 
 Sometimes it's easier to connect using IP address rather than host name. Windows 10 allows you to do just that.
 
-To connect using IP address, enter the IP address into the **Another Computer** text field.
+To connect using IP address, type the IP address into the **Another Computer** text field.
 
+## Manage a Hyper-V host outside your domain, or with no domain
 
-## Manage a Hyper-V host outside your domain (or with no domain) ##
-> This is only available when connecting to a Windows 10 or Windows Server 2016 Technical Preview 3 or later remote host
+This is only available when connecting to a Windows 10 or Windows Server 2016 remote host.
 
 On the Hyper-V host to be managed, run the following as an administrator:
 
-1.	[Enable-PSRemoting](https://technet.microsoft.com/en-us/library/hh849694.aspx)
-  * [Enable-PSRemoting](https://technet.microsoft.com/en-us/library/hh849694.aspx) will create the necessary firewall rules for *private* network zones. To allow this access on public zones you will need to enable the rules for CredSSP and WinRM.
-2.  [Enable-WSManCredSSP](https://technet.microsoft.com/en-us/library/hh849872.aspx) -Role server
+1. Create the necessary firewall rules for *private* network zones: 	
+  - ```Enable-PSRemoting```
+2. To allow remote access on public zones, enable firewall rules for CredSSP and WinRM:
+  
+   ```Enable-WSManCredSSP -Role server```
 
-On the managing PC, run the following as an administrator:
+    For details, see [Enable-PSRemoting](https://technet.microsoft.com/library/hh849694.aspx) and [Enable-WSManCredSSP](https://technet.microsoft.com/library/hh849872.aspx).
+
+From the computer you'll use to manage the Hyper-V host, open a PowerShell session as an administrator and run the following commands:
 
 1. Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"
 2. [Enable-WSManCredSSP](https://technet.microsoft.com/en-us/library/hh849872.aspx) -Role client -DelegateComputer "fqdn-of-hyper-v-host"
