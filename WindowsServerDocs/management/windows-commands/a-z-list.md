@@ -98,7 +98,7 @@ Alphabetical listing of commands:
 -   [flattemp](flattemp.md)  
 -   [for](for.md)  
 -   [forfiles](forfiles.md)  
--   [format_](format_.md)  
+-   [format](format.md)  
 -   [freedisk](freedisk.md)  
 -   [fsutil](fsutil.md)  
 -   [ftp](ftp.md)  
