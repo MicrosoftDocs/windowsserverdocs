@@ -1,12 +1,8 @@
 ---
 title: Networking
-description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016
-ms.custom: na
+description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016.
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: dongill
@@ -38,6 +34,9 @@ Read on for more information about using networking in Windows Server 2016.
 
 ### [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md)
 You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.
+
+>[!NOTE]
+>For Hyper-V hosts and virtual machines \(VMs\) that run SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, you must install Windows Server 2016 Datacenter edition. For Hyper-V hosts that contain only tenant workload VMs that are connected to SDN\-controlled networks, you can run Windows Server 2016 Standard edition.
 
 ### [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.
@@ -131,4 +130,4 @@ Networking resources for operating systems earlier than Windows Server 2016 are 
 
 - Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](https://technet.microsoft.com/library/hh831357.aspx)  
 - Windows Server 2008 and Windows Server 2008 R2 [Networking](https://technet.microsoft.com/library/cc753940)  
-- Windows Server 2003 [Network Services](https://technet.microsoft.com/library/cc787191(v=ws.10))  
+- Windows Server 2003 [Windows Server 2003/2003 R2 Retired Content ](https://www.microsoft.com/en-US/download/details.aspx?id=53314)  
