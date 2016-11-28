@@ -1184,7 +1184,6 @@
 ###### [User Account Control: Run all administrators in Admin Approval mode](security/group-managed-service-accounts/security-options/user-account-control-run-all-administrators-in-admin-approval-mode.md)
 ###### [User Account Control: Switch to the secure desktop when prompting for elevation](security/group-managed-service-accounts/security-options/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation.md)
 ###### [User Account Control: Virtualize file and registry write failures to per-user locations](security/group-managed-service-accounts/security-options/user-account-control-virtualize-file-and-registry-write-failures-to-per-user-locations.md)
-##### [Advanced Audit Policy Configuration](security/group-managed-service-accounts/advanced-audit-policy-configuration.md)
 ##### [User Rights assignment](security/access-control/user-rights-assignment.md)
 ###### [Access Credential Manager as a trusted caller](security/group-managed-service-accounts/user-rights-assignment/access-credential-manager-as-a-trusted-caller.md)
 ###### [Access this computer from the network](security/access-control/access-this-computer-from-the-network.md)
