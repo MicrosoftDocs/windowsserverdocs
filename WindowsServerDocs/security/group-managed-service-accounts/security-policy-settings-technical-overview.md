@@ -39,8 +39,6 @@ To manage security configurations for multiple computers, you can use one of the
 
 -   Use the Security Templates snap-in to create a security template that contains the security policies you want to apply, and then import the security template into a Group Policy Object. A security template is a file that represents a security configuration, and it can be imported to a GPO, applied to a local computer, or used to analyze security.
 
-For more information about managing security configurations, see [Administer Security Policy Settings](../security-policy-settings/administer-security-policy-settings.md).
-
 The Security Settings extension of the Local Group Policy Editor includes the following types of security policies:
 
 -   **Account Policies.** These polices are defined on computers; they affect how user accounts can interact with the computer or domain. Account policies include the following types of policies:
