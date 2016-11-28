@@ -765,7 +765,7 @@
 #### [Manage Hyper-V Virtual Switch](networking/technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md)
 ##### [Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](networking/technologies/hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md)
 ##### [Create Security Policies with extended Port Access Control lists](networking/technologies/hyper-v-virtual-switch/create-Security-Policies-with-extended-Port-Access-Control-lists.md)
-### [IP address Management (IPAM)](networking/technologies/ipam/ipam-top.md)
+### [IP Address Management (IPAM)](networking/technologies/ipam/ipam-top.md)
 #### [What's New in IPAM](networking/technologies/ipam/What-s-New-in-IPAM.md)
 #### [Manage IPAM](networking/technologies/ipam/Manage-IPAM.md)
 ##### [DNS Resource Record Management](networking/technologies/ipam/DNS-Resource-Record-Management.md)
