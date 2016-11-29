@@ -1,3 +1,3 @@
 ---
-redirect_url: select-hardware-mps.md
+redirect_url: select-hardware-mps
 ---
