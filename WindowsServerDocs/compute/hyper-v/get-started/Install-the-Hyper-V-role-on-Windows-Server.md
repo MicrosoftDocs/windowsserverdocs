@@ -10,7 +10,7 @@ ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 author: KBDAzure
 ms.author: kathydav
-ms.date: 111/21/2016
+ms.date: 11/29/2016
 ---
 # Install the Hyper-V role on Windows Server 2016
 
@@ -20,7 +20,7 @@ To create and run virtual machines, install the Hyper-V role on  Windows Server 
   
 Before you install Windows Server 2016 or enable Hyper-V, make sure that:
 *  Your system is compatible. For more information, see [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows.md). Install the Hyper-V role after you [download and install Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
-*  You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMWare Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, they won't be able to use the features they rely on when the Hyper-V hypervisor is running because Hyper-V has exclusive use of the features. This affects the ability of these other apps to manage virtual machines. They might not start or might run unreliably.
+*  You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMWare Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, if you try to use them to manage virtual machines when the Hyper-V hypervisor is running, the virtual machines might not start or might run unreliably. For details and instructions for turning off the Hyper-V hypervisor if you need to use one of these apps, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](http://support.microsoft.com/kb/3204980).
   
 ## <a name="BKMK_SERV"></a>Install Hyper-V role by using Server Manager  
   
