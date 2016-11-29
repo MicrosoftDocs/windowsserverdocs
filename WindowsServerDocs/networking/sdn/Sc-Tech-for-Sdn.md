@@ -40,7 +40,7 @@ With System Center 2016 Virtual Machine Manager (VMM), you can:
 - Helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.  
   
 
-For more information, see [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/en-us/system-center-docs/vmm/manage/deploy-a-software-defined-network-infrastructure-using-vmm).  
+For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-overview).  
     
 
   
