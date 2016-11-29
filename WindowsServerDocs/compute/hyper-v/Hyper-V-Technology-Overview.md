@@ -1,6 +1,6 @@
 ---
 title: Hyper-V Technology Overview
-description: "Describes what Hyper-V is, how to get it, key features and common uses"
+description: "Describes what Hyper-V is, how to get it, key features, and common uses."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
 ms.author: kathydav
-ms.date: 11/21/2016
+ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
 
@@ -36,6 +36,7 @@ Hyper-V can help you:
 
 ## Hyper-V and other virtualization products
 Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC. Hyper-V offers networking, performance, storage and security features not available in these older products.
+
 Hyper-V and most third-party virtualization applications that require the same processor features aren't compatible. That's because the processor features, known as hardware virtualization extensions, are designed to not be shared. For details, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](http://support.microsoft.com/kb/3204980).
 
 ## What features does Hyper-V have?  
