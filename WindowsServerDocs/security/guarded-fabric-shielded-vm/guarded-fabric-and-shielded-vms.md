@@ -154,7 +154,7 @@ The following figure shows the shielding data file and related configuration ele
 
 ## Guarded fabric and shielded VM glossary
 
-| Term              | Definiotion           |
+| Term              | Definition           |
 |----------|------------|
 | Host Guardian Service (HGS) | A Windows Server role that is installed on a secured cluster of bare-metal servers that is able to measure the health of a Hyper-V host and release keys to healthy Hyper-V hosts when powering-on or live migrating shielded VMs. These two capabilities are fundamental to a shielded VM solution and are referred to as the **Attestation service** and **Key Protection Service** respectively. |
 | guarded host | A Hyper-V host on which shielded VMs can run. A host can only be considered _guarded_ when it has been deemed healthy by HGS' Attestation service. Shielded VMs cannot be powered-on or live migrated to a Hyper-V host that has not yet attested or that failed attestation. |
