@@ -33,4 +33,5 @@ This section contains the following topics.
 - [Configure Remote RADIUS Server Groups](nps-crp-rrsg-configure.md)
 - [Disable NAS Notification Forwarding](nps-disable-nas-notifications.md)
 - [Increase Concurrent Authentications Processed by NPS](nps-concurrent-auth.md)
+- [Manage Certificates Used with NPS](nps-manage-certificates.md)
 - [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)

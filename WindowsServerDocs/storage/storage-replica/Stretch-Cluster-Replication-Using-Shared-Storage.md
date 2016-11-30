@@ -34,7 +34,7 @@ This walkthrough uses the following environment as an example:
 
 ## Prerequisites  
 -   Active Directory Domain Services forest (does not need to run Windows Server 2016).  
--   At least two servers with Windows Server 2016 installed. Supports up to 64 node cluster.  
+-   At least two servers with Windows Server 2016 Datacenter Edition installed. Supports up to 64 node cluster.  
 -   Two sets of shared storage, using SAS JBODs, Fibre Channel SAN, Shared VHDX, or iSCSI Target. The storage should contain a mix of HDD and SSD media and must support Persistent Reservation. You will make each storage set available to two of the servers only (asymmetric).  
 -   Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 -   At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
