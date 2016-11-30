@@ -103,6 +103,22 @@ This capability is new in Windows Server 2016. This requires a Windows Server 20
 
 If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
 
+## ReFS 
+ReFS v2, the next iteration of ReFS, provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     
+
+**What value does this change add?**<br>
+ReFS v2 provides the following improvements to previous versions of ReFS:
+
+* The introduction of block cloning substantially improves the performance of fast-fixed VHD creation and VHD checkpoint merge operations. 
+* The implementation of new tiering logic enables:
+    * Faster I/O performance. 
+    * Multi-resiliency tiering.
+    * Increased responsiveness to drifting working sets. 
+    * Support for SMR (Shingled Magnetic Recording) media. 
+* The new ReFS Fix tool enables the recovery of leaked storage and helps salvage data from critical corruptions. 
+
+**What works differently?**<br>
+ReFS v2 is new in Windows Server 2016. 
 
 ## See also  
 * [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
