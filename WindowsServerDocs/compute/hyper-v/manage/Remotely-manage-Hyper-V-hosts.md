@@ -30,8 +30,8 @@ The following table shows which versions of a Hyper-V host you can manage from a
 
 |Hyper-V Manager version | Hyper-V host version|
 |---|---|
-|Windows 2016, Windows 10|- Windows Server 2016: all editions and installation options, including Nano Server, and corresponding version of Hyper-V Server <br>- Windows Server 2012 R2 — all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server <br> - Windows 10 <br> - Windows 8.1  |
-| Windows Server 2012 R2, Windows 8.1 | - Windows Server 2012 R2 — all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows Server 2012 — all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows 8.1 
+|Windows 2016, Windows 10|- Windows Server 2016: all editions and installation options, including Nano Server, and corresponding version of Hyper-V Server <br>- Windows Server 2012 R2—all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows Server 2012—all editions and installation options, and corresponding version of Hyper-V Server <br> - Windows 10 <br> - Windows 8.1  |
+| Windows Server 2012 R2, Windows 8.1 | - Windows Server 2012 R2—all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows Server 2012—all editions and installation options, and corresponding version of Hyper-V Server <br>- Windows 8.1 
 
 ## Connect to a Hyper-V host
 
