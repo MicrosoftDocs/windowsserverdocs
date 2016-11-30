@@ -1,5 +1,6 @@
 ---
 title: Get started with Remote Desktop on Android
+description: Basic set up steps for the Remote Desktop client for Android.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
