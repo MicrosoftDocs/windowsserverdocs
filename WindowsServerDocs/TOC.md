@@ -139,7 +139,7 @@
 ###### [Getting started with MultiPoint Services](compute/remote-desktop-services/multipoint-services/getting-started-with-MultiPoint-services.md)
 ###### [Common Usage Scenarios](compute/remote-desktop-services/multipoint-services/Common-MultiPoint-services-Usage-Scenarios.md)
 ###### [MultiPoint Stations](compute/remote-desktop-services/multipoint-services/MultiPoint-services-Stations.md)
-###### [Selecting Hardware for Your MultiPoint Services System](compute/remote-desktop-services/multipoint-services/selecting-Hardware-for-Your-MultiPoint-services-System.md)
+###### [Selecting Hardware for Your MultiPoint Services System](compute/remote-desktop-services/multipoint-services/select-hardware-mps.md)
 ###### [Hardware Requirements and Performance Recommendations](compute/remote-desktop-services/multipoint-services/hardware-and-performance-recommendations.md)
 ####### [Variables Affecting MultiPoint Services System Performance](compute/remote-desktop-services/multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance.md)
 ###### [MultiPoint Services Site Planning](compute/remote-desktop-services/multipoint-services/MultiPoint-services-Site-Planning.md)
