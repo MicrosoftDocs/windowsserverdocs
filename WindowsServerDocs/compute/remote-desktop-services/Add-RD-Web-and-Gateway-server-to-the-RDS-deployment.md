@@ -1,6 +1,6 @@
 ---
 title: Add RD Web and Gateway server to the RDS deployment
-Description: Provides steps for installing the RD Web and Gateway servers in an RDS deployment.
+description: Provides steps for installing the RD Web and Gateway servers in an RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

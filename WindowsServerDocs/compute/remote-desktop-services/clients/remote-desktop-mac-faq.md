@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop client FAQ for Mac
+description: Frequently asked questions about the Remote Desktop client for Mac
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
