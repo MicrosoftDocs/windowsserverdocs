@@ -36,31 +36,43 @@ manager: dongill
 |DLNA codecs and web media streaming|Yes, if installed as Server with Desktop Experience|Yes, if installed as Server with Desktop Experience|
 
 ## Server roles
-|Windows Server roles available|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|---------------------------|  
-|Active Directory Certificate Services|Yes|Yes|
-|Active Directory Domain Services|Yes|Yes|
-|Active Directory Federation Services|Yes|Yes|
-|AD Lightweight Directory Services|Yes|Yes|
-|AD Rights Management Services|Yes|Yes|
-|Device Health Attestation|???|Yes|
-|DHCP Server|Yes|Yes|
-|DNS Server|Yes|Yes|
-|Fax Server|Yes|Yes|
-|File and Storage Services|Yes|Yes|
-|Host Guardian Service|???|Yes|
-|Hyper-V|Yes|Yes|
-|MultiPoint Services|Yes|Yes|
-|Network Controller|???|Yes|
-|Network Policy and Access Services|Yes|Yes|
-|Print and Document Services|Yes|Yes|
-|Remote Access|???|Yes|
-|Remote Desktop Services|Yes|Yes|
-|Volume Activation Services|???|Yes|
-|Web Servicer (IIS)|Yes|Yes|
-|Windows Deployment Services|Yes|Yes|
-|Windows Server Essentials Experience|???|Yes|
-|Windows Server Update Services|???|Yes|
+|Windows Server roles available|Role services|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
+|-------------------|----------|----------|---------------------------|  
+|Active Directory Certificate Services| |Yes|Yes|
+|Active Directory Domain Services| |Yes|Yes|
+|Active Directory Federation Services| |Yes|Yes|
+|AD Lightweight Directory Services| |Yes|Yes|
+|AD Rights Management Services| |Yes|Yes|
+|Device Health Attestation| |???|Yes|
+|DHCP Server| |Yes|Yes|
+|DNS Server| |Yes|Yes|
+|Fax Server| |Yes|Yes|
+|File and Storage Services| |Yes|Yes|
+| |File Server|???|Yes|
+| |BranchCache for Network Files|???|Yes|
+| |Data Deduplication|???|Yes|
+| |DFS Namespaces|???|Yes|
+| |DFS Replication|???|Yes|
+| |File Serve Resource Mnager|???|Yes|
+| |File Server VSS Agent Service|???|Yes|
+| |iSCSI Target Server|???|Yes|
+| |iSCSI Target Storage Provider|???|Yes|
+| |Server for NFS|???|Yes|
+| |Work Folders|???|Yes|
+| |Storage Services|???|Yes|
+|Host Guardian Service| |???|Yes|
+|Hyper-V| |Yes|Yes|
+|MultiPoint Services| |Yes|Yes|
+|Network Controller| |???|Yes|
+|Network Policy and Access Services| |Yes|Yes|
+|Print and Document Services| |Yes|Yes|
+|Remote Access| |???|Yes|
+|Remote Desktop Services| |Yes|Yes|
+|Volume Activation Services| |???|Yes|
+|Web Servicer (IIS)| |Yes|Yes|
+|Windows Deployment Services| |Yes|Yes|
+|Windows Server Essentials Experience| |???|Yes|
+|Windows Server Update Services| |???|Yes|
 
 ## Features
 
@@ -68,7 +80,7 @@ manager: dongill
 |-------------------|----------|---------------------------|  
 |.NET Framework 3.5|Yes|Yes|
 |.NET Framework 4.6|Yes|Yes|
-|BITS|???|Yes|
+|Background Intelligent Transfer Service (BITS)|???|Yes|
 |BitLocker Drive Encryption|???|Yes|
 |BitLocker Network Unlock|???|Yes|
 |BranchCache|???|Yes|
@@ -125,15 +137,12 @@ manager: dongill
 |WinRM IIS Extension|???|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 Support|Yes|Yes|
+|WoW64 support|Yes|Yes|
 |XPS Viewer|Yes|Yes|
 
 |Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |Best Practices Analyzer|Yes|Yes|
-|Cross File Replication (DFS-R)|Yes|Yes|
-|Data De-duplication|Yes|Yes|
-|ISCSI target support|Yes|Yes|
 |Direct Access|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|
 |Hot Add/Replace RAM|Yes|Yes|
@@ -141,7 +150,8 @@ manager: dongill
 |Minimal Server Interface|Yes|Yes|
 |Network Load Balancing|Yes|Yes|
 |Windows PowerShell|Yes|Yes|
-|Server Core Installation Option|Yes|Yes|
+|Server Core installation option|Yes|Yes|
+|Nano Server installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Storage Management Service|Yes|Yes|
