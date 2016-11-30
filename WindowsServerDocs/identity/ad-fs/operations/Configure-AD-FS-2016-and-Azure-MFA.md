@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/22/2016
+ms.date: 11/30/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -28,6 +28,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
 - [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
+
 >[!NOTE]   
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.   
 - A Windows Server 2016 AD FS on-premises environment.  
@@ -54,6 +55,7 @@ Note that TenantID is the name of your directory in Azure AD.  Use the following
   
 ### Step 2: Add the new credentials to Azure Multi-Factor Auth Client SPN   
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the SPN for the Azure Multi-Factor Auth Client. The certificates generated using the `New-AdfsAzureMFaTenantCertificate` cmdlet will serve as these credentials. Do the following using PowerShell to add the new credentials to the Azure Multi-Factor Auth Client SPN.  
+
 >[!NOTE]   
 >In order to complete this step you need to connect to your instance of Azure AD with PowerShell using Connect-MsolService.  These steps assume you have already connected via PowerShell.  For information see [Connect-MsolService.](https://msdn.microsoft.com/library/dn194123.aspx)  
      
