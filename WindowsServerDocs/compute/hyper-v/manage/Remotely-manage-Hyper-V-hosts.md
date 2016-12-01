@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 author: KBDAzure
 ms.author: kathydav
-ms.date: 11/29/2016
+ms.date: 12/01/2016
 ---
 # Remotely manage Hyper-V hosts with Hyper-V Manager
 
@@ -62,7 +62,7 @@ Or, from either operating system, open Windows PowerShell as Administrator and r
 Enable-PSRemoting
 ```
 
-### Hosts in the same domain
+### Connect to hosts in the same domain
 
 For Windows 8.1 and earlier, remote management works only when the host is in the same domain and your local user account is also on the remote host.
 
@@ -75,18 +75,20 @@ Now you can connect to a remote Windows 10 or later host using either the host n
 
 Starting with Windows 2016 and Windows 10, Hyper-V Manager lets you use a different user account to connect remotely. To do this:
 
+1. In the left pane, right-click **Hyper-V Manager**.
+1. Click **Connect to Server**.
 1. Select **Connect as another user** in the **Select Computer** dialogue box.
-2. Select **Set User**.
+1. Select **Set User**.
 
-### Connect to the remote host using IP address
+### Connect to a Windows 2016 or Windows 10 remote host using IP address
 
-This is only available when connecting to a Windows 10 or Windows Server 2016 remote host
+Starting with Windows 2016 and Windows 10, you can also connect using IP address. To do this:
 
-Sometimes it's easier to connect using IP address rather than host name. Windows 10 allows you to do just that.
+1. In the left pane, right-click **Hyper-V Manager**.
+1. Click **Connect to Server**.
+1. Type the IP address into the **Another Computer** text field.
 
-To connect using IP address, type the IP address into the **Another Computer** text field.
-
-## Manage a Hyper-V host outside your domain, or with no domain
+## Connect to a Windows 2016 or Windows 10 remote host  outside your domain, or with no domain
 
 This is only available when connecting to a Windows 10 or Windows Server 2016 remote host.
 
@@ -109,29 +111,30 @@ Next, configure the computer you'll use to manage the Hyper-V host.
 
      ```Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"```<br>
      ```Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"```
-3. You might also need to configure the following group policy: 
+1. You might also need to configure the following group policy: 
      * **Computer Configuration** \> **Administrative Templates** \> **System** \> **Credentials Delegation** \> **Allow delegating fresh credentials with NTLM-only server authentication**
     * Click **Enable** and add *wsman/fqdn-of-hyper-v-host*.
+1. Open **Hyper-V Manager**.
+1. In the left pane, right-click **Hyper-V Manager**.
+1. Click **Connect to Server**.
 
 For details, see [Enable-WSManCredSSP](https://technet.microsoft.com/en-us/library/hh849872.aspx).
 
 ## Install Hyper-V Manager
 
-### Install from Server Manager or Programs and Features
+To use a UI tool, choose the one appropriate for the oeprating system on the computer where you'll run Hyper-V Manager:
 
 On Windows Server, open Server Manager \> **Manage** \> **Add roles and features**. Move to the **Features** page and expand **Remote server administration tools** \> **Role administration tools** \> **Hyper-V management tools**. 
 
-On Windows, Hyper-V Manager is available on [any Windows operating system that includes Hyper-V](../quick_start/walkthrough_compatibility.md#operating-system-requirements).
+On Windows, Hyper-V Manager is available on [any Windows operating system that includes Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility).
 
 1. On the Windows desktop, click the Start button and begin typing **Programs and features**. 
 1. In search results, click **Programs and Features**.
 1. In the left pane, click **Turn Windows features on or off**.
 1. Expand the Hyper-V folder, and **click Hyper-V Management Tools**.
-1. To install Hyper-V Manager, click **Hyper-V Management Tools**. If you want to also install the Hyper-V module, click that option as well.
+1. To install Hyper-V Manager, click **Hyper-V Management Tools**. If you want to also install the Hyper-V module, click that option.
 
-### Install from Windows PowerShell on Windows 10
-
-Run the following command as Administrator:
+To use Windows PowerShell, run the following command as Administrator:
 
 ```add-windowsfeature rsat-hyper-v-tools```
 
