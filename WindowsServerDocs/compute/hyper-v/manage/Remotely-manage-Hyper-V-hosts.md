@@ -16,7 +16,7 @@ ms.date: 12/01/2016
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
 
-This article lists the supported versions of Hyper-V hosts you can manage with supported versions of Hyper-V Manager and describes how to set up Hyper-V Manager to connect to remote and local Hyper-V hosts. 
+This article lists the supported combinations of Hyper-V hosts and Hyper-V Manager versions and describes how to connect to remote and local Hyper-V hosts so you can manage them. 
 
 Hyper-V Manager lets you manage a small number of Hyper-V hosts, both remote and local. It's installed when you install the Hyper-V Management Tools, which you can do either through a full Hyper-V installation or a tools-only installation. Doing a tools-only installation means you can use the tools on computers that don't meet the hardware requirements to host Hyper-V. For details about hardware for Hyper-V hosts, see [System requirements](..\System-requirements-for-Hyper-V-on-Windows.md).
 
@@ -46,7 +46,7 @@ Hyper-V Manager doesn't list any computers that host Hyper-V until you add the c
 
 If you can't connect:
 
-* It's possible that only the Hyper-V tools are installed. Check that the Virtual Machine Management service is listed and running. \(Open the Services desktop app: click **Start**, click in the **Start Search** box, type **services.msc**, and then press ENTER. If it's not listed, follow instructions in [Install Hyper-V](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md) to install the Hyper-V platform.\)
+* It's possible that only the Hyper-V tools are installed. To check that Hyper-V platform is installed, look for the Virtual Machine Management service. \(Open the Services desktop app: click **Start**, click the **Start Search** box, type **services.msc**, and then press **Enter**. If the Virtual Machine Management service isn't listed, install the Hyper-V platform by following the instructions in [Install Hyper-V](..\get-started\Install-the-Hyper-V-role-on-Windows-Server.md).\)
 * Check that your hardware meets the requirements. See [System requirements](..\System-requirements-for-Hyper-V-on-Windows.md).
 * Check that your user account belongs to the Administrators group or the Hyper-V Administrators group.
 
@@ -68,8 +68,7 @@ For Windows 8.1 and earlier, remote management works only when the host is in th
 
 To add a remote Hyper-V host to Hyper-V Manager, select **Another computer** in the **Select Computer** dialogue box and type the remote host's hostname, NetBIOS name, or fully qualified domain name \(FQDN\).
 
-Windows 10 greatly expanded the possible combinations of remote connection types.  
-Now you can connect to a remote Windows 10 or later host using either the host name or IP address. Hyper-V Manager now supports alternate user credentials as well.  
+Hyper-V Manager in Windows Server 2016 and Windows 10 more types of remote connection than previous versions, described in the following sections.  
 
 ### Connect to a Windows 2016 or Windows 10 remote host as a different user
 
@@ -88,7 +87,7 @@ Starting with Windows 2016 and Windows 10, you can also connect using IP address
 1. Click **Connect to Server**.
 1. Type the IP address into the **Another Computer** text field.
 
-## Connect to a Windows 2016 or Windows 10 remote host  outside your domain, or with no domain
+### Connect to a Windows 2016 or Windows 10 remote host outside your domain, or with no domain
 
 This is only available when connecting to a Windows 10 or Windows Server 2016 remote host.
 
@@ -112,13 +111,13 @@ Next, configure the computer you'll use to manage the Hyper-V host.
      ```Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"```<br>
      ```Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"```
 1. You might also need to configure the following group policy: 
-     * **Computer Configuration** \> **Administrative Templates** \> **System** \> **Credentials Delegation** \> **Allow delegating fresh credentials with NTLM-only server authentication**
+    * **Computer Configuration** \> **Administrative Templates** \> **System** \> **Credentials Delegation** \> **Allow delegating fresh credentials with NTLM-only server authentication**
     * Click **Enable** and add *wsman/fqdn-of-hyper-v-host*.
 1. Open **Hyper-V Manager**.
 1. In the left pane, right-click **Hyper-V Manager**.
 1. Click **Connect to Server**.
 
-For details, see [Enable-WSManCredSSP](https://technet.microsoft.com/en-us/library/hh849872.aspx).
+For cmdlet details, see [Set-Item](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/set-item) and [Enable-WSManCredSSP](https://technet.microsoft.com/library/hh849872.aspx).
 
 ## Install Hyper-V Manager
 
