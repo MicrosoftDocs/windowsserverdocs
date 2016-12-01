@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop client - supported configuration
+description: Learn which PCs you can access using Remote Desktop clients
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

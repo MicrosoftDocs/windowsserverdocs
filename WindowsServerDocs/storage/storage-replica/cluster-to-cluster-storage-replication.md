@@ -12,11 +12,11 @@ ms.date: 10/11/2016
 # Cluster to cluster Storage Replication
 > Applies To: Windows Server 2016
 
-Cluster-to-cluster replication is now available in Windows Server 2016, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
+Cluster-to-cluster replication is now available in Windows Server 2016 Datacenter Edition, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
+There are no graphical tools in Windows Server 2016 Datacenter Edition that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 16 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
@@ -39,7 +39,7 @@ This walkthrough uses the following environment as an example:
 ### Prerequisites  
 
 * Active Directory Domain Services forest (does not need to run Windows Server 2016).  
-* At least four servers (two servers in two clusters) with Windows Server 2016 installed. Supports up to two 64 node clusters.  
+* At least four servers (two servers in two clusters) with Windows Server 2016 Datacenter Edition installed. Supports up to two 64 node clusters.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
@@ -50,7 +50,7 @@ This walkthrough uses the following environment as an example:
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
 ### Provision operating system, features, roles, storage, and network  
-1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
 
