@@ -22,9 +22,6 @@ If you deploy a certificate-based authentication method, such as Extensible Auth
 
 The following instructions assist in managing NPS server certificates in deployments where the trusted root CA is a third-party CA, such as Verisign, or is a CA that you have deployed for your public key infrastructure \(PKI\) by using Active Directory Certificate Services \(AD CS\).
 
->[!IMPORTANT]
->This procedures in this topic must be performed on an NPS server, not on a client computer.
-
 ## Change the Cached TLS Handle Expiry
 
 During the initial authentication processes for EAP\-TLS, PEAP\-TLS, and PEAP\-MS\-CHAP v2, the NPS server caches a portion of the connecting client's TLS connection properties. The client also caches a portion of the NPS server's TLS connection properties.
@@ -33,7 +30,7 @@ Each individual collection of these TLS connection properties is called a TLS ha
 
 Client computers can cache the TLS handles for multiple authenticators, while NPS servers can cache the TLS handles of many client computers.
 
-The cached TLS handles on the client and server allows the reauthentication process to occur more rapidly. For example, when a wireless computer reauthenticates with an NPS server, the NPS server can examine the TLS handle for the wireless client and can quickly determine that the client connection is a reconnect. The NPS server authorizes the connection without performing full authentication.
+The cached TLS handles on the client and server allow the reauthentication process to occur more rapidly. For example, when a wireless computer reauthenticates with an NPS server, the NPS server can examine the TLS handle for the wireless client and can quickly determine that the client connection is a reconnect. The NPS server authorizes the connection without performing full authentication.
 
 Correspondingly, the client examines the TLS handle for the NPS server, determines that it is a reconnect, and does not need to perform server authentication.
 
@@ -41,7 +38,7 @@ On computers running Windows 10 and Windows Server 2016, the default TLS handle 
 
 In some circumstances, you might want to increase or decrease the TLS handle expiry time.
 
-For example, you might want to decrease the TLS handle expiry time is in a scenario where a user's certificate is revoked by an administrator and the certificate has expired. In this scenario, the user can still connect to the network if an NPS server has a cached TLS handle that has not expired. Reducing the TLS handle expiry might help prevent such users with revoked certificates from reconnecting.
+For example, you might want to decrease the TLS handle expiry time in circumstances where a user's certificate is revoked by an administrator and the certificate has expired. In this scenario, the user can still connect to the network if an NPS server has a cached TLS handle that has not expired. Reducing the TLS handle expiry might help prevent such users with revoked certificates from reconnecting.
 
 >[!NOTE]
 >The best solution to this scenario is to disable the user account in Active Directory, or to remove the user account from the Active Directory group that is granted permission to connect to the network in network policy. The propagation of these changes to all domain controllers might also be delayed, however, due to replication latency. 
@@ -51,6 +48,9 @@ For example, you might want to decrease the TLS handle expiry time is in a scena
 You can use this procedure to change the amount of time that client computers cache the TLS handle of an NPS server. After successfully authenticating an NPS server, client computers cache TLS connection properties of the NPS server as a TLS handle. The TLS handle has a default duration of 10 hours \(36,000,000 milliseconds\). You can increase or decrease the TLS handle expiry time by using the following procedure.
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
+
+>[!IMPORTANT]
+>This procedure must be performed on an NPS server, not on a client computer.
 
 ### To configure the TLS handle expiry time on client computers
 
@@ -71,6 +71,9 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 Use this procedure to change the amount of time that NPS servers cache the TLS handle of client computers. After successfully authenticating an access client, NPS servers cache TLS connection properties of the client computer as a TLS handle. The TLS handle has a default duration of 10 hours \(36,000,000 milliseconds\). You can increase or decrease the TLS handle expiry time by using the following procedure.
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
+
+>[!IMPORTANT]
+>This procedure must be performed on an NPS server, not on a client computer.
 
 ### To configure the TLS handle expiry time on NPS servers
 
