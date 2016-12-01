@@ -15,7 +15,7 @@ author: jamesmci
 
 All certificates that are used for network access authentication with Extensible Authentication Protocol\-Transport Layer Security \(EAP\-TLS\), Protected Extensible Authentication Protocol\-Transport Layer Security \(PEAP\-TLS\), and PEAP\-Microsoft Challenge Handshake Authentication Protocol version 2 \(MS\-CHAP v2\) must meet the requirements for X.509 certificates and work for connections that use Secure Socket Layer/Transport Level Security (SSL/TLS). Both client and server certificates have additional requirements.
 
->[IMPORTANT]
+>[!IMPORTANT]
 >This topic provides instructions for configuring certificate templates. To use these instructions, it is required that you have deployed your own Public Key Infrastructure \(PKI\) with Active Directory Certificate Services \(AD CS\).
 
 ## Minimum server certificate requirements

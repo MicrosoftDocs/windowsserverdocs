@@ -22,9 +22,6 @@ If you deploy a certificate-based authentication method, such as Extensible Auth
 
 The following instructions assist in managing NPS server certificates in deployments where the trusted root CA is a third-party CA, such as Verisign, or is a CA that you have deployed for your public key infrastructure \(PKI\) by using Active Directory Certificate Services \(AD CS\).
 
->[!IMPORTANT]
->This procedures in this topic must be performed on an NPS server, not on a client computer.
-
 ## Change the Cached TLS Handle Expiry
 
 During the initial authentication processes for EAP\-TLS, PEAP\-TLS, and PEAP\-MS\-CHAP v2, the NPS server caches a portion of the connecting client's TLS connection properties. The client also caches a portion of the NPS server's TLS connection properties.
@@ -52,6 +49,9 @@ You can use this procedure to change the amount of time that client computers ca
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
 
+>[!IMPORTANT]
+>This procedure must be performed on an NPS server, not on a client computer.
+
 ### To configure the TLS handle expiry time on client computers
 
 1. On an NPS server, open Registry Editor.
@@ -71,6 +71,9 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 Use this procedure to change the amount of time that NPS servers cache the TLS handle of client computers. After successfully authenticating an access client, NPS servers cache TLS connection properties of the client computer as a TLS handle. The TLS handle has a default duration of 10 hours \(36,000,000 milliseconds\). You can increase or decrease the TLS handle expiry time by using the following procedure.
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
+
+>[!IMPORTANT]
+>This procedure must be performed on an NPS server, not on a client computer.
 
 ### To configure the TLS handle expiry time on NPS servers
 
