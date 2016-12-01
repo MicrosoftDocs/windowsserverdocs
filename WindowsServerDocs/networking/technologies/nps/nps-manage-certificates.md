@@ -30,7 +30,7 @@ Each individual collection of these TLS connection properties is called a TLS ha
 
 Client computers can cache the TLS handles for multiple authenticators, while NPS servers can cache the TLS handles of many client computers.
 
-The cached TLS handles on the client and server allows the reauthentication process to occur more rapidly. For example, when a wireless computer reauthenticates with an NPS server, the NPS server can examine the TLS handle for the wireless client and can quickly determine that the client connection is a reconnect. The NPS server authorizes the connection without performing full authentication.
+The cached TLS handles on the client and server allow the reauthentication process to occur more rapidly. For example, when a wireless computer reauthenticates with an NPS server, the NPS server can examine the TLS handle for the wireless client and can quickly determine that the client connection is a reconnect. The NPS server authorizes the connection without performing full authentication.
 
 Correspondingly, the client examines the TLS handle for the NPS server, determines that it is a reconnect, and does not need to perform server authentication.
 
@@ -38,7 +38,7 @@ On computers running Windows 10 and Windows Server 2016, the default TLS handle 
 
 In some circumstances, you might want to increase or decrease the TLS handle expiry time.
 
-For example, you might want to decrease the TLS handle expiry time is in a scenario where a user's certificate is revoked by an administrator and the certificate has expired. In this scenario, the user can still connect to the network if an NPS server has a cached TLS handle that has not expired. Reducing the TLS handle expiry might help prevent such users with revoked certificates from reconnecting.
+For example, you might want to decrease the TLS handle expiry time in circumstances where a user's certificate is revoked by an administrator and the certificate has expired. In this scenario, the user can still connect to the network if an NPS server has a cached TLS handle that has not expired. Reducing the TLS handle expiry might help prevent such users with revoked certificates from reconnecting.
 
 >[!NOTE]
 >The best solution to this scenario is to disable the user account in Active Directory, or to remove the user account from the Active Directory group that is granted permission to connect to the network in network policy. The propagation of these changes to all domain controllers might also be delayed, however, due to replication latency. 
