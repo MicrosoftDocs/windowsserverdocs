@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop clients
+description: Learn about the different Remote Desktop clients available for all your devices
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

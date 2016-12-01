@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop client FAQ for Android
+description: Frequently asked questions about the Remote Desktop client for Android
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
