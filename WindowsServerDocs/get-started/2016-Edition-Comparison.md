@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 11/29/2016
+ms.date: 12/01/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -47,19 +47,18 @@ manager: dongill
 |DHCP Server| |Yes|Yes|
 |DNS Server| |Yes|Yes|
 |Fax Server| |Yes|Yes|
-|File and Storage Services| |Yes|Yes|
-| |File Server|???|Yes|
-| |BranchCache for Network Files|???|Yes|
-| |Data Deduplication|???|Yes|
-| |DFS Namespaces|???|Yes|
-| |DFS Replication|???|Yes|
-| |File Serve Resource Mnager|???|Yes|
-| |File Server VSS Agent Service|???|Yes|
-| |iSCSI Target Server|???|Yes|
-| |iSCSI Target Storage Provider|???|Yes|
-| |Server for NFS|???|Yes|
-| |Work Folders|???|Yes|
-| |Storage Services|???|Yes|
+|File and Storage Services|File Server|???|Yes|
+|File and Storage Services|BranchCache for Network Files|???|Yes|
+|File and Storage Services|Data Deduplication|???|Yes|
+|File and Storage Services|DFS Namespaces|???|Yes|
+|File and Storage Services|DFS Replication|???|Yes|
+|File and Storage Services|File Serve Resource Mnager|???|Yes|
+|File and Storage Services|File Server VSS Agent Service|???|Yes|
+|File and Storage Services|iSCSI Target Server|???|Yes|
+|File and Storage Services|iSCSI Target Storage Provider|???|Yes|
+|File and Storage Services|Server for NFS|???|Yes|
+|File and Storage Services|Work Folders|???|Yes|
+|File and Storage Services|Storage Services|???|Yes|
 |Host Guardian Service| |???|Yes|
 |Hyper-V| |Yes|Yes|
 |MultiPoint Services| |Yes|Yes|
