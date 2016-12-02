@@ -52,7 +52,7 @@ In addition, the following requirements apply.
 - Ensure SSDs have power-loss protection, i.e. they are "enterprise-grade"
 - Ensure SSDs used for cache have high endurance, we recommend 5+ drive-writes-per-day (DWPD)
 - Separate dedicated drive for boot
-- **Not supported: ** multi-path IO (MPIO) or physically connecting drives via multiple paths
+- **Not supported:** multi-path IO (MPIO) or physically connecting drives via multiple paths
 
 #### Minimum number of drives
 
