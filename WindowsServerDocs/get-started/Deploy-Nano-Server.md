@@ -59,7 +59,7 @@ This table shows the roles and features that are available in this release of Na
 |Hyper-V role (including NetQoS)|-Compute|
 |Failover Clustering|-Clustering|
 |Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|
-|File Server role and other storage components|-Storage|
+|File Server role and other storage components, detailed after this table|-Storage|
 |Windows Defender, including a default signature file|-Defender|
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default|
 |DNS Server role|-Package Microsoft-NanoServer-DNS-Package|
@@ -79,7 +79,23 @@ This table shows the roles and features that are available in this release of Na
 > When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in subfolders named for the locale of the image.  
   
 > [!NOTE]  
-> When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager.  
+> When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager. 
+
+### File and storage items installed by the -Storage parameter
+
+- File Server role
+- Data Deduplication
+- Multipath I/O (including a driver for MSDSM)
+- ReFS (regular and v1)
+- iSCSI Initiator (but not iSCSI target)
+- Storage Replica
+- Storage Management Service
+- SMB Witness Service
+- Volume Shadow Copy Service
+- Storage Tiering
+- Dynamic Volumes
+- Basic Windows storage providers (for Windows Storage Management)
+ 
   
   
   
