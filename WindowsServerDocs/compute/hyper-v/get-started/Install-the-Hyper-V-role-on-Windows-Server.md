@@ -10,19 +10,21 @@ ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 author: KBDAzure
 ms.author: kathydav
-ms.date: 12/01/2016
+ms.date: 12/02/2016
 ---
 # Install the Hyper-V role on Windows Server 2016
 
 >Applies To: Windows Server 2016
   
-To create and run virtual machines, install the Hyper-V role on  Windows Server 2016 by using  Server Manager or the Install-WindowsFeature cmdlet in Windows PowerShell.  To install the Hyper-V role on a Nano Server, see [Getting Started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). For Windows 10, see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).    
-  
+To create and run virtual machines, install the Hyper-V role on Windows Server 2016 by using Server Manager or the Install-WindowsFeature cmdlet in Windows PowerShell. To install the Hyper-V role on a Nano Server, see [Getting Started with Nano Server](../../../get-started/Getting-Started-with-Nano-Server.md). For Windows 10, see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).    
+
+To learn more about Hyper-V, see the [Hyper-V Technology Overview](..\Hyper-V-Technology-Overview.md). To try out Windows Server 2016, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
+
 Before you install Windows Server 2016 or add the Hyper-V role, make sure that:
-*  Your computer hardware is compatible. For more information, see [System Requirements for Windows Server](../../../get-started/System-Requirements.md) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows.md). Install the Hyper-V role after you [download and install Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
+*  Your computer hardware is compatible. For details, see [System Requirements for Windows Server](../../../get-started/System-Requirements.md) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows.md).
 *  You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMWare Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, if you try to use them to manage virtual machines when the Hyper-V hypervisor is running, the virtual machines might not start or might run unreliably. For details and instructions for turning off the Hyper-V hypervisor if you need to use one of these apps, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](http://support.microsoft.com/kb/3204980).
 
-If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](..\Manage\Remotely-manage-Hyper-V-hosts.md). To learn more about Hyper-V, see the [Hyper-V Technology Overview](..\Hyper-V-Technology-Overview.md).
+If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](..\Manage\Remotely-manage-Hyper-V-hosts.md). 
   
 ## <a name="BKMK_SERV"></a>Install Hyper-V by using Server Manager  
   
