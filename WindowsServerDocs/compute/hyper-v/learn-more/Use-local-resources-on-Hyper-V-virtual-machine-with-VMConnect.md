@@ -10,20 +10,22 @@ ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: KBDAzure
 ms.author: kathyDav
-ms.date: 9/30/2016
+ms.date: 12/02/2016
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
 >Applies To: Windows 10, Windows Server 2016, Windows Server 2012 R2
 
-When you use Virtual Machine Connection (VMConnect), generation 2 virtual machines that run a Windows operating system can access a computer's local resources, like a removable USB flash drive. To make this happen, turn on enhanced session mode on the Hyper-V host, use VMConnect to connect to the virtual machine, and before you connect, choose the local resource that you want to use. When you turn on enhanced session mode, you can also resize the VMConnect window. 
+Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. You'll need a Hyper-V host with enhanced session mode and a Windows operating system as a guest. This article shows you how configure the host and then give the virtual machine access to a local resource.
 
-Enhanced session mode isn't available for generation 1 virtual machines or for virtual machines that run non-Windows operating systems. For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/). 
+Enhanced session mode also lets you resize the VMConnect window. 
+
+Enhanced session mode isn't available for virtual machines that don't run Windows operating systems. For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/). 
   
 ## <a name="BKMK_OVER"></a>Turn on enhanced session mode on Hyper-V host  
-If your Hyper-V host runs Windows 10, Windows 8, or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs Windows Server 2016, Windows Server 2012, or Windows Server 2012 R2, you must turn on enhanced session mode to use it. It is turned off by default for those operating systems. 
+If your Hyper-V host runs Windows 10, Windows 8, or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 2016, Windows Server 2012, or Windows Server 2012 R2, follow these steps first. 
   
-To turn on enhanced session mode,  
+To turn on enhanced session mode:  
   
 1.  Connect to the computer that hosts the virtual machine.  
   
@@ -52,9 +54,9 @@ To turn on enhanced session mode,
 8.  Click **Ok**.  
   
 ## Choose the local resource that you want to use  
-You can choose a local resource like a printer, the clipboard or a local drive that's on the computer that you're using to connect to the VM.  
+You can choose a local resource like a printer, the clipboard, or a local drive on the computer where you're running VMConnect.  
   
-To select a local resource like a drive,  
+To select a local resource:  
   
 1.  Open VMConnect.  
   
