@@ -1028,6 +1028,7 @@
 #### [Advanced Data Deduplication settings](storage/data-deduplication/advanced-settings.md)
 #### [Data Deduplication interoperability](storage/data-deduplication/interop.md)
 ### [Storage Spaces Direct](storage/storage-spaces/storage-spaces-direct-overview.md)
+#### [Storage Spaces Direct hardware requirements](storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Fault tolerance and storage efficiency](storage/storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Software Storage Bus](storage/storage-spaces/Software-Storage-Bus-Overview.md)
 #### [Hyper-converged solution using Storage Spaces Direct](storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)

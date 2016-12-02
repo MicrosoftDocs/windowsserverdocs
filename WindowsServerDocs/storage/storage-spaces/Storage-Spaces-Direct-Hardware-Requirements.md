@@ -1,26 +1,27 @@
 ---
 title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server-threshold
-ms.author: jgerend
+description: Minimum hardware requirements for testing Storage Spaces Direct.
+ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/23/2016
+ms.date: 12/2/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
-# Storage Spaces Direct Hardware Requirements
+# Storage Spaces Direct hardware requirements
 >Applies To: Windows Server 2016
 
-## Foreword
+This topic describes minimum hardware requirements for testing Storage Spaces Direct. For production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! To learn more, check out [Partner Offers at Microsoft Ignite 2016](https://channel9.msdn.com/events/Ignite/2016/BRK2167).
 
-Microsoft strongly recommends deploying Storage Spaces Direct with *Windows Server Software-Defined (WSSD)* offers from our hardware partners. They have been thoughtfully designed and extensively validated to provide the best experience. To learn more, check out [Partner Offers at Microsoft Ignite 2016](https://channel9.msdn.com/events/Ignite/2016/BRK2167).
+If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, as described in [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).
 
 ## Basic requirements
 
 All systems, components, devices, and drivers must be "Certified for Windows Server 2016" per the [Windows Server Catalog](https://www.windowsservercatalog.com).
 
-The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/en-us/library/cc732035(v=ws.10).aspx) per the wizard in the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell.
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell.
 
 In addition, the following requirements apply.
 
@@ -33,7 +34,7 @@ In addition, the following requirements apply.
  
 ### CPU
 
-- Minimum of Nehalem or later compatible processor
+- Minimum of Intel Nehalem or later compatible processor
 
 ### Memory
 
