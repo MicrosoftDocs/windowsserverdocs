@@ -60,18 +60,18 @@ manager: dongill
 |File and Storage Services|Work Folders|Yes|Yes|
 |File and Storage Services|Storage Services|Yes|Yes|
 |Host Guardian Service| |Yes|Yes|
-|Hyper-V| |Yes|Yes|
+|Hyper-V| |Yes|Yes; including Shielded Virtual Machines|
 |MultiPoint Services| |Yes|Yes|
-|Network Controller| |???|Yes|
-|Network Policy and Access Services| |Yes|Yes|
+|Network Controller| |No|Yes|
+|Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Print and Document Services| |Yes|Yes|
-|Remote Access| |???|Yes|
+|Remote Access| |Yes|Yes|
 |Remote Desktop Services| |Yes|Yes|
-|Volume Activation Services| |???|Yes|
-|Web Servicer (IIS)| |Yes|Yes|
-|Windows Deployment Services| |Yes|Yes|
-|Windows Server Essentials Experience| |???|Yes|
-|Windows Server Update Services| |???|Yes|
+|Volume Activation Services| |Yes|Yes|
+|Web Services (IIS)| |Yes|Yes|
+|Windows Deployment Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Windows Server Essentials Experience| |Yes|Yes|
+|Windows Server Update Services| |Yes|Yes|
 
 ## Features
 
@@ -79,65 +79,65 @@ manager: dongill
 |-------------------|----------|---------------------------|  
 |.NET Framework 3.5|Yes|Yes|
 |.NET Framework 4.6|Yes|Yes|
-|Background Intelligent Transfer Service (BITS)|???|Yes|
-|BitLocker Drive Encryption|???|Yes|
-|BitLocker Network Unlock|???|Yes|
-|BranchCache|???|Yes|
-|Client for NFS|???|Yes|
-|Containers|???|Yes|
-|Data Center Bridging|???|Yes|
-|Direct Play|???|Yes|
-|Enhanced Storage|???|Yes|
-|Failover Clustering|???|Yes|
+|Background Intelligent Transfer Service (BITS)|Yes|Yes|
+|BitLocker Drive Encryption|Yes|Yes|
+|BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|BranchCache|Yes|Yes|
+|Client for NFS|Yes|Yes|
+|Containers|Yes|Yes|
+|Data Center Bridging|Yes|Yes|
+|Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Enhanced Storage|Yes|Yes|
+|Failover Clustering|Yes|Yes|
 |Group Policy Management|Yes|Yes|
-|Host Guardian Hyper-V Support|???|Yes|
+|Host Guardian Hyper-V Support|No|Yes|
 |I/O Quality of Service|???|Yes|
-|IIS Hostable Web Core|???|Yes|
-|Internet Printing Client|???|Yes|
-|IPAM Server|???|Yes|
-|iSNS Server service|???|Yes|
-|LPR Port Monitor|???|Yes|
-|Management OData IIS Extension|???|Yes|
-|Media Foundation|???|Yes|
-|Message Queueing|???|Yes|
-|Multipath I/O|???|Yes|
-|MultiPoint Connector|???|Yes|
-|Network Load Balancing|???|Yes|
-|Peer Name Resolution Protocol|???|Yes|
-|Quality Windows Audio Video Experience|???|Yes|
-|RAS Connection Manager Administration Kit|???|Yes|
-|Remote Assistance|???|Yes|
-|Remote Differential Compression|???|Yes|
+|IIS Hostable Web Core|Yes|Yes|
+|Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|IPAM Server|Yes|Yes|
+|iSNS Server service|Yes|Yes|
+|LPR Port Monitor|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Management OData IIS Extension|Yes|Yes|
+|Media Foundation|Yes|Yes|
+|Message Queueing|Yes|Yes|
+|Multipath I/O|Yes|Yes|
+|MultiPoint Connector|Yes|Yes|
+|Network Load Balancing|Yes|Yes|
+|Peer Name Resolution Protocol|Yes|Yes|
+|Quality Windows Audio Video Experience|Yes|Yes|
+|RAS Connection Manager Administration Kit|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Remote Assistance|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Remote Differential Compression|Yes|Yes|
 |RSAT|Yes|Yes|
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
-|Simple TCP/IP Services|Yes|Yes|
-|SMB 1.0/CIFS File Sharing Support|???|Yes|
-|SMB Bandwidth Limit|???|Yes|
+|Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|???|Yes|
-|Storage Replica|???|Yes|
+|Storage Replica|No|Yes|
 |Telnet Client|Yes|Yes|
-|TFTP Client|Yes|Yes|
-|VM Shielding Tools for Fabric Management|???|Yes|
+|TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|VM Shielding Tools for Fabric Management|Yes|Yes|
 |WebDAV Redirector|???|Yes|
-|Windows Biometric Framework|???|Yes|
-|Windows Defender features|Yes|Yes|
-|Windows Identity Foundation 3.5|???|Yes|
-|Windows Internal Database|???|Yes|
-|Windows PowerShell|Yes|Yes|
-|Windows Process Activation Service|???|Yes|
-|Windows Search Service|???|Yes|
+|Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Windows Defender features|Installed|Installed|
+|Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|Windows Internal Database|Yes|Yes|
+|Windows PowerShell|Installed|Installed|
+|Windows Process Activation Service|Yes|Yes|
+|Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
 |Windows Server Migration Tools|Yes|Yes|
-|Windows Standards-Based Storage Management|???|Yes|
-|Windows TIFF IFilter|???|Yes|
-|WinRM IIS Extension|???|Yes|
+|Windows Standards-Based Storage Management|Yes|Yes|
+|Windows TIFF IFilter|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Yes|Yes|
-|XPS Viewer|Yes|Yes|
+|WoW64 support|Installed|Installed|
+|XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 
 |Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
