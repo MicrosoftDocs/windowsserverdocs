@@ -361,7 +361,7 @@ To enable w32tm for auditing purposes, the following command enables logging tha
 
 For more information, see [How to turn on debug logging in the Windows Time Service](https://support.microsoft.com/en-us/kb/816043).
 
-	w32tm /debug /enable /file:c:\w32time-test.log /size:10000000 /entries:0-73,103,107,110
+	w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-73,103,107,110
 
 #### Performance Monitor
 The Windows Server 2016 Windows Time service exposes performance counters which can be used to collect logging for auditing.  These can be logged locally or remotely.  You can record the Computer Time Offset and Round Trip delay counters.  
@@ -405,7 +405,7 @@ Focusing on the system with divergent time, you can use these tools below to gat
 
 
 - System Event logs
-- Enable logging using: w32tm logs - w32tm /debug /enable /file:c:\w32time-test.log /size:10000000 /entries:0-300
+- Enable logging using: w32tm logs - w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-300
 - w32Time Registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time
 - Local network traces
 - Performance Counters (from the local machine or the UpstreamClockSource)
