@@ -30,7 +30,11 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 ![Guarded host fabric](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
 
-### Attestation modes in the Guarded Fabric solution
+## Video: Introduction to shielded virtual machines in Windows Server 2016
+
+[![Introduction to Shielded Virtual Machines Video](../media/Guarded-Fabric-Shielded-VM/shielded-vms-introduction-video.png)](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+
+## Attestation modes in the Guarded Fabric solution
 
 The HGS supports two different attestation modes for a guarded fabric:
 
@@ -43,32 +47,6 @@ TPM-trusted attestation is recommended because it offers stronger assurances, as
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |**TPM-trusted attestation:** Offers the strongest possible protections but also requires more configuration steps. Host hardware and firmware must include TPM 2.0 and UEFI 2.3.1 with secure boot enabled. | Guarded hosts that can run shielded VMs are approved based on their TPM identity, measured boot sequence and code integrity policies so that you can ensure that these hosts are only running approved code.|  
 | **Admin-trusted attestation:** Intended to support existing host hardware where TPM 2.0 is not available. Requires fewer configuration steps and is compatible with commonplace server hardware. | Guarded hosts that can run shielded VMs are approved by the Host Guardian Service based on membership in a designated Active Directory Domain Services (AD DS) security group.|
-
-## What are the types of virtual machines that a guarded fabric can run?
-
-Guarded fabrics are capable of running VMs in one of three possible ways:
-
-1.	A normal VM offering no protections above and beyond previous versions of Hyper-V
-2.	An encryption-supported VM whose protections can be configured by a fabric admin
-3.	A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
-
-Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools.
-
-Shielded VMs are intended for use in fabrics where the data and state of the VM must be protected from both fabric administrators and untrusted software that might be running on the Hyper-V hosts. For example, shielded VMs will never permit a VM console connection whereas a fabric administrator can turn this protection on or off for encryption supported VMs.
-
-The following table summarizes the differences between encryption-supported and shielded VMs.
-
-| Capability        | Generation 2 Encryption Supported     | Generation 2 Shielded         |
-|----------|--------------------|----------------|
-|Secure Boot        | Yes, required but configurable        | Yes, required and enforced    |
-|Vtpm               | Yes, required but configurable        | Yes, required and enforced    |
-|Encrypt VM state and live migration traffic | Yes, required but configurable |  Yes, required and enforced  |
-|Integration components | Configurable by fabric admin      | Certain integration components blocked (e.g. data exchange, PowerShell Direct) |
-|Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) |
-|COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
-|Attach a debugger (to the VM process) | Supported          | Disabled (cannot be enabled) |
-
-Both shielded VMs and encryption-supported VMs continue to support commonplace fabric management capabilities, such as Live Migration, Hyper-V replica, VM checkpoints, and so on.
 
 ## Assurances provided by the Host Guardian Service
 
@@ -100,6 +78,32 @@ The shielding data file (PDK file) provides assurances that the VM will be creat
 The following figure shows the shielding data file and related configuration elements.
 
 ![Shielding data file](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
+
+## What are the types of virtual machines that a guarded fabric can run?
+
+Guarded fabrics are capable of running VMs in one of three possible ways:
+
+1.	A normal VM offering no protections above and beyond previous versions of Hyper-V
+2.	An encryption-supported VM whose protections can be configured by a fabric admin
+3.	A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
+
+Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools.
+
+Shielded VMs are intended for use in fabrics where the data and state of the VM must be protected from both fabric administrators and untrusted software that might be running on the Hyper-V hosts. For example, shielded VMs will never permit a VM console connection whereas a fabric administrator can turn this protection on or off for encryption supported VMs.
+
+The following table summarizes the differences between encryption-supported and shielded VMs.
+
+| Capability        | Generation 2 Encryption Supported     | Generation 2 Shielded         |
+|----------|--------------------|----------------|
+|Secure Boot        | Yes, required but configurable        | Yes, required and enforced    |
+|Vtpm               | Yes, required but configurable        | Yes, required and enforced    |
+|Encrypt VM state and live migration traffic | Yes, required but configurable |  Yes, required and enforced  |
+|Integration components | Configurable by fabric admin      | Certain integration components blocked (e.g. data exchange, PowerShell Direct) |
+|Virtual Machine Connection (Console), HID devices (e.g. keyboard, mouse) | On, cannot be disabled | Disabled (cannot be enabled) |
+|COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
+|Attach a debugger (to the VM process) | Supported          | Disabled (cannot be enabled) |
+
+Both shielded VMs and encryption-supported VMs continue to support commonplace fabric management capabilities, such as Live Migration, Hyper-V replica, VM checkpoints, and so on.
 
 ## The Host Guardian Service in action: How a shielded VM is powered on
 
