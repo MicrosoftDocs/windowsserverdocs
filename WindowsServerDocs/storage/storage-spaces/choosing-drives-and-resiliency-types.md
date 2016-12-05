@@ -17,11 +17,32 @@ This topic provides guidance on how to choose drives and resiliency types (mirro
 
 Storage Spaces Direct currently works with three types of storage devices:
 
--   **NVMe** (Non-Volatile Memory Express) drives are solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2*,* PCIe Add-In-Card (AIC), and M.2. NVMe can vary considerably from model to model, but universally offers lower latency and higher IOPS and IO throughput than any other type of drive we support today.
-
--   **SSD** refers to solid-state drives which connect via conventional SATA or SAS.
-
--   **HDD** refers to rotational magnetic hard disk drives which connect via SATA or SAS and offer vast storage capacity.
+<table>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0;">
+			<img src="media/choosing-drives-and-resiliency-types/NVMe.png">
+		</td>
+		<td style="padding: 10px; border: 0;">
+			<b>NVMe</b> (Non-Volatile Memory Express) drives are solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2*,* PCIe Add-In-Card (AIC), and M.2. NVMe can vary considerably from model to model, but universally offers lower latency and higher IOPS and IO throughput than any other type of drive we support today.
+		</td>
+	</tr>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0;">
+			<img src="media/choosing-drives-and-resiliency-types/SSD.png">
+		</td>
+		<td style="padding: 10px; border: 0;">
+			<b>SSD</b> refers to solid-state drives which connect via conventional SATA or SAS.
+		</td>
+	</tr>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0;">
+			<img src="media/choosing-drives-and-resiliency-types/HDD.png">
+		</td>
+		<td style="padding: 10px; border: 0;">
+			<b>HDD</b> refers to rotational magnetic hard disk drives which connect via SATA or SAS and offer vast storage capacity.
+		</td>
+	</tr>
+</table>
 
 Besides the underlying storage devices, the performance and capacity of Storage Spaces Direct depends on how you configure the resiliency of your volumes. There are several [resiliency types with differing storage efficiency](storage-spaces-fault-tolerance.md) you can choose from.
 
@@ -48,7 +69,7 @@ You should go "all-flash". There are currently three ways to do that:
 
 To maximize performance, all volumes should use mirroring for resiliency. Unless you have only two servers, we strongly recommend three-way mirroring, because it provides better fault tolerance as well as better performance.
 
-   >[!NOTE]
+   >[!TIP]
    > Mirroring is faster than any other resiliency type.
 
 
