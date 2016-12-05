@@ -3,18 +3,18 @@ title: Use local resources on Hyper-V virtual machine with VMConnect
 description: "Describes the requirements for using local resources with VMConnect"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: KBDAzure
 ms.author: kathyDav
-ms.date: 12/02/2016
+ms.date: 12/05/2016
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
->Applies To: Windows 10, Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2
 
 Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. You'll need a Hyper-V host with enhanced session mode and a Windows operating system as a guest. This article shows you how configure the host and then give the virtual machine access to a local resource.
 
@@ -23,10 +23,10 @@ Enhanced session mode also lets you resize the VMConnect window.
 Enhanced session mode isn't available for virtual machines that don't run Windows operating systems. For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/). 
   
 ## <a name="BKMK_OVER"></a>Turn on enhanced session mode on Hyper-V host  
-If your Hyper-V host runs Windows 10, Windows 8, or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 2016, Windows Server 2012, or Windows Server 2012 R2, follow these steps first. 
+If your Hyper-V host runs Windows 10 or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 201612 or Windows Server 2012 R2, do this first. 
   
-To turn on enhanced session mode:  
-  
+Turn on enhanced session mode:  
+
 1.  Connect to the computer that hosts the virtual machine.  
   
 2.  In Hyper-V Manager, select the host's computer name.  
@@ -53,10 +53,11 @@ To turn on enhanced session mode:
   
 8.  Click **Ok**.  
   
-## Choose the local resource that you want to use  
+## Choose a local resource
+
 You can choose a local resource like a printer, the clipboard, or a local drive on the computer where you're running VMConnect.  
   
-To select a local resource:  
+To choose a local resource:  
   
 1.  Open VMConnect.  
   
@@ -84,21 +85,23 @@ To select a local resource:
   
 8.  Click **Connect**.  
   
-## Edit VMConnect settings  
+## Edit VMConnect settings
+
 You can easily edit your connection settings for VMConnect by running the following command in Windows PowerShell or the command prompt:  
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
-## <a name="BKMK_NEW"></a>What's needed to use a computer's local resources?  
+## <a name="BKMK_NEW"></a>What's needed to use a computer's local resources?
+
 To be able to use a computer's local resources on a virtual machine:  
   
--   The Hyper-V host  must have **Enhanced session mode policy** and **Enhanced session mode** settings turned on.  
+-   The Hyper-V host must have **Enhanced session mode policy** and **Enhanced session mode** settings turned on.  
   
--   The computer that you use to connect to the virtual machine with VMConnect must run Windows 10, Windows Server 2016, Windows 8, Windows 8.1, Windows Server 2012, or Windows Server 2012 R2.  
+-   The computer that you use to connect to the virtual machine with VMConnect must run Windows 10, Windows 8.1, Windows Server 2016, or Windows Server 2012 R2.  
   
--   The virtual machine must be a generation 2 virtual machine, have Remote Desktop Services enabled, and run Windows 10, Windows Server 2016, Windows Server 2012 R2, or Windows 8.1 as the guest operating system.  
+-   The virtual machine must have Remote Desktop Services enabled, and run Windows 10, Windows 8.1, Windows Server 2016, or Windows Server 2012 R2 as the guest operating system.  
   
-If your virtual machine fits those criteria, then you can use any of the following local resources available from the computer where you use VMConnect.  
+If the computer running VMConnect and the virtual machine both meet the requirements, you can use any of the following local resources if they're available:  
   
 -   Display configuration  
   
