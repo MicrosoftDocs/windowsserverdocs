@@ -13,7 +13,7 @@ ms.date: 12/5/2016
 # Choosing drives and resiliency types in Storage Spaces Direct to meet performance and capacity requirements
 >Applies To: Windows Server 2016
 
-This topic provides guidance on how to choose drives and resiliency types (mirroring versus parity) in Storage Spaces Direct to meet your workload's performance, capacity, and cost requirements.
+This topic provides guidance on how to choose drives and resiliency types (mirroring versus parity) in [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your workload's performance, capacity, and cost requirements.
 
 Storage Spaces Direct currently works with three types of storage devices:
 
@@ -23,11 +23,11 @@ Storage Spaces Direct currently works with three types of storage devices:
 
 -   **HDD** refers to rotational magnetic hard disk drives which connect via SATA or SAS and offer vast storage capacity.
 
-Besides the underlying storage devices, the performance and capacity of Storage Spaces Direct depends on how you configure the resiliency of your volumes. There are several *resiliency types with differing storage efficiency* you can choose from.
+Besides the underlying storage devices, the performance and capacity of Storage Spaces Direct depends on how you configure the resiliency of your volumes. There are several [resiliency types with differing storage efficiency](storage-spaces-fault-tolerance.md) you can choose from.
 
 ## Option 1 – Maximizing performance
 
-To achieve predictable and uniform sub-millisecond latency across random reads and writes to any data, or to achieve extremely high IOPS (we’ve done *over six million*!) or IO throughput (we’ve done *over 1 Tb/s*!), this is for you.
+To achieve predictable and uniform sub-millisecond latency across random reads and writes to any data, or to achieve extremely high IOPS (we've done [over six million](https://www.youtube.com/watch?v=0LviCzsudGY&t=28m)!) or IO throughput (we've done [over 1 Tb/s](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=16m50s)!), this is for you.
 
 ### Choosing device types
 
