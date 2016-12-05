@@ -39,6 +39,8 @@ You should go "all-flash". There are currently three ways to do that:
 
 3.  **All SATA/SAS SSD.** As with All-NVMe, if all your drives are the same model, there is no cache. Or, you can mix higher-endurance and lower-endurance SATA/SAS SSD models, and configure the former to cache writes for the latter (requires set-up).
 
+![Deployment options for maximizing performance](media/choosing-drives-and-resiliency-types/maximizing-performance.png)
+
    >[!NOTE]
    > An advantage to choosing all NVMe or all SATA SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
 
@@ -64,7 +66,9 @@ You should go "hybrid" with either NVMe or SATA/SAS SSDs caching for larger HDDs
 
 You have one additional, rather exotic option: to use drives of *all three types*.
 
-1.  **NVMe + SATA/SAS SSD + HDD.** With drives of all three types, the NVMe will cache for the others. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe! The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
+3.  **NVMe + SATA/SAS SSD + HDD.** With drives of all three types, the NVMe will cache for the others. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe! The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
+
+![Deployment options for balancing performance and capacity](media/choosing-drives-and-resiliency-types/balancing-performance-and-capacity.png)
 
    >[!IMPORTANT]
    > There is no significant performance advantage to one volume spanning drives of all three types. Do not create volumes which span the SSDs and HDDs in deployments with drives of all three types. The NVMe drives are already accelerating all IO to/from the hottest data by caching and de-staging it in real time. This fulfills most people’s expectation for real-time storage tiering. The latency, IOPS, and IO throughput you get depends almost exclusively on the NVMe drives.
@@ -86,6 +90,8 @@ For workloads which write infrequently and in large, sequential passes such as a
 You should combine few SATA/SAS SSDs for caching with many larger HDDs for capacity.
 
 1.  **SATA/SAS SSD + HDD**. The SATA/SAS SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs. You can use as few as two SSDs per server (the minimum required for redundancy) and we’ve tested at cache-to-capacity device ratios of up to 1:12, which is to say 24 HDDs per server.
+
+![Deployment options for maximizing capacity](media/choosing-drives-and-resiliency-types/maximizing-capacity.png)
 
 ### Choosing resiliency types
 
