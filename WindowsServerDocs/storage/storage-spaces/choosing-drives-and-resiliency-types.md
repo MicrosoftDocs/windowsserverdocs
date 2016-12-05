@@ -23,7 +23,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 			<img src="media/choosing-drives-and-resiliency-types/NVMe.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>NVMe</b> (Non-Volatile Memory Express) drives are solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2*,* PCIe Add-In-Card (AIC), and M.2. NVMe can vary considerably from model to model, but universally offers lower latency and higher IOPS and IO throughput than any other type of drive we support today.
+			<b>NVMe</b> (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -110,7 +110,7 @@ For workloads which write infrequently and in large, sequential passes such as a
 
 You should combine few SATA/SAS SSDs for caching with many larger HDDs for capacity.
 
-1.  **SATA/SAS SSD + HDD**. The SATA/SAS SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs. You can use as few as two SSDs per server (the minimum required for redundancy) and we’ve tested at cache-to-capacity device ratios of up to 1:12, which is to say 24 HDDs per server.
+1.  **SATA/SAS SSD + HDD**. The SATA/SAS SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
 
 ![Deployment options for maximizing capacity](media/choosing-drives-and-resiliency-types/maximizing-capacity.png)
 
