@@ -18,7 +18,7 @@ ms.date: 12/05/2016
 
 Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how configure the host and then give the virtual machine access to a local resource.
 
-Enhanced session mode is available only for virtual machines that run recent Windows operating systems. \(See [What's needed to use a computer's local resources?](#Why-use-a-computer's-local-resources?), below.\) 
+Enhanced session mode is available only for virtual machines that run recent Windows operating systems. \(See [Requirements for using local resources](#requirements-for-using-local-resources), below.\) 
 
 For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/). 
   
@@ -55,7 +55,7 @@ Turn on enhanced session mode:
   
 ## Choose a local resource
 
-Local resources include printers, the clipboard, and a local drive on the computer where you're running VMConnect. For more details, see [What's needed to use a computer's local resources?](#Why-use-a-computer's-local-resources?), below.  
+Local resources include printers, the clipboard, and a local drive on the computer where you're running VMConnect. For more details, see [Requirements for using local resources](#requirements-for-using-local-resources), below.  
   
 To choose a local resource:
   
@@ -91,7 +91,7 @@ You can easily edit your connection settings for VMConnect by running the follow
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
-## <a name="BKMK_NEW"></a>What's needed to use a computer's local resources?
+## <a name="BKMK_NEW"></a>Requirements for using local resources
 
 To be able to use a computer's local resources on a virtual machine:  
   
