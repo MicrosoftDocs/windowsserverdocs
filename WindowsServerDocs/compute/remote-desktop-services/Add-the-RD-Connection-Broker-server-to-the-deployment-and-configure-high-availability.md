@@ -1,6 +1,6 @@
 ---
 title: Add the RD Connection Broker server to the deployment and configure high availability
-Description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
+description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

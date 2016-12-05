@@ -1,5 +1,6 @@
 ---
 title: Get started with Remote Desktop on Mac
+description: Learn how to set up the Remote Desktop client for Mac
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
