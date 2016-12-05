@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 12/2/2016
+ms.date: 12/5/2016
 ---
 
 # Choosing drives and resiliency types in Storage Spaces Direct to meet performance and capacity requirements
@@ -25,13 +25,11 @@ Storage Spaces Direct currently works with three types of storage devices:
 
 Besides the underlying storage devices, the performance and capacity of Storage Spaces Direct depends on how you configure the resiliency of your volumes. There are several *resiliency types with differing storage efficiency* you can choose from.
 
-Option 1 – Maximizing performance
-=================================
+## Option 1 – Maximizing performance
 
 To achieve predictable and uniform sub-millisecond latency across random reads and writes to any data, or to achieve extremely high IOPS (we’ve done *over six million*!) or IO throughput (we’ve done *over 1 Tb/s*!), this is for you.
 
-Choosing device types
----------------------
+### Choosing device types
 
 You should go “all-flash”. There are currently three ways to do that:
 
@@ -44,21 +42,18 @@ You should go “all-flash”. There are currently three ways to do that:
    >[!NOTE]
    > An advantage to choosing All NVMe or All SATA SSD with no cache is that you get usable storage capacity from every drive. There is no capacity “spent” on caching.
 
-Choosing resiliency types
--------------------------
+### Choosing resiliency types
 
 To maximize performance, all volumes should use mirroring for resiliency. Unless you have only two servers, we strongly recommend three-way mirroring, because it provides better fault tolerance as well as better performance.
 
 Mirroring is faster than any other resiliency type.
 
 
-Option 2 – Balancing performance and capacity
-=============================================
+## Option 2 – Balancing performance and capacity
 
 For environments with a variety of applications and workloads, not all of which have stringent performance requirements, and some of which require considerable storage capacity, you have a few good options.
 
-Choosing device types
----------------------
+### Choosing device types
 
 You should go “hybrid” with either NVMe or SATA/SAS SSDs caching for larger HDDs.
 
@@ -73,28 +68,25 @@ You have one additional, rather exotic option: to use drives of *all three types
    >[!IMPORTANT]
    > Contrary to popular belief, there is little to no performance advantage to one volume spanning drives of all three types. Do not create volumes which span the SSDs and HDDs in deployments with drives of all three types. The NVMe drives are already accelerating all IO to/from the hottest data by caching and de-staging it in real time. This fulfills most people’s expectation for storage tiers in real-time. The latency, IOPS, and IO throughput you get depends almost exclusively on the NVMe drives.
 
-Choosing resiliency types
--------------------------
+### Choosing resiliency types
 
 Our current recommendation is that all volumes should use mirroring for resiliency. Unless you have only two servers, we strongly recommend three-way mirroring, because it provides better fault tolerance.
 
    >[!NOTE]
    >  We don't recommend mixing mirroring and parity resiliency for general-purpose workloads, although we hope to do so in the future as we continue to evolve the technology. We do wholeheartedly recommend it for maximizing capacity – see below.
 
-Option 3 – Maximizing capacity
-==============================
+
+## Option 3 – Maximizing capacity
 
 For workloads which write infrequently and in large, sequential passes such as archival, backup targets, or cold data storage, this is for you.
 
-Choosing device types
----------------------
+### Choosing device types
 
 You should combine few SATA/SAS SSDs for caching with many larger HDDs for capacity.
 
 1.  **SATA/SAS SSD + HDD**. The SATA/SAS SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs. You can use as few as two SSDs per server (the minimum required for redundancy) and we’ve tested at cache-to-capacity device ratios of up to 1:12, which is to say 24 HDDs per server.
 
-Choosing resiliency types
--------------------------
+### Choosing resiliency types
 
 For archival, backup targets, or cold data storage, we recommend mixing mirroring and parity resiliency to achieve mirror-accelerated erasure coding, also called ‘mixed’ resiliency. The lesser mirror portion accelerates ingestion and mitigate and amortize the compute spike incurred by the parity encoding when large writes arrive.
 
