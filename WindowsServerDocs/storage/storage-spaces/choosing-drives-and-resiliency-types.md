@@ -119,3 +119,13 @@ You should combine few SATA/SAS SSDs for caching with many larger HDDs for capac
 For archival, backup targets, or cold data storage, we recommend mixing mirroring and parity resiliency to achieve mirror-accelerated erasure coding. This has been called "mixed" or "multi-" resiliency. The lesser mirror portion accelerates ingestion and mitigate and amortize the compute spike incurred by the parity encoding when large writes arrive.
 
 For sizing the mirror and parity parts of the volume, the ideal is that the number of writes that happen at once (e.g. one daily backup) should comfortably fit in mirror. For example, if you ingest 100 GB once daily, consider using 150 GB to 200 GB of mirror.
+
+## Sizing Considerations
+
+Every server must have at least two cache drives (the minimum required for redundancy). These can bind to capacity drives at any ratio from 1:1 up to 1:12 and beyond. We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you will experience more even performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
+
+We recommend limiting the total storage capacity per server to approximately 100 terabytes (TB). The more storage capacity per server, the longer the time required to resync data after downtime or rebooting, such when applying software updates.
+
+The current maximum size per storage pool is 1 petabyte (PB), or 1,000 terabytes.
+
+The cache should be sized to accomodate the working set of your applications and workloads, i.e. all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For typical deployments, a fair starting place is 10% of your capacity. For example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server seems reasonable to us. You can always add or remove cache drives later to adjust.
