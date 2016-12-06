@@ -58,9 +58,9 @@ You should go "all-flash". There are currently three ways to do that:
 
 - **1. All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter (requires set-up).
 
-- **2. NVMe + SATA/SAS SSD.** Using NVMe together with SATA/SAS SSDs, the former will automatically cache writes to latter. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SATA/SAS SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SATA/SAS SSDs.
+- **2. NVMe + SATA/SAS SSD.** Using NVMe together with SATA/SAS SSDs, the NVMe will automatically cache writes to SATA/SAS SSDs. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SATA/SAS SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SATA/SAS SSDs.
 
-- **3. All SATA/SAS SSD.** As with All-NVMe, if all your drives are the same model, there is no cache. Or, you can mix higher-endurance and lower-endurance SATA/SAS SSD models, and configure the former to cache writes for the latter (requires set-up).
+- **3. All SATA/SAS SSD.** As with All-NVMe, there is no cache if all your drives are the same model. If you mix higher-endurance and lower-endurance SATA/SAS SSD models, you can configure the former to cache writes for the latter (requires set-up).
 
    >[!NOTE]
    > An advantage to using all NVMe or all SATA SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
