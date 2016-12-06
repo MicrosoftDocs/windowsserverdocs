@@ -120,7 +120,7 @@ For archival, backup targets, or cold data storage, we recommend mixing mirrorin
 
 For sizing the mirror and parity parts of the volume, the ideal is that the number of writes that happen at once (e.g. one daily backup) should comfortably fit in mirror. For example, if you ingest 100 GB once daily, consider using 150 GB to 200 GB of mirror.
 
-## Sizing Considerations
+## Sizing considerations
 
 ### Cache
 
