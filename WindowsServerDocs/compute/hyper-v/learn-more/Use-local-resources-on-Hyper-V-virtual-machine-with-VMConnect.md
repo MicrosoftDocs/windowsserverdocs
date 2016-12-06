@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: KBDAzure
 ms.author: kathyDav
-ms.date: 12/05/2016
+ms.date: 12/06/2016
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
@@ -23,7 +23,7 @@ Enhanced session mode is available only for virtual machines that run recent Win
 For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/). 
   
 ## <a name="BKMK_OVER"></a>Turn on enhanced session mode on a Hyper-V host  
-If your Hyper-V host runs Windows 10 or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 201612 or Windows Server 2012 R2, do this first. 
+If your Hyper-V host runs Windows 10 or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 2016 or Windows Server 2012 R2, do this first. 
   
 Turn on enhanced session mode:
 
