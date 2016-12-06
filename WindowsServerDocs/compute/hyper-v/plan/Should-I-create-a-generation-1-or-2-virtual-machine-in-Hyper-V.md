@@ -195,51 +195,51 @@ The following table compares the devices available between generation 1 and gene
 |Super I/O device|No longer required|N/A|  
 
 ## <a name="BKMK_More"></a> More about generation 2 virtual machines
-The following sections may answer some additional questions you have about generation 2 virtual machines.
-###  Attaching or adding a DVD drive
+Here are some additional tips about using generation 2 virtual machines.
+###  Attach or add a DVD drive
 
 - You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the Oscdimg  command line tool. For more information, see [Oscdimg Command-Line Options](http://msdn.microsoft.com/library/hh824847.aspx).
 - When you create a new virtual machine with the New-VM Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
 
-###  Using UEFI firmware
+###  Use UEFI firmware
 
 - Secure Boot or UEFI firmware isn't required on the physical Hyper-V host. Hyper-V provides virtual firmware to virtual machines that is independent of what's on the Hyper-V host.    
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.   
 - We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
 
-### Working with VHDX files
+### Work with VHDX files
 
 - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
 - We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
 
-### Using IPv6 instead of IPv4
-By default, generation 2 virtual machines use IPv4. You can set a virtual machine to use IPv6 instead of IPv4 by using the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
+### Use IPv6 instead of IPv4
+By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
 
 ```  
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
-## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
-By default, COM ports are not visible in generation 2 virtual machines. You can configure COM ports by using Windows PowerShell or Windows Management Instrumentation (WMI).  
+## <a name="BKMK_Debug"></a>Add a COM port for kernel debugging  
+COM ports aren't available in generation 2 virtual machines until you add them. You can do this with Windows PowerShell or Windows Management Instrumentation (WMI). These steps show you how to do it with Windows PowerShell.
 
-To enable kernel debugging by using a COM port, follow these steps:  
+To add a COM port:  
 
-1.  Disable Secure Boot. Kernel debugging is not compatible with Secure Boot, so Secure Boot must be disabled in the virtual machine. Use the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet  to disable Secure Boot when the virtual machine is in an Off state. For example, the following command disables Secure Boot on virtual machine TestVM:  
+1.  Disable Secure Boot. Kernel debugging isn't compatible with Secure Boot. Make sure the virtual machine is in an Off state, then use the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) cmdlet. For example, the following command disables Secure Boot on virtual machine TestVM:  
 
     ```  
     Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off  
     ```  
 
-2.  Configure a COM port. Use the [Set-VMComPort](https://technet.microsoft.com/library/hh848616.aspx) Windows PowerShell cmdlet to add a COM port to the virtual machine. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:  
+2.  Add a COM port. Use the [Set-VMComPort](https://technet.microsoft.com/library/hh848616.aspx) cmdlet to do this. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:  
 
     ```  
     Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe  
     ```  
 
 > [!NOTE]  
-> Configured COM ports are not visible when looking at the settings of a virtual machine in the Hyper-V Manager console.  
+> Configured COM ports aren't listed in the settings of a virtual machine in Hyper-V Manager.
 
 ## See Also  
 
