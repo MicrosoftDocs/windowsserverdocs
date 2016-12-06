@@ -83,6 +83,7 @@ This table shows the roles and features that are available in this release of Na
 
 ### Failover Clustering items installed by the -Clustering parameter
 
+- Failover Clustering role
 - VM Failover Clustering
 - Storage Spaces Direct
 - Storage Quality of Service
