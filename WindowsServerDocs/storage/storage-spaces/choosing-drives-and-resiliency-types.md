@@ -56,11 +56,11 @@ You should go "all-flash". There are currently three ways to do that:
 
 ![Deployment options for maximizing performance](media/choosing-drives-and-resiliency-types/maximizing-performance.png)
 
-1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter (requires set-up).
+- **1. All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter (requires set-up).
 
-2. **NVMe + SATA/SAS SSD.** Using NVMe together with SATA/SAS SSDs, the former will automatically cache writes to latter. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SATA/SAS SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SATA/SAS SSDs.
+- **2. NVMe + SATA/SAS SSD.** Using NVMe together with SATA/SAS SSDs, the former will automatically cache writes to latter. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SATA/SAS SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SATA/SAS SSDs.
 
-3. **All SATA/SAS SSD.** As with All-NVMe, if all your drives are the same model, there is no cache. Or, you can mix higher-endurance and lower-endurance SATA/SAS SSD models, and configure the former to cache writes for the latter (requires set-up).
+- **3. All SATA/SAS SSD.** As with All-NVMe, if all your drives are the same model, there is no cache. Or, you can mix higher-endurance and lower-endurance SATA/SAS SSD models, and configure the former to cache writes for the latter (requires set-up).
 
    >[!NOTE]
    > An advantage to using all NVMe or all SATA SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
@@ -83,16 +83,16 @@ You should go "hybrid" with either NVMe or SATA/SAS SSDs caching for larger HDDs
 
 ![Deployment options for balancing performance and capacity](media/choosing-drives-and-resiliency-types/balancing-performance-and-capacity.png)
 
-1. **NVMe + HDD**. The NVMe drives will accelerate reads and writes by caching both. Caching reads allows the HDDs to focus on writes. Caching writes absorbs bursts and allows writes to coalesce and be de-staged only as needed, in an artificially serialized manner that maximizes HDD IOPS and IO throughput. This provides NVMe-like write characteristics, and for frequently or recently read data, NVMe-like read characteristics too.
+- **1. NVMe + HDD**. The NVMe drives will accelerate reads and writes by caching both. Caching reads allows the HDDs to focus on writes. Caching writes absorbs bursts and allows writes to coalesce and be de-staged only as needed, in an artificially serialized manner that maximizes HDD IOPS and IO throughput. This provides NVMe-like write characteristics, and for frequently or recently read data, NVMe-like read characteristics too.
 
-2. **SATA/SAS SSD + HDD**. Similar to the above, the SATA/SAS SSDs will accelerate reads and writes by caching both. This provides SSD-like write characteristics, and SSD-like read characteristics for frequently or recently read data.
+- **2. SATA/SAS SSD + HDD**. Similar to the above, the SATA/SAS SSDs will accelerate reads and writes by caching both. This provides SSD-like write characteristics, and SSD-like read characteristics for frequently or recently read data.
 
-You have one additional, rather exotic option: to use drives of *all three types*.
+There is one additional, rather exotic option: to use drives of *all three* types.
 
-3. **NVMe + SATA/SAS SSD + HDD.** With drives of all three types, the NVMe will cache for the others. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
+- **3. NVMe + SATA/SAS SSD + HDD.** With drives of all three types, the NVMe will cache for the others. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
 
    >[!IMPORTANT]
-   > There is no significant performance advantage to one volume spanning drives of all three types. Do not create volumes which span the SSDs and HDDs in deployments with drives of all three types. The NVMe drives are already accelerating all IO to/from the hottest data by caching and de-staging it in real time. This fulfills most people's expectation of real-time storage tiering. The latency, IOPS, and IO throughput you get depends almost exclusively on the NVMe drives.
+   > There is no significant performance advantage to one volume spanning drives of all three types. Do not create volumes which span the SSDs and HDDs in deployments with drives of all three types. The NVMe drives are already accelerating all IO to/from the hottest data by caching and de-staging it in real time.
 
 ### Choosing resiliency types
 
@@ -112,7 +112,7 @@ You should combine few SATA/SAS SSDs for caching with many larger HDDs for capac
 
 ![Deployment options for maximizing capacity](media/choosing-drives-and-resiliency-types/maximizing-capacity.png)
 
-1. **SATA/SAS SSD + HDD**. The SATA/SAS SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
+- **1. SATA/SAS SSD + HDD**. The SATA/SAS SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
 
 ### Choosing resiliency types
 
