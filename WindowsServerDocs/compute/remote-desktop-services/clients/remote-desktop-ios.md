@@ -1,5 +1,6 @@
 ---
 title: Get started with Remote Desktop on iOS
+description: Learn how to set up the Remote Desktop client for iOS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

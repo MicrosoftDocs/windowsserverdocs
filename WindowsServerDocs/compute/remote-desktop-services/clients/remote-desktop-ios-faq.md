@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop client FAQ for iOS
+description: Frequently asked questions about the Remote Desktop client for iOS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
