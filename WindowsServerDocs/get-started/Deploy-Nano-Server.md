@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 12/05/2016
+ms.date: 12/06/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -57,7 +57,7 @@ This table shows the roles and features that are available in this release of Na
 |Role or feature|Option|  
 |-------------------|----------|  
 |Hyper-V role (including NetQoS)|-Compute|
-|Failover Clustering|-Clustering|
+|Failover Clustering and other components, detailed after this table|-Clustering|
 |Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|
 |File Server role and other storage components, detailed after this table|-Storage|
 |Windows Defender, including a default signature file|-Defender|
@@ -70,8 +70,8 @@ This table shows the roles and features that are available in this release of Na
 |System Center Operations Manager agent| Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/en-us/system-center-docs/om/manage/install-agent-on-nano-server.|
 |Network Performance Diagnostics Service (NPDS)<br />**Note:** Requires the Windows Defender package, which you should install before installing NPDS|-Package Microsoft-NanoServer-NPDS-Package|
 |Data Center Bridging (including DCBQoS)|-Package Microsoft-NanoServer-DCB-Package|
-|Deploying on a virtual machine|Microsoft-NanoServer-Guest-Package|
-|Deploying on a physical machine|Microsoft-NanoServer-Host-Package|
+|Deploying on a virtual machine|-Package Microsoft-NanoServer-Guest-Package|
+|Deploying on a physical machine|- Package Microsoft-NanoServer-Host-Package|
 |BitLocker, trusted platform module (TPM), volume encryption, platform identification, cryptography providers, and other functionality related to secure startup|-Package Microsoft-NanoServer-SecureStartup-Package|
 |Hyper-V support for Shielded VMs|-Package Microsoft-NanoServer-ShieldedVM-Package<br />**Note:** This package is only available for the Datacenter edition of Nano Server.|
 
@@ -80,6 +80,15 @@ This table shows the roles and features that are available in this release of Na
   
 > [!NOTE]  
 > When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager. 
+
+### Failover Clustering items installed by the -Clustering parameter
+
+- VM Failover Clustering
+- Storage Spaces Direct
+- Storage Quality of Service
+- Volume Replication Clustering
+- SMB Witness Service
+
 
 ### File and storage items installed by the -Storage parameter
 
