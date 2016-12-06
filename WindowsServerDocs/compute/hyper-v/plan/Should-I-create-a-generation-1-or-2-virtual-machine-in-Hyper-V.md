@@ -122,7 +122,7 @@ The following table shows which versions of Unbreakable Enterprise Kernel you ca
 For more information, see [Oracle Linux virtual machines on Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
 
 ### <a name="BKMK_SUSE"></a>SUSE guest operating system support  
-he following table shows which versions of SUSE you can use as a guest operating system for generation 1 and generation 2 virtual machines.
+The following table shows which versions of SUSE you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
