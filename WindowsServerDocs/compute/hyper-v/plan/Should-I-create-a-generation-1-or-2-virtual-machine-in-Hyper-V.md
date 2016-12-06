@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: KBDAzure
 ms.author: kathydav
-ms.date: 10/04/2016
+ms.date: 12/05/2016
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
@@ -26,19 +26,9 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
 
 -   Generation 2 doesn't support the boot method you want to use.  
 
-For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).
+For more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).
 
-You can't change a virtual machine's generation after you've created it. So review the following sections in this article to make sure the generation you pick supports the operating system, boot method, and features you want to use.  
-
-- [Which guest operating systems are supported?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_OS)  
-
-- [How can I boot the virtual machine?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Boot)  
-
-- [What are the advantages of using generation 2 virtual machines?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Advantages)
-- [What's the difference in device support?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_DeviceCompare)
-- [More about generation 2 virtual machines](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_More)
-
-- [Enable kernel debugging by using a COM port on a generation 2 virtual machine](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Debug)
+You can't change a virtual machine's generation after you've created it. So, we recommend that you review the considerations here, as well as choose the operating system, boot method, and features you want to use before you choose a generation.  
 
 ## <a name="BKMK_OS"></a>Which guest operating systems are supported?  
 Generation 1 virtual machines support most guest operating systems. Generation 2 virtual machines support most 64-bit versions of Windows and more current versions of Linux and FreeBSD operating systems. Use the following sections to see which generation of virtual machine supports the guest operating system you want to install.  
@@ -170,7 +160,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
 
     To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.  
 
--   **Larger boot volume** - The maximum boot volume for generation 2 virtual machines is 64TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
+-   **Larger boot volume** - The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
 
  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
