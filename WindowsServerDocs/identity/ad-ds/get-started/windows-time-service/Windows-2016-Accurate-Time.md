@@ -5,7 +5,7 @@ description:
 author: paullo
 ms.author: paullo
 manager: femila
-ms.date: 10/07/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -268,6 +268,9 @@ Source|	Local CMOS Clock|
 Phase Offset|	0.0000000s|
 Server Role|	576 (Reliable Time Service)|
 
+#### Windows Server 2016 on 3rd Party Virtual platforms
+When Windows is virtualized, by default the Hypervisor is responsible for providing time.  But domain joined members need to be sychronized with the Domain Controller in order for Active Directory to work properly.  It is best to disable any time virtualization between the guest and the host of any 3rd Patry Virtual platforms.
+
 #### Discovering the Hierarchy
 Since the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you will need to query the status of a particular machine to understand it’s time source and chain to the master source clock.  This can help diagnose time synchronization problems.
 
@@ -358,7 +361,7 @@ To enable w32tm for auditing purposes, the following command enables logging tha
 
 For more information, see [How to turn on debug logging in the Windows Time Service](https://support.microsoft.com/en-us/kb/816043).
 
-	w32tm /debug /enable /file:c:\w32time-test.log /size:10000000 /entries:0-73,103,107,110
+	w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-73,103,107,110
 
 #### Performance Monitor
 The Windows Server 2016 Windows Time service exposes performance counters which can be used to collect logging for auditing.  These can be logged locally or remotely.  You can record the Computer Time Offset and Round Trip delay counters.  
@@ -402,7 +405,7 @@ Focusing on the system with divergent time, you can use these tools below to gat
 
 
 - System Event logs
-- Enable logging using: w32tm logs - w32tm /debug /enable /file:c:\w32time-test.log /size:10000000 /entries:0-300
+- Enable logging using: w32tm logs - w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-300
 - w32Time Registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time
 - Local network traces
 - Performance Counters (from the local machine or the UpstreamClockSource)
