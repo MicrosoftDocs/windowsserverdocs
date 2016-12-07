@@ -15,9 +15,9 @@ This topic describes how to add servers or drives to Storage Spaces Direct.
 
 ## <a name="adding-servers"></a> Adding servers
 
-![scaling-out](media/add-nodes/Scaling-Out.gif)
-
 Adding servers, often called scaling out, adds storage capacity and can improve storage performance and unlock better storage efficiency. If your deployment is hyper-converged, adding servers also provides more compute resources for your workload. 
+
+![scaling-out](media/add-nodes/Scaling-Out.gif)
 
 Typical deployments are simple to scale out by adding servers: 
 
@@ -151,27 +151,26 @@ New-ClusterFaultDomain -Type Node -Name <NewNode>
 Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
 ```
 
-   For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
+For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
 
 3. Add the server to the cluster as described in [Adding servers](#adding-servers). When the new server joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
 
 ## <a name="adding-drives"></a> Adding drives
 
-![scaling-up](media/add-nodes/Scaling-Up.gif)
-
-Adding drives, also known as scaling up, adds storage capacity and can improve performance. If you have available slots, you can add drives to each server to expand your storage capacity without adding servers. You can add cache drives, or capacity drives, independently. 
+Adding drives, also known as scaling up, adds storage capacity and can improve performance. If you have available slots, you can add drives to each server to expand your storage capacity without adding servers. You can add cache drives or capacity drives independently at any time.
 
    >[!IMPORTANT]
-   > We strongly recommend configuring all servers with identical storage configurations.
+   > We strongly recommend that all servers have identical storage configurations.
 
+![scale-up](media/add-nodes/Scale-Up.gif)
 
-To scale up, connect the drives and verify that Windows discovers them. They should appear in the output of this PowerShell cmdlet (run as Administrator), on any cluster node, marked as **CanPool = True**.
+To scale up, connect the drives and verify that Windows discovers them. They should appear in the output of the **Get-PhysicalDisk** cmdlet in PowerShell with their **CanPool** property set to **True**. If they show as **CanPool = False**, you can see why by checking their **CannotPoolReason** property.
 
 ```
-Get-PhysicalDisk 
+Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 ```
 
-Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be redistributed evenly across all the drives. At this point - you're finished and ready to create more volumes.
+Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/). At this point, you're finished and ready to create more volumes.
 
 If the drives don’t appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management**.
 
