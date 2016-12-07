@@ -68,7 +68,9 @@ Which type is "fastest" is determined according to the following hierarchy.
 
 ![Drive-Type-Hierarchy](media/understand-the-cache/Drive-Type-Hierarchy.png)
 
-For example, if you have NVMe and SSDs, the NVMe will cache for the SSDs; if you have SSDs and HDDs, the SSDs will cache for the HDDs.
+For example, if you have NVMe and SSDs, the NVMe will cache for the SSDs.
+
+If you have SSDs and HDDs, the SSDs will cache for the HDDs.
 
    >[!NOTE]
    > Cache drives do not contribute usable storage capacity. All data stored in the cache is also stored elsewhere, or will be once it de-stages. This means the total raw storage capacity of your deployment is the sum of your capacity drives only.
