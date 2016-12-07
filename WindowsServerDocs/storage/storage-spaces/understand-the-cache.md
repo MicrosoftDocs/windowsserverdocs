@@ -181,7 +181,9 @@ You can verify that the drives are being used for caching by running **Get-Physi
 
 It is possible to override the default behavior of the cache. For example, you can set it to cache reads even in an all-flash deployment. We discourage modifying the behavior unless you are certain the default does not suit your workload.
 
-To override the behavior, use **Set-ClusterS2D** cmdlet and its **-CacheModeSSD** and **-CacheModeHDD** parameters. The **CacheModeSSD** parameter sets the cache behavior when caching for solid-state drives. The **CacheModeHDD** parameter sets cache behavior when caching for hard disk drives. The possible values are **WriteOnly**, **ReadWrite**, and **ReadOnly**. This can be done at any time after Storage Spaces Direct is enabled. You can use **Get-ClusterS2D** to verify the behavior is set.
+To override the behavior, use **Set-ClusterS2D** cmdlet and its **-CacheModeSSD** and **-CacheModeHDD** parameters. The **CacheModeSSD** parameter sets the cache behavior when caching for solid-state drives. The **CacheModeHDD** parameter sets cache behavior when caching for hard disk drives. This can be done at any time after Storage Spaces Direct is enabled.
+
+You can use **Get-ClusterS2D** to verify the behavior is set.
 
 #### Example
 
