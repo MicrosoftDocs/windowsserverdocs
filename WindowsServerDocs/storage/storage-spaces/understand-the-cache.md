@@ -100,20 +100,20 @@ When caching for hard disk drives (HDDs), both reads *and* writes are cached, to
 
 ### Caching in deployments with drives of all three types
 
-When drives of all three types are present, the NVMe drives provides caching for both the SSDs and the HDDs. Per the above, all writes are cached, and reads to the HDDs are cached.
+When drives of all three types are present, the NVMe drives provides caching for both the SSDs and the HDDs. The behavior is as described above: only writes are cached for the SSDs, and both reads and writes are cached for the HDDs. The burden of caching for the HDDs is distributed evenly among the cache drives. 
 
 ## Summary
 
 This table summarizes which drives are used for caching, which are used for capacity, and what the caching behavior is for each deployment possibility.
 
-| Deployment       | Cache drives                      | Capacity drives | Cache behavior (default)                   |
-|------------------|-----------------------------------|-----------------|--------------------------------------------|
-| All NVMe         | None (unless configured manually) | NVMe            | None / Write-only (if configured manually) |
-| All SSD          | None (unless configured manually) | SSD             | None / Write-only (if configured manually) |
-| NVMe + SSD       | NVMe                              | SSD             | Write-only                                 |
-| NVMe + HDD       | NVMe                              | HDD             | Read + Write                               |
-| SSD + HDD        | SSD                               | HDD             | Read + Write                               |
-| NVMe + SSD + HDD | NVMe                              | SSD + HDD       | Read + Write for HDD / Write-only for SSD  |
+| Deployment       | Cache drives                        | Capacity drives | Cache behavior (default)                   |
+|------------------|-------------------------------------|-----------------|--------------------------------------------|
+| All NVMe         | None (optional: configure manually) | NVMe            | None (Write-only)                          |
+| All SSD          | None (optional: configure manually) | SSD             | None (Write-only)                          |
+| NVMe + SSD       | NVMe                                | SSD             | Write-only                                 |
+| NVMe + HDD       | NVMe                                | HDD             | Read + Write                               |
+| SSD + HDD        | SSD                                 | HDD             | Read + Write                               |
+| NVMe + SSD + HDD | NVMe                                | SSD + HDD       | Read + Write for HDD / Write-only for SSD  |
 
 ## Server-side architecture
 
