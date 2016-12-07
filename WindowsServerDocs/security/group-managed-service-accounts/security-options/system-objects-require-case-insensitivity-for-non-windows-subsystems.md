@@ -1,5 +1,5 @@
 ---
-title: System objects: Require case insensitivity for non-Windows subsystems
+title: System objects - Require case insensitivity for non-Windows subsystems
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

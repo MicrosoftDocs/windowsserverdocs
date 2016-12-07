@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Number of previous logons to cache (in case domain controller is not available)
+title: Interactive logon - Number of previous logons to cache (in case domain controller is not available)
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

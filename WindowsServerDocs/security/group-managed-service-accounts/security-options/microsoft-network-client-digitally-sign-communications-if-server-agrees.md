@@ -1,5 +1,5 @@
 ---
-title: Microsoft network client: Digitally sign communications (if server agrees)
+title: Microsoft network client - Digitally sign communications (if server agrees)
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

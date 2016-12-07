@@ -1,5 +1,5 @@
 ---
-title: Accounts: Guest account status
+title: Accounts - Guest account status
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Network Security: Restrict NTLM: Outgoing NTLM traffic to remote servers
+title: Network Security - Restrict NTLM - Outgoing NTLM traffic to remote servers
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

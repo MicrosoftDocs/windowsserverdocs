@@ -1,5 +1,5 @@
 ---
-title: Microsoft network server: Server SPN target name validation level
+title: Microsoft network server - Server SPN target name validation level
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

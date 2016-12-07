@@ -1,5 +1,5 @@
 ---
-title: Network Security: Restrict NTLM: Incoming NTLM Traffic
+title: Network Security - Restrict NTLM - Incoming NTLM Traffic
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

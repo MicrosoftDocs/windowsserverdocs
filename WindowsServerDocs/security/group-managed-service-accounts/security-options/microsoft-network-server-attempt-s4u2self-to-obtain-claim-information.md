@@ -1,5 +1,5 @@
 ---
-title: Microsoft network server: Attempt S4U2Self to obtain claim information
+title: Microsoft network server - Attempt S4U2Self to obtain claim information
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

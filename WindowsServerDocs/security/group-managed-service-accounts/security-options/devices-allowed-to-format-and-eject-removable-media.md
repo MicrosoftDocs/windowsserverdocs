@@ -1,5 +1,5 @@
 ---
-title: Devices: Allowed to format and eject removable media
+title: Devices - Allowed to format and eject removable media
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

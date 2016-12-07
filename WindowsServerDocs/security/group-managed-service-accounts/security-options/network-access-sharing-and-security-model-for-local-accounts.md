@@ -1,5 +1,5 @@
 ---
-title: Network access: Sharing and security model for local accounts
+title: Network access - Sharing and security model for local accounts
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

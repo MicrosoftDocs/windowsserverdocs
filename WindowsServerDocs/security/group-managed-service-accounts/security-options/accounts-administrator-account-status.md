@@ -1,5 +1,5 @@
 ---
-title: Accounts: Administrator account status
+title: Accounts - Administrator account status
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

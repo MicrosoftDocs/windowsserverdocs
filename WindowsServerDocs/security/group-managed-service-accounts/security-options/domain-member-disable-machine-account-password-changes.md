@@ -1,5 +1,5 @@
 ---
-title: Domain member: Disable machine account password changes
+title: Domain member - Disable machine account password changes
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Require Domain Controller authentication to unlock workstation
+title: Interactive logon - Require Domain Controller authentication to unlock workstation
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

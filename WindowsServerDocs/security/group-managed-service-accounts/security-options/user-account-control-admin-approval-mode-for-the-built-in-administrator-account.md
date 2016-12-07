@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Admin Approval Mode for the Built-in Administrator account
+title: User Account Control - Admin Approval Mode for the Built-in Administrator account
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
