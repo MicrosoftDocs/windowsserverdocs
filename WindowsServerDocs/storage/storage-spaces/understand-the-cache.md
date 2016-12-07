@@ -22,7 +22,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/choosing-drives-and-resiliency-types/NVMe.png">
+			<img src="media/understand-the-cache/NVMe-100px.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			NVMe (Non-Volatile Memory Express)
@@ -30,7 +30,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/choosing-drives-and-resiliency-types/SSD.png">
+			<img src="media/understand-the-cache/SSD-100px.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			SATA/SAS SSD (Solid-State Drive)
@@ -38,7 +38,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<img src="media/choosing-drives-and-resiliency-types/HDD.png">
+			<img src="media/understand-the-cache/HDD-100px.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
 			HDD (Hard Disk Drive)
@@ -52,13 +52,13 @@ These can be combined in six ways, which we group into two categories: "all-flas
 
 All-flash deployments aim to maximize storage performance, and do not include rotational hard disk drives (HDD).
 
-[IMAGE]
+![All-Flash-Deployment-Possibilities](media/understand-the-cache/All-Flash-Deployment-Possibilities.png)
 
 ### Hybrid deployment possibilities
 
 Hybrid deployments aim to balance performance and capacity or to maximize capacity and do include rotational hard disk drives (HDD).
 
-[IMAGE]
+![Hybrid-Deployment-Possibilities](media/understand-the-cache/Hybrid-Deployment-Possibilities.png)
 
 ## Cache drives are selected automatically
 
@@ -80,7 +80,7 @@ When all drives are of the same type, no cache is configured automatically. You 
 
 The behavior of the cache is determined automatically based on the type(s) of drives that are being cached for. When caching for solid-state drives (such as NVMe caching for SSDs), only writes are cached. When caching for hard disk drives (such as SSDs caching for HDDs), both reads and writes are cached.
 
-[IMAGE]
+![Cache-Read-Write-Behavior](media/understand-the-cache/Cache-Read-Write-Behavior.png)
 
 ### Write-only caching for all-flash deployments
 
@@ -119,15 +119,15 @@ Because the cache is below the rest of the software-defined storage stack, it do
 
 Given that resiliency in Storage Spaces Direct is at least server-level (meaning data copies are always written to different servers; at most one copy per server), data in the cache benefits from the same resiliency as data not in the cache.
 
-[IMAGE]
+![Cache-Server-Side-Architecture](media/understand-the-cache/Cache-Server-Side-Architecture.png)
 
 For example, when using three-way mirroring, three copies of any data are written to different servers, where they land in cache. Regardless of whether they are later de-staged or not, three copies will always exist.
 
-## Dynamic binding
+## Drive bindings are dynamic
 
 The binding between cache and capacity drives can have any ratio, from 1:1 up to 1:12 and beyond. It adjusts dynamically whenever drives are added or removed, such as when scaling up or after failures. This means you can add cache drives or capacity drives independently, whenever you want.
 
-[IMAGE]
+![Dynamic-Binding](media/understand-the-cache/Dynamic-Binding.gif)
 
 We recommend making the number of capacity drives a multiple of the number of cache drives, for symmetry. For example, if you have 4 cache drives, you will experience more even performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
 
@@ -139,7 +139,7 @@ For a brief period, the capacity drives which were bound to the lost cache drive
 
 This scenario is why at minimum two cache drives are required per server.
 
-[IMAGE]
+![Handling-Failure](media/understand-the-cache/Handling-Failure.gif)
 
 You can then replace the cache drive just like any other drive replacement.
 
@@ -211,7 +211,7 @@ This is particularly important in hybrid deployments with hard disk drives. If t
 
 If you believe your cache may be too small, you can use the built-in Performance Monitor (PerfMon.exe) utility in Windows to inspect the rate of cache misses. Specifically, you should compare the **Cache Miss Reads/sec** from the **Cluster Storage Hybrid Disk** counter set to the overall read IOPS of your deployment. Each "Hybrid Disk" corresponds to one capacity drive. For example, in this screenshot, 2 cache drives are bound to 4 capacity drives (1:2 ratio), resulting in 4 "Hybrid Disk" object instances per server.
 
-[IMAGE]
+![Performance-Monitor](media/understand-the-cache/PerfMon.png)
 
 There is no universal rule, but if too many reads are missing the cache, it may be undersized and you should consider adding cache drives to expand your cache. You can add cache drives or capacity drives independently whenever you want.
 
