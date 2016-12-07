@@ -1,5 +1,5 @@
 ---
-title: Audit: Audit the access of global system objects
+title: Audit - Audit the access of global system objects
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

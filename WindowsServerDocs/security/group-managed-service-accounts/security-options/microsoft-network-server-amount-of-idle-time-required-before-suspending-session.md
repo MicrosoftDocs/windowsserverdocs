@@ -1,5 +1,5 @@
 ---
-title: Microsoft network server: Amount of idle time required before suspending session
+title: Microsoft network server - Amount of idle time required before suspending session
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Microsoft network server: Digitally sign communications (always)
+title: Microsoft network server - Digitally sign communications (always)
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Domain member: Digitally encrypt or sign secure channel data (always)
+title: Domain member - Digitally encrypt or sign secure channel data (always)
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

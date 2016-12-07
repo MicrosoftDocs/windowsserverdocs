@@ -1,5 +1,5 @@
 ---
-title: Domain controller: Refuse machine account password changes
+title: Domain controller - Refuse machine account password changes
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

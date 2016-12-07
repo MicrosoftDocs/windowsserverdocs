@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Prompt user to change password before expiration
+title: Interactive logon - Prompt user to change password before expiration
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

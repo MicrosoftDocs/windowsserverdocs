@@ -1,5 +1,5 @@
 ---
-title: Recovery console: Allow automatic administrative logon
+title: Recovery console - Allow automatic administrative logon
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Detect application installations and prompt for elevation
+title: User Account Control - Detect application installations and prompt for elevation
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Microsoft network client: Send unencrypted password to third-party SMB servers
+title: Microsoft network client - Send unencrypted password to third-party SMB servers
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

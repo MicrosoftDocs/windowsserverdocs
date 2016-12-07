@@ -1,5 +1,5 @@
 ---
-title: Network security: Restrict NTLM: Add server exceptions in this domain
+title: Network security - Restrict NTLM - Add server exceptions in this domain
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
