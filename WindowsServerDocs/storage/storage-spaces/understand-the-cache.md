@@ -156,7 +156,7 @@ You may choose to use the CSV cache, or not – it's up to you. It is off by def
 
 ## <a name="manual"></a> Manual configuration
 
-### Cache drive selection
+### Select cache drives manually
 
 In deployments where all drives are of the same type, such as all-NVMe or all-SSD deployments, no cache is configured because Windows cannot distinguish characteristics like write endurance automatically among drives of the same type.
 
@@ -177,7 +177,7 @@ PS C:\> Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
 
 You can verify that the drives are being used for caching by running **Get-PhysicalDisk** in PowerShell and verifying that their **Usage** property says **"Journal"**.
 
-## Cache behavior 
+### Set cache behavior manually
 
 It is possible to override the default behavior of the cache. For example, you can set it to cache reads even in an all-flash deployment. We discourage modifying the behavior unless you are certain the default does not suit your workload.
 
@@ -198,6 +198,7 @@ CacheModeHDD : ReadWrite
 CacheModeSSD : ReadWrite
 ...
 ```
+
 ## Sizing the cache
 
 The cache should be sized to accommodate the working set (the data being actively read or written at any given time) of your applications and workloads.
