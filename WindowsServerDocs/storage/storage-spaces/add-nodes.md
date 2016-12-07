@@ -21,113 +21,113 @@ Typical deployments are simple to scale out by adding servers:
 
 1. Run cluster validation by opening an elevated PowerShell session on the cluster and then running the following command, including the new server *\<NewNode>*:
 
-   ```PowerShell
-   Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
-   ```
-    This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured. 
+```
+Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
+```
 
-   You can further verify that the new drives are ready for use by running **Get-PhysicalDisk** in PowerShell on the new server. Check that they are listed and marked **CanPool = True**. If they aren’t, you can check their **CannotPoolReason**, and if they contain old data or metadata, consider using **Clear-Disk**.
+This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured. 
+
+You can further verify that the new drives are ready for use by running **Get-PhysicalDisk** in PowerShell on the new server. Check that they are listed and marked **CanPool = True**. If they aren’t, you can check their **CannotPoolReason**, and if they contain old data or metadata, consider using **Clear-Disk**.
 
 2. Run the following command on the cluster to finish adding the server:
 
-   ```PowerShell
-   Add-ClusterNode -Name NewNode 
-   ```
+```
+Add-ClusterNode -Name NewNode 
+```
 
-Note that automatic pooling depends on you having only one pool. If you manually created multiple pools, add new drives to your preferred pool manually by using the **Add-PhysicalDisk** cmdlet.
+   >[!NOTE]
+   > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
 
 ### Special case: from 2 to 3 servers
 
-With two servers, you can only create two-way mirrored volumes (compare to distributed RAID-1). Any of the following cmdlets in PowerShell will do so.
+With two servers, you can only create two-way mirrored volumes (compare with distributed RAID-1). With three servers, you can create three-way mirrored volumes, which offer better fault tolerance. (For more details, check out the [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) topic.) We recommend using three-way mirroring when possible.
 
-```PowerShell
-New-Volume -FriendlyName "A" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB
-New-Volume -FriendlyName "B" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Mirror
-New-Volume -FriendlyName "C" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes 100GB
-```
+Two-way mirrored volumes cannot be upgraded in-place to three-way mirroring. Instead, you can create a new volume and migrate (copy, such as by using [Storage Replica](../storage-replica/server-to-server-storage-replication.md)) your data to it, and then remove the old volume.
 
-   >[!TIP]
-   > Two-way mirroring only has **PhysicalDiskRedundancy = 1**, meaning that you are not protected against multiple simultaneous drive or node failures.
+To begin creating three-way mirrored volumes, you have several good options. You can use whichever you prefer. 
 
-With three servers, you can create three-way mirrored volumes, which are tolerant to multiple simultaneous failures. We recommend using three-way mirroring whenever possible. To begin creating three-way mirroed volumes, you have several options:
-
-#### OPTION 1:
+#### Option 1
 
 Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
 
-```PowerShell
-New-Volume -FriendlyName "D" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -PhysicalDiskRedundancy 2
-New-Volume -FriendlyName "E" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 2 
-New-Volume -FriendlyName "F" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes 100GB -PhysicalDiskRedundancy 2
+```
+New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size <Size> -PhysicalDiskRedundancy 2
 ```
 
-#### OPTION 2:
+#### Option 2
 
-Set **PhysicalDiskRedundancy = 2** on the pool's **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
+Instead, you can set **PhysicalDiskRedundancyDefault = 2** on the pool's **ResiliencySetting** object named **Mirror**. Then, any new mirrored volumes will automatically use *three-way* mirroring even if you don't specify it.
 
-```PowerShell
-Get-StoragePool S* | Get-ResiliencySetting -Name Mirror | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2 
+```
+Get-StoragePool S2D* | Get-ResiliencySetting -Name Mirror | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2
+
+New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size <Size>
 ```
 
-#### OPTION 3:
+#### Option 3
 
-Set **PhysicalDiskRedundancy = 2** on the **StorageTier** called *Capacity*, and then create volumes by referencing the tier.
+Set **PhysicalDiskRedundancy = 2** on the **StorageTier** template called *Capacity*, and then create volumes by referencing the tier.
 
 ```PowerShell
 Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2 
-```
 
-   >[!TIP]
-   > Tip: Single parity only has **PhysicalDiskRedundancy = 1**, meaning that you are not protected against multiple simultaneous drive or node failures.
+New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes <Size>
+```
 
 ### Special case: from 3 to 4 servers
 
-With four servers, you can use "dual" parity, also commonly called "erasure coding" (compare to distributed RAID-6). This provides the same dual fault tolerance as three-way mirroring, but with a surprising 50.0% efficiency. Here again, if you’re coming from a smaller configuration, you have several options:
+With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. (For more details, check out the [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) topic.)
 
-#### OPTION 1:
+If you're coming from a smaller deployment, to begin creating dual parity volumes you have several good options. You can use whichever you prefer. 
 
-Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
+#### Option 1
 
-```PowerShell
-New-Volume -FriendlyName "Q" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
+Specify **PhysicalDiskRedundancy = 2** and **ResiliencySettingName = Parity** on each new volume upon creation.
+
+```
+New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size <Size> -PhysicalDiskRedundancy 2 -ResiliencySettingName Parity
 ```
 
-#### OPTION 2:
+#### Option 2
 
-Set **PhysicalDiskRedundancy = 2** on the pool's **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
+Set **PhysicalDiskRedundancy = 2** on the pool's **ResiliencySetting** object named **Parity**. Then, any new parity volumes will automatically use *dual* parity even if you don't specify it
 
-```PowerShell
-Get-StoragePool S* | Get-ResiliencySetting -Name Parity | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2 
+```
+Get-StoragePool S2D* | Get-ResiliencySetting -Name Parity | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2
+
+New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size <Size> -ResiliencySettingName Parity
 ```
 
 With four servers, you can also begin using mixed resiliency, where an individual volume is part mirror and part parity.
 
-For this, you will need to update your **StorageTier** configuration to have both *Performance* and *Capacity* tiers, as they would be created if you had first run **Enable-ClusterS2D** at four servers. Specifically, both tiers should have the **MediaType** of your capacity devices (e.g. HDD) and **PhysicalDiskRedundancy = 2**. The *Performance* tier should be **ResiliencySettingName = Mirror**, and the *Capacity* tier should be **ResiliencySettingName = Parity**.
+For this, you will need to update your **StorageTier** configuration to have both *Performance* and *Capacity* tiers, as they would be created if you had first run **Enable-ClusterS2D** at four servers. Specifically, both tiers should have the **MediaType** of your capacity devices (such as SSD or HDD) and **PhysicalDiskRedundancy = 2**. The *Performance* tier should be **ResiliencySettingName = Mirror**, and the *Capacity* tier should be **ResiliencySettingName = Parity**.
 
-You may find it easiest to simply remove the existing tier, and create the two new ones.
+You may find it easiest to simply remove the existing tier and create the two new ones.
 
-#### OPTION 3:
+#### Option 3
 
-Modify the **StorageTier** definitions and then create volumes by referencing the tier.
+Modify the **StorageTier** templates and then create volumes by referencing these tiers.
 
-```PowerShell
+```
 Remove-StorageTier -FriendlyName Capacity
 
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Mirror -FriendlyName Performance
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Parity -FriendlyName Capacity
 ```
 
-That’s it! You are now ready to create mixed resiliency volumes!
+That's it! You are now ready to create mixed resiliency volumes!
 
-Example:
+#### Example
 
 ```PowerShell
-New-Volume -FriendlyName "M" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 50GB, 50GB 
+New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size> 
 ```
 
 ### Greater parity efficiency beyond 4 servers
 
 As you scale beyond four servers, new volumes can benefit from ever-greater parity encoding efficiency. For example, between six and seven servers, efficiency improves from 50.0% to 66.7% as it becomes possible to use Reed-Solomon 4+2 (rather than 2+2). There are no steps you need to take to begin enjoying this new efficiency; the best possible encoding is determined automatically each time you create a volume.
+
+(For more details, check out the [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) topic.)
 
 However, any pre-existing volumes will *not* be "converted" to the new, wider encoding. One good reason is that to do so would require a massive calculation affecting literally *every single bit* in the entire deployment. If you would like pre-existing data to become encoded at the higher efficiency, you can migrate it to new volume(s).
 
@@ -169,5 +169,5 @@ Within a short time, eligible drives will automatically be claimed by Storage Sp
 
 If the drives don’t appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management**.
 
-   >[!TIP]
+   >[!NOTE]
    > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
