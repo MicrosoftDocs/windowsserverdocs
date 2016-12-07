@@ -38,7 +38,8 @@ In addition, the following requirements apply.
 
 ### Memory
 
-- At least 5 GB of RAM per 1 TB of cache drive capacity on each server, plus whatever memory you intend for your workload
+- 5 gigabytes (GB) of memory per terabyte (TB) of cache drive on each server, to store metadata structures. For example, if each server has 2 x 1 TB cache drives, you should have 2 x 5 GB = 10 GB of memory for Storage Spaces Direct internal use.
+- Any memory needed for your applications or workloads (such as virtual machines)
 
 ### Networking
 
@@ -48,31 +49,33 @@ In addition, the following requirements apply.
 
 ### Drives
 
+For help choosing drives, see [Choosing drives and resiliency types in Storage Spaces Direct to meet performance and capacity requirements](choosing-drives-and-resiliency-types.md).
+
 - Local-attached SATA, SAS, or NVMe drives
 - Every drive must be physically connected to only one server
-- Ensure SSDs have power-loss protection, i.e. they are "enterprise-grade"
-- Ensure SSDs used for cache have high endurance, we recommend 5+ drive-writes-per-day (DWPD)
+- Ensure SSDs are "enterprise-grade", meaning they have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Ensure SSDs used for cache have high write endurance. We recommend 5+ drive-writes-per-day (DWPD).
+- Drives can be 512n, 512e, or 4K native, they all work equally well
 - Separate dedicated drive for boot
 - **Not supported:** multi-path IO (MPIO) or physically connecting drives via multiple paths
 
 #### Minimum number of drives
 
 - If there are drives used as cache, there must be at least 2 per server
-- There must be at least 4 other non-cache drives per server
+- There must be at least 4 non-cache drives per server
 
-| Number of device types | Device types present               | Minimum number required         |
-|------------------------|------------------------------------|---------------------------------|
-| 1                      | All NVMe (same model)              | 4 NVMe                          |
-| 1                      | All SATA/SAS SSD (same model)      | 4 SATA/SAS SSD                  |
-| 2                      | NVMe + SATA/SAS SSD                | 2 NVMe + 4 SATA/SAS SSD         |
-| 2                      | NVMe + SATA/SAS HDD                | 2 NVMe + 4 SATA/SAS HDD         |
-| 2                      | SATA/SAS SSD + SATA/SAS HDD        | 2 SATA/SAS SSD + 4 SATA/SAS HDD |
-| 3                      | NVMe + SATA/SAS SSD + SATA/SAS HDD | 2 NVMe + 4 Others               |
+| Drive types present   | Minimum number required |
+|-----------------------|-------------------------|
+| All NVMe (same model) | 4 NVMe                  |
+| All SSD (same model)  | 4 SSD                   |
+| NVMe + SSD            | 2 NVMe + 4 SSD          |
+| NVMe + HDD            | 2 NVMe + 4 HDD          |
+| SSD + HDD             | 2 SSD + 4 HDD           |
+| NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
 
 #### Maximum
 
-- Maximum of 416 drives total across all servers
-- Maximum of 1 PB of total raw capacity
+- Maximum of 1 petabyte (1,000 TB) of raw capacity per storage pool
 
 ### Host-bus adapter (HBA)
 
