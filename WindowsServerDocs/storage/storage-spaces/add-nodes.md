@@ -30,7 +30,7 @@ Typical deployments are simple to scale out by adding servers. There are just tw
    This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured.
 
    >[!IMPORTANT]
-   > If you are re-using drives which contain old data or metadata you no longer need, clear them using **Disk Management** or the **Reset-PhysicalDisk** cmdlet. If old data or metadata is detected, the drives will not be pooled.
+   > If you are re-using drives that contain old data or metadata you no longer need, clear them using **Disk Management** or the **Reset-PhysicalDisk** cmdlet. If old data or metadata is detected, the drives aren't pooled.
 
 2. Run the following cmdlet on the cluster to finish adding the server:
 
