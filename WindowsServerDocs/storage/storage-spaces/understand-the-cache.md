@@ -187,6 +187,7 @@ To override the behavior, use **Set-ClusterS2D** cmdlet and its **-CacheModeSSD*
 
 ```
 PS C:\> Get-ClusterS2D
+
 CacheModeHDD : ReadWrite
 CacheModeSSD : WriteOnly
 ...
@@ -194,6 +195,7 @@ CacheModeSSD : WriteOnly
 PS C:\> Set-ClusterS2D -CacheModeSSD ReadWrite
 
 PS C:\> Get-ClusterS2D
+
 CacheModeHDD : ReadWrite
 CacheModeSSD : ReadWrite
 ...
