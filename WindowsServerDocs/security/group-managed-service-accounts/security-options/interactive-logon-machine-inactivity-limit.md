@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Machine inactivity limit
+title: Interactive logon - Machine inactivity limit
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

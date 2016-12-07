@@ -1,5 +1,5 @@
 ---
-title: System settings: Optional subsystems
+title: System settings - Optional subsystems
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

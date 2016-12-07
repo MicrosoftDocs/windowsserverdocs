@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Message text for users attempting to log on
+title: Interactive logon - Message text for users attempting to log on
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

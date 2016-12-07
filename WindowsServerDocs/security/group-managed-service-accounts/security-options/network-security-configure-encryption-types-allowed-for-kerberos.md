@@ -1,5 +1,5 @@
 ---
-title: Network security: Configure encryption types allowed for Kerberos
+title: Network security - Configure encryption types allowed for Kerberos
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

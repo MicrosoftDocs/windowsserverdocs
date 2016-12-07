@@ -1,5 +1,5 @@
 ---
-title: Network access: Do not allow storage of passwords and credentials for network authentication
+title: Network access - Do not allow storage of passwords and credentials for network authentication
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

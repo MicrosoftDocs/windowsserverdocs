@@ -1,4 +1,3 @@
-
 ---
 ms.assetid: 0379abc3-25c7-46ab-9a6b-80a5152365b0
 title: Custom Web Themes in AD FS
@@ -12,6 +11,7 @@ ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adfs
 ---
+
 # Custom Web Themes in AD FS 
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

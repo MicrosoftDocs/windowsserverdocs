@@ -1,5 +1,5 @@
 ---
-title: Domain member: Maximum machine account password age
+title: Domain member - Maximum machine account password age
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

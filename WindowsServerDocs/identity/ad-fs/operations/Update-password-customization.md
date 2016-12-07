@@ -1,4 +1,3 @@
-
 ---
 ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
 title: Update password customization 
@@ -12,6 +11,7 @@ ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adfs
 ---
+
 # Update password customization 
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

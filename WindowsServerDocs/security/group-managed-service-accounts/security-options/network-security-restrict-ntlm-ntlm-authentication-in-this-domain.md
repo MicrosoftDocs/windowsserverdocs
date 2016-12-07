@@ -1,5 +1,5 @@
 ---
-title: Network Security: Restrict NTLM: NTLM authentication in this domain
+title: Network Security - Restrict NTLM - NTLM authentication in this domain
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

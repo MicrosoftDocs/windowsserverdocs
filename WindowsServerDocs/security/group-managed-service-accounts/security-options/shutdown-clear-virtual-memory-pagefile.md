@@ -1,5 +1,5 @@
 ---
-title: Shutdown: Clear virtual memory pagefile
+title: Shutdown - Clear virtual memory pagefile
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

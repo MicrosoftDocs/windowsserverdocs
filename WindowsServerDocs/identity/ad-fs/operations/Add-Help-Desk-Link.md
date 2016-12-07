@@ -1,4 +1,3 @@
-
 ---
 ms.assetid: 2bac7744-9de3-491a-b0a2-4e843cec7344
 title: Add Home Link 
@@ -12,6 +11,7 @@ ms.prod: windows-server-threshold
 ms.service: active-directory
 ms.technology: identity-adfs
 ---
+
 # Add Help Desk Link 
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

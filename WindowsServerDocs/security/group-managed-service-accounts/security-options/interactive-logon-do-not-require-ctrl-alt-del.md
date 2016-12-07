@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Do not require CTRL+ALT+DEL
+title: Interactive logon - Do not require CTRL+ALT+DEL
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

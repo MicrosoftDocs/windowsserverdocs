@@ -1,5 +1,5 @@
 ---
-title: Domain member: Require strong (Windows 2000 or later) session key
+title: Domain member - Require strong (Windows 2000 or later) session key
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

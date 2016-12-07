@@ -1,5 +1,5 @@
 ---
-title: Network security: Do not store LAN Manager hash value on next password change
+title: Network security - Do not store LAN Manager hash value on next password change
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

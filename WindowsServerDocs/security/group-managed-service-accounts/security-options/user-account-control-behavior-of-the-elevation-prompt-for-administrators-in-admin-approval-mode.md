@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode
+title: User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

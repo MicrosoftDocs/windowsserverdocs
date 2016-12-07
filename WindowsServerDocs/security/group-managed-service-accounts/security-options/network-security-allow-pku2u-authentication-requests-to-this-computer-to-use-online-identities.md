@@ -1,5 +1,5 @@
 ---
-title: Network Security: Allow PKU2U authentication requests to this computer to use online identities
+title: Network Security - Allow PKU2U authentication requests to this computer to use online identities
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
