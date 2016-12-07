@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 11/07/2016
+ms.date: 12/07/2016
 manager: scottman
 ---
 # Deploy a two-node S2D SOFS for UPD storage in Azure
@@ -116,7 +116,14 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       ```powershell
       Get-ClusterSharedVolume
       ```
-   6. Create a new SMB file share on the SOFS cluster.
+   
+   6. Create the scale-out file server (SOFS):
+
+      ```powershell
+      Add-ClusterScaleOutFileServerRole -Name my-sofs1 -Cluster MY-CL1
+      ```
+
+   7. Create a new SMB file share on the SOFS cluster.
 
       ```powershell
       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
