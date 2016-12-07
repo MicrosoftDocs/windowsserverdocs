@@ -17,9 +17,7 @@ This topic describes how to add servers or drives to Storage Spaces Direct.
 
 Adding servers, often called scaling out, adds storage capacity and can improve storage performance and unlock better storage efficiency. If your deployment is hyper-converged, adding servers also provides more compute resources for your workload. 
 
-<center>
 ![scaling-out](media/add-nodes/Scaling-Out.gif)
-</center>
 
 Typical deployments are simple to scale out by adding servers. There are just two steps:
 
@@ -29,11 +27,12 @@ Typical deployments are simple to scale out by adding servers. There are just tw
 Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
 ```
 
-This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured. 
+This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured.
 
-You can further verify that the new drives are ready for use by running **Get-PhysicalDisk** in PowerShell on the new server. Check that they are listed and marked **CanPool = True**. If they aren’t, you can check their **CannotPoolReason**, and if they contain old data or metadata, consider using **Clear-Disk**.
+   >[!IMPORTANT]
+   > If you are re-using drives which contain old data or metadata you no longer need, clear them using **Disk Management** or the **Reset-PhysicalDisk** cmdlet. If old data or metadata is detected, the drives will not be pooled.
 
-2. Run the following command on the cluster to finish adding the server:
+2. Run the following cmdlet on the cluster to finish adding the server:
 
 ```
 Add-ClusterNode -Name NewNode 
@@ -174,7 +173,7 @@ Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 
 Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/). At this point, you're finished and ready to create more volumes.
 
-If the drives don’t appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management**.
+If the drives don't appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management** or with the **Reset-PhysicalDisk** cmdlet.
 
    >[!NOTE]
    > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
