@@ -62,9 +62,11 @@ Hybrid deployments aim to balance performance and capacity or to maximize capaci
 
 ## Cache drives are selected automatically
 
-In deployments with multiple types of drives, Storage Spaces Direct automatically uses all drives of the "fastest" type for caching. The remaining drives are used for capacity. Which type is "fastest" is determined according to the following hierarchy:
+In deployments with multiple types of drives, Storage Spaces Direct automatically uses all drives of the "fastest" type for caching. The remaining drives are used for capacity.
 
-[IMAGE]
+Which type is "fastest" is determined according to the following hierarchy.
+
+![Drive-Type-Hierarchy](media/understand-the-cache/Drive-Type-Hierarchy.png)
 
 For example, if you have NVMe and SSDs, the NVMe will cache for the SSDs; if you have SSDs and HDDs, the SSDs will cache for the HDDs.
 
@@ -209,7 +211,9 @@ The cache should be sized to accommodate the working set (the data being activel
 
 This is particularly important in hybrid deployments with hard disk drives. If the active working set exceeds the size of the cache, or if the active working set drifts too quickly, read cache misses will increase and writes will need to be de-staged more aggressively, hurting overall performance.
 
-If you believe your cache may be too small, you can use the built-in Performance Monitor (PerfMon.exe) utility in Windows to inspect the rate of cache misses. Specifically, you should compare the **Cache Miss Reads/sec** from the **Cluster Storage Hybrid Disk** counter set to the overall read IOPS of your deployment. Each "Hybrid Disk" corresponds to one capacity drive. For example, in this screenshot, 2 cache drives are bound to 4 capacity drives (1:2 ratio), resulting in 4 "Hybrid Disk" object instances per server.
+You can use the built-in Performance Monitor (PerfMon.exe) utility in Windows to inspect the rate of cache misses. Specifically, you can compare the **Cache Miss Reads/sec** from the **Cluster Storage Hybrid Disk** counter set to the overall read IOPS of your deployment. Each "Hybrid Disk" corresponds to one capacity drive.
+
+For example, 2 cache drives bound to 4 capacity drives results in 4 "Hybrid Disk" object instances per server.
 
 ![Performance-Monitor](media/understand-the-cache/PerfMon.png)
 
