@@ -23,11 +23,11 @@ Typical deployments are simple to scale out by adding servers. There are just tw
 
 1. Run the [cluster validation wizard](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) using the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell (run as Administrator). Include the new server *\<NewNode>* you wish to add.
 
-```
-Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
-```
+   ```
+   Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
+   ```
 
-This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured.
+   This confirms that the new server is running Windows Server 2016 Datacenter Edition, has joined the same Active Directory Domain Services domain as the existing servers, has all the required roles and features, and has networking properly configured.
 
    >[!IMPORTANT]
    > If you are re-using drives which contain old data or metadata you no longer need, clear them using **Disk Management** or the **Reset-PhysicalDisk** cmdlet. If old data or metadata is detected, the drives will not be pooled.
@@ -142,17 +142,17 @@ If your deployment uses chassis or rack fault tolerance, you must specify the ch
 
 1. Create a temporary fault domain for the node by opening an elevated PowerShell session and then using the following command, where *\<NewNode>* is the name of the new cluster node:
 
-```
-New-ClusterFaultDomain -Type Node -Name <NewNode> 
-```
+   ```
+   New-ClusterFaultDomain -Type Node -Name <NewNode> 
+   ```
 
 2. Move this temporary fault-domain into the chassis or rack where the new server is located in the real world, as specified by *\<ParentName>*:
 
-```
-Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
-```
+   ```
+   Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
+   ```
 
-For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
+   For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
 
 3. Add the server to the cluster as described in [Adding servers](#adding-servers). When the new server joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
 
