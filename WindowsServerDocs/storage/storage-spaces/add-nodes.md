@@ -17,11 +17,13 @@ This topic describes how to add servers or drives to Storage Spaces Direct.
 
 Adding servers, often called scaling out, adds storage capacity and can improve storage performance and unlock better storage efficiency. If your deployment is hyper-converged, adding servers also provides more compute resources for your workload. 
 
+<center>
 ![scaling-out](media/add-nodes/Scaling-Out.gif)
+</center>
 
-Typical deployments are simple to scale out by adding servers: 
+Typical deployments are simple to scale out by adding servers. There are just two steps:
 
-1. Run cluster validation by opening an elevated PowerShell session on the cluster and then running the following command, including the new server *\<NewNode>*:
+1. Run the [cluster validation wizard](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) using the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell (run as Administrator). Include the new server *\<NewNode>* you wish to add.
 
 ```
 Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
