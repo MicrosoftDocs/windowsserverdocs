@@ -164,7 +164,10 @@ You may choose to use the CSV cache, or not – it's up to you. It is off by def
 
 In deployments where all drives are of the same type, such as all-NVMe or all-SSD deployments, no cache is configured because Windows cannot distinguish characteristics like write endurance automatically among drives of the same type.
 
-To use higher-endurance drives to cache for lower-endurance drives of the same type, you can specify which drive model to use with the **-CacheDeviceModel** parameter of the **Enable-ClusterS2D** cmdlet. Once Storage Spaces Direct is enabled, all drives of that model will be used for caching. Be sure to match the model string exactly as it appears in the output of **Get-PhysicalDisk**.
+To use higher-endurance drives to cache for lower-endurance drives of the same type, you can specify which drive model to use with the **-CacheDeviceModel** parameter of the **Enable-ClusterS2D** cmdlet. Once Storage Spaces Direct is enabled, all drives of that model will be used for caching.
+
+   >[!TIP]
+   > Be sure to match the model string exactly as it appears in the output of **Get-PhysicalDisk**.
 
 ####  Example
 
