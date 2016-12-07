@@ -47,7 +47,7 @@ You'll need to supply the following information when you deploy the Marketplace 
 
 Use these steps to create your small-footprint RDS deployment: 
 
-1. Sign into the [Azure portal](portal.azure.com).
+1. Sign into the [Azure portal](https://portal.azure.com).
 2. Click **New** to add your deployment.
 3. Type "RDS" in the search field and press Enter.
 4. Click **Remote Desktop Services (RDS) Deployment**, and then click **Create**.
