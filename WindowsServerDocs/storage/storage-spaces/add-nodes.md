@@ -15,6 +15,8 @@ This topic describes how to add servers or drives to Storage Spaces Direct.
 
 ## <a name="adding-servers"></a> Adding servers
 
+![scaling-out](media/add-nodes/Scaling-Out.gif)
+
 Adding servers, often called scaling out, adds storage capacity and can improve storage performance and unlock better storage efficiency. If your deployment is hyper-converged, adding servers also provides more compute resources for your workload. 
 
 Typical deployments are simple to scale out by adding servers: 
@@ -39,6 +41,8 @@ Add-ClusterNode -Name NewNode
    > Automatic pooling depends on you having only one pool. If you've circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
 
 ### From 2 to 3 servers: unlocking three-way mirroring
+
+![scaling-from-2-to-3](media/add-nodes/Scaling-2-to-3.png)
 
 With two servers, you can only create two-way mirrored volumes (compare with distributed RAID-1). With three servers, you can create three-way mirrored volumes for better fault tolerance. We recommend using three-way mirroring whenever possible.
 
@@ -75,6 +79,8 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 ```
 
 ### From 3 to 4 servers: unlocking dual parity
+
+![scaling-from-3-to-4](media/add-nodes/Scaling-3-to-4.png)
 
 With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
 
@@ -150,6 +156,8 @@ Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName>
 3. Add the server to the cluster as described in [Adding servers](#adding-servers). When the new server joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
 
 ## <a name="adding-drives"></a> Adding drives
+
+![scaling-up](media/add-nodes/Scaling-Up.gif)
 
 Adding drives, also known as scaling up, adds storage capacity and can improve performance. If you have available slots, you can add drives to each server to expand your storage capacity without adding servers. You can add cache drives, or capacity drives, independently. 
 
