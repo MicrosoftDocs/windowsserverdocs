@@ -2,12 +2,12 @@
 title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server-threshold
 description: Minimum hardware requirements for testing Storage Spaces Direct.
-ms.author: cosdar
+ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
-author: cosmosdarwin
-ms.date: 12/2/2016
+author: eldenchristensen
+ms.date: 12/7/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct hardware requirements
