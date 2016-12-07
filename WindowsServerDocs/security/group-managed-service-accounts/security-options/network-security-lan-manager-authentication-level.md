@@ -1,5 +1,5 @@
 ---
-title: Network security: LAN Manager authentication level
+title: Network security - LAN Manager authentication level
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

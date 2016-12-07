@@ -1,6 +1,6 @@
 ﻿---
 ms.assetid: 38c9bcd3-c6f8-4153-8e42-5fd31568c65a
-title: Checklist: Setting Up a Federation Server Proxy
+title: Checklist - Setting Up a Federation Server Proxy
 author: billmath
 manager: femila
 ms.date: 09/12/2016

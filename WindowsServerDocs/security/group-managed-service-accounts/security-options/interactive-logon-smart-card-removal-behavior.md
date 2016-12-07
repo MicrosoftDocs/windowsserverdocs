@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Smart card removal behavior
+title: Interactive logon - Smart card removal behavior
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

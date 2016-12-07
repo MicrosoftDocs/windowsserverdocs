@@ -1,5 +1,5 @@
 ---
-title: Network security: Minimum session security for NTLM SSP based (including secure RPC) clients
+title: Network security - Minimum session security for NTLM SSP based (including secure RPC) clients
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

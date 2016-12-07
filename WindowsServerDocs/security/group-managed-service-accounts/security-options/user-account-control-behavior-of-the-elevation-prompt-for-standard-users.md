@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Behavior of the elevation prompt for standard users
+title: User Account Control - Behavior of the elevation prompt for standard users
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

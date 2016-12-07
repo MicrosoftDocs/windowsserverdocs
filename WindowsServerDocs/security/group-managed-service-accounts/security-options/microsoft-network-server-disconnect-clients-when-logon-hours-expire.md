@@ -1,5 +1,5 @@
 ---
-title: Microsoft network server: Disconnect clients when logon hours expire
+title: Microsoft network server - Disconnect clients when logon hours expire
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

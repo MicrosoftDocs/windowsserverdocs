@@ -1,5 +1,5 @@
 ---
-title: Audit: Audit the use of Backup and Restore privilege
+title: Audit - Audit the use of Backup and Restore privilege
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

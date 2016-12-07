@@ -1,5 +1,5 @@
 ---
-title: Network security: Allow Local System to use computer identity for NTLM
+title: Network security - Allow Local System to use computer identity for NTLM
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

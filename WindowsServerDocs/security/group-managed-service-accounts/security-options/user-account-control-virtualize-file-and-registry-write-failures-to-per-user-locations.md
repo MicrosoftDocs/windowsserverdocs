@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Virtualize file and registry write failures to per-user locations
+title: User Account Control - Virtualize file and registry write failures to per-user locations
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Network security: Force logoff when logon hours expire
+title: Network security - Force logoff when logon hours expire
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

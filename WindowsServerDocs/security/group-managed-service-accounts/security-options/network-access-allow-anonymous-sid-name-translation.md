@@ -1,5 +1,5 @@
 ---
-title: Network access: Allow anonymous SID Name translation
+title: Network access - Allow anonymous SID Name translation
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Accounts: Block Microsoft accounts
+title: Accounts - Block Microsoft accounts
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Shutdown: Allow system to be shut down without having to log on
+title: Shutdown - Allow system to be shut down without having to log on
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

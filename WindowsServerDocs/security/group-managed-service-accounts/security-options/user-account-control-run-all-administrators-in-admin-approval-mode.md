@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Run all administrators in Admin Approval Mode
+title: User Account Control - Run all administrators in Admin Approval Mode
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

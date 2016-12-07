@@ -1,5 +1,5 @@
 ---
-title: System cryptography: Force strong key protection for user keys stored on the computer - Explain text
+title: System cryptography - Force strong key protection for user keys stored on the computer - Explain text
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

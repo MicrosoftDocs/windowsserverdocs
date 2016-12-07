@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Require smart card
+title: Interactive logon - Require smart card
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
