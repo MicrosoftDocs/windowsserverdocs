@@ -36,11 +36,11 @@ Add-ClusterNode -Name NewNode
 ```
 
    >[!NOTE]
-   > Automatic pooling depends on you having only one pool. If you’ve circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
+   > Automatic pooling depends on you having only one pool. If you've circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
 
 ### Special case: from 2 to 3 servers
 
-With two servers, you can only create two-way mirrored volumes (compare with distributed RAID-1). With three servers, you can create three-way mirrored volumes, which offer better fault tolerance. (For more details, check out the [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) topic.) We recommend using three-way mirroring when possible.
+With two servers, you can only create two-way mirrored volumes (compare with distributed RAID-1). With three servers, you can create three-way mirrored volumes for better fault tolerance. We recommend using three-way mirroring whenever possible.
 
 Two-way mirrored volumes cannot be upgraded in-place to three-way mirroring. Instead, you can create a new volume and migrate (copy, such as by using [Storage Replica](../storage-replica/server-to-server-storage-replication.md)) your data to it, and then remove the old volume.
 
@@ -76,9 +76,9 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 ### Special case: from 3 to 4 servers
 
-With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. (For more details, check out the [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) topic.)
+With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
 
-If you're coming from a smaller deployment, to begin creating dual parity volumes you have several good options. You can use whichever you prefer. 
+If you're coming from a smaller deployment, you have several good options to begin creating dual parity volumes. You can use whichever you prefer.
 
 #### Option 1
 
