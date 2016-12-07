@@ -51,7 +51,9 @@ New-Volume -FriendlyName "C" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D
 
 With three servers, you can create three-way mirrored volumes, which are tolerant to multiple simultaneous failures. We recommend using three-way mirroring whenever possible. To begin creating three-way mirroed volumes, you have several options:
 
-#### OPTION 1: Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
+#### OPTION 1:
+
+Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
 
 ```PowerShell
 New-Volume -FriendlyName "D" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -PhysicalDiskRedundancy 2
@@ -59,22 +61,20 @@ New-Volume -FriendlyName "E" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D
 New-Volume -FriendlyName "F" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes 100GB -PhysicalDiskRedundancy 2
 ```
 
-#### OPTION 2: Set **PhysicalDiskRedundancy = 2** on the pool’s **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
+#### OPTION 2:
+
+Set **PhysicalDiskRedundancy = 2** on the pool's **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
 
 ```PowerShell
 Get-StoragePool S* | Get-ResiliencySetting -Name Mirror | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2 
 ```
 
-#### OPTION #: Set **PhysicalDiskRedundancy = 2** on the **StorageTier** called *Capacity*, and then create volumes by referencing the tier.
+#### OPTION 3:
+
+Set **PhysicalDiskRedundancy = 2** on the **StorageTier** called *Capacity*, and then create volumes by referencing the tier.
 
 ```PowerShell
 Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2 
-```
-
-It is worth noting that with three servers, you are also able to use single parity (compare to distributed RAID-5). This has the advantage of greater storage efficiency: 66.7%, compared to 50.0% with two-way mirroring or 33.3% with three-way mirroring.
-
-```PowerShell
-New-Volume -FriendlyName "P" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Parity 
 ```
 
    >[!TIP]
@@ -84,25 +84,31 @@ New-Volume -FriendlyName "P" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D
 
 With four servers, you can use "dual" parity, also commonly called "erasure coding" (compare to distributed RAID-6). This provides the same dual fault tolerance as three-way mirroring, but with a surprising 50.0% efficiency. Here again, if you’re coming from a smaller configuration, you have several options:
 
-#### OPTION 1: Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
+#### OPTION 1:
+
+Specify **PhysicalDiskRedundancy = 2** on each new volume upon creation.
 
 ```PowerShell
 New-Volume -FriendlyName "Q" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 100GB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
 ```
 
-#### OPTION 2: Set **PhysicalDiskRedundancy = 2** on the pool’s **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
+#### OPTION 2:
+
+Set **PhysicalDiskRedundancy = 2** on the pool's **ResiliencySetting** object, if you won’t reference the tier when thereafter creating volumes.
 
 ```PowerShell
 Get-StoragePool S* | Get-ResiliencySetting -Name Parity | Set-ResiliencySetting -PhysicalDiskRedundancyDefault 2 
 ```
 
-With four servers, you can also begin using mixed resiliency, or "multi-resiliency", where an individual volume is part mirror, part parity.
+With four servers, you can also begin using mixed resiliency, where an individual volume is part mirror and part parity.
 
 For this, you will need to update your **StorageTier** configuration to have both *Performance* and *Capacity* tiers, as they would be created if you had first run **Enable-ClusterS2D** at four servers. Specifically, both tiers should have the **MediaType** of your capacity devices (e.g. HDD) and **PhysicalDiskRedundancy = 2**. The *Performance* tier should be **ResiliencySettingName = Mirror**, and the *Capacity* tier should be **ResiliencySettingName = Parity**.
 
 You may find it easiest to simply remove the existing tier, and create the two new ones.
 
-#### OPTION 3: Modify the **StorageTier** definitions and then create volumes by referencing the tier.
+#### OPTION 3:
+
+Modify the **StorageTier** definitions and then create volumes by referencing the tier.
 
 ```PowerShell
 Remove-StorageTier -FriendlyName Capacity
