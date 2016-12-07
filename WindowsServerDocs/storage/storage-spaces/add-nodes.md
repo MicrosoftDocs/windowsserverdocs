@@ -38,7 +38,7 @@ Add-ClusterNode -Name NewNode
    >[!NOTE]
    > Automatic pooling depends on you having only one pool. If you've circumvented the standard configuration to create multiple pools, you will need to add new drives to your preferred pool yourself using **Add-PhysicalDisk**.
 
-### Special case: from 2 to 3 servers
+### From 2 to 3 servers: unlocking three-way mirroring
 
 With two servers, you can only create two-way mirrored volumes (compare with distributed RAID-1). With three servers, you can create three-way mirrored volumes for better fault tolerance. We recommend using three-way mirroring whenever possible.
 
@@ -74,7 +74,7 @@ Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2
 New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes <Size>
 ```
 
-### Special case: from 3 to 4 servers
+### From 3 to 4 servers: unlocking dual parity
 
 With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
 
@@ -121,7 +121,7 @@ That's it! You are now ready to create mixed resiliency volumes by referencing t
 New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size> 
 ```
 
-### Greater parity efficiency beyond 4 servers
+### Beyond 4 servers: greater parity efficiency
 
 As you scale beyond four servers, new volumes can benefit from ever-greater parity encoding efficiency. For example, between six and seven servers, efficiency improves from 50.0% to 66.7% as it becomes possible to use Reed-Solomon 4+2 (rather than 2+2). There are no steps you need to take to begin enjoying this new efficiency; the best possible encoding is determined automatically each time you create a volume.
 
