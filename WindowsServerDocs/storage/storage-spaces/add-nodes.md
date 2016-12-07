@@ -100,13 +100,11 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 With four servers, you can also begin using mixed resiliency, where an individual volume is part mirror and part parity.
 
-For this, you will need to update your **StorageTier** configuration to have both *Performance* and *Capacity* tiers, as they would be created if you had first run **Enable-ClusterS2D** at four servers. Specifically, both tiers should have the **MediaType** of your capacity devices (such as SSD or HDD) and **PhysicalDiskRedundancy = 2**. The *Performance* tier should be **ResiliencySettingName = Mirror**, and the *Capacity* tier should be **ResiliencySettingName = Parity**.
-
-You may find it easiest to simply remove the existing tier and create the two new ones.
+For this, you will need to update your **StorageTier** templates to have both *Performance* and *Capacity* tiers, as they would be created if you had first run **Enable-ClusterS2D** at four servers. Specifically, both tiers should have the **MediaType** of your capacity devices (such as SSD or HDD) and **PhysicalDiskRedundancy = 2**. The *Performance* tier should be **ResiliencySettingName = Mirror**, and the *Capacity* tier should be **ResiliencySettingName = Parity**.
 
 #### Option 3
 
-Modify the **StorageTier** templates and then create volumes by referencing these tiers.
+You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by refering the tier template: it's just a template.
 
 ```
 Remove-StorageTier -FriendlyName Capacity
@@ -115,11 +113,11 @@ New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedund
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Parity -FriendlyName Capacity
 ```
 
-That's it! You are now ready to create mixed resiliency volumes!
+That's it! You are now ready to create mixed resiliency volumes by referencing these tier templates.
 
 #### Example
 
-```PowerShell
+```
 New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size> 
 ```
 
@@ -127,9 +125,9 @@ New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFrie
 
 As you scale beyond four servers, new volumes can benefit from ever-greater parity encoding efficiency. For example, between six and seven servers, efficiency improves from 50.0% to 66.7% as it becomes possible to use Reed-Solomon 4+2 (rather than 2+2). There are no steps you need to take to begin enjoying this new efficiency; the best possible encoding is determined automatically each time you create a volume.
 
-(For more details, check out the [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) topic.)
-
 However, any pre-existing volumes will *not* be "converted" to the new, wider encoding. One good reason is that to do so would require a massive calculation affecting literally *every single bit* in the entire deployment. If you would like pre-existing data to become encoded at the higher efficiency, you can migrate it to new volume(s).
+
+For more details, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
 
 ### Adding servers when using chassis or rack fault tolerance
 
@@ -149,7 +147,7 @@ Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName>
 
    For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
 
-3. Add the server to the cluster as described in [Adding servers](#adding-servers). <br>When the new server joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
+3. Add the server to the cluster as described in [Adding servers](#adding-servers). When the new server joins the cluster, it's automatically associated (using its name) with the placeholder fault domain.
 
 ## <a name="adding-drives"></a> Adding drives
 
