@@ -12,21 +12,21 @@ ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 # Resilient File System
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availibility, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It provides a similar API surface to previous Microsoft file systems, but it seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
+The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availibility, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
 
 ## Key benefits
 
 ### **Resiliency**
-ReFS prioritizes the integrity and availability of data, minimizing volume downtime and improving the ability to detect and fix corruptions:
+ReFS introduces new features that can precisely detect corruptions and also fix those corruptions while remaining online, helping provide increased integrity and availibility for your data: 
 
-- **Inbuilt chkdsk** - ReFS includes inbuilt chkdsk, where repair processes are both localized to the area of corruption and performed online, requiring no volume downtime. 
-- **Storage spaces integration** - When used in conjunction with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces or Storage Spaces Direct. 
-- **Salvaging data** - If a volume becomes corrupted and an alternate copy of the corrupted data doesn't exist, ReFS removes the corrupt data from the namespace on a live volume and ensures that good data is not adversely affected by nonrepairable corrupt data. 
+- **Online repair** - Repair processes are both localized to the area of corruption and performed online, requiring no volume downtime. 
+- **Storage spaces integration** - When used in conjunction with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces. 
+- **Salvaging data** - If a volume becomes corrupted and an alternate copy of the corrupted data doesn't exist, ReFS removes the corrupt data from the namespace on a live volume. In other words, ReFS keeps the volume online while it handles non-correctable corruptions.
 - **Integrity-streams** - ReFS introduces checksums for metadata and optionally for file data, giving ReFS the ability to reliably detect corruptions. 
 - **Proactive error correction** - In addition to validating data before reads and writes, ReFS introduces a data integrity scanner, known as a <i>scrubber</i>. This scrubber periodically scans the volume, identifying latent corruptions and proactively triggering a repair of corrupt data. 
 
 ### **Performance**
-In addition to providing resiliency improvements, ReFS optimizes for performance-sensitive and virtualized workloads. Real-time tiering, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
+In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tiering, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **Real-time tiering** - Real-time tiering enables ReFS to deliver both highly performant and also capacity efficient storage for your data. By rotating data between performance and capacity tiers in real-time, incoming read and writes can be serviced in the performance tier while the less-frequently accessed data can be stored in the capacity tier. 
 
@@ -35,7 +35,7 @@ In addition to providing resiliency improvements, ReFS optimizes for performance
 - **Sparse VDL** - When setting the valid data length of a file, ReFS avoids expensive zeroing operations and performs these operations instantly in metadata. 
 
 ### **Scalability**
-ReFS is designed to support extremely large data sets--petabytes and larger--without negatively impacting performance.
+ReFS is designed to support extremely large data sets--petabytes and larger--without negatively impacting performance, achieving greater scale than prior file systems. 
 
 ## Supported deployments
 
