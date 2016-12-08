@@ -1,5 +1,6 @@
 ---
-title: Understand the cache in Storage Spaces Direct
+title: Understanding the cache in Storage Spaces Direct
+ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: dongill
@@ -9,13 +10,13 @@ author: cosmosdarwin
 ms.date: 12/7/2016
 ---
 
-# Understand the cache in Storage Spaces Direct
+# Understanding the cache in Storage Spaces Direct
 >Applies To: Windows Server 2016
 
 [Storage Spaces Direct](storage-spaces-direct-overview.md) features a built-in server-side cache to maximize storage performance. It is a large, persistent, real-time read *and* write cache. The cache is configured automatically when Storage Spaces Direct is enabled. In most cases, no manual management whatsoever is required. 
 How the cache works depends on the types of drives present.
 
-## Review: drive types and deployment options
+## Drive types and deployment options
 
 Storage Spaces Direct currently works with three types of storage devices:
 
