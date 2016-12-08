@@ -8,7 +8,7 @@ ms.date: 12/6/2016
 ms.topic: article
 ms.prod: refs
 ms.technology: storage
-ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
+ms.assetid: 
 ---
 
 # Block cloning on ReFS
