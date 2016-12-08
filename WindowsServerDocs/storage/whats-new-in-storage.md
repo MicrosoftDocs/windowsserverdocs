@@ -104,21 +104,20 @@ This capability is new in Windows Server 2016. This requires a Windows Server 20
 If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
 
 ## ReFS 
-ReFS v2, the next iteration of ReFS, provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     
+RThe next iteration of ReFS provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     
 
 **What value does this change add?**<br>
-ReFS v2 provides the following improvements to previous versions of ReFS:
+ReFS introduces the following new features:
 
-* The introduction of block cloning substantially improves the performance of fast-fixed VHD creation and VHD checkpoint merge operations. 
-* The implementation of new tiering logic enables:
-    * Faster I/O performance. 
-    * Multi-resiliency tiering.
+* The introduction of block cloning substantially improves the performance VM operations, such as .vhdx checkpoint merge operations. 
+* ReFS implements new tiering logic, helping deliver faster performance and increased storage capacity. This new functionality enables:
+    * Multi-resiliency tiering: using mirroring in the performance tier and parity in the capacity tier, for example.
     * Increased responsiveness to drifting working sets. 
     * Support for SMR (Shingled Magnetic Recording) media. 
-* The new ReFS Fix tool enables the recovery of leaked storage and helps salvage data from critical corruptions. 
+* The new ReFS scan tool enables the recovery of leaked storage and helps salvage data from critical corruptions. 
 
 **What works differently?**<br>
-ReFS v2 is new in Windows Server 2016. 
+These capabilities are new in Windows Server 2016. 
 
 ## See also  
 * [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
