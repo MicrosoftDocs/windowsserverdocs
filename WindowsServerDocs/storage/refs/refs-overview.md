@@ -29,9 +29,9 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tiering, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **Real-time tiering** - Real-time tiering enables ReFS to deliver both high performance and also capacity efficient storage for your data.
-    - ReFS allows the performance tier and the capacity tier to have different resiliency schemes: for example, the performance tier and the capacity tier can use mirror and parity resiliency schemes respectively, helping to deliver fast and capacity-efficient storage. 
+    - Multiresiliency tiers - ReFS allows the performance tier and the capacity tier to have different resiliency schemes: for example, the performance tier and the capacity tier can use mirror and parity resiliency schemes respectively, helping to deliver fast and capacity-efficient storage. 
     - All writes will occur on the performance tier, and large chunks of cold data in the performance tier will be efficiently moved to the capacity tier.  
-    - Reads of hot data will occur on the Storage Spaces Direct cache, helping accelerate fragmented reads that are often characteristic of virtualized workloads. 
+    - Reads of hot data will occur on [the cache created in Storage Spaces Direct](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/understand-the-cache), helping accelerate fragmented reads that are often characteristic of virtualized workloads. 
 
 - **Block cloning** - Block cloning is central to accelerating VM operations, such as quick, low-impact VM checkpoint merge operations.  
 
