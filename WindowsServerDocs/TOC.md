@@ -1023,6 +1023,7 @@
 ##### [Troubleshoot the Windows Server 2016 Software Defined Networking Stack](networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)
 #### [System Center Technologies for Software Defined Networking](networking/sdn/Sc-Tech-for-Sdn.md)
 #### [Microsoft Azure and Software Defined Networking](networking/sdn/Azure_and_Sdn.md)
+
 ## [Storage](storage/storage.md)
 ### [What's new in Storage](storage/whats-new-in-storage.md)
 ### [Data Deduplication](storage/data-deduplication/overview.md)
@@ -1035,6 +1036,7 @@
 ### [Storage Spaces Direct](storage/storage-spaces/storage-spaces-direct-overview.md)
 #### [Storage Spaces Direct hardware requirements](storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Fault tolerance and storage efficiency](storage/storage-spaces/Storage-Spaces-Fault-Tolerance.md)
+#### [Understanding the cache](storage/storage-spaces/understand-the-cache.md)
 #### [Choosing drives and resiliency types](storage/storage-spaces/choosing-drives-and-resiliency-types.md)
 #### [Software Storage Bus](storage/storage-spaces/Software-Storage-Bus-Overview.md)
 #### [Hyper-converged solution using Storage Spaces Direct](storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)
@@ -1051,6 +1053,7 @@
 ### [Storage-class memory health management](storage/storage-spaces/Storage-class-memory-health.md)
 ### [iSCSI boot](storage/iscsi/iscsi-boot-overview.md)
 ### [ReFS integrity streams](storage/refs/integrity-streams.md)
+
 ## [Security and Assurance](security/security-and-assurance.md)
 ### [Device Health attestation](security/device-health-attestation.md)
 ### [Guarded fabric and shielded VMs](security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
