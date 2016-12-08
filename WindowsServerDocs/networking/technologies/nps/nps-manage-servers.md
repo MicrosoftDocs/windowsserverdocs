@@ -25,5 +25,7 @@ This section contains the following topics.
 - [Configure NPS UDP Port Information](nps-udp-ports-configure.md)
 - [Disable NAS Notification Forwarding](nps-disable-nas-notifications.md)
 - [Increase Concurrent Authentications Processed by NPS](nps-concurrent-auth.md)
+- [Register an NPS Server in an Active Directory Domain](nps-manage-register.md)
+- [Unregister an NPS Server from an Active Directory Domain](nps-manage-unregister.md)
 - [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)
 
