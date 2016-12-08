@@ -104,16 +104,16 @@ This capability is new in Windows Server 2016. This requires a Windows Server 20
 If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
 
 ## ReFS 
-RThe next iteration of ReFS provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     
+The next iteration of ReFS provides support for large-scale storage deployments with diverse workloads, delivering reliability, resiliency, and scalability for your data.     
 
 **What value does this change add?**<br>
-ReFS introduces the following new features:
+ReFS introduces the following improvements:
 
-* The introduction of block cloning substantially improves the performance VM operations, such as .vhdx checkpoint merge operations. 
 * ReFS implements new tiering logic, helping deliver faster performance and increased storage capacity. This new functionality enables:
-    * Multi-resiliency tiering: using mirroring in the performance tier and parity in the capacity tier, for example.
+    * Multi-resiliency tiering (using mirroring in the performance tier and parity in the capacity tier, for example).
     * Increased responsiveness to drifting working sets. 
     * Support for SMR (Shingled Magnetic Recording) media. 
+* The introduction of block cloning substantially improves the performance of VM operations, such as .vhdx checkpoint merge operations. 
 * The new ReFS scan tool enables the recovery of leaked storage and helps salvage data from critical corruptions. 
 
 **What works differently?**<br>
