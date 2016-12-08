@@ -31,7 +31,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 - **Real-time tiering** - Real-time tiering enables ReFS to deliver both high performance and also capacity efficient storage for your data.
     - Multiresiliency tiers - ReFS allows the performance tier and the capacity tier to have different resiliency schemes: for example, the performance tier and the capacity tier can use mirror and parity resiliency schemes respectively, helping to deliver fast and capacity-efficient storage. 
     - All writes will occur on the performance tier, and large chunks of cold data in the performance tier will be efficiently moved to the capacity tier.  
-    - Reads of hot data will occur on [the cache created in Storage Spaces Direct](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/understand-the-cache), helping accelerate fragmented reads that are often characteristic of virtualized workloads. 
+    - Reads of hot data will occur on [the cache in Storage Spaces Direct](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/understand-the-cache), helping accelerate fragmented reads that are often characteristic of virtualized workloads. 
 
 - **Block cloning** - Block cloning is central to accelerating VM operations, such as quick, low-impact VM checkpoint merge operations.  
 
@@ -44,7 +44,7 @@ ReFS is designed to support extremely large data sets--petabytes and larger--wit
 
 **ReFS on Storage Spaces Direct** <br>
 Deploying ReFS on Storage Spaces Direct is the recommended setup for virtualized workloads: 
-- Real-time tiering and the Storage Spaces Direct read cache deliver high performance and capacity-efficient storage. 
+- Real-time tiering and the cache in Storage Spaces Direct deliver high performance and capacity-efficient storage. 
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
@@ -107,5 +107,6 @@ Deploying ReFS on plain disks is suitable for applications that provide their ow
 | Sparse VDL | Yes | No |
 | ReFS real-time tiering | Yes | No |
 
- 
+## See also
+[Storage Spaces Direct in Windows Server 2016](https://technet.microsoft.com/en-us/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
 
