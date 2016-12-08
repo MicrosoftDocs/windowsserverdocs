@@ -821,6 +821,7 @@
 ###### [Configure NPS UDP Port Information](networking/technologies/nps/nps-udp-ports-configure.md)
 ###### [Disable NAS Notification Forwarding](networking/technologies/nps/nps-disable-nas-notifications.md)
 ###### [Increase Concurrent Authentications Processed by NPS](networking/technologies/nps/nps-concurrent-auth.md)
+###### [Register an NPS Server in an Active Directory Domain](networking/technologies/nps/nps-manage-register.md)
 ###### [Use Regular Expressions in NPS](networking/technologies/nps/nps-crp-reg-expressions.md)
 ##### [Manage NPS Templates](networking/technologies/nps/nps-manage-templates.md)
 ### [Network Subsystem Performance Tuning](networking/technologies/network-subsystem/net-sub-performance-top.md)
