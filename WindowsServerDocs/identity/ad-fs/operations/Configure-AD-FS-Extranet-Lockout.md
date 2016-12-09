@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/02/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

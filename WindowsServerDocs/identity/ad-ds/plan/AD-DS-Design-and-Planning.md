@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 # AD DS Design and Planning

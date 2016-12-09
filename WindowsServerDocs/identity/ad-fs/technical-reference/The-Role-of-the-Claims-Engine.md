@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 8b15d44e-e4e6-4510-aa91-cc7ec7161b0a
 title: The Role of the Claims Engine
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

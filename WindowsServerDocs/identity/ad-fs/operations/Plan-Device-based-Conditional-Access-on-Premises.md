@@ -8,7 +8,7 @@ manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # Plan Device-based Conditional Access on-Premises

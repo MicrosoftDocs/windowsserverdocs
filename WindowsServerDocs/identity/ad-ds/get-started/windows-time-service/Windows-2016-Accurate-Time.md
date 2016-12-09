@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows 2016 Accurate Time
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 12/05/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 
