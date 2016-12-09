@@ -6,7 +6,7 @@ manager: femila
 ms.date: 10/14/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: active-directory-federation-services
 ---
 

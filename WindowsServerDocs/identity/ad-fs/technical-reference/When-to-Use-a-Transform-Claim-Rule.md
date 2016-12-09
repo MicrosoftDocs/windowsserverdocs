@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 77aa61bf-9c04-4889-a5d2-6f45bc1b8bd2
 title: When to Use a Transform Claim Rule
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

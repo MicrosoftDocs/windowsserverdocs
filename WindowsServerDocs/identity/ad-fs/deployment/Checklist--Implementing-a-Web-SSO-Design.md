@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 30657638-5709-48c5-87aa-98f688e07b4c
 title: Checklist - Implementing a Web SSO Design
 description:
@@ -7,7 +7,7 @@ manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ---
