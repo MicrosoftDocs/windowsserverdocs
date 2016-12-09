@@ -824,6 +824,7 @@
 ###### [Register an NPS Server in an Active Directory Domain](networking/technologies/nps/nps-manage-register.md)
 ###### [Unregister an NPS Server from an Active Directory Domain](networking/technologies/nps/nps-manage-unregister.md)
 ###### [Use Regular Expressions in NPS](networking/technologies/nps/nps-crp-reg-expressions.md)
+###### [Verify Configuration After NPS Server Changes](networking/technologies/nps/nps-manage-verify.md)
 ##### [Manage NPS Templates](networking/technologies/nps/nps-manage-templates.md)
 ### [Network Subsystem Performance Tuning](networking/technologies/network-subsystem/net-sub-performance-top.md)
 #### [Choosing a Network Adapter](networking/technologies/network-subsystem/net-sub-choose-nic.md)

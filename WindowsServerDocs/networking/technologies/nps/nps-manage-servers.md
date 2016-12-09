@@ -12,6 +12,8 @@ author: jamesmci
 
 # Manage NPS Servers
 
+>Applies To: windows Server 2016
+
 You can use the topics in this section to manage NPS servers.
 
 >[!NOTE]
@@ -28,4 +30,5 @@ This section contains the following topics.
 - [Register an NPS Server in an Active Directory Domain](nps-manage-register.md)
 - [Unregister an NPS Server from an Active Directory Domain](nps-manage-unregister.md)
 - [Use Regular Expressions in NPS](nps-crp-reg-expressions.md)
+- [Verify Configuration After NPS Server Changes](nps-manage-verify.md)
 
