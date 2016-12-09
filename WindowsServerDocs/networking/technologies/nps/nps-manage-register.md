@@ -56,7 +56,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 1. Open Command Prompt or windows PowerShell. 
 
-2. Type the following at the command prompt: **netsh nps add registeredserver** *domain* *server*, and then press ENTER.
+2. Type the following at the command prompt: **netsh nps add registeredserver** &nbsp;*domain* &nbsp;*server*, and then press ENTER.
 
 >[!NOTE]
 >In the preceding command, *domain* is the DNS domain name of the domain where you want to register the NPS server, and *server* is the name of the NPS server computer.
