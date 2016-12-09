@@ -20,7 +20,7 @@ Block cloning in ReFS, however, performs copies as a low-cost metadata operation
   
 ## How it works 
 
-Block cloning on ReFS converts a file data operation into a metadata operation. In order to make this optimization, ReFS introduces reference counts into its metadata for regions that have been copied. This reference count records the number of distinct file regions that reference the same logical clusters. This allows multiple files to share the same physical data:
+Block cloning on ReFS converts a file data operation into a metadata operation. In order to make this optimization, ReFS introduces reference counts into its metadata for copied regions. This reference count records the number of distinct file regions that reference the same physical regions. This allows multiple files to share the same physical data:
 
 <img src=media/ref-count-example.gif alt="Show reference count updates when multiple files reference same LCN"/>
 
@@ -28,11 +28,11 @@ Block cloning on ReFS converts a file data operation into a metadata operation. 
 By keeping a reference count for each logical cluster, ReFS does not break the isolation between files: writes to shared regions trigger an allocate-on-write mechanism, where ReFS allocates a new region for the incoming write. This mechanism preserves the integrity of the shared logical clusters. 
 
 ### Example
-Suppose there are two files, X and Y, where each file is composed of three regions, and each region maps to separate logical clusters. The initial reference count reflects that region is only referenced in one file region.
+Suppose there are two files, X and Y, where each file is composed of three regions, and each region maps to separate logical clusters.
 
 <img src=media/block-clone-1.png alt="Two files each with three distinct virtual clusters which all map to logical clusters that have ref count 1"/>
 
-Now suppose an application issues a block clone operation from File X, over regions A and B, to File Y at the offset of region E. The following file system state would result:
+Now suppose an application issues a block clone operation from File X to File Y, for regions A and B to be copied at the offset of region E. The following file system state would result:
 
 <img src=media/block-clone-2.png alt="Reference count shows 2 for blocked clone region"/>
 
