@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 98c5ef45-2bcb-4f87-86c8-5ac6c16a6097
 title: Token-Signing Certificates
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 
