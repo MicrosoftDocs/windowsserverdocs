@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
 title: Web SSO Design
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

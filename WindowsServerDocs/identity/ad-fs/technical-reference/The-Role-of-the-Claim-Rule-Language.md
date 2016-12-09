@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 title: The Role of the Claim Rule Language
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

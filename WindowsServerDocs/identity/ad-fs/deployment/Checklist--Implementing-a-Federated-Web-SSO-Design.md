@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 6b49cde3-d2cb-4ece-b9b7-dc600e037495
 title: Checklist - Implementing a Federated Web SSO Design
 description:
@@ -7,7 +7,7 @@ manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ---
