@@ -20,34 +20,35 @@ Block cloning in ReFS, however, performs copies as a low-cost metadata operation
   
 ## How it works 
 
-Block cloning on ReFS converts a file data operation into a metadata operation. In order to make this optimization, ReFS introduces a reference count into its metadata, which records the number of virtual clusters that reference the same LCN (logical cluster number). This allows multiple files to share the same physical data:
+Block cloning on ReFS converts a file data operation into a metadata operation. In order to make this optimization, ReFS introduces reference counts into its metadata for regions that have been copied. This reference count records the number of distinct file regions that reference the same logical clusters. This allows multiple files to share the same physical data:
 
 <img src=media/ref-count-example.gif alt="Show reference count updates when multiple files reference same LCN"/>
 
 
-By keeping a reference count for each logical cluster, ReFS does not break the isolation between files: writes to shared clusters trigger an allocate-on-write mechanism, where ReFS allocates a new cluster for the incoming write. This mechanism preserves the integrity of the logical cluster that was shared by multiple files. 
+By keeping a reference count for each logical cluster, ReFS does not break the isolation between files: writes to shared regions trigger an allocate-on-write mechanism, where ReFS allocates a new region for the incoming write. This mechanism preserves the integrity of the shared logical clusters. 
 
 ### Example
-Suppose there are two files, X and Y, where each file is only composed of three virtual clusters, and each virtual cluster maps to a separate LCN (logical cluster number). The initial reference count reflects that each logical cluster is only referenced by one virtual cluster.
+Suppose there are two files, X and Y, where each file is composed of three regions, and each region maps to separate logical clusters. The initial reference count reflects that region is only referenced in one file region.
 
 <img src=media/block-clone-1.png alt="Two files each with three distinct virtual clusters which all map to logical clusters that have ref count 1"/>
 
-Now suppose an application issues a block clone operation from File X, over a region that includes LCNs 1 and 2, to File Y at the offset where LCN 5 current is. The following file system state would result:
+Now suppose an application issues a block clone operation from File X, over regions A and B, to File Y at the offset of region E. The following file system state would result:
 
 <img src=media/block-clone-2.png alt="Reference count shows 2 for blocked clone region"/>
 
 This file system state reveals a successful duplication of the block cloned region. Because ReFS performs this copy operation by only updating VCN to LCN mappings, no physical data was read, nor was the physical data in File Y overwritten. File X and Y now share logical clusters, reflected by the reference counts in the table. Because no data was physically copied, ReFS reduces capacity consumption on the volume. 
 
-Now suppose the application attempts to overwrite LCN 1 in File X. ReFS will duplicate the shared region into another logical cluster (LCN 7, in this example), update the reference counts appropriately, and perform the incoming write to the newly duplicated region. This ensures that isolation between the files is preserved.   
+Now suppose the application attempts to overwrite region A in File X. ReFS will duplicate the shared region, update the reference counts appropriately, and perform the incoming write to the newly duplicated region. This ensures that isolation between the files is preserved.   
 
 <img src=media/block-clone-3.png alt="Isolation preserved by writing to LCN 7 and updating ref counts"/>
 
-Note that after the modifying write, LCN 2 is still shared by both files.  
+After the modifying write, region B is still shared by both files. Note that if region A were larger than a cluster, only the modified cluster would have been duplicated, and the remaining portion would have remained shared.
 
 
 ## Functionality restrictions and remarks
 - The source and destination region must begin and end at a cluster boundary. 
 - The cloned region must be less than 4GB in length. 
+- The maximum number of file regions that can map to the same physical region is 64K.
 - The destination region must not extend past the end of the file. If the application wishes to extend the destination with cloned data, it must first call [SetEndOfFile](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365531(v=vs.85).aspx). 
 - If the source and destination regions are in the same file, they must not overlap. (The application may be able to proceed by splitting up the block clone operation into multiple block clones that no longer overlap).
 - The source and destination files must be on the same ReFS volume. 
