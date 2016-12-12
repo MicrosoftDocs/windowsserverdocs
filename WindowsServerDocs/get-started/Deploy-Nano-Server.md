@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 12/06/2016
+ms.date: 12/12/2016
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -85,7 +85,7 @@ This table shows the roles and features that are available in this release of Na
 
 - Failover Clustering role
 - VM Failover Clustering
-- Storage Spaces Direct
+- Storage Spaces Direct (S2D)
 - Storage Quality of Service
 - Volume Replication Clustering
 - SMB Witness Service
@@ -95,13 +95,13 @@ This table shows the roles and features that are available in this release of Na
 
 - File Server role
 - Data Deduplication
-- Multipath I/O (including a driver for MSDSM)
-- ReFS (regular and v1)
-- iSCSI Initiator (but not iSCSI target)
+- Multipath I/O, including a driver for Microsoft Device-Specific Module (MSDSM)
+- ReFS (v1 and v2)
+- iSCSI Initiator (but not iSCSI Target)
 - Storage Replica
-- Storage Management Service
+- Storage Management Service with SMI-S support
 - SMB Witness Service
-- Volume Shadow Copy Service
+- Volume Shadow Copy Service (VSS)
 - Dynamic Volumes
 - Basic Windows storage providers (for Windows Storage Management)
  
