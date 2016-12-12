@@ -12,7 +12,7 @@ ms.assetid: 5f72ceb6-6f90-48f6-bfc3-bdad63984ce7
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 12/07/2016
+ms.date: 12/12/2016
 ---
 # Quick start for Remote Desktop Services in Azure
 
@@ -43,31 +43,35 @@ Creating your deployment through the Azure Marketplace is the quickest way to ge
 You'll need to supply the following information when you deploy the Marketplace offering:
 - Administrator user name and password. This is a new user that will manage the deployment.
 - DNS name and AD domain name. These are NEW resources that are created. Make sure the names are meaningful.
-- VM size. You get to choose the size of VMs to use for the RDS components. Make sure you're aware of the performance and cost differences between the different sizes.
+- VM size. You get to choose the size of VMs to use for the RDSH endpoints. You can also manually change the sizes after the initial deployment to help you optimize the VMs for your workloads and for cost.
 
-Use these steps to create your small-footprint RDS deployment: 
+Use these steps to create your small-footprint RDS deployment from the Azure Marketplace: 
 
-1. Sign into the [Azure portal](https://portal.azure.com).
-2. Click **New** to add your deployment.
-3. Type "RDS" in the search field and press Enter.
-4. Click **Remote Desktop Services (RDS) Deployment**, and then click **Create**.
-5. Follow the steps in the portal to create and deploy RDS.
- 
-When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
+1. Launch the Azure Marketplace RDS deployment:
+   1. Sign into the [Azure portal](https://portal.azure.com).
+   2. Click **New** to add your deployment.
+   3. Type "RDS" in the search field and press Enter.
+   4. Click **Remote Desktop Services (RDS) Deployment**, and then click **Create**.
+   5. Follow the steps in the portal to create and deploy RDS.
+2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
+   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) to install any certificates needed to connect to the RDS deployment. The script also starts RD Web in your browser.
+   2. When prompted, sign into your Azure account. Select the Azure subscription, resource group, and public IP address created for this new deployment.
+   3. The RD Web page lets you authenticate to your new deployment - sign in with the admin user and password you created during deployment. You can also send users this RD Web site to test their desktops and applications.
 
 ## Customized RDS using Quickstart templates
 
-You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. Unlike the Marketplace offering, you can customize a deployment through templates.
+You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. o	Unlike the Marketplace offering, you can make further customizations, such as use an existing AD on a virtual network, use a custom OS image for the RDSH VMs, and layer on high availability for RDS components. 
 
-The specific template you use to deploy RDS depends on what you want. There are templates that use existing AD or VNET resources, that use a custom OS image for the VMs, and that extend RDS for high availability. 
+Use these steps to create your small-footprint RDS deployment from an Azure RDS template: 
 
-To get started with templates, do the following:
-
-1. Go to the [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/) site.
-2. Type "RDS" in the search box, and press Enter.
-3. Choose the template that matches what you are trying to do. Make sure you meet any prerequisites for that specific template. (For example, if you are want to use a custom image for your VMs, make sure you have already uploaded that image to an Azure storage account.)
-4. Click **Deploy to Azure**.
-5. You'll need to provide some details (like admin user name, AD domain name) in the Azure portal. This varies based on the template you choose.
-6. Click **Purchase**.
-
-When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
+1. Pick your Azure Quickstart template:
+   1. Go to the [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/) site.
+   2. Type "RDS" in the search box, and press Enter.
+   3. Choose the template that matches what you are trying to do. Make sure you meet any prerequisites for that specific template. (For example, if you are want to use a custom image for your VMs, make sure you have already uploaded that image to an Azure storage account.)
+   4. Click **Deploy to Azure**.
+   5. You'll need to provide some details (like admin user name, AD domain name) in the Azure portal. This varies based on the template you choose.
+   6. Click **Purchase**.
+2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
+   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) to install any certificates needed to connect to the RDS deployment. The script also starts RD Web in your browser.
+   2. When prompted, sign into your Azure account. Select the Azure subscription, resource group, and public IP address created for this new deployment.
+   3. The RD Web page lets you authenticate to your new deployment - sign in with the admin user and password you created during deployment. You can also send users this RD Web site to test their desktops and applications.
