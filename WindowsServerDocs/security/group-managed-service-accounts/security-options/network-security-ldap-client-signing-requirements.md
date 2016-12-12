@@ -1,5 +1,5 @@
 ---
-title: Network security: LDAP client signing requirements
+title: Network security - LDAP client signing requirements
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

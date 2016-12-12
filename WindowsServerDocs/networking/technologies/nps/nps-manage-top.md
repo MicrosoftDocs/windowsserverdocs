@@ -19,6 +19,7 @@ You can use the topics in this section to manage Network Policy Server.
 >[!NOTE]
 >For additional Network Policy Server documentation, you can use the following library sections.  
 >- [Getting Started with Network Policy Server](nps-getstart-top.md)
+>- [Plan Network Policy Server](nps-plan-top.md)
 >- [Deploy Network Policy Server](nps-deploy.md)  
   
 This section contains the following topics.  

@@ -1,5 +1,5 @@
 ---
-title: Network security: Allow LocalSystem NULL session fallback
+title: Network security - Allow LocalSystem NULL session fallback
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

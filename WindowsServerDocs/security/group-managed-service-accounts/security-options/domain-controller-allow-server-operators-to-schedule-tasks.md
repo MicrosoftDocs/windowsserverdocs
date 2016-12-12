@@ -1,5 +1,5 @@
 ---
-title: Domain controller: Allow server operators to schedule tasks
+title: Domain controller - Allow server operators to schedule tasks
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

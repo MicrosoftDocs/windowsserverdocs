@@ -1,5 +1,5 @@
 ---
-title: Recovery console: Allow floppy copy and access to all drives and folders
+title: Recovery console - Allow floppy copy and access to all drives and folders
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

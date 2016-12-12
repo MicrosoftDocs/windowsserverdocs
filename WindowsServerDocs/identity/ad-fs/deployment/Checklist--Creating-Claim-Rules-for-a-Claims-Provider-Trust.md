@@ -1,13 +1,13 @@
-﻿---
+---
 ms.assetid: 503733f8-be0c-429c-81f0-cd4205e8b118
-title: Checklist: Creating Claim Rules for a Claims Provider Trust
+title: Checklist - Creating Claim Rules for a Claims Provider Trust
 description:
 author: billmath
 manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ms.author: billmath

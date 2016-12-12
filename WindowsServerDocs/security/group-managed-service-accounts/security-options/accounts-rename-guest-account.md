@@ -1,5 +1,5 @@
 ---
-title: Accounts: Rename guest account
+title: Accounts - Rename guest account
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: ffb9d63c-ba7c-4ad1-b814-6db67f98c943
 title: The Role of the Claims Pipeline
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/08/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

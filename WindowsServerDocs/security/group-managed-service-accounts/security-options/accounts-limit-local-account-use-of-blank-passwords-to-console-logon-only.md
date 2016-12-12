@@ -1,5 +1,5 @@
 ---
-title: Accounts: Limit local account use of blank passwords to console logon only
+title: Accounts - Limit local account use of blank passwords to console logon only
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

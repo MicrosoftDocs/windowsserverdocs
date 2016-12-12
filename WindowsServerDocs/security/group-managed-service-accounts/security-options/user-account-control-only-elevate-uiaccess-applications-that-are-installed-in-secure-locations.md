@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Only elevate UIAccess applications that are installed in secure locations
+title: User Account Control - Only elevate UIAccess applications that are installed in secure locations
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

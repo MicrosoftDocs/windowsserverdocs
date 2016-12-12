@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Do not display last user name
+title: Interactive logon - Do not display last user name
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

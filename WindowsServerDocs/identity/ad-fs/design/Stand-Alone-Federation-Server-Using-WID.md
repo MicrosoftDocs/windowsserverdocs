@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 33b80a3f-67f3-4da7-ac4a-7fd2232fbd5d
 title: Stand-Alone Federation Server Using WID
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

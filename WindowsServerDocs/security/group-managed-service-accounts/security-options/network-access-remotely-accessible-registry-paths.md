@@ -1,5 +1,5 @@
 ---
-title: Network access: Remotely accessible registry paths
+title: Network access - Remotely accessible registry paths
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: Federation Server Farm Using WID
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 
