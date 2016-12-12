@@ -30,9 +30,9 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 
 - **Real-time tier optimization** - By dividing a volume into a performance tier and a capacity tier, ReFS can leverage real-time tier optimization to deliver both high performance and also capacity efficient storage for your data.
     - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time. 
-    - If using a [hybrid deployment](../storage-spaces/choosing-drives-and-resiliency-types) (mixing flash and HDD devices), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache) will help accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads will also occur in the performance tier. 
+    - If using a [hybrid deployment](../storage-spaces/choosing-drives-and-resiliency-types.md) (mixing flash and HDD devices), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads will also occur in the performance tier. 
     
-- **Tiers with multiple resiliency types** - ReFS allows the performance tier and the capacity tier to have different resiliency schemes: for example, the performance tier and the capacity tier can use mirror and parity resiliency schemes respectively, helping to deliver fast storage for hot data and capacity-efficient storage for cold data. 
+- **Tiers with multiple resiliency types** - ReFS allows the performance tier and the capacity tier to have different resiliency types: for example, the performance tier and the capacity tier can use mirror and parity resiliency types respectively, helping to deliver fast storage for hot data and capacity-efficient storage for cold data. 
     
 - **Block cloning** - Block cloning is central to accelerating VM operations, such as quick, low-impact VM checkpoint merge operations.  
 
@@ -45,7 +45,7 @@ ReFS is designed to support extremely large data sets--petabytes and larger--wit
 
 **ReFS on Storage Spaces Direct** <br>
 Deploying ReFS on Storage Spaces Direct is the recommended setup for virtualized workloads: 
-- Real-time tier optimization and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache) deliver high performance and capacity-efficient storage. 
+- Real-time tier optimization and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
@@ -109,5 +109,5 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 | Real-time tier optimization| Yes | No |
 
 ## See also
-[Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview)
+[Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
 
