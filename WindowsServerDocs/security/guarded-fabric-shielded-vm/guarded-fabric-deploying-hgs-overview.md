@@ -37,14 +37,14 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 <col width="38%" />
 <col width="26%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th align="left">![Host Guardian Service administrator tasks](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-administrator-tasks.png)</th>
-<th align="left">![Fabric administrator tasks](../media/Guarded-Fabric-Shielded-VM/guarded-host-fabric-administrator-tasks.png)</th>
-<th align="left">![Tenant administrator tasks](../media/Guarded-Fabric-Shielded-VM/guarded-host-tenant-administrator-tasks.png)</th>
+<tr>
+<td align="left" BGCOLOR="#00B850">
+<p><img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-administrator-tasks.png" alt="Host Guardian Service administrator tasks" hspace="8" align="left" /><font color="#FFFFFF"><strong>Host Guardian Service administrator tasks</strong></font></p></td>
+<td align="left" BGCOLOR="#92D050">
+<p><img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-fabric-administrator-tasks.png" alt="Fabric administrator tasks" hspace="8" align="left" /><font color="#FFFFFF"><strong>Fabric administrator tasks</strong></font></p></td>
+<td align="left" BGCOLOR="#FFC000">
+<p><img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-tenant-administrator-tasks.png" alt="Tenant administrator tasks" hspace="8" align="left" /><font color="#FFFFFF"><strong>Tenant administrator tasks</strong></font></p></td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
 <td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/1111.png" alt="Step 1" hspace="8" align="left" /> [Verify HGS prerequisites](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#prerequisites-for-the-host-guardian-service) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 1" hspace="8" align="right" /></p></td>
 <td align="left"><p></p></td>
@@ -116,7 +116,7 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 <td align="left"><p></p></td>
 <td align="left"><p><img src="../media/Guarded-Fabric-Shielded-VM/151515.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p>
 <p><img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-plain-spacer-15.png" alt="Step 15" hspace="8" align="left" /> [Create shielded VMs using VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" /></p></td>
-</tr></tbody>
+</tr>
 </table>
 
 ## See also
