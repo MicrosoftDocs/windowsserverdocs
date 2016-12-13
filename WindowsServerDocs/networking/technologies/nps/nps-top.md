@@ -20,9 +20,10 @@ You can use this topic for an overview of Network Policy Server in Windows Serve
 >In addition to this topic, the following NPS documentation is available.
 > - [Network Policy Server Best Practices](nps-best-practices.md)
 > - [Getting Started with Network Policy Server](nps-getstart-top.md)
+> - [Plan Network Policy Server](nps-plan-top.md)
 > - [Deploy Network Policy Server](nps-deploy.md)
 > - [Manage Network Policy Server](nps-manage-top.md)
-> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows&reg; 10
+> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows 10
 > - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 R2 and Windows 8.1
 > - [NPS Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 and Windows 8
 
