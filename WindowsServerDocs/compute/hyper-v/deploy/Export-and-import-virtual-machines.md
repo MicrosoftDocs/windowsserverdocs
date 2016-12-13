@@ -26,11 +26,11 @@ To create a virtual machine export:
 
 2. Choose where to store the exported files, and click **Export**.
 
-When the export has been completed you can see all exported files under the export location.
+When the export is done, you can see all exported files under the export location.
 
 ### Using PowerShell
 
-Open a session as Administrator and run a command like the following after replacing \<vm name\> and \<path\>:
+Open a session as Administrator and run a command like the following, after replacing \<vm name\> and \<path\>:
 
 ```powershell
 Export-VM -Name \<vm name\> -Path \<path\>
@@ -56,17 +56,17 @@ To import a virtual machine:
 
 4. Select the virtual machine to import.
 
-5. Choose the import type, and click **Next**. (For explanations, see [Import types](#import-types), below)
+5. Choose the import type, and click **Next**. (For descriptions, see [Import types](#import-types), below.)
 
 6. Click **Finish**.
 
 ### Import using PowerShell
 
-To import a virtual machine using PowerShell, use the **Import-VM** command.  The following commands demonstrate an import of each of the three import types using PowerShell.
+Use the **Import-VM** cmdlet, following the example for the type of import you want. For descriptions of the types, see [Import types](#import-types), below. 
 
 #### Register in place
 
-To complete an in-place import of a virtual machine, the command would look similar to this. Recall that an in place import uses the files where they are stored at the time of import and retains the virtual machines id.
+This type of import uses the files where they are stored at the time of import and retains the virtual machine's ID. The following command shows an example of an import file. Run a similar command with your own values.
 
 ```powershell
 Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
@@ -74,7 +74,7 @@ Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx'
 
 #### Restore
 
-To import the virtual machine specifying your own path for the virtual machine files, the command would look similar to this.
+To import the virtual machine specifying your own path for the virtual machine files, run a command like this, replacing the examples with your values:
 
 ```powershell
 Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -VhdDestinationPath 'D:\Virtual Machines\WIN10DOC' -VirtualMachinePath 'D:\Virtual Machines\WIN10DOC'
@@ -82,7 +82,7 @@ Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
 
 #### Import as a copy
 
-To complete a copy import and move the virtual machine files to the default Hyper-V location, the command would be similar to this.
+To complete a copy import and move the virtual machine files to the default Hyper-V location, run a command like this, replacing the examples with your values:
 
 ``` PowerShell
 Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -GenerateNewId
@@ -94,9 +94,9 @@ For details, see [Import-VM](https://technet.microsoft.com/library/hh848495.aspx
 
 Hyper-V offers three import types:
 
-- **Register in-place** – Export files have been placed in the location where the virtual machine should be run from. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already registered with Hyper-V, it needs to be deleted before the import will work. When the import has completed, the export files become the running state files and cannot be removed.
+- **Register in-place** – This type assumes export files are in the location where you'll store and run the virtual machine. The imported virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already registered with Hyper-V, it needs to be deleted before the import will work. When the import has completed, the export files become the running state files and can't be removed.
 
-- **Restore the virtual machine** – Restore the virtual machine to a location you choose, or use the default to Hyper-V. This import type creates a copy of the exported file and moves them to the selected location. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already running in Hyper-V it needs to be deleted before the import can be completed. When the import has completed the exported files remain untouched and can be removed and / or imported again.
+- **Restore the virtual machine** – Restore the virtual machine to a location you choose, or use the default to Hyper-V. This import type creates a copy of the exported files and moves them to the selected location. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already running in Hyper-V, it needs to be deleted before the import can be completed. When the import has completed, the exported files remain intact and can be removed or imported again.
 
-- **Copy the virtual machine** – This is similar to the Restore type in that you select a location for the VM files. The difference is that when imported the virtual machine has a new unique ID. This allows for the Virtual Machine to be imported into the same host multiple time.
+- **Copy the virtual machine** – This is similar to the Restore type in that you select a location for the files. The difference is that the imported virtual machine has a new unique ID, which means you can import the virtual machine to the same host multiple times.
 
