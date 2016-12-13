@@ -4,15 +4,18 @@ description: Shows you how to export and import virtual machines using Hyper-V M
 ms.prod: windows-server-threshold
 author: KBDAzure
 ms.author: kathydav
+manager: dongill
 ms.technology: compute-hyper-v
-ms.date: 12/12/2016
+ms.date: 12/13/2016
 ms.topic: article
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 ---
 
+>Applies To: Windows Server 2016, Windows 10
+
 # Export and Import virtual machines
 
-Exporting and importing virtual machines lets you quickly move or copy virtual machines. This article shows you how to export and import a virtual machine and discusses some of the choices you can make when doing this.
+This article shows you how to export and import a virtual machine, which is a quick way to move or copy them. This article also discusses some of the choices to make when doing an export or import.
 
 ## Export a Virtual Machine
 
