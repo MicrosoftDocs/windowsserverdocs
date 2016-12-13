@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 9831b421-8fb7-4e15-ac27-c013cbca6d05
 title: Certificate Requirements for Federation Servers
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

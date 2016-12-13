@@ -1,5 +1,5 @@
 ---
-title: Devices: Allow undock without having to log on
+title: Devices - Allow undock without having to log on
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

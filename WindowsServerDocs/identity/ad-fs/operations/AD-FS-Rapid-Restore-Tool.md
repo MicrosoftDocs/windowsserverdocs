@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
 title: AD FS Rapid Restore Tool
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/25/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool

@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: ef83960f-d2cf-441f-b2b6-d97822ec7149
 title: Create a Rule to Transform an Incoming Claim
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 
 ---

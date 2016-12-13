@@ -1,5 +1,5 @@
 ---
-title: Devices: Restrict CD-ROM access to locally logged-on user only
+title: Devices - Restrict CD-ROM access to locally logged-on user only
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

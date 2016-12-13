@@ -1,5 +1,5 @@
 ---
-title: Domain controller: LDAP server signing requirements
+title: Domain controller - LDAP server signing requirements
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

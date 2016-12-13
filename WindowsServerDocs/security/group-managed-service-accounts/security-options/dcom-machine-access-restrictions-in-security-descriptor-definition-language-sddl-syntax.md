@@ -1,5 +1,5 @@
 ---
-title: DCOM: Machine Access Restrictions in Security Descriptor Definition Language (SDDL) syntax
+title: DCOM - Machine Access Restrictions in Security Descriptor Definition Language (SDDL) syntax
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

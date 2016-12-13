@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What&#39;s New in Active Directory Domain Services Installation and Removal
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 

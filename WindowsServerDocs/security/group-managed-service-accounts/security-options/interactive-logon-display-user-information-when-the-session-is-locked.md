@@ -1,5 +1,5 @@
 ---
-title: Interactive logon: Display user information when the session is locked
+title: Interactive logon - Display user information when the session is locked
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

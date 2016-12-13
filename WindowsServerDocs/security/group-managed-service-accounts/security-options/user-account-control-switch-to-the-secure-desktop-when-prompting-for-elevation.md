@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Switch to the secure desktop when prompting for elevation
+title: User Account Control - Switch to the secure desktop when prompting for elevation
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 16c217ad-700a-48a3-8398-4a7f7e9edb52
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # MultiPoint Services migration in Windows Server 2016
 >Applies To: Windows Server 2016

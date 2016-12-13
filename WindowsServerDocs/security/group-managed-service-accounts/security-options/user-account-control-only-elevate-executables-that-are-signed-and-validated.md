@@ -1,5 +1,5 @@
 ---
-title: User Account Control: Only elevate executables that are signed and validated
+title: User Account Control - Only elevate executables that are signed and validated
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

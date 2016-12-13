@@ -1,13 +1,13 @@
-﻿---
+---
 ms.assetid: 8f954004-40d5-4c5e-8e0d-e8700c8ec7b1
-title: Checklist: Setting Up a Federation Server
+title: Checklist - Setting Up a Federation Server
 description:
 author: billmath
 manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ms.author: billmath

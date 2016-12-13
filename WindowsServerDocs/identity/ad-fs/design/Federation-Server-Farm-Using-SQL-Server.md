@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: Federation Server Farm Using SQL Server
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/22/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

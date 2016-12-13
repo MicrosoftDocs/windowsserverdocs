@@ -1,5 +1,5 @@
 ---
-title: Network access: Do not allow anonymous enumeration of SAM accounts and shares
+title: Network access - Do not allow anonymous enumeration of SAM accounts and shares
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold

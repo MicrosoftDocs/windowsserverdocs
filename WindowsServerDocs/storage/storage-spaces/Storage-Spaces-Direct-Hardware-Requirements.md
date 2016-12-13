@@ -1,26 +1,27 @@
 ---
 title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server-threshold
-ms.author: jgerend
+description: Minimum hardware requirements for testing Storage Spaces Direct.
+ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
-author: cosmosdarwin
-ms.date: 11/23/2016
+author: eldenchristensen
+ms.date: 12/7/2016
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
-# Storage Spaces Direct Hardware Requirements
+# Storage Spaces Direct hardware requirements
 >Applies To: Windows Server 2016
 
-## Foreword
+This topic describes minimum hardware requirements for testing Storage Spaces Direct. For production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! To learn more, check out [Partner Offers at Microsoft Ignite 2016](https://channel9.msdn.com/events/Ignite/2016/BRK2167).
 
-Microsoft strongly recommends deploying Storage Spaces Direct with *Windows Server Software-Defined (WSSD)* offers from our hardware partners. They have been thoughtfully designed and extensively validated to provide the best experience. To learn more, check out [Partner Offers at Microsoft Ignite 2016](https://channel9.msdn.com/events/Ignite/2016/BRK2167).
+If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, as described in [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).
 
 ## Basic requirements
 
 All systems, components, devices, and drivers must be "Certified for Windows Server 2016" per the [Windows Server Catalog](https://www.windowsservercatalog.com).
 
-The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/en-us/library/cc732035(v=ws.10).aspx) per the wizard in the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell.
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell.
 
 In addition, the following requirements apply.
 
@@ -33,11 +34,12 @@ In addition, the following requirements apply.
  
 ### CPU
 
-- Minimum of Nehalem or later compatible processor
+- Minimum of Intel Nehalem or later compatible processor
 
 ### Memory
 
-- At least 5 GB of RAM per 1 TB of cache drive capacity on each server, plus whatever memory you intend for your workload
+- 5 gigabytes (GB) of memory per terabyte (TB) of cache drive on each server, to store metadata structures. For example, if each server has 2 x 1 TB cache drives, you should have 2 x 5 GB = 10 GB of memory for Storage Spaces Direct internal use.
+- Any memory needed for your applications or workloads (such as virtual machines)
 
 ### Networking
 
@@ -47,31 +49,33 @@ In addition, the following requirements apply.
 
 ### Drives
 
+For help choosing drives, see [Choosing drives and resiliency types in Storage Spaces Direct to meet performance and capacity requirements](choosing-drives-and-resiliency-types.md).
+
 - Local-attached SATA, SAS, or NVMe drives
 - Every drive must be physically connected to only one server
-- Ensure SSDs have power-loss protection, i.e. they are "enterprise-grade"
-- Ensure SSDs used for cache have high endurance, we recommend 5+ drive-writes-per-day (DWPD)
+- Ensure SSDs are "enterprise-grade", meaning they have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Ensure SSDs used for cache have high write endurance. We recommend 5+ drive-writes-per-day (DWPD).
+- Drives can be 512n, 512e, or 4K native, they all work equally well
 - Separate dedicated drive for boot
 - **Not supported:** multi-path IO (MPIO) or physically connecting drives via multiple paths
 
 #### Minimum number of drives
 
 - If there are drives used as cache, there must be at least 2 per server
-- There must be at least 4 other non-cache drives per server
+- There must be at least 4 non-cache drives per server
 
-| Number of device types | Device types present               | Minimum number required         |
-|------------------------|------------------------------------|---------------------------------|
-| 1                      | All NVMe (same model)              | 4 NVMe                          |
-| 1                      | All SATA/SAS SSD (same model)      | 4 SATA/SAS SSD                  |
-| 2                      | NVMe + SATA/SAS SSD                | 2 NVMe + 4 SATA/SAS SSD         |
-| 2                      | NVMe + SATA/SAS HDD                | 2 NVMe + 4 SATA/SAS HDD         |
-| 2                      | SATA/SAS SSD + SATA/SAS HDD        | 2 SATA/SAS SSD + 4 SATA/SAS HDD |
-| 3                      | NVMe + SATA/SAS SSD + SATA/SAS HDD | 2 NVMe + 4 Others               |
+| Drive types present   | Minimum number required |
+|-----------------------|-------------------------|
+| All NVMe (same model) | 4 NVMe                  |
+| All SSD (same model)  | 4 SSD                   |
+| NVMe + SSD            | 2 NVMe + 4 SSD          |
+| NVMe + HDD            | 2 NVMe + 4 HDD          |
+| SSD + HDD             | 2 SSD + 4 HDD           |
+| NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
 
 #### Maximum
 
-- Maximum of 416 drives total across all servers
-- Maximum of 1 PB of total raw capacity
+- Maximum of 1 petabyte (1,000 TB) of raw capacity per storage pool
 
 ### Host-bus adapter (HBA)
 
