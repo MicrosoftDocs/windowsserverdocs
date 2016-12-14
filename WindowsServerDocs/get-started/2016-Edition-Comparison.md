@@ -43,7 +43,7 @@ manager: dongill
 |Active Directory Federation Services| |Yes|Yes|
 |AD Lightweight Directory Services| |Yes|Yes|
 |AD Rights Management Services| |Yes|Yes|
-|Device Health Attestation| |???|Yes|
+|Device Health Attestation| |Yes|Yes|
 |DHCP Server| |Yes|Yes|
 |DNS Server| |Yes|Yes|
 |Fax Server| |Yes|Yes|
@@ -91,7 +91,7 @@ manager: dongill
 |Failover Clustering|Yes|Yes|
 |Group Policy Management|Yes|Yes|
 |Host Guardian Hyper-V Support|No|Yes|
-|I/O Quality of Service|???|Yes|
+|I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |IPAM Server|Yes|Yes|
@@ -116,12 +116,12 @@ manager: dongill
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
-|Software Load Balancer|???|Yes|
+|Software Load Balancer|Yes|Yes|
 |Storage Replica|No|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |VM Shielding Tools for Fabric Management|Yes|Yes|
-|WebDAV Redirector|???|Yes|
+|WebDAV Redirector|Yes|Yes|
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Defender features|Installed|Installed|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
