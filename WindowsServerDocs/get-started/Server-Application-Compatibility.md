@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/29/2016
+ms.date: 12/14/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -22,19 +22,21 @@ This table lists Microsoft server applications that support installation and fun
 
 For customers and software vendor partners looking for more information on Windows Server compatibility with non-Microsoft applications, visit the main [Windows Server Logo Certification portal](https://msdn.microsoft.com/enterprisecloudcertified).
 
-|Microsoft Server Application|	Available at Windows Server 2016 General Availability?|	Product Link|
+|Microsoft Server Application|	Available Currently?|	Product Link|
 |-------------------------------------|--------------------------------------------|-------------------|
+|Microsoft SQL Server 2012|Yes| [Hardware and Software Requirements for Installing SQL Server 2012](https://msdn.microsoft.com/library/ms143506(v=sql.110).aspx)|
+|Microsoft SQL Server 2014|Yes|[Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(SQL.120).aspx)|
 |Microsoft SQL Server 2016|	Yes|	[SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server)| 
-|Microsoft System Center Virtual Machine Manager 2016|	Yes|	[Preparing your environment for System Center 2016 - Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/deploy/preparing-your-environment-for-system-center-2016---virtual-machine-manager)|
-|Microsoft System Center Operations Manager 2016|	Yes|	[Operations Manager](https://technet.microsoft.com/system-center-docs/om/operations-manager)|
-|Microsoft System Center Data Protection Manager 2016|	Yes|	[What's new in DPM in System Center 2016](https://technet.microsoft.com/system-center-docs/dpm/get-started/what-s-new-in-dpm-in-system-center-technical-preview)|
+|Microsoft System Center Virtual Machine Manager 2016|	Yes|	[What's New in System Center](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
+|Microsoft System Center Operations Manager 2016|	Yes|	[What's New in System Center](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
+|Microsoft System Center Data Protection Manager 2016|	Yes|	[What's New in System Center](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
 |Microsoft System Center Configuration Manager (version 1606)|	Yes|	[What's new in version 1606 of System Center Configuration Manager](https://technet.microsoft.com/library/mt752488.aspx)|  
 |SharePoint Server 2016|	Yes|	[Hardware and software requirements for SharePoint Server 2016](https://technet.microsoft.com/library/cc262485(v=office.16).aspx)|
 |Project Server 2016|	Yes|	[Software requirements for Project Server 2016](https://technet.microsoft.com/library/ee683978(v=office.16).aspx)|
 |Exchange Server 2016|	Yes|	[Updates for Exchange 2016](https://technet.microsoft.com/library/jj907309(v=exchg.160).aspx)| 
+|Biztalk Server 2016|	Yes|	[Microsoft BizTalk Server](https://www.microsoft.com/en-us/cloud-platform/biztalk)|
+|Host Integration Server 2016|	Yes|	[What's New in HIS 2016](https://msdn.microsoft.com/library/mt670807.aspx)|
+|Visual Studio Team Foundation Server 2017|	Yes|	[Team Foundation Server 2017](https://www.visualstudio.com/news/releasenotes/tfs2017-relnotes)| 
 |Skype for Business Server 2015|	No|	[Server requirements for Skype for Business Server 2015](https://technet.microsoft.com/library/dn951388.aspx)|
-|Biztalk Server 2016|	No|	[BizTalk Server 2016 What's New](https://msdn.microsoft.com/library/mt670742.aspx)| 
-|Visual Studio Team Foundation Server 15|	No|	[Team Foundation Server 2015](https://www.visualstudio.com/docs/setup-admin/requirements)| 
-|Host Integration Server 2016|	No|	[What's New in HIS 2016](https://msdn.microsoft.com/library/mt670807.aspx)| 
 
 
