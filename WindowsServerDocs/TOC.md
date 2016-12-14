@@ -8,6 +8,7 @@
 ### [Server Application Compatibility Table](get-started/Server-Application-compatibility.md)
 ### [Features Removed or Deprecated in Windows Server 2016](get-started/Deprecated-Features.md)
 ### [Install Nano Server](get-started/Getting-started-with-Nano-Server.md)
+### [Windows Server 2016 Edition Comparison](get-started/2016-Edition-Comparison.md)
 #### [Nano Server Quick Start](get-started/Nano-Server-Quick-start.md)
 #### [Deploy Nano Server](get-started/Deploy-Nano-Server.md)
 ##### [IIS on Nano Server](get-started/IIS-on-Nano-Server.md)
