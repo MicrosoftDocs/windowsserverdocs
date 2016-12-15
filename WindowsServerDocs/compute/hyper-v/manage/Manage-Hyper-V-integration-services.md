@@ -77,7 +77,8 @@ Each service you want to use must be enabled in both the host and guest because 
 
 ## Start and stop an integration service from a Windows Guest
 
->[!NOTE] Stopping an integration service may severely affect the host's ability to manage your virtual machine. To work correctly, each integration service you want to use must be enabled on both the host and guest.
+>[!IMPORTANT]
+> Stopping an integration service may severely affect the host's ability to manage your virtual machine. To work correctly, each integration service you want to use must be enabled on both the host and guest.
 
 Integration services appear as services in Windows. To enable or disable an integration services from inside the virtual machine, open the Windows Services manager.
 
