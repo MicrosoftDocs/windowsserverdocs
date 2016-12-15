@@ -42,7 +42,7 @@ Hyper-V hosts that will become guarded hosts using TPM-trusted attestation must 
 
     - [Cumulative Update KB3200970](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3200970) ([OS Build 14393.448](https://support.microsoft.com/help/4001886))
     - [Cumulative Update KB3200970](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3200970) ([OS Build 14393.447](https://support.microsoft.com/help/4001885))
-    - [Cumulative Update KB3197954](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3197954) ([OS Build 14393.351](https://support.microsoft.com/help/4004253))
+    - [Cumulative Update KB3197954](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3197954) ([OS Build 14393.351](https://support.microsoft.com/help/4001753))
     
     No other builds are supported for a guarded fabric. If the server is running [Cumulative Update KB3206632](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3206632) ([OS Build 14393.576](https://support.microsoft.com/help/4004227)) or a later build, uninstall the updates so the server runs OS Build 14393.479.
     
