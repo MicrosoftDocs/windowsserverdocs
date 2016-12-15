@@ -24,8 +24,17 @@ Together, HGS and the hosts it supports form a guarded fabric. After the guarded
 
     If you want to run HGS as a three-node physical cluster (for availability), you must have three physical servers. (As a best practice for clustering, the three servers should have very similar hardware.)
   
--   **Operating system**: Windows Server 2016, Standard or Datacenter edition.
+-   **Operating system**: Windows Server 2016, Standard or Datacenter edition. 
 
+    Install [Cumulative Update KB3201845](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3201845) ([OS Build 14393.479](https://support.microsoft.com/help/4004253)). 
+    The following earlier builds are also supported:
+
+    - [Cumulative Update KB3200970](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3200970) ([OS Build 14393.448](https://support.microsoft.com/help/4001886))
+    - [Cumulative Update KB3200970](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3200970) ([OS Build 14393.447](https://support.microsoft.com/help/4001885))
+    - [Cumulative Update KB3197954](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3197954) ([OS Build 14393.351](https://support.microsoft.com/help/4001753))
+    
+    No other builds are supported for a guarded fabric. If the server is running [Cumulative Update KB3206632](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3206632) ([OS Build 14393.576](https://support.microsoft.com/help/4004227)) or a later build, uninstall the updates so the server runs OS Build 14393.479.
+    
 -   **Server Roles**: Host Guardian Service and supporting server roles.
 
 -   **Configuration permissions/privileges for the fabric (host) domain**: You will need to be able to configure DNS forwarding between the fabric (host) domain and the HGS domain. If you are using Admin-trusted attestation, you will need to be able to configure Active Directory trusts between the fabric domain the HGS domain. Admin-trusted attestation is one of the two mutually-exclusive attestation modes that HGS uses, with the other mode being TPM-trusted attestation. For information about the two modes, including the hardware and firmware requirements for TPM-trusted attestation, see [Attestation modes in the Guarded Fabric solution](Guarded-Fabric-and-Shielded-VMs.md#attestation-modes-in-the-guarded-fabric-solution).
