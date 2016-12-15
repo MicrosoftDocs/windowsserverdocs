@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/10/2016
+ms.date: 12/15f/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -38,7 +38,7 @@ Physical and virtual machines benefit from greater time accuracy due to improvem
 ### Nano Server  
 What's New in [Nano Server](https://technet.microsoft.com/library/mt126167.aspx). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality as well as support for different Windows Server editions.   
 
-There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair configuration of WinRM.  
+There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair the configuration of WinRM.  
 
 ### Remote Desktop Services  
 [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). Deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
@@ -56,7 +56,7 @@ Active Directory Domain Services includes improvements to help organizations sec
 What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see   [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md).  
 
 ### Web Application Proxy  
-The latest version of Web Application Proxyfocuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/library/dn765473.aspx).  
+The latest version of Web Application Proxy focuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/library/dn765473.aspx).  
 
 ##  [Management and Automation](../management/Management-and-Automation.md)  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.  
@@ -160,6 +160,29 @@ For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-wi
 The Health Service improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
 
 For more info, see [Health Service](../failover-clustering/health-service-overview.md).
+
+## Application development
+
+### Internet Information Services (IIS) 10.0
+New features provided by the IIS 10.0 web server in Windows Server 2016 include:
+
+- Support for HTTP/2 protocol in the Networking stack and integrated with IIS 10.0, allowing IIS 10.0 websites to automatically serve HTTP/2 requests for supported configurations. This allows numerous enhancements over HTTP/1.1 such as more efficient reuse of connections and decreased latency, improving load times for web pages. 
+- Ability to run and manage IIS 10.0 in Nano Server. See [IIS on Nano Server](https://technet.microsoft.com/en-us/windows-server-docs/get-started/iis-on-nano-server).
+- Support for Wildcard Host Headers, enabling administratorss to set up a web server for a domain and then have the web server serve requests for any subdomain.
+- A new PowerShell module (IISAdministration) for managing IIS. 
+
+For more details see [IIS](https://www.iis.net/learn).
+
+### Distributed Transaction Coordinator (MSDTC)
+Three new features are added in Microsoft Windows 10 and Windows Server 2016:
+
+- A new interface for Resource Manager Rejoin can be used by a resource manager to determine the outcome of an in-doubt transaction after a database restarts due to an error. See [IResourceManagerRejoinable::Rejoin](https://msdn.microsoft.com/en-us/library/mt203799(v=vs.85).aspx) for details.
+
+- The DSN name limit is enlarged from 256 bytes to 3072 bytes. See [IDtcToXaHelperFactory::Create](https://msdn.microsoft.com/en-us/library/ms686861(v=vs.85).aspx), [IDtcToXaHelperSinglePipe::XARMCreate](https://msdn.microsoft.com/en-us/library/ms679248(v=vs.85).aspx), or [IDtcToXaMapper::RequestNewResourceManager](https://msdn.microsoft.com/en-us/library/ms680310(v=vs.85).aspx) for details.
+
+- Improved tracing allowing you to set a registry key to include an image file path in the trace log file name so you can tell which trace log file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/en-us/kb/926099) for details on configuring tracing for MSDTC.
+
+
 
 ## See Also  
 -   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
