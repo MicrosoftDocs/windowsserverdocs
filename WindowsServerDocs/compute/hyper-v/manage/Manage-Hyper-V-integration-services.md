@@ -33,7 +33,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 ## Enable or Disable Integration Services Using PowerShell
 
-To do this in PowerShell, use [`Enable-VMIntegrationService`](https://technet.microsoft.com/library/hh848500.aspx) and [`Disable-VMIntegrationService`](https://technet.microsoft.com/library/hh848488.aspx).
+To do this in PowerShell, use [Enable-VMIntegrationService](https://technet.microsoft.com/library/hh848500.aspx) and [Disable-VMIntegrationService](https://technet.microsoft.com/library/hh848488.aspx).
 
 The following examples show you how turn on and turn off an integration service by doing this for the guest file copy service on a virtual machine named "demovm".
 
@@ -84,7 +84,7 @@ Integration services appear as services in Windows. To enable or disable an inte
 
 ![](media/HVServices.png) 
 
-Find the services containing Hyper-V in the name. Right click on the service you'd like to enable or disable and start or stop the service.
+Find the services containing Hyper-V in the name. Right-click the service you want start or stop.
 
 Or, to use PowerShell to see list integration services, run:
 
@@ -109,7 +109,7 @@ Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
 
 Start or stop services using [`Start-Service`](https://technet.microsoft.com/library/hh849825.aspx) or [`Stop-Service`](https://technet.microsoft.com/library/hh849790.aspx).
 
-For example, to disable PowerShell Direct, run `Stop-Service -Name vmicvmsession`.
+For example, to disable Windows PowerShell Direct, run `Stop-Service -Name vmicvmsession`.
 
 ## Start and stop an integration service from a Linux guest 
 
