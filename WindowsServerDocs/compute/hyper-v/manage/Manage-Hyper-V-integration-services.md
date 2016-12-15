@@ -79,9 +79,9 @@ Get-VMIntegrationService -VMName "DemoVM"
    
 Because integration services provide communications between the host and the guest, each service you want to use must be enabled in both the host and guest. All integration services are on by default on Windows guest operating systems, but they can be turned off individually. The next section shows you how.
 
-## Manage Integration Services from Guest OS (Windows)
+## Start and stop an integration Services from a Windows Guest
 
-> **Note:** disabling integration services may severely affect the host's ability to manage your virtual machine.  Integration services must be enabled on both the host and guest to operate.
+>[!NOTE] Stopping an integration service may severely affect the host's ability to manage your virtual machine. To work correctly, each integration services must be enabled on both the host and guest.
 
 Integration services appear as services in Windows. To enable or disable an integration services from inside the virtual machine, open the Windows Services manager.
 
@@ -89,13 +89,13 @@ Integration services appear as services in Windows. To enable or disable an inte
 
 Find the services containing Hyper-V in the name. Right click on the service you'd like to enable or disable and start or stop the service.
 
-Alternately, to see all integration services with PowerShell, run:
+Or, to use PowerShell to see list integration services, run:
 
 ```PowerShell
 Get-Service -Name vm*
 ```
 
-that will return a list that looks something like this:
+The output should look similar to this:
 
 ```PowerShell
 Status   Name               DisplayName
@@ -114,19 +114,19 @@ Start or stop services using [`Start-Service`](https://technet.microsoft.com/en-
 
 For example, to disable PowerShell Direct, run `Stop-Service -Name vmicvmsession`.
 
-## Manage Integration Services from Guest OS (Linux)
+## Start or stop Integration Services from a Linux guest 
 
 Linux integration services are generally provided through the Linux kernel.
 
 Check to see if the integration service driver and daemons are running by running the following commands in your Linux guest operating system.
 
-1. The Linux integration services driver is called `hv_utils'.  Run the following to see if it is loaded.
+1. The Linux integration services driver is called `hv_utils'. To find out if it's loaded, run:
 
   ``` BASH
   lsmod | grep hv_utils
   ``` 
   
-  The output should look about like this:  
+The output should look similar to this:  
   
   ``` BASH
   Module                  Size   Used by
@@ -140,7 +140,7 @@ Check to see if the integration service driver and daemons are running by runnin
   ps -ef | grep hv
   ```
   
-  The output should look about like this:  
+The output should look similar to this: 
   
   ``` BASH
   root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
@@ -158,7 +158,7 @@ Check to see if the integration service driver and daemons are running by runnin
   compgen -c hv_
   ```
   
-  The output should look about like this:
+The output should look similar to this:
   
   ``` BASH
   hv_vss_daemon
@@ -178,13 +178,13 @@ Check to see if the integration service driver and daemons are running by runnin
 
 In this example, we'll stop and start the KVP daemon `hv_kvp_daemon`.
 
-Stop the daemon's process using the pid (process ID) located in the second column of the output. Or, you can find the right process using `pidof`. Hyper-V daemons run as root, so you need root permissions.
+Use the process ID \(PID\) to stop the daemon's process. To find the PID, look at the second column of the output, or use `pidof`. Hyper-V daemons run as root, so you'll need root permissions.
 
 ``` BASH
 sudo kill -15 `pidof hv_kvp_daemon`
 ```
 
-Now if you run `ps -ef | hv` again, you'll discover all `hv_kvp_daemon` process are gone.
+Run `ps -ef | hv` again to verify that all `hv_kvp_daemon` process are gone.
 
 To start the daemon again, run the daemon as root.
 
@@ -192,15 +192,15 @@ To start the daemon again, run the daemon as root.
 sudo hv_kvp_daemon
 ``` 
 
-Now if you run `ps -ef | hv` again, you'll discover a `hv_kvp_daemon` process with a new process ID.
+Run `ps -ef | hv` again ato verify that a `hv_kvp_daemon` process is listed with a new process ID.
 
 ## Keeping integration services up to date
 
-We recommend that you keep integration services up to date to get the best performance and most recent features for your virtual machines. Integration service maintenance in Windows 10 happens by default so long as your virtual machines are set up to get important updates from Windows Update.  
+We recommend that you keep integration services up to date to get the best performance and most recent features for your virtual machines. This happens in Windows 10 by default when your virtual machines are set up to get important updates from Windows Update.  
 
 **For virtual machines running on Windows 10 hosts:**
 
-> **Note:** The ISO image file vmguest.iso is no longer needed for updating integration components. It's not included with Hyper-V on Windows 10.
+> **Note:** The ISO image file vmguest.iso is no longer needed, so it's not included with Hyper-V on Windows 10.
 
 | Guest OS | Update mechanism | Notes |
 |:---------|:---------|:---------|
@@ -219,7 +219,7 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Linux guests | package manager | Integration components for Linux are built into the distro but there may be optional updates available. ******** |
 
->  \* If the Data Exchange integration service can not be enabled, the integration components for these guests are available [here](https://support.microsoft.com/en-us/kb/3071740) as a cabinet (cab) file on the download center.  
+>  \* If the Data Exchange integration service can't be enabled, the integration components for these guests are available [here](https://support.microsoft.com/en-us/kb/3071740) as a cabinet (cab) file on the download center.  
   Instructions for applying a cab are available  [here](http://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx).
 
 
@@ -267,5 +267,5 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Linux guests | package manager | Integration components for Linux are built into the distro but there may be optional updates available. ** |
 
- > ** Find more information about Linux Guests [here](https://technet.microsoft.com/en-us/library/dn531030.aspx). 
+For more details about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows).
 
