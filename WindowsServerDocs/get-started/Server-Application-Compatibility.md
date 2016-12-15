@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 12/14/2016
+ms.date: 12/15/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -22,7 +22,7 @@ This table lists Microsoft server applications that support installation and fun
 
 For customers and software vendor partners looking for more information on Windows Server compatibility with non-Microsoft applications, visit the main [Windows Server Logo Certification portal](https://msdn.microsoft.com/enterprisecloudcertified).
 
-|Microsoft Server Application|	Available Currently?|	Product Link|
+|Microsoft Server Application|	Released?|	Product Link|
 |-------------------------------------|--------------------------------------------|-------------------|
 |Microsoft SQL Server 2012|Yes| [Hardware and Software Requirements for Installing SQL Server 2012](https://msdn.microsoft.com/library/ms143506(v=sql.110).aspx)|
 |Microsoft SQL Server 2014|Yes|[Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(SQL.120).aspx)|
