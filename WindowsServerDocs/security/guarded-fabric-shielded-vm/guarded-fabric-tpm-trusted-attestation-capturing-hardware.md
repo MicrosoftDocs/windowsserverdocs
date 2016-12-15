@@ -44,7 +44,7 @@ Hyper-V hosts that will become guarded hosts using TPM-trusted attestation must 
     - [Cumulative Update KB3200970](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3200970) ([OS Build 14393.447](https://support.microsoft.com/help/4001885))
     - [Cumulative Update KB3197954](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3197954) ([OS Build 14393.351](https://support.microsoft.com/help/4004253))
     
-    No other builds are supported for a guarded fabric. If the server is running [Cumulative Update KB3201845](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3201845) ([OS Build 14393.479](https://support.microsoft.com/help/4004253)) or a later build, uninstall the updates so the server runs OS Build 14393.479.
+    No other builds are supported for a guarded fabric. If the server is running [Cumulative Update KB3206632](http://www.catalog.update.microsoft.com/Search.aspx?q=KB3206632) ([OS Build 14393.576](https://support.microsoft.com/help/4004253)) or a later build, uninstall the updates so the server runs OS Build 14393.479.
     
 -   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is necessary to let the Hyper-V host communicate with HGS to attest to its health and request keys for shielded VMs. This feature is only available on Datacenter editions of Windows Server 2016. If you are using the Nano Server installation option of Windows Server 2016, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md). 
 
