@@ -17,7 +17,7 @@ ms.date: 10/14/2016
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
 > [!IMPORTANT]
-> Before you deploy shielded virtual machines in production, make sure that HGS servers and guarded hosts are running a supported build for a guarded fabric. Supported builds are listed in the prerequisites for installing the servers.
+> Ensure that you have installed the latest cumulative update before you deploy shielded virtual machines in production.
 
 ## Videos, blog, and overview topic about guarded fabrics and shielded VMs
 
