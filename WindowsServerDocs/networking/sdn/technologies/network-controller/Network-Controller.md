@@ -117,7 +117,7 @@ For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../.
 
 For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
 
-### Network Controller Deployment Options
+## Network Controller Deployment Options
 
 To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN Network Controller in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller).
 
