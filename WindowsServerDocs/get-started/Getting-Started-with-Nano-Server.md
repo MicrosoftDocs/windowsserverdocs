@@ -41,6 +41,7 @@ Because Nano Server is optimized as a lightweight operating system for running â
 - Nano Server cannot be configured to use a proxy server to access the internet.
 - NIC Teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
 - System Center Configuration Manager and System Center Data Protection Manager are not supported.
+- Best Practices Analyzer (BPA) cmdlets and BPA integration with Server Manager are not supported.
 - The version of Windows PowerShell provided with Nano Server has important differences. For details, see [PowerShell on Nano Server](PowerShell-on-Nano-Server.md).
 - Nano Server is supported only on the Current Branch for Business (CBB) model--there is no Long-Term Servicing Branch (LTSB) release for Nano Server at this time. See the following subsection for more information.
 
