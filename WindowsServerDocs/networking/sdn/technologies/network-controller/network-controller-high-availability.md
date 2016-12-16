@@ -73,7 +73,7 @@ This application architecture provides the following benefits.
 
 Service Fabric modularity uses service model schemas to maximize the ease of developing, deploying, and servicing an application.
 
-### Network Controller Deployment Options
+## Network Controller Deployment Options
 
 To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller).
 
