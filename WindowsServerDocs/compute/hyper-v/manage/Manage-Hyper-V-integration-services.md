@@ -15,9 +15,12 @@ ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 
 # Manage Hyper-V Integration Services
 
-Integration services allow a virtual machine to communicate with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's ability to function correctly, such as time synchronization. Integration services are sometimes referred to as integration components.
+Hyper-V Integration Services allow a virtual machine to communicate with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's ability to function correctly, such as time synchronization. This set of services are sometimes referred to as integration components.
 
 For details about each integration service, see [Hyper-V Integration Services](https://msdn.microsoft.com/virtualization/hyperv_on_windows/reference/ic_info).
+
+>[!IMPORTANT]
+>Each service you want to use must be enabled in both the host and guest so they can communicate. All integration services are on by default on Windows guest operating systems, but you can turned them off individually. The next sections show you how.
 
 ## Turn an integration service on or off using Hyper-V Manager
 
@@ -30,12 +33,15 @@ The Integration Services pane lists all integration services available on the Hy
 ```
 REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesVersion
 ```
+## Turn an integration service on or off for a Windows guest
 
-## Turn an integration service on or off using PowerShell
+All integration services are on by default on Windows guest operating systems, but you can turned them off individually. The next section shows you how.
+
+### Use Windows PowerShell to turn a integration service on or off
 
 To do this in PowerShell, use [Enable-VMIntegrationService](https://technet.microsoft.com/library/hh848500.aspx) and [Disable-VMIntegrationService](https://technet.microsoft.com/library/hh848488.aspx).
 
-The following examples show you how turn on and turn off an integration service by doing this for the guest file copy service on a virtual machine named "demovm".
+The following examples show you how turn an integration service on and off by doing this for the guest file copy service on a virtual machine named "demovm".
 
 1. Get a list of running integration services:
   
@@ -61,7 +67,7 @@ The following examples show you how turn on and turn off an integration service 
 Enable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
 ```
 
-1. Verify that the Guest Service Interface integration service is enabled:
+1. Verify that Guest Service Interface is enabled:
 
 ```
 Get-VMIntegrationService -VMName "DemoVM" 
@@ -73,43 +79,50 @@ Get-VMIntegrationService -VMName "DemoVM"
 Disable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
 ```
    
-Each service you want to use must be enabled in both the host and guest so they can communicate. All integration services are on by default on Windows guest operating systems, but you can turned them off individually. The next section shows you how.
-
 ## Start and stop an integration service from a Windows Guest
 
 >[!IMPORTANT]
 > Stopping an integration service may severely affect the host's ability to manage your virtual machine. To work correctly, each integration service you want to use must be enabled on both the host and guest.
 
-Integration services appear as services in Windows. To enable or disable an integration services from inside the virtual machine, open the Windows Services manager.
+Integration services appear as services in Windows. To turn an integration service on or off from inside the virtual machine, you'll start or stop the service.
 
-![](media/HVServices.png) 
+### Use Windows Services 
 
-Find the services containing Hyper-V in the name. Right-click the service you want start or stop.
+1. Open Services manager
 
-Or, to use PowerShell to get a list of integration services, run:
+![Screen shot that shows the Windows Services pane](media/HVServices.png) 
 
-```PowerShell
-Get-Service -Name vm*
-```
+1. Find the services with Hyper-V in the name. 
+
+1. Right-click the service you want start or stop.
+
+
+### Use Windows PowerShell
+
+1. To get a list of integration services, run:
+
+    ```PowerShell
+    Get-Service -Name vm*
+    ```
 
 The output should look similar to this:
 
-```PowerShell
-Status   Name               DisplayName
-------   ----               -----------
-Running  vmicguestinterface Hyper-V Guest Service Interface
-Running  vmicheartbeat      Hyper-V Heartbeat Service
-Running  vmickvpexchange    Hyper-V Data Exchange Service
-Running  vmicrdv            Hyper-V Remote Desktop Virtualizati...
-Running  vmicshutdown       Hyper-V Guest Shutdown Service
-Running  vmictimesync       Hyper-V Time Synchronization Service
-Stopped  vmicvmsession      Hyper-V VM Session Service
-Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
-```
+    ```PowerShell
+    Status   Name               DisplayName
+    ------   ----               -----------
+    Running  vmicguestinterface Hyper-V Guest Service Interface
+    Running  vmicheartbeat      Hyper-V Heartbeat Service
+    Running  vmickvpexchange    Hyper-V Data Exchange Service
+    Running  vmicrdv            Hyper-V Remote Desktop Virtualizati...
+    Running  vmicshutdown       Hyper-V Guest Shutdown Service
+    Running  vmictimesync       Hyper-V Time Synchronization Service
+    Stopped  vmicvmsession      Hyper-V VM Session Service
+    Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
+    ```
 
-Start or stop services using [`Start-Service`](https://technet.microsoft.com/library/hh849825.aspx) or [`Stop-Service`](https://technet.microsoft.com/library/hh849790.aspx).
+1. Run either [`Start-Service`](https://technet.microsoft.com/library/hh849825.aspx) or [`Stop-Service`](https://technet.microsoft.com/library/hh849790.aspx).For example, to turn off Windows PowerShell Direct, run:
 
-For example, to turn off Windows PowerShell Direct, run `Stop-Service -Name vmicvmsession`.
+    ```Stop-Service -Name vmicvmsession```
 
 ## Start and stop an integration service from a Linux guest 
 
@@ -172,7 +185,7 @@ The output should look similar to this:
 > [!NOTE:]
 > If those integration services daemons aren't available, they may not be supported on your system or they may not be installed. Find more disto specific information [here](https://technet.microsoft.com/library/dn531030.aspx).  
 
-These next examples stop and start the KVP daemon, named `hv_kvp_daemon`.
+These examples stop and start the KVP daemon, named `hv_kvp_daemon`.
 
 1. Use the process ID \(PID\) to stop the daemon's process. To find the PID, look at the second column of the output, or use `pidof`. Hyper-V daemons run as root, so you'll need root permissions.
 
