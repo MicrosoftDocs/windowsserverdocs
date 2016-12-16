@@ -13,20 +13,22 @@ author: jamesmci
 
 >Applies To: Windows Server 2016
 
-New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.
+New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. 
+
+Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.
 
 > [!NOTE]
 > In addition to this topic, the following Network Controller documentation is available.
->
-> - [Installation and Preparation Requirements for Deploying Network Controller](../../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
-> - [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
-> - [Install the Network Controller server role using Server Manager](../../../sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)
+> - [Network Controller High Availability](network-controller-high-availability.md)
+> - [Installation and Preparation Requirements for Deploying Network Controller](../../plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
+> - [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
+> - [Install the Network Controller server role using Server Manager](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [Post-Deployment Steps for Network Controller](post-deploy-steps-nc.md)
 > - [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx) 
 
 ## <a name="bkmk_overview"></a>Network Controller Overview
 
-Network Controller is a highly available and scalable server role, and provides one application programming interface (API) that allows Network Controller to communicate with the network, and a second API that allows you to communicate with Network Controller.
+Network Controller is a highly available and scalable server role, and provides one application programming interface \(API\) that allows Network Controller to communicate with the network, and a second API that allows you to communicate with Network Controller.
 
 You can deploy Network Controller in both domain and non-domain environments. In domain environments, Network Controller authenticates users and network devices by using Kerberos; in non-domain environments, you must deploy certificates for authentication.
 
@@ -34,12 +36,12 @@ Network Controller communicates with network devices, services, and components b
 
 The Network Controller Northbound API provides you with the ability to gather network information from Network Controller and use it to monitor and configure the network.
 
-The Network Controller Northbound API allows you to configure, monitor, troubleshoot, and deploy new devices on the network by using Windows PowerShell, the Representational State Transfer (REST) API, or a management application with a graphical user interface, such as System Center Virtual Machine Manager.
+The Network Controller Northbound API allows you to configure, monitor, troubleshoot, and deploy new devices on the network by using Windows PowerShell, the Representational State Transfer \(REST\) API, or a management application with a graphical user interface, such as System Center Virtual Machine Manager.
 
-> [!NOTE]
-> The Network Controller Northbound API is implemented as a REST interface.
+>[!NOTE]
+>The Network Controller Northbound API is implemented as a REST interface.
 
-You can manage your datacenter network with Network Controller by using management applications, such as System Center Virtual Machine Manager (SCVMM), and System Center Operations Manager (SCOM), because Network Controller allows you to configure, monitor, program, and troubleshoot the network infrastructure under its control.
+You can manage your datacenter network with Network Controller by using management applications, such as System Center Virtual Machine Manager \(SCVMM\), and System Center Operations Manager \(SCOM\), because Network Controller allows you to configure, monitor, program, and troubleshoot the network infrastructure that is under its control.
 
 Using Windows PowerShell, the REST API, or a management application, you can use Network Controller to manage the following physical and virtual network infrastructure:
 
@@ -47,7 +49,7 @@ Using Windows PowerShell, the REST API, or a management application, you can use
 
 - Datacenter Firewall
 
-- Remote Access Service (RAS) Multitenant Gateways, Virtual Gateways, and gateway pools
+- Remote Access Service \(RAS\) Multitenant Gateways, Virtual Gateways, and gateway pools
 
 - Software Load Balancers
 
@@ -55,9 +57,9 @@ In the following illustration, an Administrator uses a Management Tool that inte
 
 ![Network Controller overview](../../../media/Network-Controller/NetController_overview.png)  
 
-If you are deploying Network Controller in a test lab environment, you can run the Network Controller server role on a single physical server (without using Hyper-V) or on a Hyper-V virtual machine (VM) that is installed on a Hyper-V host.
+If you are deploying Network Controller in a test lab environment, you can run the Network Controller server role on a single physical server (without using Hyper-V) or on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host.
 
-For high availability in larger datacenters, you can deploy a cluster by using either three physical servers (without Hyper-V) or by using three VMs that are installed on three Hyper-V hosts.
+For high availability in larger datacenters, you can deploy a cluster by using either three physical servers \(without Hyper-V\) or by using three VMs that are installed on three or more Hyper-V hosts. For more information, see [Network Controller High Availability](network-controller-high-availability.md).
 
 ## <a name="bkmk_features"></a>Network Controller Features
 
@@ -115,3 +117,10 @@ For more information on BGP, see [Border Gateway Protocol &#40;BGP&#41;](../../.
 
 For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
 
+### Network Controller Deployment Options
+
+To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN Network Controller in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller).
+
+To deploy Network Controller using scripts, see [Deploy a Software Defined Network Infrastructure Using Scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
+
+To deploy Network Controller using Windows PowerShell, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
