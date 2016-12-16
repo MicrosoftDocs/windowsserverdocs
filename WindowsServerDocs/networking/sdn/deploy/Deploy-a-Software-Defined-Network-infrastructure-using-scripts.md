@@ -1,20 +1,16 @@
 ---
-title: Deploy a Software Defined Network infrastructure using scripts
+title: Deploy a Software Defined Network Infrastructure Using Scripts
 description: This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server 2016. 
 manager: dongill
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
 ms.service: virtual-network
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: jamesmci
 author: vhorne
 ---
-# Deploy a Software Defined Network infrastructure using scripts
+# Deploy a Software Defined Network Infrastructure Using Scripts
 
 >Applies To: Windows Server 2016
 
@@ -22,7 +18,7 @@ This topic covers how to deploy a Microsoft Software Defined Network (SDN) infra
   
 If you want your tenant workloads to communicate outside their virtual networks, you can setup SLB NAT rules, Site-to-Site Gateway tunnels, or Layer-3 Forwarding to route between virtual and physical workloads.  
   
-You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). For more information, see [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/en-us/library/mt695701.aspx).  
+You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-overview).  
   
 ## Pre-deployment  
   

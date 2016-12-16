@@ -258,11 +258,11 @@ VMQ and SET work well together, and you should enable VMQ whenever you are using
 
 Most network adapters have queues that can be used for either Receive Side Scaling \(RSS\) or VMQ, but not both at the same time.
   
-Some VMQ settings appear to be settings for RSS queues but are really settings on the generic queues that both RSS and VMQ use depending on which feature is presently in use. Each NIC has, in its advanced properties, values for ***RssBaseProcNumber** and ***MaxRssProcessors**.
+Some VMQ settings appear to be settings for RSS queues but are really settings on the generic queues that both RSS and VMQ use depending on which feature is presently in use. Each NIC has, in its advanced properties, values for `*RssBaseProcNumber` and `*MaxRssProcessors`.
 
 Following are a few VMQ settings that provide better system performance.
 
-- Ideally each NIC should have the ***RssBaseProcNumber** set to an even number greater than or equal to two (2). This is because the first physical processor, Core 0 \(logical processors 0 and 1\), typically does most of the system processing so the network processing should be steered away from this physical processor. 
+- Ideally each NIC should have the `*RssBaseProcNumber` set to an even number greater than or equal to two (2). This is because the first physical processor, Core 0 \(logical processors 0 and 1\), typically does most of the system processing so the network processing should be steered away from this physical processor. 
 
 >[!NOTE]
 >Some machine architectures don't have two logical processors per physical processor, so for such machines the base processor should be greater than or equal to 1. If in doubt, assume your host is using a 2 logical processor per physical processor architecture.
@@ -289,15 +289,15 @@ This change only applies to traffic that was going to be sent on the VM's affini
 
 Following are lists that describe SET teaming MAC address replacement behavior, based on how the team is configured:
 
-- **In Switch Independent mode with Hyper-V Port distribution**  
+- In Switch Independent mode with Hyper-V Port distribution
 
-    - Every vmSwitch port is affinitized to a team member  
+    - Every vmSwitch port is affinitized to a team member
   
     - Every packet is sent on the team member to which the port is affinitized  
   
     - No source MAC replacement is done  
   
-- **In Switch Independent mode with Dynamic distribution**  
+- In Switch Independent mode with Dynamic distribution
   
     - Every vmSwitch port is affinitized to a team member  
   
@@ -313,7 +313,7 @@ It is recommended that you use System Center Virtual Machine Manager \(VMM\) to 
   
 ### Create a SET team
 
-You must create a SET team at the same time that you create the Hyper-V Virtual Switch with the New-VMSwitch Windows PowerShell command.
+You must create a SET team at the same time that you create the Hyper-V Virtual Switch by using the **New-VMSwitch** Windows PowerShell command.
 
 When you create the Hyper-V Virtual Switch, you must include the new **EnableEmbeddedTeaming** parameter in your command syntax. In the following example, a Hyper-V switch named  **TeamedvSwitch** with embedded teaming and two initial team members is created.
   
