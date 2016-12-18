@@ -42,7 +42,10 @@ These technologies are the *role services* of the Remote Access server role. Whe
 ## <a name="bkmk_da"></a>Remote Access Service (RAS) - RAS Gateway  
 When you install the **DirectAccess and (VPN)** role service, you are deploying the Remote Access Service Gateway (**RAS Gateway**). You can deploy the RAS Gateway as a DirectAccess server, a single tenant RAS Gateway virtual private network (VPN) server, and a multitenant RAS Gateway VPN server.  
   
--   **DirectAccess**. DirectAccess enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. DirectAccess establishes bi-directional connectivity with an internal network every time a DirectAccess-enabled computer is connected to the Internet. Users never have to think about connecting to the internal network, and IT administrators can manage remote computers outside the office, even when the computers are not connected via VPN.  
+-   **DirectAccess**. DirectAccess enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. DirectAccess establishes bi-directional connectivity with an internal network every time a DirectAccess-enabled computer is connected to the Internet. Users never have to think about connecting to the internal network, and IT administrators can manage remote computers outside the office, even when the computers are not connected via VPN.
+
+>[!IMPORTANT]
+>Although DirectAccess is currently supported, Microsoft is no longer investing in DirectAccess development. DirectAccess is now deprecated and might not be included in future iterations of Windows Server. In Windows Server 2016 and Windows 10, Remote Access VPN now supports always\-on connections. Because of this, it is recommended that you deploy Remote Access with VPN instead of DirectAccess.  
   
 -   **RAS Gateway - Single Tenant**. By using RAS Gateway, you can deploy VPN connections to provide end users with remote access to your organization's network and resources. You can also create a site-to-site VPN connection between two servers at different locations, such as between your primary office and a branch office, and use Network Address Translation (NAT) so that users inside the network can access external resources, such as the Internet. In addition, RAS Gateway supports Border Gateway Protocol (BGP), which provides dynamic routing services when your remote office locations also have edge gateways that support BGP.  
   
@@ -53,7 +56,8 @@ When you install the **DirectAccess and (VPN)** role service, you are deploying 
   
 For more information, see [RAS Gateway](../remote-access/ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol-BGP.md).  
   
-## <a name="bkmk_rras"></a>Routing  
+## <a name="bkmk_rras"></a>Routing
+
 You can use Remote Access to route network traffic between subnets on your Local Area Network. Routing provides support for Network Address Translation (NAT) routers, LAN routers running BGP, Routing Information Protocol (RIP), and multicast-capable routers using Internet Group Management Protocol (IGMP). As a full-featured router, you can deploy RAS on either a server computer or as a virtual machine (VM) on a computer that is running Hyper-V.  
   
 To install Remote Access as a LAN router, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Routing** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.  
@@ -62,7 +66,8 @@ To install Remote Access as a LAN router, either use the Add Roles and Features 
 Install-RemoteAccess -VpnType RoutingOnly  
 ```  
   
-## <a name="bkmk_proxy"></a>Web Application Proxy  
+## <a name="bkmk_proxy"></a>Web Application Proxy
+
 Web Application Proxy is a Remote Access role service in Windows Server 2016. Web Application Proxy provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network. Web Application Proxy pre-authenticates access to web applications using Active Directory Federation Services (AD FS), and also functions as an AD FS proxy.  
   
 To install Remote Access as a Web Application Proxy, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Web Application Proxy** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.  
