@@ -57,9 +57,9 @@ After the modifying write, region B is still shared by both files. Note that if 
 - The ReFS volume must have been formatted with Windows Server 2016, and if Failover Clustering is in use, the Clustering Functional Level must have been Windows Server 2016 or later at format time. 
 
 ## See also
+
+-   [ReFS Overview](refs-overview.md)
+-   [ReFS Integrity Streams](integrity-streams.md.md)
+-   [Storage Spaces Direct Overview](../storage-spaces/storage-spaces-direct-overview.md)
 -   [DUPLICATE_EXTENTS_DATA](https://msdn.microsoft.com/library/windows/desktop/mt590821(v=vs.85).aspx)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](https://msdn.microsoft.com/library/windows/desktop/mt590823(v=vs.85).aspx)
-
-
-
-
