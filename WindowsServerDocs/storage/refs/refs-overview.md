@@ -39,7 +39,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 - **Sparse VDL** - Sparse VDL also improves the efficiency of VM operations, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds. 
 
 ### **Scalability**
-ReFS is designed to support extremely large data sets -- petabytes and larger -- without negatively impacting performance, achieving greater scale than prior file systems. 
+ReFS is designed to support extremely large data sets -- petabytes and larger -- without negatively impacting performance, achieving greater scale than prior file systems. The maximum volume size with ReFS is 4.7 zettabytes (ZB), or 4,700,000,000 terabytes (TB).
 
 ## Supported deployments
 
@@ -69,12 +69,12 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 
 ### Limits
 
-| Feature       | ReFS                                        | NTFS |
-|----------------|------------------------------------------------|-----------------------|
-| Maximum file name length | 32K Unicode characters  | 32K Unicode characters               |
-| Maximum path name length |32K Unicode characters | 32K Unicode characters                |
-| Maximum file size | 18 EB (exabytes)  | 18 EB (exabytes)                |
-| Maximum volume size | 4.7 ZB (zettabytes)                           | 256 TB                |
+| Feature                  | ReFS                    | NTFS                   |
+|--------------------------|-------------------------|------------------------|
+| Maximum file name length | 32K Unicode characters  | 32K Unicode characters |
+| Maximum path name length | 32K Unicode characters  | 32K Unicode characters |
+| Maximum file size        | 18 EB (exabytes)        | 18 EB (exabytes)       |
+| Maximum volume size      | 4.7 ZB (zettabytes)     | 256 TB                 |
 
 
 ### Functionality
