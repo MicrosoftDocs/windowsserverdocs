@@ -29,10 +29,10 @@ Although you can deploy Network Controller as a single machine cluster, for high
 
 To achieve high availability and scalability, Network Controller relies on Service Fabric. Service Fabric provides a distributed systems platform to build scalable, reliable, and easily-managed applications.
 
-You can create clusters for Service Fabric anywhere, including in Microsoft Azure or on premises in Windows Server 2016 Datacenter edition. As a platform, Service Fabric provides functionality that is required for building a scalable distributed system. It provides service hosting on multiple operating system instances, synchronizing state information between instances, electing a leader, failure detection, load balancing, and more.
+As a platform, Service Fabric provides functionality that is required for building a scalable distributed system. It provides service hosting on multiple operating system instances, synchronizing state information between instances, electing a leader, failure detection, load balancing, and more.
 
 >[!NOTE]
->For more information about Service Fabric in Azure, see [Overview of Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).
+>For information about Service Fabric in Azure, see [Overview of Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).
 
 When you deploy Network Controller on multiple machines, Network Controller runs as a single Service Fabric application on a Service Fabric cluster. You can form a Service Fabric cluster  by connecting a set of operating system instances.
 
@@ -63,13 +63,13 @@ The Network Controller application has large storage requirements for its config
 
 Network Controller is designed with a modular architecture, with each of the network services, such as the virtual networks service and firewall service, built\-in as individual services. 
 
->[!NOTE]
->In Windows Server 2016, the addition of third party services to Network Controller is not supported.
-
 This application architecture provides the following benefits.
 
 1. Network Controller modularity allows independent development of each of the supported services, as needs evolve. For example, the Software Load Balancing service can be updated without affecting any of the other services or the normal operation of Network Controller.
 2. Network Controller modularity allows the addition of new services, as the network evolves. New services can be added to Network Controller without impacting existing services.
+
+>[!NOTE]
+>In Windows Server 2016, the addition of third party services to Network Controller is not supported.
 
 Service Fabric modularity uses service model schemas to maximize the ease of developing, deploying, and servicing an application.
 
