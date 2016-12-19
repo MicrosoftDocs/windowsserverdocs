@@ -39,26 +39,30 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 - **Sparse VDL** - Sparse VDL also improves the efficiency of VM operations, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds. 
 
 ### **Scalability**
-ReFS is designed to support extremely large data sets--petabytes and larger--without negatively impacting performance, achieving greater scale than prior file systems. 
+ReFS is designed to support extremely large data sets -- petabytes and larger -- without negatively impacting performance, achieving greater scale than prior file systems. 
 
 ## Supported deployments
 
-**ReFS on Storage Spaces Direct** <br>
+### Storage Spaces Direct
+
 Deploying ReFS on Storage Spaces Direct is the recommended setup for virtualized workloads: 
 - Real-time tier optimization and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
 
-**ReFS on Storage Spaces with shared SAS enclosures** <br>
+### Shared SAS Storage Spaces
+
 Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents:
+
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Classic Storage Spaces to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
 - Data will be stored on a non-tiered volume. 
 
+### Standalone drives
 
-**ReFS on basic disks** <br>
 Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availibility solutions. 
+
 - For example, Exchange and SQL both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
 
 ## Feature comparison
