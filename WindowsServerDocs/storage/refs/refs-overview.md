@@ -108,6 +108,8 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 | Sparse VDL | Yes | No |
 | Real-time tier optimization| Yes | No |
 
-## See also
-[Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+## See Also
 
+-   [ReFS Block Cloning](block-cloning.md)
+-   [ReFS Integrity Streams](integrity-streams.md.md)
+-   [Storage Spaces Direct Overview](../storage-spaces/storage-spaces-direct-overview.md)
