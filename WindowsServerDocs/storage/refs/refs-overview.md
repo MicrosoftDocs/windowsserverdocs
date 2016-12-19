@@ -108,8 +108,8 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 | Sparse VDL | Yes | No |
 | Real-time tier optimization| Yes | No |
 
-## See Also
+## See also
 
--   [ReFS Block Cloning](block-cloning.md)
--   [ReFS Integrity Streams](integrity-streams.md.md)
--   [Storage Spaces Direct Overview](../storage-spaces/storage-spaces-direct-overview.md)
+-   [ReFS block cloning](block-cloning.md)
+-   [ReFS integrity streams](integrity-streams.md.md)
+-   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
