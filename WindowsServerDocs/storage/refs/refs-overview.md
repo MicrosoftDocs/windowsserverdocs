@@ -1,5 +1,5 @@
 ---
-title: refs-overview
+title: Resilient File System (ReFS) overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
 ms.manager: dmoss
@@ -8,7 +8,7 @@ ms.topic: articleauthor: gawatu
 ms.date: 12/9/2016
 ms.assetid: 
 ---
-# Resilient File System
+# Resilient File System (ReFS) overview
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availibility, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
