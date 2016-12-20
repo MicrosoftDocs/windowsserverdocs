@@ -180,9 +180,9 @@ Linux integration services are generally provided through the Linux kernel. The 
     ```
   
   1. Integration service daemons that might be listed include the following. If they're not, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
-  * **hv_vss_daemon** – This daemon is required to create live Linux virtual machine backups.
-  * **hv_kvp_daemon** – This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-  * **hv_fcopy_daemon** – This daemon implements a file copying service between the host and guest.  
+        - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
+        - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
+        - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
 
 ### Examples
 
@@ -288,7 +288,7 @@ We recommend that you keep integration services up to date to get the best perfo
 
 For more details about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows).
 
-## instructions
+## Install or update integration services
 
 For hosts earlier than Windows Server 2016 and Windows 10, you'll need to manually instructions from the guest operating system. These steps can't be automated or done within a Windows PowerShell session.
   
