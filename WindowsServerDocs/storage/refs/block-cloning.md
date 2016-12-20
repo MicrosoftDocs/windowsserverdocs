@@ -59,7 +59,7 @@ After the modifying write, region B is still shared by both files. Note that if 
 ## See also
 
 -   [ReFS overview](refs-overview.md)
--   [ReFS integrity streams](integrity-streams.md.md)
+-   [ReFS integrity streams](integrity-streams.md)
 -   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 -   [DUPLICATE_EXTENTS_DATA](https://msdn.microsoft.com/library/windows/desktop/mt590821(v=vs.85).aspx)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](https://msdn.microsoft.com/library/windows/desktop/mt590823(v=vs.85).aspx)
