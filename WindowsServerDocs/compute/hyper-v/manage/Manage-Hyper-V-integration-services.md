@@ -1,10 +1,10 @@
 ---
 title: Manage Hyper-V Integration Services
-description: Managing Hyper-V Integration Services
+description: "Describes how to turn integration services on and off and install them if needed"
 author: KBDAzure
 ms.author: kathydav
 manager: dongill
-ms.date: 12/15/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: na
@@ -45,39 +45,39 @@ The following examples show you how turn an integration service on and off by do
 
 1. Get a list of running integration services:
   
-  ``` PowerShell
-  Get-VMIntegrationService -VMName "DemoVM"
-  ```
+    ``` PowerShell
+    Get-VMIntegrationService -VMName "DemoVM"
+    ```
+1. The output should look like this:
 
-  The output should look like this:  
-  ``` PowerShell
-  VMName      Name                    Enabled PrimaryStatusDescription SecondaryStatusDescription
-  ------      ----                    ------- ------------------------ --------------------------
-  DemoVM      Guest Service Interface False   OK
-  DemoVM      Heartbeat               True    OK                       OK
-  DemoVM      Key-Value Pair Exchange True    OK
-  DemoVM      Shutdown                True    OK
-  DemoVM      Time Synchronization    True    OK
-  DemoVM      VSS                     True    OK
-  ```
+    ``` PowerShell
+   VMName      Name                    Enabled PrimaryStatusDescription SecondaryStatusDescription
+   ------      ----                    ------- ------------------------ --------------------------
+   DemoVM      Guest Service Interface False   OK
+   DemoVM      Heartbeat               True    OK                       OK
+   DemoVM      Key-Value Pair Exchange True    OK
+   DemoVM      Shutdown                True    OK
+   DemoVM      Time Synchronization    True    OK
+   DemoVM      VSS                     True    OK
+   ```
 
-1. Turn on the Guest Service Interface integration service:
+1. Turn on Guest Service Interface:
 
-``` PowerShell
-Enable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
-```
+   ``` PowerShell
+   Enable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
+   ```
 
 1. Verify that Guest Service Interface is enabled:
 
-```
-Get-VMIntegrationService -VMName "DemoVM" 
-``` 
+   ```
+   Get-VMIntegrationService -VMName "DemoVM" 
+   ``` 
 
-1. Turn off the `Guest Service Interface` integration service:
+1. Turn off Guest Service Interface:
 
-``` PowerShell
-Disable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
-```
+    ```
+    Disable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
+    ```
    
 ## Start and stop an integration service from a Windows Guest
 
@@ -90,7 +90,7 @@ Each integration service is listed as a service in Windows. To turn an integrati
 
 1. Open Services manager
 
-![Screen shot that shows the Windows Services pane](media/HVServices.png) 
+    ![Screen shot that shows the Windows Services pane](media/HVServices.png) 
 
 1. Find the services with Hyper-V in the name. 
 
@@ -101,11 +101,10 @@ Each integration service is listed as a service in Windows. To turn an integrati
 
 1. To get a list of integration services, run:
 
-    ```PowerShell
+    ```
     Get-Service -Name vm*
     ```
-
-The output should look similar to this:
+1.  The output should look similar to this:
 
     ```PowerShell
     Status   Name               DisplayName
@@ -120,9 +119,11 @@ The output should look similar to this:
     Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. Run either [`Start-Service`](https://technet.microsoft.com/library/hh849825.aspx) or [`Stop-Service`](https://technet.microsoft.com/library/hh849790.aspx).For example, to turn off Windows PowerShell Direct, run:
+1. Run either [Start-Service](https://technet.microsoft.com/library/hh849825.aspx) or [Stop-Service](https://technet.microsoft.com/library/hh849790.aspx). For example, to turn off Windows PowerShell Direct, run:
 
-    ```Stop-Service -Name vmicvmsession```
+    ```
+    Stop-Service -Name vmicvmsession
+    ```
 
 ## Start and stop an integration service from a Linux guest 
 
@@ -130,78 +131,86 @@ Linux integration services are generally provided through the Linux kernel. The 
 
 1.  To find out if **hv_utils** is loaded, use this command:
 
-  ``` BASH
-  lsmod | grep hv_utils
-  ``` 
+    ``` BASH
+    lsmod | grep hv_utils
+    ``` 
   
-The output should look similar to this:  
+1. The output should look similar to this:  
   
-  ``` BASH
-  Module                  Size   Used by
-  hv_utils               20480   0
-  hv_vmbus               61440   8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc
-  ```
+    ``` BASH
+    Module                  Size   Used by
+    hv_utils               20480   0
+    hv_vmbus               61440   8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc
+    ```
 
-2. To find out if the required daemons are running, use this command.
+1. To find out if the required daemons are running, use this command.
   
-  ``` BASH
-  ps -ef | grep hv
-  ```
+    ``` BASH
+    ps -ef | grep hv
+    ```
   
-The output should look similar to this: 
+1. The output should look similar to this: 
   
-  ``` BASH
-  root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
-  root       237     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
-  ...
-  root       252     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
-  root      1286     1  0 Jul11 ?        00:01:11 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
-  root      9333     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
-  root      9365     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_vss_daemon
-  scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
-  ```
-  
-  To see what daemons are available, run:
-  ``` BASH
-  compgen -c hv_
-  ```
-  
-The output should look similar to this:
-  
-  ``` BASH
-  hv_vss_daemon
-  hv_get_dhcp_info
-  hv_get_dns_info
-  hv_set_ifconfig
-  hv_kvp_daemon
-  hv_fcopy_daemon     
-  ```
-  
-  Integration service daemons you may see:  
-  * **`hv_vss_daemon`** – This daemon is required to create live Linux virtual machine backups.
-  * **`hv_kvp_daemon`** – This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-  * **`hv_fcopy_daemon`** – This daemon implements a file copying service between the host and guest.
+    ```BASH
+    root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
+    root       237     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
+    ...
+    root       252     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
+    root      1286     1  0 Jul11 ?        00:01:11 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
+    root      9333     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
+    root      9365     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_vss_daemon
+    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
+    ```
 
-> [!NOTE]
-> If those integration services daemons aren't available, they may not be supported on your system or they may not be installed. Find more disto specific information [here](https://technet.microsoft.com/library/dn531030.aspx).  
+1. To see what daemons are available, run:
+
+    ``` BASH
+    compgen -c hv_
+    ```
+  
+1. The output should look similar to this:
+  
+    ``` BASH
+    hv_vss_daemon
+    hv_get_dhcp_info
+    hv_get_dns_info
+    hv_set_ifconfig
+    hv_kvp_daemon
+    hv_fcopy_daemon     
+    ```
+  
+  1. Integration service daemons that might be listed include the following. If they're not, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
+  * **hv_vss_daemon** – This daemon is required to create live Linux virtual machine backups.
+  * **hv_kvp_daemon** – This daemon allows setting and querying intrinsic and extrinsic key value pairs.
+  * **hv_fcopy_daemon** – This daemon implements a file copying service between the host and guest.  
+
+### Examples
 
 These examples stop and start the KVP daemon, named `hv_kvp_daemon`.
 
 1. Use the process ID \(PID\) to stop the daemon's process. To find the PID, look at the second column of the output, or use `pidof`. Hyper-V daemons run as root, so you'll need root permissions.
 
-``` BASH
-sudo kill -15 `pidof hv_kvp_daemon`
-```
+    ``` BASH
+    sudo kill -15 `pidof hv_kvp_daemon`
+    ```
 
-1. Run `ps -ef | hv` again to verify that all `hv_kvp_daemon` process are gone.
+1. To verify that all `hv_kvp_daemon` process are gone, run:
 
-1. To start the daemon again, run the daemon as root.
+    ```
+    ps -ef | hv
+    ```
 
-``` BASH
-sudo hv_kvp_daemon
-``` 
+1. To start the daemon again, run the daemon as root:
 
-1. Run `ps -ef | hv` again to verify that the `hv_kvp_daemon` process is listed with a new process ID.
+    ``` BASH
+    sudo hv_kvp_daemon
+    ``` 
+
+1. To verify that the `hv_kvp_daemon` process is listed with a new process ID, run:
+
+    ```
+    ps -ef | hv
+    ```
 
 ## Keep integration services up to date
 
@@ -289,5 +298,4 @@ For hosts earlier than Windows Server 2016 and Windows 10, you'll need to manual
   
 3.  From the Action menu of Virtual Machine Connection, click **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually.  
   
-4.  After the installation finishes, all integration services are available for use.  
-
+4.  After the installation finishes, all integration services are available for use.
