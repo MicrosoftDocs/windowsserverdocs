@@ -38,6 +38,8 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 
 - **Sparse VDL** - Sparse VDL also improves the efficiency of VM operations, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds. 
 
+- **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.  
+
 ### **Scalability**
 ReFS is designed to support extremely large data sets--petabytes and larger--without negatively impacting performance, achieving greater scale than prior file systems. 
 
@@ -50,16 +52,15 @@ Deploying ReFS on Storage Spaces Direct is the recommended setup for virtualized
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
 
-**ReFS on Storage Spaces with shared SAS enclosures** <br>
-Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents:
+**ReFS on Storage Spaces with SAS drive enclosures** <br>
+Deploying ReFS on Storage Spaces with SAS drive enclosures is suitable for hosting archival data and storing user documents:
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Classic Storage Spaces to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
 - Data will be stored on a non-tiered volume. 
 
-
 **ReFS on basic disks** <br>
 Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availibility solutions. 
-- For example, Exchange and SQL both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
+- For example, Exchange introduces its own concepts of resiliency and availability suited for its own workloads, and it benefits from the scalability offered in ReFS. 
 
 ## Feature comparison
 
@@ -106,7 +107,7 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 | Named streams | Yes | Yes |
 | Block clone | Yes | No |
 | Sparse VDL | Yes | No |
-| Real-time tier optimization| Yes | No |
+| Real-time tier optimization| Yes (on Storage Spaces Direct) | No |
 
 ## See also
 [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
