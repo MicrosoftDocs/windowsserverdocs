@@ -4,8 +4,7 @@ ms.prod: windows-server-threshold
 ms.author: gawatu
 ms.manager: dmoss
 ms.technology: storage-file-systems
-ms.topic: article
-author: gawatu
+ms.topic: articleauthor: gawatu
 ms.date: 12/9/2016
 ms.assetid: 
 ---
@@ -15,9 +14,7 @@ ms.assetid:
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availibility, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
 
 ## Key benefits
-
-### **Resiliency**
-ReFS introduces new features that can precisely detect corruptions and also fix those corruptions while remaining online, helping provide increased integrity and availibility for your data: 
+### **Resiliency**ReFS introduces new features that can precisely detect corruptions and also fix those corruptions while remaining online, helping provide increased integrity and availibility for your data: 
 
 - **Online repair** - Repair processes are both localized to the area of corruption and performed online, requiring no volume downtime. 
 - **Storage Spaces integration** - When used in conjunction with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces. 
@@ -41,37 +38,43 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 - **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.  
 
 ### **Scalability**
-ReFS is designed to support extremely large data sets--petabytes and larger--without negatively impacting performance, achieving greater scale than prior file systems. 
+ReFS is designed to support extremely large data sets -- petabytes and larger -- without negatively impacting performance, achieving greater scale than prior file systems. The maximum volume size with ReFS is 4.7 zettabytes (ZB), or 4,700,000,000 terabytes (TB).
 
 ## Supported deployments
 
-**ReFS on Storage Spaces Direct** <br>
+### Storage Spaces Direct
+
 Deploying ReFS on Storage Spaces Direct is the recommended setup for virtualized workloads: 
 - Real-time tier optimization and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage. 
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
 
-**ReFS on Storage Spaces with SAS drive enclosures** <br>
+
+### ReFS on Storage Spaces with SAS drive enclosures
 Deploying ReFS on Storage Spaces with SAS drive enclosures is suitable for hosting archival data and storing user documents:
 - Built-in checksums, online repair, and alternate data copies enable ReFS and Classic Storage Spaces to jointly to detect and correct corruptions within both metadata and data. 
 - ReFS provides the functionality to efficiently scale and support massive data sets. 
 - Data will be stored on a non-tiered volume. 
 
-**ReFS on basic disks** <br>
+
+### ReFS on basic disks
+
 Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availibility solutions. 
-- For example, Exchange introduces its own concepts of resiliency and availability suited for its own workloads, and it benefits from the scalability offered in ReFS. 
+
+For example, Exchange and SQL both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
+
 
 ## Feature comparison
 
 ### Limits
 
-| Feature       | ReFS                                        | NTFS |
-|----------------|------------------------------------------------|-----------------------|
-| Maximum file name length | 32K Unicode characters  | 32K Unicode characters               |
-| Maximum path name length |32K Unicode characters | 32K Unicode characters                |
-| Maximum file size | 18 EB (exabytes)  | 18 EB (exabytes)                |
-| Maximum volume size | 4.7 ZB (zettabytes)                           | 256 TB                |
+| Feature                  | ReFS                    | NTFS                   |
+|--------------------------|-------------------------|------------------------|
+| Maximum file name length | 32K Unicode characters  | 32K Unicode characters |
+| Maximum path name length | 32K Unicode characters  | 32K Unicode characters |
+| Maximum file size        | 18 EB (exabytes)        | 18 EB (exabytes)       |
+| Maximum volume size      | 4.7 ZB (zettabytes)     | 256 TB                 |
 
 
 ### Functionality
@@ -110,5 +113,7 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 | Real-time tier optimization| Yes (on Storage Spaces Direct) | No |
 
 ## See also
-[Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
 
+-   [ReFS block cloning](block-cloning.md)
+-   [ReFS integrity streams](integrity-streams.md)
+-   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
