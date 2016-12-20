@@ -115,5 +115,5 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 ## See also
 
 -   [ReFS block cloning](block-cloning.md)
--   [ReFS integrity streams](integrity-streams.md.md)
+-   [ReFS integrity streams](integrity-streams.md)
 -   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
