@@ -179,10 +179,10 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_fcopy_daemon     
     ```
   
-  1. Integration service daemons that might be listed include the following. If they're not, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
-        - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
-        - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-        - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
+ Integration service daemons that might be listed include the following. If they're not, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
+  - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
+  - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
+  - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
 
 ### Examples
 
@@ -238,9 +238,7 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Linux guests | package manager | Integration services for Linux are built into the distro but there may be optional updates available. ******** |
 
->  \* If the Data Exchange integration service can't be enabled, the integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file.  
-  Instructions for applying a cab are available [here](http://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx).
-
+\* If the Data Exchange integration service can't be enabled, the integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [blog post](http://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx).
 
 **For virtual machines running on Windows 8.1 hosts:**
 
