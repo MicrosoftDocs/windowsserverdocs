@@ -26,7 +26,7 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 - **Integrity-streams** - ReFS introduces checksums for metadata and optionally for file data, giving ReFS the ability to reliably detect corruptions. 
 - **Proactive error correction** - In addition to validating data before reads and writes, ReFS introduces a data integrity scanner, known as a *scrubber*. This scrubber periodically scans the volume, identifying latent corruptions and proactively triggering a repair of corrupt data. 
 
-### **Performance**
+### Performance
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **Real-time tier optimization** - By dividing a volume into a performance tier and a capacity tier, ReFS can leverage real-time tier optimization to deliver both high performance and also capacity efficient storage for your data.
@@ -41,7 +41,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 
 - **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.  
 
-### **Scalability**
+### Scalability
 ReFS is designed to support extremely large data sets -- petabytes and larger -- without negatively impacting performance, achieving greater scale than prior file systems. The maximum volume size with ReFS is 4.7 zettabytes (ZB), or 4,700,000,000 terabytes (TB).
 
 ## Supported deployments
