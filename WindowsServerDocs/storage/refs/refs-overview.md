@@ -1,28 +1,32 @@
 ---
-title: refs-overview
+title: Resilient File System (ReFS) overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
 ms.manager: dmoss
 ms.technology: storage-file-systems
-ms.topic: articleauthor: gawatu
-ms.date: 12/9/2016
+ms.topic: article
+author: gawatu
+ms.date: 12/20/2016
 ms.assetid: 
 ---
-# Resilient File System
+
+# Resilient File System (ReFS) overview
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availibility, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
+The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
 
 ## Key benefits
-### **Resiliency**ReFS introduces new features that can precisely detect corruptions and also fix those corruptions while remaining online, helping provide increased integrity and availibility for your data: 
+
+### Resiliency 
+ReFS introduces new features that can precisely detect corruptions and also fix those corruptions while remaining online, helping provide increased integrity and availability for your data: 
 
 - **Online repair** - Repair processes are both localized to the area of corruption and performed online, requiring no volume downtime. 
-- **Storage Spaces integration** - When used in conjunction with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces. 
+- **Storage Spaces integration** - When used with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces. 
 - **Salvaging data** - If a volume becomes corrupted and an alternate copy of the corrupted data doesn't exist, ReFS removes the corrupt data from the namespace on a live volume. In other words, ReFS keeps the volume online while it handles non-correctable corruptions.
 - **Integrity-streams** - ReFS introduces checksums for metadata and optionally for file data, giving ReFS the ability to reliably detect corruptions. 
-- **Proactive error correction** - In addition to validating data before reads and writes, ReFS introduces a data integrity scanner, known as a <i>scrubber</i>. This scrubber periodically scans the volume, identifying latent corruptions and proactively triggering a repair of corrupt data. 
+- **Proactive error correction** - In addition to validating data before reads and writes, ReFS introduces a data integrity scanner, known as a *scrubber*. This scrubber periodically scans the volume, identifying latent corruptions and proactively triggering a repair of corrupt data. 
 
-### **Performance**
+### Performance
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **Real-time tier optimization** - By dividing a volume into a performance tier and a capacity tier, ReFS can leverage real-time tier optimization to deliver both high performance and also capacity efficient storage for your data.
@@ -37,7 +41,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 
 - **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.  
 
-### **Scalability**
+### Scalability
 ReFS is designed to support extremely large data sets -- petabytes and larger -- without negatively impacting performance, achieving greater scale than prior file systems. The maximum volume size with ReFS is 4.7 zettabytes (ZB), or 4,700,000,000 terabytes (TB).
 
 ## Supported deployments
@@ -60,7 +64,7 @@ Deploying ReFS on Storage Spaces with SAS drive enclosures is suitable for hosti
 
 ### ReFS on basic disks
 
-Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availibility solutions. 
+Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availability solutions. 
 
 For example, Exchange and SQL both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
 
