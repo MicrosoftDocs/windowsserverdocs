@@ -189,9 +189,9 @@ PS C:\> Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
 
 You can verify that the drives you intended are being used for caching by running **Get-PhysicalDisk** in PowerShell and verifying that their **Usage** property says **"Journal"**.
 
-Manual configuration enables the following deployment possibilities:
-
 ### Manual deployment possibilities
+
+Manual configuration enables the following deployment possibilities:
 
 ![Exotic-Deployment-Possibilities](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
 
