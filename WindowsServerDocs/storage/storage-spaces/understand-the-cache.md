@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 12/7/2016
+ms.date: 12/21/2016
 ---
 
 # Understanding the cache in Storage Spaces Direct
@@ -51,7 +51,7 @@ These can be combined in six ways, which we group into two categories: "all-flas
 
 ### All-flash deployment possibilities
 
-All-flash deployments aim to maximize storage performance, and do not include rotational hard disk drives (HDD).
+All-flash deployments aim to maximize storage performance and do not include rotational hard disk drives (HDD).
 
 ![All-Flash-Deployment-Possibilities](media/understand-the-cache/All-Flash-Deployment-Possibilities.png)
 
@@ -91,13 +91,15 @@ The behavior of the cache is determined automatically based on the type(s) of dr
 
 When caching for solid-state drives (NVMe or SSDs), only writes are cached. This reduces wear on the capacity drives because many writes and re-writes can coalesce in the cache and then de-stage only as needed, reducing the cumulative traffic to the capacity drives and extending their lifetime. For this reason, we recommend selecting [higher-endurance, write-optimized](http://whatis.techtarget.com/definition/DWPD-device-drive-writes-per-day) drives for the cache. The capacity drives may reasonably have lower write endurance.
 
-Because reads do not significantly affect the lifespan of flash, and because solid-state drives universally offer low read latency, reads are not cached: they are served directly from the capacity drives. This allows the cache to be dedicated entirely to writes, maximizing its effectiveness.
+Because reads do not significantly affect the lifespan of flash, and because solid-state drives universally offer low read latency, reads are not cached: they are served directly from the capacity drives (except when the data was written so recently that it has not yet been de-staged). This allows the cache to be dedicated entirely to writes, maximizing its effectiveness.
 
 This results in write characteristics, such as write latency, being dictated by the cache drives, while read characteristics are dictated by the capacity drives. Both are consistent, predictable, and uniform.
 
 ### Read/write caching for hybrid deployments
 
-When caching for hard disk drives (HDDs), both reads *and* writes are cached, to provide flash-like latency (often ~10x better) for both. The read cache stores recently and frequently read data for fast access and to minimize random traffic to the HDDs. (Because of seek and rotational delays, the latency and lost time incurred by random access to an HDD is significant.) Writes are cached to absorb bursts and, as before, to coalesce writes and re-writes and minimize the cumulative traffic to the capacity drives. Storage Spaces Direct implements an algorithm that de-randomizes writes before de-staging them, to emulate an IO pattern to disk that seems sequential even when the actual IO coming from the workload (such as virtual machines) is random. This maximizes the IOPS and throughput to the HDDs.
+When caching for hard disk drives (HDDs), both reads *and* writes are cached, to provide flash-like latency (often ~10x better) for both. The read cache stores recently and frequently read data for fast access and to minimize random traffic to the HDDs. (Because of seek and rotational delays, the latency and lost time incurred by random access to an HDD is significant.) Writes are cached to absorb bursts and, as before, to coalesce writes and re-writes and minimize the cumulative traffic to the capacity drives.
+
+Storage Spaces Direct implements an algorithm that de-randomizes writes before de-staging them, to emulate an IO pattern to disk that seems sequential even when the actual IO coming from the workload (such as virtual machines) is random. This maximizes the IOPS and throughput to the HDDs.
 
 ### Caching in deployments with drives of all three types
 
@@ -120,7 +122,7 @@ This table summarizes which drives are used for caching, which are used for capa
 
 The cache is implemented at the drive level: individual cache drives within one server are bound to one or many capacity drives within the same server.
 
-Because the cache is below the rest of the software-defined storage stack, it does not have nor need any awareness of concepts such as Storage Spaces or fault tolerance. You can think of it as creating "hybrid" (e.g. part flash, part disk) drives which are then presented to Windows. As with an actual hybrid drive, the real-time movement of hot and cold data between the faster and slower portions of the physical media is nearly invisible to the outside.
+Because the cache is below the rest of the Windows software-defined storage stack, it does not have nor need any awareness of concepts such as Storage Spaces or fault tolerance. You can think of it as creating "hybrid" (part flash, part disk) drives which are then presented to Windows. As with an actual hybrid drive, the real-time movement of hot and cold data between the faster and slower portions of the physical media is nearly invisible to the outside.
 
 Given that resiliency in Storage Spaces Direct is at least server-level (meaning data copies are always written to different servers; at most one copy per server), data in the cache benefits from the same resiliency as data not in the cache.
 
@@ -142,7 +144,7 @@ When a cache drive fails, any writes which have not yet been de-staged are lost 
 
 For a brief period, the capacity drives which were bound to the lost cache drive will appear unhealthy. Once the cache rebinding has occurred (automatic) and the data repair has completed (automatic), they will resume showing as healthy.
 
-This scenario is why at minimum two cache drives are required per server.
+This scenario is why at minimum two cache drives are required per server to preserve performance.
 
 ![Handling-Failure](media/understand-the-cache/Handling-Failure.gif)
 
@@ -160,6 +162,8 @@ With Storage Spaces Direct, the Storage Spaces write-back cache and the ReFS rea
 You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
 
 ## <a name="manual"></a> Manual configuration
+
+For most deployments, manual configuration is not required. In case you do need it, read on!
 
 ### Specify cache drive model
 
@@ -183,7 +187,13 @@ Count Name
 PS C:\> Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
 ```
 
-You can verify that the drives are being used for caching by running **Get-PhysicalDisk** in PowerShell and verifying that their **Usage** property says **"Journal"**.
+You can verify that the drives you intended are being used for caching by running **Get-PhysicalDisk** in PowerShell and verifying that their **Usage** property says **"Journal"**.
+
+### Manual deployment possibilities
+
+Manual configuration enables the following deployment possibilities:
+
+![Exotic-Deployment-Possibilities](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
 
 ### Set cache behavior
 
