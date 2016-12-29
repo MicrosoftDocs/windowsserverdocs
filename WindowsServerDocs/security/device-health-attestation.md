@@ -142,7 +142,7 @@ After you've installed Windows Server 2016, the device restarts and opens Server
 
 ### Install the signing and encryption certificates
 
-Using the following Windows PowerShell script to install the signing and encryption certificates.
+Using the following Windows PowerShell script to install the signing and encryption certificates. For more information about the thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](https://msdn.microsoft.com/library/ms734695.aspx).
 
 ```
 $key = Get-ChildItem Cert:\LocalMachine\My | Where-Object {$_.Thumbprint -like "<thumbprint>"}

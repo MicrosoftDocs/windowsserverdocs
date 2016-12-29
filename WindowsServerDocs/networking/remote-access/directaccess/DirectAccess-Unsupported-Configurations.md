@@ -15,12 +15,6 @@ author: jamesmci
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.  
 
-## DirectAccess deprecation
-
-Although DirectAccess is currently supported, Microsoft is no longer investing in DirectAccess development. DirectAccess is now deprecated and might not be included in future iterations of Windows Server. 
-
-In Windows Server 2016 and Windows 10, Remote Access VPN now supports always\-on connections. Because of this, it is recommended that you deploy Remote Access with VPN instead of DirectAccess.
-  
 ## <a name="bkmk_frs"></a>File Replication Service (FRS) distribution of Group Policy objects (SYSVOL replications)  
 Do not deploy DirectAccess in environments where your domain controllers are running the File Replication Service (FRS) for distribution of Group Policy objects (SYSVOL replications). Deployment of DirectAccess is not supported when you use FRS.  
   
