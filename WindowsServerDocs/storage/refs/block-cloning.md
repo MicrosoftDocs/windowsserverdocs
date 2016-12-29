@@ -1,4 +1,5 @@
 ---
+ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
 description:
 author: gawatu
@@ -8,7 +9,6 @@ ms.date: 12/6/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-file-systems
-ms.assetid: 
 ---
 
 # Block cloning on ReFS
