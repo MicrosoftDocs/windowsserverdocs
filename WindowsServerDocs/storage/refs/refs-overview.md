@@ -1,4 +1,5 @@
 ---
+ms.assetid: 570f0f5c-9d4d-4d55-8c12-e9758adfad03
 title: Resilient File System (ReFS) overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
@@ -7,7 +8,6 @@ ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 12/20/2016
-ms.assetid: 
 ---
 
 # Resilient File System (ReFS) overview
