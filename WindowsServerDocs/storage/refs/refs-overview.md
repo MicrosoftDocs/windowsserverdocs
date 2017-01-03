@@ -1,5 +1,5 @@
 ---
-title: Resilient-File-System-(ReFS)-Overview
+title: Resilient-File-System-(ReFS)-overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
 ms.manager: dmoss
@@ -9,7 +9,7 @@ author: gawatu
 ms.date: 12/9/2016
 ms.assetid: 
 ---
-# Resilient File System (ReFS) Overview
+# Resilient File System (ReFS) overview
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availibility, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations. 
@@ -43,6 +43,8 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
     - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations. 
     - Sparse VDL - Sparse VDL allows ReFS to zero files rapidly, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds.
+
+- **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.
     
     
 ### **Scalability**
