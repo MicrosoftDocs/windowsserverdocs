@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 12/14/2016
+ms.date: 01/03/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -155,6 +155,7 @@ manager: dongill
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Storage Management Service|Yes|Yes|
 |Storage Spaces|Yes|Yes|
+|Storage Spaces Direct|No|Yes|
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
