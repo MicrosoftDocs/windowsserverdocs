@@ -5,7 +5,7 @@ description:
 author: paullo
 ms.author: paullo
 manager: femila
-ms.date: 12/05/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -25,7 +25,7 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 - Best Practices
 
 >[!IMPORTANT]
-> An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](http://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.docx).  This document provides more details about our testing and measurement methodologies.
+> An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](http://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf).  This document provides more details about our testing and measurement methodologies.
 
 >[!NOTE]
 >For a quick overview, take a look at this high level overview video at [https://aka.ms/WS2016TimeVideo](https://aka.ms/WS2016TimeVideo).

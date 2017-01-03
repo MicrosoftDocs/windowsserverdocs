@@ -181,7 +181,7 @@ $HttpsCertificate = New-SelfSignedCertificate -DnsName "<HgsServiceName>.$env:us
 After you have chosen or created a certificate to use for HTTPS, use a command like the following to export it.
 
 ```powershell
-Export-PfxCertificate -Cert $HttpsCertificate -Password $certificatePassword -FilePath 'c:\\HttpsCertificate.pfx'
+Export-PfxCertificate -Cert $HttpsCertificate -Password $certificatePassword -FilePath 'c:\HttpsCertificate.pfx'
 ```
 
 The options for specifying this certificate when initializing the HGS server are listed later in this topic.
@@ -241,10 +241,10 @@ The following commands will complete the configuration of the first HGS node.
 If you want to enable HTTPS communication on the HGS server, you need to pass in the HTTPS certificate (the one you exported in [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https)) when initializing the HGS server. Modify the following example as appropriate, and then run it in place of the command in the previous section.
 
 ```powershell
-Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
+Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
 ```
     
->**Note**&nbsp;&nbsp;If you are setting up multiple HGS servers in a high availability configuration, be sure to import the same HTTPS certificate on each machine. The variables **-Http -Https -HttpsCertificatePath 'C:\\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword** (as shown in the previous command) should be included every time you initialize an HGS server in your environment.
+>**Note**&nbsp;&nbsp;If you are setting up multiple HGS servers in a high availability configuration, be sure to import the same HTTPS certificate on each machine. The variables **-Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword** (as shown in the previous command) should be included every time you initialize an HGS server in your environment.
 
 #### Initialize HGS in an existing bastion forest
 

@@ -38,7 +38,7 @@ NPS allows you to centrally configure and manage network access authentication, 
 - **RADIUS accounting**. You can configure NPS to log events to a local log file or to a local or remote instance of Microsoft SQL Server.
 
 >[!IMPORTANT]
->Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) are deprecated, and are not available in Windows Server 2016.
+>Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) were deprecated in Windows Server 2012 R2, and are not available in Windows Server 2016. If you have a NAP deployment using operating systems earlier than Windows Server 2016, you cannot migrate your NAP deployment to Windows Server 2016.
 
 You can configure NPS with any combination of these features. For example, you can configure one NPS server as a RADIUS server for VPN connections and also as a RADIUS proxy to forward some connection requests to members of a remote RADIUS server group for authentication and authorization in another domain.
 
