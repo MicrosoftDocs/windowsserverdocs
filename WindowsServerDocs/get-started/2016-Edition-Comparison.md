@@ -84,7 +84,7 @@ manager: dongill
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes|Yes|
+|Containers|Yes (up to 2)|Yes (unlimited)|
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
@@ -153,6 +153,7 @@ manager: dongill
 |Nano Server installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
+|Software-defined Networking|No|Yes|
 |Storage Management Service|Yes|Yes|
 |Storage Spaces|Yes|Yes|
 |Storage Spaces Direct|No|Yes|
