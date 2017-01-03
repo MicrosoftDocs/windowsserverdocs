@@ -29,17 +29,17 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 ### Performance
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
-- **Real-time tier optimization** - Real-time tier optimization delivers both high performance and also capacity efficient storage for your data.
-     - To provide fast and capacity-efficient storage, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include: 
-        | Performance tier | Capacity tier |
-        |----------------|-----------------|
-          Mirrored SSD | Mirrored HDD |
-          Mirrored SSD | Parity SSD |
-          Mirrored SSD | Parity HDD |    
+- **Real-time tier optimization** - Real-time tier optimization delivers both high performance and also capacity efficient storage for your data. To do so, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include: 
+    | Performance tier | Capacity tier |
+    |----------------|-----------------|
+     Mirrored SSD | Mirrored HDD |
+     Mirrored SSD | Parity SSD |
+     Mirrored SSD | Parity HDD |   
+     ||| 
             
-- Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
-    - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
-    - If using a [hybrid deployment](../storage-spaces/choosing-drives-and-resiliency-types.md) (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads will also occur in the performance tier. 
+    - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
+        - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
+        - If using a [hybrid deployment](../storage-spaces/choosing-drives-and-resiliency-types.md) (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads will also occur in the performance tier. 
 
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
     - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations. 
