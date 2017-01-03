@@ -35,7 +35,6 @@ In addition to providing resiliency improvements, ReFS introduces new features f
      Mirrored SSD | Mirrored HDD |
      Mirrored SSD | Parity SSD |
      Mirrored SSD | Parity HDD |   
-     ||| 
             
     - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
         - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
