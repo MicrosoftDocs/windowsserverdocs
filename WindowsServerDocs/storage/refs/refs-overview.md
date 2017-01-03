@@ -1,5 +1,5 @@
 ---
-title: Resilient-File-System-Overview
+title: Resilient-File-System-(ReFS)-Overview
 ms.prod: windows-server-threshold
 ms.author: gawatu
 ms.manager: dmoss
@@ -28,7 +28,7 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **Real-time tier optimization** - Real-time tier optimization delivers both high performance and also capacity efficient storage for your data.
-     - To provide fast and capacity-efficient storage, a volume can be divided into two groups of drives, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include:
+     - To provide fast and capacity-efficient storage, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include:
     
             | Performance tier | Capacity tier |
             |----------------|-----------------|
@@ -43,6 +43,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
     - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations. 
     - Sparse VDL - Sparse VDL allows ReFS to zero files rapidly, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds.
+    
     
 ### **Scalability**
 ReFS is designed to support extremely large data sets--millions of terabytes--without negatively impacting performance, achieving greater scale than prior file systems. 
@@ -81,6 +82,8 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 
 ### Functionality
 
+#### The following features are available on ReFS:
+
 | Functionality       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
 | BitLocker encryption | Yes | Yes |
@@ -102,7 +105,7 @@ Deploying ReFS on basic disks is suitable for applications that provide their ow
 | Sparse VDL | Yes | No |
 | Real-time tier optimization| Yes | No |
 
-<br></br>
+#### The following features are unavailable on ReFS at this time:
 
 | Functionality       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|

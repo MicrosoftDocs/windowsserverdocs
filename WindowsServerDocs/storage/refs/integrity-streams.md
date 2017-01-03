@@ -1,5 +1,5 @@
 ---
-title: Integrity streams
+title: ReFS integrity streams
 description:
 author: gawatu
 ms.author: jgerend
