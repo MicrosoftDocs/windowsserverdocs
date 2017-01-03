@@ -13,7 +13,9 @@ ms.date: 12/7/2016
 # Choosing drives and resiliency types in Storage Spaces Direct to meet performance and capacity requirements
 >Applies To: Windows Server 2016
 
-This topic provides guidance on how to choose drives and resiliency types (such as mirroring) in [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your workload's performance and capacity requirements. For an in-depth conceptual explanation of the cache and its benefits, check out [Understand the cache in Storage Spaces Direct](understand-the-cache.md).
+This topic provides guidance on how to choose drives and resiliency types (such as mirroring) in [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your workload's performance and capacity requirements.
+
+For more in-depth content about the cache check out [Understanding the cache in Storage Spaces Direct](understand-the-cache.md).
 
 Storage Spaces Direct currently works with three types of storage devices:
 
@@ -54,7 +56,7 @@ To achieve predictable and uniform sub-millisecond latency across random reads a
 
 You should go "all-flash". There are currently three ways to do that:
 
-![Deployment options for maximizing performance](media/choosing-drives-and-resiliency-types/maximizing-performance.png)
+![All-Flash-Deployment-Possibilities](media/choosing-drives-and-resiliency-types/All-Flash-Deployment-Possibilities.png)
 
 1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter ([requires set-up](understand-the-cache.md#manual)).
 
@@ -81,7 +83,7 @@ For environments with a variety of applications and workloads, not all of which 
 
 You should go "hybrid" with either NVMe or SSDs caching for larger HDDs.
 
-![Deployment options for balancing performance and capacity](media/choosing-drives-and-resiliency-types/balancing-performance-and-capacity.png)
+![Hybrid-Deployment-Possibilities](media/choosing-drives-and-resiliency-types/Hybrid-Deployment-Possibilities.png)
 
 1. **NVMe + HDD**. The NVMe drives will accelerate reads and writes by caching both. Caching reads allows the HDDs to focus on writes. Caching writes absorbs bursts and allows writes to coalesce and be de-staged only as needed, in an artificially serialized manner that maximizes HDD IOPS and IO throughput. This provides NVMe-like write characteristics, and for frequently or recently read data, NVMe-like read characteristics too.
 
