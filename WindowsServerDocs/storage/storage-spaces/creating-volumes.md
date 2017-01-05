@@ -26,8 +26,11 @@ The **New-Volume** cmdlet has four parameters you'll always need to provide:
 
 -	**FriendlyName:** Any string you want – for example, *"Volume1"*
 -	**FileSystem:** Either **CSVFS_ReFS** or **CSVFS_NTFS**
--	**StoragePoolFriendlyName:** The name of your storage pool, probably *"S2D*"*
--	**Size:** The size of the volume, interpreted in binary units – for example, "0.909495 TB" will create a volume of size 1,000,000,000,000 bytes
+-	**StoragePoolFriendlyName:** The name of your storage pool, probably *"S2D\*"*
+-	**Size:** The size of the volume
+
+   >[!NOTE]
+   >  The **Size** value is interpreted in binary units – for example, specifying "0.909495TB" will create a volume of size approximately 1,000,000,000,000 bytes. 
 
 ### Example: With 2 or 3 servers
 
@@ -52,9 +55,7 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 ### Example: Tiers
 
-In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each.
-
-Likewise, in deployments with four or more servers, one volume can mix mirroring and erasure coding to reside partially on each.
+In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each. Likewise, in deployments with four or more servers, one volume can mix mirroring and erasure coding to reside partially on each.
 
 To help you create such volumes, Storage Spaces Direct provides default 'tier templates' called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and erasure coding on the slower capacity drives (if applicable). If you're curious, you can see them by running the **Get-StorageTier** cmdlet.
 
