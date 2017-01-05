@@ -24,10 +24,10 @@ We recommend using the **New-Volume** cmdlet to create volumes for Storage Space
 
 The **New-Volume** cmdlet has four parameters you'll always need to provide:
 
--	**FriendlyName:** Any string you want, for example *"Volume1"*
--	**FileSystem:** Either **CSVFS_ReFS** or **CSVFS_NTFS**
--	**StoragePoolFriendlyName:** The name of your storage pool, for example *"S2D on ClusterName"*
--	**Size:** The size of the volume, for example *"10TB"*
+- **FriendlyName:** Any string you want, for example *"Volume1"*
+- **FileSystem:** Either **CSVFS_ReFS** or **CSVFS_NTFS** 
+- **StoragePoolFriendlyName:** The name of your storage pool, for example *"S2D on ClusterName"*
+- **Size:** The size of the volume, for example *"10TB"*
 
    >[!NOTE]
    >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is not unexpected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
@@ -53,7 +53,7 @@ New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity
 ```
 
-### Example: Tiers
+### Example: Using storage tiers
 
 In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each. Likewise, in deployments with four or more servers, one volume can mix mirroring and erasure coding to reside partially on each.
 
