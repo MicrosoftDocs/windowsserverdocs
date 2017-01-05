@@ -25,7 +25,7 @@ We recommend using the **New-Volume** cmdlet to create volumes for Storage Space
 The **New-Volume** cmdlet has four parameters you'll always need to provide:
 
 - **FriendlyName:** Any string you want, for example *"Volume1"*
-- **FileSystem:** Either **CSVFS_ReFS** or **CSVFS_NTFS** 
+- **FileSystem:** Either **CSVFS_ReFS** (recommended) or **CSVFS_NTFS**
 - **StoragePoolFriendlyName:** The name of your storage pool, for example *"S2D on ClusterName"*
 - **Size:** The size of the volume, for example *"10TB"*
 
