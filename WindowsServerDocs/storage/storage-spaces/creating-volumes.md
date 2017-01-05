@@ -13,7 +13,7 @@ ms.date: 1/5/2017
 
 >Applies To: Windows Server 2016
 
-This topic provides instructions for how to create volumes in Storage Spaces Direct using PowerShell or using the wizards from Failover Cluster Manager.
+This topic provides instructions for how to create volumes in Storage Spaces Direct using PowerShell or Failover Cluster Manager.
 
    >[!TIP]
    >  If you haven’t already, check out [Choosing drives and resiliency types in Storage Spaces Direct](choosing-drives-and-resiliency-types.md).
@@ -24,17 +24,17 @@ We recommend using the **New-Volume** cmdlet to create volumes for Storage Space
 
 The **New-Volume** cmdlet has four parameters you'll always need to provide:
 
--	**FriendlyName:** Any string you want – for example, *"Volume1"*
+-	**FriendlyName:** Any string you want, for example *"Volume1"*
 -	**FileSystem:** Either **CSVFS_ReFS** or **CSVFS_NTFS**
--	**StoragePoolFriendlyName:** The name of your storage pool, probably *"S2D on ClusterName"*
--	**Size:** The size of the volume – for example, *"10TB"*
+-	**StoragePoolFriendlyName:** The name of your storage pool, for example *"S2D on ClusterName"*
+-	**Size:** The size of the volume, for example *"10TB"*
 
    >[!NOTE]
-   >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often marketed using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is not unexpected. When creating volumes using **New-Volume**, you should specify the size in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
+   >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is not unexpected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
 
 ### Example: With 2 or 3 servers
 
-If you have only two servers, Storage Spaces Direct will automatically use two-way mirroring for resiliency. If you have three servers, it will automatically use three-way mirroring.
+To make things easier, if your deployment has only two servers, Storage Spaces Direct will automatically use two-way mirroring for resiliency. If your deployment has only three servers, it will automatically use three-way mirroring.
 
 ```
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
@@ -44,7 +44,7 @@ New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 If you have four or more servers, you can use the optional **ResiliencySettingName** parameter to choose your resiliency type.
 
--	**ResiliencySettingName:** Either **Mirror** or **Parity**, the latter referring to erasure coding. If you don’t specify, the default is **Mirror**.
+-	**ResiliencySettingName:** Either **Mirror** or **Parity**, the latter referring to erasure coding.
 
 In the following example, *"Volume2"* uses three-way mirroring and *"Volume3"* uses erasure coding.
 
@@ -67,7 +67,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 ![storage-tiers-screenshot](media/Storage-Spaces-Fault-Tolerance/storage-tiers-screenshot.png)
 
-To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and erasure coding in 30%:70% proportions.
+To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and erasure coding in 30:70 proportions.
 
 ```
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
@@ -111,7 +111,7 @@ Select the virtual disk you just created and click **Next**.
 
 Specify the volume size, probably the same as the virtual disk size, and click **Next**. 
 
-Assign the volume to a drive letter if you'd like, or choose **Don't assign to a drive letter**, and click **Next**.
+Assign the volume to a drive letter or choose **Don't assign to a drive letter** and click **Next**.
 
 Specify the filesystem to use, leave the allocation unit size as *Default*, name the volume, and click **Next**.
 
