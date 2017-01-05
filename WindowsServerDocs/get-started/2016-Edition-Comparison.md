@@ -84,7 +84,7 @@ manager: dongill
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes (up to 2)|Yes (unlimited)|
+|Containers|Yes (Windows containers unlimited; Hyper-V containers up to 2)|Yes (all container types unlimited)|
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
