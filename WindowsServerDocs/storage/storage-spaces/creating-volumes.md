@@ -83,7 +83,7 @@ In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
 
 Select **New Virtual Disk** from the Actions pane on the right, or right-click the pool and select **New Virtual Disk**.
 
-[ IMAGE ]
+![New Virtual Disk](media/creating-volumes/GUI-Step-1.png)
 
 Select the storage pool and click **OK**.
 
@@ -98,8 +98,6 @@ Specify its size, optionally spanning multiple tiers (if applicable), and click 
 Review your selections and click **Create**.
 
 Once the virtual disk has been created, be sure to check the box marked **[Check] Create a volume when this wizard closes**, and click **Close**.
-
-[ IMAGE ]
 
 ### Create volume
 
@@ -125,7 +123,7 @@ Finally, in Failover Cluster Manager, navigate to **Storage** -> **Disks**.
 
 Select the virtual disk you just created and select **Add to Cluster Shared Volumes** from the Actions pane on the right, or right-click the virtual disk and select **Add to Cluster Shared Volumes**.
 
-[ IMAGE ]
+![Add to Cluster Shared Volumes](media/creating-volumes/GUI-Step-2.png)
 
 ## See also
 
