@@ -422,7 +422,7 @@ You can create volumes for Storage Spaces Direct in PowerShell using the **New-V
 
 We recommend using the **New-Volume** cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-For more information, check out [Creating volumes in Storage Spaces Direct](creating-volumes.md).
+For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
 ### Step 3.7: Deploy virtual machines
 
