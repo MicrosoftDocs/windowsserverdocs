@@ -418,7 +418,7 @@ When this command is finished, which may take several minutes, the system will b
 
 ### Step 3.6: Create volumes
 
-You can create volumes in Storage Spaces Direct using the **New-Volume** cmdlet in PowerShell or the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard* from Failover Cluster Manager.
+You can create volumes for Storage Spaces Direct in PowerShell using the **New-Volume** cmdlet or in Failover Cluster Manager using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard*.
 
 We recommend using the **New-Volume** cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
