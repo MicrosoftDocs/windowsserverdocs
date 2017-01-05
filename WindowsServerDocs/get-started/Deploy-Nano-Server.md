@@ -216,7 +216,7 @@ Import-PackageProvider NanoServerPackage
 ```
 
 >[!NOTE]
->If you experience errors when running Install-PackageProvider, check that you have [installed the latest cumulative update](https://technet.microsoft.com/en-us/windows-server-docs/get-started/update-nano-server) ([KB3206632](https://support.microsoft.com/kb/3206632) or later), or use Save-Module as follows: 
+>If you experience errors when running Install-PackageProvider, check that you have installed the latest [cumulative update](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server) ([KB3206632](https://support.microsoft.com/kb/3206632) or later), or use Save-Module as follows: 
 
 ```powershell
 Save-Module -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\" -Name NanoServerPackage -MinimumVersion 1.0.1.0
