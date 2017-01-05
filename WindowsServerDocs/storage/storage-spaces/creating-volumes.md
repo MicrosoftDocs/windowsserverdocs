@@ -26,11 +26,11 @@ The **New-Volume** cmdlet has four parameters you'll always need to provide:
 
 -	**FriendlyName:** Any string you want – for example, *"Volume1"*
 -	**FileSystem:** Either **CSVFS_ReFS** or **CSVFS_NTFS**
--	**StoragePoolFriendlyName:** The name of your storage pool, probably *"S2D\*"*
--	**Size:** The size of the volume
+-	**StoragePoolFriendlyName:** The name of your storage pool, probably *"S2D on ClusterName"*
+-	**Size:** The size of the volume – for example, *"10TB"*
 
    >[!NOTE]
-   >  The **Size** value is interpreted in binary units – for example, specifying "0.909495TB" will create a volume of size approximately 1,000,000,000,000 bytes. 
+   >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often marketed using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is not unexpected. When creating volumes using **New-Volume**, you should specify the size in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
 
 ### Example: With 2 or 3 servers
 
@@ -57,7 +57,9 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each. Likewise, in deployments with four or more servers, one volume can mix mirroring and erasure coding to reside partially on each.
 
-To help you create such volumes, Storage Spaces Direct provides default 'tier templates' called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and erasure coding on the slower capacity drives (if applicable). If you're curious, you can see them by running the **Get-StorageTier** cmdlet.
+To help you create such volumes, Storage Spaces Direct provides default tier templates called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and erasure coding on the slower capacity drives (if applicable).
+
+You can see them by running the **Get-StorageTier** cmdlet.
 
 ```
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
@@ -65,9 +67,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 ![storage-tiers-screenshot](media/Storage-Spaces-Fault-Tolerance/storage-tiers-screenshot.png)
 
-To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet.
-
-For example, the following cmdlet creates one volume which uses 30% three-way mirroring and 70% erasure coding.
+To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and erasure coding in 30%:70% proportions.
 
 ```
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
@@ -75,7 +75,9 @@ New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 ## Failover Cluster Manager
 
-You can also create volumes using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard* from Failover Cluster Manager.
+You can also create volumes using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard* from Failover Cluster Manager, although this workflow has many more manual steps and therefore takes longer.
+
+### Create virtual disk
 
 In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
 
@@ -99,8 +101,33 @@ Once the virtual disk has been created, be sure to check the box marked **[Check
 
 [ IMAGE ]
 
+### Create volume
+
 The *New Volume Wizard* will open.
 
 Click **Next**.
 
-...
+Select the virtual disk you just created and click **Next**.
+
+Specify the volume size, probably the same as the virtual disk size, and click **Next**. 
+
+Assign the volume to a drive letter if you'd like, or choose **Don't assign to a drive letter**, and click **Next**.
+
+Specify the filesystem to use, leave the allocation unit size as *Default*, name the volume, and click **Next**.
+
+Review your selections and click **Create**.
+
+Click **Close**.
+
+### Add to cluster shared volumes
+
+Finally, in Failover Cluster Manager, navigate to **Storage** -> **Disks**.
+
+Select the virtual disk you just created and select **Add to Cluster Shared Volumes** from the Actions pane on the right, or right-click the virtual disk and select **Add to Cluster Shared Volumes**.
+
+[ IMAGE ]
+
+## See also
+
+- [Storage Spaces Direct](storage-spaces-direct-overview.md)
+- [Choosing drives and resiliency types](choosing-drives-and-resiliency-types.md)
