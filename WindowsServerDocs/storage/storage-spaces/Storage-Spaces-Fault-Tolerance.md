@@ -208,40 +208,9 @@ Over its lifetime, Storage Spaces can tolerate any number of failures, because i
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
-## Usage in PowerShell
+## Usage
 
-When you create volumes ("Storage Spaces"), you can specify which resiliency type to use. In PowerShell, you can use the the **New-Volume** cmdlet and its **ResiliencySettingName** and **PhysicalDiskRedundancy** parameters.
-
-Each of the following four cmdlets creates one volume. *Mirror 1* uses two-way mirror; *Mirror 2* uses three-way mirror; *Parity 1* uses single parity; and *Parity 2* uses dual parity. So long as you have the minimum number of fault domains required for each, these cmdlets individually are the most prescriptive and surefire way to create exactly what you want. Remember to specify whatever **FriendlyName** and **Size** you want.
-
-```
-New-Volume -FriendlyName "Mirror 1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 1
-New-Volume -FriendlyName "Mirror 2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror -PhysicalDiskRedundancy 2
-New-Volume -FriendlyName "Parity 1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity -PhysicalDiskRedundancy 1
-New-Volume -FriendlyName "Parity 2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity -PhysicalDiskRedundancy 2
-```
-
-To make things easier, if your deployment uses Storage Spaces Direct with only two or three servers, you can omit the **ResiliencySettingName** and **PhysicalDiskRedundancy** parameters altogether, and Storage Spaces will automatically use the most fault tolerant mirroring option. Easy!
-
-```
-New-Volume -FriendlyName "Bill Gates" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
-```
-
-If your deployment uses Storage Spaces Direct with four or more servers, ‘tier templates’ are automatically created, called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring (*Performance*) and the best dual parity layout at your scale (*Capacity*). If you’re curious, you can see them by running the following cmdlet.
-
-```
-Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
-```
-
-![storage-tiers-screenshot](media/Storage-Spaces-Fault-Tolerance/storage-tiers-screenshot.png)
-
-To create volumes, and especially mixed resiliency volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters. The following cmdlet creates a 1 TB mixed volume, split 30% three-way mirror and 70% dual parity.
-
-```
-New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
-```
-
-We recommend this blog about [how volumes are represented in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/), by our very own [Cosmos Darwin](https://twitter.com/cosmosdarwin), which includes guidance and scripting samples on how best to inspect them in PowerShell.
+Check out [Creating volumes in Storage Spaces Direct](creating-volumes.md).
 
 ## See Also
 
