@@ -90,7 +90,7 @@ There are three major steps:
 5. Name the virtual disk and click **Next**.
 6. Specify its size, optionally spanning multiple tiers (if applicable), and click **Next**.
 7. Review your selections and click **Create**.
-8. Once the virtual disk has been created, be sure to check the box marked **[Check] Create a volume when this wizard closes**, and click **Close**.
+8. Once the virtual disk has been created, be sure to check the box marked **Create a volume when this wizard closes**, and click **Close**.
 
 ### Step 2: Create volume
 
