@@ -210,7 +210,7 @@ Over its lifetime, Storage Spaces can tolerate any number of failures, because i
 
 ## Usage
 
-Check out [Creating volumes in Storage Spaces Direct](creating-volumes.md).
+Check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
 ## See Also
 
