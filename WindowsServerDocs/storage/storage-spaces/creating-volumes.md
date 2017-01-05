@@ -77,7 +77,9 @@ New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 You can also create volumes using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard* from Failover Cluster Manager, although this workflow has many more manual steps and is not recommended.
 
-### Create virtual disk
+There are three major steps:
+
+### Step 1: Create virtual disk
 
 ![New Virtual Disk](media/creating-volumes/GUI-Step-1.png)
 
@@ -93,7 +95,7 @@ The *New Virtual Disk Wizard (Storage Spaces Direct)* will open.
 7. Review your selections and click **Create**.
 8. Once the virtual disk has been created, be sure to check the box marked **[Check] Create a volume when this wizard closes**, and click **Close**.
 
-### Create volume
+### Step 2: Create volume
 
 The *New Volume Wizard* will open.
 
@@ -105,7 +107,7 @@ The *New Volume Wizard* will open.
 14. Review your selections and click **Create**.
 15. Click **Close**.
 
-### Add to cluster shared volumes
+### Step 3: Add to cluster shared volumes
 
 ![Add to Cluster Shared Volumes](media/creating-volumes/GUI-Step-2.png)
 
