@@ -85,10 +85,7 @@ There are three major steps:
 
 1. In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
 2. Select **New Virtual Disk** from the Actions pane on the right, or right-click the pool and select **New Virtual Disk**.
-3. Select the storage pool and click **OK**.
-
-The *New Virtual Disk Wizard (Storage Spaces Direct)* will open.
-
+3. Select the storage pool and click **OK**. The *New Virtual Disk Wizard (Storage Spaces Direct)* will open.
 4. Click **Next**.
 5. Name the virtual disk and click **Next**.
 6. Specify its size, optionally spanning multiple tiers (if applicable), and click **Next**.
