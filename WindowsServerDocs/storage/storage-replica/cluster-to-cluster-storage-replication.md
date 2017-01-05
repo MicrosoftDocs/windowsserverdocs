@@ -26,9 +26,9 @@ There are no graphical tools in Windows Server 2016 Datacenter Edition that can 
 ### Terms  
 This walkthrough uses the following environment as an example:  
 
--   Two member servers, named **SR-SRV01** and **SR-SRV02** in a cluster named **SR-SRVCLUSA**.  
+-   Two member servers, named **SR-SRV01** and **SR-SRV02** that are later formed into a cluster named **SR-SRVCLUSA**.  
 
--   Two member servers named **SR-SRV03** and **SR-SRV04** in a cluster named **SR-SRVCLUSB**.  
+-   Two member servers named **SR-SRV03** and **SR-SRV04** that are later formed into  a cluster named **SR-SRVCLUSB**.  
 
 -   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
@@ -120,31 +120,13 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         2.  Provision the storage using your vendor documentation.  
 
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.  
-For example, to validate two of the proposed stretch cluster nodes that each have D: and E: volume and run the test for230 minutes:
+For example,  
 
-    1.  Move all available storage to **SR-SRV01**.  
+   ```PowerShell
+   MD c:\temp
 
-    2.  Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-
-    3.  Add the online storage to that empty role named **New Role**.  
-
-    4.  Move all available storage to **SR-SRV03**.  
-
-    5.  Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-
-    6.  Move the empty **New Role (2)** to **SR-SRV03**.  
-
-    7.  Add the online storage to that empty role named **New Role (2)**.  
-
-    8.  Now that you have mounted all your storage with drive letters and evaluate the cluster with `Test-SRTopology`.  
-
-        For example:  
-
-        ```PowerShell
-        MD c:\temp
-
-        Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
-        ```
+   Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
+   ```
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  

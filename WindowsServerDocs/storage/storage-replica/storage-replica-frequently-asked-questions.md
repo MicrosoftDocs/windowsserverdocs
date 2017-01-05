@@ -65,7 +65,7 @@ Get-SRGroup
 
 do{
     $r=(Get-SRGroup -Name "Replication 2").replicas
-    [System.Console]::Write("Number of remaining bytes {0}`r", $r.NumOfBytesRemaining)
+    [System.Console]::Write("Number of remaining bytes {0}`n", $r.NumOfBytesRemaining)
     Start-Sleep 10
 }until($r.ReplicationStatus -eq 'ContinuouslyReplicating')
 Write-Output "Replica Status: "$r.replicationstatus
