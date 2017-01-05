@@ -18,7 +18,7 @@ This topic provides instructions for how to create volumes in Storage Spaces Dir
    >[!TIP]
    >  If you haven’t already, check out [Choosing drives and resiliency types in Storage Spaces Direct](choosing-drives-and-resiliency-types.md).
 
-## PowerShell
+## Create volumes using PowerShell
 
 We recommend using the **New-Volume** cmdlet to create volumes for Storage Spaces Direct. It provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
@@ -73,59 +73,48 @@ To create tiered volumes, reference these tier templates using the **StorageTier
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 
-## Failover Cluster Manager
+## Create volumes using Failover Cluster Manager
 
 You can also create volumes using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard* from Failover Cluster Manager, although this workflow has many more manual steps and is not recommended.
 
 ### Create virtual disk
 
-In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
-
-Select **New Virtual Disk** from the Actions pane on the right, or right-click the pool and select **New Virtual Disk**.
-
 ![New Virtual Disk](media/creating-volumes/GUI-Step-1.png)
 
-Select the storage pool and click **OK**.
+1. In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
+2. Select **New Virtual Disk** from the Actions pane on the right, or right-click the pool and select **New Virtual Disk**.
+3. Select the storage pool and click **OK**.
 
-This will open the *New Virtual Disk Wizard (Storage Spaces Direct)*.
+The *New Virtual Disk Wizard (Storage Spaces Direct)* will open.
 
-Click **Next**.
-
-Name the virtual disk and click **Next**.
-
-Specify its size, optionally spanning multiple tiers (if applicable), and click **Next**.
-
-Review your selections and click **Create**.
-
-Once the virtual disk has been created, be sure to check the box marked **[Check] Create a volume when this wizard closes**, and click **Close**.
+4. Click **Next**.
+5. Name the virtual disk and click **Next**.
+6. Specify its size, optionally spanning multiple tiers (if applicable), and click **Next**.
+7. Review your selections and click **Create**.
+8. Once the virtual disk has been created, be sure to check the box marked **[Check] Create a volume when this wizard closes**, and click **Close**.
 
 ### Create volume
 
 The *New Volume Wizard* will open.
 
-Click **Next**.
-
-Select the virtual disk you just created and click **Next**.
-
-Specify the volume size, probably the same as the virtual disk size, and click **Next**. 
-
-Assign the volume to a drive letter or choose **Don't assign to a drive letter** and click **Next**.
-
-Specify the filesystem to use, leave the allocation unit size as *Default*, name the volume, and click **Next**.
-
-Review your selections and click **Create**.
-
-Click **Close**.
+9. Click **Next**.
+10. Select the virtual disk you just created and click **Next**.
+11. Specify the volume size, probably the same as the virtual disk size, and click **Next**. 
+12. Assign the volume to a drive letter or choose **Don't assign to a drive letter** and click **Next**.
+13. Specify the filesystem to use, leave the allocation unit size as *Default*, name the volume, and click **Next**.
+14. Review your selections and click **Create**.
+15. Click **Close**.
 
 ### Add to cluster shared volumes
 
-Finally, in Failover Cluster Manager, navigate to **Storage** -> **Disks**.
-
-Select the virtual disk you just created and select **Add to Cluster Shared Volumes** from the Actions pane on the right, or right-click the virtual disk and select **Add to Cluster Shared Volumes**.
-
 ![Add to Cluster Shared Volumes](media/creating-volumes/GUI-Step-2.png)
+
+16. In Failover Cluster Manager, navigate to **Storage** -> **Disks**.
+17. Select the virtual disk you just created and select **Add to Cluster Shared Volumes** from the Actions pane on the right, or right-click the virtual disk and select **Add to Cluster Shared Volumes**.
+
+You're done! Repeat as needed to create more than one volume.
 
 ## See also
 
-- [Storage Spaces Direct](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Choosing drives and resiliency types](choosing-drives-and-resiliency-types.md)
