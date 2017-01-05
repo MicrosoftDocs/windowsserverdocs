@@ -51,7 +51,7 @@ Use these steps to create your small-footprint RDS deployment from the Azure Mar
    1. Sign into the [Azure portal](https://portal.azure.com).
    2. Click **New** to add your deployment.
    3. Type "RDS" in the search field and press Enter.
-   4. Click **Remote Desktop Services (RDS) Deployment**, and then click **Create**.
+   4. Click **Remote Desktop Services (RDS) - Basic - Devtest**, and then click **Create**.
    5. Follow the steps in the portal to create and deploy RDS.
 2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
    1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) to install any certificates needed to connect to the RDS deployment. The script also starts RD Web in your browser.
