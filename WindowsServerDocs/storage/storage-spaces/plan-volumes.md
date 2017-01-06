@@ -11,7 +11,7 @@ ms.date: 01/07/2016
 
 # Planning Volumes in Storage Spaces Direct
 
->Applies To: Windows Server 2016
+> Applies To: Windows Server 2016
 
 This topic provides guidance for how to plan volumes in Storage Spaces Direct to meet the performance and capacity needs of your workloads, including choosing their filesystem, resiliency type, and size.
 
@@ -24,9 +24,11 @@ Volumes are the datastores where you put the files your workloads need, such as 
 
 ![what-are-volumes](media/plan-volumes/what-are-volumes.png)
 
-All volumes are accessible by all servers in the cluster at the same time – once created, they show up at **C:\ClusterStorage\** on all servers.
+All volumes are accessible by all servers in the cluster at the same time.
 
-(IMAGE)
+Once created, they show up at **C:\ClusterStorage\** on all servers.
+
+![csv-folder-screenshot](media/plan-volumes/csv-folder-screenshot.png)
 
 ## Choosing how many volumes to create
 
@@ -156,6 +158,7 @@ Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*
 We aren't required to make all volumes the same size, but for simplicity, let's – for example, we can make them all 12 TB.
 
 *Volume1* and *Volume2* will each occupy 12 TB x 33.3% efficiency = 36 TB of physical storage capacity.
+
 *Volume3* and *Volume4* will each occupy 12 TB x 50.0% efficiency = 24 TB of physical storage capacity.
 
 ```
