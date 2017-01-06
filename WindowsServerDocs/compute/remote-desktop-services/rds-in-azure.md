@@ -56,15 +56,15 @@ Use these steps to create your small-footprint RDS deployment from the Azure Mar
 2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
    1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment. 
    
-   This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
+      This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
 
    2. When prompted, sign into your Azure account. Select the Azure subscription, resource group, and public IP address created for this new deployment.
    3. When the script is finished, the RD Web page launches in your default browser. You can double-check the RD Web page by comparing the URL for the page to the DNS address you provided during deployment. 
    
-   Sign in with the admin credentials you created during deployment to see the default desktop published for you. You can also send users the RD Web site to test their desktops and applications.
+      Sign in with the admin credentials you created during deployment to see the default desktop published for you. You can also send users the RD Web site to test their desktops and applications.
 
-   > [!TIP]
-   > Forget the domain name or admin user? You can go back to the new Resource Group in the portal, click **Deployments**, and then view the parameters you entered.
+      > [!TIP]
+      > Forget the domain name or admin user? You can go back to the new Resource Group in the portal, click **Deployments**, and then view the parameters you entered.
 
 ## Customized RDS using Quickstart templates
 
@@ -82,13 +82,13 @@ Use these steps to create your small-footprint RDS deployment with an Azure RDS 
 2. Connect to your deployment. 
    1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment. 
    
-   This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
+      This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
 
    2. When prompted, sign into your Azure account. Select the Azure subscription, resource group, and public IP address created for this new deployment.
    3. When the script is finished, the RD Web page launches in your default browser. You can double-check the RD Web page by comparing the URL for the page to the DNS address you provided during deployment. 
    
-   Sign in with the admin credentials you created during deployment to see the default desktop published for you. You can also send users the RD Web site to test their desktops and applications.
+      Sign in with the admin credentials you created during deployment to see the default desktop published for you. You can also send users the RD Web site to test their desktops and applications.
 
-   > [!TIP]
-   > Forget the domain name or admin user? You can go back to the new Resource Group in the portal, click **Deployments**, and then view the parameters you entered.
+      > [!TIP]
+      > Forget the domain name or admin user? You can go back to the new Resource Group in the portal, click **Deployments**, and then view the parameters you entered.
 
