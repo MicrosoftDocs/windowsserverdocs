@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 01/06/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -26,15 +26,16 @@ AD FS provides the on premises component of conditional access policies in a hyb
 ### Types of registered devices  
 There are three kinds of registered devices, all of which are represented as Device objects in Azure AD and can be used for conditional access with AD FS on premises as well.  
 
+| |Add Work or School Account  |Azure AD Join  |Windows 10 Domian Join    
+| --- | --- |--- | --- |
+|Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1       | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.|           
+|How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.       |   Login to Windows as the (work or school) account that registered the device.      |     Login using AD account.|      
+|How devices are managed    |      MDM Policies (with additional Intune enrollment)   | MDM Policies (with additional Intune enrollment)        |   Group Policy, System Center Configuration Manager (SCCM) |
+|Azure AD Trust type|Workplace joined|Azure AD joined|Domain joined  |     
+|W10 Settings location    | Settings > Accounts > Your account > Add a work or school account        | Settings > System > About > Join Azure AD       |   Settings > System > About > Join a domain |       
+|Also available for iOS and Android Devices?   |    Yes     |       No  |   No   |   
 
-
- |Add Work or School Account  |Azure AD Join  |Windows 10 Domian Join    
----------|---------|---------|---------  
-Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1       | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.           
-How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.       |   Login to Windows as the (work or school) account that registered the device.      |     Login using AD account.      
-How devices are managed    |      MDM Policies (with additional Intune enrollment)   | MDM Policies (with additional Intune enrollment)        |   Group Policy, System Center Configuration Manager (SCCM)        
- W10 Settings location    | Settings > Accounts > Your account > Add a work or school account        | Settings > System > About > Join Azure AD       |   Settings > System > About > Join a domain        
-Also available for iOS and Android Devices?   |    Yes     |       No  |   No        
+  
 
 For more information on the different ways to register devices, see also:  
 * [Using Windows 10 devices in your workplace](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-windows10-devices/)  
