@@ -70,7 +70,7 @@ Use these steps to create your small-footprint RDS deployment from the Azure Mar
 
 You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. o	Unlike the Marketplace offering, you can make further customizations, such as use an existing AD on a virtual network, use a custom OS image for the RDSH VMs, and layer on high availability for RDS components. 
 
-Use these steps to create your small-footprint RDS deployment from an Azure RDS template: 
+Use these steps to create your small-footprint RDS deployment with an Azure RDS template: 
 
 1. Pick your Azure Quickstart template:
    1. Go to the [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/) site.
