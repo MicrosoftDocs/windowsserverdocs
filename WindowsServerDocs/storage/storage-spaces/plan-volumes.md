@@ -149,11 +149,9 @@ From this 128 TB, we set aside four drives, or 8 TB, so that in-place repairs ca
 128 TB – (4 x 2 TB) = 120 TB
 ```
 
-Suppose we need our deployment to host some highly active Hyper-V virtual machines, but we also have lots of cold storage – old files and backups we need to retain.
+Suppose we need our deployment to host some highly active Hyper-V virtual machines, but we also have lots of cold storage – old files and backups we need to retain. Because we have four servers, let's create four volumes.
 
-Because we have four servers, let’s create four volumes.
-
-Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*. We choose ReFS as the filesystem (for the faster creation and checkpoints!) and three-way mirroring for resiliency to maximize performance. And let's put the cold storage on the other two volumes, *Volume 3* and *Volume 4*. We choose NTFS as the filesystem (for data deduplication!) and dual parity for resiliency to maximize capacity.
+Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*. We choose ReFS as the filesystem (for the faster creation and checkpoints!) and three-way mirroring for resiliency to maximize performance. Let's put the cold storage on the other two volumes, *Volume 3* and *Volume 4*. We choose NTFS as the filesystem (for data deduplication!) and dual parity for resiliency to maximize capacity.
 
 We aren't required to make all volumes the same size, but for simplicity, let's – for example, we can make them all 12 TB.
 
