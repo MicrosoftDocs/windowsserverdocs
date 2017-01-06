@@ -1,5 +1,5 @@
 ---
-title: Understanding the cache in Storage Spaces Direct
+title: Planning Volumes in Storage Spaces Direct
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: eldenc
@@ -22,7 +22,7 @@ Volumes are the datastores where you put the files your workloads need, such as 
    >[!NOTE]
    > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS real-time tiering. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully. For details about how to see each of these pieces in Windows Storage Management API, check out this [blog post](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/).
 
-(IMAGE)
+![what-are-volumes](media/plan-volumes/what-are-volumes.png)
 
 All volumes are accessible by all servers in the cluster at the same time – once created, they show up at **C:\ClusterStorage\** on all servers.
 
@@ -57,7 +57,7 @@ Volumes in Storage Spaces Direct provide resiliency to protect against hardware 
 
 The only option for clusters with two servers is two-way mirroring. This keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure (drive or server) at a time.
 
-(IMAGE)
+![two-way-mirror](media/plan-volumes/two-way-mirror.png)
 
 If you have more than two servers, we recommend using one of the following resiliency types instead.
 
@@ -65,7 +65,7 @@ If you have more than two servers, we recommend using one of the following resil
 
 With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible. 
 
-(IMAGE)
+![three-way-mirror](media/plan-volumes/three-way-mirror.png)
 
 ### With four or more servers
 
@@ -75,7 +75,7 @@ Dual parity provides the same fault tolerance as three-way mirroring but with be
 
 The illustration below shows dual parity with four servers achieving 50.0% storage efficiency.
 
-(IMAGE)
+![dual-parity](media/plan-volumes/dual-parity.png)
 
 Which resiliency type to use depends on the needs of your workload(s).
 
@@ -120,7 +120,7 @@ For example, volumes that use three-way mirroring have a footprint three times t
 
 The footprints of your volumes need to fit in the storage pool.
 
-(IMAGE)
+![size-versus-footprint](media/plan-volumes/size-versus-footprint.png)
 
 #### Reserve capacity
 
@@ -128,7 +128,7 @@ Leaving some capacity in the storage pool unallocated gives volumes space to rep
 
 We recommend reserving the equivalent of one capacity drive per server, up to 4 drives maximum. For example, if you have 2 servers and you are using 1 TB capacity drives, set aside 2 x 1 = 2 TB of the pool as reserve. If you have 3 servers and 1 TB capacity drives, set aside 3 x 1 = 3 TB as reserve. If you have 4 or more servers and 1 TB capacity drives, set aside 4 x 1 = 4 TB as reserve. You may reserve more at your discretion, but this minimum recommendation guarantees an immediate, in-place, parallel repair can succeed after the failure of any drive.
 
-(IMAGE)
+![reserve](media/plan-volumes/reserve.png)
 
    >[!NOTE]
    > In clusters with drives of all three types (NVMe + SSD + HDD), we recommend reserving the equivalent of one SSD plus one HDD per server, up to 4 drives of each maximum.
@@ -164,14 +164,14 @@ We aren't required to make all volumes the same size, but for simplicity, let's 
 
 The four volumes fit exactly on the physical storage capacity available in our pool. Perfect!
 
-(IMAGE)
+![example](media/plan-volumes/example.png)
 
    >[!TIP]
    > You don’t need to create all the volumes right away. You can leave some of your storage pool unallocated to extend volumes or create new volumes later.
 
 ### Usage
 
-See [Creating volumes in Storage Spaces Direct)[create-volumes.md].
+See [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
 ### See also
 
