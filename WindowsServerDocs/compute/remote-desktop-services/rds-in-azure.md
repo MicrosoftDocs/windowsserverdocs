@@ -12,7 +12,7 @@ ms.assetid: 5f72ceb6-6f90-48f6-bfc3-bdad63984ce7
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 12/12/2016
+ms.date: 01/06/2017
 ---
 # Quick start for Remote Desktop Services in Azure
 
@@ -51,12 +51,20 @@ Use these steps to create your small-footprint RDS deployment from the Azure Mar
    1. Sign into the [Azure portal](https://portal.azure.com).
    2. Click **New** to add your deployment.
    3. Type "RDS" in the search field and press Enter.
-   4. Click **Remote Desktop Services (RDS) - Basic - Devtest**, and then click **Create**.
-   5. Follow the steps in the portal to create and deploy RDS.
+   4. Click **Remote Desktop Services (RDS) - Basic - Dev/Test**, and then click **Create**.
+   5. Follow the steps in the portal to create and deploy RDS. You'll add key configuration details, like the information listed above. 
 2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
-   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) to install any certificates needed to connect to the RDS deployment. The script also starts RD Web in your browser.
+   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment. 
+   
+   This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
+
    2. When prompted, sign into your Azure account. Select the Azure subscription, resource group, and public IP address created for this new deployment.
-   3. The RD Web page lets you authenticate to your new deployment - sign in with the admin user and password you created during deployment. You can also send users this RD Web site to test their desktops and applications.
+   3. When the script is finished, the RD Web page launches in your default browser. You can double-check the RD Web page by comparing the URL for the page to the DNS address you provided during deployment. 
+   
+   Sign in with the admin credentials you created during deployment to see the default desktop published for you. You can also send users the RD Web site to test their desktops and applications.
+
+   > [!TIP]
+   > Forget the domain name or admin user? You can go back to the new Resource Group in the portal, click **Deployments**, and then view the parameters you entered.
 
 ## Customized RDS using Quickstart templates
 
@@ -71,7 +79,16 @@ Use these steps to create your small-footprint RDS deployment from an Azure RDS 
    4. Click **Deploy to Azure**.
    5. You'll need to provide some details (like admin user name, AD domain name) in the Azure portal. This varies based on the template you choose.
    6. Click **Purchase**.
-2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
-   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) to install any certificates needed to connect to the RDS deployment. The script also starts RD Web in your browser.
+2. Connect to your deployment. 
+   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment. 
+   
+   This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
+
    2. When prompted, sign into your Azure account. Select the Azure subscription, resource group, and public IP address created for this new deployment.
-   3. The RD Web page lets you authenticate to your new deployment - sign in with the admin user and password you created during deployment. You can also send users this RD Web site to test their desktops and applications.
+   3. When the script is finished, the RD Web page launches in your default browser. You can double-check the RD Web page by comparing the URL for the page to the DNS address you provided during deployment. 
+   
+   Sign in with the admin credentials you created during deployment to see the default desktop published for you. You can also send users the RD Web site to test their desktops and applications.
+
+   > [!TIP]
+   > Forget the domain name or admin user? You can go back to the new Resource Group in the portal, click **Deployments**, and then view the parameters you entered.
+
