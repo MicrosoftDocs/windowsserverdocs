@@ -65,7 +65,7 @@ You can see them by running the **Get-StorageTier** cmdlet.
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
 ```
 
-![storage-tiers-screenshot](media/create-volumes/storage-tiers-screenshot.png)
+![Storage Tiers PowerShell Screenshot](media/creating-volumes/storage-tiers-screenshot.png)
 
 To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and erasure coding in 30:70 proportions.
 
@@ -81,7 +81,7 @@ There are three major steps:
 
 ### Step 1: Create virtual disk
 
-![New Virtual Disk](media/create-volumes/GUI-Step-1.png)
+![New Virtual Disk](media/creating-volumes/GUI-Step-1.png)
 
 1. In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
 2. Select **New Virtual Disk** from the Actions pane on the right, or right-click the pool and select **New Virtual Disk**.
@@ -102,7 +102,7 @@ The *New Volume Wizard* will open.
 
 ### Step 3: Add to cluster shared volumes
 
-![Add to Cluster Shared Volumes](media/create-volumes/GUI-Step-2.png)
+![Add to Cluster Shared Volumes](media/creating-volumes/GUI-Step-2.png)
 
 12. In Failover Cluster Manager, navigate to **Storage** -> **Disks**.
 13. Select the virtual disk you just created and select **Add to Cluster Shared Volumes** from the Actions pane on the right, or right-click the virtual disk and select **Add to Cluster Shared Volumes**.
