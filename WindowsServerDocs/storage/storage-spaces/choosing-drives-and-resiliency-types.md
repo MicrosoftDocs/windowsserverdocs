@@ -88,7 +88,7 @@ For environments with a variety of applications and workloads, some with stringe
 
 ## Option 3 – Maximizing capacity
 
-For workloads which require vast capacity and write infrequently, such as archival, backup targets, data warehouses or "cold" storage, you should combine few SSDs for caching with many larger HDDs for capacity.
+For workloads which require vast capacity and write infrequently, such as archival, backup targets, data warehouses or "cold" storage, you should combine a few SSDs for caching with many larger HDDs for capacity.
 
 ![Deployment options for maximizing capacity](media/choosing-drives-and-resiliency-types/maximizing-capacity.png)
 
@@ -98,7 +98,7 @@ For workloads which require vast capacity and write infrequently, such as archiv
 
 ### Cache
 
-Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you will experience more even performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
+Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you will experience more consistent performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
 
 The cache should be sized to accomodate the working set of your applications and workloads, i.e. all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For typical deployments, a fair starting place is 10% of your capacity. For example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server seems reasonable to us. You can always add or remove cache drives later to adjust.
 
