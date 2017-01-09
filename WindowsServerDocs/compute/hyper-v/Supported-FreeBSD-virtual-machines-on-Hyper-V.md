@@ -70,10 +70,10 @@ The following feature distribution map indicates the features in each version. T
 1. Suggest to [Label Disk Devices]( https://www.freebsd.org/doc/handbook/geom-glabel.html) to avoid ROOT MOUNT ERROR during startup.
 
 2. The virtual DVD drive may not be recognized when BIS drivers are loaded on FreeBSD 8.x and 9.x unless you enable the legacy ATA driver through the following command.
-```bash
-    # set hw.ata.disk_enable=1
-    # boot
-```
+    ```bash
+    # dd if=/dev/da1 of=/dev/da1 count=0
+    # gpart recover da1
+    ```
 
 3. 9126 is the maximum supported MTU size.
 
@@ -83,11 +83,11 @@ The following feature distribution map indicates the features in each version. T
 
 6. KVP may not work on Windows Server 2008 R2.
 
-7. To make VHDX online resizing work properly in FreeBSD 11, a special manual step is required to work around a GEOM bug which is fixed in 11+, after the host resizes the VHDX disk - open the disk for write, and run “gpart recover” as the following:
-```bash
-    # dd if=/dev/da1 of=/dev/da1 count=0
-    # gpart recover da1
-```
+7. To make VHDX online resizing work properly in FreeBSD 11, a special manual step is required to work around a GEOM bug which is fixed in 11+, after the host resizes the VHDX disk - open the disk for write, and run “gpart recover” as the following.
+    ```bash
+    # set hw.ata.disk_enable=1
+    # boot
+    ```
 
 See Also
 
