@@ -132,7 +132,9 @@ If using the Disk Management MMC snapin, you receive this error:
 
     Element not found
 
-This occurs even if you correctly enable volume resizing using `Set-SRGroup -Name rg01 -AllowVolumeResize $true`.  This issue is caused by a code defect in the RTM version fo Windows Server 2016. A cumulative update packge will be issued to resolve this problem. For more information, email srfeed@microsoft.com. 
+This occurs even if you correctly enable volume resizing using `Set-SRGroup -Name rg01 -AllowVolumeResize $true`. 
+
+This issue was fixed in Cumulative Update for Windows 10 Version 1607 and Windows Server 2016: December 9, 2016 (KB3201845). 
 
 ## Attempting to move a PDR resource between sites on an asynchronous stretch cluster fails
 When attempting to move a physical disk resource-attached role - such as a file server for general use - in order to move the associated storage in an asynchronous stretch cluster, you receive an error.
