@@ -75,34 +75,34 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 <table>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
-			<img src="media/icon.png">
+		<td style="padding: 10px; border: 0; width=25%">
+			<img src="media/understand.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
-			<img src="media/icon.png">
+		<td style="padding: 10px; border: 0; width=25%">
+			<img src="media/plan.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
-			<img src="media/icon.png">
+		<td style="padding: 10px; border: 0; width=25%">
+			<img src="media/deploy.png">
 		</td>
-		<td style="padding: 10px; border: 0;">
-			<img src="media/icon.png">
+		<td style="padding: 10px; border: 0; width=25%">
+			<img src="media/manage.png">
 		</td>
 	</tr>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width=25%">
 			- [Understand the cache](understand-the-cache.md) <br />
 			- [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) <br />
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width=25%">
 			- [Hardware requirements](storage-spaces-direct-hardware-requirements.md) <br />
 			- [Choose drives](choosing-drives-and-resiliency-types.md) <br />
 			- [Plan volumes](plan-volumes.md) <br />
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width=25%">
 			- [Deploy hyper-converged](hyper-converged-solution-using-storage-spaces-direct.md) <br />
 			- [Create volumes](create-volumes.md) <br />
 		</td>
-		<td style="padding: 10px; border: 0;">
+		<td style="padding: 10px; border: 0; width=25%">
 			- [Add nodes or drives](add-nodes.md) <br />
 			- [Update drive firmware](update-firmware.md) <br />
 		</td>
