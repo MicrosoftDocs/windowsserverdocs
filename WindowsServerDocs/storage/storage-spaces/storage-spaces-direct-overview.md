@@ -73,21 +73,19 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 ## Docs
 
-![TEST](media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png)
-
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%">
-			<img src="media/storage-spaces-direct-in-windows-server-2016/understand.png">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
-			<img src="media/storage-spaces-direct-in-windows-server-2016/plan.png">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
-			<img src="media/storage-spaces-direct-in-windows-server-2016/deploy.png">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
-			<img src="media/storage-spaces-direct-in-windows-server-2016/manage.png">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
 		</td>
 	</tr>
 	<tr style="border: 0;">
