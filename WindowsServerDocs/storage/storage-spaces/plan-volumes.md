@@ -36,9 +36,6 @@ We recommend making the number of volumes a multiple of the number of servers in
 
 We recommend limiting the total number of volumes to 32 per cluster.
 
-   >[!NOTE]
-   > How many volumes you can create is independent of how many drives you have.
-
 ## Choosing the filesystem
 
 We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.md) for Storage Spaces Direct.
