@@ -99,8 +99,10 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			- [Plan volumes](plan-volumes.md) <br />
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
-		<a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a><br />
-		<a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a><br />
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
+			</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			- [Add nodes or drives](add-nodes.md) <br />
