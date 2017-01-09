@@ -79,9 +79,10 @@ During startup, device nodes are created as new devices are discovered. This can
 
 If the virtual switch on the host is based on wireless network adapter, reduce the ARP expiration time to 60 seconds by the following command. Otherwise the networking of the VM may stop working after a while.
 
-   ```bash
+
+```
    # sysctl net.link.ether.inet.max_age=60
-   ```
+```
 
 
 See also
