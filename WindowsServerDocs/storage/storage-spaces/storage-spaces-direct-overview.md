@@ -90,24 +90,21 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			- Something
-			- Something
-			- Something
+			- [Understand the cache](understand-the-cache.md) <br />
+			- [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) <br />
 		</td>
 		<td style="padding: 10px; border: 0;">
-			- Something
-			- Something
-			- Something
+			- [Hardware requirements](storage-spaces-direct-hardware-requirements.md) <br />
+			- [Choose drives](choosing-drives-and-resiliency-types.md) <br />
+			- [Plan volumes](plan-volumes.md) <br />
 		</td>
 		<td style="padding: 10px; border: 0;">
-			- Something
-			- Something
-			- Something
+			- [Deploy hyper-converged](hyper-converged-solution-using-storage-spaces-direct.md) <br />
+			- [Create volumes](create-volumes.md) <br />
 		</td>
 		<td style="padding: 10px; border: 0;">
-			- Something
-			- Something
-			- Something
+			- [Add nodes or drives](add-nodes.md) <br />
+			- [Update drive firmware](update-firmware.md) <br />
 		</td>
 	</tr>
 </table>
