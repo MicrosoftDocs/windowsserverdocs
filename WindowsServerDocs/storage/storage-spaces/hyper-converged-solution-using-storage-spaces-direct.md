@@ -414,30 +414,15 @@ Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
 
 To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.
 
-When this command is finished, which may take several minutes, the system will be ready for virtual disks to be created.
+When this command is finished, which may take several minutes, the system will be ready for volumes to be created.
 
 ### Step 3.6: Create volumes
 
-When Storage Spaces Direct was enabled, it created a single pool using all the disks and named the pool something similar to “S2D on Cluster1”, with the name of the cluster that is on specified in the name. So the next step is to create some volumes, specifying whether to use multiple tiers.
+You can create volumes for Storage Spaces Direct in PowerShell using the **New-Volume** cmdlet or in Failover Cluster Manager using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard*.
 
-Storage Spaces Direct includes the ability to create a virtual disk with tiers using different resiliency types. For instance, the example below sets the virtual disk to create a three-way mirror *and* dual-parity tier. This optimizes writes to the mirror for performance and in the background writes to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes.
+We recommend using the **New-Volume** cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-> [!Important]
-> Leave enough available capacity in the storage pool to allow for a disks to fail and still be able to repair the virtual disks with the remaining disks. For example, if you have 20 disks of 2TB each and you want to allow the system to have 1 disk failure with automatic repair of the virtual disks, you would create a volume that leaves a minimum of 2TB of available capacity in the storage pool. If you allocate all of the pool capacity to virtual disks and a disk fails, the virtual disks will not be able to repair until the failed disk is replaced or new disks are added to the pool.
-
-The following PowerShell command creates a virtual disk with two tiers, a mirror tier and a parity tier from a management system:
-
-```PowerShell
-New-Volume -StoragePoolFriendlyName “S2D*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS_ReFS -StorageTierfriendlyNames Capacity,Performance -StorageTierSizes <Size of capacity tier in size units, example: 800GB>, <Size of Performance tier in size units, example: 80GB> –CimSession <ClusterName>
-```
-
-The following PowerShell command creates a virtual disk with mirror resiliency only:
-
-```PowerShell
-New-Volume -StoragePoolFriendlyName “S2D*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS_ReFS -StorageTierfriendlyNames Performance -StorageTierSizes <Size of Performance tier in size units, example: 800GB> –CimSession <ClusterName>
-```
-
-The **New-Volume** cmdlet simplifies deployments as it ties together a long list of operations that would otherwise have to be done in individual commands such as creating the virtual disk, partitioning and formatting the virtual disk, adding the virtual disk to the cluster, and converting it into CSVFS.
+For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
 ### Step 3.7: Deploy virtual machines
 
