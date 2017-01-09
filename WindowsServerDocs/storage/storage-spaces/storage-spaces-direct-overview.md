@@ -76,20 +76,38 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0;">
-			<tr style="border: 0;"> IMAGE 1 GOES HERE </tr>
-			<tr style="border: 0;">
-			- Something cool 1
-			- Some other thing 1
-			- One last pt 2
-			</tr>
+			<img src="media/icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<tr style="border: 0;"> IMAGE 2 GOES HERE </tr>
-			<tr style="border: 0;">
-			- Something cool 2
-			- Some other thing 2
-			- One last pt 2
-			</tr>
+			<img src="media/icon.png">
+		</td>
+		<td style="padding: 10px; border: 0;">
+			<img src="media/icon.png">
+		</td>
+		<td style="padding: 10px; border: 0;">
+			<img src="media/icon.png">
+		</td>
+	</tr>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0;">
+			- Something
+			- Something
+			- Something
+		</td>
+		<td style="padding: 10px; border: 0;">
+			- Something
+			- Something
+			- Something
+		</td>
+		<td style="padding: 10px; border: 0;">
+			- Something
+			- Something
+			- Something
+		</td>
+		<td style="padding: 10px; border: 0;">
+			- Something
+			- Something
+			- Something
 		</td>
 	</tr>
 </table>
