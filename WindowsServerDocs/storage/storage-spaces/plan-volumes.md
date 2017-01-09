@@ -102,12 +102,12 @@ The resulting storage efficiency depends on the proportions you choose. See [thi
 
 ### About deployments with NVMe, SSD, and HDD
 
-In deployments with *two* types of drives, the faster drives provide caching while the slower drives provide capacity. This happens automatically – for more information, see [Understanding the cache in Storage Spaces Direct](understand-the-cache.md). In such deployments, all volumes ultimately reside on the same type of drives – the capacity drives.
+In deployments with two types of drives, the faster drives provide caching while the slower drives provide capacity. This happens automatically – for more information, see [Understanding the cache in Storage Spaces Direct](understand-the-cache.md). In such deployments, all volumes ultimately reside on the same type of drives – the capacity drives.
 
-In deployments with *three* types of drives, only the fastest drives (NVMe) provide caching, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two. Remember that each is independently accelerated by the NVMe cache.
+In deployments with all three types of drives, only the fastest drives (NVMe) provide caching, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two.
 
    >[!IMPORTANT]
-   > There is no significant performance advantage to one volume spanning the SSD tier and HDD tier in such deployments because the NVMe is already caching and de-staging the "hottest" data in real time to provide universally flash-like performance characteristics. In deployments with three types of drives, we recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
+   > We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
 ### Choosing the size of volumes
 
@@ -169,7 +169,7 @@ The four volumes fit exactly on the physical storage capacity available in our p
 ![example](media/plan-volumes/example.png)
 
    >[!TIP]
-   > You don’t need to create all the volumes right away. You can leave some of your storage pool unallocated to extend volumes or create new volumes later.
+   > You don't need to create all the volumes right away. You can leave some of your storage pool unallocated to extend volumes or create new volumes later.
 
 ### Usage
 
