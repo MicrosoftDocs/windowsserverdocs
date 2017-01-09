@@ -1,5 +1,5 @@
 ---
-title: Planning Volumes in Storage Spaces Direct
+title: Planning volumes in Storage Spaces Direct
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: eldenc
@@ -9,7 +9,7 @@ author: cosmosdarwin
 ms.date: 01/07/2016
 ---
 
-# Planning Volumes in Storage Spaces Direct
+# Planning volumes in Storage Spaces Direct
 
 > Applies To: Windows Server 2016
 
@@ -17,10 +17,10 @@ This topic provides guidance for how to plan volumes in Storage Spaces Direct to
 
 ## Review: What are volumes
 
-Volumes are the datastores where you put the files your workloads need, such as .VHD(X) files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
+Volumes are the datastores where you put the files your workloads need, such as VHD(X) files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
 
    >[!NOTE]
-   > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS real-time tiering. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully. For details about how to see each of these pieces in the Windows Storage Management API, check out this [blog post](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/).
+   > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully. For details about how to see each of these pieces in the Windows Storage Management API, check out this [blog post](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/).
 
 ![what-are-volumes](media/plan-volumes/what-are-volumes.png)
 
@@ -41,9 +41,11 @@ We recommend limiting the total number of volumes to 32 per cluster.
 
 ## Choosing the filesystem
 
-Volumes can use NTFS or the new [Resilient File System (ReFS)](../refs/refs-overview.md). ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. However, it does not yet support certain features such as data deduplication. For more information, see the list of [functionality supported in ReFS](../refs/refs-overview.md#functionality).
+We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.md) for Storage Spaces Direct.
 
-We recommend using ReFS for Storage Spaces Direct if you can. If your workload needs a feature which ReFS does not yet support, such as data deduplication, use NTFS.
+ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. However, it does not yet support certain features, such as data deduplication.
+
+If your workload requires a feature that ReFS doesn't support yet, you can use NTFS instead.
 
    >[!TIP]
    > Volumes with different filesystems can coexist in the same cluster.
@@ -79,7 +81,7 @@ The illustration below shows dual parity with four servers achieving 50.0% stora
 
 ![dual-parity](media/plan-volumes/dual-parity.png)
 
-Which resiliency type to use depends on the needs of your workload(s).
+Which resiliency type to use depends on the needs of your workload.
 
 #### When performance matters most
 
@@ -96,16 +98,16 @@ Workloads that write infrequently, such as data warehouses or "cold" storage, sh
 
 Workloads that write in large, sequential passes, such as archival or backup targets, have another option that is new in Windows Server 2016: one volume can mix mirroring and dual parity. Writes land first in the mirrored portion and are gradually moved into the parity portion later. This accelerates ingestion and reduces resource utilization when large writes arrive by allowing the compute-intensive parity encoding to happen over a longer time. When sizing the portions, consider that the quantity of writes that happen at once (such as one daily backup) should comfortably fit in the mirror portion. For example, if you ingest 100 GB once daily, consider using mirroring for 150 GB to 200 GB, and dual parity for the rest.
 
-The resulting storage efficiency depends on the proportions you choose. See this demo for some examples.
+The resulting storage efficiency depends on the proportions you choose. See [this demo](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) for some examples.
 
    >[!TIP]
    > Volumes with different resiliency types can coexist in the same cluster.
 
-### About deployments with all three types of drives
+### About deployments with NVMe, SSD, and HDD
 
-In deployments with *two* types of drives, the faster drives cache while the slower drives provide capacity. This happens automatically – for more information, see [Understanding the cache in Storage Spaces Direct](understand-the-cache.md). In such deployments, all volumes ultimately reside on the same type of drives – the capacity drives.
+In deployments with *two* types of drives, the faster drives provide caching while the slower drives provide capacity. This happens automatically – for more information, see [Understanding the cache in Storage Spaces Direct](understand-the-cache.md). In such deployments, all volumes ultimately reside on the same type of drives – the capacity drives.
 
-In deployments with *three* types of drives, only the fastest drives (NVMe) cache, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two. Remember that each is independently accelerated by the NVMe cache.
+In deployments with *three* types of drives, only the fastest drives (NVMe) provide caching, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two. Remember that each is independently accelerated by the NVMe cache.
 
    >[!IMPORTANT]
    > There is no significant performance advantage to one volume spanning the SSD tier and HDD tier in such deployments because the NVMe is already caching and de-staging the "hottest" data in real time to provide universally flash-like performance characteristics. In deployments with three types of drives, we recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
@@ -135,7 +137,7 @@ We recommend reserving the equivalent of one capacity drive per server, up to 4 
    >[!NOTE]
    > In clusters with drives of all three types (NVMe + SSD + HDD), we recommend reserving the equivalent of one SSD plus one HDD per server, up to 4 drives of each maximum.
 
-### Example
+### Example: Capacity planning
 
 Consider four servers, each with some cache and 16 x 2 TB drives for capacity.
 
@@ -151,7 +153,7 @@ From this 128 TB, we set aside four drives, or 8 TB, so that in-place repairs ca
 
 Suppose we need our deployment to host some highly active Hyper-V virtual machines, but we also have lots of cold storage – old files and backups we need to retain. Because we have four servers, let's create four volumes.
 
-Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*. We choose ReFS as the filesystem (for the faster creation and checkpoints!) and three-way mirroring for resiliency to maximize performance. Let's put the cold storage on the other two volumes, *Volume 3* and *Volume 4*. We choose NTFS as the filesystem (for data deduplication!) and dual parity for resiliency to maximize capacity.
+Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*. We choose ReFS as the filesystem (for the faster creation and checkpoints) and three-way mirroring for resiliency to maximize performance. Let's put the cold storage on the other two volumes, *Volume 3* and *Volume 4*. We choose NTFS as the filesystem (for data deduplication) and dual parity for resiliency to maximize capacity.
 
 We aren't required to make all volumes the same size, but for simplicity, let's – for example, we can make them all 12 TB.
 
