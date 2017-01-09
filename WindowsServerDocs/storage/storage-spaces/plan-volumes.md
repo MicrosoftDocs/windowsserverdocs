@@ -17,7 +17,7 @@ This topic provides guidance for how to plan volumes in Storage Spaces Direct to
 
 ## Review: What are volumes
 
-Volumes are the datastores where you put the files your workloads need, such as VHD(X) files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
+Volumes are the datastores where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of Storage Spaces Direct.
 
    >[!NOTE]
    > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully. For details about how to see each of these pieces in the Windows Storage Management API, check out this [blog post](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/).
