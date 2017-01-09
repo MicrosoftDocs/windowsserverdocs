@@ -98,9 +98,11 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			- [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) <br />
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
-			- [Hardware requirements](storage-spaces-direct-hardware-requirements.md) <br />
-			- [Choose drives](choosing-drives-and-resiliency-types.md) <br />
-			- [Plan volumes](plan-volumes.md) <br />
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives-and-resiliency-types">Choose drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
+		</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
@@ -109,8 +111,10 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
-			- [Add nodes or drives](add-nodes.md) <br />
-			- [Update drive firmware](update-firmware.md) <br />
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-node">Add servers or drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/update-firmware">Update drive firmware</a></li>
+			</ul>
 		</td>
 	</tr>
 </table>
