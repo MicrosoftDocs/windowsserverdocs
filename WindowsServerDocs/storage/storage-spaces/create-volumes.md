@@ -1,4 +1,5 @@
 ---
+ms.assetid: a9f229eb-bef4-4231-97d0-0899e17cef32
 title: Creating volumes in Storage Spaces Direct
 ms.prod: windows-server-threshold
 ms.author: cosdar

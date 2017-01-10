@@ -1,6 +1,6 @@
 ---
 title: Plan Your WSUS Deployment
-description: ""Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
+description: "Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.technology: manage-wsus
@@ -9,7 +9,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
+ms.date: 01/09/2016
 ---
 # Plan your WSUS deployment
 
@@ -139,10 +139,8 @@ The most basic WSUS deployment consists of a server inside the corporate firewal
 
 By default, the WSUS server uses port 80 for HTTP protocol and port 443 for HTTPS protocol to obtain updates from Microsoft. If there is a corporate firewall between your network and the Internet, you will have to open these ports on the server that communicates directly to Microsoft Update. If you are planning to use custom ports for this communication, you must open those ports instead. You can configure multiple WSUS servers to synchronize with a parent WSUS server. By default, the WSUS server uses port 8530 for HTTP protocol and port 8531 for HTTPS protocol to provide updates to client workstations.
 
-The following figure shows a simple WSUS server scenario in which an administrator can set up a server running WSUS inside the corporate firewall, which synchronizes content directly with Microsoft Update and distributes updates to client computers.
-
 ### Multiple WSUS servers
-Administrators can deploy multiple servers running WSUS that synchronize all content within their organization's intranet. In Figure 2, only one server is exposed to the Internet. In this configuration, this is the only server that downloads updates from Microsoft Update. This server is set up as the upstream server the source to which the downstream servers synchronize. When applicable, servers can be located throughout a geographically dispersed network to provide the best connectivity to all client computers.
+Administrators can deploy multiple servers running WSUS that synchronize all content within their organization's intranet. You might expose only one server to the Internet, which would be the only server that downloads updates from Microsoft Update. This server is set up as the upstream server the source to which the downstream servers synchronize. When applicable, servers can be located throughout a geographically dispersed network to provide the best connectivity to all client computers.
 
 ### Disconnected WSUS server
 If corporate policy or other conditions limit computer access to the Internet, administrators can set up an internal server to run WSUS. An example of this is a server that is connected to the intranet but is isolated from the Internet. After downloading, testing, and approving the updates on this server, an administrator would export the update metadata and content to a DVD. The update metadata and content is imported from the DVD to servers running WSUS within the intranet.
@@ -191,7 +189,7 @@ Network Load Balancing (NLB) increases the reliability and performance of your W
 -   WSUS setup must be done in serial. Postinstall tasks cannot be run on more than one server at the same time when sharing the same SQL database.
 
 ### WSUS deployment with roaming client computers
-If the network includes mobile users who log on to the network from different locations, you can configure WSUS to let roaming users update their client computers from the WSUS server that is closest to them geographically. Figure 7 shows one WSUS server deployed in each region, and each region is a DNS subnet. All client computers are directed to the same WSUS server, which resolves in each subnet to the nearest physical WSUS server.
+If the network includes mobile users who log on to the network from different locations, you can configure WSUS to let roaming users update their client computers from the WSUS server that is closest to them geographically. For example, you might deploy one WSUS server each region and use a different DNS subnet for each region. All client computers could be directed to the same WSUS server, which resolves in each subnet to the nearest physical WSUS server.
 
 ## <a name="BKMK_1.3."></a>1.3. Choose a WSUS storage strategy
 Windows Server Update Services (WSUS) uses two types of storage systems: a database to store WSUS configuration and update metadata, and an optional local file system to store update files. Before you install WSUS, you should decide how you want to implement storage.
@@ -261,8 +259,6 @@ This option requires that the server have sufficient disk space to store all nee
 You can store updates remotely on Microsoft Update servers. This option is useful if most client computers connect to the WSUS server over a slow WAN connection, but they connect to the Internet over a high-bandwidth connection.
 
 In this case, the root WSUS server synchronizes with Microsoft Update and receives the update metadata. After you approve the updates, the client computers download the approved updates from Microsoft Update servers.
-
-Figure 8 shows a WSUS configuration in which updates are stored on Microsoft Update. In this case, branch offices retrieve approved updates directly from Microsoft Update servers. This saves disk space and network bandwidth in the organization. This storage option can offer faster downloads for geographically distributed client computers.
 
 ## <a name="BKMK_1.4."></a>1.4. Choose WSUS update languages
 When you deploy a WSUS server hierarchy, you should determine which language updates are required throughout the organization. You should configure the root WSUS server to download updates in all languages that are used throughout the entire organization.
@@ -422,8 +418,6 @@ Updates typically consist of new versions of files that already exist on the com
 Sometimes this feature is called "delta delivery" because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
 
 You can use express installation files to limit the bandwidth that is consumed on the local network, because WSUS transmits only the delta applicable to a particular version of an updated component. However, this comes at the cost of additional bandwidth between your WSUS server, any upstream WSUS servers, and Microsoft Update, and requires additional local disk space. By default, WSUS does not use express installation files.
-
-Figure 10 shows an update that is first distributed by using express installation files, and then distributed without using express installation files. In this example, the use of express installation files incurs an initial download size that is three times the size of the actual update. However, this cost is lessened by the reduced amount of bandwidth that is required to update client computers on the corporate network. When the express installation files feature is disabled, the initial download is smaller, but the full size of the download must then be distributed to each client computer on the corporate network.
 
 Not all updates are good candidates for distribution by using express installation files. If you select this option, you obtain express installation files for all updates. If you do not store updates locally, the Windows Update Agent will decide whether to download the express installation files or the full-file update distributions.
 

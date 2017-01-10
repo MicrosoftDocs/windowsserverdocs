@@ -16,7 +16,72 @@ Storage Spaces Direct uses industry-standard servers with local-attached drives 
 
 Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
-[![Storage Spaces Direct Overview Video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+<table style="width: 100%; table-layout: fixed;">
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
+			<strong>Understand</strong>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
+			<strong>Plan</strong>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
+			<strong>Deploy</strong>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
+			<strong>Manage</strong>
+		</td>
+	</tr>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li>Overview (you are here)</li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
+		  	</ul>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives-and-resiliency-types">Choose drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
+		</ul>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
+			</ul>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-nodes">Add servers or drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/update-firmware">Update drive firmware</a></li>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+## Videos
+
+<table style="width: 100%; table-layout: fixed;">
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width=50%">
+			<strong>Quick Video Overview (5m)</strong>
+			<a href="https://www.youtube.com/embed/raeUiNtMk0E">
+				<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png">
+			</a>
+		</td>
+		<td style="padding: 10px; border: 0; width=50%">
+			<strong>Launch Event at Microsoft Ignite 2016 (1h04m)</strong>
+			<a href="https://www.youtube.com/watch?v=-LK2ViRGbWs">
+				<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/ignite-2016-session-video-thumbnail.png">
+			</a>
+		</td>
+</table>
 
 ## Key benefits
 
@@ -42,7 +107,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Fault Tolerance. </b><a href="storage-spaces-fault-tolerance.md">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
+			<b>Fault Tolerance. </b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -50,7 +115,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like <a href="https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/">Local Reconstruction Codes</a> and <a href="https://blogs.technet.microsoft.com/filecab/2016/03/25/storage-spaces-direct-in-technical-preview-4/">real-time tiering</a> to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
+			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like Local Reconstruction Codes and ReFS real-time tiers to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
 		</td>
 	</tr>
 	<tr style="border: 0;">
