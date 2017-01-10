@@ -42,7 +42,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Fault Tolerance. </b><a href="storage-spaces-fault-tolerance.md">Built-in resiliency</a> handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
+			<b>Fault Tolerance. </b> Built-in resiliency handles drive, server, or component failures with continuous availability. Larger deployments can also be configured for <a href="../../failover-clustering/fault-domains.md">chassis and rack fault tolerance</a>. When hardware fails, just swap it out; the software heals itself, with no complicated management steps.
 		</td>
 	</tr>
 	<tr style="border: 0;">
@@ -50,7 +50,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<img src="media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png">
 		</td>
 		<td style="padding: 10px; border: 0;">
-			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like <a href="https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/">Local Reconstruction Codes</a> and <a href="https://blogs.technet.microsoft.com/filecab/2016/03/25/storage-spaces-direct-in-technical-preview-4/">real-time tiering</a> to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
+			<b>Resource Efficiency.</b> Erasure coding delivers up to 2.4x greater storage efficiency, with unique innovations like Local Reconstruction Codes and ReFS real-time tiers to extend these gains to hard disk drives and mixed hot/cold workloads, all while minimizing CPU consumption to give resources back to where they're needed most - the VMs.
 		</td>
 	</tr>
 	<tr style="border: 0;">
