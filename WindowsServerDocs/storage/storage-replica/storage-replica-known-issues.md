@@ -116,7 +116,7 @@ When attempting to create a new replication partnership with `New-SRPartnership`
 
 This is caused by selecting a data volume that is on the same partition as the System Drive (i.e. the **C:** drive with its Windows folder). For instance, on a drive that contains both the **C:** and **D:** volumes created from the same partition. This is not supported in Storage Replica; you must pick a different volume to replicate.
 
-## Attempting to grow a replicated volume fails
+## Attempting to grow a replicated volume fails due to missing update
 When attempting to grow or extend a replicated volume, you receive the following error:
 
     PS C:\> Resize-Partition -DriveLetter d -Size 44GB
@@ -132,9 +132,41 @@ If using the Disk Management MMC snapin, you receive this error:
 
     Element not found
 
-This occurs even if you correctly enable volume resizing using `Set-SRGroup -Name rg01 -AllowVolumeResize $true`. 
+This occurs even if you correctly enable volume resizing on the source server using `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`. 
 
 This issue was fixed in Cumulative Update for Windows 10 Version 1607 and Windows Server 2016: December 9, 2016 (KB3201845). 
+
+## Attempting to grow a replicated volume fails due to missing step
+If you attempt to resize a replicated volume on the source server without setting `-AllowResizeVolume $TRUE` first, you will receive the following errors:
+
+    PS C:\> Resize-Partition -DriveLetter I -Size 8GB
+    Resize-Partition : Failed
+    Activity ID: {87aebbd6-4f47-4621-8aa4-5328dfa6c3be}
+    At line:1 char:1
+    + Resize-Partition -DriveLetter I -Size 8GB
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (StorageWMI:ROOT/Microsoft/.../MSFT_Partition) [Resize-Partition], CimException
+        + FullyQualifiedErrorId : StorageWMI 4,Resize-Partition
+
+Storage Replica Event log error 10307:
+
+    Attempted to resize a partition that is protected by Storage Replica .
+
+    DeviceName: \Device\Harddisk1\DR1
+    PartitionNumber: 7
+    PartitionId: {b71a79ca-0efe-4f9a-a2b9-3ed4084a1822}
+
+    Guidance: To grow a source data partition, set the policy on the replication group containing the data partition.
+
+    Set-SRGroup -ComputerName [ComputerName] -Name [ReplicationGroupName] -AllowVolumeResize $true
+
+    Before you grow the source data partition, ensure that the destination data partition has enough space to grow to an equal size. Shrinking of data partition protected by Storage Replica is blocked.
+
+Disk Management Snap-in Error: 
+
+    An unexpected error has occurred 
+
+After resizing the volume, remember to disable resizing with `Set-SRGroup -Name rg01 -AllowVolumeResize $FALSE`. This parameter prevents admins from attempting to resize volumes prior to ensuring that there is sufficient space on the destination volume, typically because they were unaware of Storage Replica's presence. 
 
 ## Attempting to move a PDR resource between sites on an asynchronous stretch cluster fails
 When attempting to move a physical disk resource-attached role - such as a file server for general use - in order to move the associated storage in an asynchronous stretch cluster, you receive an error.
