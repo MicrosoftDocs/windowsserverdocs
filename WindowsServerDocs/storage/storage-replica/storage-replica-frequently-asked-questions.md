@@ -102,9 +102,11 @@ For configuring network constraints on a stretch cluster:
 Not in Windows Server 2016. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release. You can of course configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
 
 ## <a name="FAQ5"></a> Can I expand or shrink replicated volumes replicated by Storage Replica?  
-You can expand (grow) volumes, but not shrink them. This is prevented by default; use the `Set-SRGroup -AllowVolumeResize $TRUE` option to allow it on both groups, prior to resizing.
+You can expand (grow) volumes, but not shrink them. Growth is prevented by default, in order for administrators to guarantee that both the source and destination storage have sufficient space before to attempting; use the `Set-SRGroup -AllowVolumeResize $TRUE` option on the source group, prior to resizing. For example:
 
-Note that ReFS does not support shrinking drives regardless of replication, unlike NTFS.
+1. Use against the source computer: `Set-SRGroup -Name YourRG -AllowVolumeResize $TRUE`
+2. Grow the volume using whatever technique you prefer
+3. Use against the source computer: `Set-SRGroup -Name YourRG -AllowVolumeResize $FALSE` 
 
 ## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
 Not in Windows Server 2016. Storage Replica dismounts the destination volume and its drive letter or mount point when replication begins. This may change in a later release.  
