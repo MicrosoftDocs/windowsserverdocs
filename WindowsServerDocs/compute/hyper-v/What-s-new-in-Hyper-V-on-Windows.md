@@ -73,9 +73,7 @@ Starting with version 8, generation 2 virtual machines can use significantly mor
 ## <a name="BKMK_nested"></a>Nested virtualization \(new\) 
 This feature lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. This can be especially useful for development and test environments. To use nested virtualization, you'll need:  
   
--   At least 4 GB RAM available for the virtualized Hyper-V host.  
-  
--   To run at least Windows Server 2016 Technical Preview 4 or Windows 10 build 10565 on both the physical Hyper-V host and the virtualized host. Running the same build in both the physical and virtualized environments generally improves performance.  
+-   To run at least Windows Server 2016 or Windows 10 on both the physical Hyper-V host and the virtualized host.  
   
 -   A processor with Intel VT-x (nested virtualization is available only for Intel processors at this time).  
   
