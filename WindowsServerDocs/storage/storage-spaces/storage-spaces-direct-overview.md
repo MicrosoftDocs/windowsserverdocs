@@ -38,6 +38,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
+			  <li>Overview (you are here)</li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
@@ -64,17 +65,21 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 	</tr>
 </table>
 
-## Overview
+## Videos
 
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px">
 			<strong>Quick Video Overview (5m)</strong>
-			[![Quick Video Overview (5m)](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+			<a href="https://www.youtube.com/embed/raeUiNtMk0E">
+				<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png">
+			</a>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<strong>Launch Event at Microsoft Ignite 2016 (1h04m)</strong>
-			[![Launch Event at Microsoft Ignite 2016 (1h04m)](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+			<a href="https://www.youtube.com/watch?v=-LK2ViRGbWs">
+				<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/ignite-2016-session-video-thumbnail.png">
+			</a>
 		</td>
 </table>
 
