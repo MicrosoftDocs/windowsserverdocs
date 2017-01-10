@@ -14,7 +14,8 @@ ms.date: 1/10/2017
 >Applies To: Windows Server 2016
 
 <img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png" style='float:left; padding:.3em;' width= 75; alt="Deploying Storage Spaces Direct">
-This topic provides resources that help you deploy a Storage Spaces Direct cluster. Storage Spaces Direct is a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
+
+This topic provides resources that help you deploy a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster. Storage Spaces Direct is a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
 
    >[!NOTE]
    > Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates!
@@ -26,7 +27,7 @@ This topic provides resources that help you deploy a Storage Spaces Direct clust
 
 ## See also
 
-- [Storage Spaces overview](storage-spaces-direct-overview.md)
+- [Understanding Storage Spaces Direct](storage-spaces-direct-overview.md)
 - [Planning Storage Spaces Direct](plan-storage-spaces-direct.md)
 - [Managing Storage Spaces Direct](manage-storage-spaces-direct.md)
 
