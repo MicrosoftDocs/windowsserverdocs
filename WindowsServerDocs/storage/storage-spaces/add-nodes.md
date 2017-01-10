@@ -10,6 +10,7 @@ author: cosmosdarwin
 ms.date: 12/7/2016
 ---
 # Adding servers or drives to Storage Spaces Direct
+>Applies To: Windows Server 2016
 
 This topic describes how to add servers or drives to Storage Spaces Direct. 
 
