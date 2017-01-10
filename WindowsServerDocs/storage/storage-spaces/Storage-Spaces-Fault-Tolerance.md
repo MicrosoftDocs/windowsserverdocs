@@ -110,7 +110,7 @@ This section summarizes the resiliency types available in Storage Spaces Direct,
 |    Mixed               |    4                                |
 
    >[!TIP]
-   > If you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
+   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
 
 ### Dual parity efficiency for hybrid deployments
 
