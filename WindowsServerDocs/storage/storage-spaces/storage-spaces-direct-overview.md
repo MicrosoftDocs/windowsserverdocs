@@ -16,7 +16,67 @@ Storage Spaces Direct uses industry-standard servers with local-attached drives 
 
 Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
-[![Storage Spaces Direct Overview Video](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+<table style="width: 100%; table-layout: fixed;">
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
+			<strong>Understand</strong>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
+			<strong>Plan</strong>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
+			<strong>Deploy</strong>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
+			<strong>Manage</strong>
+		</td>
+	</tr>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
+		  	</ul>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives-and-resiliency-types">Choose drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
+		</ul>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
+			</ul>
+		</td>
+		<td style="padding: 10px; border: 0; width=25%">
+			<ul>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-node">Add servers or drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/update-firmware">Update drive firmware</a></li>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+## Overview
+
+<table>
+	<tr style="border: 0;">
+		<td style="padding: 10px">
+			<strong>Quick Video Overview (5m)</strong>
+			[![Quick Video Overview (5m)](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+		</td>
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+			<strong>Launch Event at Microsoft Ignite 2016 (1h04m)</strong>
+			[![Launch Event at Microsoft Ignite 2016 (1h04m)](media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png)](https://www.youtube.com/embed/raeUiNtMk0E)
+		</td>
+</table>
 
 ## Key benefits
 
@@ -67,54 +127,6 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 		</td>
 		<td style="padding: 10px; border: 0;">
 			<b>Scalability.</b> Go up to 16 servers and over 400 drives, for multiple petabytes of storage per cluster. To scale out, simply add drives or add more servers; Storage Spaces Direct will automatically onboard new drives and begin using them. Storage efficiency and performance improve predictably at scale.
-		</td>
-	</tr>
-</table>
-
-## Docs
-
-<table style="width: 100%; table-layout: fixed;">
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
-			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
-			<strong>Understand</strong>
-		</td>
-		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
-			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
-			<strong>Plan</strong>
-		</td>
-		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
-			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
-			<strong>Deploy</strong>
-		</td>
-		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
-			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
-			<strong>Manage</strong>
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width=25%">
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
-		</td>
-		<td style="padding: 10px; border: 0; width=25%">
-			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives-and-resiliency-types">Choose drives</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
-		</ul>
-		</td>
-		<td style="padding: 10px; border: 0; width=25%">
-			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
-			</ul>
-		</td>
-		<td style="padding: 10px; border: 0; width=25%">
-			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-node">Add servers or drives</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/update-firmware">Update drive firmware</a></li>
-			</ul>
 		</td>
 	</tr>
 </table>
