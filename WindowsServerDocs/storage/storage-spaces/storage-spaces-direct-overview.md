@@ -67,15 +67,15 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 ## Videos
 
-<table>
+<table style="width: 100%; table-layout: fixed;">
 	<tr style="border: 0;">
-		<td style="padding: 10px">
+		<td style="padding: 10px; border: 0; width=50%">
 			<strong>Quick Video Overview (5m)</strong>
 			<a href="https://www.youtube.com/embed/raeUiNtMk0E">
 				<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/storage-spaces-direct-video-thumbnail.png">
 			</a>
 		</td>
-		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
+		<td style="padding: 10px; border: 0; width=50%">
 			<strong>Launch Event at Microsoft Ignite 2016 (1h04m)</strong>
 			<a href="https://www.youtube.com/watch?v=-LK2ViRGbWs">
 				<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/ignite-2016-session-video-thumbnail.png">
