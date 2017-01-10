@@ -101,8 +101,8 @@ For configuring network constraints on a stretch cluster:
 ## <a name="FAQ4"></a> Can I configure one-to-many replication or transitive (A to B to C) replication?  
 Not in Windows Server 2016. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release. You can of course configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
 
-## <a name="FAQ5"></a> Can I expand or shrink replicated volumes replicated by Storage Replica?  
-You can expand (grow) volumes, but not shrink them. Growth is prevented by default, in order for administrators to guarantee that both the source and destination storage have sufficient space before to attempting; use the `Set-SRGroup -AllowVolumeResize $TRUE` option on the source group, prior to resizing. For example:
+## <a name="FAQ5"></a> Can I grow or shrink replicated volumes replicated by Storage Replica?  
+You can grow (extend) volumes, but not shrink them. By default, Storage Replica prevents administrators from extending replicated volumes; use the `Set-SRGroup -AllowVolumeResize $TRUE` option on the source group, prior to resizing. For example:
 
 1. Use against the source computer: `Set-SRGroup -Name YourRG -AllowVolumeResize $TRUE`
 2. Grow the volume using whatever technique you prefer
