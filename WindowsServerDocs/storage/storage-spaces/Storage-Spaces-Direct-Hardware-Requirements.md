@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 12/7/2016
+ms.date: 01/11/2017
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct hardware requirements
@@ -49,7 +49,7 @@ In addition, the following requirements apply.
 
 ### Drives
 
-For help choosing drives, see [Choosing drives and resiliency types in Storage Spaces Direct to meet performance and capacity requirements](choosing-drives-and-resiliency-types.md).
+For more help choosing drives, see the [Choosing drives](choosing-drives-and-resiliency-types.md) topic.
 
 - Local-attached SATA, SAS, or NVMe drives
 - Every drive must be physically connected to only one server
@@ -62,7 +62,7 @@ For help choosing drives, see [Choosing drives and resiliency types in Storage S
 #### Minimum number of drives
 
 - If there are drives used as cache, there must be at least 2 per server
-- There must be at least 4 non-cache drives per server
+- There must be at least 4 capacity (non-cache) drives per server
 
 | Drive types present   | Minimum number required |
 |-----------------------|-------------------------|
@@ -72,6 +72,9 @@ For help choosing drives, see [Choosing drives and resiliency types in Storage S
 | NVMe + HDD            | 2 NVMe + 4 HDD          |
 | SSD + HDD             | 2 SSD + 4 HDD           |
 | NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
+
+   >[!NOTE]
+   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), this requirement is waived because your "drives" should never fail per se. In this case, the only requirement is that you need at least three total drives per cluster. In Azure, we recommend using [premium data disks](https://azure.microsoft.com/en-us/documentation/articles/storage-premium-storage/) for better performance. 
 
 #### Maximum
 
