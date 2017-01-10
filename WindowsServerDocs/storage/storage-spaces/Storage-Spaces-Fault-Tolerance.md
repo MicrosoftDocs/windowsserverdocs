@@ -24,7 +24,7 @@ As with RAID, there are a few different ways Storage Spaces can do this, which m
 
 ## Mirroring
 
-Mirroring provides fault tolerance by keeping multiple copies of all data. This most closely resembles RAID-1. How that data is striped and placed is non-trivial, but it is absolutely true to say that any data stored using mirroring is written, in its entirety, multiple times. Each copy is written to different physical hardware (different drives in different servers) which are assumed to fail independently.
+Mirroring provides fault tolerance by keeping multiple copies of all data. This most closely resembles RAID-1. How that data is striped and placed is non-trivial (see [this blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/) to learn more), but it is absolutely true to say that any data stored using mirroring is written, in its entirety, multiple times. Each copy is written to different physical hardware (different drives in different servers) which are assumed to fail independently.
 
 In Windows Server 2016, Storage Spaces offers two flavors of mirroring – ‘two-way’ and ‘three-way’.
 
