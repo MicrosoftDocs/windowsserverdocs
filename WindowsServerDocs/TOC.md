@@ -1062,7 +1062,7 @@
 ##### [Planning volumes in Storage Spaces Direct](storage/storage-spaces/plan-volumes.md)
 #### [Deploying Storage Spaces Direct](storage/storage-spaces/deploy-storage-spaces-direct.md)
 ##### [Hyper-converged solution using Storage Spaces Direct](storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)
-##### Create volumes in Storage Spaces Direct](storage/storage-spaces/create-volumes.md)
+##### [Create volumes in Storage Spaces Direct](storage/storage-spaces/create-volumes.md)
 #### [Managing Storage Spaces Direct](storage/storage-spaces/manage-storage-spaces-direct.md)
 ##### [Adding nodes or drives](storage/storage-spaces/add-nodes.md)
 ##### [Updating drive firmware](storage/update-firmware.md)
