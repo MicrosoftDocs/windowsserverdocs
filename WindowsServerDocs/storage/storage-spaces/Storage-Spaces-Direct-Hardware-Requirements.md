@@ -74,7 +74,7 @@ For more help choosing drives, see the [Choosing drives](choosing-drives-and-res
 | NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
 
    >[!NOTE]
-   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), this requirement is waived because your "drives" should never fail per se. In this case, the only requirement is that you need at least three total drives per cluster. In Azure, we recommend using [premium data disks](https://azure.microsoft.com/en-us/documentation/articles/storage-premium-storage/) for better performance. 
+   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), this requirement is waived because your "drives" should never fail per se. In this case, the only requirement is that you need at least three total drives per cluster. In Azure, we recommend using [premium data disks](https://azure.microsoft.com//documentation/articles/storage-premium-storage/) for better performance. 
 
 #### Maximum
 
