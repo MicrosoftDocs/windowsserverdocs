@@ -81,11 +81,9 @@ We recommend this in-depth yet eminently readable walkthrough of [how local reco
 
 ## Mixed resiliency
 
-Beginning in Windows Server 2016, one Storage Spaces Direct volume can be part mirror and part parity. Based on read/write activity, the new Resilient File System (ReFS) intelligently moves data between the two resiliency types in real-time to keep the most active data in the mirror part. Effectively, this is [using mirroring to accelerate erasure coding](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), giving the best of both: fast, cheap writes of hot data, and better storage efficiency for cooler data.
+Beginning in Windows Server 2016, one Storage Spaces Direct volume can be part mirror and part parity. Writes land first in the mirrored portion and are gradually moved into the parity portion later. Effectively, this is [using mirroring to accelerate erasure coding](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/).
 
 To mix three-way mirror and dual parity, you need at least four fault domains, meaning four servers.
-
-### Storage efficiency
 
 The storage efficiency of mixed resiliency is in between what you’d get from using all mirror or all parity, and depends on the proportions you choose. For example, the demo at the 37-minute mark of this presentation shows [various mixes achieving 46%, 54%, and 65% efficiency](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) with 12 servers.
 
@@ -101,9 +99,6 @@ This section summarizes the resiliency types available in Storage Spaces Direct,
 |    Three-way mirror    |    2                       |    33.3%                   |
 |    Dual parity         |    2                       |    50.0% - 80.0%           |
 |    Mixed               |    2                       |    33.3% - 80.0%           |
-
-   >[!TIP]
-   > Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they can tolerate two simultaneous failures. For examples of what this means, see the [Examples](#examples) section below.
 
 ### Minimum scale requirements
 
