@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 01/07/2016
+ms.date: 01/09/2016
 ---
 
 # Planning volumes in Storage Spaces Direct
@@ -110,7 +110,7 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
    >[!IMPORTANT]
    > We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
-### Choosing the size of volumes
+## Choosing the size of volumes
 
 Volumes in Storage Spaces Direct can be any size up to 64 TB.
 
@@ -137,7 +137,7 @@ For example, if you have 2 servers and you are using 1 TB capacity drives, set a
    >[!NOTE]
    > In clusters with drives of all three types (NVMe + SSD + HDD), we recommend reserving the equivalent of one SSD plus one HDD per server, up to 4 drives of each maximum.
 
-### Example: Capacity planning
+## Example: Capacity planning
 
 Consider four servers, each with some cache and 16 x 2 TB drives for capacity.
 
@@ -172,7 +172,7 @@ The four volumes fit exactly on the physical storage capacity available in our p
    >[!TIP]
    > You don't need to create all the volumes right away. You can leave some of your storage pool unallocated to extend volumes or create new volumes later.
 
-### Usage
+## Usage
 
 See [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
