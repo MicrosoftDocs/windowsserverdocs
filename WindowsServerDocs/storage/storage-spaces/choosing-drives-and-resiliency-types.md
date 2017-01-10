@@ -9,8 +9,8 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 12/7/2016
 ---
+# Choosing drives for Storage Spaces Direct
 
-# Choosing drives for Storage Spaces Direct to meet performance and capacity requirements
 >Applies To: Windows Server 2016
 
 This topic provides guidance on how to choose drives for [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your workload's performance and capacity requirements.
