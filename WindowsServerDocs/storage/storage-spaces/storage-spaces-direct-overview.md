@@ -75,27 +75,27 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 
 <table>
 	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width=25%">
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/understand.png">
-			<strong>Understand</strong>
+			<h3>Understand</h3>
 		</td>
-		<td style="padding: 10px; border: 0; width=25%">
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/plan.png">
-			<strong>Plan</strong>
+			<h3>Plan</h3>
 		</td>
-		<td style="padding: 10px; border: 0; width=25%">
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/deploy.png">
-			<strong>Deploy</strong>
+			<h3>Deploy</h3>
 		</td>
-		<td style="padding: 10px; border: 0; width=25%">
+		<td style="padding: 10px; border: 0; width=25%; text-align: center;">
 			<img src="media/Storage-Spaces-Direct-in-Windows-Server-2016/manage.png">
-			<strong>Manage</strong>
+			<h3>Manage</h3>
 		</td>
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width=25%">
-			- [Understand the cache](understand-the-cache.md) <br />
-			- [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md) <br />
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
