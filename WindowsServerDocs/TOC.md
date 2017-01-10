@@ -1053,7 +1053,7 @@
 #### [Storage Replica: known issues](storage/storage-replica/storage-replica-known-issues.md)
 #### [Storage Replica: Frequently Asked Questions](storage/storage-replica/storage-replica-frequently-asked-questions.md)
 ### [Storage Spaces Direct](storage/storage-spaces/storage-spaces-direct-overview.md)
-#### [Understanding Storage Spaces Direct](storage/storage-spaces/understand-storage-spaces-direct.md))
+#### [Understanding Storage Spaces Direct](storage/storage-spaces/understand-storage-spaces-direct.md)
 ##### [Understanding the cache](storage/storage-spaces/understand-the-cache.md)
 ##### [Fault tolerance and storage efficiency](storage/storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Planning Storage Spaces Direct](storage/storage-spaces/plan-storage-spaces-direct.md)
