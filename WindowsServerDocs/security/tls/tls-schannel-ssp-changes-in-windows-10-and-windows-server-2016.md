@@ -1,5 +1,5 @@
 ---
-title: TLS (Scahannel SSP)
+title: TLS (Schannel SSP)
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
