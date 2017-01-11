@@ -28,16 +28,7 @@ Move settings and data to the Destination Server as follows:
 3.  [Configure the network](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
   
 4.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
-  
-2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_ImportADaccounts)  
-  
-3.  [Configure the network](../migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
-  
-4.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-  
+ 
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
   
@@ -53,10 +44,14 @@ Move settings and data to the Destination Server as follows:
   
 2.  At the command prompt, type the following command, and then press ENTER:  
   
-     **robocopy \\\\** *<SourceServerName\>* **\\** *<SharedSourceFolderName\>* **\\\\** *<DestinationServerName\>* **\\** *<SharedDestinationFolderName\>*  **/E /B /COPY:DATSOU /LOG:C:\Copyresults.txt**  
+    `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`  
   
-     where *<SourceServerName\>* is the name of the Source Server, *<SharedSourceFolderName\>* is the name of the shared folder on the Source Server, *<DestinationServerName\>* is the name of the Destination Server, and *<SharedDestinationFolderName\>* is the shared folder on the Destination Server to which the data will be copied.  
-  
+     Where:
+     - \<SourceServerName\> is the name of the Source Server
+     - \<SharedSourceFolderName\> is the name of the shared folder on the Source Server
+     - \<DestinationServerName\> is the name of the Destination Server,
+     - \<SharedDestinationFolderName\> is the shared folder on the Destination Server to which the data will be copied.  
+        
 3.  Repeat the previous step for each shared folder that you are migrating from the Source Server.  
   
 ##  <a name="BKMK_ImportADaccounts"></a> Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)  
@@ -70,7 +65,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Run the following cmdlet, where `[AD username]` is the name of the Active Directory user account that you want to import:  
   
-     `Import-WssUser  œSamAccountName [AD username]`  
+     `Import-WssUser  SamAccountName [AD username]`  
   
 ##  <a name="BKMK_Network"></a> Configure the network  
   
