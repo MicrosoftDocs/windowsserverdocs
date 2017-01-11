@@ -42,7 +42,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<ul>
 			  <li>Overview (you are here)</li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/understand-the-cache">Understand the cache</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-fault-tolerance">Fault tolerance and storage efficiency</a></li>
 		  	</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
