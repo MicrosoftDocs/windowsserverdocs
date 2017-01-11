@@ -545,7 +545,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 ### The internal network adapter is not configured to register IP address in DNS  
  **Issue:**  The internal network adapter is not configured to register its IP address in DNS.  
   
- **Impact:**  If the IP address of the internal network adapter is not registered in DNS, it might not be possible to access the server by using the server „¢s computer name.  
+ **Impact:**  If the IP address of the internal network adapter is not registered in DNS, it might not be possible to access the server by using the server s computer name.  
   
  **Resolution:**  Verify that the internal network adapter is configured to register in DNS.  
   
@@ -718,7 +718,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
   
  **Resolution:**  
   
-##### To configure DNS to point only to the server „¢s internal IP address  
+##### To configure DNS to point only to the server s internal IP address  
   
 1.  From the client computer, open the **Properties** page for the network connection.  
   
@@ -789,7 +789,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
  **Resolution:**  After you back up the server, you can delete the Remoteaccess.log file, which is located in the %ProgramData%\Microsoft\Windows Server\Logs\WebApps folder.  
   
 ### Default Web site's log directory is over 1 GB in size  
- **Issue:**  If the size of the default website „¢s log folder exceeds 1 GB, you can experience low disk space errors on the system drive.  
+ **Issue:**  If the size of the default website's log folder exceeds 1 GB, you can experience low disk space errors on the system drive.  
   
  **Impact:**  If the default website's log folder is too large, it might cause free space Issue: s on drive C:  
   
@@ -854,7 +854,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 ### Certificate subject does not match the name configured by Domain Name wizard  
  **Issue:**  The certificate subject does not match the name that was configured by Domain Name wizard.  
   
- **Impact:**  If the certificate subject does not match the name that was configured by Domain Name wizard, some websites will not initialize. Other sites will display the error "There is a problem with this website „¢s security certificate."  
+ **Impact:**  If the certificate subject does not match the name that was configured by Domain Name wizard, some websites will not initialize. Other sites will display the error "There is a problem with this website's security certificate."  
   
  **Resolution:**  To resolve this Issue: , either run the Set up Anywhere Access Wizard again and provide the correct domain name for the certificate, or purchase a new certificate that matches the domain name that you wish to use.  
   
@@ -897,7 +897,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 ### Read and Script permissions for the /Remote virtual directory are incorrect  
  **Issue:**  Read and Script permissions are not assigned to the /Remote virtual directory.  
   
- **Impact:**  If the Read and Script permissions for the /Remote virtual directory are incorrect, users cannot use Remote Web Access. When they try to use Remote Web Access to browse the Internet, they might encounter the error "HTTP Error 403.1  œ Forbidden."  
+ **Impact:**  If the Read and Script permissions for the /Remote virtual directory are incorrect, users cannot use Remote Web Access. When they try to use Remote Web Access to browse the Internet, they might encounter the error "HTTP Error 403.1   Forbidden."  
   
  **Resolution:**  
   

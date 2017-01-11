@@ -36,7 +36,5 @@ When you finish migrating your settings and data to  Windows Server Essentials, 
  You have run the  Windows Server Essentials Best Practices Analyzer. Your migration to  Windows Server Essentials is now complete.  
   
 
- To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-
- To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 
