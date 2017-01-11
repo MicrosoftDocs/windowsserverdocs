@@ -1099,6 +1099,8 @@
 ##### [Manage the Host Guardian Service](security/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md)
 #### [Troubleshoot a guarded fabric](security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md)
 ##### [Troubleshoot using the Guarded Fabric Diagnostic Tool](security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md)
+##### [Troubleshoot the Host Guardian Service](security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md)
+##### [Troubleshoot Guarded Hosts](security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md)
 ### [Securing Privileged Access](security/securing-privileged-access/securing-privileged-access.md)
 #### [Privileged Access Workstations](security/securing-privileged-access/privileged-access-workstations.md)
 #### [Securing Privileged Access Reference Material](security/securing-privileged-access/securing-privileged-access-reference-material.md)
