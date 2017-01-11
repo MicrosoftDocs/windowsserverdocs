@@ -48,7 +48,7 @@ If your workload requires a feature that ReFS doesn't support yet, you can use N
 
 ## Choosing the resiliency type
 
-Volumes in Storage Spaces Direct provide resiliency to protect against hardware problems, such as drive failures, and to enable continuous availability throughout server maintenance, such as during software updates. If you have four or more servers, you can choose between several resiliency types.
+Volumes in Storage Spaces Direct provide resiliency to protect against hardware problems, such as drive or server failures, and to enable continuous availability throughout server maintenance, such as software updates.
 
    >[!NOTE]
    > Which resiliency types you can choose is independent of which types of drives you have.
@@ -135,13 +135,13 @@ For example, if you have 2 servers and you are using 1 TB capacity drives, set a
 
 ## Example: Capacity planning
 
-Consider four servers, each with some cache and 16 x 2 TB drives for capacity.
+Consider one four-server cluster. Each server has some cache drives plus sixteen 2 TB drives for capacity.
 
 ```
 4 servers x 16 drives each x 2 TB each = 128 TB
 ```
 
-From this 128 TB, we set aside four drives, or 8 TB, so that in-place repairs can happen without any rush to replace drives after they fail. This leaves 120 TB of physical storage capacity in the pool with which we can create volumes.
+From this 128 TB in the storage pool, we set aside four drives, or 8 TB, so that in-place repairs can happen without any rush to replace drives after they fail. This leaves 120 TB of physical storage capacity in the pool with which we can create volumes.
 
 ```
 128 TB – (4 x 2 TB) = 120 TB
@@ -166,7 +166,7 @@ The four volumes fit exactly on the physical storage capacity available in our p
 ![example](media/plan-volumes/example.png)
 
    >[!TIP]
-   > You don't need to create all the volumes right away. You can leave some of your storage pool unallocated to extend volumes or create new volumes later.
+   > You don't need to create all the volumes right away. You can always extend volumes or create new volumes later.
 
 ## Usage
 
