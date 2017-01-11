@@ -110,11 +110,14 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
 
 Volumes in Storage Spaces Direct can be any size up to 32 TB.
 
-#### Size versus footprint
+   >[!NOTE]
+   > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider – as is common with file server workloads - limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.
 
-The size of a volume refers to its usable capacity, the amount of data it can store. This is provided by the **-Size** parameter of the **New-Volume** cmdlet and then appears in the **Size** property when you run the **Get-Volume** cmdlet. This is distinct from volume's **Footprint**, the total physical storage capacity it occupies on the storage pool. The footprint depends on its resiliency type.
+#### Footprint
 
-For example, volumes that use three-way mirroring have a footprint three times their size.
+The size of a volume refers to its usable capacity, the amount of data it can store. This is provided by the **-Size** parameter of the **New-Volume** cmdlet and then appears in the **Size** property when you run the **Get-Volume** cmdlet.
+
+Size is distinct from volume's *footprint*, the total physical storage capacity it occupies on the storage pool. The footprint depends on its resiliency type. For example, volumes that use three-way mirroring have a footprint three times their size.
 
 The footprints of your volumes need to fit in the storage pool.
 
@@ -131,7 +134,7 @@ We recommend reserving the equivalent of one capacity drive per server, up to 4 
 For example, if you have 2 servers and you are using 1 TB capacity drives, set aside 2 x 1 = 2 TB of the pool as reserve. If you have 3 servers and 1 TB capacity drives, set aside 3 x 1 = 3 TB as reserve. If you have 4 or more servers and 1 TB capacity drives, set aside 4 x 1 = 4 TB as reserve.
 
    >[!NOTE]
-   > In clusters with drives of all three types (NVMe + SSD + HDD), we recommend reserving the equivalent of one SSD plus one HDD per server, up to 4 drives of each maximum.
+   > In clusters with drives of all three types (NVMe + SSD + HDD), we recommend reserving the equivalent of one SSD plus one HDD per server, up to 4 drives of each.
 
 ## Example: Capacity planning
 
@@ -167,6 +170,9 @@ The four volumes fit exactly on the physical storage capacity available in our p
 
    >[!TIP]
    > You don't need to create all the volumes right away. You can always extend volumes or create new volumes later.
+
+   >[!NOTE]
+   > For simplicity, this example uses decimal (base-10) units throughout, meaning 1 TB = 1,000,000,000,000 bytes. However, storage quantities in Windows appear in binary (base-2) units. For example, each 2 TB drive would appear as 1.82 TiB in Windows. Likewise, the 128 TB storage pool would appear as 116.41 TiB. This is expected.
 
 ## Usage
 
