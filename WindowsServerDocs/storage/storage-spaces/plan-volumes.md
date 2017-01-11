@@ -110,7 +110,7 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
 
 Volumes in Storage Spaces Direct can be any size up to 32 TB.
 
-   >[!NOTE]
+   >[!TIP]
    > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider – as is common with file server workloads - limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.
 
 #### Footprint
