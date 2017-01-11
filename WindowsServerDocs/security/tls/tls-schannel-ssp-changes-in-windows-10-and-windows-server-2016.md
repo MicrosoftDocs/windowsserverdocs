@@ -136,3 +136,21 @@ This means that unless the application or service specifically requests SSL 3.0 
 
 Beginning with Windows 10 version 1607 and Windows Server 2016, SSL 2.0 has been removed and is no longer supported.
 
+## Changes to Windows TLS adherence to TLS 1.2 requirements for connections with non-compliant TLS clients
+
+In TLS 1.2, the client uses the ["signature_algorithms" extension](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1) to indicate to the server which signature/hash algorithm pairs may be used in digital signatures (i.e., server certificates and server key exchange). 
+The TLS 1.2 RFC also requires that the server Certificate message honor "signature_algorithms" extension:
+
+"If the client provided a "signature_algorithms" extension, then all certificates provided by the server MUST be signed by a hash/signature algorithm pair that appears in that extension."
+
+In practice, some third-party TLS clients do not comply with the TLS 1.2 RFC and fail to include all the signature and hash algorithm pairs they are willing to accept in the "signature_algorithms" extension, or omit the extension altogether (the latter indicates to the server that the client only supports SHA1 with RSA, DSA or ECDSA).
+
+A TLS server often only has one certificate configured per endpoint, which means the server can’t always supply a certificate that meets the client’s requirements.
+
+Prior to Windows 10 and Windows Server 2016, the Windows TLS stack strictly adhered to the TLS 1.2 RFC requirements, resulting in connection failures with RFC non-compliant TLS clients and interoperability issues. 
+In Windows 10 and Windows Server 2016, the constraints are relaxed and the server can send a certificate that does not comply with TLS 1.2 RFC, if that’s the server’s only option. 
+The client may then continue or terminate the handshake.
+
+When validating server and client certificates, the Windows TLS stack strictly complies with the TLS 1.2 RFC and only allows the negotiated signature and hash algorithms in the server and client certificates.
+
+
