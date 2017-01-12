@@ -173,8 +173,17 @@ To see the bandwidth limit, use:
 To remove the bandwidth limit, use:
 
     Remove-SmbBandwidthLimit -Category StorageReplication
+    
+## <a name="FAQ15"></a>What network ports does Storage Replica require?
+Storage Replica relies on SMB and WSMAN for its replication and management. This means the following ports are required:
 
-## <a name="FAQ14"></a> How do I report an issue with Storage Replica or this guide?  
+445 (SMB - replication transport protocol)
+5445 (iWARP SMB - only needed when using iWARP RDMA networking)
+5895 (WSManHTTP - Management protocol for WMI/CIM/PowerShell)
+
+Note: The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
+
+## <a name="FAQ16></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The https://windowsserver.uservoice.com site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
 ## Related Topics  
