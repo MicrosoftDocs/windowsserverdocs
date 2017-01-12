@@ -34,9 +34,9 @@ The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the
 
    3. Select **Enable MAC Address spoofing**.
 
-## Label Disk Devices
+## Create labels for disk devices
 
-During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create labels for each IDE partition to avoid conflicts and changes. As for how, refer to Labeling Disk Devices. Below are examples. 
+During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create labels for each IDE partition to avoid conflicts and changes. To learn how, see [Labeling Disk Devices](http://www.freebsd.org/doc/handbook/geom-glabel.html). Below are examples. 
 
 > [!IMPORTANT]
 > Make a backup copy of your fstab before making any changes.
