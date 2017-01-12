@@ -473,13 +473,21 @@ Add-HgsAttestationCiPolicy -Name 'WS2016-Hardware01' -Path 'C:\temp\ws2016-hardw
 
 When the *Hgs\_NoDumps* policy is disabled and *Hgs\_DumpEncryption* policy is enabled, guarded hosts are allowed to have memory dumps (including crash dumps) to be enabled as long as those dumps are encrypted. Guarded hosts will only pass attestation if they either have memory dumps disabled or are encrypting them with a key known to HGS. By default, no dump encryption keys are configured on HGS.
 
-To add a dump encryption key to HGS, use the `Add-HgsAttestationDumpPolicy` cmdlet to provide HGS with the public half of the dump encryption key.
+To add a dump encryption key to HGS, use the `Add-HgsAttestationDumpPolicy` cmdlet to provide HGS with the hash of your dump encryption key.
+If you capture a TPM baseline on a Hyper-V host configured with dump encryption, the hash is included in the tcglog and can be provided to the `Add-HgsAttestationDumpPolicy` cmdlet.
 
 ```powershell
-Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey01' -Path 'C:\temp\publicDumpEncryptionKey.cer'
+Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey01' -Path 'C:\temp\TpmBaselineWithDumpEncryptionKey.tcglog'
 ```
 
-Be sure to add every encryption key to HGS if your hosts use different keys to ensure they can pass attestation.
+Alternatively, you can directly provide the string representation of the hash to the cmdlet.
+
+```powershell
+Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey02' -PublicKeyHash '<paste your hash here>'
+```
+
+Be sure to add each unique dump encryption key to HGS if you choose to use different keys across your guarded fabric.
+Hosts that are encrypting memory dumps with a key not known to HGS will not pass attestation.
 
 Consult the Hyper-V documentation for more information about [configuring dump encryption on hosts](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/manage/about-dump-encryption).
 
