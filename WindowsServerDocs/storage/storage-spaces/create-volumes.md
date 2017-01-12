@@ -7,17 +7,17 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 1/7/2017
+ms.date: 1/11/2017
 ---
 
 # Creating volumes in Storage Spaces Direct
 
 >Applies To: Windows Server 2016
 
-This topic provides instructions for how to create volumes in Storage Spaces Direct using PowerShell or Failover Cluster Manager.
+This topic describes how to create volumes in Storage Spaces Direct using PowerShell or Failover Cluster Manager.
 
    >[!TIP]
-   >  If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md).
+   >  If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
 
 ## Create volumes using PowerShell
 
@@ -31,7 +31,7 @@ The **New-Volume** cmdlet has four parameters you'll always need to provide:
 - **Size:** The size of the volume, for example *"10TB"*
 
    >[!NOTE]
-   >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is not unexpected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
+   >  Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is expected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
 
 ### Example: With 2 or 3 servers
 
@@ -45,9 +45,9 @@ New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 If you have four or more servers, you can use the optional **ResiliencySettingName** parameter to choose your resiliency type.
 
--	**ResiliencySettingName:** Either **Mirror** or **Parity**, the latter referring to erasure coding.
+-	**ResiliencySettingName:** Either **Mirror** or **Parity**.
 
-In the following example, *"Volume2"* uses three-way mirroring and *"Volume3"* uses erasure coding.
+In the following example, *"Volume2"* uses three-way mirroring and *"Volume3"* uses dual parity (often called "erasure coding").
 
 ```
 New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror
@@ -56,9 +56,9 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 ### Example: Using storage tiers
 
-In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each. Likewise, in deployments with four or more servers, one volume can mix mirroring and erasure coding to reside partially on each.
+In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each. Likewise, in deployments with four or more servers, one volume can mix mirroring and dual parity to reside partially on each.
 
-To help you create such volumes, Storage Spaces Direct provides default tier templates called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and erasure coding on the slower capacity drives (if applicable).
+To help you create such volumes, Storage Spaces Direct provides default tier templates called *Performance* and *Capacity*. They encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and dual parity on the slower capacity drives (if applicable).
 
 You can see them by running the **Get-StorageTier** cmdlet.
 
@@ -68,7 +68,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 ![Storage Tiers PowerShell Screenshot](media/creating-volumes/storage-tiers-screenshot.png)
 
-To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and erasure coding in 30:70 proportions.
+To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and dual parity in 30:70 proportions.
 
 ```
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
