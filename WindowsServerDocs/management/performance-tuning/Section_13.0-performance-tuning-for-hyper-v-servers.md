@@ -1,4 +1,4 @@
----
+﻿---
 title: Performance Tuning for Hyper-V Servers
 description: Performance Tuning for Hyper-V Servers
 ms.prod: windows-server-threshold
@@ -9,14 +9,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a387861d-257a-4803-aa48-a1bb1b6c6cb6
 author: phstee
-ms.author: Asmahi; SandySp; shirgall;
+ms.author: Asmahi; SandySp; JoPoulso;
 ms.date: 10/31/2016
 ---
 
 # Performance Tuning for Hyper-V Servers
 
 
-Hyper-V is the virtualization server role in Windows Server 2012 R2. Virtualization servers can host multiple virtual machines that are isolated from each other but share the underlying hardware resources by virtualizing the processors, memory, and I/O devices. By consolidating servers onto a single machine, virtualization can improve resource usage and energy efficiency and reduce the operational and maintenance costs of servers. In addition, virtual machines and the management APIs offer more flexibility for managing resources, balancing load, and provisioning systems.
+Hyper-V is the virtualization server role in Windows Server 2016. Virtualization servers can host multiple virtual machines that are isolated from each other but share the underlying hardware resources by virtualizing the processors, memory, and I/O devices. By consolidating servers onto a single machine, virtualization can improve resource usage and energy efficiency and reduce the operational and maintenance costs of servers. In addition, virtual machines and the management APIs offer more flexibility for managing resources, balancing load, and provisioning systems.
 
 **In this topic:**
 
@@ -38,8 +38,8 @@ Hyper-V is the virtualization server role in Windows Server 2012 R2. Virtualiz
 
 -   [Linux Virtual Machines](#linux)
 
-## <a href="" id="terminology"></a>Hyper-V terminology
 
+## <a href="" id="terminology"></a>Hyper-V terminology
 
 This section summarizes key terminology specific to virtual machine technology that is used throughout this performance tuning topic:
 
@@ -111,10 +111,6 @@ This section summarizes key terminology specific to virtual machine technology t
 
     Channel-based communication mechanism used for inter-partition communication and device enumeration on systems with multiple active virtualized partitions. The VMBus is installed with Hyper-V Integration Services.
 
--   **Virtual machine queue (VMQ)**
-
-    Virtual machine queue (VMQ) is a feature available to computers running Windows Server 2008 R2 or later with the Hyper-V server role installed, that have VMQ-capable network hardware. VMQ uses hardware packet filtering to deliver packet data from an external virtual machine network directly to virtual machines, which reduces the overhead of routing packets and copying them from the management operating system to the virtual machine.
-
 ## <a href="" id="arch"></a>Hyper-V architecture
 
 
@@ -128,7 +124,7 @@ The Hyper-V-specific I/O architecture consists of virtualization service provide
 
 Starting with Windows Server 2008, the operating system features enlightenments to optimize its behavior when it is running in virtual machines. The benefits include reducing the cost of memory virtualization, improving multicore scalability, and decreasing the background CPU usage of the guest operating system.
 
-The following sections suggest best practices that yield increased performance on servers running Hyper-V role. Tuning guidance that can yield increased performance on servers running Hyper-V, based on a live system state, is also available in the Hyper-V Advisor Pack that is included with Server Performance Advisor.
+The following sections suggest best practices that yield increased performance on servers running Hyper-V role.
 
 ## <a href="" id="serverconfig"></a>Hyper-V server configuration
 
@@ -139,7 +135,7 @@ The hardware considerations for servers running Hyper-V generally resemble those
 
 -   **Processors**
 
-    Hyper-V in Windows Server 2012 R2 presents the logical processors as one or more virtual processors to each active virtual machine. You can achieve additional run-time efficiency by using processors that support Second Level Address Translation (SLAT) technologies such as Extended Page Tables (EPT) or Nested Page Tables (NPT).
+    Hyper-V in Windows Server 2016 presents the logical processors as one or more virtual processors to each active virtual machine. Hyper-V now requires processors that support Second Level Address Translation (SLAT) technologies such as Extended Page Tables (EPT) or Nested Page Tables (NPT).
 
 -   **Cache**
 
@@ -149,22 +145,15 @@ The hardware considerations for servers running Hyper-V generally resemble those
 
     The physical server requires sufficient memory for the both the root and child partitions. The root partition requires memory to efficiently perform I/Os on behalf of the virtual machines and operations such as a virtual machine snapshot. Hyper-V ensures that sufficient memory is available to the root partition, and allows remaining memory to be assigned to child partitions. Child partitions should be sized based on the needs of the expected load for each virtual machine.
 
--   **Networking**
-
-    If the expected loads are network intensive, the virtualization server can benefit from having multiple network adapters or multiport network adapters. Each network adapter is assigned to its own virtual switch, which enables each virtual switch to service a subset of virtual machines. For the teamed NICs just one virtual switched is assigned. When you host multiple virtual machines, using multiple network adapters enables distribution of the network traffic among the adapters for better overall performance.
-
-    To reduce the CPU usage of network I/Os from virtual machines, Hyper-V can use hardware offloads such as Large Send Offload (LSOv1, LSOv2), TCP checksum offload (TCPv4, TCPv6), virtual machine queue (VMQ) and SR-IOV.
-
-
 -   **Storage**
 
     The storage hardware should have sufficient I/O bandwidth and capacity to meet the current and future needs of the virtual machines that the physical server hosts. Consider these requirements when you select storage controllers and disks and choose the RAID configuration. Placing virtual machines with highly disk-intensive workloads on different physical disks will likely improve overall performance. For example, if four virtual machines share a single disk and actively use it, each virtual machine can yield only 25 percent of the bandwidth of that disk.
 
 ### Server Core installation option
 
-Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 feature the Server Core installation option. Server Core offers a minimal environment for hosting a select set of server roles including Hyper-V. It features a smaller disk footprint for the host OS, and a smaller attack and servicing surface. Therefore, we highly recommend that Hyper-V virtualization servers use the Server Core installation option.
+Windows Server 2016 feature the Server Core installation option. Server Core offers a minimal environment for hosting a select set of server roles including Hyper-V. It features a smaller disk footprint for the host OS, and a smaller attack and servicing surface. Therefore, we highly recommend that Hyper-V virtualization servers use the Server Core installation option.
 
-A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes management features by using [Windows Powershell](http://technet.microsoft.com/library/hh848559.aspx) so administrators can manage it remotely.
+A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](http://technet.microsoft.com/library/hh848559.aspx) so administrators can manage it remotely.
 
 ### Dedicated server role
 
@@ -175,8 +164,6 @@ System administrators should consider carefully what software is installed in th
 ### Guest operating systems
 
 Hyper-V supports and has been tuned for a number of different guest operating systems. The number of virtual processors that are supported per guest depends on the guest operating system. For a list of the supported guest operating systems, see [Hyper-V Overview](http://technet.microsoft.com/library/hh831531.aspx).
-
-You should consider carefully what options get added by using the **bcdedit** command in the guest operating system. Some options may adversely impact the performance of the guest operating system.
 
 ### CPU statistics
 
@@ -201,19 +188,11 @@ You should always measure the CPU usage of the physical system by using the Hype
 
 The Virtual Machine Integration Services include enlightened drivers for the Hyper-V-specific I/O devices, which significantly reduces CPU overhead for I/O compared to emulated devices. You should install the latest version of the Virtual Machine Integration Services in every supported virtual machine. The services decrease the CPU usage of the guests, from idle guests to heavily used guests, and improves the I/O throughput. This is the first step in tuning performance in a server running Hyper-V. For a list of supported guest operating systems, see [Hyper-V Overview](http://technet.microsoft.com/library/hh831531.aspx).
 
-### Use enlightened guest operating systems
-
-The operating system kernels in Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, and Windows 8.1, Windows 7, and Windows Vista with SP1 feature enlightenments that optimize their operation for virtual machines.
-
-The enlightenments present in Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 decrease the CPU overhead of the Windows operating system that is running in a virtual machine. The Virtual Machine Integration Services provide additional enlightenments for I/O. Depending on the server load, it can be appropriate to host a server application in a Windows Server virtual machine for improved performance.
-
 ### Virtual processors
 
-Hyper-V in Windows Server 2012 R2 supports a maximum of 64 virtual processors per virtual machine. Virtual machines that have loads that are not CPU intensive should be configured to use one virtual processor. This is because of the additional overhead that is associated with multiple virtual processors, such as additional synchronization costs in the guest operating system.
+Hyper-V in Windows Server 2016 supports a maximum of 240 virtual processors per virtual machine. Virtual machines that have loads that are not CPU intensive should be configured to use one virtual processor. This is because of the additional overhead that is associated with multiple virtual processors, such as additional synchronization costs in the guest operating system.
 
-Increase the number of virtual processors if the virtual machine requires more than one CPU of processing under peak load. For a list of supported guest operating systems, see [Hyper-V Overview](http://technet.microsoft.com/library/hh831531.aspx).
-
-Enlightenments in Windows Server 2012 and Windows Server 2012 R2 improve scalability in multiprocessor virtual machines, like for example database workloads running in a virtual machine with up to 64 virtual processors.
+Increase the number of virtual processors if the virtual machine requires more than one CPU of processing under peak load.
 
 ### Background activity
 
@@ -243,13 +222,11 @@ The following are additional best practices for configuring a *client version* o
 
 -   Disable scheduled tasks such as Scheduled Defrag.
 
--   Disable Aero glass and other user interface effects.
-
 ### Virtual NUMA
 
-To enable virtualizing large scale-up workloads, Hyper-V in Windows Server 2012 introduced expanded virtual machine scale limits. A single virtual machine can be assigned up to 64 virtual processors and 1 TB of memory. When creating such large virtual machines, memory from multiple NUMA nodes on the host system will likely be utilized. In such virtual machine configuration, if virtual processors and memory are not allocated from the same NUMA node, workloads may have bad performance due to the inability to take advantage of NUMA optimizations.
+To enable virtualizing large scale-up workloads, Hyper-V in Windows Server 2016 expanded virtual machine scale limits. A single virtual machine can be assigned up to 240 virtual processors and 12 TB of memory. When creating such large virtual machines, memory from multiple NUMA nodes on the host system will likely be utilized. In such virtual machine configuration, if virtual processors and memory are not allocated from the same NUMA node, workloads may have bad performance due to the inability to take advantage of NUMA optimizations.
 
-In Windows Server 2012 R2 and Windows Server 2012, Hyper-V presents a virtual NUMA topology to virtual machines. By default, this virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a virtual NUMA topology into a virtual machine allows the guest operating system and any NUMA-aware applications running within it to take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
+In Windows Server 2016, Hyper-V presents a virtual NUMA topology to virtual machines. By default, this virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a virtual NUMA topology into a virtual machine allows the guest operating system and any NUMA-aware applications running within it to take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
 
 There is no distinction between a virtual and a physical NUMA from the workload’s perspective. Inside a virtual machine, when a workload allocates local memory for data, and accesses that data in the same NUMA node, fast local memory access results on the underlying physical system. Performance penalties due to remote memory access are successfully avoided. Only NUMA-aware applications can benefit of vNUMA.
 
@@ -262,52 +239,29 @@ For more info on Virtual NUMA, see [Hyper-V Virtual NUMA Overview](http://techne
 ## <a href="" id="memory"></a>Hyper-V memory performance
 
 
-The hypervisor virtualizes the guest physical memory to isolate virtual machines from each other and to provide a contiguous, zero-based memory space for each guest operating system, just as on non-virtualized systems. To ensure that you get maximum performance use SLAT-based hardware to minimize the performance cost of memory virtualization.
+The hypervisor virtualizes the guest physical memory to isolate virtual machines from each other and to provide a contiguous, zero-based memory space for each guest operating system, just as on non-virtualized systems.
 
 ### Correct memory sizing for child partitions
 
 You should size virtual machine memory as you typically do for server applications on a physical computer. You must size it to reasonably handle the expected load at ordinary and peak times because insufficient memory can significantly increase response times and CPU or I/O usage.
 
-You can enable Dynamic Memory to allow Windows to size virtual machine memory dynamically. The recommended initial memory size for Windows Server 2012 R2 guests is at least 512 MB. With Dynamic Memory, if applications in the virtual machine experience problems making large sudden memory allocations, you can increase the page file size for the virtual machine to ensure temporary backing while Dynamic Memory responds to the memory pressure.
+You can enable Dynamic Memory to allow Windows to size virtual machine memory dynamically. With Dynamic Memory, if applications in the virtual machine experience problems making large sudden memory allocations, you can increase the page file size for the virtual machine to ensure temporary backing while Dynamic Memory responds to the memory pressure.
 
-For more info on Dynamic Memory, see [Hyper-V Dynamic Memory Overview](http://technet.microsoft.com/library/hh831766.aspx) and [Hyper-V Dynamic Memory Configuration Guide](http://technet.microsoft.com/library/ff817651(WS.10).aspx).
+For more info on Dynamic Memory, see [Hyper-V Dynamic Memory Overview]( https://go.microsoft.com/fwlink/?linkid=834434) and [Hyper-V Dynamic Memory Configuration Guide](https://go.microsoft.com/fwlink/?linkid=834435).
 
 When running Windows in the child partition, you can use the following performance counters within a child partition to identify whether the child partition is experiencing memory pressure and is likely to perform better with a higher virtual machine memory size.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Performance counter</th>
-<th>Suggested threshold value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Memory – Standby Cache Reserve Bytes</p></td>
-<td><p>Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM.</p></td>
-</tr>
-<tr class="even">
-<td><p>Memory – Free &amp; Zero Page List Bytes</p></td>
-<td><p>Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM.</p></td>
-</tr>
-<tr class="odd">
-<td><p>Memory – Pages Input/Sec</p></td>
-<td><p>Average over a 1-hour period is less than 10.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+| Performance counter                                                         | Suggested threshold value                                                                                                                                                           |
+|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Memory – Standby Cache Reserve Bytes                                        | Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM. |
+| Memory – Free & Zero Page List Bytes                                        | Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM. |
+| Memory – Pages Input/Sec                                                    | Average over a 1-hour period is less than 10.                                                                                                                                       | 
 
 ### Correct memory sizing for root partition
 
 The root partition must have sufficient memory to provide services such as I/O virtualization, virtual machine snapshot, and management to support the child partitions.
 
-Hyper-V in Windows Server 2012 R2 monitors the runtime health of the root partition’s management operating system to determine how much memory can safely be allocated to child partitions, while still ensuring high performance and reliability of the root partition.
+Hyper-V in Windows Server 2016 monitors the runtime health of the root partition’s management operating system to determine how much memory can safely be allocated to child partitions, while still ensuring high performance and reliability of the root partition.
 
 ## <a href="" id="storageio"></a>Hyper-V storage I/O performance
 
@@ -320,19 +274,19 @@ Hyper-V offers three types of virtual controllers: IDE, SCSI, and Virtual host b
 
 ### IDE
 
-IDE controllers expose IDE disks to the virtual machine. The IDE controller is emulated, and it is the only controller that is available when the Virtual Machine Integration Services are not installed on the guest operating system. Disk I/O that is performed by using the IDE filter driver that is provided with the Virtual Machine Integration Services is significantly better than the disk I/O performance that is provided with the emulated IDE controller. We recommend that IDE disks be used only for the operating system disks because they have performance limitations due to the maximum I/O size that can be issued to these devices.
+IDE controllers expose IDE disks to the virtual machine. The IDE controller is emulated, and it is the only controller that is available for guest VMs running older version of Windows without the Virtual Machine Integration Services. Disk I/O that is performed by using the IDE filter driver that is provided with the Virtual Machine Integration Services is significantly better than the disk I/O performance that is provided with the emulated IDE controller. We recommend that IDE disks be used only for the operating system disks because they have performance limitations due to the maximum I/O size that can be issued to these devices.
 
 ### SCSI (SAS controller)
 
 SCSI controllers expose SCSI disks to the virtual machine, and each virtual SCSI controller can support up to 64 devices. For optimal performance, we recommend that you attach multiple disks to a single virtual SCSI controller and create additional controllers only as they are required to scale the number of disks connected to the virtual machine. SCSI path is not emulated which makes it the preferred controller for any disk other than the operating system disk. In fact with Generation 2 VMs, it is the only type of controller possible. Introduced in Windows Server 2012 R2, this controller is reported as SAS to support shared VHDX.
 
-### Virtual HBAs
+### Virtual Fibre Channel HBAs
 
-Virtual HBAs can be configured to allow direct access for virtual machines to Fibre Channel and Fibre Channel over Ethernet (FCoE) LUNs. Virtual Fibre Channel disks bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O.
+Virtual Fibre Channel HBAs can be configured to allow direct access for virtual machines to Fibre Channel and Fibre Channel over Ethernet (FCoE) LUNs. Virtual Fibre Channel disks bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O.
 
 Large data drives and drives that are shared between multiple virtual machines (for guest clustering scenarios) are prime candidates for virtual Fibre Channel disks.
 
-Virtual Fibre Channel disks require one or more Fibre Channel host bus adapters (HBAs) to be installed on the host. Each host HBA is required to use an HBA driver that supports the Windows Server 2012 R2 Virtual Fibre Channel/NPIV capabilities. The SAN fabric should support NPIV, and the HBA port(s) that are used for the virtual Fibre Channel should be set up in a Fibre Channel topology that supports NPIV.
+Virtual Fibre Channel disks require one or more Fibre Channel host bus adapters (HBAs) to be installed on the host. Each host HBA is required to use an HBA driver that supports the Windows Server 2016 Virtual Fibre Channel/NPIV capabilities. The SAN fabric should support NPIV, and the HBA port(s) that are used for the virtual Fibre Channel should be set up in a Fibre Channel topology that supports NPIV.
 
 To maximize throughput on hosts that are installed with more than one HBA, we recommend that you configure multiple virtual HBAs inside the Hyper-V virtual machine (up to four HBAs can be configured for each virtual machine). Hyper-V will automatically make a best effort to balance virtual HBAs to host HBAs that access the same virtual SAN.
 
@@ -346,9 +300,9 @@ There are two virtual hard disk formats, VHD and VHDX. Each of these formats sup
 
 ### VHD format
 
-The VHD format was the only virtual hard disk format that was supported by Hyper-V in past releases. Introduce in Windows Server 2012, the VHD format has been modified to allow better alignment, which results in significantly better performance on new large sector disks.
+The VHD format was the only virtual hard disk format that was supported by Hyper-V in past releases. Introduced in Windows Server 2012, the VHD format has been modified to allow better alignment, which results in significantly better performance on new large sector disks.
 
-Any new VHD that is created on a Windows Server 2012 R2 and Windows Server 2012 server has the optimal 4 KB alignment. This aligned format is completely compatible with previous Windows Server operating systems. However, the alignment property will be broken for new allocations from parsers that are not 4 KB alignment-aware (such as a VHD parser from a previous version of Windows Server or a non-Microsoft parser).
+Any new VHD that is created on a Windows Server 2012 or newer has the optimal 4 KB alignment. This aligned format is completely compatible with previous Windows Server operating systems. However, the alignment property will be broken for new allocations from parsers that are not 4 KB alignment-aware (such as a VHD parser from a previous version of Windows Server or a non-Microsoft parser).
 
 Any VHD that is moved from a previous release does not automatically get converted to this new improved VHD format.
 
@@ -426,7 +380,7 @@ The VHDX format also provides the following performance benefits:
 
 -   Efficiency in representing data, which results in smaller file size and allows the underlying physical storage device to reclaim unused space. (Trim requires pass-through or SCSI disks and trim-compatible hardware.)
 
-When you upgrade to Windows Server 2012, we recommend that you convert all VHD files to the VHDX format due to these benefits. The only scenario where it would make sense to keep the files in the VHD format is when a virtual machine has the potential to be moved to a previous release of Hyper-V that does not support the VHDX format.
+When you upgrade to Windows Server 2016, we recommend that you convert all VHD files to the VHDX format due to these benefits. The only scenario where it would make sense to keep the files in the VHD format is when a virtual machine has the potential to be moved to a previous release of Hyper-V that does not support the VHDX format.
 
 ### Types of virtual hard disk files
 
@@ -448,7 +402,7 @@ Space for the VHD is first allocated when the VHD file is created. This type of 
 
 ### Dynamic virtual hard disk type
 
-Space for the VHD is allocated on demand. The blocks in the disk start as zeroed blocks, but they are not backed by any actual space in the file. Reads from such blocks return a block of zeros. When a block is first written to, the virtualization stack must allocate space within the VHD file for the block, and then update the metadata. This increases the number of necessary disk I/Os for the Write and increases CPU usage. Reads and writes to existing blocks incur disk access and CPU overhead when looking up the blocks’ mapping in the metadata.
+Space for the VHD is allocated on demand. The blocks in the disk start as unallocated blocks and are not backed by any actual space in the file. When a block is first written to, the virtualization stack must allocate space within the VHD file for the block, and then update the metadata. This increases the number of necessary disk I/Os for the Write and increases CPU usage. Reads and writes to existing blocks incur disk access and CPU overhead when looking up the blocks’ mapping in the metadata.
 
 ### Differencing virtual hard disk type
 
@@ -482,17 +436,17 @@ This process is called read-modify-write (RMW). The overall performance impact o
 
 ![vhd 4 kb block](../media/performance-tuning/perftune-guide-vhd-4kb-block.png)
 
-Each 4 KB write command that is issued by the current parser to update the payload data results in two reads for two blocks on the disk, which are then updated and subsequently written back to the two disk blocks. Hyper-V in Windows Server 2012 and Windows Server 2012 R2 mitigates some of the performance effects on 512e disks on the VHD stack by preparing the previously mentioned structures for alignment to 4 KB boundaries in the VHD format. This avoids the RMW effect when accessing the data within the virtual hard disk file and when updating the virtual hard disk metadata structures.
+Each 4 KB write command that is issued by the current parser to update the payload data results in two reads for two blocks on the disk, which are then updated and subsequently written back to the two disk blocks. Hyper-V in Windows Server 2016 mitigates some of the performance effects on 512e disks on the VHD stack by preparing the previously mentioned structures for alignment to 4 KB boundaries in the VHD format. This avoids the RMW effect when accessing the data within the virtual hard disk file and when updating the virtual hard disk metadata structures.
 
 As mentioned earlier, VHDs that are copied from previous versions of Windows Server will not automatically be aligned to 4 KB. You can manually convert them to optimally align by using the **Copy from Source** disk option that is available in the VHD interfaces.
 
-By default, VHDs are exposed with a physical sector size of 512 bytes. This is done to ensure that physical sector size dependent applications are not impacted when the application and VHDs are moved from a previous version of Windows Server to Windows Server 2012 or Windows Server 2012 R2.
+By default, VHDs are exposed with a physical sector size of 512 bytes. This is done to ensure that physical sector size dependent applications are not impacted when the application and VHDs are moved from a previous version of Windows Server.
 
 By default, disks with the VHDX format are created with the 4 KB physical sector size to optimize their performance profile regular disks and large sector disks. To make full use of 4 KB sectors it’s recommended to use VHDX format.
 
 ### Support for native 4 KB disks
 
-Hyper-V in Windows Server 2012 R2 supports 4 KB native disks. But it is still possible to store VHD disk on 4 KB native disk. This is done by implementing a software RMW algorithm in the virtual storage stack layer that converts 512-byte access and update requests to corresponding 4 KB accesses and updates.
+Hyper-V in Windows Server 2012 R2 and beyond supports 4 KB native disks. But it is still possible to store VHD disk on 4 KB native disk. This is done by implementing a software RMW algorithm in the virtual storage stack layer that converts 512-byte access and update requests to corresponding 4 KB accesses and updates.
 
 Because VHD file can only expose themselves as 512-byte logical sector size disks, it is very likely that there will be applications that issue 512-byte I/O requests. In these cases, the RMW layer will satisfy these requests and cause performance degradation. This is also true for a disk that is formatted with VHDX that has a logical sector size of 512 bytes.
 
@@ -505,41 +459,6 @@ The VHD in a virtual machine can be mapped directly to a physical disk or logica
 Pass-through disks should be avoided due to the limitations introduced with virtual machine migration scenarios.
 
 ### Advanced storage features
-
-### I/O balancer controls
-
-The virtualization stack balances storage I/O streams from different virtual machines so that each virtual machine has similar I/O response times when the system’s I/O bandwidth is saturated. The following registry entries can be used to adjust the balancing algorithm, but the virtualization stack tries to fully use the I/O device’s throughput while providing reasonable balance. The first path should be used for storage scenarios, and the second path should be used for networking scenarios:
-
-Storage and networking have three registry entries at the **StorVsp** and **VmSwitch** paths, respectively. Each value is a DWORD and operates as explained in the following list.
-
-**Note**  
-We do not recommend this advanced tuning option unless you have a specific reason to use it. These registry entries may be removed in future releases.
-
- 
-
--   **IOBalance\_Enabled**
-
-    ``` syntax
-    HKLM\System\CurrentControlSet\Services\StorVsp\IOBalance_Enabled (REG_DWORD)
-    ```
-
-    The balancer is enabled when it is set to a nonzero value, and it is disabled when set to 0. The default is enabled for virtual hard disks on local storage and disabled for virtual hard disks on remote SMB storage and networking. Enabling the balancing for networking can add significant CPU overhead in some scenarios.
-
--   **IOBalance\_KeepHwBusyLatencyTarget\_Microseconds**
-
-    ``` syntax
-    HKLM\System\CurrentControlSet\Services\StorVsp\IOBalance_KeepHwBusyLatencyTarget_Microseconds (REG_DWORD)
-    ```
-
-    This controls how much work, represented by a latency value, the balancer allows to be issued to the hardware before throttling to provide better balance. The default is 83 ms for storage and 2 ms for networking. Lowering this value can improve balance, but it will reduce some throughput. Lowering it too much significantly affects overall throughput. Storage systems with high throughput and high latencies can show added overall throughput with a higher value for this parameter.
-
--   **IOBalance\_AllowedPercentOverheadDueToFlowSwitching**
-
-    ``` syntax
-    HKLM\System\CurrentControlSet\Services\StorVsp\IOBalance_AllowedPercentOverheadDueToFlowSwitching (REG_DWORD)
-    ```
-
-    This controls how much work the balancer issues from a virtual machine before switching to another virtual machine. This setting is primarily for storage where finely interleaving I/Os from different virtual machines can increase the number of disk seeks. The default is 8 percent for both storage and networking.
 
 ### Storage Quality of Service (QoS)
 
@@ -567,9 +486,9 @@ For more info on Storage Quality of Service, see [Storage Quality of Service for
 
 ### NUMA I/O
 
-Windows Server 2012 R2 and Windows Server 2012 supports large virtual machines, and any large virtual machine configuration (for example, a configuration with Microsoft SQL Server running with 64 virtual processors) will also need scalability in terms of I/O throughput.
+Windows Server 2012 and beyond supports large virtual machines, and any large virtual machine configuration (for example, a configuration with Microsoft SQL Server running with 64 virtual processors) will also need scalability in terms of I/O throughput.
 
-The following key improvements in the Windows Server 2012 R2 and Windows Server 2012 storage stack and Hyper-V provide the I/O scalability needs of large virtual machines:
+The following key improvements first introduced in the Windows Server 2012 storage stack and Hyper-V provide the I/O scalability needs of large virtual machines:
 
 -   An increase in the number of communication channels created between the guest devices and host storage stack.
 
@@ -587,7 +506,7 @@ Crucial maintenance tasks for VHDs, such as merge, move, and compact, depend cop
 
 Storage area network (SAN) vendors are working to provide near-instantaneous copy operations of large amounts of data. This storage is designed to allow the system above the disks to specify the move of a specific data set from one location to another. This hardware feature is known as an Offloaded Data Transfer.
 
-Hyper-V in Windows Server 2012 R2 and Windows Server 2012 supports Offload Data Transfer (ODX) operations so that these operations can be passed from the guest operating system to the host hardware. This ensures that the workload can use ODX-enabled storage as it would if it were running in a non-virtualized environment. The Hyper-V storage stack also issues ODX operations during maintenance operations for VHDs such as merging disks and storage migration meta-operations where large amounts of data are moved.
+Hyper-V in Windows Server 2012 and beyond supports Offload Data Transfer (ODX) operations so that these operations can be passed from the guest operating system to the host hardware. This ensures that the workload can use ODX-enabled storage as it would if it were running in a non-virtualized environment. The Hyper-V storage stack also issues ODX operations during maintenance operations for VHDs such as merging disks and storage migration meta-operations where large amounts of data are moved.
 
 ### Unmap integration
 
@@ -601,230 +520,10 @@ Only Hyper-V-specific SCSI, enlightened IDE, and Virtual Fibre Channel controlle
 
 For these reasons, we recommend that you use VHDX files attached to a SCSI controller when not using Virtual Fibre Channel disks.
 
+
 ## <a href="" id="netio"></a>Hyper-V network I/O performance
 
-
-Hyper-V supports Hyper-V-specific and emulated network adapters in the virtual machines, but the Hyper-V-specific devices offer significantly better performance and reduced CPU overhead. Each of these adapters is connected to a virtual network switch, which can be connected to a physical network adapter if external network connectivity is needed.
-
-### Hyper-V specific network adapter
-
-Hyper-V features a Hyper-V-specific network adapter that is designed specifically for virtual machines to achieve significantly reduced CPU overhead on network I/O when it is compared to the emulated network adapter that mimics existing hardware. The Hyper-V-specific network adapter communicates between the child and root partitions over VMBus by using shared memory for more efficient data transfer.
-
-The emulated network adapter should be removed through the settings dialog box in the virtual machine and replaced with a Hyper-V-specific network adapter. The guest requires that the virtual machine Virtual Machine Integration Services be installed.
-
-Performance Monitors counters that represent the network statistics for the installed Hyper-V-specific network adapters are available under the following counter set: \\Hyper-V Virtual Network Adapter (\*) \\ \*.
-
-### Offload hardware
-
-As with the native scenario, offload capabilities in the physical network adapter reduce the CPU usage of network I/Os in virtual machine scenarios. Hyper-V currently supports LargeSend Offload (LSOv1, LSOv2) and TCP checksum offload (TCPv4, TCPv6). The offload capabilities must be enabled in the driver for the physical network adapter in the root partition.
-
-Drivers for certain network adapters disable LSOv1, and they enable LSOv2 by default. System administrators must explicitly enable LSOv1 by using the **Properties** dialog box for the driver in Device Manager.
-
-### Network switch topology
-
-Hyper-V supports creating multiple virtual network switches, each of which can be attached to a physical network adapter if needed. Each network adapter in a virtual machine can be connected to a virtual network switch. If the physical server has multiple network adapters, virtual machines with network-intensive loads can benefit from being connected to different virtual switches to better use the physical network adapters.
-
-Performance Monitor counters that represents the network statistics for the installed Hyper-V-specific switches are available under the following counter set: \\Hyper-V Virtual Switch (\*) \\ \*.
-
-### VLAN performance
-
-The Hyper-V-specific network adapter supports VLAN tagging. It provides significantly better network performance if the physical network adapter supports NDIS\_ENCAPSULATION\_IEEE\_802\_3\_P\_AND\_Q\_IN\_OOB encapsulation for Large Send Offload and checksum offload. Without this support, Hyper-V cannot use hardware offload for packets that require VLAN tagging, and network performance can be decreased.
-
-### Dynamic VMQ
-
-Dynamic virtual machine queue (VMQ or dVMQ) is a performance optimization of VMQ in Windows Server 2012 R2 and Windows Server 2012 that automatically scales the number of processors that are in use for VMQ, based on the traffic volume. This section provides guidance about how to configure the system to take full advantage of dVMQ.
-
-The configuration of dVMQ is controlled by the same settings as RSS. It uses the following standard keywords in the registry for the base CPU number and the maximum number of CPUs to use: \*RssBaseProcNumber and \*MaxRssProcessors.
-
-When NIC is connected to vSwitch, RSS is automatically disabled and VMQ mechanism has to be used to direct network processing to logical CPUs.
-
-Some Intel multi-core processors may use Intel Hyper-Threading technology. When Hyper-Threading is enabled, the actual number of cores that are used by dVMQ should be half the total number of logical processors that are available in the system. This is because dVMQ spreads the processing across individual physical cores only, and it will not use hyper-threaded sibling cores. As an example, if the machine has an Intel processor with four physical cores, and Hyper-Threading is enabled, it will show a total of eight logical processors. Only four logical processors are available to VMQ. VMQ will use cores 0, 2, 4, and 6.
-
-There may be situations where starting with logical processor 0 (which corresponds to core 0) as the RssBaseProcNumber is acceptable. However, general guidance is to avoid using core 0 as the base CPU because it is generally used for default network queues and workload processing in the root partition.
-
-Based on the root virtual processor utilization, the RSS base and maximum logical processors for a physical network adapter can be configured to define the set of root virtual processors that are available for VMQ processing. Selecting the set of VMQ processors can better isolate latency-centric or cache-sensitive virtual machines or workloads from root network processing. Use the Windows PowerShell cmdlet, **Set-NetAdapterVmq**, to set the correct base processor number and the maximum processor number.
-
-There are limited hardware queues available, so you can use the Hyper-V WMI API to ensure that the virtual machines using the network bandwidth are assigned a hardware queue. To disable VMQ for specific virtual network adapters, open Hyper-V Manager, and then open the settings for a virtual machine. For the virtual network adapter on which you want to disable VMQ, expand the port settings, and in the **Hardware Acceleration** section, clear the **Enable Virtual Machine Queue** check box.
-
-When a host has multiple network adapters, each for a different virtual switch instance, and it is using dVMQ, do not configure dVMQ to use overlapping processor sets. Ensure that each network adapter that is configured for dVMQ has its own set of cores. Otherwise performance results may be impaired and unpredictable.
-
-There are two separate dVMQ configuration recommendations, based on the type of NIC teaming in Windows Server 2012 R2 with Hyper-V. If the team is configured by using switch dependent-mode or address hashing, each network adapter in the team should have identical values for \*RssBaseProcNumber and \*MaxRssProcessors. This mode is referred to as Min mode in the following table.
-
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Teaming mode</th>
-<th>Address hash modes</th>
-<th>HyperVPort</th>
-<th>Dynamic</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Switch independent</p></td>
-<td><p>Min-Queues</p></td>
-<td><p>Sum-of-Queues</p></td>
-<td><p>Sum-of-Queues</p></td>
-</tr>
-<tr class="even">
-<td><p>Switch dependent</p></td>
-<td><p>Min-Queues</p></td>
-<td><p>Min-Queues</p></td>
-<td><p>Min-Queues</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
-If the team is configured by using switch independent mode and the load distribution is set to Dynamic mode or Hyper-V switch port addressing, each network adapter in the team should be configured by using non-overlapped processor sets as earlier described for multiple network adapters. This is referred to as the Sum-of-queues mode in the above table. For more info, see the [Windows Server 2012 R2 NIC Teaming (LBFO) Deployment and Management Guide](http://www.microsoft.com/download/details.aspx?id=40319). Dynamic mode algorithm takes the best aspects of each of the other two modes and combines them into a single mode. Outbound loads are distributed based on a hash of the TCP ports and IP addresses. Dynamic mode also rebalances loads in real-time so that a given outbound flow may move back and forth between team members. Inbound loads are distributed as though the Hyper-V port mode was in use. Dynamic mode was added in Windows Server 2012 R2.
-
-The following table compares dVMQ settings (RssBaseProcNumber, MaxRssProcNumber) for two virtual machines that use the Min and Sum configurations.
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>*RssBaseProcNumber, *MaxRssProcessors</th>
-<th>8-core HT, 3 network adapters</th>
-<th>16-core HT4 network adapters</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Min example configuration</p></td>
-<td><p>Each NIC=2, 3</p></td>
-<td><p>Each NIC=2,7</p></td>
-</tr>
-<tr class="even">
-<td><p>Sum example configuration</p></td>
-<td><p>NIC1=2,1</p>
-<p>NIC2=4,1</p>
-<p>NIC3=6,1</p></td>
-<td><p>NIC1=2,2</p>
-<p>NIC2=6,2</p>
-<p>NIC3=10,2</p>
-<p>NIC4=14,1</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
-The following formula can be used to compute even distribution of cores among network adapters for a team. It is assumed that the first core is skipped; that is, RssBaseProcNumber starts at 2.
-
-The maximum number of cores per virtual machine that dVMQ will use is 16.
-
-Ct = total number of cores
-
-Nt = total number of network adapters in the team
-
-The general case assumes hyper-threading is in use on cores: MaxRssProcessors = min((Ct-2)/2/Nt, 16)
-
-In the event that hyper-threading is disabled or unavailable: MaxRssProcessors=min((Ct-1)/Nt, 16)
-
-If the link speed is less than 10 GB, VMQ is disabled by default by the vmSwitch even though it will still show as enabled in the Windows PowerShell cmdlet **Get-NetAdapterVmq**. One way to verify that VMQ is disabled is to use the Windows PowerShell cmdlet **Get-NetAdapterVmqQueue**. This will show that there is not a QueueID assigned to the virtual machine or host vNIC. There shouldn’t be a reason for VMQ usage for lower link speeds.
-
-If you must enable the feature, you can do it by using the following registry entry:
-
-``` syntax
-HKLM\SYSTEM\CurrentControlSet\Services\VMSMP\Parameters\BelowTenGigVmqEnabled
-```
-
-For more info about VMQ, see the VQM Deep Dive series:
-
--   [VMQ Deep Dive, 1 of 3](http://blogs.technet.com/b/networking/archive/2013/09/10/vmq-deep-dive-1-of-3.aspx)
-
--   [VMQ Deep Dive, 2 of 3](http://blogs.technet.com/b/networking/archive/2013/09/10/vmq-deep-dive-2-of-3.aspx)
-
--   [VMQ Deep Dive, 3 of 3](http://blogs.technet.com/b/networking/archive/2013/10/22/vmq-deep-dive-3-of-3.aspx)
-
-### MAC spoofing guidance
-
-By default, each virtual machine has MAC address protection, so traffic on a MAC address (other than the one assigned in the host) is blocked. To allow a virtual machine to set its own MAC address, MAC Address Spoofing must be enabled by using Windows Powershell:
-
-``` syntax
-Get-VM "MyVM" | Set- VMNetworkAdapter –MacAddressSpoofing On
-```
-
-**Note**  
-If MAC spoofing is enabled on a virtual machine that is connected to an SR-IOV mode virtual switch, traffic will still be blocked. MAC spoofing should only be enabled for a virtual machine on a non-SR-IOV mode virtual switch. If Enable MAC Spoofing is selected, the SR-IOV virtual function is removed and traffic is routed through the virtual switch.
-
- 
-
-### Single root I/O virtualization
-
-Windows Server 2012 introduced support for single root I/O virtualization (SR-IOV), which allows the direct assignment of network resources (virtual functions) to individual virtual machines when specialized hardware is available. SR-IOV can be enabled for networking and CPU intensive workloads to reduce virtualization overhead for networking I/O.
-
-The number of virtual functions available for assignment is defined by the network adapter, and they can be queried by using the Windows PowerShell cmdlet, **Get-NetAdapterSriov**. Other IOV operations that are exposed through Windows PowerShell include:
-
--   **Enable-NetAdapterSriov** Enable IOV on the physical network adapter
-
--   **Disable-NetAdapterSriov** Disable IOV on the physical network adapter
-
--   **New-VMSwitch** Use with the **–EnableIov** parameter to create an IOV switch.
-
-When networking virtual machine-to-virtual machine, the virtual function bandwidth is limited by the bandwidth of the physical adapter. In cases where the virtual function bandwidth is saturated, switching to the Hyper-V-specific network adapter for inter-virtual machine communication can improve throughput by decoupling virtual machine-to-virtual machine network I/O traffic from the physical adapter bandwidth.
-
-SR-IOV is ideal for high I/O workloads that do not require port policies, QoS, or network virtualization enforced at the host virtual switch. These features are not supported for SR-IOV because traffic doesn’t go through virtual switch.
-
-SR-IOV is not compatible with LBFO on the host but can be used in conjunction with LBFO inside a virtual machine. If the NIC doesn’t support VF RSS, workloads that are network intensive, such as a Web server might benefit of greater parallelism in the virtual network stack if a second Hyper-V-specific network adapter is installed in a virtual machine.
-
-When SR-IOV is enabled, any policy that is added to the switch will turn SR-IOV off for that virtual machine, reverting the network path back through the vSwitch. This guarantees that policies are enforced.
-
-To be able to use RSS with SR-IOV, VF RSS has to be supported by NIC, and the following conditions must be true:
-
--   The virtual machine must be created with multiple cores.
-
--   The SR-IOV network adapter must support VF RSS. This means that the network adapter has multiple RSS tables; one for each VF that uses RSS.
-
--   The network adapter driver must also advertise that the network adapter supports VF RSS.
-
--   RSS must be enabled in the virtual machine.
-
-### Virtual Receive Side Scaling
-
-Virtual Receive Side Scaling (vRSS), introduced in Windows Server 2012 R2, enables the software processing of inbound (received) networking traffic to be shared across multiple processors inside the host and virtual machine. vRSS can dynamically balance the inbound network traffic load.
-
-vRSS works by scaling a virtual machine’s receive side traffic to multiple virtual processors, so that the incoming traffic spreads over the total number of cores available to that virtual machine. vRSS also spreads send side traffic from a virtual machine onto multiple processors, so that virtual switch processing does not generate bottlenecks on a single physical processor when sending large amounts of outgoing traffic.
-
-### Configuring vRSS
-
-Before you enable vRSS in a virtual machine, you must do the following:
-
--   Verify that the network adapter is VMQ-capable and has a link speed of at least 10 GB. Also, verify that VMQ is enabled on the host machine. vRSS will not work if the host does not support VMQ.
-
--   Verify that an SR-IOV Virtual Function (VF) is not attached to the virtual machine’s network adapter. This can be done by using the **Get-NetAdapterSriov** Windows PowerShell cmdlet. If a VF driver is loaded, vRSS will use the vRSS settings exposed from this driver. If the VF driver does not expose RSS, vRSS is disabled.
-
--   If you are using NIC Teaming, you must properly configure VMQ to work with the NIC Teaming settings. For more info on deploying and managing NIC Teaming, see [Windows Server 2012 R2 NIC Teaming (LBFO) Deployment and Management Guide](http://www.microsoft.com/download/details.aspx?id=40319).
-
-You can enable vRSS a few different ways:
-
-1.  Run the following Windows PowerShell as an administrator inside the virtual machine: **AdapterName** should be replaced with the name of the vmNIC adapter that RSS should be enabled on.
-
-    ``` syntax
-    Enable-NetAdapterRSS -Name "AdapterName"
-    ```
-
-2.  Run the following Windows PowerShell as an administrator inside the virtual machine: **AdapterName** should be replaced with the name of the vmNIC adapter that RSS should be enabled on.
-
-    ``` syntax
-    Set-NetAdapterRSS -Name "AdapterName" -Enabled $True
-    ```
-
-3.  From the **Advanced** tab in the settings of the network adapter.
-
-The vRSS settings in the virtual machine are configured by using the same Windows PowerShell cmdlets as native RSS.
+Server 2016 contains several improvements and new functionality to optimize network performance under Hyper-V.  Documentation on how to optimize network performance will be included in a future version of this article.
 
 ### Live Migration
 
@@ -976,21 +675,21 @@ Linux by default enables hardware acceleration and offloads by default. If vRSS 
 
 Similarly, the VMMQ (Virtual Switch RSS) feature can be enabled on the physical NIC used by the guest "Properties" > "Configure..." > "Advanced" Tab > set "Virtual Switch RSS" to "Enabled" or enable VMMQ in Powershell: <pre>Set-VMNetworkAdapter -VMName **$VMName** -VmmqEnabled $True</pre>
 
-In the guest additional TCP tuning can be performed by increasing limits. For the best performance sprading workload over multiple CPUs and having deep workloads produces the best throughput, as virtualized workloads will have higher latency than "bare metal" ones. 
+In the guest additional TCP tuning can be performed by increasing limits. For the best performance sprading workload over multiple CPUs and having deep workloads produces the best throughput, as virtualized workloads will have higher latency than "bare metal" ones.
 
 Some example tuning paramters that have been useful in network benchmarks include:
 
 ```
-net.core.netdev_max_backlog = 30000 
-net.core.rmem_max = 67108864 
-net.core.wmem_max = 67108864 
-net.ipv4.tcp_wmem = 4096 12582912 33554432 
-net.ipv4.tcp_rmem = 4096 12582912 33554432 
-net.ipv4.tcp_max_syn_backlog = 80960 
-net.ipv4.tcp_slow_start_after_idle = 0 
-net.ipv4.tcp_tw_reuse = 1 
-net.ipv4.ip_local_port_range = 10240 65535 
-net.ipv4.tcp_abort_on_overflow = 1 
+net.core.netdev_max_backlog = 30000
+net.core.rmem_max = 67108864
+net.core.wmem_max = 67108864
+net.ipv4.tcp_wmem = 4096 12582912 33554432
+net.ipv4.tcp_rmem = 4096 12582912 33554432
+net.ipv4.tcp_max_syn_backlog = 80960
+net.ipv4.tcp_slow_start_after_idle = 0
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.ip_local_port_range = 10240 65535
+net.ipv4.tcp_abort_on_overflow = 1
 ```
 
 A useful tool for network microbenchmarks is ntttcp, which is available on both Linux and Windows. The Linux version is open source and available from [ntttcp-for-linux on github.com](https://github.com/Microsoft/ntttcp-for-linux). The Windows version can be found in the [download center](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769). When tuning workloads it is best to use as many streams as necessary to get the best throughput. Using ntttcp to model traffic, the <pre>-P</pre> parameter sets the number of parallel connections used.
@@ -999,4 +698,4 @@ A useful tool for network microbenchmarks is ntttcp, which is available on both 
 
 Some best practices, like the following, are listed on [Best Practices for Running Linux on Hyper-V](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/best-practices-for-running-linux-on-hyper-v). The Linux kernel has different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add <pre>elevator=noop</pre> to the kernel parameters, and then restart.
 
-Similar to networking, Linux guest performance with storage benefits the most from multiple queues with enough depth to keep the host busy. Microbenchmarking storage performance is probably best with the fio benchmark tool with the libaio engine. 
+Similar to networking, Linux guest performance with storage benefits the most from multiple queues with enough depth to keep the host busy. Microbenchmarking storage performance is probably best with the fio benchmark tool with the libaio engine.
