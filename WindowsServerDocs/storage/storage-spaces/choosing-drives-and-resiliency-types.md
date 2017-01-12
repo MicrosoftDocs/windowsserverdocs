@@ -7,13 +7,13 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 12/7/2016
+ms.date: 01/12/2017
 ---
 # Choosing drives for Storage Spaces Direct
 
 >Applies To: Windows Server 2016
 
-This topic provides guidance on how to choose drives for [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your workload's performance and capacity requirements.
+This topic provides guidance on how to choose drives for [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your performance and capacity requirements.
 
 ## Drive types
 
@@ -81,10 +81,10 @@ For environments with a variety of applications and workloads, some with stringe
 
 	There is one additional, rather exotic option: to use drives of *all three* types.
 
-3. **NVMe + SSD + HDD.** With drives of all three types, the NVMe will cache for the others. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
+3. **NVMe + SSD + HDD.** With drives of all three types, the NVMe drives cache for both the SSDs and HDDs. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
 
    >[!IMPORTANT]
-   > There is no significant performance advantage to one volume spanning drives of all three types. Do not create volumes which span the SSDs and HDDs in deployments with drives of all three types. The NVMe drives are already accelerating all IO to/from the hottest data by caching and de-staging it in real time.
+   > We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
 ## Option 3 – Maximizing capacity
 
