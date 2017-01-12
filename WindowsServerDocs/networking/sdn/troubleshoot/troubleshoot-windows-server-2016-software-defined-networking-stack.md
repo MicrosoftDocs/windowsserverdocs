@@ -608,13 +608,14 @@ Rtt = 0 ms
 4.  [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.    
 ```none
 
-# Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain
+Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain
+
 $uri = "https://sa18n30nc.sa18.nttest.microsoft.com"
 Get-NetworkControllerAccessControlList -ConnectionUri $uri 
 
-# Look at IP Configuration and Virtual Subnets which are referencing this ACL
-
 ```
+
+# Look at IP Configuration and Virtual Subnets which are referencing this ACL
 
 5.  [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question and then run ``Test-LogicalNetworkConnection`` or ``ping -c <compartment>`` from the Hyper-V host to validate connectivity on the HNV Provider logical network
 6.  [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
@@ -622,20 +623,23 @@ Get-NetworkControllerAccessControlList -ConnectionUri $uri
 8.  [Hoster] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
 9.  [Hoster] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
 10. [Hoster] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
-  
-
 
 ## Logging, Tracing and advanced diagnostics
 
-### Network controller centralized logging  
+The following sections provide information on advanced diagnostics, logging, and tracing.
+
+### Network controller centralized logging 
+ 
 The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines. Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.  
 
-#### Enable logging  
+#### Enable logging
+
 Logging is automatically enabled when you install the Network Controller cluster using the  ``Install-NetworkControllerCluster`` cmdlet. By default, the logs are collected locally on the Network Controller nodes at *%systemdrive%\SDNDiagnostics*. It is **STRONGLY RECOMMENDED** that you change this location to be a remote file share (not local). The Network Controller cluster logs are stored at *%programData%\Windows Fabric\log\Traces*. You can specify a centralized location for log collection with the ``DiagnosticLogLocation`` parameter with the recommendation that this is also be a remote file share. If you want to restrict access to this location, you can provide the access credentials with the ``LogLocationCredential`` parameter. If you provide the credentials to access the log location, you should also provide the ``CredentialEncryptionCertificate`` parameter, which is used to encrypt the credentials stored locally on the Network Controller nodes.  
 
 With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a 3-node Network Controller cluster.  
 
-#### Change logging settings  
+#### Change logging settings
+
 You can change logging settings at any time using the ``Set-NetworkControllerDiagnostic`` cmdlet. The following settings can be changed:  
 *   **Centralized log location**  
 You can change the location to store all the logs, with the ``DiagnosticLogLocation`` parameter.  
@@ -650,10 +654,9 @@ The default logging level is Informational. You can change it to Error, Warning,
 *   **Log Aging time**  
 The logs are stored in a circular fashion. You will have 3 days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with ``LogTimeLimitInDays`` parameter.  
 *   **Log Aging size**  
-By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the ``LogSizeLimitInMBs`` parameter.  
-
-
+By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the ``LogSizeLimitInMBs`` parameter. 
 #### Collecting Logs and Traces
+
 VMM deployments use centralized logging for the Network Controller by default. The file share location for these logs is specified when deploying the Network Controller service template. If a file location has not been specified, local logging will be used on each Network Controller node with logs saved under C:\Windows\tracing\SDNDiagnostics. These logs are saved using the following hierarchy:
 
 * CrashDumps
@@ -669,7 +672,8 @@ If a user has run the _Debug-NetworkController_ cmdlet, additional logs will be 
 
 ### SLB Diagnostics
 
-#### SLBM Fabric errors (Hosting service provider actions)  
+#### SLBM Fabric errors (Hosting service provider actions)
+
 1.  Check that Software Load Balancer Manager (SLBM) is functioning and that the orchestration layers can talk to each other: SLBM -> SLB Mux and SLBM -> SLB Host Agents. Run [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) from any node with access to Network Controller REST Endpoint.  
 2.  Validate the *SDNSLBMPerfCounters* in PerfMon on one of the Network Controller node VMs (preferably the primary Network Controller node - Get-NetworkControllerReplica):
     1.  Is Load Balancer (LB) engine connected to SLBM? (*SLBM LBEngine Configurations Total* > 0)  
@@ -700,7 +704,8 @@ Based on the following diagnostic information presented, fix the following:
 * Collect logs  
 
 
-#### SLBM Tenant errors (Hosting service provider  and tenant actions)  
+#### SLBM Tenant errors (Hosting service provider  and tenant actions)
+
 1.  [Hoster] Check *Debug-NetworkControllerConfigurationState* to see if any LoadBalancer resources are in an error state. Try to mitigate by following the Action items Table in the Appendix.   
     1.  Check that a VIP endpoint is present and advertising routes  
     2.  Check how many DIP endpoints have been discovered for the VIP endpoint  
@@ -714,6 +719,7 @@ Based on the following diagnostic information presented, fix the following:
 4.  [Hosting provider] Collect logs   
 
 #### SLB Mux Tracing
+
 Information from the Software Load Balancer Muxes can also be determined through Event Viewer. 
 
 1. Click on "Show Analytic and Debug Logs" under the Event Viewer View menu
@@ -724,6 +730,7 @@ Information from the Software Load Balancer Muxes can also be determined through
 >It is recommended that you only have this logging enabled for a short time while you are trying to reproduce a problem
 
 ### VFP and vSwitch Tracing
+
 From any Hyper-V host which is hosting a guest VM attached to a tenant virtual network, you can collected a VFP trace to determine where problems might lie.
 
 ```none
