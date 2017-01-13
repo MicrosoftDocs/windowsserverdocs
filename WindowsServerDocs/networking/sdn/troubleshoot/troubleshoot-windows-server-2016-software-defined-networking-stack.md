@@ -555,39 +555,38 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 
 With this information, a tenant VM ping can now be initiated by the Hoster from the Network Controller using the _Test-VirtualNetworkConnection_ cmdlet.
 
-```none
-
-```
-
 ## Specific Troubleshooting Scenarios
 
-### No network connectivity between two tenant virtual machines  
+The following sections provide guidance for troubleshooting specific scenarios.
+
+### No network connectivity between two tenant virtual machines
+
 1.  [Tenant] Ensure Windows Firewall in tenant virtual machines is not blocking traffic.  
 2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running _ipconfig_. 
-3.  [Hoster] Run ``Test-VirtualNetworkConnection`` from the Hyper-V host to validate connectivity between the two tenant virtual machines in question. 
+3.  [Hoster] Run **Test-VirtualNetworkConnection** from the Hyper-V host to validate connectivity between the two tenant virtual machines in question. 
 
 >[!NOTE]
->The VSID refers to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this >value by running the Get-PACAMapping cmdlet.
+>The VSID refers to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this value by running the **Get-PACAMapping** cmdlet.
 
-```none
-# Example
-$password = ConvertTo-SecureString -String "password" -AsPlainText -Force
-$cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
+#### Example
 
-# Create CA-ping between "Green Web VM 1" with SenderCA IP of 192.168.1.4 on Host "sa18n30-2.sa18.nttest.microsoft.com" with Mgmt IP of 10.127.132.153
-# to ListenerCA IP of 192.168.1.5 both attached to Virtual Subnet (VSID) 4114
-Test-VirtualNetworkConnection -OperationId 27 -HostName sa18n30-2.sa18.nttest.microsoft.com -MgmtIp 10.127.132.153 -Creds $cred -VMName "Green Web VM 1" -VMNetworkAdapterName "Green Web VM 1" -SenderCAIP 192.168.1.4 -SenderVSID 4114 -ListenerCAIP 192.168.1.5 -ListenerVSID 4114
+    $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
+    $cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
 
-cmdlet Test-VirtualNetworkConnection at command pipeline position 1
+Create CA-ping between "Green Web VM 1" with SenderCA IP of 192.168.1.4 on Host "sa18n30-2.sa18.nttest.microsoft.com" with Mgmt IP of 10.127.132.153 to ListenerCA IP of 192.168.1.5 both attached to Virtual Subnet (VSID) 4114.
+
+    Test-VirtualNetworkConnection -OperationId 27 -HostName sa18n30-2.sa18.nttest.microsoft.com -MgmtIp 10.127.132.153 -Creds $cred -VMName "Green Web VM 1" -VMNetworkAdapterName "Green Web VM 1" -SenderCAIP 192.168.1.4 -SenderVSID 4114 -ListenerCAIP 192.168.1.5 -ListenerVSID 4114
+
+    Test-VirtualNetworkConnection at command pipeline position 1
 
 Starting CA-space ping test
 Starting trace session
 Ping to 192.168.1.5 succeeded from address 192.168.1.4
 Rtt = 0 ms
 
-<snip> ...
 
-### CA Routing Information:
+CA Routing Information:
+
     Local IP: 192.168.1.4
     Local VSID: 4114
     Remote IP: 192.168.1.5
@@ -598,31 +597,28 @@ Rtt = 0 ms
     Remote CA MAC: 00-1D-D8-B7-1C-07
     Next Hop CA MAC Address: 00-1D-D8-B7-1C-07
 
-### PA Routing Information:
+PA Routing Information:
+
     Local PA IP: 10.10.182.66
     Remote PA IP: 10.10.182.65
  
  <snip> ...
-``` 
 
 4.  [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.    
-```none
 
-Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain
+Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain.
 
-$uri = "https://sa18n30nc.sa18.nttest.microsoft.com"
-Get-NetworkControllerAccessControlList -ConnectionUri $uri 
-
-```
+    $uri = "https://sa18n30nc.sa18.nttest.microsoft.com"
+    Get-NetworkControllerAccessControlList -ConnectionUri $uri 
 
 # Look at IP Configuration and Virtual Subnets which are referencing this ACL
 
-5.  [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question and then run ``Test-LogicalNetworkConnection`` or ``ping -c <compartment>`` from the Hyper-V host to validate connectivity on the HNV Provider logical network
-6.  [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
-7.  [Hoster] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run ``Get-PACAMapping`` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.  
-8.  [Hoster] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
-9.  [Hoster] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
-10. [Hoster] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
+1. [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question and then run ``Test-LogicalNetworkConnection`` or ``ping -c <compartment>`` from the Hyper-V host to validate connectivity on the HNV Provider logical network
+2.  [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
+3.  [Hoster] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run ``Get-PACAMapping`` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.  
+4.  [Hoster] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
+5.  [Hoster] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
+6. [Hoster] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
 
 ## Logging, Tracing and advanced diagnostics
 
@@ -630,41 +626,45 @@ The following sections provide information on advanced diagnostics, logging, and
 
 ### Network controller centralized logging 
  
-The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines. Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.  
+The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines. 
+
+These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines. 
+Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.
 
 #### Enable logging
 
-Logging is automatically enabled when you install the Network Controller cluster using the  ``Install-NetworkControllerCluster`` cmdlet. By default, the logs are collected locally on the Network Controller nodes at *%systemdrive%\SDNDiagnostics*. It is **STRONGLY RECOMMENDED** that you change this location to be a remote file share (not local). The Network Controller cluster logs are stored at *%programData%\Windows Fabric\log\Traces*. You can specify a centralized location for log collection with the ``DiagnosticLogLocation`` parameter with the recommendation that this is also be a remote file share. If you want to restrict access to this location, you can provide the access credentials with the ``LogLocationCredential`` parameter. If you provide the credentials to access the log location, you should also provide the ``CredentialEncryptionCertificate`` parameter, which is used to encrypt the credentials stored locally on the Network Controller nodes.  
+Logging is automatically enabled when you install the Network Controller cluster using the  **Install-NetworkControllerCluster** cmdlet. By default, the logs are collected locally on the Network Controller nodes at *%systemdrive%\SDNDiagnostics*. It is **STRONGLY RECOMMENDED** that you change this location to be a remote file share (not local). 
 
-With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a 3-node Network Controller cluster.  
+The Network Controller cluster logs are stored at *%programData%\Windows Fabric\log\Traces*. You can specify a centralized location for log collection with the **DiagnosticLogLocation** parameter with the recommendation that this is also be a remote file share. 
+
+If you want to restrict access to this location, you can provide the access credentials with the **LogLocationCredential** parameter. If you provide the credentials to access the log location, you should also provide the **CredentialEncryptionCertificate** parameter, which is used to encrypt the credentials stored locally on the Network Controller nodes.  
+
+With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a 3-node Network Controller cluster.
 
 #### Change logging settings
 
-You can change logging settings at any time using the ``Set-NetworkControllerDiagnostic`` cmdlet. The following settings can be changed:  
-*   **Centralized log location**  
-You can change the location to store all the logs, with the ``DiagnosticLogLocation`` parameter.  
-*   **Credentials to access log location**  
-You can change the credentials to access the log location, with the ``LogLocationCredential`` parameter.  
-*   **Move to local logging**  
-If you have provided centralized location to store logs, you can move back to logging locally on the Network Controller nodes with the ``UseLocalLogLocation`` parameter (not recommended due to large disk space requirements).  
-*   **Logging scope**  
-By default, all logs are collected. You can change the scope to collect only Network Controller cluster logs.  
-*   **Logging level**  
-The default logging level is Informational. You can change it to Error, Warning, or Verbose.  
-*   **Log Aging time**  
-The logs are stored in a circular fashion. You will have 3 days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with ``LogTimeLimitInDays`` parameter.  
-*   **Log Aging size**  
-By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the ``LogSizeLimitInMBs`` parameter. 
+You can change logging settings at any time using the ``Set-NetworkControllerDiagnostic`` cmdlet. The following settings can be changed:
+
+- **Centralized log location**.  You can change the location to store all the logs, with the ``DiagnosticLogLocation`` parameter.  
+- **Credentials to access log location**.  You can change the credentials to access the log location, with the ``LogLocationCredential`` parameter.  
+- **Move to local logging**.  If you have provided centralized location to store logs, you can move back to logging locally on the Network Controller nodes with the ``UseLocalLogLocation`` parameter (not recommended due to large disk space requirements).  
+- **Logging scope**.  By default, all logs are collected. You can change the scope to collect only Network Controller cluster logs.  
+- **Logging level**.  The default logging level is Informational. You can change it to Error, Warning, or Verbose.  
+- **Log Aging time**.  The logs are stored in a circular fashion. You will have 3 days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with **LogTimeLimitInDays** parameter.  
+- **Log Aging size**.  By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the **LogSizeLimitInMBs** parameter.
+
 #### Collecting Logs and Traces
 
-VMM deployments use centralized logging for the Network Controller by default. The file share location for these logs is specified when deploying the Network Controller service template. If a file location has not been specified, local logging will be used on each Network Controller node with logs saved under C:\Windows\tracing\SDNDiagnostics. These logs are saved using the following hierarchy:
+VMM deployments use centralized logging for the Network Controller by default. The file share location for these logs is specified when deploying the Network Controller service template.
 
-* CrashDumps
-* NCApplicationCrashDumps
-* NCApplicationLogs
-* PerfCounters
-* SDNDiagnostics
-* Traces
+If a file location has not been specified, local logging will be used on each Network Controller node with logs saved under C:\Windows\tracing\SDNDiagnostics. These logs are saved using the following hierarchy:
+
+- CrashDumps
+- NCApplicationCrashDumps
+- NCApplicationLogs
+- PerfCounters
+- SDNDiagnostics
+- Traces
 
 The Network Controller uses (Azure) Service Fabric. Service Fabric logs may be required when troubleshooting certain issues. These logs can be found on each Network Controller node at C:\ProgramData\Microsoft\Service Fabric.
 
@@ -703,7 +703,6 @@ Based on the following diagnostic information presented, fix the following:
 * Ensure Host ID in the registry matches Server Instance ID in Server Resource (reference Appendix for *HostNotConnected* error code)  
 * Collect logs  
 
-
 #### SLBM Tenant errors (Hosting service provider  and tenant actions)
 
 1.  [Hoster] Check *Debug-NetworkControllerConfigurationState* to see if any LoadBalancer resources are in an error state. Try to mitigate by following the Action items Table in the Appendix.   
@@ -721,7 +720,6 @@ Based on the following diagnostic information presented, fix the following:
 #### SLB Mux Tracing
 
 Information from the Software Load Balancer Muxes can also be determined through Event Viewer. 
-
 1. Click on "Show Analytic and Debug Logs" under the Event Viewer View menu
 2. Navigate to "Applications and Services Logs" > Microsoft > Windows > SlbMuxDriver > Trace in Event Viewer 
 3. Right click on it and select "Enable Log"
@@ -733,7 +731,7 @@ Information from the Software Load Balancer Muxes can also be determined through
 
 From any Hyper-V host which is hosting a guest VM attached to a tenant virtual network, you can collected a VFP trace to determine where problems might lie.
 
-```none
+```
 netsh trace start provider=Microsoft-Windows-Hyper-V-VfpExt overwrite=yes tracefile=vfp.etl report=disable provider=Microsoft-Windows-Hyper-V-VmSwitch 
 netsh trace stop
 netsh trace convert .\vfp.etl ov=yes 
