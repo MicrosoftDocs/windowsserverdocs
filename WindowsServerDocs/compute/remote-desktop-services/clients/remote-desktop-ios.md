@@ -30,7 +30,7 @@ Follow these steps to get started with Remote Desktop on your iOS device:
 
 1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
-3. Add a [Remote Desktop connection](add-a-remote-desktop-connection) or a [remote resource](add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
+3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 
 ### Add a Remote Desktop connection
