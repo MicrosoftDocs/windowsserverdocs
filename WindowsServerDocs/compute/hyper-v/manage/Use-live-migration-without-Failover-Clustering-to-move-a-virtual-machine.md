@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ms.author: kathydav
-ms.date: 9/30/2016
+ms.date: 01/17/2017
 ---
 # Use live migration without Failover Clustering to move a virtual machine
 
@@ -22,7 +22,7 @@ To be able to do this, you'll need:
 
 - A user account that's a member of the local Hyper-V Administrators group or the Administrators group on both the source and destination computers. 
   
-- The Hyper-V role in Windows Server 2016 or Windows Server 2012 R2 installed on the source and destination servers and set up for live migrations. You can do a live migration between hosts running Windows Server 2016 and Windows Server 2012 R2 if the virtual machine is at least version 5. <br>For version upgrade instructions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For installation instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
+- The Hyper-V role in Windows Server 2016 or Windows Server 2012 R2 installed on the source and destination servers and set up for live migrations. You can do a live migration between hosts running Windows Server 2016 and Windows Server 2012 R2 if the virtual machine is at least version 5. <br>For version upgrade instructions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](..\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For installation instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
   
 - The Hyper-V management tools installed on a computer running Windows Server 2016 or Windows 10, unless the tools are installed on the source or destination server and you'll run them from there.  
    
