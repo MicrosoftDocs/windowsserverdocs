@@ -181,6 +181,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 2.  If you are using RoCEv2 turn on Flow Control for SMB as follows (not required for iWarp):
 
     ```PowerShell
+    Install-WindowsFeature "data-center-bridging"
     Enable-NetQosFlowControl –Priority 3
     ```
 
