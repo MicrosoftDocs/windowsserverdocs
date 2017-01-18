@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 11/09/2016
+ms.date: 01/18/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -37,7 +37,7 @@ and Migration](http://technet.microsoft.com/windowsserver/dn458795).
 > Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.  
 
 > [!IMPORTANT]  
-> **You can only perform conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (**not the Server Core option**).
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, **you can only perform conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 > [!IMPORTANT]  
 > If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
@@ -81,7 +81,7 @@ Even in supported upgrade paths from previous retail versions to Windows Server 
 You can convert the evaluation version of Windows Server 2016 Standard to either Windows Server 2016 Standard (retail) or Datacenter (retail). Similarly, you can convert the evaluation version of Windows Server 2016 Datacenter to the retail version.
 
 > [!IMPORTANT]  
-> You can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option).
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 Before you attempt to convert from evaluation to retail, verify that your server is actually running an evaluation version. To do this, do either of the following:
 
