@@ -581,9 +581,9 @@ When you want to start inventorying servers in your environment with a different
 -   While it is possible to add Windows Server 2008 R2 and Windows Server 2012 hosts to the polling host list, this version (1.0) of SIL Aggregator only supports polling Windows Server 2012 R2, for Windows/Hyper-V based hosts, to have success with all features and functionality.  In particular, it is known that when polling Windows Server 2008 R2 hosts, virtual machines and hosts may not match up in the SIL Aggregator reports.
 
 ## See Also
-[Software Inventory Logging Aggregator 1.0 for Windows Server](http://www.microsoft.com/en-us/download/details.aspx?id=49046)
-[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/en-us/library/mt548455.aspx)
-[SIL PowerShell cmdlets](https://technet.microsoft.com/en-us/library/dn283390.aspx)
-[An Overview of SIL](https://technet.microsoft.com/en-us/library/dn268301.aspx)
+[Software Inventory Logging Aggregator 1.0 for Windows Server](http://www.microsoft.com/en-us/download/details.aspx?id=49046)<br>
+[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/en-us/library/mt548455.aspx)<br>
+[SIL PowerShell cmdlets](https://technet.microsoft.com/en-us/library/dn283390.aspx)<br>
+[An Overview of SIL](https://technet.microsoft.com/en-us/library/dn268301.aspx)<br>
 [Managing SIL](https://technet.microsoft.com/en-us/library/dn383584.aspx)
 
