@@ -1,6 +1,6 @@
 ---
 ms.assetid: 39ecc468-77c5-4938-827e-48ce498a25ad
-title: Appendix A: Reviewing AD FS Requirements
+title: Appendix A - Reviewing AD FS Requirements
 description:
 author: billmath
 ms.author:  billmath
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

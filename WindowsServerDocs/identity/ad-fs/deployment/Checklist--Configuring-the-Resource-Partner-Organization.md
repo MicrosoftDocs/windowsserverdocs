@@ -1,13 +1,13 @@
-﻿---
+---
 ms.assetid: 80d50a9f-428e-40fe-b6b3-9837fd9a3efc
-title: Checklist: Configuring the Resource Partner Organization
+title: Checklist - Configuring the Resource Partner Organization
 description:
 author: billmath
 manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ---

@@ -7,7 +7,9 @@ ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
+
 # Shielded VMs - Generate an answer file by using the New-ShieldingDataAnswerFile function
 
 >Applies To: Windows Server 2016
@@ -16,7 +18,7 @@ As part of the process of configuring shielded VMs, you may need to create a vir
 
 For general guidelines for Unattend files for shielded VMs, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
 
-To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md).
  
 ## Downloading the New-ShieldingDataAnswerFile function
 
@@ -106,7 +108,8 @@ The following screenshot shows how to add the script to your shielding data file
 
 Note that the name of the script must be the same as the script that you will include in your shielding data file. The setup process will put the file in `C:\Temp`, and the `unattend.xml` file will invoke your Windows PowerShell script from there. The `unattend.xml` file will append a Windows PowerShell command to start the script onto the `SetupComplete.cmd` file. This command runs after setup is complete.
 
-> **Note**&nbsp;&nbsp;We recommend that you add the `Start-Transcript` command on your script so that you can see the output of your scripts. This can be useful for debugging. For more information, see [Start-Transcript](https://technet.microsoft.com/library/hh849687.aspx).
+> [!NOTE]
+> We recommend that you add the `Start-Transcript` command on your script so that you can see the output of your scripts. This can be useful for debugging. For more information, see [Start-Transcript](https://technet.microsoft.com/library/hh849687.aspx).
 
 ## Answer file that configures BitLocker to back up the recovery password
 
@@ -122,7 +125,7 @@ After the setup is complete and you have signed in, you can check the following 
 
 Here is an example of what a successful output looks like:
 
-```powershell
+```
 Updating policy...
 Computer Policy update has completed successfully.
 User Policy update has completed successfully.
@@ -176,5 +179,6 @@ Here are all the parameters:
 
 ## See also
 
-- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md)
+- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

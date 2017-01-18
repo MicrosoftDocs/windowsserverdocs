@@ -12,11 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: coreyp
-author coreyp-at-msft
+author: coreyp-at-msft
 ---
+
 # STEP 8: Configure INET1
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 To enable client computers to connect to Remote Access servers over the Internet, you must configure a DNS entry for 2-EDGE1 on INET1.  
   

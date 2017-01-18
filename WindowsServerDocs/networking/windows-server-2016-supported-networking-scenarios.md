@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # Windows Server 2016 Supported Networking Scenarios
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.  
 >[!IMPORTANT]

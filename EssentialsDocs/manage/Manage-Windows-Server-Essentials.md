@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The following topics provide information about the server and network management features that are included with Windows Server Essentials:  
   

@@ -5,10 +5,10 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 01/18/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # AD FS 2016 Operations

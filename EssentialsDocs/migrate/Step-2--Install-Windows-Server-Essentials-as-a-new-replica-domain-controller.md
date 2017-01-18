@@ -16,14 +16,14 @@ manager: dongill
 
 # Step 2: Install Windows Server Essentials as a new replica domain controller
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This section describes how to install  Windows Server Essentials and  Windows Server 2012 R2 Standard (with the Windows Server Essentials Experience role enabled) as a domain controller.  
   
  For environments with up to 25 users and 50 devices, you can follow the steps in this guide to migrate from previous versions of Windows SBS to  Windows Server Essentials. For environments with up to 100 users and 200 devices, you can follow the same guidance to migrate to the Standard and Datacenter editions of  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. Both scenarios are covered in this documentation.  
   
-> [!WARNING]
->  If you migrate to  Windows Server Essentials, the following error message is added to the event log each day during the 21-day grace period until you remove the Source Server from your network: **The FSMO Role Check detected a condition in your environment that is out of compliance with the licensing policy. The Management Server must hold the primary domain controller and domain naming master Active Directory roles. Please move the Active Directory roles to the Management Server now. This server will be automatically shut down if the issue is not corrected in 21 days from the time this condition was first detected**. After the 21-day grace period, the Source Server will shut down.  
+> [!IMPORTANT]
+>  If you migrate to  Windows Server Essentials, the following error message is added to the event log each day during the 21-day grace period until you remove the Source Server from your network. After the 21-day grace period, the Source Server will shut down. <br> **The FSMO Role Check detected a condition in your environment that is out of compliance with the licensing policy. The Management Server must hold the primary domain controller and domain naming master Active Directory roles. Please move the Active Directory roles to the Management Server now. This server will be automatically shut down if the issue is not corrected in 21 days from the time this condition was first detected**.   
   
 #### Install Windows Server Essentials or Windows Server 2012 R2 Standard on the Destination Server  
   
@@ -47,7 +47,7 @@ This section describes how to install  Windows Server Essentials and  Windows Se
   
     -   Change the server name if needed, because you cannot change the name after you have completed the Configure Windows Server Essentials Wizard.  
   
-    -   Ensure that the server „¢s time and settings are correct.  
+    -   Ensure that the server's time and settings are correct.  
   
 7.  Verify the installation as follows:  
   
@@ -96,7 +96,5 @@ This section describes how to install  Windows Server Essentials and  Windows Se
 ## Next steps  
  You have installed  Windows Server Essentials as a new replica domain controller. Now go to [Step 3: Join computers to the new Windows Server Essentials server](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  
   
- To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-
- To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 

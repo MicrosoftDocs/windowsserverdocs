@@ -2,13 +2,8 @@
 title: DirectAccess Unsupported Configurations
 description: This topic provides a list of unsupported DirectAccess configurations in Windows Server 2016.
 manager: dongill
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-da
-ms.tgt_pltfrm: na
+ms.technology: networking-da
 ms.topic: article
 ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
 ms.author: jamesmci
@@ -16,10 +11,10 @@ author: jamesmci
 ---
 # DirectAccess Unsupported Configurations
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.  
-  
+
 ## <a name="bkmk_frs"></a>File Replication Service (FRS) distribution of Group Policy objects (SYSVOL replications)  
 Do not deploy DirectAccess in environments where your domain controllers are running the File Replication Service (FRS) for distribution of Group Policy objects (SYSVOL replications). Deployment of DirectAccess is not supported when you use FRS.  
   
@@ -32,7 +27,7 @@ If you are planning to deploy DirectAccess, you must use domain controllers that
 For information on migrating from FRS to DFS-R, see the [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/en-us/library/dd640019(v=ws.10).aspx).  
   
 ## <a name="bkmk_nap"></a>Network Access Protection for DirectAccess clients  
-Network Access Protection (NAP) is used to determine whether remote client computers meet IT policies before they are granted access to the corporate network. NAP was deprecated in Windows Server 2012 R2. This means that NAP may not be supported in future versions of Windows. For this reason, starting a new deployment of DirectAccess with NAP is not recommended. A different method of end point control for the security of DirectAccess clients is recommended.  
+Network Access Protection (NAP) is used to determine whether remote client computers meet IT policies before they are granted access to the corporate network. NAP was deprecated in Windows Server 2012 R2 and is not included in Windows Server 2016. For this reason, starting a new deployment of DirectAccess with NAP is not recommended. A different method of end point control for the security of DirectAccess clients is recommended.  
   
 ## <a name="bkmk_multi"></a>Multisite support for Windows 7 clients  
 When DirectAccess is configured in a multisite deployment, Windows 10&reg;, Windows&reg; 8.1, and Windows&reg; 8 clients have the capability of connecting to the nearest site.  Windows 7&reg;  client computers do not have the same capability. Site selection for  Windows 7  clients is set to a particular site at the time of policy configuration, and these clients will always connect to that designated site, regardless of their location.  

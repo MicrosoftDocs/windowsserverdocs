@@ -9,7 +9,7 @@ ms.date: 10/12/2016
 ---
 # Server Performance Advisor Pack for Tiered Storage Spaces
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Tiered Storage Spaces, introduced in Windows Server 2012 R2, dynamically move chunks of stored data between different classes of storage, such as fast SSDs and slower hard drives to optimize data placement with respect to common access patterns. Provisioning decisions such as the size of the SSD tier and the ratio of SSD to HDD heavily affect the performance of the system in response to the system s workloads. The Server Performance Advisor (SPA) Pack for Tiered Storage Spaces collects and exposes performance data for tiered storage spaces deployed on a system and provides you with useful statistics and recommendations for configuring the system to maximize performance.
 
@@ -21,7 +21,7 @@ The SPA Pack for Tiered Storage Spaces aims to expose relevant information about
 ## Setup
 
 
-You can download the SPA Pack for Tiered Storage Spaces [here](http://go.microsoft.com/fwlink/p/?linkid=327754). Once the folder is downloaded, place it into *&lt;SPA INSTALL DIR&gt;*/APs folder and it will automatically appear when SPA is restarted.
+You can download the SPA Pack for Tiered Storage Spaces [here](http://go.microsoft.com/fwlink/p/?linkid=327754). Once the folder is downloaded, place it into *&lt;SPA INSTALL dir&gt;*/APs folder and it will automatically appear when SPA is restarted.
 
 **Note**
 The computer running SPA should have administrative rights to the system under test.
@@ -31,7 +31,7 @@ The computer running SPA should have administrative rights to the system under t
 Once you have the SPA Advisor Pack for Tiered Storage Spaces Pack installed, you need to run the following from an elevated command prompt. This command modifies the routine storage tier optimization pack to pipe out to a file that can be read by using SPA:
 
 ``` syntax
-SCHTASKS /Change /TN  \Microsoft\Windows\Storage Tiers Management\Storage Tiers Optimization  /TR  cmd /C %windir%\System32\defrag.exe /c /h /g -# > %windir%\tieringOut.txt 
+schtasks /change /TN  \Microsoft\Windows\Storage Tiers Management\Storage Tiers Optimization  /TR  cmd /C %windir%\System32\defrag.exe /c /h /g -# > %windir%\tieringOut.txt 
 ```
 
 The SPA Advisor Pack for Tiered Storage Spaces expects to find the results of the optimizer in the Windows folder. The report will not collect this file if it is moved to another location.
@@ -96,9 +96,9 @@ The chart is shown in the following figure:
 
 A good indicator of the basic performance of the Tiered Storage Space is the % read/writes on SSD, which can be viewed on a per-space basis.
 
--   If the working set size for the workload is comparable to the size of the installed SSD tier, you should expect the % of read/writes on SSD to be high (&gt; 70 %).
+-   if the working set size for the workload is comparable to the size of the installed SSD tier, you should expect the % of read/writes on SSD to be high (&gt; 70 %).
 
--   If the read/writes on SSD are &lt; 50 %, it could mean the following:
+-   if the read/writes on SSD are &lt; 50 %, it could mean the following:
 
     -   The Storage Optimizer hasn t run and optimized the tiers on the volume yet. To fix this, repeat the readings after the Storage Optimizer has run. You can also run the Storage Optimizer task manually by using Task Scheduler.
 

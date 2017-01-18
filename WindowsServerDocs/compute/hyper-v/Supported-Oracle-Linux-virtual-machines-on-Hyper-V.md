@@ -52,6 +52,7 @@ The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS su
 |Static IP Injection|2016, 2012 R2, 2012|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
+|SR-IOV|2016||||||||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||
@@ -93,6 +94,7 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
 |Static IP Injection|2016, 2012 R2, 2012|&#10004;|&#10004;|&#10004;||
 |vRSS|2016, 2012 R2|&#10004;||||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;||||
+|SR-IOV|2016|||||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;||
 |Virtual Fibre Channel|2016, 2012 R2|&#10004;|&#10004;|&#10004;||

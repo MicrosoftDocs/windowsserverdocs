@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # Change the illustration on the AD FS sign-in page

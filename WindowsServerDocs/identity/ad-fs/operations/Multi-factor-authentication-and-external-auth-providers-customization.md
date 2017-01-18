@@ -1,4 +1,3 @@
-﻿
 ---
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 title: Multi-factor authentication and external authentication providers customization 
@@ -9,9 +8,10 @@ manager: femila
 ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
+
 # Multi-factor authentication and external authentication providers customization 
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

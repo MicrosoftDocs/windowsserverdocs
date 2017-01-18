@@ -16,7 +16,7 @@ manager: dongill
 
 # Move settings and data to the Destination Server for Windows Server Essentials migration
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Move settings and data to the Destination Server as follows:  
   
@@ -26,14 +26,7 @@ Move settings and data to the Destination Server as follows:
 2.  [Configure the network](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
   
 3.  [Map permitted computers to user accounts](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
-  
-2.  [Configure the network](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
-  
-3.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-  
+ 
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
   
@@ -49,9 +42,13 @@ Move settings and data to the Destination Server as follows:
   
 2.  At the command prompt, type the following command, and then press ENTER:  
   
-     **robocopy \\\\<SourceServerName\> \\<SharedSourceFolderName\> \\\\<DestinationServerName\> \\<SharedDestinationFolderName\> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt**  
+    `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`  
   
-     where *<SourceServerName\>* is the name of the Source Server, *<SharedSourceFolderName\>* is the name of the shared folder on the Source Server, *<DestinationServerName\>* is the name of the Destination Server, and *<SharedDestinationFolderName\>* is the shared folder on the Destination Server to which the data will be copied.  
+     Where:
+     - \<SourceServerName\> is the name of the Source Server
+     - \<SharedSourceFolderName\> is the name of the shared folder on the Source Server
+     - \<DestinationServerName\> is the name of the Destination Server,
+     - \<SharedDestinationFolderName\> is the shared folder on the Destination Server to which the data will be copied.  
   
 3.  Repeat the previous step for each shared folder that you are migrating from the Source Server.  
   
@@ -66,7 +63,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Complete the instructions in the wizard to configure your router and domain names.  
   
- If your router does not support the UPnP žÂ¢ framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
+ If your router does not support the UPnP framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
   
 -   Port 80: HTTP Web traffic  
   

@@ -16,7 +16,7 @@ manager: dongill
 
 # Use the Windows Server Essentials Log Collector
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 When you are troubleshooting computer issues, a representative from Microsoft Customer Service and Support may ask you to gather logs from servers, computers on the network, or both by using the  Windows Server Essentials Log Collector.  
   

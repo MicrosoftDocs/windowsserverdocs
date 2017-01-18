@@ -16,7 +16,7 @@ manager: dongill
 
 # Transition from Windows Server Essentials to Windows Server 2012 Standard
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
  Windows Server® 2012 Essentials supports up to 25 users and 50 devices. When your business needs exceed the limit, you can perform an in-place license transition from  Windows Server Essentials to  Windows Server 2012 Standard to remain license compliant.  
   

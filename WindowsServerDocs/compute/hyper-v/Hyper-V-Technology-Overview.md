@@ -1,16 +1,16 @@
 ---
 title: Hyper-V Technology Overview
-description: "Describes what Hyper-V is, how to get it, key features and common uses"
+description: "Describes what Hyper-V is, how to get it, key features, and common uses."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
 ms.author: kathydav
-ms.date: 9/30/2016
+ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
 
@@ -19,9 +19,6 @@ ms.date: 9/30/2016
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.  
   
 Hyper-V runs each virtual machine in its own isolated space, which means you can run more than one virtual machine on the same hardware at the same time. You might want to do this to avoid problems such as a crash affecting the other workloads, or to give different people, groups or services access to different systems.  
-  
->[!NOTE]  
->Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC.  
   
 ## Some ways Hyper-V can help you   
   
@@ -36,7 +33,12 @@ Hyper-V can help you:
 -   **Establish or expand a virtual desktop infrastructure (VDI).** Use a centralized desktop strategy with VDI can help you increase business agility and data security, as well as simplify regulatory compliance and manage desktop operating systems and applications. Deploy Hyper-V and Remote Desktop Virtualization Host (RD Virtualization Host) on the same  server to make personal virtual desktops or virtual desktop pools available to your users.  
   
 -   **Make development and test more efficient.** Reproduce different computing environments without having to buy or maintain all the hardware you'd need if you only used physical systems.  
-  
+
+## Hyper-V and other virtualization products
+Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC. Hyper-V offers networking, performance, storage and security features not available in these older products.
+
+Hyper-V and most third-party virtualization applications that require the same processor features aren't compatible. That's because the processor features, known as hardware virtualization extensions, are designed to not be shared. For details, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](http://support.microsoft.com/kb/3204980).
+
 ## What features does Hyper-V have?  
   
 Hyper-V offers many features. This is an overview, grouped by what the features provide or help you do.   

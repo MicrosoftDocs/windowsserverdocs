@@ -16,10 +16,10 @@ ms.date: 10/12/2016
 ---
 # winsat mem
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 ```
 winsat mem <parameters>
@@ -27,7 +27,7 @@ winsat mem <parameters>
 ## Parameters
 |Parameter|Description|
 |-------|--------|
-|-up|Force memory testing with only one thread. The default is to run one thread per physical CPU or core.|
+|-up|force memory testing with only one thread. The default is to run one thread per physical CPU or core.|
 |-rn|Specify that the assessment s threads should run at normal priority. The default is to run at priority 15.|
 |-nc|Specify that the assessment should allocate memory and flag it as un-cached. This means that the processor s caches will be bypassed for copy operations. The default is to run in cached space.|
 |-do <n>|Specify the distance, in bytes, between the end of the source buffer and the beginning of the destination buffer. The default is 64 bytes. The maximum allowable destination offset is 16MB. Specifying an invalid destination offset will result in an error. **Note:** Zero is a valid value for **<n>**, but negative numbers are not.|
@@ -37,8 +37,8 @@ winsat mem <parameters>
 |-v|Send verbose output to STDOUT, including status and progress information. Any errors will also be written to the command window.|
 |-xml <file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
 |-idiskinfo|Save information about physical volumes and logical disks as part of the **<SystemConfig>** section in the XML output.|
-|-iguid|Create a globally unique identifier (GUID) in the XML output file.|
-|-note "note text"|Add the note text to the **<note>** section in the XML output file.|
+|-iguid|create a globally unique identifier (GUID) in the XML output file.|
+|-note "note text"|add the note text to the **<note>** section in the XML output file.|
 |-icn|Include the local computer name in the XML output file.|
 |-eef|Enumerate extra system information in the XML output file.|
 ## <a name="BKMK_examples"></a>Examples
@@ -46,7 +46,7 @@ winsat mem <parameters>
     ```
     winsat mem -mint 4.0 -maxt 12.0 -buffersize 32MB -xml memtest.xml
     ```
-## Remarks
+## remarks
 -   Membership in the local Administrators group, or equivalent, is the minimum required to use **winsat**. The command must be executed from an elevated command prompt window.
--   To open an elevated command prompt window, click **Start**, click **Accessories**, right-click **Command Prompt**, and click **Run as administrator**.
+-   To open an elevated command prompt window, click **start**, click **Accessories**, right-click **Command prompt**, and click **Run as administrator**.
 

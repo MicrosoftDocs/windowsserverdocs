@@ -9,7 +9,7 @@ ms.date: 10/12/2016
 ---
 # Microsoft Server Performance Advisor
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Download Microsoft Server Performance Advisor (SPA) to help diagnose performance issues in a Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 deployment. SPA generates comprehensive diagnostic reports and charts and provides recommendations to help you quickly analyze issues and develop corrective actions.
 
@@ -44,7 +44,7 @@ SPA Advisor Packs are the center of all tuning rules, which consist of a series 
 
      
 
--   The Active Directory advisor pack analyzes the general performance of the Active Directory role.
+-   The active directory advisor pack analyzes the general performance of the active directory role.
 
 SPA also offers an extensible model for non-Microsoft developers to write advisor packs to suit their needs.
 
@@ -64,16 +64,16 @@ Use the following links to download Server Performance Advisor for Windows Serve
 
 You can extract the files in the CAB file by using the following commands:
 
--   For the x86 version: **extrac32.exe /e /a /l  d:\\SPA   d:\\SPA\\SPAPlus\_x86.cab **
+-   for the x86 version: **extrac32.exe /e /a /l  d:\\SPA   d:\\SPA\\SPAPlus\_x86.cab **
 
--   For the x64 version: **extrac32.exe /e /a /l  d:\\SPA   d:\\SPA\\SPAPlus\_amd64.cab **
+-   for the x64 version: **extrac32.exe /e /a /l  d:\\SPA   d:\\SPA\\SPAPlus\_amd64.cab **
 
 **Caution**
 When you extract the .cab file, SPA must preserve the hierarchical directory structure to function correctly. Depending on the CAB tools that are installed on your server, extraction may result in a non-operational directory structure. To retain the hierarchical directory structure, you can use a CAB extraction utility tool that extracts a file directory structure.
 
  
 
-If the CAB extraction tool properly extracted the files, subfolders will automatically appear in the extraction target folder.
+if the CAB extraction tool properly extracted the files, subfolders will automatically appear in the extraction target folder.
 
 ### SPA prerequisites
 

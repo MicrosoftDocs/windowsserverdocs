@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot File History in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials 
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
   
 ## Troubleshoot issues with user File History backups  
  The following issues might occur while managing File History backups for a user or a computer that has been added to a server running Windows Server Essentials.  

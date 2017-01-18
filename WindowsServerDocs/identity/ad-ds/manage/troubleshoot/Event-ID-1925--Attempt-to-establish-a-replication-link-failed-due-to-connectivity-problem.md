@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/29/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 
@@ -16,7 +16,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>The description text in event ID 1925 reports that the attempt to establish a replication link for the following writable directory partition failed, and the description text provides the distinguished name of the directory partition that the destination is attempting to replicate from the source. The error code in the event gives more specific information about the cause of the problem.</para>

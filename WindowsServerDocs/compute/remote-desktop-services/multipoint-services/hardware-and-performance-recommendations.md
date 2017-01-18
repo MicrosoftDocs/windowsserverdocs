@@ -17,10 +17,10 @@ ms.author: evas
 # Hardware Requirements and Performance Recommendations
 This topic describes the hardware that is required to run a MultiPoint Services system and support user application scenarios. The user scenario directly affects the CPU, RAM, and network bandwidth requirements.  
 
-## <a name="BKMK_OptimizeMultiPointServerSystemPerformance"></a>Optimize MultiPoint server system performance  
+## Optimize MultiPoint Services system performance  
 The performance of your MultiPoint Services system will be directly affected by the capability of the CPU, the GPU, and the amount of RAM that is available on the computer that is running MultiPoint Services.  
   
-### <a name="BKMK_TypeandNumberofInstancesofApplicationsandInternetContent"></a>Applications and Internet content  
+### Applications and Internet content  
 Because MultiPoint Services is a shared resource computing solution, the type and number of applications that are running on the stations can impact the performance of your MultiPoint Services system. It is important to consider the types of programs that are used regularly when you are planning your system. For example, a graphics-intensive application requires a more powerful computer than an application such as a word processor. Overloading the computer with graphics-intensive applications will likely cause lag problems throughout the entire system.  
   
 The type of content that is accessed by applications also affects the system’s performance. If multiple stations are using web browsers to access multimedia content, such as full-motion video, fewer stations can be connected before adversely affecting the system performance. Conversely, if the multiple stations are using web browsers to access static web content, more stations can be connected without a significant effect on performance.  

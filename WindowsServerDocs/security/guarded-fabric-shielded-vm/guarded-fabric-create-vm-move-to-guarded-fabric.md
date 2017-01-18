@@ -1,5 +1,6 @@
 ---
-title: Shielded VMs - Create a new shielded VM on-premises and move it to a guarded fabric
+redirect_url: guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md
+title: Shielded VMs for tenants - Creating a new shielded VM on-premises and moving it to a guarded fabric
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -7,14 +8,21 @@ ms.assetid: 0ca1efa0-01f9-4b6f-87d4-c66db00d7d70
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
-# Shielded VMs - Create a new shielded VM on-premises and move it to a guarded fabric
+
+# Shielded VMs for tenants - Creating a new shielded VM on-premises and moving it to a guarded fabric
 
 >Applies To: Windows Server 2016
 
+
+<!-- NOTE THAT THIS FILE HAS A "redirect_url" LINE IN THE METADATA. EVENTUALLY WE WILL PROBABLY STRIP OUT THE DETAILED METADATA AND THE CONTENT BELOW, SO IT'S PURELY A REDIRECTED TOPIC. However, as of mid-November 2016, we're still deciding. -->
+
+
+
 This topic describes the steps to create a shielded VM using only Hyper-V; that is, without Virtual Machine Manager, template disks, or a shielding data file. This is an uncommon scenario for most public cloud hosting environments, but may be useful when testing a guarded fabric or in enterprise scenarios where a VM is being moved from a departmental fabric to shared IT infrastructure and must be encrypted before migration.
 
-To understand how this topic fits in the overall process of deploying shielded VMs, see [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
+To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 ## Import the guardian configuration on the tenant Hyper-V server
 
@@ -28,7 +36,8 @@ To understand how this topic fits in the overall process of deploying shielded V
 
         - Remote Server Administration Tools\\Feature Administration Tools\\Shielded VM Tools
 
-    >**Note**&nbsp;&nbsp;The host used here should *not* be a host in the guarded fabric. This is a separate host where VMs are prepared before being moved to the guarded fabric.
+    > [!NOTE]
+    > The host used here should *not* be a host in the guarded fabric. This is a separate host where VMs are prepared before being moved to the guarded fabric.
 
 2.  Before you can run a shielded VM on this machine, you will need to ensure Virtualization Based Security is enabled and running. Run the following command in an elevated Windows PowerShell window to install the Host Guardian Hyper-V Support feature. This will configure all of the necessary settings on your machine to be able to run shielded VMs.
 
@@ -60,7 +69,7 @@ As part of the procedure, you will create a Key Protector that contains two impo
 
 -   **Guardians**: Also in the Key Protector, your hosting provider or enterprise datacenter (which runs HGS and guarded hosts) is identified as a "guardian." The guardian is represented by the guardian key that you imported in the previous procedure, [Import the guardian configuration on the tenant Hyper-V server](#import-the-guardian-configuration-on-the-tenant-hyper-v-server).
 
-For an illustration showing the Key Protector, which is an element in a shielding data file, see [What is shielding data and why is it necessary?](Guarded-Fabric-and-Shielded-VMs.md#what-is-shielding-data-and-why-is-it-necessary).
+For an illustration showing the Key Protector, which is an element in a shielding data file, see [What is shielding data and why is it necessary?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
 1.  On a tenant Hyper-V host, to create a new generation 2 virtual machine, run the following command.
 
@@ -110,7 +119,8 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 
 8.  Use RDP to remotely connect to the VM and enable BitLocker on all partitions on all VHDXs that are attached to the shielded VM.
 
-    >**Important**&nbsp;&nbsp;Before proceeding to the next step, wait for BitLocker encryption to finish on all partitions where you enabled it.
+    > [!IMPORTANT]
+    > Before proceeding to the next step, wait for BitLocker encryption to finish on all partitions where you enabled it.
 
 9.  Shut down the VM when you are ready to move it to the guarded fabric.
 
@@ -122,5 +132,5 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 
 ## See also
 
-- [Configuration scenarios for shielded VMs in a guarded fabric](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

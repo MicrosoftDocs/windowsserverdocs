@@ -10,7 +10,7 @@ ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall
 ms.author: kathydav
-ms.date: 10/03/2016
+ms.date: 01/09/2017
 ---
 # Supported FreeBSD virtual machines on Hyper-V
 
@@ -28,22 +28,23 @@ The following feature distribution map indicates the features in each version. T
 
 |**Feature**|**Windows Server operating system version**|**11**|**10.3**|**10.2**|**10 - 10.1**|**9.1 - 9.3**|**8.4**|
 |-|-|-|-|-|-|-|-|
-|**Availability**||Built in|Built in|Built in|Built in|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 1|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 2|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; Note 3|&#10004; Note 3|
+|**Availability**||Built in|Built in|Built in|Built in|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) |[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) |
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |&#10004; |
 |Windows Server 2016 Accurate Time|2016|||||||
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
 |VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 5|&#10004; Note 5|&#10004; Note 5|&#10004; Note 5|&#10004;|&#10004;|
+|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004;|&#10004;|
 |vRSS|2016, 2012 R2|&#10004;|||||||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |Large Receive Offload (LRO)|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||||
-|VHDX resize|2016, 2012 R2|&#10004;||||||
+|SR-IOV|2016|||||||
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|Note 1|Note 1|Note 1|Note 1|Note 1,2|Note 1,2|Note 1,2|
+|VHDX resize|2016, 2012 R2|&#10004; Note 7||||||
 |Virtual Fibre Channel|2016, 2012 R2|||||||
 |Live virtual machine backup|2016, 2012 R2|||||||
-|TRIM support|2016, 2012 R2|&#10004;||||||
+|TRIM support|2016, 2012 R2|||||||
 |SCSI WWN|2016, 2012 R2|||||||
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||||
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|||||||
@@ -54,7 +55,7 @@ The following feature distribution map indicates the features in each version. T
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||||
 |Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|||||||
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||||
-|Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 7|&#10004; Note 7|&#10004; Note 7|&#10004; Note 6, 7|&#10004; Note 7|&#10004; Note 7|
+|Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; Note 6|&#10004; Note 5, 6|&#10004; Note 6|&#10004; Note 6|
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2016, 2012 R2|||||||
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||||
@@ -66,22 +67,29 @@ The following feature distribution map indicates the features in each version. T
 
 ## <a name="BKMK_notes"></a>Notes
 
-1. To install BIS on FreeBSD 9.x, you need to add UUIDs for all devices listed in fstab before installation. For more information, see [Add UUIDs for all devices listed in fstab](Best-practices-for-running-FreeBSD-on-Hyper-V.md#BKMK_UUID).
+1. Suggest to [Label Disk Devices]( https://www.freebsd.org/doc/handbook/geom-glabel.html) to avoid ROOT MOUNT ERROR during startup.
 
-2. To install BIS on FreeBSD 8.x, you need to disable the fast IDE driver or create GEOM labels. For more information, see [Disable the Fast IDE Driver](Best-practices-for-running-FreeBSD-on-Hyper-V.md#BKMK_IDE) or [Create GEOM labels on FreeBSD 8.x](Best-practices-for-running-FreeBSD-on-Hyper-V.md#BKMK_GEOM).
+2. The virtual DVD drive may not be recognized when BIS drivers are loaded on FreeBSD 8.x and 9.x unless you enable the legacy ATA driver through the following command.
+    ```bash
+    # dd if=/dev/da1 of=/dev/da1 count=0
+    # gpart recover da1
+    ```
 
-3. The virtual DVD drive will not be recognized when BIS drivers are loaded on FreeBSD 8.x and 9.x unless you disable the fast IDE driver. For more information, see [Disable the Fast IDE Driver](Best-practices-for-running-FreeBSD-on-Hyper-V.md#BKMK_IDE).
+3. 9126 is the maximum supported MTU size.
 
-4. 9K is the maximum supported MTU size.
+4. In a failover scenario, you cannot set a static IPv6 address in the replica server. Use an IPv4 address instead.
 
-5. In a failover scenario, you cannot set a static IPv6 address in the replica server. Use an IPv4 address instead.
+5. KVP is provided by ports on FreeBSD 10. See the [FreeBSD 10 ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) on FreeBSD.org for more information.
 
-6. KVP is provided by ports on FreeBSD 10. See the [FreeBSD 10 ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) on FreeBSD.org for more information.
+6. KVP may not work on Windows Server 2008 R2.
 
-7. KVP may not work on Windows Server 2008 R2.
+7. To make VHDX online resizing work properly in FreeBSD 11, a special manual step is required to work around a GEOM bug which is fixed in 11+, after the host resizes the VHDX disk - open the disk for write, and run “gpart recover” as the following.
+    ```bash
+    # set hw.ata.disk_enable=1
+    # boot
+    ```
 
 See Also
 
 * [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
-
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)

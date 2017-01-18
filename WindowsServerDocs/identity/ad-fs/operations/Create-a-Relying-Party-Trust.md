@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 5b9fc9c1-5d12-4ad4-8ddc-3b8a6d45b217
 title: Create a Relying Party Trust
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/22/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

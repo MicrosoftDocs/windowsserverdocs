@@ -5,10 +5,10 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 
@@ -246,7 +246,7 @@ In previous releases, Windows Server editions differed in their support of serve
 ### Windows client and Windows Server operating systems that are supported to join Windows Server domains  
 The following Windows client and Windows Server operating systems are supported for domain member computers with domain controllers that run Windows Server 2012 or later:  
   
--   Client operating systems: Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows XP  
+-   Client operating systems: Windows 8.1, Windows 8, Windows 7, Windows Vista 
   
     Computers that run Windows 8.1 or Windows 8 are also able to join domains that have domain controllers that run earlier version of Windows Server, including Windows Server 2003 or later. In this case however, some Windows 8 features may require additional configuration or may not be available. For more information about those features and other recommendations for managing Windows 8 clients in downlevel domains, see [Running Windows 8 member computers in Windows Server 2003 domains](http://social.technet.microsoft.com/wiki/contents/articles/17361.running-windows-8-member-computers-in-windows-server-2003-domains.aspx).  
   

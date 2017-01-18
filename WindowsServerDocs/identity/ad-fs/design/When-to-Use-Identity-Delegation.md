@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: When to Use Identity Delegation
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

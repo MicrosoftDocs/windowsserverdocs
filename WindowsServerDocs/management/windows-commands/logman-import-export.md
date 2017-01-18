@@ -16,9 +16,9 @@ ms.date: 10/12/2016
 ---
 # logman import | export
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
+import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
   
 ## Syntax  
 ```  
@@ -41,5 +41,5 @@ The following command imports the XML file c:\windows\perf_log.xml from the comp
 ```  
 logman import perf_log -s server_1 -xml "c:\windows\perf_log.xml"  
 ```  
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  

@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 475e34f9-9399-43f4-a840-9dd77258e11a
 title: Create a Rule to Send Group Membership as a Claim
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # Create a Rule to Send Group Membership as a Claim

@@ -16,7 +16,7 @@ manager: dongill
 
 # Add Windows Server Essentials as a Member Server
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 This topic applies to a server running Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter, or Windows Server 2016 with the Windows Server Essentials Experience role installed. In the remainder of this document, the Windows Server Essentials Experience role will be referred to as Windows Server Essentials.  
   

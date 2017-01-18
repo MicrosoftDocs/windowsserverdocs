@@ -16,7 +16,7 @@ manager: dongill
 
 # Migrate Server Data to Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The following guides provide information about how to migrate to Windows Server Essentials from an existing installation of Windows Small Business Server or Windows Server Essentials, and include information about how to prepare and plan for specific Windows Server Essentials migration scenarios.  
   

@@ -1,3 +1,88 @@
 ---
-redirect_url: storage-spaces-direct-overview
+title: Storage Spaces Direct Hardware Requirements
+ms.prod: windows-server-threshold
+description: Minimum hardware requirements for testing Storage Spaces Direct.
+ms.author: eldenc
+ms.manager: eldenc
+ms.technology: storage-spaces
+ms.topic: article
+author: eldenchristensen
+ms.date: 01/11/2017
+ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
+# Storage Spaces Direct hardware requirements
+>Applies To: Windows Server 2016
+
+This topic describes minimum hardware requirements for testing Storage Spaces Direct. For production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! To learn more, check out [Partner Offers at Microsoft Ignite 2016](https://channel9.msdn.com/events/Ignite/2016/BRK2167).
+
+If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, as described in [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).
+
+## Basic requirements
+
+All systems, components, devices, and drivers must be "Certified for Windows Server 2016" per the [Windows Server Catalog](https://www.windowsservercatalog.com).
+
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell.
+
+In addition, the following requirements apply.
+
+## Additional requirements for Storage Spaces Direct
+
+### Servers
+
+- Minimum of 2 servers, maximum of 16 servers
+- All servers must be identical in hardware components, drivers, firmware, and configuration
+ 
+### CPU
+
+- Minimum of Intel Nehalem or later compatible processor
+
+### Memory
+
+- 5 gigabytes (GB) of memory per terabyte (TB) of cache drive on each server, to store metadata structures. For example, if each server has 2 x 1 TB cache drives, you should have 2 x 5 GB = 10 GB of memory for Storage Spaces Direct internal use.
+- Any memory needed for your applications or workloads (such as virtual machines)
+
+### Networking
+
+- Minimum of 10 Gbps network interface for intra-cluster communication
+- Recommended: Two NICs for redundancy and performance
+- Recommended: Interfaces which are remote-direct memory access (RDMA) capable, iWARP or RoCE
+
+### Drives
+
+For more help choosing drives, see the [Choosing drives](choosing-drives-and-resiliency-types.md) topic.
+
+- Local-attached SATA, SAS, or NVMe drives
+- Every drive must be physically connected to only one server
+- Ensure SSDs are "enterprise-grade", meaning they have [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Ensure SSDs used for cache have high write endurance. We recommend 5+ drive-writes-per-day (DWPD).
+- Drives can be 512n, 512e, or 4K native, they all work equally well
+- Separate dedicated drive for boot
+- **Not supported:** multi-path IO (MPIO) or physically connecting drives via multiple paths
+
+#### Minimum number of drives
+
+- If there are drives used as cache, there must be at least 2 per server
+- There must be at least 4 capacity (non-cache) drives per server
+
+| Drive types present   | Minimum number required |
+|-----------------------|-------------------------|
+| All NVMe (same model) | 4 NVMe                  |
+| All SSD (same model)  | 4 SSD                   |
+| NVMe + SSD            | 2 NVMe + 4 SSD          |
+| NVMe + HDD            | 2 NVMe + 4 HDD          |
+| SSD + HDD             | 2 SSD + 4 HDD           |
+| NVMe + SSD + HDD      | 2 NVMe + 4 Others       |
+
+   >[!NOTE]
+   >  This table provides the minimum number of drives required for bare-metal deployments. If you're deploying Storage Spaces Direct using virtual machines and virtualized storage, such as [in Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), this requirement is waived because your "drives" should never fail per se. In this case, the only requirement is that you need at least three total drives per cluster. In Azure, we recommend using [premium data disks](https://azure.microsoft.com//documentation/articles/storage-premium-storage/) for better performance. 
+
+#### Maximum
+
+- Maximum of 1 petabyte (1,000 TB) of raw capacity per storage pool
+
+### Host-bus adapter (HBA)
+
+- Simple pass-through SAS HBA for both SAS and SATA drives
+- SCSI Enclosure Services (SES) for SAS and SATA drives
+- Any direct-attached storage enclosures must present Unique ID
+- **Not Supported:** RAID HBA controllers or SAN (Fibre Channel, iSCSI, FCoE) devices

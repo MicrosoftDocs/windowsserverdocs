@@ -16,9 +16,9 @@ ms.date: 10/12/2016
 ---
 # logman start | stop
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Start a data collector and set the begin time to manual, or stop a data collector set and set the end time to manual.  
+start a data collector and set the begin time to manual, or stop a data collector set and set the end time to manual.  
   
 ## Syntax  
 ```  
@@ -39,5 +39,5 @@ The following command starts the data collector perf_log on the remote computer 
 ```  
 logman start perf_log -s server_1  
 ```  
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  

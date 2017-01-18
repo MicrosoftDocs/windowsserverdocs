@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage BranchCache in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 BranchCache can help you optimize Internet usage, improve performance of networked applications, and reduce traffic on your wide-area network (WAN) when the  Windows Server Essentials server is located remotely from your office, or when client computers connected to a local server use cloud-based resources such as SharePoint Online libraries.  
   

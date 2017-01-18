@@ -16,9 +16,9 @@ author: jamesmci
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
- Windows Server 2016, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012 enable you to create clusters of Remote Access servers. A cluster acts as a single logical server and provides centralized configuration and management for the servers in the cluster. When using Network Load Balancing (NLB) there is support for up to 8 Remote Access members in a single cluster. Remote Access clusters provide high availability and load balancing of connections from DirectAccess clients to the internal network.  
+ Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012 enable you to create clusters of Remote Access servers. A cluster acts as a single logical server and provides centralized configuration and management for the servers in the cluster. When using Network Load Balancing (NLB) there is support for up to 8 Remote Access members in a single cluster. Remote Access clusters provide high availability and load balancing of connections from DirectAccess clients to the internal network.  
   
 The following procedures enable you to create and test a Remote Access cluster:  
   

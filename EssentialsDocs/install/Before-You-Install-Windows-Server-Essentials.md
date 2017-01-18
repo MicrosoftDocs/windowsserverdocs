@@ -16,7 +16,7 @@ manager: dongill
 
 # Before You Install Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_BeforeYouBegin"></a> Before you begin your installation of  Windows Server Essentials, perform the following tasks:  
 

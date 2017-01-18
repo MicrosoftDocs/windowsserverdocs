@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Office 365 in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 When you integrate your  Windows Server Essentials server with Microsoft  Office 365, you can manage your  Office 365 services and online accounts along with your on-premises resources from the  Windows Server Essentials Dashboard. In this topic, you „¢ll find out what you can gain by integrating your server with  Office 365, how to do it, and how to manage and troubleshoot your  Office 365 integration.  
   

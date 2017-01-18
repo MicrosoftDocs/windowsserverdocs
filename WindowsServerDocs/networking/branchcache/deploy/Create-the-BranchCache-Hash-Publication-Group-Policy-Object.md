@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # Create the BranchCache Hash Publication Group Policy Object
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this procedure to create the BranchCache hash publication Group Policy Object (GPO).  
   

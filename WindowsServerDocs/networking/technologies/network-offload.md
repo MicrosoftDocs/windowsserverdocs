@@ -16,7 +16,7 @@ author: jamesmci
 
 # Network Offload and Optimization Technologies
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic for a brief overview of Network Offload and Optimization technologies that are available in Windows Server 2016.
 
@@ -53,7 +53,6 @@ The following SH features and technologies are available in Windows Server 2016 
 - **Hyper-V Network Virtualization - v2 NVGRE \(HNVv2 NVGRE\)**. In Windows Server 2016 and System Center Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution that includes RAS Gateway, Software Load Balancing, Network Controller, and more. For more information, see [Hyper-V Network Virtualization Overview in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server).
 - **Hyper-V Network Virtualization - v2 VxLAN \(HNVv2 VxLAN\)**. See previous information.
 - **IPsec Task Offload \(IPsecTO\)**. IPsec task offload is a NIC feature that enables the operating system to use the processor on the NIC for the IPsec encryption work. For more information, see [Improving Network Performance by Using IPsec Task Offload](https://technet.microsoft.com/library/dd125367.aspx). 
-- **PacketDirect**. PacketDirect (PD) extends the current NDIS model with an accelerated network I/O path that is optimized for packet per second (pps) counts an order of a magnitude higher than what has been seen with the traditional NDIS I/O model. For more information, see [Introduction to the NDIS PacketDirect Provider Interface](https://msdn.microsoft.com/windows/hardware/drivers/network/introduction-to-ndis-pdpi).
 - **Private virtual Local Area Network \(PVLAN\)**. PVLANs allow communication only between virtual machines on the same virtualization server. A private virtual network is not bound to a physical network adapter. A private virtual network is isolated from all external network traffic on the virtualization server, as well any network traffic between the management operating system and the external network. This type of network is useful when you need to create an isolated networking environment, such as an isolated test domain. The Hyper-V and SDN stacks support PVLAN Isolated Port mode only.
 - **Remote Direct Memory Access \(RDMA\)**. RDMA is a networking technology that provides high-throughput, low-latency communication that minimizes CPU usage. For information about RDMA in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
 - **Receive Side Scaling \(RSS\)**. Receive Side Scaling is a NIC feature that segregates different sets of streams and delivers them to different processors for processing. This parallelizes the networking processing, enabling a host to scale to very high data rates. For more information, see [Receive Side Scaling (RSS)](https://technet.microsoft.com/library/hh997036.aspx).

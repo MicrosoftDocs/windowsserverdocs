@@ -1,11 +1,11 @@
 ---
 title: Windows Server 2016
-description: "Get started with Windows Server 2016. " 
+description: "Get started with Windows Server 2016. "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 10/10/2016
+ms.date: 11/09/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,35 +14,60 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ---
-# Windows Server 2016 
 
-<table border=0 width="100%">
-  <tr>
-    <td colspan='4' style='padding:0;'><img src='wsbanner.png' alt="Banner inviting you to build your future with Windows Server 2016"></td>
+# Windows Server 2016
+
+<img src="media/2whats-new.png" alt="alt text" title="What's new in Windows Server 2016?" />
+    <font size="5">
+    &nbsp;[Read what's new in Windows Server 2016](what-s-new-in-windows-server-2016.md)</font>
+<br/><br/>
+[![Storage Spaces Direct Overview Video](media/front-page-video.png)](https://www.youtube.com/embed/V8oF0JpDzaM)
+
+<table border="0" width="100%">
+</tr>
+  <tr style="text-align:center;">
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">
+        <img height=145 src="media/1-getstarted.png" alt="alt text" title="Get started" />
+      </a>
+    </td>
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">
+        <img height=145 src="media/2-compute.png" alt="alt text" title="Windows Server Compute" />
+      </a>
+    </td>
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/failover-clustering/failover-clustering-overview">
+        <img height=145 src="media/3-failover.png" alt="Failover clustering" title="Failover clustering" />
+      </a>
+    </td>
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/identity/identity-and-access">
+        <img height=145 src="media/4-identity.png" alt="alt text" title="Windows Server Identity and Access" />
+      </a>
+    </td>
   </tr>
-  <tr style='text-align:center;'><td colspan='4' bgcolor="F3FBFF">![alt text](2whats-new.png "What's new in Windows Server 2016?")
-    &nbsp;&nbsp;<font size='4'>[What's New in Windows Server 2016?](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)</font></td></tr>
-  <tr style='text-align:center;'>
-    <td style='width:25%'>
-    <a href="https://technet.microsoft.com/windows-server-docs/get-started/server-basics">![alt text](1-getstarted.png "Get started")</a>
+  <tr style="text-align:center;">
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/security/security-and-assurance">
+        <img height=145 src="media/5-security.png" alt="alt text" title="Windows Server Security and Assurance" />
+      </a>
     </td>
-    <td style='width:25%'>
-    <a href="https://technet.microsoft.com/windows-server-docs/compute/compute">![alt text](2-compute.png "Windows Server Compute")</a>
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/networking/networking">
+        <img height=145 src="media/6-networking.png" alt="alt text" title="Windows Server Networking" />
+      </a>
     </td>
-    <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/failover-clustering/failover-clustering-overview">![Failover clustering](3-failover.png "Failover clustering")</a>
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage">
+        <img height=145 src="media/7-storage.png" alt="alt text" title="Windows Server Storage" />
+      </a>
     </td>
-    <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/identity/identity-and-access">
-    ![alt text](4-identity.png "Windows Server Identity and Access")</a></td>
-  </tr>
-  <tr style='text-align:center;'>
-  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/security/security-and-assurance">
-  ![alt text](5-security.png "Windows Server Security and Assurance")</a></td>
-  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/networking/networking">
-  ![alt text](6-networking.png "Windows Server Networking")</a></td>
-  <td style='width:25%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/storage/storage">
-  ![alt text](7-storage.png "Windows Server Storage")</a></td>
-  <td style='width:25%'><a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
-  ![alt text](8-management.png "Windows Server Management and Automation")</a></td>
+    <td style="width:25%; border:0;">
+      <a href="https://technet.microsoft.com/windows-server-docs/management/management-and-automation">
+        <img height=145 src="media/8-management.png" alt="alt text" title="Windows Server Management and Automation" />
+      </a>
+    </td>
   </tr>
 </table>
 
@@ -75,14 +100,18 @@ Both Standard and Datacenter editions offer three installation options:
 - **Server with Desktop Experience:** installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods.
 - **Nano Server:** is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than the other options.
 
+>[!NOTE]
+>
+>Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. For example, if you install Server Core and later decide to user Server with Desktop Experience, you should do a fresh installation (and vice versa).
+
 
 Now that you know which edition and installation option is right for you, click below to get started with Windows Server 2016.
 
 
 <table border=0 width="100%">
   <tr style='text-align:center;'>
-    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server">![Nano](nano.png)</a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core">![Server core](servercore.png)</a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience">![Desktop](desktop.png)</a></td>
+    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server">![Nano](media/nano.png)</a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core">![Server core](media/servercore.png)</a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience">![Desktop](media/desktop.png)</a></td>
   </tr>
 </table>

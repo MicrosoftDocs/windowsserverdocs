@@ -3,7 +3,7 @@ title: Set up hosts for live migration without Failover Clustering
 description: "Gives instructions for setting up live migration in a non-clustered environment"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -24,10 +24,9 @@ To set up non-clustered hosts for live migration, you'll need:
   
 -  A user account with permission to perform the various steps. Membership in the local Hyper-V Administrators group or the Administrators group on both the source and destination computers meets this requirement, unless you're configuring constrained delegation. Membership in the Domain Administrators group is required to configure constrained delegation.  
   
-- The Hyper-V role in Windows Server 2016 installed on the source and destination servers. For instructions, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
+- The Hyper-V role in Windows Server 2016 or Windows Server 2012 R2 installed on the source and destination servers. You can do a live migration between hosts running Windows Server 2016 and Windows Server 2012 R2 if the virtual machine is at least version 5. <br>For version upgrade instructions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For installation instructions, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
   
-- Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.  
-  
+- Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.    
 - The Hyper-V management tools installed on a computer running Windows Server 2016 or Windows 10, unless the tools are installed on the source or destination server and you'll run the tools from the server.  
   
 ## Consider options for authentication and networking  

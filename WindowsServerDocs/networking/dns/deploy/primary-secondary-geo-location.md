@@ -15,11 +15,11 @@ author: jamesmci
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.  
 
-The previous scenario provided instructions for configuring DNS policy for geo-location based traffic management on a primary DNS server. In the Internet infrastructure, however, the DNS servers are widely deployed in a primary-secondary model, where the writable copy of a zone is stored on select and secure primary servers, and read-only copies of the zone are kept on multiple secondary servers.   
+The previous scenario, [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](primary-geo-location.md), provided instructions for configuring DNS policy for geo-location based traffic management on a primary DNS server. In the Internet infrastructure, however, the DNS servers are widely deployed in a primary-secondary model, where the writable copy of a zone is stored on select and secure primary servers, and read-only copies of the zone are kept on multiple secondary servers.   
   
 The secondary servers use the zone transfer protocols Authoritative Transfer (AXFR) and Incremental Zone Transfer (IXFR) to request and receive zone updates that include new changes to the zones on the primary DNS servers.   
   
@@ -173,9 +173,4 @@ Now the secondary DNS servers are configured with the required DNS policies to r
   
 When the DNS server receives name resolution queries, the DNS server evaluates the fields in the DNS request against the configured DNS policies. If the source IP address in the name resolution request matches any of the policies, the associated zone scope is used to respond to the query, and the user is directed to the resource that is geographically closest to them.   
   
-You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.  
-  
-  
-  
-
-
+You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries. 

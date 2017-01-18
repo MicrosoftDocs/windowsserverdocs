@@ -5,7 +5,7 @@ ms.technology: storage-deduplication
 ms.prod: windows-server-threshold
 ms.topic: article
 author: wmgries
-manager: eldenc
+manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ---
@@ -28,7 +28,7 @@ To install Data Deduplication, run the following PowerShell command as an admini
 
 To install Data Deduplication in a Nano Server installation:
 
-1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md#BKMK_CreateImage).
+1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md).
 2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
 	```PowerShell
 	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
@@ -131,7 +131,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 > If you are running a recommended workload, you can skip this section.
 
 * Data Deduplication's Usage Types give sensible defaults for recommended workloads, but they also provide a good starting point for all workloads. For workloads other than the recommended workloads, it is possible to modify [Data Deduplication's advanced settings](advanced-settings.md) to improve deduplication performance.
-* If your workload has high resource requirements on your server, the Data Deduplication jobs [should be scheduled to run during the expected idle times for that workload](advanced-settings.md#schedule-dedup-jobs). This is particularly important when running deduplication on a hyper-converged host, because running Data Deduplication during expected working hours can starve VMs.
+* If your workload has high resource requirements on your server, the Data Deduplication jobs [should be scheduled to run during the expected idle times for that workload](advanced-settings.md#modifying-job-schedules-change-schedule). This is particularly important when running deduplication on a hyper-converged host, because running Data Deduplication during expected working hours can starve VMs.
 * If your workload does not have high resource requirements, or if it is more important that optimization jobs complete than workload requests be served, [the memory, CPU, and priority of the Data Deduplication jobs can be adjusted](advanced-settings.md#modifying-job-schedules).
 
 ## <a id="faq"></a>Frequently asked questions (FAQ)

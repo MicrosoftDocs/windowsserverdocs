@@ -1,13 +1,13 @@
-﻿---
+---
 ms.assetid: 826974ea-3635-40df-aa37-77dd12a363c8
-title: Checklist: Configuring the Account Partner Organization
+title: Checklist - Configuring the Account Partner Organization
 description:
 author: billmath
 manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ms.author: billmath

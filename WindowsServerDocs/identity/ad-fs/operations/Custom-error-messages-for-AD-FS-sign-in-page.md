@@ -1,4 +1,3 @@
-﻿
 ---
 ms.assetid: 1df78c2a-5054-4b54-8310-c48ea62e6e0b
 title: Custom error messages for AD FS sign-in page 
@@ -9,9 +8,10 @@ manager: femila
 ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
+
 # Custom error messages for AD FS sign-in page  
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

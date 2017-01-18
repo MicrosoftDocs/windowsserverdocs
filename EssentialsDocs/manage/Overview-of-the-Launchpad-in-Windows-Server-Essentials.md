@@ -16,7 +16,7 @@ manager: dongill
 
 # Overview of the Launchpad in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The Windows Server Essentials Launchpad is a small application that is installed on a computer the first time the computer connects to the server. The Launchpad provides authenticated users with access to key features of Windows Server Essentials including computer backups, shared files and media, and the Remote Web Access site. Users can access these features from either domain-joined computers or non-domain joined computers. The Launchpad also provides real-time information and notifications about the health of the computer. Administrators can use the Launchpad to access the server Dashboard, even if the computer is not connected to the network.  
   

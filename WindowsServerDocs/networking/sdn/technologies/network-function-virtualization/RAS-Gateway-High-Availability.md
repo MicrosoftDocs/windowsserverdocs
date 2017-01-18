@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # RAS Gateway High Availability
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN).  
   
@@ -72,7 +72,7 @@ The following illustration demonstrates a typical Cloud Service Provider (CSP) d
   
 ![RAS Gateway Deployment Overview](../../../media/RAS-Gateway-High-Availability/ras_csp_deploy.png)  
   
-With this type of deployment, the gateway pools are deployed behind a Software Load Balancing (SLB), which enables the CSP to assign a single public IP address for the entire deployment. Multiple gateway connections of a tenant can terminate on multiple gateway pools - and also on multiple gateways within a pool. This is illustrated through IKEv2 S2S connections in the above diagram, but the same is applicable to other gateway functions too, such as L3 and GRE gateways.  
+With this type of deployment, the gateway pools are deployed behind a Software Load Balancer (SLB), which enables the CSP to assign a single public IP address for the entire deployment. Multiple gateway connections of a tenant can terminate on multiple gateway pools - and also on multiple gateways within a pool. This is illustrated through IKEv2 S2S connections in the above diagram, but the same is applicable to other gateway functions too, such as L3 and GRE gateways.  
   
 In the illustration, the MT BGP device is a RAS Multitenant Gateway with BGP. Multitenant BGP is used for dynamic routing. The routing for a tenant is centralized - a single point, called the route reflector (RR), handles the BGP peering for all tenant sites. The RR itself is distributed across all gateways in a pool. This results in a configuration where the connections of a tenant (data path) terminate on multiple gateways, but the RR for the tenant (BGP peering point - control path) is on only one of the gateways.  
   

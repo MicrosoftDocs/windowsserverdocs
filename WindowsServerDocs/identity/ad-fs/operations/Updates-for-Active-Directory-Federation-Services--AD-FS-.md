@@ -8,7 +8,7 @@ manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # Updates for Active Directory Federation Services (AD FS)
@@ -49,7 +49,7 @@ Updates have been released for Active Directory Federation Services (AD FS) in W
 |[3105881](http://support.microsoft.com/kb/3105881)|Can't access applications when device authentication is enabled in Windows Server 2012 R2-based AD FS server|October 2015
 |[3092003](http://support.microsoft.com/kb/3092003)|Page loads repeatedly and authentication fails when users use MFA in Windows Server 2012 R2 AD FS|August 2015
 |[3080778](http://support.microsoft.com/kb/3080778)|AD FS does not call OnError when MFA adapter throws an exception in Windows Server 2012 R2|July 2015
-|[3075610](http://support.microsoft.com/en-us/kb/3075610)|Trust relationships are lost on secondary AD FS server after you add or remove claims provider in Windows Server 2012 R2|July 2015
+|[3075610](http://support.microsoft.com/kb/3075610)|Trust relationships are lost on secondary AD FS server after you add or remove claims provider in Windows Server 2012 R2|July 2015
 |[3070080](http://support.microsoft.com/kb/3070080)|Home Realm Discovering not working correctly for Non-claims Aware Relying Party Trust|June 2015
 |[3052122](http://support.microsoft.com/kb/3052122)|Update adds support for compound ID claims in AD FS tokens in Windows Server 2012 R2|May 2015
 |[3045711](http://support.microsoft.com/kb/3045711)|MS15-040: Vulnerability in Active Directory Federation Services could allow information disclosure|April 2015
@@ -71,9 +71,10 @@ Updates have been released for Active Directory Federation Services (AD FS) in W
 |[2919355](http://support.microsoft.com/kb/2919355)|Windows Server 2012 R2 Update Roll-up|April 2014
 
 ## Updates for AD FS and WAP in Windows Server 2016
+The update package listed below is recommended for all AD FS and WAP 2016 servers.
+Windows 10 and Windows Server 2016 updates are cumulative.  Therefore, the package includes all previously required updates as well as the latest fixes.
 
-Updates have been released for Active Directory Federation Services (AD FS) in Windows Server 2016. There are update rollup releases as well as individual hotfix releases. The following provides a timeline view on those releases and the issues that have been fixed.
 
 |KB # |Description|Date Released
 |----- | ----- |-----
-|[3135173](http://support.microsoft.com/kb/3135173)|Cumulative update for Windows 10 Version 1511: February 9, 2016| February 2016
+|[3201845](https://support.microsoft.com/kb/3201845)|Cumulative Update for Windows 10 Version 1607 and Windows Server 2016: December 9, 2016| December 2016

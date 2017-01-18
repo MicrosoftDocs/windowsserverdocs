@@ -16,7 +16,7 @@ manager: dongill
 
 # Customize the Image
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 You can use the information in this section to customize an image of the operating system.  
   
