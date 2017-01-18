@@ -290,7 +290,7 @@ Below are two examples of what the output on the PowerShell console would look l
 ![](../media/software-inventory-logging/SILHyper-VExample2.png)  
   
 ## See Also  
-[Get Started with Software Inventory Logging](get-started-with- software-inventory-logging.md)  
+[Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)  
 [Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md)  
 [Software Inventory Logging Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/dn283390.aspx)  
 [Import-BinaryMiLog](http://technet.microsoft.com/library/dn262592.aspx)  

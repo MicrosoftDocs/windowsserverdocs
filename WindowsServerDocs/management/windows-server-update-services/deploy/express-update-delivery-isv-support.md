@@ -49,7 +49,7 @@ ISVs can use WSUS and the WU client to support Express update delivery. Microsof
 3.  [**Set up an ISV client agent to direct WU client operations**](#BKMK_3)
 
 >[!NOTE]
->Requires Cumulative Update for Windows 10 Version 1607 release in (or after) January 2017 ([KB 3209835](https://support.microsoft.com/en-us/kb/3209835)) to be installed
+>Requires Cumulative Update for Windows 10 Version 1607 release in (or after) January 2017 ([KB3213986 (OS Build 14393.693)](https://support.microsoft.com/en-us/help/4009938/january-10-2017-kb3213986-os-build-14393-693) to be installed.
     
    - The ISV client agent determines which updates to approve, and when do download and install updates
    - The WU client determines byte ranges to download and initiates the download request

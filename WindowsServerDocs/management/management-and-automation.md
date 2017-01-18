@@ -33,6 +33,13 @@ The content in this section describes how to use Server Manager in Windows Serve
 
  To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10. Remote Server Administration Tools for Windows 10 includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server 2016.  
 
+## [Software Inventoy Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
+
+Software Inventory Logging in Windows Server is a feature with a simple set of PowerShell cmdlets that help server administrators retrieve a list of the Microsoft software that is installed on their servers. It also provides the capability to collect and forward this data periodically over the network to a target web server, using the HTTPS protocol, for aggregation. Managing the feature, primarily for hourly collection and forwarding, is also done with PowerShell commands.
+
+## [User Access Logging (UAL)](user-access-logging/get-started-with-user-access-logging.md)
+
+User Access Logging aggregates unique client device and user request events that are logged on a computer running Windows Server 2012 or 2016 into a local database. These records are then made available (through a query by a server administrator) to retrieve quantities and instances by server role, by user, by device, by the local server, and by date. In addition, UAL also enables non-Microsoft software developers to instrument their UAL events to be aggregated. 
 
 ## [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/get-started/windows-server-update-services-wsus.md)  
 
