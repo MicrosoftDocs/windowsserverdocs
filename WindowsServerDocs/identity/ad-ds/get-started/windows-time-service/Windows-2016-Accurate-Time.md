@@ -338,7 +338,7 @@ If the Azure VM is not joined to a domain, nor is it a Domain Controller, the re
 
 ### Windows Application Requiring Accurate Time
 #### Time Stamp API
-Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemPreciseTimeAsFileTime API](https://msdn.microsoft.com/library/windows/desktop/Hh706895.aspx).  This assures your application gets System Time, which is conditioned by the Windows Time service.
+Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](https://msdn.microsoft.com/library/windows/desktop/Hh706895.aspx).  This assures your application gets System Time, which is conditioned by the Windows Time service.
 
 #### UDP Performance
 If you have an application that uses UDP communication for transactions and it’s important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from port the base filtering engine.  This will improve both the latency and increase your throughput.  However, changes to the registry should be limited to experienced administrators.  Additionally, this work around excludes ports from being secured by the firewall.  See the article reference below for more information.
