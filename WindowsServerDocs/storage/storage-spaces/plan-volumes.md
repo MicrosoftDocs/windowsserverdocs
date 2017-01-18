@@ -39,7 +39,7 @@ We recommend limiting the total number of volumes to 32 per cluster.
 
 We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.md) for Storage Spaces Direct.
 
-ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. However, it does not yet support certain features, such as data deduplication.
+ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. However, it does not yet support certain features, such as Data Deduplication.
 
 If your workload requires a feature that ReFS doesn't support yet, you can use NTFS instead.
 
@@ -152,7 +152,7 @@ From this 128 TB in the storage pool, we set aside four drives, or 8 TB, so that
 
 Suppose we need our deployment to host some highly active Hyper-V virtual machines, but we also have lots of cold storage – old files and backups we need to retain. Because we have four servers, let's create four volumes.
 
-Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*. We choose ReFS as the filesystem (for the faster creation and checkpoints) and three-way mirroring for resiliency to maximize performance. Let's put the cold storage on the other two volumes, *Volume 3* and *Volume 4*. We choose NTFS as the filesystem (for data deduplication) and dual parity for resiliency to maximize capacity.
+Let's put the virtual machines on the first two volumes, *Volume1* and *Volume2*. We choose ReFS as the filesystem (for the faster creation and checkpoints) and three-way mirroring for resiliency to maximize performance. Let's put the cold storage on the other two volumes, *Volume 3* and *Volume 4*. We choose NTFS as the filesystem (for Data Deduplication) and dual parity for resiliency to maximize capacity.
 
 We aren't required to make all volumes the same size, but for simplicity, let's – for example, we can make them all 12 TB.
 
