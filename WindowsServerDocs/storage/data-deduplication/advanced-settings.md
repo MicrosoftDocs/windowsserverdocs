@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
-manager: eldenc
+manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ---

@@ -163,7 +163,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 1.  Set a network QoS policy for SMB-Direct, which is the protocol that the software defined storage system uses.
 
     ```PowerShell
-    New-NetQosPolicy “SMB” –NetDirectPortMatchCondition 445 –PriorityValue8021Action 3
+    New-NetQosPolicy "SMB" –NetDirectPortMatchCondition 445 –PriorityValue8021Action 3
     ```
 
     The output should look something like this:
@@ -181,6 +181,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 2.  If you are using RoCEv2 turn on Flow Control for SMB as follows (not required for iWarp):
 
     ```PowerShell
+    Install-WindowsFeature "data-center-bridging"
     Enable-NetQosFlowControl –Priority 3
     ```
 
@@ -193,7 +194,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 4.  Get a list of the network adapters to identify the target adapters (RDMA adapters) as follows:
 
     ```PowerShell
-    Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed
+    Get-NetAdapter | FT Name, InterfaceDescription, Status, LinkSpeed
     ```
 
     The output should look something like the following. The Mellanox ConnectX03 Pro adapters are the RDMA network adapters and are the only ones connected to a switch, in this example configuration.
@@ -209,19 +210,19 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
     NIC2       QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45 Disconnected 0 bps
     ```
 
-5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the “Name” of the target adapters for the –InterfaceAlias in the following example
+5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the "Name" of the target adapters for the –InterfaceAlias in the following example
 
     ```PowerShell
-    Enable-NetAdapterQos –InterfaceAlias “<adapter1>”,”<adapter2>”
+    Enable-NetAdapterQos –InterfaceAlias "<adapter1>", "<adapter2>"
     ```
 
    Using the example above, the command would look like this:
 
     ```PowerShell
-    Enable-NetAdapterQoS –InterfaceAlias “Ethernet 2”,”SLOT #”
+    Enable-NetAdapterQoS –InterfaceAlias "Ethernet 2", "SLOT #"
     ```
 
-6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be “SMB”.
+6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be "SMB".
 
     ```PowerShell
     New-NetQosTrafficClass “SMB” –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
@@ -236,13 +237,13 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 1.  Identify the network adapters (you will use this info in step \#2)
 
     ```PowerShell
-    Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed
+    Get-NetAdapter | FT Name, InterfaceDescription, Status, LinkSpeed
     ```
 
 1.  Create the virtual switch connected to both of the physical network adapters, and enable the Switch Embedded Teaming (SET). You may notice a message that your PSSession lost connection. This is expected and your session will reconnect.
 
     ```PowerShell
-    New-VMSwitch –Name SETswitch –NetAdapterName “<adapter1>”,"<adapter2>" –EnableEmbeddedTeaming $true
+    New-VMSwitch –Name SETswitch –NetAdapterName "<adapter1>", "<adapter2>" –EnableEmbeddedTeaming $true
     ```
 
 1.  Add host vNICs to the virtual switch. This configures a virtual NIC (vNIC) from the virtual switch that you just configured for the management OS to use.
@@ -278,21 +279,21 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 1.  Restart each host vNIC adapter so that the Vlan is active.
 
     ```PowerShell
-    Restart-NetAdapter “vEthernet (SMB_1)”
-    Restart-NetAdapter “vEthernet (SMB_2)”
+    Restart-NetAdapter "vEthernet (SMB_1)"
+    Restart-NetAdapter "vEthernet (SMB_2)"
     ```
 
 1.  Enable RDMA on the host vNIC adapters
 
     ```PowerShell
-    Enable-NetAdapterRDMA “vEthernet (SMB_1)”,”vEthernet (SMB_2)”
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)", "vEthernet (SMB_2)"
     ```
 
 1.  Associate each of the vNICs configured for RDMA to a physical adapter that is connected to the virtual switch
 
     ```PowerShell
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName 'SMB_1' –ManagementOS –PhysicalNetAdapterName 'SLOT 2'
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName 'SMB_2' –ManagementOS –PhysicalNetAdapterName 'SLOT 2 2'
+    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName "SMB_1" –ManagementOS –PhysicalNetAdapterName "SLOT 2"
+    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName "SMB_2" –ManagementOS –PhysicalNetAdapterName "SLOT 2 2"
     ```
 
 1.  Verify RDMA capabilities.
@@ -314,7 +315,7 @@ In this step, you will run the cluster validation tool to ensure that the server
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
 ```PowerShell
-Test-Cluster –Node <MachineName1,MachineName2,MachineName3,MachineName4> –Include “Storage Spaces Direct”,”Inventory”,”Network”,”System Configuration”
+Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
 ### Step 3.2: Create a cluster
