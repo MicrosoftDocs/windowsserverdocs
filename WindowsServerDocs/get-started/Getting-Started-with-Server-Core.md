@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 11/09/2016
+ms.date: 01/18/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -37,7 +37,7 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 >[!NOTE]
 >
 >For RSAT, you must use the Windows 10 version.
->Microsoft Management Console: not available locally.
+>Microsoft Management Console is not available locally.
 
 **Server roles available:**
 
@@ -79,7 +79,7 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
 
 > [!IMPORTANT]  
-> **You can only perform license conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (**not the Server Core option**).
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 ### Clean installation
 
