@@ -1,5 +1,5 @@
 ---
-title: manage-bde: KeyPackage
+title: manage-bde KeyPackage
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

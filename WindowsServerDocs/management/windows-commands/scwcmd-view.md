@@ -1,5 +1,5 @@
 ---
-title: Scwcmd: view
+title: Scwcmd view
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

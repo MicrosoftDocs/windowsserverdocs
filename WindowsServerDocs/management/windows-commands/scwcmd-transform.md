@@ -1,5 +1,5 @@
 ---
-title: Scwcmd: transform
+title: Scwcmd transform
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -9,7 +9,6 @@ ms.technology: security-access-control
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b023602e-8973-4336-b876-d8f92e288003
-author:coreyp
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

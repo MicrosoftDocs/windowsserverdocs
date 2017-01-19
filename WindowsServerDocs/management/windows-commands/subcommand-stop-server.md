@@ -1,5 +1,5 @@
 ---
-title: Subcommand: stop-Server
+title: Subcommand stop-Server
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

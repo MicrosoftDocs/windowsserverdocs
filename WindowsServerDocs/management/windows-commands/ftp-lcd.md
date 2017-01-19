@@ -1,5 +1,5 @@
 ---
-title: ftp: lcd
+title: ftp lcd
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
