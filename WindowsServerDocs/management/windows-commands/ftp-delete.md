@@ -1,6 +1,6 @@
 ---
-title: ftp: delete
-description: "Windows Commands topic for **** - "
+title: ftp delete
+description: "Windows Commands topic for ftp delete"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

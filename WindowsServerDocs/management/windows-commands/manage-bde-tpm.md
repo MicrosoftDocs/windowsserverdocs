@@ -1,5 +1,5 @@
 ---
-title: manage-bde: tpm
+title: manage-bde tpm
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

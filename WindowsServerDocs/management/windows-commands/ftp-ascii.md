@@ -1,6 +1,6 @@
 ---
-title: ftp: ascii
-description: "Windows Commands topic for **** - "
+title: ftp ascii
+description: "Windows Commands topic for ftp ascii "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

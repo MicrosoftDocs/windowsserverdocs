@@ -1,6 +1,6 @@
 ---
-title: ftp: disconnect_1
-description: "Windows Commands topic for **** - "
+title: ftp disconnect_1
+description: "Windows Commands topic for ftp disconnect_1"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

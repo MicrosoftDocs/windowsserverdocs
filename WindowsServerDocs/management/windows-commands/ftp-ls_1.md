@@ -1,5 +1,5 @@
 ---
-title: ftp: ls_1
+title: ftp ls_1
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

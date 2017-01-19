@@ -1,5 +1,5 @@
 ---
-title: manage-bde: pause
+title: manage-bde pause
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

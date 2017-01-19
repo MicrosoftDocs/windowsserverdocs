@@ -1,8 +1,5 @@
 ---
 title: nslookup ls
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -18,7 +15,10 @@ manager: dongill
 ms.date: 10/12/2016
 ---
 # nslookup ls
-lists information for a Domain Name System (DNS) domain.
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Lists information for a Domain Name System (DNS) domain.
 ## Syntax
 ```
 ls [<Option>] <DNSDomain> [{[>] <FileName>|[>>] <FileName>}]

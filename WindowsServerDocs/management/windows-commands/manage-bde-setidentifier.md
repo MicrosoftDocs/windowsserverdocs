@@ -1,5 +1,5 @@
 ---
-title: manage-bde: setidentifier
+title: manage-bde setidentifier
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

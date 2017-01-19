@@ -1,6 +1,6 @@
 ---
-title: ftp: get
-description: "Windows Commands topic for **** - "
+title: ftp get
+description: "Windows Commands topic for ftp get"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

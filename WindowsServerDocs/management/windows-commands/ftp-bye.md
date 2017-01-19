@@ -1,6 +1,6 @@
 ---
-title: ftp: bye
-description: "Windows Commands topic for **** - "
+title: ftp bye
+description: "Windows Commands topic for ftp bye"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

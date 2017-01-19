@@ -1,5 +1,5 @@
 ---
-title: Subcommand: set-Device
+title: Subcommand set-Device
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

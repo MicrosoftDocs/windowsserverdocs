@@ -1,5 +1,5 @@
 ---
-title: Subcommand: set-ImageGroup
+title: Subcommand set-ImageGroup
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

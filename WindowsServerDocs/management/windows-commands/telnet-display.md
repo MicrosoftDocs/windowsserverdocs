@@ -1,5 +1,5 @@
 ---
-title: telnet: display
+title: telnet display
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

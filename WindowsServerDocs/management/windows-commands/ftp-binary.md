@@ -1,6 +1,6 @@
 ---
-title: ftp: binary
-description: "Windows Commands topic for **** - "
+title: ftp binary
+description: "Windows Commands topic for ftp binary"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

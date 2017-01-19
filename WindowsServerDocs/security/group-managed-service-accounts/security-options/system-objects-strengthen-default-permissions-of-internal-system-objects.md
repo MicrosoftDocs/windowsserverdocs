@@ -1,5 +1,5 @@
 ---
-title: System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)
+title: System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)
 description: "Windows Server Security"
 ms.custom: na
 ms.prod: windows-server-threshold
