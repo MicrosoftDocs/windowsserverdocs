@@ -1,5 +1,5 @@
 ---
-title: Subcommand: start-MulticastTransmission
+title: Subcommand start-MulticastTransmission
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

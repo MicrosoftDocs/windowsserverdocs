@@ -1,5 +1,5 @@
 ---
-title: Subcommand: set-Image
+title: Subcommand set-Image
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

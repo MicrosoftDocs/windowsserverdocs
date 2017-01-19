@@ -1,6 +1,6 @@
 ---
-title: bdehdcfg: newdriveletter
-description: "Windows Commands topic for **bdehdcfg: newdriveletter** - assigns a new drive letter to the portion of a drive used as the system drive."
+title: bdehdcfg newdriveletter
+description: Windows Commands topic for bdehdcfg newdriveletter - assigns a new drive letter to the portion of a drive used as the system drive.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,5 +1,5 @@
 ---
-title: manage-bde: forcerecovery
+title: manage-bde forcerecovery
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

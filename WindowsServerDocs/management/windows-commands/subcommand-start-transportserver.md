@@ -1,5 +1,5 @@
 ---
-title: Subcommand: start-TransportServer
+title: Subcommand start-TransportServer
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

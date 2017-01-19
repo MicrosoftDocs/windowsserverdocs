@@ -1,6 +1,6 @@
 ---
 title: bootcfg delete
-description: "Windows Commands topic for **bootcfg delete** - deletes an operating system entry in the [operating systems] section of the Boot.ini file."
+description: "Windows Commands topic for **bootcfg delete** - deletes an operating system entry in the operating systems section of the Boot.ini file."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

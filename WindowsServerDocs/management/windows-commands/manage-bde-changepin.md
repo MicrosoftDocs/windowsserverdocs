@@ -1,5 +1,5 @@
 ---
-title: manage-bde: changepin
+title: manage-bde changepin
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

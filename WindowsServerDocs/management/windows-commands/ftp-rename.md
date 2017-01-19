@@ -1,5 +1,5 @@
 ---
-title: ftp: rename
+title: ftp rename
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

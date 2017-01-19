@@ -1,6 +1,6 @@
 ---
-title: ftp: append
-description: "Windows Commands topic for **** - "
+title: ftp append
+description: "Windows Commands topic for ftp append "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

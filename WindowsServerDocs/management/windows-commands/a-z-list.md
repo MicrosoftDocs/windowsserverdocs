@@ -1,8 +1,7 @@
 ---
 title: A-Z list
-description: "Topic containing a list of Windows Commands, A to Z"
+description: Topic containing a list of Windows Commands, A to Z
 ms.custom: na
-description: "Windows Commands"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

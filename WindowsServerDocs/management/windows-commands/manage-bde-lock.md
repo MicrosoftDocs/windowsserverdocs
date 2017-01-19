@@ -1,5 +1,5 @@
 ---
-title: manage-bde: lock
+title: manage-bde lock
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

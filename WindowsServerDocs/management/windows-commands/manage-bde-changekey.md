@@ -1,5 +1,5 @@
 ---
-title: manage-bde: changekey
+title: manage-bde changekey
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

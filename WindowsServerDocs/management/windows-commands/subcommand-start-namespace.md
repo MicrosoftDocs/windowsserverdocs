@@ -1,5 +1,5 @@
 ---
-title: Subcommand: start-Namespace
+title: Subcommand start-Namespace
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
