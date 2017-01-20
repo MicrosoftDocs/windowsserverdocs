@@ -28,18 +28,28 @@ VHD Set files are a meta data file used to store VM group virtual disk snapshot 
 ## Creating a VHD Set file from Powershell
 Use the powershell cmdlet New-VHD, with the filetype .VHDS in the file path. For example, the following creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
 
+``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
+```
 
 ## Migrating a shared VHDX file to a VHD Set file
 Migrating an existing shared VHDX to a VHDS requires taking the VM offline. The follow are the best practice steps for migrating a shared VHDX to a VHD Set file. 
 
 1.	Remove the VHDX from the VM 
--	PS c:\>Remove-VMHardDiskDrive existing.vhdx
+  ``` PowerShell
+  PS c:\>Remove-VMHardDiskDrive existing.vhdx
+  ```
+  
 2.	Convert the VHDX to a VHDS
--	PS c:\>Convert-VHD existing.vhdx new.vhds
+  ``` PowerShell
+  PS c:\>Convert-VHD existing.vhdx new.vhds
+  ```
+  
 3.	Add the VHDS to the VM
--	PS c:\>Add-VMHardDiskDrive new.vhds
-
+  ``` PowerShell
+  PS c:\>Add-VMHardDiskDrive new.vhds
+  ```
+  
 
 
 
