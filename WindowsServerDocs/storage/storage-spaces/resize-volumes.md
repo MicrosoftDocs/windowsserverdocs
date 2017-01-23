@@ -34,7 +34,7 @@ For example:
 Get-VirtualDisk
 ```
 
-To follow associations from one object to the next, pipe one **Get-** cmdlet into another.
+To follow associations between objects in the stack, pipe one **Get-** cmdlet into the next.
 
 For example, here's how to get from a virtual disk up to its volume:
 
