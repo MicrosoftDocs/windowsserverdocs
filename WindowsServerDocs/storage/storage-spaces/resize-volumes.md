@@ -18,11 +18,11 @@ This topic provides instructions for resizing volumes in Storage Spaces Direct.
 
 ### Capacity in the storage pool
 
-Before you resize a volume, make sure you have enough capacity in the storage pool to accommodate its new, larger footprint. For example, when resizing a three-way mirror volume from 1 TB to 2 TB, its footprint would grow from 3 TB to 6 TB. For the resize to succeed, you would need at least (6 - 3) = 3 TB unallocated in the storage pool.
+Before you resize a volume, make sure you have enough capacity in the storage pool to accommodate its new, larger footprint. For example, when resizing a three-way mirror volume from 1 TB to 2 TB, its footprint would grow from 3 TB to 6 TB. For the resize to succeed, you would need at least (6 - 3) = 3 TB of available capacity in the storage pool.
 
-### Familiarity with volumes in SM-API
+### Familiarity with volumes in Storage Spaces
 
-In Storage Spaces Direct, every "volume" is represented in the Storage Management API by several stacked objects: the cluster shared volume, which is a volume; the partition; the disk, which is a virtual disk; and one or more storage tiers (if applicable). To resize a volume, you will need to resize several of these objects.
+In Storage Spaces Direct, every volume is comprised of several stacked objects: the cluster shared volume (CSV), which is a volume; the partition; the disk, which is a virtual disk; and one or more storage tiers (if applicable). To resize a volume, you will need to resize several of these objects.
 
 ![volumes-in-smapi](media/resize-volumes/volumes-in-smapi.png)
 
@@ -52,7 +52,7 @@ Stop your workloads and then run:
 Get-ClusterSharedVolume <Name> | Suspend-ClusterResource
 ```
 
-## Step 1 – Resize virtual disk
+## Step 1 – Resize the virtual disk
 
 The virtual disk may use storage tiers, or not, depending on how it was created.
 
@@ -62,7 +62,7 @@ To check, run the following cmdlet:
 Get-VirtualDisk <FriendlyName> | Get-StorageTier 
 ```
 
-If the cmdlet returns nothing, the virtual disk does not use storage tiers.
+If the cmdlet returns nothing, the virtual disk doesn't use storage tiers.
 
 ### No storage tiers
 
@@ -107,7 +107,7 @@ Next, resize the partition using the **Resize-Partition** cmdlet. The virtual di
 
 Provide the new size in the **-Size** parameter. We recommend using the maximum supported size, as shown below.
 
-```
+```PowerShell
 # Choose virtual disk
 $VirtualDisk = Get-VirtualDisk <FriendlyName>
 
@@ -122,7 +122,7 @@ When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** fo
 
 ![Resize-Partition](media/resize-volumes/Resize-Partition.gif)
 
-That's it! You're done!	
+That's it!
 
 > [!TIP]
 > You can verify the volume has the new size by running **Get-Volume**.
