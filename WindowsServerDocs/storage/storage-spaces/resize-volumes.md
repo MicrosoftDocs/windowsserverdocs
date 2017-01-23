@@ -15,30 +15,7 @@ ms.date: 01/23/2017
 This topic provides instructions for resizing volumes in Storage Spaces Direct.
 
 > [!TIP]
-> If you just want the instructions, skip to [Suspend IO](...).
-
-In Storage Spaces Direct, every "volume" is actually several stacked objects: the cluster shared volume is a volume; the volume sits on a partition; the partition sits on a disk; that disk is a virtual disk; that virtual disk may (or not) be comprised of storage tiers.
-
-You can familiarize yourself with these objects in PowerShell by running:
-
-```
-Get-ClusterSharedVolume
-Get-Volume
-Get-Partition
-Get-Disk
-Get-VirtualDisk
-Get-StorageTier
-```
-
-You can follow associations between each object in the stack by piping **Get-** cmdlets into one another.
-
-For example, here’s how to get from a virtual disk up to its volume.
-
-```
-Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
-```
-
-To resize a volume, you need to resize several of these objects.
+> If you just want the instructions, skip to [Suspend IO](#suspend-io).
 
 ## Prerequisite capacity
 
@@ -64,6 +41,41 @@ Get-StorageSubSystem Cluster* | Get-StorageHealthReport
 ```
 
 (IMAGE HERE)
+
+## Volumes: Under the hood
+
+In Storage Spaces Direct, every "volume" is actually several stacked objects: the *cluster shared volume* is a *volume*; the volume sits on a *partition*; the partition sits on a *disk*; that disk is a *virtual disk*; the virtual disk may (or not) be comprised of *storage tiers*.
+
+You can familiarize yourself with these objects in PowerShell by running these cmdlets:
+
+```
+Get-ClusterSharedVolume
+```
+```
+Get-Volume
+```
+```
+Get-Partition
+```
+```
+Get-Disk
+```
+```
+Get-VirtualDisk
+```
+```
+Get-StorageTier
+```
+
+You can follow associations between each object in the stack by piping **Get-** cmdlets into one another.
+
+For example, here's how to get from a virtual disk up to its volume.
+
+```
+Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
+```
+
+To resize a volume, you need to resize several of these objects.
 
 ## Suspend IO
 
@@ -97,7 +109,7 @@ Provide the new size in the **-Size** parameter.
 Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
 ```
 
-When you resize the VirtualDisk, the Disk follows automatically and is resized too.
+When you resize the **VirtualDisk**, the **Disk** follows automatically and is resized too.
 
 (IMAGE HERE)
 
@@ -120,7 +132,9 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 > [!TIP]
 > If your tiers are different physical media types (such as **MediaType = SSD** and **MediaType = HDD**) you need to ensure you have enough capacity of each media type in the storage pool to accommodate the new, larger footprint of each tier.
 
-When you resize the StorageTier(s), the VirtualDisk and Disk follow automatically and are resized too.
+When you resize the **StorageTier**(s), the **VirtualDisk** and **Disk** follow automatically and are resized too.
+
+(IMAGE HERE)
 
 ## Step 2 – Resize partition
 
@@ -132,25 +146,25 @@ Provide the new size in the **-Size** parameter. We recommend using the maximum 
 # Choose virtual disk
 $VirtualDisk = Get-VirtualDisk <FriendlyName>
 
-# Get its partition with PartitionNumber = 2
+# Get its partition
 $Partition = $VirtualDisk | Get-Disk | Get-Partition | Where PartitionNumber -Eq 2
 
-# Resize partition to its maximum supported size 
+# Resize to its maximum supported size 
 $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).SizeMax
 ```
 
-When you resize the Partition, the Volume and ClusterSharedVolume follow automatically and are resized too.
+When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** follow automatically and are resized too.
 
 (IMAGE HERE)
 
-That’s it! You’re done!	
+That's it! You're done!	
 
 > [!TIP]
 > You can verify the volume has the new size by running **Get-Volume**.
 
 ## Resume IO
 
-Last, don’t forget to allow IO to the volume to resume, and then resume your workloads.
+Last, don't forget to allow IO to the volume to resume, and then resume your workloads.
 
 ```
 Get-ClusterSharedVolume <FriendlyName> | Resume-ClusterResource
