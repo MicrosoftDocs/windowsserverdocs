@@ -101,7 +101,7 @@ When you resize the **StorageTier**(s), the **VirtualDisk** and **Disk** follow 
 
 ![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
 
-## Step 2 – Resize partition
+## Step 2 – Resize the partition
 
 Next, resize the partition using the **Resize-Partition** cmdlet. The virtual disk is expected to have two partitions: the first is Reserved and should not be modified; the one you need to resize has **PartitionNumber = 2** and **Type = Basic**.
 
