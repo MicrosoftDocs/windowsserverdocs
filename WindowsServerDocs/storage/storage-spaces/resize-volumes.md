@@ -14,35 +14,33 @@ ms.date: 01/23/2017
 
 This topic provides instructions for resizing volumes in Storage Spaces Direct.
 
-> [!TIP]
-> If you just want the instructions, skip to [Suspend IO](#suspend-io).
+## Prerequisites
 
-## Prerequisite capacity
+### Capacity in the storage pool
 
-Before you resize a volume, make sure you have enough capacity in the storage pool to accommodate its new, larger footprint. For example, when extending a three-way mirror volume from 1 TB to 2 TB, its footprint will grow from 3 TB to 6 TB.
+Before you resize a volume, make sure you have enough capacity in the storage pool to accommodate its new, larger footprint. For example, when resizing a three-way mirror volume from 1 TB to 2 TB, its footprint would grow from 3 TB to 6 TB. For the resize to succeed, you would need at least (6 - 3) = +3 TB unallocated in the storage pool.
 
-```
-1 TB x 33.3% = 3 TB (original footprint)
-2 TB x 33.3% = 6 TB (new footprint)
-```
+### Familiarity with volumes in SM-API
 
-For the resize to succeed, you will need at least (6 - 3) = 3 TB free in the storage pool.
-
-## Volumes: Under the hood
-
-In Storage Spaces Direct, every "volume" is actually several stacked objects, as shown below. The *cluster shared volume* wraps the *volume*; the volume sits on the *partition*; the partition sits on the *disk*; that disk is a *virtual disk*; the virtual disk may be comprised of *storage tiers*, or not.
+In Storage Spaces Direct, every "volume" is comprised of several stacked objects: the cluster shared volume, which is a volume; the partition; the disk, which is a virtual disk; and one or more storage tiers (if applicable). To resize a volume, you will need to resize several of these objects.
 
 ![volume-under-the-hood](media/resize-volumes/volume-under-the-hood.png)
 
-You can follow associations between each object in the stack by piping **Get-** cmdlets into one another.
+To familiarize yourself with them, try running **Get-** with the corresponding noun in PowerShell.
 
-For example, here's how to get from a virtual disk up to its volume.
+For example:
+
+```
+Get-VirtualDisk
+```
+
+To follow associations from one object to the next, pipe one **Get-** cmdlet into another.
+
+For example, here's how to get from a virtual disk up to its volume:
 
 ```
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
-
-To resize a volume, you need to resize several of these.
 
 ## Suspend IO
 
@@ -51,7 +49,7 @@ Before you begin, we recommend temporarily suspending all IO to the volume.
 Stop your workloads and then run:
 
 ```
-Get-ClusterSharedVolume <FriendlyName> | Suspend-ClusterResource
+Get-ClusterSharedVolume <Name> | Suspend-ClusterResource
 ```
 
 ## Step 1 – Resize virtual disk
@@ -134,7 +132,7 @@ That's it! You're done!
 Last, don't forget to allow IO to the volume to resume, and then resume your workloads.
 
 ```
-Get-ClusterSharedVolume <FriendlyName> | Resume-ClusterResource
+Get-ClusterSharedVolume <Name> | Resume-ClusterResource
 ```
 
 ## See also
