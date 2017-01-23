@@ -26,40 +26,13 @@ Before you resize a volume, make sure you have enough capacity in the storage po
 2 TB x 33.3% = 6 TB (new footprint)
 ```
 
-(IMAGE HERE)
-
-```
-(new - original) = 6 TB - 3 TB = +3 TB
-```
-
-In this example, for the resize to succeed you need at least another 3 TB unallocated in the storage pool.
+For the resize to succeed, you will need at least (6 - 3) = 3 TB free in the storage pool.
 
 ## Volumes: Under the hood
 
-In Storage Spaces Direct, every "volume" is actually several stacked objects: the *cluster shared volume* is a *volume*; the volume sits on a *partition*; the partition sits on a *disk*; that disk is a *virtual disk*; the virtual disk may (or not) be comprised of *storage tiers*.
+In Storage Spaces Direct, every "volume" is actually several stacked objects, as shown below. The *cluster shared volume* wraps the *volume*; the volume sits on the *partition*; the partition sits on the *disk*; that disk is a *virtual disk*; the virtual disk may be comprised of *storage tiers*, or not.
 
-(IMAGE HERE)
-
-You can familiarize yourself with these objects in PowerShell by running these cmdlets:
-
-```
-Get-ClusterSharedVolume
-```
-```
-Get-Volume
-```
-```
-Get-Partition
-```
-```
-Get-Disk
-```
-```
-Get-VirtualDisk
-```
-```
-Get-StorageTier
-```
+![volume-under-the-hood](media/resize-volumes/volume-under-the-hood.png)
 
 You can follow associations between each object in the stack by piping **Get-** cmdlets into one another.
 
@@ -69,7 +42,7 @@ For example, here's how to get from a virtual disk up to its volume.
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
-To resize a volume, you need to resize several of these objects.
+To resize a volume, you need to resize several of these.
 
 ## Suspend IO
 
