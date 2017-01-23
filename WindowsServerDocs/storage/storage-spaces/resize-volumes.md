@@ -24,7 +24,7 @@ Before you resize a volume, make sure you have enough capacity in the storage po
 
 In Storage Spaces Direct, every "volume" is comprised of several stacked objects: the cluster shared volume, which is a volume; the partition; the disk, which is a virtual disk; and one or more storage tiers (if applicable). To resize a volume, you will need to resize several of these objects.
 
-![volume-under-the-hood](media/resize-volumes/volume-under-the-hood.png)
+![volumes-in-smapi](media/resize-volumes/volumes-in-smapi.png)
 
 To familiarize yourself with them, try running **Get-** with the corresponding noun in PowerShell.
 
