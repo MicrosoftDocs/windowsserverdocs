@@ -19,7 +19,7 @@ This topic provides instructions for resizing volumes in Storage Spaces Direct.
 
 ## Prerequisite capacity
 
-Before you resize, make sure you have enough capacity in the storage pool to accommodate its new, larger footprint. For example, when extending a three-way mirror volume from 1 TB to 2 TB, its footprint will grow from 3 TB to 6 TB.
+Before you resize a volume, make sure you have enough capacity in the storage pool to accommodate its new, larger footprint. For example, when extending a three-way mirror volume from 1 TB to 2 TB, its footprint will grow from 3 TB to 6 TB.
 
 ```
 1 TB x 33.3% = 3 TB (original footprint)
@@ -34,17 +34,11 @@ Before you resize, make sure you have enough capacity in the storage pool to acc
 
 In this example, for the resize to succeed you need at least another 3 TB unallocated in the storage pool.
 
-You can check by viewing the **CapacityPhysicalPooledAvailable** in the output of this cmdlet.
-
-```
-Get-StorageSubSystem Cluster* | Get-StorageHealthReport
-```
-
-(IMAGE HERE)
-
 ## Volumes: Under the hood
 
 In Storage Spaces Direct, every "volume" is actually several stacked objects: the *cluster shared volume* is a *volume*; the volume sits on a *partition*; the partition sits on a *disk*; that disk is a *virtual disk*; the virtual disk may (or not) be comprised of *storage tiers*.
+
+(IMAGE HERE)
 
 You can familiarize yourself with these objects in PowerShell by running these cmdlets:
 
@@ -111,7 +105,7 @@ Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
 
 When you resize the **VirtualDisk**, the **Disk** follows automatically and is resized too.
 
-(IMAGE HERE)
+![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
 
 ### With storage tiers
 
@@ -134,7 +128,7 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 
 When you resize the **StorageTier**(s), the **VirtualDisk** and **Disk** follow automatically and are resized too.
 
-(IMAGE HERE)
+![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
 
 ## Step 2 – Resize partition
 
@@ -155,7 +149,7 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 
 When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** follow automatically and are resized too.
 
-(IMAGE HERE)
+![Resize-Partition](media/resize-volumes/Resize-Partition.gif)
 
 That's it! You're done!	
 
