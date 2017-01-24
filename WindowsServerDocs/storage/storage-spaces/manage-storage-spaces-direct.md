@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: jasongerend
-ms.date: 1/10/2017
+ms.date: 1/23/2017
 description: Resources to help you manage a Storage Spaces Direct deployment consisting of multiple servers clustered to provide software-defined storage using Windows Server.
 ---
 # Managing Storage Spaces Direct
@@ -18,10 +18,13 @@ description: Resources to help you manage a Storage Spaces Direct deployment con
 
 This topic provides resources that help you manage a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster. Storage Spaces Direct is a Windows Server-based storage solution that uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage.
 
-## Resources for managing
+When managing Storage Spaces Direct, you can use Windows PowerShell, System Center Virtual Machine Manager (VMM) and Operations Manager, and/or Failover Cluster Manager.
+
+## Resources for managing Storage Spaces Direct
 
 - [Adding servers or drives to Storage Spaces Direct](add-nodes.md)
 - [Updating drive firmware in Windows Server 2016](..\update-firmware.md)
+- [Extending volumes](resize-volumes.md)
 
 ## See also
 
