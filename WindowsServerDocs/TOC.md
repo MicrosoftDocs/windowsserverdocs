@@ -1067,6 +1067,7 @@
 #### [Managing](storage/storage-spaces/manage-storage-spaces-direct.md)
 ##### [Adding nodes or drives](storage/storage-spaces/add-nodes.md)
 ##### [Updating drive firmware](storage/update-firmware.md)
+##### [Extending volumes](storage/storage-spaces/resize-volumes.md)
 ### [Storage-class memory health management](storage/storage-spaces/Storage-class-memory-health.md)
 ### [iSCSI boot](storage/iscsi/iscsi-boot-overview.md)
 

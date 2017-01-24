@@ -1,5 +1,6 @@
 ---
-title: Resize volumes in Storage Spaces Direct
+title: Extending volumes in Storage Spaces Direct
+ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
 ms.prod: windows-server-threshold
 ms.author: cosmosdarwin
 ms.manager: eldenc
@@ -12,7 +13,7 @@ ms.date: 01/23/2017
 # Extending volumes in Storage Spaces Direct
 > Applies To: Windows Server 2016
 
-This topic provides instructions for resizing volumes in Storage Spaces Direct.
+This topic provides instructions for resizing volumes in [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
 ## Prerequisites
 
@@ -30,7 +31,7 @@ To familiarize yourself with them, try running **Get-** with the corresponding n
 
 For example:
 
-```
+```PowerShell
 Get-VirtualDisk
 ```
 
@@ -38,7 +39,7 @@ To follow associations between objects in the stack, pipe one **Get-** cmdlet in
 
 For example, here's how to get from a virtual disk up to its volume:
 
-```
+```PowerShell
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
@@ -48,7 +49,7 @@ Before you begin, we recommend temporarily suspending all IO to the volume.
 
 Stop your workloads and then run:
 
-```
+```PowerShell
 Get-ClusterSharedVolume <Name> | Suspend-ClusterResource
 ```
 
@@ -58,7 +59,7 @@ The virtual disk may use storage tiers, or not, depending on how it was created.
 
 To check, run the following cmdlet:
 
-```
+```PowerShell
 Get-VirtualDisk <FriendlyName> | Get-StorageTier 
 ```
 
@@ -70,7 +71,7 @@ If the virtual disk has no storage tiers, you can resize it directly using the *
 
 Provide the new size in the **-Size** parameter.
 
-```
+```PowerShell
 Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
 ```
 
@@ -84,13 +85,13 @@ If the virtual disk uses storage tiers, you can resize each tier separately usin
 
 Get the names of the storage tiers by following the associations from the virtual disk.
 
-```
+```PowerShell
 Get-VirtualDisk <FriendlyName> | Get-StorageTier | Select FriendlyName
 ```
 
 Then, for each tier, provide the new size in the **-Size** parameter.
 
-```
+```PowerShell
 Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 ```
 
@@ -131,10 +132,12 @@ That's it!
 
 Last, don't forget to allow IO to the volume to resume, and then resume your workloads.
 
-```
+```PowerShell
 Get-ClusterSharedVolume <Name> | Resume-ClusterResource
 ```
 
 ## See also
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
+- [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Creating volumes in Storage Spaces Direct](create-volumes.md)
