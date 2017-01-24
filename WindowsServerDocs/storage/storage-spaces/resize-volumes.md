@@ -1,5 +1,6 @@
 ---
-title: Resize volumes in Storage Spaces Direct
+title: Extending volumes in Storage Spaces Direct
+ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
 ms.prod: windows-server-threshold
 ms.author: cosmosdarwin
 ms.manager: eldenc
