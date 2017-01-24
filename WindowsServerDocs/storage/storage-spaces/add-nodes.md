@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 12/7/2016
+ms.date: 01/23/2017
 ---
 # Adding servers or drives to Storage Spaces Direct
 >Applies To: Windows Server 2016
