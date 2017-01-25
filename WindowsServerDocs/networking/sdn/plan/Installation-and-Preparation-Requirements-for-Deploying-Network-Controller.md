@@ -1,7 +1,7 @@
 ---
 title: Installation and Preparation Requirements for Deploying Network Controller
 description: You can use this topic to prepare your datacenter for Network Controller deployment.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: get-started-article

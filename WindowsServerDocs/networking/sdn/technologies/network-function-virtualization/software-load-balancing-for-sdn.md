@@ -1,7 +1,7 @@
 ---
 title: Software Load Balancing (SLB) for SDN
 description: You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

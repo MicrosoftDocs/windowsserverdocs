@@ -1,7 +1,7 @@
 ---
 title: RAS Gateway High Availability
 description: You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN) in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

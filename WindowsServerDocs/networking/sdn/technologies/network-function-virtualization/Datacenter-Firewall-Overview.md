@@ -1,7 +1,7 @@
 ---
 title: Datacenter Firewall Overview
 description: You can use this topic to learn about Datacenter Firewall, which is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
