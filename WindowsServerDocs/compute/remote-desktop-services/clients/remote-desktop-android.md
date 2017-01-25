@@ -17,17 +17,14 @@ ms.author: elizapo
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-Devices running Android version 4.0.3 and newer are supported.
+You can use the Remote Desktop client for Android to work with Windows apps, resources, and desktops directly from your Android device.
 
-Microsoft Remote Desktop Client lets you get work done from almost anywhere by providing an easy way to use your mobile device to: 
+Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
-- Connect to a remote PC to access all of your apps, files, and network resources
-- Access published Windows apps hosted on Microsoft Azure
+> [!NOTE]
+> You can run the client on Android 4.0.3 and newer devices.
 
-
-You can run the client on Android 4.0.3 and newer devices.
-
-## Start using the Remote Desktop client on your Android device
+## Get the RD client and start using it
 
 To get started, download the client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android). Next you need to [configure the remote PC that you want to accept remote connections](https://social.technet.microsoft.com/forums/en-us/169da213-5173-4552-9005-c7a355c0d12a/connect-to-your-pc-using-microsoft-rdp-apps?forum=winrdc). 
 
