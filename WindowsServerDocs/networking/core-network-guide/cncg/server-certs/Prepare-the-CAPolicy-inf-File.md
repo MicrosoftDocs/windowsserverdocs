@@ -1,11 +1,7 @@
 ---
 title: Prepare the CAPolicy.inf File
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: c36201de-7eb6-4e38-87da-cf7dd981a442
 ms.prod: windows-server-threshold
