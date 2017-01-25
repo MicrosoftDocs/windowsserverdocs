@@ -1,7 +1,7 @@
 ---
 title: Plan a Software Defined Network Infrastructure
 description: This topic provides information on how to plan your Software Defined Network (SDN) infrastructure deployment.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
