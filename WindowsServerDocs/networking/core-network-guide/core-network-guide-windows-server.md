@@ -1,13 +1,9 @@
 ---
 title: Core Network Guide for Windows Server 2016
 description: This topic provides an overview of the Core Network Guide, which allows you to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
 ms.author: jamesmci
