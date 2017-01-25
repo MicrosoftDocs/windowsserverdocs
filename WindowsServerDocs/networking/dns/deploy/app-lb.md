@@ -1,13 +1,9 @@
 ---
 title: Use DNS Policy for Application Load Balancing
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-dns
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: jamesmci
