@@ -1,7 +1,7 @@
 ---
 title: DirectAccess
 description: You can use this topic for a brief overview of DirectAccess in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
