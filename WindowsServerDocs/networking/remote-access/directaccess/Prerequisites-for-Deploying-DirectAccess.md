@@ -1,7 +1,7 @@
 ---
 title: Prerequisites for Deploying DirectAccess
 description: This topic provides prerequisites for DirectAccess deployment in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
