@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
-manager: dongill
+manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---

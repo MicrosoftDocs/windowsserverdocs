@@ -1,7 +1,7 @@
 ---
 title: Manage NPS Servers
 description: This topic provides links to procedures for managing NPS servers in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article

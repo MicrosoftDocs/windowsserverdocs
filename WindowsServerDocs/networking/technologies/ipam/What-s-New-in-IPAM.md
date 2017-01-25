@@ -1,7 +1,7 @@
 ---
 title: What's New in IPAM
 description: This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
