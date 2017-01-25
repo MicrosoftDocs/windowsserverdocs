@@ -1,7 +1,7 @@
 ---
 title: Monitor the existing load on the Remote Access server
 description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
