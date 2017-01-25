@@ -126,7 +126,7 @@
 #### [Additional Remote Desktop support](compute/remote-desktop-services/rds-get-support.md)
 #### [Remote Desktop clients](compute/remote-desktop-services/clients/remote-desktop-clients.md)
 ##### [Supported PCs](compute/remote-desktop-services/clients/remote-desktop-supported-config.md)
-##### [Grant Remote Desktop access to your PC](compute/remote-desktop-services/clients/remote-desktop-allow-access)
+##### [Grant Remote Desktop access to your PC](compute/remote-desktop-services/clients/remote-desktop-allow-access.md)
 ##### [Getting started with Remote Desktop client on Android](compute/remote-desktop-services/clients/remote-desktop-android.md)
 ##### [Getting started with Remote Desktop client on iOS](compute/remote-desktop-services/clients/remote-desktop-ios.md)
 ##### [Getting started with Remote Desktop client on Mac](compute/remote-desktop-services/clients/remote-desktop-mac.md)
