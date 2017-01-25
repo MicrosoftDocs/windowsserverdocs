@@ -1,7 +1,7 @@
 ---
 title: Remote Access Server Role Documentation
 description: This topic provides links to documentation for Remote Access in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
