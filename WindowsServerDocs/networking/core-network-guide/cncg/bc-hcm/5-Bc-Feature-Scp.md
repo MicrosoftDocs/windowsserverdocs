@@ -1,13 +1,9 @@
 ---
 title: Install the BranchCache Feature and Configure the Hosted Cache Server by Service Connection Point
-ms.custom: na
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9adf420b-5a58-4e59-9906-71bd58f757fd
 ms.author: jamesmci

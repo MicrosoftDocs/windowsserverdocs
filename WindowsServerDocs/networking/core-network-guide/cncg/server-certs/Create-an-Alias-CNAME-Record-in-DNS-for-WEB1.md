@@ -1,11 +1,7 @@
 ---
 title: Create an Alias (CNAME) Record in DNS for WEB1
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
 ms.prod: windows-server-threshold

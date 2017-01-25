@@ -1,11 +1,7 @@
 ---
 title: Verify Server Enrollment of a Server Certificate
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
 ms.prod: windows-server-threshold
