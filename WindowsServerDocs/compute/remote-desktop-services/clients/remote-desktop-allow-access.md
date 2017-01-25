@@ -12,7 +12,7 @@ ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 01/24/2017
+ms.date: 01/25/2017
 ---
 # Remote Desktop - Allow access to your PC
 
@@ -24,7 +24,7 @@ To automatically configure your PC for remote access, download and run the [Micr
 
 ## Should I enable Remote Desktop?
 
-If you only want to access your PC when you are physically sitting in front of it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your machine to a local network. You should only enable Remote Desktop in trusted networks. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
+If you only want to access your PC when you are physically sitting in front of it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC on your local network. You should only enable Remote Desktop in trusted networks, like your own home. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
 
 Be aware that when you enable access to Remote Desktop, you are granting anyone in the Administrator's group, as well as any additional users you select though the **Select user** button, the ability to remotely access their accounts on the computer.
 
