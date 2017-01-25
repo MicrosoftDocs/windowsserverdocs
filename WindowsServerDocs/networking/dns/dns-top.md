@@ -1,14 +1,9 @@
 ---
 title: Domain Name System (DNS)
 description: This topic provides an overview of DNS in Windows Server 2016
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-dns
-ms.tgt_pltfrm: na
+ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 1324ba18-4e28-4b9d-bbe7-75707e6d30ab
 ms.author: jamesmci

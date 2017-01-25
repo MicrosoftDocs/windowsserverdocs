@@ -1,14 +1,9 @@
 ---
 title: What's New in DNS Client in Windows Server 2016
 description: This topic provides an overview of new features in DNS Client in Windows Server 2016 and Windows 10
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-dns
-ms.tgt_pltfrm: na
+ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 6edaba84-4595-4fd8-95d7-64d4d975a38a
 ms.author: jamesmci

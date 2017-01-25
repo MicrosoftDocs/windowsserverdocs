@@ -1,7 +1,7 @@
 ---
 title: Deploy Software Defined Networking
 description: This topic provides links to topics on how to deploy a Microsoft Software Defined Network (SDN) infrastructure in Windows Server 2016. 
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

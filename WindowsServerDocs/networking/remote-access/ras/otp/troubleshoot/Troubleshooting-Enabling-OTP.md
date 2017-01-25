@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Enabling OTP
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

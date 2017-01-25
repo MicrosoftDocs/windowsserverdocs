@@ -1,7 +1,7 @@
 ---
 title: Verify Configuration After NPS Server Changes
 description: You can use this topic to verify Windows Server 2016 Network Policy Server configuration after an IP address or name change to the server.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article

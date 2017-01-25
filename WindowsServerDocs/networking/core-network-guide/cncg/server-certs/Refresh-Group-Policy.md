@@ -1,11 +1,7 @@
 ---
 title: Refresh Group Policy
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
 ms.prod: windows-server-threshold

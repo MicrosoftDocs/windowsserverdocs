@@ -1,7 +1,7 @@
 ---
 title: Software Defined Networking Technologies
 description: The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

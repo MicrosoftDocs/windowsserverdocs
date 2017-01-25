@@ -1,7 +1,7 @@
 ---
 title: STEP 3 Install and Configure CLIENT2
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
