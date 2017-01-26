@@ -57,6 +57,7 @@
 ##### [Upgrade virtual machine version](compute/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
 #### [Manage](compute/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
 ##### [Choose between standard or production checkpoints](compute/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
+##### [Create a VHD set](compute/hyper-v/manage/Create-VHDSet-file.md)
 ##### [Enable or disable checkpoints](compute/hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md)
 ##### [Manage hosts with Hyper-V Manager](compute/hyper-v/manage/Remotely-manage-Hyper-V-hosts.md)
 ##### [Manage Integration Services](compute/hyper-v/manage/Manage-Hyper-V-integration-services.md)
