@@ -30,7 +30,7 @@ manager: dongill
 
 There are more options than ever before to help you and your customers take advantage of features in Windows Server 2016, with minimal impact to your current services and workloads.
 
-- Try out the latest operating system with your application by downloading the evaluation version of [Windows Server](https://www.microsoft.com/en-us/cloud-platform/windows-server) for testing on your premises. Once testing is complete and quality confirmed, you can perform a simple license conversion with a retail license key (requires restarting).
+- Try out the latest operating system with your application by downloading the evaluation version of [Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016) for testing on your premises. Once testing is complete and quality confirmed, you can perform a simple license conversion with a retail license key (requires restarting).
 
 - [Microsoft Azure](http://microsoft.azure.com) can also be used on a trial basis for testing to ensure your custom application will work on the latest server operating system. Once testing is complete and quality confirmed, [migrate to the latest Windows Server version](https://technet.microsoft.com/windowsserver/dn527667#upgrade) on your premises. 
 
