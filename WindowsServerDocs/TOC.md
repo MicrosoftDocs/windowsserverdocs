@@ -681,6 +681,7 @@
 ##### [Running WSUS Replica mode](management/windows-server-update-services/manage/running-wsus-replica-mode.md)
 ##### [WSUS Messages and Troubleshooting Tips](management/windows-server-update-services/manage/wsus-messages-and-troubleshooting-tips.md)
 #### [Express update delivery ISV support](management/windows-server-update-services/deploy/express-update-delivery-isv-support.md)
+#### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](management/windows-server-update-services/manage/wid-to-sql-migration.md)
 ### [Windows Commands](management/windows-commands/windows-commands.md)
 #### [A-Z list](management/windows-commands/a-z-list.md)
 #### [Command-Line Syntax Key](management/windows-commands/command-line-syntax-key.md)
