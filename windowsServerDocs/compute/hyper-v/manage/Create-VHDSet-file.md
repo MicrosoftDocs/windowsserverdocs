@@ -16,11 +16,12 @@ ms.reviewer: kathydav
 # Create Hyper-V VHD Set files
 VHD Set files are a new shared Virtual Disk model for guest clusters in Windows Server 2016. VHD Set files support online resizing of shared virtual disks, support Hype-V Replica, and can be included in application-consistent checkpoints. 
 
-All aspects of managing the checkpoint chains and merging of the shared VHD set is handled within the new Hyper-V 2016 infrastructure. Management software can run disk operations like online resizing on VHD Set files in the same way as on .VHDX files. Consequently, management software doesn't need to know about the VHD Set file format.
-
 VHD Set files use a new VHD file type, .VHDS. VHD Set files store checkpoint information about the group virtual disk used in guest clusters, in the form of metadata.
 
+Hyper-V handles all aspects of managing the checkpoint chains and merging the shared VHD set. Management software can run disk operations like online resizing on VHD Set files in the same way it does for .VHDX files. This means that management software doesn't need to know about the VHD Set file format.
+
 ## Create a VHD Set file from Hyper-V Manager
+
 1.	Open Hyper-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
 2.	In the Action pane, click **New**, and then click **Hard Disk**.
 3.	On the **Choose Disk Format** page, select **VHD Set** as the format of the virtual hard disk.
@@ -28,26 +29,28 @@ VHD Set files use a new VHD file type, .VHDS. VHD Set files store checkpoint inf
 5.	After you have finished configuring the virtual hard disk, click **Finish**.
 
 ## Create a VHD Set file from Windows PowerShell
-Use the New-VHD cmdlet, with the file type .VHDS in the file path. This example creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
+
+Use the [New-VHD](https://technet.microsoft.com/library/hh848503.aspx) cmdlet, with the file type .VHDS in the file path. This example creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
 
 ``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
 ```
 
-## Migratea shared VHDX file to a VHD Set file
-Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is recommended process:
+## Migrate a shared VHDX file to a VHD Set file
 
-1.	Remove the VHDX from the VM 
+Migrating an existing shared VHDX to a VHDS requires taking the VM offline. This is recommended process, using Windows PowerShell:
+
+1.	Remove the VHDX from the VM. For example, run: 
   ``` PowerShell
   PS c:\>Remove-VMHardDiskDrive existing.vhdx
   ```
   
-2.	Convert the VHDX to a VHDS
+2.	Convert the VHDX to a VHDS. For example, run:
   ``` PowerShell
   PS c:\>Convert-VHD existing.vhdx new.vhds
   ```
   
-3.	Add the VHDS to the VM
+3.	Add the VHDS to the VM. For example, run:
   ``` PowerShell
   PS c:\>Add-VMHardDiskDrive new.vhds
   ```
