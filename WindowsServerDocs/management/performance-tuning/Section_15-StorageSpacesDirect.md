@@ -35,4 +35,5 @@ To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDire
 
 ## See also
 
+- [Performance tuning for file servers](./Section_9.0-performance-tuning-for-file-servers.md)
 - [Software-Defined Storage Design Considerations Guide](https://technet.microsoft.com/library/mt243829.aspx) (for Windows Server 2012 R2 and shared SAS storage)
