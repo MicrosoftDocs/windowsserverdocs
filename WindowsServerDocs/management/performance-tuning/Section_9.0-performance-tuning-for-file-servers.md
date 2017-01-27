@@ -1,6 +1,6 @@
 ---
-title: Performance Tuning for File Servers
-description: Performance Tuning for File Servers
+title: Performance tuning for file servers
+description: Performance tuning for file servers running Windows Server
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
@@ -10,25 +10,12 @@ ms.topic: article
 ms.assetid: 08b171dc-bc24-4068-a1e7-1ff099328146
 author: phstee
 ms.author: NedPyle; Danlo; DKruse
-ms.date: 10/31/2016
+ms.date: 1/27/2017
 ---
 
-# Performance Tuning for File Servers
+# Performance tuning for file servers
 
 You should select the proper hardware to satisfy the expected file server load, considering average load, peak load, capacity, growth plans, and response times. Hardware bottlenecks limit the effectiveness of software tuning.
-
-**In this topic:**
-
--   [SMB configuration considerations](#smb)
-
--   [SMB performance tuning](#smbperftuning)
-
--   [Tuning parameters for SMB file servers](#smbtuningpars)
-
--   [Services for NFS model](#servicesnfs)
-
--   [General tuning parameters for clients](#clients)
-
 
 ## <a href="" id="clients"></a>General tuning parameters for clients
 
