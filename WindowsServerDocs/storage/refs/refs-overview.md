@@ -70,7 +70,7 @@ Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for host
 
 ### Basic disks ###
 Deploying ReFS on basic disks is suitable for applications that provide their own resiliency and availibility solutions. 
-- For example, Exchange and [SQL Server AlwaysOn](https://msdn.microsoft.com/en-us/library/hh510230.aspx) both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
+- For example, Exchange and [SQL Server AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx) both introduce their own concepts of resiliency and availability suited for their specific workloads, and they can leverage the scalability offered in ReFS. 
     - (Other SQL Server 2016 deployments that use ReFS, however, are only [supported on Storage Spaces Direct](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/).)
     
 
