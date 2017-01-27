@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
 author: phstee
 ms.author: Vshankar; DanLo; clausjor; StevenEk
-ms.date: 11/17/2016
+ms.date: 1/27/2017
 ---
 
 # Performance tuning for Storage Spaces Direct
@@ -32,3 +32,7 @@ Note that caching over an SSD or NVMe device defaults to write caching, only. Th
 * **NVMe+NVMe** Similarly, if the read capability of the cache NVMe are greater than the combined capacity NVMe, there may be value in enabling read cache. <br>Good cases for read cache in these configurations are expected to be unusual.
 
 To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt634616.aspx) and [Set-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt763265.aspx) cmdlets. The `CacheModeHDD` and `CacheModeSSD` properties define how the cache operates on capacity media of the indicated type.
+
+## See also
+
+- [Software-Defined Storage Design Considerations Guide](https://technet.microsoft.com/library/mt243829.aspx) (for Windows Server 2012 R2 and shared SAS storage)
