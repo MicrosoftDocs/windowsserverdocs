@@ -22,7 +22,7 @@ ms.author: jaimeo
 <br/>
 <br/>
 >[!Note]
-> To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).
+> To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
 
 
 ## [System Requirements](System-Requirements--and-Installation.md)
