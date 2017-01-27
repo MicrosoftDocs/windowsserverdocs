@@ -12,7 +12,7 @@ ms.date: 10/11/2016
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
 
-This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide shared-nothing, software-defined storage for virtual machines hosted in the same hyper-converged cluster.
+This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for virtual machines hosted in the same hyper-converged cluster.
 
 Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! 
 
