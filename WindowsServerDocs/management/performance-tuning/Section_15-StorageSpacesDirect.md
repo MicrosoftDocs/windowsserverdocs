@@ -21,10 +21,9 @@ The following table summarizes the defaults:
 
 | Storage Types | Cache Configuration |
 | --- | --- |
-| Any Single Type | If there is only one type of storage present, the Software Storage Bus is not configured. |
-| SSD+HDD or NVMe+HDD | The fast storage is configured as the cache layer and will cache both reads and writes. |
-| SSD+SSD or NVMe+NVMe | These fast+fast options are targeted to combinations of higher and lower endurance storage, for instance 10DWPD NAND flash SSD for cache and 1.5DWPD NAND flash SSD for capacity. They are enabled by giving Storage Spaces Direct a set of Model strings to identify cache devices with. For more information see the [Enable-StorageSpacesDirect](https://technet.microsoft.com/library/mt589697.aspx) cmdlet reference (`CacheDeviceModel`). <br><br>In a fast+fast system, only writes are cached. Reads are not cached. |
-| NVME+SSD+HDD | The NVMe storage is configured as the cache layer. It will cache both reads and writes for the HDD, but will only cache writes for the SSD. <br><br>These "three-tier" configurations are most suitable for Multi-Resilient Volumes, which blend mirror and parity. Mirror is allocated from SSD and parity from HDD. Caution should be used in sizing since SSD capacity is fixed. |
+| Any Single Type | If there is only one type of storage present, the Software Storage Bus Cache isn't configured. |
+| SSD+HDD or NVMe+HDD | The fastest storage is configured as the cache layer and caches both reads and writes. |
+| SSD+SSD or NVMe+NVMe | These fast+fast options are targeted to combinations of higher and lower endurance storage, for instance 10 drive writes per day (DWPD) NAND flash SSD for cache and 1.5 DWPD NAND flash SSD for capacity. They're enabled by giving Storage Spaces Direct a set of Model strings to identify cache devices with. For more information see the [Enable-StorageSpacesDirect](https://technet.microsoft.com/library/mt589697.aspx) cmdlet reference (`CacheDeviceModel`). <br><br>In a fast+fast system, only writes are cached. Reads aren't cached. |
 
 Note that caching over an SSD or NVMe device defaults to write caching, only. The intention is that since the capacity device is fast, there is limited value in moving read content to the cache devices. There are cases where this may not hold, though care should be taken since enabling read cache may unnecessarily consume cache device endurance for no increase in performance. Examples may include:
 
@@ -35,5 +34,7 @@ To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDire
 
 ## See also
 
+- [Understanding Storage Spaces Direct](../../storage/storage-spaces/understand-storage-spaces-direct.md)
+- [Planning Storage Spaces Direct](../../storage/storage-spaces/plan-storage-spaces-direct.md)
 - [Performance tuning for file servers](./Section_9.0-performance-tuning-for-file-servers.md)
 - [Software-Defined Storage Design Considerations Guide](https://technet.microsoft.com/library/mt243829.aspx) (for Windows Server 2012 R2 and shared SAS storage)
