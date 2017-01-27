@@ -12,7 +12,7 @@ ms.date: 10/11/2016
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
 
-You can use Storage Spaces Direct to deploy software-defined storage (SDS) for virtual machines, and host the virtual machines on the same cluster in a hyper-converged solution. This guide provides background info about the solution and shows you one way to deploy it. For an overview of Storage Spaces Direct, see [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for virtual machines hosted in the same hyper-converged cluster.
 
 Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! 
 
@@ -419,8 +419,6 @@ When this command is finished, which may take several minutes, the system will b
 
 ### Step 3.6: Create volumes
 
-You can create volumes for Storage Spaces Direct in PowerShell using the **New-Volume** cmdlet or in Failover Cluster Manager using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard*.
-
 We recommend using the **New-Volume** cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
 For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
@@ -433,26 +431,10 @@ The virtual machine’s files should be stored on the systems CSV namespace (exa
 
 You may use in-box tools or other tools to manage the storage and virtual machines, including System Center Virtual Machine Manager.
 
-## Definitions
+## See also
 
-**Networking hardware** Storage Spaces Direct relies on a network to communicate between hosts. For production deployments, it is required to have an RDMA-capable NIC (or a pair of NIC ports).
-
-**Storage hardware**: The storage system consisting of a minimum of four storage nodes with local storage. Each storage node can have internal disks, or disks in an external SAS connected JBOD enclosure. The disk devices can be SATA disks, NVMe disks or SAS disks.
-
-**Software Storage Bus**: The Software Storage Bus is the Storage Spaces Direct-specific software component that spans all the storage nodes and brings together the local storage in each node, so all disks are visible to the Storage Spaces layer above. For more information about Software Storage Bus, see [Software Storage Bus Overview](Software-Storage-Bus-Overview.md).
-
-**Storage pool**: The storage pool spans local storage across all the nodes.
-
-**Storage spaces**: Storage Spaces (aka virtual disks) provide resiliency to disk or node failures as data copies are stored on different storage nodes.
-
-**Resilient File System (ReFS)** ReFS provides the file system in which the Hyper-V VM files are stored. ReFS is a premier file system for virtualized deployments and includes optimizations for Storage Spaces such as error detection and automatic correction. In addition, ReFS provides accelerations for VHD(X) operations such as fixed VHD(X) creation, dynamic VHD(X) growth, and VHD(X) merge.
-
-**Clustered Shared Volumes**: CSVFS layers above ReFS to bring all the mounted volumes into a single namespace accessible through any node.
-
-## See also  
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
--   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
--   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
+-   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
+-   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
--   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)
--   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
+-   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
