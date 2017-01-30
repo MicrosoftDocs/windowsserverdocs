@@ -172,6 +172,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 
 2. Static IP injection may not work if Network Manager has been configured for a given synthetic network adapter on the virtual machine. For smooth functioning of static IP injection please make sure that either Network Manager is either turned off completely or has been turned off for a specific network adapter through its ifcfg-ethX file.
 
+
 3. On Windows Server 2012 R2 while using virtual fibre channel devices, make sure that logical unit number 0 (LUN 0) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.
 
 4. If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed-up VHDs might have to undergo a file system consistency check (fsck) on restore.
@@ -218,7 +219,9 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 15. In Red Hat Enterprise Linux or CentOS 5.2, 5.3, and 5.4 the filesystem freeze functionality is not available, so Live Virtual Machine Backup is also not available.
 
 16. PCI Passthrough and SR-IOV are only available with the Linux Integration Services download on Red Hat Enterprise Linux or CentOS 7.3 or greater.
-See Also
+
+
+### See Also
 
 * [Set-VMFirmware](http://technet.microsoft.com/library/dn464287.aspx)
 
