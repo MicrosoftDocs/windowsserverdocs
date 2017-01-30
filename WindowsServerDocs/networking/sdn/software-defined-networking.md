@@ -139,4 +139,4 @@ Windows Server Containers are a lightweight operating system virtualization meth
 
 If you're interested in discussing SDN technologies with Microsoft or other SDN customers, there are a variety of methods for making contact.
 
-For more information, see [Contact the SDN Team](https://technet.microsoft.com/en-us/windows-server-docs/networking/sdn/contact-sdn-team.md).
+For more information, see [Contact the SDN Team](https://technet.microsoft.com/windows-server-docs/networking/sdn/contact-sdn-team.md).
