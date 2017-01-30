@@ -25,7 +25,7 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > - [Troubleshoot Software Defined Networking](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 > - [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
 > - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)
-> - [Contact the SDN Team](https://technet.microsoft.com/en-us/windows-server-docs/networking/sdn/contact-sdn-team.md)
+> - [Contact the SDN Team](https://technet.microsoft.com/windows-server-docs/networking/sdn/contact-sdn-team.md)
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
 
