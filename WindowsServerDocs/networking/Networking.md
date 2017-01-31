@@ -33,6 +33,7 @@ Read on for more information about using networking in Windows Server 2016.
 ## Software Defined Networking technologies
 
 ### [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md)
+
 You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.
 
 >[!NOTE]
