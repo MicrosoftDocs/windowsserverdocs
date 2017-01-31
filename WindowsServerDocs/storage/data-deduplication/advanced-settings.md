@@ -276,13 +276,13 @@ For example, you may want to disable full Garbage Collection. More information a
 
 * If Data Deduplication is running in a cluster:
 	```PowerShell
-	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
+	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
 	Set-ItemProperty -Path HKLM:\CLUSTER\Dedup -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
 	```
 
 * If Data Deduplication is not running in a cluster:
 	```PowerShell
-	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
+	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
 	```
 
 ### <a id="modifying-dedup-system-settings-available-settings"></a>Available system-wide settings
@@ -304,8 +304,8 @@ For example, you may want to disable full Garbage Collection. More information a
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
-			<td>This setting configures the interval at which regular Garbage Collection jobs become [full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n would mean that every n<sup>th</sup> job was a full Garbage Collection job.</td>
-			<td>Positive integers (inclusive of zero)</td>
+			<td>This setting configures the interval at which regular Garbage Collection jobs become [full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n would mean that every n<sup>th</sup> job was a full Garbage Collection job. Note that full Garbage Collection is always disabled (regardless of the registry value) for volumes with the [Backup Usage Type](understand.md#usage-type-backup). `Start-DedupJob -Type GarbageCollection -Full` may be used if full Garbage Collection is desired on a Backup volume.</td>
+			<td>Integers (-1 indicates disabled)</td>
 			<td>See [this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)</td>
 		</tr>
 	</tbody>
