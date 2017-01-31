@@ -277,7 +277,7 @@ For example, you may want to disable full Garbage Collection. More information a
 * If Data Deduplication is running in a cluster:
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
-	Set-ItemProperty -Path HKLM:\CLUSTER\Dedup -Name DeepGCInterval -Type DWord -Value 0
+	Set-ItemProperty -Path HKLM:\CLUSTER\Dedup -Name DeepGCInterval -Type DWord -Value 0xFFFFFFFF
 	```
 
 * If Data Deduplication is not running in a cluster:
