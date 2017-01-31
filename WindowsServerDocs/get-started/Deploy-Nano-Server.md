@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 12/12/2016
+ms.date: 01/31/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -66,7 +66,7 @@ This table shows the roles and features that are available in this release of Na
 |PowerShell Desired State Configuration (DSC)|-Package Microsoft-NanoServer-DSC-Package<br />**Note:** For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc).|
 |Internet Information Server (IIS)|-Package Microsoft-NanoServer-IIS-Package<br />**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS.|
 |Host support for Windows Containers|-Containers|
-|System Center Virtual Machine Manager agent|-Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V.|
+|System Center Virtual Machine Manager agent|-Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-compute-add-nano-hyper-v).| 
 |System Center Operations Manager agent| Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/en-us/system-center-docs/om/manage/install-agent-on-nano-server.|
 |Data Center Bridging (including DCBQoS)|-Package Microsoft-NanoServer-DCB-Package|
 |Deploying on a virtual machine|-Package Microsoft-NanoServer-Guest-Package|
