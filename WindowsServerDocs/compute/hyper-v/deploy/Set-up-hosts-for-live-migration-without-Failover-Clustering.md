@@ -59,7 +59,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
   
 4.  From **Properties**, click the **Delegation** tab.  
   
-5.  On the delegation tab, select **Trust this computer for delegation to the specified services only** and then select **Use Kerberos only**.  
+5.  On the delegation tab, select **Trust this computer for delegation to the specified services only** and then select **Use any authentication protocol**.  
   
 6.  Click **Add**.  
   
