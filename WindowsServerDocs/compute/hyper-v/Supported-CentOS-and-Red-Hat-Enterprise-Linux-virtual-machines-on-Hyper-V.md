@@ -44,7 +44,7 @@ In this section:
 
 This series only has 64-bit kernels.
 
-|**Feature**|**Windows Server version**|**7.0-7.2**|**7.0-7.1**|**7.3**|**7.2**|**7.1**|**7.0**|
+|**Feature**|**Windows Server version**|**7.0-7.3**|**7.0-7.1**|**7.3**|**7.2**|**7.1**|**7.0**|
 |-|-|-|-|-|-|-|-|
 |**Availability**||[LIS 4.1](http://www.microsoft.com/download/details.aspx?id=51612)|[LIS 4.0](http://www.microsoft.com/download/details.aspx?id=46842)|Built in|Built in|Built in|Built in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -56,7 +56,7 @@ This series only has 64-bit kernels.
 |Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|
 |vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|SR-IOV|2016|||&#10004;||||
+|SR-IOV|2016|&#10004; Note 16||&#10004;||||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|||
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
@@ -77,7 +77,7 @@ This series only has 64-bit kernels.
 |File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;||||||
 |Hyper-V Sockets|2016|&#10004;||||||
-|PCI Passthrough/DDA|2016|||&#10004;||||
+|PCI Passthrough/DDA|2016|&#10004; Note 16||&#10004;||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|||
 |Boot using UEFI|2016, 2012 R2|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|&#10004; Note 14|
 |Secure boot|2016|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -172,6 +172,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 
 2. Static IP injection may not work if Network Manager has been configured for a given synthetic network adapter on the virtual machine. For smooth functioning of static IP injection please make sure that either Network Manager is either turned off completely or has been turned off for a specific network adapter through its ifcfg-ethX file.
 
+
 3. On Windows Server 2012 R2 while using virtual fibre channel devices, make sure that logical unit number 0 (LUN 0) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.
 
 4. If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed-up VHDs might have to undergo a file system consistency check (fsck) on restore.
@@ -217,7 +218,10 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 
 15. In Red Hat Enterprise Linux or CentOS 5.2, 5.3, and 5.4 the filesystem freeze functionality is not available, so Live Virtual Machine Backup is also not available.
 
-See Also
+16. PCI Passthrough and SR-IOV are only available with the Linux Integration Services download on Red Hat Enterprise Linux or CentOS 7.3 or greater.
+
+
+### See Also
 
 * [Set-VMFirmware](http://technet.microsoft.com/library/dn464287.aspx)
 
