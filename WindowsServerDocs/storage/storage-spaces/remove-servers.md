@@ -30,22 +30,35 @@ This cmdlet succeeds quickly, regardless of any capacity considerations, because
 When the drives come back, they are automatically detected and re-associated with the pool, even if they are now in a new server.
 
    >[!WARNING]
-   > Do not distribute drives with pool data from one server into multiple other servers. For example, if one server with ten drives fails (because its motherboard or boot drive failed, for instance), you can move those ten drives into a new server, but you absolutely should not move each of them separately into different other servers.
+   > Do not distribute drives with pool data from one server into multiple other servers. For example, if one server with ten drives fails (because its motherboard or boot drive failed, for instance), you **can** move all ten drives into one new server, but you **cannot** move each of them separately into different other servers.
 
 ## Remove server and remove drives
 
-If you want to permanently scale in, you can remove the server from the cluster *and* remove its drives from the storage pool.
+If you want to scale-in permanently, you can remove the server from the cluster *and* remove its drives from the storage pool.
 
-Use the optional **-CleanUpDisks** flag in PowerShell:
+Use the **Remove-ClusterNode** cmdlet with the optional **-CleanUpDisks** flag:
 
 ```PowerShell
 Get-ClusterNode <Name> | Remove-ClusterNode -CleanUpDisks
 ```
 
-This cmdlet may take a long time (up to many hours) to run because it moves all data away from the server's drives. When it completes, the drives will be removed and "forgotten" by the storage pool, and all volumes will be healthy.
+This cmdlet may take a long time (sometimes many hours) to run because it requires significant data movement: all data stored on all the drives in that server must be moved to other drives in other servers. Once this is complete, the drives will be removed and "forgotten" by the storage pool, and all volumes will be healthy.
 
-   >[!TIP]
-   > For this cmdlet to succeed, you must have enough capacity in the remaining servers to accomodate all your data. For example, if you have four servers with 10 TB each, you have 40 TB of physical storage capacity. After removing one server, you will only have (40 TB - 10 TB) = 30 TB. If you have more than 30 TB of data, this cmdlet will fail immediately, before it begins any data movement.
+### Scale-in requirements
+
+To permanently scale-in, your cluster must meet two requirements. If it does not, the **Remove-ClusterNode -CleanUpDisks** cmdlet will stop (fail) immediately, before it begins any data movement, to minimize disruption.
+
+#### Enough capacity
+
+First, you must have enough physical storage capacity in the remaining servers to accomodate the footprints of all your volumes.
+
+For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you will only have 30 TB of capacity. If the footprints of your volumes are more than 30 TB together, they will not fit in the remaining servers, and the cmdlet will fail.
+
+#### Enough fault domains
+
+Second, you must have enough hardware fault domains (typically servers) to validly provide the resiliency of your volumes.
+
+For example, if your volumes use three-way mirroring for resiliency, you must have at least three servers. If you have exactly three servers, and then you attempt to remove one and all its drives, the cmdlet will fail.
 
 ## See also
 
