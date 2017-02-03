@@ -53,7 +53,7 @@ To permanently scale-in (remove a server *and* its drives), your cluster must me
 
 First, you must have enough storage capacity in the remaining servers to accomodate all your volumes.
 
-For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, and the cmdlet will fail.
+For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you will have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, and the cmdlet will fail.
 
 #### Enough fault domains
 
@@ -70,7 +70,7 @@ This table shows the minimum number of fault domains required for each resilienc
 |    Dual parity         |    4                                |
 
    >[!NOTE]
-   > It is okay to briefly have fewer servers, during failures or maintenance. However, in order for volumes to return to a fully healthy state, you must have the minimum number of fault domains listed above.
+   > It is okay to briefly have fewer servers, such as during failures or maintenance. However, in order for volumes to return to a fully healthy state, you must have the minimum number of servers listed above.
 
 ## See also
 
