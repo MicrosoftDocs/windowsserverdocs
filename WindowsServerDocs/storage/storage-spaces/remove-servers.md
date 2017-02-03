@@ -16,7 +16,7 @@ ms.date: 2/2/2017
 
 This topic describes how to remove servers in [Storage Spaces Direct](storage-spaces-direct-overview.md) using PowerShell.
 
-## Remove a server while leaving its drives in the storage pool
+## Remove a server but leave its drives
 
 If you intend to add the server back into the cluster soon, or if you intend to keep its drives by moving them to another server, you can remove the server from the cluster *without* removing its drives from the storage pool. This is the default behavior if you use Failover Cluster Manager to remove the server.
 
@@ -33,7 +33,7 @@ When the drives come back, they are automatically detected and re-associated wit
    >[!WARNING]
    > Do not distribute drives with pool data from one server into multiple other servers. For example, if one server with ten drives fails (because its motherboard or boot drive failed, for instance), you **can** move all ten drives into one new server, but you **cannot** move each of them separately into different other servers.
 
-## Remove a server and its drives from the storage pool
+## Remove a server and its drives
 
 If you want to permanently remove a server from the cluster (sometimes referred to as scaling-in), you can remove the server from the cluster *and* remove its drives from the storage pool.
 
@@ -47,7 +47,7 @@ This cmdlet might take a long time (sometimes many hours) to run because Windows
 
 ### Requirements
 
-To permanently scale-in (remove a server *and* its drives), your cluster must meet two requirements. If it doesn't, the **Remove-ClusterNode -CleanUpDisks** cmdlet stops (fails) immediately, before it begins any data movement, to minimize disruption.
+To permanently scale-in (remove a server *and* its drives), your cluster must meet the following two requirements. If it doesn't, the **Remove-ClusterNode -CleanUpDisks** cmdlet stops (fails) immediately, before it begins any data movement, to minimize disruption.
 
 #### Enough capacity
 
