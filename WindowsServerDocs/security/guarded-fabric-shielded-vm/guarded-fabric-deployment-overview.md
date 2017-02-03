@@ -16,6 +16,8 @@ ms.date: 02/02/2017
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).
 
+Prefer to watch this on video? Check out the Microsoft Virtual Academy course: [Deploying Shielded VMs and a Guarded Fabric with Windows Server 2016](https://mva.microsoft.com/en-US/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474).
+
 ## What is a guarded fabric
 
 A _guarded fabric_ is a Windows Server 2016 Hyper-V fabric capable of protecting tenant workloads against inspection, theft, and tampering from malware running on the host, as well as from system administrators. 
@@ -139,5 +141,5 @@ The shielding data file also includes the security policy setting for the shield
 
     A lesser level of protection that still provides the compliance benefits of being able to encrypt a VM, but allows Hyper-V admins to do things like use VM console connection and PowerShell Direct. 
 
-Now you can add optional management pieces like VMM or Windows Azure Pack. But if you’d like to create a VM now without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](https://blogs.technet.microsoft.com/datacentersecurity/2016/06/06/step-by-step-creating-shielded-vms-without-vmm/).
+Now you can add optional management pieces like VMM or Windows Azure Pack. But if you’d like to create a VM without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](https://blogs.technet.microsoft.com/datacentersecurity/2016/06/06/step-by-step-creating-shielded-vms-without-vmm/).
 
