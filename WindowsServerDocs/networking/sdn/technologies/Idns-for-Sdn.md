@@ -13,7 +13,7 @@ ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: jamesmci
 author: jamesmci
 ---
-# Internal DNS Service (iDNS) for SDN
+# Internal DNS Service \(iDNS\) for SDN
 
 >Applies To: Windows Server 2016
 
