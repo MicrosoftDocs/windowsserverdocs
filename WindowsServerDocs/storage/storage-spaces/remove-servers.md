@@ -43,7 +43,7 @@ Use the **Remove-ClusterNode** cmdlet with the optional **-CleanUpDisks** flag:
 Get-ClusterNode <Name> | Remove-ClusterNode -CleanUpDisks
 ```
 
-This cmdlet might take a long time (sometimes many hours) to run because Windows must move all the data stored on that cluster node to other nodes in the cluster. Once this is complete, the drives are permanently removed from the storage pool, returning affected volumes to a healthy state.
+This cmdlet might take a long time (sometimes many hours) to run because Windows must move all the data stored on that server to other servers in the cluster. Once this is complete, the drives are permanently removed from the storage pool, returning affected volumes to a healthy state.
 
 ### Requirements
 
