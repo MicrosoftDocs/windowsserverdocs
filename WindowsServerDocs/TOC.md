@@ -1083,6 +1083,7 @@
 ##### [Guarded fabric and shielded VM planning guide for hosters](security/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters.md)
 ###### [Compatible hardware with Windows Server 2016 yirtualization-based protection of code integrity](security/guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md)
 ##### [Guarded fabric and shielded VM planning guide for tenants](security/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-planning-for-tenants.md)
+#### [Guarded fabric deployment overview](security/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md)
 #### [Deploying the Host Guardian Service for guarded hosts and shielded VMs](security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md)
 ##### [Setting up the Host Guardian Service - HGS](security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
 ##### [Configuration steps for Hyper-V hosts that will become guarded hosts](security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
