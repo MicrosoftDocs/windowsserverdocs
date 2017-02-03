@@ -43,7 +43,7 @@ Use the **Remove-ClusterNode** cmdlet with the optional **-CleanUpDisks** flag:
 Get-ClusterNode <Name> | Remove-ClusterNode -CleanUpDisks
 ```
 
-This cmdlet might take a long time (sometimes many hours) to run because Windows must move all the data stored on that cluster node to other nodes in the cluster. Once this is complete, the drives are permanently removed from the storage pool, returning affected volumes to a healthy state.
+This cmdlet might take a long time (sometimes many hours) to run because Windows must move all the data stored on that server to other servers in the cluster. Once this is complete, the drives are permanently removed from the storage pool, returning affected volumes to a healthy state.
 
 ### Requirements
 
@@ -53,13 +53,24 @@ To permanently scale-in (remove a server *and* its drives), your cluster must me
 
 First, you must have enough storage capacity in the remaining servers to accomodate all your volumes.
 
-For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, and the cmdlet fails.
+For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you will have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, and the cmdlet will fail.
 
 #### Enough fault domains
 
 Second, you must have enough fault domains (typically servers) to provide the resiliency of your volumes.
 
-For example, if your volumes use three-way mirroring for resiliency, you must have at least three servers. If you have exactly three, and then attempt to remove one server and all its drives, the cmdlet fails. Likewise, if your volumes use dual parity, which requires four servers, you cannot permanently scale-in to three servers.
+For example, if your volumes use three-way mirroring for resiliency, they cannot be fully healthy unless you have at least three servers. If you have exactly three servers, and then attempt to remove one server and all its drives, the cmdlet will fail.
+
+This table shows the minimum number of fault domains required for each resiliency type.
+
+|    Resiliency          |    Minimum required fault domains   |
+|------------------------|-------------------------------------|
+|    Two-way mirror      |    2                                |
+|    Three-way mirror    |    3                                |
+|    Dual parity         |    4                                |
+
+   >[!NOTE]
+   > It is okay to briefly have fewer servers, such as during failures or maintenance. However, in order for volumes to return to a fully healthy state, you must have the minimum number of servers listed above.
 
 ## See also
 

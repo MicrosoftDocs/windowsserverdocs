@@ -61,6 +61,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-nodes">Add servers or drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/remove-servers">Remove servers</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/resize-volumes">Resize volumes</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/update-firmware">Update drive firmware</a></li>
 			</ul>
