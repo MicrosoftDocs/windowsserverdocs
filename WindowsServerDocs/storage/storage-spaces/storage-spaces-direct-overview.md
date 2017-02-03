@@ -188,7 +188,6 @@ Here's an overview of the Storage Spaces Direct stack:
 
 Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
 
-<<<<<<< HEAD
 ## See also  
 -   [(VIDEO) Discover Storage Spaces Direct at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs)
 -   [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md)
