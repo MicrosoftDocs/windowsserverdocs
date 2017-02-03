@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 01/31/2017
+ms.date: 02/03/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -459,7 +459,10 @@ If you want to use your own unattend file, use the -UnattendPath parameter:
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -UnattendPath \\path\to\unattend.xml`  
   
-Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName.  
+Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName. 
+
+> [!NOTE]
+> Nano Server does not support setting TCP/IP settings via unattend files. You can use Setupcomplete.cmd to configure TCP/IP settings.
 
 ### Collecting log files
 If you want to collect the log files during image creation, use the -LogPath parameter to specify a directory where all the log files are copied.
