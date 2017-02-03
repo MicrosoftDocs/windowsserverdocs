@@ -31,9 +31,8 @@ When managing Storage Spaces Direct, you can use Windows PowerShell, System Cent
 After you've deployed your storage, some of the management tasks you'll perform include monitoring for failed physical disks or other issues, replacing disks that fail, and updating firmware and drivers.
 See the following table for common management options.
 
-||||
-|---|---|---|
 |Tool|Advantages|Disadvantages|
+|---|---|---|
 |Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|	- Requires knowledge of Windows PowerShell<br>- Arguably more difficult to get an intuitive sense of overall storage health.<br>- Scripts require development and testing|
 |System Center Virtual Machine Manager & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
 |Failover Cluster Manager & Server Manager|- Easy to use<br>- Graphical displays for monitoring<br>|- Some tasks require Windows PowerShell<br>- Slow automatic refreshes in Server Manager when working with storage<br>- Performance and usability decreases with large numbers of objects|
