@@ -132,7 +132,7 @@ For a deeper overview of Microsoft SDN infrastructure, skip this topic and start
 
 ## Key Components of SDN Architecture
 
-The following list of SDN technologies provides links to documentation for each technology. For brief technology overviews, see the section **Windows Server Technologies for Software Defined Networking** in the topic [Software Defined Networking (SDN)](https://technet.microsoft.com/en-us/windows-server-docs/networking/sdn/software-defined-networking#a-namebkmkwsawindows-server-technologies-for-software-defined-networking).
+The following list of SDN technologies provides links to documentation for each technology. For brief technology overviews, see the section **Windows Server Technologies for Software Defined Networking** in the topic [Software Defined Networking (SDN)](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking#a-namebkmkwsawindows-server-technologies-for-software-defined-networking).
 
 - [Network Controller](technologies/network-controller/Network-Controller.md)
 - [Hyper-V Network Virtualization](technologies/hyper-v-network-virtualization/hyper-v-network-virtualization.md)
