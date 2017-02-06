@@ -1039,6 +1039,7 @@
 #### [System Center Technologies for Software Defined Networking](networking/sdn/Sc-Tech-for-Sdn.md)
 #### [Microsoft Azure and Software Defined Networking](networking/sdn/Azure_and_Sdn.md)
 #### [Contact the SDN Team](networking/sdn/contact-sdn-team.md)
+
 ## [Storage](storage/storage.md)
 ### [What's new in Storage](storage/whats-new-in-storage.md)
 ### [Data Deduplication](storage/data-deduplication/overview.md)
@@ -1069,7 +1070,8 @@
 ##### [Hyper-converged solution](storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct.md)
 ##### [Create volumes](storage/storage-spaces/create-volumes.md)
 #### [Managing](storage/storage-spaces/manage-storage-spaces-direct.md)
-##### [Adding nodes or drives](storage/storage-spaces/add-nodes.md)
+##### [Adding servers or drives](storage/storage-spaces/add-nodes.md)
+##### [Removing servers](storage/storage-spaces/remove-servers.md)
 ##### [Updating drive firmware](storage/update-firmware.md)
 ##### [Extending volumes](storage/storage-spaces/resize-volumes.md)
 ### [Storage-class memory health management](storage/storage-spaces/Storage-class-memory-health.md)
