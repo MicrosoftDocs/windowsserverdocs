@@ -109,6 +109,10 @@ Network offload and optimization technologies in Windows Server 2016 include Sof
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 
+### [Network Shell (Netsh)](technologies/netsh.md)
+
+You can use the Network Shell \(netsh\) networking utility to manage networking technologies in Windows Server 2016 and Windows 10.
+
 ### [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 
 This topic provides information about choosing the right network adapter for your server workload, ordering network interfaces, network related performance counters, and performance tuning network adapters and related networking technologies, such as Receive Side Scaling \(RSS\), Receive Side Coalescing \(RSC\), and others.
