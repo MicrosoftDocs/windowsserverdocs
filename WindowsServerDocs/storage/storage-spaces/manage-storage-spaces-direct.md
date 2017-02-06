@@ -7,7 +7,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: jasongerend
-ms.date: 2/3/2017
+ms.date: 2/6/2017
 description: Resources to help you manage a Storage Spaces Direct deployment consisting of multiple servers clustered to provide software-defined storage using Windows Server.
 ---
 # Managing Storage Spaces Direct
@@ -33,9 +33,11 @@ See the following table for common management options.
 
 |Tool|Advantages|Disadvantages|
 |---|---|---|
-|Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|- Arguably more difficult to get an intuitive sense of overall storage health.<br>- Scripts require development and testing|
-|System Center Virtual Machine Manager & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
+|Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|- Better for management than visually monitoring overall storage health.<br>- Scripts require development and testing|
+|System Center Virtual Machine Manager (VMM) & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
 |Failover Cluster Manager & Server Manager|- Easy to use<br>- Graphical displays for monitoring<br>|- Some tasks require Windows PowerShell<br>- Slow automatic refreshes in Server Manager when working with storage<br>- Performance and usability decreases with large numbers of objects|
+
+For more info about using VMM with Storage Spaces Direct, see [Manage Storage Spaces Direct in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm), and [Manage storage in Storage Spaces Direct in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/storage-spaces-manage).
 
 ## See also
 
