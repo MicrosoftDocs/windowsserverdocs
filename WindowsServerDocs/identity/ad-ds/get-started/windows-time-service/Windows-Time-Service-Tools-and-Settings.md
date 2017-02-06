@@ -106,9 +106,40 @@ Some of the parameters are stored in clock ticks in the registry and some are in
   
 -   1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](http://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx).  
   
-For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks.  
-  
-#### AllowNonstandardModeCombinations  
+For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks. 
+
+#### Registry Entries under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+
+|Registry Entry|Version|Description|
+|------------------------------------|---------------|----------------------------|
+|AllowNonstandardModeCombinations|All|This entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.|
+
+#### Registry Entries under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config
+
+|Registry Entry|Version|Description|
+|------------------------------------|---------------|----------------------------|
+|AnnounceFlags|All|This entry controls whether this computer is marked as a reliable time server. A computer is not marked as reliable unless it is also marked as a time server.<br /> -   0x00 Not a time server  <br /> - 0x01 Always time server  <br /> -   0x02 Automatic time server  <br /> -   0x04 Always reliable time server  <br /> -   0x08 Automatic reliable time server  <br />The default value for domain members is 10. The default value for stand-alone clients and servers is 10.|
+
+
+#### Registry Entries under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+
+|Registry Entry|Version|Description|
+|------------------------------------|---------------|----------------------------|
+|AllowNonstandardModeCombinations|All|This entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.|
+|CompatibilityFlags|All|This entry specifies the following compatibility flags and values: <br /><br />-   DispersionInvalid: 0x00000001  <br />-   IgnoreFutureRefTimeStamp: 0x00000002  <br /> -   AutodetectWin2K: 0x80000000  <br />-   AutodetectWin2KStage2: 0x40000000  <br /><br />The default value for domain members is 0x80000000. The default value for stand-alone clients and servers is 0x80000000.  |
+|CrossSiteSyncFlags|All|This entry determines whether the service chooses synchronization partners outside the domain of the computer. The options and values are:  <br /><br />-   None: 0  <br />-   PdcOnly: 1  <br />-   All: 2  <br /><br />This value is ignored if the NT5DS value is not set. The default value for domain members is 2. The default value for stand-alone clients and servers is 2.  |
+|DllName|All|This entry specifies the location of the DLL for the time provider.  <br /><br />The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.|
+|Enabled|All|This entry indicates if the NtpClient provider is enabled in the current Time Service.  <br /><br />-   Yes 1  <br />-   No 0  <br /><br />The default value on domain members is 1. The default value on stand-alone clients and servers is 1.|
+
+#### Registry Entries under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+
+|Registry Entry|Version|Description|
+|------------------------------------|---------------|----------------------------|
+|AllowNonstandardModeCombinations|All|This entry indicates that non-standard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.|
+|DllName|All|This entry specifies the location of the DLL for the time provider.<br /><br />The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.  |
+|Enabled|All|This entry indicates if the NtpServer provider is enabled in the current Time Service.  <br /><br />-   Yes 1  <br />-   No 0  <br /><br />The default value on domain members is 1. The default value on stand-alone clients and servers is 1.  |
+
+#### AllowNonstandardModeCombinations  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer**  
@@ -118,7 +149,7 @@ Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003
   
 This entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.  
   
-#### AllowNonstandardModeCombinations  
+#### AllowNonstandardModeCombinations  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
@@ -128,7 +159,7 @@ Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003
   
 This entry indicates that non-standard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is 1. The default value for stand-alone clients and servers is 1.  
   
-#### AnnounceFlags  
+#### AnnounceFlags  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config**  
@@ -150,7 +181,7 @@ This entry controls whether this computer is marked as a reliable time server. A
   
 The default value for domain members is 10. The default value for stand-alone clients and servers is 10.  
   
-#### CompatibilityFlags  
+#### CompatibilityFlags  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
@@ -170,7 +201,7 @@ This entry specifies the following compatibility flags and values:
   
 The default value for domain members is 0x80000000. The default value for stand-alone clients and servers is 0x80000000.  
   
-#### CrossSiteSyncFlags  
+#### CrossSiteSyncFlags  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
@@ -188,7 +219,7 @@ This entry determines whether the service chooses synchronization partners outsi
   
 This value is ignored if the NT5DS value is not set. The default value for domain members is 2. The default value for stand-alone clients and servers is 2.  
   
-#### DllName  
+#### DllName  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
@@ -200,7 +231,7 @@ This entry specifies the location of the DLL for the time provider.
   
 The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.  
   
-#### DllName  
+#### DllName  X
 Registry path  
   
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer**  
@@ -213,7 +244,7 @@ This entry specifies the location of the DLL for the time provider.
   
 The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll.  
   
-#### Enabled  
+#### Enabled  X
   
 ###### Registry path  
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**  
