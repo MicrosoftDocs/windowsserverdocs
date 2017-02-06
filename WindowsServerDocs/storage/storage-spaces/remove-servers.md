@@ -7,7 +7,8 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 2/2/2017
+description: How to remove servers from a Storage Spaces Direct cluster in Windows Server.
+ms.date: 2/5/2017
 ---
 
 # Removing servers in Storage Spaces Direct
@@ -20,10 +21,10 @@ This topic describes how to remove servers in [Storage Spaces Direct](storage-sp
 
 If you intend to add the server back into the cluster soon, or if you intend to keep its drives by moving them to another server, you can remove the server from the cluster *without* removing its drives from the storage pool. This is the default behavior if you use Failover Cluster Manager to remove the server.
 
-Use the **Remove-ClusterNode** cmdlet in PowerShell:
+Use the [Remove-ClusterNode](https://technet.microsoft.com/library/hh847251.aspx) cmdlet in PowerShell:
 
 ```PowerShell
-Get-ClusterNode <Name> | Remove-ClusterNode
+Remove-ClusterNode <Name>
 ```
 
 This cmdlet succeeds quickly, regardless of any capacity considerations, because the storage pool "remembers" the missing drives and expects them to come back. There is no data movement away from the missing drives. While they remain missing, their **OperationalStatus** will show as "Lost Communication", and your volumes will show "Incomplete".
@@ -40,26 +41,26 @@ If you want to permanently remove a server from the cluster (sometimes referred 
 Use the **Remove-ClusterNode** cmdlet with the optional **-CleanUpDisks** flag:
 
 ```PowerShell
-Get-ClusterNode <Name> | Remove-ClusterNode -CleanUpDisks
+Remove-ClusterNode <Name> -CleanUpDisks
 ```
 
 This cmdlet might take a long time (sometimes many hours) to run because Windows must move all the data stored on that server to other servers in the cluster. Once this is complete, the drives are permanently removed from the storage pool, returning affected volumes to a healthy state.
 
 ### Requirements
 
-To permanently scale-in (remove a server *and* its drives), your cluster must meet the following two requirements. If it doesn't, the **Remove-ClusterNode -CleanUpDisks** cmdlet stops (fails) immediately, before it begins any data movement, to minimize disruption.
+To permanently scale-in (remove a server *and* its drives), your cluster must meet the following two requirements. If it doesn't, the **Remove-ClusterNode -CleanUpDisks** cmdlet will return an error immediately, before it begins any data movement, to minimize disruption.
 
 #### Enough capacity
 
 First, you must have enough storage capacity in the remaining servers to accomodate all your volumes.
 
-For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you will have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, and the cmdlet will fail.
+For example, if you have four servers, each with 10 x 1 TB drives, you have 40 TB of total physical storage capacity. After removing one server and all its drives, you will have 30 TB of capacity left. If the footprints of your volumes are more than 30 TB together, they won't fit in the remaining servers, so the cmdlet will return an error and not move any data.
 
 #### Enough fault domains
 
 Second, you must have enough fault domains (typically servers) to provide the resiliency of your volumes.
 
-For example, if your volumes use three-way mirroring for resiliency, they cannot be fully healthy unless you have at least three servers. If you have exactly three servers, and then attempt to remove one server and all its drives, the cmdlet will fail.
+For example, if your volumes use three-way mirroring at the server level for resiliency, they cannot be fully healthy unless you have at least three servers. If you have exactly three servers, and then attempt to remove one and all its drives, the cmdlet will return an error and not move any data.
 
 This table shows the minimum number of fault domains required for each resiliency type.
 
