@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 02/03/2017
+ms.date: 02/072017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -102,7 +102,6 @@ This table shows the roles and features that are available in this release of Na
 - Storage Replica
 - Storage Management Service with SMI-S support
 - SMB Witness Service
-- Volume Shadow Copy Service (VSS)
 - Dynamic Volumes
 - Basic Windows storage providers (for Windows Storage Management)
  
