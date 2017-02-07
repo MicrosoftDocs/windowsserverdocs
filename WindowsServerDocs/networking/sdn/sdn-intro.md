@@ -52,6 +52,17 @@ For a deeper overview of Microsoft SDN infrastructure, skip this topic and start
 	</tr>
 </table>
 
+## Microsoft SDN Mechanics Video
+
+In this Microsoft Mechanics Video, Windows Server SDN engineer Greg Cusanza joins Matt McSpirit to demonstrate the new Software Defined Networking capabilities in Windows Server 2016. Watch as Cusanza explains the SDN technology underpinnings and shows you how you can use SDN to do the following.
+
+- Dynamically create, secure, and connect your network to meet the evolving needs of your apps
+- Speed up the deployment of your workloads
+- Contain security vulnerabilities from spreading across your network
+
+SDN allows you to accomplish all of this while also reducing your overall infrastructure costs.
+
+To watch the video on YouTube, click the image below.
 
 [![SDN Overview Video](./../media/Sdn-intro/sdn_video_thumbnail.png)](https://youtu.be/f501zUUcXD0)
 
