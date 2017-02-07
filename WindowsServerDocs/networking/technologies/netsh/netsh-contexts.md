@@ -97,7 +97,7 @@ To display a list of commands and subcontexts that you can use within a context,
 
 To perform tasks in another context without changing from your current context, type the context path of the command you want to use at the netsh prompt. For example, to add an interface named "Local Area Connection" in the IGMP context without first changing to the IGMP context, at the netsh prompt, type:
 
-**routing ip igmp add interface "Local Area Connection" startupqueryinterval=21 **
+**routing ip igmp add interface "Local Area Connection" startupqueryinterval=21**
 
 ## Running netsh commands
 
@@ -128,7 +128,7 @@ Netsh is a command-line scripting utility that allows you to, either locally or 
 
 #### Syntax
 
-**netsh**\[ **-a** *AliasFile*\] \[ **-c** *Context* \] \[**-r** *RemoteComputer*\] \[ **-u** \[ *DomainName\\* \] *UserName* \] \[ **-p** *Password* | \*\] \[{*NetshCommand* | **-f** *ScriptFile*}\]
+**netsh**\[ **-a**&nbsp;*AliasFile*\] \[ **-c**&nbsp;*Context* \] \[**-r**&nbsp;*RemoteComputer*\] \[ **-u** \[ *DomainName\\* \] *UserName* \] \[ **-p**&nbsp;*Password* | \*\] \[{*NetshCommand* | **-f**&nbsp;*ScriptFile*}\]
 
 #### Parameters
 
@@ -153,7 +153,7 @@ Optional. Specifies the **netsh** context that you want to enter.
 Optional. Specifies that you want the command to run on a remote computer.
 
 >[!IMPORTANT]
->To use some netsh commands remotely on another computer by using the **netsh –r** parameter, the Remote Registry service must be running on the remote computer. If it is not running, Windows displays a “Network Path Not Found” error message.
+>When you use some netsh commands remotely on another computer with the **netsh –r** parameter, the Remote Registry service must be running on the remote computer. If it is not running, Windows displays a “Network Path Not Found” error message.
 
 ***`RemoteComputer`***
 

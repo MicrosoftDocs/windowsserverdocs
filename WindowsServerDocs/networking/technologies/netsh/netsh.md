@@ -16,6 +16,12 @@ author: jamesmci
 
 Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server 2016.
 
+>[!NOTE]
+>In addition to this topic, the following Network Shell content is available.
+>
+> - [Netsh Command Syntax, Contexts, and Formatting](netsh-contexts.md)
+> - [Netsh Technical Reference](https://gallery.technet.microsoft.com/Netsh-Technical-Reference-c46523dc) 
+
 Some client technologies, such as Dynamic Host Configuration Protocol \(DHCP\) client and BranchCache, also provide netsh commands that allow you to configure client computers that are running Windows 10.
 
 In most cases, netsh commands provide the same functionality that is available when you use the Microsoft Management Console \(MMC\) snap\-in for each networking server role or networking feature. For example, you can configure Network Policy Server \(NPS\) by using either the NPS MMC snap-in or the netsh commands in the **netsh nps** context.
