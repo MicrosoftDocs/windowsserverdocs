@@ -115,7 +115,7 @@ You can use the following formatting legend to  interpret and use correct netsh 
 | **Bold ** | Elements that the user must type exactly as shown.|
 | Ellipsis \(...\) | Parameter that can be repeated several times in a command line. |
 | Between brackets \(\[\]\) | Optional items. |
-| Between braces \({}\); choices separated by pipe \(|\). Example: {even|odd} | Set of choices from which the user must choose only one.|
+| Between braces \({}\); choices separated by pipe \(\|\). Example: {even\|odd} | Set of choices from which the user must choose only one.|
 | Courier font  | Code or program output. |
 
 ## Running Netsh commands from the command prompt or Windows PowerShell

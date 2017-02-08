@@ -241,7 +241,7 @@ The following commands will complete the configuration of the first HGS node.
 If you want to enable HTTPS communication on the HGS server, you need to pass in the HTTPS certificate (the one you exported in [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https)) when initializing the HGS server. Modify the following example as appropriate, and then run it in place of the command in the previous section.
 
 ```powershell
-Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
+Initialize-HgsServer -HgsServiceName '<HgsServiceName>' -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
 ```
     
 >**Note**&nbsp;&nbsp;If you are setting up multiple HGS servers in a high availability configuration, be sure to import the same HTTPS certificate on each machine. The variables **-Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword** (as shown in the previous command) should be included every time you initialize an HGS server in your environment.
@@ -266,10 +266,10 @@ The following tables describe the unique **Initialize-HgsServer** parameters to 
 
 | **Required Parameter**  | **Description**    |
 |-------------|----------|
-| `-UseExistingDomain`      | Adds HGS to an existing domain.                                                                                              |
+| `-UseExistingDomain`      | Adds HGS to an existing domain. HGS must already be joined to the existing domain.                                           |
 | `-JeaAdministratorsGroup` | Identifies the Active Directory group of users who can perform HGS administration (through Just Enough Administration, JEA). |
-| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view HGS (through JEA).                                               |
-| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service.                        |
+| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view, but not change, the HGS settings (through JEA).                                               |
+| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service. The specified account must already be installed and configured for use on this machine.   |
 
 | **Optional Parameter** | **Description**     |
 |------------|-----------|
