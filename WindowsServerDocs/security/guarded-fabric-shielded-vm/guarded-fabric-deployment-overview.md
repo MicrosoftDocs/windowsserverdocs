@@ -16,7 +16,7 @@ ms.date: 02/02/2017
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).
 
-Prefer to watch this on video? Check out the Microsoft Virtual Academy course: [Deploying Shielded VMs and a Guarded Fabric with Windows Server 2016](https://mva.microsoft.com/en-US/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474).
+Prefer video? See the Microsoft Virtual Academy course [Deploying Shielded VMs and a Guarded Fabric with Windows Server 2016](https://mva.microsoft.com/en-US/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474).
 
 ## What is a guarded fabric
 
