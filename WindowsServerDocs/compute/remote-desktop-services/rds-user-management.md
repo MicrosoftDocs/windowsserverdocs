@@ -77,5 +77,6 @@ Now that you've create the users and groups in Active Directory, you can add som
    2. Under **Properties**, click **Tasks > Edit properties**.
    3. Click **User groups**.
    4. Click **Add** and enter the user or group to give access to the collection. You can remove users and groups from this window as well. 
+   
    >[!NOTE] 
    > The User groups can never be empty. To narrow the scope of users who have access to the collection, you must first add specific users or groups before removing broader groups.
