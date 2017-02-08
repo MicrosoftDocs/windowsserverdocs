@@ -830,6 +830,7 @@
 ###### [Configure NPS on a Multihomed Computer](networking/technologies/nps/nps-multihomed-configure.md)
 ###### [Configure NPS UDP Port Information](networking/technologies/nps/nps-udp-ports-configure.md)
 ###### [Disable NAS Notification Forwarding](networking/technologies/nps/nps-disable-nas-notifications.md)
+###### [Export an NPS Server Configuration for Import on Another Server](networking/technologies/nps/nps-manage-export.md)
 ###### [Increase Concurrent Authentications Processed by NPS](networking/technologies/nps/nps-concurrent-auth.md)
 ###### [Register an NPS Server in an Active Directory Domain](networking/technologies/nps/nps-manage-register.md)
 ###### [Unregister an NPS Server from an Active Directory Domain](networking/technologies/nps/nps-manage-unregister.md)
