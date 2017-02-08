@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
-ms.date: 09/23/2016  
+ms.date: 02/08/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
@@ -21,6 +21,8 @@ Tuning your deployment takes time and requires instrumentation and monitoring. U
 It’s a good practice to continually assess the metrics and balance against running costs.
 
 ## Management and monitoring
+
+CHeck out [Manage users in your RDS collection](rds-user-management.md) for information about how to manage access to your desktops and remote resources.
 
 Use **Microsoft Operations Management Suite (OMS)** to monitor Remote Desktop deployments for potential bottlenecks and manage them using one of the following ways: 
 
