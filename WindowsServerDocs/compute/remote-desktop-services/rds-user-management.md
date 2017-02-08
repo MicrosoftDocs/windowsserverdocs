@@ -9,10 +9,10 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
-author: lizap
-ms.author: elizapo
+author: christianmontoya
+ms.author: chrimo
 ms.date: 02/07/2017
-manager: dongill
+manager: scottman
 ---
 # Manage users in your RDS collection
 
