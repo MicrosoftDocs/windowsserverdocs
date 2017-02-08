@@ -1,3 +1,4 @@
+
 ---
 title: Contact the SDN Team
 description: This page is designed to inform customers on the best methods for reaching the SDN team in various contexts.
@@ -31,3 +32,6 @@ Our [Container Networking documentation](https://docs.microsoft.com/en-us/virtua
 > [Microsoft Docs](https://docs.microsoft.com/) is Microsoft's new unified documentation site. While most of our team's [SDN documentation](https://technet.microsoft.com/en-us/windows-server-docs/networking/sdn/software-defined-networking) remains on TechNet, our [Container Networking documentation](https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/container-networking) is now on Microsoft Docs.
 
 >*In general, If you run into a topic on Microsoft Docs that sparks a question or leaves you wanting more, just leave a comment on that page to share your feedback with the Microsoft team that can help.*
+
+### Not seeing the forum for you? 
+Whenever possible, we encourage use of our public forums so that the broader community can benefit from access to the questions and comments that come our way. However, we also recognize that there are situations where email is simply the preferred way to get in touch with us. If you're in one of those situations, please send us an email at sdn_feedback@microsoft.com and we'll be happy to hear from you.
