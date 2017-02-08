@@ -27,7 +27,7 @@ One of the benefits of this feature is that it enables you to adopt SaaS provide
 > We have recently changed our support statement on using Alternate ID with Exchange Hybrid.   For the best user experience in an Exchange Hybrid environment, we recommend using the same set of credentials for on-premises and Exchange Online.  It is also recommended that customers that use Office 2013 clients enable [Modern Authentication](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/).  Please refer to the table below for the expected user experience using various clients.
 
 > [!IMPORTANT]
-> For the best user experience in an Lync Hybrid environments, we recommend using the same set of credentials for on-premises and Lync Online.  Using Alternate ID with Lync Hybrid environments is currently not supported.  It is also recommended that customers that use Office 2013 clients enable [Modern Authentication](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/).  Please refer to the table below for the expected user experience using various clients.
+> Using Alternate ID with Lync Hybrid environments is currently not supported.  For the best user experience in Lync Hybrid environments, you should use the same set of credentials for on-premises and Lync Online.
 
 Please refer to the table below for the user experience with Alternate ID using various Office 365 clients with Regular Authentication, Modern Authentication and Certificate Based Authentication (requires enabling Modern Authentication).
 
