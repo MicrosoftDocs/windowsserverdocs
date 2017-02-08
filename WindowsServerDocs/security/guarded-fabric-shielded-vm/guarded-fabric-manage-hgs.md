@@ -351,6 +351,10 @@ Hgs_VsmIdkPresent              | Requires virtualization based security to be ru
 Hgs_PageFileEncryptionEnabled  | Requires pagefiles to be encrypted on the host. Disabling this policy could result in information exposure if an unencrypted pagefile is inspected for tenant secrets.
 Hgs_BitLockerEnabled           | Requires BitLocker to be enabled on the Hyper-V host. This policy is disabled by default for performance reasons and is not recommended to be enabled. This policy has no bearing on the encryption of the shielded VMs themselves.
 Hgs_IommuEnabled               | Requires that the host have an IOMMU device in use to prevent direct memory access attacks. Disabling this policy and using hosts without an IOMMU enabled can expose tenant VM secrets to direct memory attacks.
+Hgs_NoHibernation              | Requires hibernation to be disabled on the Hyper-V host. Disabling this policy could allow hosts to save shielded VM memory to an unencrypted hibernation file.
+Hgs_NoDumps                    | Requires memory dumps to be disabled on the Hyper-V host. If you disable this policy, it is recommended that you configure dump encryption to prevent shielded VM memory from being saved to unencrypted crash dump files.
+Hgs_DumpEncryption             | Requires memory dumps, if enabled on the Hyper-V host, to be encrypted with an encryption key trusted by HGS. This policy does not apply if dumps are not enabled on the host. If this policy and *Hgs\_NoDumps* are both disabled, shielded VM memory could be saved to an unencrypted dump file.
+Hgs_DumpEncryptionKey          | Negative policy to ensure hosts configured to allow memory dumps are using an admin-defined dump file encryption key known to HGS. This policy does not apply when *Hgs\_DumpEncryption* is disabled.
 
 ### Authorizing new guarded hosts
 To authorize a new host to become a guarded host (e.g. attest successfully), HGS must trust the host and (when configured to use TPM-trusted attestation) the software running on it.
@@ -370,7 +374,7 @@ Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
 
 For Nano Server, you should prepare the image with the **Compute**, **Microsoft-NanoServer-SecureStartup-Package** and **Microsoft-NanoServer-ShieldedVM-Package** packages.
 
-#### admin-trusted attestation
+#### Admin-trusted attestation
 To register a new host in HGS when using admin-trusted attestation, you must first add the host to a security group in the domain to which it's joined.
 Typically, each domain will have one security group for guarded hosts.
 If you have already registered that group with HGS, the only action you need to take is to restart the host to refresh its group membership.
@@ -464,6 +468,28 @@ Once you have your policy created, tested and enforced, copy the binary file (.p
 ```powershell
 Add-HgsAttestationCiPolicy -Name 'WS2016-Hardware01' -Path 'C:\temp\ws2016-hardware01-ci.p7b'
 ```
+
+**Adding a memory dump encryption key**
+
+When the *Hgs\_NoDumps* policy is disabled and *Hgs\_DumpEncryption* policy is enabled, guarded hosts are allowed to have memory dumps (including crash dumps) to be enabled as long as those dumps are encrypted. Guarded hosts will only pass attestation if they either have memory dumps disabled or are encrypting them with a key known to HGS. By default, no dump encryption keys are configured on HGS.
+
+To add a dump encryption key to HGS, use the `Add-HgsAttestationDumpPolicy` cmdlet to provide HGS with the hash of your dump encryption key.
+If you capture a TPM baseline on a Hyper-V host configured with dump encryption, the hash is included in the tcglog and can be provided to the `Add-HgsAttestationDumpPolicy` cmdlet.
+
+```powershell
+Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey01' -Path 'C:\temp\TpmBaselineWithDumpEncryptionKey.tcglog'
+```
+
+Alternatively, you can directly provide the string representation of the hash to the cmdlet.
+
+```powershell
+Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey02' -PublicKeyHash '<paste your hash here>'
+```
+
+Be sure to add each unique dump encryption key to HGS if you choose to use different keys across your guarded fabric.
+Hosts that are encrypting memory dumps with a key not known to HGS will not pass attestation.
+
+Consult the Hyper-V documentation for more information about [configuring dump encryption on hosts](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/manage/about-dump-encryption).
 
 #### Check if the system passed attestation
 After registering the necessary information with HGS, you should check if the host passes attestation.
@@ -713,3 +739,52 @@ These tasks add extra operational burden, however they are required for HSM-back
 **SSL Certificates** are never replicated in any form.
 It is your responsibility to initialize each HGS server with the same SSL certificate and update each server whenever you choose to renew or replace the SSL certificate.
 When replacing the SSL certificate, it is recommended that you do so using the [Set-HgsServer](https://technet.microsoft.com/en-us/library/mt652180.aspx) cmdlet.
+
+## Unconfiguring HGS
+
+If you need to decommission or significantly reconfigure an HGS server, you can do so using the [Clear-HgsServer](https://technet.microsoft.com/en-us/library/mt652176.aspx) or [Uninstall-HgsServer](https://technet.microsoft.com/en-us/library/mt652182.aspx) cmdlets.
+
+### Clearing the HGS configuration
+
+To remove a node from the HGS cluster, use the [Clear-HgsServer](https://technet.microsoft.com/en-us/library/mt652176.aspx) cmdlet.
+This cmdlet will make the following changes on the server where it is run:
+
+- Unregisters the attestation and key protection services
+- Removes the "microsoft.windows.hgs" JEA management endpoint
+- Removes the local computer from the HGS failover cluster
+
+If the server is the last HGS node in the cluster, the cluster and its corresponding Distributed Network Name resource will also be destroyed.
+
+```powershell
+# Removes the local computer from the HGS cluster
+Clear-HgsServer
+```
+
+After the clear operation completes, the HGS server can be re-initialized with [Initialize-HgsServer](https://technet.microsoft.com/en-us/library/mt652185.aspx).
+If you used [Install-HgsServer](https://technet.microsoft.com/en-us/library/mt652169.aspx) to set up an Active Directory Domain Services domain, that domain will remain configured and operational after the clear operation.
+
+### Uninstalling HGS
+
+If you wish to remove a node from the HGS cluster **and** demote the Active Directory Domain Controller running on it, use the [Uninstall-HgsServer](https://technet.microsoft.com/en-us/library/mt652182.aspx) cmdlet.
+This cmdlet will make the following changes on the server where it is run:
+
+- Unregisters the attestation and key protection services
+- Removes the "microsoft.windows.hgs" JEA management endpoint
+- Removes the local computer from the HGS failover cluster
+- Demotes the Active Directory Domain Controller, if configured
+
+If the server is the last HGS node in the cluster, the domain, failover cluster, and the cluster's Distributed Network Name resource will also be destroyed.
+
+```powershell
+# Removes the local computer from the HGS cluster and demotes the ADDC (restart required)
+$newLocalAdminPassword = Read-Host -AsSecureString -Prompt "Enter a new password for the local administrator account"
+Uninstall-HgsServer -LocalAdministratorPassword $newLocalAdminPassword -Restart
+```
+
+After the uninstall operation is complete and the computer has been restarted, you can reinstall ADDC and HGS using [Install-HgsServer](https://technet.microsoft.com/en-us/library/mt652169.aspx) or join the computer to a domain and initialize the HGS server in that domain with [Initialize-HgsServer](https://technet.microsoft.com/en-us/library/mt652185.aspx).
+
+If you no longer intend to use the computer as a HGS node, you can remove the role from Windows.
+
+```powershell
+Uninstall-WindowsFeature HostGuardianServiceRole
+```

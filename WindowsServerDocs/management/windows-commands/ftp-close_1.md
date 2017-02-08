@@ -1,6 +1,6 @@
 ---
-title: ftp: close_1
-description: "Windows Commands topic for **** - "
+title: ftp close_1
+description: "Windows Commands topic for ftp close_1"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,7 +1,7 @@
 ---
 title: Connection Request Policies
 description: This topic provides an overview of Network Policy Server connection request policies in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article

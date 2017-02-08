@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 10/06/2016
+ms.date: 02/072017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
@@ -54,32 +54,57 @@ You can also find and install these packages with the the NanoServerPackage prov
   
 This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Package parameter, which you can combine in a comma-separated list. You can dynamically list available packages using the Get-NanoServerPackage cmdlet.  
   
-|Role or feature|Option|  
-|-------------------|----------|  
+|Role or feature|Option|
+|-------------------|----------|
 |Hyper-V role (including NetQoS)|-Compute|
-|Failover Clustering|-Clustering|
+|Failover Clustering and other components, detailed after this table|-Clustering|
 |Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|
-|File Server role and other storage components|-Storage|
+|File Server role and other storage components, detailed after this table|-Storage|
 |Windows Defender, including a default signature file|-Defender|
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default|
 |DNS Server role|-Package Microsoft-NanoServer-DNS-Package|
 |PowerShell Desired State Configuration (DSC)|-Package Microsoft-NanoServer-DSC-Package<br />**Note:** For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc).|
 |Internet Information Server (IIS)|-Package Microsoft-NanoServer-IIS-Package<br />**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS.|
 |Host support for Windows Containers|-Containers|
-|System Center Virtual Machine Manager agent|-Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V.|
+|System Center Virtual Machine Manager agent|-Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-compute-add-nano-hyper-v).| 
 |System Center Operations Manager agent| Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/en-us/system-center-docs/om/manage/install-agent-on-nano-server.|
-|Network Performance Diagnostics Service (NPDS)<br />**Note:** Requires the Windows Defender package, which you should install before installing NPDS|-Package Microsoft-NanoServer-NPDS-Package|
 |Data Center Bridging (including DCBQoS)|-Package Microsoft-NanoServer-DCB-Package|
-|Deploying on a virtual machine|Microsoft-NanoServer-Guest-Package|
-|Deploying on a physical machine|Microsoft-NanoServer-Host-Package|
+|Deploying on a virtual machine|-Package Microsoft-NanoServer-Guest-Package|
+|Deploying on a physical machine|- Package Microsoft-NanoServer-Host-Package|
 |BitLocker, trusted platform module (TPM), volume encryption, platform identification, cryptography providers, and other functionality related to secure startup|-Package Microsoft-NanoServer-SecureStartup-Package|
 |Hyper-V support for Shielded VMs|-Package Microsoft-NanoServer-ShieldedVM-Package<br />**Note:** This package is only available for the Datacenter edition of Nano Server.|
+|Simple Network Management Protocol (SNMP) agent|-Package Microsoft-NanoServer-SNMP-Agent-Package.cab<br />**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online) for details.|
+|IPHelper service which provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS|-Package Microsoft-NanoServer-IPHelper-Service-Package.cab<br />**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online) for details.|
 
 > [!NOTE]  
 > When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in subfolders named for the locale of the image.  
   
 > [!NOTE]  
-> When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager.  
+> When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager. 
+
+### Failover Clustering items installed by the -Clustering parameter
+
+- Failover Clustering role
+- VM Failover Clustering
+- Storage Spaces Direct (S2D)
+- Storage Quality of Service
+- Volume Replication Clustering
+- SMB Witness Service
+
+
+### File and storage items installed by the -Storage parameter
+
+- File Server role
+- Data Deduplication
+- Multipath I/O, including a driver for Microsoft Device-Specific Module (MSDSM)
+- ReFS (v1 and v2)
+- iSCSI Initiator (but not iSCSI Target)
+- Storage Replica
+- Storage Management Service with SMI-S support
+- SMB Witness Service
+- Dynamic Volumes
+- Basic Windows storage providers (for Windows Storage Management)
+ 
   
   
   
@@ -186,6 +211,14 @@ Edit a file residing on the remote Nano Server by starting a remote session with
 You can find and install Nano Server packages from the online package repository by using the NanoServerPackage provider of the PackageManagement PowerShell module. To install this provider, use these cmdlets:
 
 ```powershell
+Install-PackageProvider NanoServerPackage
+Import-PackageProvider NanoServerPackage
+```
+
+>[!NOTE]
+>If you experience errors when running Install-PackageProvider, check that you have installed the latest [cumulative update](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server) ([KB3206632](https://support.microsoft.com/kb/3206632) or later), or use Save-Module as follows: 
+
+```powershell
 Save-Module -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\" -Name NanoServerPackage -MinimumVersion 1.0.1.0
 Import-PackageProvider NanoServerPackage
 ```
@@ -221,9 +254,9 @@ Running `Find-Package -ProviderName NanoServerPackage -DisplayCulture` displays 
 If you need a specific locale version, such as US English, you could use `Find-NanoServerPackage -Culture en-us` or  
 `Find-Package -ProviderName NanoServerPackage -Culture en-us` or `Find-Package -Culture en-us -DisplayCulture`.
 
-To find a specific package by package name, use the -Name parameter. This parameter also accepts wildcards. For example, to find all packages with NPDS in the name, use `Find-NanoServerPackage -Name *NPDS*` or `Find-Package -ProviderName NanoServerPackage -Name *NPDS*`.
+To find a specific package by package name, use the -Name parameter. This parameter also accepts wildcards. For example, to find all packages with VMM in the name, use `Find-NanoServerPackage -Name *VMM*` or `Find-Package -ProviderName NanoServerPackage -Name *VMM*`.
 
-You can find a particular version with the -RequiredVersion, -MinimumVersion, or -MaximumVersion parameters. To find all available versions, use -AllVersions. Otherwise, only the latest version is returned. For example: `Find-NanoServerPackage -AllVersions -Name *NPDS* -RequiredVersion 10.0.14393.0`. Or, for all versions: `Find-Package -ProviderName NanoServerPackage -AllVersions -Name *NPDS*`
+You can find a particular version with the -RequiredVersion, -MinimumVersion, or -MaximumVersion parameters. To find all available versions, use -AllVersions. Otherwise, only the latest version is returned. For example: `Find-NanoServerPackage -Name *VMM* -RequiredVersion 10.0.14393.0`. Or, for all versions: `Find-Package -ProviderName NanoServerPackage -Name *VMM* -AllVersions`
 
 ### Installing Nano Server packages  
 You can install a Nano Server package (including its dependency packages, if any) to Nano Server either locally or an offline image with either `Install-NanoServerPackage` or `Install-Package -ProviderName NanoServerPackage`. Both of these accept input from the pipeline.
@@ -252,18 +285,18 @@ Here are some examples of pipelining package search results to the installation 
 
 `Save-NanoServerPackage` or `Save-Package` allow you to download packages and save them without installing them. Both cmdlets accept input from the pipeline.
 
-For example, to download and save a Nano Server package to a directory that matches the wildcard path, use `Save-NanoServerPackage -Name Microsoft-NanoServer-NPDS-Package -Path C:\t*p\`
+For example, to download and save a Nano Server package to a directory that matches the wildcard path, use `Save-NanoServerPackage -Name Microsoft-NanoServer-DNS-Package -Path C:\`
 In this example, -Culture wasn't specified, so the culture of the local machine will be used. No version was specified, so the latest version will be saved.
 
-`Save-Package -ProviderName NanoServerPackage -Name Microsoft-NanoServer-IIS-Package -Path .\Temp -Culture it-it -MinimumVersion 10.0.14393.0` saves a particular version and for the Italian language and locale.
+`Save-Package -ProviderName NanoServerPackage -Name Microsoft-NanoServer-IIS-Package -Path C:\ -Culture it-IT -MinimumVersion 10.0.14393.0` saves a particular version and for the Italian language and locale.
 
-You can search results through the pipeline as in these examples:
+You can send search results through the pipeline as in these examples:
 
-`Find-NanoServerPackage -Name *containers* -MaximumVersion 10.2 -MinimumVersion 1.0 -Culture es-es | Save-NanoServerPackage -Path C:\`
+`Find-NanoServerPackage -Name *containers* -MaximumVersion 10.2 -MinimumVersion 1.0 -Culture es-ES | Save-NanoServerPackage -Path C:\`
 
 or
 
-`Find-Package -ProviderName NanoServerPackage -Name *shield* -Culture es-es | Save-Package -Path`
+`Find-Package -ProviderName NanoServerPackage -Name *shield* -Culture es-ES | Save-Package -Path`
 
 ### Inventory installed packages
 You can discover which Nano Server packages are installed with `Get-Package`. For example, see which packages are on Nano Server with `Get-Package -ProviderName NanoserverPackage`.
@@ -425,7 +458,10 @@ If you want to use your own unattend file, use the -UnattendPath parameter:
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -UnattendPath \\path\to\unattend.xml`  
   
-Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName.  
+Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName. 
+
+> [!NOTE]
+> Nano Server does not support setting TCP/IP settings via unattend files. You can use Setupcomplete.cmd to configure TCP/IP settings.
 
 ### Collecting log files
 If you want to collect the log files during image creation, use the -LogPath parameter to specify a directory where all the log files are copied.

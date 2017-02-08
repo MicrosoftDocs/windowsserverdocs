@@ -1,5 +1,5 @@
 ---
-title: ftp: mkdir
+title: ftp mkdir
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

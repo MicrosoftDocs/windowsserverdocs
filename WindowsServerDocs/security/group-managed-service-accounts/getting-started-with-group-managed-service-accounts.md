@@ -139,7 +139,7 @@ When deploying a new server farm, the service administrator will need to determi
 ### <a name="BKMK_Step1"></a>Step 1: Provisioning group Managed Service Accounts
 You can create a gMSA only if the forest schema has been updated to  Windows Server 2012 , the master root key for Active Directory has been deployed, and there is at least one Windows Server 2012 DC in the domain in which the gMSA will be created.
 
-Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
+Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
 #### <a name="BKMK_CreateGMSA"></a>To create a gMSA using the New-ADServiceAccount cmdlet
 
@@ -217,7 +217,7 @@ Other services could support gMSA. See the appropriate product documentation for
 ## <a name="BKMK_AddMemberHosts"></a>Adding member hosts to an existing server farm
 If using security groups for managing member hosts, add the computer account for the new member host to the security group (that the gMSA's member hosts are a member of) using one of the following methods.
 
-Membership in **Domain Admins**, or the ability to add members to the security group object, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
+Membership in **Domain Admins**, or the ability to add members to the security group object, is the minimum required to complete these procedures.
 
 -   Method 1: Active Directory Users and Computers
 
@@ -267,14 +267,14 @@ Set-ADServiceAccount [-Name] ITFarm1-PrincipalsAllowedToRetrieveManagedPassword 
 ```
 
 ## <a name="BKMK_Update_gMSA"></a>Updating the group Managed Service Account properties
-Membership in **Domain Admins**, **Account Operators**, or the ability to write to msDS-GroupManagedServiceAccount objects, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
+Membership in **Domain Admins**, **Account Operators**, or the ability to write to msDS-GroupManagedServiceAccount objects, is the minimum required to complete these procedures.
 
 Open the Active Directory Module for Windows PowerShell, and set any property by using the Set-ADServiceAccount cmdlet.
 
 For detailed information how to set these properties, see [Set-ADServiceAccount](http://technet.microsoft.com/library/ee617252.aspx) in the TechNet Library or by typing **Get-Help Set-ADServiceAccount** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
 
 ## <a name="BKMK_DecommMemberHosts"></a>Decommissioning member hosts from an existing server farm
-Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
+Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures.
 
 ### Step 1: Remove member host from gMSA
 If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA's member hosts are a member of using either of the following methods.
@@ -329,7 +329,7 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 ### <a name="BKMK_RemoveGMSA"></a>Step 2: Removing a group Managed Service Account from the system
 Remove the cached gMSA credentials from the member host using Uninstall-ADServiceAccount or the NetRemoveServiceAccount API on the host system.
 
-Membership in **Administrators**, or equivalent, is the minimum required to complete these procedures. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](local-and-domain-default-groups.md).
+Membership in **Administrators**, or equivalent, is the minimum required to complete these procedures.
 
 ##### To remove a gMSA using the Uninstall-ADServiceAccount cmdlet
 

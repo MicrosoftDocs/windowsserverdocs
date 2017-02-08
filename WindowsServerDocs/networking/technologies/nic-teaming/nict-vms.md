@@ -1,7 +1,7 @@
 ---
 title: NIC Teaming in Virtual Machines (VMs)
 description: This topic provides information about using NIC Teaming within Hyper-V VMs in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: d562ef46-f240-48be-bbd4-fd88fc6bbbdc
 title: Configuring intranet forms-based authentication for devices that do not support WIA
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 08/22/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

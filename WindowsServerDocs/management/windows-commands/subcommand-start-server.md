@@ -1,5 +1,5 @@
 ---
-title: Subcommand: start-Server
+title: Subcommand start-Server
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

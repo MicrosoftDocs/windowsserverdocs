@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 manager: scottman
 ---
 # Deploy a two-node S2D SOFS for UPD storage in Azure
@@ -61,7 +61,8 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       - Follow the steps to install AD DS.
    3. Enable [Azure AD Domain Services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-ds-getting-started/):
       Note that this only works on a V1 VNet, while the rest of the deployment described below requires a V2 VNet. In order to allow communication between the cluster nodes and the domain controller, you will need to deploy [VNet peering](https://azure.microsoft.com/documentation/articles/virtual-network-peering-overview/) (you can also use a [quickstart template to deploy VNet peering](https://azure.microsoft.com/documentation/templates/201-vnet-to-vnet-peering/)).
-5. Set up the file server cluster nodes:
+5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct (S2D) SOFS cluster Azure template](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) or by following steps 6-11 to deploy manually.
+5. To manually set up the file server cluster nodes:
    1. Create the first node: 
       1. Create a new virtual machine using the Windows Server 2016 image. (Click **New > Virtual Machines > Windows Server 2016.** Select **Resource Manager**, and then click **Create**.)
       2. Set the basic configuration as follows:

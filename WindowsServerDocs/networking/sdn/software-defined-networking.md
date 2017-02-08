@@ -1,13 +1,9 @@
 ---
 title: Software Defined Networking (SDN)
 description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
 ms.author: jamesmci
@@ -19,16 +15,18 @@ author: jamesmci
 
 You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server Datacenter edition, System Center 2016, and Microsoft Azure.  
   
-> [!NOTE]  
-> In addition to this topic, the following SDN content is available.  
->   
+> [!NOTE]
+> In addition to this topic, the following SDN content is available.
+> 
+> - [Introduction to Software Defined Networking in Windows Server 2016](sdn-intro.md)
 > - [Software Defined Networking Technologies](technologies/Software-Defined-Networking-Technologies.md)  
-> - [Plan Software Defined Networking](plan/Plan-Software-Defined-Networking.md)  
+> - [Plan Software Defined Networking](plan/Plan-Software-Defined-Networking.md) 
 > - [Deploy Software Defined Networking](deploy/Deploy-Software-Defined-Networking.md)  
 > - [Manage Software Defined Networking](manage/manage-sdn.md)  
 > - [Troubleshoot Software Defined Networking](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 > - [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
-> - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)  
+> - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)
+> - [Contact the SDN Team](contact-sdn-team.md)
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
 
@@ -137,3 +135,9 @@ For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn
 ### Windows Server Containers
 
 Windows Server Containers are a lightweight operating system virtualization method used to separate applications or services from other services that are running on the same container host. To enable this, each container has its own view of the operating system, processes, file system, registry, and IP addresses. With Windows Server 2016, you can now connect Windows Server containers to virtual networks. For more information, see [Windows Server Containers](technologies/containers/Container-networking-overview.md).
+
+### Contact the SDN product team
+
+If you're interested in discussing SDN technologies with Microsoft or other SDN customers, there are a variety of methods for making contact.
+
+For more information, see [Contact the SDN Team](contact-sdn-team.md).

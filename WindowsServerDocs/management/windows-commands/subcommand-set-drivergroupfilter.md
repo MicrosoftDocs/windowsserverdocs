@@ -1,5 +1,5 @@
 ---
-title: Subcommand: set-DriverGroupFilter
+title: Subcommand set-DriverGroupFilter
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

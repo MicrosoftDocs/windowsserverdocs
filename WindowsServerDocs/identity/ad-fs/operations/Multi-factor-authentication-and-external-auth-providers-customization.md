@@ -1,14 +1,14 @@
-﻿---
+ ---
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 title: Multi-factor authentication and external authentication providers customization 
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/31/2016
+ms.date: 01/18/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 
@@ -16,7 +16,7 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-In AD FS, the support for multifactor authentication is provided out\-of\-the\-box. For example, you can configure AD FS to use built\-in Certificate Authentication as the second factor authentication. You can also use external authentication providers. This approach can enable AD FSto integrate with additional services, such as Windows Azure Active Authentication, or you can develop your own provider. See [Solution Guide: Manage Risk with Multi\-factor Access Control](http://technet.microsoft.com/library/dn280937.aspx) for more information about how to register external authentication provider by using AD FS.  
+In AD FS, the support for multifactor authentication is provided out\-of\-the\-box. For example, you can configure AD FS to use built\-in Certificate Authentication as the second factor authentication. You can also use external authentication providers. This approach can enable AD FS to integrate with additional services, such as Azure Multi-factor Authentication, or you can develop your own provider. See [Solution Guide: Manage Risk with Multi\-factor Access Control](http://technet.microsoft.com/library/dn280937.aspx) for more information about how to register external authentication provider by using AD FS.  
   
 We recommend that an external authentication provider use the classes that are defined in the .css file that AD FS provides to author the authentication UI. You can use the following cmdlet to export the default web theme and inspect the user interface classes and elements that are defined in the .css file. The .css file can be used in the development of the sign\-in user interface of an external authentication provider.  
   

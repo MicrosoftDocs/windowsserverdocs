@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 38c9bcd3-c6f8-4153-8e42-5fd31568c65a
 title: Checklist - Setting Up a Federation Server Proxy
 author: billmath
@@ -6,7 +6,7 @@ manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ms.author: billmath

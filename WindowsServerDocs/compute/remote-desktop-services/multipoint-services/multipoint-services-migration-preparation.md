@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
 

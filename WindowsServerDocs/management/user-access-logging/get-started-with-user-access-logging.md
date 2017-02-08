@@ -128,7 +128,6 @@ UAL can be used on any computer running versions of Windows Server after Windows
   
 ## See also  
 [User Access Logging](http://msdn.microsoft.com/library/windows/desktop/hh437528(v=vs.85).aspx) on MSDN.  
-  
 [Manage User Access Logging](Manage-User-Access-Logging.md)  
   
 

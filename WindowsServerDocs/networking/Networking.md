@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
-manager: dongill
+manager: brianlic
 ms.author: jamesmci
 author: jamesmci
 ---
@@ -33,6 +33,7 @@ Read on for more information about using networking in Windows Server 2016.
 ## Software Defined Networking technologies
 
 ### [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md)
+
 You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.
 
 >[!NOTE]
@@ -107,6 +108,10 @@ Network offload and optimization technologies in Windows Server 2016 include Sof
 ### [Network Policy Server](technologies/nps/nps-top.md)
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
+
+### [Network Shell (Netsh)](technologies/netsh/netsh.md)
+
+You can use the Network Shell \(netsh\) networking utility to manage networking technologies in Windows Server 2016 and Windows 10.
 
 ### [Network Subsystem Performance Tuning](technologies/network-subsystem/net-sub-performance-top.md)
 

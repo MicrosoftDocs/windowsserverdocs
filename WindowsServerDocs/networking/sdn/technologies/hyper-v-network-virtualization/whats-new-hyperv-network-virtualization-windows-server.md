@@ -1,7 +1,7 @@
 ---
 title: What's New in Hyper-V Network Virtualization in Windows Server 2016
 description: This topic provides information about new features in Hyper-V Network Virtualization in Windows Server 2016
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

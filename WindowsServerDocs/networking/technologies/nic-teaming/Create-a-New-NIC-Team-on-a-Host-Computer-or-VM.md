@@ -1,7 +1,7 @@
 ---
 title: Create a New NIC Team on a Host Computer or VM
 description: This topic provides information about NIC Teaming configuration so that you understand the selections you must make when you are configuring a new NIC Team in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

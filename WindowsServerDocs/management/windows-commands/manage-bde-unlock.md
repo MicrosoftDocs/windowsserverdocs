@@ -1,5 +1,5 @@
 ---
-title: manage-bde: unlock
+title: manage-bde unlock
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

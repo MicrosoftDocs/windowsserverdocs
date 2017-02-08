@@ -1,5 +1,5 @@
 ---
-title: manage-bde: upgrade
+title: manage-bde upgrade
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,6 +1,6 @@
 ---
-title: bdehdcfg: restart
-description: "Windows Commands topic for **bdehdcfg: restart** - Tells bdehdcfg that the computer should be restarted after the drive preparation has concluded."
+title: bdehdcfg restart
+description: Windows Commands topic for bdehdcfg restart - Tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

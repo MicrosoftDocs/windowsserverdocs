@@ -1,5 +1,5 @@
 ---
-title: manage-bde: off
+title: manage-bde off
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

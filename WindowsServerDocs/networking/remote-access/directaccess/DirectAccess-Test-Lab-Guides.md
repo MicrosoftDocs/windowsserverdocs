@@ -1,7 +1,7 @@
 ---
 title: DirectAccess Test Lab Guides
 description: This topic provides links to the test lab guides for DirectAccess in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

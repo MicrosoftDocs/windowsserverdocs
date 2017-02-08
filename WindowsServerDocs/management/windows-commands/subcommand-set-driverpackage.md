@@ -1,5 +1,5 @@
 ---
-title: Subcommand: set-DriverPackage
+title: Subcommand set-DriverPackage
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: ftp: recv
+title: ftp recv
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

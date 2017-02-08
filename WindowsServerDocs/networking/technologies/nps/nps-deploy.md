@@ -1,7 +1,7 @@
 ---
 title: Deploy Network Policy Server
 description: This topic provides links to Network Policy Server deployment content for Windows Server 2016, and includes links to additional guidance about NPS.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -19,6 +19,7 @@ You can use this topic for information about deploying Network Policy Server.
 >[!NOTE]
 >For additional Network Policy Server documentation, you can use the following library sections.  
 >- [Getting Started with Network Policy Server](nps-getstart-top.md)
+>- [Plan Network Policy Server](nps-plan-top.md)
 >- [Manage Network Policy Server](nps-manage-top.md)
 
 The Windows Server 2016 Core Network Guide includes a section on planning and installing Network Policy Server \(NPS\), and the technologies presented in the guide serve as prerequisites for deploying NPS in an Active Directory domain. For more information, see the section "Deploy NPS1" in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployNPS1).

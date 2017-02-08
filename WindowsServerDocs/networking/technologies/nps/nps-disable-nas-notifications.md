@@ -1,7 +1,7 @@
 ---
 title: Disable NAS Notification Forwarding in NPS
 description: This topic provides instructions on configuring Network Policy Server concurrent authentications in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article

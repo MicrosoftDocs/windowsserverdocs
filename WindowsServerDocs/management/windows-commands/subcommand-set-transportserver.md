@@ -1,5 +1,5 @@
 ---
-title: Subcommand: set-TransportServer
+title: Subcommand set-TransportServer
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,7 +1,7 @@
 ---
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -20,9 +20,10 @@ You can use this topic for an overview of Network Policy Server in Windows Serve
 >In addition to this topic, the following NPS documentation is available.
 > - [Network Policy Server Best Practices](nps-best-practices.md)
 > - [Getting Started with Network Policy Server](nps-getstart-top.md)
+> - [Plan Network Policy Server](nps-plan-top.md)
 > - [Deploy Network Policy Server](nps-deploy.md)
 > - [Manage Network Policy Server](nps-manage-top.md)
-> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows&reg; 10
+> - [Network Policy Server (NPS) Cmdlets](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows 10
 > - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 R2 and Windows 8.1
 > - [NPS Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 and Windows 8
 
@@ -37,7 +38,7 @@ NPS allows you to centrally configure and manage network access authentication, 
 - **RADIUS accounting**. You can configure NPS to log events to a local log file or to a local or remote instance of Microsoft SQL Server.
 
 >[!IMPORTANT]
->Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) are deprecated, and are not available in Windows Server 2016.
+>Network Access Protection \(NAP\), Health Registration Authority \(HRA\), and Host Credential Authorization Protocol \(HCAP\) were deprecated in Windows Server 2012 R2, and are not available in Windows Server 2016. If you have a NAP deployment using operating systems earlier than Windows Server 2016, you cannot migrate your NAP deployment to Windows Server 2016.
 
 You can configure NPS with any combination of these features. For example, you can configure one NPS server as a RADIUS server for VPN connections and also as a RADIUS proxy to forward some connection requests to members of a remote RADIUS server group for authentication and authorization in another domain.
 

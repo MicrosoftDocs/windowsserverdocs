@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Software Defined Networking
 description: This topic provides links to contents about troubleshooting Software Defined Networking in Windows Server 2016.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: article

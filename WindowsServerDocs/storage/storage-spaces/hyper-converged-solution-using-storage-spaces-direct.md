@@ -12,7 +12,7 @@ ms.date: 10/11/2016
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 >Applies to: Windows Server 2016
 
-You can use Storage Spaces Direct to deploy software-defined storage (SDS) for virtual machines, and host the virtual machines on the same cluster in a hyper-converged solution. This guide provides background info about the solution and shows you one way to deploy it. For an overview of Storage Spaces Direct, see [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides instructions for how to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) to provide software-defined storage for virtual machines hosted in the same hyper-converged cluster.
 
 Note that for production environments we recommend acquiring a *Windows Server Software-Defined* hardware/software offering, which includes production deployment tools and procedures. These offerings are designed, assembled, and validated to meet Microsoft's requirements for private cloud environments, helping ensure reliable operation. Windows Server Software-Defined offerings will be available later this year - check back for updates! 
 
@@ -163,7 +163,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 1.  Set a network QoS policy for SMB-Direct, which is the protocol that the software defined storage system uses.
 
     ```PowerShell
-    New-NetQosPolicy “SMB” –NetDirectPortMatchCondition 445 –PriorityValue8021Action 3
+    New-NetQosPolicy "SMB" –NetDirectPortMatchCondition 445 –PriorityValue8021Action 3
     ```
 
     The output should look something like this:
@@ -181,6 +181,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 2.  If you are using RoCEv2 turn on Flow Control for SMB as follows (not required for iWarp):
 
     ```PowerShell
+    Install-WindowsFeature "data-center-bridging"
     Enable-NetQosFlowControl –Priority 3
     ```
 
@@ -193,7 +194,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 4.  Get a list of the network adapters to identify the target adapters (RDMA adapters) as follows:
 
     ```PowerShell
-    Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed
+    Get-NetAdapter | FT Name, InterfaceDescription, Status, LinkSpeed
     ```
 
     The output should look something like the following. The Mellanox ConnectX03 Pro adapters are the RDMA network adapters and are the only ones connected to a switch, in this example configuration.
@@ -209,19 +210,19 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
     NIC2       QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45 Disconnected 0 bps
     ```
 
-5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the “Name” of the target adapters for the –InterfaceAlias in the following example
+5. Apply network QoS policy to the target adapters. The target adapters are the RDMA adapters. Use the "Name" of the target adapters for the –InterfaceAlias in the following example
 
     ```PowerShell
-    Enable-NetAdapterQos –InterfaceAlias “<adapter1>”,”<adapter2>”
+    Enable-NetAdapterQos –InterfaceAlias "<adapter1>", "<adapter2>"
     ```
 
    Using the example above, the command would look like this:
 
     ```PowerShell
-    Enable-NetAdapterQoS –InterfaceAlias “Ethernet 2”,”SLOT #”
+    Enable-NetAdapterQoS –InterfaceAlias "Ethernet 2", "SLOT #"
     ```
 
-6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be “SMB”.
+6.  Create a Traffic class and give SMB Direct 30% of the bandwidth minimum. The name of the class will be "SMB".
 
     ```PowerShell
     New-NetQosTrafficClass “SMB” –Priority 3 –BandwidthPercentage 30 –Algorithm ETS
@@ -236,13 +237,13 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 1.  Identify the network adapters (you will use this info in step \#2)
 
     ```PowerShell
-    Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed
+    Get-NetAdapter | FT Name, InterfaceDescription, Status, LinkSpeed
     ```
 
 1.  Create the virtual switch connected to both of the physical network adapters, and enable the Switch Embedded Teaming (SET). You may notice a message that your PSSession lost connection. This is expected and your session will reconnect.
 
     ```PowerShell
-    New-VMSwitch –Name SETswitch –NetAdapterName “<adapter1>”,"<adapter2>" –EnableEmbeddedTeaming $true
+    New-VMSwitch –Name SETswitch –NetAdapterName "<adapter1>", "<adapter2>" –EnableEmbeddedTeaming $true
     ```
 
 1.  Add host vNICs to the virtual switch. This configures a virtual NIC (vNIC) from the virtual switch that you just configured for the management OS to use.
@@ -278,21 +279,21 @@ Do the following steps from a management system using [*Enter-PSSession*](https:
 1.  Restart each host vNIC adapter so that the Vlan is active.
 
     ```PowerShell
-    Restart-NetAdapter “vEthernet (SMB_1)”
-    Restart-NetAdapter “vEthernet (SMB_2)”
+    Restart-NetAdapter "vEthernet (SMB_1)"
+    Restart-NetAdapter "vEthernet (SMB_2)"
     ```
 
 1.  Enable RDMA on the host vNIC adapters
 
     ```PowerShell
-    Enable-NetAdapterRDMA “vEthernet (SMB_1)”,”vEthernet (SMB_2)”
+    Enable-NetAdapterRDMA "vEthernet (SMB_1)", "vEthernet (SMB_2)"
     ```
 
 1.  Associate each of the vNICs configured for RDMA to a physical adapter that is connected to the virtual switch
 
     ```PowerShell
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName 'SMB_1' –ManagementOS –PhysicalNetAdapterName 'SLOT 2'
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName 'SMB_2' –ManagementOS –PhysicalNetAdapterName 'SLOT 2 2'
+    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName "SMB_1" –ManagementOS –PhysicalNetAdapterName "SLOT 2"
+    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName "SMB_2" –ManagementOS –PhysicalNetAdapterName "SLOT 2 2"
     ```
 
 1.  Verify RDMA capabilities.
@@ -314,7 +315,7 @@ In this step, you will run the cluster validation tool to ensure that the server
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
 ```PowerShell
-Test-Cluster –Node <MachineName1,MachineName2,MachineName3,MachineName4> –Include “Storage Spaces Direct”,”Inventory”,”Network”,”System Configuration”
+Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
 ### Step 3.2: Create a cluster
@@ -414,30 +415,13 @@ Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
 
 To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.
 
-When this command is finished, which may take several minutes, the system will be ready for virtual disks to be created.
+When this command is finished, which may take several minutes, the system will be ready for volumes to be created.
 
 ### Step 3.6: Create volumes
 
-When Storage Spaces Direct was enabled, it created a single pool using all the disks and named the pool something similar to “S2D on Cluster1”, with the name of the cluster that is on specified in the name. So the next step is to create some volumes, specifying whether to use multiple tiers.
+We recommend using the **New-Volume** cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-Storage Spaces Direct includes the ability to create a virtual disk with tiers using different resiliency types. For instance, the example below sets the virtual disk to create a three-way mirror *and* dual-parity tier. This optimizes writes to the mirror for performance and in the background writes to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes.
-
-> [!Important]
-> Leave enough available capacity in the storage pool to allow for a disks to fail and still be able to repair the virtual disks with the remaining disks. For example, if you have 20 disks of 2TB each and you want to allow the system to have 1 disk failure with automatic repair of the virtual disks, you would create a volume that leaves a minimum of 2TB of available capacity in the storage pool. If you allocate all of the pool capacity to virtual disks and a disk fails, the virtual disks will not be able to repair until the failed disk is replaced or new disks are added to the pool.
-
-The following PowerShell command creates a virtual disk with two tiers, a mirror tier and a parity tier from a management system:
-
-```PowerShell
-New-Volume -StoragePoolFriendlyName “S2D*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS_ReFS -StorageTierfriendlyNames Capacity,Performance -StorageTierSizes <Size of capacity tier in size units, example: 800GB>, <Size of Performance tier in size units, example: 80GB> –CimSession <ClusterName>
-```
-
-The following PowerShell command creates a virtual disk with mirror resiliency only:
-
-```PowerShell
-New-Volume -StoragePoolFriendlyName “S2D*” -FriendlyName <VirtualDiskName> -FileSystem CSVFS_ReFS -StorageTierfriendlyNames Performance -StorageTierSizes <Size of Performance tier in size units, example: 800GB> –CimSession <ClusterName>
-```
-
-The **New-Volume** cmdlet simplifies deployments as it ties together a long list of operations that would otherwise have to be done in individual commands such as creating the virtual disk, partitioning and formatting the virtual disk, adding the virtual disk to the cluster, and converting it into CSVFS.
+For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
 ### Step 3.7: Deploy virtual machines
 
@@ -447,26 +431,10 @@ The virtual machine’s files should be stored on the systems CSV namespace (exa
 
 You may use in-box tools or other tools to manage the storage and virtual machines, including System Center Virtual Machine Manager.
 
-## Definitions
+## See also
 
-**Networking hardware** Storage Spaces Direct relies on a network to communicate between hosts. For production deployments, it is required to have an RDMA-capable NIC (or a pair of NIC ports).
-
-**Storage hardware**: The storage system consisting of a minimum of four storage nodes with local storage. Each storage node can have internal disks, or disks in an external SAS connected JBOD enclosure. The disk devices can be SATA disks, NVMe disks or SAS disks.
-
-**Software Storage Bus**: The Software Storage Bus is the Storage Spaces Direct-specific software component that spans all the storage nodes and brings together the local storage in each node, so all disks are visible to the Storage Spaces layer above. For more information about Software Storage Bus, see [Software Storage Bus Overview](Software-Storage-Bus-Overview.md).
-
-**Storage pool**: The storage pool spans local storage across all the nodes.
-
-**Storage spaces**: Storage Spaces (aka virtual disks) provide resiliency to disk or node failures as data copies are stored on different storage nodes.
-
-**Resilient File System (ReFS)** ReFS provides the file system in which the Hyper-V VM files are stored. ReFS is a premier file system for virtualized deployments and includes optimizations for Storage Spaces such as error detection and automatic correction. In addition, ReFS provides accelerations for VHD(X) operations such as fixed VHD(X) creation, dynamic VHD(X) growth, and VHD(X) merge.
-
-**Clustered Shared Volumes**: CSVFS layers above ReFS to bring all the mounted volumes into a single namespace accessible through any node.
-
-## See also  
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
--   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
--   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
+-   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
+-   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
--   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)
--   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
+-   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  

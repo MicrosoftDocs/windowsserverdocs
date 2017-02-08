@@ -1,5 +1,5 @@
 ---
-title: Scwcmd: analyze
+title: Scwcmd analyze
 description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold

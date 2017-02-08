@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
 author: rpsqrd
+ms.author: justinha
 ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
@@ -33,6 +34,7 @@ One of the most important goals of providing a hosted environment is to guarante
 
 ## Deployment topics
 
+- [Guarded fabric deployment overview](guarded-fabric-deployment-overview.md)
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
     - [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
     - [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)

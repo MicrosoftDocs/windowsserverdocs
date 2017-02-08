@@ -1,7 +1,7 @@
 ---
 title: Installation and Preparation Requirements for Deploying Network Controller
 description: You can use this topic to prepare your datacenter for Network Controller deployment.
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
 ms.topic: get-started-article
@@ -18,9 +18,10 @@ You can use this topic to prepare your datacenter for Network Controller deploym
 > [!NOTE]  
 > In addition to this topic, the following Network Controller documentation is available.  
 > 
-> - [Network Controller](../../sdn/technologies/network-controller/Network-Controller.md)  
-> - [Deploy Network Controller using Windows PowerShell](../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
-> - [Install the Network Controller server role using Server Manager](../../sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)  
+> - [Network Controller](../technologies/network-controller/Network-Controller.md)
+> - [Network Controller High Availability](../technologies/network-controller/network-controller-high-availability.md)
+> - [Deploy Network Controller using Windows PowerShell](../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
+> - [Install the Network Controller server role using Server Manager](../technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)  
 
 Following are the installation, software, and other requirements and preparation steps you must take before deploying Network Controller.
 
@@ -59,11 +60,16 @@ You can store Network Controller debug logs on the Network Controller computer o
 
 ### Configure dynamic DNS registration for Network Controller
   
-You can deploy Network Controller cluster nodes on the same subnet or on different subnets. If Network Controller nodes are on different subnets, you must perform the following additional DNS configuration:
+You can deploy Network Controller cluster nodes on the same subnet or on different subnets. 
+
+>[!NOTE]
+>If the Network Controller nodes are on the same subnet, you must provide the Network Controller REST IP address when you configure dynamic DNS registration for Network Controller. If the nodes are on different subnets, you must provide the Network Controller REST DNS name when you configure dynamic DNS registration.
+
+If Network Controller nodes are on different subnets, you must perform the following additional DNS configuration:
 
 - Create a DNS name for Network Controller during the deployment process
 
-- Configure DNS dynamic updates for the Network Controller DNS name  on the DNS server
+- Configure DNS dynamic updates for the Network Controller DNS name on the DNS server
 
 - Restrict the DNS dynamic updates to Network Controller nodes only
 

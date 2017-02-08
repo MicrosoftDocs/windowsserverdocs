@@ -1,14 +1,14 @@
-﻿---
+---
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows 2016 Accurate Time
 description:
 author: paullo
 ms.author: paullo
 manager: femila
-ms.date: 12/05/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 
@@ -23,6 +23,9 @@ Time synchronization accuracy in Windows Server 2016 has been improved substanti
 - Improvements
 - Measurements
 - Best Practices
+
+>[!IMPORTANT]
+> An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](http://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf).  This document provides more details about our testing and measurement methodologies.
 
 >[!NOTE]
 >For a quick overview, take a look at this high level overview video at [https://aka.ms/WS2016TimeVideo](https://aka.ms/WS2016TimeVideo).
@@ -335,7 +338,7 @@ If the Azure VM is not joined to a domain, nor is it a Domain Controller, the re
 
 ### Windows Application Requiring Accurate Time
 #### Time Stamp API
-Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemPreciseTimeAsFileTime API](https://msdn.microsoft.com/library/windows/desktop/Hh706895.aspx).  This assures your application gets System Time, which is conditioned by the Windows Time service.
+Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](https://msdn.microsoft.com/library/windows/desktop/Hh706895.aspx).  This assures your application gets System Time, which is conditioned by the Windows Time service.
 
 #### UDP Performance
 If you have an application that uses UDP communication for transactions and it’s important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from port the base filtering engine.  This will improve both the latency and increase your throughput.  However, changes to the registry should be limited to experienced administrators.  Additionally, this work around excludes ports from being secured by the firewall.  See the article reference below for more information.
@@ -376,7 +379,7 @@ From w32tm log files you will want to validate two pieces of information.  The f
 
 The main point is that you see messages prefixed with ClockDispln Discipline which is proof w32time is interacting with your system clock.
  
-Next you need to find the last report in the log before the disputed time which reports the source computer which is currently being used as the reference clock.  This could be an IP address, computer name, or the VMIC provider, which indicates that it’s syncing with the Host for Hyper-V.  The following example provides an IPv6 address of 10.197.216.105.
+Next you need to find the last report in the log before the disputed time which reports the source computer which is currently being used as the reference clock.  This could be an IP address, computer name, or the VMIC provider, which indicates that it’s syncing with the Host for Hyper-V.  The following example provides an IPv4 address of 10.197.216.105.
 
 	151802 20:18:54.6531515s - Response from peer 10.197.216.105,0x8 (ntp.m|0x8|0.0.0.0:123->10.197.216.105:123), ofs: +00.0012218s
 

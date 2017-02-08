@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 11/09/2016
+ms.date: 01/31/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
@@ -41,6 +41,8 @@ Because Nano Server is optimized as a lightweight operating system for running �
 - Nano Server cannot be configured to use a proxy server to access the internet.
 - NIC Teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
 - System Center Configuration Manager and System Center Data Protection Manager are not supported.
+- Best Practices Analyzer (BPA) cmdlets and BPA integration with Server Manager are not supported.
+- Nano Server does not need to be activated with a product key. When functioning as a Hyper-V host, Nano Server does not support [Automatic Virtual Machine Activation](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Virtual machines running on a Nano Server host can be activated using [Key Management Service](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) with a generic volume license key or using [Active Directory-based activation](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).
 - The version of Windows PowerShell provided with Nano Server has important differences. For details, see [PowerShell on Nano Server](PowerShell-on-Nano-Server.md).
 - Nano Server is supported only on the Current Branch for Business (CBB) model--there is no Long-Term Servicing Branch (LTSB) release for Nano Server at this time. See the following subsection for more information.
 
@@ -52,7 +54,7 @@ The Server Core and Server with Desktop Experience installation options are stil
 ## Installation scenarios
 
 ### Evaluation
-You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). To try out Nano Server, choose the **Nano Server | 64-bit EXE option**, and then come back to either [Nano Server Quick Start](Nano-Server-Quick-Start.md) or [Deploy Nano Server](Deploy-Nano-Server.md) to get started.
+You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). To try out Nano Server, choose the **Nano Server | 64-bit EXE option**, and then come back to either [Nano Server Quick Start](Nano-Server-Quick-Start.md) or [Deploy Nano Server](Deploy-Nano-Server.md) to get started.
 
 ### Clean installation
 Because you install Nano Server by configuring a VHD, a clean installation is the quickest and simplest deployment method.

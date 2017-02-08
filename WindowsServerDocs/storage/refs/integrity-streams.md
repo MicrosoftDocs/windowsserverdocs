@@ -14,33 +14,27 @@ ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 # ReFS integrity streams
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-Integrity streams is an optional feature in ReFS that validates and maintains data integrity. ReFS uses checksums for metadata and optionally for file data--file data checksums are disabled by default on current versions of ReFS. Using checksums is an important feature for ReFS, for it enables ReFS to clearly determine if a block is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically. 
+Integrity streams is an optional feature in ReFS that validates and maintains data integrity using checksums. While ReFS always uses checksums for metadata, by default, ReFS does not generate or validate checksums for file data. Integrity streams is a feature that enables checksum usage for file data. Using checksums is an important feature, for it enables ReFS to clearly determine if a block is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically. 
 
 
 ## How it works 
 
+Integrity streams can be enabled for individual files, directories, or the entire volume, and integrity stream settings can be toggled at any time. Additionally, integrity stream settings for files and directories are inherited from their parent directories. 
+
 Once integrity streams is enabled, ReFS will create and maintain a checksum for the specified file(s) in that file's metadata. This checksum allows ReFS to validate the integrity of the data before accessing it. Before returning any data that has integrity streams enabled, ReFS will first calculate its checksum:
 
-<!--![Compute checksum for file data](media/compute-checksum-simple.gif)-->
-<img src=media/compute-checksum-simple.gif alt="Compute checksum for file data"/>
+<img src=media/compute-checksum.gif alt="Compute checksum for file data"/>
 
-Then, this checksum is compared to the checksum contained in the file metadata:
+Then, this checksum is compared to the checksum contained in the file metadata. If the checksums match, then the data is marked as valid and returned to the user. If the checksums don't match, then the data has been corrupted. The resiliency of the volume determines how ReFS responds to corruptions:
 
-<img src=media/compare-checksum-simple.gif alt="Compute checksum for file data"/>
-
-If the checksums match, then the data is marked as valid and returned to the user:
-
-<img src=media/valid-data.gif alt="Compute checksum for file data"/>
-
-If the checksums don't match, then the data is corrupted. The resiliency of the volume determines how ReFS responds to corruptions.  
 - If ReFS is mounted on a non-resilient simple space or a bare drive, ReFS will return an error to the user without returning the corrupted data. 
-    <!-- - If ReFS encounters a metadata corruption that it cannot fix, it will delete the file. 
-    - If ReFS encounters a file data corruption, ReFS still permits users to access corrupted file data through a [FSCTL](https://msdn.microsoft.com/en-us/library/hh553984.aspx). -->
-- If ReFS is mounted on a resilient mirror or parity space, ReFS will attempt to correct the corruption. ReFS will apply a corrective write to restore the integrity of the data, and it will return the valid data to the application. The application remains unaware of any corruptions.
+- If ReFS is mounted on a resilient mirror or parity space, ReFS will attempt to correct the corruption. 
+    - If the attempt is successful, ReFS will apply a corrective write to restore the integrity of the data, and it will return the valid data to the application. The application remains unaware of any corruptions.
+    - If the attempt is unsuccessful, ReFS will return an error. 
 
 ReFS will record all corruptions in the System Event Log, and the log will reflect whether the corruptions were fixed. 
 
-<img src=media/corrupt-data.gif alt="Compute checksum for file data"/>
+<img src=media/corrective-write.gif alt="Corrective write restores data integrity."/>
 
 ## Performance 
 
@@ -86,5 +80,8 @@ PS C:\> Set-FileIntegrity H:\ -Enable $True
 PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 ```
 
+## See also
 
-
+-   [ReFS overview](refs-overview.md)
+-   [ReFS block cloning](block-cloning.md)
+-   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
