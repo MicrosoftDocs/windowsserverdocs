@@ -7,7 +7,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 01/11/2017
+ms.date: 02/8/2017
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct hardware requirements
@@ -31,14 +31,15 @@ In addition, the following requirements apply.
 
 - Minimum of 2 servers, maximum of 16 servers
 - All servers must be identical in hardware components, drivers, firmware, and configuration
- 
+
 ### CPU
 
 - Minimum of Intel Nehalem or later compatible processor
 
 ### Memory
 
-- 5 gigabytes (GB) of memory per terabyte (TB) of cache drive on each server, to store metadata structures. For example, if each server has 2 x 1 TB cache drives, you should have 2 x 5 GB = 10 GB of memory for Storage Spaces Direct internal use.
+- 4 gigabytes (GB) of memory per terabyte (TB) of cache drive capacity on each server, to store metadata.
+<br>For example, if each server has 2 x 1.6 TB (advertised capacity) cache drives, you should have 2 x 1.6 x 4 GB = 12.8 GB of memory for Storage Spaces Direct internal use.
 - Any memory needed for your applications or workloads (such as virtual machines)
 
 ### Networking
