@@ -62,14 +62,14 @@ You can use AD DS groups to grant access to a set of users that need to use the 
 2. Expand the domain in the left-hand pane to view its subfolders.
 3. Right-click **Users**, and then click **New > User**.
 4. Enter, at minimum, a first name and a user logon name.
-5. Enter and a password for the user. Set appropriate user options, like **User must change password at next logon**.
+5. Enter and confirm a password for the user. Set appropriate user options, like **User must change password at next logon**.
 6. Add the new user to a group:
    1. In the **Users** folder right-click the new user.
    2. Click **Add to a group**.
    3. Enter the name of the group to which you want to add the user.
 
 ## Assign users and groups to collections
-Now that you've create the users and groups in Active Directory, you can add some granularity regarding who has access to the Remote Desktop collections in your deployment.
+Now that you've created the users and groups in Active Directory, you can add some granularity regarding who has access to the Remote Desktop collections in your deployment.
 
 1. Connect to the server running the Remote Desktop Connection Broker (RD Connection Broker) role, following the steps described earlier.
 2. Add the other Remote Desktop servers to the RD Connection Broker’s pool of managed servers:
