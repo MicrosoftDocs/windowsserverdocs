@@ -40,7 +40,7 @@ In addition, the following requirements apply.
 
 - 4 GB of RAM per terabyte (TB) of cache drive capacity on each server, to store Storage Spaces Direct metadata.   
 Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives are advertised using base-10 numbering (where 1 TB = 1,000 GB). For example, if each server has 2 x 1.6 TB (advertised capacity) cache drives, you should keep 2 x 1.6 x 4096 MB = 13,107 MB (12.8 GB) of memory available for Storage Spaces Direct internal use.
-- Any memory used Windows Server, VMs, and other apps or workloads.
+- Any memory used by Windows Server, VMs, and other apps or workloads.
 
 ### Networking
 
