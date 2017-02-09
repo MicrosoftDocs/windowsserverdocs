@@ -1,6 +1,6 @@
 
 ---
-title: Contact the SDN Team
+title: Contact the Datacenter and Cloud Networking Team
 description: This page is designed to inform customers on the best methods for reaching the SDN team in various contexts.
 manager: brianlic
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ author: kallie-b
 
 > Applies To: Windows Server 2016
 
-Microsoft's **Software Defined Networking (SDN)** and **container networking** solutions are created by us, the Datacenter and Cloud Networking Team. Please use this page to be in touch with us--to ask questions, provide feedback, report bugs or make feature requests.
+Microsoft's **Software Defined Networking \(SDN\)** and **container Networking** solutions are created by the Datacenter and Cloud Networking Team. Please use this page to be in touch with the team--to ask questions, provide feedback, report bugs or make feature requests.
 
 There are many avenues for contacting Microsoft teams, and while we do our best on the SDN team to follow all of the avenues used by our community, here's a list of forums that tend to be the most active. *These are key resources for our users, and as such they are the avenues that we watch the closest.*
 
