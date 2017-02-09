@@ -26,7 +26,7 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > - [Troubleshoot Software Defined Networking](troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 > - [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
 > - [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)
-> - [Contact the SDN Team](contact-sdn-team.md)
+> - [Contact the Datacenter and Cloud Networking Team](contact-sdn-team.md)
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview
 
@@ -136,8 +136,8 @@ For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn
 
 Windows Server Containers are a lightweight operating system virtualization method used to separate applications or services from other services that are running on the same container host. To enable this, each container has its own view of the operating system, processes, file system, registry, and IP addresses. With Windows Server 2016, you can now connect Windows Server containers to virtual networks. For more information, see [Windows Server Containers](technologies/containers/Container-networking-overview.md).
 
-### Contact the SDN product team
+### Contact the Datacenter and Cloud Networking product team
 
 If you're interested in discussing SDN technologies with Microsoft or other SDN customers, there are a variety of methods for making contact.
 
-For more information, see [Contact the SDN Team](contact-sdn-team.md).
+For more information, see [Contact the Datacenter and Cloud Networking Team](contact-sdn-team.md).
