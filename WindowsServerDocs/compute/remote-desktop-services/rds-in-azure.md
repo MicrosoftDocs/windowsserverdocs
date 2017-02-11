@@ -18,27 +18,12 @@ ms.date: 01/06/2017
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-Remote Desktop Services (RDS) is the platform of choice to cost-effectively host Windows desktops and applications. You can use an Azure marketplace offering or a Quickstart template to quickly create an RDS on IaaS deployment for testing and proof-of-concept purposes. Once set up, you can connect to the published desktops and applications from various platforms and devices, using the Microsoft Remote Desktop apps for Windows, Mac, iOS and Android.
+Remote Desktop Services (RDS) is the platform of choice to cost-effectively host Windows desktops and applications. You can use an Azure marketplace offering or a Quickstart template to quickly create an RDS on Azure IaaS deployment for your needs. The [Azure Marketplace offering](#basic-rds-through-the-azure-marketplace) is currently only for testing and proof-of-concepts, with usage being tested on desktops. The [ARM templates](#Customized-RDS-using-Quickstart-templates) provide you quick, automated flexibility that is production-ready. In production, you can use any of the Microsoft Remote Desktop applications (Windows, Mac, iOS, and Android).
 
-## What does an RDS deployment in Azure look like?
-
-Your RDS deployment in Azure includes the following: 
-
-![RDS deployment in Azure](media/rds-azure-deployment.png)
-
-- 1 virtual machine as the domain controller 
-- 2 virtual machines running the infrastructure components of RDS 
-- Virtual machines running the Remote Desktop Session Host role. You can create as many endpoints (where users will connect and run applications) as you need. The default is 2.
-- A public IP address to connect to your deployment and resources 
-- All internal networking pieces 
-
-There are two ways to create your RDS deployment in Azure:
-- [Using the Azure Marketplace RDS offering](#basic-rds-through-the-azure-marketplace). Use this option to create a basic RDS deployment.
-- [Using one of the Quickstart templates](#Customized-RDS-using-Quickstart-templates). Use this option to customize your deployment - for example, if you want to use an existing AD domain or a custom OS image (as opposed to the default Windows Server images available in Azure).
 
 ## Basic RDS through the Azure Marketplace
 
-Creating your deployment through the Azure Marketplace is the quickest way to get up and running. The offering creates all the RDS components that you need - all you need to do is supply some information.
+Creating your deployment through the Azure Marketplace is the quickest way to get up and running. When everything is completed, your environment will look like the [basic RDS architecture](desktop-hosting-logical-architecture.md#basic-deployment). The offering creates all the RDS components that you need - all you need to do is supply some information. 
 
 You'll need to supply the following information when you deploy the Marketplace offering:
 - Administrator user name and password. This is a new user that will manage the deployment.
@@ -70,7 +55,7 @@ Now that you have an RDS deployment, you can [add and manage users](rds-user-man
 
 ## Customized RDS using Quickstart templates
 
-You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. o	Unlike the Marketplace offering, you can make further customizations, such as use an existing AD on a virtual network, use a custom OS image for the RDSH VMs, and layer on high availability for RDS components. 
+You can use Azure Resource Manager templates to deploy RDS in Azure. This is especially useful if you want a basic RDS deployment but have existing components (like AD) that you want to use. Unlike the Marketplace offering, you can make further customizations, such as use an existing AD on a virtual network, use a custom OS image for the RDSH VMs, and layer on high availability for RDS components. After adding on high availability to each component, your environment will look like the [highly availabile RDS architecture](desktop-hosting-logical-architecture.md#highly-available-deployment).
 
 Use these steps to create your small-footprint RDS deployment with an Azure RDS template: 
 
