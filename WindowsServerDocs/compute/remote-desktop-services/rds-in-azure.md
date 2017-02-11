@@ -1,6 +1,6 @@
 ---
-title: Quick start for Remote Desktop Services in Azure
-description: Learn how to create a small RDS deployment in Azure.
+title: Seamlessly deploy RDS with ARM and Azure Marketplace
+description: Learn how to create a small RDS deployment in Azure by using ARM templates and the Azure Marketplace.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ manager: dongill
 ms.author: elizapo
 ms.date: 02/10/2017
 ---
-# Quick start for Remote Desktop Services in Azure
+# Seamlessly deploy RDS with ARM and Azure Marketplace
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
