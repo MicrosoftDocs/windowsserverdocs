@@ -88,7 +88,7 @@
 ###### [Azure services and considerations for desktop hosting](compute/remote-desktop-services/Azure-services-and-considerations-for-desktop-hosting.md)
 ###### [Tenant on-premises components](compute/remote-desktop-services/Tenant-on-premises-components.md)
 #### [Build and deploy](compute/remote-desktop-services/rds-build-and-deploy.md)
-##### [Seamlessly deploy RDS with ARM and Azure Marketplace](compute/remote-desktop-services/rds-in-azure)
+##### [Seamlessly deploy RDS with ARM and Azure Marketplace](compute/remote-desktop-services/rds-in-azure.md)
 ##### [Migrate your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/migrate-rds-role-services.md)
 ###### [Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)](compute/remote-desktop-services/migrate-rds-cals.md)
 ##### [Upgrade your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/upgrade-to-rds-2016.md)
