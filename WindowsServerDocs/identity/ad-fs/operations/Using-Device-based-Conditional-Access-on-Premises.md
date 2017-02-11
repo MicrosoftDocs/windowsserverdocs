@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 77d40715-f09a-4fac-b584-7a40beea1170
 title: Using Device-based Conditional Access on-Premises
 ms.custom: na
