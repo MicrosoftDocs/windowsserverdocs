@@ -1,5 +1,7 @@
 ---
 title: Switch Embedded Teaming for SDN
+description: You can use this topic for a brief overview of Switch Embedded Teaming in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # Switch Embedded Teaming for SDN
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. 
 

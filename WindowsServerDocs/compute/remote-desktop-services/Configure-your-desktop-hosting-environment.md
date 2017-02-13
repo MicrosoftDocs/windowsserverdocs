@@ -1,5 +1,6 @@
 ---
 title: Configure your desktop hosting environment
+description: Get your environment ready for RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

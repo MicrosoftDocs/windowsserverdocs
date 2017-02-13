@@ -1,5 +1,6 @@
 ---
 title: Edit Server Settings
+description: Learn about MultiPoint Services settings
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

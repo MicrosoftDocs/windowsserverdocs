@@ -1,5 +1,6 @@
 ---
 title: Prepare to migrate to MultiPoint Services
+description: Describes information to gather before you migrate to MultiPoint Services in Windows Server 2016
 ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server-threshold
@@ -11,6 +12,7 @@ ms.topic: article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
 

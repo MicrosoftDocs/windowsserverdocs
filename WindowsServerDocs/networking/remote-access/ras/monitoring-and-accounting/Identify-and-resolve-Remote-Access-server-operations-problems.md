@@ -1,5 +1,7 @@
 ---
 title: Identify and resolve Remote Access server operations problems
+description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Identify and resolve Remote Access server operations problems
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   

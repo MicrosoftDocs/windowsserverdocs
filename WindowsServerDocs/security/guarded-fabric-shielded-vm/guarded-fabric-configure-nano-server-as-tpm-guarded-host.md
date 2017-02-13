@@ -7,6 +7,7 @@ ms.assetid: 40d2a967-a6ee-4b46-aead-e3a0b275e212
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
+ms.date: 10/14/2016
 ---
 
 # Appendix A - Configure Nano server as TPM attested guarded host
@@ -21,9 +22,9 @@ There are a few different ways to deploy Nano servers. This section follows the 
 
 You can run shielded VMs on a Nano server configured as a guarded host. However, the HGS role is not supported on Nano Server. Note the following limitations for a guarded host run on Nano server:
 
-- Nano Server can only run shielded VMs in a guarded fabric; it cannot be used to run shielded VMs without the use of HGS to unlock the virtual TPM devices. This means that you cannot use Nano Server to [Create a new shielded VM on-premises and move it to a guarded fabric](guarded-fabric-create-vm-move-to-guarded-fabric.md), because Nano Server does not support the use of local key material to start up shielded VMs.
+- Nano Server can only run shielded VMs in a guarded fabric; it cannot be used to run shielded VMs without the use of HGS to unlock the virtual TPM devices. This means that you cannot use Nano Server to create a new shielded VM on-premises and move it to a guarded fabric, because Nano Server does not support the use of local key material to start up shielded VMs.
 
-- If you are using VMM to manage a guarded host running Nano server, you will not be able to use the “Apply latest CI Policy” feature to deploy updated code integrity (CI) policies to Nano server. Instead, you will have to manually copy your CI policy (SIPolicy.p7b) to C:\Windows\System32\CodeIntegrity\SIPolicy.p7b and restart the host to apply it. Enforcement of the CI policy remains the same as with the Core and Desktop Experience editions of Windows Server 2016.
+- If you are using VMM to manage a guarded host running Nano server, you will not be able to use the "Apply latest CI Policy" feature to deploy updated code integrity (CI) policies to Nano server. Instead, you will have to manually copy your CI policy (SIPolicy.p7b) to C:\Windows\System32\CodeIntegrity\SIPolicy.p7b and restart the host to apply it. Enforcement of the CI policy remains the same as with the Core and Desktop Experience editions of Windows Server 2016.
 
 ## Creating a Nano server image
 
@@ -39,7 +40,7 @@ The following steps are from [Nano Server Quick Start](https://technet.microsoft
 
     `$mediapath = <location of the mounted ISO image, e.g. E:\>`
 
-    `New-NanoServerImage -MediaPath $mediapath -TargetPath <nanoVHD path> -ComputerName "<nanoserver name>" -OEMDrivers -Compute -DeploymentType Host -Edition Datacenter -Packages Microsoft-NanoServer-SecureStartup-Package, Microsoft-NanoServer-ShieldedVM-Package -EnableRemoteManagementPort –DomainName <Domain Name>`
+    `New-NanoServerImage -MediaPath $mediapath -TargetPath <nanoVHD path> -ComputerName "<nanoserver name>" -OEMDrivers -Compute -DeploymentType Host -Edition Datacenter -Packages Microsoft-NanoServer-SecureStartup-Package, Microsoft-NanoServer-ShieldedVM-Package -EnableRemoteManagementPort -DomainName <Domain Name>`
 
     The command will complete in a few minutes.
 
@@ -47,7 +48,7 @@ When you specify the domain name, the Nano server will be joined to the defined 
 
 ## Creating a code integrity policy for a Nano server
 
-If you are using TPM-trusted attestation and you create a host with a new configuration, such as the first Nano server in your guarded fabric, you will need to create a code integrity (CI) policy based on this image. Creating a code integrity policy is a part of the process described in [TPM-trusted attestation: capturing hardware and software information that HGS uses in attestation](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#tpm-trusted-attestation-capturing-hardware). Within that section, code integrity policies are described at [Create and apply a code integrity policy](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#create-and-apply-a-code-integrity-policy).
+If you are using TPM-trusted attestation and you create a host with a new configuration, such as the first Nano server in your guarded fabric, you will need to create a code integrity (CI) policy based on this image. Creating a code integrity policy is a part of the process described in [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md). Within that section, code integrity policies are described at [Create and apply a code integrity policy](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#create-and-apply-a-code-integrity-policy).
 
 If you have already created code integrity policies for this image, and captured other hardware and software information that HGS uses in attestation, you can proceed to [Configure the boot menu](#configure-the-boot-menu), later in this topic.
 
@@ -59,7 +60,7 @@ Mount the Nano server VHDX and run [New-CIPolicy](https://technet.microsoft.com/
 
 `New-CIPolicy -FilePath .\NanoCI.xml -Level FilePublisher -Fallback Hash -ScanPath G:\ -PathToCatroot G:\Windows\System32\CatRoot\ -UserPEs`
 
->**Note**&nbsp;&nbsp;The CI policy will need to be added to the HGS server. For information about how to do this, see [Create and apply a code integrity policy](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#create-and-apply-a-code-integrity-policy).
+>**Note**&nbsp;&nbsp;The CI policy will need to be added to the HGS server. For information about how to do this, see the HGS server procedure that tells how to [Add host information for TPM-trusted attestation](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#add-host-information-for-tpm-trusted-attestation).
 
 ## Configure the boot menu
 
@@ -74,11 +75,11 @@ Copy the Nano server VHDX file to the physical computer and configure it to boot
 
 3.   Unmount the VHDX by right-clicking the VHDX file and selecting **Eject**.
 
-Restart the computer to boot into Nano server. Now the Nano server is ready, and you can follow the procedures in [Confirm hosts can attest successfully](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#confirm-hosts-can-attest-successfully) to configure the server as a guarded host.
+Restart the computer to boot into Nano server. Now the Nano server is ready, and you can follow the steps in [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md).
 
 ## Getting Nano server IP
 
-There isn’t much you need to configure on the Nano server. Everything you do will be done through the remote Windows PowerShell session. You will need to get the Nano server IP address or use the server name for management. In places where this topic uses the IP address as the example, you can replace it with the server name.
+There isn't much you need to configure on the Nano server. Everything you do will be done through the remote Windows PowerShell session. You will need to get the Nano server IP address or use the server name for management. In places where this topic uses the IP address as the example, you can replace it with the server name.
 
 -   Log on to the Recovery Console, using the administrator account and password you supplied to build the Nano image.
 

@@ -16,7 +16,7 @@ manager: dongill
 
 # Move Windows SBS 2011 Standard settings and data to the Destination Server for Windows Server Essentials migration
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Move settings and data to the Destination Server as follows:  
   
@@ -32,19 +32,6 @@ Move settings and data to the Destination Server as follows:
 5.  [Remove legacy Active Directory Group Policy Objects (optional)](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
   
 6.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
-  
-2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_ImportADaccounts)  
-  
-3.  [Move the DHCP Server role from the Source Server to the router](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MoveDHCP)  
-  
-4.  [Configure the network](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
-  
-5.  [Remove legacy Active Directory Group Policy Objects (optional)](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
-  
-6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -61,9 +48,13 @@ Move settings and data to the Destination Server as follows:
   
 2.  At the command prompt, type the following command, and then press ENTER:  
   
-     **robocopy \\\\** *<SourceServerName\>* **\\** *<SharedSourceFolderName\>* **\\\\** *<DestinationServerName\>* **\\** *<SharedDestinationFolderName\>*  **/E /B /COPY:DATSOU /LOG:C:\Copyresults.txt**  
+    `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`  
   
-     where *<SourceServerName\>* is the name of the Source Server, *<SharedSourceFolderName\>* is the name of the shared folder on the Source Server, *<DestinationServerName\>* is the name of the Destination Server, and *<SharedDestinationFolderName\>* is the shared folder on the Destination Server to which the data will be copied.  
+     Where:
+     - \<SourceServerName\> is the name of the Source Server
+     - \<SharedSourceFolderName\> is the name of the shared folder on the Source Server
+     - \<DestinationServerName\> is the name of the Destination Server,
+     - \<SharedDestinationFolderName\> is the shared folder on the Destination Server to which the data will be copied.  
   
 3.  Repeat the previous step for each shared folder that you are migrating from the Source Server.  
   
@@ -78,7 +69,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Run the following cmdlet, where `[AD username]` is the name of the Active Directory user account that you want to import:  
   
-     `Import-WssUser  œSamAccountName [AD username]`  
+     `Import-WssUser  SamAccountName [AD username]`  
   
 ##  <a name="BKMK_MoveDHCP"></a> Move the DHCP Server role from the Source Server to the router  
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
@@ -144,9 +135,9 @@ Move settings and data to the Destination Server as follows:
   
 6.  Repeat step 5 to delete the following GPOs that apply to your network:  
   
-    -   Windows SBS Client  œ Windows 7 and Windows Vista Policy  
+    -   Windows SBS Client   Windows 7 and Windows Vista Policy  
   
-    -   Windows SBS Client  œ Windows XP Policy  
+    -   Windows SBS Client   Windows XP Policy  
   
     -   Windows SBS CSE Policy  
   
@@ -172,9 +163,9 @@ Move settings and data to the Destination Server as follows:
   
 5.  Right-click **Windows SBS Client**, click **Delete**, and then click **Yes**.  
   
-6.  Right-click **Windows SBS Client  œ Windows 7 and Windows Vista**, click **Delete**, and then click **Yes**.  
+6.  Right-click **Windows SBS Client   Windows 7 and Windows Vista**, click **Delete**, and then click **Yes**.  
   
-7.  Right-click **Windows SBS Client  œ Windows XP**, click **Delete**, and then click **Yes**.  
+7.  Right-click **Windows SBS Client   Windows XP**, click **Delete**, and then click **Yes**.  
   
 8.  Confirm that these three WMI filters are deleted.  
   

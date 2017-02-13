@@ -1,5 +1,6 @@
 ---
 title: Install updates
+description: Learn how to install updates to MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

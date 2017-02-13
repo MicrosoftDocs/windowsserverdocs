@@ -1,5 +1,7 @@
 ---
-title: What&#39;s New in IPAM
+title: What's New in IPAM
+description: This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,11 +14,11 @@ ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
 ms.author: jamesmci
 author: jamesmci
 ---
-# What&#39;s New in IPAM
+# What's New in IPAM
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
-This topic describes the IP Address Management (IPAM) functionality that is new or changed in  Windows Server 2016.  
+This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.  
   
 IPAM provides highly customizable administrative and monitoring capabilities for the IP address and DNS infrastructure on an Enterprise or Cloud Service Provider (CSP) network. You can monitor, audit, and manage servers running Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) by using IPAM.  
   

@@ -1,5 +1,6 @@
 ---
 title: Configure Disk Protection in MultiPoint Services
+description: Learn how to set up disk protection for MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

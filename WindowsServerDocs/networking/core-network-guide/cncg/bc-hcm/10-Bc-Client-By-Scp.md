@@ -1,13 +1,9 @@
 ---
 title: Configure Client Automatic Hosted Cache Discovery by Service Connection Point
-ms.custom: na
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ea1c34fd-5a33-4228-9437-9bb3d44230eb
 ms.author: jamesmci
@@ -16,7 +12,7 @@ author: jamesmci
 
 #  Configure Client Automatic Hosted Cache Discovery by Service Connection Point
 
->Applies To: Windows Server&reg; 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 With this procedure you can use Group Policy to enable and configure BranchCache hosted cache mode on domain\-joined computers that are running the following BranchCache\-capable Windows operating systems.
 

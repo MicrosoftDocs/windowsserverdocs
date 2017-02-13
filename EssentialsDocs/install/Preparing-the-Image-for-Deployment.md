@@ -16,7 +16,7 @@ manager: dongill
 
 # Preparing the Image for Deployment
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 A typical tool for preparing an image is sysprep.exe. Running this tool generalizes the image and shuts down the server so that the Initial Configuration will run when the server that contains the image is restarted. All modifications to the image must be complete before you run sysprep.exe.  
   

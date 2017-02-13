@@ -1,5 +1,7 @@
 ---
 title: View DNS Resource Records for a DNS Zone
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +16,7 @@ author: jamesmci
 ---
 # View DNS Resource Records for a DNS Zone
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to view DNS resource records for a DNS zone in the IPAM client console.  
   

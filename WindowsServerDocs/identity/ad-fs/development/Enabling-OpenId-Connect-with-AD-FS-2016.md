@@ -5,10 +5,10 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 
@@ -140,8 +140,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
                 //Authority = authority,  
                 MetadataAddress = metadataAddress,  
                 RedirectUri = postLogoutRedirectUri,  
-                PostLogoutRedirectUri = postLogoutRedirectUri,  
-                ResourceID = resourceId  
+                PostLogoutRedirectUri = postLogoutRedirectUri 
         ```  
   
         ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_11.PNG)  

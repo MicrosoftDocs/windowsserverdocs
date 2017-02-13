@@ -16,7 +16,7 @@ manager: dongill
 
 # Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
  Office 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. These tools include Microsoft Office Web Apps, which are web versions of the Microsoft Office desktop applications that you are already familiar with, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint. With Office Web Apps, you can create and edit documents on any computer with a web browser.  
   

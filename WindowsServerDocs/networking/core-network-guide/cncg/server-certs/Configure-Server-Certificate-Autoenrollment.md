@@ -1,11 +1,7 @@
 ---
 title: Configure Server Certificate Autoenrollment
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
 ms.prod: windows-server-threshold
@@ -15,12 +11,10 @@ author: jamesmci
 ---
 # Configure Server Certificate Autoenrollment
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
-  
 > [!NOTE]  
 > Before you perform this procedure, you must configure a server certificate template by using the Certificate Templates Microsoft Management Console snap-in on a CA that is running AD CS.  
-  
 Membership in both the **Enterprise Admins** and the root domain's **Domain Admins** group is the minimum required to complete this procedure.  
   
 ### To configure server certificate autoenrollment  

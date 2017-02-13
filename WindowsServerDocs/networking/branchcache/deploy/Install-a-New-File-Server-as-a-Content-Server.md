@@ -1,13 +1,9 @@
 ---
 title: Install a New File Server as a Content Server
 description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
 ms.author: jamesmci
@@ -15,7 +11,7 @@ author: jamesmci
 ---
 # Install a New File Server as a Content Server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server 2016.  
   

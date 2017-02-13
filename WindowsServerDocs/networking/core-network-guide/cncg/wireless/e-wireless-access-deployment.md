@@ -1,13 +1,9 @@
 ---
 title: Wireless Access Deployment
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: jamesmci
@@ -21,7 +17,7 @@ Follow these steps to deploy wireless access:
 
 - [Deploy and Configure Wireless APs](#bkmk_aps)
 
-- [Create Security Groups for Wireless Users](#bkmk_groups)
+- [Create a Wireless Users Security Group](#bkmk_groups)
 
 - [Configure Wireless Network \(IEEE 802.11\) Policies](#bkmk_policies)
 
@@ -89,11 +85,11 @@ This procedure enumerates items commonly configured on a wireless AP. The item n
 
 Follow these steps to create one or more wireless users security groups, and then add users to the appropriate wireless users security group:
 
-- [Create a Wireless Users Security Group](#bkmk_creategroup)
+- [Create a Wireless Users Security Group](#bkmk_groups)
 
 - [Add Users to the Wireless Security Group](#bkmk_addusers)
 
-### <a name="bkmk_creategroup"></a>Create a Wireless Users Security Group
+### <a name="bkmk_groups"></a>Create a Wireless Users Security Group
 
 You can use this procedure to create a wireless security group in the Active Directory Users and Computers Microsoft Management Console \(MMC\) snap\-in.  
 

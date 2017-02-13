@@ -16,10 +16,9 @@ manager: dongill
 
 # Move Windows SBS 2003 settings and data to the Destination Server for Windows Server Essentials migration
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Move settings and data to the Destination Server as follows:  
-  
+Move settings and data to the Destination Server as follows:
 
 1.  [Copy data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
   
@@ -32,20 +31,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Configure the network](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Configure)  
   
 6.  [Map permitted computers to user accounts](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
-  
-2.  [Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_ImportADaccounts)  
-  
-3.  [Remove old logon scripts (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_RemoveScripts)  
-  
-4.  [Remove legacy Active Directory Group Policy Objects (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
-  
-5.  [Configure the network](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Configure)  
-  
-6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
-
-  
+ 
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
   
@@ -63,10 +49,14 @@ Move settings and data to the Destination Server as follows:
   
 3.  At the command prompt, type the following command, and then press ENTER:  
   
-     **robocopy \\\\<SourceServerName\>\\<SharedSourceFolderName\>\\\\<DestinationServerName\>\\<SharedDestinationFolderName\> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt**  
+    `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`  
   
-     where *<SourceServerName\>* is the name of the Source Server, *<SharedSourceFolderName\>* is the name of the shared folder on the Source Server, *<DestinationServerName\>* is the name of the Destination Server, and *<SharedDestinationFolderName\>* is the shared folder on the Destination Server to which the data will be copied.  
-  
+     Where:
+     - \<SourceServerName\> is the name of the Source Server
+     - \<SharedSourceFolderName\> is the name of the shared folder on the Source Server
+     - \<DestinationServerName\> is the name of the Destination Server,
+     - \<SharedDestinationFolderName\> is the shared folder on the Destination Server to which the data will be copied.  
+ 
 4.  Repeat the previous step for each shared folder that you are migrating from the Source Server.  
   
 ##  <a name="BKMK_ImportADaccounts"></a> Import Active Directory user accounts to the Windows Server Essentials Dashboard (optional)  
@@ -80,7 +70,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Run the following cmdlet, where `[AD username]` is the name of the Active Directory user account that you want to import:  
   
-     `Import-WssUser  œSamAccountName [AD username]`  
+     `Import-WssUser SamAccountName [AD username]`  
   
 ##  <a name="BKMK_RemoveScripts"></a> Remove old logon scripts (optional)  
  Windows SBS 2003 uses logon scripts for tasks such as installing software and customizing desktops.  Windows Server Essentials replaces the Windows SBS 2003 logon scripts with a combination of logon scripts and Group Policy Objects.  
@@ -177,7 +167,7 @@ Move settings and data to the Destination Server as follows:
   
 3.  Follow the instructions in the **Set up Anywhere Access** wizard to configure your router and domain name.  
   
- If your router does not support the UPnP žÂ¢ framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
+ If your router does not support the UPnP framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
   
 -   Port 80: HTTP Web traffic  
   

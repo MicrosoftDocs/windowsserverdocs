@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: c28c60ff-693d-49ee-a75b-58f24866217b
 title: Name Resolution Requirements for Federation Server Proxies
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

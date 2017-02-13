@@ -1,7 +1,7 @@
 ---
 title: BranchCache
 description: This topic provides an overview of BranchCache in Windows Server 2016
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,7 @@ author: jamesmci
 ---
 # BranchCache
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: de7e1e4a-f96d-4b59-ac9b-f65f5d37a96f
 title: Provide Users in Another Organization Access to Your Claims-Aware Applications and Services
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Allow one account to have multiple sessions
+description: Let a user access multiple systems at the same time.
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

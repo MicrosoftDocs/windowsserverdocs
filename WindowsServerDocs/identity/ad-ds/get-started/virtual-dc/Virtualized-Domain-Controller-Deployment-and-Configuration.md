@@ -5,10 +5,10 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 
@@ -276,7 +276,7 @@ You run the cmdlet on the proposed source domain controller that you intend to c
 ||-PreferredWINSServer|Specifies the static IPv4 address of the primary WINS server. String data type.|  
 ||-AlternateWINSServer|Specifies the static IPv4 address of the secondary WINS server. String data type.|  
 ||-IPv6DNSResolver|Specifies the static IPv6 DNS entries of the cloned computer in a comma-separated list. There is no way to set Ipv6 static information in virtualized domain controller cloning. Array data type.|  
-||-Offline|Does not perform the validation tests and overwrites any existing dccloneconfig.xml. Has no parameters. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#BKMK_OfflineMode).|  
+||-Offline|Does not perform the validation tests and overwrites any existing dccloneconfig.xml. Has no parameters. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md#BKMK_OfflineMode).|  
 ||*-Static*|Required if specifying static IP arguments IPv4SubnetMask, IPv4SubnetMask, or IPv4DefaultGateway. Has no parameters.|  
   
 Tests performed when run in online mode:  

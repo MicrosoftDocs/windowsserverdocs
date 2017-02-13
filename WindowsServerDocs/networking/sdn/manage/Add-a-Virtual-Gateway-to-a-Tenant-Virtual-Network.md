@@ -1,5 +1,7 @@
 ---
 title: Add a Virtual Gateway to a Tenant Virtual Network
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # Add a Virtual Gateway to a Tenant Virtual Network
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn how to configure tenant Virtual Gateways, using Windows PowerShell cmdlets and scripts, to provide your tenants' Virtual Networks with site-to-site connectivity to their organization sites and to the Internet.   
   

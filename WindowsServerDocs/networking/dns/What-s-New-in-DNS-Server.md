@@ -1,14 +1,9 @@
 ---
 title: What's New in DNS Server in Windows Server 2016
 description: This topic provides an overview of new features in DNS Server in Windows Server 2016
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-dns
-ms.tgt_pltfrm: na
+ms.technology: networking-dns
 ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: jamesmci
@@ -16,7 +11,7 @@ author: jamesmci
 ---
 # What's New in DNS Server in Windows Server 2016
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.  
   

@@ -1,5 +1,7 @@
 ---
 title: Monitor the existing load on the Remote Access server
+description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Monitor the existing load on the Remote Access server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   

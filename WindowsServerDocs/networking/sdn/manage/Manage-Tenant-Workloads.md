@@ -1,5 +1,7 @@
 ---
 title: Manage Tenant Workloads
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # Manage Tenant Workloads
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic contains links to documentation that allows you to manage tenant workloads by adding tenant virtual machines (VMs), using network virtual appliances, configuring software load balancing, and more.
 

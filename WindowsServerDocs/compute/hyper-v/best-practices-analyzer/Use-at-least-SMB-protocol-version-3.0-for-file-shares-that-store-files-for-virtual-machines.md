@@ -1,6 +1,6 @@
 ---
 title: Use at least SMB protocol version 3.0 for file shares that store files for virtual machines.
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

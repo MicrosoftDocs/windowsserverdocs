@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 09f335bb-896a-45dd-adc2-f215b8fba828
 title: Federated Web SSO Design
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

@@ -1,9 +1,8 @@
 ---
-title: Install the Network Controller server role using Server Manager
-ms.custom: na
+title: Install the Network Controller Server Role Using Server Manager
+description: This topic provides instructions on how to install the Network Controller server role by using Server Manager in Windows Server 2016. 
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
@@ -11,14 +10,14 @@ ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
 ms.author: jamesmci
 author: jamesmci
 ---
-# Install the Network Controller server role using Server Manager
+# Install the Network Controller Server Role Using Server Manager
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.  
   
 > [!NOTE]  
-> After you install Network Controller, you must use Windows PowerShell commands for additional Network Controller configuration. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
+> After you install Network Controller, you must use Windows PowerShell commands for additional Network Controller configuration. For more information, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
   
 ### To install Network Controller  
   

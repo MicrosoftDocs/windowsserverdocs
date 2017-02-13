@@ -1,5 +1,7 @@
 ---
 title: Guest Clustering in a Virtual Network
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +16,7 @@ author: jamesmci
 
 # Guest Clustering in a Virtual Network
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Virtual machines that are connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned in order to communicate on the network.  This means clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps in order to function correctly.
 

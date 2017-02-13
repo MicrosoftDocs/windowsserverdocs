@@ -1,5 +1,7 @@
 ---
 title: Filter the View of DNS Resource Records
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +16,7 @@ author: jamesmci
 ---
 # Filter the View of DNS Resource Records
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to filter the view of DNS resource records in the IPAM client console.  
   

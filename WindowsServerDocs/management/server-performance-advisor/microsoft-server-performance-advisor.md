@@ -7,12 +7,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # Microsoft Server Performance Advisor
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Download Microsoft Server Performance Advisor (SPA) to help diagnose performance issues in a Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 deployment. SPA generates comprehensive diagnostic reports and charts and provides recommendations to help you quickly analyze issues and develop corrective actions.
+Download Microsoft Server Performance Advisor (SPA) to help diagnose performance issues in a Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 deployment. SPA generates comprehensive diagnostic reports and charts and provides recommendations to help you quickly analyze issues and develop corrective actions.
 
 -   [Overview of Server Performance Advisor](#bkmk-aboutspa)
 
@@ -40,24 +39,24 @@ SPA Advisor Packs are the center of all tuning rules, which consist of a series 
 
 -   The Hyper-V Advisor Pack analyzes the general performance of the Hyper-V server role.
 
-    **Note**  
+    **Note**
     The Hyper-V Advisor Pack does not analyze guest operating systems.
 
-     
+     
 
--   The Active Directory advisor pack analyzes the general performance of the Active Directory role.
+-   The active directory advisor pack analyzes the general performance of the active directory role.
 
 SPA also offers an extensible model for non-Microsoft developers to write advisor packs to suit their needs.
 
-**Note**  
+**Note**
 SPA cannot understand all hardware and user scenario contexts. You should use the recommendations that are provided by the tool to help you make decisions and understand the consequences of any potential changes that are made to the servers.
 
- 
+ 
 
 ## <a href="" id="bkmk-downloadspa"></a>Download Server Performance Advisor
 
 
-Use the following links to download Server Performance Advisor for Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008:
+Use the following links to download Server Performance Advisor for Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008:
 
 -   [Microsoft Server Performance Advisor 3.1 (32-bit)](http://go.microsoft.com/fwlink/p/?linkid=327751)
 
@@ -65,16 +64,16 @@ Use the following links to download Server Performance Advisor for Windows Serve
 
 You can extract the files in the CAB file by using the following commands:
 
--   For the x86 version: **extrac32.exe /e /a /l “d:\\SPA�? “d:\\SPA\\SPAPlus\_x86.cab�?**
+-   for the x86 version: **extrac32.exe /e /a /l  d:\\SPA   d:\\SPA\\SPAPlus\_x86.cab **
 
--   For the x64 version: **extrac32.exe /e /a /l “d:\\SPA�? “d:\\SPA\\SPAPlus\_amd64.cab�?**
+-   for the x64 version: **extrac32.exe /e /a /l  d:\\SPA   d:\\SPA\\SPAPlus\_amd64.cab **
 
-**Caution**  
+**Caution**
 When you extract the .cab file, SPA must preserve the hierarchical directory structure to function correctly. Depending on the CAB tools that are installed on your server, extraction may result in a non-operational directory structure. To retain the hierarchical directory structure, you can use a CAB extraction utility tool that extracts a file directory structure.
 
- 
+ 
 
-If the CAB extraction tool properly extracted the files, subfolders will automatically appear in the extraction target folder.
+if the CAB extraction tool properly extracted the files, subfolders will automatically appear in the extraction target folder.
 
 ### SPA prerequisites
 
@@ -82,6 +81,6 @@ The SPA Console requires that the following software is installed:
 
 -   Microsoft .NET Framework 4
 
--   SQL Server 2008 R2 Express SP1 or Microsoft SQL Server 2008 R2 SP1
+-   SQL Server 2008 R2 Express SP1 or Microsoft SQL Server 2008 R2 SP1
 
 Newer versions may be compatible. Any known product incompatibilities with SPA Console will be noted.

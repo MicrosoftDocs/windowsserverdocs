@@ -1,4 +1,3 @@
-
 ---
 ms.assetid: 626e33fc-4ac2-4d38-9ac9-addaa4c8d9bb
 title: Home Realm Discovery Customization 
@@ -6,12 +5,13 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/31/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
+
 # Home Realm Discovery Customization
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

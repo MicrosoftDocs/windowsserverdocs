@@ -12,11 +12,11 @@ ms.date: 10/11/2016
 # Cluster to cluster Storage Replication
 > Applies To: Windows Server 2016
 
-Cluster-to-cluster replication is now available in Windows Server 2016, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
+Cluster-to-cluster replication is now available in Windows Server 2016 Datacenter Edition, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct-attached storage). The management and configuration is similar to server-to-server replication.  
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
+There are no graphical tools in Windows Server 2016 Datacenter Edition that can configure Storage Replica for cluster-to-cluster replication, though Azure Site Recovery will be able to configure this scenario in the future.
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 16 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.  
@@ -26,9 +26,9 @@ There are no graphical tools in Windows Server 2016 that can configure Storage R
 ### Terms  
 This walkthrough uses the following environment as an example:  
 
--   Two member servers, named **SR-SRV01** and **SR-SRV02** in a cluster named **SR-SRVCLUSA**.  
+-   Two member servers, named **SR-SRV01** and **SR-SRV02** that are later formed into a cluster named **SR-SRVCLUSA**.  
 
--   Two member servers named **SR-SRV03** and **SR-SRV04** in a cluster named **SR-SRVCLUSB**.  
+-   Two member servers named **SR-SRV03** and **SR-SRV04** that are later formed into  a cluster named **SR-SRVCLUSB**.  
 
 -   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
@@ -39,7 +39,7 @@ This walkthrough uses the following environment as an example:
 ### Prerequisites  
 
 * Active Directory Domain Services forest (does not need to run Windows Server 2016).  
-* At least four servers (two servers in two clusters) with Windows Server 2016 installed. Supports up to two 64 node clusters.  
+* At least four servers (two servers in two clusters) with Windows Server 2016 Datacenter Edition installed. Supports up to two 64 node clusters.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
@@ -50,7 +50,7 @@ This walkthrough uses the following environment as an example:
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
 ### Provision operating system, features, roles, storage, and network  
-1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
 
@@ -120,31 +120,13 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         2.  Provision the storage using your vendor documentation.  
 
 10. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.  
-For example, to validate two of the proposed stretch cluster nodes that each have D: and E: volume and run the test for230 minutes:
+For example,  
 
-    1.  Move all available storage to **SR-SRV01**.  
+   ```PowerShell
+   MD c:\temp
 
-    2.  Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-
-    3.  Add the online storage to that empty role named **New Role**.  
-
-    4.  Move all available storage to **SR-SRV03**.  
-
-    5.  Click **Create Empty Role** in the **Roles** section of Failover Cluster Manager.  
-
-    6.  Move the empty **New Role (2)** to **SR-SRV03**.  
-
-    7.  Add the online storage to that empty role named **New Role (2)**.  
-
-    8.  Now that you have mounted all your storage with drive letters and evaluate the cluster with `Test-SRTopology`.  
-
-        For example:  
-
-        ```PowerShell
-        MD c:\temp
-
-        Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
-        ```
+   Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
+   ```
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
@@ -386,8 +368,8 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Storage Replica Overview](storage-replica-overview.md)  
 -   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)  
--   [Storage Replica: Known Issues](storage-replica--known-issues.md)  
--   [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+-   [Storage Replica: Known Issues](storage-replica-known-issues.md)  
+-   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 
 ## See Also  
 -   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  

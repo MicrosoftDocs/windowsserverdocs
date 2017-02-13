@@ -1,6 +1,6 @@
 ---
 title: The team interface bound to a virtual switch should be in default mode
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

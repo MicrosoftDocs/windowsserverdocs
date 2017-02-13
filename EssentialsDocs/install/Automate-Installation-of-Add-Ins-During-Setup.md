@@ -16,7 +16,7 @@ manager: dongill
 
 # Automate Installation of Add-Ins During Setup
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_AddIns"></a> Automate installing add-ins during setup  
  To install add-ins during setup, use the PostIC.cmd method described in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section of this document.  

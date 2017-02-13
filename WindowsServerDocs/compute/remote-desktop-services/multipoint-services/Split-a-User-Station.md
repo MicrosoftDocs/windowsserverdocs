@@ -1,5 +1,6 @@
 ---
 title: Split a User Station
+description: Learn how to split a display in MultiPoint Services so two users can use the same station
 ms.custom: na
 ms.date: 07/08/2016
 ms.prod: windows-server-threshold

@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: kumudd
-ms.date: 08/18/2016
+ms.date: 11/21/2016
 ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
 ---
 # Storage Spaces Optimize Pool
@@ -32,14 +32,14 @@ You can monitor the progress of the optimize job with the following command:
 ```  
 Get-StorageJob | ? Name -eq Optimize  
 ```  
-
-## Related Topics  
+## See Also  
+-   [Optimize-StoragePool](https://technet.microsoft.com/library/mt774164.aspx)
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
 -   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
-## See Also  
+
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  \
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  

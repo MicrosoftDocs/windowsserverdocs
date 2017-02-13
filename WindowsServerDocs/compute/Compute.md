@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 
 >Applies To: Windows Server 2016 
 
-<img src="../get-started/2-compute.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Compute in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, compute features deliver the flexibility you need to power the workloads for your customers.
+<img src="../get-started/media/2-compute.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Compute in Windows Server 2016 is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, compute features deliver the flexibility you need to power the workloads for your customers.
 
 Compute in Windows Server 2016 includes updates to Hyper-V that improve security, scalability, and reliability. Updates to failover clustering, networking, and storage make it even easier to deploy and manage these technologies when used with Hyper-V. For details, see [What's new in Hyper-V on Windows Server 2016](./hyper-v/what-s-new-in-hyper-v-on-windows.md).   
 
@@ -44,9 +44,9 @@ Hyper-V is available in certain versions of Windows 10, Windows 8.1, and Windows
 ### [Microsoft Hyper-V Server 2016](https://technet.microsoft.com/hyper-v-server-docs/)
 The Hyper-V technology is also available separately from Windows and Windows Server, as a free, standalone product. Hyper-V Server is commonly used as the host in a virtualized desktop infrastructure (VDI) environment.
 
-## [Remote Desktop Services](./remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
+## [Remote Desktop Services](./remote-desktop-services/welcome-to-rds.md)
 
-Learn how to create a desktop hosting environment based on Remote Desktop Services and Azure services. Also included is information about using MultiPoint Services in Windows Server 2016.
+Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely. You can use Remote Desktop Services plus Azure services to create hosting solutions. 
 
 ## [Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)
 

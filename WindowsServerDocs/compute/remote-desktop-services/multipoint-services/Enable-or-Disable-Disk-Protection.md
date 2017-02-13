@@ -1,5 +1,6 @@
 ---
 title: Enable or Disable Disk Protection
+description: Learn how to use disk protection with MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

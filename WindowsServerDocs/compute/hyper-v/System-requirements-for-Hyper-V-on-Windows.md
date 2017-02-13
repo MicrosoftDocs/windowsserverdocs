@@ -1,9 +1,9 @@
 ---
 title: System requirements for Hyper-V on Windows Server 2016
-description: " "
+description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server 2016"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: logman create api
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,36 +15,35 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman create api
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Create an API tracing data collector.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+create an API tracing data collector.  
+  
 ## Syntax  
 ```  
 logman create api <[-n] <name>> [options]  
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  
 |[-n] <name>|Name of the target object.|  
 |-f <bin&#124;bincirc&#124;csv&#124;tsv&#124;sql>|Specifies the log format for the data collector.|  
 |-[-]u <user [password]>|Specifies the user to Run As. Entering a * for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt.|  
-|-m <[start] [stop] [[start] [stop] [...]]>|Change to manual start or stop instead of a scheduled begin or end time.|  
+|-m <[start] [stop] [[start] [stop] [...]]>|change to manual start or stop instead of a scheduled begin or end time.|  
 |-rf <[[hh:]mm:]ss>|Run the data collector for the specified period of time.|  
 |-b <M/d/yyyy h:mm:ss[AM&#124;PM]>|Begin collecting data at the specified time.|  
 |-e <M/d/yyyy h:mm:ss[AM&#124;PM]>|End data collection at the specified time.|  
 |-si <[[hh:]mm:]ss>|Specifies the sample interval for performance counter data collectors.|  
 |-o <path&#124;dsn!log>|Specifies the output log file or the DSN and log set name in a SQL database.|  
 |-[-]r|Repeat the data collector daily at the specified begin and end times.|  
-|-[-]a|Append to an existing log file.|  
+|-[-]a|append to an existing log file.|  
 |-[-]ow|Overwrite an existing log file.|  
-|-[-]v <nnnnnn&#124;mmddhhmm>|Attach file versioning information to the end of the log file name.|  
+|-[-]v <nnnnnn&#124;mmddhhmm>|attach file versioning information to the end of the log file name.|  
 |-[-]rc <task>|Run the command specified each time the log is closed.|  
 |-[-]max <value>|Maximum log file size in MB or maximum number of records for SQL logs.|  
 |-[-]cnf <[[hh:]mm:]ss>|When time is specified, create a new file when the specified time has elapsed. When time is not specified, create a new file when the maximum size is exceeded.|  
@@ -52,10 +51,10 @@ logman create api <[-n] <name>> [options]
 |-mods <path [path [...]]>|Specifies the list of modules to log API calls from.|  
 |-inapis <module!api [module!api [...]]>|Specifies the list of API calls to include in logging.|  
 |-exapis <module!api [module!api [...]]>|Specifies the list of API calls to exclude from logging.|  
-|-[-]ano|Log (-ano) API names only, or do not log only (--ano) API names.|  
-|-[-]recursive|Log (-recursive) or do not log (--recursive) APIs recursively beyond the first layer.|  
+|-[-]ano|Log (-ano) API names only, or do not log only (-ano) API names.|  
+|-[-]recursive|Log (-recursive) or do not log (-recursive) APIs recursively beyond the first layer.|  
 |-exe <value>|Specifies the full path to an executable for API Tracing.|  
-## Remarks  
+## remarks  
 Where [-] is listed, an extra - negates the option.  
 ## <a name="BKMK_examples"></a>Examples  
 The following command creates an API trace counter called trace_notepad for the executable file c:\windows\notepad.exe and outputs the results to the file c:\notepad.etl.  
@@ -70,5 +69,5 @@ The following command creates an API trace counter called trace_notepad for the 
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  

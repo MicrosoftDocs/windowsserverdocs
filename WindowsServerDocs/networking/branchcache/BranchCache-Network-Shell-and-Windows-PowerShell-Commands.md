@@ -1,7 +1,7 @@
 ---
 title: BranchCache Network Shell and Windows PowerShell Commands
 description: This topic provides links to Network Shell and Windows PowerShell command reference resources for BranchCache in Windows Server 2016
-manager: dongill
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -16,7 +16,7 @@ author: jamesmci
 ---
 # BranchCache Network Shell and Windows PowerShell Commands
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 In Windows Server 2016, you can configure and manage BranchCache by using either Windows PowerShell or the Network Shell (Netsh) commands for BranchCache.  
   

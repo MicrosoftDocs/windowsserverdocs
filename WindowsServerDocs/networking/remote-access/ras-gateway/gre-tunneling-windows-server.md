@@ -1,15 +1,12 @@
 ---
 title: GRE Tunneling in Windows Server 2016
-ms.custom: na
+description: You can use this topic to gain an understanding of updates to Generic Routing Encapsulation (GRE) tunnel capability for RAS Gateway in Windows Server 2016. 
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-ras
-ms.tgt_pltfrm: na
+ms.technology: networking-ras
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
-ms.author: victorh
+ms.author: jamesmci
 author: vhorne
 ---
 # GRE Tunneling in Windows Server 2016
@@ -104,7 +101,7 @@ For more information about deploying S2S gateways, see the following topics:
   
 -   [RAS Gateway](RAS-Gateway.md)  
   
--   [Border Gateway Protocol &#40;BGP&#41;](../bgp/Border-Gateway-Protocol--BGP-.md)  
+-   [Border Gateway Protocol &#40;BGP&#41;](../bgp/Border-Gateway-Protocol-BGP.md)  
   
 -   [New! Windows Server 2012 R2 RAS Multitenant Gateway Deployment Guide](http://blogs.technet.com/b/wsnetdoc/archive/2014/03/26/new-windows-server-2012-r2-RAS-multitenant-gateway-deployment-guide.aspx)  
   

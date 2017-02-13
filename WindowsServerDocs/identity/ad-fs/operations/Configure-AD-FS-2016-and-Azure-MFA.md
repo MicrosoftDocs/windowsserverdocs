@@ -5,10 +5,10 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/22/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 
@@ -28,6 +28,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
 - [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
+
 >[!NOTE]   
 > Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  If you have either of these you do not need individual subscriptions.   
 - A Windows Server 2016 AD FS on-premises environment.  
@@ -54,18 +55,14 @@ Note that TenantID is the name of your directory in Azure AD.  Use the following
   
 ### Step 2: Add the new credentials to Azure Multi-Factor Auth Client SPN   
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the SPN for the Azure Multi-Factor Auth Client. The certificates generated using the `New-AdfsAzureMFaTenantCertificate` cmdlet will serve as these credentials. Do the following using PowerShell to add the new credentials to the Azure Multi-Factor Auth Client SPN.  
+
 >[!NOTE]   
 >In order to complete this step you need to connect to your instance of Azure AD with PowerShell using Connect-MsolService.  These steps assume you have already connected via PowerShell.  For information see [Connect-MsolService.](https://msdn.microsoft.com/library/dn194123.aspx)  
-      
-1. **Get the X.509 interpretation of the certificate and convert it to X509**   
-          
-    `$certX509 = New-Object System.Security.Cryptography.X509Certificates.X509Certificate`  
-    `$certX509.Import([System.Convert]::FromBase64String($certBase64))`  
-      
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA2.PNG)  
+     
   
 2. **Set the certificate as the new credential against the Azure Multi-Factor Auth Client**  
-    `New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 -StartDate $certX509.GetEffectiveDateString() -EndDate $certX509.GetExpirationDateString()`  
+	
+	`New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 `
   
 >[!NOTE]  
 > 981f26a1-7f43-403b-a875-f8b09b8cd720 is the guid for Azure Multi-Factor Auth Client.  

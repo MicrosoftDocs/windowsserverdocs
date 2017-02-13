@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Anywhere Access in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 When you turn on the Anywhere Access functionalities, Remote Web Access, virtual private network, and DirectAccess in  Windows Server Essentials, or in  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, they enable your network users to access server resources from any location with an Internet connection, at any time, and on any device. The following topics discuss configuring Remote Web Access, virtual private network (VPN), and DirectAccess features on your server.  
   

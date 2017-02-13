@@ -30,15 +30,19 @@ Here's how to create a local branch, save your changes, and then push them to yo
 
   This creates the local branch directly from the upstream branch and helps you avoid merging the wrong files into your new local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
       
-        git checkout upstream/ga-threshold -b working-8-31  
+        git checkout upstream/master -b working-11-18
+
+  If you're working on content that should be merged into branch that's not         
 
 5. Add the local working branch to your fork:
 
         git push origin <working branch>
 
-6. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. After you've done this, go to the next step.
+6. Create your new article or make changes to an existing article. Use Windows Explorer to open markdown files, and your markdown editor to create and edit files. For basic formatting help, see this [article](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) in Github.
 
-7. Check status, then add and commit your changes:
+7. Add required metadata and version info, according to [Metadata and product versioning](metadata-OSversioning-and-trademarks.md).
+
+8. Check status, then add and commit your changes:
 
         git status
 
@@ -55,11 +59,11 @@ Here's how to create a local branch, save your changes, and then push them to yo
 >[!IMPORTANT]
 >The command ```git add .``` adds ALL pending changes reported by ```git status```. This means that if ```git status``` shows untracked updates that you don't want to add, use ```git add <file path>``` instead.  
 
-7. Update your local working branch with changes from upstream:
+9. Update your local working branch with changes from upstream:
 
         git pull upstream master
 
-8. Push the changes to your fork on GitHub:
+10. Push the changes to your fork on GitHub:
 
         git push origin <working branch>
 

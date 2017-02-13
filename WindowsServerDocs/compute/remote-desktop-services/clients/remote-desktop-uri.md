@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop clients URI scheme
+description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,6 +12,7 @@ ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: lizap
 manager: dongill
 ms.author: elizapo
+ms.date: 11/02/2016
 ---
 # Remote Desktop client Universal Resource Identifier (URI) scheme support
 
@@ -21,11 +23,13 @@ Enabling a Uniform Resource Identifier (URI) scheme gives IT professionals and d
 - Third-party applications to launch Microsoft Remote Desktop and start remote sessions with predefined settings (provided as part of the URI string).
 - End users to start remote connections using pre-configured URLs.
 
-Microsoft Remote Desktop uses the URI scheme rdp://query_string to store pre-configured attribute settings that are used when launching the client. The query strings represent a single or set of RDP attributes provided in the URL. The RDP attributes are separated by the ampersand symbol (&).
+Microsoft Remote Desktop uses the URI scheme rdp://query_string to store pre-configured attribute settings that are used when launching the client. The query strings represent a single or set of RDP attributes provided in the URL. 
 
-For example, when connecting to a PC, the string is:
+The RDP attributes are separated by the ampersand symbol (&). For example, when connecting to a PC, the string is:
 
-*rdp://full%20address=s:mypc:3389&audiomode=i:2&disable%20themes=i:1*
+```
+rdp://full%20address=s:mypc:3389&audiomode=i:2&disable%20themes=i:1
+```
 
 This table gives a complete list of supported attributes that may be used with the iOS, Mac, and Android Remote Desktop clients. (An “x” in the platform column indicates the attribute is supported. The values denoted by chevrons (<>) represent the values that are supported by the Remote Desktop clients.)
 

@@ -1,5 +1,7 @@
 ---
 title: Overview of the Test Lab Scenario
+description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Overview of the Test Lab Scenario
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 In this test lab scenario, DirectAccess is deployed with:  
   

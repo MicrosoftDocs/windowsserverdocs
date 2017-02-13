@@ -16,7 +16,7 @@ manager: dongill
 
 # Preconfiguring a Router
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Typically, a new installation of the operating system requires an Internet capable router and firewall to connect the internal network of the customer to the Internet. If you provide a router as an additional value with a preconfigured server, you can take additional steps to preconfigure the router to provide a better user experience.  
   

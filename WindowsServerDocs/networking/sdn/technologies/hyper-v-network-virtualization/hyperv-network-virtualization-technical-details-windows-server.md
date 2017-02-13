@@ -1,5 +1,7 @@
 ---
-title: Hyper-V Network Virtualization Technical Details in  Windows Server 2016
+title: Hyper-V Network Virtualization Technical Details in Windows Server 2016
+description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server 2016
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,10 +12,10 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
-ms.author: vhorne
+ms.author: jamesmci
 author: vhorne
 ---
-# Hyper-V Network Virtualization Technical Details in  Windows Server 2016
+# Hyper-V Network Virtualization Technical Details in Windows Server 2016
 
 >Applies To:  Windows Server 2016
 

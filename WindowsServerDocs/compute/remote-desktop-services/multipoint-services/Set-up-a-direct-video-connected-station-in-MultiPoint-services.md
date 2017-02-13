@@ -1,5 +1,6 @@
 ---
 title: Set up a direct-video-connected station in MultiPoint Services
+description: Learn how to create a direct-video-connected station in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

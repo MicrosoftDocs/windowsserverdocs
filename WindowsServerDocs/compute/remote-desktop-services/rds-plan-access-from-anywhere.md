@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Access from anywhere
+description: Planning information for an RD Gateway
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,7 +11,7 @@ ms.topic: article
 ms.assetid: 5c38fab1-3586-4b7a-8bf0-7d85a8d5361d
 author: lizap
 ms.author: elizapo
-ms.date: 09/07/2016
+ms.date: 11/03/2016
 manager: dongill
 ---
 # Remote Desktop Services - Access from anywhere
@@ -26,4 +27,4 @@ The three primary purposes of the RD Gateway, in the order of the connection seq
 2. **Authenticate the user into the environment**: The RD Gateway uses the inbox IIS service to perform authentication, and can even utilize the RADIUS protocol to leverage [multi-factor authentication](rds-plan-mfa.md) solutions such as Azure MFA. Aside from the default policies created, you can create additional RD Resource Authorization Policies (RD RAPs) and RD Connection Authorization Policies (RD CAPs) to more specifically define which users should have access to which resources within the secure environment.
 3. **Pass traffic back and forth between the end-user's device and the specified resource**: The RD Gateway continues to perform this task for as long as the connection is established. You can specify different timeout properties on the RD Gateway servers to maintain the security of the enviornment in case the user walks away from the device.
 
-Additional details on the overall architecture of a Remote Desktop Services deployment can be found [in the desktop hosting reference architecture](desktop-hosting-reference-architecture.md) section.
+You can find additional details on the overall architecture of a Remote Desktop Services deployment [in the desktop hosting reference architecture](desktop-hosting-reference-architecture.md).

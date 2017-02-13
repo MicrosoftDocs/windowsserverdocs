@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Build anywhere
+description: Planning information to help you determine where to host your RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

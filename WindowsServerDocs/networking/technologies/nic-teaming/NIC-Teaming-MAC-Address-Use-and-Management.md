@@ -1,5 +1,7 @@
 ---
 title: NIC Teaming MAC Address Use and Management
+description: This topic provides information about how NIC Teaming uses the media access control (MAC) address in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +16,7 @@ author: jamesmci
 ---
 # NIC Teaming MAC Address Use and Management
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control (MAC) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter selected by the operating system from the initial set of team members.  
   

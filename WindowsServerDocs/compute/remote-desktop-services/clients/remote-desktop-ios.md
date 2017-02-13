@@ -1,5 +1,6 @@
 ---
 title: Get started with Remote Desktop on iOS
+description: Learn how to set up the Remote Desktop client for iOS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,48 +12,30 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: lizap
 manager: dongill
 ms.author: elizapo
+date: 01/13/2017
 ---
 # Get started with Remote Desktop on iOS
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-Devices running iOS 6.x and newer are supported.
+You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
-Microsoft Remote Desktop Client gives you the ability to get work done from almost anywhere by providing an easy way to use your mobile device to: 
+Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
-- Connect to a remote PC to access all of your apps, files, and network resources
-- Access published Windows apps hosted on Microsoft Azure
+> [!NOTE]
+> The iOS client supports devices running iOS 6.x and newer.
 
-
-
-## Start using the Remote Desktop client on your iOS device
+## Get the Remote Desktop client and start using it
 Follow these steps to get started with Remote Desktop on your iOS device:
 
 1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8).
-2. Set up your PC to accept remote connections.
-3. Create a new Remote Desktop connection or add a remote resource.
+2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
+3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
-A remote desktop connection summarizes all the settings for the remote desktop you want to connect to.
 
-Remote Resources enables access to RemoteApp programs, session-based desktops, and virtual desktops published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
+### Add a Remote Desktop connection
 
-RemoteApp is also available as a cloud-based service that provides access to published applications on Microsoft Azure. For more information, visit the Azure RemoteApp landing page.
-
-## Getting to know the Connection Center
-
-After the Remote Desktop Client is installed, start the app, and the connection center will open. You can use the connection center to:
-
-- Connect to a Windows PC or server
-- Access on-premises work resources published using RemoteApp and Desktop Connections
-- Access apps in the cloud through Azure RemoteApp
-- Manage remote desktops
-- Modify settings
-
-### Create and edit Remote Desktops
-
-A remote desktop summarizes all the settings for the remote desktop connection.
-
-To create a remote desktop: 
+To create a remote desktop connection: 
 1. In the Connection Center tap **+**, and then tap **Add PC or Server**.
 2. Enter the following information for the remote desktop connection:
   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
@@ -67,11 +50,27 @@ To create a remote desktop:
 
 Need to edit these settings? Press and hold the desktop you want to edit, and then tap the settings icon. 
 
-To delete a remote desktop, press and hold the desktop you want to delete. Tap the **Delete** icon.
+### Add a remote resource
+Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
 
-## Gateway
+- The URL displays the link to the RD Web Access server that gives you access to RemoteApp and Desktop Connections.
+- The configured RemoteApp and Desktop Connections are listed.
 
-A Remote Desktop Gateway (RD Gateway) lets authorized users connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
+To add a remote resource:
+
+1. On the Connection Center screen, tap **+**, and then tap **Add Remote Resources**. 
+2. Enter information for the remote resource:
+   - **Feed URL** - The URL of the RD Web Access server. You can also enter your corporate email account in this field – this tells the client to search for the RD Web Access Server associated with your email address.
+   - **User name** - The user name to use for the RD Web Access server you are connecting to.
+   - **Password** - The password to use for the RD Web Access server you are connecting to.
+3. Tap **Save**.
+
+The remote resources will be displayed in the Connection Center.
+
+
+## Connect to an RD Gateway to access internal assets
+
+A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
 
 To set up a new gateway:
 
@@ -81,13 +80,8 @@ To set up a new gateway:
   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
   - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
-To delete a gateway:
 
-1. In the Connection Center, tap **Settings > Gateways**.
-2. Swipe a row from right to left to select the gateway.
-3. Tap **Delete**.
-
-## User management
+## Manage your user accounts 
 
 When you connect to a desktop or remote resources, you can save the user accounts to select from again. You can manage your user accounts by using the Remote Desktop client.
 
@@ -107,34 +101,10 @@ To delete a user account:
 2. Swipe the row from right to left to select the user.
 3. Tap **Delete**.
 
-## Remote resources
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
-
-- The URL displays the link to the RD Web Access server enabling access to RemoteApp and Desktop Connections.
-- The configured RemoteApp and Desktop Connections are listed.
-
-To add remote resources:
-
-1. On the Connection Center screen, tap **+**, and then tap **Add Remote Resources**. 
-2. Enter information for the remote resource:
-   - **Feed URL** - The URL of the RD Web Access server. You can also enter your corporate email account in this field – this tells the client to search for the RD Web Access Server associated with your email address.
-   - **User name** - The user name to use for the RD Web Access server you are connecting to.
-   - **Password** - The password to use for the RD Web Access server you are connecting to.
-3. Tap **Save**.
-
-The remote resources will be displayed in the Connection Center.
 
 
-To delete remote resources:
-
-1. In the Connection Center, press and hold any of the applications or desktops in the remote resources or the name of the application feed.
-2. Tap **Settings** on the URL name.
-2. Tap **Delete**.
-3. Confirm the deletion.
-
-
-## Navigating the Remote Desktop Session
-When you start a remote desktop connection, there are tools available that you can use to navigate the session.
+## Navigate the Remote Desktop session
+When you start a remote desktop session, there are tools available that you can use to navigate the session.
 
 ### Start a Remote Desktop Connection
 
@@ -171,7 +141,7 @@ You can have multiple connections open to different PCs at the same time. Tap th
 
 The command bar replaced the Utility bar starting in version 8.0.1. You can switch between the mouse modes and return to the connection center from the command bar.
 
-### Direct touch gestures and mouse modes
+## Use touch gestures and mouse modes in a remote session
 
 The client uses standard touch gestures. You can also use touch gestures to replicate mouse actions on the remote desktop. The mouse modes available are defined in the table below.
 
@@ -189,13 +159,15 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Mouse wheel          | 2 finger tap and hold, then drag up or down                |
 | Mouse pointer | Zoom                 | Pinch 2 fingers to zoom in or spread 2 fingers to zoom out |
 
-## On-screen keyboards
-On the iPad and iPhone you can use the button on the right edge of the bar above the keyboard to switch between the standard and additional keyboard.
+## Use a keyboard in a remote session
 
-## Bluetooth keyboard
-If Bluetooth is enabled, a Bluetooth keyboard should be automatically detected.
+You can use either an on-screen keyboard or physical keyboard in your remote session.
 
-Due to limitations on the OS, special keys such as Ctrl, Option, and Function will not work as expected. The following keys currently work:
+For on-screen keyboards, use the button on the right edge of the bar above the keyboard to switch between the standard and additional keyboard.
+
+If Bluetooth is enabled for your iOS device, the client automatically detects the Bluetooth keyboard.
+
+Be aware that, due to limitations on the OS, special keys such as Ctrl, Option, and Function will not work as expected with a Bluetooth keyboard. The following keys work:
 
 - Alphanumeric keys
 - Cursor keys

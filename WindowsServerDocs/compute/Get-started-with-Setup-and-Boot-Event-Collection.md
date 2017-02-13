@@ -1,6 +1,6 @@
 ---
 title: Get started with Setup and Boot Event Collection
-description: " "
+description: "Setting up Setup and Boot Event Collection collectors and targets"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill

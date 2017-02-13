@@ -1,11 +1,7 @@
 ---
 title: Install the Certification Authority
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 ms.prod: windows-server-threshold
@@ -15,7 +11,7 @@ author: jamesmci
 ---
 # Install the Certification Authority
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this procedure to install Active Directory Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.  
   

@@ -1,5 +1,7 @@
 ---
 title: DirectAccess
+description: This topic provides a link to DirectAccess documentation for Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +17,7 @@ author: jamesmci
 
 # DirectAccess
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 In Windows Server 2016, **DirectAccess and VPN** is a role service of the **Remote Access** server role.
 

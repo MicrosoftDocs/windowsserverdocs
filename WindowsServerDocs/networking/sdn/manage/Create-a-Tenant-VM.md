@@ -1,5 +1,7 @@
 ---
 title: Create a VM and Connect to a Tenant Virtual Network or VLAN
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # Create a VM and Connect to a Tenant Virtual Network or VLAN
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to create a tenant virtual machine \(VM\) and connect the VM to either a Virtual Network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network \(VLAN\). 
 

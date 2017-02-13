@@ -1,5 +1,6 @@
 ---
 title: MultiPoint Services Site Planning
+description: Planning information for MultiPoint Services deployments in Windows Server 2016
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
@@ -53,7 +54,7 @@ The physical layout of your site may affect your choice of station type. For mor
 > [!IMPORTANT]  
 > There should always be at least one direct video connected station per computer to act as the primary station.  
   
-### <a name="BKMK_USBZeroClientConnectedStations"></a>Layout for USB zero client connected stations  
+### Layout for USB zero client connected stations  
   
 -   Using intermediate hubs or daisy-chained station hubs is supported for ease-of-deployment, but the maximum recommended number of consecutive hubs is three. This means that the maximum distance from the computer to the station hub is 15 meters, because each USB 2.0 cable has the maximum length of five meters.  
   
@@ -79,13 +80,13 @@ There are no physical distance limitations for LAN clients. As long as they are 
 ## Using additional hubs  
 Additional hubs can be used to make installation easier. There are three types of hubs that are used on a MultiPoint Services system:  
   
--   [Station hubs](MultiPoint-services-site-Planning.md#BKMK_StationHubs)  
+-   [Station hubs](#Station-hubs)  
   
--   [Intermediate hubs](MultiPoint-services-site-Planning.md#BKMK_Intermediatehub)  
+-   [Intermediate hubs](#Intermediate-hubs)  
   
--   [Downstream hubs](MultiPoint-services-site-Planning.md#BKMK_Downstreamhubs)  
+-   [Downstream hubs](#Downstream-hubs)  
   
-### <a name="BKMK_StationHubs"></a>Station hubs  
+### Station hubs  
 A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high-powered devices will plugin to them.  
   
 **Root hub** A USB hub that is built-in to the host controller on a computer’s motherboard is known as a *root hub*. Station hubs are generally plugged-in to the root hub on the computer running MultiPoint Services.  
@@ -101,19 +102,19 @@ There should be no more than three USB zero clients or station hubs daisy chaine
   
 **Figure 6** MultiPoint Services system with daisy-chained stations  
   
-### <a name="BKMK_Intermediatehub"></a>Intermediate hubs  
+### Intermediate hubs  
 An intermediate hub is a hub that is between the server and a station hub. It is typically used to increase the number of ports that are available for station hubs or to extend the distance of the stations from the computer. It is recommended that no more than two intermediate hubs are used between a station hub and the server.  
   
 Intermediate hubs must be USB 2.0 or later, and they must be externally powered. USB 3.0 is recommended between the server and the intermediate hub if you are connecting more than three USB zero clients to an intermediate hub.  
   
-### <a name="BKMK_Downstreamhubs"></a>Downstream hubs  
+### Downstream hubs  
 A downstream hub is connected to a station hub to add more available ports for station devices. A downstream hub can be externally powered or bus-powered, depending on the devices that are plugged-in to the hub.  
   
 ![Multiple USB zero client connections](./media/WMS_diagram4.gif "WMS_diagram4")  
   
 **Figure 7** MultiPoint Services system with an intermediate hub, a station hub, and a downstream hub  
   
-## <a name="BKMK_NumberofUsersStationsandComputersRunningMultiPointServer"></a>Users, stations, and computers  
+## Users, stations, and computers  
 The number of stations you will need depends on the number of people who will have to access the computers running MultiPoint Services at the same time. Similarly, the number of computers running MultiPoint Services you will need depends on the total number of stations required. Direct-video-connected stations, USB-zero-client-connected stations, and RDP-over-LAN-connected stations are all considered stations. In addition, if the split-screen functionality is used, each half is considered a station.  
   
 ## Power considerations  

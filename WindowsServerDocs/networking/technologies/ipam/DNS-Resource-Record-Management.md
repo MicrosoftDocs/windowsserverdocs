@@ -1,5 +1,7 @@
 ---
 title: DNS Resource Record Management
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +16,7 @@ author: jamesmci
 ---
 # DNS Resource Record Management
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides information about managing DNS resource records by using IPAM.  
   

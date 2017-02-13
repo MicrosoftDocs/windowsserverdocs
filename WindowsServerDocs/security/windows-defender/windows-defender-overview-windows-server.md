@@ -16,7 +16,7 @@ ms.date: 10/12/2016
 ---
 # Windows Defender Overview for Windows Server
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Windows Server 2016 now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 against known malware and can regularly update antimalware definitions through Windows Update.
 
@@ -48,7 +48,7 @@ To uninstall Windows Defender, start a Windows PowerShell console as an administ
 `Uninstall-WindowsFeature -Name Windows-Server-Antimalware`
 
 > [!TIP]
-> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](../windows-defender/Windows-Defender-Events.md).
+> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](../windows-defender/windows-defender-events.md).
 
 ## <a name="BKMK_DefRun"></a>Verify Windows Defender is running
 To verify that Windows Defender is running on the server, run the following command: `sc query Windefend`. The `sc query` command returns information about the Windows Defender service. If Windows Defender is running, the `STATE` value displays `RUNNING`.
@@ -83,7 +83,7 @@ To ensure that protection from malware is maintained, we recommend that you enab
 The following table lists the services for Windows Defender and the dependent services.
 
 |Service Name|File Location|Description|
-|----------------|-----------------|---------------|
+|--------|---------|--------|
 |Windows Defender Service (Windefend)|C:\Program Files\Windows Defender\MsMpEng.exe|This is the main Windows Defender service that needs to be running at all times.|
 |Windows Defender Network Inspection Service (Wdnissvc)|C:\Program Files\Windows Defender\NisSrv.exe|This service is invoked when Windows Defender encounters a trigger to load it.|
 |Windows Error Reporting Service (Wersvc)|C:\WINDOWS\System32\svchost.exe -k WerSvcGroup|This service sends   error reports back to Microsoft.|
@@ -127,12 +127,12 @@ To remove exclusions, start a Windows PowerShell console as an administrator, an
 > [!TIP]
 > Custom and duplicate exclusions do not conflict with automatic exclusions.
 
-For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](../windows-defender/Automatic-exclusions-for-Windows-Defender.md).
+For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](../windows-defender/automatic-exclusions-for-windows-defender.md).
 
 ## See Also
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
-[Windows Defender Events](../windows-defender/Windows-Defender-Events.md)
-[Automatic exclusions for Windows Defender](../windows-defender/Automatic-exclusions-for-Windows-Defender.md)
+[Windows Defender Events](../windows-defender/windows-defender-events.md)
+[Automatic exclusions for Windows Defender](../windows-defender/automatic-exclusions-for-windows-defender.md)
 
 
 

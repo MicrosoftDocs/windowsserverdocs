@@ -4,10 +4,10 @@ title: Import a Server Authentication Certificate to the Default Web Site
 description:
 author: billmath
 manager: femila
-ms.date: 09/21/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ---

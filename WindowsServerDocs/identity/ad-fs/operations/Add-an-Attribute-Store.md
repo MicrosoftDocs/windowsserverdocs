@@ -1,14 +1,14 @@
-﻿---
+---
 ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Add an Attribute Store
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/22/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

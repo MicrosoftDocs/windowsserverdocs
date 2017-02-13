@@ -1,9 +1,9 @@
 ---
 title: What's new in Hyper-V on Windows Server 2016
-description: " "
+description: "Gives a summary of the new features in Hyper-V"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -73,9 +73,7 @@ Starting with version 8, generation 2 virtual machines can use significantly mor
 ## <a name="BKMK_nested"></a>Nested virtualization \(new\) 
 This feature lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. This can be especially useful for development and test environments. To use nested virtualization, you'll need:  
   
--   At least 4 GB RAM available for the virtualized Hyper-V host.  
-  
--   To run at least Windows Server 2016 Technical Preview 4 or Windows 10 build 10565 on both the physical Hyper-V host and the virtualized host. Running the same build in both the physical and virtualized environments generally improves performance.  
+-   To run at least Windows Server 2016 or Windows 10 on both the physical Hyper-V host and the virtualized host.  
   
 -   A processor with Intel VT-x (nested virtualization is available only for Intel processors at this time).  
   
@@ -84,7 +82,7 @@ For details and instructions, see [Nested Virtualization](https://msdn.microsoft
 ## <a name="BKMK_networking"></a>Networking features \(new\) 
 New networking features include:  
   
--   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../networking/sdn/Software-Defined-Networking--SDN-.md#bkmk_rdma).  
+-   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../networking/sdn/software-defined-networking.md#bkmk_rdma).  
   
 -   **Virtual machine multi queues (VMMQ)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.  
   

@@ -1,5 +1,6 @@
 ---
 title: Tenant on-premises components
+description: Describes the on-premises components in your RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

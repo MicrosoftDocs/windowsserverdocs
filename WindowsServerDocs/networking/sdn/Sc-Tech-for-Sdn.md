@@ -1,5 +1,7 @@
 ---
 title: System Center Technologies for Software Defined Networking
+description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in System Center.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # System Center Technologies for Software Defined Networking
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 System Center includes the following technologies for use with Software Defined Networking (SDN):  
   
@@ -38,7 +40,7 @@ With System Center 2016 Virtual Machine Manager (VMM), you can:
 - Helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.  
   
 
-For more information, see [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/en-us/system-center-docs/vmm/manage/deploy-a-software-defined-network-infrastructure-using-vmm).  
+For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-overview).  
     
 
   

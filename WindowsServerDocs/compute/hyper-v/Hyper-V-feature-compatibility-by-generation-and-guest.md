@@ -1,16 +1,16 @@
 ---
 title: Hyper-V feature compatibility by generation and guest
-description: " "
+description: "Lists the generations and operating systems that are compatible with key Hyper-V features"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
+manager: dongill
 ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 author: KBDAzure
 ms.author: kathydav
-ms.date: 9/30/2016
+ms.date: 12/05/2016
 ---
 # Hyper-V feature compatibility by generation and guest
 
@@ -18,10 +18,10 @@ ms.date: 9/30/2016
   
 The tables in this article show you the generations and operating systems that are compatible with some of the Hyper-V features, grouped by categories. In general, you'll get the best availability of features with a generation 2 virtual machine that runs the newest operating system.  
   
-Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System Requirements](https://technet.microsoft.com/library/mt608570.aspx). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:  
+Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:  
   
-* [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030.aspx)  
-* [Supported Windows guest operating systems](https://technet.microsoft.com/library/mt126119.aspx)  
+* [Supported Linux and FreeBSD virtual machines](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
+* [Supported Windows guest operating systems](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
   
 ## Availability and backup  
   
@@ -42,7 +42,7 @@ Virtual NUMA | 1 and 2 | Any supported guest
 ## Development and test  
 Feature  | Generation | Guest operating system  
 ------------- | ------------- | -----------  
-COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Generation 2 Virtual Machine Overview](https://technet.microsoft.com/library/dn282285.aspx). | Any supported guest  
+COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#a-namebkmkdebugaadd-a-com-port-for-kernel-debugging). | Any supported guest  
   
 ## Mobility  
   
@@ -65,7 +65,7 @@ Virtual machine multi queue (VMMQ) | 1 and 2  | Any supported guest
 Feature  | Generation | Guest operating system  
 ------------- | ------------- | -----------  
 Discrete device assignment (DDA) | 1 and 2 | Windows Server 2016, Windows Server 2012 R2 only with Update 3133690 installed, Windows 10 <br> **Note:** For details on Update 3133690, see [this](https://support.microsoft.com/kb/3133690) support article.  
-Enhanced session mode | 2 | Windows Server 2016, Windows Server 2012 R2, Windows 10 or Windows 8.1, with Remote Desktop Services enabled <br>**Note**: You might need to also configure the host. For details, see [Use local resources on Hyper-V virtual machine with VMConnect](https://technet.microsoft.com/library/dn282274.aspx).  
+Enhanced session mode | 1 and 2 | Windows Server 2016, Windows Server 2012 R2, Windows 10, and Windows 8.1, with Remote Desktop Services enabled <br>**Note**: You might need to also configure the host. For details, see [Use local resources on Hyper-V virtual machine with VMConnect](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md).  
 RemoteFx | 1 and 2 | Generation 1 on 32-bit and 64-bit Windows versions starting with Windows 8. <br> Generation 2 on 64-bit Windows 10 versions  
   
 ## Security  

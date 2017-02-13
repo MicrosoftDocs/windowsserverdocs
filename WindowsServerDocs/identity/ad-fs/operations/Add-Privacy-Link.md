@@ -1,4 +1,3 @@
-
 ---
 ms.assetid: 1ca6f87f-7272-4767-b609-3e295ac7d32f
 title: Add Privacy Link 
@@ -6,12 +5,13 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/31/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
+
 # Add Privacy Link 
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

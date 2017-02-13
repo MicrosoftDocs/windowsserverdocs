@@ -18,7 +18,7 @@ manager: dongill
 
 # Overview of the Dashboard in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
  
  Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled include an administrative dashboard, which simplifies the tasks that you perform to manage your Windows Server Essentials network and server. By using the Windows Server Essentials Dashboard, you can:  
   

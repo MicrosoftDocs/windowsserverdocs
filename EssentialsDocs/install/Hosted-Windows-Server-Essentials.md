@@ -16,22 +16,22 @@ manager: dongill
 
 # Hosted Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-This document includes information that is specific to hosters who intend to deploy Windows ServerÃ �Â® 2012 Essentials in their lab and offer Windows Server Essentials as a service to their customers.  
+This document includes information that is specific to hosters who intend to deploy Windows Server Essentials in their lab and offer Windows Server Essentials as a service to their customers.  
   
 ## What is Windows Server Essentials?  
  Windows Server Essentials is a cross-premises small business solution, which incorporates best-of-breed, 64-bit product technologies to deliver a server environment well suited for the vast majority of small businesses. The following technologies are included in Windows Server Essentials.  
   
  **Server Operating System:** Windows Server 2012 product technologies provide the core of Windows Server Essentials. For more information, visit the [Windows Server 2012 website](http://www.microsoft.com/en-us/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh).  
   
- **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the network ?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](http://technet.microsoft.com/library/hh831419.aspx) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the new File History feature of WindowsÃ �Â® 8 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.  
+ **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the network ?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](http://technet.microsoft.com/library/hh831419.aspx) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the File History feature of Windows 8.1 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.  
   
- **Anywhere Access:** Remote Web Access provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere you have an Internet connection and using almost any device. Windows Server Essentials also provides an updated Windows Phone app and a new app for Windows 8 client computers, allowing users to intuitively connect to, search across, and access files and folders on the server. Files are also automatically cached for offline access and synchronized when a connection to the server becomes available. Windows Server Essentials turns setting up virtual private networking (VPN) into a painless, wizard-driven process of just a few clicks, and simplifies the management of VPN access for users. Client computers can leverage a VPN connection to remotely join the Windows SBS environment without the need to commute to the office.  
+ **Anywhere Access:** Remote Web Access provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere you have an Internet connection and using almost any device. Windows Server Essentials also provides an updated Windows Phone app and a new app for Windows 8.1 client computers, allowing users to intuitively connect to, search across, and access files and folders on the server. Files are also automatically cached for offline access and synchronized when a connection to the server becomes available. Windows Server Essentials turns setting up virtual private networking (VPN) into a painless, wizard-driven process of just a few clicks, and simplifies the management of VPN access for users. Client computers can leverage a VPN connection to remotely join the Windows SBS environment without the need to commute to the office.  
   
- **Workload Flexibility:** Windows Server Essentials has been designed to allow customers the flexibility to choose which applications and services run on premises and which run in the cloud. In previous versions, Windows Small Business Server Standard included Exchange Server as a component product, which added expense and complexity for customers who wished to leverage cloud-based messaging and collaboration services. With Windows Server Essentials, customers can take advantage of the same type of integrated management experience whether they choose to run an on-premises copy of Exchange Server, subscribe to a hosted Exchange service, or subscribe to MicrosoftÃ �Â® Office 365.  
+ **Workload Flexibility:** Windows Server Essentials has been designed to allow customers the flexibility to choose which applications and services run on premises and which run in the cloud. In previous versions, Windows Small Business Server Standard included Exchange Server as a component product, which added expense and complexity for customers who wished to leverage cloud-based messaging and collaboration services. With Windows Server Essentials, customers can take advantage of the same type of integrated management experience whether they choose to run an on-premises copy of Exchange Server, subscribe to a hosted Exchange service, or subscribe to Microsoft Office 365.  
   
- **Health Monitoring:** Windows Server Essentials monitors its own health status and the status of client computers running Windows 8, Windows 7, and Mac OS X version 10.5 and later. Health status notifies you of issues or problems related to computer backups, server storage, low disk space, and more.  
+ **Health Monitoring:** Windows Server Essentials monitors its own health status and the status of client computers running Windows 8.1, Windows 7, and Mac OS X version 10.5 and later. Health status notifies you of issues or problems related to computer backups, server storage, low disk space, and more.  
   
  **Extensibility:** Windows Server Essentials builds on the extensibility model of Windows SBS 2011 Essentials, which allows other software vendors to add capabilities and features to the core product, and adds a new set of web services APIs. It also maintains compatibility with the existing [software development kit](http://msdn.microsoft.com/library/gg513958.aspx) (SDK) and [add-ins](http://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) created for Windows SBS 2011 Essentials.  
   
@@ -57,7 +57,7 @@ This document includes information that is specific to hosters who intend to dep
   
 1.  Perform only unattended WinPE setup. This will automate only the WinPE setup, and let the installation stop before Initial Configuration so that end users can provide Corp, Domain, and Administrator information by themselves after RDP into server session. To do this:  
   
-    1.  Provide the Windows unattend.xml file. Follow the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the Microsoft-Windows-Setup section of the unattend.xml file, provide the information as below.  
+    1.  Provide the Windows unattend.xml file. Follow the [Windows 8.1 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the Microsoft-Windows-Setup section of the unattend.xml file, provide the information as below.  
   
         ```  
         <InstallFrom>  
@@ -147,10 +147,10 @@ This document includes information that is specific to hosters who intend to dep
     ## To configure external domain and SSL certificate (if not yet done in unattended Initial Configuration).  
     ##  
   
-    $myExternalDomainName = 'remote.contoso.com';Ã �Â Ã �Â  ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
-    $mySslCertificateFile = 'C:\ssl.pfx';Ã �Â Ã �Â  ## full path to SSL certificate file  
-    $mySslCertificatePassword = ConvertTo-SecureString '******';Ã �Â Ã �Â  ## password for private key of the SSL certificate  
-    $skipCertificateVerification = $true;Ã �Â Ã �Â  ## whether or not, skip verification for the SSL certificate  
+    $myExternalDomainName = 'remote.contoso.com';   ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
+    $mySslCertificateFile = 'C:\ssl.pfx';   ## full path to SSL certificate file  
+    $mySslCertificatePassword = ConvertTo-SecureString '******';   ## password for private key of the SSL certificate  
+    $skipCertificateVerification = $true;   ## whether or not, skip verification for the SSL certificate  
   
     Add-Type -AssemblyName 'Wssg.Web.DomainManagerObjectModel';  
     [Microsoft.WindowsServerSolutions.RemoteAccess.Domains.DomainConfigurationHelper]::SetDomainNameAndCertificate($myExternalDomainName,$mySslCertificateFile,$mySslCertificatePassword,$skipCertificateVerification);  
@@ -209,7 +209,7 @@ $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers
  **Add User**  
   
 ```  
-Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]Ã �Â  [<CommonParameters>]  
+Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]   [<CommonParameters>]  
 ```  
   
  Example:  
@@ -333,7 +333,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 -   Client Bare Metal Restore: because Windows Preinstall Environment does not support VPN connection, Client Bare Metal Restore is not supported.  
   
- **File History** is a Windows 8 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server Essentials, we allow central management of the File History setting of all the Windows 8 clients joined to Windows Server Essentials. The backup data is stored on the server running Windows Server Essentials. You can turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
+ **File History** is a Windows 8.1 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server Essentials, we allow central management of the File History setting of all the Windows 8.1 clients joined to Windows Server Essentials. The backup data is stored on the server running Windows Server Essentials. You can turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
   
 ### Storage management  
  The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can also attach an iSCSI disk to Windows Server Essentials to expand its storage.  

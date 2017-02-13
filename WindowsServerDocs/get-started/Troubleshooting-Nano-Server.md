@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Nano Server
-description: " "
+description: "Recovery Console, Emergency Management Services, kernel debugging"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
@@ -8,7 +8,7 @@ ms.technology: server-nano
 ms.date: 09/30/2016
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: fbef4d91-e18c-4f1b-952f-a9a7ad46cd74
+ms.assetid: e427c66f-9571-4b8c-b65d-e7370d91544d
 author: jaimeo
 ms.author: jaimeo
 ---

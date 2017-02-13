@@ -1,6 +1,6 @@
 ---
 title: Ensure sufficient physical disk space is available when virtual machines use differencing virtual hard disks
-description: " "
+description: "Online version of the text for this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill

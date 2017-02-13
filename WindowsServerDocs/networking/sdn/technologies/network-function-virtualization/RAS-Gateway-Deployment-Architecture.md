@@ -1,5 +1,7 @@
 ---
 title: RAS Gateway Deployment Architecture
+description: You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway in Windows Server 2016, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # RAS Gateway Deployment Architecture
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.  
   

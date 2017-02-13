@@ -23,6 +23,8 @@
 
 - [File names and locations](file-names-and-locations.md)
 
+- [Metadata, product versioning, and trademarks](metadata-OSversioning-and-trademarks.md)
+
 - [Quality criteria for pull request review](contributor-guide-pr-criteria.md)
 
 - [Linking guidelines](create-links-markdown.md/)

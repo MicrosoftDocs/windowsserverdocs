@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/29/2016
+ms.date: 01/18/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -20,7 +20,11 @@ manager: dongill
 
 When you install Windows Server 2016 using the Setup wizard, you can choose between **Windows Server 2016** and **Windows Server (Server with Desktop Experience)**. The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you do not make a choice in the Setup wizard, **Windows Server 2016** is installed; this is the **Server Core** installation option.
 
-The Server with Desktop Experience option installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods. Compared with the Server Core option, it requires more space on disk,and has higher servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you feel you can work without the additional elements, see Getting Started with Server Core. For an even more lightweight option, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md).
+The Server with Desktop Experience option installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods. Compared with the Server Core option, it requires more space on disk,and has higher servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you feel you can work without the additional elements, see [Install Server Core](Getting-Started-with-Server-Core.md). For an even more lightweight option, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
+
+>[!NOTE]
+>
+>Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. If you install Server with Desktop Experience and later decide to use Server Core, you should do a fresh installation.
 
 **User interface:** standard graphical user interface ("Server Graphical Shell"). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.
 
@@ -33,7 +37,10 @@ The Server with Desktop Experience option installs the standard user interface a
 ## Installation scenarios
 
 ### Evaluation
-You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
+You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
+
+> [!IMPORTANT]  
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 
 ### Clean installation

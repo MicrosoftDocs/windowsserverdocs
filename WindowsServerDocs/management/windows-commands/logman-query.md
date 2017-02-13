@@ -1,6 +1,6 @@
 ---
 title: logman query
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,20 +14,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman query
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Query data collector or data collector set properties.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+query data collector or data collector set properties.  
+  
 ## Syntax  
 ```  
 logman query [providers|"Data Collector Set name"] [options]  
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  
@@ -46,5 +45,5 @@ The following command lists all available providers of data collectors on the ta
 ```  
 logman query providers  
 ```  
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  

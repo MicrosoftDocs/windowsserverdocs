@@ -1,5 +1,6 @@
 ---
 title: Office 2016 in RDSH and VDI deployments
+description: Describes how you can use Office with Remote Desktop Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

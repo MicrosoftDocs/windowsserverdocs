@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Online Backup in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  After you integrate with  Microsoft Azure Backup, the **Online Backup** management page appears in the Windows Server Essentials Dashboard. The **Online Backup** page makes it possible to perform common administrative tasks. The features on the Online Backup page include:  
   

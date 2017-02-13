@@ -1,14 +1,14 @@
 ---
 title: Install Nano Server
-description: " "
+description: "Clean installation, upgrade, migration, and evaluation of Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 09/29/2016
+ms.date: 01/31/2017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
+ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
 ---
@@ -30,12 +30,31 @@ Nano Server is ideal for a number of scenarios:
   
 -   As a host for applications that are developed using cloud application patterns and run in a container or virtual machine guest operating system  
   
-These topics describe how to configure a Nano Server image with the packages you'll need, add additional device drivers, and deploy it with an Unattend.xml file. It also explains the options for managing Nano Server remotely, managing the Hyper-V role running on Nano Server, and setup and management of a failover cluster of computers that are running Nano Server. 
+## Important differences in Nano Server
+
+Because Nano Server is optimized as a lightweight operating system for running “cloud-native” applications based on containers and micro-services or as an agile and cost-effective datacenter host with a dramatically smaller footprint, there are important differences in Nano Server versus Server Core or Server with Desktop Experience installations:
+
+- Nano Server is "headless;" there is no local logon capability or graphical user interface.
+- Only 64-bit applications, tools, and agents are supported.
+- Nano Server cannot serve as an Active Directory domain controller.
+- Group Policy is not supported. However, you can use [Desired State Configuration](https://msdn.microsoft.com/powershell/dsc/nanoDsc) to apply settings at scale.
+- Nano Server cannot be configured to use a proxy server to access the internet.
+- NIC Teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
+- System Center Configuration Manager and System Center Data Protection Manager are not supported.
+- Best Practices Analyzer (BPA) cmdlets and BPA integration with Server Manager are not supported.
+- Nano Server does not need to be activated with a product key. When functioning as a Hyper-V host, Nano Server does not support [Automatic Virtual Machine Activation](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Virtual machines running on a Nano Server host can be activated using [Key Management Service](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) with a generic volume license key or using [Active Directory-based activation](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).
+- The version of Windows PowerShell provided with Nano Server has important differences. For details, see [PowerShell on Nano Server](PowerShell-on-Nano-Server.md).
+- Nano Server is supported only on the Current Branch for Business (CBB) model--there is no Long-Term Servicing Branch (LTSB) release for Nano Server at this time. See the following subsection for more information.
+
+### Current Branch for Business
+Nano Server is serviced with a more active model, called Current Branch for Business (CBB), in order to support customers who are moving at a “cloud cadence," using rapid development cycles. In this model, feature update releases of Nano Server are expected two to three times per year. This model requires [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) for Nano Servers deployed and operated in production. To maintain support, administrators must stay no more than two CBB releases behind. However, these releases do not auto-update existing deployments; administrators perform manual installation of a new CBB release at their convenience. For some additional information, see [Windows Server 2016 new Current Branch for Business servicing option](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+
+The Server Core and Server with Desktop Experience installation options are still serviced on the [Long-Term Servicing Branch (LTSB) model](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy), comprising 5 years of mainstream support and 5 years of extended support.
 
 ## Installation scenarios
 
 ### Evaluation
-You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). To try out Nano Server, choose the **Nano Server | 64-bit EXE option**, and then come back to either [Nano Server Quick Start](Nano-Server-Quick-Start.md) or [Deploy Nano Server](Deploy-Nano-Server.md) to get started.
+You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). To try out Nano Server, choose the **Nano Server | 64-bit EXE option**, and then come back to either [Nano Server Quick Start](Nano-Server-Quick-Start.md) or [Deploy Nano Server](Deploy-Nano-Server.md) to get started.
 
 ### Clean installation
 Because you install Nano Server by configuring a VHD, a clean installation is the quickest and simplest deployment method.

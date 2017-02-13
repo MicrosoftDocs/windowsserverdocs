@@ -5,10 +5,10 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 # AD FS Development
@@ -24,4 +24,6 @@ This document contains a list of all of the documentation walkthroughs for AD FS
 * [Enabling Oauth Confidential Clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 
 - [Single Page Application with AD FS](../ad-fs/development/Single-Page-Application-with-AD-FS.md)
+
+- [Customizing the Id_Token in OpenID Connect Scenarios](../ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
 

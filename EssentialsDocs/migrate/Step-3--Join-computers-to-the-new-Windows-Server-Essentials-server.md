@@ -16,7 +16,7 @@ manager: dongill
 
 # Step 3: Join computers to the new Windows Server Essentials server
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The next step in the migration process is to connect client computers to the new server running  Windows Server Essentials.  
   
@@ -53,7 +53,5 @@ The next step in the migration process is to connect client computers to the new
  You have joined your client computers to the new server running  Windows Server Essentials. Now go to [Step 4: Move settings and data to the Destination Server for Windows Server Essentials migration](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
   
 
- To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-
- To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 

@@ -16,7 +16,7 @@ manager: dongill
 
 # Manage Remote Web Access in Windows Server Essentials
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
  
  Remote Web Access in Windows Server Essentials, or in  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere that you have an Internet connection and by using almost any device. To use the Remote Web Access functionality, you must first turn it on by using the Set Up Anywhere Access Wizard, and then set up your router and domain name.  
   

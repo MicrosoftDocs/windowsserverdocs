@@ -1,5 +1,6 @@
 ---
 title: Planning worksheet for MultiPoint Services migration
+description: Provides planning worksheets to help you migrate to MultiPoint Services in Windows Server 2016 
 ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server-threshold
@@ -11,6 +12,7 @@ ms.topic: article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: lizap
 manager: dongill
+ms.author: elizapo
 ---
 # Planning worksheet for MultiPoint Services migration
 

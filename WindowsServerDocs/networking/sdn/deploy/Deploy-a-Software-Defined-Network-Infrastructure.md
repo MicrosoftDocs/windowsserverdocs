@@ -1,5 +1,7 @@
 ---
 title: Deploy a Software Defined Network Infrastructure
+description: This topic provides links to topics on how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server 2016. 
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,7 +11,7 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
-author: vhorne
+ms.author: jamesmci
 ms.author: victorh
 ---
 # Deploy a Software Defined Network Infrastructure
@@ -22,7 +24,7 @@ These deployments include all the technologies you need for a fully functional i
   
     
   
--   [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/library/mt695701.aspx)  
+-   [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://technet.microsoft.com/en-us/system-center-docs/vmm/scenario/sdn-overview)  
   
     Use this method if you want to incorporate System Center Virtual Machine Manger (VMM) to manage your SDN infrastructure.  
   

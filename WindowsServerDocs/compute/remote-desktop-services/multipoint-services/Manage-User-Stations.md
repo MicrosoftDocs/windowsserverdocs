@@ -1,5 +1,6 @@
 ---
 title: Manage User Stations
+description: Learn how to manage user stations in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

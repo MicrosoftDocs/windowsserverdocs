@@ -1,14 +1,14 @@
-﻿---
+---
 ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: Add a Claim Description
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

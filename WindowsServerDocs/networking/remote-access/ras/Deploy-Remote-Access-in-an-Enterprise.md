@@ -1,5 +1,7 @@
 ---
 title: Deploy Remote Access in an Enterprise
+description: This topic provides an introduction to the DirectAccess scenario in Windows Server 2016 for the Enterprise.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy Remote Access in an Enterprise
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.  
   
@@ -59,7 +61,7 @@ Remote access enterprise scenarios provide the following:
 The following table lists the roles and features used in the enterprise scenario.  
   
 |Role/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |Remote Access server role|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server features:<br /><br />-   Internet Information Services (IIS) - This feature is required to configure the network location server and default web probe.<br />-   Group Policy Management Console feature - feature is required by DirectAccess to create and manage the Group Policy Objects (GPOs) in Active Directory and must be installed as a required feature for the server role.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />1.  Remote Access GUI and Command Line Tools<br />2.  Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />1.  Group Policy Management Console<br />2.  RAS Connection Manager Administration Kit (CMAK)<br />3.  Windows PowerShell 3.0<br />4.  Graphical Management Tools and Infrastructure|  
 |Windows NLB|This feature allows the load balancing of multiple Remote Access servers.|  

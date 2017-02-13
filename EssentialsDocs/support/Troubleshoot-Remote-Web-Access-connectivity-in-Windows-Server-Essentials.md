@@ -16,7 +16,7 @@ manager: dongill
 
 # Troubleshoot Remote Web Access connectivity in Windows Server Essentials
  
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  Typically, Windows Server Essentials can automatically configure a broadband router if the router is a UPnP certified device and if the UPnP setting is enabled on the router.  
   

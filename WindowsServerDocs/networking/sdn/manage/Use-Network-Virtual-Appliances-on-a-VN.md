@@ -1,5 +1,7 @@
 ---
 title: Use Network Virtual Appliances on a Virtual Network
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # Use Network Virtual Appliances on a Virtual Network
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn how to deploy network virtual appliances on tenant Virtual Networks.
 

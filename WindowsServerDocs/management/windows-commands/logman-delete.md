@@ -1,6 +1,6 @@
 ---
 title: logman delete
-description: "Windows Commands"
+description: "Windows Commands topic for **** - "
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,20 +15,19 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
 ---
-
 # logman delete
 
->Applies To: Windows Server&reg; 2016, Windows Server&reg; 2012 R2, Windows Server&reg; 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Delete an existing data collector.  
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+delete an existing data collector.  
+  
 ## Syntax  
 ```  
 logman delete <[-n] <name>> [options]  
 ```  
 ## Parameters  
 |Parameter|Description|  
-|-------------|---------------|  
+|-------|--------|  
 |/?|Displays context-sensitive help.|  
 |-s <computer name>|Perform the command on the specified remote computer.|  
 |-config <value>|Specifies the settings file containing command options.|  
@@ -40,5 +39,5 @@ The following command deletes the data collector perf_log.
 ```  
 logman delete perf_log  
 ```  
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  

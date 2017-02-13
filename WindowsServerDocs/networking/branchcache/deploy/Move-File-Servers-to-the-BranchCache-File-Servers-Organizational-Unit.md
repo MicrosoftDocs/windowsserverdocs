@@ -1,14 +1,9 @@
 ---
 title: Move File Servers to the BranchCache File Servers Organizational Unit
 description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
-manager: dongill
-ms.custom: na
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-bc
-ms.tgt_pltfrm: na
+ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
 ms.author: jamesmci
@@ -16,7 +11,7 @@ author: jamesmci
 ---
 # Move File Servers to the BranchCache File Servers Organizational Unit
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 You can use this procedure to add BranchCache file servers to an organizational unit (OU) in Active Directory Domain Services (AD DS).  
   

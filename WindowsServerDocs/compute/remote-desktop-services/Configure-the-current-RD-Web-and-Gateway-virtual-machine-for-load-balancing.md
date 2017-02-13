@@ -1,5 +1,6 @@
 ---
 title: Configure the current RD Web and Gateway virtual machine for load balancing
+description: Learn how to set up load balancing in RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

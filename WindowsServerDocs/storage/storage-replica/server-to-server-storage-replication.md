@@ -33,7 +33,7 @@ This walkthrough uses the following environment as an example:
 ## Prerequisites  
 
 * Active Directory Domain Services forest (does not need to run Windows Server 2016).  
-* Two servers with Windows Server 2016 installed.  
+* Two servers with Windows Server 2016 Datacenter Edition installed.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the servers, with no shared access.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
@@ -44,7 +44,7 @@ This walkthrough uses the following environment as an example:
 Many of these requirements can be determined by using the `Test-SRTopology cmdlet`. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
 ## Provision operating system, features, roles, storage, and network  
-1.  Install Windows Server 2016 on both server nodes with an installation type of Windows Server 2016 (Desktop Experience). Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server 2016 on both server nodes with an installation type of Windows Server 2016 Datacenter **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
 
@@ -359,8 +359,8 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 - [Storage Replica Overview](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
-- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+- [Storage Replica: Known Issues](storage-replica-known-issues.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 
 ## See Also  
 - [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  

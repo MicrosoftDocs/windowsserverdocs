@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: bbb5b68f-00ad-4715-8176-0c2769b706c4
 title: Windows Server 2012 R2 AD FS Deployment Guide
 description:
@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/22/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

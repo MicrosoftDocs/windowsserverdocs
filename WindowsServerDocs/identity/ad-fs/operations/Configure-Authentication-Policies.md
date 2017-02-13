@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configure Authentication Policies
 description:
@@ -7,10 +7,10 @@ ms.author: billmath
 ms.author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/02/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ms.author: billmath

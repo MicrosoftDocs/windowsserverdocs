@@ -1,14 +1,14 @@
-﻿---
+---
 ms.assetid: 606df285-259c-4c6b-8583-9aca1d614c43
 title: When to Use a Pass Through or Filter Claim Rule
 description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/08/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 

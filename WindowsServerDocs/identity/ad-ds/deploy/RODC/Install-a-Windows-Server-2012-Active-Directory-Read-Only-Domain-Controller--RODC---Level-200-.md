@@ -5,10 +5,10 @@ description: "This topic explains how to create a staged RODC account and then a
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/29/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adds
 ---
 

@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/22/2016
+ms.date: 01/18/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -36,6 +36,12 @@ and Migration](http://technet.microsoft.com/windowsserver/dn458795).
 > [!IMPORTANT]  
 > Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.  
 
+> [!IMPORTANT]  
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, **you can only perform conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
+
+> [!IMPORTANT]  
+> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
+
 ## Upgrading previous retail versions of Windows Server to Windows Server 2016
 
 The table below briefly summarizes which **already licensed** (that is, not evaluation) Windows operating systems can be upgraded to which editions of Windows Server 2016.
@@ -65,8 +71,6 @@ If you see more than one edition in the right column, upgrading to **either** ed
 |Windows Storage Server 2012 R2 Standard|Windows Storage Server 2016 Standard|
 |Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 Workgroup|
 
-> [!IMPORTANT]  
-> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
 
 ## Per-server-role considerations for upgrading
 
@@ -76,8 +80,8 @@ Even in supported upgrade paths from previous retail versions to Windows Server 
 
 You can convert the evaluation version of Windows Server 2016 Standard to either Windows Server 2016 Standard (retail) or Datacenter (retail). Similarly, you can convert the evaluation version of Windows Server 2016 Datacenter to the retail version.
 
-> [!NOTE]  
-> In this release, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option).
+> [!IMPORTANT]  
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 Before you attempt to convert from evaluation to retail, verify that your server is actually running an evaluation version. To do this, do either of the following:
 
@@ -102,16 +106,16 @@ For the evaluation version of Windows Server 2016 Standard, you can also convert
 > Tip 
 >For more information about Dism.exe, see [DISM Command-line options](http://go.microsoft.com/fwlink/?LinkId=192466).
 
-## Converting a current retail version to a different current retail version
+## Converting a current retail edition to a different current retail edition
 
 At any time after installing Windows Server 2016, you can run Setup to repair the installation (sometimes called “repair in place”) or, in certain cases, to convert to a different edition.
 You can run Setup to perform a “repair in place” on any edition of Windows Server 2016; the result will be the same edition you started with.
 
 For Windows Server 2016 Standard, you can convert the system to Windows Server 2016 Datacenter as follows: From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
 
-## Converting a current volume-licensed version to a current retail version
+## Converting a current retail version to a current volume-licensed version
 
-At any time after installing Windows Server 2016, you can freely convert it between a volume-licensed version, a retail version, or an OEM version. The edition remains the same during this conversion.
+At any time after installing Windows Server 2016, you can freely convert it between a retail version, a volume-licensed version, or an OEM version. The edition remains the same during this conversion. If you are starting with an evaluation version, convert it to the retail version first, and then you can inter-convert as described here.
 
 To do this, from an elevated command prompt, run:
 **slmgr /ipk \<key\>**

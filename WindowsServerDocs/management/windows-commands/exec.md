@@ -1,0 +1,44 @@
+---
+title: exec
+description: "Windows Commands topic for **** - "
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 364e8baf-576f-401b-a431-7d3c06621614
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/12/2016
+---
+# exec
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+executes a file on the local computer. The file can be a **cmd** script.  
+  
+## Syntax  
+  
+```  
+exec <ScriptFile.cmd>  
+```  
+  
+## Parameters  
+  
+|Parameter|Description|  
+|-------|--------|  
+|<ScriptFile.cmd>|Specifies the script file to execute.|  
+  
+## remarks  
+  
+-   This command is used to duplicate or restore data as part of a backup or restore sequence.  
+  
+-   if the script fails, an error is returned and diskshadow quits.  
+  
+#### additional references  
+[Command-Line Syntax Key](command-line-syntax-key.md)  
+  
+

@@ -23,7 +23,7 @@ Storage Replica supports synchronous and asynchronous replication:
 This guide outlines how your business can benefit from this new functionality and the different replication scenarios that are supported by Storage Replica. It assumes that you have a previous working knowledge of Windows Server, Failover Clustering, File Servers, and Hyper-V, to include basic administration.  
 
 ## Why use Storage Replica?  
-Storage Replica offers new disaster recovery and preparedness capabilities in Windows Server 2016. For the first time, Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data will exist elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.  
+Storage Replica offers new disaster recovery and preparedness capabilities in Windows Server 2016 Datacenter Edition. For the first time, Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data will exist elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.  
 
 Storage Replica allows more efficient use of multiple datacenters. By stretching clusters or replicating clusters, workloads can be run in multiple datacenters for quicker data access by local proximity users and applications, as well as better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can move its typical workloads to the other site temporarily.  
 
@@ -33,7 +33,7 @@ Storage Replica also supports asynchronous replication for longer ranges and hig
 
 ## <a name="BKMK_SRSupportedScenarios"></a>Supported configurations
 
-Using this guide and Windows Server 2016, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
+Using this guide and Windows Server 2016 Datacenter Edition, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
 
 **Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
 
@@ -62,7 +62,7 @@ Using this guide and Windows Server 2016, you can deploy storage replication in 
 
 * **Simple deployment and management**. Storage Replica has a design mandate for ease of use. Creation of a replication partnership between two servers requires only a single PowerShell command. Deployment of stretch clusters uses intuitive wizard in the familiar Failover Cluster Manager tool.   
 
-* **Guest and host**. All capabilities of Storage Replica are exposed in both virtualized guest and host-based deployments. This means guests can replicate their data volumes even if running on non-Windows virtualization platforms or in public clouds, as long as using Windows Server 2016 in the guest.  
+* **Guest and host**. All capabilities of Storage Replica are exposed in both virtualized guest and host-based deployments. This means guests can replicate their data volumes even if running on non-Windows virtualization platforms or in public clouds, as long as using Windows Server 2016 Datacenter Edition in the guest.  
 
 * **SMB3-based**. Storage Replica uses the proven and mature technology of SMB 3, first released in Windows Server 2012. This means all of SMB's advanced characteristics - such as multichannel and SMB direct support on RoCE, iWARP, and InfiniBand RDMA network cards - are available to Storage Replica.   
 
@@ -154,7 +154,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 
 > [!NOTE]
-> This document contains a list of [known issues](storage-replica--known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica--frequently-asked-questions.md) section.
+> This document contains a list of [known issues](storage-replica-known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica-frequently-asked-questions.md) section.
  
 ### Storage Replica terminology  
 This guide frequently uses the following terms:  
@@ -171,6 +171,6 @@ This guide frequently uses the following terms:
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)  
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
-- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
-- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
+- [Storage Replica: Known Issues](storage-replica-known-issues.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

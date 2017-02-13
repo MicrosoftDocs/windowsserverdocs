@@ -1,5 +1,6 @@
 ---
 title: Save Connection Settings to File
+description: Learn how to create connection files to use to connect from one computer to another in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

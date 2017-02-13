@@ -1,5 +1,6 @@
 ---
 title: Remote Desktop Services - Multi-Factor Authentication
+description: Planning information for using MFA with RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -29,4 +30,4 @@ As an admin, there are several steps to take:
 - **Create/install Azure MFA server**: Receives authentication requests from the RD Gateway, uses the MFA service for authentication, then relays the success/failure to the RD Gateway
 - **Configure RD Gateway server as RADIUS server**: Instead of immediately processing the username/password for the user, prompts the MFA server to perform a MFA challenge, then validates credentials after receiving the successful MFA challenge
 
-For a more in-depth description of the step-by-step configuration process, please read this detailed [article](http://www.rdsgurus.com/uncategorized/step-by-step-using-windows-server-2012-r2-rd-gateway-with-azure-multifactor-authentication/) provided by Microsoft MVPs.
+For more details on the configuration process, check out [Remote Desktop Gateway and Azure Multi-Factor Authentication Server using RADIUS](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-rdg).

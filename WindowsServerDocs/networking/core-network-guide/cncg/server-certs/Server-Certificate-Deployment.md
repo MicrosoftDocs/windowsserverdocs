@@ -1,11 +1,7 @@
 ---
 title: Server Certificate Deployment
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: dongill
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: brianlic
 ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
 ms.prod: windows-server-threshold
@@ -15,7 +11,7 @@ author: jamesmci
 ---
 # Server Certificate Deployment
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.  
   

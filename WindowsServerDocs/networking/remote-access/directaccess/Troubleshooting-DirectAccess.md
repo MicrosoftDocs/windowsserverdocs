@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting DirectAccess
+description: This topic provides information about troubleshooting DirectAccess deployments in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Troubleshooting DirectAccess
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Follow these steps to troubleshoot Remote Access (DirectAccess) issues.  
   

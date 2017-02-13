@@ -16,16 +16,16 @@ manager: dongill
 
 # Install and Configure Windows Server Essentials or Windows Server Essentials Experience
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Windows Server Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
+Windows Server Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
   
-  Windows Server Essentials Experience, the new server role in  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter, enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in  Windows Server Essentials without the locks and limits that are enforced in  Windows Server Essentials. This server role is also available in  Windows Server Essentials and is enabled by default.
+Windows Server Essentials Experience is a role in Windows Server 2016 that enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in  Windows Server Essentials without the locks and limits that are enforced in  Windows Server Essentials. This server role is also available in  Windows Server Essentials and is enabled by default.
   
- The  Windows Server Essentials Experience role in  Windows Server Essentials or  Windows Server 2012 R2 has the following limitations.  
+Before you install Windows Server Essentials or the Essentials Experience role, note the following limitations.  
   
-|Windows Server Essentials Experience in Windows Server Essentials|Windows Server Essentials Experience in Windows Server 2012 R2 Standard or Datacenter 
-|
+|Windows Server Essentials Experience in Windows Server Essentials|Windows Server Essentials Experience in Windows Server 2016
+|----|----|
 |- Must be the domain controller at the root of the forest and domain, and must hold all the FSMO roles.<br /><br /> - Cannot be installed in an environment with a pre-existing Active Directory domain (however, there is a grace period of 21 days for performing migrations).|- Does not have to be a domain controller if it is installed in an environment with a pre-existing Active Directory domain.<br /><br /> - If an Active Directory domain does not exist, installing the role will create an Active Directory domain, and the server will become the domain controller at the root of the forest and domain, holding all the FSMO roles.  
 |Can only be deployed into a single domain.|Can only be deployed into a single domain.  
 |A read-only domain controller cannot exist in your domain.|A read-only domain controller cannot exist in your domain.
@@ -33,32 +33,23 @@ manager: dongill
 > [!NOTE]
 >  To download evaluation versions of the operating systems, visit the TechNet Evaluation Center:  
 >   
->  [Download Windows Server 2012 R2](http://technet.microsoft.com/evalcenter/dn205286.aspx)  
+>  [Download Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)  
 >   
->  [Download Windows Server Essentials](http://technet.microsoft.com/evalcenter/dn205288?WT.mc_id=OO_Technet_Home_General_EN_US)  
+>  [Download Windows Server Essentials](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016-essentials)
   
 ## Installation options  
  This document provides step-by-step instructions for installing and configuring Windows Server Essentials. Depending on your network environment, you have the following installation options available to you:  
   
--    Windows Server Essentials (with the  Windows Server Essentials Experience role enabled by default)  
+-    Windows Server Essentials (with the Windows Server Essentials Experience role enabled by default)  
   
--    Windows Server 2012 R2 Standard with the  Windows Server Essentials Experience role installed  
-  
--    Windows Server 2012 R2 Datacenter with the  Windows Server Essentials Experience role installed  
-  
+-    Windows Server 2016 with the Windows Server Essentials Experience role installed  
+ 
 |Deployment environment|Description|Related section|  
 |----------------------------|-----------------|---------------------|  
-
 |New Active Directory environment|You can install Windows Server Essentials to create a new Active Directory environment.|[Deploy Windows Server Essentials to set up a new Active Directory environment](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
 |Existing Active Directory environment|You can install Windows Server Essentials in an existing Active Directory environment.|[Deploy Windows Server Essentials in an existing Active Directory environment](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
 |Virtual environment|You can deploy Windows Server Essentials as a virtual machine.|[Virtualize your environment](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
 |Automated deployment|You can automate deployment of Windows Server Essentials by using Windows PowerShell.|[Install and configure Windows Server Essentials by using Windows PowerShell](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
-
-|New Active Directory environment|You can install Windows Server Essentials to create a new Active Directory environment.|[Deploy Windows Server Essentials to set up a new Active Directory environment]Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
-|Existing Active Directory environment|You can install Windows Server Essentials in an existing Active Directory environment.|[Deploy Windows Server Essentials in an existing Active Directory environment](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
-|Virtual environment|You can deploy Windows Server Essentials as a virtual machine.|[Virtualize your environment](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
-|Automated deployment|You can automate deployment of Windows Server Essentials by using Windows PowerShell.|[Install and configure Windows Server Essentials by using Windows PowerShell](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
-
   
 ## Before you begin  
  Before you begin the installation, review the following documentation:  

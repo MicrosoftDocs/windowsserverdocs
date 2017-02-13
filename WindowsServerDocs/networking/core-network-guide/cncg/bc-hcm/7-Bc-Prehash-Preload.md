@@ -1,13 +1,9 @@
 ---
 title: Prehash and Preload Content on the Hosted Cache Server (Optional)
-ms.custom: na
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
-manager: dongill
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e79c66a-8555-4d8e-8691-d6c37377aab4
 ms.author: jamesmci
@@ -16,7 +12,7 @@ author: jamesmci
 
 # Prehash and Preload Content on the Hosted Cache Server \(Optional\)
 
->Applies To: Windows Server&reg; 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use the procedures in this section to prehash content on your content servers, add the content to data packages, and then preload the content on your hosted cache servers. 
 

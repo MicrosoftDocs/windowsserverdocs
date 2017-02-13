@@ -1,14 +1,14 @@
 ---
 title: Deploy Nano Server
-description: " "
+description: "Explains creating and deploying custom images, packages, drivers, domains, roles, features"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.date: 10/06/2016
+ms.date: 02/072017
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
+ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ---
@@ -19,8 +19,10 @@ ms.author: jaimeo
 This topic covers information you need to deploy Nano Server images that are more customized to your needs compared to the simple examples in the Nano Server Quick Start topic. You'll find information about making a custom Nano Server image with exactly the features you want, installing Nano Server images from VHD or WIM, editing files, working with domains, dealing with packages by several methods, and working with server roles.
 
 ## Nano Server Image Builder
-[comment]: # (##Using the Nano Server Image Creation wizard - info goes here)
-The Nano Server Image Builder is a tool that helps you create a custom Nano Server image and bootable USB media with the aid of a graphical interface. Based on the inputs you provide, it generates reusable PowerShell scripts that allow you easily automate consistent installations of Nano Server running either Windows Server 2016 Datacenter or Standard editions. 
+
+The Nano Server Image Builder is a tool that helps you create a custom Nano Server image and bootable USB media with the aid of a graphical interface. Based on the inputs you provide, it generates reusable PowerShell scripts that allow you easily automate consistent installations of Nano Server running either Windows Server 2016 Datacenter or Standard editions.
+
+Obtain the tool from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=54065). 
 
 The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit).
 
@@ -50,33 +52,59 @@ For Windows Server 2016, Nano Server is distributed on the physical media, where
   
 You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the "Installing roles and features online" section of this topic.  
   
-This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Package parameter, which you can combine in a comma-separated list. You can dynamically list available packages using Get-NanoServerPackage cmdlet.  
+This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Package parameter, which you can combine in a comma-separated list. You can dynamically list available packages using the Get-NanoServerPackage cmdlet.  
   
-|Role or feature|Option|  
-|-------------------|----------|  
-|Hyper-V role (including NetQoS|-Compute|  
-|Failover Clustering|-Clustering|  
-|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|  
-|File Server role and other storage components|-Storage|  
-|Windows Defender Antimalware, including a default signature file|-Defender|  
-|Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default  
-|DNS Server role|-Package Microsoft-NanoServer-DNS-Package|  
-|Desired State Configuration (DSC)|-Package Microsoft-NanoServer-DSC-Package **Note:** For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc) .|  
-|Internet Information Server (IIS)|-Package Microsoft-NanoServer-IIS-Package **Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS.|  
-|Host support for Windows Containers|-Containers|  
-|System Center Virtual Machine Manager agent|   -Package Microsoft-NanoServer-SCVMM-Package<br />   -Package Microsoft-NanoServer-SCVMM-Compute-Package <br>**Note:**     Use the SCVMM Compute package only if you are monitoring Hyper-V.|  
-|Network Performance Diagnostics Service (NPDS) (**Note:** Requires Windows Defender Anti-Malware package, which you should install before installing NPDS)|-Package Microsoft-NanoServer-NPDS-Package |  
-|Data Center Bridging (including DCBQoS|-Package Microsoft-NanoServer-DCB-Package|  
-|Deploying on a virtual machine|Microsoft-NanoServer-Guest-Package|  
-|Deploying on a physical machine|Microsoft-NanoServer-Host-Package|  
-|Secure Startup|-Package Microsoft-NanoServer-SecureStartup-Package|  
-|Shielded VM|-Package Microsoft-NanoServer-ShieldedVM-Package **Note:** This package is only available for the Datacenter edition of Nano Server.|  
-  
+|Role or feature|Option|
+|-------------------|----------|
+|Hyper-V role (including NetQoS)|-Compute|
+|Failover Clustering and other components, detailed after this table|-Clustering|
+|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016.|-OEMDrivers|
+|File Server role and other storage components, detailed after this table|-Storage|
+|Windows Defender, including a default signature file|-Defender|
+|Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default|
+|DNS Server role|-Package Microsoft-NanoServer-DNS-Package|
+|PowerShell Desired State Configuration (DSC)|-Package Microsoft-NanoServer-DSC-Package<br />**Note:** For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc).|
+|Internet Information Server (IIS)|-Package Microsoft-NanoServer-IIS-Package<br />**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS.|
+|Host support for Windows Containers|-Containers|
+|System Center Virtual Machine Manager agent|-Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-compute-add-nano-hyper-v).| 
+|System Center Operations Manager agent| Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/en-us/system-center-docs/om/manage/install-agent-on-nano-server.|
+|Data Center Bridging (including DCBQoS)|-Package Microsoft-NanoServer-DCB-Package|
+|Deploying on a virtual machine|-Package Microsoft-NanoServer-Guest-Package|
+|Deploying on a physical machine|- Package Microsoft-NanoServer-Host-Package|
+|BitLocker, trusted platform module (TPM), volume encryption, platform identification, cryptography providers, and other functionality related to secure startup|-Package Microsoft-NanoServer-SecureStartup-Package|
+|Hyper-V support for Shielded VMs|-Package Microsoft-NanoServer-ShieldedVM-Package<br />**Note:** This package is only available for the Datacenter edition of Nano Server.|
+|Simple Network Management Protocol (SNMP) agent|-Package Microsoft-NanoServer-SNMP-Agent-Package.cab<br />**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online) for details.|
+|IPHelper service which provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS|-Package Microsoft-NanoServer-IPHelper-Service-Package.cab<br />**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online) for details.|
+
 > [!NOTE]  
 > When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in subfolders named for the locale of the image.  
   
 > [!NOTE]  
-> When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager.  
+> When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager. 
+
+### Failover Clustering items installed by the -Clustering parameter
+
+- Failover Clustering role
+- VM Failover Clustering
+- Storage Spaces Direct (S2D)
+- Storage Quality of Service
+- Volume Replication Clustering
+- SMB Witness Service
+
+
+### File and storage items installed by the -Storage parameter
+
+- File Server role
+- Data Deduplication
+- Multipath I/O, including a driver for Microsoft Device-Specific Module (MSDSM)
+- ReFS (v1 and v2)
+- iSCSI Initiator (but not iSCSI Target)
+- Storage Replica
+- Storage Management Service with SMI-S support
+- SMB Witness Service
+- Dynamic Volumes
+- Basic Windows storage providers (for Windows Storage Management)
+ 
   
   
   
@@ -180,84 +208,102 @@ Edit a file residing on the remote Nano Server by starting a remote session with
 ## <a name="BKMK_online"></a>Installing roles and features online  
   
 ### Installing roles and features from a package repository  
-You can find and install Windows Packages from the online package repository by using the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. To install this provider, use these cmdlets:  
-  `Save-Module -Path “$env:ProgramFiles\WindowsPowerShell\Modules”  -Name NanoServerPackage -MinimumVersion 1.0.0.0`
+You can find and install Nano Server packages from the online package repository by using the NanoServerPackage provider of the PackageManagement PowerShell module. To install this provider, use these cmdlets:
 
-`Import-PackageProvider NanoServerPackage`  
-   
-Once this provider is installed and imported, you can search for, download, or install Windows Packages using PowerShell cmdlets. Cmdlets specifically for working with Windows Packages are:  
+```powershell
+Install-PackageProvider NanoServerPackage
+Import-PackageProvider NanoServerPackage
+```
+
+>[!NOTE]
+>If you experience errors when running Install-PackageProvider, check that you have installed the latest [cumulative update](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server) ([KB3206632](https://support.microsoft.com/kb/3206632) or later), or use Save-Module as follows: 
+
+```powershell
+Save-Module -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\" -Name NanoServerPackage -MinimumVersion 1.0.1.0
+Import-PackageProvider NanoServerPackage
+```
+
+Once this provider is installed and imported, you can search for, download, and install Nano Server packages using cmdlets designed specifically for working with Nano Server packages:
+
+```powershell
+Find-NanoServerPackage  
+Save-NanoServerPackage  
+Install-NanoServerPackage
+```  
   
-`Find-NanoServerPackage`  
-`Save-NanoServerPackage`  
-`Install-NanoServerPackage`  
+You can also use the generic PackageManagement cmdlets and specify the NanoServerPackage provider:
+
+```powershell
+Find-Package -ProviderName NanoServerPackage
+Save-Package -ProviderName NanoServerPackage
+Install-Package -ProviderName NanoServerPackage
+Get-Package -ProviderName NanoServerPackage
+```
   
-The generic PackageManagement cmdlets are:  
-  
-`Find-Package`  
-`Save-Package`  
-`Install-Package`  
-`Get-Package`  
-  
-To use any of these cmdlets with Windows packages on Nano Server, add `-provider NanoServerPackage`. If you don't add the -provider parameter, PackageManagement will iterate all of the providers. For a complete details for the cmdlets, use `get-help <cmdlet>`, but here are some examples of common usages:  
+To use any of these cmdlets with Nano Server packages on Nano Server, add `-ProviderName NanoServerPackage`. If you don't add the -ProviderName parameter, PackageManagement will iterate all of the providers. For more details on these cmdlets, run `Get-Help <cmdlet>`. Here are some common usage examples:
     
-### Searching for Windows packages  
-You can use either `Find-NanoServerPackage` or `Find-Package` to search for and return a list of Windows Packages that are available in the online repository. For example, you can get a list of all the latest packages with  
-`Find-NanoServerPackage`.  
+### Searching for Nano Server packages  
+You can use either `Find-NanoServerPackage` or `Find-Package -ProviderName NanoServerPackage` to search for and return a list of Nano Server packages that are available in the online repository. For example, you can get a list of all the latest packages:
+
+```powershell
+Find-NanoServerPackage
+```
   
-Using `Find-Package -provider NanoServerPackage -displayCulture` displays all cultures available.  
-      
+Running `Find-Package -ProviderName NanoServerPackage -DisplayCulture` displays all available cultures.
+
 If you need a specific locale version, such as US English, you could use `Find-NanoServerPackage -Culture en-us` or  
-`Find-Package -provider NanoServerPackage -Culture en-us` or `Find-Package -Culture en-us -displayCulture`.  
-  
-To find a specific package by package name, use the -name parameter, which accepts wildcards. For example, to find all packages with NPDS in the name, use `Find-NanoServerPackage -Name *NPDS*` or `Find-Package -provider NanoServerPackage -Name *NPDS*`.  
-     
-You can find a particular version with -RequiredVersion, -MinimumVersion, or -MaximumVersion parameters. To find all available versions, use -AllVersions. Otherwise, only the latest version is returned. Example: `Find-NanoServerPackage -AllVersions -Name *NPDS* -RequiredVersion 10.0.14393.0`. Or, for all versions: `Find-Package -provider NanoServerPackage -AllVersions -Name *NPDS*`  
-  
-### Installing Windows Packages  
-You can install a Windows package (including its dependency packages, if any) to Nano Server either locally or an offline image with either `Install-NanoServerPackage` or `Install-Package`. Both of these accept pipeline results from search cmdlets.  
+`Find-Package -ProviderName NanoServerPackage -Culture en-us` or `Find-Package -Culture en-us -DisplayCulture`.
 
-To install the latest version of a Windows Package to an online Nano Server, use either `Install-NanoServerPackage -Name Microsoft-NanoServer-Containers-Package` or `Install-Package -Name Microsoft-NanoServer-Containers-Package`. PackageManagement will use the culture of the Nano Server.  
-      
-You can install a Windows Package to an offline image, specifying a particular version and culture, like this:  
-  
-`Install-NanoServerPackage -Name Microsoft-NanoServer-DCB-Package -culture de-de -RequiredVersion 10.0.14393.0  -ToVHd c:\MyNanoVhd.vhd`
+To find a specific package by package name, use the -Name parameter. This parameter also accepts wildcards. For example, to find all packages with VMM in the name, use `Find-NanoServerPackage -Name *VMM*` or `Find-Package -ProviderName NanoServerPackage -Name *VMM*`.
 
- or:
+You can find a particular version with the -RequiredVersion, -MinimumVersion, or -MaximumVersion parameters. To find all available versions, use -AllVersions. Otherwise, only the latest version is returned. For example: `Find-NanoServerPackage -Name *VMM* -RequiredVersion 10.0.14393.0`. Or, for all versions: `Find-Package -ProviderName NanoServerPackage -Name *VMM* -AllVersions`
 
-`Install-Package -Name Microsoft-NanoServer-DCB-Package -culture de-de -RequiredVersion 10.0.14393.0  -ToVHd c:\MyNanoVhd.vhd`  
-  
+### Installing Nano Server packages  
+You can install a Nano Server package (including its dependency packages, if any) to Nano Server either locally or an offline image with either `Install-NanoServerPackage` or `Install-Package -ProviderName NanoServerPackage`. Both of these accept input from the pipeline.
+
+To install the latest version of a Nano Server package to an online Nano Server, use either `Install-NanoServerPackage -Name Microsoft-NanoServer-Containers-Package` or `Install-Package -Name Microsoft-NanoServer-Containers-Package`. PackageManagement will use the culture of the Nano Server.
+
+You can install a Nano Server package to an offline image while specifying a particular version and culture, like this:
+
+`Install-NanoServerPackage -Name Microsoft-NanoServer-DCB-Package -Culture de-de -RequiredVersion 10.0.14393.0 -ToVhd C:\MyNanoVhd.vhd`
+
+or:
+
+`Install-Package -Name Microsoft-NanoServer-DCB-Package -Culture de-de -RequiredVersion 10.0.14393.0 -ToVhd C:\MyNanoVhd.vhd`
+
 Here are some examples of pipelining package search results to the installation cmdlet:  
+
+`Find-NanoServerPackage *dcb* | Install-NanoServerPackage` finds any packages with "dcb" in the name and then installs them.
+
+`Find-Package *nanoserver-compute-* | Install-Package` finds packages with "nanoserver-compute-" in the name and installs them.
   
-`Find-NanoServerPackage *dcb* | Install-NanoServerPackage` finds any package with "dcb" in the name and then installs them.  
-  
-`Find-Package *nanoserver-compute-* | Install-Package` finds packages with "nanoserver-computer-" in the name and installs them.  
-  
-`Find-NanoServerPackage -Name *nanoserver-compute* |Install-NanoServerPackage -ToVhd c:\MyNanoVhd.vhd` finds packages with "compute" in the name and installs them to an offline image.  
-  
-`Find-Package -provider NanoserverPackage *nanoserver-compute-* | Install-Package -ToVhd c:\MyNanoVhd.vhd` does the same thing with any package that has "nanoserver-compute-" in the name.  
-  
-### Download Windows Packages  
-  
-`Save-NanoServerPackage` or `Save-Package` allow you download packages and save them without installing them. Both cmdlets accept pipeline results from the search cmdlets.  
-  
-For example, to download and save a Windows Package to a directory that matches the wildcard path, use `Save-NanoServerPackage -Name Microsoft-NanoServer-NPDS-Package -Path C:\t*p\`  
-In this example, -Culture wasn't specified, so the culture of the local machine will be used. No version was specified, so the latest version will be saved.  
-  
-`Save-Package -provider NanoServerPackage -Name Microsoft-NanoServer-IIS-Package -Path .\temp -culture it-it -MinimumVersion 10.0.14393.0` saves a particular version and for the Italian language and locale.  
-  
-You can pipeline search results as in these examples:  
-`Find-NanoServerPackage -Name *containers* -MaximumVersion 10.2 -MinimumVersion 1.0 -Culture es-es | Save-NanoServerPackage -Path c:\`  
-  
-or  
-  
-`Find-Package -provider nanoserverPackage -Name *shield* -Culture es-es | Save-Package -Path`  
-  
-### Inventory installed packages  
-You can discover which Window Packages are installed with `PackageManagement Get-Package`. For example, see which packages are on Nano Server with `Get-Package -provider NanoserverPackage`.   
-  
-To check the Windows Packages that are installed in an offline image, use, for example, `Get-Package -provider NanoserverPackage -fromVhd c:\MyNanoVhd.vhd`.  
-  
-  
+`Find-NanoServerPackage -Name *nanoserver-compute* | Install-NanoServerPackage -ToVhd C:\MyNanoVhd.vhd` finds packages with "compute" in the name and installs them to an offline image.
+
+`Find-Package -ProviderName NanoserverPackage *nanoserver-compute-* | Install-Package -ToVhd C:\MyNanoVhd.vhd` does the same thing with any package that has "nanoserver-compute-" in the name.
+
+### Downloading Nano Server packages  
+
+`Save-NanoServerPackage` or `Save-Package` allow you to download packages and save them without installing them. Both cmdlets accept input from the pipeline.
+
+For example, to download and save a Nano Server package to a directory that matches the wildcard path, use `Save-NanoServerPackage -Name Microsoft-NanoServer-DNS-Package -Path C:\`
+In this example, -Culture wasn't specified, so the culture of the local machine will be used. No version was specified, so the latest version will be saved.
+
+`Save-Package -ProviderName NanoServerPackage -Name Microsoft-NanoServer-IIS-Package -Path C:\ -Culture it-IT -MinimumVersion 10.0.14393.0` saves a particular version and for the Italian language and locale.
+
+You can send search results through the pipeline as in these examples:
+
+`Find-NanoServerPackage -Name *containers* -MaximumVersion 10.2 -MinimumVersion 1.0 -Culture es-ES | Save-NanoServerPackage -Path C:\`
+
+or
+
+`Find-Package -ProviderName NanoServerPackage -Name *shield* -Culture es-ES | Save-Package -Path`
+
+### Inventory installed packages
+You can discover which Nano Server packages are installed with `Get-Package`. For example, see which packages are on Nano Server with `Get-Package -ProviderName NanoserverPackage`.
+
+To check the Nano Server packages that are installed in an offline image, run `Get-Package -ProviderName NanoserverPackage -FromVhd C:\MyNanoVhd.vhd`.
+
+
 ### Installing roles and features from local source  
 Though offline installation of server roles and other packages is recommended, you might need to install them online (with the Nano Server running) in container scenarios. To do this, follow these steps:  
   
@@ -268,7 +314,7 @@ Though offline installation of server roles and other packages is recommended, y
    
      
 ```  
- <?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>
     <unattend xmlns="urn:schemas-microsoft-com:unattend">  
     <servicing>  
         <package action="install">  
@@ -362,9 +408,13 @@ Nano Server offers a package that includes a set of basic drivers for a variety 
   
 `New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\InjectingDrivers.vhdx -DriverPath .\Extra\Drivers`  
   
-> [!NOTE]  
-> In the folder where you keep your drivers, both the SYS files and corresponding INF files must be present. Also, Nano Server only supports signed, 64-bit drivers.  
-  
+> [!NOTE]
+> In the folder where you keep your drivers, both the SYS files and corresponding INF files must be present. Also, Nano Server only supports signed, 64-bit drivers.
+
+Using the -DriverPath parameter, you can also pass a array of paths to driver .inf files:
+
+`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\InjectingDrivers.vhdx -DriverPath .\Extra\Drivers\netcard64.inf`
+
 ### Connecting with WinRM  
 To be able to connect to a Nano Server computer using Windows Remote Management (WinRM) (from another computer that is not on the same subnet), open port 5985 for inbound TCP traffic on the Nano Server image. Use this cmdlet:  
   
@@ -381,28 +431,47 @@ You can configure the Nano Server image to be a dynamically expanding VHD or VHD
 `New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\BigBoss.vhd -MaxSize 100GB`  
   
 ### Embedding custom data  
-To embed your own script or binaries in the Nano Server image, use the -CopyFiles parameter (you can pass an array of files and directories to be copied):  
-  
-`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\BigBoss.vhd -CopyFiles .\tools`  
-  
-### Running custom commands after the first boot  
-To run custom commands as part of setupcomplete.cmd, use the -SetupCompleteCommands parameter (you can pass an array of commands):  
-  
-`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -SetupCompleteCommands @("echo foo", "echo bar")`  
-  
+To embed your own script or binaries in the Nano Server image, use the -CopyPath parameter to pass an array of files and directories to be copied. The -CopyPath parameter can also accept a hashtable to specify the destination path for files and directories.
 
-### Support for development scenarios  
-If you want to develop and test on Nano Server, you can use the -Development parameter. This will enable installation of unsigned drivers, copy debugger binaries, open a port for debugging, enable test signing and enable installation of AppX packages without a developer license:  
-  
-`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`  
-  
-  
+`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\BigBoss.vhd -CopyPath .\tools`
+
+### Running custom commands after the first boot
+To run custom commands as part of setupcomplete.cmd, use the -SetupCompleteCommand parameter to pass an array of commands:
+
+`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -SetupCompleteCommand @("echo foo", "echo bar")`
+
+
+### Running custom PowerShell scripts as part of image creation
+To run custom PowerShell scripts as part of the image creation process, use the -OfflineScriptPath parameter to pass an array of paths to .ps1 scripts. If those scripts take arguments, use the -OfflineScriptArgument to pass a hashtable of additional arguments to the scripts.
+
+`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -OfflineScriptPath C:\MyScripts\custom.ps1 -OfflineScriptArgument @{Param1="Value1"; Param2="Value2"}`
+
+
+### Support for development scenarios
+If you want to develop and test on Nano Server, you can use the -Development parameter. This will enable PowerShell as the default local shell, enable installation of unsigned drivers, copy debugger binaries, open a port for debugging, enable test signing, and enable installation of AppX packages without a developer license:
+
+`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`
+
+
 ### Custom unattend file  
 If you want to use your own unattend file, use the -UnattendPath parameter:  
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -UnattendPath \\path\to\unattend.xml`  
   
-Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName.  
+Specifying an administrator password or computer name in this unattend file will override the values set by -AdministratorPassword and -ComputerName. 
+
+> [!NOTE]
+> Nano Server does not support setting TCP/IP settings via unattend files. You can use Setupcomplete.cmd to configure TCP/IP settings.
+
+### Collecting log files
+If you want to collect the log files during image creation, use the -LogPath parameter to specify a directory where all the log files are copied.
+
+`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -LogPath C:\Logs`
+
+
+> [!NOTE]
+> Some parameters on New-NanoServerImage and Edit-NanoServerImage are for internal use only and can be safely ignored. These include the -SetupUI and -Internal parameters.
+
 
 ## Installing apps and drivers
 [comment]: # (From Xumin Sun, bug #68620.)  
@@ -421,7 +490,7 @@ The package publisher should do the following:
 
 Next, the package consumer should follow these steps:
 
-1. Run the [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet to import the publisher’s certificate from Step 4 above to Nano Server with the certStoreLocation at “Cert:\LocalMachine\TrustedPeople”. For example: `Import-Certificate -filepath ".\xyz.cer" -certStoreLocation "Cert:\LocalMachine\TrustedPeople"`
+1. Run the [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet to import the publisher's certificate from Step 4 above to Nano Server with the certStoreLocation at "Cert:\LocalMachine\TrustedPeople". For example: `Import-Certificate -FilePath ".\xyz.cer" -CertStoreLocation "Cert:\LocalMachine\TrustedPeople"`
 2. Install the app on Nano Server by running the [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet to install a WSA package on Nano Server. For example: `Add-AppxPackage wsaSample.appx`
 
 #### Additional resources for creating apps

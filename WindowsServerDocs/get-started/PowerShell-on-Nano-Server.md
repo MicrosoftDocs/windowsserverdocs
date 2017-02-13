@@ -1,6 +1,6 @@
 ---
 title: PowerShell on Nano Server
-description: " "
+description: "Differences in the reduced set of PowerShell features on Nano Server"
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
@@ -95,9 +95,9 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
   
 **Windows PowerShell features not available in Nano Server**  
 * ADSI, ADO, and WMI type adapters   
-* Enable-PSRemoting, Disable-PSRemoting (PowerShell remoting is enabled by default; see the "Using Windows PowerShell Remoting" section of [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)).  
+* Enable-PSRemoting, Disable-PSRemoting (PowerShell remoting is enabled by default; see the "Using Windows PowerShell Remoting" section of [Install Nano Server](Getting-Started-with-Nano-Server.md)).  
 * Scheduled jobs and PSScheduledJob module   
-* Computer cmdlets for joining a domain { Add | Remove } (for different methods to join Nano Server to a domain, see the "Joining Nano Server to a domain" section of [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)).  
+* Computer cmdlets for joining a domain { Add | Remove } (for different methods to join Nano Server to a domain, see the "Joining Nano Server to a domain" section of [Install Nano Server](Getting-Started-with-Nano-Server.md)).  
 * Reset-ComputerMachinePassword, Test-ComputerSecureChannel   
 * Profiles (you can add a startup script for incoming remote connections with `Set-PSSessionConfiguration`)  
 * Clipboard cmdlets   

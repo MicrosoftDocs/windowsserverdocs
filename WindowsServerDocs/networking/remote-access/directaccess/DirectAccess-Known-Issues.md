@@ -1,5 +1,7 @@
 ---
 title: DirectAccess Known Issues
+description: This topic provides a link to Microsoft Technical Support documents for DirectAccess in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3511a91f-1d5d-45a0-97f2-3fc0d6f079b4
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # DirectAccess Known Issues
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 
 ## Recommended hotfixes and updates for Windows Server 2012 DirectAccess  

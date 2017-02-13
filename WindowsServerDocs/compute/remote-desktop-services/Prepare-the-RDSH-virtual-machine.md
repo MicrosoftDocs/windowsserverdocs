@@ -1,5 +1,6 @@
 ---
 title: Prepare the RDSH virtual machine
+description: Get the VM ready for the RD Session Host
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

@@ -1,12 +1,13 @@
 ---
 title: Add the RDSH Server, create a collection, and publish the RemoteApp programs
+description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 08/01/2016
+ms.date: 11/08/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60
@@ -20,7 +21,10 @@ manager: dongill
 Use the following steps to deploy RemoteApp programs in your desktop hosting environment. Make sure you have reviewed and completed the prerequisites before starting.  
 
 ## Add the RD Session Host to your deployment
->[NOTE] Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
+
+>[!NOTE] 
+> Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
+
 
 1. Create a public IP address for the virtual machine running Remote Desktop Management Services (RDMS). The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.  
     1. In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment and then click the RDMS virtual machine (for example, Contoso-Cb1).  

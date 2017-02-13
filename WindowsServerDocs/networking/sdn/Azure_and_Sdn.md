@@ -1,5 +1,7 @@
 ---
-title: Microsoft Azure and Software Defined Networking 
+title: Microsoft Azure and Software Defined Networking
+description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Microsoft Azure.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +15,7 @@ author: jamesmci
 ---
 # Microsoft Azure and Software Defined Networking
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 Microsoft Azure is Microsoft's cloud platform: a growing collection of integrated services - compute, storage, data, networking, and app - that help you move faster, do more, and save money.  
   

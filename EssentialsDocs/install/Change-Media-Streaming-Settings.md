@@ -16,7 +16,7 @@ manager: dongill
 
 # Change Media Streaming Settings
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Multiple options are available for you to change media streaming settings. The following options are available:  
   

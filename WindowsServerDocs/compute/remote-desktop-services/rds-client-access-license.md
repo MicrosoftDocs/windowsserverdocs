@@ -1,5 +1,6 @@
 ---
 title: License your RDS deployment with client access licenses (CALs)
+description: Overview of client licensing in Remote Desktop Services.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,7 +11,7 @@ ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: lizap
 ms.author: elizapo
-ms.date: 09/20/2016
+ms.date: 11/15/2016
 manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
@@ -62,12 +63,13 @@ The CAL used by users or devices must correspond to the version of Windows Serve
 
 The following table shows the CALs that are compatible on RD Session Hosts and RD Virtualization Hosts.
 
-| CAL type     | 2000 | 2003 | 2003R2 | 2008 | 2008R2 | 2012 | 2012R2 | 2016 |
-|--------------|------|------|--------|------|--------|------|--------|------|
-| 2000         | Yes  | No   | No     | No   | No     | No   | No     | No   |
-| 2003         | Yes  | Yes  | Yes    | No   | No     | No   | No     | No   |
-| 2008, 2008R2 | Yes  | Yes  | Yes    | Yes  | Yes    | No   | No     | No   |
-| 2012         | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | No   |
-| 2016         | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | Yes  |
+|      |2000 CAL|2003 CAL|2003 R2 CAL|2008 CAL|2008 R2 CAL|2012 CAL|2016 CAL|
+|--------------|------|------|--------|------|--------|------|------|
+| 2000 license server | Yes  | No   | No     | No   | No     | No   | No   |
+| 2003 license server | Yes  | Yes  | Yes    | No   | No     | No   | No   |
+| 2008, 2008 R2 license server| Yes  | Yes  | Yes    | Yes  | Yes    | No   | No   |
+| 2012 license server | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | No   |
+| 2012 R2 license server | Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | No   |
+| 2016 license server| Yes  | Yes  | Yes    | Yes  | Yes    | Yes  | Yes    | Yes  |
 
-The RD license server can host licenses from any version of Remote Desktop Services.
+Any RDS license server can host licenses from all previous versions of Remote Desktop Services and the current version of Remote Desktop Services. For example, a Windows Server 2016 RDS license server can host licenses from all previous versions of RDS, while a Windows Server 2012 R2 RDS license server can only host licenses up to Windows Server 2012 R2.

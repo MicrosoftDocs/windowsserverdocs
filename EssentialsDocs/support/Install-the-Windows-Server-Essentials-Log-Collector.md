@@ -16,7 +16,7 @@ manager: dongill
 
 # Install the Windows Server Essentials Log Collector
 
->Applies To: Windows Server&reg; 2016 Essentials, Windows Server&reg; 2012 R2 Essentials, Windows Server&reg; 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 The  Windows Server Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
   

@@ -1,5 +1,7 @@
 ---
 title: DirectAccess Offline Domain Join
+description: This guide explains the steps to perform an offline domain join with DirectAccess in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # DirectAccess Offline Domain Join
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This guide explains the steps to perform an offline domain join with DirectAccess. During an offline domain join, a computer is configured to join a domain without physical or VPN connection.  
   

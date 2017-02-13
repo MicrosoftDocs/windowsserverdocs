@@ -1,13 +1,13 @@
-﻿---
+---
 ms.assetid: 551c1a0d-8d30-41b4-9c4a-35a3337dd3bc
 title: Deploying Federation Servers
 description:
 author: billmath
 manager: femila
-ms.date: 09/21/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ms.author: billmath
 ---

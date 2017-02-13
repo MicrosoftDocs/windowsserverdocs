@@ -1,5 +1,6 @@
 ---
 title: Log Off User Sessions
+description: Learn how to log off of MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.technology: multipoint-services

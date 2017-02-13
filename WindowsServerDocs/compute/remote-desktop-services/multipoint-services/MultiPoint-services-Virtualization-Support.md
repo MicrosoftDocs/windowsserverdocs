@@ -1,5 +1,6 @@
 ---
 title: MultiPoint Services Virtualization Support
+description: Describes how to use MultiPoint Services with Hyper-V
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold

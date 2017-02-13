@@ -1,5 +1,7 @@
 ---
 title: Plan a Multi-Forest Deployment
+description: This topic is part of the guide Deploy Remote Access in a Multi-Forest Environment in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,12 +11,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Plan a Multi-Forest Deployment
 
->Applies To: Windows Server&reg; 2016
+>Applies To: Windows Server 2016
 
 This topic describes the planning steps required when configuring Remote Access in a multi-forest deployment.  
   

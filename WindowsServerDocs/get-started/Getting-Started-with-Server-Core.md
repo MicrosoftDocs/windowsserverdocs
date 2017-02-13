@@ -5,11 +5,11 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/29/2016
+ms.date: 01/18/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
+ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
@@ -20,9 +20,13 @@ manager: dongill
 
 When you install Windows Server 2016 using the Setup wizard, you can choose between **Windows Server 2016** and **Windows Server (Server with Desktop Experience)**. The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you do not make a choice in the Setup wizard, **Windows Server 2016** is installed; this is the **Server Core** installation option.
 
-The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additionial user interface elements, see Getting Started with a Desktop Experience Installation. For an even more lightweight option, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md).
+The Server Core option reduces the space required on disk, the potential attack surface, and especially the servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additionial user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). For an even more lightweight option, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
 With the Server Core option, the standard user interface (the "Server Graphical Shell") is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.
+
+>[!NOTE]
+>
+>Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. If you install Server Core and later decide to use Server with Desktop Experience, you should do a fresh installation.
 
 **User interface:** command prompt
 
@@ -33,7 +37,7 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 >[!NOTE]
 >
 >For RSAT, you must use the Windows 10 version.
->Microsoft Management Console: not available locally.
+>Microsoft Management Console is not available locally.
 
 **Server roles available:**
 
@@ -72,7 +76,10 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 ## Installation scenarios
 
 ### Evaluation
-You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016?i=1). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
+You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
+
+> [!IMPORTANT]  
+> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 ### Clean installation
 
@@ -84,7 +91,7 @@ To install the Server Core installation option from the media, insert the media 
 If you already have a Server Core installation of the appropriate Windows Server product, you can upgrade it to a Server Core installation of the appropriate edition of Windows Server 2016, as indicated below.
 
 > [!NOTE]  
-> If you are upgrading from Server Core installations of Windows Server 2012 or Windows Server 2012 R2, you must use the **/compact ingnorewarning flag**. Otherwise, the upgrade will stop because the upgrade attempts to open an Internet Explorer warning, but Internet Explorer is not available in Server Core installations.
+> If you are upgrading from Server Core installations of Windows Server 2012 or Windows Server 2012 R2, you must use the **/compat ingnorewarning flag**. Otherwise, the upgrade will stop because the upgrade attempts to open an Internet Explorer warning, but Internet Explorer is not available in Server Core installations.
 
 > [!IMPORTANT]  
 > In this release, upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade. Otherwise, migration is the recommended option.  

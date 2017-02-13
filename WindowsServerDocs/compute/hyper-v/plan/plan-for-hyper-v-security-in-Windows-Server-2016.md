@@ -1,6 +1,6 @@
 ---
 title: Plan for Hyper-V security in Windows Server 2016
-description: " "
+description: "Provides a lists of security considerations for Hyper-v hosts and virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
 ms.suite: na
@@ -35,7 +35,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 - **Configure hosts to be part of a guarded fabric.** For more information, see [Guarded fabric](../../../security/Guarded-Fabric-and-Shielded-VMs.md).
 - **Secure devices.** Secure the storage devices where you keep virtual machine resource files.
 - **Secure the hard drive.** Use BitLocker Drive Encryption to protect resources.
-- **Harden the Hyper-V host operating system.** Use the baseline security setting recommendations described in the [Windows Server Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines). See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
+- **Harden the Hyper-V host operating system.** Use the baseline security setting recommendations described in the [Windows Server Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines).
 - **Grant appropriate permissions.**
     - Add users that need to manage the Hyper-V host to the Hyper-V administrators group.
     - Don't grant virtual machine administrators permissions on the Hyper-V host operating system.
@@ -52,7 +52,7 @@ For more secure environments:
 - **Keep the guest OS secure.**
     - Install the latest security updates before you turn on a virtual machine in a production environment.
     - Install integration services for the supported guest operating systems that need it and keep it up to date. Integration service updates for guests that run supported Windows versions are available through Windows Update.
-    - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the [Windows Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines). See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
+    - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the [Windows Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines).
 - **Use a secure network.** Make sure virtual network adapters connect to the correct virtual switch and have the appropriate security setting and limits applied.
 - **Store virtual hard disks and snapshot files in a secure location.**
 - **Secure devices.** Configure only required devices for a virtual machine. Don't enable discrete device assignment in your production environment unless you need it for a specific scenario. If you do enable it, make sure to only expose devices from trusted vendors. 

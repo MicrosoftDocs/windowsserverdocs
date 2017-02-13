@@ -8,7 +8,7 @@ manager: femila
 ms.date: 09/22/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: identity-adfs
 ---
 
@@ -29,9 +29,7 @@ The following are the requirements for deploying AD FS:
 -   [Configuration database requirements](AD-FS-2016-Requirements.md#BKMK_5)  
   
 -   [Browser requirements](AD-FS-2016-Requirements.md#BKMK_6)  
-  
--   [Extranet requirements](AD-FS-2016-Requirements.md#BKMK_extranet)  
-  
+
 -   [Network requirements](AD-FS-2016-Requirements.md#BKMK_7)  
   
 -   [Permissions requirements](AD-FS-2016-Requirements.md#BKMK_13)  
@@ -98,11 +96,11 @@ AD FS and Web Application Proxy hardware requirements (physical or virtual) are 
 
 The memory and disk requirements for AD FS are fairly static, see the table below:
 
-||||  
-|-|-|-|  
-|**Hardware requirement**|**Minimum requirement**|**Recommended requirement**|  
-|RAM|2 GB|4 GB|  
-|Disk space|32 GB|100 GB|  
+
+|**Hardware requirement**|**Minimum requirement**|**Recommended requirement**|
+|----- | ----- |-----|
+|RAM|2 GB|4 GB |
+|Disk space|32 GB|100 GB |
 
 **SQL Server Hardware Requirements**
 
@@ -172,11 +170,11 @@ This section describes the requirements and restrictions for AD FS farms that us
   
 The following table provides a summary of how many AD FS servers are supported in a WID vs a SQL Server farm.    
   
-||||  
-|-|-|-|  
-||1 \- 100 relying party (RP) trusts configured in AD FS|More than 100 RP trusts configured|  
-|1 \- 30 AD FS servers|WID Supported|Not supported using WID \- SQL Server required|  
-|More than 30 AD FS servers|Not supported using WID \- SQL Server required|Not supported using WID \- SQL Server required|  
+  
+|| 1 - 100 relying party (RP) trusts configured in AD FS | More than 100 RP trusts configured  |
+| --- |--- | --- |
+|1 - 30 AD FS servers|WID Supported|Not supported using WID - SQL Server required |
+|More than 30 AD FS servers|Not supported using WID - SQL Server required|Not supported using WID - SQL Server required  
   
 **SQL Server**  
   
