@@ -1037,6 +1037,8 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 
 3.  In **Network Policy Server**, click **OK**, and then click **OK** again.
 
+For more information about Network Policy Server, see [Network Policy Server (NPS)](../technologies/nps/nps-top.md).
+
 #### <a name="BKMK_IIS"></a>Deploying WEB1
 The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-manage, modular and extensible platform for reliably hosting web sites, services, and applications. With Internet Information Services (IIS), you can share information with users on the Internet, an intranet, or an extranet. IIS  is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).
 
