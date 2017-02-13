@@ -804,7 +804,7 @@
 ###### [Manage Role Based Access Control with Windows PowerShell](networking/technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md)
 ### [Network Load Balancing](networking/technologies/Network-Load-Balancing.md)
 ### [Network Offload and Optimization Technologies](networking/technologies/network-offload.md)
-### [Network Policy Server](networking/technologies/nps/nps-top.md)
+### [Network Policy Server (NPS)](networking/technologies/nps/nps-top.md)
 #### [Network Policy Server Best Practices](networking/technologies/nps/nps-best-practices.md)
 #### [Getting Started with Network Policy Server](networking/technologies/nps/nps-getstart-top.md)
 ##### [Connection Request Processing](networking/technologies/nps/nps-crp-top.md)
