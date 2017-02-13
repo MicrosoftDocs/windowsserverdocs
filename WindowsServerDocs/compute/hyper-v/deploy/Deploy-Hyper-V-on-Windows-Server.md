@@ -21,7 +21,7 @@ Use these resources to help you deploy Hyper-V on Windows Server 2016.
 - [Configure virtual local area networks for Hyper-V](configure-virtual-local-areal-networks-for-Hyper-V.md)  
 - [Set up hosts for live migration without Failover Clustering](Set-up-hosts-for-live-migration-without-Failover-Clustering.md)  
 - [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
-- [Deploy graphics devices using Discrete Device Assignment](deploying-grahpics-devices-using-dda.md)
+- [Deploy graphics devices using Discrete Device Assignment](deploying-graphics-devices-using-dda.md)
 - [Deploy storage devices using Discrete Device Assignment](deploying-storage-devices-using-dda.md)  
   
 

@@ -56,7 +56,7 @@
 ##### [Export and import virtual machines](compute/hyper-v/deploy/Export-and-import-virtual-machines.md)
 ##### [Set up hosts for live migration](compute/hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)
 ##### [Upgrade virtual machine version](compute/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
-##### [Deploy graphics devices using DDA](compute/hyper-v/deploy/deploy-graphics-devices-using-dda.md)
+##### [Deploy graphics devices using DDA](compute/hyper-v/deploy/deploying-graphics-devices-using-dda.md)
 ##### [Deploy storage devices using DDA](compute/hyper-v/deploy/deploying-storage-devices-using-dda.md)
 #### [Manage](compute/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
 ##### [Choose between standard or production checkpoints](compute/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
