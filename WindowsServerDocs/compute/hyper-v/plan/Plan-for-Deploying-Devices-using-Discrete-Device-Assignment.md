@@ -1,14 +1,14 @@
 ---
 title: Plan for Deploying Devices using Discrete Device Assignment
-description: " "
+description: Learn about how DDA works in Windows Server
 ms.prod: windows-server-threshold
 ms.service: na
-ms.technology:
-  - hyper-v
-  - techgroup-compute
+ms.technology: hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
+ms.author: chrihu
+ms.assetid: dd8d35b2-133c-475d-8756-52a6c553f901
 ---
 # Plan for Deploying Devices using Discrete Device Assignment
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016

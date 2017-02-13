@@ -1,14 +1,14 @@
 ---
 title: Deploy Devices using Discrete Device Assignment
-description: " "
+description: Learn how to use DDA to deploy devices in Windows Server
 ms.prod: windows-server-threshold
 ms.service: na
-ms.technology:
-  - hyper-v
-  - techgroup-compute
+ms.technology: hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
+ms.author: chrihu
+ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
 ---
 # Deploy Devices using Discrete Device Assignment
 

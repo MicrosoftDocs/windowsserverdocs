@@ -1,14 +1,14 @@
 ---
 title: Deploy NVMe Storage Devices using Discrete Device Assignment
-description: " "
+description: Learn how to use DDA to deploy storage devices
 ms.prod: windows-server-threshold
 ms.service: na
-ms.technology:
-  - hyper-v
-  - techgroup-compute
+ms.technology: hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
+ms.author: chrihu
+ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
 ---
 # Deploy NVMe Storage Devices using Discrete Device Assignment
 
