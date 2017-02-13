@@ -942,11 +942,11 @@ The following sections provide information on adding NPS and Web servers to your
 #### <a name="BKMK_deployNPS1"></a>Deploying NPS1
 The Network Policy Server (NPS) server is installed as a preparatory step for deploying other network access technologies, such as virtual private network (VPN) servers, wireless access points, and 802.1X authenticating switches.
 
-Network Policy Server (NPS) allows you to centrally configure and manage network policies with the following three features: Remote Authentication Dial-In User Service (RADIUS) server, RADIUS proxy, and Network Access Protection (NAP) policy server.
+Network Policy Server (NPS) allows you to centrally configure and manage network policies with the following features: Remote Authentication Dial-In User Service (RADIUS) server and RADIUS proxy.
 
 NPS is an optional component of a core network, but you should install NPS if any of the following are true:
 
--   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running  Windows Server 2016,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
+-   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012,  Windows Server 2008 R2 or Windows Server 2008 and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
 
 
 -   You plan to deploy 802.1X authentication for wired or wireless  access.
@@ -975,15 +975,15 @@ When you use NPS as a Remote Authentication Dial-In User Service (RADIUS) server
 
 Following are key planning steps before installing NPS.
 
--   Plan the user accounts database. By default, if you join the server running NPS to an Active Directory domain, NPS performs authentication and authorization using the AD DS user accounts database. In some cases, such as with large networks that use NPS as a RADIUS proxy to forward connection requests to other RADIUS servers, you might want to install NPS on a non-domain member computer.
+- Plan the user accounts database. By default, if you join the server running NPS to an Active Directory domain, NPS performs authentication and authorization using the AD DS user accounts database. In some cases, such as with large networks that use NPS as a RADIUS proxy to forward connection requests to other RADIUS servers, you might want to install NPS on a non-domain member computer.
 
--   Plan RADIUS accounting. NPS allows you to log accounting data to a SQL Server database or to a text file on the local computer. If you want to use SQL Server logging, plan the installation and configuration of your server running SQL Server.
+- Plan RADIUS accounting. NPS allows you to log accounting data to a SQL Server database or to a text file on the local computer. If you want to use SQL Server logging, plan the installation and configuration of your server running SQL Server.
 
 ##### <a name="BKMK_installNPS"></a>Install Network Policy Server (NPS)
 You can use this procedure to install Network Policy Server (NPS) by using the Add Roles and Features Wizard. NPS is a role service of the Network Policy and Access Services server role.
 
 > [!NOTE]
-> By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 (IPv6) and IPv4 traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
+> By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 \(IPv6\) and IPv4 traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
 
 **Administrative Credentials**
 
@@ -1007,7 +1007,7 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 
 4.  In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Click **Next**.
 
-5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**, and then click **Next**
+5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**. A dialog box opens asking if it should add features that are required for Network Policy and Access Services. Click **Add Features**, and then click **Next**.
 
 6.  In **Select features**, click **Next**, and in **Network Policy and Access Services**, review the information that is provided, and then click **Next**.
 
