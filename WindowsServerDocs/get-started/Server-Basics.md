@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: dongill
 ms.technology: get-started
-ms.date: 10/20/2016
+ms.date: 02/14/2017
 ms.topic: article
 ms.assetid: 8a7b18d8-b1ab-42a5-85d9-366715aa851b
 author: jaimeo
@@ -45,5 +45,8 @@ Information about additional steps needed to bring particular server roles to Wi
 
 ## [Server Application Compatibility Table](Server-Application-Compatibility.md)
 Does SQL work on Windows Server 2016? What steps are needed to get Exchange running? This topic explains what you'll need to do.
+
+## [Server Activation Guide](Server-2016-activation.md)
+Basic information on activation of Windows Server 2016 itself and other operating systems by using Windows Server 2016.
 
 
