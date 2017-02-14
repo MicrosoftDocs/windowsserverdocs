@@ -5,18 +5,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 02/13/2017
+ms.date: 02/14/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
 author: jaimeo
 ms.author: jaimeo
-manager: dongill
+manager: elizapo
 ---
 # Windows Server 2016 Activation
 
-The following information outlines initial planning considerations that you need to review for Key Management Services (KMS) activation.
+The following information outlines initial planning considerations that you need to review for Key Management Services (KMS) activation involving Windows Server 2016. For information about KMS activation involving operating systems older than those listed here, see [Step 1: Review and Select Activation Methods](https://technet.microsoft.com/library/jj134256(WS.11).aspx).
 
 KMS uses a client-server model to active clients. KMS clients connect to a KMS server, called the KMS host, for activation. The KMS host must reside on your local network.
 
