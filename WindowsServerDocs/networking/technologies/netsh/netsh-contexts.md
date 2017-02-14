@@ -109,14 +109,12 @@ To run a netsh command, you must start netsh from the command prompt by typing *
 
 You can use the following formatting legend to  interpret and use correct netsh command syntax when you run the command at the netsh prompt or in a batch file or script.
 
-| Format | Meaning |
-|--------------|----------------|
-|*Italic*|Information that the user must supply. |
-|**Bold**|Elements that the user must type exactly as shown.|
-|Ellipsis \(...\)|Parameter that can be repeated several times in a command line.|
-|Between brackets \(\[\]\) | Optional items.|
-|Between braces \({}\) with choices separated by pipe.|Set of choices from which the user must choose only one, such as \{enable\|disable\}|
-|Courier font|Code or program output.|
+- Text in *Italic* is information that the user must supply.
+- Text in **Bold** is information that the user must type exactly as shown.
+- Text followed by an ellipsis \(...\) is a parameter that can be repeated several times in a command line.
+- Text that is between brackets [&nbsp;] is an optional item.
+- Text that is between braces {&nbsp;} with choices separated by a pipe provides a set of choices from which the user must select only one, such as `{enable|disable}`
+- Text that is formatted with the Courier font is code or program output.
 
 ## Running Netsh commands from the command prompt or Windows PowerShell
 
