@@ -85,3 +85,19 @@ Use the following steps to choose which GPU to use:
 1. Navigate to the Hyper-V settings in Hyper-V Manager.
 2. Click **Physical GPUs** in Hyper-V Settings.
 3. Select the GPU that you don’t want to use, and then clear **Use this GPU with RemoteFX**.
+
+## Monitor performance
+
+Remote vGPU support in RDS includes the following performance counters, which you can view in Performance Monitor (perfmon.exe) to gather information about frame rate througput.
+
+- RemoteFX Graphics - counters for Remote Desktop Protocol graphics compression. For example, if you want to look at the number of frames being presented to RDP for compression, look at the **Input Frames/Second** counter.
+- RemoteFX Network - counters for Remote Desktop Protocol network traffic. For example, **Round Trip Time (RTT)**.
+- Remote FX Root GPU Management - Measures VRAM available and reserved.
+- RemoteFX Software - Provides counters for capture rate, GPU response time, and othres.
+
+For more low-level performance monitoring, particularly for troubleshooing, you can use the following additional performance counters:
+- RemoteFX Synth3D VSC VM Device 
+- RemoteFX Synth3D VSC VM Transport Channel 
+- RemoteFX Synth3D VSP 
+- RemoteFX Synth3D VSP VM Device 
+- RemoteFX Synth3D VSP VM Channel
