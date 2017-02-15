@@ -843,6 +843,7 @@
 ##### [Manage NPS Templates](networking/technologies/nps/nps-manage-templates.md)
 ### [Network Shell (Netsh)](networking/technologies/netsh/netsh.md)
 #### [Netsh Command Syntax, Contexts, and Formatting](networking/technologies/netsh/netsh-contexts.md)
+#### [Network Shell (Netsh) Example Batch File](networking/technologies/netsh/netsh-wins.md)
 ### [Network Subsystem Performance Tuning](networking/technologies/network-subsystem/net-sub-performance-top.md)
 #### [Choosing a Network Adapter](networking/technologies/network-subsystem/net-sub-choose-nic.md)
 #### [Configure the Order of Network Interfaces](networking/technologies/network-subsystem/net-sub-interface-metric.md)
