@@ -14,7 +14,7 @@ author: jamesmci
 
 Applies To: Windows Server 2016
 
-You can use this topic to learn how to create a batch file that performs multiple tasks by using Netsh in Windows Server 2016. In this example batch file, the **netsh wins**context is used.
+You can use this topic to learn how to create a batch file that performs multiple tasks by using Netsh in Windows Server 2016. In this example batch file, the **netsh wins** context is used.
 
 ## Example Batch File Overview
 
@@ -30,7 +30,7 @@ The example batch file accomplishes the following tasks.
 - Initiates a push replication from WINS\-A to WINS\-B
 - Connects to WINS\-B to verify that the new record, MY\_RECORD, was replicated successfully
 
-## Netsh Wins example batch file
+## Netsh example batch file
 
 In the following example batch file, lines that contain comments are preceded by "rem," for remark. Netsh ignores comments.
 
@@ -64,7 +64,7 @@ In the following example batch file, lines that contain comments are preceded by
     
     rem 6. End example batch file.
 
-## Netsh Wins commands used in the example batch file
+## Netsh WINS commands used in the example batch file
 
 The following section lists the **netsh wins** commands that are used in this example procedure.
 
@@ -72,4 +72,6 @@ The following section lists the **netsh wins** commands that are used in this ex
 - **add name**. Registers a name on the WINS server.
 - **add partner**. Adds a replication partner on the WINS server.
 - **init push**. Initiates and sends a push trigger to a WINS server.
-- **show name**. Displays detailed information for a particular record in the WINS server database.                     |
+- **show name**. Displays detailed information for a particular record in the WINS server database.  
+
+For more information, see [Network Shell (Netsh)](netsh.md).
