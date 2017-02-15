@@ -146,6 +146,10 @@ Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Creden
    
 ## Additional Options
 Other methods for updating Nano Server might overlap or complement the options above. Such options include using Windows Server Update Services (WSUS), System Center Virtual Machine Manager (VMM), Task Scheduler, or a non-Microsoft solution.
-- [Configuring Windows Update for WSUS](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx)
+- [Configuring Windows Update for WSUS](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx) by setting the following registry keys:
+  - WUServer
+  - WUStatusServer (generally uses the same value as WUServer)
+  - UseWUServer
+  - AUOptions
 - [Managing Fabric Updates in VMM](https://technet.microsoft.com/en-us/library/gg675084(v=sc.12).aspx)
 - [Registering a Scheduled Task](https://technet.microsoft.com/en-us/library/jj649811.aspx)
