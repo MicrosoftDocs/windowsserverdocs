@@ -1,6 +1,6 @@
 ---
-title: Linux Package Repository for Microsoft Software
-description: This document describes how to use and install Microsoft's Linux software packages.
+title: Linux Software Repository for Microsoft Products
+description: This document describes how to use and install Linux software packages for Microsoft products.
 ms.custom: na
 ms.prod: 
 ms.service: na
@@ -10,24 +10,24 @@ ms.topic: article
 ms.assetid: 
 author: szarkos
 ms.author: szark
-ms.date: 10/12/2016
+ms.date: 02/15/2017
 ---
-# Microsoft's Linux Software Repository
+# Linux Software Repository for Microsoft Products
 
 >Applies To:  
 
 
 ## Overview
-Microsoft builds and supports a variety of software products for Linux systems and makes them available via standard APT and YUM package repositories. This document will describe how to set up the repository, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
+Microsoft builds and supports a variety of software products for Linux systems and makes them available via standard APT and YUM package repositories. This document describes how to configure the repository on your Linux system, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
 
 Microsoft’s Linux Software Repository is comprised of multiple sub-repositories:
 
  - prod – The Production sub-repository is designated for packages intended for use in production. These packages are commercially supported by Microsoft under the terms of the applicable support agreement or program that you have with Microsoft.
 
- - mssql-server - These repositories contain packages for Microsoft SQL Server for Linux - See also: [SQL Server on Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
+ - mssql-server - These repositories contain packages for Microsoft SQL Server on Linux - See also: [SQL Server on Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
 
 >[!Note]
-Packages in the Linux software repositories are subject to the license terms located in the packages.
+Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
 
 ## Configuring the repositories
