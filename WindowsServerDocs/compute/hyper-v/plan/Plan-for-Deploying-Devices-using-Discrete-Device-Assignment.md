@@ -1,5 +1,5 @@
 ---
-title: Plan for Deploying Devices using Discrete Device Assignment
+title: Plan for deploying devices using Discrete Device Assignment
 description: Learn about how DDA works in Windows Server
 ms.prod: windows-server-threshold
 ms.service: na
@@ -121,4 +121,4 @@ $locationPath = ($gpudevs | Get-PnpDeviceProperty DEVPKEY_Device_LocationPaths).
 ```
 
 ### Can Discrete Device Assignment be used to pass a USB device into a VM?
-Although not officially supported, our customers have used Discrete Device Assignment to do this by passing the entire USB3 controller into a VM.  As the whole controller is being passed in, each USB device plugged into that controller will also be accessible in the VM.  Note, only some USB3 controllers may work, and USB2 controllers definitely will not work as they
+Although not officially supported, our customers have used Discrete Device Assignment to do this by passing the entire USB3 controller into a VM.  As the whole controller is being passed in, each USB device plugged into that controller will also be accessible in the VM.  Note, only some USB3 controllers may work, and USB2 controllers definitely will not work.

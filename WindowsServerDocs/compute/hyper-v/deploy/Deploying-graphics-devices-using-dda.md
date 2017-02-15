@@ -1,6 +1,6 @@
 ---
-title: Deploy Devices using Discrete Device Assignment
-description: Learn how to use DDA to deploy devices in Windows Server
+title: Deploy graphics devices using Discrete Device Assignment
+description: Learn how to use DDA to deploy graphics devices in Windows Server
 ms.prod: windows-server-threshold
 ms.service: na
 ms.technology: hyper-v
@@ -10,7 +10,7 @@ author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
 ---
-# Deploy Devices using Discrete Device Assignment
+# Deploy graphics devices using Discrete Device Assignment
 
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
 
