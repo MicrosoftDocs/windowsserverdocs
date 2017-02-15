@@ -4,7 +4,7 @@ title: Manually Configure a Service Account for a Federation Server Farm
 description:
 author: billmath
 manager: femila
-ms.date: 09/21/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

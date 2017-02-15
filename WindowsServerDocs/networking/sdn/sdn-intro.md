@@ -156,7 +156,7 @@ The following list of SDN technologies provides links to documentation for each 
 - [Container Networking Overview](technologies/containers/Container-networking-overview.md)
 
 
-## Contact the SDN Team
+## Contact the Datacenter and Cloud Networking Team
 
 Have questions about how Microsoft SDN can meet your needs?
 
@@ -164,4 +164,4 @@ Need troubleshooting help, or to report a bug?
 
 Looking to make a doc request?
 
-Please [Contact the SDN Team](contact-sdn-team.md) with questions, to get assistance with our products, or simply to provide us with feedback of any kind. We love to hear from you as a member of our community--it's in hearing from you that we are able to make our products truly meet and exceed your needs as a customer.
+Please [Contact the Datacenter and Cloud Networking Team](contact-sdn-team.md) with questions, to get assistance with our products, or simply to provide us with feedback of any kind. We love to hear from you as a member of our community--it's in hearing from you that we are able to make our products truly meet and exceed your needs as a customer.
