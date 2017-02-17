@@ -181,5 +181,5 @@ See [Creating volumes in Storage Spaces Direct](create-volumes.md).
 ### See also
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Choosing drives for Storage Spaces Direct](choosing-drives-and-resiliency-types.md)
+- [Choosing drives for Storage Spaces Direct](choosing-drives.md)
 - [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
