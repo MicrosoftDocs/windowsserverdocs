@@ -14,9 +14,7 @@ ms.date: 10/14/2016
 
 >Applies To: Windows Server 2016
 
-This topic describes the process of setting up the Host Guardian Service (HGS), which includes reviewing prerequisites, setting up the first HGS node, configuring the secondary HGS nodes, and providing information to HGS about the hosts that HGS will support.
-
-Together, HGS and the hosts it supports form a guarded fabric. After the guarded fabric is configured, shielded virtual machines (VMs) can run in it. For a list of the tasks for configuring a guarded fabric, see [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms).
+Setting up the Host Guardian Service (HGS) includes reviewing prerequisites, setting up the HGS nodes, and providing Hyper-V host information to HGS.
 
 ## Prerequisites for the Host Guardian Service
 
@@ -28,12 +26,8 @@ Together, HGS and the hosts it supports form a guarded fabric. After the guarded
 
 -   **Server Roles**: Host Guardian Service and supporting server roles.
 
--   **Configuration permissions/privileges for the fabric (host) domain**: You will need to be able to configure DNS forwarding between the fabric (host) domain and the HGS domain. If you are using Admin-trusted attestation, you will need to be able to configure Active Directory trusts between the fabric domain the HGS domain. Admin-trusted attestation is one of the two mutually-exclusive attestation modes that HGS uses, with the other mode being TPM-trusted attestation. For information about the two modes, including the hardware and firmware requirements for TPM-trusted attestation, see [Attestation modes in the Guarded Fabric solution](Guarded-Fabric-and-Shielded-VMs.md#attestation-modes-in-the-guarded-fabric-solution).
+-   **Configuration permissions/privileges for the fabric (host) domain**: You will need to configure DNS forwarding between the fabric (host) domain and the HGS domain. If you are using Admin-trusted attestation (AD mode), you will need to configure an Active Directory trust between the fabric domain the HGS domain. 
     
-    As noted, a guarded fabric cannot contain a mix of admin- and TPM-trusted attestation. However, you can change from one attestation mode to the other. In other words, even though you must choose one mode for your initial deployment, you can change to the other mode later. For information about changing modes, see [Changing attestation modes](guarded-fabric-manage-hgs.md#changing-attestation-modes) in "Managing the Host Guardian Service."
-
-    >**Important**&nbsp;&nbsp;By default, when you set up HGS, it creates its own forest. However, you can choose to add HGS to an existing forest. The forest used by HGS is sensitive because its administrators have access to the keys that control shielded VMs. For this reason, we strongly recommend that HGS either create its own forest during initial installation, or use an existing bastion forest - one that is isolated from traditional fabric or CORP-forest administrators. For more information, see [Choose whether to install HGS in its own new forest or in an existing bastion forest](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#choose-whether-to-install-hgs-in-its-own-new-forest-or-in-an-existing-bastion-forest).
-
 ### Supported upgrade scenarios
 
 Before you deploy a guarded fabric, make sure the servers have installed the latest Cumulative Update. 
@@ -71,13 +65,13 @@ There are no technical requirements that prevent installing HGS in an existing f
 - They are not general-purpose in nature 
 - They have a low number of logons
 
-General purpose forests such as production forests are not suitable for use by the HGS. Because the HGS needs to be isolated from fabric administrators, fabric forests are unsuitable.
+General purpose forests such as production forests are not suitable for use by the HGS. Fabric domain forests are also unsuitable because the HGS needs to be isolated from fabric administrators.
 
 Depending on your deployment scenario, follow the steps to [install HGS in its own new forest](#install-hgs-in-its-own-new-forest) or [initialize HGS in an existing bastion forest](#initialize-hgs-in-an-existing-bastion-forest). 
 
 #### Install HGS in its own new forest
 
-The following steps describe the process for deploying the Host Guardian Service using its own newly created Active Directory forest. Ensure that the HGS machine is **not** joined to a domain before performing these steps.
+Ensure that the HGS machine is **not** joined to a domain before performing these steps.
 
 1.  In an elevated Windows PowerShell console, run the following commands to install the Host Guardian Service and configure its domain. The password you specify here will only apply to the Directory Services Restore Mode password for Active Directory; it will *not* change the password you log in with.
 
@@ -190,8 +184,6 @@ The options for specifying this certificate when initializing the HGS server are
 
 The following commands will complete the configuration of the first HGS node.
 
->**Note**&nbsp;&nbsp;During this step, you will determine the attestation mode that HGS will use, either Admin-trusted or TPM-trusted attestation, although you can change the mode later. With HGS in TPM-trusted mode, hosts that you configure as guarded hosts must have TPM 2.0, UEFI 2.3.1, and boot in UEFI mode (not BIOS or "legacy" mode).
-
 1.  Open an elevated Windows PowerShell console, and then run the following commands to initialize the HGS server with the encryption and signing certificates created earlier.
 
     For &lt;HgsServiceName&gt;, substitute a name of your choosing for the HGS cluster. This name is the distributed network name of the cluster. This name should *not* be fully qualified (e.g. enter "hgs" if you want the DNN to be configured as "hgs.relecloud.com").
@@ -222,9 +214,9 @@ The following commands will complete the configuration of the first HGS node.
 
     Specify your attestation mode as follows:
 
-    -   For Admin-trusted attestation, use: `-TrustActiveDirectory`
+    -   For AD mode, use: `-TrustActiveDirectory`
 
-    -   For TPM-trusted attestation, use: `-TrustTpm`
+    -   For TPM mode, use: `-TrustTpm`
 
     For information about attestation modes, see [Attestation modes in the Guarded Fabric solution](Guarded-Fabric-and-Shielded-VMs.md#attestation-modes-in-the-guarded-fabric-solution).
 
@@ -241,7 +233,7 @@ The following commands will complete the configuration of the first HGS node.
 If you want to enable HTTPS communication on the HGS server, you need to pass in the HTTPS certificate (the one you exported in [Configure a certificate for enabling HTTPS](#configure-a-certificate-for-enabling-https)) when initializing the HGS server. Modify the following example as appropriate, and then run it in place of the command in the previous section.
 
 ```powershell
-Initialize-HgsServer -HgsServiceName '<HgsServiceName>' -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
+Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThumbprint $encryptionCert.Thumbprint -SigningCertificateThumbprint $signingCert.Thumbprint -TrustTpm -Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword
 ```
     
 >**Note**&nbsp;&nbsp;If you are setting up multiple HGS servers in a high availability configuration, be sure to import the same HTTPS certificate on each machine. The variables **-Http -Https -HttpsCertificatePath 'C:\HttpsCertificate.pfx' -HttpsCertificatePassword $certificatePassword** (as shown in the previous command) should be included every time you initialize an HGS server in your environment.
@@ -252,7 +244,7 @@ The following steps describe the process for adding HGS to an existing forest, r
 
 **Requirements for adding HGS to an existing forest**
 
-Before you can add HGS to an existing forest, you will need to add these objects to the target domain:
+Before you can add HGS to an existing forest, you will need to join the server and add these objects to the target domain:
 
 -   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
 
@@ -266,10 +258,10 @@ The following tables describe the unique **Initialize-HgsServer** parameters to 
 
 | **Required Parameter**  | **Description**    |
 |-------------|----------|
-| `-UseExistingDomain`      | Adds HGS to an existing domain. HGS must already be joined to the existing domain.                                           |
+| `-UseExistingDomain`      | Adds HGS to an existing domain.                                                                                              |
 | `-JeaAdministratorsGroup` | Identifies the Active Directory group of users who can perform HGS administration (through Just Enough Administration, JEA). |
-| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view, but not change, the HGS settings (through JEA).                                               |
-| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service. The specified account must already be installed and configured for use on this machine.   |
+| `-JeaReviewersGroup`      | Identifies the Active Directory group of users who can view HGS (through JEA).                                               |
+| `-ServiceAccount`         | Identifies the group Managed Service Account (gMSA) that will be used for the Key Protection Service.                        |
 
 | **Optional Parameter** | **Description**     |
 |------------|-----------|
@@ -346,63 +338,44 @@ After you have confirmed the HGS server configuration by running diagnostics, HG
 
 ### Add host information for Admin-trusted attestation
 
->**Important**&nbsp;&nbsp;The following steps apply only to Admin-trusted attestation. For the steps for TPM-trusted attestation, see [Add host information for TPM-trusted attestation](#add-host-information-for-tpm-trusted-attestation), later in this topic.
-
-The following two sections describe how to add configure necessary DNS forwarding, and add necessary host information to HGS for Admin-trusted attestation:
+The following two sections describe how to configure DNS forwarding, and add host information to HGS for AD mode:
 
 - [Configuring DNS forwarding and domain trust](#admin-trusted-attestation-only---configuring-dns-forwarding-and-domain-trust)
 - [Adding security group information to the HGS configuration](#admin-trusted-attestation-only---adding-security-group-information-to-the-hgs-configuration)
 
 #### Admin-trusted attestation only - configuring DNS forwarding and domain trust
 
-For Admin-trusted attestation, use the following steps to set up necessary DNS forwarding from the HGS domain to the fabric domain, and to establish a one-way forest trust to the fabric domain. These steps are necessary because this attestation mode identifies legitimate hosts through a designated Active Directory security group in the fabric (host) domain. To allow HGS to locate the fabric domain's domain controllers and validate group membership, you must configure a DNS forwarder and establish a one-way forest trust to the fabric domain.
+Use the following steps to set up necessary DNS forwarding from the HGS domain to the fabric domain, and to establish a one-way forest trust to the fabric domain. These steps allow the HGS to locate the fabric domain's domain controllers and validate group membership of the Hyper-V hosts.
 
-1.  Configure a DNS forwarder that allows HGS to resolve resources located in the fabric (host) domain. There are many different ways to configure a DNS forwarder, and you can use any forwarder you choose. As one example, to create a conditional DNS forwarder zone, in the HGS domain, run the following command.
+1.  To configure a DNS forwarder that allows HGS to resolve resources located in the fabric (host) domain, run the following command in an elevated PowerShell session. 
 
-    For fabrikam.com, either use that name, or type the name of the fabric (host) domain.
-
-    For `<DNSserverAddress1>`, type the IP address of a DNS server in the fabric (host) domain.
-
-    For `<DNSserverAddress2>`, substitute the IP address of an additional DNS server (if one exists in the fabric domain). You can type additional IP addresses, if available.
+    Replace fabrikam.com with the name of the fabric domain and type the IP addresses of DNS servers in the fabric domain. For higher availability, point to more than one DNS server.
 
     ```powershell
     Add-DnsServerConditionalForwarderZone -Name "fabrikam.com" -ReplicationScope "Forest" -MasterServers <DNSserverAddress1>, <DNSserverAddress2>
     ```
 
-    >**Note**&nbsp;&nbsp;To enable high availability and ensure resiliency against a DNS node failure, configure your forwarder to point to more than one DNS server in the fabric domain.
+2.  To create a one-way forest trust from the HGS domain to the fabric domain, run the following command in an elevated Command Prompt:
 
-2.  To create a one-way forest trust from the HGS domain to the fabric domain, use the Active Directory Domains and Trusts management console or run the following command in an elevated Command Prompt:
-
-    For `relecloud.com`, substitute the name of your HGS domain if necessary.
-
-    For `fabrikam.com,` substitute the name of the fabric domain if necessary.
-
-    For `<password>`, substitute the Administrator password for the fabric domain.
+    Replace `relecloud.com` with the name of the HGS domain and `fabrikam.com` with the name of the fabric domain. Provide the password for and admin of the fabric domain.
 
         netdom trust relecloud.com /domain:fabrikam.com /userD:fabrikam.com\Administrator /passwordD:<password> /add
 
 #### Admin-trusted attestation only - adding security group information to the HGS configuration 
 
-For Admin-trusted attestation, the fabric administrator creates a security group, and places the intended guarded hosts into that group, as described in [Create a security group and place hosts in the group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md#create-a-security-group-and-place-hosts-in-the-group). You, the HGS administrator, must obtain the SID of that security group from the fabric administrator. Then you can complete the following steps.
-
-1. On an HGS server, run the following command to register the security group with HGS as an Attestation Host Group. You can re-run the command if necessary for additional Attestation Host groups.
-
-    For `<GuardedHostGroup>`, provide a friendly name for the guarded host group in HGS - this is useful if you need to differentiate one Attestation Host group from another in different domains. This name does not need to match the Active Directory security group name but it does not support spaces or common punctuation other than hyphens.<br>
-    For `<SID>`, copy the SID as formatted in the output from the host domain (don't forget to wrap it in quotes).
+1.  Obtain the SID of the [security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md#create-a-security-group-and-place-hosts-in-the-group) for guarded hosts from the fabric administrator and run the following command to register the security group with HGS. Re-run the command if necessary for additional groups. Provide a friendly name for the group. It does not need to match the Active Directory security group name. 
 
     ```powershell
     Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
     ```
 
-2. To verify that the guarded host group was successfully added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx). The friendly name of your group should appear.
+2.  To verify the group was added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx). 
 
-This completes the process of configuring an HGS cluster for Admin-trusted attestation. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
+This completes the process of configuring an HGS cluster for AD mode. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
 
 ### Add host information for TPM-trusted attestation
 
->**Important**&nbsp;&nbsp;The following steps apply only to TPM-trusted attestation. For the steps for Admin-trusted attestation, see [Add host information for Admin-trusted attestation](#add-host-information-for-admin-trusted-attestation), earlier in this topic.
-
-For TPM-trusted attestation, the fabric administrator captures three kinds of host information, each of which needs to be added to the HGS configuration:
+For TPM mode, the fabric administrator captures three kinds of host information, each of which needs to be added to the HGS configuration:
 
 - A TPM identifier (EKpub) for each Hyper-V host
 - Code Integrity policies, a white list of allowed binaries for the Hyper-V hosts
@@ -410,7 +383,7 @@ For TPM-trusted attestation, the fabric administrator captures three kinds of ho
 
 The process that the fabric administrator uses is described in [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-hardware-and-software-information). 
 
-After the fabric administrator captures the information, you, the HGS administrator, can add it to the HGS configuration as described in the following procedure.
+After the fabric administrator captures the information, add it to the HGS configuration as described in the following procedure.
 
 1.  Obtain the XML files that contain the EKpub information and copy them to an HGS server. There will be one XML file per host. Then, in an elevated Windows PowerShell console on an HGS server, run the command below. Repeat the command for each of the XML files.
 
@@ -434,7 +407,7 @@ After the fabric administrator captures the information, you, the HGS administra
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
     ```
 
-This completes the process of configuring an HGS cluster for TPM-trusted attestation. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
+This completes the process of configuring an HGS cluster for TPM mode. The fabric administrator might need you to provide two URLs from HGS before the configuration can be completed for the hosts. To obtain these URLs, on an HGS server, run [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
 
 ## See also
 

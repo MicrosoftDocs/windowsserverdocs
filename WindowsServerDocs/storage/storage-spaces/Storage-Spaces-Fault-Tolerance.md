@@ -8,6 +8,7 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 01/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
+description: A discussion of resiliency options in Storage Spaces Direct including mirroring and parity.
 ---
 # Fault tolerance and storage efficiency in Storage Spaces Direct
 >Applies To: Windows Server 2016
@@ -194,13 +195,13 @@ Over its lifetime, Storage Spaces can tolerate any number of failures, because i
 
 Check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
-## See Also
+## See also
 
 Every link below is inline somewhere in the body of this topic.
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 - [Fault Domain Awareness in Windows Server 2016](../../failover-clustering/fault-domains.md)
-- [Erasure Coding in Windows Azure by Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [Erasure Coding in Azure by Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
 - [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
 - [Storage Efficiency Demo at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)

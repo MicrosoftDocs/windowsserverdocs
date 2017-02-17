@@ -12,26 +12,20 @@ ms.date: 10/14/2016
 
 # Admin-trusted attestation for a guarded fabric - creating a security group
 
-This topic describes the intermediate steps that a fabric administrator takes to prepare Hyper-V hosts to become guarded hosts, and describes Admin-trusted attestation mode only. Before taking these steps, complete the steps in [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns.md).
-
-If you need to prepare hosts for TPM-trusted attestation, see [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md).
-
-For a list of the tasks for configuring a guarded fabric, see [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms).
+This topic describes the intermediate steps that a fabric administrator takes to prepare Hyper-V hosts to become guarded hosts using Admin-trusted attestation (AD mode). Before taking these steps, complete the steps in [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns.md).
 
 ## Prerequisites for guarded hosts using Admin-trusted attestation
 
-Hyper-V hosts that will become guarded hosts using Admin-trusted attestation must meet the following prerequisites:
+Hyper-V hosts must meet the following prerequisites for AD mode:
 
--   **Hardware**: One host is required for initial deployment. To test Hyper-V live migration for shielded VMs, you must have at least two hosts.
-
-    For this attestation mode, hosts only need hardware capable of running Hyper-V in Windows Server 2016.
+-   **Hardware**: Hosts only need hardware capable of running Hyper-V in Windows Server 2016. One host is required for initial deployment. To test Hyper-V live migration for shielded VMs, you must have at least two hosts.
 
 -   **Operating system**: Windows Server 2016 Datacenter edition
 
    > [!IMPORTANT]
-   > Ensure that you have installed the latest cumulative update before you deploy shielded virtual machines in production.
+   > Install the [latest cumulative update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
--   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is necessary to let the Hyper-V host communicate with HGS to attest to its health and request keys for shielded VMs. This feature is only available on Datacenter editions of Windows Server 2016. If you are using the Nano Server installation option of Windows Server 2016, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md). 
+-   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature, which is only available on Datacenter editions of Windows Server 2016. If you are using the Nano Server installation option, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md). 
 
 > [!WARNING]
 > The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. 
@@ -41,17 +35,17 @@ Hyper-V hosts that will become guarded hosts using Admin-trusted attestation mus
 
 ## Create a security group and place hosts in the group
 
-Admin-trusted attestation identifies legitimate hosts through a designated Active Directory security group. As a fabric administrator, you can use the following steps to create the security group and place hosts in that group.
+1. Create a new **GLOBAL** security group in the fabric domain and add Hyper-V hosts that will run shielded VMs. Restart the hosts to update their group membership.
 
-1.  **On a computer in the fabric (host) domain**: Create a new **GLOBAL** security group in the fabric domain to identify those hosts trusted to run shielded VMs. You can create this group in Active Directory Users and Computers or by running the Active Directory PowerShell commands on a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
+2. Use Get-ADGroup to obtain the security identifier (SID) of the security group and provide it to the HGS administrator. 
 
-    >**Warning**&nbsp;&nbsp;You must restart each host after adding them to this security group to update their group membership, unless using a group that the host was already a member of.
-
-2. Obtain the security identifier (SID) of the security group that you created (so that you can provide it to the HGS administrator). To obtain the SID, use the following Windows PowerShell command in the fabric domain.
+    ```powershell
+    Get-ADGroup "Guarded Hosts"
+    ```
 
     ![Get-AdGroup command with output](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
 
-    Provide the SID to the HGS administrator so they can [register the group with HGS as an Attestation Host Group](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#admin-trusted-attestation-only---adding-security-group-information-to-the-hgs-configuration).
+    The HGS administrator will [register the group with HGS as an Attestation Host Group](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#admin-trusted-attestation-only---adding-security-group-information-to-the-hgs-configuration).
 
 ## Next step
 
