@@ -773,6 +773,7 @@
 ##### [Use DNS Policy for Intelligent DNS Responses Based on the time of Day](networking/dns/deploy/dns-tod-intelligent.md)
 ##### [DNS Responses Based on time of Day with an Azure Cloud App Server](networking/dns/deploy/dns-tod-azure-cloud-app-server.md)
 ##### [Use DNS Policy for Split-Brain DNS Deployment](networking/dns/deploy/split-brain-DNS-deployment.md)
+##### [Use DNS Policy for Split-Brain DNS in Active Directory](networking/dns/deploy/dns-sb-with-ad.md)
 ##### [Use DNS Policy for Applying Filters on DNS Queries](networking/dns/deploy/apply-filters-on-dns-queries.md)
 ##### [Use DNS Policy for Application Load Balancing](networking/dns/deploy/app-lb.md)
 ##### [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](networking/dns/deploy/app-lb-geo.md)
