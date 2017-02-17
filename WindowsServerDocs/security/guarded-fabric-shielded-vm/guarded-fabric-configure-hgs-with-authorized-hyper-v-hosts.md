@@ -14,11 +14,7 @@ ms.date: 10/14/2016
 
 >Applies To: Windows Server 2016
 
-The topics in this section describe the steps that a fabric administrator takes to configure Hyper-V hosts (and the fabric DNS that supports those hosts) to work with the Host Guardian Service (HGS). Before you can start these steps, the HGS cluster must already have been set up by the HGS administrator, as described in [Setting up the Host Guardian Service - HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
-
-For background about how HGS works with guarded hosts, and descriptions of the attestation modes you can use, see [Guarded fabric and shielded VMs overview](Guarded-Fabric-and-Shielded-VMs.md).
-
-The following lists outline the steps. Some steps are the same regardless of the attestation mode, and some differ.  At the completion of these steps, the Hyper-V hosts will become guarded hosts, able to pass attestation with HGS.
+The topics in this section describe the steps that a fabric administrator takes to configure Hyper-V hosts to work with the Host Guardian Service (HGS). Before you can start these steps, at least one node in the [HGS cluster must be set up](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 
 **For Admin-trusted attestation**:
 1. [Configuring the fabric DNS](guarded-fabric-configuring-fabric-dns.md): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
@@ -27,7 +23,7 @@ The following lists outline the steps. Some steps are the same regardless of the
 
 **For TPM-trusted attestation**:
 1. [Configuring the fabric DNS](guarded-fabric-configuring-fabric-dns.md): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
-2. [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md): Tells how to capture TPM identifiers (also called platform identifiers), create a Code Integrity policy, and create a TPM baseline. Then you can provide the information you captured to the HGS administrator, and it will create the basis for attestation.
+2. [TPM-trusted attestation for a guarded fabric - capturing information required by HGS](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md): Tells how to capture TPM identifiers (also called platform identifiers), create a Code Integrity policy, and create a TPM baseline. Then you will provide this information to the HGS administrator to configure attestation.
 3. [Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 ## See also
