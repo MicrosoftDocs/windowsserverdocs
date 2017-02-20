@@ -44,13 +44,15 @@ SDN relies on encapsulation of packets to to virtualize the network.  For optima
 
 You can determine which encapsulation format is being used through the network controller with the following PowerShell cmdlet:
 
+``` syntax
     (Get-NetworkControllerVirtualNetworkConfiguration -connectionuri $uri).properties.networkvirtualizationprotocol
+```
 
-For best performance, if VXLAN is returned then you must make sure your physical network adapters support VXLAN task offload.  If NVGRE is returned, then your physical network adapters must support NVGRE task offload. 
+For best performance, if VXLAN is returned then you must make sure your physical network adapters support VXLAN task offload.  If NVGRE is returned, then your physical network adapters must support NVGRE task offload.
 
 ### MTU
 
-Encapsulation results in extra bytes being added to each packet.  In order to avoid fragmentation of these packets, the physical network must be configured to use jumbo frames.  An MTU value of 9234 is the recommended size for either VXLAN or NVGRE and must be configured on the physical switch for the physical interfaces of the host ports (L2) and the router interfaces (L3) of the VLANs over which encapsulated packets will be sent.  This includes the Transit, HNV Provider and Management networks. 
+Encapsulation results in extra bytes being added to each packet.  In order to avoid fragmentation of these packets, the physical network must be configured to use jumbo frames.  An MTU value of 9234 is the recommended size for either VXLAN or NVGRE and must be configured on the physical switch for the physical interfaces of the host ports (L2) and the router interfaces (L3) of the VLANs over which encapsulated packets will be sent.  This includes the Transit, HNV Provider and Management networks.
 
 MTU on the Hyper-V host is configured through the network adapter, and the Network Controller Host Agent running on the Hyper-V host will adjust for the encapsulation overhead automatically if supported by the network adapter driver.  
 
@@ -71,4 +73,3 @@ You can find information on tuning HNV Gateways for use with SDN in the [RAS Gat
 ## Software Load Balancer (SLB)
 
 SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](./Section_11.2-SoftwareDefinedNetworking-SLB.md) section.
-

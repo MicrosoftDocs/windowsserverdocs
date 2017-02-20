@@ -18,17 +18,7 @@ ms.date: 10/31/2016
 
 This topic describes performance tuning methods and recommendations for Windows Server 2016 web servers.
 
-**In this topic:**
 
--   [Selecting the proper hardware for performance](#hardware)
-
--   [Operating system best practices](# os)
-
--   [Tuning IIS 10.0](#iis)
-
--   [NTFS file system setting](#filesystem)
-
--   [Networking subsystem performance settings for IIS](#netsub)
 
 ## <a href="" id="hardware"></a>Selecting the proper hardware for performance
 
@@ -47,7 +37,7 @@ It is important to select the proper hardware to satisfy the expected web load, 
 
 -   The file system becomes a bottleneck because of an inefficient disk subsystem or storage adapter.
 
-## <a href="" id="-os"></a>Operating system best practices
+## <a href="" id="os"></a>Operating system best practices
 
 
 If possible, start with a clean installation of the operating system. Upgrading the software can leave outdated, unwanted, or suboptimal registry settings and previously installed services and applications that consume resources if they are started automatically. If another operating system is installed and you must keep it, you should install the new operating system on a different partition. Otherwise, the new installation overwrites the settings under %Program Files%\\Common Files.

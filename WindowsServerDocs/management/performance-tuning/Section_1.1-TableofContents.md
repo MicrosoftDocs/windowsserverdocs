@@ -58,17 +58,12 @@ ms.date: 10/31/2016
     -    [Troubleshooting NIC Teaming](../../networking/technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
 
-**Performance Tuning for Storage Subsystems**
+    **Performance Tuning for Storage Features**
+    -    [Storage Spaces Direct Performance Tuning](./Section_15-StorageSpacesDirect.md)
 
--    [Performance Tuning for Storage Subsystems](./Section_5.0-performance-tuning-for-storage-subsystems.md)
+    -    [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.md)
 
--    [Storage Selection for Storage Subsystem Performance](./Section_5.1-choosing-storage-for-storage-subsystem-performance.md)
-
--    [Storage Spaces for Storage Subsystem Performance](./Section_5.2-using-storage-spaces-for-storage-subsystem-performance.md)
-
--    [Using Storage-related Parameters and Performance Counters](./Section_5.3-using-storage-related-parameters-and-performance-counters.md)
-
--    [Using Storage Drivers for Storage Subsystem Performance](./Section_5.4-using-storage-drivers-for-storage-subsystem-performance.md)
+    -    [Data Deduplication Advanced Settings](../../storage/data-deduplication/advanced-settings.md)
 
 
 **Performance Tuning for Cache and Memory Manager Subsystems**
@@ -125,12 +120,6 @@ ms.date: 10/31/2016
 **Performance Tuning for Powershell**
 -    [Powershell Performance Tuning](./Section_14-Powershell.md)
 
-**Performance Tuning for Storage Features**
--    [Storage Spaces Direct Performance Tuning](./Section_15-StorageSpacesDirect.md)
-
--    [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.md)
-
--    [Data Deduplication Advanced Settings](../../storage/data-deduplication/advanced-settings.md)
 
 **References**
 -    [References and Links](./Section_1.2-References.md)

@@ -155,32 +155,11 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
 
 The following settings can optimize a computer for file server performance in many cases. The settings are not optimal or appropriate on all computers. You should evaluate the impact of individual settings before applying them.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Value</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>AdditionalCriticalWorkerThreads</p></td>
-<td><p>64</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>MaxThreadsPerQueue</p></td>
-<td><p>64</p></td>
-<td><p>20</p></td>
-</tr>
-</tbody>
-</table>
+| Parameter                       | Value | Default |
+|---------------------------------|-------|---------|
+| AdditionalCriticalWorkerThreads | 64    | 0       |
+| MaxThreadsPerQueue              | 64    | 20      |
+
 
  
 

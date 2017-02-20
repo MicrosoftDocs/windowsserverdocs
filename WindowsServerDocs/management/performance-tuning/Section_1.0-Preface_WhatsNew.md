@@ -16,17 +16,12 @@ ms.date: 10/31/2016
 
 # Performance Tuning Guidelines for Windows Server 2016
 
-
-A downloadable version of these guidelines are available [here](https://www.microsoft.com/download/details.aspx?id=51960).
-
 When you run a server system in your organization, you might have business needs that are not met by using the default settings. For example, you might need the lowest possible energy consumption, or the lowest possible latency, or the maximum possible throughput on your server. This topic provides a set of guidelines that you can use to tune the server settings in Windows Server 2016 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.
 
 To have the most impact, your tuning changes should consider the hardware, the workload, the power budgets, and the performance goals of your server. This topic describes important tuning considerations and settings that can result in improved performance or energy efficiency. It also describes each setting and its potential effect to help you make an informed decision about its relevance to your system, workload, performance, and energy usage goals.
 
 **Note**  
 Registry settings and tuning parameters changed significantly between versions of Windows Server. Be sure to use the latest tuning guidelines to avoid unexpected results.
-
- 
 
 # What's New in the Latest Tuning Guide
 
@@ -37,22 +32,37 @@ This section describes what changes are in the Windows Server 2016 edition of th
 
 **Sections added:**
 
-    - Software Defined Networking: improve performance of virtualized networks
+    - Software Defined Networking, including RAS and SLB configuration guidance
 
-    - Storage Spaces Direct: optimize scalable storage systems using SDS; now supporting NVMe and SATA devices
+    - Storage Spaces Direct
 
-    - Storage Replication: for tweaks to optimize replication performance  
+    - Powershell, including module authoring and scripting for performance
 
-    - HTTP1.1 and HTTP2: for best practices to maximize HTTP performance
+    - Storage Replication  
 
-    - Containers: tweaks for container boot and network performance
+    - HTTP1.1 and HTTP2
 
-    - Powershell: for best practices for powershell command performance
+    - Containers
 
-    - Boot: for configuration tweaks that minimize boot times   
+    - Powershell
 
-**Sections removed or modified:**
+
+**Sections changes:**
 
     - Performance Tuning for Workloads removed, pointers to relevant resources added to Resources section
 
-    - Resource links updated; dead links removed
+    - Significant changes to the Hyper-V section
+
+    - Removal of dedicated storage sections, in favor of Storage Spaces Direct section and canonical Technet content
+
+    - Removal of dedicated networking section, in favor of canonical Technet content  
+
+    - Resource links updated, dead links removed
+
+    - Several changes to Active Directory sections
+
+    - Updates to file server sections
+
+    - Updates to Web Server guidance
+
+    - Updates for power tuning
