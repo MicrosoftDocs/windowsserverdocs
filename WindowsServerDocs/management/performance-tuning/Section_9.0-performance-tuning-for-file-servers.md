@@ -211,47 +211,13 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
 The general tuning parameters for client computers can optimize a computer for accessing remote file shares, particularly over some high-latency networks (such as branch offices, cross-datacenter communication, home offices, and mobile broadband). The settings are not optimal or appropriate on all computers. You should evaluate the impact of individual settings before applying them.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Value</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>DisableBandwidthThrottling</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>FileInfoCacheEntriesMax</p></td>
-<td><p>32768</p></td>
-<td><p>64</p></td>
-</tr>
-<tr class="even">
-<td><p>DirectoryCacheEntriesMax</p></td>
-<td><p>4096</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>FileNotFoundCacheEntriesMax</p></td>
-<td><p>32768</p></td>
-<td><p>128</p></td>
-</tr>
-<tr class="even">
-<td><p>MaxCmds</p></td>
-<td><p>32768</p></td>
-<td><p>15</p></td>
-</tr>
-</tbody>
-</table>
+| Parameter                   | Value | Default |
+|-----------------------------|-------|---------|
+| DisableBandwidthThrottling  | 1     | 0       |
+| FileInfoCacheEntriesMax     | 32768 | 64      |
+| DirectoryCacheEntriesMax    | 4096  | 16      |
+| FileNotFoundCacheEntriesMax | 32768 | 128     |
+| MaxCmds                     | 32768 | 15      |
 
  
 

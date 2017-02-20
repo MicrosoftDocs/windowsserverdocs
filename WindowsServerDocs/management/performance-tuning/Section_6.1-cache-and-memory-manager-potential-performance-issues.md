@@ -17,13 +17,6 @@ ms.date: 10/31/2016
 
 Before Windows Server 2012, two primary potential issues caused system file cache to grow until available memory was almost depleted under certain workloads. When this situation results in the system being sluggish, you can determine whether the server is facing one of these issues.
 
-**In this topic:**
-
--   [Counters to monitor](#counters-to-monitor)
-
--   [System file cache contains NTFS metafile data structures](#system-file-cache-contains-ntfs-metafile-data-structures)
-
--   [System file cache contains memory mapped files](#system-file-cache-contains-memory-mapped-files)
 
 ## Counters to monitor
 

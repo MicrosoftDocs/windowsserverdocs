@@ -16,13 +16,8 @@ ms.date: 10/31/2016
 # Cache and Memory Manager Improvements in Windows Server 2012 & 2016
 
 
-This topic describes Cache Manager and Memory Manager improvements in Windows Server 2012.
+This topic describes Cache Manager and Memory Manager improvements in Windows Server 2012 and 2016.
 
-**In this topic:**
-
--   [Cache Manager improvements](#cache-manager-improvements)
-
--   [Memory Manager improvements](#memory-manager-improvements)
 
 ## Cache Manager improvements in Windows Server 2012
 In addition to Cache Manager enhancements to read ahead logic for sequential workloads, a new API [CcSetReadAheadGranularityEx](http://msdn.microsoft.com/library/windows/hardware/hh406341.aspx) was added to let file system drivers, such as SMB, change their read ahead parameters. It allows better throughput for remote file scenarios by sending multiple small-sized read ahead requests instead of sending a single large read ahead request. Only kernel components, such as file system drivers, can programmatically configure these values on a per-file basis.

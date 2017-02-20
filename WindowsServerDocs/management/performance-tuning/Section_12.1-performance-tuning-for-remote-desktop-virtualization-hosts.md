@@ -208,60 +208,18 @@ It makes sense to turn off Windows features and services that depend on persiste
 
 Each specific service should be evaluated appropriately prior to any broad deployment. The following are some initial things to consider:
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Service</th>
-<th>Why?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Auto update</p></td>
-<td><p>Pooled virtual desktops are updated by re-creating the virtual desktop template.</p></td>
-</tr>
-<tr class="even">
-<td><p>Offline files</p></td>
-<td><p>Virtual desktops are always online and connected from a networking point-of-view.</p></td>
-</tr>
-<tr class="odd">
-<td><p>Background defrag</p></td>
-<td><p>File-system changes are discarded after a user signs off (due to a rollback to the pristine state or re-creating the virtual desktop template, which results in re-creating all pooled virtual desktops).</p></td>
-</tr>
-<tr class="even">
-<td><p>Hibernate or sleep</p></td>
-<td><p>No such concept for VDI</p></td>
-</tr>
-<tr class="odd">
-<td><p>Bug check memory dump</p></td>
-<td><p>No such concept for pooled virtual desktops. A bug-check pooled virtual desktop will start from the pristine state.</p></td>
-</tr>
-<tr class="even">
-<td><p>WLAN autoconfig</p></td>
-<td><p>There is no WiFi device interface for VDI</p></td>
-</tr>
-<tr class="odd">
-<td><p>Windows Media Player network sharing service</p></td>
-<td><p>Consumer centric service</p></td>
-</tr>
-<tr class="even">
-<td><p>Home group provider</p></td>
-<td><p>Consumer centric service</p></td>
-</tr>
-<tr class="odd">
-<td><p>Internet connection sharing</p></td>
-<td><p>Consumer centric service</p></td>
-</tr>
-<tr class="even">
-<td><p>Media Center extended services</p></td>
-<td><p>Consumer centric service</p></td>
-</tr>
-</tbody>
-</table>
+| Service                                      | Why?                                                                                                                                                                                                      |
+|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Auto update                                  | Pooled virtual desktops are updated by re-creating the virtual desktop template.                                                                                                                          |
+| Offline files                                | Virtual desktops are always online and connected from a networking point-of-view.                                                                                                                         |
+| Background defrag                            | File-system changes are discarded after a user signs off (due to a rollback to the pristine state or re-creating the virtual desktop template, which results in re-creating all pooled virtual desktops). |
+| Hibernate or sleep                           | No such concept for VDI                                                                                                                                                                                   |
+| Bug check memory dump                        | No such concept for pooled virtual desktops. A bug-check pooled virtual desktop will start from the pristine state.                                                                                       |
+| WLAN autoconfig                              | There is no WiFi device interface for VDI                                                                                                                                                                 |
+| Windows Media Player network sharing service | Consumer centric service                                                                                                                                                                                  |
+| Home group provider                          | Consumer centric service                                                                                                                                                                                  |
+| Internet connection sharing                  | Consumer centric service                                                                                                                                                                                  |
+| Media Center extended services               | Consumer centric service                                                                                                                                                                                  |
 
  
 
