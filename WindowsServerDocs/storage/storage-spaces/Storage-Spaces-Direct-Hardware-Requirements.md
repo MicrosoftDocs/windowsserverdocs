@@ -50,7 +50,7 @@ Note that RAM sizes use base-2 numbering (where 1 GB = 1,024 MB), while drives a
 
 ### Drives
 
-For more help choosing drives, see the [Choosing drives](choosing-drives-and-resiliency-types.md) topic.
+For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
 
 - Use local-attached SATA, SAS, or NVMe drives.
 - Every drive must be physically connected to only one server.

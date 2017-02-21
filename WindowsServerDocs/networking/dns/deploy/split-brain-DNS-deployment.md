@@ -9,13 +9,16 @@ ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: jamesmci
 author: jamesmci
 ---
-# Use DNS Policy for Split-Brain DNS Deployment
+# Use DNS Policy for Split\-Brain DNS Deployment
 
 >Applies To: Windows Server 2016
 
-You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 for split-brain DNS deployments, where there are two versions of a single zone - one for the internal users on your organization intranet, and one for the external users, who are typically users on the Internet. 
+You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 for split-brain DNS deployments, where there are two versions of a single zone - one for the internal users on your organization intranet, and one for the external users, who are typically users on the Internet.
 
-Previously, this scenario required that DNS administrators maintain two different DNS servers, each providing services to each set of users, internal and external. If only a few records inside the zone were split-brained or both instances of the zone (internal and external) were delegated to the same parent domain, this became a management conundrum. 
+>[!NOTE]
+>For information on how to use DNS Policy for split\-brain DNS deployment with Active Directory integrated DNS Zones, see [Use DNS Policy for Split-Brain DNS in Active Directory](dns-sb-with-ad.md).
+
+Previously, this scenario required that DNS administrators maintain two different DNS servers, each providing services to each set of users, internal and external. If only a few records inside the zone were split\-brained or both instances of the zone (internal and external) were delegated to the same parent domain, this became a management conundrum. 
 
 Another configuration scenario for split-brain deployment is Selective Recursion Control for DNS name resolution. In some circumstances, the Enterprise DNS servers are expected to perform recursive resolution over the Internet for the internal users, while they also must act as authoritative name servers for external users, and block recursion for them. 
 
@@ -71,6 +74,7 @@ The following sections provide detailed configuration instructions.
 >The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands. 
 
 ###<a name="bkmk_zscopes"></a>Create the Zone Scopes
+
 A zone scope is a unique instance of the zone. A DNS zone can have multiple zone scopes, with each zone scope containing its own set of DNS records. The same record can be present in multiple scopes, with different IP addresses or the same IP addresses. 
 
 >[!NOTE]
@@ -78,13 +82,12 @@ A zone scope is a unique instance of the zone. A DNS zone can have multiple zone
 
 You can use the following example command to partition the zone scope contoso.com to create an internal zone scope. The internal zone scope will be used to keep the internal version of www.career.contoso.com.
 
-`
-Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"
-`
+`Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"`
 
 For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx)
 
 ###<a name="bkmk_records"></a>Add Records to the Zone Scopes
+
 The next step is to add the records representing the Web server host into the two zone scopes - internal and default (for external clients). 
 
 In the internal zone scope, the record **www.career.contoso.com** is added with the IP address 10.0.0.39, which is a private IP; and in the default zone scope the same record, **www.career.contoso.com**, is added with the IP address 65.55.39.10.
@@ -101,6 +104,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).
 
 ###<a name="bkmk_policies"></a>Create the DNS Policies
+
 After you have identified the server interfaces for the external network and internal network and you have created the zone scopes, you must create DNS policies that connect the internal and external zone scopes.
 
 >[!NOTE]
@@ -113,14 +117,13 @@ When the DNS server receives a query on the private interface, the DNS query res
 
 In the following example command, 10.0.0.56 is the IP address on the private network interface, as shown in the previous illustration.
 
-`
-Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,10.0.0.56" -ZoneScope "internal,1" -ZoneName contoso.com
-`
+`Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,10.0.0.56" -ZoneScope "internal,1" -ZoneName contoso.com`
 
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  
 
 
 ## <a name="bkmk_recursion"></a>Example of DNS Selective Recursion Control
+
 Following is an example of how you can use DNS policy to accomplish the previously described scenario of DNS selective recursion control.
 
 This section contains the following topics.
@@ -146,6 +149,7 @@ The following illustration depicts this scenario.
 
 
 ### <a name="bkmk_recursionhow"></a>How DNS Selective Recursion Control Works
+
 If a query for which the Contoso DNS server is non-authoritative is received, such as for www.microsoft.com, then the name resolution request is evaluated against the policies on the DNS server. 
 
 Because these queries do not fall under any zone, the zone level policies \(as defined in the split-brain example\) are not evaluated. 
@@ -159,12 +163,14 @@ If the query is received on the external interface, no DNS policies match, and t
 This prevents the server from acting as an open resolver for external clients, while it is acting as a caching resolver for internal clients. 
 
 ### <a name="bkmk_recursionconfigure"></a>How to Configure DNS Selective Recursion Control
+
 To configure DNS selective recursion control by using DNS Policy, you must use the following steps.
 
 - [Create DNS Recursion Scopes](#bkmk_recscopes)
 - [Create DNS Recursion Policies](#bkmk_recpolicy)
 
 #### <a name="bkmk_recscopes"></a>Create DNS Recursion Scopes
+
 Recursion scopes are unique instances of a group of settings that control recursion on a DNS server. A recursion scope contains a list of forwarders and specifies whether recursion is enabled. A DNS server can have many recursion scopes. 
 
 The legacy recursion setting and list of forwarders are referred to as the default recursion scope. You cannot add or remove the default recursion scope, identified by the name dot \(“.”\).
@@ -179,6 +185,7 @@ In this example, the default recursion setting is disabled, while a new recursio
 For more information, see [Add-DnsServerRecursionScope](https://technet.microsoft.com/library/mt126268.aspx)
 
 #### <a name="bkmk_recpolicy"></a>Create DNS Recursion Policies
+
 You can create DNS server recursion policies to choose a recursion scope for a set of queries that match specific criteria. 
 
 If the DNS server is not authoritative for some queries, DNS server recursion policies allow you to control how to resolve the queries. 
@@ -195,5 +202,6 @@ For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.m
 
 Now the DNS server is configured with the required DNS policies for either a split-brain name server or a DNS server with selective recursion control enabled for internal clients.
 
-
 You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries. 
+
+For more information, see [DNS Policy Scenario Guide](DNS-Policy-Scenario-Guide.md).

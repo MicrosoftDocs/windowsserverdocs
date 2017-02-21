@@ -12,7 +12,7 @@ ms.date: 11/15/2016
 
 # Shielded VMs - Hosting service provider sets up Windows Azure Pack
 
-This topic describes how a hosting service provider can configure Windows Azure Pack so that tenants can use it to deploy shielded VMs. Windows Azure Pack is a web portal that extends the functionality of System Center Virtual Machine Manager to allow tenants to deploy and manage their own VMs through a simple web interface. Windows Azure Pack fully supports shielded VMs and  makes it even easier for your tenants to create and manage their shielding data files.
+This topic describes how a hosting service provider can configure Windows Azure Pack so that tenants can use it to deploy shielded VMs. Windows Azure Pack is a web portal that extends the functionality of System Center Virtual Machine Manager to allow tenants to deploy and manage their own VMs through a simple web interface. Windows Azure Pack fully supports shielded VMs and makes it even easier for your tenants to create and manage their shielding data files.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
@@ -26,7 +26,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 2. Install and configure System Center 2016 - Service Provider Foundation (SPF). This software enables Windows Azure Pack to communicate with your VMM servers:
 
-    [Set up System Center 2016 - Service Provider Foundation](#set-up-system-center-2016---service-provider-foundation) (in this topic)
+    [Deploying Service Provider Foundation - SPF](https://technet.microsoft.com/system-center-docs/spf/deploy/deploy-spf)
 
 3. Install Windows Azure Pack and configure it to communicate with SPF:
 
@@ -37,27 +37,19 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
     [Create a plan in Windows Azure Pack](#create-a-plan-in-windows-azure-pack) (in this topic)
 
-## Set up System Center 2016 - Service Provider Foundation
-
-System Center 2016 - Service Provider Foundation (SPF) allows Windows Azure Pack to communicate with your VMM servers that manage the hosting fabric. Before installing Windows Azure Pack, you must set up System Center 2016 - SPF. For information about installing SPF, see [Deploying Service Provider Foundation - SPF](https://technet.microsoft.com/system-center-docs/spf/deploy/deploy-spf).
-
-<!-- I have a question out to Erik Kjerland about whether the blog post in the following sentence is still helpful. If it's not, delete the sentence or replace the link. -->
-
-If you have issues with integrating Windows Azure Pack and Service Provider Foundation, see [Troubleshooting Windows Azure Pack, SPF and VMM](https://blogs.technet.microsoft.com/privatecloud/2013/11/08/troubleshooting-windows-azure-pack-spf-vmm/).
-
 ## Install Windows Azure Pack
 
-The following steps to install and configure Windows Azure Pack (WAP) should be performed on the machine where you wish to host the web portal for your tenants. This machine will need to be able to reach the SPF server you installed in the previous section, and be reachable by your tenants (for example, be connected to the Internet if you're a hosting service provider, or a corporate network in an enterprise environment).
+Install and configure Windows Azure Pack (WAP) on the machine where you wish to host the web portal for your tenants. This machine will need to be able to reach the SPF server and be reachable by your tenants.
 
-1.  Plan for your installation of WAP by reviewing its [system requirements](https://technet.microsoft.com/library/dn296442.aspx) and installing the [prerequisite software](https://technet.microsoft.com/en-us/library/dn469335.aspx).
+1.  Reviewing [WAP system requirements](https://technet.microsoft.com/library/dn296442.aspx) and install the [prerequisite software](https://technet.microsoft.com/en-us/library/dn469335.aspx).
 
-2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine you are installing WAP onto is not connected to the Internet, you should also download this on an internet-connected machine and follow the [offline installation instructions](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
+2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
 
-3.  Open the Web Platform Installer and find **Windows Azure Pack: Portal and API Express** under the Products tab. Click **Add** then **Install** at the bottom of the window.
+3.  Open the Web Platform Installer and find **Windows Azure Pack: Portal and API Express** under the **Products** tab. Click **Add**, then **Install** at the bottom of the window.
 
-4.  Proceed through the installation process. After installation completes, the configuration site (*https://&lt;wapserver&gt;:30101/*) opens in your web browser. On this website, provide information about your SQL server and finish configuring WAP.
+4.  Proceed through the installation. After the installation completes, the configuration site (*https://&lt;wapserver&gt;:30101/*) opens in your web browser. On this website, provide information about your SQL server and finish configuring WAP.
 
-If you need help setting up Windows Azure Pack, see the instructions at [Install an express deployment of Windows Azure Pack](https://technet.microsoft.com/dn296439.aspx).
+For help setting up Windows Azure Pack, see [Install an express deployment of Windows Azure Pack](https://technet.microsoft.com/dn296439.aspx).
 
 > [!NOTE]
 > If you already run Windows Azure Pack in your environment, you may use your existing installation. In order to work with the latest shielded VM features, however, you will need to upgrade your installation to at least Update Rollup 10.
@@ -70,7 +62,7 @@ Before you use Windows Azure Pack, you should already have it installed and conf
 
 2.  In the left pane, click **VM Clouds**.
 
-3.  Connect Windows Azure Pack to the SAP to the Service Provider Foundation instance you already configured by clicking **Register System Center Service Provider Foundation**. You will need to specify the URL for Service Provider Foundation, as well as a username and password.
+3.  Connect Windows Azure Pack to the Service Provider Foundation instance by clicking **Register System Center Service Provider Foundation**. You will need to specify the URL for Service Provider Foundation, as well as a username and password.
 
     ![Register System Center Service Provider Foundation](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-01-register-spf.png)
 
@@ -110,11 +102,11 @@ In order to allow tenants to create VMs in WAP, you must first create a hosting 
 
 13.  At the top left of the screen, click on the arrow to take you back to the **Plan** page.
 
-14.  At the bottom of the screen change the Plan from being **Private** to **Public** so that tenants can subscribe to the Plan.
+14.  At the bottom of the screen, change the Plan from being **Private** to **Public** so that tenants can subscribe to the Plan.
 
     ![Change access for a plan in Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-04-change-access.png)
 
-    At this point, Windows Azure Pack is configured and tenants will be able to subscribe to the plan you just created and deploy shielded VMs. For the steps tenants will take, see [Shielded VMs for tenants - Deploying a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md).
+    At this point, Windows Azure Pack is configured and tenants will be able to subscribe to the plan you just created and deploy shielded VMs. For additional steps that tenants need to complete, see [Shielded VMs for tenants - Deploying a shielded VM by using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md).
 
 ## See also
 
