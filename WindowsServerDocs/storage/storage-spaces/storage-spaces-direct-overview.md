@@ -162,7 +162,7 @@ Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Wi
 
 Here's an overview of the Storage Spaces Direct stack:
 
-![Storage Spaces Direct Stack](media/storage-spaces-direct-in-windows-server-2016	/converged-full-stack.png)
+![Storage Spaces Direct Stack](media/storage-spaces-direct-in-windows-server-2016/converged-full-stack.png)
 
 **Networking Hardware.** Storage Spaces Direct uses SMB3, including SMB Direct and SMB Multichannel, over Ethernet to communicate between servers. We strongly recommend 10+ GbE with remote-direct memory access (RDMA), either iWARP or RoCE.
 
