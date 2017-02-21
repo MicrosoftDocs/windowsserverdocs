@@ -1,4 +1,4 @@
----
+ ---
 title: Remote Desktop - compare the client apps
 description: Learn how the difference RD apps compare when it comes to supported features and functions.
 ms.custom: na
@@ -26,7 +26,7 @@ The following tables compare support for device and other redirections on the Re
 
 If you remote into your personal desktop, there are additional redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings.
 
-Please note that we are working on a new Remote Desktop application for macOS that supports more redirection than our official app published in the Mac AppStore. Testdrive our [new preview Mac client](https://aka.ms/rdmac-preview). 
+Please note that we are working on a new Remote Desktop application for macOS that supports more redirection than our official app published in the Mac App Store. Test drive our [new preview Mac client](https://aka.ms/rdmac-preview). 
 
 ### Input redirection
 
