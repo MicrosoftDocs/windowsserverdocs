@@ -132,6 +132,7 @@
 ##### [Manage users in your RDS collection](compute/remote-desktop-services/rds-user-management.md)
 #### [Additional Remote Desktop support](compute/remote-desktop-services/rds-get-support.md)
 #### [Remote Desktop clients](compute/remote-desktop-services/clients/remote-desktop-clients.md)
+##### [Which client works best for you?](compute/remote-desktop-services/clients/remote-desktop-app-compare.md)
 ##### [Supported PCs](compute/remote-desktop-services/clients/remote-desktop-supported-config.md)
 ##### [Grant Remote Desktop access to your PC](compute/remote-desktop-services/clients/remote-desktop-allow-access.md)
 ##### [Getting started with Remote Desktop client on Android](compute/remote-desktop-services/clients/remote-desktop-android.md)
