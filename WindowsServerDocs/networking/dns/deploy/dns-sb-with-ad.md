@@ -20,7 +20,7 @@ In Windows Server 2016, DNS policies support is extended to Active Directory int
 
 Previously, this scenario required that DNS administrators maintain two different DNS servers, each providing services to each set of users, internal and external. If only a few records inside the zone were split\-brained or both instances of the zone (internal and external) were delegated to the same parent domain, this became a management conundrum.
 
->[!NOTES]
+>[!NOTE]
 > - DNS deployments are split\-brain when there are two versions of a single zone, one version for internal users on the organization intranet, and one version for external users – who are, typically, users on the Internet.
 > - The topic [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md) explains how you can use DNS policies and zone scopes to deploy a split\-brain DNS system on a single Windows Server 2016 DNS server.
 
