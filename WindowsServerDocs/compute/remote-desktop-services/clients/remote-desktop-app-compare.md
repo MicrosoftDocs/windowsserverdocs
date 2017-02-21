@@ -12,7 +12,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 02/17/2017
+ms.date: 02/21/2017
 ---
 # Compare the client apps
 
