@@ -3,9 +3,9 @@ ms.assetid: bb16e39d-566d-436c-b957-394c06d556db
 title: AD FS Design Guide in Windows Server 2012
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

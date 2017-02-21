@@ -3,9 +3,9 @@ ms.assetid: 39acccd9-0402-49ca-8ce1-b239e1e7e455
 title: Deploying AD FS in the Resource Partner Organization
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

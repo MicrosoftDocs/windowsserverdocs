@@ -3,9 +3,9 @@ ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
 title: Federation Server Farm Using SQL Server
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/22/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
