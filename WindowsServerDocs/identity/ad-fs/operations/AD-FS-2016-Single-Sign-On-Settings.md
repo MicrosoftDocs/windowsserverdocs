@@ -1,17 +1,19 @@
 ---
+ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: AD FS 2016 Single Sign On Settings
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 # AD FS 2016 Single Sign On Settings
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This article describes the default AD FS behavior for how often users have to provide credentials before being prompted again, as well as the configuration settings that allow you to customize this behavior.  
   

@@ -1,14 +1,16 @@
 ---
 title: Work with Video Devices
+description: Learn how video monitors and projectors work with stations in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-servicesms.reviewer: na
+ms.technology: multipoint-services
+ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2f7f5a97-efd2-4184-8ad3-cf029d615eab
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

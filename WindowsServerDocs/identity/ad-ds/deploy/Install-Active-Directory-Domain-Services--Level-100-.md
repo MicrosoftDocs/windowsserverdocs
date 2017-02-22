@@ -1,21 +1,20 @@
 ---
+ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 title: Install Active Directory Domain Services (Level 100)
-ms.custom: 
-  - AD
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 4fff7ac7-b90f-41d0-8c87-9ffe08dc6c01
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Install Active Directory Domain Services (Level 100)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to install AD DS in  Windows Server 2012  by using any of the following methods:  
   
@@ -358,12 +357,12 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
 9. On the **Results** page, verify that the installation succeeded, and click **Promote this server to a domain controller** to start the Active Directory Domain Services Configuration Wizard.  
   
-    ![](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)  
+    ![Install AD DS](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)  
   
     > [!IMPORTANT]  
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by clicking Tasks in Server Manager.  
   
-    ![](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
+    ![Install AD DS](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
   
 10. On the **Deployment Configuration** page, choose one of the following options:  
   

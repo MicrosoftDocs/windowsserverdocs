@@ -1,19 +1,20 @@
 ---
+ms.assetid: eb600904-24b8-4488-a278-c1c971dc2f2d
 title: Planning Regional Domain Controller Placement
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: a90604bc-ab0c-4f83-b8e5-85332a8f6e7c
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Planning Regional Domain Controller Placement
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" (DSSTOPO_1.doc) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.  
   
@@ -33,7 +34,7 @@ In locations with inadequate physical security, deploying a read-only domain con
   
 To authenticate client logons and access to local file servers, most organizations place regional domain controllers for all regional domains that are represented in a given location. However, you must consider many variables when evaluating whether a business location requires its clients to have local authentication or the clients can rely on authentication and query over a wide area network (WAN) link. The following illustration shows how to determine whether to place domain controllers at satellite locations.  
   
-![](media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
+![plan regional dc placement](media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
   
 ## Onsite technical expertise availability  
 Domain controllers need to be managed continuously for various reasons. Place a regional domain controller only in locations that include personnel who can administer the domain controller, or be sure that the domain controller can be managed remotely.  

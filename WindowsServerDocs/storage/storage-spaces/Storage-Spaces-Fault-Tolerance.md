@@ -1,112 +1,208 @@
-
 ---
-title: Storage Spaces Fault Tolerance
-ms.custom: na
+title: Fault tolerance and storage efficiency in Storage Spaces Direct
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.author: cosmosdarwin
+ms.manager: eldenc
+ms.technology: storage-spaces
 ms.topic: article
+author: cosmosdarwin
+ms.date: 01/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
-author: kumudd
-manager: dongill
-ms.author: JGerend
+description: A discussion of resiliency options in Storage Spaces Direct including mirroring and parity.
 ---
-# Storage Spaces Fault Tolerance
+# Fault tolerance and storage efficiency in Storage Spaces Direct
+>Applies To: Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+This topic introduces the resiliency options available in [Storage Spaces Direct](storage-spaces-direct-overview.md) and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each. It also presents some usage instructions to get you started, and references some great papers, blogs, and additional content where you can learn more.
 
+If you are already familiar with Storage Spaces, you may want to skip to the [Summary](#summary) section.
 
-Windows Server 2016 Technical Preview Storage Spaces Direct enhances the resiliency of virtual disks to enable resiliency to node failures. This is in addition to the existing disk and enclosure resiliency.  
+## Overview
 
-When using Storage Spaces Direct, storage pools and virtual disks will, by default, be resilient to node failures. When a storage pool is created the "FaultDomainAwarenessDefault" property is set to "StorageScaleUnit". This controls the default for virtual disk creation. You can inspect the storage pool property by running the following command:  
+At its heart, Storage Spaces is about providing fault tolerance, often called ‘resiliency’, for your data. Its implementation is similar to RAID, except distributed across servers and implemented in software.
 
-```  
-Get-StoragePool -FriendlyName <PoolName> | FL FriendlyName, Size, FaultDomainAwarenessDefault  
+As with RAID, there are a few different ways Storage Spaces can do this, which make different tradeoffs between fault tolerance, storage efficiency, and compute complexity. These broadly fall into two categories: ‘mirroring’ and ‘parity’, the latter sometimes called ‘erasure coding’.
 
-FriendlyName                : <PoolName>  
-Size                        : <Size>  
-FaultDomainAwarenessDefault : StorageScaleUnit  
-```  
+## Mirroring
 
-Subsequently, when a virtual disk is created in a pool, it inherits the default value of the pool and therefore will have its "FaultDomainAwareness" set to "StorageScaleUnit". You can inspect the virtual disk property by running the following command:  
+Mirroring provides fault tolerance by keeping multiple copies of all data. This most closely resembles RAID-1. How that data is striped and placed is non-trivial (see [this blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/) to learn more), but it is absolutely true to say that any data stored using mirroring is written, in its entirety, multiple times. Each copy is written to different physical hardware (different drives in different servers) that are assumed to fail independently.
 
-```  
-Get-VirtualDisk -FriendlyName <VirtualDiskName>| FL FriendlyName, Size, FaultDomainAwareness, ResiliencySettingName  
+In Windows Server 2016, Storage Spaces offers two flavors of mirroring – ‘two-way’ and ‘three-way’.
 
-FriendlyName          : <VirtualDiskName>  
-Size                  : <Size>  
-FaultDomainAwareness  : StorageScaleUnit  
-ResiliencySettingName : Mirror  
-```  
+### Two-way mirror
 
-> [!NOTE]  
-> Do not change the **FaultDomainAwarenessDefault** and **FaultDomainAwareness** values in a Storage Spaces Direct deployment.  
+Two-way mirroring writes two copies of everything. Its storage efficiency is 50% – to write 1 TB of data, you need at least 2 TB of physical storage capacity. Likewise, you need at least two [hardware ‘fault domains’](../../failover-clustering/fault-domains.md) – with Storage Spaces Direct, that means two servers.
 
-The FaultDomainAwareness property on the virtual disk controls data placement in all scenarios, including initial data allocation when creating the virtual disk,  when repairing a virtual disk from a disk, enclosure or node failure, when rebalancing virtual disks in a storage pool. All of these operations will take into account the "StorageScaleUnit" fault domain and ensure that copies of data are placed on different nodes.  
+![two-way-mirror](media/Storage-Spaces-Fault-Tolerance/two-way-mirror-180px.png)
 
-Let us examine some basics about virtual disks. A virtual disk consists of extents, each of which are 1GB in size. A 100GB virtual disk will therefore consist of 100 1GB extents. If the virtual disk is mirrored (using ResiliencySettingName) there will be multiple copies of each  extent. The number of copies of the extent (using NumberOfDataCopes) can be two or three. All in all, a 100GB mirrored virtual disk with three data copes will consume 300 extents. The placement of extents is governed by the fault domain, which in Storage Spaces Direct is nodes (StorageScaleUnit), so the three copies of an extent (A) will be placed on three different storage nodes e.g. node 1, 2 and 3 in the diagram below. Another extent (B) of the same virtual disk might have its three copies placed on different nodes, e.g. 1, 3, and 4 and so on. This means that a virtual disk might have its extents distributed all storage nodes and the copies of each extent is placed on different nodes. Figure 6 below illustrates a four node deployment with a mirrored virtual disk with 3 copies and an example layout of extents:  
+   >[!WARNING]
+   > If you have more than two servers, we recommend using three-way mirorring instead.
 
-![](media/Storage-Spaces-Fault-Tolerance/StorageSpacesFaultTolerance.png)  
+### Three-way mirror
 
-**FIGURE 1: Four nodes with a mirrored virtual disk with 3 copies space**  
+Three-way mirroring writes three copies of everything. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity. Likewise, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers. 
 
-Understanding the above, let us review the various failure scenarios  included in this section, and examine how Storage Spaces handles them.  
+Three-way mirroring can safely tolerate at least [two hardware problems (drive or server) at a time](#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
--   [Scenario 1: One or more sectors on a disk has failed](#BKMK_FaultTolerance_Scenario1)  
+![three-way-mirror](media/Storage-Spaces-Fault-Tolerance/three-way-mirror-180px.png)
 
--   [Scenario 2: A disk has failed](#BKMK_FaultTolerance_Scenario2)  
+## Parity
 
--   [Scenario 3: A disk is missing](#BKMK_FaultTolerance_Scenario3)  
+Parity encoding, often called ‘erasure coding’, provides fault tolerance using bitwise arithmetic, which can get [remarkably complicated](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf). The way this works is less obvious than mirroring, and there are many great online resources (for example, this third-party [Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)) that can help you get the idea. Sufficed to say it provides better storage efficiency without compromising fault tolerance.
 
--   [Scenario 4: Storage node restart or maintenance](#BKMK_FaultTolerance_Scenario4)  
+In Windows Server 2016, Storage Spaces offers two flavors of parity – ‘single’ parity and ‘dual’ parity, the latter employing an advanced technique called ‘local reconstruction codes’ at larger scales.
 
--   [Scenario 5: Permanent storage node failure](#BKMK_FaultTolerance_Scenario5)  
+### Single parity
+Single parity keeps only one bitwise parity symbol, which provides fault tolerance against only one failure at a time. It most closely resembles RAID-5. To use single parity, you need at least three hardware fault domains – with Storage Spaces Direct, that means three servers. Because three-way mirroring provides more fault tolerance at the same scale, we discourage using single parity. But, it’s there if you insist on using it, and it is fully supported.
 
-### <a name="BKMK_FaultTolerance_Scenario1"></a>Scenario 1: One or more sectors on a disk has failed  
-In this scenario, Storage Spaces will reallocate the extent that is affected by the failing sectors. The target for the reallocation could be another disk in the same node, or another disk in another node that does not already have a copy of the extent. So if the three copies of the extent are on node A, B and C, and the extent on node A is affected by a sector failure, the new copy can be generated on a different disk in node A or any disk in Node D. Disks in node B and C cannot be used as these two nodes already have a copy of the extent.  
+   >[!WARNING]
+   > We discourage using single parity because it can only safely tolerate one hardware failure at a time: if you're rebooting one server when suddenly another drive or server fails, you will experience downtime. If you only have three servers, we recommend using three-way mirroring. If you have four or more, see the next section.
 
-### <a name="BKMK_FaultTolerance_Scenario2"></a>Scenario 2: A disk has failed  
-In this scenario Storage Spaces will retire the physical disk from the storage pool when it discovers the disk has failed. After the physical disk has been retired, each virtual disk will start its repair process. Since the physical disk has been retired, the virtual disks will generate a new copy of the extents that were on the retired physical disk. The new copies will follow the same logic as in scenario 1.  
+### Dual parity
 
-### <a name="BKMK_FaultTolerance_Scenario3"></a>Scenario 3: A disk is missing  
-In this scenario Storage Spaces will do one of two things:  
+Dual parity implements Reed-Solomon error-correcting codes to keep two bitwise parity symbols, thereby providing the same fault tolerance as three-way mirroring (i.e. up to two failures at once), but with better storage efficiency. It most closely resembles RAID-6. To use dual parity, you need at least four hardware fault domains – with Storage Spaces Direct, that means four servers. At that scale, the storage efficiency is 50% – to store 2 TB of data, you need 4 TB of physical storage capacity.
 
--   If the storage node or the physical enclosure to which the physical disk is attached is also missing, then Storage Spaces will not retire the physical disk.  
+![dual-parity](media/Storage-Spaces-Fault-Tolerance/dual-parity-180px.png)
 
--   If however only the physical disk is missing, then Storage Spaces will retire the disk.  
+The storage efficiency of dual parity increases the more hardware fault domains you have, from 50% up to 80%. For example, at seven (with Storage Spaces Direct, that means seven servers) the efficiency jumps to 66.7% – to store 4 TB of data, you need just 6 TB of physical storage capacity.
 
-    The reason for #1 above is that during a storage node restart or temporary maintenance of a storage node all the disks associated with that node will be reported missing. Automatically retiring all those disks would potentially result in a massive amount of repair activity as all extents on those disks would have to be rebuild elsewhere in the storage system - this could easily be multiple terabytes of data. If the disks are really missing and will not come back to the storage system, the administrator will need to retire the missing physical disks and start the repair process.  
+![dual-parity-wide](media/Storage-Spaces-Fault-Tolerance/dual-parity-wide-180px.png)
 
-### <a name="BKMK_FaultTolerance_Scenario4"></a>Scenario 4: Storage node restart or maintenance  
-In this scenario Storage Spaces will not automatically retire physical disks from the storage pool for the reasons described above in scenario 3. Once the storage node comes back online, Storage Spaces will automatically update all extents that are not up to date with the copies that were not affected by the restart or maintenance.  
+See the [Summary](#summary) section for the efficiency of dual party and local reconstruction codes at every scale.
 
-### <a name="BKMK_FaultTolerance_Scenario5"></a>Scenario 5: Permanent storage node failure  
-In this scenario, Storage Spaces will require the administrator to retire all the affected physical disks from the storage pool, add additional storage nodes to the storage system if needed, and then start repair. The reason this not an automatic process is that Storage Spaces does not know if it is a temporary or permanent failure. It is not desirable to initiate a repair that could potentially result in significant I/O and CPU activity.  
+### Local reconstruction codes
 
-For more information on Fault Domains, see [Fault Domains in Windows Server 2016 Technical Preview](fault-domains-windows-server-2016.md)  
+Storage Spaces in Windows Server 2016 introduces an advanced technique developed by Microsoft Research called ‘local reconstruction codes’, or LRC. At large scale, dual parity uses LRC to split its encoding/decoding into a few smaller groups, to reduce the overhead required to make writes or recover from failures.
 
-## Related Topics  
+With hard disk drives (HDD) the group size is four symbols; with solid-state drives (SSD), the group size is six symbols. For example, here's what the layout looks like with hard disk drives and 12 hardware fault domains (meaning 12 servers) – there are two groups of four data symbols. It achieves 72.7% storage efficiency.
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
+![local-reconstruction-codes](media/Storage-Spaces-Fault-Tolerance/local-reconstruction-codes-180px.png)
 
--   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
+We recommend this in-depth yet eminently readable walkthrough of [how local reconstruction codes handle various failure scenarios, and why they’re appealing](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/), by our very own [Claus Joergensen](https://twitter.com/clausjor).
 
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
+## Mixed resiliency
 
--   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
+Beginning in Windows Server 2016, one Storage Spaces Direct volume can be part mirror and part parity. Writes land first in the mirrored portion and are gradually moved into the parity portion later. Effectively, this is [using mirroring to accelerate erasure coding](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/).
 
-## See Also  
+To mix three-way mirror and dual parity, you need at least four fault domains, meaning four servers.
 
--   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
+The storage efficiency of mixed resiliency is in between what you’d get from using all mirror or all parity, and depends on the proportions you choose. For example, the demo at the 37-minute mark of this presentation shows [various mixes achieving 46%, 54%, and 65% efficiency](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s) with 12 servers.
 
--   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
+## <a name="summary"></a>Summary
 
--   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/whats-new-failover-clustering-windows-server.md)  
+This section summarizes the resiliency types available in Storage Spaces Direct, the minimum scale requirements to use each type, how many failures each type can tolerate, and the corresponding storage efficiency.
 
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
+### Resiliency types
 
--   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
+|    Resiliency          |    Failure tolerance       |    Storage efficiency      |
+|------------------------|----------------------------|----------------------------|
+|    Two-way mirror      |    1                       |    50.0%                   |
+|    Three-way mirror    |    2                       |    33.3%                   |
+|    Dual parity         |    2                       |    50.0% - 80.0%           |
+|    Mixed               |    2                       |    33.3% - 80.0%           |
 
+### Minimum scale requirements
+
+|    Resiliency          |    Minimum required fault domains   |
+|------------------------|-------------------------------------|
+|    Two-way mirror      |    2                                |
+|    Three-way mirror    |    3                                |
+|    Dual parity         |    4                                |
+|    Mixed               |    4                                |
+
+   >[!TIP]
+   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
+
+### Dual parity efficiency for hybrid deployments
+
+This table shows the storage efficiency of dual parity and local reconstruction codes at each scale for hybrid deployments which contain both hard disk drives (HDD) and solid-state drives (SSD).
+
+|    Fault domains      |    Layout           |    Efficiency   |
+|-----------------------|---------------------|-----------------|
+|    2                  |    –                |    –            |
+|    3                  |    –                |    –            |
+|    4                  |    RS 2+2           |    50.0%        |
+|    5                  |    RS 2+2           |    50.0%        |
+|    6                  |    RS 2+2           |    50.0%        |
+|    7                  |    RS 4+2           |    66.7%        |
+|    8                  |    RS 4+2           |    66.7%        |
+|    9                  |    RS 4+2           |    66.7%        |
+|    10                 |    RS 4+2           |    66.7%        |
+|    11                 |    RS 4+2           |    66.7%        |
+|    12                 |    LRC (8, 2, 1)    |    72.7%        |
+|    13                 |    LRC (8, 2, 1)    |    72.7%        |
+|    14                 |    LRC (8, 2, 1)    |    72.7%        |
+|    15                 |    LRC (8, 2, 1)    |    72.7%        |
+|    16                 |    LRC (8, 2, 1)    |    72.7%        |
+
+### Dual parity efficiency for all-flash deployments
+
+This table shows the storage efficiency of dual parity and local reconstruction codes at each scale for all-flash deployments which contain only solid-state drives (SSD). The parity layout can use larger group sizes and achieve better storage efficiency in an all-flash configuration.
+
+|    Fault domains      |    Layout           |    Efficiency   |
+|-----------------------|---------------------|-----------------|
+|    2                  |    –                |    –            |
+|    3                  |    –                |    –            |
+|    4                  |    RS 2+2           |    50.0%        |
+|    5                  |    RS 2+2           |    50.0%        |
+|    6                  |    RS 2+2           |    50.0%        |
+|    7                  |    RS 4+2           |    66.7%        |
+|    8                  |    RS 4+2           |    66.7%        |
+|    9                  |    RS 6+2           |    75.0%        |
+|    10                 |    RS 6+2           |    75.0%        |
+|    11                 |    RS 6+2           |    75.0%        |
+|    12                 |    RS 6+2           |    75.0%        |
+|    13                 |    RS 6+2           |    75.0%        |
+|    14                 |    RS 6+2           |    75.0%        |
+|    15                 |    RS 6+2           |    75.0%        |
+|    16                 |    LRC (12, 2, 1)   |    80.0%        |
+
+## <a name="examples"></a>Examples
+
+Unless you have only two servers, we recommend using three-way mirroring and/or dual parity, because they offer better fault tolerance. Specifically, they ensure that all data remains safe and continuously accessible even when two fault domains – with Storage Spaces Direct, that means two servers - are affected by simultaneous failures.
+
+### Examples where everything stays online
+
+These six examples show what three-way mirroring and/or dual parity **can** tolerate.
+
+- **1.**	One drive lost (includes cache drives)
+- **2.**	One server lost
+
+![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
+
+- **3.**	One server and one drive lost
+- **4.**	Two drives lost in different servers
+
+![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
+
+- **5.**	More than two drives lost, so long as at most two servers are affected
+- **6.**	Two servers lost
+
+![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
+
+...in every case, all volumes will stay online. (Make sure your cluster maintains quorum.)
+
+### Examples where everything goes offline
+
+Over its lifetime, Storage Spaces can tolerate any number of failures, because it restores to full resiliency after each one, given sufficient time. However, at most two fault domains can safely be affected by failures at any given moment. The following are therefore examples of what three-way mirroring and/or dual parity **cannot** tolerate.
+
+- **7.** Drives lost in three or more servers at once
+- **8.**	Three or more servers lost at once
+
+![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
+
+## Usage
+
+Check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
+
+## See also
+
+Every link below is inline somewhere in the body of this topic.
+
+- [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
+- [Fault Domain Awareness in Windows Server 2016](../../failover-clustering/fault-domains.md)
+- [Erasure Coding in Azure by Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [Local Reconstruction Codes and Accelerating Parity Volumes](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
+- [Volumes in the Storage Management API](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
+- [Storage Efficiency Demo at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
+- [Capacity Calculator PREVIEW for Storage Spaces Direct](http://aka.ms/s2dcalc)

@@ -1,19 +1,22 @@
 ---
 title: Create a DNS Zone
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
+ms.author: jamesmci
 author: jamesmci
 ---
 # Create a DNS Zone
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic to create a DNS zone by using the IPAM client console.  
   
@@ -27,11 +30,11 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  Locate the server where you want to add a zone, and right-click the server.  Click **Create DNS zone**.  
   
-    ![](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_01a.jpg)  
+    ![Create DNS zone](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_01a.jpg)  
   
 4.  The **Create DNS Zone** dialog box opens. In **General Properties**, select a zone category, a zone type , and enter a name in **Zone name**. Also select values appropriate for your deployment in **Advanced Properties**, and then click **OK**.  
   
-    ![](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_02a.jpg)  
+    ![Advanced Properties](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_02a.jpg)  
   
 ## See Also  
 [DNS Zone Management](DNS-Zone-Management.md)  

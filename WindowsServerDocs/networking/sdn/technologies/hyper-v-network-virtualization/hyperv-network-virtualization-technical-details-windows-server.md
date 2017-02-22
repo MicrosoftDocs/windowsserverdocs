@@ -1,37 +1,40 @@
 ---
-title: Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview
+title: Hyper-V Network Virtualization Technical Details in Windows Server 2016
+description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server 2016
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
+ms.author: jamesmci
 author: vhorne
 ---
-# Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview
+# Hyper-V Network Virtualization Technical Details in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To:  Windows Server 2016
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.  
   
 Network virtualization provides a similar capability, in which multiple virtual networks (potentially with overlapping IP addresses) run on the same physical network infrastructure and each virtual network operates as if it is the only virtual network running on the shared network infrastructure. Figure 1 shows this relationship.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF1.gif)  
+![Server virtualization versus network virtualization](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF1.gif)  
   
 Figure 1: Server virtualization versus network virtualization  
   
 ## Hyper-V Network Virtualization Concepts  
 In Hyper-V Network Virtualization (HNV), a customer or tenant is defined as the "owner" of a set of IP subnets that are deployed in an enterprise or datacenter. A customer can be a corporation or enterprise with multiple departments or business units in a private datacenter which require network isolation, or a tenant in a public data center which is hosted by a service provider. Each customer can have one or more [Virtual networks](#VirtualNetworks) in the datacenter, and each virtual network consists of one or more [Virtual subnets](#VirtualSubnets).  
   
-There are two HNV implementations which will be available in Windows Server 2016 Technical Preview: HNVv1 and HNVv2.  
+There are two HNV implementations which will be available in  Windows Server 2016: HNVv1 and HNVv2.  
   
 -   **HNVv1**  
   
-    HNVv1 is compatible with  Windows Server 2012 R2  and System Center 2012 R2 Virtual Machine Manager (VMM). Configuration for HNVv1 relies on WMI management and Windows PowerShell cmdlets (facilitated through System Center VMM) to define isolation settings and Customer Address (CA) - virtual network - to Physical Address (PA) mappings and routing. No additional features have been added to HNVv1 in Windows Server 2016 Technical Preview and no new features are planned.  
+    HNVv1 is compatible with  Windows Server 2012 R2  and System Center 2012 R2 Virtual Machine Manager (VMM). Configuration for HNVv1 relies on WMI management and Windows PowerShell cmdlets (facilitated through System Center VMM) to define isolation settings and Customer Address (CA) - virtual network - to Physical Address (PA) mappings and routing. No additional features have been added to HNVv1 in  Windows Server 2016 and no new features are planned.  
   
 -   **HNVv2**  
   
@@ -54,7 +57,7 @@ There are two HNV implementations which will be available in Windows Server 2016
   
 A key advantage of the virtual network and routing domain is that it allows customers to bring their own network topologies (for example, IP subnets) to the cloud. Figure 2 shows an example where the Contoso Corp has two separate networks, the R&D Net and the Sales Net. Because these networks have different routing domain IDs, they cannot interact with each other. That is, Contoso R&D Net is isolated from Contoso Sales Net even though both are owned by Contoso Corp. Contoso R&D Net contains three virtual subnets. Note that both the RDID and VSID are unique within a datacenter.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF6.gif)  
+![Customer networks and virtual subnets](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF6.gif)  
   
 Figure 2: Customer networks and virtual subnets  
   
@@ -104,7 +107,7 @@ In contrast to HNVv1 which allocated one PA IP address for each Virtual Subnet (
 ### Routing Outside a Virtual Network  
 Most customer deployments will require communication from the HNV environment to resources that are not part of the HNV environment. Network Virtualization gateways are required to allow communication between the two environments. Infrastructures requiring an HNV Gateway include Private Cloud and Hybrid Cloud. Basically, HNV gateways are required for Layer 3 routing between internal and external (physical) networks (including NAT) or between different sites and/or clouds (private or public) which use an IPSec VPN or GRE tunnel.  
   
-Gateways can come in different physical form factors. They can be built on Windows Server 2016 Technical Preview, incorporated into a Top of Rack (TOR) switch acting as a VXLAN Gateway, accessed through a Virtual IP (VIP) advertised by a load balancer, put into other existing network appliances, or can be a new stand-alone network appliance.  
+Gateways can come in different physical form factors. They can be built on  Windows Server 2016, incorporated into a Top of Rack (TOR) switch acting as a VXLAN Gateway, accessed through a Virtual IP (VIP) advertised by a load balancer, put into other existing network appliances, or can be a new stand-alone network appliance.  
   
 For more information about Windows RAS Gateway options, see [RAS Gateway](../../../remote-access/ras-gateway/RAS-Gateway.md).  
   
@@ -117,7 +120,7 @@ Each virtual network adapter in HNV is associated with two IP addresses:
   
 The CAs maintain the customer's network topology, which is virtualized and decoupled from the actual underlying physical network topology and addresses, as implemented by the PAs. The following diagram shows the conceptual relationship between virtual machine CAs and network infrastructure PAs as a result of network virtualization.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF2.gif)  
+![Conceptual diagram of network virtualization over physical infrastructure](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF2.gif)  
   
 Figure 6: Conceptual diagram of network virtualization over physical infrastructure  
   
@@ -139,12 +142,12 @@ HNV implements overlay tenant networks using either Network Virtualization Gener
 ### Virtual eXtensible Local Area Network (VXLAN)  
 The Virtual eXtensible Local Area Network (VXLAN) ([RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Arista, Dell, HP and others. The VXLAN protocol uses UDP as the transport. The IANA-assigned UDP destination port for VXLAN is 4789 and the UDP source port should be a hash of information from the inner packet to be used for ECMP spreading. After the UDP header, a VXLAN header is appended to the packet which includes a reserved 4-byte field followed by a 3-byte field for the VXLAN Network Identifier (VNI) - VSID - followed by another reserved 1-byte field. After the VXLAN header, the original CA L2 frame (without the CA Ethernet frame FCS) is appended.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VXLAN-packet-header.png)  
+![VXLAN packet header](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VXLAN-packet-header.png)  
   
 ### Generic Routing Encapsulation (NVGRE)  
 This network virtualization mechanism uses the Generic Routing Encapsulation (NVGRE) as part of the tunnel header. In NVGRE, the virtual machine's packet is encapsulated inside another packet. The header of this new packet has the appropriate source and destination PA IP addresses in addition to the Virtual Subnet ID, which is stored in the Key field of the GRE header, as shown in Figure 7.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF3.gif)  
+![NVGRE encapsulation](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF3.gif)  
   
 Figure 7: Network virtualization - NVGRE encapsulation  
   
@@ -152,14 +155,14 @@ The Virtual Subnet ID allows hosts to identify the customer virtual machine for 
   
 Sharing the PA has a big impact on network scalability. The number of IP and MAC addresses that need to be learned by the network infrastructure can be substantially reduced. For instance, if every end host has an average of 30 virtual machines, the number of IP and MAC addresses that need to be learned by the networking infrastructure is reduced by a factor of 30.The embedded Virtual Subnet IDs in the packets also enable easy correlation of packets to the actual customers.  
   
-The PA sharing scheme for  Windows Server 2012 R2  is one PA per VSID per host. For Windows Server 2016 Technical Preview the scheme is one PA per NIC team member.  
+The PA sharing scheme for  Windows Server 2012 R2  is one PA per VSID per host. For  Windows Server 2016 the scheme is one PA per NIC team member.  
   
-With Windows Server 2016 Technical Preview and later, HNV fully supports NVGRE and VXLAN out of the box; it does NOT require upgrading or purchasing new network hardware such as NICs (network adapters), switches, or routers. This is because these packets on the wire are regular IP packet in the PA space, which is compatible with today's network infrastructure.  However, to get the best performance use supported NICs with the latest drivers that support task offloads.  
+With  Windows Server 2016 and later, HNV fully supports NVGRE and VXLAN out of the box; it does NOT require upgrading or purchasing new network hardware such as NICs (network adapters), switches, or routers. This is because these packets on the wire are regular IP packet in the PA space, which is compatible with today's network infrastructure.  However, to get the best performance use supported NICs with the latest drivers that support task offloads.  
   
 ## Multi-tenant deployment example  
 The following diagram shows an example deployment of two customers located in a cloud datacenter with the CA-PA relationship defined by the network policies.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF5.png)  
+![Multi-tenant deployment example](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF5.png)  
   
 Figure 8: Multi-tenant deployment example  
   
@@ -223,7 +226,7 @@ A similar process for traffic between the Fabrikam Corp **Web** and **SQL** virt
 The separate addresses (CAs and PAs), the policy settings of the Hyper-V hosts, and the address translation between the CA and the PA for inbound and outbound virtual machine traffic isolate these sets of servers using either the NVGRE Key or the VLXAN VNID. Furthermore, the virtualization mappings and transformation decouples the virtual network architecture from the physical network infrastructure. Although Contoso **SQL** and **Web** and Fabrikam **SQL** and **Web** reside in their own CA IP subnets (10.1.1/24), their physical deployment happens on two hosts in different PA subnets, 192.168.1/24 and 192.168.2/24, respectively. The implication is that cross-subnet virtual machine provisioning and live migration become possible with HNV.  
   
 ## Hyper-V Network Virtualization architecture  
-In Windows Server 2016 Technical Preview, HNVv2 is implemented using the Azure Virtual Filtering Platform (VFP) which is an NDIS filtering extension within the Hyper-V Switch. The key concept of VFP is that of a Match-Action flow engine with an internal API exposed to the SDN Host Agent for programming network policy. The SDN Host Agent itself receives network policy from the Network Controller over the OVSDB and WCF SouthBound communication channels. Not only is virtual network policy (e.g. CA-PA mapping) programmed using VFP but additional policy such as ACLs, QoS, and so on.  
+In  Windows Server 2016, HNVv2 is implemented using the Azure Virtual Filtering Platform (VFP) which is an NDIS filtering extension within the Hyper-V Switch. The key concept of VFP is that of a Match-Action flow engine with an internal API exposed to the SDN Host Agent for programming network policy. The SDN Host Agent itself receives network policy from the Network Controller over the OVSDB and WCF SouthBound communication channels. Not only is virtual network policy (e.g. CA-PA mapping) programmed using VFP but additional policy such as ACLs, QoS, and so on.  
   
 The object hierarchy for the vSwitch and VFP forwarding extension is the following:  
   
@@ -269,7 +272,7 @@ The VFP extension has a slow-path and fast-path for packet traversal. The first 
   
 HNV policy is programmed by the host agent. Each virtual machine network adapter is configured with an IPv4 address. These are the CAs that will be used by the virtual machines to communicate with each other, and they are carried in the IP packets from the virtual machines. HNV encapsulates the CA frame in a PA frame based on the network virtualization policies stored in the host agent's database.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF7.png)  
+![HNV Architecture](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF7.png)  
   
 Figure 9: HNV Architecture  
   

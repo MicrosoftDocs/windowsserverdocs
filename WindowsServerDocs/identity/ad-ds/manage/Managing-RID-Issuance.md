@@ -1,21 +1,20 @@
 ---
+ms.assetid: aac117a7-aa7a-4322-96ae-e3cc22ada036
 title: Managing RID Issuance
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: fef8e0fa-2e56-49cd-9679-c4d8fc93ff5a
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Managing RID Issuance
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains the change to the RID master FSMO role, including the new issuance and monitoring functionality in the RID master and how to analyze and troubleshoot RID issuance.  
   
@@ -52,7 +51,7 @@ Assuming a default 30-bit global RID space, the first event logs when allocating
 > [!IMPORTANT]  
 > This event is not expected; investigate the user, computer, and group creation processes immediately in the domain. Creating more than 100 million AD DS objects is quite out of the ordinary.  
   
-![](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)  
+![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)  
   
 ### RID Pool Invalidation Events  
 There are new event alerts that a local DC RID pool was discarded. These are Informational and could be expected, especially due to the new VDC functionality. See the event list below for details on the event.  
@@ -84,7 +83,7 @@ Dcdiag.exe /TEST:RidManager /v | find /i "Available RID Pool for the Domain"
   
 If you increase the global RID pool, the available pool will change to 2,147,483,647 instead of the default 1,073,741,823. For example:  
   
-![](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)  
+![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)  
   
 > [!WARNING]  
 > This unlock is intended *only* to prevent running out of RIDS and is to be used *only* in conjunction with RID Ceiling Enforcement (see next section). Do not "preemptively" set this in environments that have millions of remaining RIDs and low growth, as application compatibility issues potentially exist with SIDs generated from the unlocked RID pool.  
@@ -125,7 +124,7 @@ To unlock the RID pool to the 31<sup>st</sup> bit after receiving the RID ceilin
   
 9. Select the **Synchronous** and **Extended** options, then click **Run**.  
   
-    ![](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)  
+    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)  
   
 10. If successful, the LDP output window shows:  
   
@@ -136,7 +135,7 @@ To unlock the RID pool to the 31<sup>st</sup> bit after receiving the RID ceilin
   
     ```  
   
-    ![](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)  
+    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)  
   
 11. Confirm the global RID pool increased by examining the System Event Log on that domain controller for Directory-Services-SAM Informational event 16655.  
   
@@ -186,7 +185,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
   
 9. Enable the **Synchronous** and **Extended** options, then click **Run**:  
   
-    ![](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)  
+    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)  
   
 10. If successful, the LDP output window shows:  
   
@@ -197,7 +196,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
   
     ```  
   
-    ![](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)  
+    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)  
   
 ### Other RID Fixes  
 Previous Windows Server operating systems had a RID pool leak when missing rIDSetReferences attribute. To resolve this problem on domain controllers that run Windows Server 2008 R2, install the hotfix from [KB 2618669](http://support.microsoft.com/kb/2618669).  
@@ -213,7 +212,7 @@ All of the fixes and changes above have Windows Server 2008 R2 hotfixes released
 ### Introduction to Troubleshooting  
 RID issuance troubleshooting requires a logical and linear method. Unless you are monitoring your event logs carefully for RID-triggered warnings and errors, your first indications of a problem are likely to be failed account creations. The key to troubleshooting RID issuance is to understand when the symptom is expected or not; many RID issuance issues may affect only one domain controller and have nothing to do with component improvements. This simple diagram below helps make those decisions more clear:  
   
-![](media/Managing-RID-Issuance/adds_rid_issuance_troubleshooting.png)  
+![RID issuance](media/Managing-RID-Issuance/adds_rid_issuance_troubleshooting.png)  
   
 ### Troubleshooting Options  
   

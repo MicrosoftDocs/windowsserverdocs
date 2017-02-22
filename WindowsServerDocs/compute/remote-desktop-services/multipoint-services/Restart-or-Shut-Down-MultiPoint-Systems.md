@@ -1,15 +1,16 @@
 ---
 title: Restart or Shut Down MultiPoint Systems
+description: Learn how to shut down or restart one or more systems
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6293b4f7-c009-419d-a503-fc4f3ea3913c
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

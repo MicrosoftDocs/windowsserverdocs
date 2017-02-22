@@ -1,4 +1,5 @@
 ---
+ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publishing Applications using AD FS Preauthentication
 description:
 author: kgremban
@@ -6,13 +7,13 @@ manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: web-app-proxy
 ---
 
 # Publishing Applications using AD FS Preauthentication
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   

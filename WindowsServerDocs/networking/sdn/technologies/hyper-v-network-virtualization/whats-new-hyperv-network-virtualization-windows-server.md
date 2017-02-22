@@ -1,21 +1,24 @@
 ---
-title: What&#39;s New in Hyper-V Network Virtualization in Windows Server Technical Preview
+title: What's New in Hyper-V Network Virtualization in Windows Server 2016
+description: This topic provides information about new features in Hyper-V Network Virtualization in Windows Server 2016
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
+ms.author: jamesmci
 author: vhorne
 ---
-# What&#39;s New in Hyper-V Network Virtualization in Windows Server Technical Preview
+# What's New in Hyper-V Network Virtualization in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016 Technical Preview.  
+This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016.  
   
 ## <a name="BKMK_IPAM2012R2"></a>Updates in HNV  
 HNV offers enhanced support in the following areas:  
@@ -38,16 +41,14 @@ The flow engine inside the Hyper-V switch is the same engine used in Microsoft A
 > For more information about OVSDB, see [RFC 7047](http://www.rfc-editor.org/info/rfc7047).  
   
 The Hyper-V switch supports both stateless and stateful flow rules based on simple 'match action' within Microsoft's flow engine.  
-  
-For more information about network controller integration, see Windows Server 2016 Technical Preview HNV Technical Details (coming soon)  
-  
-![](../../../media/what-s-new-in-hyper-v-network-virtualization-in-windows-server/HNVOverview.png)  
+ 
+![Windows Server 2016 Hyper-V switch](../../../media/what-s-new-in-hyper-v-network-virtualization-in-windows-server/HNVOverview.png)  
   
 ### <a name="VXLAN"></a>VXLAN encapsulation support  
 The Virtual eXtensible Local Area Network (VXLAN - [RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Dell, HP and others. HNV also now supports this encapsulation scheme using MAC distribution mode through the Microsoft Network Controller to program mappings for tenant overlay network IP addresses (Customer Address, or CA) to the physical underlay network IP addresses (Provider Address, or PA). Both NVGRE and VXLAN Task Offloads are supported for improved performance through third-party drivers.  
   
 ### <a name="SLB"></a>Software Load Balancer (SLB) interoperability  
-Windows Server 2016 Technical Preview includes a software load balancer (SLB) with full support for virtual network traffic and seamless interaction with HNV. The SLB is implemented through the performant flow engine in the data plane v-Switch and controlled by the Network Controller for Virtual IP (VIP) / Dynamic IP (DIP) mappings.  
+Windows Server 2016 includes a software load balancer (SLB) with full support for virtual network traffic and seamless interaction with HNV. The SLB is implemented through the performant flow engine in the data plane v-Switch and controlled by the Network Controller for Virtual IP (VIP) / Dynamic IP (DIP) mappings.  
   
 ### <a name="L2"></a>Compliant IEEE Ethernet headers  
 HNV implements correct L2 Ethernet headers to ensure interoperability with third-party virtual and physical appliances that depend on industry-standard protocols. Microsoft ensures that all transmitted packets have compliant values in all fields to ensure this interoperability. In addition, support for Jumbo Frames (MTU > 1780) in the physical L2 network will be required to account for packet overhead introduced by encapsulation protocols (NVGRE, VXLAN) while ensuring guest Virtual Machines attached to an HNV Virtual Network maintain a 1514 MTU.  
@@ -58,6 +59,5 @@ HNV implements correct L2 Ethernet headers to ensure interoperability with third
   
 -   [Hyper-V Network Virtualization technical details](assetId:///405a1b66-c9ba-49fa-9200-cd1364e92ab1)  
   
--   [Software Defined Networking](https://technet.microsoft.com/en-us/library/dn859240.aspx)  
+-   [Software Defined Networking](../../Software-Defined-Networking--SDN-.md)  
   
-

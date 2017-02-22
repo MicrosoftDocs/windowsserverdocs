@@ -1,19 +1,20 @@
 ---
+ms.assetid: 692bd2af-deee-44cf-9af9-f364677e267f
 title: Planning Domain Controller Placement
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: dbfe4dfc-1420-43c9-8889-905da6373c05
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Planning Domain Controller Placement
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you have gathered all of the network information that will be used to design your site topology, plan where you want to place domain controllers, including forest root domain controllers, regional domain controllers, operations master role holders, and global catalog servers.  
   

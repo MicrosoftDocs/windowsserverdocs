@@ -1,16 +1,17 @@
 ---
 title: Server Certificate Deployment Planning
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: brianlic
 ms.topic: article
 ms.assetid: 7eb746e0-1046-4123-b532-77d5683ded44
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Server Certificate Deployment Planning
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Before you deploy server certificates, you must plan the following items:  
   
@@ -31,14 +32,14 @@ Before you deploy server certificates, you must plan the following items:
 -   [Plan the configuration of the server certificate template on the CA](#bkmk_template)  
   
 ## <a name="bkmk_basic"></a>Plan basic server configuration  
-After you install Windows Server 2016 Technical Preview on the computers that you are planning to use as your certification authority and Web server, you must rename the computer and assign and configure a static IP address for the local computer.  
+After you install  Windows Server 2016 on the computers that you are planning to use as your certification authority and Web server, you must rename the computer and assign and configure a static IP address for the local computer.  
   
-For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
+For more information, see the  Windows Server 2016 [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
   
 ## <a name="bkmk_domain"></a>Plan domain access  
 To log on to the domain, the computer must be a domain member computer and the user account must be created in AD DS before the logon attempt. In addition, most procedures in this guide require that the user account is a member of the Enterprise Admins or Domain Admins groups in Active Directory Users and Computers, so you must log on to the CA with an account that has the appropriate group membership.  
   
-For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
+For more information, see the  Windows Server 2016 [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
   
 ## <a name="bkmk_virtual"></a>Plan the location and name of the virtual directory on your Web server  
 To provide access to the CRL and the CA certificate to other computers, you must store these items in a virtual directory on your Web server. In this guide, the virtual directory is located on the Web server WEB1. This folder is on the "C:" drive and is named "pki." You can locate your virtual directory on your Web server at any folder location that is appropriate for your deployment.  
@@ -79,7 +80,7 @@ You must plan the following items for this file:
   
 -   **CRLPeriodUnits**. The example CAPolicy.inf file has a CRLPeriodUnits value of 1. This is because the example refresh interval for the certificate revocation list in this guide is 1 week. At the interval value that you specify with this setting, you must publish the CRL on the CA to the Web server virtual directory where you store the CRL and provide access to it for computers that are in the authentication process.  
   
--   **AlternateSignatureAlgorithm**. This CAPolicy.inf implements an improved security mechanism by implementing alternate signature formats. You should not implement this setting if you still have Windows XP clients that require certificates from this CA. For more information, see [Additional Resources](assetId:///fdb5b540-45c6-46c8-b6c0-a992661c1165).  
+-   **AlternateSignatureAlgorithm**. This CAPolicy.inf implements an improved security mechanism by implementing alternate signature formats. You should not implement this setting if you still have Windows XP clients that require certificates from this CA.  
   
 If you do not plan on adding any subordinate CAs to your public key infrastructure at a later time, and if you want to prevent the addition of any subordinate CAs, you can add the PathLength key to your CAPolicy.inf file with a value of 0. To add this key, copy and paste the following code into your file:  
   

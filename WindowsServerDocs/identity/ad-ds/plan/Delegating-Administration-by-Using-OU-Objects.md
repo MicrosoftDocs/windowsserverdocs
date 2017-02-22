@@ -1,19 +1,20 @@
 ---
+ms.assetid: d8e61aa4-8e4b-4097-83ca-70cf61366b75
 title: Delegating Administration by Using OU Objects
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 2ddcbce2-cbc2-48f7-a732-0caf4effef9f
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Delegating Administration by Using OU Objects
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use organizational units (OUs) to delegate the administration of objects, such as users or computers, within the OU to a designated individual or group. To delegate administration by using an OU, place the individual or group to which you are delegating administrative rights into a group, place the set of objects to be controlled into an OU, and then delegate administrative tasks for the OU to that group.  
   

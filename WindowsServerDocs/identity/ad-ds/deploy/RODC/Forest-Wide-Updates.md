@@ -1,21 +1,20 @@
 ---
+ms.assetid: 3647b7e3-54a4-46c6-ab68-82fcf3bfacda
 title: Forest-Wide Updates
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 628d2ae6-2030-43ba-b08f-89152b194402
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Forest-Wide Updates
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2012 R2 and Windows Server 2012.  
   

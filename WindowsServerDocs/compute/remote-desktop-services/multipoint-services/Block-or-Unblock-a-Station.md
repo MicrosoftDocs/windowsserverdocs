@@ -1,16 +1,16 @@
 ---
 title: Block or Unblock a Station
 ms.custom: na
- 
+description: Learn how to stop a user or group from accessing a MultiPoint Services system. 
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 12bdbb60-03a5-4e7d-acb1-e4fdcb950c29
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

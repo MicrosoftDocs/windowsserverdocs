@@ -1,24 +1,23 @@
 ---
-title: Install the Network Controller server role using Server Manager
-ms.custom: na
+title: Install the Network Controller Server Role Using Server Manager
+description: This topic provides instructions on how to install the Network Controller server role by using Server Manager in Windows Server 2016. 
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
+ms.author: jamesmci
 author: jamesmci
 ---
-# Install the Network Controller server role using Server Manager
+# Install the Network Controller Server Role Using Server Manager
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.  
   
 > [!NOTE]  
-> After you install Network Controller, you must use Windows PowerShell commands for additional Network Controller configuration. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
+> After you install Network Controller, you must use Windows PowerShell commands for additional Network Controller configuration. For more information, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
   
 ### To install Network Controller  
   
@@ -30,15 +29,15 @@ This topic provides instructions on how to install the Network Controller server
   
 4.  In **Select Server Roles**, in **Roles**, click **Network Controller**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
+    ![Network Controller server role](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
 5.  The **Add features that are required for Network Controller** dialog box opens. Click **Add Features**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_06.jpg)  
+    ![Add features for Network Controller](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_06.jpg)  
   
 6.  In **Select Server Roles**, click **Next**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
+    ![Click Next](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
 7.  In **Select Features**, click **Next**.  
   
@@ -46,7 +45,7 @@ This topic provides instructions on how to install the Network Controller server
   
 9. In **Confirm installation selections**, review your choices. Installation of Network Controller requires that you restart the computer after the wizard runs. Because of this, click **Restart the destination server automatically if required**. The **Add Roles and Features Wizard** dialog box opens. Click **Yes**.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_11.jpg)  
+    ![Add Roles and Features Wizard](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_11.jpg)  
   
 10. In **Confirm installation selections**, click **Install**.  
   
@@ -54,7 +53,7 @@ This topic provides instructions on how to install the Network Controller server
   
 12. After the computer restarts, log on to the computer and verify Network Controller installation by viewing Server Manager.  
   
-    ![](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
+    ![Server Manager](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
   
 ## See Also  
 [Network Controller](Network-Controller.md)  

@@ -1,29 +1,32 @@
 ---
 title: Manage Remote Access
+description: This topic provides information on how to manage Remote Access in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Manage Remote Access
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The DirectAccess Remote Client Management deployment scenario uses DirectAccess to maintain clients over the Internet. This section explains the scenario, including its phases, roles, features, and links to additional resources.  
   
-Windows Server&reg; 2016 Technical Preview and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.   
+Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.   
   
 > [!NOTE]  
 > In addition to this topic, the following Remote Access management topics are available.  
 >   
-> -   [Use Remote Access Monitoring and Accounting](assetId:///0198ef6e-3213-4ab3-ac13-bb38f50e08af)  
-> -   [Manage DirectAccess Clients Remotely](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
+> -   [Use Remote Access Monitoring and Accounting](monitoring-and-accounting/Use-Remote-Access-Monitoring-and-Accounting.md)  
+> -   [Manage DirectAccess Clients Remotely](manage-remote-clients/Manage-DirectAccess-Clients-Remotely.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 DirectAccess client computers are connected to the intranet whenever they are connected to the Internet, regardless of whether the user has signed in to the computer. They can be managed as intranet resources and kept current with Group Policy changes, operating system updates, antimalware updates, and other organizational changes.  
@@ -56,7 +59,7 @@ Configuring your deployment consists of a number of steps. These include:
   
 2.  **Configure Remote Access server and network settings**: Configure network adapters, IP addresses, and routing.  
   
-3.  **Configure certificate settings**: In this deployment scenario, the Getting Started Wizard creates self-signed certificates, so there is no need to configure the more advanced certificate infrastructure that is explained in the topic [Deploying advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+3.  **Configure certificate settings**: In this deployment scenario, the Getting Started Wizard creates self-signed certificates, so there is no need to configure the more advanced certificate infrastructure.  
   
 4.  **Configure the network location server**:  In this scenario, the network location server is installed on the Remote Access server.  
   
@@ -77,7 +80,7 @@ Deploying a single Remote Access server for managing DirectAccess clients provid
 The following table lists the roles and features required for the scenario:  
   
 |Role or feature|How it supports this scenario|  
-|-------------------|---------------------------------|  
+|----------|-----------------|  
 |*Remote Access role*|This role is installed and uninstalled by using the Server Manager console or Windows PowerShell. This role encompasses DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services, which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN: DirectAccess and VPN are managed in the Remote Access Management console.<br />2.  RRAS: Features are managed in the Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following features:<br /><br />-   Web Server (IIS): Required to configure the network location server and default web probe.<br />-   Windows internal database: Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   By default on a Remote Access server when the Remote Access role is installed and supports the Remote Management console user interface.<br />-   As an option on a server that is not running the Remote Access server role. In this case, it is used for remote management of a Remote Access server.<br /><br />This feature consists of the following:<br /><br />-   Remote Access GUI and command-line tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
@@ -86,7 +89,7 @@ Hardware requirements for this scenario include the following:
   
 ### Server requirements  
   
--   A computer that meets the hardware requirements for  Windows Server 2012 . For more information, see [Installing Windows Server 2012](http://technet.microsoft.com/library/jj134246.aspx).  
+-   A computer that meets the hardware requirements for  Windows Server 2016. For more information, see Windows Server 2016 [System Requirements](https://technet.microsoft.com/windows-server-docs/get-started/system-requirements-and-installation).  
   
 -   The server must have at least one network adapter installed and enabled. There should be only one adapter connected to the corporate internal network, and only one connected to the external network (Internet).  
   
@@ -104,7 +107,7 @@ Hardware requirements for this scenario include the following:
   
 -   During remote management of DirectAccess client computers, clients initiate communications with management servers, such as domain controllers, System Center Configuration Servers, and Health Registration Authority (HRA) servers. These servers provide services that include Windows and antivirus updates and Network Access Protection (NAP) client compliance. You should deploy the required servers before you begin the Remote Access deployment.  
   
--   A DNS server running Windows Server&reg; 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 with SP2 is required.  
+-   A DNS server running  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 with SP2 is required.  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
 Software requirements for this scenario include the following:  
@@ -125,16 +128,4 @@ Software requirements for this scenario include the following:
   
 -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. Computers should not be included in more than one security group that includes DirectAccess clients. If clients are included in multiple groups, name resolution for client requests will not work as expected.  
   
-## <a name="BKMK_LINKS"></a>See also  
-The following table provides links to additional resources.  
-  
-|Content type|References|  
-|----------------|--------------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb545655.aspx)|  
-|**Product evaluation**|[Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](assetId:///f3e5209b-aaa9-49a7-b523-0a130ec10a4b)<br /><br />[Test Lab Guide: Demonstrate a DirectAccess multisite deployment](assetId:///3f2308e3-aa31-49db-b69b-91d1827ef7a2)<br /><br />[Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](assetId:///616db45d-f151-4abe-aecf-5f5060095a67)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|[RRAS Product Team blog](http://blogs.technet.com/RRAS/) &#124; [Remote Access  TechNet Forum](http://social.technet.microsoft.com/Forums/RRAS/threads)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
-  
-
 

@@ -1,14 +1,16 @@
 ---
 title: View Hardware Status
+description: Learn how to view hardware information in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-servicesms.reviewer: na
+ms.technology: multipoint-services
+ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a5ec549-e1f9-4714-9e6d-9ea959e1da60
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

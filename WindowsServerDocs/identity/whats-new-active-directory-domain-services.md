@@ -1,19 +1,20 @@
 ---
-title: What&#39;s new in Active Directory Domain Services Technical Preview
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
+title: What&#39;s new in Active Directory Domain Services in Windows Server 2016
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 7e122d0d-66fa-4479-87f9-90eaf75dccc3
-author: Femila
----
-# What&#39;s new in Active Directory Domain Services Technical Preview
+ms.prod: windows-server-threshold
 
->Applies To: Windows Server Technical Preview
+ms.technology: identity-adds
+---
+
+# What&#39;s new in Active Directory Domain Services for Windows Server 2016
+
+>Applies To: Windows Server 2016
 
 The following new features in Active Directory Domain Services (AD DS) improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements include:  
   

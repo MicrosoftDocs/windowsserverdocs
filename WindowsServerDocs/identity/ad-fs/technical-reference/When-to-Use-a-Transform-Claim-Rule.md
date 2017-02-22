@@ -1,13 +1,15 @@
 ---
+ms.assetid: 77aa61bf-9c04-4889-a5d2-6f45bc1b8bd2
 title: When to Use a Transform Claim Rule
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/08/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -46,7 +48,7 @@ In AD FS, the term *claims transformation* means to replace one incoming claim v
   
 For example, as shown in the following illustration, when a rule is set with the condition to replace an incoming value with a different outgoing claim value, all incoming claim types of Group are mapped to new outgoing claim types of Role. In this case, the incoming claim value of Purchaser is replaced with the new outgoing claim value of Admin.  
   
-![](media/adfs2_transform.gif)  
+![when to use a transform](media/adfs2_transform.gif)  
   
 You can also use this rule to apply a condition that will replace all incoming claims with a specified e\-mail suffix value with a new value. For example, you could set a condition in this rule to change all claim values with the suffix of sales.corp.fabrikam.com to fabrikam.com.  
   

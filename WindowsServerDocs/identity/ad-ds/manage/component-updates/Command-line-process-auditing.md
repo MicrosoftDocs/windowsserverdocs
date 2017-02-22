@@ -1,21 +1,20 @@
 ---
+ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: Command line process auditing
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: cdd4b7f8-03a8-47c1-8457-ef8348acadb3
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Command line process auditing
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
@@ -34,7 +33,7 @@ author: Femila
   
     -   "Include command line in process creation events"  
   
-![](media/Command-line-process-auditing/GTR_ADDS_Event4688.gif)  
+![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_Event4688.gif)  
   
 **Figure  SEQ Figure \\\* ARABIC 16 Event 4688**  
   
@@ -73,16 +72,16 @@ Event volume: Low to medium, depending on system usage
 |**Supported on:**|?|  
 |**Description**|This policy setting determines what information is logged in security audit events when a new process has been created.<br /><br />This setting only applies when the Audit Process Creation policy is enabled. If you enable this policy setting the command line information for every process will be logged in plain text in the security event log as part of the Audit Process Creation event 4688, "a new process has been created," on the workstations and servers on which this policy setting is applied.<br /><br />If you disable or do not configure this policy setting, the process's command line information will not be included in Audit Process Creation events.<br /><br />Default: Not configured<br /><br />Note: When this policy setting is enabled, any user with access to read the security events will be able to read the command line arguments for any successfully created process. Command line arguments can contain sensitive or private information such as passwords or user data.|  
   
-![](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)  
+![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)  
   
 When you use Advanced Audit Policy Configuration settings, you need to confirm that these settings are not overwritten by basic audit policy settings.  Event 4719 is logged when the settings are overwritten.  
   
-![](media/Command-line-process-auditing/GTR_ADDS_Event4719.gif)  
+![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_Event4719.gif)  
   
 The following procedure shows how to prevent conflicts by blocking the application of any basic audit policy settings.  
   
 ### To ensure that Advanced Audit Policy Configuration settings are not overwritten  
-![](media/Command-line-process-auditing/GTR_ADDS_AdvAuditPolicy.gif)  
+![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_AdvAuditPolicy.gif)  
   
 1.  Open the Group Policy Management console  
   

@@ -5,7 +5,7 @@
 # Windows Server technical content contributors' guide index
 
 > [!Note]
-> Where possible, Windows Server documentation adheres to Azure documentation guidance. Some of the links below lead to Azure content because the guidance is the same.
+> Where possible, guidance for Windows Server content follows Azure documentation guidance. Some of the links below lead to Azure content because the guidance is the same.
 
 ## General guidance
 
@@ -19,17 +19,19 @@
 
 - [Tools and setup for authoring in GitHub](tools-and-setup.md)
 
-- [Git commands for creating a new article or updating an existing article](git-steps-create-update-content.md)
+- [Git commands to create or update an article](git-steps-create-update-content.md)
 
 - [File names and locations](file-names-and-locations.md)
+
+- [Metadata, product versioning, and trademarks](metadata-OSversioning-and-trademarks.md)
+
+- [Quality criteria for pull request review](contributor-guide-pr-criteria.md)
 
 - [Linking guidelines](create-links-markdown.md/)
 
 - [Rename or retire an article](rename-or-retire.md)
 
 - [How to undo almost anything with Git (GitHub blog)](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
-
-- [Quality criteria for pull request review](contributor-guide-pr-criteria.md)
 
 ## Authoring articles: markdown
 

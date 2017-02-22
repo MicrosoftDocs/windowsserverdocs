@@ -1,15 +1,16 @@
 ---
 title: Save and Share Files on a USB Flash Drive
+description: Learn how to save filese to a USB flash drive in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51f6564e-a07f-4b13-8567-a5f080cc2e0d
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

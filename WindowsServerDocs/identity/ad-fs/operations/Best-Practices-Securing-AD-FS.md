@@ -1,16 +1,21 @@
 ---
+ms.assetid: b7bf7579-ca53-49e3-a26a-6f9f8690762f
 title: Best Practices for securing AD FS and Web Application Proxy
 description: "This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy."
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/20/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 ## Introduction
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains information about the default behaviors of these components and recommendations for additional security configurations for an organization with specific use cases and security requirements.
 
 This document applies to AD FS and WAP in Windows Server 2012 R2 and Windows Server 2016 (preview).  These recommendations can be used whether the infrastructure is deployed in an on premises network or in a cloud hosted environment such as Microsoft Azure.

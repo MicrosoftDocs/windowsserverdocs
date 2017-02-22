@@ -1,16 +1,17 @@
 ---
 title: Remote Desktop client - supported configuration
+description: Learn which PCs you can access using Remote Desktop clients
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
+ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44 
 author: lizap
-manager: msswadhwa
+manager: dongill
+ms.author: elizapo
 ---
 
 # Remote Desktop client - supported configuration

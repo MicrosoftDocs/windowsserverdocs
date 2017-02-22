@@ -1,19 +1,20 @@
 ---
+ms.assetid: 96040a5f-629d-4fbd-8cce-52a4bd71cd2e
 title: Understanding Active Directory Domain Services (AD DS) Functional Levels
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: dbf0cdec-d72f-4ba3-bc7a-46410e02abb0
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Understanding Active Directory Domain Services (AD DS) Functional Levels
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels do not affect which operating systems you can run on workstations and member servers that are joined to the domain or forest.  
   

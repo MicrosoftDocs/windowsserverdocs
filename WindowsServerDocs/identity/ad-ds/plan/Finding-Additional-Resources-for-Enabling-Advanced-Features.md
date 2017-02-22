@@ -1,19 +1,20 @@
 ---
+ms.assetid: 3eb89320-d8b0-463f-b9e9-5a5b6e96e0b8
 title: Finding Additional Resources for Enabling Advanced Features
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 222dca4b-43d2-4df7-95cd-1791c31f0647
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Finding Additional Resources for Enabling Advanced Features
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can find the following documentation about Active Directory Domain Services (AD DS) in the  Windows Server 2008  Technical Library:  
   

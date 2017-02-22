@@ -1,33 +1,25 @@
 ---
-title: Windows Server 2016 Technical Preview Supported Networking Scenarios
-ms.custom: na
+title: Windows Server 2016 Supported Networking Scenarios
+description: This topic provides information about new supported Networking scenarios in Windows Server 2016
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-networking
-ms.tgt_pltfrm: na
+ms.technology: networking
 ms.topic: article
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
+ms.author: jamesmci
 author: jamesmci
 ---
-# Windows Server 2016 Technical Preview Supported Networking Scenarios
+# Windows Server 2016 Supported Networking Scenarios
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of  Windows Server 2016 Technical Preview.  
+This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.  
+>[!IMPORTANT]
+>For all production scenarios, use the latest signed hardware drivers from your original equipment manufacturer \(OEM\) or independent hardware vendor \(IHV\).
   
-This topic contains the following sections.  
-  
--   [Supported Networking Scenarios](#bkmk_supp)  
-  
--   [Unsupported Networking Scenarios](#bkmk_unsupp)  
-  
-> [!NOTE]  
-> Windows Server 2016 Technical Preview is an early release of Windows Server 2016, and some of the features and scenarios in this release are still in development. Do not deploy Technical Preview  in a production environment or lab. Features and functionality might differ in the final product.  
-  
-## <a name="bkmk_supp"></a>Supported Networking Scenarios  
-This section includes information about the supported networking scenarios for Windows Server 2016 Technical Preview, and includes the following scenario categories.  
+## <a name="bkmk_supp"></a>Supported Networking Scenarios
+
+This section includes information about the supported networking scenarios for Windows Server 2016, and includes the following scenario categories.  
   
 -   [Software Defined Networking (SDN) scenarios](#bkmk_sdn)  
   
@@ -37,17 +29,21 @@ This section includes information about the supported networking scenarios for W
   
 -   [IPAM scenarios with DHCP and DNS](#bkmk_ipam)  
   
--   [NIC Teaming scenarios](#bkmk_nicteam)  
+-   [NIC Teaming scenarios](#bkmk_nicteam)
+
+- [Switch Embedded Teaming \(SET\) scenarios](#bkmk_set)
   
-### <a name="bkmk_sdn"></a>Software Defined Networking (SDN) scenarios  
-You can use the following documentation to deploy SDN scenarios with Windows Server 2016 Technical Preview.  
+### <a name="bkmk_sdn"></a>Software Defined Networking (SDN) scenarios
+ 
+You can use the following documentation to deploy SDN scenarios with Windows Server 2016.  
   
   
 -   [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
   
-For more information, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
+For more information, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).  
   
-#### <a name="bkmk_netc"></a>Network Controller scenarios  
+#### <a name="bkmk_netc"></a>Network Controller scenarios
+
 The Network Controller scenarios allow you to:  
   
 -   Deploy and manage a multiple-node instance of Network Controller. For more information, see [Deploy Network Controller using Windows PowerShell](sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
@@ -81,8 +77,9 @@ The NFV scenarios allow you to:
   
 For more information, see [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
-### <a name="bkmk_netp"></a>Network Platform scenarios  
-For the scenarios in this section, the Windows Server Networking team currently recommends using the network adapter [Mellanox Connect-X 3 Pro](http://www.mellanoxstore.com/categories/adapters/infiniband-and-vpi-adapter-cards/connectx-3-pro.html) with the most recent drivers.  
+### <a name="bkmk_netp"></a>Network Platform scenarios
+
+For the scenarios in this section the Windows Server Networking team supports the use of any Windows Server 2016 certified driver. Please check with your network interface card \(NIC\) manufacturer to ensure you have the most recent driver updates.
   
 The network platform scenarios allow you to:  
   
@@ -94,7 +91,8 @@ The network platform scenarios allow you to:
   
 For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
-#### <a name="bkmk_switch"></a>Hyper-V Virtual Switch Scenarios  
+#### <a name="bkmk_switch"></a>Hyper-V Virtual Switch Scenarios
+
 The Hyper-V Virtual Switch scenarios allow you to:  
   
 -   Create a Hyper-V Virtual Switch with a Remote Direct Memory Access (RDMA) vNIC  
@@ -107,7 +105,8 @@ The Hyper-V Virtual Switch scenarios allow you to:
   
 For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
   
-### <a name="bkmk_dns"></a>DNS Server scenarios  
+### <a name="bkmk_dns"></a>DNS Server scenarios
+
 DNS Server scenarios allow you to:  
   
 -   Specify Geo-Location based traffic management using DNS Policies  
@@ -130,9 +129,10 @@ DNS Server scenarios allow you to:
   
 -   Configure support for Unknown Records in DNS  
   
-For more information, see the topics [What's New in DNS Client in Windows Server Technical Preview](dns/What-s-New-in-DNS-Client.md) and [What's New in DNS Server in Windows Server Technical Preview](dns/What-s-New-in-DNS-Server.md).  
+For more information, see the topics [What's New in DNS Client in Windows Server 2016](dns/What-s-New-in-DNS-Client.md) and [What's New in DNS Server in Windows Server 2016](dns/What-s-New-in-DNS-Server.md).  
   
-### <a name="bkmk_ipam"></a>IPAM scenarios with DHCP and DNS  
+### <a name="bkmk_ipam"></a>IPAM scenarios with DHCP and DNS
+
 The IPAM scenarios allow you to:  
   
 -   Discover and administer DNS and DHCP servers and IP addressing across multiple federated Active Directory forests  
@@ -145,7 +145,8 @@ The IPAM scenarios allow you to:
   
     For more information, see [Manage IPAM](technologies/ipam/Manage-IPAM.md).  
   
-### <a name="bkmk_nicteam"></a>NIC Teaming scenarios  
+### <a name="bkmk_nicteam"></a>NIC Teaming scenarios
+
 The NIC Teaming scenarios allow you to:  
   
 -   Create a NIC team in a supported configuration  
@@ -157,24 +158,20 @@ The NIC Teaming scenarios allow you to:
 -   Remove network adapters from the NIC team  
   
 > [!NOTE]  
-> In Windows Server 2016 Technical Preview 4, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
+> In Windows Server 2016, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`  
+
+For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md). 
+
+### <a name="bkmk_set"></a>Switch Embedded Teaming \(SET\) scenarios
+
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. 
+
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)
   
-The following NIC Teaming scenarios are not supported in Windows Server 2016 Technical Preview 4.  
-  
--   Creating a NIC team with a VLAN on the NIC team interface.  
-  
--   You can rename a NIC Team, however doing so might cause the statistics panel in the user interface to freeze.  In this circumstance you cannot perform additional management actions, but the NIC team still functions correctly.  
-  
--   Unsupported configuration detection, including the detection of vNICs, kdNICs, tNICs, or bridges in a NIC team. Because unsupported configurations are not detected, they are not blocked by NIC Teaming and might cause unstable systems or complete system failures.  
-  
--   Using NIC Teaming in the Cisco N1K extension does not work.  (The Windows PowerShell NetSwitchTeam cmdlets do not function correctly, and the extension relies on these commands.)  
-  
--   Windows PowerShell error messages for NIC Teaming might be unintelligible. In addition, the `-WhatIf` and `-PassThrough` options for Windows PowerShell NIC Teaming commands do not function correctly.  
-  
-For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md).  
+ 
   
 ## <a name="bkmk_unsupp"></a>Unsupported Networking Scenarios  
-The following networking scenarios are not supported in Windows Server 2016 Technical Preview 3.  
+The following networking scenarios are not supported in Windows Server 2016.  
   
 -   VLAN-based tenant virtual networks.  
   

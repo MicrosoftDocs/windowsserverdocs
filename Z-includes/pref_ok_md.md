@@ -1,1 +1,0 @@
-Click **OK**. The new preference item appears in the results pane.

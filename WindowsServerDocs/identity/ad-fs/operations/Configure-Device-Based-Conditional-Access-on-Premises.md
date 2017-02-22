@@ -1,21 +1,25 @@
 ---
+ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-Premises
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/20/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 
-# Configure On-Premises Conditional Access using registered devices (TP5)  
+# Configure On-Premises Conditional Access using registered devices
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2  
 
 The following document will guide you through installing and configuring on-premises conditional access with registered devices.
 
-![](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
+![conditional access](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
 ## Infrastructure per-requisites
 The following per-requisites are required before you can begin with on-premises conditional access. 

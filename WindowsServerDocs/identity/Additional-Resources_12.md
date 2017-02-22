@@ -1,24 +1,25 @@
 ---
+ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources_12
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: 
 ms.suite: na
-ms.technology: active-directory-domain-services
+ms.technology: identity-adds
 ms.tgt_pltfrm: na
-ms.assetid: 16b28028-e0f9-483b-bf2a-3c2f43f0e462
 author: Femila
 ms.date: "06/24/2016"
 appliesto:  Windows Server Technical Preview
 description:
 manager: femila
+ms.author:  femila
 ---
 # Additional Resources_12
 
 >Applies To: Windows Server Technical Preview
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>For detailed information about using Repadmin.exe to manage Active Directory replication, see the following resource:</para>

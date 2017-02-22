@@ -1,18 +1,23 @@
 ---
 title: Connect Containers to a Virtual Network
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: ravirao
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
+ms.author: jamesmci 
 author: jmesser81
 ---
 
 # Connect container endpoints to a tenant virtual network
+
+>Applies To: Windows Server 2016
+
 This topic shows you how to connect container endpoints to an existing tenant virtual network created through the Microsoft Software Defined Networking (SDN) stack. We will use the *l2bridge* (and optionally *l2tunnel*) network driver available with the Windows libnetwork plugin for Docker to create a container network on the container host (tenant) virtual machine.
 
 As documented in the [Container Networking](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/management/container_networking) topic on MSDN, multiple network drivers are available through Docker on Windows. The drivers most suitable for SDN are *l2bridge* and *l2tunnel*. For both drivers, each container endpoint is in the same virtual subnet as the container host (tenant) virtual machine. The IP addresses for container endpoints are assigned dynamically by the Host Networking Service (HNS) through the private cloud plugin. The container endpoints have unique IP addresses but share the same MAC address of the container host (tenant) virtual machine due to Layer-2 address translation. Network policy (for example: ACLs, encapsulation, and QoS) for these container endpoints are enforced in the physical Hyper-V host as received by the Network Controller and defined in upper-layer management systems. There is a slight difference between the *l2bridge* and *l2tunnel* drivers which is explained below.
@@ -27,7 +32,16 @@ As documented in the [Container Networking](https://msdn.microsoft.com/en-us/vir
 ## Prerequistes
  * An SDN infrastructure with the Network Controller has been deployed
  * A tenant virtual network has been created
- * A tenant virtual machine has been deployed with the Windows Container feature enabled and Docker installed
+ * A tenant virtual machine has been deployed with the Windows Container feature enabled, Docker installed, and Hyper-V feature enabled
+
+>[!Note]
+>[Nested virtualization](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/nesting) and exposing virtualization extensions is not required unless using Hyper-V Containers
+>The HyperV feature is required to install several binaries for l2bridge and l2tunnel networks
+
+```powershell
+# To install HyperV feature without checks for nested virtualization
+dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V /All 
+```
 
  
 

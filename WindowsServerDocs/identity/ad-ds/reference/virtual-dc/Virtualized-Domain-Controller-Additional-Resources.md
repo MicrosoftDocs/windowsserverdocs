@@ -1,21 +1,20 @@
 ---
+ms.assetid: 47a7cede-f94a-4233-872b-fa65a5b9d8f1
 title: Virtualized Domain Controller Additional Resources
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: af60b60f-5bc9-4ca5-aae7-edc90090e6cd
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Virtualized Domain Controller Additional Resources
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 -   [AD DS Virtualization (Cloning and Virtualization safe improvements)](http://go.microsoft.com/fwlink/p/?LinkID=238316)  

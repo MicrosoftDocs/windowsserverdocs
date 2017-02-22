@@ -1,15 +1,16 @@
 ---
 title: Enable or Disable Disk Protection
+description: Learn how to use disk protection with MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 00aba4c4-0244-4b39-8c85-c46fd96e1d6a
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Enable or Disable Disk Protection

@@ -1,15 +1,16 @@
 ---
 title: Switch Between Modes
+description: Learn how to switch between station and console mode in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f1b2324-c1b0-4b61-ab51-39af15e7792a
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

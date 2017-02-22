@@ -1,13 +1,15 @@
 ---
+ms.assetid: e2c940f5-4b1f-457a-bc71-dcced0c752f7
 title: AD FS Technical Reference
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 # AD FS Technical Reference
 

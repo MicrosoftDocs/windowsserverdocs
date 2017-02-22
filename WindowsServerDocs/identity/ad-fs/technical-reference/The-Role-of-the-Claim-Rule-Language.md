@@ -1,13 +1,15 @@
 ---
+ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 title: The Role of the Claim Rule Language
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/08/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -86,7 +88,7 @@ Custom rules are processed based on the issuance statements \(*issue* or *add*\)
   
 For example, in the following illustration, the incoming claim is added to the input claim set by the claims issuance engine. When the first custom claim rule executes and the criteria of domain\\user is satisfied, the claims issuance engine processes the logic in the rule using the add statement, and the value of **Editor** is added to the input claim set. Because the value of Editor is present in the input claim set, Rule 2 can successfully process the issue statement in its logic and generate a new value of **Hello**, which is added to both the output claim set and to the input claim set for use by the next rule in the rule set. Rule 3 can now use all of the values that are present in the input claim set as input for processing its logic.  
   
-![](media/adfs2_customrule.gif)  
+![AD FS roles](media/adfs2_customrule.gif)  
   
 #### Claim issuance actions  
 The rule body represents a claim issuance action. There are two claim issuance actions that the language recognizes:  

@@ -1,24 +1,21 @@
 ---
 title: Set up hosts for live migration without Failover Clustering
-description: " "
+description: "Gives instructions for setting up live migration in a non-clustered environment"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 author: KBDAzure
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 9/30/2016
 ---
 # Set up hosts for live migration without Failover Clustering
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-**This is preliminary content and subject to change.**  
 This article shows you how to set up hosts that aren't clustered so you can do live migrations between them. Use these instructions if you didn't set up live migration when you installed Hyper-V, or if you want to change the settings. To set up clustered hosts, use tools for Failover Clustering.  
   
 ## Requirements for setting up live migration  
@@ -27,11 +24,10 @@ To set up non-clustered hosts for live migration, you'll need:
   
 -  A user account with permission to perform the various steps. Membership in the local Hyper-V Administrators group or the Administrators group on both the source and destination computers meets this requirement, unless you're configuring constrained delegation. Membership in the Domain Administrators group is required to configure constrained delegation.  
   
-- The Hyper-V role in Windows Server 2016 Technical Preview installed on the source and destination servers. For instructions, see [Install the Hyper-V role on Windows Server Technical Preview](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
+- The Hyper-V role in Windows Server 2016 or Windows Server 2012 R2 installed on the source and destination servers. You can do a live migration between hosts running Windows Server 2016 and Windows Server 2012 R2 if the virtual machine is at least version 5. <br>For version upgrade instructions, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). For installation instructions, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
   
-- Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.  
-  
-- The Hyper-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run the tools from the server.  
+- Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.    
+- The Hyper-V management tools installed on a computer running Windows Server 2016 or Windows 10, unless the tools are installed on the source or destination server and you'll run the tools from the server.  
   
 ## Consider options for authentication and networking  
   
@@ -63,7 +59,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
   
 4.  From **Properties**, click the **Delegation** tab.  
   
-5.  On the delegation tab, select **Trust this computer for delegation to the specified services only** and then select **Use Kerberos only**.  
+5.  On the delegation tab, select **Trust this computer for delegation to the specified services only** and then select **Use any authentication protocol**.  
   
 6.  Click **Add**.  
   

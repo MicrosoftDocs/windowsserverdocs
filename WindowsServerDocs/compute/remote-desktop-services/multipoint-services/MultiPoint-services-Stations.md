@@ -1,9 +1,10 @@
 ---
 title: MultiPoint Stations
+description: Learn about stations in MultiPoint Services, including the different options for users
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -75,7 +76,7 @@ From a deployment and administration perspective, the following differences exis
   
 -   No split-screen functionality.  
   
-    For more information, see [Split-screen Stations](#split--screen-stations) later in this topic  
+    For more information, see [Split-screen Stations](#a-namebkmksplitscreenstationsasplit-screen-stations) later in this topic  
   
 -   No station rename or configuring automatic logon through the MultiPoint Manager console  
   

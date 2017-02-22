@@ -1,19 +1,22 @@
 ---
 title: Set Access Scope for DNS Resource Records
+description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
+ms.author: jamesmci
 author: jamesmci
 ---
 # Set Access Scope for DNS Resource Records
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic to set the access scope for a DNS resource records by using the IPAM client console.  
   
@@ -27,15 +30,15 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 3.  In the display pane, locate and select the resource records whose access scope you want to change.  
   
-    ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_02.jpg)  
+    ![Select the resource records](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_02.jpg)  
   
 4.  Right-click the selected DNS resource records, and then click **Set Access Scope**.  
   
-    ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_03.jpg)  
+    ![Set Access Scope](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_03.jpg)  
   
 5.  The **Set Access Scope** dialog box opens. If required for your deployment, click to deselect **Inherit access scope from parent**. In **Select the access scope**, select an item, and then click **OK**.  
   
-    ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_04.jpg)  
+    ![Select the access scope](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_04.jpg)  
   
 ## See Also  
 [Role-based Access Control](Role-based-Access-Control.md)  

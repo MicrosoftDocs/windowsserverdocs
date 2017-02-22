@@ -1,15 +1,16 @@
 ---
 title: End a User Session
+description: Learn when and how to manually end a user's session in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # End a User Session

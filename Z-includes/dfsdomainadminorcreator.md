@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">To perform this procedure, you must be a member of the Domain Admins group in Active Directory, or you must have been delegated the ability to manage an existing replication group. If you are the creator of the replication group, you can also perform this procedure.</Token>

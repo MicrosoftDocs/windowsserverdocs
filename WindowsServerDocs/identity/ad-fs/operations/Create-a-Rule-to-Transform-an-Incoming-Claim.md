@@ -1,14 +1,16 @@
 ---
+ms.assetid: ef83960f-d2cf-441f-b2b6-d97822ec7149
 title: Create a Rule to Transform an Incoming Claim
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/23/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
-ms.author: billmath
+
+ms.technology: identity-adfs
+
 ---
 
 
@@ -27,16 +29,16 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
   
 4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
 
 6.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule. In **Incoming claim type**, select a claim type in the list. In **Outgoing claim type**, select a claim type in the list, and then select one of the following options, which depends on the requirements of your organization:  
   
@@ -45,7 +47,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)   
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)   
 
 7.  Click the **Finish** button.  
   
@@ -61,16 +63,16 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
   
 4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
 
 6.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule. In **Incoming claim type**, select a claim type in the list. In **Outgoing claim type**, select a claim type in the list, and then select one of the following options, which depends on the requirements of your organization:  
   
@@ -79,7 +81,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)       
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform4.PNG)       
 
 7.  Click the **Finish** button.  
   
@@ -97,7 +99,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.  
-![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
+![create rule](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
   
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, which depends on the trust that you are editing and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
@@ -108,10 +110,10 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
   
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)   
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)   
 
 6.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule. In **Incoming claim type**, select a claim type in the list. In **Outgoing claim type**, select a claim type in the list, and then select one of the following options, which depends on the requirements of your organization:  
   
@@ -120,7 +122,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Replace an incoming claim value with a different outgoing claim value**  
   
     -   **Replace incoming e\-mail suffix claims with a new e\-mail suffix**  
-![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform2.PNG)  
+![create rule](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform2.PNG)  
 
 > [!NOTE]  
 > If you are setting up the Dynamic Access Control scenario that uses AD FS\-issued claims, first create a transform rule on the claims provider trust, and in **Incoming claim type**, type the name for the incoming claim, or, if a claim description was previously created, select it from the list. Second, in **Outgoing claim type**, select the claim URL that you want, and then create a transform rule on the relying party trust to issue the device claim.  

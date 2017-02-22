@@ -1,33 +1,36 @@
 ---
 title: Deploy Remote Access in an Enterprise
+description: This topic provides an introduction to the DirectAccess scenario in Windows Server 2016 for the Enterprise.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Deploy Remote Access in an Enterprise
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.  
   
   
 > [!IMPORTANT]  
-> To deploy DirectAccess using this guide, you must use a DirectAccess server that is running Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012.  
+> To deploy DirectAccess using this guide, you must use a DirectAccess server that is running  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.  
   
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites  
   
--   [Remote Access (DirectAccess) Unsupported Configurations](assetId:///8442e8cf-3019-45c5-8d51-0783c1425ccc)  
+-   [DirectAccess Unsupported Configurations](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
   
--   [Remote Access (DirectAccess) Known Issues](assetId:///c72d760c-ebbb-4aaf-98e6-43df7790ba60)  
+-   [DirectAccess Known Issues](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
   
--   [Remote Access (DirectAccess) Prerequisites](assetId:///3b50db40-a079-479c-aa80-b68920bbac34)  
+-   [Prerequisites for Deploying DirectAccess) Prerequisites](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/prerequisites-for-deploying-directaccess)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 Remote access includes a number of enterprise features, including deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing (NLB) or an external load balancer, setting up a multisite deployment with Remote Access servers situated in dispersed geographical locations, and deploying DirectAccess with two-factor client authentication using a one-time password (OTP).  
@@ -35,15 +38,13 @@ Remote access includes a number of enterprise features, including deploying mult
 ## In this scenario  
 Each enterprise scenario is described in a document that includes planning and deployment instructions. For more information, see:  
   
--   [Deploy Remote Access in a cluster](assetId:///4b1a4b82-173b-4b0b-8974-4b35c30137f2)  
+-   [Deploy Remote Access in a cluster](cluster/Deploy-Remote-Access-In-Cluster.md)  
   
--   [Deploying multisite Remote Access](assetId:///a9249820-3563-499c-9da6-143ede2a1eb7)  
+-   [Deploy Multiple Remote Access Servers in a Multisite Deployment](multisite/Deploy-Multiple-Remote-Access-Servers-in-a-Multisite-Deployment.md)  
   
--   [Deploying Remote Access with OTP authentication overview](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001)  
+-   [Deploy Remote Access with OTP Authentication](otp/Deploy-RA-OTP.md)  
   
--   [Deploy Remote Access in a multi-forest environment](assetId:///8c5ccb3c-4676-451b-b2b9-d597ea0eee12)  
-  
--   [Deploy Remote Access with Network Access Protection  [paved over]](assetId:///f4c8e008-2ebb-4fef-9c4c-dbdb9aa6c03b)  
+-   [Deploy Remote Access in a Multi-Forest Environment](multi-forest/Deploy-Remote-Access-in-a-Multi-Forest-Environment.md)  
   
 ## <a name="BKMK_APP"></a>Practical applications  
 Remote access enterprise scenarios provide the following:  
@@ -60,22 +61,12 @@ Remote access enterprise scenarios provide the following:
 The following table lists the roles and features used in the enterprise scenario.  
   
 |Role/feature|How it supports this scenario|  
-|-----------------|---------------------------------|  
+|---------|-----------------|  
 |Remote Access server role|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server features:<br /><br />-   Internet Information Services (IIS) - This feature is required to configure the network location server and default web probe.<br />-   Group Policy Management Console feature - feature is required by DirectAccess to create and manage the Group Policy Objects (GPOs) in Active Directory and must be installed as a required feature for the server role.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />1.  Remote Access GUI and Command Line Tools<br />2.  Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />1.  Group Policy Management Console<br />2.  RAS Connection Manager Administration Kit (CMAK)<br />3.  Windows PowerShell 3.0<br />4.  Graphical Management Tools and Infrastructure|  
 |Windows NLB|This feature allows the load balancing of multiple Remote Access servers.|  
   
-## <a name="BKMK_LINKS"></a>See also  
-The following table provides links to additional resources.  
-  
-|Content type|References|  
-|----------------|--------------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb530961.aspx)|  
-|**Product evaluation**|[Demonstrate DirectAccess in a cluster with NLB](http://technet.microsoft.com/library/hh831830.aspx)<br /><br />[Demonstrate a DirectAccess multisite deployment](http://technet.microsoft.com/library/hh831461.aspx)<br /><br />[Demonstrate a DirectAccess multisite deployment](http://technet.microsoft.com/library/hh831461.aspx)|  
-|**Deployment**|[Deploy a Single DirectAccess Server using the Getting Started Wizard](assetId:///54836224-0df4-4b69-914d-dce6599f995b)<br /><br />[Deploy a Single DirectAccess Server with Advanced Settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
-|**Community resources**|[RRAS Product Team blog](http://blogs.technet.com/RRAS/) &#124; [Remote Access  TechNet Forum](http://social.technet.microsoft.com/Forums/RRAS/threads)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](ttp://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+
   
 
 

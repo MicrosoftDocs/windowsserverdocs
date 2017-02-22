@@ -1,19 +1,21 @@
 ---
 title: RAS Gateway Deployment Architecture
+description: You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway in Windows Server 2016, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
+ms.author: jamesmci
 author: jamesmci
 ---
 # RAS Gateway Deployment Architecture
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.  
   
@@ -44,7 +46,7 @@ The Border Gateway Protocol (BGP) Route Reflector capability  is now included wi
 For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md).  
   
 ### <a name="bkmk_pools"></a>Gateway Pools  
-In Windows Server 2016 Technical Preview, you can create many gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks.  
+In  Windows Server 2016, you can create many gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks.  
   
 For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
@@ -61,7 +63,7 @@ For more information, see [What's New in RAS Gateway](../../../sdn/technologies/
 ## <a name="bkmk_example"></a>Example Deployment  
 The following illustration provides an example with eBGP peering over site-to-site VPN connections configured between two tenants, Contoso and Woodgrove, and the Fabrikam CSP datacenter.  
   
-![](../../../media/RAS-Gateway-Deployment-Architecture/ras_gateway_architecture.png)  
+![eBGP peering over site-to-site VPN](../../../media/RAS-Gateway-Deployment-Architecture/ras_gateway_architecture.png)  
   
 In this example, Contoso requires additional gateway bandwidth, leading to the gateway infrastructure design decision to terminate the Contoso Los Angeles site on GW3 instead of GW2. Because of this, Contoso VPN connections from different sites terminate in the CSP datacenter on two different gateways.  
   

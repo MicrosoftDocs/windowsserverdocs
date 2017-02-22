@@ -1,20 +1,20 @@
 ---
+ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time Service Tools and Settings
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: b43a025f-cce2-4c82-b3ea-3b95d482db3a
-author: femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Windows Time Service Tools and Settings
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
   
@@ -41,7 +41,7 @@ Also, on older computers that run Windows XP or earlier, the command Net time /q
 Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](http://go.microsoft.com/fwlink/?LinkId=117753) (http://go.microsoft.com/fwlink/?LinkId=117753). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
   
 > [!IMPORTANT]  
-> The W32Time service is not a full-featured NTP solution that meets time-sensitive application needs and is not supported by Microsoft as such. For more information, see Microsoft Knowledge Base article 939322, [Support boundary to configure the Windows Time service for high-accuracy environments](http://go.microsoft.com/fwlink/?LinkID=179459) (http://go.microsoft.com/fwlink/?LinkID=179459).  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](Windows-2016-Accurate-Time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](http://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
   
 ## <a name="w2k3tr_times_tools_dyax"></a>Windows Time Service Tools  
 The following tools are associated with the Windows Time service.  

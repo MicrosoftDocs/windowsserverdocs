@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Review the details in "Additional considerations" in this topic.</Token>

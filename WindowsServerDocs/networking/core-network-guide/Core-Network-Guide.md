@@ -1,24 +1,22 @@
 ---
 title: Core Network Guide
-ms.custom: na
+description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-networking
-ms.tgt_pltfrm: na
+ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
+ms.author: jamesmci
 author: jamesmci
 ---
 # Core Network Guide
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
 > [!NOTE]
-> This guide is available for download in Microsoft Word format from TechNet Gallery. For more information, see [Core Network Guide for Windows Server 2016 Technical Preview](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
+> This guide is available for download in Microsoft Word format from TechNet Gallery. For more information, see [Core Network Guide for  Windows Server 2016](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
 
 This guide contains the following sections.
 
@@ -55,7 +53,7 @@ A Windows Server core network provides you with many benefits, including the fol
 
 -   A user and computer account database. The directory service provides a centralized user accounts database that allows you to create user and computer accounts for people and computers that are authorized to connect to your network and access network resources, such as applications, databases, shared files and folders, and printers.
 
-A core network also allows you to scale your network as your organization grows and IT requirements change. For example, with a core network you can add domains, IP subnets, remote access services, wireless services, and other features and server roles provided by Windows Server 2016 Technical Preview.
+A core network also allows you to scale your network as your organization grows and IT requirements change. For example, with a core network you can add domains, IP subnets, remote access services, wireless services, and other features and server roles provided by  Windows Server 2016.
 
 ### Network hardware requirements
 To successfully deploy a core network, you must deploy network hardware, including the following:
@@ -101,7 +99,7 @@ DHCP allows you to use a DHCP server to dynamically assign an IP address to a co
 For TCP/IP-based networks, DHCP reduces the complexity and amount of administrative work involved in reconfiguring computers.
 
 ### TCP/IP
-TCP/IP in Windows Server 2016 Technical Preview is the following:
+TCP/IP in  Windows Server 2016 is the following:
 
 -   Networking software based on industry-standard networking protocols.
 
@@ -115,7 +113,7 @@ TCP/IP in Windows Server 2016 Technical Preview is the following:
 
 TCP/IP provides basic TCP/IP utilities that enable Windows-based computers to connect and share information with other Microsoft and non-Microsoft systems, including:
 
--   Windows Server 2016 Technical Preview
+-    Windows Server 2016
 
 -   Windows 10
 
@@ -152,7 +150,7 @@ TCP/IP provides basic TCP/IP utilities that enable Windows-based computers to co
 ## <a name="BKMK_overview"></a>Core Network Overview
 The following illustration shows the Windows Server Core Network topology.
 
-![](../media/Core-Network-Guide/cng16_overview.jpg)
+![Windows Server Core Network topology](../media/Core-Network-Guide/cng16_overview.jpg)
 
 > [!NOTE]
 > This guide also includes instructions for adding optional Network Policy Server (NPS) and Web Server (IIS) servers to your network topology to provide the foundation for secure network access solutions, such as 802.1X wired and wireless deployments that you can implement using Core Network Companion guides. For more information, see [Deploying optional features for network access authentication and Web services](#BKMK_optionalfeatures).
@@ -268,19 +266,19 @@ Forest functionality enables features across all the domains in your forest. The
 
 -    Windows Server 2012 R2 . This forest functional level supports  Windows Server 2012 R2  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
--   Windows Server 2016 Technical Preview. This forest functional level supports only Windows Server 2016 Technical Preview domain controllers and domain controllers that are running later versions of the Windows Server operating system.
+-    Windows Server 2016. This forest functional level supports only  Windows Server 2016 domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
-If you are deploying a new domain in a new forest and all of your domain controllers will be running Windows Server 2016 Technical Preview, it is recommended that you configure AD DS with the Windows Server 2016 Technical Preview forest functional level during AD DS installation.
+If you are deploying a new domain in a new forest and all of your domain controllers will be running  Windows Server 2016, it is recommended that you configure AD DS with the  Windows Server 2016 forest functional level during AD DS installation.
 
 > [!IMPORTANT]
-> After the forest functional level is raised, domain controllers that are running earlier operating systems cannot be introduced into the forest. For example, if you raise the forest functional level to Windows Server 2016 Technical Preview, domain controllers running  Windows Server 2012 R2  or  Windows Server 2008  cannot be added to the forest.
+> After the forest functional level is raised, domain controllers that are running earlier operating systems cannot be introduced into the forest. For example, if you raise the forest functional level to  Windows Server 2016, domain controllers running  Windows Server 2012 R2  or  Windows Server 2008  cannot be added to the forest.
 
 Example configuration items for AD DS are provided in the following table.
 
 |Configuration items:|Example values:|
 |------------------------|-------------------|
 |Full DNS name|Examples:<br /><br />-   corp.contoso.com<br />-   example.com|
-|Forest functional level|-    Windows Server 2008 <br />-    Windows Server 2008 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2012 R2 <br />-   Windows Server 2016 Technical Preview|
+|Forest functional level|-    Windows Server 2008 <br />-    Windows Server 2008 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2012 R2 <br />-    Windows Server 2016|
 |Active Directory Domain Services Database folder location|E:\Configuration\\<br /><br />Or accept the default location.|
 |Active Directory Domain Services Log files folder location|E:\Configuration\\<br /><br />Or accept the default location.|
 |Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<br /><br />Or accept the default location|
@@ -451,7 +449,7 @@ You can use the procedure in this section to change the name of a computer. Rena
 >
 > `Restart-Computer`
 
-###### To rename computers running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012
+###### To rename computers running Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
 1.  In Server Manager, click **Local Server**. The computer **Properties** are displayed in the details pane.
 
@@ -465,7 +463,7 @@ You can use the procedure in this section to change the name of a computer. Rena
 > For information on how to rename computers that are running other Microsoft operating systems, see [Appendix A - Renaming computers](#BKMK_A).
 
 #### <a name="BKMK_ip"></a>Configure a static IP address
-You can use the procedures in this topic to configure the Internet Protocol version 4 (IPv4) properties of a network connection with a static IP address for computers running Windows Server 2016 Technical Preview.
+You can use the procedures in this topic to configure the Internet Protocol version 4 (IPv4) properties of a network connection with a static IP address for computers running  Windows Server 2016.
 
 > [!NOTE]
 > To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlets on separate lines, and then press ENTER. You must also replace interface names and IP addresses in this example with the values that you want to use to configure your computer.
@@ -474,7 +472,7 @@ You can use the procedures in this topic to configure the Internet Protocol vers
 >
 > `Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 127.0.0.1`
 
-###### To configure a static IP address on  computers running Windows Server 2016 Technical Preview, Windows Server 2012 R2 , and  Windows Server 2012
+###### To configure a static IP address on computers running Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
 1.  In the task bar, right-click the Network icon, and then click **Open Network and Sharing Center**.
 
@@ -704,7 +702,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 >
 > `Restart-Computer`
 
-###### To join computers running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  to the domain
+###### To join computers running  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  to the domain
 
 1.  In Server Manager, click **Local Server**. In the details pane, click **WORKGROUP**. The **System Properties** dialog box opens.
 
@@ -723,7 +721,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 > [!NOTE]
 > For information on how to join computers that are running other Microsoft operating systems to the domain, see [Appendix C - Joining computers to the domain](#BKMK_C).
 
-###### To log on to the domain using computers running Windows Server 2016 Technical Preview
+###### To log on to the domain using computers running Windows Server 2016
 
 1.  Log off the computer, or restart the computer.
 
@@ -933,7 +931,7 @@ If you intend to deploy network access servers, such as wireless access points o
 
 The following illustration shows the Windows Server Core Network topology with added NPS and Web servers.
 
-![](../media/Core-Network-Guide/cng16_overview_2.jpg)
+![Windows Server Core Network topology with added NPS and Web servers](../media/Core-Network-Guide/cng16_overview_2.jpg)
 
 The following sections provide information on adding NPS and Web servers to your network.
 
@@ -944,13 +942,12 @@ The following sections provide information on adding NPS and Web servers to your
 #### <a name="BKMK_deployNPS1"></a>Deploying NPS1
 The Network Policy Server (NPS) server is installed as a preparatory step for deploying other network access technologies, such as virtual private network (VPN) servers, wireless access points, and 802.1X authenticating switches.
 
-Network Policy Server (NPS) allows you to centrally configure and manage network policies with the following three features: Remote Authentication Dial-In User Service (RADIUS) server, RADIUS proxy, and Network Access Protection (NAP) policy server.
+Network Policy Server (NPS) allows you to centrally configure and manage network policies with the following features: Remote Authentication Dial-In User Service (RADIUS) server and RADIUS proxy.
 
 NPS is an optional component of a core network, but you should install NPS if any of the following are true:
 
--   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
+-   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012,  Windows Server 2008 R2 or Windows Server 2008 and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
 
--   You plan to deploy NAP.
 
 -   You plan to deploy 802.1X authentication for wired or wireless  access.
 
@@ -978,15 +975,15 @@ When you use NPS as a Remote Authentication Dial-In User Service (RADIUS) server
 
 Following are key planning steps before installing NPS.
 
--   Plan the user accounts database. By default, if you join the server running NPS to an Active Directory domain, NPS performs authentication and authorization using the AD DS user accounts database. In some cases, such as with large networks that use NPS as a RADIUS proxy to forward connection requests to other RADIUS servers, you might want to install NPS on a non-domain member computer.
+- Plan the user accounts database. By default, if you join the server running NPS to an Active Directory domain, NPS performs authentication and authorization using the AD DS user accounts database. In some cases, such as with large networks that use NPS as a RADIUS proxy to forward connection requests to other RADIUS servers, you might want to install NPS on a non-domain member computer.
 
--   Plan RADIUS accounting. NPS allows you to log accounting data to a SQL Server database or to a text file on the local computer. If you want to use SQL Server logging, plan the installation and configuration of your server running SQL Server.
+- Plan RADIUS accounting. NPS allows you to log accounting data to a SQL Server database or to a text file on the local computer. If you want to use SQL Server logging, plan the installation and configuration of your server running SQL Server.
 
 ##### <a name="BKMK_installNPS"></a>Install Network Policy Server (NPS)
 You can use this procedure to install Network Policy Server (NPS) by using the Add Roles and Features Wizard. NPS is a role service of the Network Policy and Access Services server role.
 
 > [!NOTE]
-> By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 (IPv6) and IPv4 traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
+> By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If Windows Firewall with Advanced Security is enabled when you install NPS, firewall exceptions for these ports are automatically created during the installation process for both Internet Protocol version 6 \(IPv6\) and IPv4 traffic. If your network access servers are configured to send RADIUS traffic over ports other than these defaults, remove the exceptions created in Windows Firewall with Advanced Security during NPS installation, and create exceptions for the ports that you do use for RADIUS traffic.
 
 **Administrative Credentials**
 
@@ -1010,7 +1007,7 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 
 4.  In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Click **Next**.
 
-5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**, and then click **Next**
+5.  In **Select Server Roles**, in **Roles**, select **Network Policy and Access Services**. A dialog box opens asking if it should add features that are required for Network Policy and Access Services. Click **Add Features**, and then click **Next**.
 
 6.  In **Select features**, click **Next**, and in **Network Policy and Access Services**, review the information that is provided, and then click **Next**.
 
@@ -1040,8 +1037,10 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
 
 3.  In **Network Policy Server**, click **OK**, and then click **OK** again.
 
+For more information about Network Policy Server, see [Network Policy Server (NPS)](../technologies/nps/nps-top.md).
+
 #### <a name="BKMK_IIS"></a>Deploying WEB1
-The Web Server (IIS) role in Windows Server 2016 Technical Preview provides a secure, easy-to-manage, modular and extensible platform for reliably hosting web sites, services, and applications. With Internet Information Services (IIS), you can share information with users on the Internet, an intranet, or an extranet. IIS  is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).
+The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-manage, modular and extensible platform for reliably hosting web sites, services, and applications. With Internet Information Services (IIS), you can share information with users on the Internet, an intranet, or an extranet. IIS  is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).
 
 In addition to allowing you to publish a CRL for access by domain member computers, the Web Server (IIS) server role allows you to set up and manage multiple web sites, web applications, and FTP sites. IIS also provides the following benefits:
 
@@ -1091,9 +1090,9 @@ To complete this procedure, you must be a member of the **Administrators** group
 ## <a name="BKMK_resources"></a>Additional Technical Resources
 For more information about the technologies in this guide, see the following resources:
 
-Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
+ Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/en-us/library/mt163897.aspx)
+-   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/en-us/library/mt163897.aspx)
 
 -   [Active Directory Domain Services overview](http://technet.microsoft.com/library/hh831484.aspx) at http://technet.microsoft.com/library/hh831484.aspx.
 
@@ -1108,7 +1107,7 @@ Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , and  Windows Se
 -   [Web Server (IIS) overview](http://technet.microsoft.com/library/hh831725.aspx) at http://technet.microsoft.com/library/hh831725.aspx.
 
 ## <a name="BKMK_appendix"></a>Appendices A through E
-The following sections contain additional configuration information for computers that are running operating systems other than Windows Server 2016 Technical Preview, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
+The following sections contain additional configuration information for computers that are running operating systems other than  Windows Server 2016, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
 
 1.  [Appendix A - Renaming computers](#BKMK_A)
 

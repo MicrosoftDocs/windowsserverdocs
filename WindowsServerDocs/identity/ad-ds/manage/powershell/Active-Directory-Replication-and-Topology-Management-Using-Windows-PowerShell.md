@@ -1,21 +1,20 @@
 ---
+ms.assetid: 853b7f02-bc69-416e-87b1-556f51cb2cea
 title: Active Directory Replication and Topology Management Using Windows PowerShell
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: ec220c1e-7756-4fc8-93a8-37c78792560c
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Active Directory Replication and Topology Management Using Windows PowerShell
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell for Active Directory now includes support for replication and topology management. The following topics provide an introduction and additional details:  
   

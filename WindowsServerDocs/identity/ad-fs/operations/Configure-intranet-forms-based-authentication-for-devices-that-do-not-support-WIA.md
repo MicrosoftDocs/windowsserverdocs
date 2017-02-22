@@ -1,13 +1,15 @@
 ---
+ms.assetid: d562ef46-f240-48be-bbd4-fd88fc6bbbdc
 title: Configuring intranet forms-based authentication for devices that do not support WIA
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/22/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 # Configuring intranet forms-based authentication for devices that do not support WIA
@@ -57,7 +59,7 @@ Set-AdfsProperties -WIASupportedAgents ((Get-ADFSProperties | Select -ExpandProp
 - Confirm that the user agent string for Chrome is now set in the AD FS properties
 Get-AdfsProperties | Select -ExpandProperty WIASupportedUserAgents
 
-![](media/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA/chrome1.png) 
+![configure auth](media/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA/chrome1.png) 
 
 >[!NOTE]   
 > As new browsers and devices are released, it is recommended that you reconcile the capabilities of those user agents and update the AD FS configuration accordingly to optimize the user’s authentication experience when using said browser and devices. More specifically, it is recommended that you re-evaluate the **WIASupportedUserAgents** setting in AD FS when adding a new device or browser type to your support matrix for WIA.

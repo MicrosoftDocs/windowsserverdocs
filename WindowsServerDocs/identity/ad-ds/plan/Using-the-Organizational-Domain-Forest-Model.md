@@ -1,25 +1,26 @@
 ---
+ms.assetid: 093ef1ae-ebc1-490f-9fb1-2c000ce89eb6
 title: Using the Organizational Domain Forest Model
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 045bee3a-e1d3-4f33-a758-2122aba3ca53
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Using the Organizational Domain Forest Model
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In the organizational domain forest model, several autonomous groups each own a domain within a forest. Each group controls domain-level service administration, which enables them to manage certain aspects of service management autonomously while the forest owner controls forest-level service management.  
   
 The following illustration shows an organizational domain forest model.  
   
-![](../../media/Using-the-Organizational-Domain-Forest-Model/c50a3c6a-b0e4-43ec-ad62-f05d05f0bbd2.gif)  
+![using the org domain forest model](../../media/Using-the-Organizational-Domain-Forest-Model/c50a3c6a-b0e4-43ec-ad62-f05d05f0bbd2.gif)  
   
 ## Domain-level service autonomy  
 The organizational domain forest model enables the delegation of authority for domain-level service management. The following table lists the types of service management that can be controlled at the domain level.  

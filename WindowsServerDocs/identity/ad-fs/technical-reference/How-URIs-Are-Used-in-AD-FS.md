@@ -1,13 +1,15 @@
 ---
+ms.assetid: 53ee93e2-09ea-4f8b-adb7-c24c59f055ea
 title: How URIs Are Used in AD FS
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/08/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2

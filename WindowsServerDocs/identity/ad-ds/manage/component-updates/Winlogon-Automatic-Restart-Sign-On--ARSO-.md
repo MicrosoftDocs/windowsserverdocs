@@ -1,20 +1,20 @@
 ---
+ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon Automatic Restart Sign-On (ARSO)
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Winlogon Automatic Restart Sign-On (ARSO)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
@@ -32,9 +32,9 @@ On rebooting, the user will automatically be signed in via the Autologon mechani
 > [!NOTE]
 > After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked so the user's lock screen apps can run.
 
-![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.gif)
+![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.gif)
 
-![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreen.gif)
+![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreen.gif)
 
 **Quick Overview**
 
@@ -101,7 +101,7 @@ Value: 0 or 1
 
 1 = Disabled
 
-![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_SignInPolicy.gif)
+![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_SignInPolicy.gif)
 
 ## Troubleshooting
 When WinLogon automatically locks, WinLogon's state trace will be stored in the WinLogon event log.

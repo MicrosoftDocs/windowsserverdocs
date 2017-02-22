@@ -1,19 +1,20 @@
 ---
+ms.assetid: 530b3cf1-e907-4556-92ab-c9dc4aee7b56
 title: Enabling Advanced Features for AD DS
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 36c824b5-bf53-42f7-8c7a-48f2f3d355ed
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Enabling Advanced Features for AD DS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Domain Services (AD DS) makes it possible for you to introduce advanced features into your environment by raising the domain or forest functional levels. To use advanced AD DS features, you must identify the operating systems that are running on the domain controllers in your environment.   
   

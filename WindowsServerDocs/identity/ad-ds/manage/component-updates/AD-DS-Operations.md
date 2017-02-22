@@ -1,16 +1,20 @@
 ---
+ms.assetid: 560dfa18-0398-4186-ba91-da03ab72c2d5
 title: AD DS Operations
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 299ff273-33ef-4e49-a3d8-8c822a777882
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # AD DS Operations
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **This information is preliminary and subject to change.**  
   

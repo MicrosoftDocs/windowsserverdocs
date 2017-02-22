@@ -1,13 +1,15 @@
 ---
+ms.assetid: 204f5fe9-3611-4da0-b057-a386004b4598
 title: Understanding Key Active Directory Federation Services Concepts
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/08/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012

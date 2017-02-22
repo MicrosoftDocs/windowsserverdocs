@@ -1,19 +1,20 @@
 ---
+ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: Finding Additional Resources for Logical Structure Design
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 7407f969-f375-4885-9a71-2702a388226a
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Finding Additional Resources for Logical Structure Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   

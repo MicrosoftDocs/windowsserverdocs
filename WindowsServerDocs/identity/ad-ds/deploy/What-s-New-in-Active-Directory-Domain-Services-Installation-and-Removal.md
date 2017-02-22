@@ -1,21 +1,20 @@
 ---
+ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What&#39;s New in Active Directory Domain Services Installation and Removal
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: a0c7e030-27e5-4d58-bc11-e2d180a3ffb2
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # What&#39;s New in Active Directory Domain Services Installation and Removal
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers:  
   
@@ -71,7 +70,7 @@ The  Windows Server 2012  version of adprep.exe can run on any server that runs 
 >   
 > Adprep.exe is not a valid Win32 application.  
   
-![](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
+![What's new](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
   
 For information about resolving other errors returned by Adprep.exe, see [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).  
   

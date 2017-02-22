@@ -1,19 +1,20 @@
 ---
+ms.assetid: 22c514b2-401e-49e1-a87e-0cbaa2c1dac1
 title: Site Functions
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 1d202cc2-379b-480b-93aa-58b19a88f50d
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Site Functions
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
  Windows Server 2008  uses site information for many purposes, including routing replication, client affinity, system volume (SYSVOL) replication, Distributed File System Namespaces (DFSN), and service location.  
   

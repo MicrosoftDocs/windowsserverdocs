@@ -1,15 +1,16 @@
 ---
 title: Remap Selected MultiPoint Systems
+description: Learn how to remap some but not all systems in MultiPoint Services
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f6007f1a-95d3-4a6e-a9fb-a2b82fa6918a
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
 ---

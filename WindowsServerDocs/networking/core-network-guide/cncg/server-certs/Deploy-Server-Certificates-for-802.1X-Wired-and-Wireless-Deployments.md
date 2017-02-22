@@ -1,16 +1,17 @@
 ---
 title: Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: brianlic
 ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this guide to deploy server certificates to your Remote Access and Network Policy Server (NPS) infrastructure servers.   
 
@@ -56,9 +57,9 @@ Automatic enrollment of server certificates, also called autoenrollment, provide
 
 ## <a name="bkmk_pre"></a>Prerequisites for using this guide  
 
-This guide provides instructions on how to deploy server certificates by using AD CS and the Web Server (IIS) server role in Windows Server 2016 Technical Preview. Following are the prerequisites for performing the procedures in this guide.  
+This guide provides instructions on how to deploy server certificates by using AD CS and the Web Server (IIS) server role in  Windows Server 2016. Following are the prerequisites for performing the procedures in this guide.  
 
-- You must deploy a core network using the Windows Server 2016 Technical Preview Core Network Guide, or you must already have the technologies provided in the Core Network Guide installed and functioning correctly on your network. These technologies include TCP/IP v4, DHCP, Active Directory Domain Services (AD DS), DNS, and NPS.  
+- You must deploy a core network using the  Windows Server 2016 Core Network Guide, or you must already have the technologies provided in the Core Network Guide installed and functioning correctly on your network. These technologies include TCP/IP v4, DHCP, Active Directory Domain Services (AD DS), DNS, and NPS.  
 >[!NOTE]
 >The Windows Server 2016 Core Network Guide is available in the Windows Server 2016 Technical Library. For more information, see [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).
 
@@ -76,12 +77,12 @@ This guide does not provide comprehensive instructions for designing and deployi
 Following are technology overviews for AD CS and Web Server (IIS).  
 
 ### Active Directory Certificate Services  
-AD CS in Windows Server 2016 Technical Preview provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.  
+AD CS in  Windows Server 2016 provides customizable services for creating and managing the X.509 certificates that are used in software security systems that employ public key technologies. Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.  
 
 For more information, see [Active Directory Certificate Services Overview](https://technet.microsoft.com/library/hh831740.aspx) and [Public Key Infrastructure Design Guidance](http://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).  
 
 ### Web Server (IIS)  
 
-The Web Server (IIS) role in Windows Server 2016 Technical Preview provides a secure, easy-to-manage, modular, and extensible platform for reliably hosting websites, services, and applications. With IIS, you can share information with users on the Internet, an intranet, or an extranet. IIS is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).  
+The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-manage, modular, and extensible platform for reliably hosting websites, services, and applications. With IIS, you can share information with users on the Internet, an intranet, or an extranet. IIS is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).  
 
 For more information, see [Web Server (IIS) Overview](https://technet.microsoft.com/library/hh831725.aspx).  

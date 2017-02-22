@@ -1,29 +1,25 @@
 ---
 title: Windows 8 should be configured with the recommended amount of memory
-description: " "
+description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 0c739e7c-4403-4eff-9e69-213ba1ab7336
 author: KBDAzure
-ms.date: 8/16/2016
+ms.date: 10/03/2016
 ---
 # Windows 8 should be configured with the recommended amount of memory
 
->Applies To: Windows Server Technical Preview
-
-[This information is preliminary and subject to change.  
+>Applies To: Windows Server 2016
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Property|Details|  
 |-|-|  
-|**Operating System**|Windows Server 2016 Technical Preview|  
+|**Operating System**|Windows Server 2016|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

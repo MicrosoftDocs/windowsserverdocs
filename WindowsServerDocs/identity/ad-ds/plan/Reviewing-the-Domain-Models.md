@@ -1,19 +1,20 @@
 ---
+ms.assetid: e727a33d-133b-43c9-b6a4-7c00f9cb6000
 title: Reviewing the Domain Models
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: a9cea3ca-3f39-4f78-81f3-71f9a23cc49e
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Reviewing the Domain Models
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following factors impact the domain design model that you select:  
   

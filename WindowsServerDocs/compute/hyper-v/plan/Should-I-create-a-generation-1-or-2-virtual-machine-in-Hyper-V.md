@@ -1,24 +1,20 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
-description: " "
+description: "Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs."
 ms.prod: windows-server-threshold
 ms.service: na
-ms.suite: na
-ms.technology:
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 12/05/2016
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->Applies To: Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server Technical Preview
-
-**This content is preliminary and subject to change.**  
+>Applies To: Microsoft Hyper-V Server 2016, Windows 10, Windows Server 2016
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 
@@ -30,19 +26,9 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
 
 -   Generation 2 doesn't support the boot method you want to use.  
 
-For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](https://technet.microsoft.com/library/mt695680.aspx).
+For more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).
 
-You can't change a virtual machine's generation after you've created it. So review the following sections in this article to make sure the generation you pick supports the operating system, boot method, and features you want to use.  
-
-- [Which guest operating systems are supported?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_OS)  
-
-- [How can I boot the virtual machine?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Boot)  
-
-- [What are the advantages of using generation 2 virtual machines?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Advantages)
-- [What's the difference in device support?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_DeviceCompare)
-- [More about generation 2 virtual machines](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_More)
-
-- [Enable kernel debugging by using a COM port on a generation 2 virtual machine](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Debug)
+You can't change a virtual machine's generation after you've created it. So, we recommend that you review the considerations here, as well as choose the operating system, boot method, and features you want to use before you choose a generation.  
 
 ## <a name="BKMK_OS"></a>Which guest operating systems are supported?  
 Generation 1 virtual machines support most guest operating systems. Generation 2 virtual machines support most 64-bit versions of Windows and more current versions of Linux and FreeBSD operating systems. Use the following sections to see which generation of virtual machine supports the guest operating system you want to install.  
@@ -86,7 +72,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
 
 
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
-he following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
+The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
 
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -136,7 +122,7 @@ The following table shows which versions of Unbreakable Enterprise Kernel you ca
 For more information, see [Oracle Linux virtual machines on Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
 
 ### <a name="BKMK_SUSE"></a>SUSE guest operating system support  
-he following table shows which versions of SUSE you can use as a guest operating system for generation 1 and generation 2 virtual machines.
+The following table shows which versions of SUSE you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -174,7 +160,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
 
     To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.  
 
--   **Larger boot volume** - The maximum boot volume for generation 2 virtual machines is 64TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
+-   **Larger boot volume** - The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
 
  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
@@ -199,55 +185,55 @@ The following table compares the devices available between generation 1 and gene
 |Super I/O device|No longer required|N/A|  
 
 ## <a name="BKMK_More"></a> More about generation 2 virtual machines
-The following sections may answer some additional questions you have about generation 2 virtual machines.
-###  Attaching or adding a DVD drive
+Here are some additional tips about using generation 2 virtual machines.
+###  Attach or add a DVD drive
 
 - You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the Oscdimg  command line tool. For more information, see [Oscdimg Command-Line Options](http://msdn.microsoft.com/library/hh824847.aspx).
 - When you create a new virtual machine with the New-VM Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
 
-###  Using UEFI firmware
+###  Use UEFI firmware
 
 - Secure Boot or UEFI firmware isn't required on the physical Hyper-V host. Hyper-V provides virtual firmware to virtual machines that is independent of what's on the Hyper-V host.    
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.   
 - We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
 
-### Working with VHDX files
+### Work with VHDX files
 
 - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
 - We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
 
-### Using IPv6 instead of IPv4
-By default, generation 2 virtual machines use IPv4. You can set a virtual machine to use IPv6 instead of IPv4 by using the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
+### Use IPv6 instead of IPv4
+By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
 
 ```  
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
-## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
-By default, COM ports are not visible in generation 2 virtual machines. You can configure COM ports by using Windows PowerShell or Windows Management Instrumentation (WMI).  
+## <a name="BKMK_Debug"></a>Add a COM port for kernel debugging  
+COM ports aren't available in generation 2 virtual machines until you add them. You can do this with Windows PowerShell or Windows Management Instrumentation (WMI). These steps show you how to do it with Windows PowerShell.
 
-To enable kernel debugging by using a COM port, follow these steps:  
+To add a COM port:  
 
-1.  Disable Secure Boot. Kernel debugging is not compatible with Secure Boot, so Secure Boot must be disabled in the virtual machine. Use the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet  to disable Secure Boot when the virtual machine is in an Off state. For example, the following command disables Secure Boot on virtual machine TestVM:  
+1.  Disable Secure Boot. Kernel debugging isn't compatible with Secure Boot. Make sure the virtual machine is in an Off state, then use the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) cmdlet. For example, the following command disables Secure Boot on virtual machine TestVM:  
 
     ```  
     Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off  
     ```  
 
-2.  Configure a COM port. Use the [Set-VMComPort](https://technet.microsoft.com/library/hh848616.aspx) Windows PowerShell cmdlet to add a COM port to the virtual machine. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:  
+2.  Add a COM port. Use the [Set-VMComPort](https://technet.microsoft.com/library/hh848616.aspx) cmdlet to do this. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:  
 
     ```  
     Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe  
     ```  
 
 > [!NOTE]  
-> Configured COM ports are not visible when looking at the settings of a virtual machine in the Hyper-V Manager console.  
+> Configured COM ports aren't listed in the settings of a virtual machine in Hyper-V Manager.
 
 ## See Also  
 
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
-- [Use local resources on Hyper-V virtual machine with VMConnect](https://technet.microsoft.com/library/dn282274.aspx)
-- [Plan for Hyper-V scalability in Windows Server 2016](https://technet.microsoft.com/library/jj680093.aspx)
+- [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
+- [Plan for Hyper-V scalability in Windows Server 2016](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
   

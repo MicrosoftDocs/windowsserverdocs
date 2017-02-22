@@ -1,23 +1,22 @@
 ---
 title: Desktop Hosting Reference Architecture
+description: Architectural guidance for creating a desktop hosting solution with RDS and Azure.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 08/01/2016
+ms.date: 11/02/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1bac5dd3-8430-46ee-8bef-10cc4b7cc437
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Desktop Hosting Reference Architecture
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This article defines a set of architectural blocks for using Remote Desktop Services (RDS) and Microsoft Azure virtual machines to create multitenant, hosted Windows desktop and application services, which we call "desktop hosting." You can use this architecture reference to create highly secure, scalable, and reliable desktop hosting solutions for small- and medium-sized organizations with 5 to 5000 users.    
   
@@ -41,11 +40,12 @@ After reading this document, the reader should understand:
 - The building blocks that are necessary to provide a secure, reliable, multitenant desktop hosting solution based in Microsoft Azure Services.  
 - The purpose of each building block and how they fit together.  
   
-There are multiple ways to build a desktop hosting solution based on this architecture. This architecture outlines integration and improvements in Azure with Windows Server 2016. Other deployment options are available with the [Desktop Hosting Reference Architecture Guide](https://technet.microsoft.com/library/mt404690.aspx) for Windows Server 2012R2.    
+There are multiple ways to build a desktop hosting solution based on this architecture. This architecture outlines integration and improvements in Azure with Windows Server 2016. Other deployment options are available with the [Desktop Hosting Reference Architecture Guide](http://go.microsoft.com/fwlink/p/?LinkId=517389) for Windows Server 2012 R2.    
   
 The following topics are covered:  
 - [Desktop hosting logical architecture](Desktop-hosting-logical-architecture.md)  
-- [Understanding the desktop hosting environment](Understanding-the-desktop-hosting-environment.md)  
+- [Understand the RDS Roles](Understanding-RDS-roles.md)
+- [Understand the desktop hosting environment](Understanding-the-desktop-hosting-environment.md)  
 - [Azure services and considerations for desktop hosting](Azure-services-and-considerations-for-desktop-hosting.md)
   
  

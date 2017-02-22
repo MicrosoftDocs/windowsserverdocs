@@ -1,16 +1,17 @@
 ---
 title: Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+manager: brianlic
 ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this procedure to configure the web server WEB1 to distribute CRLs.  
   

@@ -1,17 +1,19 @@
 ---
+ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
 title: Plan Device-based Conditional Access on-Premises
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 # Plan Device-based Conditional Access on-Premises
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This document describes conditional access policies based on devices in a hybrid scenario where the on-premises directories are connected to Azure AD using Azure AD Connect.     
 
@@ -19,20 +21,21 @@ This document describes conditional access policies based on devices in a hybrid
 
 AD FS provides the on premises component of conditional access policies in a hybrid scenario.  When you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.  
 
-![](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
+![conditional access](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
 
 ### Types of registered devices  
 There are three kinds of registered devices, all of which are represented as Device objects in Azure AD and can be used for conditional access with AD FS on premises as well.  
 
+| |Add Work or School Account  |Azure AD Join  |Windows 10 Domian Join    
+| --- | --- |--- | --- |
+|Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1       | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.|           
+|How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.       |   Login to Windows as the (work or school) account that registered the device.      |     Login using AD account.|      
+|How devices are managed    |      MDM Policies (with additional Intune enrollment)   | MDM Policies (with additional Intune enrollment)        |   Group Policy, System Center Configuration Manager (SCCM) |
+|Azure AD Trust type|Workplace joined|Azure AD joined|Domain joined  |     
+|W10 Settings location    | Settings > Accounts > Your account > Add a work or school account        | Settings > System > About > Join Azure AD       |   Settings > System > About > Join a domain |       
+|Also available for iOS and Android Devices?   |    Yes     |       No  |   No   |   
 
-
- |Add Work or School Account  |Azure AD Join  |Windows 10 Domian Join    
----------|---------|---------|---------  
-Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1       | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.           
-How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.       |   Login to Windows as the (work or school) account that registered the device.      |     Login using AD account.      
-How devices are managed    |      MDM Policies (with additional Intune enrollment)   | MDM Policies (with additional Intune enrollment)        |   Group Policy, System Center Configuration Manager (SCCM)        
- W10 Settings location    | Settings > Accounts > Your account > Add a work or school account        | Settings > System > About > Join Azure AD       |   Settings > System > About > Join a domain        
-Also available for iOS and Android Devices?   |    Yes     |       No  |   No        
+  
 
 For more information on the different ways to register devices, see also:  
 * [Using Windows 10 devices in your workplace](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-windows10-devices/)  

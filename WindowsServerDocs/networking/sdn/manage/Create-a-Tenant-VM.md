@@ -1,17 +1,22 @@
 ---
 title: Create a VM and Connect to a Tenant Virtual Network or VLAN
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
+ms.author: jamesmci
 author: jamesmci
 ---
 # Create a VM and Connect to a Tenant Virtual Network or VLAN
+
+>Applies To: Windows Server 2016
+
 You can use this topic to create a tenant virtual machine \(VM\) and connect the VM to either a Virtual Network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network \(VLAN\). 
 
 This topic contains the following sections.
@@ -77,8 +82,9 @@ To create a network interface object in Network Controller, use the following ex
 
     
     $vmnicproperties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
-    $vmnicproperties.PrivateMacAddress = "00-11-22-33-44-55" 
-    
+    $vmnicproperties.PrivateMacAddress = "001122334455" 
+    $vmnicproperties.PrivateMacAllocationMethod = "Static" 
+
     $vmnicproperties.DnsSettings = new-object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
     $vmnicproperties.DnsSettings.DnsServers = @("24.30.1.11", "24.30.1.12")
     

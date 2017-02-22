@@ -1,21 +1,20 @@
 ---
+ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Reducing the Active Directory Attack Surface
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: c1f60064-7b9a-44b4-814b-965b182226bf
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Reducing the Active Directory Attack Surface
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section focuses on technical controls to implement to reduce the attack surface of the Active Directory installation. The section contains the following information:  
   

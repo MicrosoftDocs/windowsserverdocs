@@ -1,23 +1,22 @@
 ---
 title: Desktop hosting service
+description: Describes the components of a desktop hosting service.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8bfa3e48-5198-4dd8-b2d8-4013477135fb
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Desktop hosting service
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following information describes the components of the desktop hosting service.  
   

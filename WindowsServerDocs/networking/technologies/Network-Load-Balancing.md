@@ -1,18 +1,23 @@
 ---
 title: Network Load Balancing
+description: This topic provides an overview of the Network Load Balancing (NLB) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-networking
+ms.technology: networking-nlb
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
+ms.author: jamesmci 
 author: jamesmci
 ---
-#Network Load Balancing
-This topic provides an overview of the Network Load Balancing \(NLB\) feature in Windows Server&reg; 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
+# Network Load Balancing
+
+>Applies To:  Windows Server 2016
+
+This topic provides an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
 
 You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.   
 
@@ -75,7 +80,7 @@ To support manageability, you can do the following with NLB:
  
 NLB is installed as a standard Windows Server networking driver component. Its operations are transparent to the TCP\/IP networking stack. The following figure shows the relationship between NLB and other software components in a typical configuration.  
   
-![](../media/NLB/nlb.jpg)  
+![Network Load Balancing and other software components](../media/NLB/nlb.jpg)  
   
 Following are the primary features of NLB.  
   

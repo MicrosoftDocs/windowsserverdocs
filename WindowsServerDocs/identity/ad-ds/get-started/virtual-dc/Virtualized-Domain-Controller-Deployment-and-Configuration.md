@@ -1,21 +1,20 @@
 ---
+ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: Virtualized Domain Controller Deployment and Configuration
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: f3e09c62-c40b-46f8-b115-c00c45c3c0ae
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Virtualized Domain Controller Deployment and Configuration
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers:  
   
@@ -123,7 +122,7 @@ There are several points in the procedure where you have choices for how to crea
   
 The following diagram illustrates the virtualized domain controller cloning process, where the domain already exists.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)  
   
 ### Step 1 - Validate the Hypervisor  
 Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and do not require Hyper-V.  
@@ -132,7 +131,7 @@ If the hypervisor is Microsoft Hyper-V, ensure it is running on  Windows Server 
   
 Open **Devmgmt.msc** and examine **System Devices** for installed Microsoft Hyper-V devices and drivers. The specific system device required for a virtualized domain controller is the **Microsoft Hyper-V Generation Counter** (driver: vmgencounter.sys).  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVVMGenIDCounter.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVVMGenIDCounter.png)  
   
 ### Step 2 - Verify the PDCE FSMO role  
 Before you attempt to clone a DC, you must validate that the domain controller hosting the Primary Domain Controller Emulator FSMO runs Windows Server 2012. The PDC emulator (PDCE) is required for several reasons:  
@@ -181,7 +180,7 @@ get-adcomputer(Get-ADDomainController -Discover -Service "PrimaryDC").name -prop
   
 This example below demonstrates specifying the domain name and filtering the returned properties before the Windows PowerShell pipeline:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PDCOSInfo.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PDCOSInfo.png)  
   
 ### Step 3 - Authorize a Source DC  
 The source domain controller must have the control access right (CAR) **Allow a DC to create a clone of itself** on the domain NC head. By default, the well-known group **Cloneable Domain Controllers** has this permission and contains no members. The PDCE creates this group when that FSMO role transfers to a Windows Server 2012 domain controller.  
@@ -201,7 +200,7 @@ Get-adcomputer <dc name> | %{add-adgroupmember "cloneable domain controllers" $_
   
 For instance, this adds server DC1 to the group, without the need to specify the distinguished name of the group member:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_AddDcToGroup.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_AddDcToGroup.png)  
   
 #### Rebuilding Default Permissions  
 If you remove this permission from the domain head, cloning fails. You can recreate the permission using the Active Directory Administrative Center or Windows PowerShell.  
@@ -277,7 +276,7 @@ You run the cmdlet on the proposed source domain controller that you intend to c
 ||-PreferredWINSServer|Specifies the static IPv4 address of the primary WINS server. String data type.|  
 ||-AlternateWINSServer|Specifies the static IPv4 address of the secondary WINS server. String data type.|  
 ||-IPv6DNSResolver|Specifies the static IPv6 DNS entries of the cloned computer in a comma-separated list. There is no way to set Ipv6 static information in virtualized domain controller cloning. Array data type.|  
-||-Offline|Does not perform the validation tests and overwrites any existing dccloneconfig.xml. Has no parameters. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#BKMK_OfflineMode).|  
+||-Offline|Does not perform the validation tests and overwrites any existing dccloneconfig.xml. Has no parameters. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md#BKMK_OfflineMode).|  
 ||*-Static*|Required if specifying static IP arguments IPv4SubnetMask, IPv4SubnetMask, or IPv4DefaultGateway. Has no parameters.|  
   
 Tests performed when run in online mode:  
@@ -290,7 +289,7 @@ Tests performed when run in online mode:
   
 -   Source domain controller does not already contain a DcCloneConfig.xml at the specified path  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewDCCloneConfig.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewDCCloneConfig.png)  
   
 ### Step 6 - Take the Source Domain Controller Offline  
 You cannot copy a running source DC; it must be shutdown gracefully. Do not clone a domain controller stopped by graceless power loss.  
@@ -298,9 +297,9 @@ You cannot copy a running source DC; it must be shutdown gracefully. Do not clon
 #### Graphical Method  
 Use the shutdown button within the running DC, or the Hyper-V Manager shutdown button.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_Shutdown.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_Shutdown.png)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVShutdown.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVShutdown.png)  
   
 #### Windows PowerShell Method  
 You can shut down a virtual machine using either of the following cmdlets:  
@@ -312,9 +311,9 @@ Stop-vm
   
 Stop-computer is a cmdlet that supports shutting down computers regardless of virtualization, and is analogous to the legacy Shutdown.exe utility. Stop-vm is a new cmdlet in the Windows Server 2012 Hyper-V Windows PowerShell module, and is equivalent to the power options in Hyper-V Manager. The latter is useful in lab environments where the domain controller often operates on a private virtualized network.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopComputer2.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopComputer2.png)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopVM.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopVM.png)  
   
 ### Step 7 - Copy Disks  
 An administrative choice is required in the copying phase:  
@@ -339,11 +338,11 @@ If copying files manually, delete any snapshots prior to copying. If exporting t
 ##### Hyper-V Manager Method  
 Use the Hyper-V Manager snap-in to determine which disks are associated with the source domain controller. Use the Inspect option to validate if the domain controller uses differencing disks (which requires that you copy the parent disk also)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVInspect.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVInspect.png)  
   
 To delete snapshots, select a VM and delete the snapshot subtree.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDeleteSnapshot.gif)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDeleteSnapshot.gif)  
   
 You can then manually copy the VHD or VHDX files using Windows Explorer, Xcopy.exe, or Robocopy.exe. No special steps are required. It is a best practice to change the file names even if moving to another folder.  
   
@@ -362,7 +361,7 @@ Get-vmharddiskdrive
   
 For example, you can return all IDE hard drives from a VM named **DC2** with the following sample:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_ReturnIDE.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_ReturnIDE.png)  
   
 If the disk path points to an AVHD or AVHDX file, it is a snapshot. To delete the snapshots associated with a disk and merge in the real VHD or VHDX, use cmdlets:  
   
@@ -373,7 +372,7 @@ Remove-VMSnapshot
   
 For example, to delete all snapshots from a VM named DC2-SOURCECLONE:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_DelSnapshots.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_DelSnapshots.png)  
   
 To copy the files using Windows PowerShell, use the following cmdlet:  
   
@@ -387,7 +386,7 @@ Combine with VM cmdlets in pipelines to aid automation. The pipeline is a channe
 Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-item -path $_.path -destination c:\temp\copy.vhd}  
 ```  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSCopyDrive.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSCopyDrive.png)  
   
 > [!IMPORTANT]  
 > You cannot use passthru disks with cloning, as they do not use a virtual disk file but instead an actual hard disk.  
@@ -398,7 +397,7 @@ Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-
 #### Exporting the VM  
 As an alternative to copying the disks, you can export the entire Hyper-V VM as a copy. Exporting automatically creates a folder named for the VM and containing all disks and configuration information.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVExport.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVExport.png)  
   
 ##### Hyper-V Manager Method  
 To export a VM with Hyper-V Manager:  
@@ -418,7 +417,7 @@ Export-vm
   
 For example, to export a VM named DC2-SOURCECLONE to a folder named C:\VM:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSExport.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSExport.png)  
   
 > [!NOTE]  
 > Windows Server 2012 Hyper-V supports new export and import capabilities that are outside the scope of this training. Review TechNet for more information.  
@@ -446,7 +445,7 @@ Convert-vm
   
 For example, to export the entire chain of a VM's disk snapshots (this time not including any differencing disks) and parent disk into a new single disk named DC4-CLONED.VHDX:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSConvertVhd.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSConvertVhd.png)  
   
 #### <a name="BKMK_Offline"></a>Adding XML to the Offline System Disk  
 If you did copy the Dccloneconfig.xml to the running source DC, you must copy the updated dccloneconfig.xml file to the offline copied/exported system disk now. Depending on installed applications detected with Get-ADDCCloningExcludedApplicationList earlier, you may also need to copy the CustomDCCloneAllowList.xml file to the disk.  
@@ -515,11 +514,11 @@ Windows Server 2012 now offers a graphical option for mounting VHD and VHDX file
   
 3.  Click the mounted drive and click **Eject** from the **Disk Tools** menu.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVClickMountedDrive.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVClickMountedDrive.png)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDetailsMountedDrive.gif)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDetailsMountedDrive.gif)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVEjectMountedDrive.gif)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVEjectMountedDrive.gif)  
   
 ##### Windows PowerShell Method  
 Alternatively, you can mount the offline disk and copy the XML file using the Windows PowerShell cmdlets:  
@@ -545,7 +544,7 @@ dismount-vhd <disk path>
   
 For example:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSMountVHD.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSMountVHD.png)  
   
 Alternatively, you can use the new **Mount-DiskImage** cmdlet to mount a VHD (or ISO) file.  
   
@@ -559,7 +558,7 @@ The final configuration step before starting the cloning process is creating a n
 #### Associating a New VM with Copied Disks  
 If you copied the system disk manually, you must create a new virtual machine using the copied disk. The hypervisor automatically sets the VM-Generation ID when a new VM is created; no configuration changes are required in the VM or Hyper-V host.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVConnectVHD.gif)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVConnectVHD.gif)  
   
 ##### Hyper-V Manager Method  
   
@@ -582,7 +581,7 @@ New-VM
   
 For example, here the DC4-CLONEDFROMDC2 VM is created, using 1GB of RAM, booting from the c:\vm\dc4-systemdrive-clonedfromdc2.vhd file, and using the 10.0 virtual network:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewVM.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewVM.png)  
   
 #### Import VM  
 If you previously exported your VM, you now need to import it back in as a copy. This uses the exported XML to recreate the computer using all the previous settings, drives, networks, and memory settings.  
@@ -605,15 +604,15 @@ To import using the Hyper-V Manager snap-in:
   
 5.  Rename the imported VM if importing on the same Hyper-V host; it will have the same name as the exported source domain controller.  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportLocateFolder.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportLocateFolder.png)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportSelectVM.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportSelectVM.png)  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportChooseType.gif)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportChooseType.gif)  
   
 Remember to remove any imported snapshots, using the Hyper-V Management snap-in:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportDelSnap.gif)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportDelSnap.gif)  
   
 > [!WARNING]  
 > Deleting any imported snapshots is critically important; if applied, they would return the cloned domain controller to the state of a previous - and possibly live - DC, leading to replication failure, duplicate IP information, and other disruptions.  
@@ -628,7 +627,7 @@ Rename-VM
   
 For example, here the exported VM DC2-CLONED is imported using its automatically determined XML file, then renamed immediately to its new VM name DC5-CLONEDFROMDC2:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSImportVM.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSImportVM.png)  
   
 Remember to remove any imported snapshots, using the following cmdlets:  
   
@@ -639,7 +638,7 @@ Remove-VMSnapshot
   
 For example:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)  
   
 > [!WARNING]  
 > Ensure that, when importing the computer, static MAC addresses were not assigned to the source domain controller. If a source computer with a static MAC is cloned, those copied computers will not correctly send or receive any network traffic. Set a new unique static or dynamic MAC address if this is the case. You can see if a VM uses static MAC addresses with the command:  
@@ -663,7 +662,7 @@ Start-VM
   
 For example:  
   
-![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSStartVM.png)  
+![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSStartVM.png)  
   
 Once the computer restarts after cloning completes, it is a domain controller and you can logon on normally to confirm normal operation. If there are any errors, the server is set to start in Directory Services Restore Mode for investigation.  
   

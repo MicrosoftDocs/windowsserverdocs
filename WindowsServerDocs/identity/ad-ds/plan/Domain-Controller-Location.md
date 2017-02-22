@@ -1,19 +1,20 @@
 ---
+ms.assetid: cc2834ec-8f66-4209-aba3-402d710cd1bd
 title: Domain Controller Location
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: ec41eeae-9cd6-4835-be3b-f852e3f2da57
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Domain Controller Location
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Clients use Domain Name System (DNS) to locate domain controllers to complete operations such as processing logon requests or searching the directory for published resources. Domain controllers register a variety of records in DNS to help clients and other computers locate them. These records are collectively referred to as the locator records.  
   

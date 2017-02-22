@@ -1,9 +1,10 @@
 ---
 title: Update and install device drivers if needed
+description: Learn how to check and update device drivers in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

@@ -1,21 +1,20 @@
 ---
+ms.assetid: dc60ebc1-4363-4bb7-81ab-be4889292d55
 title: Active Directory Administrative Center
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 738c3e80-ec79-4a16-9aee-aa1be7f3472f
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Active Directory Administrative Center
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Active Directory Administrative Center (ADAC) in Windows Server includes enhanced management experience features. These features ease the administrative burden for managing Active Directory Domain Services (AD DS). The following topics provide an introduction and additional details:  
   

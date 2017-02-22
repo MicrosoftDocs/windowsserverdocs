@@ -1,24 +1,20 @@
 ---
 title: Generation 2 virtual machine security settings for Hyper-V
-description: " "
+description: "Describes the security settings available in Hyper-V Manager for generation 2 virtual machines"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology:
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: larsiwer
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Generation 2 virtual machine security settings for Hyper-V
 
->Applies To: Windows Server 2016 Technical Preview, Windows 10
-
-**This is preliminary content and subject to change.**  
+>Applies To: Windows Server 2016, Windows 10
 
 Use the virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. You can protect virtual machines from inspection, theft, and tampering from both malware that may run on the host, and datacenter administrators. The level of security you get depends on the host hardware you run, the virtual machine generation, and whether you set up the service, called the Host Guardian Service, that authorizes hosts to start shielded virtual machines.  
 
@@ -35,7 +31,7 @@ To learn how you can make your virtual machines more secure with the Host Guardi
 ## Secure Boot setting in Hyper-V Manager  
 Secure Boot is a feature available with generation 2 virtual machines that helps prevent unauthorized firmware, operating systems, or Unified Extensible Firmware Interface (UEFI) drivers (also known as option ROMs) from running at boot time. Secure Boot is enabled by default. You can use secure boot with generation 2 virtual machines that run Windows or Linux distribution operating systems.  
 
-The   templates described in the following table refer to  the certificates that you need to verify the integrity of the boot process.  
+The templates described in the following table refer to the certificates that you need to verify the integrity of the boot process.  
 
 |Template name|Description|  
 |-----------------|---------------|  
@@ -46,7 +42,7 @@ For more information, see the following topics.
 
 -   [Windows 10 Security Overview](https://technet.microsoft.com/library/mt601297.aspx)  
 -   [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)  
--   [Linux and FreeBSD Virtual Machines on Hyper-V](https://technet.microsoft.com/library/dn531030.aspx)  
+-   [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
 
 ## Encryption support settings in Hyper-V Manager  
 You can help protect the data and state of the virtual machine by selecting the following encryption support options.  
@@ -73,11 +69,11 @@ To enable Isolated User Mode on the Hyper-V host that run earlier versions of Wi
 
     ```  
 
-You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/Guarded-Fabric-and-Shielded-VMs.md) and [System requirements for Hyper-V on Windows Server 2016 Technical Preview](../System-requirements-for-Hyper-V-on-Windows.md).  
+You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](http://go.microsoft.com/fwlink/?LinkId=746381) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows.md).  
 
 ## Security Policy in Hyper-V Manager  
 For more virtual machine security, use the **Enable Shielding** option to disable management features like console connection, PowerShell Direct, and some integration components. If you select this option, **Secure Boot**, **Enable Trusted Platform Module**, and **Encrypt State and VM migration traffic** options are selected and enforced.   
 
-You can run the shielded virtual machine locally without setting up a Host Guardian Service. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see  [Guarded Fabric and Shielded VMs](http://go.microsoft.com/fwlink/?LinkId=746381).  
+You can run the shielded virtual machine locally without setting up a Host Guardian Service. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](http://go.microsoft.com/fwlink/?LinkId=746381).  
 
 For more information about security in Windows Server 2016, see [Security and Assurance](../../../security/Security-and-Assurance.md).  

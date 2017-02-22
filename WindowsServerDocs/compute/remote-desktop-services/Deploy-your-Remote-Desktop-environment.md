@@ -2,26 +2,26 @@
 title: Deploy your Remote Desktop environment
 ms.custom: na
 ms.prod: windows-server-threshold
+description: Basic steps to deploy a Remote Desktop environment.
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 08/01/2016
+ms.date: 02/08/2017
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ed2eb96-2bc4-4b1a-977c-ff7a11f21cef
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Deploy your Remote Desktop environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Use the following steps to deploy the Remote Desktop servers in your environment.  
   
->[NOTE] The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS virtual machine, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment.  
+>[!NOTE] 
+> The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS virtual machine, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment.  
   
 1.  Connect to the RDMS virtual machine using the Remote Desktop (RDC) client:  
     1.  In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.  
@@ -55,7 +55,8 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     3.  Enter the SSL certificate name for the RD Gateway server using the external fully qualified DNS Name (FQDN) of the RD Gateway server. In Azure, this is the **DNS name** label and uses the format servicename.location.cloudapp.azure.com. For example, contoso.westus.cloudapp.azure.com.  
     4.  Click **Next**, and then click **Add**.
 
->[NOTE] Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.
+   > [!NOTE] 
+   > Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.
   
 7.  Create and install self-signed certificates for the RD Gateway and RD Connection Broker servers. Note that this procedure will be different if you are using certificates from a trusted certificate authority.    
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
@@ -69,7 +70,7 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     9.  Browse to the certificate created for the RD Gateway server (for example, ContosoRdGwCert), and then click **Open**.  
     10. Enter the password for the certificate, select **Allow the certificate to be added to the Trusted Root Certificate store on the destination computers**, and then click **OK**.  
     11. Click **Apply**, and then wait for the certificate to be successfully applied to the RD Web Access server.  
-    12. Repeat steps c. - r. for the **RD Connection Broker - Enable Single Sign On** and **RD Connection Broker - Publishing services** using the internal FQDN of the RD Connection Broker server for the new certificate's name (for example, Contoso-Cb1.Contoso.com).  
+    12. Repeat substeps 1-11 for the **RD Connection Broker - Enable Single Sign On** and **RD Connection Broker - Publishing services**, using the internal FQDN of the RD Connection Broker server for the new certificate's name (for example, Contoso-Cb1.Contoso.com).  
 8.  Export self-signed public certificates and copy them to a client computer. If you are using certificates from a trusted certificate authority, you can skip this step.  
     1.  Launch certlm.msc.  
     2.  Expand **Personal**, and then click **Certificates**.  
@@ -79,7 +80,7 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     6.  Browse to the shared folder you created for certificates, for example \Contoso-Cb1\Certificates.  
     7.  Enter a File name, for example ContosoCbClientCert, and then click **Save**.  
     8.  Click **Next**, and then click **Finish**.  
-    9.  Repeat steps c. through i. for the RD Gateway and Web certificate, (for example contoso.westus.cloudapp.azure.com), giving the exported certificate an appropriate file name, for example **ContosoWebGwClientCert**.  
+    9.  Repeat substeps 1-8 for the RD Gateway and Web certificate, (for example contoso.westus.cloudapp.azure.com), giving the exported certificate an appropriate file name, for example **ContosoWebGwClientCert**.  
     10. In File Explorer, navigate to the folder where the certificates are stored, for example \Contoso-Cb1\Certificates.  
     11. Select the two exported client certificates, then right-click them, and click **Copy**.  
     12. Paste the certifcates on the local client computer.  

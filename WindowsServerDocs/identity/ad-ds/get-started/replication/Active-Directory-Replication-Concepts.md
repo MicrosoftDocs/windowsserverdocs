@@ -1,19 +1,20 @@
 ---
+ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Active Directory Replication Concepts
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: a85971c3-3e64-4a05-873c-45b8ee0570f5
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Active Directory Replication Concepts
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Before designing site topology, become familiar with some Active Directory replication concepts.  
   

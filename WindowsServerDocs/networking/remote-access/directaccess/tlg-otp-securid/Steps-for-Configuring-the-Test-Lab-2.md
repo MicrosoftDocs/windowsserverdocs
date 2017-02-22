@@ -1,19 +1,22 @@
 ---
 title: Steps for Configuring the Test Lab
+description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a40183c-afd1-43ca-b306-05745640a37d
-author: coreyp-at-msft
+ms.author: jamesmci
+author: jamesmci
 ---
 # Steps for Configuring the Test Lab
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access server and client, and test DirectAccess connectivity from the Homenet and Internet subnets.  
   

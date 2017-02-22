@@ -1,19 +1,20 @@
 ---
+ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: Determining the Number of Domains Required
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: bf0230ae-4f1a-4200-892f-b621278657ec
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Determining the Number of Domains Required
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Every forest starts with a single domain. The maximum number of users that a single domain forest can contain is based on the slowest link that must accommodate replication between domain controllers and the available bandwidth that you want to allocate to Active Directory Domain Services (AD DS). The following table lists the maximum recommended number of users that a domain can contain based on a single domain forest, the speed of the slowest link, and the percentage of bandwidth that you want to reserve for replication. This information applies to forests that contain a maximum of 100,000 users and that have a connectivity of 28.8 kilobits per second (Kbps) or higher. For recommendations that apply to forests that contain more than 100,000 users or connectivity of less than 28.8 Kbps, consult an experienced Active Directory designer. The values in the following table are based on the replication traffic generated in an environment that has the following characteristics:  
   

@@ -1,17 +1,22 @@
 ---
 title: Configure Quality of Service (QoS) for a Tenant VM Network Adapter
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure Quality of Service (QoS) for a Tenant VM Network Adapter
+
+>Applies To: Windows Server 2016
+
 When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 
 1.	**DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example see the section “Enable Data Center Bridging”  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).

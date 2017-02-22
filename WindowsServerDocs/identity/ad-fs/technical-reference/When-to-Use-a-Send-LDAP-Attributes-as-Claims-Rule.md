@@ -1,13 +1,15 @@
 ---
+ms.assetid: 606f4196-b579-4806-a462-3abd4d93e87c
 title: When to Use a Send LDAP Attributes as Claims Rule
 description:
 author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/08/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+
+ms.technology: identity-adfs
 ---
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012

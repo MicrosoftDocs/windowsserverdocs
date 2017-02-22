@@ -1,19 +1,20 @@
 ---
+ms.assetid: 62708b2e-4090-4cf7-8ae6-a557f31f561f
 title: Understanding the Active Directory Logical Model
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 0302f7b2-b2ec-448f-994b-32938cf2e783
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Understanding the Active Directory Logical Model
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Designing your logical structure for Active Directory Domain Services (AD DS) involves defining the relationships between the containers in your directory. These relationships might be based on administrative requirements, such as delegation of authority, or they might be defined by operational requirements, such as the need to control replication.  
   

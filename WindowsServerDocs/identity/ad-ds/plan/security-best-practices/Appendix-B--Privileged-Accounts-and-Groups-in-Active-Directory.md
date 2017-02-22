@@ -1,21 +1,20 @@
 ---
+ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: Appendix B - Privileged Accounts and Groups in Active Directory
-ms.custom:
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 95ab100e-c45f-4419-ac97-a3abc2666f71
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # Appendix B: Privileged Accounts and Groups in Active Directory
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix B: Privileged Accounts and Groups in Active Directory  
@@ -29,7 +28,7 @@ The differences between rights, permissions, and privileges can be confusing and
 #### Rights and Privileges  
 Rights and privileges are effectively the same system-wide capabilities that are granted to security principals such as users, services, computers, or groups. In interfaces typically used by IT professionals, these are usually referred to as "rights" or "user rights," and they are often assigned by Group Policy Objects. The following screenshot shows some of the most common user rights that can be assigned to security principals (it represents the Default Domain Controllers GPO in a Windows Server 2012 domain). Some of these rights apply to Active Directory, such as the **Enable computer and user accounts to be trusted for delegation** user right, while other rights apply to the Windows operating system, such as **Change the system time**.  
 
-![](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
+![privileged accounts and groups](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
 
 In interfaces such as the Group Policy Object Editor, all of these assignable capabilities are referred to broadly as user rights. In reality however, some user rights are programmatically referred to as rights, while others are programmatically referred to as privileges. Table B-1: User Rights and Privileges provides some of the most common assignable user rights and their programmatic constants. Although Group Policy and other interfaces refer to all of these as user rights, some are programmatically identified as rights, while others are defined as privileges.  
 
@@ -166,16 +165,12 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Distributed COM Users|Built-in container<br /><br />Domain-local security group|Members of this group are allowed to launch, activate, and use distributed COM objects on this computer.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |DnsAdmins|Users container<br /><br />Domain-local security group|Members of this group have administrative access to the DNS Server service.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |DnsUpdateProxy|Users container<br /><br />Global security group|Members of this group are DNS clients who are permitted to perform dynamic updates on behalf of clients that cannot themselves perform dynamic updates. Members of this group are typically DHCP servers.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-
 |Domain Admins|Users container<br /><br />Global security group|Designated administrators of the domain; Domain Admins is a member of every domain-joined computer's local Administrators group and receives rights and permissions granted to the local Administrators group, in addition to the domain's Administrators group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Adjust memory quotas for a process<br /><br />Allow log on locally<br /><br />Allow log on through Remote Desktop Services<br /><br />Back up files and directories<br /><br />Bypass traverse checking<br /><br />Change the system time<br /><br />Change the time zone<br /><br />Create a pagefile<br /><br />Create global objects<br /><br />Create symbolic links<br /><br />Debug programs<br /><br />Enable computer and user accounts to be trusted for delegation<br /><br />Force shutdown from a remote system<br /><br />Impersonate a client after authentication<br /><br />Increase a process working set<br /><br />Increase scheduling priority<br /><br />Load and unload device drivers<br /><br />Log on as a batch job<br /><br />Manage auditing and security log<br /><br />Modify firmware environment values<br /><br />Perform volume maintenance tasks<br /><br />Profile single process<br /><br />Profile system performance<br /><br />Remove computer from docking station<br /><br />Restore files and directories<br /><br />Shut down the system<br /><br />Take ownership of files or other objects|  
-
 |Domain Computers|Users container<br /><br />Global security group|All workstations and servers that are joined to the domain are by default members of this group.<br /><br />**Default direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Domain Controllers|Users container<br /><br />Global security group|All domain controllers in the domain. Note: Domain controllers are not a member of the Domain Computers group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Domain Guests|Users container<br /><br />Global security group|All guests in the domain<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Domain Users|Users container<br /><br />Global security group|All users in the domain<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-
 |Enterprise Admins (exists only in forest root domain)|Users container<br /><br />Universal security group|Enterprise Admins have permissions to change forest-wide configuration settings; Enterprise Admins is a member of every domain's Administrators group and receives rights and permissions granted to that group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Adjust memory quotas for a process<br /><br />Allow log on locally<br /><br />Allow log on through Remote Desktop Services<br /><br />Back up files and directories<br /><br />Bypass traverse checking<br /><br />Change the system time<br /><br />Change the time zone<br /><br />Create a pagefile<br /><br />Create global objects<br /><br />Create symbolic links<br /><br />Debug programs<br /><br />Enable computer and user accounts to be trusted for delegation<br /><br />Force shutdown from a remote system<br /><br />Impersonate a client after authentication<br /><br />Increase a process working set<br /><br />Increase scheduling priority<br /><br />Load and unload device drivers<br /><br />Log on as a batch job<br /><br />Manage auditing and security log<br /><br />Modify firmware environment values<br /><br />Perform volume maintenance tasks<br /><br />Profile single process<br /><br />Profile system performance<br /><br />Remove computer from docking station<br /><br />Restore files and directories<br /><br />Shut down the system<br /><br />Take ownership of files or other objects|  
-
 |Enterprise Read-only Domain Controllers|Users container<br /><br />Universal security group|This group contains the accounts for all read-only domain controllers in the forest.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Event Log Readers|Built-in container<br /><br />Domain-local security group|Members of this group in can read the event logs on domain controllers.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Group Policy Creator Owners|Users container<br /><br />Global security group|Members of this group can create and modify Group Policy Objects in the domain.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
@@ -184,9 +179,7 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Hyper-V Administrators (Windows Server 2012)|Built-in container<br /><br />Domain-local security group|Members of this group have complete and unrestricted access to all features of Hyper-V.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |IIS_IUSRS|Built-in container<br /><br />Domain-local security group|Built-in group used by Internet Information Services.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Incoming Forest Trust Builders (exists only in forest root domain)|Built-in container<br /><br />Domain-local security group|Members of this group can create incoming, one-way trusts to this forest. (Creation of outbound forest trusts is reserved for Enterprise Admins.)<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-
 |Krbtgt|Users container<br /><br />Not a group|The Krbtgt account is the service account for the Kerberos Key Distribution Center in the domain. This account has access to all accounts' credentials stored in Active Directory. This account is disabled by default and should never be enabled<br /><br />**User rights:** N/A|  
-
 |Network Configuration Operators|Built-in container<br /><br />Domain-local security group|Members of this group are granted privileges that allow them to manage configuration of networking features.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Performance Log Users|Built-in container<br /><br />Domain-local security group|Members of this group can schedule logging of performance counters, enable trace providers, and collect event traces locally and via remote access to the computer.<br /><br />**Direct user rights:**<br /><br />Log on as a batch job<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Performance Monitor Users|Built-in container<br /><br />Domain-local security group|Members of this group can access performance counter data locally and remotely.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  

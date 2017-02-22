@@ -1,9 +1,10 @@
 ---
 title: Create Windows 10 Enterprise virtual desktops for stations
+description: Learn how to create Windows Server 2016 desktops for station
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -37,7 +38,7 @@ To prepare to create station virtual desktops, ensure that your MultiPoint Servi
 ## Procedures  
 Use the following procedures to:  
   
--   [Create a template for virtual desktops](#create-a-template-for-virtual-desktops)  
+-   [Create a template for virtual desktops](#a-namebkmkcreateatemplateacreate-a-template-for-virtual-desktops)  
   
 -   [Create virtual desktops from the template](#BKMK_CreateVirtualDesktopsfromTemplate)  
   

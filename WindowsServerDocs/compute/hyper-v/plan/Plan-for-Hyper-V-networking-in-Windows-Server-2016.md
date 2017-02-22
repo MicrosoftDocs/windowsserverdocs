@@ -1,24 +1,20 @@
 ---
 title: Plan for Hyper-V networking in Windows Server 2016
-description: " "
+description: "Describes what's needed for basic networking in Hyper-V and gives links to instructions"
 ms.prod: windows-server-threshold
 ms.service: na
-ms.author: kathydav
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7067bd74-8786-4202-9093-520a286f5883
 author: KBDAzure
 ms.author: kathydav
-ms.date: 8/16/2016
+ms.date: 10/04/2016
 ---
 # Plan for Hyper-V networking in Windows Server 2016
 
->Applies To: Microsoft Hyper-V Server Technical Preview, Windows Server Technical Preview
-
-**This is preliminary content and subject to change.**  
+>Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
   
 A basic understanding of networking in Hyper-V helps you plan networking for virtual machines. This article also covers some networking considerations when using live migration and when using Hyper-V with other server features and roles.  
   
@@ -57,9 +53,6 @@ Some features rely on specific networking configurations or do better under cert
   
 **Failover clustering** - It's a best practice to isolate cluster traffic and use Hyper-V Quality of Service (QoS) on the virtual switch. For details, see [Network Recommendations for a Hyper-V Cluster](https://technet.microsoft.com/library/dn550728.aspx)  
   
-**Live migration** - Use performance options to reduce network and CPU usage and the time it takes to  complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](https://technet.microsoft.com/library/mt708952.aspx).  
+**Live migration** - Use performance options to reduce network and CPU usage and the time it takes to complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).  
   
-**Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../../../storage/storage-spaces/storage-spaces-direct-windows-server-2016.md).  
-  
-
-
+**Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct in Windows Server 2016](../../../storage/storage-spaces/storage-spaces-direct-overview.md).

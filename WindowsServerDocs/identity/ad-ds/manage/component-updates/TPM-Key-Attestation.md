@@ -1,21 +1,20 @@
 ---
+ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
-ms.custom: 
-  - AD
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
 ms.topic: article
-ms.assetid: 24e0d52d-2b01-43ca-b3bb-457073731ff4
-author: Femila
+ms.prod: windows-server-threshold
+
+ms.technology: identity-adds
 ---
+
 # TPM Key Attestation
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
@@ -109,23 +108,23 @@ To configure the certificate template for TPM key attestation, do the following 
   
     -   Ensure **Windows 8.1 / Windows Server 2012 R2** is selected for the **Certificate recipient**.  
   
-    ![](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)  
+    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)  
   
 2.  **Cryptography** tab  
   
     Ensure **Key Storage Provider** is selected for the **Provider Category** and **RSA** is selected for the **Algorithm name**. Ensure **Requests must use one of the following providers** is selected and the **Microsoft Platform Crypto Provider** option is selected for the **Providers**.  
   
-    ![](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)  
+    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)  
   
 3.  **Key Attestation** tab  
   
     This is a new tab for Windows Server 2012 R2:  
   
-    ![](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)  
+    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)  
   
     Choose an attestation mode from three possible options.  
   
-    ![](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)  
+    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)  
   
     -   **None:** Implies that key attestation must not be used  
   
@@ -135,7 +134,7 @@ To configure the certificate template for TPM key attestation, do the following 
   
     Then choose the TPM trust model. There are again three options.  
   
-    ![](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)  
+    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)  
   
     -   **User credentials:** Allow an authenticating user to vouch for a valid TPM by specifying their domain credentials.  
   
@@ -155,7 +154,7 @@ To configure the certificate template for TPM key attestation, do the following 
   
     The OIDs will be inserted into the issued certificate if **Include Issuance Policies** is selected (the default configuration).  
   
-    ![](media/TPM-Key-Attestation/GTR_ADDS_IssuancePolicies.gif)  
+    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_IssuancePolicies.gif)  
   
     > [!TIP]  
     > One potential use of having the OID present in the certificate is to limit access to VPN or wireless to certain devices. Example: Allow network access if OID 1.3.6.1.4.1.311.21.30 is present in the certificate. This allows you to limit access to devices whose TPM EK is present in the EKPUB list.  

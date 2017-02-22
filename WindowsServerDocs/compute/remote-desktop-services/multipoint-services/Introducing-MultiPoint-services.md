@@ -1,9 +1,10 @@
 ---
 title: Introducing MultiPoint Services
+description: Provides an overview of MultiPoint Services, a way to let multiple users share a system
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

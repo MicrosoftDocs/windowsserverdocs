@@ -1,21 +1,20 @@
 ---
+ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.custom: 
-  - AD
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: b7c6a691-b966-47a5-b80b-bc668e5104eb
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.  
   
@@ -247,7 +246,7 @@ In previous releases, Windows Server editions differed in their support of serve
 ### Windows client and Windows Server operating systems that are supported to join Windows Server domains  
 The following Windows client and Windows Server operating systems are supported for domain member computers with domain controllers that run Windows Server 2012 or later:  
   
--   Client operating systems: Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows XP  
+-   Client operating systems: Windows 8.1, Windows 8, Windows 7, Windows Vista 
   
     Computers that run Windows 8.1 or Windows 8 are also able to join domains that have domain controllers that run earlier version of Windows Server, including Windows Server 2003 or later. In this case however, some Windows 8 features may require additional configuration or may not be available. For more information about those features and other recommendations for managing Windows 8 clients in downlevel domains, see [Running Windows 8 member computers in Windows Server 2003 domains](http://social.technet.microsoft.com/wiki/contents/articles/17361.running-windows-8-member-computers-in-windows-server-2003-domains.aspx).  
   
@@ -325,7 +324,7 @@ Some new features in  Windows Server 2012  affect operations master roles:
 > Though they are not operations master roles, another change in AD DS installation is that DNS server role and the global catalog are installed by default on all domain controllers that run  Windows Server 2012 .  
   
 ## <a name="BKMK_Virtual"></a>Virtualizing domain controllers  
-Improvements in AD DS beginning in  Windows Server 2012  enable safer virtualization of domain controllers and the ability to clone domain controllers. Cloning domain controllers in turn enables rapid deployment of additional domain controllers in a new domain and other benefits. For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md).  
+Improvements in AD DS beginning in  Windows Server 2012  enable safer virtualization of domain controllers and the ability to clone domain controllers. Cloning domain controllers in turn enables rapid deployment of additional domain controllers in a new domain and other benefits. For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).  
   
 ## <a name="BKMK_Admin"></a>Administration of Windows Server 2012 servers  
 Use the [Remote Server Administration Tools for Windows 8](http://www.microsoft.com/download/details.aspx?id=28972) to manage domain controllers and other servers that run  Windows Server 2012 . You can run the  Windows Server 2012  Remote Server Administration Tools on a computer that runs Windows 8.  

@@ -1,17 +1,22 @@
 ---
 title: Configure Datacenter Firewall Access Control Lists (ACLs)
+description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: 25f18927-a63e-44f3-b02a-81ed51933187
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure Datacenter Firewall Access Control Lists (ACLs)
+
+>Applies To: Windows Server 2016
+
 You can apply specific ACLs to network interfaces.  If ACLs are also set on the virtual subnet to which the network interface is connected, both ACLs are applied, but the network interface ACLs are prioritized above the virtual subnet ACLs.
 
 This topic contains the following sections.

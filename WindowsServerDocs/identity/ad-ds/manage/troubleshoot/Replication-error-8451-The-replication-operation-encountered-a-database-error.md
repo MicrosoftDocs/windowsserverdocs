@@ -1,21 +1,22 @@
 ---
+ms.assetid: 11dc987a-2c34-4d02-8286-fc7b8f747c46
 title: Replication error 8451 The replication operation encountered a database error
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: 21a0ba4f-48e5-4a8b-a02a-a92bb0ef36de
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Replication error 8451 The replication operation encountered a database error
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-<?xml version="1.0" encoding="utf-8"?>
+
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
     <para>This article covers symptoms, root causes, and how to resolve Active Directory replication error 8451: The replication operation encountered a database error. </para>

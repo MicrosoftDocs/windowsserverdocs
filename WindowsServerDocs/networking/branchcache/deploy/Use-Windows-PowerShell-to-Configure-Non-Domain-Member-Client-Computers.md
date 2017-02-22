@@ -1,19 +1,17 @@
 ---
 title: Use Windows PowerShell to Configure Non-Domain Member Client Computers
-ms.custom: na
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-networking
-ms.tgt_pltfrm: na
+ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
+ms.author: jamesmci
 author: jamesmci
 ---
 # Use Windows PowerShell to Configure Non-Domain Member Client Computers
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this procedure to manually configure a BranchCache client computer for distributed cache mode or hosted cache mode.  
   

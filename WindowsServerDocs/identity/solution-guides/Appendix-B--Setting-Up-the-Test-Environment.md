@@ -1,18 +1,20 @@
 ---
+ms.assetid: 82918181-525d-4e93-af96-957dac6aedb6
 title: Appendix B Setting Up the Test Environment
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: 
+
+ms.technology: identity-adds
 ---
 
 # Appendix B: Setting Up the Test Environment
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic outlines the steps to build a hands-on lab to test Dynamic Access Control. The instructions are meant to be followed sequentially because there are many components that have dependencies.  
   
@@ -741,7 +743,7 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
   
 7.  Click **OK** three times to finish and return to Active Directory Administrative Center.  
   
-    ![](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+    ![solution guides](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   

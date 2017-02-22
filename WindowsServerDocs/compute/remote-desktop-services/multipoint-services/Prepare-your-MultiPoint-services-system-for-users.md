@@ -1,16 +1,17 @@
 ---
 title: Prepare your Windows MultiPoint Services system for users
+description: Navigation topic for planning user management in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e392f423-a64b-4825-91ab-334058721c4d
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Prepare your MultiPoint Services system for users

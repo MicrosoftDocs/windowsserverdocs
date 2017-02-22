@@ -1,18 +1,20 @@
 ---
+ms.assetid: 7f6b27e5-dc55-4ffc-8e76-6d57e65a870b
 title: Appendix A Dynamic Access Control Glossary
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: 
+
+ms.technology: identity-adds
 ---
 
 # Appendix A: Dynamic Access Control Glossary
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Following are the list of terms and definitions that are included in the Dynamic Access Control scenario.  
   

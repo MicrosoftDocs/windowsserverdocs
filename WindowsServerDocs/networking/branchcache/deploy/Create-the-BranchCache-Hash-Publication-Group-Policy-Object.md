@@ -1,19 +1,17 @@
 ---
 title: Create the BranchCache Hash Publication Group Policy Object
-ms.custom: na
+description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+manager: brianlic
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-networking
-ms.tgt_pltfrm: na
+ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: c3d33bed-83ef-4eb8-acf9-0719ecb4a931
+ms.author: jamesmci
 author: jamesmci
 ---
 # Create the BranchCache Hash Publication Group Policy Object
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 You can use this procedure to create the BranchCache hash publication Group Policy Object (GPO).  
   

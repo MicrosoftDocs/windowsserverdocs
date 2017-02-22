@@ -1,26 +1,22 @@
 ---
 title: Create a virtual switch for Hyper-V virtual machines
-description: " "
+description: "Gives instructions on creating a virtual switch using Hyper-V Manager or Windows PowerShell"
 ms.prod: windows-server-threshold
 ms.service: na
-manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+manager: dongill
+ms.technology: compute-hyper-v
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
-author: cwatsonmsft
-ms.author: cwatson
-ms.date: 8/16/2016
+author: KBDAzure
+ms.author: kathydav
+ms.date: 10/04/2016
 ---
 # Create a virtual switch for Hyper-V virtual machines
 
->Applies To: Windows 10, Windows Server Technical Preview
-
-**This is preliminary content and subject to change.**  
+>Applies To: Windows 10, Windows Server 2016
   
-A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server Technical Preview. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
+A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server 2016. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
 Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#bkmk_sswitchembedded). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/Networking.md) documentation.   
   
@@ -30,7 +26,7 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 2.  Select **Action** > **Virtual Switch Manager**.  
   
-    ![](../media/Hyper-V-Action-VSwitchManager.png)  
+    ![Screenshot that shows the menu option Action > Virtual Switch Manager](../media/Hyper-V-Action-VSwitchManager.png)  
   
 3.  Choose the type of virtual switch you want.  
   
@@ -46,7 +42,7 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 6.  If you select External, choose the network adapter (NIC) that you want to use and any other options described in the following table.  
   
-    ![](../media/Hyper-V-NewVSwitch-ExternalOptions.png)  
+    ![Screenshot that shows the external network options](../media/Hyper-V-NewVSwitch-ExternalOptions.png)  
   
     |Setting name|Description|  
     |----------------|---------------|  
@@ -55,13 +51,13 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 7.  If you want to isolates network traffic from the management Hyper-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.  
   
-    ![](../media/Hyper-V-NewSwitch-VLAN.png)  
+    ![Screenshot that shows the VLAN ID options](../media/Hyper-V-NewSwitch-VLAN.png)  
   
 8.  Click **OK**.  
   
 9. Click **Yes**.  
   
-    ![](../media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
+    ![Screenshot that shows the "Pending changes may disrupt network connectivity" message](../media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
   
 ## <a name="BKMK_WPS"></a>Create a virtual switch by using Windows PowerShell  
   
@@ -93,7 +89,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016, see [Remote Direct Memory Access and Switch Embedded Teaming](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
 
   
 ## Next step  

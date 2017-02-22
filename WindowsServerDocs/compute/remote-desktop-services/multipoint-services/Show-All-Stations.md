@@ -1,16 +1,17 @@
 ---
 title: Show All Stations
+description: Learn how to view all stations in MultiPoint Services
 ms.custom: na
 ms.date: 07/07/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4fcb5354-b7cd-4015-b9e7-42aef98b55f7
 author: lizap
-manager: swadhwa
+manager: dongill
 ms.author: elizapo
 ---
 # Show All Stations

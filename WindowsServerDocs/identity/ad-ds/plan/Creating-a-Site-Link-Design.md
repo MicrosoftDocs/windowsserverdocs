@@ -1,19 +1,20 @@
 ---
+ms.assetid: 206b8072-1d0c-4a0b-ba8a-35a868d67b4c
 title: Creating a Site Link Design
-ms.custom: na
+description:
+author: billmath
+ms.author: billmath
+manager: femila
+ms.date: 02/09/2017
+ms.topic: article
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.assetid: d35bcae0-fe46-4f6f-8cf2-df09e5896546
-author: Femila
+
+ms.technology: identity-adds
 ---
+
 # Creating a Site Link Design
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Create a site link design to connect your sites with site links. Site links reflect the intersite connectivity and method used to transfer replication traffic. You must connect sites with site links so that domain controllers at each site can replicate Active Directory changes.  
   

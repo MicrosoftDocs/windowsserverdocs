@@ -1,13 +1,15 @@
 ---
+ms.assetid: 9ee8a6cb-7550-46e2-9c11-78d0545c3a97
 title: Dynamic Access Control Overview
 description:
-author: femila
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: 
+
+ms.technology: identity-adds
 ---
 
 # Dynamic Access Control Overview

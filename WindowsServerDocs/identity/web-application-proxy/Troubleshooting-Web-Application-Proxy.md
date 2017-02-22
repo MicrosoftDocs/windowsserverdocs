@@ -1,4 +1,5 @@
 ---
+ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 title: Troubleshooting Web Application Proxy
 description:
 author: kgremban
@@ -6,13 +7,13 @@ manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
+
 ms.technology: web-app-proxy
 ---
 
 # Troubleshooting Web Application Proxy
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
@@ -88,7 +89,7 @@ The following administrator console events are usually indicative of problems ha
 |13007<br /><br />The HTTP response from the backend server was not received within the expected interval.|The back end server request timed out or is slow or unresponsive.|Check the backend server configuration. If it's very slow, check the connectivity to the backend server and also consider changing the Web Application Proxy global configuration parameter cmdlet for InactiveTransactionsTimeoutSec.|  
   
 ## See Also  
-[What's New in Web Application Proxy in Windows Server Technical Preview](web-application-proxy-windows-server.md)  
+[What's New in Web Application Proxy in Windows Server 2016](web-application-proxy-windows-server.md)  
 [Working with Web Application Proxy](assetId:///b607b717-2172-4271-98d1-fa8162e0bb2e)  
   
 
