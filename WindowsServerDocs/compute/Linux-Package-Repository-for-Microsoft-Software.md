@@ -14,9 +14,6 @@ ms.date: 02/15/2017
 ---
 # Linux Software Repository for Microsoft Products
 
->Applies To:  
-
-
 ## Overview
 Microsoft builds and supports a variety of software products for Linux systems and makes them available via standard APT and YUM package repositories. This document describes how to configure the repository on your Linux system, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
 
@@ -37,37 +34,37 @@ Repositories can be configured automatically by installing the Linux package tha
 
  - Enterprise Linux 6 (EL6)
 
-		sudo rpm -Uvh https://packages.microsoft.com/rhel/6/prod/microsoft-prod-el6.noarch.rpm
+		sudo rpm -Uvh http://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
 
  - Enterprise Linux 7 (EL7)
 
-		sudo rpm -Uvh https://packages.microsoft.com/rhel/7/prod/microsoft-prod-el7.noarch.rpm
+		sudo rpm -Uvh http://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 
 
 ### Ubuntu
 
  - Ubuntu 14.04 (Trusty)
 
-		wget https://packages.microsoft.com/ubuntu/14.04/prod/packages-microsoft-prod_1.0-1-trusty.deb
+		wget http://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
 		sudo dpkg -i packages-microsoft-prod_1.0-1-trusty.deb
 		sudo apt-get update
 
  - Ubuntu 16.04 (Xenial)
 
-		wget https://packages.microsoft.com/ubuntu/16.04/prod/packages-microsoft-prod_1.0-1-xenial.deb
+		wget http://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 		sudo dpkg -i packages-microsoft-prod_1.0-1-xenial.deb
 		sudo apt-get update
 
  - Ubuntu 16.10 (Yakkety)
 
-		wget https://packages.microsoft.com/ubuntu/16.10/prod/packages-microsoft-prod_1.0-1-yakkety.deb
+		wget http://packages.microsoft.com/config/ubuntu/16.10/packages-microsoft-prod.deb
 		sudo dpkg -i packages-microsoft-prod_1.0-1-yakkety.deb
 		sudo apt-get update
 
 
 ### SUSE Linux Enterprise 12
 
-		sudo rpm -Uvh https://packages.microsoft.com/sles/12/prod/packages-microsoft-prod-1.0-sle12.noarch.rpm
+		sudo rpm -Uvh http://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 
 
 ## Manual Configuration
