@@ -14,7 +14,7 @@ ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: lizap
 manager: scottman
 ---
-# Which graphics rendering virtualization technology is right for you?
+# Which graphics virtualization technology is right for you?
 
 You have a range of options when it comes to enabling graphics rendering in Remote Desktop Services. When you are planning your virtualization environment, the following considerations drive which graphics rendering technology you choose:
 
