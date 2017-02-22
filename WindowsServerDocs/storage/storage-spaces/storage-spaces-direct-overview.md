@@ -48,13 +48,13 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-hardware-requirements">Hardware requirements</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives-and-resiliency-types">Choose drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/choosing-drives">Choose drives</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/plan-volumes">Plan volumes</a></li>
 		</ul>
 		</td>
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Deploy hyper-converged</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct">Hyper-converged solution</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/create-volumes">Create volumes</a></li>
 			</ul>
 		</td>
@@ -62,7 +62,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 			<ul>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-nodes">Add servers or drives</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/remove-servers">Remove servers</a></li>
-			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/resize-volumes">Resize volumes</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/resize-volumes">Extend volumes</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/update-firmware">Update drive firmware</a></li>
 			</ul>
 		</td>
@@ -186,7 +186,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 ## Get started
 
-Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
+Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/), or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602).
 
 ## See also  
 -   [(VIDEO) Discover Storage Spaces Direct at Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs)
