@@ -3,9 +3,9 @@ ms.assetid: f88238ea-d851-4129-8b4e-a3a62b813614
 title: Review the Role of the Federation Server in the Resource Partner
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

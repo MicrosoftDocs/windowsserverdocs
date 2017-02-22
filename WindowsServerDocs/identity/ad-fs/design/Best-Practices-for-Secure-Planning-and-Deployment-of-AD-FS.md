@@ -3,9 +3,9 @@ ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
 title: Best Practices for Secure Planning and Deployment of AD FS
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
