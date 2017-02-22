@@ -96,7 +96,7 @@ The repository configuration files are available from [packages.microsoft.com/co
 		curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > ./microsoft-prod.list
 		sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
 
-		# Install Microsoft's GPG public key
+		# Install Microsoft GPG public key
 		curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 		sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
 
