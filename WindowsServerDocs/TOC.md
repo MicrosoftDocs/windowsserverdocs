@@ -826,6 +826,7 @@
 ##### [Plan NPS as a RADIUS proxy](networking/technologies/nps/nps-plan-proxy.md)
 #### [Deploy Network Policy Server](networking/technologies/nps/nps-deploy.md)
 #### [Manage Network Policy Server](networking/technologies/nps/nps-manage-top.md)
+##### [Network Policy Server Management with Administration Tools](networking/technologies/nps/nps-admintools.md)
 ##### [Configure Connection Request Policies](networking/technologies/nps/nps-crp-configure.md)
 ##### [Configure Firewalls for RADIUS Traffic](networking/technologies/nps/nps-firewalls-configure.md)
 ##### [Configure Network Policies](networking/technologies/nps/nps-np-configure.md)
