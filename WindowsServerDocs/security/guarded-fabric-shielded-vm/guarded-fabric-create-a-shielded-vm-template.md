@@ -106,7 +106,7 @@ The small shield icon next to the disk's name denotes the disk as a prepared tem
 
 ![Shielded vm template disk](../media/Guarded-Fabric-Shielded-VM/shielded-vm-template-disk.png)
 
-## Create the shielded VM template in VMM using the prepareded template disk
+## Create the shielded VM template in VMM using the prepared template disk
 
 With a prepared template disk in your VMM library, you are ready to create a VM template for shielded VMs. VM templates for shielded VMs differ slightly from traditional VM templates in that certain settings are fixed (generation 2 VM, UEFI and Secure Boot enabled, and so on) and others are unavailable (tenant customization is limited to a few, select properties of the VM). To create the VM template, perform the following steps:
 

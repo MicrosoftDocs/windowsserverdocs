@@ -3,9 +3,9 @@ ms.assetid: bb9b9e18-bf2f-4115-be77-9a165944db41
 title: Planning Your Deployment
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

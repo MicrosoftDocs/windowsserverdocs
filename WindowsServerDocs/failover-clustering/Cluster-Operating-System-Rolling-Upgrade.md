@@ -217,11 +217,8 @@ Cluster OS Rolling upgrade includes the following steps:
 
         ![Screencap showing the Update-VMVersion cmdlet in action](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
         **Figure 22: Upgrading a VM version using the Update-VMVersion PowerShell cmdlet**  
-        
-        > [!CAUTION]  
-        > Leave Production VMs at Configuration Version 5.0 - only VMs with Configuration Version 5.0 are guaranteed to be able to Live Migrate to Windows Server 2016 RTM version. Upgrade the VM Configuration Version only for Test VMs..  
 
-    4.  Storage pools can be upgraded using the Update-StoragePool PowerShell cmdlet - this is an online operation.  
+4.  Storage pools can be upgraded using the [Update-StoragePool](https://technet.microsoft.com/itpro/powershell/windows/storage/update-storagepool) PowerShell cmdlet - this is an online operation.  
 
 Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scale-out File Server clusters, which can be upgraded without downtime, the Cluster OS Rolling Upgrade process can be used for any cluster role.  
 
