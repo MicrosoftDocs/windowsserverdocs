@@ -14,7 +14,7 @@ ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: lizap
 manager: scottman
 ---
-# Which graphics virtualization technology is right for you?
+# Which graphics rendering virtualization technology is right for you?
 
 You have a range of options when it comes to enabling graphics rendering in Remote Desktop Services. When you are planning your virtualization environment, the following considerations drive which graphics rendering technology you choose:
 
@@ -72,7 +72,7 @@ If you want to make available applications that require RemoteFX vGPU and higher
 
 Windows Server 2016 added support for Generation 2 VMs - this gives you access to features like Secure Boot, UEFI Firmware support, boot from SCSI hard disk (VHDX). Support is only available for Windows 10 or Windows Server 2016 Guest VMs with RemoteFX vGPU. 
 
-See [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) for more information.
+See [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md) for more information.
 
 
 ### Improved frame rate and reduced jitter with AVC444
