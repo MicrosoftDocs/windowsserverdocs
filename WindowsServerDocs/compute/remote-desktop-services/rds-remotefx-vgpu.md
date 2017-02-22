@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 02/13/2017  
+ms.date: 02/21/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0263fa6b-2185-4cc3-99ef-3588e2f4ada5
@@ -16,7 +16,6 @@ manager: scottman
 ---
 # Set up and configure RemoteFX vGPU for Remote Desktop Services
 
-RemoteFX in Windows Server 2012 is a suite of improvements to the Microsoft Remote Display Protocol (RDP). It optimizes the display experience for remote users, even on constraint networks. Additionally, RemoteFX improves access to peripheral devices attached to the client, e.g. via USB. 
 
 The vGPU feature of RemoteFX makes it possible for multiple virtual machines to share a physical graphics adapter. The virtual machines are able to offload rendering of graphic information from the processor to the dedicated graphics adapter. This will decrease the CPU load and improve the scalability for graphic intense workloads that run in the VDI virtual machines. 
 
@@ -26,22 +25,26 @@ The vGPU feature of RemoteFX makes it possible for multiple virtual machines to 
 - DX 11.0 compatible GPU with WDDM 1.2 compatible driver 
 - Windows Server RD Virtualization Host role enabled (enables Hyper-V Role) 
 - Server with a CPU that supports SLAT (Second Level Address Translation) 
-- Guest VM running a Windows Enterprise client (Windows 7 with Service Pack 1, Windows 8.1, Windows 10, or Windows Server 2016)  
-   - OpenGL and OpenCL functionality is only available in Windows 10 or Windows Server 2016 Technical Preview o DirectX 11.0 is only available with Windows 8 or newer Guest VM’s 
+- Guest VM running a Windows Enterprise client (Windows 7 with Service Pack 1, Windows 8.1, Windows 10)
+- Guest VM running Windows Server 2016
+
+Requirements for guest VMs:  
+   - OpenGL and OpenCL functionality is only available in Windows 10 or Windows Server 2016  
+   - DirectX 11.0 is only available with Windows 8 or newer Guest VMs 
    - Windows 7 SP1 Guest VM requires latest updates and also does not support OpenGL/OpenCL. 
-   - Remote Desktop Session Host is not supported with RemoteFX vGPU
+   - Remote Desktop Session Host is only supported with RemoteFX vGPU if it is running as a [personal session desktop](rds-personal-session-desktops.md).
 
 ## Install RemoteFX vGPU
 
 Use the following steps to install RemoteFX vGPU support:
 
 1. Install Windows Server 2016. 
-2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the vendor's site 
-3. Enable Hyper-V role 
-4. Enable Remote Desktop Virtualization Host (RDVH) role 
-5. Note: If you have multiple GPU’s configured in your system use “Hyper Setting 
-6. Create VM with Windows 10 (Enterprise SKU) or Windows Server 2016 Technical Preview 5. 
-7. Add the RemoteFX 3D Graphics Adapter 
+2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the vendor's site. 
+3. Enable the Hyper-V role. 
+4. Enable the Remote Desktop Virtualization Host (RDVH) role. 
+5. If you have multiple GPUs configured in your system use the Hyper-V settings to choose which GPUs to enable for RemoteFX vGPU. 
+6. Create a VM with Windows 10 (Enterprise SKU) or Windows Server 2016. 
+7. Add the RemoteFX 3D Graphics Adapter.
 
 ## Configure the RemoteFX vGPU 3D adapter
 You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the RemoteFX vGPU 3D graphics adapter. 

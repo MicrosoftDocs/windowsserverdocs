@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 80d82d30-3ad0-4a8c-9a9b-2773c47eee19
 author: lizap
 ms.author: elizapo
-ms.date: 09/20/2016
+ms.date: 02/21/2017
 manager: dongill
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)
@@ -19,6 +19,9 @@ manager: dongill
 >Applies To: Windows Server 2016
 
 You can use the Remote Desktop Licensing Manager tool to create (generate) reports to track the RDS Per User CALs that have been issued by a Remote Desktop license server.
+
+> [!NOTE]
+>  If you are using Azure AD Domain Services in your environment, the Remote Desktop Licensing Manager tool won't work to obtain Per User CALs. Instead, you need to track licensing manually, either through logon events, polling active Remote Desktop connections through the Connection Broker, or another mechanism that works for you. 
 
 Use the following steps to generate a per User CALs report:
 
