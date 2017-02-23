@@ -50,11 +50,11 @@ Before performing the procedure below, you must install NPS on the local compute
 
 Depending on network conditions and the number of NPS servers you manage by using the NPS MMC snap\-in, response of the MMC snap\-in might be slow. In addition, NPS server configuration traffic is sent over the network during a remote administration session by using the NPS snap\-in. Ensure that your network is physically secure and that malicious users do not have access to this network traffic.
 
-### To manage multiple NPS servers by using the NPS snap\-in
-
 **Administrative Credentials** 
 
 To complete this procedure, you must be a member of the Administrators group.
+
+### To manage multiple NPS servers by using the NPS snap\-in
 
 1. To open the MMC, run Windows PowerShell as an Administrator. In Windows PowerShell, type **mmc**, and then press ENTER. The Microsoft Management Console opens.
 2. In the MMC, on the **File** menu, click **Add/Remove Snap\-in**. The **Add or Remove Snap\-ins** dialog box opens.
@@ -85,7 +85,9 @@ To complete this procedure, you must be a member of the Administrators group on 
 1. On each NPS server that you want to manage remotely, in Server Manager, select **Local Server**. In the Server Manager details pane, view the **Remote Desktop** setting, and do one of the following. 
 	1. If the value of the **Remote Desktop** setting is **Enabled**, you do not need to perform some of the steps in this procedure. Skip down to Step 4 to start configuring Remote Desktop User permissions.
 	2. If the **Remote Desktop** setting is **Disabled**, click the word **Disabled**. The **System Properties** dialog box opens on the **Remote** tab.
-2. In **Remote Desktop**, click **Allow remote connections to this computer**. The **Remote Desktop Connection** dialog box opens. To customize the network connections that are allowed, click **Windows Firewall with Advanced Security**, and then configure the settings that you want to allow. To enable Remote Desktop Connection for all network connections on the computer, click **OK**.
+2. In **Remote Desktop**, click **Allow remote connections to this computer**. The **Remote Desktop Connection** dialog box opens. Do one of the following.
+	1. To customize the network connections that are allowed, click **Windows Firewall with Advanced Security**, and then configure the settings that you want to allow. 
+	2. To enable Remote Desktop Connection for all network connections on the computer, click **OK**.
 3. In **System Properties**, in **Remote Desktop**, decide whether to enable **Allow connections only from computers running Remote Desktop with Network Level Authentication**, and make your selection.
 4. Click **Select Users**. The **Remote Desktop Users** dialog box opens.
 5. In **Remote Desktop Users**, to grant permission to a user to connect remotely to the NPS server, click **Add**, and then type the user name for the user's account. Click **OK**.
