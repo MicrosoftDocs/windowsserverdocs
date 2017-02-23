@@ -163,6 +163,8 @@ When configuring a Cloud Witness as a quorum witness for your Failover Cluster, 
 * The generated SAS token is valid as long as the Access Key remains valid. When rotating the Primary Access Key, it is important to first update the Cloud Witness (on all your clusters that are using that Storage Account) with the Secondary Access Key before regenerating the Primary Access Key.  
 * Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.
 
+### Proxy considerations with Cloud Witness  
+Cloud Witness uses HTTPS (default port 443) to establish communication with Azure blob service. Ensure that HTTPS port is accessible via network Proxy.
 
 ## See Also
 - [What's New in Failover Clustering in Windows Server](whats-new-in-failover-clustering.md)
