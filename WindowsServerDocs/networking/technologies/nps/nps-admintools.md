@@ -59,7 +59,7 @@ To complete this procedure, you must be a member of the Administrators group.
 1. To open the MMC, run Windows PowerShell as an Administrator. In Windows PowerShell, type **mmc**, and then press ENTER. The Microsoft Management Console opens.
 2. In the MMC, on the **File** menu, click **Add/Remove Snap\-in**. The **Add or Remove Snap\-ins** dialog box opens.
 3. In **Add or Remove Snap\-ins**, in **Available snap\-ins**, scroll down the list, click **Network Policy Server**, and then click **Add**. The **Select Computer** dialog box opens.
-4. In **Select Computer**, verify that **Local computer \(the computer on which this console is running\)** is selected, and then click **OK**. The snap\-in for the local NPS server is added to the list in Selected snap-ins.
+4. In **Select Computer**, verify that **Local computer \(the computer on which this console is running\)** is selected, and then click **OK**. The snap\-in for the local NPS server is added to the list in **Selected snap\-ins**.
 5. In **Add or Remove Snap\-ins**, in **Available snap\-ins**, ensure that **Network Policy Server** is still selected, and then click **Add**. The **Select Computer** dialog box opens again.
 6. In **Select Computer**, click **Another computer**, and then type the IP address or fully qualified domain name \(FQDN\) of the remote NPS server that you want to manage by using the NPS snap\-in. Optionally, you can click **Browse** to peruse the directory for the computer that you want to add. Click **OK**.
 7. Repeat steps 5 and 6 to add more NPS servers to the NPS snap\-in. When you have added all the NPS servers you want to manage, click **OK**.
