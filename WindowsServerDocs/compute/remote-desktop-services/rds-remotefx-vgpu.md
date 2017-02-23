@@ -55,6 +55,7 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
 2. Stop the VM, if it is running. 
 3. In Hyper-V Manager navigate to the **VM Settings**, and then click **RemoteFX 3D Graphics Adapter**. 
 4. Set the maximum number of monitors, maximum monitor resolution, and dedicated video memory. 
+
    > [!NOTE]
    > Setting higher values for any of these options will have impact to scale, so you should only set what is absolutely necessary. 
 
