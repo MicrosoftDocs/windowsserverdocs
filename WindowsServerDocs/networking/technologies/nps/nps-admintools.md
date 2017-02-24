@@ -36,7 +36,7 @@ To complete this procedure, you must be a member of the Administrators group.
 
 ### To configure the local NPS server by using the NPS console
 
-1. In Server Manager, click Tools, and then click Network Policy Server. The NPS console opens.
+1. In Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 
 2. In the NPS console, click NPS \(Local\). In the details pane, choose either **Standard Configuration** or **Advanced Configuration**, and then do one of the following based upon your selection:
 	- If you choose **Standard Configuration**, select a scenario from the list, and then follow the instructions to start a configuration wizard.
