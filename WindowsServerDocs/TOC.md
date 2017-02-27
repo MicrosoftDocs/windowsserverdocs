@@ -599,7 +599,8 @@
 ##### [Single Page Application with AD FS](identity/ad-fs/development/Single-Page-Application-with-AD-FS.md)
 
 #### [AD FS Operations](identity/ad-fs/AD-FS-2016-Operations.md)
-##### [Access Control Policies in AD FS](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
+##### [Access Control Policies in Windows Server 2016 AD FS](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
+##### [Access Control Policies in Windows Server 2012 R2 and Windows Server 2012 AD FS](identity/ad-fs/operations/Access-Control-Policies-W2K12.md)
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 ##### [AD FS Rapid Restore Tool](identity/ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 ##### [AD FS support for alternate hostname binding for certificate authentication](identity/ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
