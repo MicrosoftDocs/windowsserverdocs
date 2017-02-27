@@ -30,10 +30,10 @@ The policies described in this article should always be used with another authen
   
 |**Scenario**|**Description**| 
 | --- | --- | 
-|[Scenario 1: Block all external access to Office 365](../Topic/Configuring%20Client%20Access%20Policies.md#scenario1)|Office 365 access is allowed from all clients on the internal corporate network, but requests from external clients are denied based on the IP address of the external client.|  
-|[Scenario 2: Block all external access to Office 365 except Exchange ActiveSync](../Topic/Configuring%20Client%20Access%20Policies.md#scenario2)|Office 365 access is allowed from all clients on the internal corporate network, as well as from any external client devices, such as smart phones, that make use of Exchange ActiveSync. All other external clients, such as those using Outlook, are blocked.|  
-|[Scenario 3: Block all external access to Office 365 except browser-based applications](../Topic/Configuring%20Client%20Access%20Policies.md#scenario3)|Blocks external access to Office 365, except for passive (browser-based) applications such as Outlook Web Access or SharePoint Online.|  
-|[Scenario 4: Block all external access to Office 365 except for designated Active Directory groups](../Topic/Configuring%20Client%20Access%20Policies.md#scenario4)|This scenario is used for testing and validating client access policy deployment. It blocks external access to Office 365 only for members of one or more Active Directory group. It can also be used to provide external access only to members of a group.|  
+|Scenario 1: Block all external access to Office 365|Office 365 access is allowed from all clients on the internal corporate network, but requests from external clients are denied based on the IP address of the external client.|  
+|Scenario 2: Block all external access to Office 365 except Exchange ActiveSync|Office 365 access is allowed from all clients on the internal corporate network, as well as from any external client devices, such as smart phones, that make use of Exchange ActiveSync. All other external clients, such as those using Outlook, are blocked.|  
+|Scenario 3: Block all external access to Office 365 except browser-based applications|Blocks external access to Office 365, except for passive (browser-based) applications such as Outlook Web Access or SharePoint Online.|  
+|Scenario 4: Block all external access to Office 365 except for designated Active Directory groups|This scenario is used for testing and validating client access policy deployment. It blocks external access to Office 365 only for members of one or more Active Directory group. It can also be used to provide external access only to members of a group.|  
   
 ## Enabling Client Access Policy  
  To enable client access policy in AD FS in Windows Server 2012 R2, you must update the Microsoft Office 365 Identity Platform relying party trust. Choose one of the example scenarios below to configure the claim rules on the **Microsoft Office 365 Identity Platform** relying party trust that best meets the needs of your organization.  
@@ -72,7 +72,7 @@ The policies described in this article should always be used with another authen
   
 7.  To save the new rules, in the **Edit Claim Rules** dialog box, click **OK**. The resulting list should look like the following.  
   
-     ![Issuance Auth Rules](../Image/ADFS_Client_Access_1.png "ADFS_Client_Access_1")  
+     ![Issuance Auth Rules](media/Access-Control-Policies-W2K12/clientaccess1.png "ADFS_Client_Access_1")  
   
 ###  <a name="scenario2"></a> Scenario 2: Block all external access to Office 365 except Exchange ActiveSync  
  The following example allows access to all Office 365 applications, including Exchange Online, from internal clients including Outlook. It blocks access from clients residing outside the corporate network, as indicated by the client IP address, except for Exchange ActiveSync clients such as smart phones.  
@@ -148,7 +148,7 @@ The policies described in this article should always be used with another authen
   
 19. To save the new rules, in the **Edit Claim Rules** dialog box, click OK. The resulting list should look like the following.  
   
-     ![Issuance Authorization Rules](../Image/ADFS_Client_Access_2.png "ADFS_Client_Access_2")  
+     ![Issuance Authorization Rules](media/Access-Control-Policies-W2K12/clientaccess2.png )  
   
 ###  <a name="scenario3"></a> Scenario 3: Block all external access to Office 365 except browser-based applications  
   
@@ -196,7 +196,7 @@ The policies described in this article should always be used with another authen
   
 11. To save the new rules, in the **Edit Claim Rules** dialog box, click **OK**. The resulting list should look like the following.  
   
-     ![Issuance](../Image/ADFS_Client_Access_3.png "ADFS_Client_Access_3")  
+     ![Issuance](media/Access-Control-Policies-W2K12/clientaccess3.png)  
   
 ###  <a name="scenario4"></a> Scenario 4: Block all external access to Office 365 except for designated Active Directory groups  
  The following example enables access from internal clients based on IP address. It blocks access from clients residing outside the corporate network that have an external client IP address, except for those individuals in a specified Active Directory Group.Use the following steps to add the correct Issuance Authorization rules to the **Microsoft Office 365 Identity Platform** relying party trust using the Claim Rule Wizard:  
@@ -261,7 +261,7 @@ The policies described in this article should always be used with another authen
   
 15. To save the new rules, in the **Edit Claim Rules** dialog box, click OK. The resulting list should look like the following.  
   
-     ![Issuance](../Image/ADFS_Client_Access_4.png "ADFS_Client_Access_4")  
+     ![Issuance](media/Access-Control-Policies-W2K12/clientaccess4.png)  
   
 ##  <a name="buildingip"></a> Building the IP address range expression  
  The x-ms-forwarded-client-ip claim is populated from an HTTP header that is currently set only by Exchange Online, which populates the header when passing the authentication request to AD FS. The value of the claim may be one of the following:  
