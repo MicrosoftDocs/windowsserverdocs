@@ -108,7 +108,7 @@ The last 3 counters cover NTP server scenarios and are helpful when determine th
 ### Configuration Updates per Environment
 In this section shows the changes in default configuration based on various environments between Windows 2016 and previous versions. 
 
-|Role|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012R2</br>Windows 2008R2</br>Windows 10|
+|Role|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012R2  Windows 2008R2 Windows 10|
 |----|--|-|-|-|
 |s|a|b|c|d|
 
