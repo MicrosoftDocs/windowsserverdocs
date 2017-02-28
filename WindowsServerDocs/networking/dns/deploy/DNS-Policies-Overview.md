@@ -176,5 +176,18 @@ You can also create zone level zone transfer policies. The example below ignores
 Add-DnsServerZoneTransferPolicy -Name "InternalTransfers" -Action IGNORE -ServerInterfaceIP "ne,10.0.0.33" -PassThru -ZoneName "contoso.com"  
 ```  
   
+## DNS Policy Scenarios
+
+For information on how to use DNS policy for specific scenarios, see the following topics in this guide.
+
+- [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](primary-geo-location.md)  
+- [Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](primary-secondary-geo-location.md)  
+- [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](dns-tod-intelligent.md)
+- [DNS Responses Based on Time of Day with an Azure Cloud App Server](dns-tod-azure-cloud-app-server.md)
+- [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md)
+- [Use DNS Policy for Split-Brain DNS in Active Directory](dns-sb-with-ad.md)
+- [Use DNS Policy for Applying Filters on DNS Queries](apply-filters-on-dns-queries.md)
+- [Use DNS Policy for Application Load Balancing](app-lb.md)
+- [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)
 
 
