@@ -112,7 +112,7 @@ In this section shows the changes in default configuration based on various envi
 |----|---|----|---|---|
 |s|a|b|c|d|
 
-Role|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012R2  Windows 2008R2 Windows 10|
+Role|Setting|Windows 2016|Windows 10</br> Anniversary|Windows 2012R2  Windows 2008R2 Windows 10|
 ----|---|----|---|---|
 s|a|b|c|d|
 
