@@ -77,7 +77,7 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 3.  To disable this feature, set the value for both parameters to be null.
 
     ```
-    Set-AdfsClaimsProviderTrust -Target Identifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
+    Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
     ```
 
 4.  To enable alternate login ID with Azure AD, no additional configurations steps are needed when using Azure AD Connect.   Alternate ID can be configured directly from the wizard.  See uniquely identifying your users under the section [Connect to Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-get-started-custom/#connect-to-azure-ad).

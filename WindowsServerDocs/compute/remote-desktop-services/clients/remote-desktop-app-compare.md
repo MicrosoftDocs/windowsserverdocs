@@ -1,4 +1,4 @@
- ---
+---
 title: Remote Desktop - compare the client apps
 description: Learn how the difference RD apps compare when it comes to supported features and functions.
 ms.custom: na
@@ -14,6 +14,7 @@ manager: dongill
 ms.author: elizapo
 ms.date: 02/21/2017
 ---
+
 # Compare the client apps
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
