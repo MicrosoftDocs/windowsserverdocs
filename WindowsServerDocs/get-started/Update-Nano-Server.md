@@ -20,7 +20,7 @@ Nano Server offers a variety of methods for staying up to date. Compared to othe
 > [!NOTE]
 > If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. So you should install the latest cumulative update after installing any optional packages.
 
-In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you should first install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176939](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
+In the case of the Cumulative Update for Windows Server 2016: September 26, 2016 ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), you should first install the latest Servicing Stack Update for Windows 10 Version 1607: August 23, 2016 as a prerequisite ([KB3176936](https://support.microsoft.com/en-us/kb/3176936)). For most of the options below, you need the .msu files containing the .cab update packages. Visit the Microsoft Update Catalog to download each of these update packages:
 - [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
 - [http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
 
