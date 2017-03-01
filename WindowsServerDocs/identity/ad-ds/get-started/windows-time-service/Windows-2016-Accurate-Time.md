@@ -108,6 +108,12 @@ The last 3 counters cover NTP server scenarios and are helpful when determine th
 ### Configuration Updates per Environment
 In this section shows the changes in default configuration based on various environments between Windows 2016 and previous versions. 
 
+|Role||
+|----|---|
+|Standalone</br>Nano Server|<table><tr><th>Settings</th><th>Windows 2016</th><th>Windows 10</br>Anniversary</th><th>Windows 2012R2</br>Windows 2008R2</br>Windows 10</th></tr><tr><td>Time Server</td><td>time.windows.com</td><td>NA</td><td>time.windows.com</td></tr><tr><td>Polling Frequency</td><td>64 sec - 1024 sec</td><td>NA</td><td>Once a week</td></tr><tr><td>Clock Update Freq</td><td>Once a second</td><td>NA</td><td>Once a hour</td></tr></table>|
+|Standalone</br>Client|<table><tr><th>Settings</th><th>Windows 2016</th><th>Windows 10</br>Anniversary</th><th>Windows 2012R2</br>Windows 2008R2</br>Windows 10</th></tr><tr><td>Time Server</td><td>NA</td><td>time.windows.com</td><td>time.windows.com</td></tr><tr><td>Polling Frequency</td><td>NA</td><td>Once a Day</td><td>Once a week</td></tr><tr><td>Clock Update Freq</td><td>NA</td><td>Once a day</td><td>Once a week</td></tr></table>|
+|Hyper-V</br>Guest|<table><tr><th>Settings</th><th>Windows 2016</th><th>Windows 10</br>Anniversary</th><th>Windows 2012R2</br>Windows 2008R2</br>Windows 10</th></tr><tr><td>Time Server</td><td>Chooses best option based on stratum of HOst and Time server</td><td>Chooses best option based on stratum of Host and Time server</td><td>Defaults to host</td></tr><tr><td>Polling Frequency</td><td>Based on Role</td><td>Based on Role</td><td>Based on Role</td></tr><tr><td>Clock Update Freq</td><td>Based on Role</td><td>Based on Role</td><td>Based on Role</td></tr></table>|
+
 |Role|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012R2</br>Windows 2008R2</br>Windows 10|
 ----|---|---|---|---|
 |Standalone</br>Nano Server|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Freq</td></tr></table>|<table><tr><td>Time.windows.com</td></tr><tr><td><br></td></tr><tr><td>Time.windows.com</br> </td></tr></table>|<table><tr><td>64sec-1024sec</td></tr><tr><td></br></td></tr><tr><td>Once a week</td></tr></table>|<table><tr><td>Once a sec</td></tr><tr><td></br></td></tr><tr><td>Once a hour</td></tr></table>|
