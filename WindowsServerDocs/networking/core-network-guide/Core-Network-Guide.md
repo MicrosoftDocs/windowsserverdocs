@@ -558,7 +558,7 @@ When installation has successfully completed, the following message is displayed
 
 - In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
 
- `Install-ADDSForest -DomainName "corp.contoso.com"`
+    Install-ADDSForest -DomainName "corp.contoso.com"
 
 - During the installation and configuration process, which is visible at the top of the Windows PowerShell window, the following prompt appears. After it appears, type a password and then press ENTER.
 
