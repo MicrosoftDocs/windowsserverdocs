@@ -397,7 +397,7 @@
 ###### [Audit Policy Recommendations](identity/ad-ds/plan/security-best-practices/audit-policy-Recommendations.md)
 ###### [Planning for compromise](identity/ad-ds/plan/security-best-practices/Planning-for-compromise.md)
 ###### [Maintaining a more Secure Environment](identity/ad-ds/plan/security-best-practices/Maintaining-a-more-Secure-Environment.md)
-###### [Summary of Best Practices](identity/ad-ds/plan/security-best-practices/Summary-of-Best-Practices.md)
+
 ###### [Appendices](identity/ad-ds/plan/security-best-practices/appendices.md)
 
 ###### [Appendix B: Privileged Accounts and Groups in Active Directory](identity/ad-ds/plan/security-best-practices/appendix-B--Privileged-Accounts-and-Groups-in-active-directory.md)

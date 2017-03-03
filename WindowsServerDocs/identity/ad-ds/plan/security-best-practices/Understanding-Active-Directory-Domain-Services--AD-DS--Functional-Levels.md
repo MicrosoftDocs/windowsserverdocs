@@ -14,9 +14,10 @@ ms.technology: identity-adds
 
 # Understanding Active Directory Domain Services (AD DS) Functional Levels
 
->Applies To: Windows Server 2012
+>Applies To: Windows Server 2012 R2, Windows Server 2012
 
->[!IMPORTANT] The following documentation was written in 2013 and is provided for historical purposes only.  Currently we are reviewing this documentation and it is subject to change.  It may not reflect current best practices.
+>[!IMPORTANT] 
+>The following documentation was written in 2013 and is provided for historical purposes only.  Currently we are reviewing this documentation and it is subject to change.  It may not reflect current best practices.
 
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels do not affect which operating systems you can run on workstations and member servers that are joined to the domain or forest.  
   
