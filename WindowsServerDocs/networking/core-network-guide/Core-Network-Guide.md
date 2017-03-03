@@ -579,6 +579,11 @@ If you prefer, you can read the warning messages that are displayed during norma
 
 After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.
 
+For more information about these Windows PowerShell commands, see the following reference topics.
+
+- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
+- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
+
 **Install AD DS and DNS Using Server Manager**
 
 1.  On DC1, in **Server Manager**, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.
