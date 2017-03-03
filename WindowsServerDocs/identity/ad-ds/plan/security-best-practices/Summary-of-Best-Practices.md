@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -14,7 +14,9 @@ ms.technology: identity-adds
 
 # Summary of Best Practices
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2012
+
+>[!IMPORTANT] The following documentation was written in 2013 and is provided for historical purposes only.  Currently we are reviewing this documentation and it is subject to change.  It may not reflect current best practices.
 
 The following table contains a summary of the best practices for securing Active Directory as described in this document, with hyperlinks to the sections in which the recommendations are detailed. Practices and controls that are described as tactical in nature may be implemented more quickly and with less effort than those that are described as strategic or are applicable to discrete components in the larger infrastructure.  
 
