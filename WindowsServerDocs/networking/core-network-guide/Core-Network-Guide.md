@@ -592,7 +592,7 @@ Install-ADDSForest -DomainName "corp.contoso.com"
 Get-WindowsFeature
 ````
 
-The results of this command are displayed in Windows PowerShell, and should be similar to the results in the image below. For installed technologies, the brackets to the left of the technology name contain the character **X**, and the value of **Install State** is Installed.
+The results of this command are displayed in Windows PowerShell, and should be similar to the results in the image below. For installed technologies, the brackets to the left of the technology name contain the character **X**, and the value of **Install State** is **Installed**.
 
 ![Results of the Get-WindowsFeature command](../media/Core-Network-Guide/server-roles-installed.jpg)
 
