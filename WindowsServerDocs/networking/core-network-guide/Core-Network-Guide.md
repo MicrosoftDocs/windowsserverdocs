@@ -529,19 +529,62 @@ All members of the Domain Users group can log on to any client computer after it
 
 You can configure user accounts to designate the days and times that the user is allowed to log on to the computer. You can also designate which computers each user is allowed to use. To configure these settings, open Active Directory Users and Computers, locate the user account that you want to configure, and double-click the account. In the user account **Properties**, click the **Account** tab, and then click either **Logon Hours** or **Log On To**.
 
-##### <a name="BKMK_installAD-DNS"></a>Install AD DS and DNS for a New Forest
-You can use this procedure to install Active Directory Domain Services (AD DS) and DNS and to create a new domain in a new forest.
+#### <a name="BKMK_installAD-DNS"></a>Install AD DS and DNS for a New Forest
+
+You can use one of the following procedures to install Active Directory Domain Services (AD DS) and DNS and to create a new domain in a new forest. 
+
+The first procedure provides instructions on performing these actions by using Windows PowerShell, while the second procedure shows you how to install AD DS and DNS by using Server Manager.
+
+>[!IMPORTANT]
+>After you finish performing the steps in this procedure, the computer is automatically restarted.
+
+**Install AD DS and DNS Using Windows PowerShell**
+
+You can use the following commands to install and configure AD DS and DNS. You must replace the domain name in this example with the value that you want to use for your domain.
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 
-> [!NOTE]
-> To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlets on separate lines, and then press ENTER. You must also replace the domain name in this example with the value that you want to use.
->
-> `Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
->
-> `Install-ADDSForest -DomainName corp.contoso.com`
+- Run Windows PowerShell as an Administrator, type the following command, and then press ENTER:  
 
-###### To install Active Directory Domain Services and DNS
+`Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
+
+When installation has successfully completed, the following message is displayed in Windows PowerShell.
+
+    
+    Success Restart Needed 	Exit Code  	Feature Result
+    ------- -------------- 	---------  	--------------
+    True	No 				Success		{Active Directory Domain Services, Group P...
+    
+
+- In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
+
+    Install-ADDSForest -DomainName "corp.contoso.com"
+
+- During the installation and configuration process, which is visible at the top of the Windows PowerShell window, the following prompt appears. After it appears, type a password and then press ENTER.
+
+    SafeModeAdministratorPassword:
+
+- After you type a password and press ENTER, the following confirmation prompt appears. Type the same password and then press ENTER.
+
+    Confirm SafeModeAdministratorPassword:
+
+- When the following prompt appears, type the letter **Y** and then press ENTER.
+
+    
+    The target server will be configured as a domain controller and restarted when this operation is complete.
+    Do you want to continue with this operation?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+    
+If you prefer, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS.
+
+After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.
+
+For more information about these Windows PowerShell commands, see the following reference topics.
+
+- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
+- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
+
+**Install AD DS and DNS Using Server Manager**
 
 1.  On DC1, in **Server Manager**, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.
 
