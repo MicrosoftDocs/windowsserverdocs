@@ -542,6 +542,11 @@ The first procedure provides instructions on performing these actions by using W
 
 You can use the following commands to install and configure AD DS and DNS. You must replace the domain name in this example with the value that you want to use for your domain.
 
+>[!NOTE
+>For more information about these Windows PowerShell commands, see the following reference topics.
+>- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
+>- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
+
 Membership in **Administrators** is the minimum required to perform this procedure.
 
 - Run Windows PowerShell as an Administrator, type the following command, and then press ENTER:  
@@ -558,15 +563,17 @@ When installation has successfully completed, the following message is displayed
 
 - In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
 
-    Install-ADDSForest -DomainName "corp.contoso.com"
+````
+Install-ADDSForest -DomainName "corp.contoso.com"
+````
 
 - During the installation and configuration process, which is visible at the top of the Windows PowerShell window, the following prompt appears. After it appears, type a password and then press ENTER.
 
-    SafeModeAdministratorPassword:
+	**SafeModeAdministratorPassword:**
 
 - After you type a password and press ENTER, the following confirmation prompt appears. Type the same password and then press ENTER.
 
-    Confirm SafeModeAdministratorPassword:
+	**Confirm SafeModeAdministratorPassword:**
 
 - When the following prompt appears, type the letter **Y** and then press ENTER.
 
@@ -575,14 +582,19 @@ When installation has successfully completed, the following message is displayed
     Do you want to continue with this operation?
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
     
-If you prefer, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS.
+- If you want to, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS. These messages are normal and are not an indication of install failure.
 
-After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.
+- After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.
 
-For more information about these Windows PowerShell commands, see the following reference topics.
+- After the server is restarted, you can verify successful installation of Active Directory Domain Services and DNS. Open Windows PowerShell, type the following command, and press ENTER.
 
-- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
-- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
+````
+Get-WindowsFeature
+````
+
+The results of this command are displayed in Windows PowerShell, and should be similar to the results in the image below. For installed technologies, the brackets to the left of the technology name contain the character **X**, and the value of **Install State** is Installed.
+
+![Results of the Get-WindowsFeature command](../media/Core-Network-Guide/server-roles-installed.jpg)
 
 **Install AD DS and DNS Using Server Manager**
 
