@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 02/21/2017  
+ms.date: 03/03/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0263fa6b-2185-4cc3-99ef-3588e2f4ada5
@@ -21,18 +21,22 @@ The vGPU feature of RemoteFX makes it possible for multiple virtual machines to 
 
 ## RemoteFX vGPU requirements
 
+Requirements for host systems: 
 - Windows Server 2016 
 - DX 11.0 compatible GPU with WDDM 1.2 compatible driver 
 - Windows Server RD Virtualization Host role enabled (enables Hyper-V Role) 
 - Server with a CPU that supports SLAT (Second Level Address Translation) 
-- Guest VM running a Windows Enterprise client (Windows 7 with Service Pack 1, Windows 8.1, Windows 10)
 - Guest VM running Windows Server 2016
 
-Requirements for guest VMs:  
-   - OpenGL and OpenCL functionality is only available in Windows 10 or Windows Server 2016  
-   - DirectX 11.0 is only available with Windows 8 or newer Guest VMs 
-   - Windows 7 SP1 Guest VM requires latest updates and also does not support OpenGL/OpenCL. 
-   - Remote Desktop Session Host is only supported with RemoteFX vGPU if it is running as a [personal session desktop](rds-personal-session-desktops.md).
+Guest VM requirements:
+
+- Guest VM running a Windows Enterprise client (Windows 7 with Service Pack 1, Windows 8.1, Windows 10)
+- OpenGL and OpenCL functionality is only available in Windows 10 or Windows Server 2016  
+- DirectX 11.0 is only available with Windows 8 or newer Guest VMs 
+- Windows 7 SP1 Guest VM requires latest updates and also does not support OpenGL/OpenCL. 
+- Remote Desktop Session Host is only supported with RemoteFX vGPU if it is running as a [personal session desktop](rds-personal-session-desktops.md).
+
+See [Supported configuration for Remote Desktop Services](rds-supported-config.md) for more information about GPU requirements. For guest VMS, make sure to review [VDI deployment - supported guest OSs](rds-supported-config.md#vdi-deployment--supported-guest-oss).
 
 ## Install RemoteFX vGPU
 
@@ -42,14 +46,19 @@ Use the following steps to install RemoteFX vGPU support:
 2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the vendor's site. 
 3. Enable the Hyper-V role. 
 4. Enable the Remote Desktop Virtualization Host (RDVH) role. 
-5. If you have multiple GPUs configured in your system use the Hyper-V settings to choose which GPUs to enable for RemoteFX vGPU. 
-6. Create a VM with Windows 10 (Enterprise SKU) or Windows Server 2016. 
-7. Add the RemoteFX 3D Graphics Adapter.
+5. When there are multiple GPUs on the host, RemoteFX vGPU will use all GPUs. However, in certain cases this may not be ideal and you might want to limit which GPUs are used by RemoteFX. In the Hyper-V environment, you control this by specifically selecting which GPUs should *not* be used by RemoteFX. Use the following steps: 
 
-## Configure the RemoteFX vGPU 3D adapter
+   1. Navigate to the Hyper-V settings in Hyper-V Manager.
+   2. Click **Physical GPUs** in Hyper-V Settings.
+   3. Select the GPU that you don’t want to use, and then clear **Use this GPU with RemoteFX**.
+
+6. Create a VM with Windows 10 (Enterprise SKU) or Windows Server 2016. 
+7. Add the RemoteFX 3D Graphics Adapter. See [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter) for information on how to do with either Hyper-V Manager or PowerShell cmdlets. 
+
+### Configure the RemoteFX vGPU 3D adapter
 You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the RemoteFX vGPU 3D graphics adapter. 
 
-### Through Hyper-V Manager:
+#### Through Hyper-V Manager:
 
 1. Ensure the system has been set up with Hyper-V and has a VM configured.  
 2. Stop the VM, if it is running. 
@@ -60,7 +69,7 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
    > Setting higher values for any of these options will have impact to scale, so you should only set what is absolutely necessary. 
 
 
-### With PowerShell cmdlets:
+#### With PowerShell cmdlets:
 
 Run the following cmdlets to review and configure the adapter: 
 
@@ -80,15 +89,6 @@ Get-VMRemoteFXPhysicalVideoAdapter [[-Name] <string[]>] [-ComputerName <string[]
 Set-VMRemoteFx3dVideoAdapter [-VM] <VirtualMachine[]> [[-MonitorCount] <byte>] [[MaximumResolution] <string>][[-VRAMSizeBytes] <uint64>] [-Passthru] [-WhatIf] [Confirm][<CommonParameters>] 
 ```
 
-## Configure which GPU to use when there are multiple GPUs to choose from
-
-When there are multiple GPUs on the host, RemoteFX vGPU will use all GPUs. However, in certain cases this may not be the best option. For example, if you have a built-in GPU that came with the system and a separate more powerful GPU, you will want to use which to use. You do this by specifying which GPU should NOT be used with RemoteFX.
-
-Use the following steps to choose which GPU to use: 
-
-1. Navigate to the Hyper-V settings in Hyper-V Manager.
-2. Click **Physical GPUs** in Hyper-V Settings.
-3. Select the GPU that you don’t want to use, and then clear **Use this GPU with RemoteFX**.
 
 ## Monitor performance
 

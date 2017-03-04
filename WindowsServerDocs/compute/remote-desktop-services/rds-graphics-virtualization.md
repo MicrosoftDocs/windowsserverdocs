@@ -63,7 +63,7 @@ The RemoteFX adapter now provides two capabilities in regard to VRAM:
 
 ### Support for Windows Server 2016 as Guest VM 
 
-If you want to make available applications that require RemoteFX vGPU and higher density, you can do so by using Windows Server 20916 as your Guest VM. 
+If you want to make available applications that require RemoteFX vGPU and higher density, you can do so by using Windows Server 2016 as your Guest VM. 
 
 > [!NOTE] 
 > Remote Desktop Session Host is not supported in this scenario, only 1 session can be hosted per Windows Server 2016 guest VM. 
@@ -90,8 +90,10 @@ Frame throughput has been improved with the H.264/AVC based compression, resulti
 
 ## Which should you use?
 
-Unfortunately, there's no simple, clearcut answer to when to use RemoteFX vGPU vs when to use DDA. Here are some general guidelines:
+For the decision to use RemoteFX vGPU or DDA, here are some key considerations:
 
-- Do you need native driver support (for example, Cuda, or anything greater than OpenCL 1.1)? Use DDA. 
-- Does your application uses a whitelist approach to enable graphics acceleration? You may have to use DDA. 
-- Do you want the highest performance possible for a VM for either visualization (VDI, Remote Desktop) or GP-GPU workloads (like machine learning workloads)? Use DDA. 
+- Do you need native driver support (for example, Cuda, or anything greater than OpenCL 1.1)? 
+- Does your application only support and recognize specific graphics cards for graphics acceleration? 
+- Do you want the highest performance possible on the VM for either visualization (VDI, Remote Desktop) or compute (machine learning workloads) workloads? 
+ 
+If you answered yes to any of these questions, DDA might be the preferred option for you. Otherwise, RemoteFX vGPU might work best for you to scale out your graphics virtualization to a wider base of users.
