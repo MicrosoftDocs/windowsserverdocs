@@ -633,7 +633,11 @@ The results of this command are displayed in Windows PowerShell, and should be s
 
 14. In **Review Options**, review your selections.
 
-15. If you want to export settings to a Windows PowerShell script, click **View script**. The script opens in Notepad, and you can save it to the folder location that you want. Click **Next**. In **Prerequisites Check**, your selections are validated. When the check completes, click **Install**. When prompted by Windows, click **Close**.
+15. If you want to export settings to a Windows PowerShell script, click **View script**. The script opens in Notepad, and you can save it to the folder location that you want. Click **Next**. In **Prerequisites Check**, your selections are validated. When the check completes, click **Install**. When prompted by Windows, click **Close**. The server restarts to complete installation of AD DS and DNS.
+
+16. To verify successful installation, view the Server Manager console after the server restarts. Both AD DS and DNS should appear in the left pane, like the highlighted items in the image below.
+
+![AD DS and DNS in Server Manager](../media/Core-Network-Guide/server-roles-installed-sm.jpg)
 
 ##### <a name="BKMK_createUA"></a>Create a User Account in Active Directory Users and Computers
 You can use this procedure to create a new domain user account in Active Directory Users and Computers Microsoft Management Console (MMC).
