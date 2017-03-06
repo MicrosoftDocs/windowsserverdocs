@@ -106,25 +106,49 @@ The first 3 counters target scenarios for troubleshooting accuracy issues.  The 
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ### Configuration Updates per Environment
-In this section shows the changes in default configuration based on various environments between Windows 2016 and previous versions. 
+The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.
 
-|Role||
-|----|---|
-|Standalone</br>Nano Server|<table><tr><th>Settings</th><th>Windows 2016</th><th>Windows 10</br>Anniversary</th><th>Windows 2012R2</br>Windows 2008R2</br>Windows 10</th></tr><tr><td>Time Server</td><td>time.windows.com</td><td>NA</td><td>time.windows.com</td></tr><tr><td>Polling Frequency</td><td>64 sec - 1024 sec</td><td>NA</td><td>Once a week</td></tr><tr><td>Clock Update Freq</td><td>Once a second</td><td>NA</td><td>Once a hour</td></tr></table>|
-|Standalone</br>Client|<table><tr><th>Settings</th><th>Windows 2016</th><th>Windows 10</br>Anniversary</th><th>Windows 2012R2</br>Windows 2008R2</br>Windows 10</th></tr><tr><td>Time Server</td><td>NA</td><td>time.windows.com</td><td>time.windows.com</td></tr><tr><td>Polling Frequency</td><td>NA</td><td>Once a Day</td><td>Once a week</td></tr><tr><td>Clock Update Freq</td><td>NA</td><td>Once a day</td><td>Once a week</td></tr></table>|
-|Hyper-V</br>Guest|<table><tr><th>Settings</th><th>Windows 2016</th><th>Windows 10</br>Anniversary</th><th>Windows 2012R2</br>Windows 2008R2</br>Windows 10</th></tr><tr><td>Time Server</td><td>Chooses best option based on stratum of HOst and Time server</td><td>Chooses best option based on stratum of Host and Time server</td><td>Defaults to host</td></tr><tr><td>Polling Frequency</td><td>Based on Role</td><td>Based on Role</td><td>Based on Role</td></tr><tr><td>Clock Update Freq</td><td>Based on Role</td><td>Based on Role</td><td>Based on Role</td></tr></table>|
+#### Standalong Nano Server
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|time.windows.com|NA|time.windows.com|
+|Polling Frequency|64 1024 seconds|NA|Once a week|
+|Clock Update Frequency|Once a second|NA|Once an hour|
 
-|Role|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012R2</br>Windows 2008R2</br>Windows 10|
-----|---|---|---|---|
-|Standalone</br>Nano Server|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Freq</td></tr></table>|<table><tr><td>Time.windows.com</td></tr><tr><td><br></td></tr><tr><td>Time.windows.com</br> </td></tr></table>|<table><tr><td>64sec-1024sec</td></tr><tr><td></br></td></tr><tr><td>Once a week</td></tr></table>|<table><tr><td>Once a sec</td></tr><tr><td></br></td></tr><tr><td>Once a hour</td></tr></table>|
-|Standalone Client|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Frequency</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|
-|Domain Controler|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Frequency</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|
-|Domain Member<br>Server|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Frequency</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|
-|Domain Member<br>Client|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Frequency</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>bye</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|
-|Hyper-V Guest|<table><tr><td>Time Server</td></tr><tr><td>Polling Frequency</td></tr><tr><td>Clock Update Frequency</td></tr></table>|<table><tr><td>Chooses best option based on stratum of Host and Time Server</td></tr><tr><td>1</td></tr><tr><td>1</td></tr></table>|<table><tr><td>Based on Role</td></tr><tr><td>Based on Role</td></tr><tr><td>Based on Role</td></tr></table>|<table><tr><td>Based on Role</td></tr><tr><td>Based on Role</td></tr><tr><td>Based on Role</td></tr></table>|
+#### Standalong Client
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|NA|time.windows.com|time.windows.com|
+|Polling Frequency|NA|Once a day|Once a week|
+|Clock Update Frequency|NA|Once a day|Once an week|
 
+#### Domain Controller
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|PDC/GTIMESERV|NA|PDC/GTIMESERV|
+|Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
+|Clock Update Frequency|NA|Once a day|Once an week|
 
+#### Domain Member Server
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|DC|NA|DC|
+|Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
+|Clock Update Frequency|Once a second|NA|Once every 5 minutes|
 
+#### Domain Member Client
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|NA|DC|DC|
+|Polling Frequency|NA|1204 - 32768 seconds|1024 - 32768 seconds|
+|Clock Update Frequency|NA|Once every 5 minutes|Once every 5 minutes|
+
+#### Hyper-V Guest
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|Chooses best option based on stratum of Host and Time server|Chooses best option based on stratum of Host and Time server|Defaults to Host|
+|Polling Frequency|Based on Role|Based on Role|Based on Role|
+|Clock Update Frequency|Based on Role|Based on RoleNA|Based on Role|
 
 ![Windows Time](media/Windows-2016-Accurate-Time/table1.png)
 
