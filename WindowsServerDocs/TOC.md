@@ -397,9 +397,9 @@
 ###### [Audit Policy Recommendations](identity/ad-ds/plan/security-best-practices/audit-policy-Recommendations.md)
 ###### [Planning for compromise](identity/ad-ds/plan/security-best-practices/Planning-for-compromise.md)
 ###### [Maintaining a more Secure Environment](identity/ad-ds/plan/security-best-practices/Maintaining-a-more-Secure-Environment.md)
-###### [Summary of Best Practices](identity/ad-ds/plan/security-best-practices/Summary-of-Best-Practices.md)
+
 ###### [Appendices](identity/ad-ds/plan/security-best-practices/appendices.md)
-###### [Appendix A: Patch and Vulnerability Management Software](identity/ad-ds/plan/security-best-practices/appendix-A--Patch-and-Vulnerability-Management-Software.md)
+
 ###### [Appendix B: Privileged Accounts and Groups in Active Directory](identity/ad-ds/plan/security-best-practices/appendix-B--Privileged-Accounts-and-Groups-in-active-directory.md)
 ###### [Appendix C: Protected Accounts and Groups in Active Directory](identity/ad-ds/plan/security-best-practices/appendix-C--Protected-Accounts-and-Groups-in-active-directory.md)
 ###### [Appendix D: Securing Built-In Administrator Accounts in Active Directory](identity/ad-ds/plan/security-best-practices/appendix-D--Securing-Built-In-Administrator-Accounts-in-active-directory.md)
@@ -408,8 +408,7 @@
 ###### [Appendix G: Securing Administrators Groups in Active Directory](identity/ad-ds/plan/security-best-practices/appendix-G--Securing-Administrators-Groups-in-active-directory.md)
 ###### [Appendix H: Securing Local Administrator Accounts and Groups](identity/ad-ds/plan/security-best-practices/appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)
 ###### [Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](identity/ad-ds/manage/component-updates/appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-active-directory.md)
-###### [Appendix J: Third-Party RBAC Vendors](identity/ad-ds/plan/security-best-practices/appendix-J--Third-Party-RBAC-Vendors.md)
-###### [Appendix K: Third-Party PIM Vendors](identity/ad-ds/plan/security-best-practices/appendix-K--Third-Party-PIM-Vendors.md)
+
 ###### [Appendix L: Events to Monitor](identity/ad-ds/plan/appendix-L--Events-to-Monitor.md)
 ###### [Appendix M: Document Links and Recommended Reading](identity/ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md)
 ##### [Active Directory Replication and Topology Management Using Windows powershell](identity/ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md)
