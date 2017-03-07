@@ -542,7 +542,7 @@ The first procedure provides instructions on performing these actions by using W
 
 You can use the following commands to install and configure AD DS and DNS. You must replace the domain name in this example with the value that you want to use for your domain.
 
->[!NOTE
+>[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
 >- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
 >- [Install-ADDSForest](https://technet.microsoft.com/itpro/powershell/windows/adds/deployment/install-addsforest)
