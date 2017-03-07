@@ -46,8 +46,6 @@ This document provides a practitioner's perspective and contains a set of practi
   
 -   [Maintaining a More Secure Environment](../../../ad-ds/plan/security-best-practices/Maintaining-a-More-Secure-Environment.md)  
   
--   [Summary of Best Practices](../../../ad-ds/plan/security-best-practices/Summary-of-Best-Practices.md)  
-  
 -   [Appendices](../../../ad-ds/plan/security-best-practices/Appendices.md)  
    
 -   [Appendix B: Privileged Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)  
