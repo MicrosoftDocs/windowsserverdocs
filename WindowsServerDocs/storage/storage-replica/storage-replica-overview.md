@@ -13,7 +13,7 @@ ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 
 >Applies To: Windows Server 2016
 
-Storage Replica is Windows Server technology that enables synchronous replication of volumes between servers or clusters for disaster recovery. It also enables you to use asynchronous replication to create failover clusters that span two sites, with all nodes staying in sync.
+Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
 
 Storage Replica supports synchronous and asynchronous replication:
 
