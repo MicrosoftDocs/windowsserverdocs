@@ -8,9 +8,10 @@ ms.technology: storage-failover-clustering
 ms.topic: article
 author: AmitabhTamhane
 ms.date: 9/15/2016
+description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
 ---
 
-# Deploy a cloud witness for a Failover Cluster
+# Deploy a Cloud Witness for a Failover Cluster
 > Applies to Windows Server 2016
 
 Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
@@ -75,11 +76,12 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
         Your storage account name must be unique within Azure. The Azure Portal will indicate if the storage account name you select is already in use.
         
-  5. For **Replication**, select **Locally-redundant storage (LRS)** (see figure 3).
+    2. For **Replication**, select **Locally-redundant storage (LRS)** (see figure 3).
         >[!NOTE]  
         > Failover Cluster uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Hence, it is very important to select **Locally-redundant storage** for **Replication** type.   
 
         ![Creating an Azure Storage account with locally-redundant storage replication type](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_3.png)
+        
         **Figure 3: Creating an Azure Storage account with locally-redundant storage replication type**
 
 ### View and copy storage access keys for your Azure Storage Account  
