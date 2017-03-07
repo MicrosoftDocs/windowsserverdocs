@@ -671,6 +671,7 @@
 ### [Get started with Software Inventory Logging (SIL)](management/software-inventory-logging/get-started-with-software-inventory-logging.md)
 #### [Manage Software Inventory Logging](management/software-inventory-logging/manage-software-inventory-logging.md)
 #### [Software Inventory Logging Aggregator](management/software-inventory-logging/software-inventory-logging-aggregator.md)
+#### [Troubleshoot Software Inventory Logging](management/software-inventory-logging/troubleshoot-sil.md)
 ### [Get started with User Access Logging (UAL)](management/user-access-logging/get-started-with-user-access-logging.md)
 #### [Manage User Access Logging](management/user-access-logging/manage-user-access-logging.md)
 ### [Windows Server Update Services (WSUS)](management/windows-server-update-services/get-started/windows-server-update-services-wsus.md)
