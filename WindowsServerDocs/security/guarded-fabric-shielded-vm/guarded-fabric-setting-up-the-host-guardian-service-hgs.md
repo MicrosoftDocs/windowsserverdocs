@@ -57,15 +57,20 @@ When you install HGS, it creates its own forest by default. Another option is to
 
 #### Choose whether to install HGS in its own new forest or in an existing bastion forest
 
-The default installation will set up a new Active Directory forest for HGS and configure other dependencies. This option is recommended because the environment is self-contained and known to be secure when it is created. 
+The default installation will set up a new Active Directory forest for HGS and configure other dependencies. 
+This option is recommended because the environment is self-contained and known to be secure when it is created. 
 
-There are no technical requirements that prevent installing HGS in an existing forest, but there are operational requirements and security-related best practices. Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). Such forests are suitable and usually exhibit the following characteristics:
+The only technical requirement for installing HGS in an existing forest is that it be added to the root domain; non-root domains are not supported. 
+But there are also operational requirements and security-related best practices for using an existing forest. 
+Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). 
+Such forests usually exhibit the following characteristics:
 
-- They have few admins (separate from fabric admins)
-- They are not general-purpose in nature 
+- They have few admins (separate from fabric admins) 
 - They have a low number of logons
+- They are not general-purpose in nature
 
-General purpose forests such as production forests are not suitable for use by the HGS. Fabric domain forests are also unsuitable because the HGS needs to be isolated from fabric administrators.
+General purpose forests such as production forests are not suitable for use by the HGS. 
+Fabric forests are also unsuitable because the HGS needs to be isolated from fabric administrators.
 
 Depending on your deployment scenario, follow the steps to [install HGS in its own new forest](#install-hgs-in-its-own-new-forest) or [initialize HGS in an existing bastion forest](#initialize-hgs-in-an-existing-bastion-forest). 
 
@@ -240,11 +245,7 @@ Initialize-HgsServer -HgsServiceName <HgsServiceName> -EncryptionCertificateThum
 
 #### Initialize HGS in an existing bastion forest
 
-The following steps describe the process for adding HGS to an existing forest, rather than using the default process of allowing HGS to create its own forest and domain. 
-
-**Requirements for adding HGS to an existing forest**
-
-Before you can add HGS to an existing forest, you will need to join the server and add these objects to the target domain:
+To initialize HGS in an existing bastion forest, you will need to join each target server of HGS cluster to the root domain, and then add these objects:
 
 -   A Group Managed Service Account (gMSA) that is configured for use on the machine(s) that host HGS.
 

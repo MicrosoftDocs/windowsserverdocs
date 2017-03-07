@@ -46,19 +46,19 @@ Repositories can be configured automatically by installing the Linux package tha
  - Ubuntu 14.04 (Trusty)
 
 		wget http://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
-		sudo dpkg -i packages-microsoft-prod_1.0-1-trusty.deb
+		sudo dpkg -i packages-microsoft-prod.deb
 		sudo apt-get update
 
  - Ubuntu 16.04 (Xenial)
 
 		wget http://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-		sudo dpkg -i packages-microsoft-prod_1.0-1-xenial.deb
+		sudo dpkg -i packages-microsoft-prod.deb
 		sudo apt-get update
 
  - Ubuntu 16.10 (Yakkety)
 
 		wget http://packages.microsoft.com/config/ubuntu/16.10/packages-microsoft-prod.deb
-		sudo dpkg -i packages-microsoft-prod_1.0-1-yakkety.deb
+		sudo dpkg -i packages-microsoft-prod.deb
 		sudo apt-get update
 
 
