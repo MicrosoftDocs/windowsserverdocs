@@ -74,7 +74,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 >[!Important]
 >If the cube has processed at least once since SILA inserted data into the database, then this data should be reflected in the report. If there is no data in the database then either polling the physical hosts is failing, or nothing is being received over HTTPS, or both.
 
-####PowerShell
+ ####PowerShell
 
 1. Open PowerShell as an administrator and run the **get-silvmhost** cmdlet, and then run **get-silaggregator**.
 
@@ -84,7 +84,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 2. Run **get-silvmhost**
  - If there are no hosts listed, then add hosts using the **add-silvmhost** cmdlet.
  - If hosts are listed as **Unknown**, then go to Issue 2. 
- - If hosts are listed but there is no **datetime** under the **Recent Poll** column, then go to **Issue 2** below.
+d - If hosts are listed but there is no **datetime** under the **Recent Poll** column, then go to **Issue 2** below.
 
 **Other related commands**
 
@@ -94,7 +94,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 
 ####SSMS
 
-**Check for data from hosts being polled:**
+n**Check for data from hosts being polled:**
  
 1. Open **SSMS** and connect to the **Database Engine**.
 2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **HostInfo** table and then select top 1000 rows. 
@@ -104,7 +104,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
  **Check for data from VMs, or standalone servers, that have pushed data over HTTPS:** 
 
 1. Open **SSMS** and connect to the **Database Engine**.
-2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **VMInfo** table and then select the top 1000 rows. 
+a2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **VMInfo** table and then select the top 1000 rows. 
 
     >[!NOTE] 
     >Each row for a unique VM will represent one processed **bmil** file successfully pushed over HTTPS and processed by the SIL Aggregator. Bmil files are proprietary files used by SIL, one is created each our by each SIL instance Note that this is only necessary when SIL and SILA are used in virtual environments. Otherwise only HTTPS traffic is necessary/expected).
@@ -152,7 +152,7 @@ Once the hosts are polling correctly, you will be able to see the data for these
 
     -  Finally, you can check the following location for cached SIL files on the server attempting to forward/push, **\Windows\System32\Logfiles\SIL**. If **SilLogging** has started and has been running for more than an hour, or **Publish-SilData** has been run recently, and there are no files in this directory, than logging to the Aggregator has been successful.
 
-If there is no error, and no output on the console, then the data push/publish from the Windows Server end node to SIL Aggregator over HTTPS was successful. To follow the path of the data forward, login to the SIL Aggregator as an administrator look at the data file(s) that have arrived. Go to **Program Files (x86)** &gt; **Microsoft SIL Aggregator** &gt; SILA directory. You can watch data files arriving in real time.
+If there is no error, and no output on the console, then the data push/publish from the Windows Server end node to SIL Aggregator over HTTPS was successful. To follow the path of the data forward, login to the SIL Aggregator as an administrator and examine the data file(s) that have arrived. Go to **Program Files (x86)** &gt; **Microsoft SIL Aggregator** &gt; SILA directory. You can watch data files arriving in real time.
 
 >[!NOTE] 
 >More than one data file may have been transferred with the **Publish-SilData** cmdlet. SIL on the end node will cache failed pushes for up to 30 days. On the next successful push ALL data files will go to the Aggregator for processing. In this way, a newly set up SIL Aggregator could show data from an end node well before its own setup.
