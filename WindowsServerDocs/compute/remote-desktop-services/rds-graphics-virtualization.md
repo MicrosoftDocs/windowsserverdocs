@@ -18,7 +18,7 @@ manager: scottman
 
 You have a range of options when it comes to enabling graphics rendering in Remote Desktop Services. When you are planning your virtualization environment, the following considerations drive which graphics rendering technology you choose:
 
-![Graphics rendering considerations](media/rds-gpu.png)
+![Graphics rendering considerations - compares user scale and GPU requirements to determine the best GPU technology for your environment](media/rds-gpu.png)
 
 In Windows Server 2016, you have two graphics virtualization technologies available with Hyper-V that let you leverage the GPU hardware:
 
@@ -27,7 +27,7 @@ In Windows Server 2016, you have two graphics virtualization technologies availa
 
 The following illustration shows the graphics virtualization options in Windows Server 2016.
 
-![Graphics virtualization options in Windows Server 2016 with RDS](media/rds-graphics-virtualization.png)
+![Graphics virtualization options in Windows Server 2016 with RDS - shows the three technologies available and how they differ on scale and performance](media/rds-graphics-virtualization.png)
 
 ## Discrete Device Assignment
 Discrete Device Assignment (DDA) is a hardware pass-through solution that provides the best performance, given that the VM has full access to the GPU using the native driver. Your VM user can access the full capabilities of their device as well the device’s native driver. This means the features and capabilities of running the device in a VM mirror running the same device on bare metal.
@@ -44,7 +44,7 @@ RemoteFX vGPU is a graphics virtualization technology that allows the processing
 -	Improved application compatibility and stability.
 -	VM Connect Enhanced Session Mode, allowing USB and clipboard redirection through VM Connect to a VM that is enabled for RemoteFX vGPU.
 
-For installation and configuration steps, see [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md).
+
 
 ## Which should you use?
 
