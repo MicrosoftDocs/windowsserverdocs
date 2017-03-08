@@ -250,6 +250,7 @@
 ### [Deploy a Cloud Witness for a Failover Cluster](failover-clustering/deploy-cloud-witness.md)
 ### [Cluster Operating System Rolling Upgrade](failover-clustering/cluster-operating-system-rolling-upgrade.md)
 ### [Simplified SMB Multichannel and Multi-NIC Cluster Networks](failover-clustering/smb-multichannel.md)
+### [Change history for Failover Clustering topics](failover-clustering/clustering-change-history.md)
 ## [Identity and Access](identity/Identity-and-Access.md)
 ### [Solutions and Scenario Guides](identity/solution-guides/Solutions-and-Scenario-Guides.md)
 #### [Dynamic Access Control: Scenario Overview](identity/solution-guides/Dynamic-Access-Control--Scenario-Overview.md)
@@ -1093,6 +1094,7 @@
 ##### [Extend volumes](storage/storage-spaces/resize-volumes.md)
 ### [Storage-class memory health management](storage/storage-spaces/Storage-class-memory-health.md)
 ### [iSCSI boot](storage/iscsi/iscsi-boot-overview.md)
+### [Change history for Storage topics](storage/storage-change-history.md)
 
 ## [Security and Assurance](security/security-and-assurance.md)
 ### [Device Health attestation](security/device-health-attestation.md)
