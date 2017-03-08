@@ -16,8 +16,6 @@ ms.date: 10/14/2016
 
 A shielding data file (also called a provisioning data file or PDK file) is an encrypted file that a tenant or VM owner creates to protect important VM configuration information, such as the administrator password, RDP and other identity-related certificates, domain-join credentials, and so on. This topic provides information about how to create a shielding data file. Before you can create the file, you must either obtain a template disk from your hosting service provider, or create a template disk as described in [Shielded VMs for tenants - Creating a template disk (optional)](guarded-fabric-tenant-creates-template-disk.md).
 
-To understand how this topic fits in the overall process of deploying shielded VMs, see [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md).
-
 For a list and a diagram of the contents of a shielding data file, see [What is shielding data and why is it necessary?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
 > [!IMPORTANT]
@@ -193,6 +191,5 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
 ## See also
 
-- [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md)
-- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

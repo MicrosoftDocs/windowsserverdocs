@@ -1,5 +1,5 @@
 ---
-title: TPM-trusted attestation for a guarded fabric - capturing information required by HGS
+title: Capture TPM-mode information required by HGS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -10,11 +10,13 @@ ms.technology: security-guarded-fabric
 ms.date: 10/14/2016
 ---
 
-# TPM-trusted attestation for a guarded fabric - capturing information required by HGS
+# Capture TPM-mode information required by HGS
+
+>Applies To: Windows Server 2016
 
 This topic describes the intermediate steps that a fabric administrator takes to prepare Hyper-V hosts to become guarded hosts using TPM-trusted attestation (TPM mode). Before taking these steps, complete the steps in [Configuring the fabric DNS for hosts that will become guarded hosts](guarded-fabric-configuring-fabric-dns.md). 
 
-## Prerequisites for guarded hosts using TPM-trusted attestation
+## Prerequisites 
 
 Guarded hosts using TPM mode must meet the following prerequisites:
 
@@ -33,7 +35,7 @@ Guarded hosts using TPM mode must meet the following prerequisites:
     > [!IMPORTANT]
     > Make sure you install the [latest cumulative update](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).  
 
--   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is only available on Datacenter editions of Windows Server 2016. If you are using the Nano Server installation option, see [Appendix A - Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md). 
+-   **Role and features**: Hyper-V role and the Host Guardian Hyper-V Support feature. The Host Guardian Hyper-V Support feature is only available on Datacenter editions of Windows Server 2016. Special instructions for Nano Server are near the end of this topic.
 
 > [!WARNING]
 > The Host Guardian Hyper-V Support feature enables Virtualization-based protection of code integrity that may be incompatible with some devices. 
@@ -59,8 +61,6 @@ TPM mode uses a TPM identifier (also called a platform identifier or endorsement
 
 We recommend that you capture the baseline and CI policies from a "reference host" that is representative of each unique class of Hyper-V hardware configuration within your datacenter. 
 
->**Nano Server Only**&nbsp;&nbsp;If you are using Nano Server to host your shielded VMs, there are special steps you must take to acquire the attestation artifacts listed in this section. For more information, see [Configure Nano server as TPM attested guarded host](guarded-fabric-configure-nano-server-as-tpm-guarded-host.md).
-
 ## Capture the TPM identifier (platform identifier or EKpub) for each host
 
 1.  Ensure the TPM on each host is ready for use - that is, the TPM is initialized and ownership obtained. You can check the status of the TPM by opening the TPM Management Console (tpm.msc) or by running **Get-Tpm** in an elevated Windows PowerShell window. If your TPM is not in the **Ready** state, you will need to initialize it and set its ownership. This can be done in the TPM Management Console or by running **Initialize-Tpm**.
@@ -72,7 +72,7 @@ We recommend that you capture the baseline and CI policies from a "reference hos
     ```
 3.  Repeat the preceding steps for each host that will become a guarded host, being sure to give each XML file a unique name.
 
-4.  Provide the resulting XML files to the HGS administrator, who can [register each host's TPM identifier with HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#add-host-information-for-tpm-trusted-attestation).
+4.  Provide the resulting XML files to the HGS administrator, who can [register each host's TPM identifier with HGS](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
 
 ## Create and apply a Code Integrity policy
 
@@ -124,7 +124,7 @@ Before you can use the [New-CIPolicy](https://technet.microsoft.com/library/mt63
 
     >**Note**&nbsp;&nbsp;Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up. For best practices regarding CI policies, see [Planning and getting started on the Device Guard deployment process](https://technet.microsoft.com/itpro/windows/keep-secure/planning-and-getting-started-on-the-device-guard-deployment-process#getting-started-on-the-deployment-process) and [Deploy Device Guard: deploy code integrity policies](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies).
 
-6.  Provide the binary file (in this example, HW1CodeIntegrity\_enforced.p7b) to the HGS administrator, who can [register the CI policy with HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#add-host-information-for-tpm-trusted-attestation).
+6.  Provide the binary file (in this example, HW1CodeIntegrity\_enforced.p7b) to the HGS administrator, who can [register the CI policy with HGS](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
 
 ## Capture the TPM baseline for each unique class of hardware
 
@@ -146,7 +146,22 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
     >**Note**&nbsp;&nbsp;You will need to use the **-SkipValidation** flag if the reference host does not have Secure Boot enabled, an IOMMU present, Virtualization Based Security enabled and running, or a code integrity policy applied. These validations are designed to make you aware of the minimum requirements of running a shielded VM on the host. Using the -SkipValidation flag does not change the output of the cmdlet; it merely silences the errors.
 
-3.  Provide the TPM baseline (TCGlog file) to the HGS administrator so they can [register it as a trusted baseline](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#add-host-information-for-tpm-trusted-attestation).
+3.  Provide the TPM baseline (TCGlog file) to the HGS administrator so they can [register it as a trusted baseline](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
+
+[!INCLUDE [Configure Nano Server as a guarded host](../../../includes/configure-nano-server-as-a-guarded-host.md)] 
+
+## Creating a code integrity policy 
+
+If you are using TPM mode, you can only create the code integrity policy against an offline Nano Server image.
+Mount the Nano Server VHDX and run [New-CIPolicy](https://technet.microsoft.com/library/mt634473.aspx) in a command like the following from the management server. This example uses G: as the mounted drive.
+
+```powershell
+New-CIPolicy -FilePath .\NanoCI.xml -Level FilePublisher -Fallback Hash -ScanPath G:\ -PathToCatroot G:\Windows\System32\CatRoot\ -UserPEs
+```
+
+>**Note**&nbsp;&nbsp;The CI policy will need to be [added to the HGS Server](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md).
+
+[!INCLUDE [Configure the boot menu](../../../includes/configure-the-boot-menu-for-a-nano-server.md)] 
 
 ## Next step
 

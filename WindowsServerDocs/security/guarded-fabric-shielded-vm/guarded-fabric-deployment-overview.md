@@ -1,5 +1,5 @@
 ---
-title: Guarded fabric deployment overview
+title: Quick start for guarded fabric deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -11,7 +11,7 @@ ms.technology: security-guarded-fabric
 ms.date: 02/02/2017
 ---
 
-# Guarded Fabric Deployment Overview
+# Quick start for guarded fabric deployment
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process. 
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).
