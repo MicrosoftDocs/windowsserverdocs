@@ -44,7 +44,7 @@ RemoteFX vGPU is a graphics virtualization technology that allows the processing
 -	Improved application compatibility and stability.
 -	VM Connect Enhanced Session Mode, allowing USB and clipboard redirection through VM Connect to a VM that is enabled for RemoteFX vGPU.
 
-For installation and configuration steps, see Set up and configure RemoteFX vGPU for Remote Desktop Services.
+For installation and configuration steps, see [Set up and configure RemoteFX vGPU for Remote Desktop Services](rds-remotefx-vgpu.md).
 
 ## Which should you use?
 
