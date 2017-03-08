@@ -16,9 +16,7 @@ ms.date: 10/14/2016
 
 If your hosting service provider supports it, you can use Windows Azure Pack to deploy a shielded VM.
 
-To understand how this topic fits in the overall process of deploying shielded VMs, see [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md).
-
-As a tenant, take the following steps to create a shielded VM with Windows Azure Pack:
+Complete the following steps:
 
 <!-- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. -->
 
