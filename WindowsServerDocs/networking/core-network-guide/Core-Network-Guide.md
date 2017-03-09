@@ -99,7 +99,7 @@ DHCP allows you to use a DHCP server to dynamically assign an IP address to a co
 For TCP/IP-based networks, DHCP reduces the complexity and amount of administrative work involved in reconfiguring computers.
 
 ### TCP/IP
-TCP/IP in  Windows Server 2016 is the following:
+TCP/IP in Windows Server 2016 is the following:
 
 -   Networking software based on industry-standard networking protocols.
 
