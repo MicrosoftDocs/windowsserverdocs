@@ -56,7 +56,6 @@ To following architectural diagram shows the setup that was used to validate and
 6.  On the **Specify Service Account** screen, specify the service account and click **Next**. 
 7.  On the **Review Options** screen, review the options and click **Next**. 
 8.  On the **Pre-requisites Checks** screen, ensure that all of the pre-requisite checks have passed and click **Configure**.
-![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure7.png)
 9.  On the **Results** screen, ensure that server was successfully configured and click **Close**.
  
    
