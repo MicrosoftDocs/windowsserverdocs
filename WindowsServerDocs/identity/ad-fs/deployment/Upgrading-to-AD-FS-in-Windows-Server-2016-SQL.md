@@ -42,7 +42,7 @@ To following architectural diagram shows the setup that was used to validate and
 ![Architecture](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png) 
 
 
-##### Join the Windows 2016 AD FS Server to the AD FS farm
+#### Join the Windows 2016 AD FS Server to the AD FS farm
 
 1.  Using Server Manager install the Active Directory Federation Services Role on the Windows Server 2016  
 
