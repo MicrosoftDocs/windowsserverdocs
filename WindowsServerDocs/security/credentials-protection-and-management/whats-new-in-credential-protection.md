@@ -59,6 +59,9 @@ Beginning with Windows Server 2016, KDCs can support the PKInit freshness extens
 
 Beginning with Windows Server 2016 domain functional level (DFL), DCs can support rolling a public key only user's NTLM secrets. This feature is unavailble in lower DFLs.
 
+> [!WARNING] 
+> Adding a domain controller to a domain with rolling NTLM secrets enabled before the DC has been updated with at least the November 8, 2016 servicing runs the risk of the DC crashing. 
+
 Configuration: For new domains, this feature is enabled by default. For existing domains, it must be configured in the Active Directory Administrative center: 
 
 1. From the Active Directory Administrative center, right-click the domain on the left pane and select **Properties**.
