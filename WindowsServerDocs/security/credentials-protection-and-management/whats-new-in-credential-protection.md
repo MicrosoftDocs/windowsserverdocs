@@ -61,11 +61,13 @@ Beginning with Windows Server 2016 domain functional level (DFL), DCs can suppor
 
 Configuration: For new domains, this feature is enabled by default. For existing domains, it must be configured in the Active Directory Administrative center: 
 
-1. From the Active Directory Administrative center, select the domain controller on the left pane.
+1. From the Active Directory Administrative center, right-click the domain on the left pane and select **Properties**.
 
-    ![Domain controller properties](../media/Credentials-Protection-And-Management/domain-controller-properties.png)
+    ![Domain properties](../media/Credentials-Protection-And-Management/domain-properties.png)
     
-2. From the shortcut menu, select **Properties**, and select the check box next to **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Microsoft Passport or smart card for interactive logon**.
+2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Microsoft Passport or smart card for interactive logon**.
+
+    ![Autoroll expiring NTLM secrets](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)
 
 3. Click **OK**. 
 
