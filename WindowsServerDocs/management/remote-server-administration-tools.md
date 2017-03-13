@@ -32,20 +32,6 @@ Remote Server Administration Tools for Windows 10 includes support for remote ma
 ### Tools available in this release
 for a list of the tools available in Remote Server Administration Tools for Windows 10, see the table in [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](http://go.microsoft.com/fwlink/p/?LinkID=221055).
 
-The following management tools are not available in this release of Remote Server Administration Tools.
-
--   BitLocker Drive Encryption administration utilities
-
--   Direct Access
-
--   Routing and Remote Access
-
--   Remote Desktop Services
-
--   Windows PowerShell cmdlets for Cluster Aware Updating
-
--   Windows PowerShell cmdlets for Best Practices Analyzer
-
 ### System requirements
 Remote Server Administration Tools for Windows 10 can be installed only on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1, or other system-on-chip devices.
 

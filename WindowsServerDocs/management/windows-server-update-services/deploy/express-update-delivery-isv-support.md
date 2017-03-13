@@ -10,8 +10,8 @@ ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09b5ce
 author: sakitong
 ms.author: coreyp
-manager: dongill
-ms.date: 01/03/2017
+manager: lizapo
+ms.date: 02/20/2017
 ---
 
 >Applies To: Windows 10 1607, Windows Server 2016
@@ -20,7 +20,7 @@ ms.date: 01/03/2017
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.  
 
-Since version 7, Windows has been able to reduce the size of Windows Update downloads with a feature called [Express](https://technet.microsoft.com/en-us/library/cc708456(v=ws.10).aspx#Anchor_2), and although consumer devices support it by default, Windows 10 enterprise devices require Windows Server Update Services (WSUS) to take advantage of Express. 
+Since version 7, Windows has been able to reduce the size of Windows Update downloads with a feature called [Express](https://technet.microsoft.com/en-us/library/cc708456(v=ws.10).aspx#Anchor_2), and although consumer devices support it by default, Windows 10 enterprise devices require Windows Server Update Services (WSUS) to take advantage of Express.
 
 ## How Microsoft supports Express
 

@@ -520,7 +520,8 @@
 
 ####[AD FS Deployment](identity/ad-fs/AD-FS-Deployment.md)
 ##### [AD FS Deployment Guide](identity/ad-fs/deployment/AD-FS-Deployment-Guide.md)
-#####[Upgrading to AD FS in Windows Server 2016](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
+#####[Upgrading to AD FS in Windows Server 2016 using a WID database](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
+#####[Upgrading to AD FS in Windows Server 2016 using a SQL database](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
 #####[Windows Server 2016 and 2012 R2 AD FS Deployment Guide](identity/ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 ######[Deploying a Federation Server Farm](identity/ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)
 #######[Join a computer to a Domain](identity/ad-fs/deployment/Join-a-computer-to-a-Domain.md)
