@@ -59,13 +59,18 @@ Beginning with Windows Server 2016, KDCs can support the PKInit freshness extens
 
 Beginning with Windows Server 2016 domain functional level (DFL), DCs can support rolling a public key only user's NTLM secrets. This feature is unavailble in lower DFLs.
 
+> [!WARNING] 
+> Adding a domain controller to a domain with rolling NTLM secrets enabled before the DC has been updated with at least the November 8, 2016 servicing runs the risk of the DC crashing. 
+
 Configuration: For new domains, this feature is enabled by default. For existing domains, it must be configured in the Active Directory Administrative center: 
 
-1. From the Active Directory Administrative center, select the domain controller on the left pane.
+1. From the Active Directory Administrative center, right-click the domain on the left pane and select **Properties**.
 
-    ![Domain controller properties](../media/Credentials-Protection-And-Management/domain-controller-properties.png)
+    ![Domain properties](../media/Credentials-Protection-And-Management/domain-properties.png)
     
-2. From the shortcut menu, select **Properties**, and select the check box next to **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Microsoft Passport or smart card for interactive logon**.
+2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Microsoft Passport or smart card for interactive logon**.
+
+    ![Autoroll expiring NTLM secrets](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)
 
 3. Click **OK**. 
 
