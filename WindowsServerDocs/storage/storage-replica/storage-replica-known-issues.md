@@ -204,6 +204,13 @@ To add the storage, you can run the following command on the node in the second 
 
 `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
+## The SMB Bandwidth limiter fails to throttle Storage Replica bandwidth
+When specifying a bandwidth limit to Storage Replica, the limit is ignored and full bandwidth used. For example:
+
+`Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB`
+
+This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue should be fixed in a later update to Windows Server 2016. There is no workaround using Windows Server, but you can use external QoS network policies to attain the desired effect.
+
 ## See also  
 - [Storage Replica](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
