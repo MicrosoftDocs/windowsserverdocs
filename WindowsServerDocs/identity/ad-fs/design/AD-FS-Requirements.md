@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # AD FS Requirements
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2012 R2
 
 The following are the various requirements that you must conform to when deploying AD FS:  
   
@@ -148,7 +148,7 @@ The following table provides a summary for using a WID farm.  Use it to plan you
   
 **SQL Server**  
   
-For AD FS in Windows Server 2012 R2, you can use SQL Server 2008 and higher, including SQL Server 2012 and SQL Server 2014.  
+For AD FS in Windows Server 2012 R2, you can use SQL Server 2008 and higher  
   
 ## <a name="BKMK_6"></a>Browser requirements  
 When AD FS authentication is performed via a browser or browser control, your browser must comply to the following requirements:  
