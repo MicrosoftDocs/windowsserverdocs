@@ -597,7 +597,8 @@
 ##### [Single Page Application with AD FS](identity/ad-fs/development/Single-Page-Application-with-AD-FS.md)
 
 #### [AD FS Operations](identity/ad-fs/AD-FS-2016-Operations.md)
-##### [Access Control Policies in AD FS](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
+##### [Access Control Policies in AD FS](identity/ad-fs/operations/Access-Control-Policies-W2K12.md)
+##### [Access Control Policies in AD FS for Windows Server 2012 R2](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 ##### [AD FS Rapid Restore Tool](identity/ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 ##### [AD FS support for alternate hostname binding for certificate authentication](identity/ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
@@ -632,6 +633,7 @@
 ##### [Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
 #### [AD FS Technical Reference](identity/ad-fs/AD-FS-Technical-Reference.md)
+##### [AD FS and certificate KeySpec property information](identity/ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 ##### [Understanding Key AD FS Concepts](identity/ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 ######[The Role of attribute Stores](identity/ad-fs/technical-reference/The-Role-of-attribute-Stores.md)
 ######[The Role of the AD FS Configuration Database](identity/ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)
