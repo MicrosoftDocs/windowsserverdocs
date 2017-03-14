@@ -11,7 +11,7 @@ ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09b5ce
 author: sakitong
 ms.author: coreyp
 manager: lizapo
-ms.date: 02/20/2017
+ms.date: 03/14/2017
 ---
 
 >Applies To: Windows 10 1607, Windows Server 2016
@@ -64,7 +64,7 @@ If you approve and deploy the same version of the Delta and Cumulative update, y
 
 - If Cumulative installs first, the Delta update subset is not applicable since the Cumulative update included the Delta files and they are already installed. In this case, it would have been best to apply the Delta update instead, since it is considerably smaller.
 
-- If Delta installs first, it won't be applied since it requires the previous month’s update as a prerequisite.
+- If Delta installs first, Cumulative is no longer applicable since the device is already up-to-date.  
 
 **If the device is not up-to-date (falling behind)**
 

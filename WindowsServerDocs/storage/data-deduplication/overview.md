@@ -16,7 +16,7 @@ ms.date: 09/15/2016
 Data Deduplication, often called Dedup for short, is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
 
 > [!Important]  
-> [KB3216755](https://support.microsoft.com/kb/3216755) contains a critical reliability fix for Data Deduplication, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
+> [KB4013429](https://support.microsoft.com/kb/4013429) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
 
 ## <a name="why-is-dedup-useful"></a>Why is Data Deduplication useful?  
 Data Deduplication helps storage administrators reduce costs that are associated with duplicated data. Large datasets often have **<u>a lot</u>** of duplication, which increases the costs of storing the data. For example:
