@@ -633,6 +633,7 @@
 ##### [Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
 #### [AD FS Technical Reference](identity/ad-fs/AD-FS-Technical-Reference.md)
+##### [AD FS and certificate KeySpec property information](identity/ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
 ##### [Understanding Key AD FS Concepts](identity/ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 ######[The Role of attribute Stores](identity/ad-fs/technical-reference/The-Role-of-attribute-Stores.md)
 ######[The Role of the AD FS Configuration Database](identity/ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)
