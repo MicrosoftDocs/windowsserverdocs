@@ -47,7 +47,7 @@ Use the same SSL certificate for all AD FS federation servers and Web Applicatio
 
 SSL certificates on federation servers must meet the following requirements
 - Certificate is publicly trusted (for production deployments)
-- Certificate contains Server Authentication and Client Authentication Enhanced Key Usage (EKU) values 
+- Certificate contains the Server Authentication Enhanced Key Usage (EKU) value
 - Certificate contains the federation service name, such as "fs.contoso.com" in the Subject or Subject Alternative Name (SAN)
 - For user certificate authentication on port 443, certificate contains "certauth.\<federation service name\>", such as "certauth.fs.contoso.com" in the SAN
 - For device registration or for modern authentication to on premises resources using pre-Windows 10 clients, the SAN must contain "enterpriseregistration.\<upn suffix\>" for each UPN suffix in use in your organization.
