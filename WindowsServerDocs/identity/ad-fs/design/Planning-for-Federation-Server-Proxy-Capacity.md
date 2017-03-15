@@ -3,9 +3,9 @@ ms.assetid: 3ecb6e87-17f1-4d38-97d2-9c4d52b7cf39
 title: Planning for Federation Server Proxy Capacity
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

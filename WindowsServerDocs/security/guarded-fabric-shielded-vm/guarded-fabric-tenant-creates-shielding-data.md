@@ -16,8 +16,6 @@ ms.date: 10/14/2016
 
 A shielding data file (also called a provisioning data file or PDK file) is an encrypted file that a tenant or VM owner creates to protect important VM configuration information, such as the administrator password, RDP and other identity-related certificates, domain-join credentials, and so on. This topic provides information about how to create a shielding data file. Before you can create the file, you must either obtain a template disk from your hosting service provider, or create a template disk as described in [Shielded VMs for tenants - Creating a template disk (optional)](guarded-fabric-tenant-creates-template-disk.md).
 
-To understand how this topic fits in the overall process of deploying shielded VMs, see [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md).
-
 For a list and a diagram of the contents of a shielding data file, see [What is shielding data and why is it necessary?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
 > [!IMPORTANT]
@@ -37,7 +35,7 @@ Then you can create the shielding data file:
 
 ## Obtain a certificate for Remote Desktop Connection
 
-Since tenants are only able to connect to their shielded VMs using Remote Desktop Connection or other remote management tools, it is important to ensure that tenants can verify they are connecting to the right endpoint. That is, to ensure that there is not a "man in the middle" intercepting the connection and recording the user's keystrokes, which may reveal important information such as an administrator password.
+Since tenants are only able to connect to their shielded VMs using Remote Desktop Connection or other remote management tools, it is important to ensure that tenants can verify they are connecting to the right endpoint (that is, there is not a "man in the middle" intercepting the connection).
 
 One way to verify you are connecting to the intended server is to install and configure a certificate for Remote Desktop Services to present when you initiate a connection. The client machine connecting to the server will check whether it trusts the certificate and show a warning if it does not. Generally, to ensure the connecting client trusts the certificate, RDP certificates are issued from the tenant's PKI. More information about [Using certificates in Remote Desktop Services](https://technet.microsoft.com/library/dn781533.aspx) can be found on TechNet.
 
@@ -56,7 +54,7 @@ Export-PfxCertificate -Cert $RdpCertificate -FilePath .\rdpCert.pfx -Password $p
 
 ## Create an answer file
 
-Since the signed template disk in VMM is generalized, tenants are required to provide an answer file to specialize their shielded VMs during the provisioning process. The answer file (often called the unattend file) can configure the VM for its intended role - that is, it can install Windows features, register the RDP certificate created in the previous step, and perform other custom actions. It will also supply required information for Windows setup including the default administrator's password and product key.
+Since the signed template disk in VMM is generalized, tenants are required to provide an answer file to specialize their shielded VMs during the provisioning process. The answer file (often called the unattend file) can configure the VM for its intended role - that is, it can install Windows features, register the RDP certificate created in the previous step, and perform other custom actions. It will also supply required information for Windows setup, including the default administrator's password and product key.
 
 For information about obtaining and using the **New-ShieldingDataAnswerFile** function to generate an answer file (Unattend.xml file) for creating shielded VMs, see [Generate an answer file by using the New-ShieldingDataAnswerFile function](guarded-fabric-sample-unattend-xml-file.md). Using the function, you can more easily generate an answer file that reflects choices such as the following:
 
@@ -106,7 +104,7 @@ Finally, it is important to note that the shielded VM deployment process will on
 Shielding data files also contain information about the template disks a tenant trusts. Tenants acquire the disk signatures from trusted template disks in the form of a volume signature catalog (VSC) file. These signatures are then validated when a new VM is deployed. If none of the signatures in the shielding data file match the template disk trying to be deployed with the VM (i.e. it was modified or swapped with a different, potentially malicious disk), the provisioning process will fail.
 
 > [!IMPORTANT]
-> While the VSC ensures that a disk has not been tampered with, it is still important for the tenant to trust the disk in the first place. If you are the tenant and the template disk is provided by your hoster, it is important to deploy a test VM using that template disk and run your own tools (antivirus, vulnerability scanners, and so on) to validate the disk is, in fact, in a state that you trust.
+> While the VSC ensures that a disk has not been tampered with, it is still important for the tenant to trust the disk in the first place. If you are the tenant and the template disk is provided by your hoster, deploy a test VM using that template disk and run your own tools (antivirus, vulnerability scanners, and so on) to validate the disk is, in fact, in a state that you trust.
 
 There are two ways to acquire the VSC of a template disk:
 
@@ -118,7 +116,7 @@ There are two ways to acquire the VSC of a template disk:
     
         $vsc.WriteToFile(".\templateDisk.vsc")
 
--  The tenant has access to the template disk file. This may be the case if the tenant creates their own template disk which is uploaded to a hosting service provider or if the tenant can download the hoster's template disk. In this case, without VMM in the picture, the tenant would run the following cmdlet (installed with the Shielded VM Tools feature, part of Remote Server Administration Tools):
+-  The tenant has access to the template disk file. This may be the case if the tenant creates a template disk to uploaded to a hosting service provider or if the tenant can download the hoster's template disk. In this case, without VMM in the picture, the tenant would run the following cmdlet (installed with the Shielded VM Tools feature, part of Remote Server Administration Tools):
 
         Save-VolumeSignatureCatalog -TemplateDiskPath templateDisk.vhdx -VolumeSignatureCatalogPath templateDisk.vsc
 
@@ -193,6 +191,5 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
 ## See also
 
-- [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md)
-- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

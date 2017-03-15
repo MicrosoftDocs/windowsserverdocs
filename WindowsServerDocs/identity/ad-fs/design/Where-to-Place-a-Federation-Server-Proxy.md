@@ -3,9 +3,9 @@ ms.assetid: ec26705c-4446-4226-b9b4-b775b642f0f4
 title: Where to Place a Federation Server Proxy
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

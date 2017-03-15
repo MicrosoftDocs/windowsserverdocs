@@ -3,9 +3,9 @@ ms.assetid: f67b0bc9-e5af-4891-9da0-d9be539af42d
 title: Determine Your AD FS Deployment Topology
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

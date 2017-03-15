@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/09/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -25,9 +25,6 @@ One of the benefits of this feature is that it enables you to adopt SaaS provide
 
 > [!IMPORTANT]
 > We have recently changed our support statement on using Alternate ID with Exchange Hybrid.   For the best user experience in an Exchange Hybrid environment, we recommend using the same set of credentials for on-premises and Exchange Online.  It is also recommended that customers that use Office 2013 clients enable [Modern Authentication](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/).  Please refer to the table below for the expected user experience using various clients.
-
-> [!IMPORTANT]
-> Using Alternate ID with Lync Hybrid environments is currently not supported.  For the best user experience in Lync Hybrid environments, you should use the same set of credentials for on-premises and Lync Online.
 
 Please refer to the table below for the user experience with Alternate ID using various Office 365 clients with Regular Authentication, Modern Authentication and Certificate Based Authentication (requires enabling Modern Authentication).
 
@@ -80,7 +77,7 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 3.  To disable this feature, set the value for both parameters to be null.
 
     ```
-    Set-AdfsClaimsProviderTrust -Target Identifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
+    Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $NULL -LookupForests $NULL
     ```
 
 4.  To enable alternate login ID with Azure AD, no additional configurations steps are needed when using Azure AD Connect.   Alternate ID can be configured directly from the wizard.  See uniquely identifying your users under the section [Connect to Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-get-started-custom/#connect-to-azure-ad).

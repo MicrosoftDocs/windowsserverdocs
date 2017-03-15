@@ -3,9 +3,9 @@ ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

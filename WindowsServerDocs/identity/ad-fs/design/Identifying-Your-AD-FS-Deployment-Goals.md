@@ -3,9 +3,9 @@ ms.assetid: 604c771b-efae-4d0c-84a1-693e1f96d705
 title: Identifying Your AD FS Deployment Goals
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
