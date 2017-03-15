@@ -37,6 +37,8 @@ ms.technology: identity-adfs
 
 -   [Why does AD FS installation require a reboot of the server?](AD-FS-FAQ.md#BKMK_10)  
 
+-   [How can I ensure my AD FS and WAP servers support Apple's ATP requirements?](AD-FS-FAQ.md#BKMK_11)  
+
 ## <a name="BKMK_1"></a>How can I upgrade/migrate from previous versions of AD FS?  
 You can upgrade an AD FS 2012 R2 farm using the “mixed farm” process described [here](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016).  It works for WID or SQL farms, though the document shows only the WID scenario.
 
@@ -202,3 +204,12 @@ The default lifetimes of the various cookies and tokens are listed below (as wel
 ## <a name="BKMK_10"></a>Why does AD FS installation require a reboot of the server?
 
 HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for client certificate authentication.  Because many AD FS scenarios make use of client certificate authentication, and a significant number of clients do not support retrying requests using HTTP/1.1, AD FS farm configuration re-configures the local server's HTTP settings to HTTP/1.1.  This requires a reboot of the server.  
+
+## <a name="BKMK_11"></a>How can I ensure my AD FS and WAP servers support Apple's ATP requirements?
+
+Apple has released a set of requirements called App Transport Security (ATS) that may impact calls from iOS apps that authenticate to AD FS.  You can ensure your AD FS and WAP servers comply by making sure they support the [requirements for connecting using ATS](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  
+In particular, you should verify that your AD FS and WAP servers support TLS 1.2 and that the TLS connection's negotiated cipher suite will support perfect forward secrecy.
+
+You can enable and disable SSL 2.0 and 3.0 and TLS versions 1.0, 1.1, and 1.2 using the guidance [here](https://technet.microsoft.com/en-us/library/dn786418(v=ws.11).aspx).
+
+To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](https://technet.microsoft.com/itpro/powershell/windows/tls/index).  
