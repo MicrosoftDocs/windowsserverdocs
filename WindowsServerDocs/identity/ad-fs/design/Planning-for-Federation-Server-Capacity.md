@@ -3,9 +3,9 @@ ms.assetid: 7013fc21-9ced-4f9d-9588-cb04d6d60924
 title: Planning for Federation Server Capacity
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

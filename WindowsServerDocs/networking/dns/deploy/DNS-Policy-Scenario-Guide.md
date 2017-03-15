@@ -3,7 +3,6 @@ title: DNS Policy Scenario Guide
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
 ms.prod: windows-server-threshold
-ms.prod: windows-server-threshold
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
@@ -28,6 +27,7 @@ This guide contains the following sections.
 - [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](dns-tod-intelligent.md)
 - [DNS Responses Based on Time of Day with an Azure Cloud App Server](dns-tod-azure-cloud-app-server.md)
 - [Use DNS Policy for Split-Brain DNS Deployment](split-brain-DNS-deployment.md)
+- [Use DNS Policy for Split-Brain DNS in Active Directory](dns-sb-with-ad.md)
 - [Use DNS Policy for Applying Filters on DNS Queries](apply-filters-on-dns-queries.md)
 - [Use DNS Policy for Application Load Balancing](app-lb.md)
 - [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](app-lb-geo.md)

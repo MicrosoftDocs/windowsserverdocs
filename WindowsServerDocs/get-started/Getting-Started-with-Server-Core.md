@@ -5,14 +5,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 01/18/2017
+ms.date: 02/22/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jaimeo
 ms.author: jaimeo
-manager: dongill
+manager: elizapo
 ---
 # Install Server Core
 > Applies To: Windows Server 2016
@@ -72,6 +72,8 @@ With the Server Core option, the standard user interface (the "Server Graphical 
 - Licensing
 
 - Virtualization
+
+- Volume Activation Services
 
 ## Installation scenarios
 

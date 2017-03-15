@@ -3,9 +3,9 @@ ms.assetid: 4ef052f0-61a9-4912-b780-5c96187c850f
 title: AD FS Deployment Topology Considerations
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

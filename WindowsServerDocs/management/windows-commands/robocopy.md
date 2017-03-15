@@ -11,8 +11,8 @@ ms.topic: article
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
 ms.author: coreyp
-manager: dongill
-ms.date: 10/12/2016
+manager: lizapo
+ms.date: 02/28/2017
 ---
 # robocopy
 
@@ -30,7 +30,8 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |<Destination>|Specifies the path to the destination directory.|
 |<File>|Specifies the file or files to be copied. You can use wildcard characters (**\*** or **?**), if you want. If the **File** parameter is not specified, **\*.\*** is used as the default value.|
 |<Options>|Specifies options to be used with the **robocopy**command.|
-#### copy options
+
+#### Copy options
 |Option|Description|
 |-----|--------|
 |/s|Copies subdirectories. Note that this option excludes empty directories.|
@@ -63,6 +64,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/pf|Checks run times on a per-file (not per-pass) basis.|
 |/ipg:n|Specifies the inter-packet gap to free bandwidth on slow lines.|
 |/sl|Copies the symbolic link instead of the target.|
+
 > [!IMPORTANT]
 > When using the **/SECFIX** copy option, specify the type of security information you want to copy by also using one of these additional copy options:
 > 
@@ -71,6 +73,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 > -   **/copy:S**
 > -   **/copy:U**
 > -   **/SEC**
+
 #### File selection options
 |Option|Description|
 |-----|--------|
@@ -98,6 +101,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/dst|compensates for one-hour DST time differences.|
 |/xjd|Excludes junction points for directories.|
 |/xjf|Excludes junction points for files.|
+
 #### Retry options
 |Option|Description|
 |-----|--------|
@@ -105,6 +109,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/w:<N>|Specifies the wait time between retries, in seconds. The default value of *N* is 30  (wait time 30 seconds).|
 |/reg|Saves the values specified in the **/r** and **/w** options as default settings in the registry.|
 |/tbd|Specifies that the system will wait for share names to be defined (retry error 67).|
+
 #### Logging options
 |Option|Description|
 |-----|--------|
@@ -128,6 +133,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/tee|Writes the status output to the console window, as well as to the log file.|
 |/njh|Specifies that there is no job header.|
 |/njs|Specifies that there is no job summary.|
+
 #### Job options
 |Option|Description|
 |-----|--------|
@@ -137,9 +143,11 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/nosd|Indicates that no source directory is specified.|
 |/nodd|Indicates that no destination directory is specified.|
 |/if|Includes the specified files.|
-#### <a name="BKMK_remarks"></a>remarks
+
+#### <a name="BKMK_remarks"></a>Remarks
 -   The **/mir** option is equivalent to the **/e** plus **/purge** options with one small difference in behavior:
     -   With the **/e** plus **/purge** options, if the destination directory exists, the destination directory security settings are not overwritten.
     -   With the **/mir** option, if the destination directory exists, the destination directory security settings are overwritten.
-#### additional references
+
+#### Additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

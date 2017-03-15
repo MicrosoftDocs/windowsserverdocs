@@ -13,7 +13,7 @@ ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 
 >Applies To: Windows Server 2016
 
-Storage Replica is Windows Server technology that enables synchronous replication of volumes between servers or clusters for disaster recovery. It also enables you to use asynchronous replication to create failover clusters that span two sites, with all nodes staying in sync.
+Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
 
 Storage Replica supports synchronous and asynchronous replication:
 
@@ -41,7 +41,7 @@ Using this guide and Windows Server 2016 Datacenter Edition, you can deploy stor
 
 **FIGURE 1: Storage replication in a stretch cluster using Storage Replica**  
 
-**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces Direct, Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and Azure Site Recovery, and requires manual intervention for failover.  
+**Cluster to Cluster** allows replication between two separate clusters, where one cluster synchronously or asynchronously replicates with another cluster. This scenario can utilize Storage Spaces Direct, Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It is managed with PowerShell and requires manual intervention for failover. Support for Azure Site Recovery of this scenario is scheduled.
 
 ![Diagram showing a cluster in Los Angeles using Storage Replica to replicate its storage with a different cluster in Las Vegas](./media/Storage-Replica-Overview/Storage_SR_ClustertoCluster.png)  
 

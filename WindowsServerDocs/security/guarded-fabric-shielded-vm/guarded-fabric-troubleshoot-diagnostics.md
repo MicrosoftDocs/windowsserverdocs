@@ -17,7 +17,9 @@ This topic describes the use of the Guarded Fabric Diagnostic Tool to identify a
 
 Documentation of the cmdlets used in this topic can be found on [TechNet](https://technet.microsoft.com/library/mt718834.aspx).
 
-## Quick Start
+[!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)] 
+
+# Quick Start
 
 You can diagnose either a guarded host or an HGS node by calling the following from a Windows PowerShell session with local administrator privileges:
 ```PowerShell

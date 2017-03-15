@@ -3,9 +3,9 @@ ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: When to Use Identity Delegation
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

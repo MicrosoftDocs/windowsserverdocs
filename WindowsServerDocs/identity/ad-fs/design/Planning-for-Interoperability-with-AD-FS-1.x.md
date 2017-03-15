@@ -3,9 +3,9 @@ ms.assetid: 04b63d9f-e924-4146-9b1d-785ed8b4239c
 title: Planning for Interoperability with AD FS 1.x
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

@@ -2,12 +2,8 @@
 title: Network Offload and Optimization Technologies
 description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: networking-nlb
-ms.tgt_pltfrm: na
+ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 ms.author: jamesmci 
@@ -48,16 +44,24 @@ The following SO features and technologies are available in Windows Server 2016 
 The following SH features and technologies are available in Windows Server 2016 and are documented in the **Network Offload and Optimization Technologies** guide.
 
 - **Converged NIC**. Converged NIC is a technology that allows virtual NICs in the Hyper-V host to expose RDMA services to host processes. In Windows Server 2016, separate NICs are no longer required for RDMA. The Converged NIC feature allows the Virtual NICs in the Host partition (vNICs) to expose RDMA to the host partition and share the bandwidth of the NICs between the RDMA traffic and the VM and other TCP/UDP traffic in a fair and manageable manner.   
-- **Data Center Bridging (DCB)**. Data Center Bridging provides hardware queue based bandwidth management in a host with cooperation from the adjacent switch. For more information, see [Data Center Bridging (DCB) Overview](https://technet.microsoft.com/library/hh849179.aspx).
+- **Data Center Bridging \(DCB\)**. DCB is a suite of Institute of Electrical and Electronics Engineers \(IEEE\) standards that enable Converged Fabrics in the data center, where storage, data networking, cluster Inter\-Process Communication \(IPC\), and management traffic all share the same Ethernet network infrastructure. For more information, see [Data Center Bridging (DCB)](dcb/dcb-top.md).
 - **Hyper-V Network Virtualization - v1 \(HNVv1\)**. Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud. 
 - **Hyper-V Network Virtualization - v2 NVGRE \(HNVv2 NVGRE\)**. In Windows Server 2016 and System Center Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution that includes RAS Gateway, Software Load Balancing, Network Controller, and more. For more information, see [Hyper-V Network Virtualization Overview in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server).
 - **Hyper-V Network Virtualization - v2 VxLAN \(HNVv2 VxLAN\)**. See previous information.
-- **IPsec Task Offload \(IPsecTO\)**. IPsec task offload is a NIC feature that enables the operating system to use the processor on the NIC for the IPsec encryption work. For more information, see [Improving Network Performance by Using IPsec Task Offload](https://technet.microsoft.com/library/dd125367.aspx). 
+- **IPsec Task Offload \(IPsecTO\)**. IPsec task offload is a NIC feature that enables the operating system to use the processor on the NIC for the IPsec encryption work.
+
+>[!IMPORTANT]
+>IPsec Task Offload is a deprecated technology. It is recommended that you do not use IPsec Task Offload because it might not be supported by Microsoft in the future.
+
 - **Private virtual Local Area Network \(PVLAN\)**. PVLANs allow communication only between virtual machines on the same virtualization server. A private virtual network is not bound to a physical network adapter. A private virtual network is isolated from all external network traffic on the virtualization server, as well any network traffic between the management operating system and the external network. This type of network is useful when you need to create an isolated networking environment, such as an isolated test domain. The Hyper-V and SDN stacks support PVLAN Isolated Port mode only.
 - **Remote Direct Memory Access \(RDMA\)**. RDMA is a networking technology that provides high-throughput, low-latency communication that minimizes CPU usage. For information about RDMA in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
 - **Receive Side Scaling \(RSS\)**. Receive Side Scaling is a NIC feature that segregates different sets of streams and delivers them to different processors for processing. This parallelizes the networking processing, enabling a host to scale to very high data rates. For more information, see [Receive Side Scaling (RSS)](https://technet.microsoft.com/library/hh997036.aspx).
 - **Single Root Input\-Output Virtualization \(SR-IOV\)**. SR\-IOV allows VM traffic to move directly from the NIC to the VM without passing through the Hyper-V host. SR-IOV is an incredible improvement in performance for a VM.  It suffers, however, from a lack of ability for the host to manage that pipe.  SR-IOV must only be used when the workload is well-behaved, trusted, and generally the only VM in the host. 
-- **TCP Chimney Offload**. TCP Chimney Offload, also known as TCP Engine Offload (TOE), is a technology that allows the host to offload all TCP processing to the NIC. Because the Windows Server TCP stack is almost always more efficient than the TOE engine, using TCP Chimney Offload is not recommended unless you have specific reasons to do so in your environment.
+- **TCP Chimney Offload**. TCP Chimney Offload, also known as TCP Engine Offload (TOE), is a technology that allows the host to offload all TCP processing to the NIC. Because the Windows Server TCP stack is almost always more efficient than the TOE engine, using TCP Chimney Offload is not recommended.
+
+>[!IMPORTANT]
+>TCP Chimney Offload is a deprecated technology. It is recommended that you do not use TCP Chimney Offload because it might not be supported by Microsoft in the future.
+
 - **Virtual Local Area Network \(VLAN\)**. VLAN is an extension to the Ethernet frame header to enable partitioning of a Local Area Network into multiple VLANs, each using its own address space.  For more information, see [NIC Teaming and Virtual Local Area Networks (VLANs)](https://technet.microsoft.com/windows-server-docs/networking/technologies/nic-teaming/nic-teaming-and-virtual-local-area-networks--vlans-).
 - **Virtual Machine Queue \(VMQ\)**. Virtual Machine Queues is a NIC feature that allocates a queue for each VM. The NIC divides the incoming traffic into the appropriate queues.  Interrupts for each queue are mapped to different processors.
 - **Virtual Machine Multi\-Queue \(VMMQ\)**. Virtual Machine Multi-Queue is a NIC feature that allows traffic for a VM to be spread across multiple queues, each processed by a different physical processor. The traffic is then passed to multiple LPs in the VM as it would be in vRSS.  This allows for very large networking bandwidth to be delivered to the VM.

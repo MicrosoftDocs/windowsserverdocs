@@ -12,13 +12,13 @@ ms.date: 10/14/2016
 
 # Shielded VMs - Hosting service provider creates a shielded VM template
 
-As with regular VMs, you can create a VM template (for example, a [VM template in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps for creating a shielded template disk and, if you use VMM for management, a VM template in VMM.
+As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
 ## Prepare an operating system VHDX
 
-In order to create a shielded template disk, you need to first prepare an OS disk that will be run through the template disk wizard. This disk will be used as the OS disk in your tenant's VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs: 
+First prepare an OS disk that you will then run through the Shielded Template Disk Creation Wizard. This disk will be used as the OS disk in your tenant's VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs: 
 
 | Requirement for VHDX | Reason |
 |-----------|----|
@@ -43,9 +43,9 @@ If you are planning to run Nano Server as your guest OS in shielded VMs, you mus
 
 On the template disk, verify that the operating system has all of the latest Windows updates installed. Recently released updates improve the reliability of the end-to-end shielding process - a process that may fail to complete if the template operating system is not up-to-date.
 
-## Sign and protect the VHDX with the template disk wizard
+## Prepare and protect the VHDX with the template disk wizard
 
-To use a template disk with shielded VMs, the disk must be signed and encrypted with BitLocker. To do this, you will use the Shielded Template Disk Creation Wizard. This wizard will generate a hash for the disk and add it to a volume signature catalog (VSC). The VSC is signed using a certificate you specify and is used during the provisioning process to ensure the disk being deployed for a tenant has not been altered or replaced with a disk the tenant does not trust. Finally, BitLocker is installed on the disk's operating system (if it is not already there) to prepare the disk for encryption during VM provisioning.
+To use a template disk with shielded VMs, the disk must be prepared and encrypted with BitLocker by using the Shielded Template Disk Creation Wizard. This wizard will generate a hash for the disk and add it to a volume signature catalog (VSC). The VSC is signed using a certificate you specify and is used during the provisioning process to ensure the disk being deployed for a tenant has not been altered or replaced with a disk the tenant does not trust. Finally, BitLocker is installed on the disk's operating system (if it is not already there) to prepare the disk for encryption during VM provisioning.
 
 > [!NOTE]
 > The template disk wizard will modify the template disk you specify in-place. You may want to make a copy of the unprotected VHDX before running the wizard to make updates to the disk at a later time. You will not be able to modify a disk that has been protected with the template disk wizard.
@@ -58,29 +58,29 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
         
-    You can also administer the server from a client computer on which you have installed the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520).
+    You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520).
 
-3. Obtain or create a certificate to sign the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
+3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
 
-    If you are setting up a test environment and just want to use a self-signed certificate to sign your template disk, run a command similar to the following on your machine:
+    If you are setting up a test environment and just want to use a self-signed certificate to prepare your template disk, run a command similar to the following:
 
         New-SelfSignedCertificate -DnsName publisher.fabrikam.com
 
 4. Start the **Template Disk Wizard** from the **Administrative Tools** folder on the Start menu or by typing **TemplateDiskWizard.exe** into a command prompt.
 
-5. On the **Certificate** page, click **Browse** to display a list of certificates. Select the certificate with which to sign the disk template. Click **OK** and then click **Next**.
+5. On the **Certificate** page, click **Browse** to display a list of certificates. Select the certificate with which to prepare the disk template. Click **OK** and then click **Next**.
 
 6. On the Virtual Disk page, click **Browse** to select the VHDX that you have prepared, then click **Next**.
 
-7. On the Signature Catalog page, provide a friendly **disk name** and **version.** These fields are present to help you identify the disk once it has been signed.
+7. On the Signature Catalog page, provide a friendly **disk name** and **version.** These fields are present to help you identify the disk once it has been prepared.
 
     For example, for **disk name** you could type _WS2016_ and for **Version**, _1.0.0.0_
 
 8. Review your selections on the Review Settings page of the wizard. When you click **Generate**, the wizard will enable BitLocker on the template disk, compute the hash of the disk, and create the Volume Signature Catalog, which is stored in the VHDX metadata.
 
-    Wait until the signing process has finished before attempting to mount or move the template disk. This process may take a while to complete, depending on the size of your disk. 
+    Wait until the prep process has finished before attempting to mount or move the template disk. This process may take a while to complete, depending on the size of your disk. 
 
-9. On the **Summary** page, information about the disk template, the certificate used to sign the template, and the certificate issuer is shown. Click **Close** to exit the wizard.
+9. On the **Summary** page, information about the disk template, the certificate used to sign the VSC, and the certificate issuer is shown. Click **Close** to exit the wizard.
 
 If you use VMM, follow the steps in the remaining sections in this topic to incorporate a template disk into a shielded VM template in VMM. 
 
@@ -102,19 +102,19 @@ If you use VMM, after you create a template disk, you need to copy it to a VMM l
 
     d. When you have updated the properties, click **OK**.
 
-The small shield icon next to the disk's name denotes the disk as a signed template disk for shielded VMs. You can also right click the column headers and toggle the **Shielded** column to see a textual representation indicating whether a disk is intended for regular or shielded VM deployments.
+The small shield icon next to the disk's name denotes the disk as a prepared template disk for shielded VMs. You can also right click the column headers and toggle the **Shielded** column to see a textual representation indicating whether a disk is intended for regular or shielded VM deployments.
 
 ![Shielded vm template disk](../media/Guarded-Fabric-Shielded-VM/shielded-vm-template-disk.png)
 
-## Create the shielded VM template in VMM using the signed template disk
+## Create the shielded VM template in VMM using the prepared template disk
 
-With a signed template disk in your VMM library, you are ready to create a VM template for shielded VMs. VM templates for shielded VMs differ slightly from traditional VM templates in that certain settings are fixed (generation 2 VM, UEFI and Secure Boot enabled, and so on) and others are unavailable (tenant customization is limited to a few, select properties of the VM). To create the VM template, perform the following steps:
+With a prepared template disk in your VMM library, you are ready to create a VM template for shielded VMs. VM templates for shielded VMs differ slightly from traditional VM templates in that certain settings are fixed (generation 2 VM, UEFI and Secure Boot enabled, and so on) and others are unavailable (tenant customization is limited to a few, select properties of the VM). To create the VM template, perform the following steps:
 
 1. In the **Library** workspace, click **Create VM Template** on the home tab at the top.
 
 2. On the **Select Source** page, click **Use an existing VM template or a virtual hard disk stored in the library**, and then click **Browse**.
 
-3. In the window that appears, select a signed template disk from the VMM library. To more easily identify which disks are signed, right-click a column header and enable the **Shielded** column. Click **OK** then **Next**.
+3. In the window that appears, select a prepared template disk from the VMM library. To more easily identify which disks are prepared, right-click a column header and enable the **Shielded** column. Click **OK** then **Next**.
 
 4. Specify a VM template name and optionally a description, and then click **Next**.
 

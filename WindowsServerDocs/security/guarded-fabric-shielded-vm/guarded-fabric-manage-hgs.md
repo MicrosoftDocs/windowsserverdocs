@@ -161,7 +161,7 @@ It is **not recommended** to back up or attempt to restore an entire system imag
 In the event you have lost your entire cluster, the best practice is to set up a brand new HGS node and restore just the HGS state, not the entire server OS.
 
 #### Recovering from the loss of one node
-If you lose one or more nodes (but not every node) in your HGS cluster, you can simply add [additional nodes to your cluster](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-secondary-hgs-nodes) following the guidance in the deployment guide.
+If you lose one or more nodes (but not every node) in your HGS cluster, you can simply [add nodes to your cluster](guarded-fabric-configure-additional-hgs-nodes.md) following the guidance in the deployment guide.
 The attestation policies will sync automatically, as will any certificates which were provided to HGS as PFX files with accompanying passwords.
 For certificates added to HGS using a thumbprint (non-exportable and hardware backed certificates, commonly), you will need to ensure each new node has access to the private key of each certificate.
 
@@ -174,7 +174,7 @@ If you restored objects to the Active Directory domain backing HGS, it is recomm
 
 Once you have set up your first HGS node (e.g. it has been installed and initialized), you will follow the procedures under [Restoring HGS from a backup](#restoring-hgs-from-a-backup) to restore the attestation policies and public halves of the key protection certificates.
 You will need to restore the private keys for your certificates manually according to the guidance of your certificate provider (e.g. import the certificate in Windows, or configure access to HSM-backed certificates).
-After the first node is set up, you can continue to [install additional nodes to the cluster](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#configure-secondary-hgs-nodes) until you have reached the capacity and resiliency you desire.
+After the first node is set up, you can continue to [install additional nodes to the cluster](guarded-fabric-configure-additional-hgs-nodes.md) until you have reached the capacity and resiliency you desire.
 
 ### Backing up HGS
 The HGS administrator should be responsible for backing up HGS on a regular basis.
@@ -240,8 +240,8 @@ If you are simply importing settings that were accidentally deleted to an existi
 If you are recovering from a complete loss of HGS, you will need to install and initialize at least one HGS node following the [guidance in the deployment guide](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 
 Specifically, you will need to:
-1. [Set up the HGS domain](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#install-hgs-in-its-own-new-forest) or join HGS to an existing domain
-2. [Initialize the HGS server](guarded-fabric-setting-up-the-host-guardian-service-hgs.md#initialize-the-hgs-server-with-your-chosen-mode-of-attestation) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](#renewing-or-replacing-keys) after importing your actual keys from the HGS backup files.
+1. [Set up the HGS domain](guarded-fabric-configure-the-first-hgs-node.md#install-hgs-in-its-own-new-forest) or join HGS to an existing domain
+2. [Initialize the HGS server](guarded-fabric-configure-the-first-hgs-node.md#initialize-the-hgs-server-with-your-chosen-mode-of-attestation) using your existing keys *or* a set of temporary keys. You can [remove the temporary keys](#renewing-or-replacing-keys) after importing your actual keys from the HGS backup files.
 3. [Import HGS settings](#import-settings-from-a-backup) from your backup to restore the trusted host groups, code integrity policies, TPM baselines, and TPM identifiers
 
 > [!TIP]
