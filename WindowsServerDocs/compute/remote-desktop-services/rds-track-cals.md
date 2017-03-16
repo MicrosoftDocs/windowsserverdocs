@@ -24,6 +24,7 @@ You can use the Remote Desktop Licensing Manager tool to create (generate) repor
 
 > [!NOTE]
 >  If you are using Azure AD Domain Services in your environment, the Remote Desktop Licensing Manager tool won't work to obtain Per User CALs. Instead, you need to track licensing manually, either through logon events, polling active Remote Desktop connections through the Connection Broker, or another mechanism that works for you. 
+
 Use the following steps to generate a per User CALs report:
 
 1. In Remote Desktop Licensing Manager right-click the license server, click **Create Report**, and then click **Per User CAL Usage**.
