@@ -83,6 +83,7 @@
 ##### [High availability](compute/remote-desktop-services/rds-plan-high-availability.md)
 ##### [Multifactor Authentication](compute/remote-desktop-services/rds-plan-mfa.md)
 ##### [Secure data storage](compute/remote-desktop-services/rds-plan-secure-data-storage.md)
+##### [Choose your graphics rendering technology](compute/remote-desktop-services/rds-graphics-virtualization.md)
 ##### [Connect from any device](compute/remote-desktop-services/rds-plan-connect-from-any-device.md)
 ##### [Choose how you pay](compute/remote-desktop-services/rds-plan-choose-how-you-pay.md)
 ##### [Office 2016 in RDS and VDI deployments](compute/remote-desktop-services/rds-office-vdi-rdsh.md)
