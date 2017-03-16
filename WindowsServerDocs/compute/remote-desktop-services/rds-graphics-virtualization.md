@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 03/07/2017  
+ms.date: 03/16/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
@@ -37,7 +37,7 @@ For more information about DDA, check out [Plan for deploying Discrete Device As
 ## RemoteFX vGPU 
 RemoteFX vGPU is a graphics virtualization technology that allows the processing power of a GPU to be split across various guest operating systems to enable knowledge worker scenarios (see first graphic above). Advancements in Windows Server 2016 allow further enhancements for GPU burst scenarios, for example for designer applications and data visualization. Other feature improvements include:
 
--	Support for Generation 2 guest VMs, Windows Server 2016 guest VMs, and Windows Client Hyper-V host support.
+-	Support for Generation 2 guest VMs, Windows Server 2016 guest VMs, and Windows Client Hyper-V host.
    >[!NOTE] 
    > Remote Desktop Session Host is not supported on a Windows Server 2016 guest VM; only 1 session can be hosted per Windows Server 2016 guest VM.
 
