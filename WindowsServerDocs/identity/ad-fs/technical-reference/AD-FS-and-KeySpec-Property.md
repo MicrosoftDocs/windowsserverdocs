@@ -3,7 +3,7 @@ title: Active Directory Federation Services and certificate Key Specification pr
 description:
 author: billmath
 manager: femila
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: a5307da5-02ff-4c31-80f0-47cb17a87272
@@ -54,16 +54,17 @@ The RSA key algorithm identifiers map to KeySpec values as follows
 
 | Provider supported algorithm| Key Specification value for CAPI calls |
 | --- | --- |
-|CALG_RSA_KEYX : RSA key that can be used for signing and decryption AT_KEYEXCHANGE (or KeySpec=1)|CALG_RSA_SIGN : RSA signature only key AT_SIGNATURE (or KeySpec=2)|
+|CALG_RSA_KEYX : RSA key that can be used for signing and decryption| AT_KEYEXCHANGE (or KeySpec=1)|
+CALG_RSA_SIGN : RSA signature only key |AT_SIGNATURE (or KeySpec=2)|
 
 ## KeySpec values and associated meanings
 The following are the meanings of the various KeySpec values:
 
-|Keyspec value	Means|Recommended AD FS use|
-| --- | --- |
-|0|The certificate is a CNG cert SSL certificate only|
-|1|For a legacy CAPI (non-CNG) cert, the key can be used for signing and decryption	SSL, token signing, token decrypting, service communication certificates|
-|2|For a legacy CAPI (non-CNG) cert, the key can be used only for signing	not recommended|
+|Keyspec value|Means|Recommended AD FS use|
+| --- | --- | --- |
+|0|The certificate is a CNG cert|SSL certificate only|
+|1|For a legacy CAPI (non-CNG) cert, the key can be used for signing and decryption|	SSL, token signing, token decrypting, service communication certificates|
+|2|For a legacy CAPI (non-CNG) cert, the key can be used only for signing|not recommended|
 
 ## How to check the KeySpec value for your certificates / keys
 To see a certificates value you can use the **certutil** command line tool.  
