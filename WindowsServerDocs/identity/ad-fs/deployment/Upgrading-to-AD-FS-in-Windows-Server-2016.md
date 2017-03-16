@@ -4,7 +4,7 @@ title: Upgrading to AD FS in Windows Server 2016
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 03/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -12,13 +12,13 @@ ms.technology: identity-adfs
 ms.author:  billmath
 ---
 
-# Upgrading to AD FS in Windows Server 2016
+# Upgrading to AD FS in Windows Server 2016 using a WID database
 
 >Applies To: Windows Server 2016
 
 
 ## Moving from a Windows Server 2012 R2 AD FS farm to a Windows Server 2016 AD FS farm  
-The following document will describe how to upgrade your AD FS Windows Server 2012 R2 farm to AD FS in Windows Server 2016.  
+The following document will describe how to upgrade your AD FS Windows Server 2012 R2 farm to AD FS in Windows Server 2016 when you are using a WID database.  
 
 ### Upgrading AD FS to Windows Server 2016 FBL  
 New in AD FS for Windows Server 2016 is the farm behavior level feature (FBL).   This features is farm wide and determines the features that the AD FS farm can use.   By default, the FBL in a Windows Server 2012 R2 AD FS farm is at the Windows Server 2012 R2 FBL.  

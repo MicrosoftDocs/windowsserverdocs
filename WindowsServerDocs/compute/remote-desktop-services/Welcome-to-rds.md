@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: chrimo
-ms.date: 09/20/2016  
+ms.date: 02/22/2017  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
@@ -35,3 +35,11 @@ Within these virtualization environments, you have additional flexibility in wha
 For environments where cost-effectiveness is crucial and you want to extend the benefits of deploying full desktops in a session-based virtualization environment, you can use [MultiPoint Services](./multipoint-services/multipoint-services.md) to deliver the best value. 
 
 With these options and configurations, you have the flexibility to deploy the desktops and applications your users need in a remote, secure, and cost-effective fashion.
+
+## Next steps
+
+Here are some next steps to help you get a better understanding of RDS and even start deploying your own environment:
+-	Understand the [supported configurations](rds-supported-config.md) for RDS with the various Windows and Windows Server versions
+-	[Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multi-factor authentication.
+-	Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.
+-	Start to [deploy your RDS environment with ARM and Azure Marketplace](rds-in-azure.md).

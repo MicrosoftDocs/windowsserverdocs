@@ -3,9 +3,9 @@ ms.assetid: 68979914-8a1c-465a-bd37-08df30722d69
 title: Mapping Your Deployment Goals to an AD FS Design
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

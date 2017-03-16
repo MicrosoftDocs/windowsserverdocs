@@ -17,8 +17,6 @@ To create a new shielded VM, you will need to use a specially prepared, signed t
 > [!IMPORTANT]
 > If you prefer, you can instead use a template disk provided by your hosting service provider. If you do this, it is important to deploy a test VM using that template disk and run your own tools (antivirus, vulnerability scanners, and so on) to validate the disk is, in fact, in a state that you trust.
 
-To understand how this topic fits in the overall process of deploying shielded VMs, see [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md).
-
 ## Prepare an operating system VHDX
 
 In order to create a shielded template disk, you need to first prepare an OS disk that will be run through the template disk wizard. This disk will be used as the OS disk in shielded VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs: 
@@ -88,6 +86,5 @@ Provide the shielded disk template to the hosting service provider, along with a
 
 ## See also
 
-- [Tenant configuration steps for shielded VMs](guarded-fabric-tenant-configuration-steps-for-shielded-vms.md)
-- [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

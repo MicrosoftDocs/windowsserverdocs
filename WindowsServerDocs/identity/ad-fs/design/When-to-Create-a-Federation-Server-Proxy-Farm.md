@@ -3,9 +3,9 @@ ms.assetid: ad0bf21d-2ace-4565-b1f5-ce57c8eb2689
 title: When to Create a Federation Server Proxy Farm
 description:
 author: billmath
-ms.author:  billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/28/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 

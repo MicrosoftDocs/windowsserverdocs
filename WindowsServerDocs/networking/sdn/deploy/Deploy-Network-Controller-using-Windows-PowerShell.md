@@ -17,7 +17,10 @@ author: jamesmci
 
 >Applies To: Windows Server 2016
 
-This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.  
+This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2016.
+
+>[!IMPORTANT]
+>Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).
 
 This topic contains the following sections.
 
@@ -37,7 +40,10 @@ This topic contains the following sections.
 
 ## <a name="bkmk_role"></a>Install the Network Controller server role
 
-You can use this procedure to install the Network Controller server role on a computer or a VM.
+You can use this procedure to install the Network Controller server role on a virtual machine \(VM\).
+
+>[!IMPORTANT]
+>Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller. By doing so, you are enabling the SDN Software Load Balancer to function.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
 
@@ -57,13 +63,13 @@ Installation of Network Controller requires that you restart the computer. To do
 The Network Controller cluster provides high availability and scalability to the Network Controller application, which you can configure after creating the cluster, and which is  hosted on top of the cluster.
 
 >[!NOTE]
->You can perform the procedures in the following sections either directly on the computer or VM where you installed Network Controller, or you can use the Remote Server Administration Tools for Windows Server 2016 to perform the procedures from a remote computer that is running either Windows Server 2016 or Windows 10. In addition, membership in **Administrators**, or equivalent, is the minimum required to perform this procedure. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.
+>You can perform the procedures in the following sections either directly on the VM where you installed Network Controller, or you can use the Remote Server Administration Tools for Windows Server 2016 to perform the procedures from a remote computer that is running either Windows Server 2016 or Windows 10. In addition, membership in **Administrators**, or equivalent, is the minimum required to perform this procedure. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.
 
 You can create a Network Controller cluster by creating a node object and then configuring the cluster.
 
 ### Create a node object
 
-You need to create a node object for each computer or VM that is a member of the Network Controller cluster.
+You need to create a node object for each VM that is a member of the Network Controller cluster.
 
 To create a node object,  type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
 

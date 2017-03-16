@@ -32,31 +32,17 @@ Remote Server Administration Tools for Windows 10 includes support for remote ma
 ### Tools available in this release
 for a list of the tools available in Remote Server Administration Tools for Windows 10, see the table in [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](http://go.microsoft.com/fwlink/p/?LinkID=221055).
 
-The following management tools are not available in this release of Remote Server Administration Tools.
-
--   BitLocker Drive Encryption administration utilities
-
--   direct Access
-
--   Routing and remote Access
-
--   remote Desktop Services
-
--   Windows PowerShell cmdlets for Cluster Aware Updating
-
--   Windows PowerShell cmdlets for Best Practices Analyzer
-
 ### System requirements
 Remote Server Administration Tools for Windows 10 can be installed only on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1, or other system-on-chip devices.
 
-Remote Server Administration Tools for Windows 10 runs on both x86- and x64-based editions of Windows 10.
+Remote Server Administration Tools for Windows 10 runs on both x86-based and x64-based editions of Windows 10.
 
 > [!IMPORTANT]
-> Remote Server Administration Tools for Windows 10 should not be installed on a computer that is running administration tools packs for Windows 8.1, Windows 8,  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 or Windows 2000 Server. Remove all older versions of Administration Tools Pack or Remote Server Administration Tools including earlier prerelease versions, and releases of the tools for different languages or locales from the computer before you install Remote Server Administration Tools for Windows 10.
+> Remote Server Administration Tools for Windows 10 should not be installed on a computer that is running administration tools packs for Windows 8.1, Windows 8,  Windows Server 2008 R2,  Windows Server 2008, Windows Server 2003 or Windows 2000 Server. Remove all older versions of Administration Tools Pack or Remote Server Administration Tools, including earlier prerelease versions, and releases of the tools for different languages or locales from the computer before you install Remote Server Administration Tools for Windows 10.
 
-To use this release of Server Manager to access and manage Remote servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2 , you must install several updates to make the older Windows Server operating systems manageable by using Server Manager. For detailed information about how to prepare  Windows Server 2012 R2 ,  Windows Server 2012 , and  Windows Server 2008 R2  for management by using Server Manager in Remote Server Administration Tools for Windows 10, see [Manage Multiple, Remote Servers with Server Manager](http://technet.microsoft.com/library/hh831456.aspx).
+To use this release of Server Manager to access and manage Remote servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2 , you must install several updates to make the older Windows Server operating systems manageable by using Server Manager. For detailed information about how to prepare  Windows Server 2012 R2,  Windows Server 2012, and  Windows Server 2008 R2 for management by using Server Manager in Remote Server Administration Tools for Windows 10, see [Manage Multiple, Remote Servers with Server Manager](http://technet.microsoft.com/library/hh831456.aspx).
 
-Windows PowerShell and Server Manager remote management must be enabled on remote servers to manage them by using tools that are part of Remote Server Administration Tools for Windows 10. remote management is enabled by default on servers that are running Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012 . For more information about how to enable remote management if it has been disabled, see [Manage multiple, remote servers with Server Manager](http://go.microsoft.com/fwlink/p/?LinkId=241358).
+Windows PowerShell and Server Manager remote management must be enabled on remote servers to manage them by using tools that are part of Remote Server Administration Tools for Windows 10. Remote management is enabled by default on servers that are running Windows Server 2016,  Windows Server 2012 R2, and  Windows Server 2012. For more information about how to enable remote management if it has been disabled, see [Manage multiple, remote servers with Server Manager](http://go.microsoft.com/fwlink/p/?LinkId=241358).
 
 ### Install, uninstall, or disable Remote Server Administration Tools for Windows 10
 Remote Server Administration Tools for Windows 10 has the same one-step installation process as Remote Server Administration Tools for Windows 8.1. Before the release of Remote Server Administration Tools for Windows 8, after running the MSU installer program, users were required to turn on specific tools that they wanted to use in the **Turn Windows features on or off** dialog box. This step has been eliminated; after you run the MSU installation program, all tools are enabled by default.
@@ -64,11 +50,11 @@ Remote Server Administration Tools for Windows 10 has the same one-step installa
 #### <a name="BKMK_installthresh"></a>To install Remote Server Administration Tools for Windows 10
 
 1.  Download the Remote Server Administration Tools for Windows 10 package from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=404281). You can either run the installer from the Download Center website, or save the download package to a local computer or share.
-
+I
     > [!IMPORTANT]
     > You can only install Remote Server Administration Tools for Windows 10 on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1 or other system-on-chip devices.
 
-2.  if you save the download package to a local computer or share, double-click the installer program, **WindowsTH-KB2693643-x64.msu** or **WindowsTH-KB2693643-x86.msu**, depending on the architecture of the computer on which you want to install the tools.
+2.  If you save the download package to a local computer or share, double-click the installer program, **WindowsTH-KB2693643-x64.msu** or **WindowsTH-KB2693643-x86.msu**, depending on the architecture of the computer on which you want to install the tools.
 
 3.  When you are prompted by the **Windows Update Standalone Installer** dialog box to install the update, click **Yes**.
 
@@ -87,7 +73,7 @@ Remote Server Administration Tools for Windows 10 has the same one-step installa
 4.  Right-click **Update for Microsoft Windows (KB2693643)**, and then click **Uninstall**.
 
 5.  When you are asked if you are sure you want to uninstall the update, click **Yes**.
-
+S
 ##### To turn off specific tools
 
 1.  On the desktop, click **Start**, click **All Apps**, click **Windows System**, and then click **Control Panel**.
@@ -99,26 +85,26 @@ Remote Server Administration Tools for Windows 10 has the same one-step installa
 4.  Clear the check boxes for any tools that you want to turn off.
 
     > [!NOTE]
-    > if you turn off Server Manager, the computer must be restarted, and tools that were accessible from the **Tools** menu of Server Manager must be opened from the **Administrative Tools** folder.
+    > If you turn off Server Manager, the computer must be restarted, and tools that were accessible from the **Tools** menu of Server Manager must be opened from the **Administrative Tools** folder.
 
 5.  When you are finished turning off tools that you do not want to use, click **OK**.
 
 ### Run Remote Server Administration Tools
 
 > [!NOTE]
-> After installing Remote Server Administration Tools for Windows 10, the **Administrative Tools** folder is displayed on the **start** menu. You can access the tools from the following locations.
+> After installing Remote Server Administration Tools for Windows 10, the **Administrative Tools** folder is displayed on the **Start** menu. You can access the tools from the following locations.
 >
 > -   The **Tools** menu in the Server Manager console.
 > -   **Control Panel\System and Security\Administrative Tools**.
-> -   A shortcut saved to the desktop from the **Administrative Tools** folder (to do this, right click the **Control Panel\System and Security\Administrative Tools** link, and then click **create Shortcut**).
+> -   A shortcut saved to the desktop from the **Administrative Tools** folder (to do this, right click the **Control Panel\System and Security\Administrative Tools** link, and then click **Create Shortcut**).
 
-The tools installed as part of Remote Server Administration Tools for Windows 10 cannot be used to manage the local, client computer. regardless of the tool you run, you must specify a remote server or multiple remote servers on which to run the tool. Because most tools are integrated with Server Manager, you add remote servers that you want to manage to the Server Manager server pool before managing the server by using the tools in the **Tools** menu. For more information about how to add servers to your server pool, and create custom groups of servers, see [add servers to Server Manager](http://go.microsoft.com/fwlink/p/?LinkId=241353) and [create and manage server groups](http://go.microsoft.com/fwlink/?LinkId=247328).
+The tools installed as part of Remote Server Administration Tools for Windows 10 cannot be used to manage the local client computer. Regardless of the tool you run, you must specify a remote server, or multiple remote servers, on which to run the tool. Because most tools are integrated with Server Manager, you add remote servers that you want to manage to the Server Manager server pool before managing the server by using the tools in the **Tools** menu. For more information about how to add servers to your server pool, and create custom groups of servers, see [Add servers to Server Manager](http://go.microsoft.com/fwlink/p/?LinkId=241353) and [Create and manage server groups](http://go.microsoft.com/fwlink/?LinkId=247328).
 
 In Remote Server Administration Tools for Windows 10, all GUI-based server management tools, such as mmc snap-ins and dialog boxes, are accessed from the **Tools** menu of the Server Manager console. Although the computer that runs Remote Server Administration Tools for Windows 10 runs a client-based operating system, after installing the tools, Server Manager, included with Remote Server Administration Tools for Windows 10, opens automatically by default on the client computer. Note that there is no **Local Server** page in the Server Manager console that runs on a client computer.
 
 ##### To start Server Manager on a client computer
 
-1.  On the **start** menu, click **All Apps**, and then click **Administrative Tools**.
+1.  On the **Start** menu, click **All Apps**, and then click **Administrative Tools**.
 
 2.  In the **Administrative Tools** folder, click **Server Manager**.
 

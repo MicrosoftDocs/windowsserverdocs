@@ -73,7 +73,7 @@ $cert.Acl = $cert.Acl | Add-AccessRule $gMSA Read Allow
 
 #### Grant access to HSM or custom provider-backed private keys
 
-If your certificate's private keys are backed by a hardware security module (HSM) or a custom key storage provider (KSP), how the permission model will depend on your specific software vendor.
+If your certificate's private keys are backed by a hardware security module (HSM) or a custom key storage provider (KSP), the permission model will depend on your specific software vendor.
 For the best results, consult your vendor's documentation or support site for information on how private key permissions are handled for your specific device/software.
 
 Some hardware security modules do not support granting specific user accounts access to a private key; rather, they allow the computer account access to all keys in a specific key set.

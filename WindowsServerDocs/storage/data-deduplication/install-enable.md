@@ -17,7 +17,7 @@ This topic explains how to install [Data Deduplication](overview.md), evaluate w
 
 ## <a id="install-dedup"></a>Install Data Deduplication
 > [!Important]  
-> [KB3216755](https://support.microsoft.com/kb/3216755) contains a critical reliability fix for Data Deduplication, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
+> [KB4013429](https://support.microsoft.com/kb/4013429) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016.
 
 ### <a id="install-dedup-via-server-manager"></a>Install Data Deduplication by using Server Manager
 1. In the Add Roles and Feature wizard, select **Server Roles**, and then select **Data Deduplication**.  
