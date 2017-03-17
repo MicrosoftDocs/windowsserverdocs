@@ -5,7 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 11/09/2016
+ms.date: 03/15/2017
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -110,8 +110,8 @@ Now that you know which edition and installation option is right for you, click 
 
 <table border=0 width="100%">
   <tr style='text-align:center;'>
-    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server">![Nano](media/nano.png)</a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core">![Server core](media/servercore.png)</a></td>
-    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience">![Desktop](media/desktop.png)</a></td>
+    <td style='width:34%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-nano-server"> <img height=145 src="media/nano.png" alt="alt text" title="Nano Server - Lightest Weight" /></a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core"> <img height=145 src="media/servercore.png" alt="alt text" title="Server Core - Recommended" /></a></td>
+    <td style='width:33%'><a href="https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-with-desktop-experience"><img height=145 src="media/desktop.png" alt="alt text" title="Desktop Experience - Full Experience" /></a></td>
   </tr>
 </table>
