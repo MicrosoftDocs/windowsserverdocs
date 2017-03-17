@@ -260,9 +260,10 @@ This deployment requires one hub or switch, two physical servers and one physica
 This deployment requires one hub or switch, one physical server, and one physical client:
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
-1. One physical computer running Windows Server 2106 that you will configure as a DHCP server by using this guide. 
-1. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
-2. 
+2. One physical computer running Windows Server 2106 that you will configure as a DHCP server by using this guide. 
+3. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
+
+
 ## <a name="bkmk_deploy"></a>Deploy DHCP
 
 This section provides example Windows PowerShell commands that you can use to deploy DHCP on one server. Before you run these example commands on your server, you must modify the commands to match your network and environment. 
@@ -353,7 +354,10 @@ For more information about this command, see the following topic.
 
 ### Create DHCP security groups and authorize the server in Active Directory \(Optional\)
 
-If you are installing DHCP in a domain environment, you must perform the following steps to add security groups to Active Directory and to authorize the DHCP server to operate in the domain.
+If you are installing DHCP in a domain environment, you must perform the following steps to add security groups to the DHCP server's **Local Users and Groups** - and to authorize the DHCP server to operate in the domain.
+
+>[!NOTE]
+>DHCP servers that are installed in Active Directory domains but are not authorized cannot function properly, and do not lease IP addresses to DHCP clients. This functionality is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP addresses to clients on your network.
 
 #### Create security groups
 
