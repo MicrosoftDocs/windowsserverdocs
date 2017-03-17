@@ -49,7 +49,8 @@ Use the following steps to install and configure RemoteFX on the host for Window
 2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the graphics card vendor site.
 3. On a Windows Server 2016 host, install the Remote Desktop Virtualization Host (RDVH) role.
 4. On a Windows 10 host, enable the Hyper-V feature in the Control Panel (go to Control Panel/Programs and Features/Turn Windows Features on or off):
-   ![Windows Features window to enable the Hyper-V feature](/media/rds-hyperv-settings.png)
+
+   ![Windows Features window to enable the Hyper-V feature](media/rds-hyperv-settings.png)
 
 5. Now, create and configure a guest VM:
    1. Create a VM with Windows 10 Enterprise or Windows Server 2016.
