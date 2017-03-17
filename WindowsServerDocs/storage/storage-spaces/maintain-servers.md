@@ -138,7 +138,7 @@ Repair True             00:06:52    Running   68              20104802841    221
 
 The **BytesTotal** shows how much storage needs to resync. The **PercentComplete** displays progress.
 
-   > [!DANGER]
+   > [!WARNING]
    > It's not safe to take another server offline until these repair jobs finish.
 
 During this time, your volumes will continue to show as **Warning**, which is normal. 
