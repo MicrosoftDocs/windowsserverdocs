@@ -782,6 +782,7 @@
 ##### [Use DNS Policy for Application Load Balancing With Geo-Location Awareness](networking/dns/deploy/app-lb-geo.md)
 ### [Dynamic Host Configuration Protocol (DHCP)](networking/technologies/dhcp/dhcp-top.md)
 #### [What's New in DHCP](networking/technologies/dhcp/What-s-New-in-DHCP.md)
+#### [Deploy DHCP Using Windows PowerShell](networking/technologies/dhcp/dhcp-deploy-wps.md)
 ### [Hyper-V Virtual Switch](networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 #### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](networking/technologies/hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
 #### [Manage Hyper-V Virtual Switch](networking/technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md)
