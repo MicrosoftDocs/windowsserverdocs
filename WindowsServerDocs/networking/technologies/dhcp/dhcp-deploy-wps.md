@@ -34,7 +34,7 @@ This guide contains the following sections.
 
 The following illustration depicts the scenario that you can deploy by using this guide. The scenario includes one DHCP server in an Active Directory domain. The server is configured to provide IP addresses to DHCP clients on two different subnets. The subnets are separated by a router that has DHCP Forwarding enabled.
 
-![DHCP Network Topology Overview](../media/Core-Network-Guide/cng16_overview.jpg)
+![DHCP Network Topology Overview](../../media/Core-Network-Guide/cng16_overview.jpg)
 
 ## <a name="bkmk_technologies"></a>Technology Overviews
 
