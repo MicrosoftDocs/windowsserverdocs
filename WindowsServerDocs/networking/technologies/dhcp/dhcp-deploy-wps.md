@@ -260,9 +260,10 @@ This deployment requires one hub or switch, two physical servers and one physica
 This deployment requires one hub or switch, one physical server, and one physical client:
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
-1. One physical computer running Windows Server 2106 that you will configure as a DHCP server by using this guide. 
-1. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
-2. 
+2. One physical computer running Windows Server 2106 that you will configure as a DHCP server by using this guide. 
+3. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
+
+
 ## <a name="bkmk_deploy"></a>Deploy DHCP
 
 This section provides example Windows PowerShell commands that you can use to deploy DHCP on one server. Before you run these example commands on your server, you must modify the commands to match your network and environment. 
