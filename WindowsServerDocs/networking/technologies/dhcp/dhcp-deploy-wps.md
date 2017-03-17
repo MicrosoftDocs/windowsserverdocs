@@ -359,7 +359,7 @@ If you are installing DHCP in a domain environment, you must perform the followi
 
 To create security groups, you must run a Network Shell \(netsh\) command in Windows PowerShell, and then restart the DHCP service so that the new groups become active.
 
-When you run the following netsh command on the DHCP server, the DHCP Administrators and DHCP Users groups are created in Active Directory Users and Computers on your domain controller.
+When you run the following netsh command on the DHCP server, the **DHCP Administrators** and **DHCP Users** security groups are created in **Local Users and Groups** on the DHCP server.
 
     netsh dhcp add securitygroups
 
@@ -489,3 +489,54 @@ The following reference provides command descriptions and syntax for all DHCP Se
 >You can use Windows Server 2012 R2 commands in Windows Server 2016.
 
 - [DHCP Server Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj590751.aspx)
+
+## List of Windows PowerShell Commands
+
+Following is a simple list of commands and example values that are used in this guide.
+
+    
+    New-NetIPAddress -IPAddress 10.0.0.3 -InterfaceAlias "Ethernet" -DefaultGateway 10.0.0.1 -AddressFamily IPv4 -PrefixLength 24
+    Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 10.0.0.2
+    Rename-Computer -Name DHCP1
+    Restart-Computer
+    
+    Add-Computer CORP
+    Restart-Computer
+    
+    Install-WindowsFeature DHCP -IncludeManagementTools
+    netsh dhcp add securitygroups
+    Restart-service dhcpserver
+    
+    Add-DhcpServerInDC -DnsName DHCP1.corp.contoso.com -IPAddress 10.0.0.3
+    Get-DhcpServerInDC
+    
+    Set-ItemProperty –Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManager\Roles\12 –Name ConfigurationState –Value 2
+    
+    Set-DhcpServerv4DnsSetting -ComputerName "DHCP1.corp.contoso.com" -DynamicUpdates "Always" -DeleteDnsRRonLeaseExpiry $True
+    
+    $Credential = Get-Credential
+    Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.contoso.com"
+    
+    rem At prompt, supply credential in form DOMAIN\user, password
+    
+    
+    rem Configure scope Corpnet
+    
+    Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 -State Active
+    
+    Add-DhcpServerv4ExclusionRange -ScopeID 10.0.0.0 -StartRange 10.0.0.1 -EndRange 10.0.0.15
+    
+    Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.0.1 -ScopeID 10.0.0.0 -ComputerName DHCP1.corp.contoso.com
+    
+    Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2
+    
+    rem Configure scope Corpnet2
+    
+    Add-DhcpServerv4Scope -name "Corpnet2" -StartRange 10.0.1.1 -EndRange 10.0.1.254 -SubnetMask 255.255.255.0 -State Active
+    
+    Add-DhcpServerv4ExclusionRange -ScopeID 10.0.1.0 -StartRange 10.0.1.1 -EndRange 10.0.1.15
+    
+    Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -ComputerName DHCP1.corp.contoso.com
+    
+
+
