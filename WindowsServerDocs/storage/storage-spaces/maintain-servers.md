@@ -39,9 +39,7 @@ Verify that the **HealthStatus** property for every volume (virtual disk) is **H
 
 To do this in Failover Cluster Manager, go to **Storage** -> **Disks**.
 
-Verify that the **Status** column for every volume shows **Online**.
-
-(IMAGE)
+Verify that the **Status** column for every volume (virtual disk) shows **Online**.
 
 ## Pause and drain the server
 
@@ -60,22 +58,20 @@ To do this in Failover Cluster Manager, go to **Nodes**.
 
 Right-click the node and select **Pause** -> **Drain Roles**, or use the **Actions** pane on the right.
 
-(IMAGE)
+![Pause-Drain](media/maintain-servers/pause-drain.png)
 
 All virtual machines will begin live migrating to other servers in the cluster. This can take a few minutes.
-
-(IMAGE)
 
    > [!NOTE]
    > When you pause and drain the cluster node properly, Windows performs an automatic safety check to ensure it is safe to proceed. If there are unhealthy volumes, it will stop and alert you that it's not safe to proceed.
 
-(IMAGE)
+![Safety-Check](media/maintain-servers/safety-check.png)
 
 ## Shutting down the server
 
 Once the server has completed draining, it will show as **Paused** in Failover Cluster Manager and PowerShell.
 
-(IMAGE)
+![Paused](media/maintain-servers/paused.png)
 
 You can now safely restart or shut it down, just like you would normally.
 
@@ -114,7 +110,7 @@ To do this in Failover Cluster Manager, go to **Nodes**.
 
 Right-click the node and select **Resume** -> **Failback Roles** (optional), or use the **Actions** pane on the right.
 
-(IMAGE)
+![Resume-Failback](media/maintain-servers/resume-failback.png)
 
 ## Wait for storage to resync
 
@@ -162,10 +158,6 @@ MyVolume1    Mirror                OK                Healthy      True          
 MyVolume2    Mirror                OK                Healthy      True           1 TB
 MyVolume3    Mirror                OK                Healthy      True           1 TB
 ```
-
-In Failover Cluster Manager:
-
-(IMAGE)
 
 It's now safe to pause and restart other servers in the cluster. That's it!
 
