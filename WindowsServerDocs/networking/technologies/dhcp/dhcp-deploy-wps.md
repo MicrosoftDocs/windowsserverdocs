@@ -354,7 +354,10 @@ For more information about this command, see the following topic.
 
 ### Create DHCP security groups and authorize the server in Active Directory \(Optional\)
 
-If you are installing DHCP in a domain environment, you must perform the following steps to add security groups to Active Directory and to authorize the DHCP server to operate in the domain.
+If you are installing DHCP in a domain environment, you must perform the following steps to add security groups to the DHCP server's **Local Users and Groups** - and to authorize the DHCP server to operate in the domain.
+
+>[!NOTE]
+>DHCP servers that are installed in Active Directory domains but are not authorized cannot function properly, and do not lease IP addresses to DHCP clients. This functionality is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP addresses to clients on your network.
 
 #### Create security groups
 
