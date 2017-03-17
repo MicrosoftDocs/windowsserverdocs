@@ -48,7 +48,7 @@ Verify that the **Status** column for every volume shows **Online**.
 Before restarting or shutting down the server, drain (move off) any roles such as virtual machines running on it. This also gives Storage Spaces Direct an opportunity to gracefully flush and commit data to ensure the shutdown is transparent to any applications running on that server.
 
    > [!IMPORTANT]
-   > Always pause and drain clustered servers restarting or shutting them down.
+   > Always pause and drain clustered servers before restarting or shutting them down.
 
 In PowerShell, run the following cmdlet (as Administrator) to pause and drain.
 
@@ -92,7 +92,7 @@ MyVolume2    Mirror                Incomplete        Warning      True          
 MyVolume3    Mirror                Incomplete        Warning      True           1 TB
 ```
 
-This is expected.
+This is normal and should not cause concern. All your volumes remain online and accessible.
 
 ## Resume the server
 
@@ -136,7 +136,10 @@ Repair True             00:06:52    Running   68              20104802841    221
 
 The **BytesTotal** shows how much storage needs to resync. The **PercentComplete** displays progress.
 
-During this time, your volumes will not show as **Healthy**. This is expected.
+   > [!DANGER]
+   > It is not safe to pause or shut down another server until these resync jobs have completed.
+
+During this time, your volumes will continue to show as **Warning**. This is expected.
 
 ```PowerShell
 PS C:\> Get-VirtualDisk 
@@ -147,9 +150,6 @@ MyVolume1    Mirror                InService         Warning      True          
 MyVolume2    Mirror                InService         Warning      True           1 TB
 MyVolume3    Mirror                InService         Warning      True           1 TB
 ```
-
-   > [!DANGER]
-   > It is not safe to pause or shut down another server until these resync jobs have completed.
 
 Once the jobs complete, verify that volumes show **Healthy** again.
 
