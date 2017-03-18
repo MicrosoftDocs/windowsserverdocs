@@ -29,6 +29,7 @@ This guide contains the following sections.
 - [Deploy DHCP](#bkmk_deploy)
 - [Verify Server Functionality](#bkmk_verify)
 - [Windows PowerShell Commands for DHCP](#bkmk_dhcpwps)
+- [List of Windows PowerShell Commands in this guide](#bkmk_list)
 
 ## <a name="bkmk_overview"></a>DHCP Deployment Overview
 
@@ -494,7 +495,7 @@ The following reference provides command descriptions and syntax for all DHCP Se
 
 - [DHCP Server Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj590751.aspx)
 
-## List of Windows PowerShell Commands
+## <a name="bkmk_list"></a>List of Windows PowerShell Commands in this guide
 
 Following is a simple list of commands and example values that are used in this guide.
 
