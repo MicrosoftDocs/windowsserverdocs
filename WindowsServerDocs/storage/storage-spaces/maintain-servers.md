@@ -1,33 +1,41 @@
 ---
-title: Taking a Storage Spaces Direct server down for maintenance
+title: Taking a Storage Spaces Direct server offline for maintenance
 ms.prod: windows-server-threshold
 ms.author: eldenc
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 03/17/2017
+ms.date: 03/20/2017
+Keywords: Storage Spaces Direct, S2D, maintenance
+ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ---
 
-# Taking a Storage Spaces Direct server down for maintenance
+# Taking a Storage Spaces Direct server offline for maintenance
 
 > Applies To: Windows Server 2016
 
 This topic provides guidance on how to properly restart or shutdown servers with [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
-When bringing servers in a Storage Spaces Direct (S2D) cluster down for maintenance or restarting to apply updates, there are special considerations. With Storage Spaces Direct bringing down a server also means bringing down pieces of the storage, which is shared across all the servers. This requires properly pausing and draining the server, and ensuring there are enough copies of the data available elsewhere so it remains safe and accessible throughout the maintenance.
+With Storage Spaces Direct, taking a server offline (bringing it down) also means taking offline portions of the storage that is shared across all servers in the cluster. Doing so requires pausing (suspending) the server you want to take offline, moving roles to other servers in the cluster, and verifying that all data is available on the other servers in the cluster so that the data remains safe and accessible throughout the maintenance.
 
-We recommend using [Cluster Aware Updating (CAU)](https://technet.microsoft.com/library/hh831694.aspx) to automate the process of patching Storage Spaces Direct clusters. It is integrated with Storage Spaces Direct and will automate all of the below steps below, including checking volume health and resync progress before patching the next server.
+Use the following procedures to properly pause a server in a Storage Spaces Direct cluster before taking it offline. 
 
-## Verifying it's safe to take the server down
+   > [!IMPORTANT]
+   > To install updates on a Storage Spaces Direct cluster, use Cluster-Aware Updating (CAU), which automatically performs the procedures in this topic so you don't have to when installing updates. For more info, see [Cluster Aware Updating (CAU)](https://technet.microsoft.com/library/hh831694.aspx).
 
-Before bringing a server down for maintenance, verify that all your volumes are healthy.
+## Verifying it's safe to take the server offline
 
-In PowerShell, run the following cmdlet (as Administrator) to view volume status.
+Before taking a server offline for maintenance, verify that all your volumes are healthy.
+
+To do so, open a PowerShell session with Administrator permissions and then run the following command to view volume status:
 
 ```PowerShell
-PS C:\> Get-VirtualDisk 
+Get-VirtualDisk 
+```
 
+Here's an example of what the output might look like:
+```
 FriendlyName ResiliencySettingName OperationalStatus HealthStatus IsManualAttach Size
 ------------ --------------------- ----------------- ------------ -------------- ----
 MyVolume1    Mirror                OK                Healthy      True           1 TB
@@ -37,13 +45,13 @@ MyVolume3    Mirror                OK                Healthy      True          
 
 Verify that the **HealthStatus** property for every volume (virtual disk) is **Healthy**.
 
-To do this in Failover Cluster Manager, go to **Storage** -> **Disks**.
+To do this in Failover Cluster Manager, go to **Storage** > **Disks**.
 
 Verify that the **Status** column for every volume (virtual disk) shows **Online**.
 
 ## Pause and drain the server
 
-Before restarting or shutting down the server, drain (move off) any roles such as virtual machines running on it. This also gives Storage Spaces Direct an opportunity to gracefully flush and commit data to ensure the shutdown is transparent to any applications running on that server.
+Before restarting or shutting down the server, pause and drain (move off) any roles such as virtual machines running on it. This also gives Storage Spaces Direct an opportunity to gracefully flush and commit data to ensure the shutdown is transparent to any applications running on that server.
 
    > [!IMPORTANT]
    > Always pause and drain clustered servers before restarting or shutting them down.
@@ -51,12 +59,10 @@ Before restarting or shutting down the server, drain (move off) any roles such a
 In PowerShell, run the following cmdlet (as Administrator) to pause and drain.
 
 ```PowerShell
-PS C:\> Suspend-ClusterNode -Drain
+Suspend-ClusterNode -Drain
 ```
 
-To do this in Failover Cluster Manager, go to **Nodes**.
-
-Right-click the node and select **Pause** -> **Drain Roles**, or use the **Actions** pane on the right.
+To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, and then select **Pause** > **Drain Roles**.
 
 ![Pause-Drain](media/maintain-servers/pause-drain.png)
 
@@ -73,13 +79,13 @@ Once the server has completed draining, it will show as **Paused** in Failover C
 
 ![Paused](media/maintain-servers/paused.png)
 
-You can now safely restart or shut it down, just like you would normally.
+You can now safely restart or shut it down, just like you would normally (for example, by using the Restart-Computer or Stop-Computer PowerShell cmdlets).
 
    > [!NOTE]
    > While the server is paused, storage IO does not flow to its drives. This means that although all your volumes remain online and accessible, they will show as **Incomplete** in Failover Cluster Manager or PowerShell. This is expected.
 
 ```PowerShell
-PS C:\> Get-VirtualDisk 
+Get-VirtualDisk 
 
 FriendlyName ResiliencySettingName OperationalStatus HealthStatus IsManualAttach Size
 ------------ --------------------- ----------------- ------------ -------------- ----
@@ -97,18 +103,16 @@ When you are ready for the server to begin hosting workloads again, resume it.
 In PowerShell, run the following cmdlet (as Administrator) to resume.
 
 ```PowerShell
-PS C:\> Resume-ClusterNode
+Resume-ClusterNode
 ```
 
 To move the roles that were previously running on this server back, use the optional **-Failback** flag.
 
 ```PowerShell
-PS C:\> Resume-ClusterNode –Failback Immediate
+Resume-ClusterNode –Failback Immediate
 ```
 
-To do this in Failover Cluster Manager, go to **Nodes**.
-
-Right-click the node and select **Resume** -> **Failback Roles** (optional), or use the **Actions** pane on the right.
+To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, and then select **Resume** > **Fail Roles Back**.
 
 ![Resume-Failback](media/maintain-servers/resume-failback.png)
 
@@ -116,13 +120,15 @@ Right-click the node and select **Resume** -> **Failback Roles** (optional), or 
 
 When the server resumes, any new writes that happened while it was paused (while its drives were not receiving storage IO) need to resync. This happens automatically. Using intelligent change tracking, it's not necessary for *all* data to be scanned or synchronized; only the changes. This process is throttled to mitigate impact to production workloads. Depending on how long the server was paused, and how much new data as written, it may take many minutes to complete.
 
-You must wait for re-syncing to complete before pausing or shutting any others servers in the cluster.
+You must wait for re-syncing to complete before taking any others servers in the cluster offline.
 
 In PowerShell, run the following cmdlet (as Administrator) to monitor progress.
 
 ```PowerShell
-PS C:\> Get-StorageJob
-
+Get-StorageJob
+```
+Here's some example output, showing the resync (repair) jobs:
+```
 Name   IsBackgroundTask ElapsedTime JobState  PercentComplete BytesProcessed BytesTotal
 ----   ---------------- ----------- --------  --------------- -------------- ----------
 Repair True             00:06:23    Running   65              11477975040    17448304640
@@ -132,14 +138,13 @@ Repair True             00:06:52    Running   68              20104802841    221
 
 The **BytesTotal** shows how much storage needs to resync. The **PercentComplete** displays progress.
 
-   > [!DANGER]
-   > It is not safe to pause or shut down another server until these resync jobs have completed.
+   > [!WARNING]
+   > It's not safe to take another server offline until these repair jobs finish.
 
-During this time, your volumes will continue to show as **Warning**. This is expected.
+During this time, your volumes will continue to show as **Warning**, which is normal. 
 
-```PowerShell
-PS C:\> Get-VirtualDisk 
-
+For example, if you use the `Get-VirtualDisk` cmdlet, you might see the following output:
+```
 FriendlyName ResiliencySettingName OperationalStatus HealthStatus IsManualAttach Size
 ------------ --------------------- ----------------- ------------ -------------- ----
 MyVolume1    Mirror                InService         Warning      True           1 TB
@@ -147,11 +152,9 @@ MyVolume2    Mirror                InService         Warning      True          
 MyVolume3    Mirror                InService         Warning      True           1 TB
 ```
 
-Once the jobs complete, verify that volumes show **Healthy** again.
+Once the jobs complete, verify that volumes show **Healthy** again by using the `Get-VirtualDisk` cmdlet. Here's some example output:
 
-```PowerShell
-PS C:\> Get-VirtualDisk 
-
+```
 FriendlyName ResiliencySettingName OperationalStatus HealthStatus IsManualAttach Size
 ------------ --------------------- ----------------- ------------ -------------- ----
 MyVolume1    Mirror                OK                Healthy      True           1 TB
@@ -159,7 +162,7 @@ MyVolume2    Mirror                OK                Healthy      True          
 MyVolume3    Mirror                OK                Healthy      True           1 TB
 ```
 
-It's now safe to pause and restart other servers in the cluster. That's it!
+It's now safe to pause and restart other servers in the cluster.
 
 ## See also
 
