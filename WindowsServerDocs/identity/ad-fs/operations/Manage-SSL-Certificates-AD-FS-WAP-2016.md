@@ -16,6 +16,8 @@ ms.technology: identity-adfs
 
 >Applies To: Windows Server 2016
 
+This article describes how to deploy a new SSL certificate to your AD FS and WAP servers.
+
 ## Obtaining your SSL Certificates
 For production AD FS farms a publicly trusted SSL certificate is recommended. This is usually obtained by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
 
@@ -24,7 +26,7 @@ For production AD FS farms a publicly trusted SSL certificate is recommended. Th
 
 
 ### How many certificates are needed
-It's recommended that you use a common SSL certificate across all AD FS and Web Application Proxy servers. For detailed requirements see the document [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
+It is recommended that you use a common SSL certificate across all AD FS and Web Application Proxy servers. For detailed requirements see the document [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
 
 ### SSL Certificate Requirements
 For requirements including naming, root of trust and extensions see the document [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
@@ -33,18 +35,18 @@ For requirements including naming, root of trust and extensions see the document
 First, determine which certificate binding mode your AD FS servers are running: default certificate authentication binding, or alternate client TLS binding mode.
 
 ### Replacing the SSL certificate for AD FS running in default certificate authentication binding mode
-> Note: The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you値l need to use PowerShell.  
+> Note: The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you will need to use PowerShell.  
 
 AD FS by default performs device certificate authentication on port 443 and user certificate authentication on port 49443 (or a configurable port that is not 443).
 In this mode, use the powershell cmdlet Set-AdfsSslCertificate to manage the SSL certificate.
 
 Follow the steps below:
 
-1) First, you値l need to obtain the new certificate.  This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
+1) First, you will need to obtain the new certificate.  This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
 
 - Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
 
-2) Once you get the response from your certificate provider, you値l need to import it to the Local Machine store on each AD FS and Web Application Proxy server.
+2) Once you get the response from your certificate provider, import it to the Local Machine store on each AD FS and Web Application Proxy server.
 
 3) On each AD FS server, use the following cmdlet to install the new SSL certificate
 
@@ -57,18 +59,18 @@ The certificate thumbprint can be found using the cmdlet
 	PS C:\>dir Cert:\LocalMachine\My\
 
 ### Replacing the SSL certificate for AD FS running in alternate TLS binding mode
-> Note: The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you値l need to use PowerShell.  
+> Note: The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you will need to use PowerShell.  
 
 When configured in alternate client TLS binding mode, AD FS performs device certificate authentication on port 443 and user certificate authentication on port 443 as well, on a different hostname.  The user certificate hostname is the AD FS hostname pre-pended with "certauth", for example "certauth.fs.contoso.com".
 In this mode, use the powershell cmdlet Set-AdfsAlternateTlsClientBinding to manage the SSL certificate.  This will manage not only the alternative client TLS binding but all other bindings on which AD FS sets the SSL certificate as well.
 
 Follow the steps below:
 
-1) First, you値l need to obtain the new certificate.  This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
+1) First, you will need to obtain the new certificate.  This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
 
 - Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
 
-2) Once you get the response from your certificate provider, you値l need to import it to the Local Machine store on each AD FS and Web Application Proxy server.
+2) Once you get the response from your certificate provider, import it to the Local Machine store on each AD FS and Web Application Proxy server.
 
 3) On each AD FS server, use the following cmdlet to install the new SSL certificate
 

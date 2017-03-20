@@ -70,39 +70,10 @@ The AD FS 2016 version of the spreadsheet can be downloaded [here](http://adfsdo
 This can also be used for AD FS in Windows Server 2012 R2.
 
 ## <a name="BKMK_5"></a>How do I replace the SSL certificate for AD FS?
-The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you’ll need to use PowerShell.  
+The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you’ll need to use PowerShell. Follow the guidance in the article below:
 
-Follow the steps below:
-
-1) First, you’ll need to obtain the new certificate.  This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider.  There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC.  Your vendor should have documentation for this.
-
-- Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements)
-
-2) Once you get the response from your certificate provider, you’ll need to import it to the Local Machine store on each AD FS and Web Application Proxy server.
-
-3) On each AD FS server, use the following cmdlet to install the new SSL certificate
-
-    ```
-    PS C:\> Set-AdfsSslCertificate <thumbprint of new cert>
-    ```
-
-The certificate thumbprint can be found using the cmdlet
-
-	PS C:\>dir Cert:\LocalMachine\My\
-
-4) On each Web Application Proxy server use the following cmdlet to install the new SSL certificate:
-
-    ```
-    PS C:\> Set-WebApplicationProxySslCertificate <thumbprint of new cert>
-    ```
-
-If the above cmdlet fails because the old certificate has already expired, reconfigure the proxy using the following cmdlets:
-
-	PS C:\>$cred = Get-Credential
-
-Enter the credentials of a domain user who is local administrator on the AD FS server
-
-	PS C:\>Install-WebApplicationProxy -FederationServiceTrustCredential $cred -CertificateThumbprint '<thumbprint of SSL cert in proxy LM store>' -FederationServiceName 'fs.contoso.com'
+[Managing SSL Certificates in AD FS and WAP 2016](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016)
+ 
 
 ## <a name="BKMK_6"></a>Does the proxy SSL certificate have to be the same as the AD FS SSL certificate?  
 - If the proxy is used to proxy AD FS requests that use Windows Integrated Authentication, the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
