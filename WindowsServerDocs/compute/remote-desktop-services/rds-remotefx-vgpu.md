@@ -23,7 +23,7 @@ The vGPU feature of RemoteFX makes it possible for multiple virtual machines to 
 
 Requirements for host systems: 
 
-- Windows Server 2016 of Windows 10
+- Windows Server 2016 or Windows 10
 - DX 11.0 compatible GPU with WDDM 1.2 compatible driver 
 - Windows Server RD Virtualization Host role enabled (enables Hyper-V Role) 
 - Server with a CPU that supports SLAT (Second Level Address Translation) 
@@ -36,7 +36,6 @@ Additional considerations for guest VMs:
 
 - OpenGL and OpenCL functionality is only available in Windows 10 or Windows Server 2016.  
 - DirectX 11.0 is only available with Windows 8 or newer guest VMs. 
-- A Windows 7 SP1 guest VM requires the latest updates and also does not support OpenGL/OpenCL. 
 - Remote Desktop Session Host is only supported with RemoteFX vGPU if it is running as a [personal session desktop](rds-personal-session-desktops.md).
 
 For guest VMS, make sure to review [VDI deployment - supported guest OSs](rds-supported-config.md#vdi-deployment--supported-guest-oss).
@@ -47,12 +46,15 @@ Use the following steps to install and configure RemoteFX on the host for Window
 
 1. Install the operating system.
 2. Install the latest Windows 10/Windows Server 2016 GPU drivers available from the graphics card vendor site.
-3. On a Windows Server 2016 host, install the Remote Desktop Virtualization Host (RDVH) role.
-4. On a Windows 10 host, enable the Hyper-V feature in the Control Panel (go to Control Panel/Programs and Features/Turn Windows Features on or off):
+3. Install RemoteFX vGPU on the Windows 10/Windows Server 2016 host:
+   1. On a Windows 10 host, enable the Hyper-V feature in the Control Panel (go to Control Panel/Programs and Features/Turn Windows Features on or off):
 
-   ![Windows Features window to enable the Hyper-V feature](media/rds-hyperv-settings.png)
+      ![Windows Features window to enable the Hyper-V feature](media/rds-hyperv-settings.png)
 
-5. Now, create and configure a guest VM:
+   2. On a Windows Server 2016 host, install the Remote Desktop Virtualization Host (RDVH) role.
+   
+
+4. Now, create and configure a guest VM:
    1. Create a VM with Windows 10 Enterprise or Windows Server 2016.
    2. Add the RemoteFX 3D graphics adapter. See [Configure the RemoteFX vGPU 3D adapter](#configure-the-remotefx-vgpu-3d-adapter) for information on how to do that with either Hyper-V Manager or PowerShell cmdlets. 
 
@@ -80,7 +82,7 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
 
 #### With PowerShell cmdlets:
 
-Run the following cmdlets to review and configure the adapter: 
+Run the following cmdlets to add, review, and configure the adapter: 
 
 ```powershell
 Add-VMRemoteFx3dVideoAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
