@@ -22,7 +22,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 
 |New or changed topic|Description|
 |---|---|
-|[Taking a Storage Spaces Direct server offline for maintenance](maintain-servers.md)|New topic.|
+|[Taking a Storage Spaces Direct server offline for maintenance](storage-spaces/maintain-servers.md)|New topic.|
 
 ## February 2017
 
