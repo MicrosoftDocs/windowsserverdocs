@@ -29,7 +29,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     - **Through VMM**: If you are using System Center 2016 - Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
     
     >**Notes**
-    > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-the-first-hgs-node.md#initialize-hgs-server-with-an-https-certificate), begin the URLs with `https://`.
+    > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-the-first-hgs-node.md#configuring-hgs-for-https-communications), begin the URLs with `https://`.
     > - If the HGS administrator enabled HTTPS on the HGS server and used a self-signed certificate, you will need to import the certificate into the Trusted Root Certificate Authorities store on every host. To do this, run the following command on each host:<br>
         `Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root`
     
