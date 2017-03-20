@@ -1089,6 +1089,7 @@
 ##### [Create volumes](storage/storage-spaces/create-volumes.md)
 #### [Manage](storage/storage-spaces/manage-storage-spaces-direct.md)
 ##### [Add servers or drives](storage/storage-spaces/add-nodes.md)
+##### [Taking a server offline for maintenance](storage/storage-spaces/maintain-servers.md)
 ##### [Remove servers](storage/storage-spaces/remove-servers.md)
 ##### [Update drive firmware](storage/update-firmware.md)
 ##### [Extend volumes](storage/storage-spaces/resize-volumes.md)
