@@ -22,7 +22,7 @@ ms.date: 03/06/2017
 
 Beginning with Windows 10, version 1507, Kerberos and NTLM use virtualization-based security to protect Kerberos & NTLM secrets of the signed-in user logon session. 
 
-Beginning with Windows 10, version 1511, Credential Manager uses virtualization-based security to protect saved credentials of domain credential type. Signed-in credentials and saved domain credentials will not be passed to remote host using remote desktop. Credential guard can be enabled without UEFI lock.
+Beginning with Windows 10, version 1511, Credential Manager uses virtualization-based security to protect saved credentials of domain credential type. Signed-in credentials and saved domain credentials will not be passed to a remote host using remote desktop. Credential Guard can be enabled without UEFI lock.
 
 Beginning with Windows 10, version 1607, Isolated User Mode is included with Hyper-V so it no longer is installed separately for Credential Guard deployment.
 
@@ -37,7 +37,7 @@ Beginning with Windows 10, version 1607, Remote Credential Guard protects signed
 
 ## Domain protections
 
-Domain protections require Active Directory domains or domain controllers to deploy.
+Domain protections require an Active Directory domain.
 
 ### Domain-joined device support for authentication using public key
 
@@ -74,10 +74,10 @@ Configuration: For new domains, this feature is enabled by default. For existing
 
 3. Click **OK**. 
 
-### Allowing newtork NTLM when user is restricted to specific domain-joined devices
+### Allowing network NTLM when user is restricted to specific domain-joined devices
 
-Beginning with Windows Server 2016 domain functional level (DFL), DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices. This feature is unavailble in lower DFLs.
+Beginning with Windows Server 2016 domain functional level (DFL), DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices. This feature is unavailable in lower DFLs.
 
-Configuration: On the authentication policy, check the box for Allow NTLM netowrk authentication when user is restricted to selected devices. 
+Configuration: On the authentication policy, click **Allow NTLM network authentication when the user is restricted to selected devices**. 
 
 [Learn more about authentication policies](https://technet.microsoft.com/en-us/windows-server-docs/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos).
