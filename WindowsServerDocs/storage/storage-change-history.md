@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dongill
 ms.author: jgerend
-ms.date: 3/7/2017
+ms.date: 3/20/2017
 description: New and updated topics in the Storage documentation for Windows Server 2016
 ---
 # Change history for storage topics in Windows Server 2016
@@ -17,6 +17,12 @@ description: New and updated topics in the Storage documentation for Windows Ser
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server 2016.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## March 2017
+
+|New or changed topic|Description|
+|---|---|
+|[Taking a Storage Spaces Direct server offline for maintenance](storage-spaces/maintain-servers.md)|New topic.|
 
 ## February 2017
 

@@ -6,7 +6,7 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 1/23/2017
+ms.date: 3/20/2017
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
 ---
@@ -61,6 +61,7 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter.
 		<td style="padding: 10px; border: 0; width=25%">
 			<ul>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/add-nodes">Add servers or drives</a></li>
+			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/maintain-servers">Taking a server offline for maintenance</li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/remove-servers">Remove servers</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/resize-volumes">Extend volumes</a></li>
 			  <li><a href="https://technet.microsoft.com/windows-server-docs/storage/update-firmware">Update drive firmware</a></li>

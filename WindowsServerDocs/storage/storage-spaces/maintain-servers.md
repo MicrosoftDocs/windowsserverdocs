@@ -49,7 +49,7 @@ To do this in Failover Cluster Manager, go to **Storage** > **Disks**.
 
 Verify that the **Status** column for every volume (virtual disk) shows **Online**.
 
-## Pause and drain the server
+## Pausing and draining the server
 
 Before restarting or shutting down the server, pause and drain (move off) any roles such as virtual machines running on it. This also gives Storage Spaces Direct an opportunity to gracefully flush and commit data to ensure the shutdown is transparent to any applications running on that server.
 
@@ -96,7 +96,7 @@ MyVolume3    Mirror                Incomplete        Warning      True          
 
 This is normal and should not cause concern. All your volumes remain online and accessible.
 
-## Resume the server
+## Resuming the server
 
 When you are ready for the server to begin hosting workloads again, resume it.
 
@@ -116,7 +116,7 @@ To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, a
 
 ![Resume-Failback](media/maintain-servers/resume-failback.png)
 
-## Wait for storage to resync
+## Waiting for storage to resync
 
 When the server resumes, any new writes that happened while it was paused (while its drives were not receiving storage IO) need to resync. This happens automatically. Using intelligent change tracking, it's not necessary for *all* data to be scanned or synchronized; only the changes. This process is throttled to mitigate impact to production workloads. Depending on how long the server was paused, and how much new data as written, it may take many minutes to complete.
 
