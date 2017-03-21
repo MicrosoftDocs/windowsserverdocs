@@ -18,7 +18,7 @@ ms.date: 03/08/2017
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-You can use the Remote Desktop client for Android to work with Windows apps, resources, and desktops directly from your Android device.
+You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
@@ -52,7 +52,7 @@ To create a Remote Desktop connection:
   - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
   - **Customize display resolution** - Set a custom resolution for a connection by enabling this setting. When off the resolution is applied which you have defined in the global settings of the app.
   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
-  - **Connect to admin session** - Use this option to connect to an administration session on a server running Windows Server 2003 or later.
+  - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
   - **Redirect to local storage** – Mounts your local storage as a remote file system on the remote PC.
 4. Tap **Save**.
 
@@ -146,7 +146,7 @@ You can set the following global settings in your Android client:
    >[!NOTE]
    > If you connect to a PC running Windows 8 or an older version of Windows, the session won't scale correctly. Your best bet is to disconnect from the PC, and then reconnect in the orientation you want to use. An even better option is to upgrade the PC to at least Windows 8.1.
 
-   - **Resolution** - Sets the resolution you want to use for all connection types. If you have already set a custom resolution for an individual app or connection, this setting won't change that.
+   - **Resolution** - Sets the resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual app or connection, this setting won't change that.
    >[!NOTE]
    >When you change one of the display settings, they only apply to new connections from that point on. To see the change in a session you're already connected to disconnect and then connect again.
 
