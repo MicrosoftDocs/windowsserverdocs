@@ -26,7 +26,7 @@ This topic explains how to install [Data Deduplication](overview.md), evaluate w
 ![Install Data Deduplication via Server Manager: click install](media/install-dedup-via-server-manager-2.png)
 
 > [!Note]  
-> If you are running Data Deduplication in a Failover Cluster, every node in the cluster must have the Data Deduplication Server Role installed.
+> If you're running Data Deduplication in a Failover Cluster, every node in the cluster must have the Data Deduplication server role installed.
 
 ### <a id="install-dedup-via-powershell"></a>Install Data Deduplication by using PowerShell
 To install Data Deduplication, run the following PowerShell command as an administrator:  
