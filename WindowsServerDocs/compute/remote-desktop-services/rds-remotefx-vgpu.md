@@ -118,7 +118,7 @@ Remote vGPU support in RDS includes the following performance counters, which yo
 
 - RemoteFX Graphics - counters for Remote Desktop Protocol graphics compression. For example, if you want to look at the number of frames being presented to RDP for compression, look at the **Input Frames/Second** counter.
 - RemoteFX Network - counters for Remote Desktop Protocol network traffic. For example, **Round Trip Time (RTT)**.
-- Remote FX Root GPU Management - Measures VRAM available and reserved.
+- RemoteFX Root GPU Management - Measures VRAM available and reserved.
 - RemoteFX Software - Provides counters for capture rate, GPU response time, and others.
 
 For more low-level performance monitoring, particularly for troubleshooting, you can use the following additional performance counters:
