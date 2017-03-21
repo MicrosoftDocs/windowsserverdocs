@@ -8,12 +8,16 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
+description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---
 
 # Install and enable Data Deduplication
 > Applies to Windows Server 2016
 
 This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
+
+> [!Note]  
+> If you're running Data Deduplication in a Failover Cluster, every node in the cluster must have the Data Deduplication server role installed.
 
 ## <a id="install-dedup"></a>Install Data Deduplication
 > [!Important]  
@@ -24,9 +28,6 @@ This topic explains how to install [Data Deduplication](overview.md), evaluate w
 ![Install Data Deduplication via Server Manager: select Data Deduplication from Server Roles](media/install-dedup-via-server-manager-1.png)
 2. Click **Next** until the **Install** button is active, and then click **Install**.  
 ![Install Data Deduplication via Server Manager: click install](media/install-dedup-via-server-manager-2.png)
-
-> [!Note]  
-> If you're running Data Deduplication in a Failover Cluster, every node in the cluster must have the Data Deduplication server role installed.
 
 ### <a id="install-dedup-via-powershell"></a>Install Data Deduplication by using PowerShell
 To install Data Deduplication, run the following PowerShell command as an administrator:  
@@ -48,8 +49,6 @@ To install Data Deduplication in a Nano Server installation:
 	Enter-PSSession -ComputerName MyNanoServer 
 	dism /online /enable-feature /featurename:dedup-core /all
 	```
-> [!Note]  
-> If you are running Data Deduplication in a Failover Cluster, every node in the cluster must have the Data Deduplication Server Role installed.
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
 ### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Data Deduplication
