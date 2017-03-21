@@ -112,17 +112,17 @@ The following describes the changes in default configuration between Windows 201
 |Role|Setting|Windows 2016|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
 |---|---|---|---|
 |**Standalone Nano Server**|||
-||Time Server|time.windows.com|time.windows.com|
-||Polling Frequency|64 - 1024 seconds|Once a week|
-||Clock Update Frequency|Once a second|Once a hour|
+| |Time Server|time.windows.com|time.windows.com|
+| |Polling Frequency|64 - 1024 seconds|Once a week|
+| |Clock Update Frequency|Once a second|Once a hour|
 |**Standalone Client**|||
-||Time Server|time.windows.com|time.windows.com|
-||Polling Frequency|Once a day|Once a week|
-||Clock Update Frequency|Once a day|Once a week|
+| |Time Server|time.windows.com|time.windows.com|
+| |Polling Frequency|Once a day|Once a week|
+| |Clock Update Frequency|Once a day|Once a week|
 |**Domain Controller**|||
-||Time Server|PDC/GTIMESERV|PDC/GTIMESERV|
-||Polling Frequency|64 -1024 seconds|1024 - 32768 seconds|
-||Clock Update Frequency|Once a day|Once a week|
+| |Time Server|PDC/GTIMESERV|PDC/GTIMESERV|
+| |Polling Frequency|64 -1024 seconds|1024 - 32768 seconds|
+| |Clock Update Frequency|Once a day|Once a week|
 
 #### Domain Member Server
 |Setting|Windows 2016|Windows 2012 R2</br>Windows 2008R2|
