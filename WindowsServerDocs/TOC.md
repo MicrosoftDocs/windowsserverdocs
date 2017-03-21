@@ -624,6 +624,7 @@
 ##### [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications](identity/ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md)
 ##### [Manage Risk with additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 ##### [Manage Risk with Conditional Access Control](identity/ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
+##### [Managing SSL Certificates in AD FS and WAP 2016](identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 ##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
 ##### [Set up an AD FS lab environment](identity/ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 ##### [Set up Geographic Redundancy with SQL Server Replication](identity/ad-fs/operations/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
