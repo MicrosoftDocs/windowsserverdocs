@@ -355,15 +355,7 @@ For more information about this command, see the following topic.
 
 - [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
 
-
-### Create DHCP security groups and authorize the server in Active Directory \(Optional\)
-
-If you are installing DHCP in a domain environment, you must perform the following steps to add security groups to the DHCP server's **Local Users and Groups** - and to authorize the DHCP server to operate in the domain.
-
->[!NOTE]
->DHCP servers that are installed in Active Directory domains but are not authorized cannot function properly, and do not lease IP addresses to DHCP clients. This functionality is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP addresses to clients on your network.
-
-#### Create security groups
+### Create DHCP security groups
 
 To create security groups, you must run a Network Shell \(netsh\) command in Windows PowerShell, and then restart the DHCP service so that the new groups become active.
 
@@ -380,7 +372,12 @@ For more information about these commands, see the following topics.
 - [Network Shell (Netsh)](../netsh/netsh.md)
 - [Restart-Service](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/restart-service)
 
-#### Authorize the DHCP server in Active Directory
+### Authorize the DHCP server in Active Directory \(Optional\)
+
+If you are installing DHCP in a domain environment, you must perform the following steps to authorize the DHCP server to operate in the domain.
+
+>[!NOTE]
+>Unauthorized DHCP servers that are installed in Active Directory domains cannot function properly, and do not lease IP addresses to DHCP clients. The automatic disabling of unauthorized DHCP servers is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP addresses to clients on your network.
 
 You can use the following command to add the DHCP server to the list of authorized DHCP servers in Active Directory. 
 
