@@ -8,7 +8,12 @@ ms.topic: article
 ms.assetid: 68fdc02b-2904-4a67-8bfe-45e426f2bd6c
 ms.author: jamesmci
 author: jamesmci
+ms.custom: na
+ms.reviewer: na
+ms.suite: na
+ms.tgt_pltfrm: na
 ---
+
 # STEP 1 Complete the DirectAccess Configuration
 
 >Applies To: Windows Server 2016
