@@ -1,4 +1,4 @@
----
+----
 title: STEP 1 Complete the DirectAccess Configuration
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 
 ms.author: jamesmci
 author: jamesmci
---
+---
 #STEP 1 Complete the DirectAccess Configuration
 
 >Applies To: Windows Server 2016
