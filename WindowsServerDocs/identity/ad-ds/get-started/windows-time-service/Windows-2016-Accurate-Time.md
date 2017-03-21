@@ -109,11 +109,41 @@ The last 3 counters cover NTP server scenarios and are helpful when determine th
 The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.
 
 #### Standalong Nano Server
-|Setting|Windows 2016|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|Role|Setting|Windows 2016|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|**Standalone Nano Server**|||
+||Time Server|time.windows.com|time.windows.com|
+||Polling Frequency|64 - 1024 seconds|Once a week|
+||Clock Update Frequency|Once a second|Once a hour|
+|**Standalone Client**|||
+||Time Server|time.windows.com|time.windows.com|
+||Polling Frequency|Once a day|Once a week|
+||Clock Update Frequency|Once a day|Once a week|
+|**Domain Controller**|||
+||Time Server|PDC/GTIMESERV|PDC/GTIMESERV|
+||Polling Frequency|64 -1024 seconds|1024 - 32768 seconds|
+||Clock Update Frequency|Once a day|Once a week|
+
+#### Domain Member Server
+|Setting|Windows 2016|Windows 2012 R2</br>Windows 2008R2|
 |---|---|---|
-|Time Server|time.windows.com|time.windows.com|
-|Polling Frequency|64 - 1024 seconds|Once a week|
-|Clock Update Frequency|Once a second|Once a hour|
+|Time Server|DC|DC|
+|Polling Frequency|64 -1024 seconds|1024 - 32768 seconds|
+|Clock Update Frequency|Once a second|Once every 5 minutes|
+
+#### Domain Member Client
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|---|---|---|---|
+|Time Server|NA|DC|DC|
+|Polling Frequency|NA|1204 - 32768 seconds|1024 - 32768 seconds|
+|Clock Update Frequency|NA|Once every 5 minutes|Once every 5 minutes|
+
+#### Hyper-V Guest
+|Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
+|------------------------------------------------|---|---|---|
+|Time Server|Chooses best option based on stratum of Host and Time server|Chooses best option based on stratum of Host and Time server|Defaults to Host|
+|Polling Frequency|Based on Role above|Based on Role above|Based on Role above|
+|Clock Update Frequency|Based on Role above|Based on Role above|Based on Role above|
 
 #### Standalone Client
 |Setting|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
@@ -145,7 +175,7 @@ The following describes the changes in default configuration between Windows 201
 
 #### Hyper-V Guest
 |Setting|Windows 2016|Windows 10 Anniversary|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
-|---|---|---|---|
+|------------------------------------------------|---|---|---|
 |Time Server|Chooses best option based on stratum of Host and Time server|Chooses best option based on stratum of Host and Time server|Defaults to Host|
 |Polling Frequency|Based on Role above|Based on Role above|Based on Role above|
 |Clock Update Frequency|Based on Role above|Based on Role above|Based on Role above|
