@@ -26,6 +26,11 @@ Version support:
     - Token Binding Protocol updated [[draft-ietf-tokbind-protocol-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
     - TLS extension for token binding negotiation added [[draft-popov-tokbind-negotiation-00]](https://tools.ietf.org/html/draft-popov-tokbind-negotiation-00)
     - WinInet & HTTP.SYS support of token binding over HTTP updated [[draft-ietf-tokbind-https-02]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/02/)
+- Windows 10, version 1703 supports Token Binding Protocol version 0.10 – On by default
+    - Token Binding Protocol updated [draft-ietf-tokbind-protocol-10]
+    - TLS extension for token binding negotiation added [draft-ietf-tokbind-negotiation-05]
+    - WinInet & HTTP.SYS support of token binding over HTTP updated [draft-ietf-tokbind-https-06]
+    - Windows devices with Virtualization-based security enabled will keep the token binding keys in a protected environment that is isolated from the running operating system
 
 Information about ASP .NET support can be found at the [.NET Framework Reference Source](http://referencesource.microsoft.com/#System.Web/ITlsTokenBindingInfo.cs,4a5e5668f5c31170). 
 
