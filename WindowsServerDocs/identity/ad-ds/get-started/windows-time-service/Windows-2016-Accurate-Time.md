@@ -106,13 +106,14 @@ The first 3 counters target scenarios for troubleshooting accuracy issues.  The 
 The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
 
 ### Configuration Updates per Environment
-The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.
+The following describes the changes in default configuration between Windows 2016 and previous versions for each Role.  The settings for client/server were not different for OS's before Windows Server 2016 and Windows 10 Anniversary (build 1604). 
 
 |Role|Setting|Windows 2016|Windows 10 (1604)|Windows 2012 R2</br>Windows 2008R2</br>Windows 10|
 |---|---|---|---|---|
 |**Standalone/Nano Server**||||
 | |Time Server|time.windows.com|NA|time.windows.com|
 | |Polling Frequency|64 - 1024 seconds|NA|Once a week|
+| |Clock Update Frequency|Once a day|NA|Once a week|
 |**Standalone Client**||||
 | |Time Server|NA|time.windows.com|time.windows.com|
 | |Polling Frequency|NA|Once a day|Once a week|
