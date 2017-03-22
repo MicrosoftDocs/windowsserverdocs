@@ -86,6 +86,9 @@ This lets you connect to the Hyper-V host when you're not running on the local c
 1. Select **Connect as another user** in the **Select Computer** dialogue box.
 1. Select **Set User**.
 
+>[!NOTE]
+> This will only work for Windows Server 2016 or Windows 10 **remote** hosts.
+
 ### Connect to a Windows 2016 or Windows 10 remote host using IP address
 
 To do this:
@@ -93,6 +96,9 @@ To do this:
 1. In the left pane, right-click **Hyper-V Manager**.
 1. Click **Connect to Server**.
 1. Type the IP address into the **Another Computer** text field.
+
+>[!NOTE]
+> This will only work for Windows Server 2016 or Windows 10 **remote** hosts.
 
 ### Connect to a Windows 2016 or Windows 10 remote host outside your domain, or with no domain
 
@@ -123,6 +129,9 @@ Next, configure the computer you'll use to manage the Hyper-V host.
 1. Open **Hyper-V Manager**.
 1. In the left pane, right-click **Hyper-V Manager**.
 1. Click **Connect to Server**.
+
+>[!NOTE]
+> This will only work for Windows Server 2016 or Windows 10 **remote** hosts.
 
 For cmdlet details, see [Set-Item](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/set-item) and [Enable-WSManCredSSP](https://technet.microsoft.com/library/hh849872.aspx).
 
